@@ -9,3 +9,8 @@ The library is published under a BSD-license so you can do basically anything yo
 MilSymbol logs the current version number to the console when it is initiated.
 
 Still in the process of moving my code, so go to http://spatialillusions.com/MilSymbolLibrary/ to read more about the project.
+
+
+# Licensing
+
+MIT, See License.txt for details
