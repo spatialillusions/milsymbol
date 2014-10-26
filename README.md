@@ -13,4 +13,4 @@ Still in the process of moving my code, so go to http://spatialillusions.com/Mil
 
 # Licensing
 
-MIT, See License.txt for details
+BSD, See License.txt for details
