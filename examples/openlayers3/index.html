@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>MilSymbol units in an Openlayers 3 map - spatialillusions.com</title>
+<style type="text/css">
+	body{
+		font-family:'Trebuchet MS',Arial;
+		font-weight:normal;
+		background-color:#202020;
+		margin-top:0px;
+		margin-left: 0px;
+   		margin-right: 0px;
+   		color:#f0f0f0;
+	}
+
+	.page{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	}
+	.mymap{
+	position: absolute; 
+	left: 0; 
+	top: 0px; 
+	bottom: 0; 
+	width: 100%;
+	}
+</style>
+    <link rel="stylesheet" href="http://openlayers.org/en/v3.0.0/css/ol.css" type="text/css">
+    <script src="http://openlayers.org/en/v3.0.0/build/ol.js" type="text/javascript"></script>
+<script src="../../bin/MilSymbol.js"></script>
+    <script type="text/javascript">
+    
+function init(){
+
+var raster = new ol.layer.Tile({
+  source: new ol.source.OSM()
+});
+
+var map = new ol.Map({
+  layers: [raster],
+  target: document.getElementById('map'),
+	  view: new ol.View({
+		center: ol.proj.transform([16, 59], 'EPSG:4326', 'EPSG:3857'),
+		zoom: 5
+	  })
+});	
+
+var Units = [{"Name":"Berga","Latitude":59.079584,"Longitude":18.132854 , "SIDC":"SFG-UCIN---G" },
+{"Name":"Boden","Latitude":65.818014,"Longitude":21.663709, "SIDC":"SFG-UCF----G"},
+{"Name":"Ronneby","Latitude":56.258695,"Longitude":15.285877, "SIDC":"SFA-MF-----G"},
+{"Name":"Karlskrona","Latitude":56.157382,"Longitude":15.585608, "SIDC":"SFU-S------G"},
+{"Name":"Karlskrona","Latitude":56.157382,"Longitude":15.585608, "SIDC":"SFS--------G"},
+{"Name":"Stockholm","Latitude":59.340861,"Longitude":18.111498, "SIDC":"SFG-I-----AI"},
+{"Name":"Halmstad","Latitude":56.683297,"Longitude":12.841988, "SIDC":"SFG-UCDHH--G"},
+{"Name":"Eksjö","Latitude":57.677746,"Longitude":14.965181, "SIDC":"SFG-UCEC---G"},
+{"Name":"Linköping","Latitude":58.409626,"Longitude":15.518382, "SIDC":"SFA-MH-----G"},
+{"Name":"Enköping","Latitude":59.645594,"Longitude":17.101014, "SIDC":"SFG-UUS----G"},
+{"Name":"Kungsängen","Latitude":59.515132,"Longitude":17.769742, "SIDC":"SFG-UCRV---G"},
+{"Name":"Karlsborg","Latitude":58.530198,"Longitude":14.522656, "SIDC":"SFG-UUM----F"},
+{"Name":"Skövde","Latitude":58.382548,"Longitude":13.84655, "SIDC":"SFG-UCA----G"},
+{"Name":"Luleå","Latitude":65.54226,"Longitude":22.106895, "SIDC":"SFA-MF-----G"},
+{"Name":"Boden","Latitude":65.820114,"Longitude":21.658816, "SIDC":"SFG-UCA----G"},
+{"Name":"Såtenäs","Latitude":58.440366,"Longitude":12.724915, "SIDC":"SFA-MFC----E"},
+{"Name":"Revingehed","Latitude":55.717829,"Longitude":13.502197, "SIDC":"SFG-UCATL--G"},
+{"Name":"Umeå","Latitude":63.837594,"Longitude":20.253832, "SIDC":"SFG-UUA----F"},
+{"Name":"Skövde","Latitude":58.382983,"Longitude":13.848578, "SIDC":"SFG-UST----G"},
+{"Name":"Arvidsjaur","Latitude":65.582793,"Longitude":19.162302, "SIDC":"SFG-UCRO---F"},
+{"Name":"Karlsborg","Latitude":58.530198,"Longitude":14.522656, "SIDC":"SFF--------E"}]
+
+var mysymbol = [];
+var myicon = [];
+var mymarker =[];
+var data = [];	
+for( i in Units){
+	iconSize = {"E":20,"F":25,"G":30,"H":35,"I":40};
+
+	mysymbol[i] = new MilSymbol(Units[i].SIDC,{size:iconSize[(Units[i].SIDC).charAt(11)]}).symbolMarker()
+ 
+    myicon[i] = new ol.style.Style({
+		image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+			anchor: [mysymbol[i].x, mysymbol[i].y],
+			anchorXUnits: 'pixels',
+			anchorYUnits: 'pixels',
+			src:  "data:image/svg+xml;base64," + btoa(mysymbol[i].textXML)
+		}))
+	});
+    mymarker[i] = {
+			'type': 'Feature',
+			'properties': {
+			  'name': i
+			},
+			'geometry': {
+			  'type': 'Point',
+			  'coordinates': ol.proj.transform([Units[i].Longitude, Units[i].Latitude], 'EPSG:4326', 'EPSG:3857')
+			}
+		  }
+}	
+
+	featureSource = new ol.source.GeoJSON( ({
+			object: {
+			  'type': 'FeatureCollection',
+			  'features': mymarker
+			}
+		  })
+		  )
+	featureSource.getFeatures().forEach(function (d){
+		d.setStyle(myicon[d.get('name')])
+	})  
+	
+	var vector = new ol.layer.Vector({
+		 source: featureSource
+		});
+	map.addLayer(vector);
+}
+    </script>
+
+</head>
+<body onload="init()">
+<div class="page">
+</div>
+<div id="map" class="mymap">
+</div>
+
+    </body>
+</html>
