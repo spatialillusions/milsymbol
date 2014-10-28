@@ -31,7 +31,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 For updates and more information go to http://www.spatialillusions.com
 
 ======================================================================================= */
-console.log("MilSymbol 0.4.4 Copyright (c) 2013 Måns Beckman http://www.spatialillusions.com")
+console.log("MilSymbol 0.4.5b Copyright (c) 2013 Måns Beckman http://www.spatialillusions.com")
 
 function MilSymbol(SIDCParameter,options){
 
@@ -300,7 +300,8 @@ function MilSymbol(SIDCParameter,options){
 			if(symbolSet == '20')installation = true;
 			
 			//Planned/Anticipated/Suspect symbols should have a dashed outline
-			if(status == '1' || standardIdentity2 == '0' || standardIdentity2 == '2' || standardIdentity2 == '5')anticipated = true;
+			if(standardIdentity2 == '0' || standardIdentity2 == '2' || standardIdentity2 == '5')anticipated = "4,4";
+			if(status == '1' )anticipated = "8,12";
 			
 			//Should it have a Condition Bar
 			if(status == '2' || status == '3' || status == '4' || status == '5')condition = statusValues[parseInt(status)];
@@ -368,7 +369,8 @@ function MilSymbol(SIDCParameter,options){
 			//symbolmodifier11 that are Installations
 			if(symbolmodifier11 == "H")installation = true;
 			//Planned/Anticipated/Suspect symbols should have a dashed outline
-			if(this.frame && (status == 'A' || (['P','A','S','G','M'].indexOf(affiliation) > -1) ) )anticipated = true;
+			if(this.frame && (['P','A','S','G','M'].indexOf(affiliation) > -1))anticipated = "4,4";
+			if(this.frame && status == 'A' )anticipated = "8,12";
 			//Should it have a Condition Bar
 			if(status == 'C')condition = statusValues[2];
 			if(status == 'D')condition = statusValues[3];
@@ -687,9 +689,9 @@ function MilSymbol(SIDCParameter,options){
 			Geometry.setAttribute("fill", "none");
 			Geometry.setAttribute("stroke", this._symbolColors.white["Friend"]);		
 			Geometry.setAttribute("stroke-width", (parseFloat(this.strokeWidth)+1));	
-			Geometry.setAttribute("stroke-dasharray", "4,4");
+			Geometry.setAttribute("stroke-dasharray", symbol.anticipated );
 		//Add the white dashed outline to the frame if we have a frame and the status is Anticipated	
-		if(this.frame && symbol.anticipated ){
+		if(this.fill && this.frame && symbol.anticipated ){
 			Geometry.appendChild(
 				Geometry.ownerDocument.importNode(
 					parseXML(
@@ -839,7 +841,7 @@ function MilSymbol(SIDCParameter,options){
 		Geometry.setAttribute("stroke-width", (this.size>=10?this.strokeWidth:10));
 		
 		//Add a dashed outline to the frame if we are using monocolor and the status is set to A or the affiliation is P,A,S or G.	
-		if(this.monoColor != '' && symbol.anticipated )Geometry.setAttribute("stroke-dasharray", "4,4");
+		if((this.monoColor != '' || !this.fill) && symbol.anticipated )Geometry.setAttribute("stroke-dasharray", symbol.anticipated);
 							
 		Geometry.appendChild(
 			Geometry.ownerDocument.importNode(
