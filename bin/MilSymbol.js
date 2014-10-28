@@ -300,8 +300,9 @@ function MilSymbol(SIDCParameter,options){
 			if(symbolSet == '20')installation = true;
 			
 			//Planned/Anticipated/Suspect symbols should have a dashed outline
-			if(standardIdentity2 == '0' || standardIdentity2 == '2' || standardIdentity2 == '5')anticipated = "4,4";
 			if(status == '1' )anticipated = "8,12";
+			if(standardIdentity2 == '0' || standardIdentity2 == '2' || standardIdentity2 == '5')anticipated = "4,4";
+
 			
 			//Should it have a Condition Bar
 			if(status == '2' || status == '3' || status == '4' || status == '5')condition = statusValues[parseInt(status)];
@@ -369,8 +370,9 @@ function MilSymbol(SIDCParameter,options){
 			//symbolmodifier11 that are Installations
 			if(symbolmodifier11 == "H")installation = true;
 			//Planned/Anticipated/Suspect symbols should have a dashed outline
-			if(this.frame && (['P','A','S','G','M'].indexOf(affiliation) > -1))anticipated = "4,4";
 			if(this.frame && status == 'A' )anticipated = "8,12";
+			if(this.frame && (['P','A','S','G','M'].indexOf(affiliation) > -1))anticipated = "4,4";
+
 			//Should it have a Condition Bar
 			if(status == 'C')condition = statusValues[2];
 			if(status == 'D')condition = statusValues[3];
