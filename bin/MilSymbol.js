@@ -459,6 +459,14 @@ function MilSymbol(SIDCParameter,options){
 				//If battle dimension is unknown and the affiliation is D,L,M,J,K we should not have a symbol
 				if(['D','L','M','J','K'].indexOf(affiliation) > -1) affiliationType = 'none';
 			};	
+			
+			//Forcing unframing of symbols that shouldn't have a frame.
+			if((battledimension=='S')&&["O-----",'ED----','EP----','EV----','ZM----','ZN----','ZI----'].indexOf(functionid) > -1){
+				unframed = true;
+			}
+			if((codingscheme=='E')&&(battledimension=='N')&&["AA----","AB----","AC----","AD----","AE----","AG----","BB----","BC----","BF----","BM----","-C-----","CA----","CB----","CC----","CD----","CE----"].indexOf(functionid) > -1){
+				unframed = true;
+			}
 		
 		}
 
@@ -483,7 +491,8 @@ function MilSymbol(SIDCParameter,options){
 		"hqETC"				: hqETC,
 		"echelonETC"		: echelonETC,
 		"mobility"			: mobility,
-		"functionid" 		: functionid
+		"functionid" 		: functionid,
+		"unframed"			: unframed
 		}
 	}
 
@@ -591,9 +600,7 @@ function MilSymbol(SIDCParameter,options){
 		}
 		
 		//Force unframing of icons that should be unframed. 
-		if((symbol.battledimension=='S')&&["O-----",'ED----','EP----','EV----','ZM----','ZN----','ZI----'].indexOf(symbol.functionid) > -1){
-			frame = false;
-		}
+		if(symbol.unframed)frame = false;
 		if((symbol.battledimension=='U')&&[	"WM----","WMD---",
 											"WMG---","WMGD--","WMGX--","WMGE--","WMGC--","WMGR--","WMGO--",
 											"WMM---","WMMD--","WMMX--","WMME--","WMMC--","WMMR--","WMMO--",
