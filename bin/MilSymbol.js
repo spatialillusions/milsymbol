@@ -248,6 +248,8 @@ function MilSymbol(SIDCParameter,options){
 		var jokerFaker = false;
 		//Is it Civilian
 		var civilian = false;
+		//Does the standard define that the symbol should be unframed
+		var unframed = false;
 		
 		if(!isNaN(symbolSIDC)){ //This is for new number based SIDCs
 			var version  	= 	symbolSIDC.substr(0,2);
@@ -448,6 +450,7 @@ function MilSymbol(SIDCParameter,options){
 				(battledimension == 'G' && functionid.substring(0,3)=='EVC')||
 				(battledimension == 'S' && functionid.charAt(0)=='X')
 			){civilian = true}
+			
 			//Colors will be have to be fixed in symbolColors
 			if(battledimension == 'Z'){
 				if((['P','U','F','N','H','A','S','G','W'].indexOf(affiliation) > -1)) dimensionUnknown = true;
@@ -462,7 +465,7 @@ function MilSymbol(SIDCParameter,options){
 		baseGeometryType = dimensionType + affiliationType;
 
 		return {
-		"battledimension" 	: battledimension,//this is used for unframing, add parameter unframed instead. 
+		"battledimension" 	: battledimension,
 		"civilian"			: civilian,
 		"dimensionTypeUnModified" : dimensionTypeUnModified,
 		"dimensionType"		: dimensionType,
