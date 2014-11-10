@@ -31,7 +31,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 For updates and more information go to http://www.spatialillusions.com
 
 ======================================================================================= */
-console.log("MilSymbol 0.4.5b Copyright (c) 2013 Måns Beckman http://www.spatialillusions.com")
+console.log("MilSymbol 0.4.5b Copyright (c) 2013 Måns Beckman http://www.spatialillusions.com");
 var timings = 0;
 var iii = 0;
 
@@ -110,9 +110,9 @@ function _MilSymbolIcons(fill,frame,strokeWidth,monoColor,civilianColors,colorMo
 				icons['SPACE.M1.LOW EARTH ORBIT (LEO)'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >LEO</text>';
 				icons['SPACE.M1.MEDIUM EARTH ORBIT (MEO)'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >MEO</text>';
 				icons['SPACE.M1.HIGH EARTH ORBIT (HEO)'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >HEO</text>';
-				icons['SPACE.M1.GEOSYNCHRONOUS ORBIT (GSO)'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >GSO</text>'
-				icons['SPACE.M1.GEOSTATIONARY ORBIT (GO)'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >GO</text>'
-				icons['SPACE.M1.MOLNIYA ORBIT (MO)'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >MO</text>'
+				icons['SPACE.M1.GEOSYNCHRONOUS ORBIT (GSO)'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >GSO</text>';
+				icons['SPACE.M1.GEOSTATIONARY ORBIT (GO)'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >GO</text>';
+				icons['SPACE.M1.MOLNIYA ORBIT (MO)'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >MO</text>';
 
 				icons['SPACE.M2.OPTICAL'] = '<text stroke="none" text-anchor="middle" x="100" y="145" font-size="30" >O</text>';
 				icons['SPACE.M2.INFRARED'] = '<text stroke="none" text-anchor="middle" x="100" y="145" font-size="30" >IR</text>';
@@ -242,7 +242,7 @@ function _MilSymbolIcons(fill,frame,strokeWidth,monoColor,civilianColors,colorMo
 		icons['AIR.M1.VIP'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="28" >VIP</text>';
 		icons['AIR.M1.COMBAT SEARCH AND RESCUE'] = ((force2525&&isNaN(SIDC)) ? '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="30" >H</text>':'<text stroke="none" text-anchor="middle" x="100" y="77" font-size="23" >CSAR</text>');
 		icons['AIR.M1.SUPRESSION OF ENEMY AIR DEFENCE'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="23" >SEAD</text>';
-			icons['AIR.M1.UNMANNED AERIAL VEHICLE']  = '<g transform="translate(20,-10),scale(0.8)">' + icons['AIR.ICON.UNMANNED AERIAL VEHICLE'] + '</g>'
+			icons['AIR.M1.UNMANNED AERIAL VEHICLE']  = '<g transform="translate(20,-10),scale(0.8)">' + icons['AIR.ICON.UNMANNED AERIAL VEHICLE'] + '</g>';
 			icons['AIR.M1.BOOM-ONLY'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="30" >B</text>';
 			icons['AIR.M1.DROUGE-ONLY'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="30" >D</text>';
 				//2525D
@@ -252,7 +252,7 @@ function _MilSymbolIcons(fill,frame,strokeWidth,monoColor,civilianColors,colorMo
 				icons['AIR.M1.MULTIMISSION'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >MM</text>';
 				icons['AIR.M1.HIJACKING'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="30" >H</text>';
 				icons['AIR.M1.ASW HELO-LAMPS'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >LP</text>';
-				icons['AIR.M1.ASW HELO – SH-60R'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="23" >60R</text>'
+				icons['AIR.M1.ASW HELO – SH-60R'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="23" >60R</text>';
 
 
 		icons['AIR.M2.HEAVY'] = '<text stroke="none" text-anchor="middle" x="100" y="145" font-size="30" >H</text>';
@@ -387,7 +387,7 @@ function _MilSymbolIcons(fill,frame,strokeWidth,monoColor,civilianColors,colorMo
 			icons['GROUND.ICON.MISSILE.MEDIUM'] = '<line x1="90" y1="90" x2="110" y2="90" /><line x1="90" y1="97" x2="110" y2="97"  />';
 			icons['GROUND.ICON.MISSILE.HEAVY'] = '<line x1="90" y1="90" x2="110" y2="90"  /><line x1="90" y1="97" x2="110" y2="97"  /><line x1="90" y1="104" x2="110" y2="104"  />';
 		icons['GROUND.ICON.MORALE, WELFARE, AND RECREATION'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="30" >MWR</text>';
-		icons['GROUND.ICON.MORTAR'] = '<circle cx="100" cy="115" r="5" fill="none"/><path d="M100,111 l0,-30 M90,90 l10,-10 10,10" fill="none" />'
+		icons['GROUND.ICON.MORTAR'] = '<circle cx="100" cy="115" r="5" fill="none"/><path d="M100,111 l0,-30 M90,90 l10,-10 10,10" fill="none" />';
 		icons['GROUND.ICON.MORTUARY AFFAIRS'] = '<path d="m 90,95 20,0 m -10,-10 0,30 m -15,-35 30,0 0,40 -30,0 z" fill="none"/>';
 				icons['GROUND.ICON.MULTINATIONAL (MN)'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >MN</text>';
 		icons['GROUND.ICON.NAVAL'] = '<path d="m 105,85 c 0,2.761424 -2.23858,5 -5,5 -2.761424,0 -5,-2.238576 -5,-5 0,-2.761424 2.238576,-5 5,-5 2.76142,0 5,2.238576 5,5 z m -20,5 30,0 m -15,0 0,30" fill="none"/><path d="m 83.923,105 c -0.842446,0.0508 0.519951,7.66585 1.077,8.20521 0.324017,0.31374 1.381807,-1.40397 1.78412,-0.96106 6.803781,7.49029 12.911811,7.33568 13.57672,7.29583 0,0 0.0915,-0.002 0.13055,0 0.66491,0.0398 6.77294,0.19446 13.57672,-7.29583 0.40232,-0.44291 1.46011,1.2748 1.78412,0.96106 0.55705,-0.53936 1.91945,-8.15438 1.077,-8.20521 -0.84245,-0.0508 -1.5471,1.54498 -2.62178,2.38715 -1.16069,0.90958 -2.93544,1.27034 -3.00255,1.65345 -0.0529,0.30189 1.93453,1.3145 1.51215,1.80846 -1.989,2.32604 -5.91274,6.16671 -12.26039,6.30376 l -0.13054,1.59143 -0.13055,-1.59143 c -6.347647,-0.13705 -10.271382,-3.97772 -12.260389,-6.30376 -0.422382,-0.49396 1.565034,-1.50657 1.512151,-1.80846 -0.06711,-0.38311 -1.841853,-0.74387 -3.002544,-1.65345 -1.074682,-0.84217 -1.779345,-2.43798 -2.621788,-2.38715 z" stroke="none"/>';	
@@ -530,7 +530,7 @@ function _MilSymbolIcons(fill,frame,strokeWidth,monoColor,civilianColors,colorMo
 			icons['GROUND.M1.LARGE COMMUNICATIONS CONTINGENCY PACKAGE'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >LCCP</text>';
 		icons['GROUND.M1.LARGE EXTENSION NODE'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >LEN</text>';
 		icons['GROUND.M1.MAINTENANCE'] = '<path fill="none" d="m 84,70 32,0 m 4,-5 c -5,0 -5,10 0,10 M 80,65 c 5,0 5,10 0,10"/>';
-			icons['GROUND.M1.MEDEVAC'] = icons['AIR.M1.MEDEVAC']
+			icons['GROUND.M1.MEDEVAC'] = icons['AIR.M1.MEDEVAC'];
 		icons['GROUND.M1.METEOROLOGICAL'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >MET</text>';
 		icons['GROUND.M1.MINE COUNTERMEASURE'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >MCM</text>';
 		icons['GROUND.M1.MISSILE'] = '<path d="M95,80 L95,60 C95,55 105,55 105,60 L105,80 M100,80 L100,55"  fill="none"/>';
@@ -545,7 +545,7 @@ function _MilSymbolIcons(fill,frame,strokeWidth,monoColor,civilianColors,colorMo
 		icons['GROUND.M1.NATO MEDICAL ROLE 2'] = '<text stroke="none" text-anchor="middle" x="120" y="77" font-size="25" >2</text>';
 		icons['GROUND.M1.NATO MEDICAL ROLE 3'] = '<text stroke="none" text-anchor="middle" x="120" y="77" font-size="25" >3</text>';
 		icons['GROUND.M1.NATO MEDICAL ROLE 4'] = '<text stroke="none" text-anchor="middle" x="120" y="77" font-size="25" >4</text>';
-		icons['GROUND.M1.NAVAL'] = _MilSymbol.translate(0,-35,_MilSymbol.scale(0.6, icons['GROUND.ICON.NAVAL']))
+		icons['GROUND.M1.NAVAL'] = _MilSymbol.translate(0,-35,_MilSymbol.scale(0.6, icons['GROUND.ICON.NAVAL']));
 		icons['GROUND.M1.NODE CENTRE'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >NC</text>';
 		icons['GROUND.M1.NUCLEAR'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="30" >N</text>';
 		icons['GROUND.M1.OPERATIONS'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >OPS</text>';
@@ -646,7 +646,7 @@ function _MilSymbolIcons(fill,frame,strokeWidth,monoColor,civilianColors,colorMo
 			icons['GROUND.M2.TARGET ACQUISITION'] = '<text stroke="none" text-anchor="middle" x="100" y="140" font-size="25" >TA</text>';
 		icons['GROUND.M2.TOWED'] = '<path  d="M70,120 l60,0" fill="none"/><circle fill="none" cx="65" cy="120" r="5" /><circle fill="none" cx="135" cy="120" r="5" />';
 		icons['GROUND.M2.TROOP'] = '<text stroke="none" text-anchor="middle" x="100" y="145" font-size="30" >T</text>';
-			icons['GROUND.M2.TRACKED'] = '<path d="M 70,120 l 60,0 c10,0 10,10 0,10 l -60,0 c-10,0 -10,-10 0,-10"  fill="none" />'
+			icons['GROUND.M2.TRACKED'] = '<path d="M 70,120 l 60,0 c10,0 10,10 0,10 l -60,0 c-10,0 -10,-10 0,-10"  fill="none" />';
 			icons['GROUND.M2.TRUCK'] = '<path  d="M60,120 l80,0" fill="none"/><circle fill="none" cx="65" cy="125" r="5" /><circle fill="none" cx="135" cy="125" r="5" />';
 				icons['GROUND.M2.UTILITY'] = '<text stroke="none" text-anchor="middle" x="100" y="145" font-size="30" >U</text>';
 		icons['GROUND.M2.VERTICAL OR SHORT TAKE-OFF AND LANDING '] = '<text stroke="none" text-anchor="middle" x="100" y="135" font-size="20" >VSTOL</text>';
@@ -670,7 +670,7 @@ function _MilSymbolIcons(fill,frame,strokeWidth,monoColor,civilianColors,colorMo
 		icons['GROUND.EQUIPMENT.DIRECT FIRE GUN'] = '<path d="m 100,60 0,80 m 15,-60 0,40 m -30,-40 0,40" fill="none" />';
 		icons['GROUND.EQUIPMENT.RECOILLESS GUN'] = '<path d="m 85,75 15,-15 15,15 m 0,5 0,40 m -30,-40 0,40 m 15,-60 0,80" fill="none" />';
 		icons['GROUND.EQUIPMENT.HOWITZER'] = '<circle cx="100" cy="130" r="10" fill="none"/><path d="m 115,80 0,40 m -30,-40 0,40 m 15,-60 0,60" fill="none" />' + (force2525?'':'<path d="M 85,75 100,60 115,75" fill="none" />');
-			icons['GROUND.EQUIPMENT.HOWITZER TRACKED'] = '<path d="M 70,120 l 60,0 c10,0 10,10 0,10 l -60,0 c-10,0 -10,-10 0,-10"  fill="none" />'
+			icons['GROUND.EQUIPMENT.HOWITZER TRACKED'] = '<path d="M 70,120 l 60,0 c10,0 10,10 0,10 l -60,0 c-10,0 -10,-10 0,-10"  fill="none" />';
 		icons['GROUND.EQUIPMENT.MISSILE LAUNCHER'] = '<path d="m 100,140 0,-80 m -15,80 0,-65 c 0,-20 30,-20 30,0 l 0,65" fill="none" />';
 		icons['GROUND.EQUIPMENT.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'] = '<path d="m 85,140 30,0 c 0,-20 -30,-20 -30,0 z m 15,-15 0,-65 m -15,80 0,-65 c 0,-20 30,-20 30,0 l 0,65" fill="none" />';
 			icons['GROUND.EQUIPMENT.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR'] = '<text stroke="none" text-anchor="middle" x="132" y="110" font-size="25" >R</text>';
@@ -724,7 +724,7 @@ function _MilSymbolIcons(fill,frame,strokeWidth,monoColor,civilianColors,colorMo
 		icons['GROUND.EQUIPMENT.MINE CLEARING VEHICLE'] = '';		
 		icons['GROUND.EQUIPMENT.MINE LAYING EQUIPMENT'] = '';			
 		icons['GROUND.EQUIPMENT.MINE LAYING VEHICLE'] = '<path d="m 90,85 20,30 m 0,-30 -20,30 m 10,-30 0,30" fill="none" /><circle cx="100" cy="100" r="10"/>';
-			icons['GROUND.EQUIPMENT.MINE SCATTERABLE'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >S</text><circle cx="85" cy="115" r="5" fill="none"/><circle cx="100" cy="115" r="5" fill="none"/><circle cx="115" cy="115" r="5" fill="none"/>'
+			icons['GROUND.EQUIPMENT.MINE SCATTERABLE'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >S</text><circle cx="85" cy="115" r="5" fill="none"/><circle cx="100" cy="115" r="5" fill="none"/><circle cx="115" cy="115" r="5" fill="none"/>';
 		
 		icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] = '<path fill="none" d="m 70,70 c 0,15 60,15 60,0 m -60,60 60,0 m -60,-60 0,60 0,0 m 60,-60 0,60" />';
 			icons['GROUND.EQUIPMENT.UTILITY VEHICLE BACKHOE'] = '<path fill="none" d="M 130,130 100,80 75,95 75,95" /><path d="M 75,105 85,95 75,95 z" />';
@@ -745,7 +745,7 @@ function _MilSymbolIcons(fill,frame,strokeWidth,monoColor,civilianColors,colorMo
 		icons['GROUND.EQUIPMENT.WATER VEHICLE'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + '<path fill="none" d="m 70,95 c 10,0 0,10 10,10 10,0 0,-10 10,-10 10,0 0,10 10,10 10,0 0,-10 10,-10 10,0 0,10 10,10 10,0 0,-10 10,-10" />';		
 		icons['GROUND.EQUIPMENT.TRAIN LOCOMOTIVE'] = '<path fill="none" d="m 70,70 0,60 60,0 0,-30 -30,0 0,-30 z" />';		
 		icons['GROUND.EQUIPMENT.RAILCAR'] = '';		
-		icons['GROUND.EQUIPMENT.CBRN EQUIPMENT'] = '<path  d="M80,140 c0,-20 10,-60 50,-63 m-10,63 c0,-20 -10,-60 -50,-63 " fill="none"/><circle cx="70" cy="85" r="8"/><circle cx="130" cy="85" r="8"/>'
+		icons['GROUND.EQUIPMENT.CBRN EQUIPMENT'] = '<path  d="M80,140 c0,-20 10,-60 50,-63 m-10,63 c0,-20 -10,-60 -50,-63 " fill="none"/><circle cx="70" cy="85" r="8"/><circle cx="130" cy="85" r="8"/>';
 		icons['GROUND.EQUIPMENT.COMPUTER SYSTEM'] = '';		
 		icons['GROUND.EQUIPMENT.LASER'] = '<path fill="none" d="m 100,55 0,25 10,5 -20,5 20,5 -20,5 10,5 0,15 10,5 -20,5 20,5 -20,5 20,5 M 90,65 100,55 110,65" />';
 		
@@ -850,7 +850,7 @@ function _MilSymbolIcons(fill,frame,strokeWidth,monoColor,civilianColors,colorMo
 			icons['SEA.ICON.PATROL GUN'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >PG</text>';
 		icons['SEA.ICON.PATROL SHIP'] = '';
 		icons['SEA.ICON.MILITARY SPEEDBOAT'] = '<path stroke="none" d="m 120,120 -40,0 -15,-25 15,0 5,-15 10,0 -5,15 45,0 z"/>';
-		icons['SEA.ICON.MILITARY SPEEDBOAT, RIGID-HULL INFLATABLE BOAT'] = '<path stroke="none" d="M 85 80 L 80 95 L 65 95 L 80 120 L 120 120 L 135 95 L 90 95 L 95 80 L 85 80 z M 87 100.6875 L 93.09375 100.6875 C 94.623689 100.68751 95.747386 100.8021 96.4375 101.0625 C 97.134103 101.31642 97.677071 101.77996 98.09375 102.4375 C 98.510404 103.09506 98.718737 103.84116 98.71875 104.6875 C 98.718737 105.76173 98.412748 106.67188 97.78125 107.375 C 97.149728 108.07162 96.194 108.50521 94.9375 108.6875 C 95.56249 109.05209 96.096344 109.43881 96.5 109.875 C 96.910145 110.3112 97.434884 111.10547 98.125 112.21875 L 99.875 115 L 96.4375 115 L 94.34375 111.875 C 93.601554 110.76172 93.08593 110.06771 92.8125 109.78125 C 92.539056 109.48829 92.243483 109.29167 91.9375 109.1875 C 91.631504 109.07683 91.164057 109.03126 90.5 109.03125 L 89.90625 109.03125 L 89.90625 115 L 87 115 L 87 100.6875 z M 101.46875 100.6875 L 107.1875 100.6875 C 108.3203 100.68751 109.16536 100.74611 109.71875 100.84375 C 110.27864 100.93491 110.78254 101.10678 111.21875 101.40625 C 111.66145 101.70574 112.01952 102.12371 112.3125 102.625 C 112.60546 103.1198 112.74999 103.66277 112.75 104.28125 C 112.74999 104.95183 112.58332 105.56511 112.21875 106.125 C 111.86067 106.6849 111.36848 107.12631 110.75 107.40625 C 111.62238 107.66016 112.28124 108.07553 112.75 108.6875 C 113.21874 109.29948 113.46874 110.01693 113.46875 110.84375 C 113.46874 111.4948 113.30598 112.13151 113 112.75 C 112.70051 113.36198 112.27733 113.84766 111.75 114.21875 C 111.22916 114.58333 110.58072 114.82161 109.8125 114.90625 C 109.33072 114.95833 108.18619 114.98698 106.34375 115 L 101.46875 115 L 101.46875 100.6875 z M 104.34375 103.0625 L 104.34375 106.375 L 106.25 106.375 C 107.37629 106.37501 108.0703 106.34506 108.34375 106.3125 C 108.83853 106.25391 109.22004 106.09246 109.5 105.8125 C 109.78645 105.52605 109.93749 105.14975 109.9375 104.6875 C 109.93749 104.2448 109.80989 103.89845 109.5625 103.625 C 109.32161 103.34506 108.98176 103.18361 108.5 103.125 C 108.21353 103.09246 107.36067 103.06251 106 103.0625 L 104.34375 103.0625 z M 89.90625 103.09375 L 89.90625 106.75 L 92.03125 106.75 C 93.417961 106.75001 94.279939 106.6797 94.625 106.5625 C 94.970043 106.44532 95.242178 106.25522 95.4375 105.96875 C 95.632802 105.6823 95.74999 105.3047 95.75 104.875 C 95.74999 104.39324 95.604157 104.01173 95.34375 103.71875 C 95.089834 103.41928 94.749991 103.23439 94.28125 103.15625 C 94.046867 103.12371 93.328117 103.09376 92.15625 103.09375 L 89.90625 103.09375 z M 104.34375 108.75 L 104.34375 112.59375 L 107.03125 112.59375 C 108.07291 112.59375 108.72004 112.5586 109 112.5 C 109.42968 112.42188 109.79556 112.23698 110.0625 111.9375 C 110.33593 111.63151 110.46874 111.22657 110.46875 110.71875 C 110.46874 110.28907 110.36457 109.92448 110.15625 109.625 C 109.94791 109.32553 109.64713 109.10547 109.25 108.96875 C 108.85937 108.83204 108.0026 108.75001 106.6875 108.75 L 104.34375 108.75 z "/>'+ '<text  fill="'+ (force2525 ? iconFillColor : !frame?iconFillColor : 'none') + '" stroke="none" text-anchor="middle" x="100" y="115" font-size="20" >RB</text>'
+		icons['SEA.ICON.MILITARY SPEEDBOAT, RIGID-HULL INFLATABLE BOAT'] = '<path stroke="none" d="M 85 80 L 80 95 L 65 95 L 80 120 L 120 120 L 135 95 L 90 95 L 95 80 L 85 80 z M 87 100.6875 L 93.09375 100.6875 C 94.623689 100.68751 95.747386 100.8021 96.4375 101.0625 C 97.134103 101.31642 97.677071 101.77996 98.09375 102.4375 C 98.510404 103.09506 98.718737 103.84116 98.71875 104.6875 C 98.718737 105.76173 98.412748 106.67188 97.78125 107.375 C 97.149728 108.07162 96.194 108.50521 94.9375 108.6875 C 95.56249 109.05209 96.096344 109.43881 96.5 109.875 C 96.910145 110.3112 97.434884 111.10547 98.125 112.21875 L 99.875 115 L 96.4375 115 L 94.34375 111.875 C 93.601554 110.76172 93.08593 110.06771 92.8125 109.78125 C 92.539056 109.48829 92.243483 109.29167 91.9375 109.1875 C 91.631504 109.07683 91.164057 109.03126 90.5 109.03125 L 89.90625 109.03125 L 89.90625 115 L 87 115 L 87 100.6875 z M 101.46875 100.6875 L 107.1875 100.6875 C 108.3203 100.68751 109.16536 100.74611 109.71875 100.84375 C 110.27864 100.93491 110.78254 101.10678 111.21875 101.40625 C 111.66145 101.70574 112.01952 102.12371 112.3125 102.625 C 112.60546 103.1198 112.74999 103.66277 112.75 104.28125 C 112.74999 104.95183 112.58332 105.56511 112.21875 106.125 C 111.86067 106.6849 111.36848 107.12631 110.75 107.40625 C 111.62238 107.66016 112.28124 108.07553 112.75 108.6875 C 113.21874 109.29948 113.46874 110.01693 113.46875 110.84375 C 113.46874 111.4948 113.30598 112.13151 113 112.75 C 112.70051 113.36198 112.27733 113.84766 111.75 114.21875 C 111.22916 114.58333 110.58072 114.82161 109.8125 114.90625 C 109.33072 114.95833 108.18619 114.98698 106.34375 115 L 101.46875 115 L 101.46875 100.6875 z M 104.34375 103.0625 L 104.34375 106.375 L 106.25 106.375 C 107.37629 106.37501 108.0703 106.34506 108.34375 106.3125 C 108.83853 106.25391 109.22004 106.09246 109.5 105.8125 C 109.78645 105.52605 109.93749 105.14975 109.9375 104.6875 C 109.93749 104.2448 109.80989 103.89845 109.5625 103.625 C 109.32161 103.34506 108.98176 103.18361 108.5 103.125 C 108.21353 103.09246 107.36067 103.06251 106 103.0625 L 104.34375 103.0625 z M 89.90625 103.09375 L 89.90625 106.75 L 92.03125 106.75 C 93.417961 106.75001 94.279939 106.6797 94.625 106.5625 C 94.970043 106.44532 95.242178 106.25522 95.4375 105.96875 C 95.632802 105.6823 95.74999 105.3047 95.75 104.875 C 95.74999 104.39324 95.604157 104.01173 95.34375 103.71875 C 95.089834 103.41928 94.749991 103.23439 94.28125 103.15625 C 94.046867 103.12371 93.328117 103.09376 92.15625 103.09375 L 89.90625 103.09375 z M 104.34375 108.75 L 104.34375 112.59375 L 107.03125 112.59375 C 108.07291 112.59375 108.72004 112.5586 109 112.5 C 109.42968 112.42188 109.79556 112.23698 110.0625 111.9375 C 110.33593 111.63151 110.46874 111.22657 110.46875 110.71875 C 110.46874 110.28907 110.36457 109.92448 110.15625 109.625 C 109.94791 109.32553 109.64713 109.10547 109.25 108.96875 C 108.85937 108.83204 108.0026 108.75001 106.6875 108.75 L 104.34375 108.75 z "/>'+ '<text  fill="'+ (force2525 ? iconFillColor : !frame?iconFillColor : 'none') + '" stroke="none" text-anchor="middle" x="100" y="115" font-size="20" >RB</text>';
 		icons['SEA.ICON.MILITARY JETSKI'] = '<path stroke="none" d="m 135,105 0,15 -60,0 -10,-15 20,-25 10,0 0,10 -5,0 -5,15 z"/>';
 		icons['SEA.ICON.UNMANNED SURFACE WATER VEHICLE'] = icons['AIR.ICON.UNMANNED AERIAL VEHICLE'];
 		icons['SEA.ICON.NAVY TASK ORGANIZATION UNIT'] = '<path d="m 110,80 15,15 0,25 M 90,80 75,95 l 0,25" fill="none"/>' + (force2525?'<path d="m 100,80 -15,15 0,25 30,0 0,-25 -15,-15"/>':'');
@@ -1135,7 +1135,7 @@ function _MilSymbolIcons(fill,frame,strokeWidth,monoColor,civilianColors,colorMo
 			icons['STABILITY.ICON.BLACK LIST LOCATION'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >BLK</text>';
 			icons['STABILITY.ICON.BOMB'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >BOMB</text>';
 			icons['STABILITY.ICON.BOOBY TRAP'] = '<path d="m 85,105 15,-25 15,25 m -35,5 c 0,-10 40,-10 40,0 0,10 -40,10 -40,0 z"  fill="none" />';	
-		icons['STABILITY.ICON.COMPOSITE LOSS'] = '<path d="m 100,85 0,30 m -35,-15 45,0 m 20,0 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.522847 4.47715,-10 10,-10 5.52285,0 10,4.477153 10,10 z" fill="none" />'
+		icons['STABILITY.ICON.COMPOSITE LOSS'] = '<path d="m 100,85 0,30 m -35,-15 45,0 m 20,0 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.522847 4.47715,-10 10,-10 5.52285,0 10,4.477153 10,10 z" fill="none" />';
 		icons['STABILITY.ICON.DEMONSTRATION'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >MASS</text>';
 		icons['STABILITY.ICON.DRIVE-BY SHOOTING'] = '<path d="m 95,85 5,-5 5,5 m -5,-5 0,30 m -15,0 30,0 m 5,5 c 0,2.76142 -2.23858,5 -5,5 -2.76142,0 -5,-2.23858 -5,-5 0,-2.76142 2.23858,-5 5,-5 2.76142,0 5,2.23858 5,5 z m -30,0 c 0,2.76142 -2.238576,5 -5,5 -2.761424,0 -5,-2.23858 -5,-5 0,-2.76142 2.238576,-5 5,-5 2.761424,0 5,2.23858 5,5 z"  fill="none" />';	
 		icons['STABILITY.ICON.DRUG RELATED ACTIVITIES'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >DRUG</text>';
@@ -1143,7 +1143,7 @@ function _MilSymbolIcons(fill,frame,strokeWidth,monoColor,civilianColors,colorMo
 		icons['STABILITY.ICON.EXTORTION'] = '<text stroke="none" text-anchor="middle" x="100" y="130" font-size="80" >$</text>';
 			icons['STABILITY.ICON.FOOD DISTRIBUTION'] = '<path d="m 105,85 c -5,10 -5,20 0,30 m 0,-30 c -20,0 -20,30 0,30" fill="none" />' + {"Unknown" : '<path d="M35,120 l130,0 " fill="none" />',"Friend" : '<path d="M25,120 l150,0 " fill="none" />',"Neutral" : '<path d="M45,120 l110,0 " fill="none" />',"Hostile" : '<path d="M50,120 l100,0 " fill="none" />'}[affiliationType];
 		icons['STABILITY.ICON.GRAFFITI'] = '<path d="m 110,80 c -10,0 -10,10 0,10 10,0 10,10 0,10 -10,0 -10,10 0,10 10,0 10,10 0,10 M 90,80 c -10,0 -10,10 0,10 10,0 10,10 0,10 -10,0 -10,10 0,10 10,0 10,10 0,10"  fill="none" />';	
-		icons['STABILITY.ICON.GROUP'] = '<path d="m 133,90 c 0,10 -15,10 -15,0 0,-10 15,-10 15,0 z m -8,7.3 0,25 m -10,-20 20,0 m -52,-12.3 c 0,10 -15,10 -15,0 0,-10 15,-10 15,0 z m -8,7.3 0,25 m -10,-20 20,0 m 23,-7.3 c 0,10 -15,10 -15,0 0,-10 15,-10 15,0 z m -8,7.3 0,25 m -10,-20 20,0" fill="none" />'
+		icons['STABILITY.ICON.GROUP'] = '<path d="m 133,90 c 0,10 -15,10 -15,0 0,-10 15,-10 15,0 z m -8,7.3 0,25 m -10,-20 20,0 m -52,-12.3 c 0,10 -15,10 -15,0 0,-10 15,-10 15,0 z m -8,7.3 0,25 m -10,-20 20,0 m 23,-7.3 c 0,10 -15,10 -15,0 0,-10 15,-10 15,0 z m -8,7.3 0,25 m -10,-20 20,0" fill="none" />';
 			icons['STABILITY.ICON.HIJACKING (AIRPLANE)'] = '<path fill="'+ (force2525 ? iconFillColor : 'none') + '" d="m 70,95 0,10 65,0 0,-10 z m 55,10 0,10 5,0 0,-10 z m 0,-10 0,-10 5,0 0,10 z m -45,10 0,15 10,0 0,-15 z m 0,-10 0,-15 10,0 0,15 z" />';
 			icons['STABILITY.ICON.HIJACKING (BOAT)'] = '<path fill="'+ (force2525 ? iconFillColor : !frame?iconFillColor : 'none') + '" d="m 105,80 0,20 20,0 z m -5,25 0,-25 m -30,25 10,15 40,0 10,-15 z"/>';
 			icons['STABILITY.ICON.GRAY LIST LOCATION'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >GRAY</text>';
@@ -2682,7 +2682,7 @@ function _MilSymbolinitLetterSIDC(icons,force2525){
 		//1.X.4.1.1.3
 		sID['S-S-CLCC--'] = icons['SEA.ICON.CRUISER'];
 		//1.X.4.1.1.4
-		sID['S-S-CLDD--'] = icons['SEA.ICON.DESTROYER']
+		sID['S-S-CLDD--'] = icons['SEA.ICON.DESTROYER'];
 		//1.X.4.1.1.5
 		sID['S-S-CLFF--'] = icons['SEA.ICON.FRIGATE'];
 		//N/A
@@ -3280,7 +3280,7 @@ function _MilSymbolinitLetterSIDC(icons,force2525){
 		//5.X.2.3
 		sID['O-L-W-----'] = icons['STABILITY.ICON.WHITE LIST LOCATION'];
 		//N/A
-		sID['O-L-M-----'] = icons['STABILITY.ICON.MASS GRAVE LOCATION']
+		sID['O-L-M-----'] = icons['STABILITY.ICON.MASS GRAVE LOCATION'];
 
 		//5.X.3.1
 		sID['O-O-P-----'] = icons['STABILITY.ICON.PATROLLING'];
@@ -4232,74 +4232,74 @@ function _MilSymbolInitNumberSIDC(symbolSet,icons,force2525){
 		sIDm1['08'] = icons['GROUND.M1.CLOSE PROTECTION'];
 		sIDm1['09'] = icons['GROUND.M1.COMBAT'];
 		sIDm1['10'] = icons['GROUND.M1.COMMAND AND CONTROL'];		
-		sIDm1['11'] = icons['GROUND.M1.COMMUNICATIONS CONTINGENCY PACKAGE']
-		sIDm1['12'] = icons['GROUND.M1.CONSTRUCTION'] 
-		sIDm1['13'] = icons['GROUND.M1.CROSS CULTURAL COMMUNICATION']
-		sIDm1['14'] = icons['GROUND.M1.CROWD AND RIOT CONTROL']
-		sIDm1['15'] = icons['GROUND.M1.DECONTAMINATION']
-		sIDm1['16'] = icons['GROUND.M1.DETENTION'] 
+		sIDm1['11'] = icons['GROUND.M1.COMMUNICATIONS CONTINGENCY PACKAGE'];
+		sIDm1['12'] = icons['GROUND.M1.CONSTRUCTION'];
+		sIDm1['13'] = icons['GROUND.M1.CROSS CULTURAL COMMUNICATION'];
+		sIDm1['14'] = icons['GROUND.M1.CROWD AND RIOT CONTROL'];
+		sIDm1['15'] = icons['GROUND.M1.DECONTAMINATION'];
+		sIDm1['16'] = icons['GROUND.M1.DETENTION'];
 		sIDm1['17'] = icons['GROUND.M1.DIRECT COMMUNICATIONS'];
 		sIDm1['18'] = icons['GROUND.M1.DIVING'];
-		sIDm1['19'] = icons['GROUND.M1.DIVISION']
-		sIDm1['20'] = icons['GROUND.M1.DOG']
+		sIDm1['19'] = icons['GROUND.M1.DIVISION'];
+		sIDm1['20'] = icons['GROUND.M1.DOG'];
 		sIDm1['21'] = icons['GROUND.M1.DRILLING'];
-		sIDm1['22'] = icons['GROUND.M1.ELECTRO-OPTICAL']
-		sIDm1['23'] = icons['GROUND.M1.ENHANCED']
-		sIDm1['24'] = icons['GROUND.M1.EXPLOSIVE ORDNANCE DISPOSAL']
-		sIDm1['25'] = icons['GROUND.M1.FIRE DIRECTION CENTRE']
-		sIDm1['26'] = icons['GROUND.M1.FORCE']
-		sIDm1['27'] = icons['GROUND.M1.FORWARD']
-		sIDm1['28'] = icons['GROUND.M1.GROUND STATION MODULE']
-		sIDm1['29'] = icons['GROUND.M1.LANDING SUPPORT']
-		sIDm1['30'] = icons['GROUND.M1.LARGE EXTENSION NODE']
+		sIDm1['22'] = icons['GROUND.M1.ELECTRO-OPTICAL'];
+		sIDm1['23'] = icons['GROUND.M1.ENHANCED'];
+		sIDm1['24'] = icons['GROUND.M1.EXPLOSIVE ORDNANCE DISPOSAL'];
+		sIDm1['25'] = icons['GROUND.M1.FIRE DIRECTION CENTRE'];
+		sIDm1['26'] = icons['GROUND.M1.FORCE'];
+		sIDm1['27'] = icons['GROUND.M1.FORWARD'];
+		sIDm1['28'] = icons['GROUND.M1.GROUND STATION MODULE'];
+		sIDm1['29'] = icons['GROUND.M1.LANDING SUPPORT'];
+		sIDm1['30'] = icons['GROUND.M1.LARGE EXTENSION NODE'];
 		sIDm1['31'] = icons['GROUND.M1.MAINTENANCE'];
-		sIDm1['32'] = icons['GROUND.M1.METEOROLOGICAL']
-		sIDm1['33'] = icons['GROUND.M1.MINE COUNTERMEASURE']
-		sIDm1['34'] = icons['GROUND.M1.MISSILE']
+		sIDm1['32'] = icons['GROUND.M1.METEOROLOGICAL'];
+		sIDm1['33'] = icons['GROUND.M1.MINE COUNTERMEASURE'];
+		sIDm1['34'] = icons['GROUND.M1.MISSILE'];
 		sIDm1['35'] = icons['GROUND.M1.(MOBILE) ADVISOR AND SUPPORT'];
-		sIDm1['36'] = icons['GROUND.M1.MOBILE SUBSCRIBER EQUIPMENT']
-		sIDm1['37'] = icons['GROUND.M1.MOBILITY SUPPORT'] 
-		sIDm1['38'] = icons['GROUND.M1.MOVEMENT CONTROL CENTRE']
-		sIDm1['39'] = icons['GROUND.M1.MULTINATIONAL']
-		sIDm1['40'] = icons['GROUND.M1.MULTINATIONAL SPECIALIZED UNIT']
-		sIDm1['41'] = icons['GROUND.M1.MULTIPLE ROCKET LAUNCHER']
+		sIDm1['36'] = icons['GROUND.M1.MOBILE SUBSCRIBER EQUIPMENT'];
+		sIDm1['37'] = icons['GROUND.M1.MOBILITY SUPPORT'];
+		sIDm1['38'] = icons['GROUND.M1.MOVEMENT CONTROL CENTRE'];
+		sIDm1['39'] = icons['GROUND.M1.MULTINATIONAL'];
+		sIDm1['40'] = icons['GROUND.M1.MULTINATIONAL SPECIALIZED UNIT'];
+		sIDm1['41'] = icons['GROUND.M1.MULTIPLE ROCKET LAUNCHER'];
 		sIDm1['42'] = icons['GROUND.M1.NATO MEDICAL ROLE 1'];
 		sIDm1['43'] = icons['GROUND.M1.NATO MEDICAL ROLE 2'];
 		sIDm1['44'] = icons['GROUND.M1.NATO MEDICAL ROLE 3'];
 		sIDm1['45'] = icons['GROUND.M1.NATO MEDICAL ROLE 4'];
-		sIDm1['46'] = icons['GROUND.M1.NAVAL']
-		sIDm1['47'] = icons['GROUND.M1.NODE CENTRE']
-		sIDm1['48'] = icons['GROUND.M1.NUCLEAR']
-		sIDm1['49'] = icons['GROUND.M1.OPERATIONS']
-		sIDm1['50'] = icons['GROUND.M1.RADAR']
-		sIDm1['51'] = icons['GROUND.M1.RADIO FREQUENCY IDENTIFICATION (RFID) INTERROGATOR/ SENSOR']
-		sIDm1['52'] = icons['GROUND.M1.RADIOLOGICAL']
-		sIDm1['53'] = icons['GROUND.M1.SEARCH AND RESCUE']
-		sIDm1['54'] = icons['GROUND.M1.SECURITY']
+		sIDm1['46'] = icons['GROUND.M1.NAVAL'];
+		sIDm1['47'] = icons['GROUND.M1.NODE CENTRE'];
+		sIDm1['48'] = icons['GROUND.M1.NUCLEAR'];
+		sIDm1['49'] = icons['GROUND.M1.OPERATIONS'];
+		sIDm1['50'] = icons['GROUND.M1.RADAR'];
+		sIDm1['51'] = icons['GROUND.M1.RADIO FREQUENCY IDENTIFICATION (RFID) INTERROGATOR/ SENSOR'];
+		sIDm1['52'] = icons['GROUND.M1.RADIOLOGICAL'];
+		sIDm1['53'] = icons['GROUND.M1.SEARCH AND RESCUE'];
+		sIDm1['54'] = icons['GROUND.M1.SECURITY'];
 		sIDm1['55'] = icons['GROUND.M1.SENSOR'];
-		sIDm1['56'] = icons['GROUND.M1.SENSOR CONTROL MODULE']
+		sIDm1['56'] = icons['GROUND.M1.SENSOR CONTROL MODULE'];
 		sIDm1['57'] = icons['GROUND.M1.SIGNALS INTELLIGENCE'];
-		sIDm1['58'] = icons['GROUND.M1.SINGLE SHELTER SWITCH']
-		sIDm1['59'] = icons['GROUND.M1.SINGLE ROCKET LAUNCHER']
-		sIDm1['60'] = icons['GROUND.M1.SMOKE']
-		sIDm1['61'] = icons['GROUND.M1.SNIPER']
-		sIDm1['62'] = icons['GROUND.M1.SOUND RANGING']
-		sIDm1['63'] = icons['GROUND.M1.SPECIAL OPERATIONS FORCES (SOF)']
-		sIDm1['64'] = icons['GROUND.M1.SPECIAL WEAPONS AND TACTICS']
+		sIDm1['58'] = icons['GROUND.M1.SINGLE SHELTER SWITCH'];
+		sIDm1['59'] = icons['GROUND.M1.SINGLE ROCKET LAUNCHER'];
+		sIDm1['60'] = icons['GROUND.M1.SMOKE'];
+		sIDm1['61'] = icons['GROUND.M1.SNIPER'];
+		sIDm1['62'] = icons['GROUND.M1.SOUND RANGING'];
+		sIDm1['63'] = icons['GROUND.M1.SPECIAL OPERATIONS FORCES (SOF)'];
+		sIDm1['64'] = icons['GROUND.M1.SPECIAL WEAPONS AND TACTICS'];
 		sIDm1['65'] = icons['GROUND.M1.SURVEY'];
-		sIDm1['66'] = icons['GROUND.M1.TACTICAL EXPLOITATION']
-		sIDm1['67'] = icons['GROUND.M1.TARGET ACQUISITION']
+		sIDm1['66'] = icons['GROUND.M1.TACTICAL EXPLOITATION'];
+		sIDm1['67'] = icons['GROUND.M1.TARGET ACQUISITION'];
 		sIDm1['68'] = icons['GROUND.M1.TOPOGRAPHIC'];
-		sIDm1['69'] = icons['GROUND.M1.UTILITY']
+		sIDm1['69'] = icons['GROUND.M1.UTILITY'];
 		sIDm1['70'] = icons['GROUND.M1.VIDEO IMAGERY'];
-		sIDm1['71'] = icons['GROUND.M1.ACCIDENT']
-		sIDm1['72'] = icons['GROUND.M1.OTHER']
-		sIDm1['73'] = icons['GROUND.M1.CIVILIAN']
-		sIDm1['74'] = icons['GROUND.M1.ANTISUBMARINE WARFARE']
-		sIDm1['75'] = icons['GROUND.M1.MEDEVAC']
-		sIDm1['76'] = icons['GROUND.M1.RANGER']
-		sIDm1['77'] = icons['GROUND.M1.SUPPORT']
-		sIDm1['78'] = icons['GROUND.M2.AVIATION']
+		sIDm1['71'] = icons['GROUND.M1.ACCIDENT'];
+		sIDm1['72'] = icons['GROUND.M1.OTHER'];
+		sIDm1['73'] = icons['GROUND.M1.CIVILIAN'];
+		sIDm1['74'] = icons['GROUND.M1.ANTISUBMARINE WARFARE'];
+		sIDm1['75'] = icons['GROUND.M1.MEDEVAC'];
+		sIDm1['76'] = icons['GROUND.M1.RANGER'];
+		sIDm1['77'] = icons['GROUND.M1.SUPPORT'];
+		sIDm1['78'] = icons['GROUND.M2.AVIATION'];
 		
 		
 		sIDm2['01'] = icons['GROUND.M2.AIRBORNE'];
@@ -4312,59 +4312,59 @@ function _MilSymbolInitNumberSIDC(symbolSet,icons,force2525){
 		sIDm2['08'] = icons['GROUND.M2.CONTROL'];
 		sIDm2['09'] = icons['GROUND.M2.DECONTAMINATION'];
 		sIDm2['10'] = icons['GROUND.M2.DEMOLITION'];
-		sIDm2['11'] = icons['GROUND.M2.DENTAL']
-		sIDm2['12'] = icons['GROUND.M2.DIGITAL']
+		sIDm2['11'] = icons['GROUND.M2.DENTAL'];
+		sIDm2['12'] = icons['GROUND.M2.DIGITAL'];
 		sIDm2['13'] = icons['GROUND.M2.ENHANCED POSITION LOCATION REPORTING SYSTEM'];
-		sIDm2['14'] = icons['GROUND.M2.EQUIPMENT']
-		sIDm2['15'] = icons['GROUND.M2.HEAVY']
-		sIDm2['16'] = icons['GROUND.M2.HIGH ALTITUDE']
+		sIDm2['14'] = icons['GROUND.M2.EQUIPMENT'];
+		sIDm2['15'] = icons['GROUND.M2.HEAVY'];
+		sIDm2['16'] = icons['GROUND.M2.HIGH ALTITUDE'];
 		sIDm2['17'] = icons['GROUND.M2.INTERMODAL'];
-		sIDm2['18'] = icons['GROUND.M2.INTENSIVE CARE']
-		sIDm2['19'] = icons['GROUND.M2.LIGHT']
-		sIDm2['20'] = icons['GROUND.M2.LABORATORY']
-		sIDm2['21'] = icons['GROUND.M2.LAUNCHER']
-		sIDm2['22'] = icons['GROUND.M2.LONG RANGE']
-		sIDm2['23'] = icons['GROUND.M2.LOW ALTITUDE']
-		sIDm2['24'] = icons['GROUND.M2.MEDIUM'] 
-		sIDm2['25'] = icons['GROUND.M2.MEDIUM ALTITUDE']
-		sIDm2['26'] = icons['GROUND.M2.MEDIUM RANGE']
-		sIDm2['27'] = icons['GROUND.M2.MOUNTAIN']
-		sIDm2['28'] = icons['GROUND.M2.HIGH TO MEDIUM ALTITUDE']
-		sIDm2['29'] = icons['GROUND.M2.MULTI-CHANNEL']
-		sIDm2['30'] = icons['GROUND.M2.OPTICAL']
+		sIDm2['18'] = icons['GROUND.M2.INTENSIVE CARE'];
+		sIDm2['19'] = icons['GROUND.M2.LIGHT'];
+		sIDm2['20'] = icons['GROUND.M2.LABORATORY'];
+		sIDm2['21'] = icons['GROUND.M2.LAUNCHER'];
+		sIDm2['22'] = icons['GROUND.M2.LONG RANGE'];
+		sIDm2['23'] = icons['GROUND.M2.LOW ALTITUDE'];
+		sIDm2['24'] = icons['GROUND.M2.MEDIUM'];
+		sIDm2['25'] = icons['GROUND.M2.MEDIUM ALTITUDE'];
+		sIDm2['26'] = icons['GROUND.M2.MEDIUM RANGE'];
+		sIDm2['27'] = icons['GROUND.M2.MOUNTAIN'];
+		sIDm2['28'] = icons['GROUND.M2.HIGH TO MEDIUM ALTITUDE'];
+		sIDm2['29'] = icons['GROUND.M2.MULTI-CHANNEL'];
+		sIDm2['30'] = icons['GROUND.M2.OPTICAL'];
 		sIDm2['31'] = icons['GROUND.M2.PACK ANIMAL'];
-		sIDm2['32'] = icons['GROUND.M2.PATIENT EVACUATION COORDINATION']
-		sIDm2['33'] = icons['GROUND.M2.PREVENTIVE MAINTENANCE']
-		sIDm2['34'] = icons['GROUND.M2.PSYCHOLOGICAL']
+		sIDm2['32'] = icons['GROUND.M2.PATIENT EVACUATION COORDINATION'];
+		sIDm2['33'] = icons['GROUND.M2.PREVENTIVE MAINTENANCE'];
+		sIDm2['34'] = icons['GROUND.M2.PSYCHOLOGICAL'];
 		sIDm2['35'] = icons['GROUND.M2.RADIO RELAY LINE OF SIGHT'];
-		sIDm2['36'] = icons['GROUND.M2.RAILROAD']
-		sIDm2['37'] = icons['GROUND.M2.RECOVERY (UNMANNED SYSTEMS)']
-		sIDm2['38'] = icons['GROUND.M2.RECOVERY (MAINTENANCE)']
-		sIDm2['39'] = icons['GROUND.M2.RESCUE COORDINATION CENTRE']
+		sIDm2['36'] = icons['GROUND.M2.RAILROAD'];
+		sIDm2['37'] = icons['GROUND.M2.RECOVERY (UNMANNED SYSTEMS)'];
+		sIDm2['38'] = icons['GROUND.M2.RECOVERY (MAINTENANCE)'];
+		sIDm2['39'] = icons['GROUND.M2.RESCUE COORDINATION CENTRE'];
 		sIDm2['40'] = icons['GROUND.M2.RIVERINE'];
-		sIDm2['41'] = icons['GROUND.M2.SINGLE CHANNEL']
+		sIDm2['41'] = icons['GROUND.M2.SINGLE CHANNEL'];
 		sIDm2['42'] = icons['GROUND.M2.SKI'];
-		sIDm2['43'] = icons['GROUND.M2.SHORT RANGE']
-		sIDm2['44'] = icons['GROUND.M2.STRATEGIC']
-		sIDm2['45'] = icons['GROUND.M2.SUPPORT'] 
-		sIDm2['46'] = icons['GROUND.M2.TACTICAL']
-		sIDm2['47'] = icons['GROUND.M2.TOWED']
-		sIDm2['48'] = icons['GROUND.M2.TROOP']
-		sIDm2['49'] = icons['GROUND.M2.VERTICAL OR SHORT TAKE-OFF AND LANDING ']
-		sIDm2['50'] = icons['GROUND.M2.VETERINARY']
-		sIDm2['51'] = icons['GROUND.M2.WHEELED']
-		sIDm2['52'] = icons['GROUND.M2.HIGH TO LOW ALTITUDE']
-		sIDm2['53'] = icons['GROUND.M2.MEDIUM TO LOW ALTITUDE']
-		sIDm2['54'] = icons['GROUND.M2.ATTACK']
-		sIDm2['55'] = icons['GROUND.M2.REFUEL']
-		sIDm2['56'] = icons['GROUND.M2.UTILITY']
+		sIDm2['43'] = icons['GROUND.M2.SHORT RANGE'];
+		sIDm2['44'] = icons['GROUND.M2.STRATEGIC'];
+		sIDm2['45'] = icons['GROUND.M2.SUPPORT'];
+		sIDm2['46'] = icons['GROUND.M2.TACTICAL'];
+		sIDm2['47'] = icons['GROUND.M2.TOWED'];
+		sIDm2['48'] = icons['GROUND.M2.TROOP'];
+		sIDm2['49'] = icons['GROUND.M2.VERTICAL OR SHORT TAKE-OFF AND LANDING '];
+		sIDm2['50'] = icons['GROUND.M2.VETERINARY'];
+		sIDm2['51'] = icons['GROUND.M2.WHEELED'];
+		sIDm2['52'] = icons['GROUND.M2.HIGH TO LOW ALTITUDE'];
+		sIDm2['53'] = icons['GROUND.M2.MEDIUM TO LOW ALTITUDE'];
+		sIDm2['54'] = icons['GROUND.M2.ATTACK'];
+		sIDm2['55'] = icons['GROUND.M2.REFUEL'];
+		sIDm2['56'] = icons['GROUND.M2.UTILITY'];
 		sIDm2['57'] = icons['GROUND.M2.COMBAT SEARCH AND RESCUE']
 	}		
 
 //Land civilian individuals/organization
 	if(symbolSet == "11" ){
 		sID['110000'] = icons['AIR.ICON.CIVILIAN'];
-		sID['110100'] = icons['GROUND.ICON.ENVIRONMENTAL PROTECTION']
+		sID['110100'] = icons['GROUND.ICON.ENVIRONMENTAL PROTECTION'];
 		sID['110200'] = icons['GROUND.ICON.GOVERNMENT ORGANIZATION'];
 		sID['110300'] = icons['STABILITY.ICON.INDIVIDUAL'];
 		sID['110400'] = icons['STABILITY.ICON.GROUP'];
@@ -5477,7 +5477,7 @@ function MilSymbol(SIDCParameter,options){
 	//The center of the symbols are in 100,100 but we later need to offset the symbol to make space for some stuff on the top, this variable is the offset.
 	var symbolOffset = 30;
 	//For the map markers we want to remove as much spacing as possible, so we need to keep track of the boundingbox
-	this.markerBBox = {x1:50,y1:50,x2:150,y2:150}
+	this.markerBBox = {x1:50,y1:50,x2:150,y2:150};
 
 	var symbolBaseGeometry = {
 		'AirHostile' 	: '<polyline points="45,150 45,70 100,20 155,70 155,150" />',
@@ -5502,7 +5502,7 @@ function MilSymbol(SIDCParameter,options){
 	_MilSymbol.symbolBaseGeometry = symbolBaseGeometry;
 
 	//Object containing bottom of all Equipment symbols.
-	var equipmentBottom = {'E-----':0,'EWM---':140,'EWMA--':140,'EWMAS-':140,'EWMASR':140,'EWMASE':140,'EWMAI-':140,'EWMAIR':140,'EWMAIE':140,'EWMAL-':140,'EWMALR':140,'EWMALE':140,'EWMAT-':153,'EWMATR':153,'EWMATE':153,'EWMS--':140,'EWMSS-':140,'EWMSI-':140,'EWMSL-':140,'EWMT--':140,'EWMTL-':140,'EWMTM-':140,'EWMTH-':140,'EWS---':140,'EWSL--':140,'EWSM--':140,'EWSH--':140,'EWX---':140,'EWXL--':140,'EWXM--':140,'EWXH--':140,'EWT---':140,'EWTL--':140,'EWTM--':140,'EWTH--':140,'EWR---':140,'EWRL--':140,'EWRM--':140,'EWRH--':140,'EWZ---':140,'EWZL--':140,'EWZM--':140,'EWZH--':140,'EWO---':140,'EWOL--':140,'EWOM--':140,'EWOH--':140,'EWH---':140,'EWHL--':140,'EWHLS-':130,'EWHM--':140,'EWHMS-':130,'EWHH--':140,'EWHHS-':130,'EWG---':140,'EWGL--':140,'EWGM--':140,'EWGH--':140,'EWGR--':140,'EWD---':140,'EWDL--':140,'EWDLS-':130,'EWDM--':140,'EWDMS-':130,'EWDH--':140,'EWDHS-':130,'EWA---':140,'EWAL--':140,'EWAM--':140,'EWAH--':140,'EV----':129,'EVA---':129,'EVAT--':130,'EVATL-':130,'EVATLR':130,'EVATM-':130,'EVATMR':130,'EVATH-':130,'EVATHR':130,'EVAA--':130,'EVAAR-':130,'EVAI--':130,'EVAC--':130,'EVAS--':972.3621826171875,'EVAL--':140,'EVU---':130,'EVAB--':130,'EVUS--':140,'EVUSL-':140,'EVUSM-':140,'EVUSH-':140,'EVUL--':140,'EVUX--':140,'EVUR--':130,'EVUTL-':130,'EVUTH-':130,'EVUA--':130,'EVUAA-':130,'EVE---':129,'EVEB--':130,'EVEE--':130,'EVEC--':140,'EVEM--':130,'EVEMA-':130,'EVEMV-':130,'EVEMT-':130,'EVEML-':140,'EVEA--':120,'EVEAA-':130,'EVEAT-':130,'EVEMSM':130,'EVED--':130,'EVEDA-':130,'EVES--':130,'EVER--':130,'EVEH--':140,'EVEF--':140,'EVD---':140,'EVT--':130,'EVC---':119,'EVCA--':132.5,'EVCAL-':132.5,'EVCAM-':132.5,'EVCAH-':132.5,'EVCO--':132.5,'EVCOL-':132.5,'EVCOM-':132.5,'EVCOH-':132.5,'EVCM--':132.5,'EVCML-':132.5,'EVCMM-':132.5,'EVCMH-':132.5,'EVCU--':132.5,'EVCUL-':132.5,'EVCUM-':132.5,'EVCUH-':132.5,'EVCJ--':132.5,'EVCJL-':132.5,'EVCJM-':132.5,'EVCJH-':132.5,'EVCT--':132.5,'EVCTL-':132.5,'EVCTM-':132.5,'EVCTH-':132.5,'EVCF--':132.5,'EVCFL-':132.5,'EVCFM-':132.5,'EVCFH-':132.5,'EVM---':125,'EVS---':129,'EVST--':129,'EVSR--':129,'EVSC--':129,'EVSP--':129,'EVSW--':129,'ES----':140,'ESR---':120,'ESE---':136,'EXI---':119,'EXL---':145,'EXN---':140,'EXF---':135,'EXM---':130,'EXMC--':122,'EXML--':122}
+	var equipmentBottom = {'E-----':0,'EWM---':140,'EWMA--':140,'EWMAS-':140,'EWMASR':140,'EWMASE':140,'EWMAI-':140,'EWMAIR':140,'EWMAIE':140,'EWMAL-':140,'EWMALR':140,'EWMALE':140,'EWMAT-':153,'EWMATR':153,'EWMATE':153,'EWMS--':140,'EWMSS-':140,'EWMSI-':140,'EWMSL-':140,'EWMT--':140,'EWMTL-':140,'EWMTM-':140,'EWMTH-':140,'EWS---':140,'EWSL--':140,'EWSM--':140,'EWSH--':140,'EWX---':140,'EWXL--':140,'EWXM--':140,'EWXH--':140,'EWT---':140,'EWTL--':140,'EWTM--':140,'EWTH--':140,'EWR---':140,'EWRL--':140,'EWRM--':140,'EWRH--':140,'EWZ---':140,'EWZL--':140,'EWZM--':140,'EWZH--':140,'EWO---':140,'EWOL--':140,'EWOM--':140,'EWOH--':140,'EWH---':140,'EWHL--':140,'EWHLS-':130,'EWHM--':140,'EWHMS-':130,'EWHH--':140,'EWHHS-':130,'EWG---':140,'EWGL--':140,'EWGM--':140,'EWGH--':140,'EWGR--':140,'EWD---':140,'EWDL--':140,'EWDLS-':130,'EWDM--':140,'EWDMS-':130,'EWDH--':140,'EWDHS-':130,'EWA---':140,'EWAL--':140,'EWAM--':140,'EWAH--':140,'EV----':129,'EVA---':129,'EVAT--':130,'EVATL-':130,'EVATLR':130,'EVATM-':130,'EVATMR':130,'EVATH-':130,'EVATHR':130,'EVAA--':130,'EVAAR-':130,'EVAI--':130,'EVAC--':130,'EVAS--':972.3621826171875,'EVAL--':140,'EVU---':130,'EVAB--':130,'EVUS--':140,'EVUSL-':140,'EVUSM-':140,'EVUSH-':140,'EVUL--':140,'EVUX--':140,'EVUR--':130,'EVUTL-':130,'EVUTH-':130,'EVUA--':130,'EVUAA-':130,'EVE---':129,'EVEB--':130,'EVEE--':130,'EVEC--':140,'EVEM--':130,'EVEMA-':130,'EVEMV-':130,'EVEMT-':130,'EVEML-':140,'EVEA--':120,'EVEAA-':130,'EVEAT-':130,'EVEMSM':130,'EVED--':130,'EVEDA-':130,'EVES--':130,'EVER--':130,'EVEH--':140,'EVEF--':140,'EVD---':140,'EVT--':130,'EVC---':119,'EVCA--':132.5,'EVCAL-':132.5,'EVCAM-':132.5,'EVCAH-':132.5,'EVCO--':132.5,'EVCOL-':132.5,'EVCOM-':132.5,'EVCOH-':132.5,'EVCM--':132.5,'EVCML-':132.5,'EVCMM-':132.5,'EVCMH-':132.5,'EVCU--':132.5,'EVCUL-':132.5,'EVCUM-':132.5,'EVCUH-':132.5,'EVCJ--':132.5,'EVCJL-':132.5,'EVCJM-':132.5,'EVCJH-':132.5,'EVCT--':132.5,'EVCTL-':132.5,'EVCTM-':132.5,'EVCTH-':132.5,'EVCF--':132.5,'EVCFL-':132.5,'EVCFM-':132.5,'EVCFH-':132.5,'EVM---':125,'EVS---':129,'EVST--':129,'EVSR--':129,'EVSC--':129,'EVSP--':129,'EVSW--':129,'ES----':140,'ESR---':120,'ESE---':136,'EXI---':119,'EXL---':145,'EXN---':140,'EXF---':135,'EXM---':130,'EXMC--':122,'EXML--':122};
 	
 	if (typeof parseXML=='undefined') {
 		window.parseXML = function (s,doc) {
@@ -5528,7 +5528,7 @@ function MilSymbol(SIDCParameter,options){
 								
 		var hqETC = { 	"fenintDummy":false,
 						"headquarters":false,
-						"taskForce":false}
+						"taskForce":false};
 						
 		var echelonETCValues = {	"11": "Team/Crew",
 									"12": "Squad",
@@ -5556,15 +5556,15 @@ function MilSymbol(SIDCParameter,options){
 									"51": "Barge",
 									"52": "Amphibious",
 									"61": "Short towed array",
-									"62": "Long towed Array"}				
+									"62": "Long towed Array"};
 		var echelonETC = new Object();
 		var mobility = false;
 							
 		var affiliationTypeValues = ["Hostile", "Friend", "Neutral", "Unknown"];
-		var dimensionTypeValues = ["Air", "Ground", "Sea", "Subsurface"]
+		var dimensionTypeValues = ["Air", "Ground", "Sea", "Subsurface"];
 
 		var symbolSIDC = String(this.SIDC).replace("*","-").replace(" ","");
-		if(isNaN(symbolSIDC)) this.SIDC = symbolSIDC = symbolSIDC.toUpperCase()
+		if(isNaN(symbolSIDC)) this.SIDC = symbolSIDC = symbolSIDC.toUpperCase();
 
 		var baseGeometryType;
 		var dimensionType;
@@ -5599,7 +5599,7 @@ function MilSymbol(SIDCParameter,options){
 			
 			var functionid = symbolSIDC.substr(10,10);
 			
-			context = contextValues[parseInt(symbolSIDC.substr(2,1))]
+			context = contextValues[parseInt(symbolSIDC.substr(2,1))];
 			
 			var affiliationMapping = {	'0':'Unknown',
 										'1':'Unknown',
@@ -5607,7 +5607,7 @@ function MilSymbol(SIDCParameter,options){
 										'3':'Friend',
 										'4':'Neutral',
 										'5':'Hostile',
-										'6':'Hostile'}
+										'6':'Hostile'};
 			affiliationType = affiliationMapping[standardIdentity2];
 			
 			var dimensionMapping = {	'00':'Sea',
@@ -5628,8 +5628,8 @@ function MilSymbol(SIDCParameter,options){
 										'52':'Ground',
 										'53':'Sea',
 										'54':'Subsurface',
-										'60':'Ground'}
-			dimensionType = dimensionMapping[symbolSet]
+										'60':'Ground'};
+			dimensionType = dimensionMapping[symbolSet];
 
 			//SymbolSets in Space
 			if(symbolSet == '05' || symbolSet == '06' || symbolSet == '50')spaceModifier = true;
@@ -5682,15 +5682,15 @@ function MilSymbol(SIDCParameter,options){
 		}else{ //This would be old letter based SIDCs
 			
 
-			var codingscheme 	= 	symbolSIDC.charAt(0)!=''?symbolSIDC.charAt(0):'-'
-			var affiliation 	= 	symbolSIDC.charAt(1)!=''?symbolSIDC.charAt(1):'-'
-			var battledimension = 	symbolSIDC.charAt(2)!=''?symbolSIDC.charAt(2):'-'
-			var status 			= 	symbolSIDC.charAt(3)!=''?symbolSIDC.charAt(3):'-'
-			var functionid 		= 	symbolSIDC.substr(4,6)!=''?symbolSIDC.substr(4,6):'------'
-			var symbolmodifier11 = 	symbolSIDC.charAt(10)!=''?symbolSIDC.charAt(10):'-'
-			var symbolmodifier12 = 	symbolSIDC.charAt(11)!=''?symbolSIDC.charAt(11):'-'
-			var countrycode 	= 	symbolSIDC.substr(12,2)!=''?symbolSIDC.substr(12,2):'--'	
-			var orderofbattle 	= 	symbolSIDC.charAt(14)!=''?symbolSIDC.charAt(14):'-'
+			var codingscheme 	= 	symbolSIDC.charAt(0)!=''?symbolSIDC.charAt(0):'-';
+			var affiliation 	= 	symbolSIDC.charAt(1)!=''?symbolSIDC.charAt(1):'-';
+			var battledimension = 	symbolSIDC.charAt(2)!=''?symbolSIDC.charAt(2):'-';
+			var status 			= 	symbolSIDC.charAt(3)!=''?symbolSIDC.charAt(3):'-';
+			var functionid 		= 	symbolSIDC.substr(4,6)!=''?symbolSIDC.substr(4,6):'------';
+			var symbolmodifier11 = 	symbolSIDC.charAt(10)!=''?symbolSIDC.charAt(10):'-';
+			var symbolmodifier12 = 	symbolSIDC.charAt(11)!=''?symbolSIDC.charAt(11):'-';
+			var countrycode 	= 	symbolSIDC.substr(12,2)!=''?symbolSIDC.substr(12,2):'--';
+			var orderofbattle 	= 	symbolSIDC.charAt(14)!=''?symbolSIDC.charAt(14):'-';
 
 			if(['H','S','J','K'].indexOf(affiliation) > -1)affiliationType = 'Hostile';
 			if(['F','A','D','M'].indexOf(affiliation) > -1)affiliationType = 'Friend';
@@ -5792,7 +5792,7 @@ function MilSymbol(SIDCParameter,options){
 			if(battledimension == 'Z'){
 				if((['P','U','F','N','H','A','S','G','W'].indexOf(affiliation) > -1)) dimensionUnknown = true;
 				//To get the correct geometry for a lot of stuff later we will have to modify the affliationType.
-				if(['F','A'].indexOf(affiliation) > -1) dimensionType = 'Sea'
+				if(['F','A'].indexOf(affiliation) > -1) dimensionType = 'Sea';
 				//If battle dimension is unknown and the affiliation is D,L,M,J,K we should not have a symbol
 				if(['D','L','M','J','K'].indexOf(affiliation) > -1) affiliationType = 'none';
 			};	
@@ -5836,12 +5836,12 @@ function MilSymbol(SIDCParameter,options){
 		"functionid" 		: functionid,
 		"unframed"			: unframed
 		}
-	}
+	};
 
 //SymbolColors ###########################################################################
 	this.symbolColors = function(){
 	
-		var symbol = this._symbol
+		var symbol = this._symbol;
 		var fill = this.fill;
 		var frame = this.frame;
 		var Colors = {	
@@ -5852,7 +5852,7 @@ function MilSymbol(SIDCParameter,options){
 			none : '',
 			black : '',
 			white : '',
-		}
+		};
 		//Ok so we don't really use the opacity, but if we want to make it posible in the 
 		//future to change opacity we have them here to play around with.
 		var baseFillColorOpacity = 1;
@@ -5866,8 +5866,8 @@ function MilSymbol(SIDCParameter,options){
 			'Friend'	: 'rgba(128, 224, 255,'+baseFillColorOpacity+')',
 			'Neutral' 	: 'rgba(170, 255, 170,'+baseFillColorOpacity+') ',
 			'Unknown' 	: 'rgba(255, 255, 128,'+baseFillColorOpacity+')'
-		}
-		var civilianColor = 'rgba(255,161,255,'+baseFillColorOpacity+')'
+		};
+		var civilianColor = 'rgba(255,161,255,'+baseFillColorOpacity+')';
 		//Overwrite with Medium colors
 		if(this.colorMode == "Medium"){
 			baseFillColor = {
@@ -5875,7 +5875,7 @@ function MilSymbol(SIDCParameter,options){
 				'Friend'	: 'rgba(0,168,220,'+baseFillColorOpacity+')',
 				'Neutral' 	: 'rgba(0,226,110,'+baseFillColorOpacity+') ',
 				'Unknown' 	: 'rgba(255,255,0,'+baseFillColorOpacity+')'
-			}
+			};
 			civilianColor = 'rgba(128,0,128,'+baseFillColorOpacity+')'
 		}
 		//Overwrite with Dark colors
@@ -5885,7 +5885,7 @@ function MilSymbol(SIDCParameter,options){
 				'Friend'	: 'rgba(0,107,140,'+baseFillColorOpacity+')',
 				'Neutral' 	: 'rgba(0,160,0,'+baseFillColorOpacity+') ',
 				'Unknown' 	: 'rgba(225,220,0,'+baseFillColorOpacity+')'
-			}
+			};
 			civilianColor = 'rgba(80,0,80,'+baseFillColorOpacity+')'
 		}
 		
@@ -5894,38 +5894,38 @@ function MilSymbol(SIDCParameter,options){
 			'Friend'	: 'rgba(0, 255, 255,'+baseFrameColorOpacity+') ',
 			'Neutral' 	: 'rgba(0, 255, 0,'+baseFrameColorOpacity+') ',
 			'Unknown' 	: 'rgba(255, 255, 0,'+baseFrameColorOpacity+') '
-		}
+		};
 		var baseIconColor = {
 			'Hostile' 	:'rgba(255, 0, 0,'+baseIconOpacity+') ',
 			'Friend' 	: 'rgba(0, 255, 255,'+baseIconOpacity+') ',
 			'Neutral' 	:  'rgba(0, 255, 0,'+baseIconOpacity+') ',
 			'Unknown' 	: 'rgba(255, 255, 0,'+baseIconOpacity+') '
-		}
+		};
 		var baseIconFillColor = baseFillColor;
 		var baseColorBlack = {
 			'Hostile' 	: 'black',
 			'Friend'	: 'black',
 			'Neutral' 	: 'black',
 			'Unknown' 	: 'black'
-		}
+		};
 		var baseColorWhite = {
 			'Hostile' 	: 'white',
 			'Friend'	: 'white',
 			'Neutral' 	: 'white',
 			'Unknown' 	: 'white'
-		}
+		};
 		var baseColorOffWhite = {
 			'Hostile' 	: 'rgba(239, 239, 239,'+baseFillColorOpacity+')',
 			'Friend'	: 'rgba(239, 239, 239,'+baseFillColorOpacity+')',
 			'Neutral' 	: 'rgba(239, 239, 239,'+baseFillColorOpacity+')',
 			'Unknown' 	: 'rgba(239, 239, 239,'+baseFillColorOpacity+')'
-		}
+		};
 		var baseColorNone = {
 			'Hostile' 	: 'none',
 			'Friend'	: 'none',
 			'Neutral' 	: 'none',
 			'Unknown' 	: 'none'
-		}
+		};
 
 		//If it is a Civilian Symbol and civilian colors not are turned off, use civilian colors... 
 		if(	this.civilianColors && symbol.civilian){
@@ -5971,9 +5971,9 @@ function MilSymbol(SIDCParameter,options){
 		}		
 
 	
-		Colors.none = baseColorNone
-		Colors.black = baseColorBlack
-		Colors.white = baseColorWhite
+		Colors.none = baseColorNone;
+		Colors.black = baseColorBlack;
+		Colors.white = baseColorWhite;
 
 		//If the user has specified a mono color to use for all symbols.
 		if(this.monoColor != ''){
@@ -6028,7 +6028,7 @@ function MilSymbol(SIDCParameter,options){
 			Colors.iconFillColor = baseColorNone;
 		}
 		return Colors;
-	}
+	};
 
 //Sets the style of the frame depending of status ########################################
 //And also add the capability status bar from 2525.
@@ -6063,7 +6063,7 @@ function MilSymbol(SIDCParameter,options){
 				var colors = {	"FullyCapable"	:'rgb(0,255,0)',
 								"Damaged"		:'rgb(255,255,0)',
 								"Destroyed"		:'rgb(255,0,0)',
-								"FullToCapacity":'rgb(0, 180, 240)'}
+								"FullToCapacity":'rgb(0, 180, 240)'};
 								
 				//If we have a mobility indicator we need to make space for it.
 				var offset = (symbol.mobility)?25:5;
@@ -6107,10 +6107,10 @@ function MilSymbol(SIDCParameter,options){
 			//Nothing, but we keep this if we need to use it.
 		
 		}
-		var Geometry = '<g id="StatusGeometry" fill="none" stroke="'+this._symbolColors.white["Friend"]+'" stroke-width="'+(parseFloat(this.strokeWidth)+1)+'" stroke-dasharray="'+symbol.anticipated+'">'+tmp+'</g>'
+		var Geometry = '<g id="StatusGeometry" fill="none" stroke="'+this._symbolColors.white["Friend"]+'" stroke-width="'+(parseFloat(this.strokeWidth)+1)+'" stroke-dasharray="'+symbol.anticipated+'">'+tmp+'</g>';
 	
 		return Geometry;
-	}
+	};
 
 //Base Geometry for the Symbol ###########################################################
 	this.symbolBaseGeometry = function(printToElementID){
@@ -6124,9 +6124,9 @@ function MilSymbol(SIDCParameter,options){
 			symbolBaseGeometry.BBox['temp'] = undefined;
 		}
 		if(this.size < 10 || (!this.frame&&!this.icon)){
-			symbolBaseGeometry['temp'] = symbolBaseGeometry[symbol.baseGeometryType]
+			symbolBaseGeometry['temp'] = symbolBaseGeometry[symbol.baseGeometryType];
 			symbolBaseGeometry[symbol.baseGeometryType] = '<circle cx="100" cy="100" r="50" />';
-			symbolBaseGeometry.BBox['temp'] = symbolBaseGeometry.BBox[symbol.baseGeometryType]
+			symbolBaseGeometry.BBox['temp'] = symbolBaseGeometry.BBox[symbol.baseGeometryType];
 			symbolBaseGeometry.BBox[symbol.baseGeometryType] = { x: 50, y:50, width: 100 , height:100};
 		}
 		
@@ -6183,7 +6183,7 @@ function MilSymbol(SIDCParameter,options){
 		}		
 
 		//The test geometry displays the bounding octagon in the symbols, good for debugging.
-		var testGeometry = ''		
+		var testGeometry = '';
 		//testGeometry = '<path d="m 120,60 0,80 m -40,-80 0,80 m -20,-20 80,0 m 0,-40 -80,0 M 100,50 135.35534,64.64466 150,100 135.35534,135.35534 100,150.00002 64.644661,135.35534 50,100 64.644661,64.64466 z" stroke="black" stroke-width="1" fill="none"></path>'
 
 		//Keep track of how big our symbol is
@@ -6191,7 +6191,7 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 		this.markerBBox = {	x1:Math.min(this.markerBBox.x1,symbolBaseGeometry.BBox[symbol.baseGeometryType].x),
 							y1:Math.min(this.markerBBox.y1,symbolBaseGeometry.BBox[symbol.baseGeometryType].y),
 							x2:Math.max(this.markerBBox.x2,symbolBaseGeometry.BBox[symbol.baseGeometryType].x + symbolBaseGeometry.BBox[symbol.baseGeometryType].width),
-							y2:Math.max(this.markerBBox.y2,symbolBaseGeometry.BBox[symbol.baseGeometryType].y + symbolBaseGeometry.BBox[symbol.baseGeometryType].height)}
+							y2:Math.max(this.markerBBox.y2,symbolBaseGeometry.BBox[symbol.baseGeometryType].y + symbolBaseGeometry.BBox[symbol.baseGeometryType].height)};
 		
 		/*
 		var Geometry = document.createElementNS(svgNS, "g");
@@ -6216,10 +6216,10 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 		var anticipated = "";
 		if((this.monoColor != '' || !this.fill) && symbol.anticipated) anticipated = ' stroke-dasharray="'+symbol.anticipated+'"';
 
-		var Geometry = '<g id="BaseGeometry" fill="'+this._symbolColors.fillColor[symbol.affiliationType]+'" stroke="'+this._symbolColors.frameColor[symbol.affiliationType]+'" stroke-width="'+(this.size>=10?this.strokeWidth:10)+'"'+anticipated+'>' + symbolBaseGeometry[symbol.baseGeometryType] + extraModifier + testGeometry + '</g>'
+		var Geometry = '<g id="BaseGeometry" fill="'+this._symbolColors.fillColor[symbol.affiliationType]+'" stroke="'+this._symbolColors.frameColor[symbol.affiliationType]+'" stroke-width="'+(this.size>=10?this.strokeWidth:10)+'"'+anticipated+'>' + symbolBaseGeometry[symbol.baseGeometryType] + extraModifier + testGeometry + '</g>';
 		
 		return {"geometry" : Geometry, "symbols" : symbolBaseGeometry};
-	}
+	};
 
 //Affiliation and dimension addons to base geometries ####################################
 	this.symbolAffliationDimensionGeometry = function(){
@@ -6238,21 +6238,21 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 				var spacing = 10;
 				if(symbol.affiliationType == "Unknown" || (symbol.affiliationType == "Hostile" && symbol.dimensionType != "Subsurface"))spacing = -10; 
 				affliationDimensionGeometry += '<text x="' + (this.markerBBox.x2 + spacing )+ '" y="60" font-family="Arial" font-size="35" font-weight="bold">X</text>';
-				this.markerBBox.x2 = Math.max(this.markerBBox.x2,(this.markerBBox.x2 + spacing + 20))
+				this.markerBBox.x2 = Math.max(this.markerBBox.x2,(this.markerBBox.x2 + spacing + 20));
 				this.markerBBox.y1 = Math.min(this.markerBBox.y1,(60-35))
 			}
 			if(symbol.jokerFaker == 'Joker'){	
 				var spacing = 10;
 				if(symbol.affiliationType == "Unknown" || (symbol.affiliationType == "Hostile" && symbol.dimensionType != "Subsurface"))spacing = -10; 
 				affliationDimensionGeometry += '<text x="' + (this.markerBBox.x2 + spacing )+ '" y="60" font-family="Arial" font-size="35" font-weight="bold">J</text>';
-				this.markerBBox.x2 = Math.max(this.markerBBox.x2,(this.markerBBox.x2 + spacing + 20))
+				this.markerBBox.x2 = Math.max(this.markerBBox.x2,(this.markerBBox.x2 + spacing + 20));
 				this.markerBBox.y1 = Math.min(this.markerBBox.y1,(60-35))		
 			}
 			if(symbol.jokerFaker == 'Faker'){	
 				var spacing = 10;
 				if(symbol.affiliationType == "Unknown" || (symbol.affiliationType == "Hostile" && symbol.dimensionType != "Subsurface"))spacing = -10; 
 				affliationDimensionGeometry += '<text x="' + (this.markerBBox.x2 + spacing )+ '" y="60" font-family="Arial" font-size="35" font-weight="bold">K</text>';
-				this.markerBBox.x2 = Math.max(this.markerBBox.x2,(this.markerBBox.x2 + spacing + 20))
+				this.markerBBox.x2 = Math.max(this.markerBBox.x2,(this.markerBBox.x2 + spacing + 20));
 				this.markerBBox.y1 = Math.min(this.markerBBox.y1,(60-35))
 			}
 		}		
@@ -6262,7 +6262,7 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 			var spacing = 10;
 			if(symbol.affiliationType == "Unknown" || (symbol.affiliationType == "Hostile" && symbol.dimensionType != "Subsurface"))spacing = -10; 
 			affliationDimensionGeometry += '<text x="' + (this.markerBBox.x2 + spacing )+ '" y="60" font-family="Arial" font-size="35" font-weight="bold">S</text>';
-			this.markerBBox.x2 = Math.max(this.markerBBox.x2,(this.markerBBox.x2 + spacing + 20))
+			this.markerBBox.x2 = Math.max(this.markerBBox.x2,(this.markerBBox.x2 + spacing + 20));
 			this.markerBBox.y1 = Math.min(this.markerBBox.y1,(60-35))
 		}
 		/*
@@ -6276,9 +6276,9 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 				), true
 			)
 		);*/
-		var Geometry = '<g id="AffliationDimensionGeometry" fill="'+this._symbolColors.frameColor[symbol.affiliationType]+'"><g xmlns="'+svgNS+'">'  + affliationDimensionGeometry + '</g></g>'
+		var Geometry = '<g id="AffliationDimensionGeometry" fill="'+this._symbolColors.frameColor[symbol.affiliationType]+'"><g xmlns="'+svgNS+'">'  + affliationDimensionGeometry + '</g></g>';
 		return Geometry;
-	}
+	};
 
 //Symbol Modifiers #######################################################################
 	this.symbolModifier = function(){
@@ -6402,7 +6402,7 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 					symbolbottom = equipmentBottom[symbol.functionid]==undefined ? symbolbottom : equipmentBottom[symbol.functionid];
 				}
 				
-				modifier += '<g transform="translate(0,' + symbolbottom + ')" stroke="' + this._symbolColors.iconColor[symbol.affiliationType] + '">'
+				modifier += '<g transform="translate(0,' + symbolbottom + ')" stroke="' + this._symbolColors.iconColor[symbol.affiliationType] + '">';
 				if(symbol.echelonETC["Wheeled limited cross country"]){
 					modifier += '<path d="M 50,1 l 100,0"  fill="none" /><circle cx="55" cy="6" r="5" fill="none"  /><circle cx="145" cy="6" r="5" fill="none"  />';
 					this.markerBBox.y2 = Math.max(this.markerBBox.y2,symbolbottom+6+5);
@@ -6412,11 +6412,11 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 					this.markerBBox.y2 = Math.max(this.markerBBox.y2,symbolbottom+6+5);
 				}
 				if(symbol.echelonETC["Tracked"]){
-					modifier += '<path d="M 50,1 l 100,0 c10,0 10,10 0,10 l -100,0 c-10,0 -10,-10 0,-10"  fill="none" />'
+					modifier += '<path d="M 50,1 l 100,0 c10,0 10,10 0,10 l -100,0 c-10,0 -10,-10 0,-10"  fill="none" />';
 					this.markerBBox.y2 = Math.max(this.markerBBox.y2,symbolbottom+10);
 				}
 				if(symbol.echelonETC["Wheeled and tracked combination"]){
-					modifier += '<circle cx="55" cy="6" r="5" fill="none"  /><path d="M 80,1 l 70,0 c10,0 10,10 0,10 l -70,0 c-10,0 -10,-10 0,-10"  fill="none" />'
+					modifier += '<circle cx="55" cy="6" r="5" fill="none"  /><path d="M 80,1 l 70,0 c10,0 10,10 0,10 l -70,0 c-10,0 -10,-10 0,-10"  fill="none" />';
 					this.markerBBox.y2 = Math.max(this.markerBBox.y2,symbolbottom+6+5);
 				}
 				if(symbol.echelonETC["Towed"]){
@@ -6432,34 +6432,34 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 					this.markerBBox.y2 = Math.max(this.markerBBox.y2,symbolbottom+9);
 				}
 				if(symbol.echelonETC["Sled"]){
-					modifier += '<path d="M 150,-9  c10,0 10,10 0,10 l -100,0 c-10,0 -10,-10 0,-10"  fill="none" />'
+					modifier += '<path d="M 150,-9  c10,0 10,10 0,10 l -100,0 c-10,0 -10,-10 0,-10"  fill="none" />';
 					this.markerBBox.y2 = Math.max(this.markerBBox.y2,symbolbottom+10);
 				}
 				if(symbol.echelonETC["Pack animals"]){
-					modifier += '<path d="M 80,20 l 10,-20 10,20 10,-20 10,20 "  fill="none" />'
+					modifier += '<path d="M 80,20 l 10,-20 10,20 10,-20 10,20 "  fill="none" />';
 					this.markerBBox.y2 = Math.max(this.markerBBox.y2,symbolbottom+20);
 				}
 				if(symbol.echelonETC["Barge"]){
-					modifier += '<path d="M 50,1 l 100,0 c0,10 -100,10 -100,0"  fill="none" />'
+					modifier += '<path d="M 50,1 l 100,0 c0,10 -100,10 -100,0"  fill="none" />';
 					this.markerBBox.y2 = Math.max(this.markerBBox.y2,symbolbottom+10);
 				}
 				if(symbol.echelonETC["Amphibious"]){
-					modifier += '<path d="M 65,10 c 0,-10 10,-10 10,0 0,10 10,10 10,0   0,-10 10,-10 10,0 0,10 10,10 10,0   0,-10 10,-10 10,0 0,10 10,10 10,0   0,-10 10,-10 10,0  "  fill="none" />'
+					modifier += '<path d="M 65,10 c 0,-10 10,-10 10,0 0,10 10,10 10,0   0,-10 10,-10 10,0 0,10 10,10 10,0   0,-10 10,-10 10,0 0,10 10,10 10,0   0,-10 10,-10 10,0  "  fill="none" />';
 					this.markerBBox.y2 = Math.max(this.markerBBox.y2,symbolbottom+20);
 				}
 				if(symbol.echelonETC["Short towed array"]){
-					modifier += '<path d="M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M100,0 l5,5 -5,5 -5,-5 z" />'
+					modifier += '<path d="M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M100,0 l5,5 -5,5 -5,-5 z" />';
 					this.markerBBox.y2 = Math.max(this.markerBBox.y2,symbolbottom+10);
 				}
 				if(symbol.echelonETC["Long towed Array"]){
-					modifier += '<path d="M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M105,0 l-10,0 0,10 10,0 z M75,0 l5,5 -5,5 -5,-5 z  M125,0 l5,5 -5,5 -5,-5 z" />'
+					modifier += '<path d="M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M105,0 l-10,0 0,10 10,0 z M75,0 l5,5 -5,5 -5,-5 z  M125,0 l5,5 -5,5 -5,-5 z" />';
 					this.markerBBox.y2 = Math.max(this.markerBBox.y2,symbolbottom+10);
 				}
 				modifier += '</g>';
 			}
 			if(this.sigint){
 				var symbolbottom = symbolBBox.y + symbolBBox.height;
-				modifier += '<text font-family="Arial" font-weight="bold" stroke="none" text-anchor="middle" x="100" y="'+ (30 + symbolbottom )+'" font-size="35" >'+this.sigint+'</text>'
+				modifier += '<text font-family="Arial" font-weight="bold" stroke="none" text-anchor="middle" x="100" y="'+ (30 + symbolbottom )+'" font-size="35" >'+this.sigint+'</text>';
 				this.markerBBox.y2 = Math.max(this.markerBBox.y2,symbolbottom+30);
 			}
 		/*	
@@ -6477,9 +6477,9 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 			)
 		);
 		*/
-		var Geometry = '<g id="symbolModifier" fill="'+this._symbolColors.frameColor[symbol.affiliationType]+'" stroke="'+this._symbolColors.frameColor[symbol.affiliationType]+'" stroke-width="'+this.strokeWidth+'">' + modifier + '</g>'
+		var Geometry = '<g id="symbolModifier" fill="'+this._symbolColors.frameColor[symbol.affiliationType]+'" stroke="'+this._symbolColors.frameColor[symbol.affiliationType]+'" stroke-width="'+this.strokeWidth+'">' + modifier + '</g>';
 		return Geometry;
-	}
+	};
 
 //Icons ##################################################################################
 	this.symbolIcon = function(element){
@@ -6540,7 +6540,7 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 
 			}else{
 				var symbols = _MilSymbolInitNumberSIDC(symbolSet,icons, this.force2525);
-				sID = _MilSymbol.sID[symbolSet+iconSet] = symbols.sID
+				sID = _MilSymbol.sID[symbolSet+iconSet] = symbols.sID;
 				sIDm1 = _MilSymbol.sIDm1[symbolSet+iconSet] = symbols.sIDm1;
 				sIDm2 = _MilSymbol.sIDm2[symbolSet+iconSet] = symbols.sIDm2;
 			}	
@@ -6614,7 +6614,7 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 */	
 
 // Put all this togheter and return the Icon. ============================================
-		var icon = ""
+		var icon = "";
 		if(!isNaN(this.SIDC)){
 			icon = sID[symbol.functionid.substr(0,6)];//Main symbol
 			if(icon == undefined)icon = sID[symbol.functionid.substr(0,4)+'00'];//We have som sepcial entity subtype and will try to find original symbol.
@@ -6643,9 +6643,9 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 			)
 		);*/
 		
-		var geometry = '<g id="Icon" fill="'+iconColor+'" stroke="'+iconColor+'" stroke-width="'+this.strokeWidth+'" font-family="Arial" font-weight="bold">' + icon + '</g>'
+		var geometry = '<g id="Icon" fill="'+iconColor+'" stroke="'+iconColor+'" stroke-width="'+this.strokeWidth+'" font-family="Arial" font-weight="bold">' + icon + '</g>';
 		return geometry;
-	}
+	};
 
 
 //Combines all parts and returns the symbol as an SVG object. mySymbol.symbolSvg() #######
@@ -6658,7 +6658,7 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 	var symbol = this._symbol;
 
 	//For the map markers we want to remove as much spacing as possible, so we need to keep track of the boundingbox
-	this.markerBBox = {x1:50,y1:50,x2:150,y2:150}	
+	this.markerBBox = {x1:50,y1:50,x2:150,y2:150};
 
 	this._symbolModifier = this.symbolModifier();
 	this._symbolBaseGeometry = this.symbolBaseGeometry();
@@ -6700,9 +6700,9 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 		svgSymbol.setAttribute("height", this.size*3.4);
 		svgSymbol.setAttribute("viewBox", "0 0 300 340");
 		svgSymbol.appendChild(Geometry);
-		var xml = (new XMLSerializer()).serializeToString(svgSymbol) 
+		var xml = (new XMLSerializer()).serializeToString(svgSymbol);
 		return {"object" : svgSymbol, "textXML" : xml};
-	}
+	};
 
 //Makes a mapmarker with a lot of stuff around the symbol ################################
 	this.symbolMarker = function(symbolObject){
@@ -6721,14 +6721,14 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 			
 		//Calculates center of icon and the base marker size. 
 		//TODO shift center for symbols where center is not in the middle of the octagon.
-		var center = {x:parseFloat(this.size-(this.markerBBox.x1-pixelMargin)*this.size/100),y:parseFloat(parseFloat(this.size)-((this.markerBBox.y1-pixelMargin)*this.size/100))}
+		var center = {x:parseFloat(this.size-(this.markerBBox.x1-pixelMargin)*this.size/100),y:parseFloat(parseFloat(this.size)-((this.markerBBox.y1-pixelMargin)*this.size/100))};
 
-		var markerSize = {x:(this.markerBBox.x2-this.markerBBox.x1+2*pixelMargin)*this.size/100, y:(this.markerBBox.y2-this.markerBBox.y1+2*pixelMargin)*this.size/100}
+		var markerSize = {x:(this.markerBBox.x2-this.markerBBox.x1+2*pixelMargin)*this.size/100, y:(this.markerBBox.y2-this.markerBBox.y1+2*pixelMargin)*this.size/100};
 		var offsetx = 0;
 
 		//If it is a HQ we will have to move the center and make the canvas bigger =======
 		if(symbol.hqETC.headquarters){
-			center = {x: pixelMargin*this.size/100, y: markerSize.y-pixelMargin*this.size/100}	
+			center = {x: pixelMargin*this.size/100, y: markerSize.y-pixelMargin*this.size/100};
 			//markerSize.y = center.y
 		}	
 				
@@ -6847,7 +6847,7 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 						w += strWidths[str[i]]?strWidths[str[i]]:28.5;
 					}
 					//This is for the space between the text and the symbol.
-					w+=20
+					w+=20;
 					return w;
 				}	
 					
@@ -6857,7 +6857,7 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 					strWidth(textInformationStrings.L2),
 					strWidth(textInformationStrings.L3),
 					strWidth(textInformationStrings.L4),
-					strWidth(textInformationStrings.L5))
+					strWidth(textInformationStrings.L5));
 
 				this.markerBBox.x2 += offsetx;
 				center.x += (this.size/100)*offsetx;	
@@ -6903,7 +6903,7 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 			Text.setAttribute("font-family", "Arial");
 			Text.setAttribute("font-weight", "bold");
 			Text.setAttribute("font-size", "30");
-			Text.setAttribute("transform", "scale(" + this.size/100 + ") translate(0," + symbolOffset + ")")	
+			Text.setAttribute("transform", "scale(" + this.size/100 + ") translate(0," + symbolOffset + ")");
 			Text.appendChild(
 				Text.ownerDocument.importNode(
 					parseXML(
@@ -6928,7 +6928,7 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 				var groundDirectionOffset = 100;
 				if(symbol.dimensionTypeUnModified == 'Ground'){
 					//markerSize.y = this.size/100*((symbolBBox.y +(symbolBBox.height) + 2*100 + symbolOffset))
-					directionIndicator += '<path  d="M' + (symbolBBox.x+symbolBBox.width/2) + ',' + (symbolBBox.y+symbolBBox.height) +  'l0,' + 100 + '" />'
+					directionIndicator += '<path  d="M' + (symbolBBox.x+symbolBBox.width/2) + ',' + (symbolBBox.y+symbolBBox.height) +  'l0,' + 100 + '" />';
 					groundDirectionOffset = symbolBBox.y+(symbolBBox.height)+100;
 				}
 			
@@ -6944,13 +6944,13 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 				this.markerBBox.x2 = Math.max(this.markerBBox.x2,2*100+offsetx);
 				this.markerBBox.y2 = Math.max(this.markerBBox.y2,groundDirectionOffset+Math.max(Math.sin((((this.direction-360)-90)/360)*Math.PI*2)*100,10));
 					
-				directionIndicator += '<g transform="rotate(' + this.direction +' 100 ' + groundDirectionOffset + ' )"><path  d="M100,' + groundDirectionOffset + ' l0,-' + (100-15) + ' -5,0 5,-10 5,10 -5,0" /></g>'
+				directionIndicator += '<g transform="rotate(' + this.direction +' 100 ' + groundDirectionOffset + ' )"><path  d="M100,' + groundDirectionOffset + ' l0,-' + (100-15) + ' -5,0 5,-10 5,10 -5,0" /></g>';
 				var Direction = document.createElementNS(svgNS, "g");
 				Direction.setAttribute('id', 'DirectionArrow');		
 				Direction.setAttribute("fill", symbolColors.black[symbol.affiliationType]);
 				Direction.setAttribute("stroke", symbolColors.black[symbol.affiliationType]);	
 				Direction.setAttribute("stroke-width", "3");
-				Direction.setAttribute("transform", "scale(" + this.size/100 + ") translate(0," + symbolOffset + ")")		
+				Direction.setAttribute("transform", "scale(" + this.size/100 + ") translate(0," + symbolOffset + ")");
 				Direction.appendChild(
 					Direction.ownerDocument.importNode(
 						parseXML(
@@ -6982,7 +6982,7 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 		svgSymbol.setAttribute("viewBox", (this.markerBBox.x1-pixelMargin)*this.size/100 + " " + (this.markerBBox.y1+symbolOffset-pixelMargin)*this.size/100 + " " + (this.markerBBox.x2-this.markerBBox.x1+2*pixelMargin)*this.size/100 + " " + (this.markerBBox.y2-this.markerBBox.y1+2*pixelMargin)*this.size/100);
 		svgSymbol.appendChild(Geometry);
 		
-		var xml = (new XMLSerializer()).serializeToString(svgSymbol)
+		var xml = (new XMLSerializer()).serializeToString(svgSymbol);
 //var end = window.performance.now()
 //timings += (end-start)
 //iii++
