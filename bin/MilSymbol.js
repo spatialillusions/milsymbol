@@ -5851,7 +5851,7 @@ function MilSymbol(SIDCParameter,options){
 			iconFillColor: '',
 			none : '',
 			black : '',
-			white : '',
+			white : ''
 		};
 		//Ok so we don't really use the opacity, but if we want to make it posible in the 
 		//future to change opacity we have them here to play around with.
