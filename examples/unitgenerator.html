@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -480,26 +479,50 @@ document.getElementById(id+"block").className = "";
 <style type="text/css">
 	body{
 
-		margin-top:10px;
-		padding-left: 10px;
-   		padding-right: 10px;
-
-   		font-family:'Trebuchet MS',Arial;
-   		font-size: 0.8em;
-
+		background-color:#fff;
+		margin-top:0px;
+		margin-left: 0px;
+   		margin-right: 0px;
+	}
+	.body{
+font-family: Helvetica, arial, freesans, clean, sans-serif;
+font-size: 0.8em;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+line-height: 1em;
+margin-bottom: 15px;
+margin-left: 10px;
+margin-right: 10px;
+margin-top: 0px;
 	}
 	a{
 	color: rgb(0,226,110);
 	}
 	.heading{
-		height: 80px;
+		height: 50px;
 		width: 100%;
-		background-color:#f0f0f0;
+		background-color:rgb(0,168,220);
 		position: relative;	
 
 
 	}
-	h1{
+	.heading a{
+		font-size: 20px;
+		text-decoration: none;
+    	position: relative; 
+    	top: 12px;
+		left: 10px;
+font-family: Helvetica, arial, freesans, clean, sans-serif;
+font-weight: normal;
+    	color: #fff;	
+	}
+		.logo{
+    	position: absolute; 
+    	bottom: 10px;
+		right: 10px;    	
+	}
+		h1{
     	position: absolute; 
     	bottom: 5px;
 		left: 10px;
@@ -512,18 +535,7 @@ document.getElementById(id+"block").className = "";
 		font-family:'Trebuchet MS',Arial;
     	color: rgb(0,168,220);
 	}
-	.logo{
-		background-color: rgb(0,168,220);
-    	position: absolute; 
-    	top: 10px;
-		right: 10px;  
-		padding: 10px;  	
-	}
-	.logo a{
-		text-decoration: none;
-		color: #FFFFFF;
-		font-size: 15px;	
-	}
+
 	.sidcLabel{
 	width: 150px;
 	display: inline-block;
@@ -587,12 +599,15 @@ document.getElementById(id+"block").className = "";
 <body onLoad="sidcCreatorInit('SHG-UCI----D');drawSymbol();Icons2525D();">
 
 <div class="heading">
-<h1>2525/APP6 Symbol Generator</h1>
-<div class="logo">
-<a href="http://spatialillusions.com">SPATIAL ILLUSIONS</a>
-<svg viewBox="50 50 100 100" width="40" height="40" style="vertical-align: middle"> 
+
+<a href="http://spatialillusions.com">SPATIAL ILLUSIONS - Symbol Generator</a>
+<svg class="logo"
+viewBox="50 50 100 100"
+   width="30"
+   height="30"
+> 
     <path
-       style="fill:none;stroke:#FFFFFF;stroke-width:3px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       style="fill:none;stroke:#ffffff;stroke-width:3px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
        d="m 105,50 25,15 m -40,20 50,10 m -80,-25 0,35 0,25 45,0 15,15 M 110,80 75,70 l 0,50 45,-25 10,35 20,-35 -20,-30 z m -30,65 20,5 20,-5 20,-15 m -50,15 -10,0 -20,-15 m 90,-35 -10,35 -10,0 -10,15 -30,0 m 45,-80 15,30 -10,0 m -10,-35 5,5 -5,0 m -25,-15 25,10 0,5 m -70,5 20,-15 20,5 M 75,70 60,70 50,105 m 10,25 -10,-25 10,0 m 45,25 -15,15 -30,-15 15,-10 m 25,-60 30,5 10,30 M 75,70 100,60 110,80 m 30,15 -10,35 -25,0 m 15,-35 20,0 -30,-15 -20,5 30,10 -15,35 L 75,120 90,85 75,70 60,105 75,120 m 25,-60 5,-10 -25,5 -5,15">
            <animateTransform 
         attributeType="xml"
@@ -601,17 +616,14 @@ document.getElementById(id+"block").className = "";
        begin="0" dur="60s" 
        fill="freeze"
        repeatCount="indefinite"
-      ></animateTransform>
+      />
+      </path>
+  </g>
+
 </svg>
 </div>
-</div>
+<div class="body">
 <form>
-<br>
-This is an implementation of APP6 (B) / 2525C / 2525D in pure javascript. All images are scalable vector graphics generated from code and the whole library is under 30K in gz format.<br>
-In some cases where the standards differ, I have chosen the one that I like the best, main focus has been that all symbol should be possible to produce and that it looks good. The library is also made to follow the way that symbols are created in APP6 (C) / 2525D because this way is more elegant than the old way, but there are differences, however good cartography has always been the main focus. All symbols have been made to be readable down to a size of L=15px.<br>
-At the moment APP6(B) ANNEX D / 2525C APPENDIX A (Unit Symbols) and 2525C APPENDIX D (Signals intelligence symbols) and APPENDIX E (Stability operations symbols) / parts of unit symbols for 2525D are implemented in this library.<br>
-<br>
-
 
 <h3>Base properties of the symbol.</h3>
 
@@ -963,14 +975,20 @@ Press this link to get a <a href="javascript:allSymbols()">LIST OF ALL SYMBOLS I
 First column is APP6 and second is 2525. -->
 <div id="AllSymbols">
 </div>
+
 <br>
-Måns BECKMAN 2013 -  For more info see <a href="http://spatialillusions.com">spatialillusions.com</a><br>
-<i>This page contains no external dependencies, so if you want to use it in a system that isn't connected to the internet, you can just save this single html page. You are free to share/modify the code as you like, as long you follow the BSD-License in the source code, basically keep my copyright notice and do what you want.</i><br>
-All Code and Graphics are created by Måns BECKMAN. You can contact <u>mans.beckman at spatialillusions dot com</u><br>
+This is an implementation of APP6 (B) / 2525C / 2525D in pure javascript. All images are scalable vector graphics generated from code and the whole library is under 30K in gz format.<br>
+In some cases where the standards differ, I have chosen the one that I like the best, main focus has been that all symbol should be possible to produce and that it looks good. The library is also made to follow the way that symbols are created in APP6 (C) / 2525D because this way is more elegant than the old way, but there are differences, however good cartography has always been the main focus. All symbols have been made to be readable down to a size of L=15px.<br>
+At the moment APP6(B) ANNEX D / 2525C APPENDIX A (Unit Symbols) and 2525C APPENDIX D (Signals intelligence symbols) and APPENDIX E (Stability operations symbols) / parts of unit symbols for 2525D are implemented in this library.<br>
+<br>
+
+
+<br>
+Måns BECKMAN 2013 -  For more info see <a href="http://spatialillusions.com">www.spatialillusions.com</a><br>
 <br>
 <br>
 
 
-
+</div>
 </body>
 </html>
