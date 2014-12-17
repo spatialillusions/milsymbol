@@ -75,6 +75,14 @@ margin-bottom: 5px;
     	bottom: 10px;
 		right: 10px;    	
 	}
+	
+	
+
+		
+	.main{
+		width: 1105px;
+	
+	}
 	.body{
 color: rgb(51, 51, 51);
 font-family: Helvetica, arial, freesans, clean, sans-serif;
@@ -92,7 +100,8 @@ word-wrap: break-word;
 float:left;
 
 	}
-	.qoute{
+	
+		.qoute{
 	
 	font-size: 14px;
 font-style: italic;
@@ -101,6 +110,9 @@ margin-bottom: 15px;
 margin-left: 50px;
 margin-right: 50px;
 	}
+	
+	
+
 	.sidebar{
 color: rgb(51, 51, 51);
 font-family: Helvetica, arial, freesans, clean, sans-serif;
@@ -114,15 +126,9 @@ margin-left: 15px;
 margin-right: 0px;
 margin-top: 15px;
 width: 350px;
-float: left;
+float: right;
 	
 	}	
-	
-	.footer{
-	width: 1000px;
-	margin-left: 100px;
-	background-color: rgb(240, 240, 240);
-	};
 	
 	code{
 	color: rgb(100, 100, 100);
