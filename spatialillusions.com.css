@@ -11,6 +11,7 @@
 	.heading{
 		height: 50px;
 		width: 100%;
+		min-width: 1110px;
 		background-color:rgb(0,168,220);
 		position: relative;	
 	}
@@ -34,6 +35,14 @@ font-family: Helvetica, arial, freesans, clean, sans-serif;
 font-weight: normal;
     	color: #fff;	
 	}	
+	
+		.logo{
+    	position: absolute; 
+    	bottom: 10px;
+		right: 10px;    	
+	}
+	
+	
 	.h1{
     	bottom: 0;
 		left: 10px;
@@ -70,11 +79,7 @@ line-height: 1.2;
 margin-bottom: 5px;
 
 	}
-	.logo{
-    	position: absolute; 
-    	bottom: 10px;
-		right: 10px;    	
-	}
+
 	
 	
 
