@@ -8,6 +8,8 @@ MilSymbol is created and maintained by Måns Beckman, and you can visit my homep
 
 If you use MilSymbol for some project I'm always interested to hear about it, my contact details can be found on my homepage. 
 
+You can find the compleate MilSymbol documentation with Examples on http://spatialillusions.github.io/MilSymbol/
+
 Technology
 ----------
 
