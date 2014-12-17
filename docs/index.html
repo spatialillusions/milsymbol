@@ -1,141 +1,595 @@
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-
-
 <title>Spatial Illusions</title>
+
+<link rel="stylesheet" href="../spatialillusions.com.css" />
 <script src="../bin/MilSymbol.js"></script>
-<script>
-
-</script>
-<style type="text/css">
-	body{
-		background-color:#fff;
-		margin-top:0px;
-		margin-left: 0px;
-   		margin-right: 0px;
-
-	}
-	a{
-	color: rgb(0,226,110);
-	}
-	.heading{
-		height: 50px;
-		width: 100%;
-		background-color:rgb(0,168,220);
-		position: relative;	
-
-
-	}
-	.heading a{
-		font-size: 20px;
-		text-decoration: none;
-    	position: relative; 
-    	top: 12px;
-		left: 10px;
-font-family: Helvetica, arial, freesans, clean, sans-serif;
-font-weight: normal;
-    	color: #fff;	
-	}
-	
-	h1{
-    	position: absolute; 
-    	bottom: 0;
-		left: 10px;
-font-family: Helvetica, arial, freesans, clean, sans-serif;
-font-weight: normal;
-    	color: rgb(0,168,220);	
-	}
-	h2{
-font-family: Helvetica, arial, freesans, clean, sans-serif;
-font-weight: normal;
-
-    	color: rgb(0,168,220);
-	}
-	.logo{
-    	position: absolute; 
-    	bottom: 10px;
-		right: 10px;    	
-	}
-	.body{
-color: rgb(51, 51, 51);
-font-family: Helvetica, arial, freesans, clean, sans-serif;
-font-size: 15px;
-font-style: normal;
-font-variant: normal;
-font-weight: normal;
-line-height: 25px;
-margin-bottom: 15px;
-margin-left: 100px;
-margin-right: 0px;
-margin-top: 15px;
-width: 640px;
-word-wrap: break-word;
-
-	}
-	
-	code{
-	color: rgb(100, 100, 100);
-	}
-</style>
-
-
 
 </head>
 <body>
+
+
 <div class="heading">
+	<a href="http://spatialillusions.com">SPATIAL ILLUSIONS</a>
+	<span class="bannerLinks">
+	<!--<a href="MilSymbolLibrary/index.html">MilSymbol.js</a>
+	<a href="ForceTracker/index.html">Force Tracker</a>-->
 
-<a href="http://spatialillusions.com">SPATIAL ILLUSIONS</a>
-<svg class="logo"
-viewBox="50 50 100 100"
-   width="30"
-   height="30"
-> 
-    <path
-       style="fill:none;stroke:#ffffff;stroke-width:3px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       d="m 105,50 25,15 m -40,20 50,10 m -80,-25 0,35 0,25 45,0 15,15 M 110,80 75,70 l 0,50 45,-25 10,35 20,-35 -20,-30 z m -30,65 20,5 20,-5 20,-15 m -50,15 -10,0 -20,-15 m 90,-35 -10,35 -10,0 -10,15 -30,0 m 45,-80 15,30 -10,0 m -10,-35 5,5 -5,0 m -25,-15 25,10 0,5 m -70,5 20,-15 20,5 M 75,70 60,70 50,105 m 10,25 -10,-25 10,0 m 45,25 -15,15 -30,-15 15,-10 m 25,-60 30,5 10,30 M 75,70 100,60 110,80 m 30,15 -10,35 -25,0 m 15,-35 20,0 -30,-15 -20,5 30,10 -15,35 L 75,120 90,85 75,70 60,105 75,120 m 25,-60 5,-10 -25,5 -5,15">
-           <animateTransform 
-        attributeType="xml"
-       attributeName="transform" type="rotate"
-       from="0 100 100" to="360 100 100"
-       begin="0" dur="60s" 
-       fill="freeze"
-       repeatCount="indefinite"
-      />
-      </path>
-  </g>
-
-</svg>
+	</span>
+	<svg class="logo"
+		viewBox="50 50 100 100"
+		width="30"
+		height="30"> 
+		<path
+			style="fill:none;stroke:#ffffff;stroke-width:3px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+			d="m 105,50 25,15 m -40,20 50,10 m -80,-25 0,35 0,25 45,0 15,15 M 110,80 75,70 l 0,50 45,-25 10,35 20,-35 -20,-30 z m -30,65 20,5 20,-5 20,-15 m -50,15 -10,0 -20,-15 m 90,-35 -10,35 -10,0 -10,15 -30,0 m 45,-80 15,30 -10,0 m -10,-35 5,5 -5,0 m -25,-15 25,10 0,5 m -70,5 20,-15 20,5 M 75,70 60,70 50,105 m 10,25 -10,-25 10,0 m 45,25 -15,15 -30,-15 15,-10 m 25,-60 30,5 10,30 M 75,70 100,60 110,80 m 30,15 -10,35 -25,0 m 15,-35 20,0 -30,-15 -20,5 30,10 -15,35 L 75,120 90,85 75,70 60,105 75,120 m 25,-60 5,-10 -25,5 -5,15">
+				<animateTransform 
+				attributeType="xml"
+				attributeName="transform" type="rotate"
+				from="0 100 100" to="360 100 100"
+				begin="0" dur="60s" 
+				fill="freeze"
+				repeatCount="indefinite"
+				/>
+		</path>
+	</svg>
 </div>
-
-
 
 <div class="body">
 
+	<div class="h1">MilSymbol API Documentation</div>
+
+<div class="h2" id="Creating">Creating a symbol</div>
+
+You create a symbol by initiating it with a SIDC, and optionally an object literal with symbol options described below.<br>
+<i>new MilSymbol(&lt;SIDC|String&gt;, &lt;Symbol options&gt; options? )</i><br>
+
+<code>//Include MilSymbol.js<br>
+&lt;script src="../bin/MilSymbol.js"&gt;&lt;/script&gt;<br>
+&lt;script&gt;<br>
+//Create a symbol<br>
+mySymbol = new MilSymbol("SFG-UCI----D");<br>
+&lt;/script&gt;</code>
+Where the SIDC is a complete, letter based or number based, or at least the first 3 chars of a letter based SIDC.<br>
+<br>
+If you want to include options the symbol should be initiated like this, see below for symbol options.<br>
+<code>mySymbol = new MilSymbol("SFG-UCI----D",{size:30,fill:false});</code><br>
+
+<div class="h3">Basic Symbol Options</div>
+<table border="1">
+<tr class="table-heading">
+<td>Option
+</td>
+<td>Type
+</td>
+<td>Default
+</td>
+<td>Description
+</td>
+</tr>
+
+<tr>
+<td><b>fill</b>
+</td>
+<td>Boolean
+</td>
+<td><i>true</i>
+</td>
+<td><small>Should your symbol be filled with color.</small>
+</td>
+</tr>
+
+<tr>
+<td><b>frame</b>
+</td>
+<td>Boolean
+</td>
+<td><i>true</i>
+</td>
+<td><small>Should your symbol have a frame.<br>
+	All symbols support to be unframed, not just the ones specified in 2525B.</small>
+</td>
+</tr>
+
+<tr>
+<td><b>icon</b>
+</td>
+<td>Boolean
+</td>
+<td><i>true</i>
+</td>
+<td><small>Should your symbol have an icon.</small>
+</td>
+</tr>
+
+<tr>
+<td><b>strokeWidth</b>
+</td>
+<td>Real
+</td>
+<td><i>3</i>
+</td>
+<td><small>The stroke width of the symbol.</small>
+</td>
+</tr>
+
+<tr>
+<td><b>size</b></td>
+<td>Integer
+</td>
+<td><i>100</i><br></td>
+<td>
+<small>The L value for you symbol. (If L < 10 the symbol will be a filled circle with the diameter of your L, at these sizes symbols won't be readable otherwise.)</small><br>
+</td>
+</tr>
+
+<tr>
+<td><b>colorMode</b></td>
+<td>String
+</td>
+<td><i>"Light"</i><br></td>
+<td>
+<small>"Light", "Medium" or "Dark".</small><br>
+</td>
+</tr>
+
+<tr>
+<td><b>monoColor</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>Set to any color name "Black"/"Green"/e.t.c. or color value "rgb(255,0,0)".</small><br>
+</td>
+</tr>
+
+<tr>
+<td><b>civilianColors</b></td>
+<td>Boolean
+</td>
+<td><i>true</i><br></td>
+<td>
+<small>2525C specifics purple as an optional color for civilian symbols. Of corse we like color so we set this as default. </small><br>
+</td>
+</tr>
+
+<tr>
+<td><b>force2525</b></td>
+<td>Boolean
+</td>
+<td><i>true</i><br></td>
+<td>
+<small>Sometimes APP6 and 2525 differ in symbols, for example 2525 wants VSTOL to be symbolized with the letter L but APP6 want to use the letter V, there are also some differences in fill colors and other. Default we are using APP6 symbology, but if you want to force 2525 symbology, just set this to true. (All possible SIDC will have some kind of symbol no matter setting, so you will always get a symbol.)</small><br>
+</td>
+</tr>
+
+<tr>
+<td><b>infoFields</b></td>
+<td>Boolean
+</td>
+<td><i>true</i><br></td>
+<td>
+<small>If you have set some text fields and direction but don't want the to be displayed you can set infoFields to false. This makes it possible to initiate the object with all information you got but not display it.</small><br>
+</td>
+</tr>
+
+</table>
+
+<div class="h3">Information fields Options</div>
+
+<table border="1">
+<tr class="table-heading">
+<td>Option
+</td>
+<td>Type
+</td>
+<td>Default
+</td>
+<td>Description
+</td>
+</tr>
+
+<tr>
+<td><b>quantity</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID C<br>A text modifier in an equipment symbol that identifies the number of items present. 9 Characters</small>
+</td>
+</tr>
+
+<tr>
+<td><b>reinforcedReduced</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID F<br>A text modifier in a unit symbol that displays (+) for reinforced, (-) for reduced, (±) reinforced and reduced. 3 Characters</small>
+</td>
+</tr>
+
+<tr>
+<td><b>staffComments</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID G<br>A text modifier for units, equipment and installations; content is implementation specific. 20 Characters</small>
+</td>
+</tr>
+
+<tr>
+<td><b>additionalInformation</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID H<br>A text modifier for units, equipment, and installations; content is implementation specific. 20 Characters</small>
+</td>
+</tr>
+
+<tr>
+<td><b>evaluationRating</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID J<br>A text modifier for units, equipment, and installations that consists of a one-letter reliability rating and a one-number credibility rating. 2 Characters</small>
+</td>
+</tr>
+
+<tr>
+<td><b>combatEffectiveness</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID K<br>A text modifier for units and installations that indicates unit effectiveness or installation capability. 5 Characters</small>	
+</td>
+</tr>
+
+<tr>
+<td><b>signatureEquipment</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID L<br>A text modifier for hostile equipment; "!" indicates detectable electronic signatures. 1 Characters</small><br>
+</td>
+</tr>
+
+<tr>
+<td><b>higherFormation</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID M<br>A text modifier for units that indicates number or title of higher echelon command (corps are designated by Roman numerals). 21 Characters</small><br>
+</td>
+</tr>
 
 
+<tr>
+<td><b>hostile</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID N<br>A text modifier for equipment; letters "ENY" denote hostile symbols. 3 Characters</small><br>
+</td>
+</tr>
 
-<h2>MilSymbol - Military symbols made easy</h2>
-MilSymbol is a small library in pure javascript that creates SVG symbols according to 
-MIL-STD-2525 and APP6. All unit symbols with SIDCs in both 2525(c) and APP6(b) are supported. 
-The symbols are created according to APP6(c) symbology and might therefore differ from the 
-symbols in shown in the standard documents, but they are made according to the standards and
-follows the way that symbols are created in ADRP 1-02 (US Army Doctrine Reference Publication).<br>
-At the moment APP6(B) ANNEX D / 2525C APPENDIX A (Unit Symbols) and 2525C APPENDIX D (Signals intelligence symbols) and APPENDIX E (Stability operations symbols) / parts of unit symbols for 2525D are implemented in this library.<br>
+
+<tr>
+<td><b>iffSif</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID P<br>A text modifier displaying IFF/SIF Identification modes and codes. 5 Characters</small>	<br>
+</td>
+</tr>
+
+
+<tr>
+<td><b>direction</b></td>
+<td>Integer
+</td>
+<td><i>undefined</i><br></td>
+<td>
+<small>FeildID Q, at the moment all directions should be in degrees and not in mils. Set to an empty string to remove the direction arrow.</small><br>
+</td>
+</tr>
+
+
+<tr>
+<td><b>sigint</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID R2<br>M = Mobile, S = Static, or U = Uncertain.</small><br>
+</td>
+</tr>
+
+
+<tr>
+<td><b>uniqueDesignation</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID T<br>A text modifier for units, equipment, and installations that uniquely identifies a particular symbol or track number. Identifies acquisitions number when used with SIGINT symbology. 21 Characters</small><br>
+</td>
+</tr>
+
+
+<tr>
+<td><b>type</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID V<br>A text modifier for equipment that indicates types of equipment. 24 Characters</small><br>
+</td>
+</tr>
+
+
+<tr>
+<td><b>dtg</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID W<br>A text modifier for units, equipment, and installations that displays DTG format: DDHHMMSSZMONYYYY or "O/O" for on order. 16 Characters</small>	<br>
+</td>
+</tr>
+
+
+<tr>
+<td><b>altitudeDepth</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID X<br>A text modifier for units, equipment, and installations, that displays either altitude flight level, depth for submerged objects; or height of equipment or structures on the ground. 14 Characters</small>	<br>
+</td>
+</tr>
+
+
+<tr>
+<td><b>location</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID Y<br>A text modifier for units, equipment, and installations that displays a symbol's location in degrees, minutes, and seconds (or in UTM or other applicable display format). 19 Characters</small><br>
+</td>
+</tr>
+
+
+<tr>
+<td><b>speed</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID Z<br>A text modifier for units and equipment that displays velocity as set forth in MIL-STD-6040. 8 Characters</small>	<br>
+</td>
+</tr>
+
+
+<tr>
+<td><b>specialHeadquarters</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID AA<br>A text modifier for units; indicator is contained inside the frame; contains the name of the special C2 Headquarters. 9 Characters</small><br>
+</td>
+</tr>
+
+
+<tr>
+<td><b>platformType</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID AD<br>"ELNOT" or "CENOT"</small><br> <br>
+</td>
+</tr>
+
+
+<tr>
+<td><b>equipmentTeardownTime</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID AE<br>Equipment teardown time in minutes.</small><br> <br>
+</td>
+</tr>
+
+
+<tr>
+<td><b>commonIdentifier</b></td>
+<td>String
+</td>
+<td><i>""</i><br></td>
+<td>
+<small>FeildID AF<br>Example: "Hawk" for Hawk SAM system.</small><br> <br>
+</td>
+</tr>
+
+</table>
+<br>
+	<div class="h2" id="Getting">Getting a symbol</div>
+You can get your symbol in two ways. Either use symbolSvg() or symbolMarker().<br>
+<br>
+	<div class="h3">symbolSvg()</div>
+
+This will return just you symbol without any text feilds. It will return an object with two properies <b>object</b> and <b>textXML</b>. Symbols generated directly from symbolSvg() will have quite large white space around them.<br>
+<br>
+<table border="1">
+<tr class="table-heading">
+<td>Property
+</td>
+<td>Description
+</td>
+</tr>
+
+<tr>
+<td><b>object</b>
+</td>
+<td>A javascript object representing the SVG XML, and can be used if you want to process your symbol further in your own javascript code.
+</td>
+</tr>
+
+<tr>
+<td><b>textXML</b>
+</td>
+<td>Is a text representation of the SVG XML, and can be used if you want to write you symbol directly to your document.
+</td>
+</tr>
+
+</table>
 
 <br>
-The library is published under a BSD-license so you can do basically anything you want 
-with it as long as you give it some credit. All of the code was created as a proof of concept
-and was initially just thought as a simple way for me to get symbols for some webmapping
-demos I was making as a hobby, but the code expanded into something much more.<br>
+<b>Example:</b>
+<code>
+mySymbol = new MilSymbol("SFG-UCI----D",{size:30})<br>
+document.write(mySymbol.symbolSvg().textXML);</code><br>
+<b>Will produce:</b><br>
+
+<script>
+mySymbol = new MilSymbol("SFG-UCI----D",{size:30})
+document.write(mySymbol.symbolSvg().textXML);
+
+</script>
+<div class="h3">symbolMarker({symbolObject}?)</div>
+The symbol marker returned from symbolMarker() is a more complex object that is suitable for when you want to use the symbol as a map marker, the white space around the symbol will also be minimized. The object returned will have six properties: <b>object</b>, <b>textXML</b>, <b>width</b>, <b>height</b>, <b>x</b> and <b>y</b>. <br>
+
+<br>
+<table border="1">
+<tr class="table-heading">
+<td>Property
+</td>
+<td>Description
+</td>
+</tr>
+
+<tr>
+<td><b>object</b>
+</td>
+<td>A javascript object representing the SVG XML, and can be used if you want to process your symbol further in your own javascript code.
+</td>
+</tr>
+
+<tr>
+<td><b>textXML</b>
+</td>
+<td>Is a text representation of the SVG XML, and can be used if you want to write you symbol directly to your document.
+</td>
+</tr>
+
+<tr>
+<td><b>width</b>
+</td>
+<td>The width of the symbol.
+</td>
+</tr>
+
+<tr>
+<td><b>height</b>
+</td>
+<td>The height of the symbol.
+</td>
+</tr>
+
+<tr>
+<td><b>x</b>
+</td>
+<td>The top offset of the insertion point, this will help you position the symbol correctly if you are using it as a map marker.
+</td>
+</tr>
+
+<tr>
+<td><b>y</b>
+</td>
+<td>The left offset of the insertion point, this will help you position the symbol correctly if you are using it as a map marker.
+</td>
+</tr>
+
+</table>
+
 <br>
 
-MilSymbol logs the current version number to the console when it is initiated.<br>
-<br>
+It's possible to pass an symbolObject from symbolSvg() to this function. If you know that you will update the information around the icon a lot but the SIDC will be the same, the recommendation is to cash the symbolObject and pass it to the function because till will gain you some speed. If you don't pass any object the function will create a new icon from the symbols SIDC.<br>
 
-<h2>Examples</h2>
+<br>
+<b>Example:</b><br>
+<code>
+//Without cashed symbol<br>
+mySymbol = new MilSymbol("SFG-UCI----D",{size:30})<br>
+document.write(mySymbol.symbolMarker().textXML);<br>
+<br>
+//With cashed symbol, this is a tiny bit faster if you are going to update your symbol often<br>
+mySymbol2 = new MilSymbol("SFG-UCI----D",{size:30})<br>
+var cashedSymbol = mySymbol2.symbolSvg();<br>
+document.write(mySymbol.symbolMarker(cashedSymbol).textXML);<br>
+</code><br>
+<b>Will produce:</b><br>
+<script>
+//Without cashed symbol
+mySymbol = new MilSymbol("SFG-UCI----D",{size:30})
+document.write(mySymbol.symbolMarker().textXML);
+
+//With cashed symbol, this is a tiny bit faster if you are going to update your symbol often<br>
+mySymbol2 = new MilSymbol("SFG-UCI----D",{size:30})
+var cashedSymbol = mySymbol2.symbolSvg();
+document.write(mySymbol.symbolMarker(cashedSymbol).textXML);
+</script>
+<br>
+<div class="h2" id="Updating">Updating a symbol</div>
+
+It is possible at any time to update properties for your symbol and request a new rendition.</br>
+<b>Example:</b><br>
+<code>var sym = new MilSymbol("SFG-UCA----G",{size:50});<br>
+document.write(sym.symbolMarker().textXML);<br>
+document.write("&lt;br&gt;");<br>
+sym.size = 29;<br>
+sym.uniqueDesignation = "NAME";<br>
+document.write(sym.symbolMarker().textXML);<br>
+</code><br>
+
+<b>Will produce:</b><br>
+<script>var sym = new MilSymbol("SFG-UCA----G",{size:50});
+document.write(sym.symbolMarker().textXML);
+document.write("<br>");
+sym.size = 29;
+sym.uniqueDesignation = "NAME";
+document.write(sym.symbolMarker().textXML);
+</script>
+
+
+</div>
+<div class="sidebar">
+	<div class="h2">MilSymbol Documentation</div>
+		<a href="../index.html">MilSymbol Introduction</a><br>
+		<a href="../License.txt">License</a><br>
+		<br>
+		<b>API</b><br>
+		<a href="#Creating">Creating a Symbol</a><br>
+		<a href="#Getting">Getting a Symbol</a><br>
+		<a href="#Updating">Updating a Symbol</a><br>
+
+
+
+<div class="h2">MilSymbol is flexible</div>
 <script>
 var size = 30;
 </script>
@@ -301,209 +755,9 @@ MilSymbol: {frame:false,fill:false,icon:false} (size set to 15px)
 </td>
 </tr>
 </table><br>
-
-Reference figure 13 from MIL-STD-2525C:<br>
-<img src="figure13.png"><br>
-Same figure created with MilSymbol: <small>(The direction arrow on the Reference figure points in the wrong direction, given direction is 0450 mills.)</small><br>
-<script>
-document.write(new MilSymbol("sfgpewrh--mt", {	size:40,
-												quantity: 200,
-												staffComments: "for reinforcements".toUpperCase(),
-												additionalInformation: "added support for JJ".toUpperCase(),
-												direction: (450*360/6400),
-												type: "machine gun".toUpperCase(),
-												dtg: "30140000ZSEP97",
-												location: "0900000.0E570306.0N"
-												}).symbolMarker().textXML);
-</script><br>
-<a href="unittest2525c.html">Most tables and figures from MIL-STD-2525C, implemented in MilSymbol, can be found here.</a><br>
-<a href="unittestAPP6b.html">Most tables and figures from APP6b, implemented in MilSymbol, can be found here.</a><br>
-<br>
-<a href="unittest2525d.html">Under development MIL-STD-2525D. Symbols implemented in MilSymbol, can be found here.</a>
-
-
-<h2>Demos</h2>
-<h3>Quick display of Units in a LeafLet map</h3>
-<iframe width="600" height="400" src="../examples/leaflet/index.html"></iframe><br>
-Showing a usecase of my javascript library just displaying some units on a leaflet map. It's possible to drag the symbols to new locations but at the moment there is no backend to save the new positions.<br>
-<a href="../examples/leaflet/index.html" target="_blank">Open in new Window</a><br>
-
-<h3>Quick display of Units in an OpenLayers 3 map</h3>
-<iframe width="600" height="400" src="../examples/openlayers3/index.html"></iframe><br>
-In OpenLayers you will have to base64 encode your symbols, but other than that it's quite straight forward. <i>This example might not work in older versions of Internet Explorer</i><br>
-<a href="../examples/openlayers3/index.html" target="_blank">Open in new Window</a><br>
-
-<h3>MilSymbol Units in d3js</h3>
-<iframe width="600" height="400" src="../examples/d3/index.html"></iframe><br>
-It's possible to use MilSymbol symbols in d3 as well and use d3's functionallity to draw network graphs.<br>
-<a href="../examples/d3/index.html" target="_blank">Open in new Window</a><br>
-
-<h2>Documentation</h2>
-<h3>Creating a symbol</h3>
-
-To create a new symbol you use<br>
-<code>mySymbol = new MilSymbol(SIDC)</code><br>
-where SIDS is a complete or at least the first 3 chars of a SIDC Code.<br>
-
-You can also set other initial attributes when you create your symbol<br>
-<code>mySymbol = new MilSymbol(SIDC,{initial values})</code><br>
-<br>
-The attributes for you symbol is:<br>
-<b>fill</b>	<i><small>default true</small></i><br>
-<small>Should your symbol be filled with color.</small><br>
-
-<b>frame</b>	<i><small>default true </small></i><br>
-<small>Should your symbol have a frame.<br>
-	All symbols support to be unframed, not just the ones specified in 2525B.</small><br>
-
-<b>icon</b>	<i><small>default true</small></i><br>
-<small>Should your symbol have an icon.</small><br>
-
-<b>strokeWidth</b> <i><small>default 3</small></i><br>
-<small>The stroke width of the symbol.</small><br>
-
-<b>size</b> <i><small>default 100</small></i><br>
-<small>The L value for you symbol. (If L < 10 the symbol will be a filled circle with the diameter of your L, at these sizes symbols won't be readable otherwise.)</small><br>
-
-<b>colorMode</b> <i><small>default "Light"</small></i><br>
-<small>"Light", "Medium" or "Dark".</small><br>
-
-<b>monoColor</b> <i><small>default ""</small></i><br>
-<small>Set to any color name "Black"/"Green"/e.t.c. or color value "rgb(255,0,0)".</small><br>
-
-<b>civilianColors</b> <i><small>default true</small></i><br>
-<small>2525C specifics purple as an optional color for civilian symbols. Of corse we like color so we set this as default. </small><br>
-
-<b>force2525</b> <i><small>default true</small></i><br>
-<small>Sometimes APP6 and 2525 differ in symbols, for example 2525 wants VSTOL to be symbolized with the letter L but APP6 want to use the letter V, there are also some differences in fill colors and other. Default we are using APP6 symbology, but if you want to force 2525 symbology, just set this to true. (All possible SIDC will have some kind of symbol no matter setting, so you will always get a symbol.)</small><br>
-
-<b>infoFields</b> <i><small>default true</small></i><br>
-<small>If you have set some text fields and direction but don't want the to be displayed you can set infoFields to false. This makes it possible to initiate the object with all information you got but not display it.</small><br>
-
-<b>quantity</b><br>
-<small>FeildID C</small><br>
-<b>reinforcedReduced</b>	<br>
-<small>FeildID F</small><br>
-<b>staffComments</b>	<br>
-<small>FeildID G</small><br>
-<b>additionalInformation</b><br>
-<small>FeildID H</small><br>
-<b>evaluationRating</b>	<br>
-<small>FeildID J</small><br>
-<b>combatEffectiveness</b><br>
-<small>FeildID K</small>	<br>
-<b>signatureEquipment</b>	<br>
-<small>FeildID L</small><br>
-<b>higherFormation</b>	<br>
-<small>FeildID M</small><br>
-<b>hostile</b>	<br>
-<small>FeildID N</small><br>
-<b>iffSif</b><br>
-<small>FeildID P</small>	<br>
-<b>direction</b><br>
-<small>FeildID Q, at the moment all directions should be in degrees and not in mils.	</small><br>
-<!--<b>sigint</b><br>
-<small>FeildID R2</small><br> <br>-->
-<b>uniqueDesignation</b>	<br>
-<small>FeildID T</small><br>
-<b>type</b>	<br>
-<small>FeildID V</small><br>
-<b>dtg</b><br>
-<small>FeildID W</small>	<br>
-<b>altitudeDepth</b><br>
-<small>FeildID X</small>	<br>
-<b>location</b>	<br>
-<small>FeildID Y</small><br>
-<b>speed</b><br>
-<small>FeildID Z</small>	<br>
-<b>specialHeadquarters</b>	<br>
-<small>FeildID AA</small><br>
-<!--<b>platformType</b>	<br>
-<small>FeildID AD</small><br> <br>
-<b>equipmentTeardownTime</b><br>
-<small>FeildID AE</small><br> <br>
-<b>commonIdentifier</b>	<br>
-<small>FeildID AF</small><br> <br>
-<b>auxiliaryEquipmentIndicator</b>	<br>
-<small>FeildID AG</small><br> <br>-->
-
-<h3>Getting a symbol</h3>
-
-You can get your symbol in two ways. Either use symbolSvg() or symbolMarker(), where I would recommend to use symbolMarker().<br>
-<br>
-<b>symbolSvg()</b><br>
-This will return just you symbol without any text feilds. It will return an object with two properies <code>object</code> and <code>textXML</code>.<br>
-The object property can be used if you want to process your symbol further and the textXML if you want to write you symbol directly to your document.<br>
-<i>Example:</i><br>
-<code>document.getElementById("2525Symbol").innerHTML = mySymbol.symbolSvg().textXML</code><br>
-<br>
-<b>symbolMarker({symbolObject})</b><br>
-This will return the symbol with all information printed. The left and top offsets of the insertion point are available from <code>symbolMarker().x</code> and <code>symbolMaker().y</code><br>It will return an object with six properies <code>object</code>, <code>textXML</code>, <code>width</code>, <code>height</code>, <code>x</code> and <code>y</code>.<br>
-The object property can be used if you want to process your symbol further and the textXML if you want to write you symbol directly to your document.<br>
-It's possible to pass an symbolObject from symbolSvg() to this function. If you know that you will update the information around the icon a lot but the SIDC will be the same, the recommendation is to cash the symbolObject and pass it to the function. If you don't pass any object the function will create a new icon from the symbols SIDC.<br>
-<i>Example:</i><br>
-<code>document.getElementById("2525Symbol").innerHTML = mySymbol.symbolMarker().textXML</code><br>
-<br>
-<i>Example using a symbolObject:</i><br>
-<code>document.getElementById("2525Symbol").innerHTML = mySymbol.symbolMarker(cashedSymbol.symbolSvg()).textXML</code><br>
-
-<h3>Updating a symbol</h3>
-It is possible at any time to update properties for you symbol and request a new rendition.</br>
-<i>Example:</i><br>
-<code>var sym = new MilSymbol("SFG-UCA----G",{size:50});<br>
-document.write(sym.symbolMarker().textXML);<br>
-document.write("&lt;br&gt;");<br>
-sym.size = 27;<br>
-sym.uniqueDesignation = "NAME";<br>
-document.write(sym.symbolMarker().textXML);<br>
-</code>
-<i>Will produce:</i><br>
-<script>var sym = new MilSymbol("SFG-UCA----G",{size:50});
-document.write(sym.symbolMarker().textXML);
-document.write("<br>");
-sym.size = 27;
-sym.uniqueDesignation = "NAME";
-document.write(sym.symbolMarker().textXML);
-</script>
-
-
-<h2>FAQ</h2>
-The library is focused on flexibility and simplicity and not on speed but it's quite fast anyway. After the initial compilation of the source most symbols will be created under 3 milliseconds.<br> 
-<br>
-There are some symbols in APP6 we don't support, simply because the SIDCs listed in APP6 sometimes have errors in them and we simply couldn't figure out the correct ones... <br>
-The symbols are:<br>
-1.X.3.1.1.4.6.1.1<br>
-1.X.3.1.1.4.6.1.2<br>
-1.X.3.1.1.4.6.1.3<br>
-1.X.3.1.1.5.10<br>
-1.X.3.1.1.6.1.11<br>
-1.X.3.1.1.6.1.12<br>
-1.X.3.1.1.6.1.13<br>
-1.X.3.1.1.6.1.14<br>
-1.X.3.1.1.7.7<br>
-1.X.3.1.1.7.8<br>
-1.X.3.1.1.11<br>
-1.X.3.1.2.9<br>
-1.X.3.1.3.3.15<br>
-1.X.3.1.3.4.8<br>
-1.X.3.1.5<br>
-1.X.3.1.6<br>
-1..X.3.2.2.3.2.1<br>
-1.X.4.1.3.4 have wrong SIDC in APP6 but we used the one in 2525.<br>
-And the whole hierarchy 1.X.3.1.1.10 has the wrong SIDC in APP6 but we use the ones listed in 2525.<br>
-<h2>Contact</h2>
-All this was made by Måns Beckman, I'm an IT consultant working with GIS and information visualization
-mainly with defence customers. All information on this homepage is however created in my spare time 
-and has no connection to my work, my work just happens to be my hobby as well.<br> 
- 
-
-If you want some more information you can contact med at mans.beckman/at/spatialillusions/dot/com
-<br>
-
-01 DEC 2013 - Måns Beckman
-
-
 </div>
+
+
 
 </body>   
     
