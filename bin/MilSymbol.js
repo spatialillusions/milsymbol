@@ -32,8 +32,6 @@ For updates and more information go to http://www.spatialillusions.com
 
 ======================================================================================= */
 console.log("MilSymbol 0.4.5 Copyright (c) 2013 Måns Beckman http://www.spatialillusions.com");
-var timings = 0;
-var iii = 0;
 
 var _MilSymbol = {
 	sID : {},
@@ -5510,7 +5508,7 @@ sID['160000'] = 'Manual Track';
 	return {sID:sID,sIDm1:sIDm1,sIDm2:sIDm2}
 }
 
-MilSymbol = function (SIDCParameter,options){
+var MilSymbol = function (SIDCParameter,options){
 
 //Constants
 	svgNS = "http://www.w3.org/2000/svg";
@@ -6104,7 +6102,6 @@ MilSymbol = function (SIDCParameter,options){
 			}
 		}		
 
-	
 		Colors.none = baseColorNone;
 		Colors.black = baseColorBlack;
 		Colors.white = baseColorWhite;
@@ -6153,8 +6150,6 @@ MilSymbol = function (SIDCParameter,options){
 			//Another dirty override to get correct 2525 colors for special symbols with filled icons.
 			//Colors.black = baseFrameColor;
 		}
-		
-
 		
 		//Icon or not (shhhh, the icon is really there but we make it invisible...)
 		if(!this.icon){
@@ -6242,7 +6237,6 @@ MilSymbol = function (SIDCParameter,options){
 		
 		}
 		var Geometry = '<g id="StatusGeometry" fill="none" stroke="'+this._symbolColors.white["Friend"]+'" stroke-width="'+(parseFloat(this.strokeWidth)+1)+'" stroke-dasharray="'+symbol.anticipated+'">'+tmp+'</g>';
-	
 		return Geometry;
 	};
 
@@ -6304,7 +6298,6 @@ MilSymbol = function (SIDCParameter,options){
 			if(symbol.affiliationType == 'Hostile'){extraModifier = '<path stroke="none" fill="' +this._symbolColors.frameColor[symbol.affiliationType]+ '" d="M67,50 L100,20 133,50 z "/>'}
 			if(symbol.affiliationType == 'Neutral'){extraModifier = '<path stroke="none" fill="' +this._symbolColors.frameColor[symbol.affiliationType]+ '" d="M45,50 l0,-20 110,0 0,20 z "/>'}
 			if(symbol.affiliationType == 'Unknown'){extraModifier = '<path stroke="none" fill="' +this._symbolColors.frameColor[symbol.affiliationType]+ '" d="M 100 22.5 C 85 22.5 70 31.669211 66 50 L 134 50 C 130 31.669204 115 22.5 100 22.5 z "/>'}
-
 		}
 		
 		//TODO Add modifiers for activity. Defined in APP6C but unclear when to trigger... 
@@ -6313,7 +6306,6 @@ MilSymbol = function (SIDCParameter,options){
 			if(symbol.affiliationType == 'Hostile'){extraModifier = '<path stroke="none" fill="' +this._symbolColors.frameColor[symbol.affiliationType]+ '" d="M 100 28 L 89.40625 38.59375 L 100 49.21875 L 110.59375 38.59375 L 100 28 z M 38.6875 89.3125 L 28.0625 99.9375 L 38.6875 110.53125 L 49.28125 99.9375 L 38.6875 89.3125 z M 161.40625 89.40625 L 150.78125 100 L 161.40625 110.59375 L 172 100 L 161.40625 89.40625 z M 99.9375 150.71875 L 89.3125 161.3125 L 99.9375 171.9375 L 110.53125 161.3125 L 99.9375 150.71875 z"/>'}
 			if(symbol.affiliationType == 'Neutral'){extraModifier = '<path stroke="none" fill="' +this._symbolColors.frameColor[symbol.affiliationType]+ '" d="m 140,140 15,0 0,15 -15,0 z m -80,0 0,15 -15,0 0,-15 z m 80,-80 0,-15 15,0 0,15 z m -80,0 -15,0 0,-15 15,0 z"/>'}
 			if(symbol.affiliationType == 'Unknown'){extraModifier = '<path stroke="none" fill="' +this._symbolColors.frameColor[symbol.affiliationType]+ '" d="M 107.96875 31.46875 L 92.03125 31.71875 L 92.03125 46.4375 L 107.71875 46.4375 L 107.96875 31.46875 z M 47.03125 92.5 L 31.09375 92.75 L 31.09375 107.5 L 46.78125 107.5 L 47.03125 92.5 z M 168.4375 92.5 L 152.5 92.75 L 152.5 107.5 L 168.1875 107.5 L 168.4375 92.5 z M 107.96875 153.5625 L 92.03125 153.8125 L 92.03125 168.53125 L 107.71875 168.53125 L 107.96875 153.5625 z"/>'}
-
 		}		
 
 		//The test geometry displays the bounding octagon in the symbols, good for debugging.
@@ -6640,8 +6632,6 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 		//Modifier 2
 		var sIDm2 = [];
 
-	
-		
 		var iconSet = symbol.affiliationType+'-fillcolor:'+fillColor+' iconColor:'+iconColor+' iconFillColor:'+iconFillColor+' '+none+black+white+'-'+this.fill+this.frame+this.strokeWidth+this.monoColor+this.civilianColors+this.colorMode+this.force2525;
 
 		if(_MilSymbol.icons.hasOwnProperty(iconSet)){	
@@ -6781,7 +6771,6 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 		return geometry;
 	};
 
-
 //Combines all parts and returns the symbol as an SVG object. mySymbol.symbolSvg() #######
 	this.symbolSvg = function(markerUpdate){
 
@@ -6854,7 +6843,7 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 		var symbolBBox = symbolBaseGeometry.BBox[symbol.baseGeometryType];
 			
 		//Calculates center of icon and the base marker size. 
-		//TODO shift center for symbols where center is not in the middle of the octagon.
+		//Should we shift center for symbols where center is not in the middle of the octagon.
 		var center = {x:parseFloat(this.size-(this.markerBBox.x1-pixelMargin)*this.size/100),y:parseFloat(parseFloat(this.size)-((this.markerBBox.y1-pixelMargin)*this.size/100))};
 
 		var markerSize = {x:(this.markerBBox.x2-this.markerBBox.x1+2*pixelMargin)*this.size/100, y:(this.markerBBox.y2-this.markerBBox.y1+2*pixelMargin)*this.size/100};
@@ -7117,10 +7106,6 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 		svgSymbol.appendChild(Geometry);
 		
 		var xml = (new XMLSerializer()).serializeToString(svgSymbol);
-//var end = window.performance.now()
-//timings += (end-start)
-//iii++
-//console.log(timings/iii)
 		return {"object" : svgSymbol, "textXML" : xml, "x" : center.x , "y": center.y, "width":(this.markerBBox.x2-this.markerBBox.x1+2*pixelMargin)*this.size/100, "height":(this.markerBBox.y2-this.markerBBox.y1+2*pixelMargin)*this.size/100};
 	}	
 }
