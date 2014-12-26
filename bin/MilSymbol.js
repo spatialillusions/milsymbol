@@ -5508,7 +5508,7 @@ sID['160000'] = 'Manual Track';
 	return {sID:sID,sIDm1:sIDm1,sIDm2:sIDm2}
 }
 
-var MilSymbol = function (SIDCParameter,options){
+MilSymbol = function (SIDCParameter,options){
 
 //Constants
 	svgNS = "http://www.w3.org/2000/svg";
