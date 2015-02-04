@@ -31,7 +31,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 For updates and more information go to http://www.spatialillusions.com
 
 ======================================================================================= */
-console.log("MilSymbol 0.4.5 Copyright (c) 2013 Måns Beckman http://www.spatialillusions.com");
+console.log("MilSymbol 0.4.6 Copyright (c) 2013 Måns Beckman http://www.spatialillusions.com");
 
 var _MilSymbol = {
 	sID : {},
