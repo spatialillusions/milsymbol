@@ -6845,12 +6845,12 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 		//Calculates center of icon and the base marker size. 
 		//Should we shift center for symbols where center is not in the middle of the octagon.
 		var center = {x:parseFloat(this.size-(this.markerBBox.x1-pixelMargin)*this.size/100),y:parseFloat(parseFloat(this.size)-((this.markerBBox.y1-pixelMargin)*this.size/100))};
-
 		var markerSize = {x:(this.markerBBox.x2-this.markerBBox.x1+2*pixelMargin)*this.size/100, y:(this.markerBBox.y2-this.markerBBox.y1+2*pixelMargin)*this.size/100};
 		var offsetx = 0;
-
+		var hqCenterDiff = {x:0,y:0};
 		//If it is a HQ we will have to move the center and make the canvas bigger =======
 		if(symbol.hqETC.headquarters){
+			hqCenterDiff = {x: center.x - (pixelMargin*this.size/100), y: center.y - (markerSize.y-pixelMargin*this.size/100)};
 			center = {x: pixelMargin*this.size/100, y: markerSize.y-pixelMargin*this.size/100};
 			//markerSize.y = center.y
 		}	
@@ -7106,7 +7106,7 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 		svgSymbol.appendChild(Geometry);
 		
 		var xml = (new XMLSerializer()).serializeToString(svgSymbol);
-		return {"object" : svgSymbol, "textXML" : xml, "x" : center.x , "y": center.y, "width":(this.markerBBox.x2-this.markerBBox.x1+2*pixelMargin)*this.size/100, "height":(this.markerBBox.y2-this.markerBBox.y1+2*pixelMargin)*this.size/100};
+		return {"object" : svgSymbol, "textXML" : xml, "x" : center.x , "y": center.y, "xOctagon": (center.x+hqCenterDiff.x), "yOctagon": (center.y+hqCenterDiff.y), "width":(this.markerBBox.x2-this.markerBBox.x1+2*pixelMargin)*this.size/100, "height":(this.markerBBox.y2-this.markerBBox.y1+2*pixelMargin)*this.size/100};
 	}	
 }
 
