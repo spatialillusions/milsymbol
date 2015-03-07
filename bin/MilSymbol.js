@@ -6091,27 +6091,9 @@ MilSymbol = function (SIDCParameter,options){
 //Sets the style of the frame depending of status ########################################
 //And also add the capability status bar from 2525.
 	this.symbolStatus = function(){
-
 		var symbol = this._symbol;
-		
 		var tmp = '';
-		/*
-		var Geometry = document.createElementNS(svgNS, "g");
-			Geometry.setAttribute('id', 'StatusGeometry');
-			Geometry.setAttribute("fill", "none");
-			Geometry.setAttribute("stroke", this._symbolColors.white["Friend"]);		
-			Geometry.setAttribute("stroke-width", (parseFloat(this.strokeWidth)+1));	
-			Geometry.setAttribute("stroke-dasharray", symbol.anticipated );
-		//Add the white dashed outline to the frame if we have a frame and the status is Anticipated	
-		if(this.fill && this.frame && symbol.anticipated ){
-			Geometry.appendChild(
-				Geometry.ownerDocument.importNode(
-					parseXML(
-						'<g xmlns="'+svgNS+'">' + this._symbolBaseGeometry.symbols[symbol.baseGeometryType] + '</g>'
-					), true
-				)
-			);
-		}*/
+
 		if(this.fill && this.frame && symbol.anticipated && !symbol.unframed){
 			tmp += this._symbolBaseGeometry.symbols[symbol.baseGeometryType]
 		}
@@ -6133,14 +6115,7 @@ MilSymbol = function (SIDCParameter,options){
 				}
 				
 				this.markerBBox.y2 = Math.max(this.markerBBox.y2,(symbolbottom+offset+15));
-				/*
-				Geometry.appendChild(
-					Geometry.ownerDocument.importNode(
-						parseXML(
-							'<g xmlns="'+svgNS+'">' + '<path  stroke-width="' + this.strokeWidth + '" fill="' + colors[symbol.condition] + '" stroke-dasharray="0" stroke="' + this.symbolColors().frameColor[symbol.affiliationType] + '" d="M' + symbolBBox.x + ',' + (symbolbottom+offset) + ' l' + symbolBBox.width + ',0 0,15 -' + symbolBBox.width + ',0 z" />' + '</g>'
-						), true
-					)
-				);*/
+
 				tmp += '<path  stroke-width="' + this.strokeWidth + '" fill="' + colors[symbol.condition] + '" stroke-dasharray="0" stroke="' + this.symbolColors().frameColor[symbol.affiliationType] + '" d="M' + symbolBBox.x + ',' + (symbolbottom+offset) + ' l' + symbolBBox.width + ',0 0,15 -' + symbolBBox.width + ',0 z" />';
 			}else{
 				var damagedDestroyed = '';
@@ -6149,14 +6124,6 @@ MilSymbol = function (SIDCParameter,options){
 				
 				this.markerBBox.y1 = Math.min(this.markerBBox.y1,(20));
 				this.markerBBox.y2 = Math.max(this.markerBBox.y2,(180));
-				/*
-				Geometry.appendChild(
-					Geometry.ownerDocument.importNode(
-						parseXML(
-							'<g xmlns="'+svgNS+'">' + damagedDestroyed + '</g>'
-						), true
-					)
-				);*/
 				tmp += damagedDestroyed;
 			}
 		}
@@ -6246,26 +6213,7 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 							y1:Math.min(this.markerBBox.y1,symbolBaseGeometry.BBox[symbol.baseGeometryType].y),
 							x2:Math.max(this.markerBBox.x2,symbolBaseGeometry.BBox[symbol.baseGeometryType].x + symbolBaseGeometry.BBox[symbol.baseGeometryType].width),
 							y2:Math.max(this.markerBBox.y2,symbolBaseGeometry.BBox[symbol.baseGeometryType].y + symbolBaseGeometry.BBox[symbol.baseGeometryType].height)};
-		
-		/*
-		var Geometry = document.createElementNS(svgNS, "g");
-		Geometry.setAttribute('id', 'BaseGeometry');
-		Geometry.setAttribute("fill", this._symbolColors.fillColor[symbol.affiliationType]);
-		Geometry.setAttribute("stroke", this._symbolColors.frameColor[symbol.affiliationType]);		
-		Geometry.setAttribute("stroke-width", (this.size>=10?this.strokeWidth:10));
-		
-		//Add a dashed outline to the frame if we are using monocolor and the status is set to A or the affiliation is P,A,S or G.	
-		if((this.monoColor != '' || !this.fill) && symbol.anticipated )Geometry.setAttribute("stroke-dasharray", symbol.anticipated);
-							
-		Geometry.appendChild(
-			Geometry.ownerDocument.importNode(
-				parseXML(
-					'<g xmlns="'+svgNS+'">' + symbolBaseGeometry[symbol.baseGeometryType] + extraModifier + testGeometry + '</g>'
-				), true
-			)
-		);
-		*/
-		
+				
 		//Add a dashed outline to the frame if we are using monocolor and the status is set to A or the affiliation is P,A,S or G.	
 		var anticipated = "";
 		if((this.monoColor != '' || !this.fill) && symbol.anticipated) anticipated = ' stroke-dasharray="'+symbol.anticipated+'"';
@@ -6310,7 +6258,6 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 				this.markerBBox.y1 = Math.min(this.markerBBox.y1,(60-35))
 			}
 		}		
-	
 
 		if(symbol.context == "Simulation"){
 			var spacing = 10;
@@ -6319,17 +6266,6 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 			this.markerBBox.x2 = Math.max(this.markerBBox.x2,(this.markerBBox.x2 + spacing + 20));
 			this.markerBBox.y1 = Math.min(this.markerBBox.y1,(60-35))
 		}
-		/*
-		var Geometry = document.createElementNS(svgNS, "g");
-		Geometry.setAttribute('id', 'AffliationDimensionGeometry');
-		Geometry.setAttribute("fill", this._symbolColors.frameColor[symbol.affiliationType]);	
-		Geometry.appendChild(
-			Geometry.ownerDocument.importNode(
-				parseXML(
-					'<g xmlns="'+svgNS+'">'  + affliationDimensionGeometry + '</g>'
-				), true
-			)
-		);*/
 		var Geometry = '<g id="AffliationDimensionGeometry" fill="'+this._symbolColors.frameColor[symbol.affiliationType]+'"><g xmlns="'+svgNS+'">'  + affliationDimensionGeometry + '</g></g>';
 		return Geometry;
 	};
@@ -6516,33 +6452,15 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 				modifier += '<text font-family="Arial" font-weight="bold" stroke="none" text-anchor="middle" x="100" y="'+ (30 + symbolbottom )+'" font-size="35" >'+this.sigint+'</text>';
 				this.markerBBox.y2 = Math.max(this.markerBBox.y2,symbolbottom+30);
 			}
-		/*	
-		var Geometry = document.createElementNS(svgNS, "g");
-		Geometry.setAttribute('id', 'SymbolModifier');
-		Geometry.setAttribute("fill", this._symbolColors.frameColor[symbol.affiliationType]);
-		Geometry.setAttribute("stroke", this._symbolColors.frameColor[symbol.affiliationType]);		
-		Geometry.setAttribute("stroke-width", this.strokeWidth);	
-//		Geometry.setAttribute("stroke-dasharray", this.symbolStatus());
-		Geometry.appendChild(
-			Geometry.ownerDocument.importNode(
-				parseXML(
-					'<g xmlns="'+svgNS+'">' + modifier + '</g>'
-				), true
-			)
-		);
-		*/
 		var Geometry = '<g id="symbolModifier" fill="'+this._symbolColors.frameColor[symbol.affiliationType]+'" stroke="'+this._symbolColors.frameColor[symbol.affiliationType]+'" stroke-width="'+this.strokeWidth+'">' + modifier + '</g>';
 		return Geometry;
 	};
 
 //Icons ##################################################################################
 	this.symbolIcon = function(element){
-
-	//remove element after testing... 		
-		
+		//remove element after testing... 		
 		var symbolColors = this._symbolColors;
 		var symbol = this._symbol;
-		
 		//var affiliationType = symbol.affiliationType;
 		var fillColor = symbolColors.fillColor[symbol.affiliationType];
 		var iconColor = symbolColors.iconColor[symbol.affiliationType];
@@ -6551,7 +6469,6 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 		var black = symbolColors.black[symbol.affiliationType];
 		var white = symbolColors.white[symbol.affiliationType];
 		var unframed = symbol.unframed;
-
 		var icons = [];
 		//Main Symbol
 		var sID = [];
@@ -6679,22 +6596,6 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 		}else{
 			icon = sID[this.SIDC.substr(0,1)+'-'+this.SIDC.substr(2,1)+'-'+this.SIDC.substr(4,6)]
 		}
-		/*
-		var Geometry = document.createElementNS(svgNS, "g");
-		Geometry.setAttribute('id', 'Icon');
-		Geometry.setAttribute("fill", iconColor);
-		Geometry.setAttribute("stroke", iconColor);		
-		Geometry.setAttribute("stroke-width", this.strokeWidth);	
-		Geometry.setAttribute("font-family", "Arial");
-		Geometry.setAttribute("font-weight", "bold");
-		Geometry.appendChild(
-			Geometry.ownerDocument.importNode(
-				parseXML(
-					'<g xmlns="'+svgNS+'">' + icon + '</g>'
-				), true
-			)
-		);*/
-		
 		var geometry = '<g id="Icon" fill="'+iconColor+'" stroke="'+iconColor+'" stroke-width="'+this.strokeWidth+'" font-family="Arial" font-weight="bold">' + icon + '</g>';
 		return geometry;
 	};
@@ -6722,13 +6623,6 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 		if(symbol.affiliationType){//If this is false we don't have an affiliationType and we won't get a symbol.
 			Geometry.setAttribute("transform", "translate(0," + symbolOffset + ")");	
 			Geometry.setAttribute("overflow", "visible");
-			/*
-			if(this.size >= 10)Geometry.appendChild(this._symbolModifier);
-			if(this.fill||this.frame||(!this.fill&&!this.frame&&!this.icon))Geometry.appendChild(this._symbolBaseGeometry.geometry);
-			Geometry.appendChild(this._symbolStatus)
-			Geometry.appendChild(this._symbolAffliationDimensionGeometry);
-			if(this.icon&&this.size>=10)Geometry.appendChild(this._symbolIcon);
-			*/
 			if(this.size >= 10)tmp += this._symbolModifier;
 			if(this.fill||this.frame||(!this.fill&&!this.frame&&!this.icon))tmp += this._symbolBaseGeometry.geometry;
 			tmp += this._symbolStatus;
@@ -6760,10 +6654,8 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 //var start = window.performance.now()
 		this._symbol = this.symbol();		
 		var symbol = this._symbol;
-	
 		this._symbolColors = this.symbolColors();
 		var symbolColors = this._symbolColors;
-	
 		var pixelMargin = 5;
 		var symbolObject = symbolObject==undefined?this.symbolSvg(true).object:symbolObject.object;
 
@@ -6781,20 +6673,14 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 			hqCenterDiff = {x: center.x - (pixelMargin*this.size/100), y: center.y - (markerSize.y-pixelMargin*this.size/100)};
 			center = {x: pixelMargin*this.size/100, y: markerSize.y-pixelMargin*this.size/100};
 			//markerSize.y = center.y
-		}	
-				
-		//If we have a Symbol Status and a mobility indicator we will have to make the canvas bigger. 
-		//if(['C','D','X','F'].indexOf(symbol.status) > -1&&symbol.symbolmodifier11=='M'){
-			//markerSize.y = Math.max(markerSize.y, this.size*2+(this.size/100 * 10 +symbolOffset))
-		//}
-		
+		}
 		//Add text =======================================================================
 		var textFields = (this.quantity||this.reinforcedReduced||this.staffComments||this.additionalInformation||this.evaluationRating||this.combatEffectiveness||this.signatureEquipment||this.higherFormation||this.hostile||this.iffSif||this.sigint||this.uniqueDesignation||this.type||this.dtg||this.altitudeDepth||this.location||this.speed||this.specialHeadquarters||this.platformType||this.equipmentTeardownTime||this.commonIdentifier||this.auxiliaryEquipmentIndicator);
 		if(this.infoFields&&textFields){	
 			if(true){
 				var textInformation = '';
 
-				if(this.specialHeadquarters)textInformation 			+= '<text x="100" y="110" text-anchor="middle">' + this.specialHeadquarters + '</text>';
+				if(this.specialHeadquarters)textInformation += '<text x="100" y="110" text-anchor="middle">' + this.specialHeadquarters + '</text>';
 
 				if(this.quantity){
 					if(this.markerBBox.y1>(symbolBBox.y-15-30)){
@@ -6804,238 +6690,236 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 					textInformation += '<text x="100" y="' + (symbolBBox.y-15) + '" text-anchor="middle">' + this.quantity + '</text>';
 				}
 
-				
-					var textInformationStrings = {L1:"",L2:"",L3:"",L4:"",L5:"",R1:"",R2:"",R3:"",R4:"",R5:""};//Text information on left and right side.
+				var textInformationStrings = {L1:"",L2:"",L3:"",L4:"",L5:"",R1:"",R2:"",R3:"",R4:"",R5:""};//Text information on left and right side.
 
-					//Air & Space (They should be different but we skip that at the moment) TODO
-					if(!isNaN(this.SIDC) && symbol.dimensionType == "Air"){
-						textInformationStrings.R1 = this.uniqueDesignation;
-						textInformationStrings.R2 = this.iffSif;
-						textInformationStrings.R3 = this.type;
-						if(this.speed||this.altitudeDepth){
-							var a = new Array;
-							this.speed?a.push(this.speed):'';
-							this.location?a.push(this.altitudeDepth):'';
-							textInformationStrings.R4 = (a.join(" "));
-						}
-						if(this.staffComments||this.location){
-							var a = new Array;
-							this.staffComments?a.push(this.staffComments):'';
-							this.additionalInformation?a.push(this.additionalInformation):'';
-							textInformationStrings.R5 = (a.join(" "));
-						}
+				//Air & Space (They should be different but we skip that at the moment) TODO
+				if(!isNaN(this.SIDC) && symbol.dimensionType == "Air"){
+					textInformationStrings.R1 = this.uniqueDesignation;
+					textInformationStrings.R2 = this.iffSif;
+					textInformationStrings.R3 = this.type;
+					if(this.speed||this.altitudeDepth){
+						var a = new Array;
+						this.speed?a.push(this.speed):'';
+						this.location?a.push(this.altitudeDepth):'';
+						textInformationStrings.R4 = (a.join(" "));
 					}
-					//Land
-					if(isNaN(this.SIDC) || symbol.dimensionType == "Ground"){
-						textInformationStrings.L1 = this.dtg;
-						if(this.altitudeDepth||this.location){
-							var a = new Array;
-							this.altitudeDepth?a.push(this.altitudeDepth):'';
-							this.location?a.push(this.location):'';
-							textInformationStrings.L2 = (a.join(" "));
-						}
-						if(this.type||this.platformType||this.commonIdentifier){
-							var a = new Array;
-							this.type?a.push(this.type):'';
-							this.platformType?a.push(this.platformType):'';
-							this.commonIdentifier?a.push(this.commonIdentifier):'';
-							textInformationStrings.L3 = (a.join(" "));
-						}
-						textInformationStrings.L4 = this.uniqueDesignation;
-						textInformationStrings.L5 = this.speed;
-						textInformationStrings.R1 = this.reinforcedReduced;
-						textInformationStrings.R2 = this.staffComments;
-						if(this.additionalInformation||this.equipmentTeardownTime){
-							var a = new Array;
-							this.additionalInformation?a.push(this.additionalInformation):'';
-							this.equipmentTeardownTime?a.push(this.equipmentTeardownTime):'';
-							textInformationStrings.R3 = (a.join(" "));
-						}						
-						textInformationStrings.R4 = this.higherFormation;
-						if(this.evaluationRating||this.combatEffectiveness||this.signatureEquipment||this.hostile||this.iffSif){
-							var a = new Array;
-							this.evaluationRating?a.push(this.evaluationRating):'';
-							this.combatEffectiveness?a.push(this.combatEffectiveness):'';
-							this.signatureEquipment?a.push(this.signatureEquipment):'';				
-							this.hostile?a.push(this.hostile):'';				
-							this.iffSif?a.push(this.iffSif):'';				
-							textInformationStrings.R5 = (a.join(" "));
-						}
-					}					
-					//Sea
-					if(!isNaN(this.SIDC) && symbol.dimensionType == "Sea"){
-						textInformationStrings.R1 = this.uniqueDesignation;
-						textInformationStrings.R2 = this.type;
-						textInformationStrings.R3 = this.iffSif;
-						if(this.staffComments||this.location){
-							var a = new Array;
-							this.staffComments?a.push(this.staffComments):'';
-							this.additionalInformation?a.push(this.additionalInformation):'';
-							textInformationStrings.R4 = (a.join(" "));
-						}
-						if(this.location||this.speed){
-							var a = new Array;
-							this.location?a.push(this.location):'';
-							this.speed?a.push(this.speed):'';
-							textInformationStrings.R5 = (a.join(" "));
-						}
-					}					
-					//Sub
-					if(!isNaN(this.SIDC) && symbol.dimensionType == "Subsurface"){
-						textInformationStrings.R1 = this.uniqueDesignation;
-						textInformationStrings.R2 = this.type;
-						textInformationStrings.R3 = this.altitudeDepth;
-						textInformationStrings.R4 = this.staffComments;
-						textInformationStrings.R5 = this.additionalInformation;
-					}					
-				function strWidth(str){
-					if(str.length == 0)return 0;
-					//We need to calculate how long our string will be in pixels
-					strWidths = {" ":9,"!":10,"\"":15,"#":17,"$":17,"%":27,"&":22,"'":8,"(":10,")":10,"*":12,"+":18,",":9,"-":10,".":9,"/":9,"0":17,"1":17,"2":17,"3":17,"4":17,"5":17,"6":17,"7":17,"8":17,"9":17,":":10,";":10,"<":18,"=":18,">":18,"?":19,"@":30,"A":22,"B":22,"C":22,"D":22,"E":21,"F":19,"G":24,"H":22,"I":9,"J":17,"K":22,"L":19,"M":25,"N":22,"O":24,"P":21,"Q":24,"R":22,"S":21,"T":19,"U":22,"V":21,"W":29,"X":21,"Y":21,"Z":19,"[":10,"]":10,"^":18,"_":17,"`":10,"a":17,"b":19,"c":17,"d":19,"e":17,"f":10,"g":19,"h":19,"i":9,"j":9,"k":17,"l":9,"m":27,"n":19,"o":19,"p":19,"q":19,"r":12,"s":17,"t":10,"u":19,"v":17,"w":24,"x":17,"y":17,"z":15,"{":12,"|":9,"}":12,"~":18};
-					w = 0;
-					for(var i in str){
-						//If we dont know how wide the char is, set it to 28.5 that is the width of W and no char is wider than that.
-						w += strWidths[str[i]]?strWidths[str[i]]:28.5;
+					if(this.staffComments||this.location){
+						var a = new Array;
+						this.staffComments?a.push(this.staffComments):'';
+						this.additionalInformation?a.push(this.additionalInformation):'';
+						textInformationStrings.R5 = (a.join(" "));
 					}
-					//This is for the space between the text and the symbol.
-					w+=20;
-					return w;
-				}	
-					
-				//Add space on left side
-				offsetx =  Math.max(	
-					strWidth(textInformationStrings.L1), 
-					strWidth(textInformationStrings.L2),
-					strWidth(textInformationStrings.L3),
-					strWidth(textInformationStrings.L4),
-					strWidth(textInformationStrings.L5));
-
-				this.markerBBox.x2 += offsetx;
-				center.x += (this.size/100)*offsetx;	
-
-				//Add space for text on right side
-				var extraPadding = (symbol.context == "Exercise" || symbol.context == "Simulation")?18:0;
-				this.markerBBox.x2 += extraPadding;
-				
-				this.markerBBox.x2 +=  Math.max(
-					strWidth(textInformationStrings.R1),
-					strWidth(textInformationStrings.R2),
-					strWidth(textInformationStrings.R3),
-					strWidth(textInformationStrings.R4),
-					strWidth(textInformationStrings.R5))+20;
-				
-				//Extra space above for field 1
-				if((textInformationStrings.L1||textInformationStrings.R1)&&this.markerBBox.y1>20){
-					center.y += (this.markerBBox.y1-20)*this.size/100;
-					this.markerBBox.y1 = Math.min(this.markerBBox.y1, 20)
 				}
-				//Extra space below for field 5
-				if(textInformationStrings.L5||textInformationStrings.R5){
-					this.markerBBox.y2 = Math.max(this.markerBBox.y2, 170)
+				//Land
+				if(isNaN(this.SIDC) || symbol.dimensionType == "Ground"){
+					textInformationStrings.L1 = this.dtg;
+					if(this.altitudeDepth||this.location){
+						var a = new Array;
+						this.altitudeDepth?a.push(this.altitudeDepth):'';
+						this.location?a.push(this.location):'';
+						textInformationStrings.L2 = (a.join(" "));
+					}
+					if(this.type||this.platformType||this.commonIdentifier){
+						var a = new Array;
+						this.type?a.push(this.type):'';
+						this.platformType?a.push(this.platformType):'';
+						this.commonIdentifier?a.push(this.commonIdentifier):'';
+						textInformationStrings.L3 = (a.join(" "));
+					}
+					textInformationStrings.L4 = this.uniqueDesignation;
+					textInformationStrings.L5 = this.speed;
+					textInformationStrings.R1 = this.reinforcedReduced;
+					textInformationStrings.R2 = this.staffComments;
+					if(this.additionalInformation||this.equipmentTeardownTime){
+						var a = new Array;
+						this.additionalInformation?a.push(this.additionalInformation):'';
+						this.equipmentTeardownTime?a.push(this.equipmentTeardownTime):'';
+						textInformationStrings.R3 = (a.join(" "));
+					}						
+					textInformationStrings.R4 = this.higherFormation;
+					if(this.evaluationRating||this.combatEffectiveness||this.signatureEquipment||this.hostile||this.iffSif){
+						var a = new Array;
+						this.evaluationRating?a.push(this.evaluationRating):'';
+						this.combatEffectiveness?a.push(this.combatEffectiveness):'';
+						this.signatureEquipment?a.push(this.signatureEquipment):'';				
+						this.hostile?a.push(this.hostile):'';				
+						this.iffSif?a.push(this.iffSif):'';				
+						textInformationStrings.R5 = (a.join(" "));
+					}
+				}					
+				//Sea
+				if(!isNaN(this.SIDC) && symbol.dimensionType == "Sea"){
+					textInformationStrings.R1 = this.uniqueDesignation;
+					textInformationStrings.R2 = this.type;
+					textInformationStrings.R3 = this.iffSif;
+					if(this.staffComments||this.location){
+						var a = new Array;
+						this.staffComments?a.push(this.staffComments):'';
+						this.additionalInformation?a.push(this.additionalInformation):'';
+						textInformationStrings.R4 = (a.join(" "));
+					}
+					if(this.location||this.speed){
+						var a = new Array;
+						this.location?a.push(this.location):'';
+						this.speed?a.push(this.speed):'';
+						textInformationStrings.R5 = (a.join(" "));
+					}
+				}					
+				//Sub
+				if(!isNaN(this.SIDC) && symbol.dimensionType == "Subsurface"){
+					textInformationStrings.R1 = this.uniqueDesignation;
+					textInformationStrings.R2 = this.type;
+					textInformationStrings.R3 = this.altitudeDepth;
+					textInformationStrings.R4 = this.staffComments;
+					textInformationStrings.R5 = this.additionalInformation;
+				}					
+			function strWidth(str){
+				if(str.length == 0)return 0;
+				//We need to calculate how long our string will be in pixels
+				strWidths = {" ":9,"!":10,"\"":15,"#":17,"$":17,"%":27,"&":22,"'":8,"(":10,")":10,"*":12,"+":18,",":9,"-":10,".":9,"/":9,"0":17,"1":17,"2":17,"3":17,"4":17,"5":17,"6":17,"7":17,"8":17,"9":17,":":10,";":10,"<":18,"=":18,">":18,"?":19,"@":30,"A":22,"B":22,"C":22,"D":22,"E":21,"F":19,"G":24,"H":22,"I":9,"J":17,"K":22,"L":19,"M":25,"N":22,"O":24,"P":21,"Q":24,"R":22,"S":21,"T":19,"U":22,"V":21,"W":29,"X":21,"Y":21,"Z":19,"[":10,"]":10,"^":18,"_":17,"`":10,"a":17,"b":19,"c":17,"d":19,"e":17,"f":10,"g":19,"h":19,"i":9,"j":9,"k":17,"l":9,"m":27,"n":19,"o":19,"p":19,"q":19,"r":12,"s":17,"t":10,"u":19,"v":17,"w":24,"x":17,"y":17,"z":15,"{":12,"|":9,"}":12,"~":18};
+				w = 0;
+				for(var i in str){
+					//If we dont know how wide the char is, set it to 28.5 that is the width of W and no char is wider than that.
+					w += strWidths[str[i]]?strWidths[str[i]]:28.5;
 				}
-					
-					if(textInformationStrings.L1)textInformation += '<text x="' + (symbolBBox.x-20) + '" y="50" text-anchor="end">' + textInformationStrings.L1 + '</text>';
-					if(textInformationStrings.L2)textInformation += '<text x="' + (symbolBBox.x-20) + '" y="80" text-anchor="end">' + textInformationStrings.L2 +'</text>';
-					if(textInformationStrings.L3)textInformation += '<text x="' + (symbolBBox.x-20) + '" y="110" text-anchor="end">' + textInformationStrings.L3 + '</text>';
-					if(textInformationStrings.L4)textInformation += '<text x="' + (symbolBBox.x-20) + '" y="140" text-anchor="end">' + textInformationStrings.L4 + '</text>';
-					if(textInformationStrings.L5)textInformation += '<text x="' + (symbolBBox.x-20) + '" y="170" text-anchor="end">' + textInformationStrings.L5 + '</text>';
+				//This is for the space between the text and the symbol.
+				w+=20;
+				return w;
+			}	
+				
+			//Add space on left side
+			offsetx =  Math.max(	
+				strWidth(textInformationStrings.L1), 
+				strWidth(textInformationStrings.L2),
+				strWidth(textInformationStrings.L3),
+				strWidth(textInformationStrings.L4),
+				strWidth(textInformationStrings.L5));
+
+			this.markerBBox.x2 += offsetx;
+			center.x += (this.size/100)*offsetx;	
+
+			//Add space for text on right side
+			var extraPadding = (symbol.context == "Exercise" || symbol.context == "Simulation")?18:0;
+			this.markerBBox.x2 += extraPadding;
+			
+			this.markerBBox.x2 +=  Math.max(
+				strWidth(textInformationStrings.R1),
+				strWidth(textInformationStrings.R2),
+				strWidth(textInformationStrings.R3),
+				strWidth(textInformationStrings.R4),
+				strWidth(textInformationStrings.R5))+20;
+			
+			//Extra space above for field 1
+			if((textInformationStrings.L1||textInformationStrings.R1)&&this.markerBBox.y1>20){
+				center.y += (this.markerBBox.y1-20)*this.size/100;
+				this.markerBBox.y1 = Math.min(this.markerBBox.y1, 20)
+			}
+			//Extra space below for field 5
+			if(textInformationStrings.L5||textInformationStrings.R5){
+				this.markerBBox.y2 = Math.max(this.markerBBox.y2, 170)
+			}
+				
+				if(textInformationStrings.L1)textInformation += '<text x="' + (symbolBBox.x-20) + '" y="50" text-anchor="end">' + textInformationStrings.L1 + '</text>';
+				if(textInformationStrings.L2)textInformation += '<text x="' + (symbolBBox.x-20) + '" y="80" text-anchor="end">' + textInformationStrings.L2 +'</text>';
+				if(textInformationStrings.L3)textInformation += '<text x="' + (symbolBBox.x-20) + '" y="110" text-anchor="end">' + textInformationStrings.L3 + '</text>';
+				if(textInformationStrings.L4)textInformation += '<text x="' + (symbolBBox.x-20) + '" y="140" text-anchor="end">' + textInformationStrings.L4 + '</text>';
+				if(textInformationStrings.L5)textInformation += '<text x="' + (symbolBBox.x-20) + '" y="170" text-anchor="end">' + textInformationStrings.L5 + '</text>';
+	
+				if(textInformationStrings.R1)textInformation += '<text x="' + (symbolBBox.x + symbolBBox.width + extraPadding + 20) + '" y="50">' + textInformationStrings.R1 + '</text>';	
+				if(textInformationStrings.R2)textInformation += '<text x="' + (symbolBBox.x + symbolBBox.width + extraPadding + 20) + '" y="80">' + textInformationStrings.R2 + '</text>';	
+				if(textInformationStrings.R3)textInformation += '<text x="' + (symbolBBox.x + symbolBBox.width + extraPadding + 20) + '" y="110">' + textInformationStrings.R3 + '</text>';
+				if(textInformationStrings.R4)textInformation += '<text x="' + (symbolBBox.x + symbolBBox.width + extraPadding + 20) + '" y="140">' + textInformationStrings.R4 + '</text>';	
+				if(textInformationStrings.R5)textInformation += '<text x="' + (symbolBBox.x + symbolBBox.width + extraPadding + 20) + '" y="170">' + textInformationStrings.R5 + '</text>';				
+		}
 		
-					if(textInformationStrings.R1)textInformation += '<text x="' + (symbolBBox.x + symbolBBox.width + extraPadding + 20) + '" y="50">' + textInformationStrings.R1 + '</text>';	
-					if(textInformationStrings.R2)textInformation += '<text x="' + (symbolBBox.x + symbolBBox.width + extraPadding + 20) + '" y="80">' + textInformationStrings.R2 + '</text>';	
-					if(textInformationStrings.R3)textInformation += '<text x="' + (symbolBBox.x + symbolBBox.width + extraPadding + 20) + '" y="110">' + textInformationStrings.R3 + '</text>';
-					if(textInformationStrings.R4)textInformation += '<text x="' + (symbolBBox.x + symbolBBox.width + extraPadding + 20) + '" y="140">' + textInformationStrings.R4 + '</text>';	
-					if(textInformationStrings.R5)textInformation += '<text x="' + (symbolBBox.x + symbolBBox.width + extraPadding + 20) + '" y="170">' + textInformationStrings.R5 + '</text>';				
+		var Text = document.createElementNS(svgNS, "g");
+		Text.setAttribute('id', 'Texts');
+		Text.setAttribute("fill", symbolColors.black[symbol.affiliationType]);
+		Text.setAttribute("stroke", "none");		
+		Text.setAttribute("font-family", "Arial");
+		Text.setAttribute("font-weight", "bold");
+		Text.setAttribute("font-size", "30");
+		Text.setAttribute("transform", "scale(" + this.size/100 + ") translate(0," + symbolOffset + ")");
+		Text.appendChild(
+			Text.ownerDocument.importNode(
+				parseXML(
+					'<g xmlns="'+svgNS+'">'  
+					+ textInformation										
+					+'</g>'
+				), true)
+			);
+	}
+
+	//Add direction arrow ============================================================
+	if(this.infoFields){
+		if(this.direction && this.direction!=''){
+			//offsetx = Math.max(offsetx, this.size/100*symbolBBox.width-this.size)
+			//markerSize.y = this.size/100*((symbolBBox.y +(symbolBBox.height/2) + symbolOffset))
+			//markerSize.x = Math.max(markerSize.x+offsetx, this.size*2)
+			//Movement indicator
+			//The length of the lines in a direction of movement indicator is a bit discussed but I use one frame height. (=100px)
+			
+			var directionIndicator = '';
+			var groundDirectionOffset = 100;
+			if(symbol.dimensionTypeUnModified == 'Ground'){
+				//markerSize.y = this.size/100*((symbolBBox.y +(symbolBBox.height) + 2*100 + symbolOffset))
+				directionIndicator += '<path  d="M' + (symbolBBox.x+symbolBBox.width/2) + ',' + (symbolBBox.y+symbolBBox.height) +  'l0,' + 100 + '" />';
+				groundDirectionOffset = symbolBBox.y+(symbolBBox.height)+100;
+			}
+		
+			//center = {x:Math.min(center.x,(100+pixelMargin)*this.size/100),y:Math.max(center.y,(100+pixelMargin)*this.size/100)}
+			center.x += this.markerBBox.x1>0?this.markerBBox.x1*this.size/100:0;
+			this.markerBBox.x1 = Math.min(this.markerBBox.x1,0);
+			
+			if(symbol.dimensionTypeUnModified != 'Ground'){
+				center.y += this.markerBBox.y1>0?this.markerBBox.y1*this.size/100:0;
+				this.markerBBox.y1 = Math.min(this.markerBBox.y1,0);
 			}
 			
-			var Text = document.createElementNS(svgNS, "g");
-			Text.setAttribute('id', 'Texts');
-			Text.setAttribute("fill", symbolColors.black[symbol.affiliationType]);
-			Text.setAttribute("stroke", "none");		
-			Text.setAttribute("font-family", "Arial");
-			Text.setAttribute("font-weight", "bold");
-			Text.setAttribute("font-size", "30");
-			Text.setAttribute("transform", "scale(" + this.size/100 + ") translate(0," + symbolOffset + ")");
-			Text.appendChild(
-				Text.ownerDocument.importNode(
+			this.markerBBox.x2 = Math.max(this.markerBBox.x2,2*100+offsetx);
+			this.markerBBox.y2 = Math.max(this.markerBBox.y2,groundDirectionOffset+Math.max(Math.sin((((this.direction-360)-90)/360)*Math.PI*2)*100,10));
+				
+			directionIndicator += '<g transform="rotate(' + this.direction +' 100 ' + groundDirectionOffset + ' )"><path  d="M100,' + groundDirectionOffset + ' l0,-' + (100-15) + ' -5,0 5,-10 5,10 -5,0" /></g>';
+			var Direction = document.createElementNS(svgNS, "g");
+			Direction.setAttribute('id', 'DirectionArrow');		
+			Direction.setAttribute("fill", symbolColors.black[symbol.affiliationType]);
+			Direction.setAttribute("stroke", symbolColors.black[symbol.affiliationType]);	
+			Direction.setAttribute("stroke-width", "3");
+			Direction.setAttribute("transform", "scale(" + this.size/100 + ") translate(0," + symbolOffset + ")");
+			Direction.appendChild(
+				Direction.ownerDocument.importNode(
 					parseXML(
 						'<g xmlns="'+svgNS+'">'  
-						+ textInformation										
+						+ directionIndicator
 						+'</g>'
 					), true
 				)
-			);
+			);	
+	
 		}
-
-		//Add direction arrow ============================================================
-		if(this.infoFields){
-			if(this.direction && this.direction!=''){
-				//offsetx = Math.max(offsetx, this.size/100*symbolBBox.width-this.size)
-				//markerSize.y = this.size/100*((symbolBBox.y +(symbolBBox.height/2) + symbolOffset))
-				//markerSize.x = Math.max(markerSize.x+offsetx, this.size*2)
-				//Movement indicator
-				//The length of the lines in a direction of movement indicator is a bit discussed but I use one frame height. (=100px)
-				
-				var directionIndicator = '';
-				var groundDirectionOffset = 100;
-				if(symbol.dimensionTypeUnModified == 'Ground'){
-					//markerSize.y = this.size/100*((symbolBBox.y +(symbolBBox.height) + 2*100 + symbolOffset))
-					directionIndicator += '<path  d="M' + (symbolBBox.x+symbolBBox.width/2) + ',' + (symbolBBox.y+symbolBBox.height) +  'l0,' + 100 + '" />';
-					groundDirectionOffset = symbolBBox.y+(symbolBBox.height)+100;
-				}
-			
-				//center = {x:Math.min(center.x,(100+pixelMargin)*this.size/100),y:Math.max(center.y,(100+pixelMargin)*this.size/100)}
-				center.x += this.markerBBox.x1>0?this.markerBBox.x1*this.size/100:0;
-				this.markerBBox.x1 = Math.min(this.markerBBox.x1,0);
-				
-				if(symbol.dimensionTypeUnModified != 'Ground'){
-					center.y += this.markerBBox.y1>0?this.markerBBox.y1*this.size/100:0;
-					this.markerBBox.y1 = Math.min(this.markerBBox.y1,0);
-				}
-				
-				this.markerBBox.x2 = Math.max(this.markerBBox.x2,2*100+offsetx);
-				this.markerBBox.y2 = Math.max(this.markerBBox.y2,groundDirectionOffset+Math.max(Math.sin((((this.direction-360)-90)/360)*Math.PI*2)*100,10));
-					
-				directionIndicator += '<g transform="rotate(' + this.direction +' 100 ' + groundDirectionOffset + ' )"><path  d="M100,' + groundDirectionOffset + ' l0,-' + (100-15) + ' -5,0 5,-10 5,10 -5,0" /></g>';
-				var Direction = document.createElementNS(svgNS, "g");
-				Direction.setAttribute('id', 'DirectionArrow');		
-				Direction.setAttribute("fill", symbolColors.black[symbol.affiliationType]);
-				Direction.setAttribute("stroke", symbolColors.black[symbol.affiliationType]);	
-				Direction.setAttribute("stroke-width", "3");
-				Direction.setAttribute("transform", "scale(" + this.size/100 + ") translate(0," + symbolOffset + ")");
-				Direction.appendChild(
-					Direction.ownerDocument.importNode(
-						parseXML(
-							'<g xmlns="'+svgNS+'">'  
-							+ directionIndicator
-							+'</g>'
-						), true
-					)
-				);	
-		
-			}
-		}
-		var Geometry = document.createElementNS(svgNS, "g");
-		Geometry.setAttribute("transform", "translate("+ (this.size/100)*offsetx + ",0)");	
-		Geometry.setAttribute("overflow", "visible");
-		
-		Geometry.appendChild(symbolObject);
-		if(this.infoFields){
-			if(this.size >= 10&&textFields)Geometry.appendChild(Text);
-			if(this.direction && this.direction!='')Geometry.appendChild(Direction); 
-		}
-		var svgSymbol = document.createElementNS(svgNS, "svg");
-		//IE gets crazy over if you happen to set xmlns twice, but other browsers wants it, this is a dirty workaround 
-		if(_MilSymbol.userAgentIE){svgSymbol.setAttribute("xmlns", svgNS)};
-		svgSymbol.setAttribute("version", 1.2);
-		svgSymbol.setAttribute("baseProfile", "tiny");
-		svgSymbol.setAttribute("width", (this.markerBBox.x2-this.markerBBox.x1+2*pixelMargin)*this.size/100);
-		svgSymbol.setAttribute("height", (this.markerBBox.y2-this.markerBBox.y1+2*pixelMargin)*this.size/100);
-		svgSymbol.setAttribute("viewBox", (this.markerBBox.x1-pixelMargin)*this.size/100 + " " + (this.markerBBox.y1+symbolOffset-pixelMargin)*this.size/100 + " " + (this.markerBBox.x2-this.markerBBox.x1+2*pixelMargin)*this.size/100 + " " + (this.markerBBox.y2-this.markerBBox.y1+2*pixelMargin)*this.size/100);
-		svgSymbol.appendChild(Geometry);
-		
-		var xml = (new XMLSerializer()).serializeToString(svgSymbol);
-		return {"object" : svgSymbol, "textXML" : xml, "x" : center.x , "y": center.y, "xOctagon": (center.x+hqCenterDiff.x), "yOctagon": (center.y+hqCenterDiff.y), "width":(this.markerBBox.x2-this.markerBBox.x1+2*pixelMargin)*this.size/100, "height":(this.markerBBox.y2-this.markerBBox.y1+2*pixelMargin)*this.size/100};
-	}	
+	}
+	var Geometry = document.createElementNS(svgNS, "g");
+	Geometry.setAttribute("transform", "translate("+ (this.size/100)*offsetx + ",0)");	
+	Geometry.setAttribute("overflow", "visible");
+	
+	Geometry.appendChild(symbolObject);
+	if(this.infoFields){
+		if(this.size >= 10&&textFields)Geometry.appendChild(Text);
+		if(this.direction && this.direction!='')Geometry.appendChild(Direction); 
+	}
+	var svgSymbol = document.createElementNS(svgNS, "svg");
+	//IE gets crazy over if you happen to set xmlns twice, but other browsers wants it, this is a dirty workaround 
+	if(_MilSymbol.userAgentIE){svgSymbol.setAttribute("xmlns", svgNS)};
+	svgSymbol.setAttribute("version", 1.2);
+	svgSymbol.setAttribute("baseProfile", "tiny");
+	svgSymbol.setAttribute("width", (this.markerBBox.x2-this.markerBBox.x1+2*pixelMargin)*this.size/100);
+	svgSymbol.setAttribute("height", (this.markerBBox.y2-this.markerBBox.y1+2*pixelMargin)*this.size/100);
+	svgSymbol.setAttribute("viewBox", (this.markerBBox.x1-pixelMargin)*this.size/100 + " " + (this.markerBBox.y1+symbolOffset-pixelMargin)*this.size/100 + " " + (this.markerBBox.x2-this.markerBBox.x1+2*pixelMargin)*this.size/100 + " " + (this.markerBBox.y2-this.markerBBox.y1+2*pixelMargin)*this.size/100);
+	svgSymbol.appendChild(Geometry);
+	
+	var xml = (new XMLSerializer()).serializeToString(svgSymbol);
+	return {"object" : svgSymbol, "textXML" : xml, "x" : center.x , "y": center.y, "xOctagon": (center.x+hqCenterDiff.x), "yOctagon": (center.y+hqCenterDiff.y), "width":(this.markerBBox.x2-this.markerBBox.x1+2*pixelMargin)*this.size/100, "height":(this.markerBBox.y2-this.markerBBox.y1+2*pixelMargin)*this.size/100};
+}	
 }
 
 //END ####################################################################################
