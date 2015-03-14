@@ -6093,7 +6093,6 @@ MilSymbol = function (SIDCParameter,options){
 	this.symbolStatus = function(){
 		var symbol = this._symbol;
 		var tmp = '';
-
 		if(this.fill && this.frame && symbol.anticipated && !symbol.unframed){
 			tmp += this._symbolBaseGeometry.symbols[symbol.baseGeometryType]
 		}
@@ -6104,35 +6103,28 @@ MilSymbol = function (SIDCParameter,options){
 								"Damaged"		:'rgb(255,255,0)',
 								"Destroyed"		:'rgb(255,0,0)',
 								"FullToCapacity":'rgb(0, 180, 240)'};
-								
 				//If we have a mobility indicator we need to make space for it.
 				var offset = (symbol.mobility)?25:5;
-			
 				var symbolBBox = this._symbolBaseGeometry.symbols.BBox[symbol.baseGeometryType];
 				var symbolbottom = symbolBBox.y + symbolBBox.height;	
 				if(!this.frame){
 					symbolbottom = equipmentBottom[symbol.functionid]==undefined ? symbolbottom : equipmentBottom[symbol.functionid];
 				}
-				
 				this.markerBBox.y2 = Math.max(this.markerBBox.y2,(symbolbottom+offset+15));
-
 				tmp += '<path  stroke-width="' + this.strokeWidth + '" fill="' + colors[symbol.condition] + '" stroke-dasharray="0" stroke="' + this.symbolColors().frameColor[symbol.affiliationType] + '" d="M' + symbolBBox.x + ',' + (symbolbottom+offset) + ' l' + symbolBBox.width + ',0 0,15 -' + symbolBBox.width + ',0 z" />';
 			}else{
 				var damagedDestroyed = '';
 				if(symbol.condition == "Damaged" || symbol.condition == "Destroyed")damagedDestroyed += '<polyline points="150,20 50,180 " stroke-width="' + (this.strokeWidth * 2 ) + '" stroke="' + this._symbolColors.frameColor[symbol.affiliationType] + '" stroke-dasharray="0" />';
 				if(symbol.condition == "Destroyed")damagedDestroyed += '<polyline points="50,20 150,180 " stroke-width="' + (this.strokeWidth * 2 ) + '" stroke="' + this.symbolColors().frameColor[symbol.affiliationType] + '" stroke-dasharray="0" />';
-				
 				this.markerBBox.y1 = Math.min(this.markerBBox.y1,(20));
 				this.markerBBox.y2 = Math.max(this.markerBBox.y2,(180));
 				tmp += damagedDestroyed;
 			}
 		}
-		
 		//if(symbol.status == 'P' || symbol.status == '-'){
 			//Nothing, but we keep this if we need to use it.
 		//}
-		var Geometry = '<g id="StatusGeometry" fill="none" stroke="'+this._symbolColors.white["Friend"]+'" stroke-width="'+(parseFloat(this.strokeWidth)+1)+'" stroke-dasharray="'+symbol.anticipated+'">'+tmp+'</g>';
-		return Geometry;
+		return '<g id="StatusGeometry" fill="none" stroke="'+this._symbolColors.white["Friend"]+'" stroke-width="'+(parseFloat(this.strokeWidth)+1)+'" stroke-dasharray="'+symbol.anticipated+'">'+tmp+'</g>';
 	};
 
 //Base Geometry for the Symbol ###########################################################
