@@ -5923,18 +5923,18 @@ MilSymbol = function (SIDCParameter,options){
 		
 		//Set Light colors as default
 		var baseFillColor = {
-			'Hostile' 	: 'rgba(255, 128, 128,'+baseFillColorOpacity+') ',
+			'Hostile' 	: 'rgba(255, 128, 128,'+baseFillColorOpacity+')',
 			'Friend'	: 'rgba(128, 224, 255,'+baseFillColorOpacity+')',
-			'Neutral' 	: 'rgba(170, 255, 170,'+baseFillColorOpacity+') ',
+			'Neutral' 	: 'rgba(170, 255, 170,'+baseFillColorOpacity+')',
 			'Unknown' 	: 'rgba(255, 255, 128,'+baseFillColorOpacity+')'
 		};
 		var civilianColor = 'rgba(255,161,255,'+baseFillColorOpacity+')';
 		//Overwrite with Medium colors
 		if(this.colorMode == "Medium"){
 			baseFillColor = {
-				'Hostile' 	: 'rgba(255,48,49,'+baseFillColorOpacity+') ',
+				'Hostile' 	: 'rgba(255,48,49,'+baseFillColorOpacity+')',
 				'Friend'	: 'rgba(0,168,220,'+baseFillColorOpacity+')',
-				'Neutral' 	: 'rgba(0,226,110,'+baseFillColorOpacity+') ',
+				'Neutral' 	: 'rgba(0,226,110,'+baseFillColorOpacity+')',
 				'Unknown' 	: 'rgba(255,255,0,'+baseFillColorOpacity+')'
 			};
 			civilianColor = 'rgba(128,0,128,'+baseFillColorOpacity+')'
@@ -5942,25 +5942,25 @@ MilSymbol = function (SIDCParameter,options){
 		//Overwrite with Dark colors
 		if(this.colorMode == "Dark"){
 			baseFillColor = {
-				'Hostile' 	: 'rgba(200,0,0,'+baseFillColorOpacity+') ',
+				'Hostile' 	: 'rgba(200,0,0,'+baseFillColorOpacity+')',
 				'Friend'	: 'rgba(0,107,140,'+baseFillColorOpacity+')',
-				'Neutral' 	: 'rgba(0,160,0,'+baseFillColorOpacity+') ',
+				'Neutral' 	: 'rgba(0,160,0,'+baseFillColorOpacity+')',
 				'Unknown' 	: 'rgba(225,220,0,'+baseFillColorOpacity+')'
 			};
 			civilianColor = 'rgba(80,0,80,'+baseFillColorOpacity+')'
 		}
 		
 		var baseFrameColor = {
-			'Hostile' 	: 'rgba(255, 0, 0,'+baseFrameColorOpacity+') ',
-			'Friend'	: 'rgba(0, 255, 255,'+baseFrameColorOpacity+') ',
-			'Neutral' 	: 'rgba(0, 255, 0,'+baseFrameColorOpacity+') ',
-			'Unknown' 	: 'rgba(255, 255, 0,'+baseFrameColorOpacity+') '
+			'Hostile' 	: 'rgba(255, 0, 0,'+baseFrameColorOpacity+')',
+			'Friend'	: 'rgba(0, 255, 255,'+baseFrameColorOpacity+')',
+			'Neutral' 	: 'rgba(0, 255, 0,'+baseFrameColorOpacity+')',
+			'Unknown' 	: 'rgba(255, 255, 0,'+baseFrameColorOpacity+')'
 		};
 		var baseIconColor = {
-			'Hostile' 	:'rgba(255, 0, 0,'+baseIconOpacity+') ',
-			'Friend' 	: 'rgba(0, 255, 255,'+baseIconOpacity+') ',
-			'Neutral' 	:  'rgba(0, 255, 0,'+baseIconOpacity+') ',
-			'Unknown' 	: 'rgba(255, 255, 0,'+baseIconOpacity+') '
+			'Hostile' 	: 'rgba(255, 0, 0,'+baseIconOpacity+')',
+			'Friend' 	: 'rgba(0, 255, 255,'+baseIconOpacity+')',
+			'Neutral' 	: 'rgba(0, 255, 0,'+baseIconOpacity+')',
+			'Unknown' 	: 'rgba(255, 255, 0,'+baseIconOpacity+')'
 		};
 		var baseIconFillColor = baseFillColor;
 		var baseColorBlack = {
