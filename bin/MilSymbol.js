@@ -53,7 +53,6 @@ var _MilSymbol = {
 	},
 	userAgentIE : (navigator.userAgent.toLowerCase().indexOf('msie')==-1)
 };
-
 function _MilSymbolIcons(fill,frame,strokeWidth,monoColor,civilianColors,colorMode,force2525,affiliationType,symbol,symbolColors,SIDC){
 	var icons = [];
 	var symbolBaseGeometry = _MilSymbol.symbolBaseGeometry;
@@ -5436,13 +5435,10 @@ sID['160000'] = 'Manual Track';
 }
 
 MilSymbol = function (SIDCParameter,options){
-
 //Constants
-	svgNS = "http://www.w3.org/2000/svg";
-
-//Options fill,frame,icon
+	var svgNS = "http://www.w3.org/2000/svg";
+//Options
 	if(!options)var options = {};
-
 //Here are ALL the attributes that you can set for the Symbol, there is a lot of stuff... 
 //========================================================================================
 	//Should the icon be filled with color
@@ -5521,17 +5517,14 @@ MilSymbol = function (SIDCParameter,options){
 
 	//The symbol size is actually the L variable in the symbols so the symbol will be larger than this size.
 	this.size 	= 	options.size!=undefined?options.size:100;
-
 	//The SIDC for the symbol.
-	this.SIDC = SIDCParameter;		
-
+	this.SIDC = SIDCParameter;
 //========================================================================================								
 
 	//The center of the symbols are in 100,100 but we later need to offset the symbol to make space for some stuff on the top, this variable is the offset.
 	var symbolOffset = 30;
 	//For the map markers we want to remove as much spacing as possible, so we need to keep track of the boundingbox
 	this.markerBBox = {x1:50,y1:50,x2:150,y2:150};
-
 	var symbolBaseGeometry = {
 		'AirHostile' 	: '<polyline points="45,150 45,70 100,20 155,70 155,150" />',
 		'AirFriend'		: '<path  d="M 155,150 C 155,50 115,30 100,30 85,30 45,50 45,150"/>',
@@ -5551,7 +5544,7 @@ MilSymbol = function (SIDCParameter,options){
 		'SubsurfaceUnknown'	: '<path  d="m 65,50 c -55,0 -50,90 0,90 0,50 70,50 70,0 50,0 55,-90 0,-90" />',
 		'BBox' : {AirHostile: { x: 45, y:20, width: 110 , height:130},AirFriend: { x: 45, y:30, width: 110 , height:120},AirNeutral: { x: 45, y:30, width: 110 , height:120},AirUnknown: { x: 25, y:20, width: 150 , height:130},GroundHostile: { x: 28, y:28, width: 144 , height:144},GroundFriend: { x: 25, y:50, width: 150 , height:100},GroundNeutral: { x: 45, y:45, width: 110 , height:110},GroundUnknown: { x: 30.75, y:30.75, width: 138.5 , height:138.5},Groundnone: { x: 0, y:0, width: 0 , height:0},SeaHostile: { x: 28, y:28, width: 144 , height:144},SeaFriend: { x: 40, y:40, width: 120 , height:120},SeaNeutral: { x: 45, y:45, width: 110 , height:110},SeaUnknown: { x: 30.75, y:30.75, width: 138.5 , height:138.5},SubsurfaceHostile: { x: 45, y:50, width: 110 , height:130},SubsurfaceFriend: { x: 45, y:50, width: 110 , height:120},SubsurfaceNeutral: { x: 45, y:50, width: 110 , height:120},SubsurfaceUnknown: { x: 25, y:50, width: 150 , height:130}}
 	};
-	var copysymbolBaseGeometry = symbolBaseGeometry;
+	//var copysymbolBaseGeometry = symbolBaseGeometry;
 	_MilSymbol.symbolBaseGeometry = symbolBaseGeometry;
 
 	//Object containing bottom of all Equipment symbols.
@@ -5567,22 +5560,18 @@ MilSymbol = function (SIDCParameter,options){
 
 //Breaking up the SICD for the symbol ####################################################
 	this.symbol = function(){
-
 		var contextValues = [	"Reality",
 								"Exercise",
-								"Simulation"];
-								
+								"Simulation"];					
 		var statusValues = [	"Present",
 								"Planned",
 								"FullyCapable",
 								"Damaged",
 								"Destroyed",
-								"FullToCapacity"];
-								
+								"FullToCapacity"];			
 		var hqETC = { 	"fenintDummy":false,
 						"headquarters":false,
 						"taskForce":false};
-						
 		var echelonETCValues = {	"11": "Team/Crew",
 									"12": "Squad",
 									"13": "Section",
@@ -6128,26 +6117,25 @@ MilSymbol = function (SIDCParameter,options){
 	};
 
 //Base Geometry for the Symbol ###########################################################
-	this.symbolBaseGeometry = function(printToElementID){
+	this.symbolBaseGeometry = function(){
 
 	var symbol = this._symbol;
 		//Att size less than 10 set the geometry to a circle and reset it back again if we size up. 
 		if(symbolBaseGeometry['temp']){
 			symbolBaseGeometry[symbol.baseGeometryType] = symbolBaseGeometry['temp'];
 			symbolBaseGeometry['temp'] = undefined;
-			symbolBaseGeometry.BBox[symbol.baseGeometryType] = symbolBaseGeometry.BBox['temp'];
-			symbolBaseGeometry.BBox['temp'] = undefined;
+			//symbolBaseGeometry.BBox[symbol.baseGeometryType] = symbolBaseGeometry.BBox['temp'];
+			//symbolBaseGeometry.BBox['temp'] = undefined;
 		}
 		if(this.size < 10 || (!this.frame&&!this.icon)){
 			symbolBaseGeometry['temp'] = symbolBaseGeometry[symbol.baseGeometryType];
 			symbolBaseGeometry[symbol.baseGeometryType] = '<circle cx="100" cy="100" r="50" />';
-			symbolBaseGeometry.BBox['temp'] = symbolBaseGeometry.BBox[symbol.baseGeometryType];
-			symbolBaseGeometry.BBox[symbol.baseGeometryType] = { x: 50, y:50, width: 100 , height:100};
+			//symbolBaseGeometry.BBox['temp'] = symbolBaseGeometry.BBox[symbol.baseGeometryType];
+			//symbolBaseGeometry.BBox[symbol.baseGeometryType] = { x: 50, y:50, width: 100 , height:100};
 		}
-		
-		//The support for Svg boudningboxes for not drawn objects in webbrowsers sucks, and we need to know the size of our 
-		//Geometries, so here is a way to print out all info we need as an object string.
-		/*	if(printToElementID){
+		/*The support for Svg boudningboxes for not drawn objects in webbrowsers sucks, and we need to know the size of our 
+		Geometries, so here is a way to print out all info we need as an object string.
+			if(printToElementID){
 				listBBoxes = '';
 				for (var property in symbolBaseGeometry) {
 						var BaseGeometry = document.createElementNS(svgNS, "g");
@@ -6177,7 +6165,6 @@ MilSymbol = function (SIDCParameter,options){
 					}
 				document.getElementById(printToElementID).innerHTML=listBBoxes;
 			}*/
-			
 		var extraModifier = '';
 		//Space Modifiers
 		if(symbol.spaceModifier){
@@ -6186,32 +6173,26 @@ MilSymbol = function (SIDCParameter,options){
 			if(symbol.affiliationType == 'Neutral'){extraModifier = '<path stroke="none" fill="' +this._symbolColors.frameColor[symbol.affiliationType]+ '" d="M45,50 l0,-20 110,0 0,20 z "/>'}
 			if(symbol.affiliationType == 'Unknown'){extraModifier = '<path stroke="none" fill="' +this._symbolColors.frameColor[symbol.affiliationType]+ '" d="M 100 22.5 C 85 22.5 70 31.669211 66 50 L 134 50 C 130 31.669204 115 22.5 100 22.5 z "/>'}
 		}
-		
-		//TODO Add modifiers for activity. Defined in APP6C but unclear when to trigger... 
+		//Modifiers for activity.
 		if(symbol.activityModifier){
 			if(symbol.affiliationType == 'Friend'){extraModifier = '<path stroke="none" fill="' +this._symbolColors.frameColor[symbol.affiliationType]+ '" d="m 160,135 0,15 15,0 0,-15 z m -135,0 15,0 0,15 -15,0 z m 135,-85 0,15 15,0 0,-15 z m -135,0 15,0 0,15 -15,0 z"/>'}
 			if(symbol.affiliationType == 'Hostile'){extraModifier = '<path stroke="none" fill="' +this._symbolColors.frameColor[symbol.affiliationType]+ '" d="M 100 28 L 89.40625 38.59375 L 100 49.21875 L 110.59375 38.59375 L 100 28 z M 38.6875 89.3125 L 28.0625 99.9375 L 38.6875 110.53125 L 49.28125 99.9375 L 38.6875 89.3125 z M 161.40625 89.40625 L 150.78125 100 L 161.40625 110.59375 L 172 100 L 161.40625 89.40625 z M 99.9375 150.71875 L 89.3125 161.3125 L 99.9375 171.9375 L 110.53125 161.3125 L 99.9375 150.71875 z"/>'}
 			if(symbol.affiliationType == 'Neutral'){extraModifier = '<path stroke="none" fill="' +this._symbolColors.frameColor[symbol.affiliationType]+ '" d="m 140,140 15,0 0,15 -15,0 z m -80,0 0,15 -15,0 0,-15 z m 80,-80 0,-15 15,0 0,15 z m -80,0 -15,0 0,-15 15,0 z"/>'}
 			if(symbol.affiliationType == 'Unknown'){extraModifier = '<path stroke="none" fill="' +this._symbolColors.frameColor[symbol.affiliationType]+ '" d="M 107.96875 31.46875 L 92.03125 31.71875 L 92.03125 46.4375 L 107.71875 46.4375 L 107.96875 31.46875 z M 47.03125 92.5 L 31.09375 92.75 L 31.09375 107.5 L 46.78125 107.5 L 47.03125 92.5 z M 168.4375 92.5 L 152.5 92.75 L 152.5 107.5 L 168.1875 107.5 L 168.4375 92.5 z M 107.96875 153.5625 L 92.03125 153.8125 L 92.03125 168.53125 L 107.71875 168.53125 L 107.96875 153.5625 z"/>'}
-		}		
-
+		}
 		//The test geometry displays the bounding octagon in the symbols, good for debugging.
 		var testGeometry = '';
 		//testGeometry = '<path d="m 120,60 0,80 m -40,-80 0,80 m -20,-20 80,0 m 0,-40 -80,0 M 100,50 135.35534,64.64466 150,100 135.35534,135.35534 100,150.00002 64.644661,135.35534 50,100 64.644661,64.64466 z" stroke="black" stroke-width="1" fill="none"></path>'
-
 		//Keep track of how big our symbol is
-if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseGeometryType = "AirFriend";//TODO find out why we sometimes get baseGeometryType == NaN... 
+		if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseGeometryType = "AirFriend";//TODO find out why we sometimes get baseGeometryType == NaN... 
 		this.markerBBox = {	x1:Math.min(this.markerBBox.x1,symbolBaseGeometry.BBox[symbol.baseGeometryType].x),
 							y1:Math.min(this.markerBBox.y1,symbolBaseGeometry.BBox[symbol.baseGeometryType].y),
 							x2:Math.max(this.markerBBox.x2,symbolBaseGeometry.BBox[symbol.baseGeometryType].x + symbolBaseGeometry.BBox[symbol.baseGeometryType].width),
 							y2:Math.max(this.markerBBox.y2,symbolBaseGeometry.BBox[symbol.baseGeometryType].y + symbolBaseGeometry.BBox[symbol.baseGeometryType].height)};
-				
 		//Add a dashed outline to the frame if we are using monocolor and the status is set to A or the affiliation is P,A,S or G.	
 		var anticipated = "";
 		if((this.monoColor != '' || !this.fill) && symbol.anticipated) anticipated = ' stroke-dasharray="'+symbol.anticipated+'"';
-
 		var Geometry = '<g id="BaseGeometry" fill="'+this._symbolColors.fillColor[symbol.affiliationType]+'" stroke="'+this._symbolColors.frameColor[symbol.affiliationType]+'" stroke-width="'+(this.size>=10?this.strokeWidth:10)+'"'+anticipated+'>' + symbolBaseGeometry[symbol.baseGeometryType] + extraModifier + testGeometry + '</g>';
-		
 		return {"geometry" : Geometry, "symbols" : symbolBaseGeometry};
 	};
 
@@ -6264,12 +6245,9 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 
 //Symbol Modifiers #######################################################################
 	this.symbolModifier = function(){
-
 		var modifier = '';
 		var symbol = this._symbol;
-		
 		var symbolBBox = symbolBaseGeometry.BBox[symbol.baseGeometryType];
-		
 		if(symbol.hqETC.headquarters){
 			//HEADQUARTERS
 			//HQ staf should go down one octagon =100px from bottom of icon.
@@ -6281,7 +6259,6 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 			modifier += '<line x1="' + symbolBBox.x + '" y1="' + startY + '" x2="' + symbolBBox.x + '" y2="' + (symbolBBox.y+symbolBBox.height+100) + '" />';
 			this.markerBBox.y2 = Math.max(this.markerBBox.y2,(symbolBBox.y+symbolBBox.height+100));	
 		}
-		
 		if(symbol.hqETC.taskForce){
 			//TASK FORCE
 			modifier += '<polyline fill="none" points="55,' + (symbolBBox.y) + ' 55,' + (symbolBBox.y-40) + ' 145,' + (symbolBBox.y-40) +' 145,'+(symbolBBox.y)+'" />';
