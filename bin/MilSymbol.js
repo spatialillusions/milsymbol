@@ -6421,11 +6421,10 @@ MilSymbol = function (SIDCParameter,options){
 	};
 
 //Icons ##################################################################################
-	this.symbolIcon = function(element){
-		//remove element after testing... 		
+	this.symbolIcon = function(){
 		var symbolColors = this._symbolColors;
 		var symbol = this._symbol;
-		//var affiliationType = symbol.affiliationType;
+
 		var fillColor = symbolColors.fillColor[symbol.affiliationType];
 		var iconColor = symbolColors.iconColor[symbol.affiliationType];
 		var iconFillColor = symbolColors.iconFillColor[symbol.affiliationType];
@@ -6433,6 +6432,7 @@ MilSymbol = function (SIDCParameter,options){
 		var black = symbolColors.black[symbol.affiliationType];
 		var white = symbolColors.white[symbol.affiliationType];
 		var unframed = symbol.unframed;
+
 		var icons = [];
 		//Main Symbol
 		var sID = [];
@@ -6440,9 +6440,8 @@ MilSymbol = function (SIDCParameter,options){
 		var sIDm1 = [];
 		//Modifier 2
 		var sIDm2 = [];
-
+		//Cashing of symbol sets.
 		var iconSet = symbol.affiliationType+'-fillcolor:'+fillColor+' iconColor:'+iconColor+' iconFillColor:'+iconFillColor+' '+none+black+white+'-'+this.fill+this.frame+this.strokeWidth+this.monoColor+this.civilianColors+this.colorMode+this.force2525;
-
 		if(_MilSymbol.icons.hasOwnProperty(iconSet)){	
 			icons = _MilSymbol.icons[iconSet];
 		}else{
@@ -6463,14 +6462,12 @@ MilSymbol = function (SIDCParameter,options){
 				sID = _MilSymbol.sID[iconSet] = _MilSymbolinitLetterSIDC(icons, this.force2525);
 			}
 		}
-		
 		if(!isNaN(this.SIDC)){ //Number based SIDCs.
 			var symbolSet = String(this.SIDC).replace("*","-").replace(" ","").substr(4,2);
 			if(_MilSymbol.sID.hasOwnProperty(symbolSet+iconSet)){	
 				sID = _MilSymbol.sID[symbolSet+iconSet];
 				sIDm1 = _MilSymbol.sIDm1[symbolSet+iconSet];
 				sIDm2 = _MilSymbol.sIDm2[symbolSet+iconSet];
-
 			}else{
 				var symbols = _MilSymbolInitNumberSIDC(symbolSet,icons, this.force2525);
 				sID = _MilSymbol.sID[symbolSet+iconSet] = symbols.sID;
@@ -6478,12 +6475,8 @@ MilSymbol = function (SIDCParameter,options){
 				sIDm2 = _MilSymbol.sIDm2[symbolSet+iconSet] = symbols.sIDm2;
 			}	
 		}
-
-
-
 //THIS IS JUST FOR Printing bottom coords of all equipment ===========================
-		/*
-			if(element){
+/*			if(element){
 				listBBoxes = '';
 				for (var property in sID) {
 					if(property.substr(4,1) == 'E'){
@@ -6514,36 +6507,7 @@ MilSymbol = function (SIDCParameter,options){
 					}
 					}
 				document.getElementById(element).innerHTML=listBBoxes;
-			}		
-	
-			if(element){//For printing all implemented symbols
-
-			var symbols = "<table>";
-			var i=0;
-			var t = new Date()
-			var symbol =  new MilSymbol("S-S",{force2525:mySymbol.force2525,fill:mySymbol.fill,frame:mySymbol.frame,monoColor:mySymbol.monoColor,size:mySymbol.size,strokeWidth:mySymbol.strokeWidth});
-			for(var index in sID) {
-				var ID = index;
-				i++
-							
-				symbols += "<tr><td colspan=3>"+ i + '   ' + ID  + "</td></tr><tr><td>";
-
-				symbol.force2525 = false;
-				symbol.frame = true;
-				symbol.SIDC = ID.substr(0,1)+document.getElementById("SIDCAFFILIATION").value + ID.substr(2,8) + document.getElementById("SIDCSYMBOLMODIFIER11").value +document.getElementById("SIDCSYMBOLMODIFIER12").value ;
-				symbols += symbol.symbolMarker().textXML + '</td><td>'
-				
-				symbol.force2525 = true;
-				symbols += symbol.symbolMarker().textXML + '</td><td>'
-				
-				var t2 = new Date()
-				//symbols += symbol.symbolSvg().textXML + '</td></tr>'
-				//symbols += "<tr><td colspan=3>" + " Time to draw: " + (t2-t)  +"</td></tr>";
-				t=t2
-			}
-			symbols += "</table>";
-			document.getElementById(element).innerHTML = symbols			
-		}	
+			}				
 */	
 
 // Put all this togheter and return the Icon. ============================================
@@ -6560,8 +6524,7 @@ MilSymbol = function (SIDCParameter,options){
 		}else{
 			icon = sID[this.SIDC.substr(0,1)+'-'+this.SIDC.substr(2,1)+'-'+this.SIDC.substr(4,6)]
 		}
-		var geometry = '<g id="Icon" fill="'+iconColor+'" stroke="'+iconColor+'" stroke-width="'+this.strokeWidth+'" font-family="Arial" font-weight="bold">' + icon + '</g>';
-		return geometry;
+		return '<g id="Icon" fill="'+iconColor+'" stroke="'+iconColor+'" stroke-width="'+this.strokeWidth+'" font-family="Arial" font-weight="bold">' + icon + '</g>';
 	};
 
 //Combines all parts and returns the symbol as an SVG object. mySymbol.symbolSvg() #######
