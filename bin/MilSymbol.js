@@ -6275,13 +6275,11 @@ MilSymbol = function (SIDCParameter,options){
 			installation = 15;
 			this.markerBBox.y1 = Math.min(this.markerBBox.y1,symbolBBox.y-10);
 		}
-					
 		if(symbol.hqETC.feintDummy){
 			//FEINT DUMMY
 			modifier += '<polyline fill="none" stroke-dasharray="8,8" points="'+symbolBBox.x+','+symbolBBox.y+' 100,-28 '+(symbolBBox.x+symbolBBox.width)+','+symbolBBox.y+'" />';	
 			this.markerBBox.y1 = Math.min(this.markerBBox.y1,-28);
 		}
-
 		//Unit Size
 			if(symbol.echelonETC["Team/Crew"]){
 				modifier += _MilSymbol.translate(0,-installation,'<circle cx="100" cy="'+(symbolBBox.y-25)+'" r="15" fill="none"  /><line x1="80" y1="'+(symbolBBox.y-15)+'" x2="120" y2="'+(symbolBBox.y-35)+'" stroke-width="' + (this.strokeWidth*2/3) + '"  />');
@@ -6352,7 +6350,6 @@ MilSymbol = function (SIDCParameter,options){
 				this.markerBBox.x1 = Math.min(this.markerBBox.x1,70);
 				this.markerBBox.x2 = Math.max(this.markerBBox.x2,130);
 			}
-			
 			//This is for movability indicators.
 			if(symbol.mobility){
 				var symbolbottom = symbolBBox.y + symbolBBox.height;
@@ -6360,7 +6357,6 @@ MilSymbol = function (SIDCParameter,options){
 				if(!this.frame){
 					symbolbottom = equipmentBottom[symbol.functionid]==undefined ? symbolbottom : equipmentBottom[symbol.functionid];
 				}
-				
 				modifier += '<g transform="translate(0,' + symbolbottom + ')" stroke="' + this._symbolColors.iconColor[symbol.affiliationType] + '">';
 				if(symbol.echelonETC["Wheeled limited cross country"]){
 					modifier += '<path d="M 50,1 l 100,0"  fill="none" /><circle cx="55" cy="6" r="5" fill="none"  /><circle cx="145" cy="6" r="5" fill="none"  />';
@@ -6421,8 +6417,7 @@ MilSymbol = function (SIDCParameter,options){
 				modifier += '<text font-family="Arial" font-weight="bold" stroke="none" text-anchor="middle" x="100" y="'+ (30 + symbolbottom )+'" font-size="35" >'+this.sigint+'</text>';
 				this.markerBBox.y2 = Math.max(this.markerBBox.y2,symbolbottom+30);
 			}
-		var Geometry = '<g id="symbolModifier" fill="'+this._symbolColors.frameColor[symbol.affiliationType]+'" stroke="'+this._symbolColors.frameColor[symbol.affiliationType]+'" stroke-width="'+this.strokeWidth+'">' + modifier + '</g>';
-		return Geometry;
+		return'<g id="symbolModifier" fill="'+this._symbolColors.frameColor[symbol.affiliationType]+'" stroke="'+this._symbolColors.frameColor[symbol.affiliationType]+'" stroke-width="'+this.strokeWidth+'">' + modifier + '</g>';
 	};
 
 //Icons ##################################################################################
