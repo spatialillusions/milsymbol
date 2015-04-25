@@ -51,7 +51,7 @@ var _MilSymbol = {
 	rotate : function(angle, svg){
 		return '<g transform="rotate('+angle+',100,100)">' + svg + '</g>';
 	},
-	userAgentIE : (navigator.userAgent.toLowerCase().indexOf('msie')==-1)
+	notUserAgentIE : (navigator.userAgent.toLowerCase().indexOf('msie')==-1 && navigator.userAgent.toLowerCase().indexOf('trident')==-1)
 };
 
 function _MilSymbolIcons(fill,frame,strokeWidth,monoColor,civilianColors,colorMode,force2525,affiliationType,symbol,symbolColors,SIDC){
@@ -6638,7 +6638,7 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 		}
 		var svgSymbol = document.createElementNS(svgNS, "svg");
 		//IE gets crazy over if you happen to set xmlns twice, but other browsers wants it, this is a dirty workaround 
-		if(_MilSymbol.userAgentIE){svgSymbol.setAttribute("xmlns", svgNS)};
+		if(_MilSymbol.notUserAgentIE){svgSymbol.setAttribute("xmlns", svgNS)};
 		svgSymbol.setAttribute("version", 1.2);
 		svgSymbol.setAttribute("baseProfile", "tiny");
 		svgSymbol.setAttribute("width", this.size*3);
@@ -6909,7 +6909,7 @@ if(!symbolBaseGeometry.BBox.hasOwnProperty(symbol.baseGeometryType))symbol.baseG
 	}
 	var svgSymbol = document.createElementNS(svgNS, "svg");
 	//IE gets crazy over if you happen to set xmlns twice, but other browsers wants it, this is a dirty workaround 
-	if(_MilSymbol.userAgentIE){svgSymbol.setAttribute("xmlns", svgNS)};
+	if(_MilSymbol.notUserAgentIE){svgSymbol.setAttribute("xmlns", svgNS)};
 	svgSymbol.setAttribute("version", 1.2);
 	svgSymbol.setAttribute("baseProfile", "tiny");
 	svgSymbol.setAttribute("width", (this.markerBBox.x2-this.markerBBox.x1+2*pixelMargin)*this.size/100);
