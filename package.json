@@ -1,8 +1,8 @@
 {
-  "name": "mil-symbol",
+  "name": "milsymbol",
   "version": "0.4.6",
-  "description": "MilSymbol is a small library in pure javascript that creates SVG symbols according to MIL-STD-2525 and APP6.",
-  "main": "bin/MilSymbol.js",
+  "description": "milsymbol.js is a small library in pure javascript that creates SVG symbols according to MIL-STD-2525 and APP6.",
+  "main": "dist/milsymbol.js",
   "directories": {
     "doc": "docs",
     "example": "examples"
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/spatialillusions/MilSymbol",
   "bin": {
-    "mil-symbol": "MilSymbol.js"
+    "milsymbol": "milsymbol.js"
   }
 }

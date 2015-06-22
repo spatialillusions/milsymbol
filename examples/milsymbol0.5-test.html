@@ -1,0 +1,169 @@
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>Spatial Illusions</title>
+
+<link rel="stylesheet" href="../spatialillusions.com.css" />
+
+<style type="text/css">
+	.mymap{
+	height: 500px; 
+	width: 100%;
+	}
+</style>
+
+<script src="../dist//milsymbol.js"></script>
+
+</head>
+<body>
+<div class="heading">
+	<a href="http://spatialillusions.com">SPATIAL ILLUSIONS</a>
+	<span class="bannerLinks">
+	<!--<a href="MS.symbolLibrary/index.html">MS.symbol.js</a>
+	<a href="ForceTracker/index.html">Force Tracker</a>-->
+
+	</span>
+	<svg class="logo"
+		viewBox="50 50 100 100"
+		width="30"
+		height="30"> 
+		<path
+			style="fill:none;stroke:#ffffff;stroke-width:3px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+			d="m 105,50 25,15 m -40,20 50,10 m -80,-25 0,35 0,25 45,0 15,15 M 110,80 75,70 l 0,50 45,-25 10,35 20,-35 -20,-30 z m -30,65 20,5 20,-5 20,-15 m -50,15 -10,0 -20,-15 m 90,-35 -10,35 -10,0 -10,15 -30,0 m 45,-80 15,30 -10,0 m -10,-35 5,5 -5,0 m -25,-15 25,10 0,5 m -70,5 20,-15 20,5 M 75,70 60,70 50,105 m 10,25 -10,-25 10,0 m 45,25 -15,15 -30,-15 15,-10 m 25,-60 30,5 10,30 M 75,70 100,60 110,80 m 30,15 -10,35 -25,0 m 15,-35 20,0 -30,-15 -20,5 30,10 -15,35 L 75,120 90,85 75,70 60,105 75,120 m 25,-60 5,-10 -25,5 -5,15">
+				<animateTransform 
+				attributeType="xml"
+				attributeName="transform" type="rotate"
+				from="0 100 100" to="360 100 100"
+				begin="0" dur="60s" 
+				fill="freeze"
+				repeatCount="indefinite"
+				/>
+		</path>
+	</svg>
+</div>
+
+<div class="body">
+<h1>minimal test cases for milsymbol</h1>
+<h2>Test symbol 1</h2>
+<script>
+
+var sidc = "SHA*C-----*****";
+
+var sym = new MS.symbol(sidc, {size:100});
+document.write(sym.getMarker().XML);
+document.write("<br>")
+document.write(sidc)
+document.write("<br>")
+document.write("Width: " + sym.width)
+document.write("<br>")
+document.write("Height: " + sym.height)
+document.write("<br>")
+
+
+</script>
+<br>
+<h2>Test symbol 2, test of fill opacity and use of icon cache.</h2>
+<script>
+
+var sidc = "SHA*WMCM--*****";
+
+var sym = new MS.symbol(sidc, {size:100});
+sym.fillOpacity = 0.5;
+
+document.write(sym.getMarker().XML);
+document.write("<br>")
+document.write(sidc)
+document.write("<br>")
+document.write("Width: " + sym.width)
+document.write("<br>")
+document.write("Height: " + sym.height)
+document.write("<br>")
+
+
+</script>
+<br>
+<h2>Test symbol 3 - Test Dark color mode.</h2>
+<script>
+
+
+var sidc = "SFA-MFK-----";
+var sym = new MS.symbol(sidc, {size:100, colorMode: MS.getColorMode("Dark")});
+document.write(sym.getMarker().XML);
+document.write("<br>")
+document.write(sidc)
+document.write("<br>")
+document.write("Width: " + sym.width)
+document.write("<br>")
+document.write("Height: " + sym.height)
+document.write("<br>")
+
+</script>
+<br>
+<h2>Test symbol 4 - Test status</h2>
+<script>
+
+var sidc = "SNSA--------";
+var sym = new MS.symbol(sidc, {size:100});
+document.write(sym.getMarker().XML);
+document.write("<br>")
+document.write(sidc)
+document.write("<br>")
+document.write("Width: " + sym.width)
+document.write("<br>")
+document.write("Height: " + sym.height)
+document.write("<br>")
+document.write("Marker anchor X: " + sym.markerAnchor.x)
+document.write("<br>")
+document.write("Marker anchor Y: " + sym.markerAnchor.y)
+document.write("<br>")
+</script>
+<br>
+<h2>Test symbol 5 - Test HQ anchor point</h2>
+
+<script>
+var sidc = "SNSA------A-";
+var sym = new MS.symbol(sidc, {size:100});
+document.write(sym.getMarker().XML);
+document.write("<br>")
+document.write(sidc)
+document.write("<br>")
+document.write("Width: " + sym.width)
+document.write("<br>")
+document.write("Height: " + sym.height)
+document.write("<br>")
+document.write("Marker anchor X: " + sym.markerAnchor.x)
+document.write("<br>")
+document.write("Marker anchor Y: " + sym.markerAnchor.y)
+document.write("<br>")
+</script>
+
+<br>
+<h2>Test symbol 6 - Test asImage()</h2>
+<div id="asimage"></div>
+<script>
+
+var sidc = "SNSA------A-";
+var sym = new MS.symbol(sidc, {size:100});
+
+//var myImage = new Image();
+var myImage = document.createElement("img");
+myImage.src = sym.getMarker().asImage();
+document.getElementById("asimage").appendChild(myImage)
+</script>
+
+
+<br>
+<h2>Test symbol 7 - Test asDOM()</h2>
+<div id="asdom"></div>
+
+<script>
+
+var sidc = "SNSA------A-";
+var sym = new MS.symbol(sidc, {size:100});
+
+document.getElementById("asdom").appendChild(sym.getMarker().asDOM())
+</script>
+</div>
+</body>
+</html>

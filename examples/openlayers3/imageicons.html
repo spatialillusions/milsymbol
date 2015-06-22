@@ -1,0 +1,109 @@
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>Spatial Illusions</title>
+
+<link rel="stylesheet" href="../../spatialillusions.com.css" />
+
+<style type="text/css">
+	.mymap{
+	height: 500px; 
+	width: 100%;
+	}
+</style>
+
+<link rel="stylesheet" href="http://openlayers.org/en/v3.6.0/css/ol.css" type="text/css">
+<script src="http://openlayers.org/en/v3.6.0/build/ol.js" type="text/javascript"></script>
+<script src="../../dist/milsymbol.js"></script>
+
+
+<script>
+function init(){
+	var iconFeature = new ol.Feature({
+	  geometry: new ol.geom.Point([0, 0]),
+	  name: 'My Unit'
+	});
+
+	var marker = new MS.symbol("SFF--------E");
+	var testarlite = document.createElement('img');
+	testarlite.src = marker.getMarker().asImage();
+	var iconStyle = new ol.style.Style({
+	  image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+		anchor: [marker.markerAnchor.x, marker.markerAnchor.y],
+		anchorXUnits: 'pixels',
+		anchorYUnits: 'pixels',
+		imgSize: [marker.width, marker.height],
+		img: (testarlite)
+	  }))
+	});
+
+	iconFeature.setStyle(iconStyle);
+
+	var vectorSource = new ol.source.Vector({
+	  features: [iconFeature]
+	});
+
+	var vectorLayer = new ol.layer.Vector({
+	  source: vectorSource
+	});
+	
+	var rasterLayer = new ol.layer.Tile({
+	  source: new ol.source.TileJSON({
+		url: 'http://api.tiles.mapbox.com/v3/mapbox.geography-class.jsonp',
+		crossOrigin: ''
+	  })
+	});
+	
+	var map = new ol.Map({
+	  layers: [rasterLayer,vectorLayer],
+	  target: document.getElementById('map'),
+	  view: new ol.View({
+		center: [0, 0],
+		zoom: 3
+	  })
+	});
+
+}
+
+</script>
+</head>
+<body onload="init()">
+
+
+<div class="heading">
+	<a href="http://spatialillusions.com">SPATIAL ILLUSIONS</a>
+	<span class="bannerLinks">
+	<!--<a href="MS.symbolLibrary/index.html">MS.symbol.js</a>
+	<a href="ForceTracker/index.html">Force Tracker</a>-->
+
+	</span>
+	<svg class="logo"
+		viewBox="50 50 100 100"
+		width="30"
+		height="30"> 
+		<path
+			style="fill:none;stroke:#ffffff;stroke-width:3px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+			d="m 105,50 25,15 m -40,20 50,10 m -80,-25 0,35 0,25 45,0 15,15 M 110,80 75,70 l 0,50 45,-25 10,35 20,-35 -20,-30 z m -30,65 20,5 20,-5 20,-15 m -50,15 -10,0 -20,-15 m 90,-35 -10,35 -10,0 -10,15 -30,0 m 45,-80 15,30 -10,0 m -10,-35 5,5 -5,0 m -25,-15 25,10 0,5 m -70,5 20,-15 20,5 M 75,70 60,70 50,105 m 10,25 -10,-25 10,0 m 45,25 -15,15 -30,-15 15,-10 m 25,-60 30,5 10,30 M 75,70 100,60 110,80 m 30,15 -10,35 -25,0 m 15,-35 20,0 -30,-15 -20,5 30,10 -15,35 L 75,120 90,85 75,70 60,105 75,120 m 25,-60 5,-10 -25,5 -5,15">
+				<animateTransform 
+				attributeType="xml"
+				attributeName="transform" type="rotate"
+				from="0 100 100" to="360 100 100"
+				begin="0" dur="60s" 
+				fill="freeze"
+				repeatCount="indefinite"
+				/>
+		</path>
+	</svg>
+</div>
+
+<div class="body">
+<h1>milsymbol in open layers 3 - ol.style.Icon()</h1>
+<i>TODO: Update with new scenario</i><br>
+<i>TODO: Fix so it works in IE11</i><br>
+<i>TODO: Make overlay example similar to L.divIcon()</i><br>
+
+</div>
+<div id="map" class="mymap">
+</div></body>
+</html>

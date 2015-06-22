@@ -1,0 +1,107 @@
+﻿<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>Spatial Illusions</title>
+
+<link rel="stylesheet" href="../../spatialillusions.com.css" />
+
+<style type="text/css">
+	.mymap{
+	height: 500px; 
+	width: 100%;
+	}
+</style>
+
+ <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+ <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script src="../../dist//milsymbol.js"></script>
+
+ 
+<script>
+function init(){
+
+	var osmAttr = '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>';	
+	var OSM = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18, attribution: osmAttr}),
+		latlng = L.latLng(59, 16);
+
+	var map = L.map('map', {center: latlng, zoom: 5, layers: [OSM]});
+
+	var Units = [{"Name":"Berga","Latitude":59.079584,"Longitude":18.132854 , "SIDC":"SFG-UCIN---G" },
+		{"Name":"Boden","Latitude":65.818014,"Longitude":21.663709, "SIDC":"SFG-UCF----G"},
+		{"Name":"Ronneby","Latitude":56.258695,"Longitude":15.285877, "SIDC":"SFA-MF-----G"},
+		{"Name":"Karlskrona","Latitude":56.157382,"Longitude":15.585608, "SIDC":"SFU-S------G"},
+		{"Name":"Karlskrona","Latitude":56.157382,"Longitude":15.585608, "SIDC":"SFS--------G"},
+		{"Name":"Stockholm","Latitude":59.340861,"Longitude":18.111498, "SIDC":"SFG-I-----AI"},
+		{"Name":"Halmstad","Latitude":56.683297,"Longitude":12.841988, "SIDC":"SFG-UCDHH--G"},
+		{"Name":"Eksjö","Latitude":57.677746,"Longitude":14.965181, "SIDC":"SFG-UCEC---G"},
+		{"Name":"Linköping","Latitude":58.409626,"Longitude":15.518382, "SIDC":"SFA-MH-----G"},
+		{"Name":"Enköping","Latitude":59.645594,"Longitude":17.101014, "SIDC":"SFG-UUS----G"},
+		{"Name":"Kungsängen","Latitude":59.515132,"Longitude":17.769742, "SIDC":"SFG-UCRV---G"},
+		{"Name":"Karlsborg","Latitude":58.530198,"Longitude":14.522656, "SIDC":"SFG-UUM----F"},
+		{"Name":"Skövde","Latitude":58.382548,"Longitude":13.84655, "SIDC":"SFG-UCA----G"},
+		{"Name":"Luleå","Latitude":65.54226,"Longitude":22.106895, "SIDC":"SFA-MF-----G"},
+		{"Name":"Boden","Latitude":65.820114,"Longitude":21.658816, "SIDC":"SFG-UCA----G"},
+		{"Name":"Såtenäs","Latitude":58.440366,"Longitude":12.724915, "SIDC":"SFA-MFC----E"},
+		{"Name":"Revingehed","Latitude":55.717829,"Longitude":13.502197, "SIDC":"SFG-UCATL--G"},
+		{"Name":"Umeå","Latitude":63.837594,"Longitude":20.253832, "SIDC":"SFG-UUA----F"},
+		{"Name":"Skövde","Latitude":58.382983,"Longitude":13.848578, "SIDC":"SFG-UST----G"},
+		{"Name":"Arvidsjaur","Latitude":65.582793,"Longitude":19.162302, "SIDC":"SFG-UCRO---F"},
+		{"Name":"Karlsborg","Latitude":58.530198,"Longitude":14.522656, "SIDC":"SFF--------E"}]
+
+	var mysymbol = [];
+	var myicon = [];
+	var mymarker =[];
+
+	for( i in Units){
+		var iconSize = {"E":20,"F":25,"G":30,"H":35,"I":40};
+
+		mysymbol[i] = new MS.symbol(Units[i].SIDC,{size:iconSize[(Units[i].SIDC).charAt(11)]})
+		myicon[i] = L.divIcon({	className: 'test', 
+			html : mysymbol[i].getMarker().XML, 
+			iconAnchor: new L.Point(mysymbol[i].markerAnchor.x, mysymbol[i].markerAnchor.y)});
+
+		mymarker[i] = L.marker([Units[i].Latitude, Units[i].Longitude],{icon:myicon[i], draggable:true});
+		mymarker[i].addTo(map)
+	}
+}
+</script>
+</head>
+<body onload="init()">
+
+
+<div class="heading">
+	<a href="http://spatialillusions.com">SPATIAL ILLUSIONS</a>
+	<span class="bannerLinks">
+	<!--<a href="MS.symbolLibrary/index.html">MS.symbol.js</a>
+	<a href="ForceTracker/index.html">Force Tracker</a>-->
+
+	</span>
+	<svg class="logo"
+		viewBox="50 50 100 100"
+		width="30"
+		height="30"> 
+		<path
+			style="fill:none;stroke:#ffffff;stroke-width:3px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+			d="m 105,50 25,15 m -40,20 50,10 m -80,-25 0,35 0,25 45,0 15,15 M 110,80 75,70 l 0,50 45,-25 10,35 20,-35 -20,-30 z m -30,65 20,5 20,-5 20,-15 m -50,15 -10,0 -20,-15 m 90,-35 -10,35 -10,0 -10,15 -30,0 m 45,-80 15,30 -10,0 m -10,-35 5,5 -5,0 m -25,-15 25,10 0,5 m -70,5 20,-15 20,5 M 75,70 60,70 50,105 m 10,25 -10,-25 10,0 m 45,25 -15,15 -30,-15 15,-10 m 25,-60 30,5 10,30 M 75,70 100,60 110,80 m 30,15 -10,35 -25,0 m 15,-35 20,0 -30,-15 -20,5 30,10 -15,35 L 75,120 90,85 75,70 60,105 75,120 m 25,-60 5,-10 -25,5 -5,15">
+				<animateTransform 
+				attributeType="xml"
+				attributeName="transform" type="rotate"
+				from="0 100 100" to="360 100 100"
+				begin="0" dur="60s" 
+				fill="freeze"
+				repeatCount="indefinite"
+				/>
+		</path>
+	</svg>
+</div>
+
+<div class="body">
+<h1>milsymbol in LeafLet - L.divIcon()</h1>
+You can use the SVG XML output directly in a L.divIcon(), this way you can also add other HTML information to your markers if you want to.<br>
+<i>TODO: Update with new scenario</i><br>
+
+</div>
+<div id="map" class="mymap">
+</div></body>
+</html>

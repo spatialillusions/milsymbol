@@ -1,173 +1,246 @@
-<!DOCTYPE html>
+<html>
+<head>
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>Spatial Illusions</title>
+
+<link rel="stylesheet" href="../../spatialillusions.com.css" />
+
+</head>
+<body onload="renderOrbat()">
+
+
+<div class="heading">
+	<a href="http://spatialillusions.com">SPATIAL ILLUSIONS</a>
+	<span class="bannerLinks">
+	<!--<a href="MS.symbolLibrary/index.html">MS.symbol.js</a>
+	<a href="ForceTracker/index.html">Force Tracker</a>-->
+
+	</span>
+	<svg class="logo"
+		viewBox="50 50 100 100"
+		width="30"
+		height="30"> 
+		<path
+			style="fill:none;stroke:#ffffff;stroke-width:3px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+			d="m 105,50 25,15 m -40,20 50,10 m -80,-25 0,35 0,25 45,0 15,15 M 110,80 75,70 l 0,50 45,-25 10,35 20,-35 -20,-30 z m -30,65 20,5 20,-5 20,-15 m -50,15 -10,0 -20,-15 m 90,-35 -10,35 -10,0 -10,15 -30,0 m 45,-80 15,30 -10,0 m -10,-35 5,5 -5,0 m -25,-15 25,10 0,5 m -70,5 20,-15 20,5 M 75,70 60,70 50,105 m 10,25 -10,-25 10,0 m 45,25 -15,15 -30,-15 15,-10 m 25,-60 30,5 10,30 M 75,70 100,60 110,80 m 30,15 -10,35 -25,0 m 15,-35 20,0 -30,-15 -20,5 30,10 -15,35 L 75,120 90,85 75,70 60,105 75,120 m 25,-60 5,-10 -25,5 -5,15">
+				<animateTransform 
+				attributeType="xml"
+				attributeName="transform" type="rotate"
+				from="0 100 100" to="360 100 100"
+				begin="0" dur="60s" 
+				fill="freeze"
+				repeatCount="indefinite"
+				/>
+		</path>
+	</svg>
+</div>
+
+<div class="body">
+
+
 <style>
 
-.node {
-  stroke: #fff;
-  stroke-width: 1.5px;
-}
-
 .link {
-  stroke: #e99;
-  stroke-opacity: .6;
-}
-
-
+  fill: none;
+  stroke: rgb(200,200,200);
+  shape-rendering: crispEdges;
+}	
 
 </style>
-<body>
+<h1>milsymbol and d3 - Let's draw an orbat tree</h1>
+This is an example of how milsymbol can be integrated into d3.js, it uses the tree functionality in d3 to draw an orbat tree and it is possible to add functionality to drag and drop units between different branches.<br>
+Click on dark colored units to expand sub units.</br>
+<br>
+Orientation of the tree:<input onclick="update()" type="radio" name="orientation" value="vertical">Top to Bottom
+<input onclick="update()" type="radio" name="orientation" value="horisontal" checked>Left to Right<br>
+
+</div>
+
+<div id="orbattree">
+</div>
+
+<script src="../../dist/milsymbol.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="../..//bin/MilSymbol.js"></script>
-<span id="d3container"></span><br>
-Built with <a href="http://d3js.org">d3.js</a> and with military units from <a href="http://spatialillusions.com">MilSymbol.js</a>.<br>
-Data from <a href="http://www.cicentre.com/?terror_orgmap">CICentre</a>
 
 <script>
+//This is the json for our orbat.
+var structure = {"orbatName":"milsymbol Orbat","Hostility":"Friend","name":"VZ","SIDC":"SFGPUCR----F***","children":[{"name":"VZ","SIDC":"SFGPUCR---AF***","children":[]},{"name":"SZ","SIDC":"SFGPUCR----E***","children":[{"name":"AS","SIDC":"SFGPUCR----D***","children":[]},{"name":"BS","SIDC":"SFGPUCR----D***","children":[]},{"name":"EQ","SIDC":"SFGPUUE----B***","children":[]},{"name":"GQ","SIDC":"SFGPUCVUF--B***","children":[]},{"name":"SZ10","SIDC":"SFGPUCR----B***","children":[]}]},{"name":"PZ","SIDC":"SFGPUU-----E***","children":[{"name":"AP","SIDC":"SFGPUSS----D***","children":[]},{"name":"PZ80","SIDC":"SFGPUSMM---D***","children":[]},{"name":"EP","SIDC":"SFGPUUS----B***","children":[]},{"name":"PZ10","SIDC":"SFGPUU-----B***","children":[]}]}]};
 
-var width = 600,
-    height = 400;
+var tree, diagonal, svg;
+var p = 0,
+    duration = 750,
+    root; 
 
-var svg = d3.select("#d3container").append("svg")
-    .attr("width", width)
-    .attr("height", height);
+var sof,orientation,_source;
 
-geojson = {"name":"terrorist","type":"FeatureCollection"
-,"features":[
-{"type":"Feature","geometry":{"type":"Point","coordinates":[43.066406,32.805744,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/aab_flag.jpg\" width=\"105\" height=\"97\" style=\"width:105px\"><div dir=\"ltr\">Name of Organization: <a href=\"http://www.cicentre.com/?AAB\" target=\"_blank\">Abdallah Azzam Brigades</a><br>Date of Founding: 2004<br>Scope of Operations: Based in Iraq, the group reportedly has branches in Egypt, Lebanon, Pakistan, and Gaza.</div>","name":"Abdallah Azzam Brigades"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[122.277832,7.602108,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/abu_sayyaf_flag.jpg\" height=\"106\" width=\"105\" style=\"width:105px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?Abu_Sayyaf\" target=\"_blank\">Abu Sayyaf Group</a><br>Date of Founding: 1991<br>Scope of Operations: Targets the Philippines and has also been involved in planning&nbsp;attacks against the United States.</div>","name":"Abu Sayyaf Group"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[65.698242,31.615967,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/taliban_flag.jpg\" height=\"92\" width=\"100\" style=\"width:105px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?Afghan_Taliban\" target=\"_blank\">Afghan Taliban</a><br>Date of Founding: Early 1990s<br>Scope of Operations: Targets Afghan Government and Coalition forces in order to re-establish Taliban rule.</div>","name":"Afghan Taliban"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[35.255127,31.942841,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/aamb_flag.gif\" height=\"106\" width=\"93\" style=\"width:105px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?Al_Aqsa\" target=\"_blank\">Al-qsa Martyrs Brigade</a><br>Date of Founding: September 2000<br>Scope of Operations: Aligned with the Fatah and attacks Israeli targets.</div>","name":"Al-Aqsa Martyrs Brigade"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[41.044922,1.142502,0]},"properties":{"description":"Name of Organization: <a href=\"http://www.cicentre.com/?Al_Hijra\" target=\"_blank\">Al Hijra</a><br>Scope of Operations: Affiliated with Al Shabaab.&nbsp; The group is composed of Kenyan Muslims who have trained in Somalia with al Shabaab and are encouraged to conduct attacks in Kenya.<br>","name":"Al Hijra", "affiliates":["Al Shabaab"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[-0.087891,16.288506,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?Al_Mulathameen\" target=\"_blank\">Al Mulathameen Brigade</a><br>Date of Founding: December 2012<br>Scope of Operations: Targets the Western-backed intervention in Mali and other Western targets in the region.</div>","name":"Al Mulathameen Brigade"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[69.554443,32.620869,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/al_qaeda_flag.jpg\" height=\"92\" width=\"123\" style=\"width:126px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?Al_Qaeda\" target=\"_blank\">Al Qaeda</a><br>Date of Founding: 11 August 1988<br>Scope of Operations: Global Terrorist Organization that targets&nbsp; the United States and its allies.</div>","name":"Al Qaeda"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[46.389771,13.656663,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?AQAP\" target=\"_blank\">Al Qaeda in the Arabian Peninsula</a><br>Date of Founding: January 2009<br>Scope of Operations:&nbsp;Affiliated organization of <a href=\"http://www.cicentre.com/?Al_Qaeda\" target=\"_blank\">al Qaeda</a>.&nbsp;Targets the Government of Yemen and has attempted complex bomb attacks against the United States.</div>","name":"AQAP","affiliates":["Al Qaeda"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[43.445435,33.339706,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/al_qaeda_flag.jpg\" width=\"135\" height=\"89\" style=\"width:137px\"><div>Name of Organization: Al Qaeda in Iraq<br>Date of Founding: October 2004<br>Scope of Operations: Affiliated organization of<a href=\"http://www.cicentre.com/?Al_Qaeda\" target=\"_blank\"> al Qaeda</a>.&nbsp;Targets the Shiite-led government and anti-al Qaeda Sunni militia groups.&nbsp; AQI has expanded its power since the U.S. withdrawal in December 2011.&nbsp; With the Syrian Civil War, AQI has greatly gained in power in Syria and has conducted terror attacks in both Syria and Lebanon.<br></div>","name":"AQI","affiliates":["Al Qaeda"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[2.768555,27.683529,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/aqim_flag.gif\" height=\"108\" width=\"129\" style=\"width:129px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?AQIM\" target=\"_blank\">Al Qaeda in the Lands of the Islamic Maghreb</a><br>Date of Founding: 1998<br>Scope of Operations: Targets Western targets in the region and has particularly targeted France.&nbsp; AQIM is active throughout the region is considered one of the most powerful <a href=\"http://www.cicentre.com/?Al_Qaeda\" target=\"_blank\">al Qaeda</a> affiliated organizations.</div>","name":"AQIM","affiliates":["Al Qaeda"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[30.410156,15.707663,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?AQ_Sudan\" target=\"_blank\">Al Qaeda in the Lands of the Two Niles</a><br>Date of Founding: Mid-2000s<br>Scope of Operations:&nbsp;Affiliated organization of <a href=\"http://www.cicentre.com/?Al_Qaeda\" target=\"_blank\">al Qaeda</a>.&nbsp;Overthrow the Government of Sudan and replace it with an Islamic government.&nbsp; The group has also plotted to attack Western targets in Khartoum.</div>","name":"Al Qaeda in the Lands of the Two Niles","affiliates":["Al Qaeda"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[44.956055,3.074695,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/al_shabaab_flag.jpg\" height=\"107\" width=\"107\" style=\"width:110px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?AL_SHABAAB\" target=\"_blank\">Al Shabaab</a><br>Date of Founding: 2004<br>Scope of Operations: Seeks to establish an Islamic government in Somalia.&nbsp; There are fears that Westerners who fight with al Shabaab may take their skills back to conduct terror attacks.</div>","name":"Al Shabaab"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[43.330078,35.496456,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/aai_flag.jpg\" height=\"87\" width=\"131\" style=\"width:122px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?AAI\" target=\"_blank\">Ansar al-Islam</a><br>Date of Founding: 2000/2001<br>Scope of Operations: Affiliated Organization of <a href=\"http://www.cicentre.com/?Al_Qaeda\" target=\"_blank\">al Qaeda</a>.&nbsp; Targets Kurds and operates in northern Iraq.</div>","name":"Ansar al-Islam","affiliates":["Al Qaeda"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[20.10498,32.082577,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/ansar_al-sharia.jpg\" width=\"137\" height=\"105\" style=\"width:141px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?Ansar_al_Sharia\" target=\"_blank\">Ansar Al-Sharia Brigade</a><br>Date of Founding: 2011<br>Scope of Operations: Closely linked to <a href=\"http://www.cicentre.com/?AQIM\" target=\"_blank\">AQIM</a>, Ansar Al-Sharia has been tied to the 11 September 2012 attack against the U.S. Consulate in Benghazi.&nbsp; <br><br>The name Ansar al-Sharia is shared by organizations operating in Tunisia, Benghazi, and Derna (eastern Libya).&nbsp; The Ansar al-Sharia organizations in Benghazi and Derna both reportedly had fighters at the U.S. Consulate compound.<br></div>","name":"Ansar Al-Sharia Brigade","affiliates":["AQIM"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[-1.274414,20.715015,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/ansar_dine_flag.png\" height=\"101\" width=\"141\" style=\"width:147px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?Ansar_Dine\" target=\"_blank\">Ansar Dine</a><br>Date of Founding: January 2012<br>Scope of Operations: Affiliated Organization of <a href=\"http://www.cicentre.com/?AQIM\" target=\"_blank\">AQIM</a>.&nbsp; Ansar Dine seeks to establish an Islamic government for Tuaregs in northern Mali.</div>","name":"Ansar Dine","affiliates":["AQIM"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[9.84375,11.695273,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?Ansaru\" target=\"_blank\">Ansaru</a><br>Date of Founding: January 2012<br>Scope of Operations: Splinter group from <a href=\"http://www.cicentre.com/?BOKO_HARAM\" target=\"_blank\">Boko Haram</a>.&nbsp; Ansaru targets Christians and foreigners in Nigeria.</div>","name":"Ansaru","affiliates":["Boko Haram"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[34.356995,31.412256,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/aoi_flag.jpg\" height=\"107\" width=\"155\" style=\"width:137px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?AOI\" target=\"_blank\">Army of Islam</a><br>Date of Founding: Late 2005<br>Scope of Operations: Targets Israel in rocket attacks and has been linked to the kidnapping of foreign journalists in Gaza.</div>","name":"Army of Islam"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[35.529785,33.51392,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?AAA\" target=\"_blank\">Asbat al-Ansar</a><br>Date of Founding: Late 1980s/Early 1990s<br>Scope of Operations: &nbsp;Small scale attacks against Western targets and influences in Lebanon.</div>","name":"Asbat al-Ansar"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[12.98584,12.125264,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?BOKO_HARAM\" target=\"_blank\">Boko Haram</a><br>Date of Founding: 2002/2003<br>Scope of Operations: Targets the Nigerian Government, foreign tourists, and Christians in hopes of establishing an Islamic Government in Nigeria.&nbsp; </div>","name":"Boko Haram"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[44.868164,44.087585,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/imarat_kavkaz.png\" height=\"106\" width=\"128\" style=\"width:128px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?Caucasus_Emirate\" target=\"_blank\">Caucasus Emirate</a><br>Date of Founding: October 2007<br>Scope of Operations:&nbsp;Affiliated organization of <a target=\"_blank\">al Qaeda</a>. &nbsp;Based in the North Caucasus, the CE has been conducted deadly attacks in Moscow and other targets in Russia.</div>","name":"Caucasus Emirate","affiliates":["Al Qaeda"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[23.203125,38.082691,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/conspiracy_of_the_fire_nucle.jpg\" height=\"106\" width=\"128\" style=\"width:132px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?SPF\" target=\"_blank\">Conspiracy of the Fire Nuclei</a><br>Date of Founding: January 2008<br>Scope of Operations: Targets the Greek government and capitalist targets.</div>","name":"Conspiracy of the Fire Nuclei"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[-5.943604,54.583206,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/continuity_ira.png\" width=\"103\" height=\"106\" style=\"width:112px\"><div dir=\"ltr\">Name of Organization: <a href=\"http://www.cicentre.com/?CIRA\" target=\"_blank\">Continuity IRA</a><br>Date of Founding: 1986; became active in 1994.</div><div dir=\"ltr\">Scope of Operations: British targets and Northern Ireland police and government  targets.</div>","name":"Continuity IRA"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[36.304321,33.527657,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/dflp.png\" height=\"107\" width=\"144\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?DFLP\" target=\"_blank\">Democratic Front for the Liberation of Palestine</a><br>Date of Founding: 22 February 1969<br>Scope of Operations: Leftist terror group, which has attacked Israel.&nbsp; During the Syrian Civil War, the DFLP has supported President Assad.</div>","name":"DFLP"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[32.915039,39.943436,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/dhkp_flag.png\" height=\"105\" width=\"169\" style=\"width:169px\"><div>Name of Organization:<a href=\"http://www.cicentre.com/?DHKPC\" target=\"_blank\"> Revolutionary People's Liberation Party/Front</a><br>Date of Founding: At least 1978<br>Scope of Operations: Leftist terror group that has targeted the Turkish government, capitalism, and Western targets.</div>","name":"DHKP/C"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[-68.554688,5.419148,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/eln_flag.png\" width=\"128\" height=\"106\" style=\"width:129px\"> <br><strong>Name of Organization</strong>: ELN<br><strong>Date of Founding</strong>: 1964<br><strong>Scope&nbsp;of Operations</strong>: Targets the Colombian Government and engages in drug cultivation&nbsp;&nbsp;and trafficking.","name":"ELN"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[-2.416992,42.988575,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/eta_flag.jpg\" height=\"114\" width=\"169\" style=\"width:97px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?ETA\" target=\"_blank\">Basque Fatherland and Homeland</a><br>Date of Founding: 1959<br>Scope of Operations: Attacked targets throughout Spain in support of establishing an independent country for the Basque.</div>","name":"ETA"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[-70.3125,4.609278,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/farc_flag.jpg\" height=\"93\" style=\"width:178px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?FARC\" target=\"_blank\">FARC</a><br>Date of Founding: 28 May 1964<br>Scope of Operations: Violent attacks against Colombian targets in order spark a communist revolution in the country.</div>","name":"FARC"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[35.507812,33.683212,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?FAI\" target=\"_blank\">Fatah al-Islam</a><br>Date of Founding: November 2006<br>Scope of Operations: Strong in Palestinian refugee camps, the group targets Lebanon and has&nbsp;been linked to attempted attacks in Europe.</div>","name":"Fatah al-Islam"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[2.966309,36.438961,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/gia_flag.jpg\" height=\"111\" width=\"140\" style=\"width:140px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?GIA\" target=\"_blank\">Armed Islamic Group</a><br>Date of Founding: 1993<br>Scope of Operations: Targets French targets both in Algeria and in France.&nbsp; The group seeks to implement a&nbsp;Sharia government in Algeria.&nbsp;</div>","name":"GIA"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[34.447632,31.511826,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/hamas_flag2.png\" height=\"109\" width=\"150\" style=\"width:150px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?HAMAS\" target=\"_blank\">Hamas</a><br>Date of Founding: 14 December 1987<br>Scope of Operations: Does not recognize Israel, supplied with arms and money by Iran and has targeted Israel repeatedly.&nbsp; </div>","name":"Hamas"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[70.065308,33.004059,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?HAQQANI_NETWORK\" target=\"_blank\">Haqqani Network</a><br>Date of Founding: 1970s<br>Scope of Operations: Targets the U.S and other targets in Afghanistan.&nbsp; The group has also been linked to attacks against Indian targets in Afghanistan.</div>","name":"Haqqani Network"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[35.524292,33.888657,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/hezbollah_flag.jpg\" height=\"107\" width=\"130\" style=\"width:135px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?Hezbollah\" target=\"_blank\">Hezbollah</a><br>Date of Founding: 1982<br>Scope of Operations: Operates as a state within a state in Lebanon and maintains a formidable arsenal of weapons.&nbsp; Provides social services and is supported by Iran and Syria.</div>","name":"Hezbollah"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[90.087891,23.281719,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?HUJI\" target=\"_blank\">Harakat ul-Jihad-i-Islam/Bangladesh</a><br>Date of Founding: April 1992.<br>Scope of Operations: Targeted ethnic minorities and has conducted terror operations in neighboring India and Burma.</div>","name":"HuJI/B"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[69.521484,29.821583,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?HUJI\" target=\"_blank\">Harakat ul-Jihad-i-Islam</a><br>Date of Founding: 1980s<br>Scope of Operations: Targets Western forces in Afghanistan and has plotted attacks against India over Kashmir.</div>","name":"HuJI"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[73.432617,33.51392,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/hum_flag.png\" height=\"86\" width=\"130\" style=\"width:136px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?HUM\" target=\"_blank\">Harakat ul-Mujahideen</a><br>Date of Founding: Mid-1980s<br>Scope of Operations: Trains militants to launch terror attacks against Indian soldiers and civilians in Kashmir.</div>","name":"HUM"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[79.541016,22.715389,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?IM\" target=\"_blank\">Indian Mujahideen</a><br>Date of Founding: 2005<br>Scope of Operations: Comprised of Indian Muslim radicals who launch attacks with support of <a href=\"http://www.cicentre.com/?LeT\" target=\"_blank\">LeT</a>, <a href=\"http://www.cicentre.com/?HUJI\" target=\"_blank\">HuJI/B</a>, <a href=\"http://www.cicentre.com/?Jaish_e_Mohammed\" target=\"_blank\">JeM</a>,&nbsp;and other Islamic terror groups in the country.</div>","name":"Indian Mujahideen","affiliates":["LeT","HuJI/B","JeM"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[29.750977,26.470573,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?IG\" target=\"_blank\">Islamic Group</a></div><div>Date of Founding: 1970s<br>Scope of Operations: Targeted initially the dictatorship of President Hosni Mubarak before targeting foreign tourists.</div>","name":"Islamic Group"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[69.433594,32.036018,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?IJU\" target=\"_blank\">Islamic Jihad Union</a><br>Date of Founding: March 2004</div><div>Scope of Operations: Splinter group from the&nbsp;<a href=\"http://www.cicentre.com/?IMU\" target=\"_blank\">Islamic Movement of Uzbekistan</a>, the group has launched attacks in Afghanistan and Uzbekistan.</div>","name":"Islamic Jihad Union","affiliates":["Islamic Movement of Uzbekistan"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[64.072266,41.228249,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/imu_flag.jpg\" height=\"91\" width=\"150\" style=\"width:152px\"><div>Name of Organization: Islamic Movement of Uzbekistan</div><div>Date of Founding: Late 1990s</div><div>Scope of Operations: Active in launching attacks in Uzbekistan, the terror group also has bases in Afghanistan and North Waziristan.</div>","name":"Islamic Movement of Uzbekistan"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[38.452148,35.047989,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/abu_sayyaf_flag.jpg\" height=\"110\" width=\"103\" style=\"width:105px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?al_Nusra\" target=\"_blank\">Jabhat al-Nusra</a><br>Date of Founding: December 2011<br>Scope of Operations: A front organization for <a href=\"http://www.cicentre.com/?AQI\" target=\"_blank\">al Qaeda in Iraq</a>, the group has targeted the Syrian regime for attacks and may be involved in al-Qaeda linked terror attacks in the region.</div>","name":"Jabhat al-Nusra","affiliates":["AQI"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[44.45343,33.384441,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?Jaish_al_Mahdi\" target=\"_blank\">Jaish al-Mahdi</a><br>Date of Founding: June 2003<br>Scope of Operations: Supported by Iran, during the U.S. military presence, the group attacked the U.S. military and other targets.&nbsp; It is an armed militia to protect the Shiite community.</div>","name":"JAM"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[73.465576,34.125446,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/jem.png\" height=\"108\" width=\"158\" style=\"width:158px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?Jaish_e_Mohammed\" target=\"_blank\">Jaish-e-Mohammed</a><br>Date of Founding: Early 2000<br>Scope of Operations: Launched terror attacks against Indian civilians and security personnel and Jammu and Kashmir.</div>","name":"JeM"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[121.201172,-4.915833,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?JI\" target=\"_blank\">Jemaah Islamiyah</a><br>Date of Founding: Early 1993<br>Scope of Operations: With cells in Malaysia, Thailand, Singapore,&nbsp;Brunei,&nbsp;the Philippines, and Indonesia, JI has plotted devastating attacks civilians and foreign tourists.</div>","name":"JI"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[34.859619,30.982319,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?Kach\" target=\"_blank\">Kach and Kahane Chai</a><br>Date of Founding: 1971<br>Scope of Operations: Radical Jewish organization that has targeted Palestinians and secular Israeli politicians.</div>","name":"Kach and Kahane Chai"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[44.522095,33.316757,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/kh_flag.jpg\" height=\"104\" width=\"120\" style=\"width:115px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?KH\" target=\"_blank\">Kata'ib Hizballah</a><br>Date of Founding: 2007<br>Scope of Operations: Splinter from <a href=\"http://www.cicentre.com/?Jaish_al_Mahdi\" target=\"_blank\">JAM</a>, KH was formed to attack Americans and Iraqi forces without hurting JAM's popularity.&nbsp; After the U.S. withdrawal, KH has kept possession of its weapons.</div>","name":"KH","affiliates":["JAM"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[67.088013,30.713505,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?Lashkar_e_Jhangvi\" target=\"_blank\">Lashkar-e-Jhangvi</a><br>Date of Founding: 1996<br>Scope of Operations: Has targeted ethnic minorities, especially Shiite&nbsp;Hazara in Quetta in order to establish a Sunni Islamic state.</div>","name":"LeJ"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[73.212891,33.815666,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/let_flag.jpg\" height=\"105\" width=\"119\" style=\"width:119px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?LeT\" target=\"_blank\">Lashkar-e-Taiba</a><br>Date of Founding: 1990</div><div>Scope of Operations: Has launched devastating terror attacks in India and has conducted training camps throughout Pakistan.</div>","name":"LeT"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[44.243317,33.297249,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/mek_flag.png\" height=\"106\" width=\"148\" style=\"width:152px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?MeK\" target=\"_blank\">Mujahedin-e-Khalq</a></div><div>Date of Founding: September 1965</div><div>Scope of Operations: Anti-Iranian terror organization.&nbsp; Fearing reprisals in Iraq and Iran, refugees belonging to the group live in a UN monitored Camp Liberty near Baghdad's airport.</div>","name":"MeK"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[6.833496,4.65308,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/mend_flag1.jpg\" width=\"131\" height=\"107\" style=\"width:108px\"><div dir=\"ltr\"><strong>Name of Organization:</strong> <a href=\"http://www.cicentre.com/?MEND\" target=\"_blank\">Movement for the Emancipation of the Niger Delta</a><br><strong>Date of Founding</strong>: January 2006<br><strong>Scope of Operations</strong>: Targets Nigerian Government and oil companies operating in the area.</div>","name":"MEND"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[-0.109863,19.186678,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?MUJAO\" target=\"_blank\">Movement for Unity and Jihad in West Africa</a><br>Date of Founding: 12 December 2011</div><div>Scope of Operations: Splinter from <a href=\"http://www.cicentre.com/?AQIM\" target=\"_blank\">AQIM</a>, the group is active in Mali and southern Algeria targeting terror attacks in the region.</div>","name":"MUJAO","affiliates":["AQIM"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[124.057617,9.968851,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/npa_flag.png\" height=\"103\" width=\"180\" style=\"width:180px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?NPA\" target=\"_blank\">New People's Army</a><br>Date of Founding: 29 March 1969<br>Scope of Operations: Formed after the founding of the Communist Party of the Philippines.&nbsp; The group is part of a Maoist insurgency against the Philippines with over 40,000 having been killed.</div>","name":"New People's Army"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[35.126038,32.070938,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/pflp_flag.png\" height=\"105\" width=\"154\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?PFLP\" target=\"_blank\">Popular Front for the Liberation of Palestine</a><br>Date of Founding: December 1967</div><div>Scope of Operations: Leftist&nbsp;Palestinian terrorist organization.&nbsp;Most active during the 1970s, the PFLP is a terror organization that launched some of the most deadly attacks against Israel.</div>","name":"PFLP"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[42.791748,37.527153,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/pkk_flag_2.png\" height=\"91\" width=\"155\" style=\"width:156px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?PKK\" target=\"_blank\">Kurdistan Workers' Party</a><br>Date of Founding: 1978<br>Scope of Operations: With bases in southern Turkey and northern Iraq, the PKK targeted Turkish forces in a violent insurgency.&nbsp; The PKK declared a truce in March 2013.</div>","name":"PKK"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[34.403687,31.453268,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/pij_symbol.jpg\" width=\"145\" height=\"108\" style=\"width:140px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?PIJ\" target=\"_blank\">Palestinian Islamic Jihad</a></div><div>Date of Founding: Late 1970s<br>Scope of Operations: Has launches terror and rocket&nbsp;attacks against Israel and is supported by Iran.</div>","name":"PIJ"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[43.417969,32.361404,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/plf_flag.jpg\" height=\"104\" width=\"97\" style=\"width:99px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?PLF\" target=\"_blank\">Palestine Liberation Front</a><br>Date of Founding: 1977</div><div>Scope of Operations: Splinter from <a href=\"http://www.cicentre.com/?PFLP_GC\" target=\"_blank\">PFLP-GC</a>, which targeted Israel from safe havens in Iraq.&nbsp; Most active during the 1980s.</div>","name":"PLF","affiliates":["PFLP-GC"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[36.274109,33.511627,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/pflp-gc.jpg\" height=\"107\" width=\"106\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?PFLP_GC\" target=\"_blank\">Popular Front for the Liberation of Palestine - General Command</a><br>Date of Founding: December 1967<br>Scope of Operations: Splinter from <a href=\"http://www.cicentre.com/?PFLP\" target=\"_blank\">PFLP</a>.&nbsp;Launched complex attacks against Israeli targets in Europe.&nbsp; During the Syrian Civil War, the PFLP-GC has supported President Assad.</div>","name":"PFLP-GC","affiliates":["PFLP"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[34.291077,31.3466,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/prc_terror_flag.jpg\" height=\"106\" width=\"137\" style=\"width:128px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?PRC\" target=\"_blank\">Popular Resistance Committees</a><br>Date of Founding: Late 2000<br>Scope of Operations: Supported by Iran, the group acts as a conduit of weapons to other Iranian supported Palestinian terror groups in Gaza.&nbsp; Launches rocket attacks against Israel.</div>","name":"PRC"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[-6.38855,54.450081,0]},"properties":{"description":"<strong>Name of Organization</strong>: <a href=\"https://cicentre.site-ym.com/?RIRA\" target=\"_blank\">Real&nbsp;&nbsp;IRA</a> <br><strong>Date of Founding</strong>: November 1997<br><strong>Scope of Operations</strong>:&nbsp;&nbsp;British&nbsp;targets and Northern Ireland police and government&nbsp;&nbsp;targets.","name":"Real IRA"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[-76.245117,-11.135287,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/shining_path_flag.png\" height=\"106\" width=\"139\" style=\"width:140px\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?Shining_Path\" target=\"_blank\">Shining Path</a><br>Date of Founding: Late 1960s/1970</div><div>Scope of Operations: Founded as part of the Communist Party of Peru, the group has launched a violent insurgency against the Government of Peru with&nbsp;over 70,000 being killed.</div>","name":"Shining Path"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[71.054077,33.934246,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/tnsm.png\" height=\"105\" width=\"159\"><div>Name of Organization: <a href=\"http://www.cicentre.com/?TNSM\" target=\"_blank\">Tehrik-e-Nifaz-e-Shariat-e-Mohammed</a><br>Date of Founding: 10 May 1989<br>Scope of Operations: Part of the TTP, the TNSM has launched devastating attacks in Pakistan and Afghanistan.</div>","name":"TNSM","affiliates":["TTP"]}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[71.18042,34.19363,0]},"properties":{"description":"<div>Name of Organization: <a href=\"http://www.cicentre.com/?TTP\" target=\"_blank\">Tehrik-i-Taliban Pakistan (Pakistani Taliban)</a><br>Date of Founding: 14 December 2007</div><div>Scope of Operations: Umbrella organization for Sunni extremist groups operating in Pakistan.&nbsp; Has launched attacks against religious minorities and Pakistani government targets.</div>","name":"TTP"}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[33.310547,30.353916,0]},"properties":{"description":"<img src=\"http://www.cicentre.com/resource/resmgr/terrorist_groups/al_maqdis_flag.png\" height=\"99\" style=\"width:123px\"><div dir=\"ltr\">Name of Organization: <a href=\"http://www.cicentre.com/?Al_Maqdis\" target=\"_blank\">Ansar Bayt al-Maqdis</a></div><div dir=\"ltr\">Date of Founding: At least August 2011</div><div dir=\"ltr\">Scope of Operations: Based in Egypt and operates mainly in the Sinai Peninsula.&nbsp;The group has launched attacks there and against civilians/security forces in Cairo.</div>","name":"Ansar Bayt al-Maqdis"}}
-]}
+var margin = {top: 100, right: 200, bottom: 200, left: 100}; 
+
+function renderOrbat() {
 
 
+	tree = d3.layout.tree()
+    	.separation(function(a, b) { return a.parent === b.parent ? 1 : 1; })
+    
+	svg = d3.select("#orbattree").append("svg")
+    	.attr("width", 500)
+		.attr("height", 500)
+		.append("g")
+    	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+	structure.x0 = 500 / 2;
+	structure.y0 = 0;
 
-var force = d3.layout.force()
-    .charge(-150)
-    .linkDistance(40)
-    .size([width, height]);
-
-
-
-graph = {nodes:[], links:[]};
-//Processing geojson to a simple array of objects, this will be my nodes
-geojson.features.forEach(function(d, i) {
-	var t = {};
-	for (key in Object.keys(d.geometry)){
-	t[Object.keys(d.geometry)[key]] = d.geometry[Object.keys(d.geometry)[key]]
-	}
-	for (key in Object.keys(d.properties)){
-	t[Object.keys(d.properties)[key]] = d.properties[Object.keys(d.properties)[key]]
-	}
-	if(t.affiliates)t.affiliates.forEach(function (v,i,a){graph.links.push({"source":t.name,"target":v})})
-	t.symbol = new MilSymbol("OHG-C-------",{size:25, uniqueDesignation:t.name}).symbolMarker();
-	graph.nodes.push(t)
-});
-
-//Converting links from names to ids
-var hash_lookup = [];
-graph.nodes.forEach(function(d, i) {
-  hash_lookup[d.name] = d;
-});
-graph.links.forEach(function(d, i) {
-  d.source = hash_lookup[d.source];
-  d.target = hash_lookup[d.target];
-});
-
-
-  force
-      .nodes(graph.nodes)
-      .links(graph.links)
-      .start();
-
-  var link = svg.selectAll(".link")
-      .data(graph.links)
-    .enter().append("line")
-      .attr("class", "link")
-      .style("stroke-width", 2);
-	  
-	  
-  var node = svg.selectAll(".node")
-	.data(graph.nodes)
-    .enter()
-	.append("g")
-	.attr("class", "node")
-	.call(force.drag)
-
-	
-	node.append("g")
-		.attr("transform", function (d){return "translate("+(-d.symbol.x)+","+(-d.symbol.y)+")"})
-		.each(function (d){this.appendChild(d.symbol.object)	})
-	
-
-  force.on("tick", tick)
+ 	function collapse(d) {
+    	if (d.children) {
+      		d._children = d.children;
+      		d._children.forEach(collapse);
+      		d.children = null;
+    	}
+  	}
+  	structure.children.forEach(collapse);
+  	
+  	update(structure);
   
-  function tick() {
-    link.attr("x1", function(d) { return d.source.x; })
-        .attr("y1", function(d) { return d.source.y; })
-        .attr("x2", function(d) { return d.target.x; })
-        .attr("y2", function(d) { return d.target.y; });
-	node.attr("transform", function (d){return "translate("+d.x+","+d.y+")"})
+}
+function update(source) {
 
-  };
+	var radios = document.getElementsByName('orientation');
+	for (var i = 0, length = radios.length; i < length; i++) {
+   		if (radios[i].checked) {
+        	orientation = radios[i].value;
+        	break;
+    	}
+	}
 
-</script><br>
+	if(orientation == "horisontal"){tree.nodeSize([70,200])}else{tree.nodeSize([120,150])};
+	
+	// Compute the new tree layout.
+  	var nodes = tree.nodes(structure),
+		links = tree.links(nodes);
+
+  	var minX = 0;
+  	var maxX = 0;
+  	var maxY = 0;
+  	nodes.forEach(function(d) { 	
+  		maxY = Math.max(d.y,maxY);
+  		maxX = Math.max(d.x,maxX);
+  		minX = Math.min(d.x,minX)});
+  
+  	nodes.forEach(function(d) { d.x = d.x - minX;});
+
+	if(orientation == "horisontal"){								
+		d3.select("#orbattree").select("svg").transition()
+			.duration(duration)
+			.attr("height", (maxX-minX)+margin.top+margin.bottom) 
+			.attr("width", maxY+margin.left+margin.right); 								
+	}else{
+		d3.select("#orbattree").select("svg").transition()
+    		.duration(duration)
+			.attr("width", (maxX-minX)+margin.top+margin.bottom) 
+			.attr("height", maxY+margin.left+margin.right); 									
+	}  
+									
+	// Update the nodes…
+	var node = svg.selectAll("g.node")
+    	.data(nodes, function(d) { return d.id || (d.id = ++p); });
+    	
+	// Enter any new nodes at the parent's previous position.
+	var nodeEnter = node.enter().append("g")
+    	.attr("class", "node")
+    	.attr("transform", function(d) { return orientation == "horisontal"?("translate(" + source.y0 + "," + source.x0 + ")"):("translate(" + source.x0 + "," + source.y0 + ")"); })
+    	.on("click", click)
+
+  	// Transition nodes to their new position.
+  	var nodeUpdate = node.transition()
+      	.duration(duration)
+      	.attr("transform", function(d) { return orientation == "horisontal"?("translate(" + d.y + "," + d.x + ")"):("translate(" + d.x + "," + d.y + ")"); });
+	
+	//Update all node symbols so that the color reflect if they have hidden children or not.
+	node.select(".symbol").remove()
+	node.append("g")
+	    .attr("class", "symbol")
+		.attr("transform", function (d){
+			d.symbol = new MS.symbol(d.SIDC,{size:30, uniqueDesignation:d.name, colorMode: (d._children && d._children!="" ? MS.getColorMode("Medium") : MS.getColorMode("Light")) }).getMarker();
+			return "translate("+(-d.symbol.octagonAnchor.x)+","+(-d.symbol.octagonAnchor.y)+")"})
+		.each(function (d){this.appendChild(d.symbol.asDOM())	})      
+
+  	// Transition exiting nodes to the parent's new position.
+  	var nodeExit = node.exit().transition()
+      	.duration(duration)
+      	.attr("transform", function(d) { return orientation == "horisontal"?("translate(" + source.y + "," + source.x + ")"):("translate(" + source.x + "," + source.y + ")"); })
+      	.remove();
+
+ 	 // Update the links…
+  	var link = svg.selectAll("path.link")
+     	.data(links, function(d) { return d.target.id; });
+
+  	// Enter any new links at the parent's previous position.
+  	link.enter().insert("path", "g")
+      	.attr("class", "link")
+      	.attr("d", function(d) {
+        	var o = {x: source.x0, y: source.y0};
+        	return elbow({source: o, target: o});
+      	});
+
+  	// Transition links to their new position.
+  	link.transition()
+      	.duration(duration)
+      	.attr("d", elbow);
+
+ 	 // Transition exiting nodes to the parent's new position.
+  	link.exit().transition()
+      	.duration(duration)
+      	.attr("d", function(d) {
+        	var o = {x: source.x, y: source.y};
+        	return elbow({source: o, target: o});
+      	})
+      	.remove();
+
+  	// Stash the old positions for transition.
+  	nodes.forEach(function(d) {
+    	d.x0 = d.x;
+    	d.y0 = d.y;
+  	});
+  	root = structure;
+  	_source = source;
+}
+
+
+
+// Toggle children on click.
+function click(d) {
+  	if (d.children) {
+    	d._children = d.children;
+    	d.children = null;
+  	} else {
+    	d.children = d._children;
+    	d._children = null;
+  	}
+  	update(d);
+}
+function expand(d) {
+    if (d._children) {
+    	d.children = d._children;
+        d._children = null;
+    }
+}
+
+// Draws the line between nodes
+function elbow(d, i) {
+  	if(orientation == "horisontal") return "M" + d.source.y + "," + d.source.x
+  		+ " l" + (d.target.y-d.source.y)/2 + "," + 0 + " "
+    	+ " 0," + (d.target.x-d.source.x) + " "
+		+ "L" + d.target.y + "," + d.target.x;
+		
+return "M" + d.source.x + "," + d.source.y
+  		+ " l" + 0 + "," + (d.target.y-d.source.y)/2 + " "
+  		+ " " + (d.target.x-d.source.x) + ",0 "
+		+ "L" + d.target.x + "," + d.target.y;				
+}
+
+
+</script>
+
+
+</body>
