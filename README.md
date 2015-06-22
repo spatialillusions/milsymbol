@@ -1,7 +1,13 @@
 milsymbol
 =========
 
+<<<<<<< HEAD
 milsymbol is a small library in pure javascript that creates SVG symbols according to MIL-STD-2525 and APP6. All unit symbols with SIDCs in both 2525(c) and APP6(b) are supported. The symbols are created according to APP6(c) symbology and might therefore differ from the  symbols in shown in the standard documents, but they are made according to the standards and follows the way that symbols are created in ADRP 1-02 (US Army Doctrine Reference Publication).
+=======
+At the moment milsymbol 0.5 is under development and it will be released here as soon as the code is more stable. The plan is to make the final release before the end of July 2015. milsymbol 0.5 introduces a new even more flexible API and a big speed bump among other things. Contact me if you want to get access to a prerelease.
+
+MilSymbol is a small library in pure javascript that creates SVG symbols according to MIL-STD-2525 and APP6. All unit symbols with SIDCs in both 2525(c) and APP6(b) are supported. The symbols are created according to APP6(c) symbology and might therefore differ from the  symbols in shown in the standard documents, but they are made according to the standards and follows the way that symbols are created in ADRP 1-02 (US Army Doctrine Reference Publication).
+>>>>>>> origin/master
 At the moment APP6(B) ANNEX D / 2525C APPENDIX A (Unit Symbols) and 2525C APPENDIX D (Signals intelligence symbols) and APPENDIX E (Stability operations symbols) / parts of unit symbols for 2525D are implemented in this library.
 
 MilSymbol is created and maintained by Måns Beckman, and you can visit my homepage http://www.spatialillusions.com to read more about who I am and see more examples of what MilSymbol can be used for. MilSymbol is a hobby project created during weekends and evenings, so I'll try to work as fast as I can but my time for the project is limited.
