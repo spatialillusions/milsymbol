@@ -1,4 +1,4 @@
-﻿/* =======================================================================================
+/* =======================================================================================
 
 Copyright (c) 2015 Måns Beckman  http://www.spatialillusions.com
 All rights reserved.
@@ -6662,28 +6662,28 @@ sID['160000'] = 'Manual Track';
 		sID['131300'] = 'Operation.Emergency Medical Operation';
 		sID['131301'] = 'Operation.Emergency Medical Operation.EMT Station Location';
 		sID['131302'] = 'Operation.Emergency Medical Operation.Health Department Facility';
-		sID['131303'] = 'Operation.Emergency Medical Operation.Medical Facilities Outpatient';
-		sID['131304'] = 'Operation.Emergency Medical Operation.Morgue';
+		sID['131303'] = icons['ACTIVITIES.ICON.MEDICAL FACILITIES OUTPATIENT'];
+		sID['131304'] = icons['ACTIVITIES.ICON.OPERATION/EMERGENCY MEDICAL OPERATION'];
 		sID['131305'] = icons['ACTIVITIES.ICON.PHARMACY'];
-		sID['131306'] = 'Operation.Emergency Medical Operation.Triage';
-		sID['131400'] = 'Operation.Fire Fighting Operation';
-		sID['131401'] = 'Operation.Fire Fighting Operation.Fire Hydrant';
-		sID['131402'] = 'Operation.Fire Fighting Operation.Fire Station';
-		sID['131403'] = 'Operation.Fire Fighting Operation.Other Water Supply Location';
-		sID['131500'] = 'Operation.Law Enforcement Operation';
-		sID['131501'] = 'Operation.Law Enforcement Operation.Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF) (Department of Justice)';
-		sID['131502'] = 'Operation.Law Enforcement Operation.Border Patrol';
-		sID['131503'] = 'Operation.Law Enforcement Operation.Customs Service';
-		sID['131504'] = 'Operation.Law Enforcement Operation.Drug Enforcement Administration (DEA)';
-		sID['131505'] = 'Operation.Law Enforcement Operation.Department of Justice (DOJ)';
-		sID['131506'] = 'Operation.Law Enforcement Operation.Federal Bureau of Investigation (FBI)';
-		sID['131507'] = 'Operation.Law Enforcement Operation.Police';
-		sID['131508'] = 'Operation.Law Enforcement Operation.Prison';
-		sID['131509'] = 'Operation.Law Enforcement Operation.United States Secret Service(Treas) (USSS)';
-		sID['131510'] = 'Operation.Law Enforcement Operation.Transportation Security Administration (TSA)';
-		sID['131511'] = 'Operation.Law Enforcement Operation.Coast Guard';
-		sID['131512'] = 'Operation.Law Enforcement Operation.US Marshals Service';
-		sID['131513'] = 'Operation.Law Enforcement Operation.Internal Security Force';
+		sID['131306'] = icons['ACTIVITIES.ICON.TRIAGE'];
+		sID['131400'] = icons['GROUND.ICON.FIRE PROTECTION'];
+		sID['131401'] = icons['ACTIVITIES.ICON.FIRE HYDRANT']; 
+		sID['131402'] = MS.scale(1.5,icons['GROUND.ICON.FIRE PROTECTION']);
+		sID['131403'] = icons['ACTIVITIES.ICON.OTHER WATER SUPPLY LOCATION']; 
+		sID['131500'] = icons['GROUND.ICON.FULLFRAME.LAW ENFORCEMENT'];
+		sID['131501'] = icons['GROUND.ICON.BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF) (DEPARTMENT OF JUSTICE)'];
+		sID['131502'] = icons['GROUND.ICON.FULLFRAME.BORDER PATROL'];
+		sID['131503'] = icons['GROUND.ICON.FULLFRAME.CUSTOMS SERVICE'];
+		sID['131504'] = icons['GROUND.ICON.DRUG ENFORCEMENT AGENCY (DEA)'];
+		sID['131505'] = icons['GROUND.ICON.FULLFRAME.DEPARTMENT OF JUSTICE (DOJ)'];
+		sID['131506'] = icons['GROUND.ICON.FEDERAL BUREAU OF INVESTIGATION (FBI)'];
+		sID['131507'] = icons['GROUND.ICON.LAW ENFORCEMENT'];
+		sID['131508'] = icons['GROUND.ICON.FULLFRAME.PRISON'];
+		sID['131509'] = icons['GROUND.ICON.UNITED STATES SECRET SERVICE(TREAS) (USSS)'];
+		sID['131510'] = icons['GROUND.ICON.TRANSPORTATION SECURITY AGENCY (TSA)'];
+		sID['131511'] = icons['SEA.ICON.LAW ENFORCEMENT VESSEL'];
+		sID['131512'] = icons['GROUND.ICON.FULLFRAME.US MARSHALS SERVICE'];
+		sID['131513'] = icons['STABILITY.ICON.INTERNAL SECURITY FORCE']
 		sID['140000'] = icons['ACTIVITIES.ICON.FIRE EVENT'];
 		sID['140100'] = icons['ACTIVITIES.ICON.FIRE ORIGIN'];
 		sID['140200'] = icons['ACTIVITIES.ICON.SMOKE'];
@@ -6711,10 +6711,10 @@ sID['160000'] = 'Manual Track';
 		sID['150114'] = icons['ACTIVITIES.ICON.TOXIC INFECTIOUS MATERIAL'];
 		sID['150115'] = icons['ACTIVITIES.ICON.UNEXPLODED ORDNANCE'];
 		sID['160000'] = 'Transportation Incident';
-		sID['160100'] = 'Transportation Incident.Air-';
-		sID['160200'] = 'Transportation Incident.Marine-';
-		sID['160300'] = 'Transportation Incident.Rail-';
-		sID['160400'] = 'Transportation Incident.Vehicle-';
+		sID['160100'] = icons['STABILITY.ICON.HIJACKING (AIRPLANE)']; 
+		sID['160200'] = icons['STABILITY.ICON.HIJACKING (BOAT)']; 
+		sID['160300'] = icons['GROUND.EQUIPMENT.TRAIN LOCOMOTIVE'];
+		sID['160400'] = icons['STABILITY.ICON.KNOWN INSURGENT VEHICLE'];
 		sID['160500'] = 'Transportation Incident.Wheeled Vehicle Explosion';
 		sID['170000'] = 'Natural Event';
 		sID['170100'] = 'Natural Event.Geologic';
@@ -6763,10 +6763,10 @@ sID['160000'] = 'Manual Track';
 	
 //Signals Intelligence
 	if(	symbolSet == "50" || symbolSet == "51" || symbolSet == "52" || symbolSet == "53" || symbolSet == "54" ){
-		sID['110000'] = 'Signal Intercept';
-		sID['110100'] = 'Signal Intercept.Communications';
+		//sID['110000'] = 'Signal Intercept';
+		sID['110100'] = icons['SIGNALS.ICON.COMMUNICATIONS']
 		sID['110200'] = 'Signal Intercept.Jammer';
-		sID['110300'] = 'Signal Intercept.Radar';
+		sID['110300'] = icons['SIGNALS.ICON.RADAR']
 	
 		sIDm1['00'] = 'Unspecified';
 		sIDm1['01'] = 'Anti-Aircraft Fire Control';
