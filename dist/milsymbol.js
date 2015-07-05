@@ -6765,7 +6765,7 @@ sID['160000'] = 'Manual Track';
 	if(	symbolSet == "50" || symbolSet == "51" || symbolSet == "52" || symbolSet == "53" || symbolSet == "54" ){
 		//sID['110000'] = 'Signal Intercept';
 		sID['110100'] = icons['SIGNALS.ICON.COMMUNICATIONS']
-		sID['110200'] = 'Signal Intercept.Jammer';
+		sID['110200'] = icons['AIR.ICON.JAMMER / ELECTRONIC COUNTER-MEASURES'];
 		sID['110300'] = icons['SIGNALS.ICON.RADAR']
 	
 		sIDm1['00'] = 'Unspecified';
