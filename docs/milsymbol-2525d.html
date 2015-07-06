@@ -44,399 +44,359 @@ var size = 40;
 
 <h1>milsymbol 2525D (Draft) Implementation</h1>
 
-<!--
-<h3 id="TABLEII">TABLE II. Frame shapes depicting exercise amplifying descriptors and battle dimensions.</h3>
+
+<h3 id="TABLEI">TABLE I. Frames depicting standard identities and dimensions.</h3>
 <table>
 <tr class="table-heading">
 <td>
 </td>
 <td>
 Unknown
-(Z)
+
 </td>
 <td>
 Space
-(P)
+
 </td>
 <td>
 Air
-(A)
+
 </td>
 <td>
-Ground (G)<br>Units
+Land<br>Units
 </td>
 <td>
-Ground (G)<br>Equipment
+Land<br>Equipment<br>and<br>Sea Surface
 </td>
 <td>
-Ground (G)<br>Installaions
-</td>
-<td>
-Sea Surface (S)
+Land<br>Installaions
 </td>
 <td>
 Subsurface
-(U)
 </td>
 <td>
-SOF
-(F)
+Activity/Event
 </td>
 </tr>
 
 <tr>
 <td>
-PENDING (P)
+PENDING
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SPZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100000, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SPP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100005, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SPA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100001, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SPG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100010, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SPG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100015, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SPG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100020, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SPS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100035, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SPU---------", {size:size}).getMarker().XML);
-</script>
-</td>
-<td>
-<script>
-document.write(new MS.symbol("SPF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100040, {size:size}).getMarker().XML);
 </script>
 </td>
 </tr>
 
 <tr>
 <td>
-UNKNOWN (U)
+UNKNOWN
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SUZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100100, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SUP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100105, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SUA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100101, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SUG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100110, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SUG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100115, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SUG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100120, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SUS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100135, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SUU---------", {size:size}).getMarker().XML);
-</script>
-</td>
-<td>
-<script>
-document.write(new MS.symbol("SUF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100140, {size:size}).getMarker().XML);
 </script>
 </td>
 </tr>
 
 <tr>
 <td>
-FRIEND (F)
+FRIEND
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SFZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100300, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SFP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100305, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SFA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100301, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SFG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100310, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SFG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100315, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SFG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100320, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SFS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100335, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SFU---------", {size:size}).getMarker().XML);
-</script>
-</td>
-<td>
-<script>
-document.write(new MS.symbol("SFF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100340, {size:size}).getMarker().XML);
 </script>
 </td>
 </tr>
 
 <tr>
 <td>
-NEUTRAL (N)
+NEUTRAL
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SNZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100400, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SNP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100405, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SNA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100401, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SNG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100410, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SNG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100415, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SNG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100420, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SNS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100435, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SNU---------", {size:size}).getMarker().XML);
-</script>
-</td>
-<td>
-<script>
-document.write(new MS.symbol("SNF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100440, {size:size}).getMarker().XML);
 </script>
 </td>
 </tr>
 
 <tr>
 <td>
-HOSTILE (H)
+HOSTILE
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SHZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100600, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SHP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100605, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SHA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100601, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SHG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100610, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SHG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100615, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SHG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100620, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SHS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100635, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SHU---------", {size:size}).getMarker().XML);
-</script>
-</td>
-<td>
-<script>
-document.write(new MS.symbol("SHF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100640, {size:size}).getMarker().XML);
 </script>
 </td>
 </tr>
 
 <tr>
 <td>
-ASSUMED FRIEND (A)
+ASSUMED FRIEND
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SAZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100200, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SAP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100205, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SAA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100201, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SAG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100210, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SAG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100215, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SAG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100220, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SAS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100235, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SAU---------", {size:size}).getMarker().XML);
-</script>
-</td>
-<td>
-<script>
-document.write(new MS.symbol("SAF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100240, {size:size}).getMarker().XML);
 </script>
 </td>
 </tr>
 
 <tr>
 <td>
-SUSPECT (S)
+SUSPECT
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SSZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100500, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SSP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100505, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SSA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100501, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SSG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100510, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SSG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100515, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SSG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100520, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SSS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100535, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SSU---------", {size:size}).getMarker().XML);
-</script>
-</td>
-<td>
-<script>
-document.write(new MS.symbol("SSF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100540, {size:size}).getMarker().XML);
 </script>
 </td>
 </tr>
@@ -444,51 +404,46 @@ document.write(new MS.symbol("SSF---------", {size:size}).getMarker().XML);
 <tr>
 <td>
 EXERCISE<br>
-PENDING (G)
+PENDING
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SGZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101000, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SGP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101005, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SGA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101001, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SGG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101010, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SGG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101015, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SGG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101020, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SGS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101035, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SGU---------", {size:size}).getMarker().XML);
-</script>
-</td>
-<td>
-<script>
-document.write(new MS.symbol("SGF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101040, {size:size}).getMarker().XML);
 </script>
 </td>
 </tr>
@@ -496,51 +451,46 @@ document.write(new MS.symbol("SGF---------", {size:size}).getMarker().XML);
 <tr>
 <td>
 EXERCISE<br>
-UNKNOWN (W)
+UNKNOWN
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SWZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101100, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SWP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101105, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SWA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101101, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SWG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101110, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SWG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101115, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SWG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101120, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SWS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101135, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SWU---------", {size:size}).getMarker().XML);
-</script>
-</td>
-<td>
-<script>
-document.write(new MS.symbol("SWF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101140, {size:size}).getMarker().XML);
 </script>
 </td>
 </tr>
@@ -548,51 +498,46 @@ document.write(new MS.symbol("SWF---------", {size:size}).getMarker().XML);
 <tr>
 <td>
 EXERCISE<br>
-FRIEND (D)
+FRIEND
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SDZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101300, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SDP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101305, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SDA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101301, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SDG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101310, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SDG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101315, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SDG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101320, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SDS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101335, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SDU---------", {size:size}).getMarker().XML);
-</script>
-</td>
-<td>
-<script>
-document.write(new MS.symbol("SDF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101340, {size:size}).getMarker().XML);
 </script>
 </td>
 </tr>
@@ -600,51 +545,46 @@ document.write(new MS.symbol("SDF---------", {size:size}).getMarker().XML);
 <tr>
 <td>
 EXERCISE<br>
-NEUTRAL (L)
+NEUTRAL
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SLZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101400, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SLP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(100405, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SLA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101401, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SLG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101410, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SLG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101415, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SLG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101420, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SLS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101435, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SLU---------", {size:size}).getMarker().XML);
-</script>
-</td>
-<td>
-<script>
-document.write(new MS.symbol("SLF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101440, {size:size}).getMarker().XML);
 </script>
 </td>
 </tr>
@@ -652,158 +592,467 @@ document.write(new MS.symbol("SLF---------", {size:size}).getMarker().XML);
 <tr>
 <td>
 EXERCISE ASSUMED<br>
-FRIEND (M)
+FRIEND
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SMZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101200, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SMP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101205, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SMA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101201, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SMG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101210, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SMG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101215, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SMG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101220, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SMS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101235, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SMU---------", {size:size}).getMarker().XML);
-</script>
-</td>
-<td>
-<script>
-document.write(new MS.symbol("SMF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101240, {size:size}).getMarker().XML);
 </script>
 </td>
 </tr>
 
 <tr>
 <td>
-JOKER (J)
+JOKER
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SJZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101500, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SJP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101505, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SJA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101501, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SJG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101510, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SJG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101515, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SJG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101520, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SJS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101535, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SJU---------", {size:size}).getMarker().XML);
-</script>
-</td>
-<td>
-<script>
-document.write(new MS.symbol("SJF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101540, {size:size}).getMarker().XML);
 </script>
 </td>
 </tr>
 
 <tr>
 <td>
-FAKER (K)
+FAKER
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SKZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101600, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SKP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101605, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SKA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101601, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SKG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101610, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SKG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101615, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SKG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101620, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SKS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101635, {size:size}).getMarker().XML);
 </script>
 </td>
 <td>
 <script>
-document.write(new MS.symbol("SKU---------", {size:size}).getMarker().XML);
-</script>
-</td>
-<td>
-<script>
-document.write(new MS.symbol("SKF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol(101640, {size:size}).getMarker().XML);
 </script>
 </td>
 </tr>
+
+<tr>
+<td>
+SIMULATED<br>PENDING
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102000, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102005, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102001, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102010, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102015, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102020, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102035, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102040, {size:size}).getMarker().XML);
+</script>
+</td>
+</tr>
+
+<tr>
+<td>
+SIMULATED<br>UNKNOWN
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102100, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102105, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102101, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102110, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102115, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102120, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102135, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102140, {size:size}).getMarker().XML);
+</script>
+</td>
+</tr>
+
+<tr>
+<td>
+SIMULATED<br>FRIEND
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102300, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102305, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102301, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102310, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102315, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102320, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102335, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102340, {size:size}).getMarker().XML);
+</script>
+</td>
+</tr>
+
+<tr>
+<td>
+SIMULATED<br>NEUTRAL
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102400, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102405, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102401, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102410, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102415, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102420, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102435, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102440, {size:size}).getMarker().XML);
+</script>
+</td>
+</tr>
+
+<tr>
+<td>
+SIMULATED<br>HOSTILE
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102600, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102605, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102601, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102610, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102615, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102620, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102635, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102640, {size:size}).getMarker().XML);
+</script>
+</td>
+</tr>
+
+<tr>
+<td>
+SIMULATED<br>ASSUMED FRIEND
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102200, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102205, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102201, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102210, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102215, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102220, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102235, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102240, {size:size}).getMarker().XML);
+</script>
+</td>
+</tr>
+
+<tr>
+<td>
+SIMULATED<br>SUSPECT
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102500, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102505, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102501, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102510, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102515, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102520, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102535, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
+</script>
+</td>
+</tr>
+
 </table><br>
--->
+
+
   <h3 id="TABLEA-VII">TABLE A-VII. Air entity/entity type/entity subtype </h3>
 <table border=1 style="width:1050px">
 <tr>
@@ -10836,42 +11085,42 @@ document.write(new MS.symbol("SKF---------", {size:size}).getMarker().XML);
 </tr>
 <tr>
 <td></td> <td>Exercise Mine, General</td> <td></td> <td>110800</td> 
-<td><script>document.write(new MS.symbol("1001360000110800", {size:size}).getMarker().XML);</script>
-<script>document.write(new MS.symbol("1003360000110800", {size:size}).getMarker().XML);</script>
-<script>document.write(new MS.symbol("1004360000110800", {size:size}).getMarker().XML);</script>
-<script>document.write(new MS.symbol("1006360000110800", {size:size}).getMarker().XML);</script>
+<td><script>document.write(new MS.symbol("1011360000110800", {size:size}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1013360000110800", {size:size}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1014360000110800", {size:size}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1016360000110800", {size:size}).getMarker().XML);</script>
 </td>
 </tr>
 <tr>
 <td></td> <td></td> <td>Exercise Mine, Bottom</td> <td>110801</td> 
-<td><script>document.write(new MS.symbol("1001360000110801", {size:size}).getMarker().XML);</script>
-<script>document.write(new MS.symbol("1003360000110801", {size:size}).getMarker().XML);</script>
-<script>document.write(new MS.symbol("1004360000110801", {size:size}).getMarker().XML);</script>
-<script>document.write(new MS.symbol("1006360000110801", {size:size}).getMarker().XML);</script>
+<td><script>document.write(new MS.symbol("1011360000110801", {size:size}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1013360000110801", {size:size}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1014360000110801", {size:size}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1016360000110801", {size:size}).getMarker().XML);</script>
 </td>
 </tr>
 <tr>
 <td></td> <td></td> <td>Exercise Mine, Moored</td> <td>110802</td> 
-<td><script>document.write(new MS.symbol("1001360000110802", {size:size}).getMarker().XML);</script>
-<script>document.write(new MS.symbol("1003360000110802", {size:size}).getMarker().XML);</script>
-<script>document.write(new MS.symbol("1004360000110802", {size:size}).getMarker().XML);</script>
-<script>document.write(new MS.symbol("1006360000110802", {size:size}).getMarker().XML);</script>
+<td><script>document.write(new MS.symbol("1011360000110802", {size:size}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1013360000110802", {size:size}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1014360000110802", {size:size}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1016360000110802", {size:size}).getMarker().XML);</script>
 </td>
 </tr>
 <tr>
 <td></td> <td></td> <td>Exercise Mine, Floating</td> <td>110803</td> 
-<td><script>document.write(new MS.symbol("1001360000110803", {size:size}).getMarker().XML);</script>
-<script>document.write(new MS.symbol("1003360000110803", {size:size}).getMarker().XML);</script>
-<script>document.write(new MS.symbol("1004360000110803", {size:size}).getMarker().XML);</script>
-<script>document.write(new MS.symbol("1006360000110803", {size:size}).getMarker().XML);</script>
+<td><script>document.write(new MS.symbol("1011360000110803", {size:size}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1013360000110803", {size:size}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1014360000110803", {size:size}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1016360000110803", {size:size}).getMarker().XML);</script>
 </td>
 </tr>
 <tr>
 <td></td> <td></td> <td>Exercise Mine, Rising</td> <td>110804</td> 
-<td><script>document.write(new MS.symbol("1001360000110804", {size:size}).getMarker().XML);</script>
-<script>document.write(new MS.symbol("1003360000110804", {size:size}).getMarker().XML);</script>
-<script>document.write(new MS.symbol("1004360000110804", {size:size}).getMarker().XML);</script>
-<script>document.write(new MS.symbol("1006360000110804", {size:size}).getMarker().XML);</script>
+<td><script>document.write(new MS.symbol("1011360000110804", {size:size}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1013360000110804", {size:size}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1014360000110804", {size:size}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1016360000110804", {size:size}).getMarker().XML);</script>
 </td>
 </tr>
 <tr>
@@ -11442,6 +11691,11 @@ document.write(new MS.symbol("SKF---------", {size:size}).getMarker().XML);
 <script>document.write(new MS.symbol("1003360000200000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("1004360000200000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("1006360000200000", {size:size}).getMarker().XML);</script>
+<br>
+<script>document.write(new MS.symbol("1001360000200000", {size:size,alternateMedal:true}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1003360000200000", {size:size,alternateMedal:true}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1004360000200000", {size:size,alternateMedal:true}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1006360000200000", {size:size,alternateMedal:true}).getMarker().XML);</script>
 </td>
 </tr>
 <tr>
@@ -11450,6 +11704,11 @@ document.write(new MS.symbol("SKF---------", {size:size}).getMarker().XML);
 <script>document.write(new MS.symbol("1003360000210000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("1004360000210000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("1006360000210000", {size:size}).getMarker().XML);</script>
+<br>
+<script>document.write(new MS.symbol("1001360000210000", {size:size,alternateMedal:true}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1003360000210000", {size:size,alternateMedal:true}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1004360000210000", {size:size,alternateMedal:true}).getMarker().XML);</script>
+<script>document.write(new MS.symbol("1006360000210000", {size:size,alternateMedal:true}).getMarker().XML);</script>
 </td>
 </tr>
 </table>

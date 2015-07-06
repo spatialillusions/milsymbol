@@ -2531,14 +2531,14 @@ MS._getLetterProperties = function(properties, mapping){
 	if(battledimension == 'P'  && codingscheme != "O")	properties.space = true;
 	//codingscheme that are Activities
 	if(codingscheme == "O" && (['V','O','R'].indexOf(battledimension)>-1)){
-														properties.activity = true;
+											properties.activity = true;
 	}
 	//symbolmodifier11 that are Installations
-	if(symbolmodifier11 == "H")							properties.installation = true;
+	if(symbolmodifier11 == "H")					properties.installation = true;
 	//Planned/Anticipated/Suspect symbols should have a dashed outline
 	if(this.frame && status == 'A' )					properties.notpresent = MS.dashArrays.anticipated;
 	if(this.frame && (['P','A','S','G','M'].indexOf(affiliation) > -1)){
-														properties.notpresent = MS.dashArrays.pending;
+												properties.notpresent = MS.dashArrays.pending;
 	}
 	//Should it have a Condition Bar
 	if(status == 'C')									properties.condition = mapping.status[2];
@@ -2547,12 +2547,12 @@ MS._getLetterProperties = function(properties, mapping){
 	if(status == 'F')									properties.condition = mapping.status[5];
 	//Is it part of Exercise Symbols
 	if(['G','W','D','L','M','J','K'].indexOf(affiliation) > -1){
-														properties.context = mapping.context[1];
+												properties.context = mapping.context[1];
 	}
 	//Framing of SO tactical symbols differs slightly from C2 Symbology: UEI tactical symbols in that there is only one battle dimension: ground.
-	if(codingscheme == "O")								properties.dimension = mapping.dimension[1];
+	if(codingscheme == "O")							properties.dimension = mapping.dimension[1];
 	//Framing of EMS tactical symbols differs slightly from C2 Symbology: UEI tactical symbols in that there is only one battle dimension: ground.
-	if(codingscheme == "E")								properties.dimension = mapping.dimension[1];
+	if(codingscheme == "E")							properties.dimension = mapping.dimension[1];
 	//First save the dimensionType and affiliationType before we modifies it... 
 	properties.baseDimension = properties.dimension;
 	properties.baseAffilation = properties.affiliation;
@@ -5232,8 +5232,8 @@ MS._getNumberProperties = function(properties,mapping){
 	if(symbolSet == '36' && this.alternateMedal == false)properties.fill = false;
 	
 	//Planned/Anticipated/Suspect symbols should have a dashed outline
-	if(status == '1' )notpresent = MS.dashArrays.anticipated;
-	if(standardIdentity2 == '0' || standardIdentity2 == '2' || standardIdentity2 == '5')notpresent = MS.dashArrays.pending;
+	if(status == '1' )properties.notpresent = MS.dashArrays.anticipated;
+	if(standardIdentity2 == '0' || standardIdentity2 == '2' || standardIdentity2 == '5')properties.notpresent = MS.dashArrays.pending;
 
 	
 	//Should it have a Condition Bar
@@ -5253,7 +5253,7 @@ MS._getNumberProperties = function(properties,mapping){
 	if(symbolSet=='00')properties.dimensionUnknown = true;
 	
 	//If battle dimension is unknown, standard identity is Exersize and other than Unknown we should not have a symbol
-	if(symbolSet=='00' && standardIdentity1 == '1' && affiliationType != 'Unknown') properties.affiliation = '';
+	if(symbolSet=='00' && standardIdentity1 == '1' && properties.affiliation != 'Unknown') properties.affiliation = '';
 	
 	//Ground Equipment should have the same geometry as sea Friend... 
 	//Signal INTELLIGENCE Ground should have the same geometry as sea Friend... 
@@ -6585,8 +6585,8 @@ sID['150000'] = 'Fused Track';
 		sID['190100'] = 'Non-Mine Mine-Like Object (NMLO), General.Non-Mine Mine-Like Object, Bottom';
 		sID['190200'] = 'Non-Mine Mine-Like Object (NMLO), General.Non-Mine Mine-Like Object, Moored';
 		sID['190300'] = 'Non-Mine Mine-Like Object (NMLO), General.Non-Mine Mine-Like Object, Floating';
-		sID['200000'] = 'Environmental Report Location';
-		sID['210000'] = 'Dive Report Location';		
+		sID['200000'] = icons['SUB.ICON.ENVIRONMENTAL REPORT LOCATION'];
+		sID['210000'] = icons['SUB.ICON.DIVE REPORT LOCATION'];		
 	
 	}		
 
