@@ -1488,11 +1488,13 @@ var milsymbol = function(){
 		//Should the icon be monocromatic and if so what color
 		this.monoColor 		= options.monoColor!=undefined?options.monoColor:false;
 		//Should we use the Civilian Purple defined in 2525? (We set this to default because I like the color.
-		this.civilianColors = options.civilianColor!=undefined||options.civilianColor==''?options.civilianColor:true;
+		this.civilianColors 	= options.civilianColor!=undefined||options.civilianColor==''?options.civilianColor:true;
 		//2525C Allows you to use Dark, Medium or Light colors. The values you can set are "Dark","Medium" or "Light"
 		this.colorMode 		= options.colorMode!=undefined||options.colorMode==''?options.colorMode:MS.getColorMode("Light");
 		//If you have set all info fields but don't want the displayed, then just set this to false.
-		this.infoFields 	= options.infoFields!=undefined||options.infoFields==''?options.infoFields:true;
+		this.infoFields 		= options.infoFields!=undefined||options.infoFields==''?options.infoFields:true;
+		//2525D lets you choose between MEDAL icons and alternate MEDAL icons for Mines, default is set to MEDAL.
+		this.alternateMedal 	= options.alternateMedal!=undefined||options.alternateMedal==''?options.alternateMedal:false;
 	
 		//FieldID C
 		this.quantity			= options.quantity!=undefined?options.quantity:'';	
