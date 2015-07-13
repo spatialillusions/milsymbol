@@ -625,7 +625,7 @@ var milsymbol = function(){
 		icons['GROUND.M2.AVIATION'] = '<path d="m 75,60 0,15 50,-15 0,15 z"  />';
 		icons['GROUND.M1.BIOLOGICAL'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="30" >B</text>';
 		icons['GROUND.M1.BORDER'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >BOR</text>';
-		icons['GROUND.M1.BRIDGING'] = '<path d="m 80,80 5,-5 30,0 5,5 m -40,-20 5,5 30,0 5,-5"  />';
+		icons['GROUND.M1.BRIDGING'] = '<path fill="none" d="m 80,80 5,-5 30,0 5,5 m -40,-20 5,5 30,0 5,-5"  />';
 		icons['GROUND.M1.CHEMICAL'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="30" >C</text>';
 		icons['GROUND.M1.INTRUSION'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="30" >I</text>';
 
@@ -648,10 +648,12 @@ var milsymbol = function(){
 		icons['GROUND.M1.ELECTRO-OPTICAL'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >EO</text>';
 		icons['GROUND.M1.ENHANCED'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >ENH</text>';
 		icons['GROUND.M1.EXPLOSIVE ORDNANCE DISPOSAL'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >EOD</text>';
+		icons['GROUND.M1.EARLY WARNING RADAR'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >EWR</text>';
 		icons['GROUND.M1.FIRE DIRECTION CENTRE'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >FDC</text>';
 		icons['GROUND.M1.FORCE'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="30" >F</text>';
 		icons['GROUND.M1.FORWARD'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >FWD</text>';
 		icons['GROUND.M1.GROUND STATION MODULE'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >GSM</text>';
+		icons['GROUND.M1.INTRUSION'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >I</text>';
 		icons['GROUND.M1.LANDING SUPPORT'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >LS</text>';
 		icons['GROUND.M1.LARGE COMMUNICATIONS CONTINGENCY PACKAGE'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >LCCP</text>';
 		icons['GROUND.M1.LARGE EXTENSION NODE'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >LEN</text>';
@@ -705,6 +707,7 @@ var milsymbol = function(){
 		icons['GROUND.M1.TARGET ACQUISITION'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >TA</text>';
 		icons['GROUND.M1.TOPOGRAPHIC'] = '<path fill="none" d="m 92,65 c 6,3 10,3 16,0 m -18,13 10,-23 10,23"/>';
 		icons['GROUND.M1.UNMANNED AERIAL VEHICLE'] = icons['AIR.M1.UNMANNED AERIAL VEHICLE'];
+		icons['GROUND.M1.UPGRADED EARLY WARNING RADAR'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="25" >UEW</text>';
 		icons['GROUND.M1.UTILITY'] = '<text stroke="none" text-anchor="middle" x="100" y="77" font-size="30" >U</text>';
 		icons['GROUND.M1.VIDEO IMAGERY'] = '<path fill="none" d="m 120,65 -11,0 m 11,10 -14,0 m 4,-14 -30,0 0,18 25,0 z m 10,2 0,14"/>';
 
@@ -802,26 +805,28 @@ var milsymbol = function(){
 		icons['GROUND.EQUIPMENT.SINGLE ROCKET LAUNCHER'] = '<path d="m 85,75 15,-15 15,15 m -15,-5 0,70 M 85,85 100,70 115,85" fill="none" /> ';
 		icons['GROUND.EQUIPMENT.MULTIPLE ROCKET LAUNCHER'] = '<path d="m 115,90 0,40 m -30,-40 0,40 m 0,-55 15,-15 15,15 m -15,-5 0,70 M 85,85 100,70 115,85" fill="none" /> ';
 		icons['GROUND.EQUIPMENT.ANTITANK ROCKET LAUNCHER'] = '<path d="m 85,140 15,-15 15,15 M 85,85 100,70 115,85 m -15,-15 0,55 M 85,75 100,60 115,75" fill="none" /> ';
-		icons['GROUND.EQUIPMENT.NON-LETHAL WEAPON'] = '';		
-		icons['GROUND.EQUIPMENT.TASER'] = '';		
-		icons['GROUND.EQUIPMENT.WATER CANNON'] = '';	
+		icons['GROUND.EQUIPMENT.NON-LETHAL WEAPON'] = '<path d="m 100,60 0,80 M 80,60 l40,0" fill="none" />';
+		icons['GROUND.EQUIPMENT.TASER'] = icons['GROUND.EQUIPMENT.NON-LETHAL WEAPON'] + '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >Z</text>';
+		icons['GROUND.EQUIPMENT.WATER CANNON'] = icons['GROUND.EQUIPMENT.NON-LETHAL WEAPON'] + '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >W</text>';
 
 		icons['GROUND.EQUIPMENT.LIMITED CROSS-COUNTRY'] = '<path d="m 70,130 60,0" fill="none" /><circle cx="75" cy="135" r="5" fill="none"/><circle cx="125" cy="135" r="5" fill="none"/>';				
 		icons['GROUND.EQUIPMENT.CROSS-COUNTRY'] = '<path d="m 70,130 60,0" fill="none" /><circle cx="75" cy="135" r="5" fill="none"/><circle cx="100" cy="135" r="5" fill="none"/><circle cx="125" cy="135" r="5" fill="none"/>';	
 
 		icons['GROUND.EQUIPMENT.ARMOURED FIGHTING VEHICLE'] = '<path d="m 70,100 30,-30 30,30 -30,30 z m 60,-30 0,60 m -60,-60 0,60 0,0" fill="none" />';			
-		icons['GROUND.EQUIPMENT.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL'] = icons['GROUND.EQUIPMENT.ARMOURED FIGHTING VEHICLE'] + '<path d="m 80,90 20,15 0,-10 20,15" fill="none" />';			
+		icons['GROUND.EQUIPMENT.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL'] = icons['GROUND.EQUIPMENT.ARMOURED FIGHTING VEHICLE'] + (numberSIDC?'<text stroke="none" text-anchor="middle" x="100" y="110" font-size="30" >C2</text>':'<path d="m 80,90 20,15 0,-10 20,15" fill="none" />');			
 		icons['GROUND.EQUIPMENT.ARMOURED PERSONNEL CARRIER'] = '<path fill="none" d="m 70,80 30,-10 30,10 0,0 m -60,50 60,0 m 0,-60 0,60 m -60,-60 0,60 0,0" />';
 		icons['GROUND.EQUIPMENT.ARMOURED PERSONNEL CARRIER COMBAT SERVICE SUPPORT VEHICLE'] = icons['GROUND.EQUIPMENT.ARMOURED PERSONNEL CARRIER'] + '<path d="m 70,972.36218 60,0" fill="none" />';
 		icons['GROUND.EQUIPMENT.ARMOURED PERSONNEL CARRIER ENGINEER RECON VEHICLE'] = '<path fill="none" d="M 130,80 70,130" />';
-		icons['GROUND.EQUIPMENT.AMPHIBIOUS ARMOURED PERSONNEL CARRIER'] = '';		
+		icons['GROUND.EQUIPMENT.COMBAT SERVICE SUPPORT VEHICLE'] = '<path fill="none" d="M 70,120 130,120" />';
+
+		//icons['GROUND.EQUIPMENT.AMPHIBIOUS ARMOURED PERSONNEL CARRIER'] = '';		
 		icons['GROUND.EQUIPMENT.ARMOURED MEDICAL PERSONNEL CARRIER'] = '<path fill="none" d="m 70,100 60,0 m -30,-30 0,60" />';		
-		icons['GROUND.EQUIPMENT.ARMOURED PROTECTED VEHICLE'] = '';		
+		//icons['GROUND.EQUIPMENT.ARMOURED PROTECTED VEHICLE'] = '';		
 		icons['GROUND.EQUIPMENT.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY'] = icons['GROUND.ICON.ARMOUR'] + icons['GROUND.M2.WHEELED'];		
 		icons['GROUND.EQUIPMENT.ARMOURED VEHICLE'] =  '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >A</text>';
 		icons['GROUND.EQUIPMENT.ARMORED CARRIER WITH VOLCANO'] =  '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >V</text>';
-		icons['GROUND.EQUIPMENT.ARMOURED PROTECTED RECOVERY VEHICLE'] = '';	
-		icons['GROUND.EQUIPMENT.MEDICAL EVACUATION ARMOURED PROTECTED VEHICLE'] = '';		
+		//icons['GROUND.EQUIPMENT.ARMOURED PROTECTED RECOVERY VEHICLE'] = '';	
+		//icons['GROUND.EQUIPMENT.MEDICAL EVACUATION ARMOURED PROTECTED VEHICLE'] = '';		
 
 		icons['GROUND.EQUIPMENT.TANK'] = '<path fill="none" d="m 70,80 60,0 m -60,40 60,0 m -60,-50 0,60 0,0 m 60,-60 0,60" />';
 		icons['GROUND.EQUIPMENT.LIGHT TANK'] = '<path fill="none" d="m 100,80 0,40" />';
@@ -830,46 +835,55 @@ var milsymbol = function(){
 		icons['GROUND.EQUIPMENT.TANK RECOVERY VEHICLE'] = '<path fill="none" d="m 85,100 30,0 m 10,-10 c -13.06403,0 -12.36705,20 0,20 M 75,90 c 12.673413,0.258545 12.735146,20.25161 0,20" />';		
 
 		icons['GROUND.EQUIPMENT.BRIDGE'] = '<path d="m 115,75 -10,10 0,30 10,10 m -30,-50 10,10 0,30 -10,10 m -15,-55 60,0 0,60 -60,0 0,-60" fill="none" />';		
-		icons['GROUND.EQUIPMENT.BRIDGE MOUNTED ON UTILITY VEHICLE'] = '';		
-		icons['GROUND.EQUIPMENT.FIXED BRIDGE'] = '';		
-		icons['GROUND.EQUIPMENT.FOLDING GIRDER BRIDGE'] = '';		
-		icons['GROUND.EQUIPMENT.HOLLOW DECK BRIDGE'] = '';		
+		//icons['GROUND.EQUIPMENT.BRIDGE MOUNTED ON UTILITY VEHICLE'] = '';		
+		icons['GROUND.EQUIPMENT.FIXED BRIDGE'] = '<path d="M 100,70 100,130" fill="none" />';		
+		icons['GROUND.EQUIPMENT.FOLDING GIRDER BRIDGE'] = '<path d="M 110, 80 90,80 90,120 110,120" fill="none" />';		
+		icons['GROUND.EQUIPMENT.HOLLOW DECK BRIDGE'] = '<path d="M 110, 80 90,80 90,120 110,120 z" fill="none" />';		
 		icons['GROUND.EQUIPMENT.DRILL'] = icons['GROUND.ICON.DRILLING'];		
-		icons['GROUND.EQUIPMENT.DRILL MOUNTED ON VEHICLE'] = '';		
+		//icons['GROUND.EQUIPMENT.DRILL MOUNTED ON VEHICLE'] = '';		
 		icons['GROUND.EQUIPMENT.DOZER'] = '<path d="m 90,60 20,0 m -10,0 0,20 m -30,0 60,0 m -60,-10 0,60 0,0 m 60,-60 0,60 m -60,-10 60,0" fill="none" />';
 		icons['GROUND.EQUIPMENT.DOZER ARMORED'] = '<path d="m 70,130 60,0 m -30,-70 0,10 m -30,10 30,-10 30,10 m 0,-10 0,60 m -60,-60 0,60 0,0 m 20,-70 20,0" fill="none" />';
 		icons['GROUND.EQUIPMENT.EARTHMOVER'] = '<path d="m 100,60 0,20 m -25,-15 5,-5 40,0 5,5 m -55,15 60,0 m -60,40 60,0 m 0,-50 0,60 m -60,-60 0,60 0,0" fill="none" />';		
-		icons['GROUND.EQUIPMENT.MULTIFUNCTIONAL EARTHMOVER/DIGGER'] = '';			
+		icons['GROUND.EQUIPMENT.MULTIFUNCTIONAL EARTHMOVER/DIGGER'] = icons['GROUND.EQUIPMENT.EARTHMOVER'] + '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >MF</text>';			
 		icons['GROUND.EQUIPMENT.MINE CLEARING EQUIPMENT'] = '<path d="m 100,80 0,15 -30,25 60,0 -30,-25" fill="none" />';
-		icons['GROUND.EQUIPMENT.MINE CLEARING VEHICLE'] = '';		
-		icons['GROUND.EQUIPMENT.MINE LAYING EQUIPMENT'] = '';			
+		//icons['GROUND.EQUIPMENT.MINE CLEARING VEHICLE'] = '';		
 		icons['GROUND.EQUIPMENT.MINE LAYING VEHICLE'] = '<path d="m 90,85 20,30 m 0,-30 -20,30 m 10,-30 0,30" fill="none" /><circle cx="100" cy="100" r="10"/>';
+		icons['GROUND.EQUIPMENT.MINE LAYING EQUIPMENT'] = icons['GROUND.EQUIPMENT.MINE LAYING VEHICLE'] + '<path d="m 90,75 l 20,0 0,5 -20,0 z " />';	
 		icons['GROUND.EQUIPMENT.MINE SCATTERABLE'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >S</text><circle cx="85" cy="115" r="5" fill="none"/><circle cx="100" cy="115" r="5" fill="none"/><circle cx="115" cy="115" r="5" fill="none"/>';
 
-		icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] = '<path fill="none" d="m 70,70 c 0,15 60,15 60,0 m -60,60 60,0 m -60,-60 0,60 0,0 m 60,-60 0,60" />';
+		icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] = '<path fill="none" d="m 70,65 c 0,15 60,15 60,0 l 0,65 -60,0 z" />';
 		icons['GROUND.EQUIPMENT.UTILITY VEHICLE BACKHOE'] = '<path fill="none" d="M 130,130 100,80 75,95 75,95" /><path d="M 75,105 85,95 75,95 z" />';
 		icons['GROUND.EQUIPMENT.UTILITY VEHICLE FERRY TRANSPORTER'] = '<path fill="none" d="m 75,100 c 15,15 35,15 50,0 z" />';
-		icons['GROUND.EQUIPMENT.UTILITY VEHICLE LIGHT'] = '<path fill="none" d="M 100,81.25 100,130" />';
-		icons['GROUND.EQUIPMENT.UTILITY VEHICLE MEDIUM'] = '<path fill="none" d="m 105,130 0.009,-48.890538 M 95,130 95.01288,81.110678" />';
-		icons['GROUND.EQUIPMENT.UTILITY VEHICLE HEAVY'] = '<path fill="none" d="m 110,130 0,-50 m -20,50 0,-50 m 10,1.25 0,48.75" />';
+		icons['GROUND.EQUIPMENT.UTILITY VEHICLE LIGHT'] = '<path fill="none" d="M 100,78.25 100,130" />';
+		icons['GROUND.EQUIPMENT.UTILITY VEHICLE MEDIUM'] = '<path fill="none" d="m 105,130 0,-52 M 95,130 l0,-52" />';
+		icons['GROUND.EQUIPMENT.UTILITY VEHICLE HEAVY'] = '<path fill="none" d="m 110,130 0,-53 m -20,50 0,-53 m 10,1.25 0,52" />';
 		icons['GROUND.EQUIPMENT.UTILITY VEHICLE.TOW TRUCK'] = '<path fill="none" d="m 130,130 -40,-40 0,25 c 0,5 -10,5 -10,0" />';
 		icons['GROUND.EQUIPMENT.UTILITY VEHICLE.TOW TRUCK.LIGHT'] = '<path fill="none" d="m 105,115 10,-10" />';
 		icons['GROUND.EQUIPMENT.UTILITY VEHICLE.TOW TRUCK.HEAVY'] = '<path fill="none" d="m 120,110 -10,10 m -10,-10 10,-10 m -5,15 10,-10" />';
-		icons['GROUND.EQUIPMENT.MEDICAL VEHICLE'] = '';			
-		icons['GROUND.EQUIPMENT.MEDICAL EVACUATION'] = '<path d="m 95,85 10,0 0,10 10,0 0,10 -10,0 0,10 -10,0 0,-10 -10,0 0,-10 10,0 z" />';		
+		icons['GROUND.EQUIPMENT.MEDICAL VEHICLE'] = '<path fill="none" d="m 70,100 l 60,0 M 100,78.25 100,130" />';			
+		icons['GROUND.EQUIPMENT.MEDICAL EVACUATION'] = '<path d="m 95,85 10,0 0,10 10,0 0,10 -10,0 0,10 -10,0 0,-10 -10,0 0,-10 10,0 z" />';
+		icons['GROUND.EQUIPMENT.MOBILE EMERGENCY PHYSICIAN'] = '<path fill="none" d="m 70,100 l 60,0 M 100,78.25 100,130 M 85,85 115,85" />';	
 		icons['GROUND.EQUIPMENT.BUS'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >B</text>';		
-		icons['GROUND.EQUIPMENT.LIMITED CROSS-COUNTRY TRUCK'] = '';		
-		icons['GROUND.EQUIPMENT.CROSS-COUNTRY TRUCK'] = '';		
+		//icons['GROUND.EQUIPMENT.LIMITED CROSS-COUNTRY TRUCK'] = '';		
+		//icons['GROUND.EQUIPMENT.CROSS-COUNTRY TRUCK'] = '';		
 		icons['GROUND.EQUIPMENT.SEMI-TRAILER TRUCK'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + '<path fill="none" d="m 140,90 0,20 m -10,-10 10,0" /><circle cx="75" cy="135" r="5" fill="none"/><circle cx="85" cy="135" r="5" fill="none"/><circle cx="125" cy="135" r="5" fill="none"/>';		
-		icons['GROUND.EQUIPMENT.POL VEHICLE'] = '';		
+		//icons['GROUND.EQUIPMENT.POL VEHICLE'] = '';		
 		icons['GROUND.EQUIPMENT.WATER VEHICLE'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + '<path fill="none" d="m 70,95 c 10,0 0,10 10,10 10,0 0,-10 10,-10 10,0 0,10 10,10 10,0 0,-10 10,-10 10,0 0,10 10,10 10,0 0,-10 10,-10" />';		
 		icons['GROUND.EQUIPMENT.TRAIN LOCOMOTIVE'] = '<path fill="none" d="m 70,70 0,60 60,0 0,-30 -30,0 0,-30 z" />';		
-		icons['GROUND.EQUIPMENT.RAILCAR'] = '';		
+		icons['GROUND.EQUIPMENT.RAILCAR'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + '<circle fill="none" cx="75" cy="135" r="5" /><circle fill="none" cx="85" cy="135" r="5" /><circle fill="none" cx="115" cy="135" r="5" /><circle fill="none" cx="125" cy="135" r="5" />';		
 		icons['GROUND.EQUIPMENT.CBRN EQUIPMENT'] = '<path  d="M80,140 c0,-20 10,-60 50,-63 m-10,63 c0,-20 -10,-60 -50,-63 " fill="none"/><circle cx="70" cy="85" r="8"/><circle cx="130" cy="85" r="8"/>';
-		icons['GROUND.EQUIPMENT.COMPUTER SYSTEM'] = '';		
-		icons['GROUND.EQUIPMENT.LASER'] = '<path fill="none" d="m 100,55 0,25 10,5 -20,5 20,5 -20,5 10,5 0,15 10,5 -20,5 20,5 -20,5 20,5 M 90,65 100,55 110,65" />';
+		icons['GROUND.EQUIPMENT.COMPUTER SYSTEM'] = '<path  d="m 100,132 0,-10 -35,0 0,-50 70,0 0,50 -35,0 m -25,10 50,0" fill="none"/>';		
 
-		//2525  
+
+		icons['GROUND.EQUIPMENT.COMMAND LAUNCH EQUIPMENT (CLE)'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >CLE</text>';	;		
+		icons['GROUND.EQUIPMENT.GENERATOR SET'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >G</text>';		
+		icons['GROUND.EQUIPMENT.GROUND-BASED MIDCOURSE DEFENSE (GMD) FIRE CONTROL (GFC) CENTER'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >GFC</text>';		
+		icons['GROUND.EQUIPMENT.IN-FLIGHT INTERCEPTOR COMMUNICATIONS SYSTEM (IFICS) DATA TERMINAL (IDT)'] = '<path fill="none" d="m 80,82.362225 45,-2 -4,37 m -6,-1 0,-35 -34,9 m 12,21 0,8 M 80,82.362205 c 0,25 16,35 41,35" />';		
+
+		icons['GROUND.EQUIPMENT.LASER'] = '<path fill="none" d="m 100,55 0,25 10,5 -20,5 20,5 -20,5 10,5 0,15 10,5 -20,5 20,5 -20,5 20,5 M 90,65 100,55 110,65" />';
+		icons['GROUND.EQUIPMENT.TENT'] = '<path fill="none" d="m 65,124.36222 10,-37 25,-10 25,10 10,37 z" />';
+		icons['GROUND.EQUIPMENT.UNIT DEPLOYMENT SHIPMENTS'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >DPLY</text>';	;		
+
 		icons['GROUND.EQUIPMENT.CIVILIAN VEHICLE.LIGHT'] = '<path fill="none" d="m 100,125 0,-20" />';
 		icons['GROUND.EQUIPMENT.CIVILIAN VEHICLE.MEDIUM'] = '<path fill="none" d="m 103,105 0,20 m -6,-20 0,20" />';
 		icons['GROUND.EQUIPMENT.CIVILIAN VEHICLE.HEAVY'] = '<path fill="none" d="m 106,105 0,20 m -12,-20 0,20 m 6,-20 0,20" />';
@@ -886,12 +900,11 @@ var milsymbol = function(){
 		icons['GROUND.EQUIPMENT.MISSILE CRANE/LOADING DEVICE'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="30" >MSL</text><path fill="none"  d="m 75,80 25,-20 c 0,0 0,15 0,15 l 5,0 0,-5" />';
 		icons['GROUND.EQUIPMENT.MISSILE PROPELLANT TRANSPORTER'] = '<text stroke="none" text-anchor="middle" x="90" y="110" font-size="20" >MSL</text><path fill="none"  d="m 120,115 0,-15 -10,-10 20,0 -10,10" />';
 		icons['GROUND.EQUIPMENT.MISSILE WARHEAD TRANSPORTER'] = '<text stroke="none" text-anchor="middle" x="100" y="100" font-size="20" >MSL</text><text stroke="none" text-anchor="middle" x="100" y="115" font-size="20" >WHD</text>';
-		//End 2525			
 
-		icons['GROUND.EQUIPMENT.LAND MINE'] = '<path fill="none" d="m 70,65 60,0 -30,65 z" /><text stroke="none" text-anchor="middle" x="100" y="90" font-family="Arial" font-size="30" font-weight="bold" >M</text>';
+		icons['GROUND.EQUIPMENT.LAND MINE'] = numberSIDC?'<circle cx="100" cy="100" r="22" fill="none" />':'<path fill="none" d="m 70,65 60,0 -30,65 z" /><text stroke="none" text-anchor="middle" x="100" y="90" font-family="Arial" font-size="30" font-weight="bold" >M</text>';
 		icons['GROUND.EQUIPMENT.ANTIPERSONNEL LAND MINE'] = '<circle cx="100" cy="100" r="22"/><path d="M117,82 l20,-18 -18,25z M83,82 l-20,-18 18,25z" stroke="none" />';
 		icons['GROUND.EQUIPMENT.ANTIPERSONNEL LAND MINE LESS THAN LETHAL'] = '<circle cx="100" cy="100" r="22" fill="none" /><path d="M117,82 l20,-18 -18,25z M83,82 l-20,-18 18,25z" stroke="none" />';
-		icons['GROUND.EQUIPMENT.ANTITANK LAND MINE'] = '';		
+		icons['GROUND.EQUIPMENT.ANTITANK MINE'] = '<circle cx="100" cy="100" r="22" />';		
 		icons['GROUND.EQUIPMENT.IMPROVISED EXPLOSIVE DEVICE'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >IED</text>';		
 		icons['GROUND.EQUIPMENT.LAND MINES'] = '<text stroke="none" text-anchor="middle" x="100" y="110" font-size="30" >M</text><path fill="none" d="' + (_STD2525?'m 135,70 -70,0 35,70 z':'m 65,130 70,0 -35,-70 z') + '" />';
 
@@ -901,10 +914,9 @@ var milsymbol = function(){
 		icons['GROUND.EQUIPMENT.RADAR'] = '<path d="M72,95 l30,-25 0,25 30,-25 M70,70 c0,35 15,50 50,50"  fill="none" />';		
 
 		icons['GROUND.EQUIPMENT.ANTENNAE'] = '';		
-		icons['GROUND.EQUIPMENT.GENERATOR SET'] = '';		
 		icons['GROUND.EQUIPMENT.PSYCHOLOGICAL OPERATIONS EQUIPMENT'] = '<path fill="'+ (_STD2525 ? iconFillColor : 'none') + '" stroke="' + black + '" d="m 110,95 10,0 m -10,10 10,0 m -10,10 10,0 m -10,-30 10,0 m -10,-5 -10,10 -30,0 0,20 30,0 10,10 z" />';	
-		icons['GROUND.EQUIPMENT.BOMB'] = '';		
-		icons['GROUND.EQUIPMENT.BOOBY TRAP'] = '';		
+		//icons['GROUND.EQUIPMENT.BOMB'] = '';		
+		//icons['GROUND.EQUIPMENT.BOOBY TRAP'] = '';		
 
 		// Installation
 		// Installations are not so structured in APP6C so we will reuse as many Symbols
@@ -1601,29 +1613,29 @@ var milsymbol = function(){
 			var properties = {
 				"activity"			: false,	//Is it an Activity
 				"affiliation"		: "",		//Affiliation it is shown as (Friend/Hostile...)
-				"baseAffilation"	: "",		//Affiliation it belongs to (Friend/Hostile...)
+				"baseAffilation"		: "",		//Affiliation it belongs to (Friend/Hostile...)
 				"baseDimension" 	: "",		//Dimension it belongs to (Air/Ground...)
 				"baseGeometry"		: {g:"",bbox:{}},		//Geometry is a combination of dimension and affiliation (AirFriend/GroundHostile...)
 				"civilian"			: false,	//Is it Civilian
-				"condition"			: "",		//What condition is it in
+				"condition"		: "",		//What condition is it in
 				"context"			: "",		//Context of the symbol (Reality/Exercise...)
-				"dimension"			: "",		//Dimension it is shown as (Air/Ground...)
+				"dimension"		: "",		//Dimension it is shown as (Air/Ground...)
 				"dimensionUnknown"	: false,	//Is the dimension unknown
 				"echelon"			: "",		//What echelon (Platoon/Company...)
-				"faker"				: false,	//Is it a Faker
+				"faker"			: false,	//Is it a Faker
 				"fenintDummy"		: false,	//Is it a feint/dummy
 				"fill"				: this.fill,		//Standard says it should be filled
-				"frame"				: this.frame,		//Standard says it should be framed
+				"frame"			: this.frame,		//Standard says it should be framed
 				"functionid" 		: "", 		//Part of SIDC referring to the icon.
 				"headquarters"		: false,	//Is it a Headquarters
 				"iconBottom"		: 150,		//The bottom of the icon
 				"installation" 		: false,	//Is it an Instalation
-				"joker"				: false,	//Is it a Joker
+				"joker"			: false,	//Is it a Joker
 				"mobility"			: "",		//What mobility (Tracked/Sled)
 				"notpresent"		: "",		//Is it Anticipated or Pending
 				"numberSIDC"		: false,	//Is the SIDC number based
-				"space"				: false,	//Is it in Space
-				"taskForce"			: false		//Is it a task force
+				"space"			: false,	//Is it in Space
+				"taskForce"		: false		//Is it a task force
 				}
 			var mapping = {};
 			mapping.context 	= ["Reality","Exercise","Simulation"];					
@@ -1661,6 +1673,7 @@ var milsymbol = function(){
 			mapping.dimension 	= ["Air", "Ground", "Sea", "Subsurface"];
 
 			properties.context = mapping.context[0];
+			
 			if(this.monoColor != ''){
 				properties.fill = false;
 			}
@@ -1722,21 +1735,20 @@ var milsymbol = function(){
 			}
 			//If the user has specified a mono color to use for all symbols.
 			if(this.monoColor != ''){
-				baseFrameColor.Friend = baseFrameColor.Neutral = baseFrameColor.Unknown = baseFrameColor.Civilian = this.monoColor;
+				baseFrameColor.Friend = baseFrameColor.Neutral = baseFrameColor.Hostile= baseFrameColor.Unknown = baseFrameColor.Civilian = this.monoColor;
 				baseColorBlack = baseFrameColor;
 				baseColorWhite = baseFillColor = baseColorNone;
 			}
 		
 			var colors = {	
-				fillColor 	: baseFillColor,
+				fillColor 		: baseFillColor,
 				frameColor 	: baseFrameColor,
-				iconColor 	: baseIconColor,
-				iconFillColor : baseIconFillColor,
+				iconColor 		: baseIconColor,
+				iconFillColor 	: baseIconFillColor,
 				none 		: baseColorNone,
 				black 		: baseColorBlack,
 				white 		: baseColorWhite
 			};
-		
 			//Turn of the frame 
 			if(this.properties.frame/* || (!this.properties.frame && !this.icon)*/){
 				colors.frameColor =  baseColorBlack;
@@ -1964,7 +1976,7 @@ MS.addMarkerParts(MSaffliationdimension);
 //Symbol Modifiers #######################################################################
 var MSmodifier = function modifier(){
 	var g = '<g id="symbolModifier" fill="'+this.colors.frameColor[this.properties.affiliation]+'" stroke="'+this.colors.frameColor[this.properties.affiliation]+'" stroke-width="'+this.strokeWidth+'">';
-	var bbox = this.properties.baseGeometry.bbox;
+	var bbox = MS.bboxMax(this.properties.baseGeometry.bbox,{}); //clone the bbox using bboxMax.
 	var gbbox = new MS.bbox(); //bounding box for the added geometries
 	if(this.properties.headquarters){
 		//HEADQUARTERS
@@ -2071,6 +2083,7 @@ var MSmodifier = function modifier(){
 		//TODO fix this for 2525D
 		if(!this.frame){
 			bbox.y2 = this.properties.iconBottom;
+			console.log("unframed")
 		}
 		if(this.properties.affiliation == "Neutral"){
 			if(this.properties.mobility == "Towed" || this.properties.mobility == "Short towed array" || this.properties.mobility == "Long towed Array"){
@@ -2411,6 +2424,44 @@ var MSicon = function icon(){
 					icons = MS._iconCache[iconSet].numberSIDC.symbolSet[symbolSet].icons;
 					m1 = MS._iconCache[iconSet].numberSIDC.symbolSet[symbolSet].m1;
 					m2 = MS._iconCache[iconSet].numberSIDC.symbolSet[symbolSet].m2;
+					//for printing equipment bottom  set MS._element to the id of an html element and call milsymbol with an equipment sysbol
+					/*
+					if(MS._element){
+					listBBoxes = '';
+					sID = MS._iconCache[iconSet].numberSIDC.symbolSet[15].icons;
+					for (var property in sID) {
+					console.log(property)
+							var BaseGeometry = document.createElementNS("http://www.w3.org/2000/svg", "g");
+							BaseGeometry.setAttribute('id', 'BaseGeometryEquipment');
+								BaseGeometry.appendChild(
+									BaseGeometry.ownerDocument.importNode(
+										parseXML(
+											'<g xmlns="'+"http://www.w3.org/2000/svg"+'">' + sID[property] + '</g>'
+										), true
+									)
+								);
+							var svgSymbol = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+							svgSymbol.setAttribute("width", 200);
+							svgSymbol.setAttribute("height", 200);
+							svgSymbol.setAttribute("version", 1.1);
+							svgSymbol.setAttribute("baseProfile", "tiny");
+							svgSymbol.setAttribute("id", property);
+
+							svgSymbol.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+							svgSymbol.appendChild(BaseGeometry);
+					
+							var targetElement = document.getElementById(MS._element);
+							if(targetElement.hasChildNodes()){
+								targetElement.removeChild(targetElement.childNodes[0])
+							}
+							targetElement.appendChild(svgSymbol);
+							console.log(targetElement)
+							var BBox = document.getElementById("BaseGeometryEquipment").getBBox()
+							listBBoxes +=  property + ':' + (BBox.y+ BBox.height)+',';
+							
+						}
+					document.getElementById(MS._element).innerHTML=listBBoxes;
+					}*/
 				}else{
 					console.warn("MS._getNumberSIDCicons() is not present, you will need to load functionality for number based SIDCs");
 				}
@@ -2483,6 +2534,7 @@ var MSicon = function icon(){
 MS.addMarkerParts(MSicon);
 
 //Debug ##################################################################################
+/*
 var MSdebug = function debug(){
 	//This debug function is a minimal example of how to extend milsymbol.
 	//Create a variable to store your geometries
@@ -2496,8 +2548,8 @@ var MSdebug = function debug(){
 
 	return MS.buildingBlock(g,gbbox);
 }
-//MS.addMarkerParts(MSdebug);
-
+MS.addMarkerParts(MSdebug);
+*/
 //########################################################################################
 // If you don't have any need for letter based SIDC, just remove the following functions
 //########################################################################################
@@ -2505,8 +2557,8 @@ MS._getLetterProperties = function(properties, mapping){
 	this.SIDC = this.SIDC.toUpperCase();
 
 	var codingscheme 		= this.SIDC.charAt(0)!=''?this.SIDC.charAt(0):'-';
-	var affiliation 		= this.SIDC.charAt(1)!=''?this.SIDC.charAt(1):'-';
-	var battledimension 	= this.SIDC.charAt(2)!=''?this.SIDC.charAt(2):'-';
+	var affiliation 			= this.SIDC.charAt(1)!=''?this.SIDC.charAt(1):'-';
+	var battledimension 		= this.SIDC.charAt(2)!=''?this.SIDC.charAt(2):'-';
 	var status 				= this.SIDC.charAt(3)!=''?this.SIDC.charAt(3):'-';
 	var functionid 			= properties.functionid	= this.SIDC.substr(4,6)!=''?this.SIDC.substr(4,6):'------';
 	var symbolmodifier11 	= this.SIDC.charAt(10)!=''?this.SIDC.charAt(10):'-';
@@ -2519,13 +2571,13 @@ MS._getLetterProperties = function(properties, mapping){
 
 	if(['H','S','J','K'].indexOf(affiliation) > -1)		properties.affiliation = mapping.affiliation[0];
 	if(['F','A','D','M'].indexOf(affiliation) > -1)		properties.affiliation = mapping.affiliation[1];
-	if(['N','L'].indexOf(affiliation) > -1)				properties.affiliation = mapping.affiliation[2];
+	if(['N','L'].indexOf(affiliation) > -1)			properties.affiliation = mapping.affiliation[2];
 	if(['P','U','G','W','O'].indexOf(affiliation) > -1)	properties.affiliation = mapping.affiliation[3];
 
-	if(['P','A'].indexOf(battledimension) > -1)			properties.dimension = mapping.dimension[0];
-	if(['G','Z','F'].indexOf(battledimension) > -1)		properties.dimension = mapping.dimension[1];
-	if(['S'].indexOf(battledimension) > -1)				properties.dimension = mapping.dimension[2];
-	if(['U'].indexOf(battledimension) > -1)				properties.dimension = mapping.dimension[3];
+	if(['P','A'].indexOf(battledimension) > -1)		properties.dimension = mapping.dimension[0];
+	if(['G','Z','F'].indexOf(battledimension) > -1)	properties.dimension = mapping.dimension[1];
+	if(['S'].indexOf(battledimension) > -1)			properties.dimension = mapping.dimension[2];
+	if(['U'].indexOf(battledimension) > -1)			properties.dimension = mapping.dimension[3];
 	
 	//dimension is in Space
 	if(battledimension == 'P'  && codingscheme != "O")	properties.space = true;
@@ -2541,24 +2593,24 @@ MS._getLetterProperties = function(properties, mapping){
 												properties.notpresent = MS.dashArrays.pending;
 	}
 	//Should it have a Condition Bar
-	if(status == 'C')									properties.condition = mapping.status[2];
-	if(status == 'D')									properties.condition = mapping.status[3];
-	if(status == 'X')									properties.condition = mapping.status[4];
-	if(status == 'F')									properties.condition = mapping.status[5];
+	if(status == 'C')								properties.condition = mapping.status[2];
+	if(status == 'D')								properties.condition = mapping.status[3];
+	if(status == 'X')								properties.condition = mapping.status[4];
+	if(status == 'F')								properties.condition = mapping.status[5];
 	//Is it part of Exercise Symbols
 	if(['G','W','D','L','M','J','K'].indexOf(affiliation) > -1){
-												properties.context = mapping.context[1];
+											properties.context = mapping.context[1];
 	}
 	//Framing of SO tactical symbols differs slightly from C2 Symbology: UEI tactical symbols in that there is only one battle dimension: ground.
-	if(codingscheme == "O")							properties.dimension = mapping.dimension[1];
+	if(codingscheme == "O")						properties.dimension = mapping.dimension[1];
 	//Framing of EMS tactical symbols differs slightly from C2 Symbology: UEI tactical symbols in that there is only one battle dimension: ground.
-	if(codingscheme == "E")							properties.dimension = mapping.dimension[1];
+	if(codingscheme == "E")						properties.dimension = mapping.dimension[1];
 	//First save the dimensionType and affiliationType before we modifies it... 
 	properties.baseDimension = properties.dimension;
 	properties.baseAffilation = properties.affiliation;
 	//Joker and faker should have the shape of friendly
-	if(affiliation == 'J')								properties.joker = true;
-	if(affiliation == 'K')								properties.faker = true;
+	if(affiliation == 'J')							properties.joker = true;
+	if(affiliation == 'K')							properties.faker = true;
 	if(properties.joker || properties.faker){
 		properties.affiliation = mapping.affiliation[1];
 	}
@@ -5217,6 +5269,9 @@ MS._getNumberProperties = function(properties,mapping){
 		'60':'Ground'};										
 											
 	var functionid = properties.functionid = this.SIDC.substr(10,10);
+
+	var equipmentBottom = {110000:140,110100:140,110101:140,110102:140,110103:140,110200:140,110201:140,110202:140,110203:140,110300:140,110301:140,110302:140,110303:140,110400:135,110500:140,110501:140,110502:140,110503:140,110600:140,110601:140,110602:140,110603:140,110700:140,110701:140,110702:140,110703:140,110800:140,110801:140,110802:140,110803:140,110900:140,110901:140,110902:140,110903:140,111000:140,111001:140,111002:140,111003:140,111100:140,111101:140,111102:140,111103:140,111104:140,111105:140,111106:140,111107:140,111108:140,111109:140,111200:140,111201:140,111202:140,111203:140,111300:140,111301:140,111302:140,111303:140,111400:140,111401:140,111402:140,111403:140,111500:140,111501:140,111502:140,111503:140,111600:140,111601:140,111602:140,111603:140,111701:140,111702:140,111703:140,111800:140,111900:140,112000:140,120000:129,120100:129,120101:130,120102:130,120103:972.3621826171875,120104:130,120105:120,120106:120,120107:120,120108:130,120109:130,120110:140,120200:130,120201:130,120202:130,120203:130,120300:130,120301:130,120302:130,120303:130,130000:129,130100:115,130200:130,130300:130,130400:135,130500:120,130600:120,130700:120,130701:130,130800:130,130801:130,130900:120,130901:130,130902:130,131000:115,131001:130,131002:130,131003:140,131100:130,131101:130,131200:130,131300:130,131400:140,131500:140,131600:140,140100:130,140200:130,140300:130,140400:130,140500:130,140600:140,140601:140,140602:140,140603:140,140700:140,140800:140,140900:130,141000:130,141100:140,141200:130,141201:130,141202:130,150100:130,150200:140,160100:132.5,160101:132.5,160102:132.5,160103:132.5,160200:132.5,160201:132.5,160202:132.5,160203:132.5,160300:132.5,160301:132.5,160302:132.5,160303:132.5,160400:132.5,160401:132.5,160402:132.5,160403:132.5,160500:132.5,160501:132.5,160502:132.5,160503:132.5,160600:132.5,160601:132.5,160602:132.5,160603:132.5,160700:132.5,160701:132.5,160702:132.5,160703:132.5,160800:115,160900:115,170000:149.03125,170100:118.75,170200:133.21875,170300:135.21875,170400:118.75,170500:138.1875,170600:118.75,170700:118.75,170800:118,170900:118,171000:135,171100:135,180000:125,190000:129,190100:129,190200:129,190300:129,190400:129,190500:129,200100:140,200200:118.75,200300:120,200400:140,200500:132,200600:118.75,200700:118.75,200800:118.75,200900:119.36222839355469,201000:145,201100:120,201200:118,201300:124.36222076416016,201400:118.75,201500:140,201501:115,210100:122,210200:122,210300:122,210400:118.75,210500:122,220100:140,220200:136,220300:120,230000:135,230100:132.5,230200:120,240000:118.75};
+	if (symbolSet == 15 && equipmentBottom.hasOwnProperty(functionid.substr(0,6))){ properties.iconBottom = equipmentBottom[functionid.substr(0,6)];}
 	
 	properties.context = mapping.context[parseInt(this.SIDC.substr(2,1))];
 	properties.affiliation = affiliationMapping[standardIdentity2];
@@ -5997,20 +6052,20 @@ MS._getNumberSIDCicons = function(symbolSet,icons,_STD2525){
 		sID['111701'] = icons['GROUND.EQUIPMENT.ANTITANK ROCKET LAUNCHER'] + icons['GROUND.EQUIPMENT.SHORT RANGE'];
 		sID['111702'] = icons['GROUND.EQUIPMENT.ANTITANK ROCKET LAUNCHER'] + icons['GROUND.EQUIPMENT.INTERMEDIATE RANGE'];
 		sID['111703'] = icons['GROUND.EQUIPMENT.ANTITANK ROCKET LAUNCHER'] + icons['GROUND.EQUIPMENT.LONG RANGE'];	
-		sID['111800'] = 'Weapons/Weapons System.Nonlethal Weapon';
-		sID['111900'] = 'Weapons/Weapons System.Taser';
-		sID['112000'] = 'Weapons/Weapons System.Water Cannon';
+		sID['111800'] = icons['GROUND.EQUIPMENT.NON-LETHAL WEAPON']
+		sID['111900'] = icons['GROUND.EQUIPMENT.TASER'];
+		sID['112000'] = icons['GROUND.EQUIPMENT.WATER CANNON'];
 		sID['120000'] = icons['GROUND.EQUIPMENT.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY'];
 		sID['120100'] = icons['GROUND.EQUIPMENT.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY'] + icons['GROUND.EQUIPMENT.ARMOURED VEHICLE'];
 		sID['120101'] = icons['GROUND.EQUIPMENT.ARMOURED FIGHTING VEHICLE'];
-		sID['120102'] = 'Vehicle.Armored.Armored Fighting Vehicle Command and Control';
+		sID['120102'] = icons['GROUND.EQUIPMENT.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL'];
 		sID['120103'] = icons['GROUND.EQUIPMENT.ARMOURED PERSONNEL CARRIER COMBAT SERVICE SUPPORT VEHICLE'];
 		sID['120104'] = icons['GROUND.EQUIPMENT.ARMOURED PERSONNEL CARRIER'] + icons['GROUND.EQUIPMENT.MEDICAL EVACUATION'];
-		sID['120105'] = 'Vehicle.Armored.Armored Protected Vehicle';
-		sID['120106'] = 'Vehicle.Armored.Armored Protected Vehicle Recovery';
-		sID['120107'] = 'Vehicle.Armored.Armored Protected Vehicle Medical Evacuation';
-		sID['120108'] = 'Vehicle.Armored.Armored Personnel Carrier, Recovery';
-		sID['120109'] = 'Vehicle.Armored.Combat Service Support Vehicle';
+		sID['120105'] = icons['GROUND.ICON.ARMOUR'];
+		sID['120106'] = icons['GROUND.ICON.ARMOUR'] + icons['GROUND.EQUIPMENT.TANK RECOVERY VEHICLE'];
+		sID['120107'] = icons['GROUND.ICON.ARMOUR'] + icons['GROUND.EQUIPMENT.MEDICAL EVACUATION'];
+		sID['120108'] = icons['GROUND.EQUIPMENT.ARMOURED PERSONNEL CARRIER'] + icons['GROUND.EQUIPMENT.TANK RECOVERY VEHICLE'];
+		sID['120109'] = icons['GROUND.EQUIPMENT.ARMOURED PERSONNEL CARRIER'] + icons['GROUND.EQUIPMENT.COMBAT SERVICE SUPPORT VEHICLE'];
 		sID['120110'] = icons['GROUND.EQUIPMENT.ARMOURED FIGHTING VEHICLE'] + icons['GROUND.EQUIPMENT.CROSS-COUNTRY'];
 		sID['120200'] = icons['GROUND.EQUIPMENT.TANK'];
 		sID['120201'] = icons['GROUND.EQUIPMENT.TANK'] + icons['GROUND.EQUIPMENT.LIGHT TANK'];
@@ -6022,20 +6077,20 @@ MS._getNumberSIDCicons = function(symbolSet,icons,_STD2525){
 		sID['120303'] = icons['GROUND.EQUIPMENT.TANK'] + icons['GROUND.EQUIPMENT.HEAVY TANK'] + icons['GROUND.EQUIPMENT.TANK RECOVERY VEHICLE'];
 		sID['130000'] = icons['GROUND.EQUIPMENT.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY'] + MS.scale(0.7,icons['GROUND.ICON.ENGINEER']);
 		sID['130100'] = icons['GROUND.INSTALLATION.ICON.BRIDGE'];
-		sID['130200'] = 'Engineer Vehicles and Equipment.Bridge Mounted on Utility Vehicle';
-		sID['130300'] = 'Engineer Vehicles and Equipment.Fixed Bridge';
-		sID['130400'] = 'Engineer Vehicles and Equipment.Floating Bridge';
-		sID['130500'] = 'Engineer Vehicles and Equipment.Folding Girder Bridge';
-		sID['130600'] = 'Engineer Vehicles and Equipment.Hollow Deck Bridge';
-		sID['130700'] = 'Engineer Vehicles and Equipment.Drill';
-		sID['130701'] = 'Engineer Vehicles and Equipment.Drill.Drill Mounted on Utility Vehicle';
+		sID['130200'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + MS.scale(0.8,icons['GROUND.INSTALLATION.ICON.BRIDGE']);
+		sID['130300'] = icons['GROUND.INSTALLATION.ICON.BRIDGE'] + icons['GROUND.EQUIPMENT.FIXED BRIDGE'];
+		sID['130400'] = icons['GROUND.INSTALLATION.ICON.BRIDGE'] + icons['GROUND.M2.RIVERINE'];
+		sID['130500'] = icons['GROUND.INSTALLATION.ICON.BRIDGE'] + icons['GROUND.EQUIPMENT.FOLDING GIRDER BRIDGE'];
+		sID['130600'] = icons['GROUND.INSTALLATION.ICON.BRIDGE'] + icons['GROUND.EQUIPMENT.HOLLOW DECK BRIDGE'];
+		sID['130700'] = icons['GROUND.ICON.DRILLING'];
+		sID['130701'] = MS.scale(0.7,icons['GROUND.ICON.DRILLING']) + icons['GROUND.EQUIPMENT.UTILITY VEHICLE'];
 		sID['130800'] = icons['GROUND.EQUIPMENT.EARTHMOVER'];
-		sID['130801'] = 'Engineer Vehicles and Equipment.Earthmover.Multifunctional Earthmover/Digger';
+		sID['130801'] = icons['GROUND.EQUIPMENT.MULTIFUNCTIONAL EARTHMOVER/DIGGER'];
 		sID['130900'] = icons['GROUND.EQUIPMENT.MINE CLEARING EQUIPMENT'];
 		sID['130901'] = icons['GROUND.EQUIPMENT.MINE CLEARING EQUIPMENT'] + MS.translate(0,-10,icons['GROUND.EQUIPMENT.LIMITED CROSS-COUNTRY']);
 		sID['130902'] = icons['GROUND.EQUIPMENT.MINE CLEARING EQUIPMENT'] + icons['GROUND.EQUIPMENT.TANK'];
-		sID['131000'] = 'Engineer Vehicles and Equipment.Mine Laying Equipment';
-		sID['131001'] = 'Engineer Vehicles and Equipment.Mine Laying Equipment.Mine Laying Equipment on Utility Vehicle';
+		sID['131000'] = icons['GROUND.EQUIPMENT.MINE LAYING EQUIPMENT'];
+		sID['131001'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + MS.translate(0, 10, icons['GROUND.EQUIPMENT.MINE LAYING EQUIPMENT']);
 		sID['131002'] = icons['GROUND.EQUIPMENT.ARMOURED PERSONNEL CARRIER'] + icons['GROUND.EQUIPMENT.ARMORED CARRIER WITH VOLCANO'];
 		sID['131003'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + icons['GROUND.EQUIPMENT.LIMITED CROSS-COUNTRY'] + icons['GROUND.EQUIPMENT.ARMORED CARRIER WITH VOLCANO'];
 		sID['131100'] = icons['GROUND.EQUIPMENT.DOZER'];
@@ -6047,9 +6102,9 @@ MS._getNumberSIDCicons = function(symbolSet,icons,_STD2525){
 		sID['131600'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + icons['GROUND.EQUIPMENT.CROSS-COUNTRY'] + icons['GROUND.EQUIPMENT.UTILITY VEHICLE FERRY TRANSPORTER'];
 		//sID['140000'] = 'Utility Vehicles';
 		sID['140100'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'];
-		sID['140200'] = 'Utility Vehicles.Medical';
+		sID['140200'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + icons['GROUND.EQUIPMENT.MEDICAL VEHICLE'];
 		sID['140300'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + icons['GROUND.EQUIPMENT.MEDICAL EVACUATION'];
-		sID['140400'] = 'Utility Vehicles.Mobile Emergency Physician';
+		sID['140400'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + icons['GROUND.EQUIPMENT.MOBILE EMERGENCY PHYSICIAN'];
 		sID['140500'] = icons['GROUND.EQUIPMENT.BUS'];
 		sID['140600'] = icons['GROUND.EQUIPMENT.SEMI-TRAILER TRUCK'];
 		sID['140601'] = icons['GROUND.EQUIPMENT.SEMI-TRAILER TRUCK'] + icons['GROUND.EQUIPMENT.UTILITY VEHICLE LIGHT'];
@@ -6057,15 +6112,15 @@ MS._getNumberSIDCicons = function(symbolSet,icons,_STD2525){
 		sID['140603'] = icons['GROUND.EQUIPMENT.SEMI-TRAILER TRUCK'] + icons['GROUND.EQUIPMENT.UTILITY VEHICLE HEAVY'];
 		sID['140700'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + icons['GROUND.EQUIPMENT.LIMITED CROSS-COUNTRY'];
 		sID['140800'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + icons['GROUND.EQUIPMENT.CROSS-COUNTRY'];
-		sID['140900'] = 'Utility Vehicles.Petroleum, Oil and Lubricant';
-		sID['141000'] = 'Utility Vehicles.Water';
+		sID['140900'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + MS.scale(0.8,icons['GROUND.ICON.FULLFRAME.CLASS III']);
+		sID['141000'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + MS.scale(0.7,icons['GROUND.ICON.WATER']);
 		sID['141100'] = icons['GROUND.EQUIPMENT.WATER VEHICLE'] + icons['GROUND.EQUIPMENT.LIMITED CROSS-COUNTRY'];;
 		sID['141200'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + icons['GROUND.EQUIPMENT.UTILITY VEHICLE.TOW TRUCK'];
 		sID['141201'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + icons['GROUND.EQUIPMENT.UTILITY VEHICLE.TOW TRUCK'] + icons['GROUND.EQUIPMENT.UTILITY VEHICLE.TOW TRUCK.LIGHT'];
 		sID['141202'] = icons['GROUND.EQUIPMENT.UTILITY VEHICLE'] + icons['GROUND.EQUIPMENT.UTILITY VEHICLE.TOW TRUCK'] + icons['GROUND.EQUIPMENT.UTILITY VEHICLE.TOW TRUCK.HEAVY'];
 		//sID['150000'] = 'Train';
 		sID['150100'] = icons['GROUND.EQUIPMENT.TRAIN LOCOMOTIVE'];
-		sID['150200'] = 'Train.Railcar';
+		sID['150200'] = icons['GROUND.EQUIPMENT.RAILCAR'];
 		//sID['160000'] = 'Civilian Vehicle';
 		sID['160100'] = icons['GROUND.EQUIPMENT.CIVILIAN VEHICLE.AUTOMOBILE'];
 		sID['160101'] = icons['GROUND.EQUIPMENT.CIVILIAN VEHICLE.AUTOMOBILE'] + icons['GROUND.EQUIPMENT.CIVILIAN VEHICLE.LIGHT'];
@@ -6110,52 +6165,52 @@ MS._getNumberSIDCicons = function(symbolSet,icons,_STD2525){
 		sID['171000'] = icons['SEA.ICON.LAW ENFORCEMENT VESSEL'];
 		sID['171100'] = icons['GROUND.ICON.FULLFRAME.US MARSHALS SERVICE'];
 		sID['180000'] = icons['GROUND.EQUIPMENT.PACK ANIMAL'];
-		sID['190000'] = 'Missile Support';
-		sID['190100'] = 'Missile Support.Transloader';
-		sID['190200'] = 'Missile Support.Transporter';
-		sID['190300'] = 'Missile Support.Crane/Loading Device';
-		sID['190400'] = 'Missile Support.Propellant Transporter';
-		sID['190500'] = 'Missile Support.Warhead Transporter';
+		sID['190000'] = icons['GROUND.EQUIPMENT.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY'] + icons['GROUND.EQUIPMENT.MISSILE SUPPORT'];
+		sID['190100'] = icons['GROUND.EQUIPMENT.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY'] + icons['GROUND.EQUIPMENT.MISSILE TRANSLOADER'];
+		sID['190200'] = icons['GROUND.EQUIPMENT.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY'] + icons['GROUND.EQUIPMENT.MISSILE TRANSPORTER'];
+		sID['190300'] = icons['GROUND.EQUIPMENT.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY'] + icons['GROUND.EQUIPMENT.MISSILE CRANE/LOADING DEVICE'];
+		sID['190400'] = icons['GROUND.EQUIPMENT.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY'] + icons['GROUND.EQUIPMENT.MISSILE PROPELLANT TRANSPORTER'];
+		sID['190500'] = icons['GROUND.EQUIPMENT.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY'] + icons['GROUND.EQUIPMENT.MISSILE WARHEAD TRANSPORTER'];
 		//sID['200000'] = 'Other Equipment';
 		sID['200100'] = icons['GROUND.ICON.FULLFRAME.BROADCAST TRANSMITTER ANTENNA'];
 		sID['200200'] = icons['STABILITY.ICON.BOMB'];
 		sID['200300'] = icons['STABILITY.ICON.BOOBY TRAP'];
 		sID['200400'] = icons['GROUND.EQUIPMENT.CBRN EQUIPMENT'];
-		sID['200500'] = 'Other Equipment.Computer System';
-		sID['200600'] = 'Other Equipment.Command Launch Equipment (CLE)';
-		sID['200700'] = 'Other Equipment.Generator Set';
-		sID['200800'] = 'Other Equipment.Ground-based Midcourse Defense (GMD) Fire Control (GFC) Center';
-		sID['200900'] = 'Other Equipment.In-Flight Interceptor Communications System (IFICS) Data Terminal (IDT)';
+		sID['200500'] = icons['GROUND.EQUIPMENT.COMPUTER SYSTEM'];
+		sID['200600'] = icons['GROUND.EQUIPMENT.COMMAND LAUNCH EQUIPMENT (CLE)'];
+		sID['200700'] = icons['GROUND.EQUIPMENT.GENERATOR SET'];
+		sID['200800'] = icons['GROUND.EQUIPMENT.GROUND-BASED MIDCOURSE DEFENSE (GMD) FIRE CONTROL (GFC) CENTER'];
+		sID['200900'] = icons['GROUND.EQUIPMENT.IN-FLIGHT INTERCEPTOR COMMUNICATIONS SYSTEM (IFICS) DATA TERMINAL (IDT)'];
 		sID['201000'] = icons['GROUND.EQUIPMENT.LASER'];
-		sID['201100'] = 'Other Equipment.Military Information Support Operations (MISO)';
-		sID['201200'] = 'Other Equipment.Sustainment Shipments';
-		sID['201300'] = 'Other Equipment.Tent';
-		sID['201400'] = 'Other Equipment.Unit Deployment Shipments';
+		sID['201100'] = icons['GROUND.EQUIPMENT.PSYCHOLOGICAL OPERATIONS EQUIPMENT'];
+		sID['201200'] = icons['GROUND.ICON.SUSTAINMENT'];
+		sID['201300'] = icons['GROUND.EQUIPMENT.TENT'];
+		sID['201400'] = icons['GROUND.EQUIPMENT.UNIT DEPLOYMENT SHIPMENTS'];
 		sID['201500'] = icons['GROUND.ICON.EMERGENCY MEDICAL OPERATION'];
-		sID['201501'] = 'Other Equipment.Emergency Medical Operation.Medical Evacuation Helicopter';
+		sID['201501'] = icons['AIR.ICON.MILITARY ROTARY WING'] + icons['AIR.M1.MEDEVAC'];
 		//sID['210000'] = 'Land Mines';
-		sID['210100'] = 'Land Mines.Land Mine';
+		sID['210100'] = icons['GROUND.EQUIPMENT.LAND MINE'];
 		sID['210200'] = icons['GROUND.EQUIPMENT.ANTIPERSONNEL LAND MINE'];
-		sID['210300'] = 'Land Mines.Antitank Mine';
+		sID['210300'] = icons['GROUND.EQUIPMENT.ANTITANK MINE'];
 		sID['210400'] = icons['GROUND.EQUIPMENT.IMPROVISED EXPLOSIVE DEVICE'];
 		sID['210500'] = icons['GROUND.EQUIPMENT.ANTIPERSONNEL LAND MINE LESS THAN LETHAL'];
 		//sID['220000'] = 'Sensors';
 		sID['220100'] = icons['GROUND.EQUIPMENT.SENSOR'];
 		sID['220200'] = icons['GROUND.EQUIPMENT.SENSOR EMPLACED'];
 		sID['220300'] = icons['GROUND.EQUIPMENT.RADAR'];
-		sID['230000'] = 'Emergency Operation';
-		sID['230100'] = 'Emergency Operation.Ambulance';
-		sID['230200'] = 'Emergency Operation.Fire Fighting/Fire Protection';
+		sID['230000'] = icons['GROUND.ICON.FULLFRAME.EMERGENCY OPERATION'];
+		sID['230100'] = icons['GROUND.EQUIPMENT.CIVILIAN VEHICLE.UTILITY VEHICLE'] + icons['GROUND.M1.MEDEVAC']; 
+		sID['230200'] = icons['GROUND.ICON.FIRE PROTECTION'];
 		sID['240000'] = icons['SPACE.ICON.MANUAL TRACK'];		
 
 		//sIDm1['00'] = 'Unspecified';
 		sIDm1['01'] = icons['GROUND.M1.BIOLOGICAL'];
 		sIDm1['02'] = icons['GROUND.M1.CHEMICAL'];
-		sIDm1['03'] = 'Early Warning Radar';
-		sIDm1['04'] = 'Intrusion';
+		sIDm1['03'] = icons['GROUND.M1.EARLY WARNING RADAR'];
+		sIDm1['04'] = icons['GROUND.M1.INTRUSION'];
 		sIDm1['05'] = icons['GROUND.M1.NUCLEAR'];
 		sIDm1['06'] = icons['GROUND.M1.RADIOLOGICAL'];
-		sIDm1['07'] = 'Upgraded Early Warning Radar';
+		sIDm1['07'] = icons['GROUND.M1.UPGRADED EARLY WARNING RADAR'];
 		sIDm1['08'] = icons['AIR.M1.HIJACKING']
 		sIDm1['09'] = icons['GROUND.M1.CIVILIAN']
 	}
@@ -6182,7 +6237,7 @@ MS._getNumberSIDCicons = function(symbolSet,icons,_STD2525){
 		sID['111600'] = 'Military/Civilian.Printed Media';
 		sID['111700'] = icons['STABILITY.ICON.SAFE HOUSE'];
 		sID['111800'] = icons['STABILITY.ICON.WHITE LIST LOCATION'];
-		sID['111900'] = 'Military/Civilian.Tented Camp';
+		sID['111900'] = icons['GROUND.EQUIPMENT.TENT'];
 		sID['111901'] = 'Military/Civilian.Tented Camp.Displaced Persons/ Refugee/Evacuees Camp';
 		sID['111902'] = 'Military/Civilian.Tented Camp.Training Camp';
 		sID['112000'] = 'Military/Civilian.Warehouse/Storage Facility';
