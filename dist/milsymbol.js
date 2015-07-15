@@ -2452,6 +2452,41 @@ var MSicon = function icon(){
 				if (typeof MS._getLetterSIDCicons == 'function'){
 					MS._iconCache[iconSet].letterSIDC = MS._getLetterSIDCicons(iconParts,MS._STD2525);
 					icons = MS._iconCache[iconSet].letterSIDC;
+					//THIS IS JUST FOR Printing bottom coords of all equipment ===========================
+		/*			This code dosen't work at the moment..... TODO
+					if(element){
+					listBBoxes = '';
+					for (var property in sID) {
+						if(property.substr(4,1) == 'E'){
+							var BaseGeometry = document.createElementNS(svgNS, "g");
+							BaseGeometry.setAttribute('id', 'BaseGeometryEquipment');
+								BaseGeometry.appendChild(
+									BaseGeometry.ownerDocument.importNode(
+										parseXML(
+											'<g xmlns="'+svgNS+'">' + sID[property] + '</g>'
+										), true
+									)
+								);
+							var svgSymbol = document.createElementNS(svgNS, "svg");
+							svgSymbol.setAttribute("width", 200);
+							svgSymbol.setAttribute("height", 200);
+							svgSymbol.setAttribute("version", 1.1);
+							svgSymbol.setAttribute("baseProfile", "tiny");
+							svgSymbol.setAttribute("xmlns", svgNS);
+							svgSymbol.appendChild(BaseGeometry);
+					
+							var targetElement = document.getElementById(element);
+							if(targetElement.hasChildNodes()){
+								targetElement.removeChild(targetElement.childNodes[0])
+							}
+							targetElement.appendChild(svgSymbol);
+							var BBox = document.getElementById("BaseGeometryEquipment").getBBox()
+							listBBoxes += '\'' + property.substr(4,6) + '\':' + (BBox.y+ BBox.height)+',';
+						}
+						}
+					document.getElementById(element).innerHTML=listBBoxes;
+				}				
+		*/	
 				}else{
 					console.warn("MS._getLetterSIDCicons() is not present, you will need to load functionality for letter based SIDCs");
 				}
@@ -2527,41 +2562,6 @@ var MSicon = function icon(){
 				}
 			}
 		}
-	
-	//THIS IS JUST FOR Printing bottom coords of all equipment ===========================
-	/*			if(element){
-				listBBoxes = '';
-				for (var property in sID) {
-					if(property.substr(4,1) == 'E'){
-						var BaseGeometry = document.createElementNS(svgNS, "g");
-						BaseGeometry.setAttribute('id', 'BaseGeometryEquipment');
-							BaseGeometry.appendChild(
-								BaseGeometry.ownerDocument.importNode(
-									parseXML(
-										'<g xmlns="'+svgNS+'">' + sID[property] + '</g>'
-									), true
-								)
-							);
-						var svgSymbol = document.createElementNS(svgNS, "svg");
-						svgSymbol.setAttribute("width", 200);
-						svgSymbol.setAttribute("height", 200);
-						svgSymbol.setAttribute("version", 1.1);
-						svgSymbol.setAttribute("baseProfile", "tiny");
-						svgSymbol.setAttribute("xmlns", svgNS);
-						svgSymbol.appendChild(BaseGeometry);
-					
-						var targetElement = document.getElementById(element);
-						if(targetElement.hasChildNodes()){
-							targetElement.removeChild(targetElement.childNodes[0])
-						}
-						targetElement.appendChild(svgSymbol);
-						var BBox = document.getElementById("BaseGeometryEquipment").getBBox()
-						listBBoxes += '\'' + property.substr(4,6) + '\':' + (BBox.y+ BBox.height)+',';
-					}
-					}
-				document.getElementById(element).innerHTML=listBBoxes;
-			}				
-	*/	
 
 	// Put all this togheter and return the Icon. ============================================
 		var iconColor = this.colors.iconColor[this.properties.affiliation];
@@ -5345,7 +5345,9 @@ MS._getNumberProperties = function(properties,mapping){
 	if(symbolSet == '20')properties.installation = true;
 	//Sea Mines with MEDAL icons
 	if(symbolSet == '36' && this.alternateMedal == false)properties.fill = false;
-	
+	//Sea own track
+	if(symbolSet == '30' && functionid.substr(0,6) == 150000)properties.frame = false;
+		
 	//Planned/Anticipated/Suspect symbols should have a dashed outline
 	if(status == '1' )properties.notpresent = MS.dashArrays.anticipated;
 	if(standardIdentity2 == '0' || standardIdentity2 == '2' || standardIdentity2 == '5')properties.notpresent = MS.dashArrays.pending;
@@ -6524,7 +6526,7 @@ MS._getNumberSIDCicons = function(symbolSet,icons,_STD2525){
 		sID['140502'] = icons['SE.IC.LEISURE CRAFT, MOTORIZED, SPEEDBOAT'];
 		sID['140600'] = icons['SE.IC.LEISURE CRAFT, JETSKI'];
 		sID['140700'] = icons['SE.IC.UNMANNED SURFACE WATER VEHICLE (USV)'];
-sID['150000'] = 'Own Ship';
+		sID['150000'] = icons['SE.IC.OWN SHIP'];
 sID['160000'] = 'Fused Track';
 		sID['170000'] = icons['SP.I.MANUAL TRACK'];
 
@@ -6709,7 +6711,7 @@ sID['150000'] = 'Fused Track';
 	if(symbolSet == "40" ){
 		//sID['110000'] = 'Incident';
 		sID['110100'] = icons['AC.IC.CRIMINAL.ACTIVITY.INCIDENT'];
-		sID['110101'] = icons['ST.IC.ARREST'];
+		sID['110101'] = MS.scale(1.5,icons['ST.IC.ARREST']);
 		sID['110102'] = icons['ST.IC.ARSON/FIRE'];
 		sID['110103'] = icons['ST.IC.INDIVIDUAL'] + icons['ST.IC.ATTEMPTED CRIMINAL ACTIVITY'];	
 		sID['110104'] = icons['ST.IC.DRIVE-BY SHOOTING'];
@@ -6719,7 +6721,7 @@ sID['150000'] = 'Fused Track';
 		sID['110108'] = icons['ST.IC.KILLING VICTIM'];
 		sID['110109'] = icons['ST.IC.POISONING'];
 		sID['110110'] = 'Incident.Criminal Activity Incident.Civil Rioting';
-		sID['110111'] = 'Incident.Criminal Activity Incident.Booby Trap';
+		sID['110111'] = MS.scale(1.5,icons['ST.IC.BOOBY TRAP']);
 		sID['110112'] = 'Incident.Criminal Activity Incident.Home Eviction';
 		sID['110113'] = 'Incident.Criminal Activity Incident.Black Marketing';
 		sID['110114'] = icons['ST.IC.VANDALISM/LOOT/RANSACK/PLUNDER/SACK'];
@@ -6731,15 +6733,15 @@ sID['150000'] = 'Fused Track';
 		sID['110120'] = 'Incident.Criminal Activity Incident.Rock Throwing';
 		sID['110121'] = 'Incident.Criminal Activity Incident.Dead Body';
 		sID['110122'] = 'Incident.Criminal Activity Incident.Sabotage';
-		sID['110123'] = 'Incident.Criminal Activity Incident.Suspicious Activity';
+		sID['110123'] = MS.translate(0,10,MS.scale(0.8,icons['AC.IC.CRIMINAL.ACTIVITY.INCIDENT'])) + icons['AC.M1.THREAT'];;
 		sID['110200'] = icons['ST.IC.BOMB'];
-		sID['110201'] = 'Incident.Bomb/Bombing.Bomb Threat';
-		sID['110300'] = 'Incident.IED Event';
-		sID['110301'] = icons['ST.IC.IED'];
-		sID['110302'] = icons['ST.IC.EXPLOSION'] + icons['ST.IC.IED'];
+		sID['110201'] = icons['ST.IC.BOMB'] + icons['AC.M1.THREAT']; 
+		sID['110300'] = icons['ST.IC.IED'];
+		sID['110301'] = icons['ST.IC.EXPLOSION'] + icons['ST.IC.IED'];
+		sID['110302'] = 'PREMATURE IED EXPLOSION';
 		sID['110303'] = 'Incident.IED Event.IED Cache';
 		sID['110304'] = 'Incident.IED Event.IED Suicide Bomber';
-		sID['110400'] = 'Incident.Shooting';
+		sID['110400'] = icons['AC.IC.SHOOTING'];
 		sID['110401'] = icons['ST.IC.SNIPING'];
 		sID['110500'] = 'Incident.Illegal Drug Operation';
 		sID['110501'] = 'Incident.Illegal Drug Operation.Trafficking';
@@ -6750,7 +6752,7 @@ sID['150000'] = 'Fused Track';
 		sID['110603'] = 'Incident.Explosion.Mine Explosion';
 		sID['110604'] = 'Incident.Explosion.Mortar Fire Explosion';
 		sID['110605'] = 'Incident.Explosion.Rocket Explosion';
-		sID['110606'] = 'Incident.Explosion.Bomb Explosion';
+		sID['110606'] = MS.scale(0.7,icons['ST.IC.BOMB']) + icons['ST.IC.EXPLOSION'];
 		sID['120000'] = icons['AC.IC.CRIMINAL.CIVIL DISTURBANCE'];
 		sID['120100'] = icons['ST.IC.DEMONSTRATION'];	
 		//sID['130000'] = 'Operation';
@@ -6772,15 +6774,15 @@ sID['150000'] = 'Fused Track';
 		sID['131200'] = icons['GR.IC.FF.EMERGENCY OPERATION'];
 		sID['131201'] = MS.scale(0.7,icons['GR.IC.FF.EMERGENCY OPERATION']) + icons['AC.M1.EMERGENCY COLLECTION EVACUATION POINT'];
 		sID['131202'] = icons['ST.IC.FOOD DISTRIBUTION'];
-		sID['131203'] = 'Operation.Emergency Operation.Emergency Incident Command Center';
-		sID['131204'] = 'Operation.Emergency Operation.Emergency Operations Center';
-		sID['131205'] = 'Operation.Emergency Operation.Emergency Public Information Center';
-		sID['131206'] = 'Operation.Emergency Operation.Emergency Shelter';
-		sID['131207'] = 'Operation.Emergency Operation.Emergency Staging Area';
+		sID['131203'] = MS.scale(0.7,icons['GR.IC.FF.EMERGENCY OPERATION']) + icons['AC.M1.EMERGENCY INCIDENT COMMAND CENTER']; 
+		sID['131204'] = MS.scale(0.7,icons['GR.IC.FF.EMERGENCY OPERATION']) + icons['AC.M1.EMERGENCY OPERATIONS CENTER']; 
+		sID['131205'] = icons['AC.IC.EMERGENCY PUBLIC INFORMATION CENTER']; 
+		sID['131206'] = MS.scale(0.7,icons['GR.IC.FF.EMERGENCY OPERATION']) + icons['AC.M1.EMERGENCY SHELTER'];
+		sID['131207'] = MS.scale(0.7,icons['GR.IC.FF.EMERGENCY OPERATION']) + icons['AC.M1.EMERGENCY STAGING AREA'];
 		sID['131208'] = 'Operation.Emergency Operation.Emergency Water Distribution Center';
-		sID['131300'] = 'Operation.Emergency Medical Operation';
+		sID['131300'] = icons['GR.IC.EMERGENCY MEDICAL OPERATION'];
 		sID['131301'] = 'Operation.Emergency Medical Operation.EMT Station Location';
-		sID['131302'] = 'Operation.Emergency Medical Operation.Health Department Facility';
+		sID['131302'] = icons['AC.IC.HEALTH DEPARTMENT FACILITY'];
 		sID['131303'] = icons['AC.IC.MEDICAL FACILITIES OUTPATIENT'];
 		sID['131304'] = icons['AC.IC.OPERATION/EMERGENCY MEDICAL OPERATION'];
 		sID['131305'] = icons['AC.IC.PHARMACY'];
@@ -6812,7 +6814,7 @@ sID['150000'] = 'Fused Track';
 		sID['140600'] = icons['AC.IC.SCHOOL FIRE'];
 		sID['140700'] = icons['AC.IC.SPECIAL NEEDS FIRE'];
 		sID['140800'] = icons['AC.IC.WILD FIRE'];
-		sID['150000'] = 'Hazardous Materials';
+		//sID['150000'] = 'Hazardous Materials';
 		sID['150100'] = icons['AC.IC.HAZARDOUS MATERIALS INCIDENT'];
 		sID['150101'] = icons['AC.IC.CHEMICAL AGENT'];
 		sID['150102'] = icons['AC.IC.CORROSIVE MATERIAL'];
@@ -6829,7 +6831,7 @@ sID['150000'] = 'Fused Track';
 		sID['150113'] = icons['AC.IC.TOXIC GAS'];
 		sID['150114'] = icons['AC.IC.TOXIC INFECTIOUS MATERIAL'];
 		sID['150115'] = icons['AC.IC.UNEXPLODED ORDNANCE'];
-		sID['160000'] = 'Transportation Incident';
+		sID['160000'] = icons['GR.IC.TRANSPORTATION'];
 		sID['160100'] = icons['ST.IC.HIJACKING (AIRPLANE)']; 
 		sID['160200'] = icons['ST.IC.HIJACKING (BOAT)']; 
 		sID['160300'] = icons['GR.EQ.TRAIN LOCOMOTIVE'];
