@@ -2449,8 +2449,8 @@ var MSicon = function icon(){
 			if( MS._iconCache[icnet].hasOwnProperty('lettersIdC')){
 				icn = MS._iconCache[icnet].lettersIdC;
 			}else{
-				if (typeof MS._getLettersIdCicn == 'function'){
-					MS._iconCache[icnet].lettersIdC = MS._getLettersIdCicn(iconParts,MS._STD2525);
+				if (typeof MS._getLetterSIDCicn == 'function'){
+					MS._iconCache[icnet].lettersIdC = MS._getLetterSIDCicn(iconParts,MS._STD2525);
 					icn = MS._iconCache[icnet].lettersIdC;
 					//THIS IS JUST FOR Printing bottom coords of all equipment ===========================
 		/*			This code dosen't work at the moment..... TODO
@@ -2488,7 +2488,7 @@ var MSicon = function icon(){
 				}				
 		*/	
 				}else{
-					console.warn("MS._getLettersIdCicn() is not present, you will need to load functionality for letter based sIdCs");
+					console.warn("MS._getLetterSIDCicn() is not present, you will need to load functionality for letter based sIdCs");
 				}
 			}	
 		}
@@ -2502,20 +2502,20 @@ var MSicon = function icon(){
 					m1 = MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet].m1;
 					m2 = MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet].m2;
 				}else{
-					if (typeof MS._getNumbersIdCicn == 'function'){
-						MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet] = MS._getNumbersIdCicn(symbolSet,iconParts,MS._STD2525);
+					if (typeof MS._getNumberSIDCicn == 'function'){
+						MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet] = MS._getNumberSIDCicn(symbolSet,iconParts,MS._STD2525);
 						icn = MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet].icn;
 						m1 = MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet].m1;
 						m2 = MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet].m2;
 					}else{
-						console.warn("MS._getNumbersIdCicn() is not present, you will need to load functionality for number based sIdCs");
+						console.warn("MS._getNumberSIDCicn() is not present, you will need to load functionality for number based sIdCs");
 					}				
 				}
 			}else{
 				MS._iconCache[icnet].numbersIdC = {};
 				MS._iconCache[icnet].numbersIdC.symbolSet = {};
-				if (typeof MS._getNumbersIdCicn == 'function'){
-					MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet] = MS._getNumbersIdCicn(symbolSet,iconParts,MS._STD2525);
+				if (typeof MS._getNumberSIDCicn == 'function'){
+					MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet] = MS._getNumberSIDCicn(symbolSet,iconParts,MS._STD2525);
 					icn = MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet].icn;
 					m1 = MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet].m1;
 					m2 = MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet].m2;
@@ -2558,7 +2558,7 @@ var MSicon = function icon(){
 					document.getElementById(MS._element).innerHTML=listBBoxes;
 					}*/
 				}else{
-					console.warn("MS._getNumbersIdCicn() is not present, you will need to load functionality for number based sIdCs");
+					console.warn("MS._getNumberSIDCicn() is not present, you will need to load functionality for number based sIdCs");
 				}
 			}
 		}
@@ -2574,10 +2574,10 @@ var MSicon = function icon(){
 				//We have some sepcial entity subtype and will try to find original symbol.
 				g += icn[this.properties.functionid.substr(0,4)+'00'];
 			}
-			if(this.properties.functionid.substr(4,2) == '95')g += iconParts['GROUND.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT'];
-			if(this.properties.functionid.substr(4,2) == '96')g += iconParts['GROUND.IC.FF.DIVISION AND BELOW SUPPORT'];
-			if(this.properties.functionid.substr(4,2) == '97')g += iconParts['GROUND.IC.FF.CORPS SUPPORT'];
-			if(this.properties.functionid.substr(4,2) == '98')g += iconParts['GROUND.IC.FF.THEATRE SUPPORT'];
+			if(this.properties.functionid.substr(4,2) == '95')g += iconParts['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT'];
+			if(this.properties.functionid.substr(4,2) == '96')g += iconParts['GR.IC.FF.DIVISION AND BELOW SUPPORT'];
+			if(this.properties.functionid.substr(4,2) == '97')g += iconParts['GR.IC.FF.CORPS SUPPORT'];
+			if(this.properties.functionid.substr(4,2) == '98')g += iconParts['GR.IC.FF.THEATRE SUPPORT'];
 			//Modifier 1
 			g += (this.properties.functionid.substr(6,2)!='00'?m1[this.properties.functionid.substr(6,2)]:'');
 			//Modifier 2
@@ -2789,7 +2789,7 @@ MS._getLetterProperties = function(properties, mapping){
 	
 	return properties;
 }
-MS._getLettersIdCicn = function(icn,_STD2525){
+MS._getLetterSIDCicn = function(icn,_STD2525){
 	var sId = [];
 	// SPACE =========================================================================
 	//1.X.1
@@ -5401,7 +5401,7 @@ MS._getNumberProperties = function(properties,mapping){
 	
 	return properties;
 }
-MS._getNumbersIdCicn = function(symbolSet,icn,_STD2525){
+MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 	var sId = {};
 	var sIdm1 = {};
 	var sIdm2 = {};
