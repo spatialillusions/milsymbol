@@ -1900,31 +1900,6 @@ var milsymbol = function(){
 				x: (anchor.x-this.bbox.x1+this.strokeWidth)*this.size/100, 
 				y: (anchor.y-this.bbox.y1+this.strokeWidth)*this.size/100};
 
-			//Need to think about if I really should create a DOM element, or just keep it as text. 
-			//This takes about half the time it takes to create a symbol.
-			/*
-			var marker = document.createElementNS(svgNS, "svg");
-			marker.setAttribute("xmlns", svgNS);
-			marker.setAttribute("version", 1.2);
-			marker.setAttribute("baseProfile", "tiny");
-			marker.setAttribute("width", this.width);
-			marker.setAttribute("height", this.height);
-			marker.setAttribute("viewBox", (this.bbox.x1-this.strokeWidth) + " " + (this.bbox.y1-this.strokeWidth) + " " + width + " " + height );
-			marker.appendChild(
-				marker.ownerDocument.importNode(
-					parseXML(
-						'<g xmlns="'+svgNS+'">'  
-						+ g
-						+'</g>'
-					), true
-				)
-			);
-		
-			//Ok, we need the namespace to be able to import the node, but then it can cause some problems, so lets remove it.
-			marker.firstElementChild.removeAttribute("xmlns");
-		
-			var xml = (new XMLSerializer()).serializeToString(marker);
-			*/
 			var xml = '<svg xmlns="'+svgNS+'" version="1.2" baseProfile="tiny" width="'+this.width+'" height="'+this.height+'" viewBox="'+(this.bbox.x1-this.strokeWidth) + " " + (this.bbox.y1-this.strokeWidth) + " " + width + " " + height +'">';
 			xml += g;
 			xml += '</svg>';
