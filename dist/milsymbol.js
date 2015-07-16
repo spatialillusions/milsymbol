@@ -1577,7 +1577,7 @@ var milsymbol = function(){
 		return icn;
 	}
 	
-	this.symbol = function (sIdCParameter,options){
+	this.symbol = function (SIDCParameter,options){
 		//Options
 		if(!options)var options = {};
 	
@@ -1585,8 +1585,8 @@ var milsymbol = function(){
 
 		//Read / Write properties
 	
-		//The sIdC for the symbol.
-		this.sIdC = sIdCParameter;
+		//The SIDC for the symbol.
+		this.SIDC = SIDCParameter;
 
 		//The symbol size is actually the L variable in the symbols so the symbol will be larger than this size.
 		this.size 			= options.size!=undefined?options.size:100;	
@@ -1729,14 +1729,14 @@ var milsymbol = function(){
 				"fenintDummy"		: false,	//Is it a feint/dummy
 				"fill"				: this.fill,		//Standard says it should be filled
 				"frame"			: this.frame,		//Standard says it should be framed
-				"functionid" 		: "", 		//Part of sIdC referring to the icon.
+				"functionid" 		: "", 		//Part of SIDC referring to the icon.
 				"headquarters"		: false,	//Is it a Headquarters
 				"iconBottom"		: 150,		//The bottom of the icon
 				"installation" 		: false,	//Is it an Instalation
 				"joker"			: false,	//Is it a Joker
 				"mobility"			: "",		//What mobility (Tracked/Sled)
 				"notpresent"		: "",		//Is it Anticipated or Pending
-				"numberSIDC"		: false,	//Is the sIdC number based
+				"numberSIDC"		: false,	//Is the SIDC number based
 				"space"			: false,	//Is it in Space
 				"taskForce"		: false		//Is it a task force
 				}
@@ -1780,23 +1780,23 @@ var milsymbol = function(){
 			if(this.monoColor != ''){
 				properties.fill = false;
 			}
-			this.sIdC = String(this.sIdC).replace(/\*/g,"-").replace(" ","");
+			this.SIDC = String(this.SIDC).replace(/\*/g,"-").replace(" ","");
 
-			properties.numberSIDC = !isNaN(this.sIdC);
-			if(properties.numberSIDC){ //This is for new number based sIdCs
+			properties.numberSIDC = !isNaN(this.SIDC);
+			if(properties.numberSIDC){ //This is for new number based SIDCs
 	
 				if (typeof MS._getNumberProperties == 'function'){
 					properties = MS._getNumberProperties.call(this,properties, mapping);
 				}else{
-					console.warn("MS._getNumberProperties() is not present, you will need to load functionality for letter based sIdCs");
+					console.warn("MS._getNumberProperties() is not present, you will need to load functionality for letter based SIDCs");
 				}	
 	
-			}else{ //This would be old letter based sIdCs
+			}else{ //This would be old letter based SIDCs
 
 				if (typeof MS._getLetterProperties == 'function'){
 					properties = MS._getLetterProperties.call(this,properties, mapping);
 				}else{
-					console.warn("MS._getNumberProperties() is not present, you will need to load functionality for letter based sIdCs");
+					console.warn("MS._getNumberProperties() is not present, you will need to load functionality for letter based SIDCs");
 				}	
 
 			}
@@ -2290,7 +2290,7 @@ var MStextfields = function textfields(){
 		var gStrings = {L1:"",L2:"",L3:"",L4:"",L5:"",R1:"",R2:"",R3:"",R4:"",R5:""};//Text information on left and right sIde.
 
 		//Air & Space (They should be different but we skip that at the moment) TODO
-		if(!isNaN(this.sIdC) && this.properties.dimension == "Air"){
+		if(!isNaN(this.SIDC) && this.properties.dimension == "Air"){
 			gStrings.R1 = this.uniqueDesignation;
 			gStrings.R2 = this.iffSif;
 			gStrings.R3 = this.type;
@@ -2307,8 +2307,8 @@ var MStextfields = function textfields(){
 				gStrings.R5 = (a.join(" "));
 			}
 		}
-		//Land or letterbased sIdC
-		if(isNaN(this.sIdC) || this.properties.dimension == "Ground"){
+		//Land or letterbased SIDC
+		if(isNaN(this.SIDC) || this.properties.dimension == "Ground"){
 			gStrings.L1 = this.dtg;
 			if(this.altitudeDepth||this.location){
 				var a = new Array;
@@ -2344,8 +2344,8 @@ var MStextfields = function textfields(){
 				gStrings.R5 = (a.join(" "));
 			}
 		}					
-		//Sea numberbased sIdC
-		if(!isNaN(this.sIdC) && this.properties.dimension == "Sea"){
+		//Sea numberbased SIDC
+		if(!isNaN(this.SIDC) && this.properties.dimension == "Sea"){
 			gStrings.R1 = this.uniqueDesignation;
 			gStrings.R2 = this.type;
 			gStrings.R3 = this.iffSif;
@@ -2362,8 +2362,8 @@ var MStextfields = function textfields(){
 				gStrings.R5 = (a.join(" "));
 			}
 		}					
-		//Sub numberbased sIdC
-		if(!isNaN(this.sIdC) && this.properties.dimension == "Subsurface"){
+		//Sub numberbased SIDC
+		if(!isNaN(this.SIDC) && this.properties.dimension == "Subsurface"){
 			gStrings.R1 = this.uniqueDesignation;
 			gStrings.R2 = this.type;
 			gStrings.R3 = this.altitudeDepth;
@@ -2432,9 +2432,9 @@ var MSicon = function icon(){
 	var iconParts = [];
 	//Main icn
 	var icn = [];
-	//Modifier 1 used in number based sIdCs
+	//Modifier 1 used in number based SIDCs
 	var m1 = [];
-	//Modifier 2 used in number based sIdCs
+	//Modifier 2 used in number based SIDCs
 	var m2 = [];
 		
 	if(this.icon){
@@ -2455,7 +2455,7 @@ var MSicon = function icon(){
 			iconParts = MS._iconCache[icnet].iconParts = MS._geticnParts(this.properties, this.colors, MS._STD2525, this.monoColor, this.alternateMedal);
 		}
 	
-		//Letter based sIdCs.
+		//Letter based SIDCs.
 		if(!this.properties.numberSIDC){ 
 			//Sea mine exercise has stuff outsIde the boundingbox... 
 			if(["WMGX--","WMMX--","WMFX--","WMX---","WMSX--"].indexOf(this.properties.functionid)!=-1){
@@ -2464,12 +2464,12 @@ var MSicon = function icon(){
 			}
 			
 			//Try to fetch the icn form the cache
-			if( MS._iconCache[icnet].hasOwnProperty('lettersIdC')){
-				icn = MS._iconCache[icnet].lettersIdC;
+			if( MS._iconCache[icnet].hasOwnProperty('letterSIDC')){
+				icn = MS._iconCache[icnet].letterSIDC;
 			}else{
 				if (typeof MS._getLetterSIDCicn == 'function'){
-					MS._iconCache[icnet].lettersIdC = MS._getLetterSIDCicn(iconParts,MS._STD2525);
-					icn = MS._iconCache[icnet].lettersIdC;
+					MS._iconCache[icnet].letterSIDC = MS._getLetterSIDCicn(iconParts,MS._STD2525);
+					icn = MS._iconCache[icnet].letterSIDC;
 					//THIS IS JUST FOR Printing bottom coords of all equipment ===========================
 		/*			This code dosen't work at the moment..... TODO
 					if(element){
@@ -2506,14 +2506,14 @@ var MSicon = function icon(){
 				}				
 		*/	
 				}else{
-					console.warn("MS._getLetterSIDCicn() is not present, you will need to load functionality for letter based sIdCs");
+					console.warn("MS._getLetterSIDCicn() is not present, you will need to load functionality for letter based SIDCs");
 				}
 			}	
 		}
 	
-		//Number based sIdCs.
-		if(this.properties.numberSIDC){ //Number based sIdCs.
-			var symbolSet = String(this.sIdC).substr(4,2);
+		//Number based SIDCs.
+		if(this.properties.numberSIDC){ //Number based SIDCs.
+			var symbolSet = String(this.SIDC).substr(4,2);
 			if( MS._iconCache[icnet].hasOwnProperty('numberSIDC')){
 				if( MS._iconCache[icnet].numberSIDC.symbolSet.hasOwnProperty(symbolSet)){
 					icn = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icn;
@@ -2526,7 +2526,7 @@ var MSicon = function icon(){
 						m1 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
 						m2 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
 					}else{
-						console.warn("MS._getNumberSIDCicn() is not present, you will need to load functionality for number based sIdCs");
+						console.warn("MS._getNumberSIDCicn() is not present, you will need to load functionality for number based SIDCs");
 					}				
 				}
 			}else{
@@ -2576,7 +2576,7 @@ var MSicon = function icon(){
 					document.getElementById(MS._element).innerHTML=listBBoxes;
 					}*/
 				}else{
-					console.warn("MS._getNumberSIDCicn() is not present, you will need to load functionality for number based sIdCs");
+					console.warn("MS._getNumberSIDCicn() is not present, you will need to load functionality for number based SIDCs");
 				}
 			}
 		}
@@ -2586,7 +2586,7 @@ var MSicon = function icon(){
 		g += '<g id="Icon" fill="'+iconColor+'" stroke="'+iconColor+'" stroke-width="'+this.strokeWidth+'" font-family="Arial" font-weight="bold">';
 		
 		if(this.properties.numberSIDC){
-			//Number based sIdC
+			//Number based SIDC
 			g += icn[this.properties.functionid.substr(0,6)];//Main symbol
 			if(!icn.hasOwnProperty(this.properties.functionid.substr(0,6))){
 				//We have some sepcial entity subtype and will try to find original symbol.
@@ -2601,8 +2601,8 @@ var MSicon = function icon(){
 			//Modifier 2
 			g += (this.properties.functionid.substr(8,2)!='00'?m2[this.properties.functionid.substr(8,2)]:'');
 		}else{
-			//Letter based sIdC
-			g += icn[this.sIdC.substr(0,1)+'-'+this.sIdC.substr(2,1)+'-'+this.sIdC.substr(4,6)]
+			//Letter based SIDC
+			g += icn[this.SIDC.substr(0,1)+'-'+this.SIDC.substr(2,1)+'-'+this.SIDC.substr(4,6)]
 		}
 		
 		g += '</g>';
@@ -2629,20 +2629,20 @@ var MSdebug = function debug(){
 MS.addMarkerParts(MSdebug);
 */
 //########################################################################################
-// If you don't have any need for letter based sIdC, just remove the following functions
+// If you don't have any need for letter based SIDC, just remove the following functions
 //########################################################################################
 MS._getLetterProperties = function(properties, mapping){
-	this.sIdC = this.sIdC.toUpperCase();
+	this.SIDC = this.SIDC.toUpperCase();
 
-	var codingscheme 		= this.sIdC.charAt(0)!=''?this.sIdC.charAt(0):'-';
-	var affiliation 			= this.sIdC.charAt(1)!=''?this.sIdC.charAt(1):'-';
-	var battledimension 		= this.sIdC.charAt(2)!=''?this.sIdC.charAt(2):'-';
-	var status 				= this.sIdC.charAt(3)!=''?this.sIdC.charAt(3):'-';
-	var functionid 			= properties.functionid	= this.sIdC.substr(4,6)!=''?this.sIdC.substr(4,6):'------';
-	var symbolmodifier11 	= this.sIdC.charAt(10)!=''?this.sIdC.charAt(10):'-';
-	var symbolmodifier12 	= this.sIdC.charAt(11)!=''?this.sIdC.charAt(11):'-';
-	var countrycode 		= this.sIdC.substr(12,2)!=''?this.sIdC.substr(12,2):'--';
-	var orderofbattle 		= this.sIdC.charAt(14)!=''?this.sIdC.charAt(14):'-';
+	var codingscheme 		= this.SIDC.charAt(0)!=''?this.SIDC.charAt(0):'-';
+	var affiliation 			= this.SIDC.charAt(1)!=''?this.SIDC.charAt(1):'-';
+	var battledimension 		= this.SIDC.charAt(2)!=''?this.SIDC.charAt(2):'-';
+	var status 				= this.SIDC.charAt(3)!=''?this.SIDC.charAt(3):'-';
+	var functionid 			= properties.functionid	= this.SIDC.substr(4,6)!=''?this.SIDC.substr(4,6):'------';
+	var symbolmodifier11 	= this.SIDC.charAt(10)!=''?this.SIDC.charAt(10):'-';
+	var symbolmodifier12 	= this.SIDC.charAt(11)!=''?this.SIDC.charAt(11):'-';
+	var countrycode 		= this.SIDC.substr(12,2)!=''?this.SIDC.substr(12,2):'--';
+	var orderofbattle 		= this.SIDC.charAt(14)!=''?this.SIDC.charAt(14):'-';
 
 	var equipmentBottom = {'E-----':0,'EWM---':140,'EWMA--':140,'EWMAS-':140,'EWMASR':140,'EWMASE':140,'EWMAI-':140,'EWMAIR':140,'EWMAIE':140,'EWMAL-':140,'EWMALR':140,'EWMALE':140,'EWMAT-':153,'EWMATR':153,'EWMATE':153,'EWMS--':140,'EWMSS-':140,'EWMSI-':140,'EWMSL-':140,'EWMT--':140,'EWMTL-':140,'EWMTM-':140,'EWMTH-':140,'EWS---':140,'EWSL--':140,'EWSM--':140,'EWSH--':140,'EWX---':140,'EWXL--':140,'EWXM--':140,'EWXH--':140,'EWT---':140,'EWTL--':140,'EWTM--':140,'EWTH--':140,'EWR---':140,'EWRL--':140,'EWRM--':140,'EWRH--':140,'EWZ---':140,'EWZL--':140,'EWZM--':140,'EWZH--':140,'EWO---':140,'EWOL--':140,'EWOM--':140,'EWOH--':140,'EWH---':140,'EWHL--':140,'EWHLS-':130,'EWHM--':140,'EWHMS-':130,'EWHH--':140,'EWHHS-':130,'EWG---':140,'EWGL--':140,'EWGM--':140,'EWGH--':140,'EWGR--':140,'EWD---':140,'EWDL--':140,'EWDLS-':130,'EWDM--':140,'EWDMS-':130,'EWDH--':140,'EWDHS-':130,'EWA---':140,'EWAL--':140,'EWAM--':140,'EWAH--':140,'EV----':129,'EVA---':129,'EVAT--':130,'EVATL-':130,'EVATLR':130,'EVATM-':130,'EVATMR':130,'EVATH-':130,'EVATHR':130,'EVAA--':130,'EVAAR-':130,'EVAI--':130,'EVAC--':130,'EVAS--':972.3621826171875,'EVAL--':140,'EVU---':130,'EVAB--':130,'EVUS--':140,'EVUSL-':140,'EVUSM-':140,'EVUSH-':140,'EVUL--':140,'EVUX--':140,'EVUR--':130,'EVUTL-':130,'EVUTH-':130,'EVUA--':130,'EVUAA-':130,'EVE---':129,'EVEB--':130,'EVEE--':130,'EVEC--':140,'EVEM--':130,'EVEMA-':130,'EVEMV-':130,'EVEMT-':130,'EVEML-':140,'EVEA--':120,'EVEAA-':130,'EVEAT-':130,'EVEMSM':130,'EVED--':130,'EVEDA-':130,'EVES--':130,'EVER--':130,'EVEH--':140,'EVEF--':140,'EVD---':140,'EVT--':130,'EVC---':119,'EVCA--':132.5,'EVCAL-':132.5,'EVCAM-':132.5,'EVCAH-':132.5,'EVCO--':132.5,'EVCOL-':132.5,'EVCOM-':132.5,'EVCOH-':132.5,'EVCM--':132.5,'EVCML-':132.5,'EVCMM-':132.5,'EVCMH-':132.5,'EVCU--':132.5,'EVCUL-':132.5,'EVCUM-':132.5,'EVCUH-':132.5,'EVCJ--':132.5,'EVCJL-':132.5,'EVCJM-':132.5,'EVCJH-':132.5,'EVCT--':132.5,'EVCTL-':132.5,'EVCTM-':132.5,'EVCTH-':132.5,'EVCF--':132.5,'EVCFL-':132.5,'EVCFM-':132.5,'EVCFH-':132.5,'EVM---':125,'EVS---':129,'EVST--':129,'EVSR--':129,'EVSC--':129,'EVSP--':129,'EVSW--':129,'ES----':140,'ESR---':120,'ESE---':136,'EXI---':119,'EXL---':145,'EXN---':140,'EXF---':135,'EXM---':130,'EXMC--':122,'EXML--':122};
 	if (equipmentBottom.hasOwnProperty(functionid)){ properties.iconBottom = equipmentBottom[functionid];}
@@ -2801,7 +2801,7 @@ MS._getLetterProperties = function(properties, mapping){
 	}
 	
 	//Some symbols in EMS
-	if(this.sIdC.substr(0,3) == "WAS" || this.sIdC.substr(0,1) == "G" || this.sIdC.substr(0,3) == "WOS"){
+	if(this.SIDC.substr(0,3) == "WAS" || this.SIDC.substr(0,1) == "G" || this.SIDC.substr(0,3) == "WOS"){
 		properties.frame = false;
 	}
 	
@@ -3175,11 +3175,11 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-G-UCVU--'] = icn['GR.IC.UNMANNED SYSTEMS'];			
 	//1.X.3.1.1.4.6.1
 	sId['S-G-UCVUF-'] = icn['GR.IC.AVIATION FIXED WING'] + icn['GR.M1.UNMANNED AERIAL VEHICLE'];		
-	//1.X.3.1.1.4.6.1.1 WRONG sIdC IN STANDARD APP6B
+	//1.X.3.1.1.4.6.1.1 WRONG SIDC IN STANDARD APP6B
 	//sId['S-G-UCVU--'] = icn['GR.IC.UNMANNED SYSTEMS'] + icn['GR.M2.CONTROL'];			
-	//1.X.3.1.1.4.6.1.2 WRONG sIdC IN STANDARD APP6B
+	//1.X.3.1.1.4.6.1.2 WRONG SIDC IN STANDARD APP6B
 	//sId['S-G-UCVU--'] = icn['GR.IC.UNMANNED SYSTEMS'] + icn['GR.M2.LAUNCHER'];	
-	//1.X.3.1.1.4.6.1.3 WRONG sIdC IN STANDARD APP6B
+	//1.X.3.1.1.4.6.1.3 WRONG SIDC IN STANDARD APP6B
 	//sId['S-G-UCVU--'] = icn['GR.IC.UNMANNED SYSTEMS'] + icn['GR.M2.RECOVERY (UNMANNED SYSTEMS)'];		
 	//1.X.3.1.1.4.6.2
 	sId['S-G-UCVUR-'] = icn['GR.IC.AVIATION ROTARY WING'] + icn['GR.M1.UNMANNED AERIAL VEHICLE'];				
@@ -3203,7 +3203,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-G-UCII--'] = icn['GR.IC.FF.INFANTRY'] + icn['GR.IC.ARMOUR'] + icn['GR.IC.FF.MAIN GUN SYSTEM'];		
 	//1.X.3.1.1.5.9
 	sId['S-G-UCIC--'] = icn['GR.IC.FF.INFANTRY'] + icn['GR.M2.ARCTIC'];			 
-	//1.X.3.1.1.5.10  WRONG sIdC IN STANDARD APP6B
+	//1.X.3.1.1.5.10  WRONG SIDC IN STANDARD APP6B
 	//sId['S-G-UCIC--'] = icn['GR.IC.FF.INFANTRY'] + icn['GR.M1.SNIPER'];		
 	//1.X.3.1.1.6
 	sId['S-G-UCE---'] = icn['GR.IC.ENGINEER'];	
@@ -3229,13 +3229,13 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-G-UCECO-'] = icn['GR.IC.ENGINEER'] + icn['GR.M2.MOUNTAIN'];		
 	//1.X.3.1.1.6.1.10
 	sId['S-G-UCECR-'] = icn['GR.IC.ENGINEER'] + icn['GR.IC.FF.RECONNAISSANCE'];		
-	//1.X.3.1.1.6.1.11  WRONG sIdC IN STANDARD APP6B
+	//1.X.3.1.1.6.1.11  WRONG SIDC IN STANDARD APP6B
 	//sId['S-G-UCEC--'] = 
-	//1.X.3.1.1.6.1.12  WRONG sIdC IN STANDARD APP6B
+	//1.X.3.1.1.6.1.12  WRONG SIDC IN STANDARD APP6B
 	//sId['S-G-UCEC--'] = 		
-	//1.X.3.1.1.6.1.13  WRONG sIdC IN STANDARD APP6B
+	//1.X.3.1.1.6.1.13  WRONG SIDC IN STANDARD APP6B
 	//sId['S-G-UCEC--'] = 		
-	//1.X.3.1.1.6.1.14  WRONG sIdC IN STANDARD APP6B
+	//1.X.3.1.1.6.1.14  WRONG SIDC IN STANDARD APP6B
 	//sId['S-G-UCEC--'] = 		
 	//1.X.3.1.1.6.2
 	sId['S-G-UCEN--'] = icn['GR.IC.ENGINEER'] + icn['GR.M1.CONSTRUCTION'];
@@ -3337,9 +3337,9 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-G-UCFOL-'] =	icn['GR.IC.METEOROLOGICAL'] + icn['GR.M2.LIGHT'];
 	//1.X.3.1.1.7.6.4
 	sId['S-G-UCFOO-'] =	icn['GR.IC.METEOROLOGICAL'] + icn['GR.M2.MOUNTAIN'];
-	//1.X.3.1.1.7.7  WRONG sIdC IN STANDARD APP6B
+	//1.X.3.1.1.7.7  WRONG SIDC IN STANDARD APP6B
 	//sId['S-G-UCF---'] = icn['GR.IC.FIELD ARTILLERY'] + icn['GR.M1.FIRE DIRECTION CENTRE'];		
-	//1.X.3.1.1.7.8  WRONG sIdC IN STANDARD APP6B
+	//1.X.3.1.1.7.8  WRONG SIDC IN STANDARD APP6B
 	//sId['S-G-UCF---'] = icn['GR.IC.FIELD ARTILLERY OBSERVER'];			
 	//1.X.3.1.1.8
 	sId['S-G-UCR---'] =	icn['GR.IC.FF.RECONNAISSANCE'];		
@@ -3399,7 +3399,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-G-UCSR--'] =	icn['GR.IC.SECURITY'] + icn['GR.M2.RAILROAD'];				
 	//1.X.3.1.1.10.5
 	sId['S-G-UCSA--'] =	MS.translate(0,-20,icn['GR.IC.SECURITY']) + icn['GR.IC.AVIATION ROTARY WING'];					
-	//1.X.3.1.1.11 TOTALLY FUCKED UP sIdC IN APP6B
+	//1.X.3.1.1.11 TOTALLY FUCKED UP SIDC IN APP6B
 	//sId['S-G-F-S---'] = ;					
 	//1.X.3.1.2
 	sId['S-G-UU----'] =	icn['GR.IC.COMBAT SUPPORT'];				
@@ -3537,7 +3537,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-G-UUE---'] = icn['GR.IC.EXPLOSIVE ORDNANCE DISPOSAL'];
 	//1.X.3.1.2.8
 	sId['S-G-UUT---'] = icn['GR.IC.TOPOGRAPHIC'];
-	//1.X.3.1.2.9 WRONG sIdC IN STANDARD APP6B
+	//1.X.3.1.2.9 WRONG SIDC IN STANDARD APP6B
 	//sId['S-G-UU----'] = icn['GR.IC.DOG'];
 	//1.X.3.1.2.10
 	sId['S-G-UUD---'] = icn['GR.IC.DRILLING'];
@@ -3747,7 +3747,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-G-USSWPT'] = icn['GR.IC.FF.SUPPLY THEATER'] + icn['GR.IC.WATER PURIFICATION'];		
 	//1.X.3.1.3.3.14.3.2
 	sId['S-G-USSWPC'] = icn['GR.IC.FF.SUPPLY CORPS'] + icn['GR.IC.WATER PURIFICATION'];		
-	//1.X.3.1.3.3.15  ANOTHER sIdC THAT DOESN'T WORK OUT...
+	//1.X.3.1.3.3.15  ANOTHER SIDC THAT DOESN'T WORK OUT...
 	//sId['S-G-US----'] = icn['GR.IC.FF.SUPPLY CORPS'] + icn['GR.IC.WATER PURIFICATION'];		
 	//1.X.3.1.3.4
 	sId['S-G-UST---'] = icn['GR.IC.TRANSPORTATION'];		
@@ -3785,7 +3785,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-G-USTIT-'] = icn['GR.IC.FF.THEATRE SUPPORT'] + icn['GR.IC.TRANSPORTATION'] + icn['GR.M1.MISSILE'];	
 	//1.X.3.1.3.4.7.2
 	sId['S-G-USTIC-'] = icn['GR.IC.FF.CORPS SUPPORT'] + icn['GR.IC.TRANSPORTATION'] + icn['GR.M1.MISSILE'];	
-	//1.X.3.1.3.4.8 sIdC BROKEN
+	//1.X.3.1.3.4.8 SIDC BROKEN
 	//sId['S-G-UST---']
 	//1.X.3.1.3.5
 	sId['S-G-USX---'] = icn['GR.IC.MAINTENANCE'];		
@@ -3833,9 +3833,9 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-G-USXEP-'] = icn['GR.IC.ENVIRONMENTAL PROTECTION'];
 	//1.X.3.1.4
 	sId['S-G-UH----'] = '';
-	//1.X.3.1.5 BROKEN sIdC
+	//1.X.3.1.5 BROKEN SIDC
 	sId['S-G-UH1---'] = icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT'];
-	//1.X.3.1.6 BROKEN sIdC
+	//1.X.3.1.6 BROKEN SIDC
 	sId['S-G-UH2---'] = icn['GR.IC.FF.SUPPLY'] + icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT'];
 	//1.X.3.1.7
 	sId['S-G-UHGL--'] = sId['S-G-GL----'] = icn['GR.IC.LIAISON'];
@@ -4044,7 +4044,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-G-EVEB--'] = icn['GR.EQ.BRIDGE'];
 	//1.X.3.2.2.3.2
 	sId['S-G-EVEE--'] = icn['GR.EQ.EARTHMOVER'];
-	//.X.3.2.2.3.2 .1 WRONG sIdC
+	//.X.3.2.2.3.2 .1 WRONG SIDC
 	//sId['S-G-EVEE--'] = '';
 	//1.X.3.2.2.3.3
 	sId['S-G-EVEC--'] = icn['GR.EQ.UTILITY VEHICLE'] + icn['GR.EQ.LIMITED CROSS-COUNTRY'] + MS.scale(0.6,icn['GR.IC.ENGINEER']);
@@ -4325,7 +4325,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-S-CH----'] = icn['SE.IC.HOVERCRAFT'];			
 	//1.X.4.1.6  in 2525 listed as 1.X.4.1.7
 	sId['S-S-G-----'] = icn['SE.IC.NAVY TASK ORGANIZATION UNIT'];		
-	//1.X.4.1.6.1  in 2525 listed as 1.X.4.1.7.1 Different sIdC listed let's support both
+	//1.X.4.1.6.1  in 2525 listed as 1.X.4.1.7.1 Different SIDC listed let's support both
 	sId['S-S-GF----'] = sId['S-S-GT----'] = icn['SE.IC.NAVY TASK FORCE'];			
 	//1.X.4.1.6.2  in 2525 listed as 1.X.4.1.7.2 
 	sId['S-S-GG----'] = icn['SE.IC.NAVY TASK GROUP'];			
@@ -4355,7 +4355,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-S-NRA---'] = icn['SE.IC.AMMUNITION SHIP'];			
 	//1.X.4.2.1.2
 	sId['S-S-NRO---'] = icn['SE.IC.OILER, REPLENISHMENT'] ;					
-	//1.X.4.2.2 Different sIdC listed let's support both
+	//1.X.4.2.2 Different SIDC listed let's support both
 	sId['S-S-NF----'] = sId['S-S-NFT---'] = icn['SE.IC.TUG, OCEAN GOING'];			
 	//1.X.4.2.3
 	sId['S-S-NI----'] = icn['SE.IC.INTELLIGENCE COLLECTOR'];				
@@ -5304,17 +5304,17 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 };
 
 //########################################################################################
-// If you don't have any need for number based sIdC, just remove the following functions
+// If you don't have any need for number based SIDC, just remove the following functions
 //########################################################################################
 MS._getNumberProperties = function(properties,mapping){
 
-	var version  			= this.sIdC.substr(0,2);
-	var standardIdentity1 	= this.sIdC.substr(2,1);
-	var standardIdentity2 	= this.sIdC.substr(3,1);
-	var symbolSet 			= this.sIdC.substr(4,2);
-	var status 				= this.sIdC.substr(6,1);
-	var headquartersTaskForceDummy = this.sIdC.substr(7,1);
-	var echelonMobility 	= this.sIdC.substr(8,2);
+	var version  			= this.SIDC.substr(0,2);
+	var standardIdentity1 	= this.SIDC.substr(2,1);
+	var standardIdentity2 	= this.SIDC.substr(3,1);
+	var symbolSet 			= this.SIDC.substr(4,2);
+	var status 				= this.SIDC.substr(6,1);
+	var headquartersTaskForceDummy = this.SIDC.substr(7,1);
+	var echelonMobility 	= this.SIDC.substr(8,2);
 
 	var affiliationMapping = {
 		'0':'Unknown',
@@ -5346,12 +5346,12 @@ MS._getNumberProperties = function(properties,mapping){
 		'54':'Subsurface',
 		'60':'Ground'};										
 											
-	var functionid = properties.functionid = this.sIdC.substr(10,10);
+	var functionid = properties.functionid = this.SIDC.substr(10,10);
 
 	var equipmentBottom = {110000:140,110100:140,110101:140,110102:140,110103:140,110200:140,110201:140,110202:140,110203:140,110300:140,110301:140,110302:140,110303:140,110400:135,110500:140,110501:140,110502:140,110503:140,110600:140,110601:140,110602:140,110603:140,110700:140,110701:140,110702:140,110703:140,110800:140,110801:140,110802:140,110803:140,110900:140,110901:140,110902:140,110903:140,111000:140,111001:140,111002:140,111003:140,111100:140,111101:140,111102:140,111103:140,111104:140,111105:140,111106:140,111107:140,111108:140,111109:140,111200:140,111201:140,111202:140,111203:140,111300:140,111301:140,111302:140,111303:140,111400:140,111401:140,111402:140,111403:140,111500:140,111501:140,111502:140,111503:140,111600:140,111601:140,111602:140,111603:140,111701:140,111702:140,111703:140,111800:140,111900:140,112000:140,120000:129,120100:129,120101:130,120102:130,120103:972.3621826171875,120104:130,120105:120,120106:120,120107:120,120108:130,120109:130,120110:140,120200:130,120201:130,120202:130,120203:130,120300:130,120301:130,120302:130,120303:130,130000:129,130100:115,130200:130,130300:130,130400:135,130500:120,130600:120,130700:120,130701:130,130800:130,130801:130,130900:120,130901:130,130902:130,131000:115,131001:130,131002:130,131003:140,131100:130,131101:130,131200:130,131300:130,131400:140,131500:140,131600:140,140100:130,140200:130,140300:130,140400:130,140500:130,140600:140,140601:140,140602:140,140603:140,140700:140,140800:140,140900:130,141000:130,141100:140,141200:130,141201:130,141202:130,150100:130,150200:140,160100:132.5,160101:132.5,160102:132.5,160103:132.5,160200:132.5,160201:132.5,160202:132.5,160203:132.5,160300:132.5,160301:132.5,160302:132.5,160303:132.5,160400:132.5,160401:132.5,160402:132.5,160403:132.5,160500:132.5,160501:132.5,160502:132.5,160503:132.5,160600:132.5,160601:132.5,160602:132.5,160603:132.5,160700:132.5,160701:132.5,160702:132.5,160703:132.5,160800:115,160900:115,170000:149.03125,170100:118.75,170200:133.21875,170300:135.21875,170400:118.75,170500:138.1875,170600:118.75,170700:118.75,170800:118,170900:118,171000:135,171100:135,180000:125,190000:129,190100:129,190200:129,190300:129,190400:129,190500:129,200100:140,200200:118.75,200300:120,200400:140,200500:132,200600:118.75,200700:118.75,200800:118.75,200900:119.36222839355469,201000:145,201100:120,201200:118,201300:124.36222076416016,201400:118.75,201500:140,201501:115,210100:122,210200:122,210300:122,210400:118.75,210500:122,220100:140,220200:136,220300:120,230000:135,230100:132.5,230200:120,240000:118.75};
 	if (symbolSet == 15 && equipmentBottom.hasOwnProperty(functionid.substr(0,6))){ properties.iconBottom = equipmentBottom[functionid.substr(0,6)];}
 	
-	properties.context = mapping.context[parseInt(this.sIdC.substr(2,1))];
+	properties.context = mapping.context[parseInt(this.SIDC.substr(2,1))];
 	properties.affiliation = affiliationMapping[standardIdentity2];
 	properties.dimension = dimensionMapping[symbolSet];
 
