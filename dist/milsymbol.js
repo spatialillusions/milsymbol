@@ -191,7 +191,7 @@ var milsymbol = function(){
 		var frame 				= properties.frame
 		var affiliation			= properties.affiliation;
 		var baseGeometry	 	= properties.baseGeometry;
-		var numbersIdC			= properties.numbersIdC;
+		var numberSIDC			= properties.numberSIDC;
 		var fillColor 			= colors.fillColor[affiliation];
 		var iconColor 			= colors.iconColor[affiliation];
 		var iconFillColor 			= colors.iconFillColor[affiliation];
@@ -341,12 +341,12 @@ var milsymbol = function(){
 		icn['AR.I.2525 PHOTOGRAPHIC'] = text('P');
 		icn['AR.I.TRAINER'] = text('T');
 		icn['AR.I.UTILITY'] = text('U');
-		icn['AR.I.VSTOL'] = text('' + ((_STD2525&&!numbersIdC) ? 'L' : 'V' )+ '');
-		icn['AR.I.AIRBORNE COMMAND POST'] =  ((_STD2525&&!numbersIdC) ? text('D'):text('ACP'));
-		icn['AR.I.AIRBORNE EARLY WARNING'] = ((_STD2525&&!numbersIdC) ? text('W'):text('AEW'));
-		icn['AR.I.ANTISURFACE WARFARE'] = ((_STD2525&&!numbersIdC) ? text('N'):text('ASUW'));
-		icn['AR.I.ANTISUBMARINE WARFARE'] = ((_STD2525&&!numbersIdC) ? text('S'):text('ASW'));
-		icn['AR.I.COMMUNICATIONS'] = ((_STD2525&&!numbersIdC)? text('Y'):text('COM'));
+		icn['AR.I.VSTOL'] = text('' + ((_STD2525&&!numberSIDC) ? 'L' : 'V' )+ '');
+		icn['AR.I.AIRBORNE COMMAND POST'] =  ((_STD2525&&!numberSIDC) ? text('D'):text('ACP'));
+		icn['AR.I.AIRBORNE EARLY WARNING'] = ((_STD2525&&!numberSIDC) ? text('W'):text('AEW'));
+		icn['AR.I.ANTISURFACE WARFARE'] = ((_STD2525&&!numberSIDC) ? text('N'):text('ASUW'));
+		icn['AR.I.ANTISUBMARINE WARFARE'] = ((_STD2525&&!numberSIDC) ? text('S'):text('ASW'));
+		icn['AR.I.COMMUNICATIONS'] = ((_STD2525&&!numberSIDC)? text('Y'):text('COM'));
 		icn['AR.I.COMBAT SEARCH AND RESCUE'] = text('CSAR');
 		icn['AR.I.ELECTRONIC SUPPORT MEASURES'] =  (_STD2525 ? text('Z'):text('ESM'));
 		icn['AR.I.GOVERNMENT'] = text('GOV');
@@ -383,12 +383,12 @@ var milsymbol = function(){
 		icn['AIR.M1.INTERCEPTOR'] = textm1('I');
 		icn['AIR.M1.TANKER'] = textm1('K');
 		icn['AIR.M1.UTILITY'] = textm1('U');
-		icn['AIR.M1.VSTOL'] = textm1('' + ((_STD2525&&!numbersIdC) ? 'L' : 'V' )+ '');
+		icn['AIR.M1.VSTOL'] = textm1('' + ((_STD2525&&!numberSIDC) ? 'L' : 'V' )+ '');
 		icn['AIR.M1.PASSENGER'] = textm1('PX');
 		icn['AIR.M1.ULTRA LIGHT'] = textm1('UL');
-		icn['AIR.M1.AIRBORNE COMMAND POST'] = ((_STD2525&&!numbersIdC) ? textm1('D'):textm1('ACP'));
-		icn['AIR.M1.ANTISURFACE WARFARE'] = ((_STD2525&&!numbersIdC) ? textm1('N'):textm1('ASUW'));
-		icn['AIR.M1.AIRBORNE EARLY WARNING'] = ((_STD2525&&!numbersIdC) ? textm1('W'):textm1('AEW'));
+		icn['AIR.M1.AIRBORNE COMMAND POST'] = ((_STD2525&&!numberSIDC) ? textm1('D'):textm1('ACP'));
+		icn['AIR.M1.ANTISURFACE WARFARE'] = ((_STD2525&&!numberSIDC) ? textm1('N'):textm1('ASUW'));
+		icn['AIR.M1.AIRBORNE EARLY WARNING'] = ((_STD2525&&!numberSIDC) ? textm1('W'):textm1('AEW'));
 		icn['AIR.M1.GOVERNMENT'] = textm1('GOV');
 		icn['AIR.M1.MEDEVAC'] = '<path stroke="none" d="M95.5,80 l9,0 0,-9 9,0 0,-9 -9,0 0,-9 -9,0 0,9 -9,0 0,9 9,0 Z"  />';
 		icn['AIR.M1.ESCORT'] = textm1('E');
@@ -397,17 +397,17 @@ var milsymbol = function(){
 		icn['AIR.M1.PATROL'] = textm1('P');
 		icn['AIR.M1.RECONNAISSANCE'] = textm1('R');
 		icn['AIR.M1.TRAINER'] = textm1('T');
-		icn['AIR.M1.PHOTOGRAPHIC'] = ((_STD2525&&!numbersIdC) ? textm1('X'):textm1('PH'));
+		icn['AIR.M1.PHOTOGRAPHIC'] = ((_STD2525&&!numberSIDC) ? textm1('X'):textm1('PH'));
 		icn['AIR.M1.PERSONNEL RECOVERY'] = textm1('PR');
-		icn['AIR.M1.ANTISUBMARINE WARFARE'] = ((_STD2525&&!numbersIdC) ? textm1('S'):textm1('ASW'));
-		icn['AIR.M1.COMMUNICATIONS'] = ((_STD2525&&!numbersIdC) ? textm1('Y'):textm1('COM'));
+		icn['AIR.M1.ANTISUBMARINE WARFARE'] = ((_STD2525&&!numberSIDC) ? textm1('S'):textm1('ASW'));
+		icn['AIR.M1.COMMUNICATIONS'] = ((_STD2525&&!numberSIDC) ? textm1('Y'):textm1('COM'));
 		icn['AIR.M1.ELECTRONIC SURVEILLANCE MEASURES'] = (_STD2525 ? textm1('Z'):textm1('ESM'));
 		icn['AIR.M1.MINE COUNTERMEASURES'] = textm1('MCM');
 		icn['AIR.M1.SEARCH AND RESCUE'] = textm1('SAR');
 		icn['AIR.M1.SPECIAL OPERATIONS FORCES'] = textm1('SOF');
 		icn['AIR.M1.SURFACE WARFARE'] =textm1('SUW');
 		icn['AIR.M1.VIP'] = textm1('VIP');
-		icn['AIR.M1.COMBAT SEARCH AND RESCUE'] = ((_STD2525&&!numbersIdC) ? textm1('H'):textm1('CSAR'));
+		icn['AIR.M1.COMBAT SEARCH AND RESCUE'] = ((_STD2525&&!numberSIDC) ? textm1('H'):textm1('CSAR'));
 		icn['AIR.M1.SUPRESSION OF ENEMY AIR DEFENCE'] = textm1('SEAD');
 		icn['AIR.M1.UNMANNED AERIAL VEHICLE']  = '<g transform="translate(20,-10),scale(0.8)">' + icn['AR.I.UNMANNED AERIAL VEHICLE'] + '</g>';
 		icn['AIR.M1.BOOM-ONLY'] = textm1('B');
@@ -855,7 +855,7 @@ var milsymbol = function(){
 		icn['GR.EQ.CROSS-COUNTRY'] = '<path d="m 70,130 60,0" fill="none" /><circle cx="75" cy="135" r="5" fill="none"/><circle cx="100" cy="135" r="5" fill="none"/><circle cx="125" cy="135" r="5" fill="none"/>';	
 
 		icn['GR.EQ.ARMOURED FIGHTING VEHICLE'] = '<path d="m 70,100 30,-30 30,30 -30,30 z m 60,-30 0,60 m -60,-60 0,60 0,0" fill="none" />';			
-		icn['GR.EQ.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL'] = icn['GR.EQ.ARMOURED FIGHTING VEHICLE'] + (numbersIdC?'<text stroke="none" text-anchor="middle" x="100" y="110" font-size="30" >C2</text>':'<path d="m 80,90 20,15 0,-10 20,15" fill="none" />');			
+		icn['GR.EQ.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL'] = icn['GR.EQ.ARMOURED FIGHTING VEHICLE'] + (numberSIDC?'<text stroke="none" text-anchor="middle" x="100" y="110" font-size="30" >C2</text>':'<path d="m 80,90 20,15 0,-10 20,15" fill="none" />');			
 		icn['GR.EQ.ARMOURED PERSONNEL CARRIER'] = '<path fill="none" d="m 70,80 30,-10 30,10 0,0 m -60,50 60,0 m 0,-60 0,60 m -60,-60 0,60 0,0" />';
 		icn['GR.EQ.ARMOURED PERSONNEL CARRIER COMBAT SERVICE SUPPORT VEHICLE'] = icn['GR.EQ.ARMOURED PERSONNEL CARRIER'] + '<path d="m 70,972.36218 60,0" fill="none" />';
 		icn['GR.EQ.ARMOURED PERSONNEL CARRIER ENGINEER RECON VEHICLE'] = '<path fill="none" d="M 130,80 70,130" />';
@@ -932,7 +932,7 @@ var milsymbol = function(){
 		icn['GR.EQ.MISSILE PROPELLANT TRANSPORTER'] = '<text stroke="none" text-anchor="middle" x="90" y="110" font-size="20" >MSL</text><path fill="none"  d="m 120,115 0,-15 -10,-10 20,0 -10,10" />';
 		icn['GR.EQ.MISSILE WARHEAD TRANSPORTER'] = '<text stroke="none" text-anchor="middle" x="100" y="100" font-size="20" >MSL</text><text stroke="none" text-anchor="middle" x="100" y="115" font-size="20" >WHD</text>';
 
-		icn['GR.EQ.LAND MINE'] = numbersIdC?'<circle cx="100" cy="100" r="22" fill="none" />':'<path fill="none" d="m 70,65 60,0 -30,65 z" /><text stroke="none" text-anchor="middle" x="100" y="90" font-family="Arial" font-size="30" font-weight="bold" >M</text>';
+		icn['GR.EQ.LAND MINE'] = numberSIDC?'<circle cx="100" cy="100" r="22" fill="none" />':'<path fill="none" d="m 70,65 60,0 -30,65 z" /><text stroke="none" text-anchor="middle" x="100" y="90" font-family="Arial" font-size="30" font-weight="bold" >M</text>';
 		icn['GR.EQ.ANTIPERSONNEL LAND MINE'] = '<circle cx="100" cy="100" r="22"/><path d="M117,82 l20,-18 -18,25z M83,82 l-20,-18 18,25z" stroke="none" />';
 		icn['GR.EQ.ANTIPERSONNEL LAND MINE LESS THAN LETHAL'] = '<circle cx="100" cy="100" r="22" fill="none" /><path d="M117,82 l20,-18 -18,25z M83,82 l-20,-18 18,25z" stroke="none" />';
 		icn['GR.EQ.ANTITANK MINE'] = '<circle cx="100" cy="100" r="22" />';		
@@ -1139,7 +1139,7 @@ var milsymbol = function(){
 		icn['SU.IC.OTHER SUBMERSIBLE'] = '<path d="m 85,90 0,-10 30,0 0,10 m 20,10 c 0,5.52285 -15.67003,10 -35,10 -19.329966,0 -35,-4.47715 -35,-10 0,-5.522847 15.670034,-10 35,-10 19.32997,0 35,4.477153 35,10 z"/>';
 		icn['SU.IC.OTHER SUBMERSIBLE, SURFACED'] = icn['SU.IC.OTHER SUBMERSIBLE'] + '<path fill="none" d="m 65,120 10,-10 10,10 10,-10 10,10 10,-10 10,10 10,-10"/>';
 		icn['SU.IC.AUTONOMOUS UNDERWATER VEHICLE/ UNMANNED UNDERWATER VEHICLE (AUV/UUV)'] = '<path d="M60,90 l40,10 40,-10 0,8 -40,15 -40,-15 Z" stroke="none"  />';
-		icn['SU.IC.NON-SUBMARINE'] = (_STD2525&&!numbersIdC)?'<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >NON</text>':'<text stroke="none" text-anchor="middle" x="100" y="100" font-size="25" >NON</text><text stroke="none" text-anchor="middle" x="100" y="120" font-size="25" >SUB</text>';
+		icn['SU.IC.NON-SUBMARINE'] = (_STD2525&&!numberSIDC)?'<text stroke="none" text-anchor="middle" x="100" y="110" font-size="35" >NON</text>':'<text stroke="none" text-anchor="middle" x="100" y="100" font-size="25" >NON</text><text stroke="none" text-anchor="middle" x="100" y="120" font-size="25" >SUB</text>';
 		icn['SU.IC.DIVER, MILITARY'] = '<path  stroke="none"  d="M 100 80 C 93.731592 80 88.315512 82.687903 85.75 88.25 L 85.75 88.34375 L 77.84375 88.34375 L 77.84375 105 L 85.75 105 L 85.75 104.8125 C 87.305963 108.18587 88.823559 110.02388 92.03125 111.65625 L 92.09375 111.65625 L 84.15625 120 L 115.84375 120 L 107.90625 111.65625 L 107.96875 111.65625 C 111.14747 110.03863 112.80044 108.31359 114.34375 105 L 122.15625 105 L 122.15625 88.34375 L 114.25 88.34375 L 114.25 88.3125 C 111.68449 82.7504 106.26841 80 100 80 z M 100 86.59375 C 105.44032 86.59375 109.84375 91.109195 109.84375 96.59375 C 109.84375 102.0783 105.44032 106.5625 100 106.5625 C 94.559678 106.5625 90.125 102.0783 90.125 96.59375 C 90.125 91.109195 94.559678 86.59375 100 86.59375 z M 100 89.59375 C 96.204841 89.59375 93.125 92.707018 93.125 96.59375 C 93.125 100.48048 96.204841 103.5625 100 103.5625 C 103.79515 103.5625 106.84375 100.48048 106.84375 96.59375 C 106.84375 92.707018 103.79515 89.59375 100 89.59375 z " />';	
 		icn['SU.IC.CIVILIAN'] = '<text fill="'+ (_STD2525 ? iconFillColor : !frame?iconFillColor : 'none') + '" text-anchor="middle" x="100" y="110" font-size="35" >CIV</text>';
 		icn['SU.IC.SUBMERSIBLE, CIVILIAN'] = '<path fill="'+ (_STD2525 ? iconFillColor : !frame?iconFillColor : 'none') + '" d="m 85,90 0,-10 30,0 0,10 m 20,10 c 0,5.52285 -15.67003,10 -35,10 -19.329966,0 -35,-4.47715 -35,-10 0,-5.522847 15.670034,-10 35,-10 19.32997,0 35,4.477153 35,10 z"/>';
@@ -1153,48 +1153,66 @@ var milsymbol = function(){
 		icn['SU.IC.UNDERWATER DECOY'] = '<path  stroke="' + black + '" d="'+(_STD2525?'M 105,110 90,95 105,80 z M 85,110 70,95 85,80 z m 40,-30 -15,15 15,15 z m -55,40 0,-5 55,0 0,5 z':'M 105,120 90,105 105,90 z M 85,120 70,105 85,90 z m 40,-30 -15,15 15,15 z m -55,-5 0,-5 55,0 0,5 z')+'" '+ (_STD2525 ? '' : 'fill="' +iconFillColor+'"') + '/>';
 		icn['SU.IC.UNDERWATER DECOY DSymbol'] = '<path d="M 85 81 L 65 98 L 85 119 L 85 81 z M 110 81 L 90 98 L 110 119 L 110 81 z M 135 81 L 115 98 L 135 119 L 135 81 z "/>';
 
-		icn['SU.IC.SEA MINE DECOY'] = '<path fill="'+(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 106.56864,101.56864 0,26.27448 -13.13727,-13.1372 z m -19.705896,0 0,26.27448 -13.137256,-13.1372 z m 39.411736,0 0,26.27448 -13.1372,-13.1372 13.1372,-13.13728 M 100,75.29412 c -14.511015,0 -26.274512,11.763492 -26.274512,26.27452 l 52.548992,0 C 126.27448,87.057612 114.51097,75.29412 100,75.29412 z m -6.56863,0 0,-13.137256 13.13727,0 0,13.137256 m -29.792246,12.340344 -9.289443,-9.289446 9.289443,-9.289438 9.289444,9.289438 m 27.868362,0 9.28939,-9.289438 9.28947,9.289438 -9.28947,9.289446"/>';
-		icn['SU.IC.SEA MINE DECOY, BOTTOM/GROUND'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0, 130, 24)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 74.317546,126.39272 0,6.42064 51.364934,0 0,-6.42064 z m 32.103094,-25.6824 0,25.6824 -12.841256,-12.8412 z m -19.261864,0 0,25.6824 -12.84123,-12.8412 z m 38.523704,0 0,25.6824 -12.84128,-12.8412 12.84128,-12.8412 M 100,75.027856 c -14.184026,0 -25.682454,11.49842 -25.682454,25.682464 l 51.364934,0 C 125.68248,86.526276 114.18401,75.027856 100,75.027856 z m -6.420616,0 0,-12.841224 12.841256,0 0,12.841224 m -29.120934,12.06228 -9.080118,-9.080126 9.080118,-9.080118 9.080116,9.080118 m 27.240378,0 9.08011,-9.080118 9.08011,9.080118 -9.08011,9.080126"/>';
-		icn['SU.IC.SEA MINE DECOY, MOORED'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0, 130, 24)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 100,100.7056 0,32.05632 m -25.645032,0 51.290072,0 m -19.23376,-32.05632 0,25.64504 -12.822536,-12.82248 z m -19.2338,0 0,25.64504 -12.822512,-12.82248 z m 38.46756,0 0,25.64504 -12.82256,-12.82248 12.82256,-12.82256 M 100,75.060592 c -14.163359,0 -25.645032,11.481668 -25.645032,25.645008 l 51.290072,0 C 125.64504,86.54226 114.16337,75.060592 100,75.060592 z m -6.411256,0 0,-12.822512 12.822536,0 0,12.822512 m -29.078502,12.044704 -9.066891,-9.066886 9.066891,-9.066894 9.066888,9.066894 m 27.200694,0 9.06683,-9.066894 9.06691,9.066894 -9.06691,9.066886"/>';
+
 		icn['SU.IC.SEA MINE'] = '<path fill="'+(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="M 115.9099,73 126.5165,62.393395 137.12311,73 126.5165,83.606605 m -53.033006,0 L 62.876894,73 73.483494,62.393395 84.090096,73 m 8.409903,-3 0,-15 15.000001,0 0,15 m 22.5,30 c 0,16.56853 -13.43147,30 -30.000001,30 -16.568542,0 -30,-13.43147 -30,-30 0,-16.56855 13.431458,-30 30,-30 C 116.56853,70 130,83.43145 130,100 z"/>';
-		icn['SU.IC.SEA MINE NEUTRALIZED'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0,255,0)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="M 115.9099,73 126.5165,62.393395 137.12311,73 126.5165,83.606605 m -53.033006,0 L 62.876894,73 73.483494,62.393395 84.090096,73 m 8.409903,-3 0,-15 15.000001,0 0,15 m 22.5,30 c 0,16.56853 -13.43147,30 -30.000001,30 -16.568542,0 -30,-13.43147 -30,-30 0,-16.56855 13.431458,-30 30,-30 C 116.56853,70 130,83.43145 130,100 z"/><path  '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 135,65 -70,70 m 0,-70 70,70"/>';
-		icn['SU.IC.SEA MINE (BOTTOM/ GROUND)'] = '<path fill="'+(numbersIdC&&alternateMedal?'':(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor))+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 74.796744,125.20328 50.406536,0 0,12.6016 -50.406536,0 z m 38.569296,-47.480022 8.91067,-8.910694 8.91075,8.910694 -8.91075,8.910702 m -44.553452,0 -8.910691,-8.910702 8.910691,-8.910694 8.9107,8.910694 m 7.065226,-2.926514 0,-12.601624 12.601616,0 0,12.601624 M 125.20328,100 c 0,13.91937 -11.28391,25.20328 -25.20328,25.20328 -13.919375,0 -25.203256,-11.28391 -25.203256,-25.20328 0,-13.91938 11.283881,-25.203256 25.203256,-25.203256 13.91937,0 25.20328,11.283876 25.20328,25.203256 z"/>';
-		icn['SU.SEA MINE (BOTTOM/ GROUND) NEUTRALIZED'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0, 255, 0)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 74.796744,125.20328 50.406536,0 0,12.6016 -50.406536,0 z m 38.569296,-47.480022 8.91067,-8.910694 8.91075,8.910694 -8.91075,8.910702 m -44.553452,0 -8.910691,-8.910702 8.910691,-8.910694 8.9107,8.910694 m 7.065226,-2.926514 0,-12.601624 12.601616,0 0,12.601624 M 125.20328,100 c 0,13.91937 -11.28391,25.20328 -25.20328,25.20328 -13.919375,0 -25.203256,-11.28391 -25.203256,-25.20328 0,-13.91938 11.283881,-25.203256 25.203256,-25.203256 13.91937,0 25.20328,11.283876 25.20328,25.203256 z"/><path  '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 135,65 -70,70 m 0,-70 70,70"/>';
-		icn['SU.IC.SEA MINE (BOTTOM/ GROUND) EXERCISE MINE'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0, 130, 24)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 74.796744,125.20328 50.406536,0 0,12.6016 -50.406536,0 z m 38.569296,-47.480022 8.91067,-8.910694 8.91075,8.910694 -8.91075,8.910702 m -44.553452,0 -8.910691,-8.910702 8.910691,-8.910694 8.9107,8.910694 m 7.065226,-2.926514 0,-12.601624 12.601616,0 0,12.601624 M 125.20328,100 c 0,13.91937 -11.28391,25.20328 -25.20328,25.20328 -13.919375,0 -25.203256,-11.28391 -25.203256,-25.20328 0,-13.91938 11.283881,-25.203256 25.203256,-25.203256 13.91937,0 25.20328,11.283876 25.20328,25.203256 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >EX</text><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +' x="150" y="46" font-size="40" >X</text>';
-		icn['SU.IC.SEA MINE (BOTTOM/ GROUND) MILEC'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(255,255,0)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.1212,124.68184 -26.2424,0 -13.121202,-13.1212 0,-26.242442 13.121202,-13.121206 26.2424,0 13.1212,13.121206 0,26.242442 -13.1212,13.1212 m -39.363602,13.1212 0,-13.1212 52.484802,0 0,13.1212 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >E</text>';
-		icn['SU.IC.SEA MINE (BOTTOM/ GROUND) MILCO'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(255,141,42)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.1212,124.68184 -26.2424,0 -13.121202,-13.1212 0,-26.242442 13.121202,-13.121206 26.2424,0 13.1212,13.121206 0,26.242442 -13.1212,13.1212 m -39.363602,13.1212 0,-13.1212 52.484802,0 0,13.1212 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >#</text>';
-		icn['SU.IC.SEA MINE (BOTTOM/ GROUND) NEGATIVE REACQUISITION'] = '<path stroke-dasharray="8,4" fill="'+(_STD2525&&!monoColor?'rgb(255,255,0)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.1212,124.68184 -26.2424,0 -13.121202,-13.1212 0,-26.242442 13.121202,-13.121206 26.2424,0 13.1212,13.121206 0,26.242442 -13.1212,13.1212 m -39.363602,13.1212 0,-13.1212 52.484802,0 0,13.1212 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >NR</text>';
-		icn['SU.IC.SEA MINE (BOTTOM/ GROUND) NON-MINE MINE-LIKE CONTACT'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0,130,23)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.1212,124.68184 -26.2424,0 -13.121202,-13.1212 0,-26.242442 13.121202,-13.121206 26.2424,0 13.1212,13.121206 0,26.242442 -13.1212,13.1212 m -39.363602,13.1212 0,-13.1212 52.484802,0 0,13.1212 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >N</text>';
-		icn['SU.IC.SEA MINE (MOORED)'] = '<path fill="'+(numbersIdC&&alternateMedal?'':(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor))+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75.475865,136.78622 49.048305,0 M 100,124.52417 l 0,12.26205 M 124.52417,100 c 0,13.54427 -10.9799,24.52417 -24.52417,24.52417 -13.54431,0 -24.524135,-10.9799 -24.524135,-24.52417 0,-13.544315 10.979825,-24.524135 24.524135,-24.524135 13.54427,0 24.52417,10.97982 24.52417,24.524135 z m -30.655202,-24.524135 0,-12.262071 12.262092,0 0,12.262071 m -27.807543,11.51825 -8.670588,-8.670598 8.670588,-8.670591 8.670596,8.670591 m 26.011807,0 8.67057,-8.670591 8.67057,8.670591 -8.67057,8.670598"/>';
-		icn['SU.IC.SEA MINE (MOORED) NEUTRALIZED'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0,255,0)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75.475865,136.78622 49.048305,0 M 100,124.52417 l 0,12.26205 M 124.52417,100 c 0,13.54427 -10.9799,24.52417 -24.52417,24.52417 -13.54431,0 -24.524135,-10.9799 -24.524135,-24.52417 0,-13.544315 10.979825,-24.524135 24.524135,-24.524135 13.54427,0 24.52417,10.97982 24.52417,24.524135 z m -30.655202,-24.524135 0,-12.262071 12.262092,0 0,12.262071 m -27.807543,11.51825 -8.670588,-8.670598 8.670588,-8.670591 8.670596,8.670591 m 26.011807,0 8.67057,-8.670591 8.67057,8.670591 -8.67057,8.670598"/><path  '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 135,65 -70,70 m 0,-70 70,70"/>';
-		icn['SU.IC.SEA MINE (MOORED) EXERCISE MINE'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0, 130, 24)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75.475865,136.78622 49.048305,0 M 100,124.52417 l 0,12.26205 M 124.52417,100 c 0,13.54427 -10.9799,24.52417 -24.52417,24.52417 -13.54431,0 -24.524135,-10.9799 -24.524135,-24.52417 0,-13.544315 10.979825,-24.524135 24.524135,-24.524135 13.54427,0 24.52417,10.97982 24.52417,24.524135 z m -30.655202,-24.524135 0,-12.262071 12.262092,0 0,12.262071 m -27.807543,11.51825 -8.670588,-8.670598 8.670588,-8.670591 8.670596,8.670591 m 26.011807,0 8.67057,-8.670591 8.67057,8.670591 -8.67057,8.670598"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >EX</text><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +' x="150" y="46" font-size="40" >X</text>';
-		icn['SU.IC.SEA MINE (MOORED) MILEC'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(255,255,0)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.09736,124.64608 -26.19476,0 -13.097392,-13.09736 0,-26.194816 13.097392,-13.097392 26.19476,0 13.09744,13.097392 0,26.194816 z M 100,137.74352 l 0,-13.09744 m -26.194792,13.09744 52.389592,0"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >E</text>';
-		icn['SU.IC.SEA MINE (MOORED) MILCO'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(255,141,42)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.09736,124.64608 -26.19476,0 -13.097392,-13.09736 0,-26.194816 13.097392,-13.097392 26.19476,0 13.09744,13.097392 0,26.194816 z M 100,137.74352 l 0,-13.09744 m -26.194792,13.09744 52.389592,0"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >#</text>';
-		icn['SU.IC.SEA MINE (MOORED) NEGATIVE REACQUISITION'] = '<path stroke-dasharray="8,4" fill="'+(_STD2525&&!monoColor?'rgb(255,255,0)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.09736,124.64608 -26.19476,0 -13.097392,-13.09736 0,-26.194816 13.097392,-13.097392 26.19476,0 13.09744,13.097392 0,26.194816 z M 100,137.74352 l 0,-13.09744 m -26.194792,13.09744 52.389592,0"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >NR</text>';
-		icn['SU.IC.SEA MINE (MOORED) NON-MINE MINE-LIKE CONTACT'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0,130,23)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.09736,124.64608 -26.19476,0 -13.097392,-13.09736 0,-26.194816 13.097392,-13.097392 26.19476,0 13.09744,13.097392 0,26.194816 z M 100,137.74352 l 0,-13.09744 m -26.194792,13.09744 52.389592,0"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >N</text>';
-		icn['SU.IC.SEA MINE (FLOATING)'] = '<path fill="'+(numbersIdC&&alternateMedal?'':(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor))+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.44489,82.324047 8.96324,-8.963254 8.96324,8.963254 -8.96324,8.963254 m -44.81626,0 -8.963251,-8.963254 8.963251,-8.963254 8.963252,8.963254 m 7.106905,-6.337973 0,-12.675953 12.675953,0 0,12.675953 m 19.01394,25.351906 c 0,14.00144 -11.35048,25.35192 -25.35192,25.35192 -14.001469,0 -25.351904,-11.35048 -25.351904,-25.35192 0,-14.001478 11.350435,-25.351906 25.351904,-25.351906 14.00144,0 25.35192,11.350428 25.35192,25.351906 z"/><path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"/>';
-		icn['SU.IC.SEA MINE (FLOATING) NEUTRALIZED'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0,255,0)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.44489,82.324047 8.96324,-8.963254 8.96324,8.963254 -8.96324,8.963254 m -44.81626,0 -8.963251,-8.963254 8.963251,-8.963254 8.963252,8.963254 m 7.106905,-6.337973 0,-12.675953 12.675953,0 0,12.675953 m 19.01394,25.351906 c 0,14.00144 -11.35048,25.35192 -25.35192,25.35192 -14.001469,0 -25.351904,-11.35048 -25.351904,-25.35192 0,-14.001478 11.350435,-25.351906 25.351904,-25.351906 14.00144,0 25.35192,11.350428 25.35192,25.351906 z"/><path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 135,65 -70,70 m 0,-70 70,70"/><path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"/>';
-		icn['SU.IC.SEA MINE (FLOATING) EXERCISE MINE'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0, 130, 24)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.44489,82.324047 8.96324,-8.963254 8.96324,8.963254 -8.96324,8.963254 m -44.81626,0 -8.963251,-8.963254 8.963251,-8.963254 8.963252,8.963254 m 7.106905,-6.337973 0,-12.675953 12.675953,0 0,12.675953 m 19.01394,25.351906 c 0,14.00144 -11.35048,25.35192 -25.35192,25.35192 -14.001469,0 -25.351904,-11.35048 -25.351904,-25.35192 0,-14.001478 11.350435,-25.351906 25.351904,-25.351906 14.00144,0 25.35192,11.350428 25.35192,25.351906 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >EX</text><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +' x="150" y="46" font-size="40" >X</text><path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"/>';
-		icn['SU.IC.SEA MINE (FLOATING) MILEC'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(255,255,0)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >E</text><path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"/>';
-		icn['SU.IC.SEA MINE (FLOATING) MILCO'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(255,141,42)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >#</text><path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"/>';
-		icn['SU.IC.SEA MINE (FLOATING) NEGATIVE REACQUISITION'] = '<path stroke-dasharray="8,4" fill="'+(_STD2525&&!monoColor?'rgb(255,255,0)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >NR</text><path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"/>';
-		icn['SU.IC.SEA MINE (FLOATING) NON-MINE MINE-LIKE CONTACT'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0,130,23)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >N</text><path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"/>';
-		icn['SU.IC.SEA MINE (IN OTHER POSITION)'] = '<path fill="'+(numbersIdC&&alternateMedal?'':(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor))+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.44489,82.324047 8.96324,-8.963254 8.96324,8.963254 -8.96324,8.963254 m -44.81626,0 -8.963251,-8.963254 8.963251,-8.963254 8.963252,8.963254 m 7.106905,-6.337973 0,-12.675953 12.675953,0 0,12.675953 m 19.01394,25.351906 c 0,14.00144 -11.35048,25.35192 -25.35192,25.35192 -14.001469,0 -25.351904,-11.35048 -25.351904,-25.35192 0,-14.001478 11.350435,-25.351906 25.351904,-25.351906 14.00144,0 25.35192,11.350428 25.35192,25.351906 z"/><path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 125.24592,100 12.62296,0 m -75.737736,0 12.622952,0"/>';
-		icn['SU.IC.SEA MINE (IN OTHER POSITION) NEUTRALIZED'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0,255,0)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.44489,82.324047 8.96324,-8.963254 8.96324,8.963254 -8.96324,8.963254 m -44.81626,0 -8.963251,-8.963254 8.963251,-8.963254 8.963252,8.963254 m 7.106905,-6.337973 0,-12.675953 12.675953,0 0,12.675953 m 19.01394,25.351906 c 0,14.00144 -11.35048,25.35192 -25.35192,25.35192 -14.001469,0 -25.351904,-11.35048 -25.351904,-25.35192 0,-14.001478 11.350435,-25.351906 25.351904,-25.351906 14.00144,0 25.35192,11.350428 25.35192,25.351906 z"/><path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 135,65 -70,70 m 0,-70 70,70"/><path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 125.24592,100 12.62296,0 m -75.737736,0 12.622952,0"/>';
-		icn['SU.IC.SEA MINE EXERCISE MINE'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0, 130, 24)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.44489,82.324047 8.96324,-8.963254 8.96324,8.963254 -8.96324,8.963254 m -44.81626,0 -8.963251,-8.963254 8.963251,-8.963254 8.963252,8.963254 m 7.106905,-6.337973 0,-12.675953 12.675953,0 0,12.675953 m 19.01394,25.351906 c 0,14.00144 -11.35048,25.35192 -25.35192,25.35192 -14.001469,0 -25.351904,-11.35048 -25.351904,-25.35192 0,-14.001478 11.350435,-25.351906 25.351904,-25.351906 14.00144,0 25.35192,11.350428 25.35192,25.351906 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >EX</text><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +' x="150" y="46" font-size="40" >X</text>';
-		icn['SU.IC.SEA MINE MILEC'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(255,255,0)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >E</text>';
-		icn['SU.IC.SEA MINE MINE ANCHOR'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0, 130, 24)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="105" font-size="18" >ANCR</text>';
-		icn['SU.IC.SEA MINE MILCO'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(255,141,42)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >#</text>';
-		icn['SU.IC.SEA MINE NEGATIVE REACQUISITION'] = '<path stroke-dasharray="8,4" fill="'+(_STD2525&&!monoColor?'rgb(255,255,0)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >NR</text>';
-		icn['SU.IC.SEA MINE GENERAL OBSTRUCTOR'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(255,255,0)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >OB</text>';
-		icn['SU.IC.SEA MINE GENERAL OBSTRUCTOR NEUTRALIZED'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0,255,0)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >OB</text><path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 135,65 -70,70 m 0,-70 70,70"/>';
-		icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0,130,23)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >N</text>';
-		icn['SU.IC.SEA MINE (RISING)'] = '<path fill="'+(numbersIdC&&alternateMedal?'':(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor))+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.44489,82.324047 8.96324,-8.963254 8.96324,8.963254 -8.96324,8.963254 m -44.81626,0 -8.963251,-8.963254 8.963251,-8.963254 8.963252,8.963254 m 7.106905,-6.337973 0,-12.675953 12.675953,0 0,12.675953 m 19.01394,25.351906 c 0,14.00144 -11.35048,25.35192 -25.35192,25.35192 -14.001469,0 -25.351904,-11.35048 -25.351904,-25.35192 0,-14.001478 11.350435,-25.351906 25.351904,-25.351906 14.00144,0 25.35192,11.350428 25.35192,25.351906 z"/><path fill="'+(numbersIdC&&alternateMedal?'':(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor))+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 100,128 -10,15 20,0 z"/>';
-		icn['SU.IC.SEA MINE (RISING) NEUTRALIZED'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0, 255, 0)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.44489,82.324047 8.96324,-8.963254 8.96324,8.963254 -8.96324,8.963254 m -44.81626,0 -8.963251,-8.963254 8.963251,-8.963254 8.963252,8.963254 m 7.106905,-6.337973 0,-12.675953 12.675953,0 0,12.675953 m 19.01394,25.351906 c 0,14.00144 -11.35048,25.35192 -25.35192,25.35192 -14.001469,0 -25.351904,-11.35048 -25.351904,-25.35192 0,-14.001478 11.350435,-25.351906 25.351904,-25.351906 14.00144,0 25.35192,11.350428 25.35192,25.351906 z"/><path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 135,65 -70,70 m 0,-70 70,70"/><path fill="'+(_STD2525&&!monoColor?'rgb(0, 255, 0)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 100,128 -10,15 20,0 z"/>';
-		icn['SU.IC.SEA MINE (RISING) EXERCISE MINE'] = '<path fill="'+(_STD2525&&!monoColor?'rgb(0, 130, 24)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.44489,82.324047 8.96324,-8.963254 8.96324,8.963254 -8.96324,8.963254 m -44.81626,0 -8.963251,-8.963254 8.963251,-8.963254 8.963252,8.963254 m 7.106905,-6.337973 0,-12.675953 12.675953,0 0,12.675953 m 19.01394,25.351906 c 0,14.00144 -11.35048,25.35192 -25.35192,25.35192 -14.001469,0 -25.351904,-11.35048 -25.351904,-25.35192 0,-14.001478 11.350435,-25.351906 25.351904,-25.351906 14.00144,0 25.35192,11.350428 25.35192,25.351906 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >EX</text><text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +' x="150" y="46" font-size="40" >X</text><path fill="'+(_STD2525&&!monoColor?'rgb(0, 130, 24)':iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 100,128 -10,15 20,0 z"/>';
+		icn['SU.IC.SEA MINE - BOTTOM'] = icn['SU.IC.SEA MINE'] + '<path fill="'+(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 74.796744,125.20328 50.406536,0 0,12.6016 -50.406536,0 z"/>'; 
+		icn['SU.IC.SEA MINE - MOORED'] = icn['SU.IC.SEA MINE'] + '<path fill="'+(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75.475865,136.78622 49.048305,0 M 100,124.52417 l 0,12.26205"/>'; 
+		icn['SU.IC.SEA MINE - FLOATING'] = icn['SU.IC.SEA MINE'] + '<path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"/>'; 
+		icn['SU.IC.SEA MINE - RISING'] = icn['SU.IC.SEA MINE'] + '<path fill="'+(numberSIDC&&alternateMedal?'':(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor))+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 100,128 -10,15 20,0 z"/>';
+		icn['SU.IC.SEA MINE (IN OTHER POSITION)'] = icn['SU.IC.SEA MINE'] + '<path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 130,100 15,0 M 70,100 l -15,0"/>';
+		icn['SU.IC.SEA MINE - KINGFISHER'] = icn['SU.IC.SEA MINE'] + '<text stroke="none" '+ (_STD2525&&!monoColor&&!alternateMedal?'fill="black"':'fill="'+white+'"') +'  text-anchor="middle" x="100" y="110" font-size="35" >K</text>';
+		icn['SU.IC.SEA MINE - SMALL OBJECT'] = icn['SU.IC.SEA MINE'] + '<text stroke="none" '+ (_STD2525&&!monoColor&&!alternateMedal?'fill="black"':'fill="'+white+'"') +'  text-anchor="middle" x="100" y="112" font-size="30" >SO</text>'
+		
+		icn['SU.IC.SEA MINE EXERCISE MINE'] = '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="M 115.9099,73 126.5165,62.393395 137.12311,73 126.5165,83.606605 m -53.033006,0 L 62.876894,73 73.483494,62.393395 84.090096,73 m 8.409903,-3 0,-15 15.000001,0 0,15 m 22.5,30 c 0,16.56853 -13.43147,30 -30.000001,30 -16.568542,0 -30,-13.43147 -30,-30 0,-16.56855 13.431458,-30 30,-30 C 116.56853,70 130,83.43145 130,100 z"/>' + '<text stroke="none" '+ (_STD2525&&!monoColor&&!alternateMedal?'fill="black"':'fill="'+white+'"') +'  text-anchor="middle" x="100" y="112" font-size="30" >EX</text>' + (numberSIDC?'':'<text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +' x="150" y="46" font-size="40" >X</text>');
+		icn['SU.IC.SEA MINE EXERCISE MINE - BOTTOM'] = icn['SU.IC.SEA MINE EXERCISE MINE'] + '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 74.796744,125.20328 50.406536,0 0,12.6016 -50.406536,0 z"/>'; 
+		icn['SU.IC.SEA MINE EXERCISE MINE - MOORED'] = icn['SU.IC.SEA MINE EXERCISE MINE'] + '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75.475865,136.78622 49.048305,0 M 100,124.52417 l 0,12.26205"/>'; 
+		icn['SU.IC.SEA MINE EXERCISE MINE - FLOATING'] = icn['SU.IC.SEA MINE EXERCISE MINE'] + '<path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"/>'; 
+		icn['SU.IC.SEA MINE EXERCISE MINE - RISING'] = icn['SU.IC.SEA MINE EXERCISE MINE'] + '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 100,128 -10,15 20,0 z"/>'; 
+
+		icn['SU.IC.SEA MINE DECOY'] = '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 106.56864,101.56864 0,26.27448 -13.13727,-13.1372 z m -19.705896,0 0,26.27448 -13.137256,-13.1372 z m 39.411736,0 0,26.27448 -13.1372,-13.1372 13.1372,-13.13728 M 100,75.29412 c -14.511015,0 -26.274512,11.763492 -26.274512,26.27452 l 52.548992,0 C 126.27448,87.057612 114.51097,75.29412 100,75.29412 z m -6.56863,0 0,-13.137256 13.13727,0 0,13.137256 m -29.792246,12.340344 -9.289443,-9.289446 9.289443,-9.289438 9.289444,9.289438 m 27.868362,0 9.28939,-9.289438 9.28947,9.289438 -9.28947,9.289446"/>';
+		icn['SU.IC.SEA MINE DECOY, BOTTOM/GROUND'] = icn['SU.IC.SEA MINE DECOY'] + '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 74.796744,125.20328 50.406536,0 0,12.6016 -50.406536,0 z"/>'; 
+		icn['SU.IC.SEA MINE DECOY, MOORED'] = icn['SU.IC.SEA MINE DECOY'] + '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75,140 50,0 M 100,100 l 0,40"/>'; 
+
+		icn['SU.IC.SEA MINE NEUTRALIZED'] = '<path fill="'+(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="M 115.9099,73 126.5165,62.393395 137.12311,73 126.5165,83.606605 m -53.033006,0 L 62.876894,73 73.483494,62.393395 84.090096,73 m 8.409903,-3 0,-15 15.000001,0 0,15 m 22.5,30 c 0,16.56853 -13.43147,30 -30.000001,30 -16.568542,0 -30,-13.43147 -30,-30 0,-16.56855 13.431458,-30 30,-30 C 116.56853,70 130,83.43145 130,100 z"/>' + '<path  stroke-width="5" '+ (!monoColor&&!alternateMedal?'stroke="'+black+'"':'stroke="'+white+'"') +' d="m 135,65 -70,70 m 0,-70 70,70"/>';
+		icn['SU.IC.SEA MINE NEUTRALIZED - BOTTOM'] = icn['SU.IC.SEA MINE NEUTRALIZED'] + '<path fill="'+(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 74.796744,125.20328 50.406536,0 0,12.6016 -50.406536,0 z"/>'; 
+		icn['SU.IC.SEA MINE NEUTRALIZED - MOORED'] =  icn['SU.IC.SEA MINE NEUTRALIZED'] + '<path fill="'+(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75.475865,136.78622 49.048305,0 M 100,124.52417 l 0,12.26205"/>'; 
+		icn['SU.IC.SEA MINE NEUTRALIZED - FLOATING'] =  icn['SU.IC.SEA MINE NEUTRALIZED'] + '<path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"/>'; 
+		icn['SU.IC.SEA MINE NEUTRALIZED - RISING'] =  icn['SU.IC.SEA MINE NEUTRALIZED'] + '<path fill="'+(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 100,128 -10,15 20,0 z"/>';
+		icn['SU.IC.SEA MINE (IN OTHER POSITION) NEUTRALIZED'] =  icn['SU.IC.SEA MINE NEUTRALIZED'] + '<path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 130,100 15,0 M 70,100 l -15,0"/>';
+
+		icn['SU.IC.SEA MINE MILEC'] = '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/><text stroke="none" '+(_STD2525&&!monoColor&&!alternateMedal?'fill="black"':'fill="'+white+'"') +'  text-anchor="middle" x="100" y="112" font-size="30" >E</text>';
+		icn['SU.IC.SEA MINE MILEC - BOTTOM'] = icn['SU.IC.SEA MINE MILEC'] + '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 74.796744,125.20328 50.406536,0 0,12.6016 -50.406536,0 z"/>'; 
+		icn['SU.IC.SEA MINE MILEC - MOORED'] = icn['SU.IC.SEA MINE MILEC'] + '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75.475865,136.78622 49.048305,0 M 100,124.52417 l 0,12.26205"/>'; 
+		icn['SU.IC.SEA MINE MILEC - FLOATING'] = icn['SU.IC.SEA MINE MILEC'] + '<path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"/>'; 
+
+		icn['SU.IC.SEA MINE MINE ANCHOR'] = '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/><text stroke="none" '+ (_STD2525&&!monoColor&&!alternateMedal?'fill="black"':'fill="'+white+'"') +'  text-anchor="middle" x="100" y="105" font-size="18" >ANCR</text>';
+		
+		icn['SU.IC.SEA MINE MILCO'] = '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,141,42)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/>' + (numberSIDC?'':'<text stroke="none" '+ (_STD2525&&!monoColor?'fill="black"':'') +'  text-anchor="middle" x="100" y="112" font-size="30" >#</text>');
+		icn['SU.IC.SEA MINE MILCO - BOTTOM'] = icn['SU.IC.SEA MINE MILCO'] + '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,141,42)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 74.796744,125.20328 50.406536,0 0,12.6016 -50.406536,0 z"/>'; 
+		icn['SU.IC.SEA MINE MILCO - MOORED'] = icn['SU.IC.SEA MINE MILCO'] + '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75.475865,136.78622 49.048305,0 M 100,124.52417 l 0,12.26205"/>'; 
+		icn['SU.IC.SEA MINE MILCO - FLOATING'] = icn['SU.IC.SEA MINE MILCO'] + '<path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"/>'; 
+		icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 1'] = '<text stroke="none" '+ (_STD2525&&!monoColor&&!alternateMedal?'fill="black"':'fill="'+white+'"') +'  text-anchor="middle" x="100" y="110" font-size="35" >1</text>';
+		icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 2'] = '<text stroke="none" '+ (_STD2525&&!monoColor&&!alternateMedal?'fill="black"':'fill="'+white+'"') +'  text-anchor="middle" x="100" y="110" font-size="35" >2</text>';
+		icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 3'] = '<text stroke="none" '+ (_STD2525&&!monoColor&&!alternateMedal?'fill="black"':'fill="'+white+'"') +'  text-anchor="middle" x="100" y="110" font-size="35" >3</text>';
+		icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 4'] = '<text stroke="none" '+ (_STD2525&&!monoColor&&!alternateMedal?'fill="black"':'fill="'+white+'"') +'  text-anchor="middle" x="100" y="110" font-size="35" >4</text>';
+		icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 5'] = '<text stroke="none" '+ (_STD2525&&!monoColor&&!alternateMedal?'fill="black"':'fill="'+white+'"') +'  text-anchor="middle" x="100" y="110" font-size="35" >5</text>';
+
+		icn['SU.IC.SEA MINE NEGATIVE REACQUISITION'] = '<path stroke-dasharray="8,4" fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/><text stroke="none" '+ (_STD2525&&!monoColor&&!alternateMedal?'fill="black"':'fill="'+white+'"') +'  text-anchor="middle" x="100" y="112" font-size="30" >NR</text>';
+		icn['SU.IC.SEA MINE NEGATIVE REACQUISITION - BOTTOM'] = icn['SU.IC.SEA MINE NEGATIVE REACQUISITION'] + '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 74.796744,125.20328 50.406536,0 0,12.6016 -50.406536,0 z"/>'; 
+		icn['SU.IC.SEA MINE NEGATIVE REACQUISITION - MOORED'] = icn['SU.IC.SEA MINE NEGATIVE REACQUISITION'] + '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75.475865,136.78622 49.048305,0 M 100,124.52417 l 0,12.26205"/>'; 
+		icn['SU.IC.SEA MINE NEGATIVE REACQUISITION - FLOATING'] = icn['SU.IC.SEA MINE NEGATIVE REACQUISITION'] + '<path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"/>'; 
+
+		icn['SU.IC.SEA MINE GENERAL OBSTRUCTOR'] = '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/><text stroke="none" '+ (_STD2525&&!monoColor&&!alternateMedal?'fill="black"':'fill="'+white+'"') +'  text-anchor="middle" x="100" y="112" font-size="30" >OB</text>';
+		icn['SU.IC.SEA MINE GENERAL OBSTRUCTOR NEUTRALIZED'] = '<path fill="'+(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/>' + '<text stroke="none" '+ (_STD2525&&!monoColor&&!alternateMedal?'fill="black"':'fill="'+white+'"') +'  text-anchor="middle" x="100" y="112" font-size="30" >OB</text>' + '<path  stroke-width="5" '+ (!monoColor&&!alternateMedal?'stroke="'+black+'"':'stroke="'+white+'"') +' d="m 135,65 -70,70 m 0,-70 70,70"/>';
+
+		icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT'] = '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 113.79424,127.58848 -27.588472,0 -13.794224,-13.79424 0,-27.588472 13.794224,-13.794224 27.588472,0 13.79424,13.794224 0,27.588472 z"/><text stroke="none" '+ (_STD2525&&!monoColor&&!alternateMedal?'fill="black"':'fill="'+white+'"') +'  text-anchor="middle" x="100" y="112" font-size="30" >N</text>';
+		icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT - BOTTOM'] = icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT'] + '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 74.796744,125.20328 50.406536,0 0,12.6016 -50.406536,0 z"/>'; 
+		icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT - MOORED'] = icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT'] + '<path fill="'+(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75.475865,136.78622 49.048305,0 M 100,124.52417 l 0,12.26205"/>'; 
+		icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT - FLOATING'] = icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT'] + '<path fill="none" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"/>'; 
+
 		icn['SU.IC.UNEXPLODED EXPLOSIVE ORDNANCE'] = '<path stroke-dasharray="8,4" fill="none" stroke="'+(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconColor)+'"  d="m 85,65 30,0 20,20 0,30 -20,20 -30,0 -20,-20 0,-30 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="'+colors.iconColor['Hostile']+'"':'') +'  text-anchor="middle" x="100" y="110" font-size="30" >UXO</text>';
-		icn['SU.IC.SEABED INSTALLATION, MAN-MADE, MILITARY'] = '';
-		icn['SU.IC.SEABED INSTALLATION, MAN-MADE, NON-MILITARY'] = '';
+		//icn['SU.IC.SEABED INSTALLATION, MAN-MADE, MILITARY'] = '';
+		//icn['SU.IC.SEABED INSTALLATION, MAN-MADE, NON-MILITARY'] = '';
 
 		icn['SU.IC.ENVIRONMENTAL REPORT LOCATION'] = '<path fill="none" stroke="'+(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconColor)+'"  d="m 70,70 0,60 60,0 0,-60 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="'+colors.iconColor['Neutral']+'"':'') +'  text-anchor="middle" x="100" y="122" font-size="60" >E</text>';
 		icn['SU.IC.DIVE REPORT LOCATION'] = '<path fill="none" stroke="'+(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconColor)+'"  d="m 70,70 0,60 60,0 0,-60 z"/><text stroke="none" '+ (_STD2525&&!monoColor?'fill="'+colors.iconColor['Neutral']+'"':'') +'  text-anchor="middle" x="100" y="122" font-size="60" >D</text>';
@@ -1718,7 +1736,7 @@ var milsymbol = function(){
 				"joker"			: false,	//Is it a Joker
 				"mobility"			: "",		//What mobility (Tracked/Sled)
 				"notpresent"		: "",		//Is it Anticipated or Pending
-				"numbersIdC"		: false,	//Is the sIdC number based
+				"numberSIDC"		: false,	//Is the sIdC number based
 				"space"			: false,	//Is it in Space
 				"taskForce"		: false		//Is it a task force
 				}
@@ -1764,8 +1782,8 @@ var milsymbol = function(){
 			}
 			this.sIdC = String(this.sIdC).replace(/\*/g,"-").replace(" ","");
 
-			properties.numbersIdC = !isNaN(this.sIdC);
-			if(properties.numbersIdC){ //This is for new number based sIdCs
+			properties.numberSIDC = !isNaN(this.sIdC);
+			if(properties.numberSIDC){ //This is for new number based sIdCs
 	
 				if (typeof MS._getNumberProperties == 'function'){
 					properties = MS._getNumberProperties.call(this,properties, mapping);
@@ -2438,7 +2456,7 @@ var MSicon = function icon(){
 		}
 	
 		//Letter based sIdCs.
-		if(!this.properties.numbersIdC){ 
+		if(!this.properties.numberSIDC){ 
 			//Sea mine exercise has stuff outsIde the boundingbox... 
 			if(["WMGX--","WMMX--","WMFX--","WMX---","WMSX--"].indexOf(this.properties.functionid)!=-1){
 				gbbox.y1 = 10;
@@ -2494,36 +2512,36 @@ var MSicon = function icon(){
 		}
 	
 		//Number based sIdCs.
-		if(this.properties.numbersIdC){ //Number based sIdCs.
+		if(this.properties.numberSIDC){ //Number based sIdCs.
 			var symbolSet = String(this.sIdC).substr(4,2);
-			if( MS._iconCache[icnet].hasOwnProperty('numbersIdC')){
-				if( MS._iconCache[icnet].numbersIdC.symbolSet.hasOwnProperty(symbolSet)){
-					icn = MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet].icn;
-					m1 = MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet].m1;
-					m2 = MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet].m2;
+			if( MS._iconCache[icnet].hasOwnProperty('numberSIDC')){
+				if( MS._iconCache[icnet].numberSIDC.symbolSet.hasOwnProperty(symbolSet)){
+					icn = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icn;
+					m1 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
+					m2 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
 				}else{
 					if (typeof MS._getNumberSIDCicn == 'function'){
-						MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet] = MS._getNumberSIDCicn(symbolSet,iconParts,MS._STD2525);
-						icn = MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet].icn;
-						m1 = MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet].m1;
-						m2 = MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet].m2;
+						MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet] = MS._getNumberSIDCicn(symbolSet,iconParts,MS._STD2525);
+						icn = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icn;
+						m1 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
+						m2 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
 					}else{
 						console.warn("MS._getNumberSIDCicn() is not present, you will need to load functionality for number based sIdCs");
 					}				
 				}
 			}else{
-				MS._iconCache[icnet].numbersIdC = {};
-				MS._iconCache[icnet].numbersIdC.symbolSet = {};
+				MS._iconCache[icnet].numberSIDC = {};
+				MS._iconCache[icnet].numberSIDC.symbolSet = {};
 				if (typeof MS._getNumberSIDCicn == 'function'){
-					MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet] = MS._getNumberSIDCicn(symbolSet,iconParts,MS._STD2525);
-					icn = MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet].icn;
-					m1 = MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet].m1;
-					m2 = MS._iconCache[icnet].numbersIdC.symbolSet[symbolSet].m2;
+					MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet] = MS._getNumberSIDCicn(symbolSet,iconParts,MS._STD2525);
+					icn = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icn;
+					m1 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
+					m2 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
 					//for printing equipment bottom  set MS._element to the id of an html element and call milsymbol with an equipment sysbol
 					/*
 					if(MS._element){
 					listBBoxes = '';
-					sId = MS._iconCache[icnet].numbersIdC.symbolSet[15].icn;
+					sId = MS._iconCache[icnet].numberSIDC.symbolSet[15].icn;
 					for (var property in sId) {
 					console.log(property)
 							var BaseGeometry = document.createElementNS("http://www.w3.org/2000/svg", "g");
@@ -2567,7 +2585,7 @@ var MSicon = function icon(){
 		var iconColor = this.colors.iconColor[this.properties.affiliation];
 		g += '<g id="Icon" fill="'+iconColor+'" stroke="'+iconColor+'" stroke-width="'+this.strokeWidth+'" font-family="Arial" font-weight="bold">';
 		
-		if(this.properties.numbersIdC){
+		if(this.properties.numberSIDC){
 			//Number based sIdC
 			g += icn[this.properties.functionid.substr(0,6)];//Main symbol
 			if(!icn.hasOwnProperty(this.properties.functionid.substr(0,6))){
@@ -4479,47 +4497,47 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	//1.X.5.2.2.1
 	sId['S-U-WMD---'] = icn['SU.IC.SEA MINE NEUTRALIZED'];			
 	//1.X.5.2.2.2
-	sId['S-U-WMG---'] = icn['SU.IC.SEA MINE (BOTTOM/ GROUND)'];		
+	sId['S-U-WMG---'] = icn['SU.IC.SEA MINE - BOTTOM'];		
 	//1.X.5.2.2.2.1
-	sId['S-U-WMGD--'] = icn['SU.SEA MINE (BOTTOM/ GROUND) NEUTRALIZED'];				
+	sId['S-U-WMGD--'] = icn['SU.IC.SEA MINE NEUTRALIZED - BOTTOM'];				
 	//N/A
-	sId['S-U-WMGX--'] = icn['SU.IC.SEA MINE (BOTTOM/ GROUND) EXERCISE MINE'];			
+	sId['S-U-WMGX--'] = icn['SU.IC.SEA MINE EXERCISE MINE - BOTTOM'];			
 	//N/A
-	sId['S-U-WMGE--'] = icn['SU.IC.SEA MINE (BOTTOM/ GROUND) MILEC'];			
+	sId['S-U-WMGE--'] = icn['SU.IC.SEA MINE MILEC - BOTTOM'];			
 	//N/A
-	sId['S-U-WMGC--'] = icn['SU.IC.SEA MINE (BOTTOM/ GROUND) MILCO'];			
+	sId['S-U-WMGC--'] = icn['SU.IC.SEA MINE MILCO - BOTTOM'];			
 	//N/A
-	sId['S-U-WMGR--'] = icn['SU.IC.SEA MINE (BOTTOM/ GROUND) NEGATIVE REACQUISITION'];					
+	sId['S-U-WMGR--'] = icn['SU.IC.SEA MINE NEGATIVE REACQUISITION - BOTTOM'];					
 	//N/A
-	sId['S-U-WMGO--'] = icn['SU.IC.SEA MINE (BOTTOM/ GROUND) NON-MINE MINE-LIKE CONTACT'];			
+	sId['S-U-WMGO--'] = icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT - BOTTOM'];			
 	//N/A
-	sId['S-U-WMM---'] = icn['SU.IC.SEA MINE (MOORED)'];			
+	sId['S-U-WMM---'] = icn['SU.IC.SEA MINE - MOORED'];			
 	//N/A
-	sId['S-U-WMMD--'] = icn['SU.IC.SEA MINE (MOORED) NEUTRALIZED'];			
+	sId['S-U-WMMD--'] = icn['SU.IC.SEA MINE NEUTRALIZED - MOORED'];			
 	//N/A
-	sId['S-U-WMMX--'] = icn['SU.IC.SEA MINE (MOORED) EXERCISE MINE'];			
+	sId['S-U-WMMX--'] = icn['SU.IC.SEA MINE EXERCISE MINE - MOORED'];			
 	//N/A
-	sId['S-U-WMME--'] = icn['SU.IC.SEA MINE (MOORED) MILEC'];			
+	sId['S-U-WMME--'] = icn['SU.IC.SEA MINE MILEC - MOORED'];			
 	//N/A
-	sId['S-U-WMMC--'] = icn['SU.IC.SEA MINE (MOORED) MILCO'];			
+	sId['S-U-WMMC--'] = icn['SU.IC.SEA MINE MILCO - MOORED'];			
 	//N/A
-	sId['S-U-WMMR--'] = icn['SU.IC.SEA MINE (MOORED) NEGATIVE REACQUISITION'];					
+	sId['S-U-WMMR--'] = icn['SU.IC.SEA MINE NEGATIVE REACQUISITION - MOORED'];					
 	//N/A
-	sId['S-U-WMMO--'] = icn['SU.IC.SEA MINE (MOORED) NON-MINE MINE-LIKE CONTACT'];				
+	sId['S-U-WMMO--'] = icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT - MOORED'];				
 	//N/A
-	sId['S-U-WMF---'] = icn['SU.IC.SEA MINE (FLOATING)'];			
+	sId['S-U-WMF---'] = icn['SU.IC.SEA MINE - FLOATING'];			
 	//N/A
-	sId['S-U-WMFD--'] = icn['SU.IC.SEA MINE (FLOATING) NEUTRALIZED'];			
+	sId['S-U-WMFD--'] = icn['SU.IC.SEA MINE NEUTRALIZED - FLOATING'];			
 	//N/A
-	sId['S-U-WMFX--'] = icn['SU.IC.SEA MINE (FLOATING) EXERCISE MINE'];			
+	sId['S-U-WMFX--'] = icn['SU.IC.SEA MINE EXERCISE MINE - FLOATING'];			
 	//N/A
-	sId['S-U-WMFE--'] = icn['SU.IC.SEA MINE (FLOATING) MILEC'];			
+	sId['S-U-WMFE--'] = icn['SU.IC.SEA MINE MILEC - FLOATING'];			
 	//N/A
-	sId['S-U-WMFC--'] = icn['SU.IC.SEA MINE (FLOATING) MILCO'];			
+	sId['S-U-WMFC--'] = icn['SU.IC.SEA MINE MILCO - FLOATING'];			
 	//N/A
-	sId['S-U-WMFR--'] = icn['SU.IC.SEA MINE (FLOATING) NEGATIVE REACQUISITION'];					
+	sId['S-U-WMFR--'] = icn['SU.IC.SEA MINE NEGATIVE REACQUISITION - FLOATING'];					
 	//N/A
-	sId['S-U-WMFO--'] = icn['SU.IC.SEA MINE (FLOATING) NON-MINE MINE-LIKE CONTACT'];			
+	sId['S-U-WMFO--'] = icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT - FLOATING'];			
 	//N/A
 	sId['S-U-WMO---'] = icn['SU.IC.SEA MINE (IN OTHER POSITION)'];			
 	//N/A
@@ -4541,11 +4559,11 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	//N/A
 	sId['S-U-WMN---'] = icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT'];			
 	//N/A
-	sId['S-U-WMS---'] = icn['SU.IC.SEA MINE (RISING)'];		
+	sId['S-U-WMS---'] = icn['SU.IC.SEA MINE - RISING'];		
 	//N/A
-	sId['S-U-WMSX--'] = icn['SU.IC.SEA MINE (RISING) EXERCISE MINE'];				
+	sId['S-U-WMSX--'] = icn['SU.IC.SEA MINE EXERCISE MINE - RISING'];				
 	//N/A
-	sId['S-U-WMSD--'] = icn['SU.IC.SEA MINE (RISING) NEUTRALIZED'];				
+	sId['S-U-WMSD--'] = icn['SU.IC.SEA MINE NEUTRALIZED - RISING'];				
 	//1.X.5.2.3
 	sId['S-U-WV----'] = icn['SU.IC.AUTONOMOUS UNDERWATER VEHICLE/ UNMANNED UNDERWATER VEHICLE (AUV/UUV)'];
 	//1.X.5.3
@@ -6640,68 +6658,68 @@ sId['150000'] = 'Fused Track';
 //Mine Warfare
 	if(symbolSet == "36" ){
 		sId['110000'] = icn['SU.IC.SEA MINE'];
-		sId['110100'] = icn['SU.IC.SEA MINE (BOTTOM/ GROUND)'];
-		sId['110200'] = icn['SU.IC.SEA MINE (MOORED)'];
-		sId['110300'] = icn['SU.IC.SEA MINE (FLOATING)'];
-		sId['110400'] = icn['SU.IC.SEA MINE (RISING)'];
+		sId['110100'] = icn['SU.IC.SEA MINE - BOTTOM'];
+		sId['110200'] = icn['SU.IC.SEA MINE - MOORED'];
+		sId['110300'] = icn['SU.IC.SEA MINE - FLOATING'];
+		sId['110400'] = icn['SU.IC.SEA MINE - RISING'];
 		sId['110500'] = icn['SU.IC.SEA MINE (IN OTHER POSITION)'];
-		sId['110600'] = 'Sea Mine, General.Kingfisher';
-		sId['110700'] = 'Sea Mine, General.Small Object, Mine-Like';
-		sId['110800'] = 'Sea Mine, General.Exercise Mine, General';
-		sId['110801'] = 'Sea Mine, General.Exercise Mine, General.Exercise Mine, Bottom';
-		sId['110802'] = 'Sea Mine, General.Exercise Mine, General.Exercise Mine, Moored';
-		sId['110803'] = 'Sea Mine, General.Exercise Mine, General.Exercise Mine, Floating';
-		sId['110804'] = 'Sea Mine, General.Exercise Mine, General.Exercise Mine, Rising';
-		sId['110900'] = 'Sea Mine, General.Neutralized Mine, General';
-		sId['110901'] = 'Sea Mine, General.Neutralized Mine, General.Neutralized Mine, Bottom';
-		sId['110902'] = 'Sea Mine, General.Neutralized Mine, General.Neutralized Mine, Moored';
-		sId['110903'] = 'Sea Mine, General.Neutralized Mine, General.Neutralized Mine, Floating';
-		sId['110904'] = 'Sea Mine, General.Neutralized Mine, General.Neutralized Mine, Rising';
-		sId['110905'] = 'Sea Mine, General.Neutralized Mine, General.Neutralized Mine, Other Position';
+		sId['110600'] = icn['SU.IC.SEA MINE - KINGFISHER'];
+		sId['110700'] = icn['SU.IC.SEA MINE - SMALL OBJECT'];
+		sId['110800'] = icn['SU.IC.SEA MINE EXERCISE MINE'];
+		sId['110801'] = icn['SU.IC.SEA MINE EXERCISE MINE - BOTTOM'];
+		sId['110802'] = icn['SU.IC.SEA MINE EXERCISE MINE - MOORED'];
+		sId['110803'] = icn['SU.IC.SEA MINE EXERCISE MINE - FLOATING'];
+		sId['110804'] = icn['SU.IC.SEA MINE EXERCISE MINE - RISING'];
+		sId['110900'] = icn['SU.IC.SEA MINE NEUTRALIZED'];
+		sId['110901'] = icn['SU.IC.SEA MINE NEUTRALIZED - BOTTOM'];
+		sId['110902'] = icn['SU.IC.SEA MINE NEUTRALIZED - MOORED'];
+		sId['110903'] = icn['SU.IC.SEA MINE NEUTRALIZED - FLOATING'];
+		sId['110904'] = icn['SU.IC.SEA MINE NEUTRALIZED - RISING'];
+		sId['110905'] = icn['SU.IC.SEA MINE (IN OTHER POSITION) NEUTRALIZED'];
 		sId['120000'] = icn['SU.IC.UNEXPLODED EXPLOSIVE ORDNANCE'];
-		sId['130000'] = 'Sea Mine Decoy';
-		sId['130100'] = 'Sea Mine Decoy.Sea Mine Decoy, Bottom';
-		sId['130200'] = 'Sea Mine Decoy.Sea Mine Decoy, Moored';
-		sId['140000'] = 'Mine-Like Contact (MILCO)';
-		sId['140100'] = 'Mine-Like Contact (MILCO).MILCO - General';
-		sId['140101'] = 'Mine-Like Contact (MILCO).MILCO - General.MILCO - General, Confidence';
-		sId['140102'] = 'Mine-Like Contact (MILCO).MILCO - General.MILCO - General, Confidence';
-		sId['140103'] = 'Mine-Like Contact (MILCO).MILCO - General.MILCO - General, Confidence';
-		sId['140104'] = 'Mine-Like Contact (MILCO).MILCO - General.MILCO - General, Confidence';
-		sId['140105'] = 'Mine-Like Contact (MILCO).MILCO - General.MILCO - General, Confidence';
-		sId['140200'] = 'Mine-Like Contact (MILCO).MILCO - Bottom';
-		sId['140201'] = 'Mine-Like Contact (MILCO).MILCO - Bottom.MILCO - Bottom, Confidence';
-		sId['140202'] = 'Mine-Like Contact (MILCO).MILCO - Bottom.MILCO - Bottom, Confidence';
-		sId['140203'] = 'Mine-Like Contact (MILCO).MILCO - Bottom.MILCO - Bottom, Confidence';
-		sId['140204'] = 'Mine-Like Contact (MILCO).MILCO - Bottom.MILCO - Bottom, Confidence';
-		sId['140205'] = 'Mine-Like Contact (MILCO).MILCO - Bottom.MILCO - Bottom, Confidence';
-		sId['140300'] = 'Mine-Like Contact (MILCO).MILCO - Moored';
-		sId['140301'] = 'Mine-Like Contact (MILCO).MILCO - Moored.MILCO - Moored, Confidence';
-		sId['140302'] = 'Mine-Like Contact (MILCO).MILCO - Moored.MILCO - Moored, Confidence';
-		sId['140303'] = 'Mine-Like Contact (MILCO).MILCO - Moored.MILCO - Moored, Confidence';
-		sId['140304'] = 'Mine-Like Contact (MILCO).MILCO - Moored.MILCO - Moored, Confidence';
-		sId['140305'] = 'Mine-Like Contact (MILCO).MILCO - Moored.MILCO - Moored, Confidence';
-		sId['140400'] = 'Mine-Like Contact (MILCO).MILCO - Floating';
-		sId['140401'] = 'Mine-Like Contact (MILCO).MILCO - Floating.MILCO - Floating, Confidence';
-		sId['140402'] = 'Mine-Like Contact (MILCO).MILCO - Floating.MILCO - Floating, Confidence';
-		sId['140403'] = 'Mine-Like Contact (MILCO).MILCO - Floating.MILCO - Floating, Confidence';
-		sId['140404'] = 'Mine-Like Contact (MILCO).MILCO - Floating.MILCO - Floating, Confidence';
-		sId['140405'] = 'Mine-Like Contact (MILCO).MILCO - Floating.MILCO - Floating, Confidence';
-		sId['150000'] = 'Mine-Like Echo (MILEC), General';
-		sId['150100'] = 'Mine-Like Echo (MILEC), General.Mine-Like Echo, Bottom';
-		sId['150200'] = 'Mine-Like Echo (MILEC), General.Mine-Like Echo, Moored';
-		sId['150300'] = 'Mine-Like Echo (MILEC), General.Mine-Like Echo, Floating';
-		sId['160000'] = 'Negative Reacquisition, General';
-		sId['160100'] = 'Negative Reacquisition, General.Negative Reacquisition, Bottom';
-		sId['160200'] = 'Negative Reacquisition, General.Negative Reacquisition, Moored';
-		sId['160300'] = 'Negative Reacquisition, General.Negative Reacquisition, Floating';
-		sId['170000'] = 'Obstructor';
-		sId['170100'] = 'Obstructor.Neutralized Obstructor';
-		sId['180000'] = 'General Mine Anchor';
-		sId['190000'] = 'Non-Mine Mine-Like Object (NMLO), General';
-		sId['190100'] = 'Non-Mine Mine-Like Object (NMLO), General.Non-Mine Mine-Like Object, Bottom';
-		sId['190200'] = 'Non-Mine Mine-Like Object (NMLO), General.Non-Mine Mine-Like Object, Moored';
-		sId['190300'] = 'Non-Mine Mine-Like Object (NMLO), General.Non-Mine Mine-Like Object, Floating';
+		sId['130000'] = icn['SU.IC.SEA MINE DECOY'];
+		sId['130100'] = icn['SU.IC.SEA MINE DECOY, BOTTOM/GROUND'];
+		sId['130200'] = icn['SU.IC.SEA MINE DECOY, MOORED'];
+		//sId['140000'] = 'Mine-Like Contact (MILCO)';
+		sId['140100'] = MS.scale(1.3,icn['SU.IC.SEA MINE MILCO']);
+		sId['140101'] = MS.scale(1.3,icn['SU.IC.SEA MINE MILCO'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 1']);
+		sId['140102'] = MS.scale(1.3,icn['SU.IC.SEA MINE MILCO'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 2']);
+		sId['140103'] = MS.scale(1.3,icn['SU.IC.SEA MINE MILCO'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 3']);
+		sId['140104'] = MS.scale(1.3,icn['SU.IC.SEA MINE MILCO'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 4']);
+		sId['140105'] = MS.scale(1.3,icn['SU.IC.SEA MINE MILCO'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 5']);
+		sId['140200'] = icn['SU.IC.SEA MINE MILCO - BOTTOM'];
+		sId['140201'] = icn['SU.IC.SEA MINE MILCO - BOTTOM'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 1'];
+		sId['140202'] = icn['SU.IC.SEA MINE MILCO - BOTTOM'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 2'];
+		sId['140203'] = icn['SU.IC.SEA MINE MILCO - BOTTOM'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 3'];
+		sId['140204'] = icn['SU.IC.SEA MINE MILCO - BOTTOM'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 4'];
+		sId['140205'] = icn['SU.IC.SEA MINE MILCO - BOTTOM'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 5'];
+		sId['140300'] = icn['SU.IC.SEA MINE MILCO - MOORED'];
+		sId['140301'] = icn['SU.IC.SEA MINE MILCO - MOORED'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 1'];
+		sId['140302'] = icn['SU.IC.SEA MINE MILCO - MOORED'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 2'];
+		sId['140303'] = icn['SU.IC.SEA MINE MILCO - MOORED'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 3'];
+		sId['140304'] = icn['SU.IC.SEA MINE MILCO - MOORED'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 4'];
+		sId['140305'] = icn['SU.IC.SEA MINE MILCO - MOORED'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 5'];
+		sId['140400'] = icn['SU.IC.SEA MINE MILCO - FLOATING'];
+		sId['140401'] = icn['SU.IC.SEA MINE MILCO - FLOATING'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 1'];
+		sId['140402'] = icn['SU.IC.SEA MINE MILCO - FLOATING'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 2'];
+		sId['140403'] = icn['SU.IC.SEA MINE MILCO - FLOATING'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 3'];
+		sId['140404'] = icn['SU.IC.SEA MINE MILCO - FLOATING'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 4'];
+		sId['140405'] = icn['SU.IC.SEA MINE MILCO - FLOATING'] + icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 5'];
+		sId['150000'] = MS.scale(1.3,icn['SU.IC.SEA MINE MILEC']);
+		sId['150100'] = icn['SU.IC.SEA MINE MILEC - BOTTOM'];
+		sId['150200'] = icn['SU.IC.SEA MINE MILEC - MOORED'];
+		sId['150300'] = icn['SU.IC.SEA MINE MILEC - FLOATING'];
+		sId['160000'] = MS.scale(1.3,icn['SU.IC.SEA MINE NEGATIVE REACQUISITION']);
+		sId['160100'] = icn['SU.IC.SEA MINE NEGATIVE REACQUISITION - BOTTOM'];
+		sId['160200'] = icn['SU.IC.SEA MINE NEGATIVE REACQUISITION - MOORED'];
+		sId['160300'] = icn['SU.IC.SEA MINE NEGATIVE REACQUISITION - FLOATING'];
+		sId['170000'] = MS.scale(1.3,icn['SU.IC.SEA MINE GENERAL OBSTRUCTOR']);
+		sId['170100'] = icn['SU.IC.SEA MINE GENERAL OBSTRUCTOR NEUTRALIZED'];
+		sId['180000'] = MS.scale(1.3,icn['SU.IC.SEA MINE MINE ANCHOR']);
+		sId['190000'] = MS.scale(1.3,icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT']);
+		sId['190100'] = icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT - BOTTOM'];
+		sId['190200'] = icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT - MOORED'];
+		sId['190300'] = icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT - FLOATING'];
 		sId['200000'] = icn['SU.IC.ENVIRONMENTAL REPORT LOCATION'];
 		sId['210000'] = icn['SU.IC.DIVE REPORT LOCATION'];		
 	
