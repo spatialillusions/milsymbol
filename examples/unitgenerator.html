@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="stylesheet" href="../spatialillusions.com.css" />
 
 <script src="../dist/milsymbol.js"></script>
 
@@ -38,7 +39,7 @@ function drawSymbol(){
 	//document.getElementById("2525Symbol").innerHTML = mySymbol.getSymbol().XML
 	mySymbolMarker = mySymbol.getMarker();	
 	document.getElementById("MapMarker").innerHTML = mySymbolMarker.XML;
-	document.getElementById("MarkerInfo").innerHTML = 'If you are using Internet Explorer, you can simply right click on the symbol to copy or save it as an image.<br><br>Center of symbol at x:' + mySymbolMarker.x + ' y:' + mySymbolMarker.y + " <br>Symbol width:" +  mySymbolMarker.width + " <br>Symbol height:" +  mySymbolMarker.height// + "<br>SymbolBBox:" + mySymbol.markerBBox.x1 +","+ mySymbol.markerBBox.y1 +","+ mySymbol.markerBBox.x2 +","+ mySymbol.markerBBox.y2
+	document.getElementById("MarkerInfo").innerHTML = 'If you are using Internet Explorer, you can simply right click on the symbol to copy or save it as an image.<br><br>Center of symbol at x:' + mySymbolMarker.markerAnchor.x + ' y:' + mySymbolMarker.markerAnchor.y + " <br>Symbol width:" +  mySymbolMarker.width + " <br>Symbol height:" +  mySymbolMarker.height// + "<br>SymbolBBox:" + mySymbol.markerBBox.x1 +","+ mySymbol.markerBBox.y1 +","+ mySymbol.markerBBox.x2 +","+ mySymbol.markerBBox.y2
 }
 
 function changeSymbol(){
@@ -66,7 +67,7 @@ function changeSymbol(){
 
 	mySymbolMarker = mySymbol.getMarker();
 	document.getElementById("MapMarker").innerHTML = mySymbolMarker.XML;
-	document.getElementById("MarkerInfo").innerHTML = 'If you are using Internet Explorer, you can simply right click on the symbol to copy or save it as an image.<br><br>Center of symbol at x:' + mySymbolMarker.x + ' y:' + mySymbolMarker.y + " <br>Symbol width:" +  mySymbolMarker.width + " <br>Symbol height:" +  mySymbolMarker.height// + "<br>SymbolBBox:" + mySymbol.markerBBox.x1 +","+ mySymbol.markerBBox.y1 +","+ mySymbol.markerBBox.x2 +","+ mySymbol.markerBBox.y2
+	document.getElementById("MarkerInfo").innerHTML = 'If you are using Internet Explorer, you can simply right click on the symbol to copy or save it as an image.<br><br>Center of symbol at x:' + mySymbolMarker.markerAnchor.x + ' y:' + mySymbolMarker.markerAnchor.y + " <br>Symbol width:" +  mySymbolMarker.width + " <br>Symbol height:" +  mySymbolMarker.height// + "<br>SymbolBBox:" + mySymbol.markerBBox.x1 +","+ mySymbol.markerBBox.y1 +","+ mySymbol.markerBBox.x2 +","+ mySymbol.markerBBox.y2
 	}
 
 function changeFill(){
@@ -487,187 +488,7 @@ document.getElementById(id+"block").className = "";
 
 
 <style type="text/css">
-	body{
-		background-color:#fff;
-		margin-top:0px;
-		margin-left: 0px;
-   		margin-right: 0px;
 
-	}
-	a{
-	color: rgb(0,226,110);
-	}
-	.heading{
-		height: 50px;
-		width: 100%;
-		min-width: 1110px;
-		background-color:rgb(0,168,220);
-		position: relative;	
-	}
-	.heading a{
-		font-size: 20px;
-		text-decoration: none;
-    	position: relative; 
-    	top: 12px;
-		left: 10px;
-font-family: Helvetica, arial, freesans, clean, sans-serif;
-font-weight: normal;
-    	color: #fff;	
-	}
-	.bannerLinks a{
-		font-size: 14px;
-		text-decoration: none;
-    	position: relative; 
-    	top: 12px;
-		margin-left: 10px;
-font-family: Helvetica, arial, freesans, clean, sans-serif;
-font-weight: normal;
-    	color: #fff;	
-	}	
-	
-		.logo{
-    	position: absolute; 
-    	bottom: 10px;
-		right: 10px;    	
-	}
-	
-	
-	.h1{
-    	bottom: 0;
-		left: 10px;
-		font-family: Helvetica, arial, freesans, clean, sans-serif;
-font-size: 30px;
-font-style: normal;
-font-variant: normal;
-font-weight: normal;
-line-height: 1.2;
-    	color: rgb(0,168,220);
-    	margin-top: 5px;
-margin-bottom: 5px;
-	}
-	.h2{
-font-family: Helvetica, arial, freesans, clean, sans-serif;
-font-size: 23px;
-font-style: normal;
-font-variant: normal;
-font-weight: normal;
-line-height: 1.2;
-    	color: rgb(0,168,220);
-    	margin-top: 5px;
-margin-bottom: 5px;
-	}
-		.h3{
-font-family: Helvetica, arial, freesans, clean, sans-serif;
-font-size: 20px;
-font-style: normal;
-font-variant: normal;
-font-weight: normal;
-line-height: 1.2;
-    	color: rgb(0,168,220);
-    	margin-top: 5px;
-margin-bottom: 5px;
-
-	}
-
-	
-	
-
-		
-	.main{
-		width: 100%;
-	
-	}
-	.body{
-color: rgb(51, 51, 51);
-font-family: Helvetica, arial, freesans, clean, sans-serif;
-font-size: 14px;
-font-style: normal;
-font-variant: normal;
-font-weight: normal;
-line-height: 1.2;
-margin-bottom: 15px;
-margin-left: 15px;
-margin-right: 15px;
-margin-top: 15px;
-word-wrap: break-word;
-float:left;
-
-	}
-	
-		.qoute{
-	
-	font-size: 14px;
-font-style: italic;
-margin-top: 15px;
-margin-bottom: 15px;
-margin-left: 50px;
-margin-right: 50px;
-	}
-	
-	
-
-	.sidebar{
-color: rgb(51, 51, 51);
-font-family: Helvetica, arial, freesans, clean, sans-serif;
-font-size: 14px;
-font-style: normal;
-font-variant: normal;
-font-weight: normal;
-line-height: 1.2;
-margin-bottom: 15px;
-margin-left: 15px;
-margin-right: 0px;
-margin-top: 15px;
-width: 350px;
-float: right;
-	
-	}	
-	
-	code{
-	color: rgb(100, 100, 100);
-	}
-	
-	#symbols{
-	width: 1010px;
-	height: 170px;
-	margin-left: 100px;
-	background-color: rgb(240, 240, 240);
-	text-align: center;
-	
-	}
-	
-	code{
-	font-size: 10px;
-	padding: 5px;
-	margin: 5px;
-	display: block;
-	background-color: rgb(240, 240, 240);
-
-}
-
-table {
-    border-collapse: collapse;
-    font-family: Helvetica, arial, freesans, clean, sans-serif;
-font-style: normal;
-font-variant: normal;
-font-weight: normal;
-line-height: 1.2;
-}
-
-table, td, th {
-    border: 1px solid rgb(200, 200, 200);
-    	padding: 5px;
-}
-
-.table-heading{
-	font-weight: bold;
-	color: white;
-	background-color:rgb(0,168,220);
-}
-
-/*------------------------*/
-
-	
 	.tabs ul {
     list-style: none;
     padding:0px;
@@ -715,6 +536,7 @@ table, td, th {
 		border: 1px solid #aaa;
 	}
 </style>
+
 </head>
 <body onLoad="sidcCreatorInit('SHG-UCI----D');drawSymbol();Icons2525D();">
 
@@ -941,11 +763,11 @@ Stroke-Width
   <!--<option value="45">Atmospheric</option>
   <option value="46">Oceanographic</option>
   <option value="47">Meteorological Space</option>-->
-  <!--<option value="50">Signals Intelligence – Space</option>
+  <option value="50">Signals Intelligence – Space</option>
   <option value="51">Signals Intelligence – Air</option>
   <option value="52">Signals Intelligence – Land</option>
   <option value="53">Signals Intelligence – Surface</option>
-  <option value="54">Signals Intelligence – Subsurface</option>-->
+  <option value="54">Signals Intelligence – Subsurface</option>
   <option value="60">Cyberspace</option>  
 </select>
 <br>
@@ -1064,7 +886,7 @@ Stroke-Width
 <input type="checkbox" id="DivBackground" onchange="changeBackground()">Dark symbol background.<br>
 <input type="checkbox" id="infoFields" checked onchange="changeInfo()">Turn information around icon on or off.<br>
 </form>
-
+</div>
 
 <h3>Text modifiers for your symbol</h3>
 <table id="textField" cellspacing="0" cellpadding="3">
