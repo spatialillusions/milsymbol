@@ -970,12 +970,34 @@ var milsymbol = function(){
 		icn['GR.IN.IC.BRIDGE'] = '<path d="m 70,115 10,-10 40,0 10,10 m -60,-30 10,10 40,0 10,-10"  fill="none" />';
 		icn['GR.IN.IC.BASE'] = '<path d="m 75,85 50,30 m -50,0 50,-30"  fill="none" />';
 		icn['GR.IN.IC.SEA SURFACE INSTALLATION, OIL RIG/PLATFORM'] = '<path d="m 85,105 0,-40 m 25,40 0,15 m -35,0 0,-15 50,0 0,15"  fill="none" /><path d="m 85,90 15,0 0,15 -15,0 0,-15" />';
+icn['GR.IN.IC.MILITARY/CIVILIAN.MATERIEL'] = text('MAT');
+icn['GR.IN.IC.MILITARY/CIVILIAN.PRINTED MEDIA'] = '<path d="m 110,110 a 10,10 0 0 1 -10,10 10,10 0 0 1 -10,-10 10,10 0 0 1 10,-10 10,10 0 0 1 10,10 z m 0,-20 a 10,10 0 0 1 -10,10 10,10 0 0 1 -10,-10 10,10 0 0 1 10,-10 10,10 0 0 1 10,10 z m -45,10 75,0"  fill="none" />';
+icn['GR.IN.IC.INFRASTRUCTURE.BANKING FINANCE AND INSURANCE  INFRASTRUCTURE.ECONOMIC INFRASTRUCTURE ASSET'] = text('ECON');
+icn['GR.IN.IC.INFRASTRUCTURE.TELECOMMUNICATIONS INFRASTRUCTURE.TELECOMMUNICATIONS'] = '<path d="m 90,105 20,0 0,0 m -25,15 15,-30 15,30 m -55,-40 25,10 0,-10 15,10 15,-10 0,10 25,-10"  fill="none" />';
 
+
+
+		icn['GR.IN.M1.RADIOLOGICAL'] = textm1('R');
+		icn['GR.IN.M1.COAL'] = textm1('CO');
+		icn['GR.IN.M1.GEOTHERMAL'] = textm1('GT');
+		icn['GR.IN.M1.HYDROELECTRIC'] = textm1('HY');
+		icn['GR.IN.M1.NATURAL GAS'] = textm1('NG');
+		icn['GR.IN.M1.PETROLEUM'] = '<path d="m 100,75 0,-10 -6,-10 12,0 -6,10"  fill="none" />';
+		icn['GR.IN.M1.CIVILIAN'] = textm1('CIV');
+		icn['GR.IN.M1.CIVILIAN TELEPHONE'] = textm1('T');
+		icn['GR.IN.M1.CIVILIAN TELEVISION'] = textm1('TV');
+
+
+		icn['GR.IN.M2.CHEMICAL WARFARE PRODUCTION'] = textm2('C');
+		icn['GR.IN.M2.NUCLEAR WARFARE PRODUCTION'] = textm2('N');
+		icn['GR.IN.M2.RADIOLOGICAL WARFARE PRODUCTION'] = textm2('R');
 		icn['GR.IN.M2.ATOMIC ENERGY REACTOR'] = textm2('A');
 		icn['GR.IN.M2.NUCLEAR MATERIAL PRODUCTION'] = textm2('P');
 		icn['GR.IN.M2.NUCLEAR MATERIAL STORAGE'] = textm2('S');
 		icn['GR.IN.M2.CHEMICAL & BIOLOGICAL WARFARE'] = textm2('B');
 		icn['GR.IN.M2.SHIP CONSTRUCTION'] = textm2('YRD');
+		icn['GR.IN.M2.WEAPONS GRADE PRODUCTION'] = textm2('W');
+
 
 		icn['SE.IC.MILITARY'] =text('MIL');
 		icn['SE.IC.COMBATANT'] = '<path d="m 86.90058,110 c -3.58686,1.97051 -7.17372,3.94101 -10.76058,5.91152 2.10233,2.85955 6.67765,3.89305 10,2.06795 2.57091,-0.9204 4.65314,-3.78198 3.05804,-6.10243 -0.76582,-0.62567 -1.53164,-1.25136 -2.29746,-1.87704 z m 26.33903,0.12 c 3.58686,1.97051 7.17372,3.94101 10.76058,5.91152 -2.10233,2.85955 -6.67765,3.89305 -10,2.06795 -2.57091,-0.9204 -4.65314,-3.78198 -3.05804,-6.10243 0.76582,-0.62567 1.53164,-1.25136 2.29746,-1.87704 z"  fill="none" /><path d="m 112.86403,110 c -5.60278,-3.95772 -11.34647,-7.87086 -16.055296,-12.54103 -4.173483,-4.54288 -6.986826,-9.79084 -9.215516,-15.11341 -0.812657,4.42298 -0.887217,9.34081 2.406782,13.17851 3.631081,4.50958 8.646979,8.14967 13.46707,11.82149 2.31514,1.65315 4.68734,3.2543 7.0812,4.83359 0.77192,-0.72638 1.54384,-1.45277 2.31576,-2.17915 m -25.740383,0 c 5.602782,-3.95772 11.346472,-7.87086 16.055303,-12.54103 4.17348,-4.54288 6.98682,-9.79084 9.21551,-15.11341 0.81266,4.42298 0.88722,9.34081 -2.40678,13.17851 -3.63108,4.50957 -8.64698,8.14967 -13.467071,11.82149 -2.315138,1.65315 -4.687341,3.2543 -7.0812,4.83359 -0.771921,-0.72638 -1.543842,-1.45277 -2.315762,-2.17915" fill="' + white + '" stroke-width="2"/>';
@@ -1439,7 +1461,17 @@ var milsymbol = function(){
 		icn['ST.M1.TARGETED'] =textm1('TGT');	
 		icn['ST.M1.TERRORIST'] =textm1('TER');	
 		icn['ST.M1.WILLING RECRUIT'] =textm1('WR');	
-		icn['ST.M1.WRITTEN PSYCHOLOGICAL OPERATIONS'] = icn['ST.M1.WILLING'] =textm1('W');				
+		icn['ST.M1.WRITTEN PSYCHOLOGICAL OPERATIONS'] = icn['ST.M1.WILLING'] =textm1('W');	
+		icn['ST.M1.FALSE'] = textm1('FAL');
+		icn['ST.M1.FIND'] = textm1('FND');
+		icn['ST.M1.FOUND AND CLEARED'] = textm1('CLR');
+		icn['ST.M1.HOAX (DECOY)'] = '<path  d="M 90,75 80,67.5 90,60 90,75 Z m 15,0 -10,-7.5 10,-7.5 0,15 z m 15,0 -10,-7.5 10,-7.5 0,15 z" />';
+		icn['ST.M1.ATTEMPTED'] = textm1('ATT');
+		icn['ST.M1.ACCIDENT'] = textm1('ACC');
+		icn['ST.M1.INCIDENT'] = textm1('INC');
+		icn['ST.M1.THEFT'] = textm1('THF');			
+		icn['ST.M1.PIRATE'] = '<path fill="none" d="M 106.81818,60 A 6.818182,6.818182 0 0 1 100,66.818182 6.818182,6.818182 0 0 1 93.181818,60 6.818182,6.818182 0 0 1 100,53.181818 6.818182,6.818182 0 0 1 106.81818,60 Z m 5.68182,7 -5,10 m -20,-10 5,10 M 115,75 85,60 m 0,15 30,-15" />';	
+
 
 		icn['ST.M2.LEADER OR LEADERSHIP'] = textm2('LDR');
 
@@ -6364,22 +6396,22 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 	if(symbolSet == "20" ){
 		sId['110000'] = icn['AR.I.MILITARY'];
 		sId['110100'] = icn['GR.IN.IC.AIRCRAFT PRODUCTION & ASSEMBLY'];
-		sId['110200'] = icn['GR.IC.FF.CLASS V'];
-		sId['110300'] = 'Military/Civilian.Ammunition Cache';
+		sId['110200'] = MS.scale(1.4,icn['GR.IC.FF.CLASS V']);
+		sId['110300'] = icn['GR.IC.FF.CLASS V'] + icn['GR.IC.FF.SUPPLY'];
 		sId['110400'] = icn['GR.EQ.TANK'];
 		sId['110500'] = icn['ST.IC.BLACK LIST LOCATION'];
 		sId['110600'] = icn['GR.IC.CBRN'];
 		sId['110700'] = icn['GR.EQ.DOZER'];
 		sId['110701'] = icn['GR.IN.IC.BRIDGE'];
-		sId['110800'] = 'Military/Civilian.Equipment Manufacture';
+		sId['110800'] = MS.scale(1.4,icn['GR.IC.FF.CLASS IX']);
 		sId['110900'] = icn['AR.I.GOVERNMENT'];
 		sId['111000'] = icn['ST.IC.GRAY LIST LOCATION'];
 		sId['111100'] = icn['ST.IC.MASS GRAVE LOCATION'];
-		sId['111200'] = 'Military/Civilian.Materiel';
+		sId['111200'] = icn['GR.IN.IC.MILITARY/CIVILIAN.MATERIEL'] + icn['GR.IC.FF.SUPPLY'];
 		sId['111300'] = icn['GR.IN.IC.MINE'];
 		sId['111400'] = icn['GR.EQ.MISSILE LAUNCHER'];
 		sId['111500'] = MS.scale(0.8,icn['AC.IC.RADIOACTIVE MATERIAL']);
-		sId['111600'] = 'Military/Civilian.Printed Media';
+		sId['111600'] = icn['GR.IN.IC.MILITARY/CIVILIAN.PRINTED MEDIA'];
 		sId['111700'] = icn['ST.IC.SAFE HOUSE'];
 		sId['111800'] = icn['ST.IC.WHITE LIST LOCATION'];
 		sId['111900'] = icn['GR.EQ.TENT'];
@@ -6416,7 +6448,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['120201'] = icn['GR.IN.IC.ATM'];
 		sId['120202'] = icn['GR.IN.IC.BANK'];
 		sId['120203'] = icn['GR.IN.IC.BULLION STORAGE'];
-		sId['120204'] = 'Infrastructure.Banking Finance and Insurance  Infrastructure.Economic Infrastructure Asset';
+		sId['120204'] = icn['GR.IN.IC.INFRASTRUCTURE.BANKING FINANCE AND INSURANCE  INFRASTRUCTURE.ECONOMIC INFRASTRUCTURE ASSET'];
 		sId['120205'] = icn['GR.IN.IC.FEDERAL RESERVE BANK'];
 		sId['120206'] = icn['GR.IN.IC.FINANCIAL EXCHANGE'];
 		sId['120207'] = icn['GR.IN.IC.FINANCIAL SERVICES, OTHER'];
@@ -6462,7 +6494,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['121103'] = icn['GR.IN.IC.ELDER CARE'];
 		sId['121200'] = icn['GR.IN.IC.TELECOMMUNICATIONS INFRASTRUCTURE'];
 		sId['121201'] = icn['GR.IC.FF.BROADCAST TRANSMITTER ANTENNA'];
-		sId['121202'] =  'Infrastructure.Telecommunications Infrastructure.Telecommunications';
+		sId['121202'] =  icn['GR.IN.IC.INFRASTRUCTURE.TELECOMMUNICATIONS INFRASTRUCTURE.TELECOMMUNICATIONS'];
 		sId['121203'] = icn['GR.IN.IC.TELECOMMUNICATIONS TOWER'];
 		sId['121300'] = MS.scale(1.5,icn['GR.IC.TRANSPORTATION']);
 		sId['121301'] = icn['GR.IC.TRANSPORTATION'] + icn['GR.IC.AIRPORT OF DEBARKATION'];
@@ -6495,26 +6527,26 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sIdm1['01'] = icn['GR.M1.BIOLOGICAL'];
 		sIdm1['02'] = icn['GR.M1.CHEMICAL'];
 		sIdm1['03'] = icn['GR.M1.NUCLEAR'];
-		sIdm1['04'] = ''//icn['GR.M1.RADIOLOGICAL'];
+		sIdm1['04'] = icn['GR.IN.M1.RADIOLOGICAL'];
 		sIdm1['05'] = icn['GR.M1.DECONTAMINATION'];
-		sIdm1['06'] = 'Coal';
-		sIdm1['07'] = 'Geothermal';
-		sIdm1['08'] = 'Hydroelectric';
-		sIdm1['09'] = 'Natural Gas';
-		sIdm1['10'] = 'Petroleum';
-		sIdm1['11'] = 'Civilian ';
-		sIdm1['12'] = 'Civilian Telephone';
-		sIdm1['13'] = 'Civilian Television';
+		sIdm1['06'] = icn['GR.IN.M1.COAL'];
+		sIdm1['07'] = icn['GR.IN.M1.GEOTHERMAL'];
+		sIdm1['08'] = icn['GR.IN.M1.HYDROELECTRIC'];
+		sIdm1['09'] = icn['GR.IN.M1.NATURAL GAS'];
+		sIdm1['10'] = icn['GR.IN.M1.PETROLEUM'];
+		sIdm1['11'] = icn['GR.IN.M1.CIVILIAN'];
+		sIdm1['12'] = icn['GR.IN.M1.CIVILIAN TELEPHONE'];
+		sIdm1['13'] = icn['GR.IN.M1.CIVILIAN TELEVISION'];
 
-		sIdm2['00'] = 'Unspecified';
-		sIdm2['01'] = 'Biological';
-		sIdm2['02'] = 'Chemical ';
-		sIdm2['03'] = 'Nuclear';
-		sIdm2['04'] = 'Radiological';
-		sIdm2['05'] = 'Atomic Energy Reactor';
-		sIdm2['06'] = 'Nuclear Material Production';
-		sIdm2['07'] = 'Nuclear Material Storage';
-		sIdm2['08'] = 'Weapons Grade';
+		//sIdm2['00'] = 'Unspecified';
+		sIdm2['01'] = icn['GR.IN.M2.CHEMICAL & BIOLOGICAL WARFARE'];
+		sIdm2['02'] = icn['GR.IN.M2.CHEMICAL WARFARE PRODUCTION'];
+		sIdm2['03'] = icn['GR.IN.M2.NUCLEAR WARFARE PRODUCTION'];
+		sIdm2['04'] = icn['GR.IN.M2.RADIOLOGICAL WARFARE PRODUCTION'];
+		sIdm2['05'] = icn['GR.IN.M2.ATOMIC ENERGY REACTOR'];
+		sIdm2['06'] = icn['GR.IN.M2.NUCLEAR MATERIAL PRODUCTION'];
+		sIdm2['07'] = icn['GR.IN.M2.NUCLEAR MATERIAL STORAGE'];
+		sIdm2['08'] = icn['GR.IN.M2.WEAPONS GRADE PRODUCTION'];
 	}
 	
 //Sea
@@ -6944,25 +6976,25 @@ sId['150000'] = 'Fused Track';
 		sId['180100'] = 'Individual.Religious Leader';
 		sId['180200'] = 'Individual.Speaker';		
 
-		sIdm1['00'] = 'Unspecified';
-		sIdm1['01'] = 'Assassination';
-		sIdm1['02'] = 'Execution (Wrongful Killing)';
-		sIdm1['03'] = 'Hijacking/Hijacked';
-		sIdm1['04'] = 'House-to-House';
-		sIdm1['05'] = 'Kidnapping';
-		sIdm1['06'] = 'Murder';
-		sIdm1['07'] = 'Piracy';
-		sIdm1['08'] = 'Rape';
-		sIdm1['09'] = 'Written Military Information Support Operations';
-		sIdm1['10'] = 'Pirate';
-		sIdm1['11'] = 'False';
-		sIdm1['12'] = 'Find';
-		sIdm1['13'] = 'Found and Cleared';
-		sIdm1['14'] = 'Hoax (Decoy)';
-		sIdm1['15'] = 'Attempted';
-		sIdm1['16'] = 'Accident';
-		sIdm1['17'] = 'Incident';
-		sIdm1['18'] = 'Theft';		
+		//sIdm1['00'] = 'Unspecified';
+		sIdm1['01'] = icn['ST.M1.ASSASSINATION'];
+		sIdm1['02'] = icn['ST.M1.EXECUTION (WRONGFUL KILLING)'];
+		sIdm1['03'] = icn['ST.M1.HIJACKING/HIJACKED'];
+		sIdm1['04'] = icn['ST.M1.HOUSE-TO-HOUSE'];
+		sIdm1['05'] = icn['ST.M1.KIDNAPPING'];
+		sIdm1['06'] = icn['ST.M1.MURDER'];
+		sIdm1['07'] = icn['ST.M1.PIRACY'];
+		sIdm1['08'] = icn['ST.M1.RAPE'];
+		sIdm1['09'] = icn['ST.M1.WRITTEN PSYCHOLOGICAL OPERATIONS'];
+		sIdm1['10'] = icn['ST.M1.PIRATE'];
+		sIdm1['11'] = icn['ST.M1.FALSE'];
+		sIdm1['12'] = icn['ST.M1.FIND'];
+		sIdm1['13'] = icn['ST.M1.FOUND AND CLEARED'];
+		sIdm1['14'] = icn['ST.M1.HOAX (DECOY)'];
+		sIdm1['15'] = icn['ST.M1.ATTEMPTED'];
+		sIdm1['16'] = icn['ST.M1.ACCIDENT'];
+		sIdm1['17'] = icn['ST.M1.INCIDENT'];
+		sIdm1['18'] = icn['ST.M1.THEFT'];		
 	}	
 	
 //Signals Intelligence
