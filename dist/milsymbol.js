@@ -1104,6 +1104,9 @@ var milsymbol = function(){
 		icn['SE.IC.NAVIGATIONAL'] = '<path fill="none" stroke="'+(monoColor?iconColor:'red')+'" d="m 75,90 -10,10 70,0 -10,10"/>';
 		icn['SE.IC.ICEBERG'] = '<path fill="'+(monoColor?iconColor:iconFillColor)+'" stroke="'+(monoColor?iconColor:iconFillColor)+'" d="m 75,100 25,-30 25,30 -5,15 -5,-5 -15,20 -15,-20 -5,5 z m -15,0 80,0"/>';
 
+		icn['SE.IC.FUSED TRACK'] = text('?') + '<path fill="none" d="m 70,65 10,35 -10,35 60,0 -10,-35 10,-35 z"/>';
+
+
 		icn['SE.M1.OWN SHIP'] = textm1('OWN');
 		icn['SE.M1.ANTIAIR WARFARE'] = textm1('AAW');
 		icn['SE.M1.ANTISUBMARINE WARFARE'] = textm1('ASW');
@@ -1175,6 +1178,9 @@ var milsymbol = function(){
 		icn['SU.IC.UNDERWATER DECOY'] = '<path  stroke="' + black + '" d="'+(_STD2525?'M 105,110 90,95 105,80 z M 85,110 70,95 85,80 z m 40,-30 -15,15 15,15 z m -55,40 0,-5 55,0 0,5 z':'M 105,120 90,105 105,90 z M 85,120 70,105 85,90 z m 40,-30 -15,15 15,15 z m -55,-5 0,-5 55,0 0,5 z')+'" '+ (_STD2525 ? '' : 'fill="' +iconFillColor+'"') + '/>';
 		icn['SU.IC.UNDERWATER DECOY DSymbol'] = '<path d="M 85 81 L 65 98 L 85 119 L 85 81 z M 110 81 L 90 98 L 110 119 L 110 81 z M 135 81 L 115 98 L 135 119 L 135 81 z "/>';
 
+		icn['SU.IC.ECHO TRACKER CLASSIFIER (ETC)/POSSIBLE CONTACT (POSCON)'] = '<text stroke="none" text-anchor="middle" x="100" y="130" font-size="60" >?</text>';
+		icn['SU.IC.FUSED TRACK'] = text('?') + '<path fill="none" d="m 70,65 10,35 -10,35 60,0 -10,-35 10,-35"/>';
+
 
 		icn['SU.IC.SEA MINE'] = '<path fill="'+(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="M 115.9099,73 126.5165,62.393395 137.12311,73 126.5165,83.606605 m -53.033006,0 L 62.876894,73 73.483494,62.393395 84.090096,73 m 8.409903,-3 0,-15 15.000001,0 0,15 m 22.5,30 c 0,16.56853 -13.43147,30 -30.000001,30 -16.568542,0 -30,-13.43147 -30,-30 0,-16.56855 13.431458,-30 30,-30 C 116.56853,70 130,83.43145 130,100 z"/>';
 		icn['SU.IC.SEA MINE - BOTTOM'] = icn['SU.IC.SEA MINE'] + '<path fill="'+(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor)+'" '+ (_STD2525&&!monoColor?'stroke="black"':'') +' d="m 74.796744,125.20328 50.406536,0 0,12.6016 -50.406536,0 z"/>'; 
@@ -1243,6 +1249,8 @@ var milsymbol = function(){
 		icn['SU.IC.WRECK'] = '<path d="m 125,85 0,30 m -50,-30 0,30 m 25,-40 0,45 m -40,-20 80,0" />';	
 		icn['SU.IC.MARINE LIFE'] = '<path d="m 60,100 20,-20 45,20 15,-10 0,20 -15,-10 -45,20 z" />';	
 		icn['SU.IC.SEA ANOMALY'] = '<path fill="none" d="m 65,100 15,-20 20,30 20,-30 15,20 m -70,10 15,-20 20,30 20,-30 15,20" />';	
+
+
 
 		icn['SU.M1.ANTISUBMARINE WARFARE'] = textm1('ASW');
 		icn['SU.M1.AUXILIARY'] = textm1('AUX');
@@ -1433,6 +1441,22 @@ var milsymbol = function(){
 		icn['ST.IC.SNIPING'] = '<path d="m 95,85 5,-5 5,5 m -5,-5 0,40"  fill="none" /><text stroke="none" text-anchor="middle" x="100" y="75" font-size="25" >S</text>';
 		icn['ST.IC.VANDALISM/LOOT/RANSACK/PLUNDER/SACK'] = '<path d="m 115,100 c 0,-5 5,-10 10,-10 M 85,100 C 85,95 80,90 75,90 m 5,25 c -0.524784,-29.475216 39.99992,-29.999923 40,0 z"  fill="none" />';
 		icn['ST.IC.WHITE LIST LOCATION'] =text('WHT');
+		
+		
+		icn['ST.IC.ROBBERY'] =text('ROB');
+		icn['ST.IC.THEFT'] =text('THF');
+		icn['ST.IC.BURGLARY'] =text('BUR');
+		icn['ST.IC.SMUGGLING'] =text('SMGL');
+		icn['ST.IC.SABOTAGE'] =text('SAB');
+		icn['ST.IC.ILLEGAL DRUG OPERATION'] =text('DRUG');
+		icn['ST.IC.SPY'] =text('SPY');
+		icn['ST.IC.WARRANT SERVED'] =text('WNT');
+		icn['ST.IC.POLLING PLACE/ELECTION'] =text('VOTE');
+		icn['ST.IC.NATURAL EVENT'] =text('NAT');
+		icn['ST.IC.GEOLOGIC'] =text('GEOL');
+		icn['ST.IC.HYDRO-METEOROLOGICAL'] =text('HYDR');
+		icn['ST.IC.INFESTATION'] =text('INFS');
+
 
 		icn['ST.M1.ACCIDENT'] =textm1('ACC');			
 		icn['ST.M1.ASSASSINATION'] =textm1('AS');	
@@ -5467,6 +5491,12 @@ MS._getNumberProperties = function(properties,mapping){
 	if(status == '1' )properties.notpresent = MS.dashArrays.anticipated;
 	if(standardIdentity2 == '0' || standardIdentity2 == '2' || standardIdentity2 == '5')properties.notpresent = MS.dashArrays.pending;
 
+	//All ETC/POSCON tracks shall have a pending standard identity frame.
+	//All fused tracks shall have a pending standard identity frame.
+	if(symbolSet == '30' && functionid.substr(0,6) == 160000)properties.notpresent = MS.dashArrays.pending;
+	if(symbolSet == '35' && functionid.substr(0,6) == 140000)properties.notpresent = MS.dashArrays.pending;
+	if(symbolSet == '35' && functionid.substr(0,6) == 150000)properties.notpresent = MS.dashArrays.pending;
+
 	
 	//Should it have a Condition Bar
 	if(status == '2' || status == '3' || status == '4' || status == '5')properties.condition = mapping.status[parseInt(status)];
@@ -6642,7 +6672,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['140600'] = icn['SE.IC.LEISURE CRAFT, JETSKI'];
 		sId['140700'] = icn['SE.IC.UNMANNED SURFACE WATER VEHICLE (USV)'];
 		sId['150000'] = icn['SE.IC.OWN SHIP'];
-sId['160000'] = 'Fused Track';
+		sId['160000'] = icn['SE.IC.FUSED TRACK'];
 		sId['170000'] = icn['SP.I.MANUAL TRACK'];
 
 
@@ -6708,8 +6738,8 @@ sId['160000'] = 'Fused Track';
 		sId['130100'] = icn['SU.IC.TORPEDO'];
 		sId['130200'] = icn['SU.IC.IMPROVISED EXPLOSIVE DEVICE (IED)'];
 		sId['130300'] = icn['SU.IC.UNDERWATER DECOY DSymbol'];
-sId['140000'] = 'Echo Tracker Classifier (ETC) / Possible Contact (POSCON)';
-sId['150000'] = 'Fused Track';
+		sId['140000'] = icn['SU.IC.ECHO TRACKER CLASSIFIER (ETC)/POSSIBLE CONTACT (POSCON)'];
+		sId['150000'] = icn['SU.IC.FUSED TRACK'];
 		sId['160000'] = icn['SP.I.MANUAL TRACK'];
 
 		sIdm1['01'] = icn['SU.M1.ANTISUBMARINE WARFARE'];
@@ -6835,30 +6865,30 @@ sId['150000'] = 'Fused Track';
 		sId['110107'] = icn['ST.IC.GRAFFITI'];
 		sId['110108'] = icn['ST.IC.KILLING VICTIM'];
 		sId['110109'] = icn['ST.IC.POISONING'];
-		sId['110110'] = 'Incident.Criminal Activity Incident.Civil Rioting';
+		sId['110110'] = icn['ST.IC.RIOT'];
 		sId['110111'] = MS.scale(1.5,icn['ST.IC.BOOBY TRAP']);
 		sId['110112'] = 'Incident.Criminal Activity Incident.Home Eviction';
 		sId['110113'] = 'Incident.Criminal Activity Incident.Black Marketing';
 		sId['110114'] = icn['ST.IC.VANDALISM/LOOT/RANSACK/PLUNDER/SACK'];
 		sId['110115'] = 'Incident.Criminal Activity Incident.Jail Break';
-		sId['110116'] = 'Incident.Criminal Activity Incident.Robbery';
-		sId['110117'] = 'Incident.Criminal Activity Incident.Theft';
-		sId['110118'] = 'Incident.Criminal Activity Incident.Burglary';
-		sId['110119'] = 'Incident.Criminal Activity Incident.Smuggling';
+		sId['110116'] = icn['ST.IC.ROBBERY'];
+		sId['110117'] = icn['ST.IC.THEFT'];
+		sId['110118'] = icn['ST.IC.BURGLARY'];
+		sId['110119'] = icn['ST.IC.SMUGGLING'];
 		sId['110120'] = 'Incident.Criminal Activity Incident.Rock Throwing';
 		sId['110121'] = 'Incident.Criminal Activity Incident.Dead Body';
-		sId['110122'] = 'Incident.Criminal Activity Incident.Sabotage';
+		sId['110122'] = icn['ST.IC.SABOTAGE'];
 		sId['110123'] = MS.translate(0,10,MS.scale(0.8,icn['AC.IC.CRIMINAL.ACTIVITY.INCIDENT'])) + icn['AC.M1.THREAT'];;
 		sId['110200'] = icn['ST.IC.BOMB'];
 		sId['110201'] = icn['ST.IC.BOMB'] + icn['AC.M1.THREAT']; 
 		sId['110300'] = icn['ST.IC.IED'];
 		sId['110301'] = icn['ST.IC.EXPLOSION'] + icn['ST.IC.IED'];
 		sId['110302'] = 'PREMATURE IED EXPLOSION';
-		sId['110303'] = 'Incident.IED Event.IED Cache';
+		sId['110303'] = icn['ST.IC.IED'] + icn['GR.IC.FF.SUPPLY'];
 		sId['110304'] = 'Incident.IED Event.IED Suicide Bomber';
 		sId['110400'] = icn['AC.IC.SHOOTING'];
 		sId['110401'] = icn['ST.IC.SNIPING'];
-		sId['110500'] = 'Incident.Illegal Drug Operation';
+		sId['110500'] = icn['ST.IC.ILLEGAL DRUG OPERATION'];
 		sId['110501'] = 'Incident.Illegal Drug Operation.Trafficking';
 		sId['110502'] = 'Incident.Illegal Drug Operation.Illegal Drug Lab';
 		sId['110600'] = icn['ST.IC.EXPLOSION'];
@@ -6879,12 +6909,12 @@ sId['150000'] = 'Fused Track';
 		sId['130401'] = 'Operation.Recruitment.Willing';
 		sId['130402'] = 'Operation.Recruitment.Coerced/Impressed';
 		sId['130500'] = icn['ST.IC.MINE LAYING'];
-		sId['130600'] = 'Operation.Spy';
-		sId['130700'] = 'Operation.Warrant Served';
+		sId['130600'] = icn['ST.IC.SPY'];
+		sId['130700'] = icn['ST.IC.WARRANT SERVED'];
 		sId['130800'] = 'Operation.Exfiltration';
 		sId['130900'] = 'Operation.Infiltration';
 		sId['131000'] = 'Operation.Meeting';
-		sId['131001'] = 'Operation.Meeting.Polling Place/Election';
+		sId['131001'] = icn['ST.IC.POLLING PLACE/ELECTION'];
 		sId['131100'] = 'Operation.Raid on House';
 		sId['131200'] = icn['GR.IC.FF.EMERGENCY OPERATION'];
 		sId['131201'] = MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']) + icn['AC.M1.EMERGENCY COLLECTION EVACUATION POINT'];
@@ -6952,8 +6982,8 @@ sId['150000'] = 'Fused Track';
 		sId['160300'] = icn['GR.EQ.TRAIN LOCOMOTIVE'];
 		sId['160400'] = icn['ST.IC.KNOWN INSURGENT VEHICLE'];
 		sId['160500'] = 'Transportation Incident.Wheeled Vehicle Explosion';
-		sId['170000'] = 'Natural Event';
-		sId['170100'] = 'Natural Event.Geologic';
+		sId['170000'] = icn['ST.IC.NATURAL EVENT'];
+		sId['170100'] = icn['ST.IC.GEOLOGIC'];
 		sId['170101'] = icn['AC.IC.AFTERSHOCK'];
 		sId['170102'] = icn['AC.IC.AVALANCHE'];
 		sId['170103'] = icn['AC.IC.EARTHQUAKE EPICENTER'];
@@ -6962,11 +6992,11 @@ sId['150000'] = 'Fused Track';
 		sId['170106'] = icn['AC.IC.VOLCANIC ERUPTION'];
 		sId['170107'] = icn['AC.IC.VOLCANIC THREAT'];
 		sId['170108'] = 'Natural Event.Geologic.Cave Entrance';
-		sId['170200'] = 'Natural Event.Hydro-Meteorological';
+		sId['170200'] = icn['ST.IC.HYDRO-METEOROLOGICAL'];
 		sId['170201'] = icn['AC.IC.DROUGHT'];
 		sId['170202'] = icn['AC.IC.FLOOD'];
 		sId['170203'] = icn['AC.IC.TSUNAMI'];
-		sId['170300'] = 'Natural Event.Infestation';
+		sId['170300'] = icn['ST.IC.INFESTATION'];
 		sId['170301'] = icn['AC.IC.BIRD'];
 		sId['170302'] = icn['AC.IC.INSECT'];
 		sId['170303'] = icn['AC.IC.MICROBIAL'];
