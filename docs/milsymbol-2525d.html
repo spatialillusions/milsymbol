@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
 
-<title>spatial illusions - milsymbol 2525D (Draft) Implementation</title>
+<title>spatial illusions - milsymbol 2525D implementation</title>
 <link rel="stylesheet" href="../spatialillusions.com.css" />
 <script src="../dist/milsymbol.js"></script>
 <script>
@@ -42,8 +42,52 @@ viewBox="50 50 100 100"
 var size = 40;
 </script>
 
-<h1>milsymbol 2525D (Draft) Implementation</h1>
 
+<div class="body">
+<h1>milsymbol 2525D Implementation</h1>
+This page shows <i>some of the</i> figures and tables from MIL-STD-2525D drawn with milsymbol.<br>
+<a href="#TABLEI">TABLE I. Frames depicting standard identities and dimensions.</a><br>
+<a href="#TABLEII">TABLE II. Exercise frames.</a><br>
+<a href="#TABLEIII">TABLE II. Simulation frames.</a><br>
+<a href="#FIGURE-8">FIGURE 8. Examples of filled and unfilled symbols. </a><br>
+<a href="#TABLEIV">TABLE V. Civilian symbols with purple fill option.</a><br>
+<br>
+<a href="#TABLEA-VII">TABLE A-VII. Air entity/entity type/entity subtype </a><br>
+<a href="#TABLEA-VIII">TABLE A-VIII. Air sector 1 modifier </a><br>
+<a href="#TABLEA-IX">TABLE A-IX. Air sector 2 modifier </a><br>
+<a href="#TABLEA-X">TABLE A-X. Air missile entity/entity type/entity subtype. </a><br>
+<a href="#TABLEA-XI">TABLE A-XI. Air missile sector 1 modifier </a><br>
+<a href="#TABLEA-XII">TABLE A-XII. Air missile sector 2 modifier </a><br>
+<a href="#TABLEA-XIII">TABLE A-XIII. Space entity/entity type/entity subtype. </a><br>
+<a href="#TABLEA-XIV">TABLE A-XIV. Space sector 1 modifier. </a><br>
+<a href="#TABLEA-XV">TABLE A-XV. Space sector 2 modifier. </a><br>
+<a href="#TABLEA-XVI">TABLE A-XVI. Space missile entity/entity type/entity subtype. </a><br>
+<a href="#TABLEA-XVII">TABLE A-XVII. Space missile sector 1 modifier </a><br>
+<a href="#TABLEA-XVIII">TABLE A-XVIII. Space missile sector 2 modifier </a><br>
+<a href="#TABLEA-XIX">TABLE A-XIX. Land unit entity/entity type/entity subtype. </a><br>
+<a href="#TABLEA-XX">TABLE A-XX. Land unit sector 1 modifier </a><br>
+<a href="#TABLEA-XXI">TABLE A-XXI. Land unit sector 2 modifier </a><br>
+<a href="#TABLEA-XXII">TABLE A-XXII. Land civilian unit/organization entity/entity type/entity subtype. </a><br>
+<a href="#TABLEA-XXIII">TABLE A-XXIII. Land civilian unit/organization sector 1 modifier </a><br>
+<a href="#TABLEA-XXIV">TABLE A-XXIV. Land civilian unit/organization sector 2 modifier </a><br>
+<a href="#TABLEA-XXV">TABLE A-XXV. Land equipment entity/entity type/entity subtype </a><br>
+<a href="#TABLEA-XXVI">TABLE A-XXVI. Land equipment sector 1 modifier </a><br>
+<a href="#TABLEA-XXVII">TABLE A-XXVII. Land installation entity/entity type/entity subtype </a><br>
+<a href="#TABLEA-XXVIII">TABLE A-XXVIII. Land installation sector 1 modifier </a><br>
+<a href="#TABLEA-XXIX">TABLE A-XXIX. Land installation sector 2 modifier </a><br>
+<a href="#TABLEA-XXXI">TABLE A-XXXI. Sea surface entity/entity type/entity subtype </a><br>
+<a href="#TABLEA-XXXII">TABLE A-XXXII. Sea surface sector 1 modifier </a><br>
+<a href="#TABLEA-XXXIII">TABLE A-XXXIII. Sea surface sector 2 modifier </a><br>
+<a href="#TABLEA-XXXIV">TABLE A-XXXIV. Sea Subsurface entity/entity type/entity subtype </a><br>
+<a href="#TABLEA-XXXV">TABLE A-XXXV. Sea subsurface sector 1 modifier </a><br>
+<a href="#TABLEA-XXXVI">TABLE A-XXXVI. Sea subsurface sector 2 modifier </a><br>
+<a href="#TABLEA-XXXVII">TABLE A-XXXVII. Mine warfare entity/entity type/entity subtype </a><br>
+<a href="#TABLEA-XXXVIII">TABLE A-XXXVIII. Activities entity/entity type/entity subtype </a><br>
+<a href="#TABLEA-XXXIX">TABLE A-XXXIX. Activities sector 1 modifier </a><br>
+<a href="#TABLEA-XLIII">TABLE A-XLIII. Signals intelligence equipment entity/entity type/entity subtype </a><br>
+<a href="#TABLEA-XLIV">TABLE A-XLIV. Signals intelligence equipment sector 1 modifier </a><br>
+<a href="#TABLEA-XLV">TABLE A-XLV. Cyberspace entity/entity type/entity subtype </a><br>
+</div>
 
 <h3 id="TABLEI">TABLE I. Frames depicting standard identities and dimensions.</h3>
 <table>
@@ -400,8 +444,11 @@ document.write(new MS.symbol(100540, {size:size}).getMarker().XML);
 </script>
 </td>
 </tr>
+</table>
 
-<tr>
+<h3 id="TABLEII">TABLE II. Exercise frames.</h3>
+<table>
+<tr class="table-heading">
 <td>
 EXERCISE<br>
 PENDING
@@ -727,8 +774,11 @@ document.write(new MS.symbol(101640, {size:size}).getMarker().XML);
 </script>
 </td>
 </tr>
+</table>
 
-<tr>
+<h3 id="TABLEIII">TABLE II. Simulation frames.</h3>
+<table>
+<tr class="table-heading">
 <td>
 SIMULATED<br>PENDING
 </td>
@@ -1051,6 +1101,123 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 
 </table><br>
+
+
+<table>
+<tr>
+<td>
+<script>document.write(new MS.symbol("10061000001211020000", {size:size}).getMarker().XML);</script>
+</td>
+<td>
+<script>document.write(new MS.symbol("10061000001211020000", {size:size,fill:false}).getMarker().XML);</script>
+</td>
+</tr>
+<tr>
+<td>
+<script>document.write(new MS.symbol("10061000001211020000", {size:size,fillOpacity:0.5}).getMarker().XML);</script>
+</td>
+<td>
+<script>document.write(new MS.symbol("10061000001211020000", {size:size,monoColor:"black"}).getMarker().XML);</script>
+</td>
+</tr>
+</table>
+  <h3 id="FIGURE-8">FIGURE 8. Examples of filled and unfilled symbols. </h3>
+<br>
+
+
+<h3 id="TABLEIV">TABLE V. Civilian symbols with purple fill option.</h3>
+<table>
+<tr class="table-heading">
+<td>STANDARD<br>
+IDENTITY
+</td>
+<td>AIR
+</td>
+<td>MARITIME
+</td>
+<td>GROUND
+</td>
+</tr>
+
+<tr>
+<td>FRIEND
+</td>
+<td>
+<script>
+document.write(new MS.symbol(10030100001201000000, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(10033000001401000000, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(10031500001601000000, {size:size}).getMarker().XML);
+</script>
+</td>
+</tr>
+
+<tr>
+<td>NEUTRAL
+</td>
+<td>
+<script>
+document.write(new MS.symbol(10040100001201000000, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(10043000001401000000, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(10041500001601000000, {size:size}).getMarker().XML);
+</script>
+</td>
+</tr>
+
+<tr>
+<td>UNKNOWN
+</td>
+<td>
+<script>
+document.write(new MS.symbol(10010100001201000000, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(10013000001401000000, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(10011500001601000000, {size:size}).getMarker().XML);
+</script>
+</td>
+</tr>
+
+<tr>
+<td>HOSTILE
+</td>
+<td><script>
+document.write(new MS.symbol(10060100001201000000, {size:size}).getMarker().XML);
+</script>
+</td>
+<td><script>
+document.write(new MS.symbol(10063000001401000000, {size:size}).getMarker().XML);
+</script>
+</td>
+<td>
+<script>
+document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML);
+</script>
+</td>
+</tr>
+</table><br>
+<br>
 
 
   <h3 id="TABLEA-VII">TABLE A-VII. Air entity/entity type/entity subtype </h3>
@@ -1475,7 +1642,7 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Air sector 1 modifier </h3>
+ <h3 id="TABLEA-VIII">TABLE A-VIII. Air sector 1 modifier </h3>
 <table>
 <tr class="table-heading">
 <td>Not Applicable</td> <td>00</td> 
@@ -1815,7 +1982,9 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Air sector 2 modifier </h3>
+ <h3 id="TABLEA-IX">TABLE A-IX. Air sector 2 modifier </h3>
+
+
 <table>
 <tr class="table-heading">
 <td>Not Applicable</td> <td>00</td> 
@@ -1948,7 +2117,7 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Air missile sector 1 modifier </h3>
+ <h3 id="TABLEA-XI">TABLE A-XI. Air missile sector 1 modifier </h3>
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
@@ -2040,7 +2209,7 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Air missile sector 2 modifier </h3>
+ <h3 id="TABLEA-XII">TABLE A-XII. Air missile sector 2 modifier </h3>
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
@@ -2477,7 +2646,8 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Space sector 1 modifier. </h3>
+ <h3 id="TABLEA-XIV">TABLE A-XIV. Space sector 1 modifier. </h3>
+
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
@@ -2553,7 +2723,7 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Space sector 2 modifier. </h3>
+ <h3 id="TABLEA-XV">TABLE A-XV. Space sector 2 modifier. </h3>
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
@@ -2630,7 +2800,7 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Space missile sector 1 modifier </h3>
+ <h3 id="TABLEA-XVII">TABLE A-XVII. Space missile sector 1 modifier </h3>
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
@@ -2682,7 +2852,7 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Space missile sector 2 modifier </h3>
+ <h3 id="TABLEA-XVIII">TABLE A-XVIII. Space missile sector 2 modifier </h3>
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
@@ -4733,7 +4903,7 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Land unit sector 1 modifier </h3>
+ <h3 id="TABLEA-XX">TABLE A-XX. Land unit sector 1 modifier </h3>
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
@@ -5385,7 +5555,7 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Land unit sector 2 modifier </h3>
+ <h3 id="TABLEA-XXI">TABLE A-XXI. Land unit sector 2 modifier </h3>
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
@@ -5966,7 +6136,7 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Land civilian unit/organization sector 1 modifier </h3>
+ <h3 id="TABLEA-XXIII">TABLE A-XXIII. Land civilian unit/organization sector 1 modifier </h3>
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
@@ -6186,7 +6356,7 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Land civilian unit/organization sector 2 modifier </h3>
+ <h3 id="TABLEA-XXIV">TABLE A-XXIV. Land civilian unit/organization sector 2 modifier </h3>
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
@@ -7989,7 +8159,7 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Land equipment sector 1 modifier </h3>
+ <h3 id="TABLEA-XXVI">TABLE A-XXVI. Land equipment sector 1 modifier </h3>
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
@@ -9116,7 +9286,7 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Land installation sector 1 modifier </h3>
+ <h3 id="TABLEA-XXVIII">TABLE A-XXVIII. Land installation sector 1 modifier </h3>
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
@@ -9248,7 +9418,7 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Land installation sector 2 modifier </h3>
+ <h3 id="TABLEA-XXIX">TABLE A-XXIX. Land installation sector 2 modifier </h3>
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
@@ -10093,7 +10263,7 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-II. Sea surface sector 1 modifier </h3>
+ <h3 id="TABLEA-XXXII">TABLE A-XXXII. Sea surface sector 1 modifier </h3>
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
@@ -10305,8 +10475,7 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-II. Sea surface sector 2 modifier </h3>
-<table>
+ <h3 id="TABLEA-XXXIII">TABLE A-XXXIII. Sea surface sector 2 modifier </h3><table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("10013000000000000000", {size:size}).getMarker().XML);</script>
@@ -10622,7 +10791,7 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Sea subsurface sector 1 modifier </h3>
+ <h3 id="TABLEA-XXXV">TABLE A-XXXV. Sea subsurface sector 1 modifier </h3>
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
@@ -10810,7 +10979,7 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Sea subsurface sector 2 modifier </h3>
+ <h3 id="TABLEA-XXXVI">TABLE A-XXXVI. Sea subsurface sector 2 modifier </h3>
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
@@ -13016,7 +13185,8 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Activities sector 1 modifier </h3>
+ <h3 id="TABLEA-XXXIX">TABLE A-XXXIX. Activities sector 1 modifier </h3>
+
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
@@ -13226,7 +13396,8 @@ document.write(new MS.symbol(102540, {size:size}).getMarker().XML);
 </tr>
 </table>
 
- <h3 id="TABLEA-I">TABLE A-I. Signals intelligence equipment sector 1 modifier </h3>
+ <h3 id="TABLEA-XLIV">TABLE A-XLIV. Signals intelligence equipment sector 1 modifier </h3>
+
 <table>
 <tr class="table-heading">
 <td>Unspecified</td> <td>00</td> 
