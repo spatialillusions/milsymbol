@@ -19,8 +19,5 @@
   "bugs": {
     "url": "https://github.com/spatialillusions/milsymbol/issues"
   },
-  "homepage": "https://github.com/spatialillusions/milsymbol",
-  "bin": {
-    "milsymbol": "milsymbol.js"
-  }
+  "homepage": "https://github.com/spatialillusions/milsymbol"
 }
