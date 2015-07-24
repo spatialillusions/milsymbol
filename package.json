@@ -1,6 +1,6 @@
 {
   "name": "milsymbol",
-  "version": "0.4.6",
+  "version": "0.5.0",
   "description": "milsymbol.js is a small library in pure javascript that creates SVG symbols according to MIL-STD-2525 and APP6.",
   "main": "dist/milsymbol.js",
   "directories": {
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/spatialillusions/MilSymbol"
+    "url": "https://github.com/spatialillusions/milsymbol"
   },
   "author": "Måns Beckman (http://www.spatialillusions.com)",
   "license": "BSD, See License.txt for details",
   "bugs": {
-    "url": "https://github.com/spatialillusions/MilSymbol/issues"
+    "url": "https://github.com/spatialillusions/milsymbol/issues"
   },
-  "homepage": "https://github.com/spatialillusions/MilSymbol",
+  "homepage": "https://github.com/spatialillusions/milsymbol",
   "bin": {
     "milsymbol": "milsymbol.js"
   }
