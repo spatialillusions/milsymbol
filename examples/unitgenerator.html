@@ -339,7 +339,7 @@ function changeSymbol2525D(){
 	mySymbol.SIDC = sidc;
 	mySymbol.force2525 = document.getElementById("Force2525").checked;
 	mySymbolMarker = mySymbol.getMarker();
-	document.getElementById("MapMarker").innerHTML = mySymbolMarker.XML	 + '<br><br>Center of symbol at x:' + mySymbolMarker.x + ' y:' + mySymbolMarker.y + " <br>Symbol width:" +  mySymbolMarker.width + " <br>Symbol height:" +  mySymbolMarker.height// + "<br>SymbolBBox:" + mySymbol.markerBBox.x1 +","+ mySymbol.markerBBox.y1 +","+ mySymbol.markerBBox.x2 +","+ mySymbol.markerBBox.y2
+	document.getElementById("MapMarker").innerHTML = mySymbolMarker.XML	 + '<br><br>Center of symbol at x:' + mySymbolMarker.markerAnchor.x + ' y:' + mySymbolMarker.markerAnchor.y + " <br>Symbol width:" +  mySymbolMarker.width + " <br>Symbol height:" +  mySymbolMarker.height// + "<br>SymbolBBox:" + mySymbol.markerBBox.x1 +","+ mySymbol.markerBBox.y1 +","+ mySymbol.markerBBox.x2 +","+ mySymbol.markerBBox.y2
 	}	
 function Icons2525D(){
 icons = {'000000':'-'};
