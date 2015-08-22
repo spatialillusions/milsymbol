@@ -131,10 +131,10 @@ var milsymbol = function(){
 		}
 	}
 	this.bbox = function(box){
-		width = function(){
+		var width = function(){
 			return this.x2-this.x1;
 		}
-		height = function(){
+		var height = function(){
 			return this.y2-this.y1;
 		}
 		if(typeof box === "undefined"){
