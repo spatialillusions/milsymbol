@@ -30,7 +30,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 For updates and more information go to http://www.spatialillusions.com
 
 ======================================================================================= */
-console.log("milsymbol.js v0.5.0 - Copyright (c) 2015 Måns Beckman  http://www.spatialillusions.com")
+console.log("milsymbol.js v0.5.2b - Copyright (c) 2015 Måns Beckman  http://www.spatialillusions.com")
 
 var milsymbol = function(){
 	//Constants
