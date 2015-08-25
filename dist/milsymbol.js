@@ -823,7 +823,7 @@ var milsymbol = function(){
 		icn['GR.M2.TRUCK'] = '<path  d="M60,120 l80,0" fill="none"/><circle fill="none" cx="65" cy="125" r="5" /><circle fill="none" cx="135" cy="125" r="5" />';
 		icn['GR.M2.UTILITY'] = textm2('U');
 		icn['GR.M2.VERTICAL OR SHORT TAKE-OFF AND LANDING '] = '<text stroke="none" text-anchor="middle" x="100" y="135" font-size="20" >VSTOL</text>';
-		icn['GR.M2.VETERINARY'] = textm2('V');
+		icn['GR.M2.VETERINARY'] = '<text stroke="none"  x="108" y="133" font-family="Arial" font-size="25" font-weight="bold" >V</text>';
 		icn['GR.M2.WHEELED'] = '<circle cx="70" cy="125" r="4" fill="none"  /><circle cx="100" cy="125" r="4" fill="none"  /><circle cx="130" cy="125" r="4" fill="none"  />';
 
 		// Ground Equipment --------------------------------------------------------------
