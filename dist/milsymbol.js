@@ -1750,7 +1750,7 @@ var milsymbol = function(){
 		//Should the icon be monocromatic and if so what color
 		this.monoColor 		= options.monoColor!=undefined?options.monoColor:false;
 		//Should we use the Civilian Purple defined in 2525? (We set this to default because I like the color.
-		this.civilianColors 	= options.civilianColor!=undefined||options.civilianColor==''?options.civilianColor:true;
+		this.civilianColor 	= options.civilianColor!=undefined||options.civilianColor==''?options.civilianColor:true;
 		//2525C Allows you to use Dark, Medium or Light colors. The values you can set are "Dark","Medium" or "Light"
 		this.colorMode 		= options.colorMode!=undefined||options.colorMode==''?options.colorMode:MS.getColorMode("Light");
 		//If you have set all info fields but don't want the displayed, then just set this to false.
@@ -1972,7 +1972,7 @@ var milsymbol = function(){
 			var baseColorNone = MS.getColorMode("None");
 
 			//If it is a Civilian Symbol and civilian colors not are turned off, use civilian colors... 
-			if(	this.civilianColors && this.properties.civilian){
+			if(	this.civilianColor && this.properties.civilian){
 				baseFillColor.Friend = baseFillColor.Neutral = baseFillColor.Unknown = baseFillColor.Civilian;
 				baseFrameColor.Friend = baseFrameColor.Neutral = baseFrameColor.Unknown = baseFrameColor.Civilian;
 				baseIconColor.Friend = baseIconColor.Neutral = baseIconColor.Unknown = baseIconColor.Civilian;
