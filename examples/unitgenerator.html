@@ -37,9 +37,8 @@ function drawSymbol(){
 	mySymbol.size = document.getElementById("Size")[document.getElementById("Size").selectedIndex].value;	
 	
 	//document.getElementById("2525Symbol").innerHTML = mySymbol.getSymbol().XML
-	mySymbolMarker = mySymbol.getMarker();	
-	document.getElementById("MapMarker").innerHTML = mySymbolMarker.XML;
-	document.getElementById("MarkerInfo").innerHTML = 'If you are using Internet Explorer, you can simply right click on the symbol to copy or save it as an image.<br><br>Center of symbol at x:' + mySymbolMarker.markerAnchor.x + ' y:' + mySymbolMarker.markerAnchor.y + " <br>Symbol width:" +  mySymbolMarker.width + " <br>Symbol height:" +  mySymbolMarker.height// + "<br>SymbolBBox:" + mySymbol.markerBBox.x1 +","+ mySymbol.markerBBox.y1 +","+ mySymbol.markerBBox.x2 +","+ mySymbol.markerBBox.y2
+	document.getElementById("MapMarker").innerHTML =  mySymbol.getMarker().XML;
+	document.getElementById("MarkerInfo").innerHTML = 'If you are using Internet Explorer, you can simply right click on the symbol to copy or save it as an image.<br><br>Center of symbol at x:' + mySymbol.markerAnchor.x + ' y:' + mySymbol.markerAnchor.y + " <br>Symbol width:" +  mySymbol.width + " <br>Symbol height:" +  mySymbol.height// + "<br>SymbolBBox:" + mySymbol.markerBBox.x1 +","+ mySymbol.markerBBox.y1 +","+ mySymbol.markerBBox.x2 +","+ mySymbol.markerBBox.y2
 }
 
 function changeSymbol(){
@@ -65,9 +64,8 @@ function changeSymbol(){
 	mySymbol.strokeWidth = document.getElementById("StrokeWidth")[document.getElementById("StrokeWidth").selectedIndex].value;
 	mySymbol.infoFields = document.getElementById("infoFields").checked;
 
-	mySymbolMarker = mySymbol.getMarker();
-	document.getElementById("MapMarker").innerHTML = mySymbolMarker.XML;
-	document.getElementById("MarkerInfo").innerHTML = 'If you are using Internet Explorer, you can simply right click on the symbol to copy or save it as an image.<br><br>Center of symbol at x:' + mySymbolMarker.markerAnchor.x + ' y:' + mySymbolMarker.markerAnchor.y + " <br>Symbol width:" +  mySymbolMarker.width + " <br>Symbol height:" +  mySymbolMarker.height// + "<br>SymbolBBox:" + mySymbol.markerBBox.x1 +","+ mySymbol.markerBBox.y1 +","+ mySymbol.markerBBox.x2 +","+ mySymbol.markerBBox.y2
+	document.getElementById("MapMarker").innerHTML =  mySymbol.getMarker().XML;
+	document.getElementById("MarkerInfo").innerHTML = 'If you are using Internet Explorer, you can simply right click on the symbol to copy or save it as an image.<br><br>Center of symbol at x:' + mySymbol.markerAnchor.x + ' y:' + mySymbol.markerAnchor.y + " <br>Symbol width:" +  mySymbol.width + " <br>Symbol height:" +  mySymbol.height// + "<br>SymbolBBox:" + mySymbol.markerBBox.x1 +","+ mySymbol.markerBBox.y1 +","+ mySymbol.markerBBox.x2 +","+ mySymbol.markerBBox.y2
 	}
 
 function changeFill(){
@@ -84,7 +82,7 @@ function changeFill(){
 
 	mySymbolMarker = mySymbol.getMarker();
 	document.getElementById("MapMarker").innerHTML = mySymbolMarker.XML;
-	document.getElementById("MarkerInfo").innerHTML = 'If you are using Internet Explorer, you can simply right click on the symbol to copy or save it as an image.<br><br>Center of symbol at x:' + mySymbolMarker.x + ' y:' + mySymbolMarker.y + " <br>Symbol width:" +  mySymbolMarker.width + " <br>Symbol height:" +  mySymbolMarker.height// + "<br>SymbolBBox:" + mySymbol.markerBBox.x1 +","+ mySymbol.markerBBox.y1 +","+ mySymbol.markerBBox.x2 +","+ mySymbol.markerBBox.y2
+	document.getElementById("MarkerInfo").innerHTML = 'If you are using Internet Explorer, you can simply right click on the symbol to copy or save it as an image.<br><br>Center of symbol at x:' + mySymbolMarker.markerAnchor.x + ' y:' + mySymbolMarker.markerAnchor.y + " <br>Symbol width:" +  mySymbolMarker.width + " <br>Symbol height:" +  mySymbolMarker.height// + "<br>SymbolBBox:" + mySymbol.markerBBox.x1 +","+ mySymbol.markerBBox.y1 +","+ mySymbol.markerBBox.x2 +","+ mySymbol.markerBBox.y2
 	}
 	
 function changeInfo(){
@@ -92,7 +90,7 @@ function changeInfo(){
 
 	mySymbolMarker = mySymbol.getMarker();
 	document.getElementById("MapMarker").innerHTML = mySymbolMarker.XML;
-	document.getElementById("MarkerInfo").innerHTML = 'If you are using Internet Explorer, you can simply right click on the symbol to copy or save it as an image.<br><br>Center of symbol at x:' + mySymbolMarker.x + ' y:' + mySymbolMarker.y + " <br>Symbol width:" +  mySymbolMarker.width + " <br>Symbol height:" +  mySymbolMarker.height// + "<br>SymbolBBox:" + mySymbol.markerBBox.x1 +","+ mySymbol.markerBBox.y1 +","+ mySymbol.markerBBox.x2 +","+ mySymbol.markerBBox.y2
+	document.getElementById("MarkerInfo").innerHTML = 'If you are using Internet Explorer, you can simply right click on the symbol to copy or save it as an image.<br><br>Center of symbol at x:' + mySymbolMarker.markerAnchor.x + ' y:' + mySymbolMarker.markerAnchor.y + " <br>Symbol width:" +  mySymbolMarker.width + " <br>Symbol height:" +  mySymbolMarker.height// + "<br>SymbolBBox:" + mySymbol.markerBBox.x1 +","+ mySymbol.markerBBox.y1 +","+ mySymbol.markerBBox.x2 +","+ mySymbol.markerBBox.y2
 	}
 function changeTexts(){
 
@@ -150,7 +148,7 @@ function changeTexts(){
 	//FieldID AO EngagementBar
 	mySymbolMarker = mySymbol.getMarker();
 	document.getElementById("MapMarker").innerHTML = mySymbolMarker.XML;
-	document.getElementById("MarkerInfo").innerHTML = 'If you are using Internet Explorer, you can simply right click on the symbol to copy or save it as an image.<br><br>Center of symbol at x:' + mySymbolMarker.x + ' y:' + mySymbolMarker.y + " <br>Symbol width:" +  mySymbolMarker.width + " <br>Symbol height:" +  mySymbolMarker.height// + "<br>SymbolBBox:" + mySymbol.markerBBox.x1 +","+ mySymbol.markerBBox.y1 +","+ mySymbol.markerBBox.x2 +","+ mySymbol.markerBBox.y2
+	document.getElementById("MarkerInfo").innerHTML = 'If you are using Internet Explorer, you can simply right click on the symbol to copy or save it as an image.<br><br>Center of symbol at x:' + mySymbolMarker.markerAnchor.x + ' y:' + mySymbolMarker.markerAnchor.y + " <br>Symbol width:" +  mySymbolMarker.width + " <br>Symbol height:" +  mySymbolMarker.height// + "<br>SymbolBBox:" + mySymbol.markerBBox.x1 +","+ mySymbol.markerBBox.y1 +","+ mySymbol.markerBBox.x2 +","+ mySymbol.markerBBox.y2
 	}	
 	
 
