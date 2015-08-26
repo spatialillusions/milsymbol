@@ -1755,6 +1755,9 @@ var milsymbol = function(){
 		this.colorMode 		= options.colorMode!=undefined||options.colorMode==''?options.colorMode:MS.getColorMode("Light");
 		//If you have set all info fields but don't want the displayed, then just set this to false.
 		this.infoFields 		= options.infoFields!=undefined||options.infoFields==''?options.infoFields:true;
+		this.infoSize 			= options.infoSize!=undefined?options.infoSize:40;	
+
+		
 		//2525D lets you choose between MEDAL icn and alternate MEDAL icn for Mines, default is set to MEDAL.
 		this.alternateMedal 	= options.alternateMedal!=undefined||options.alternateMedal==''?options.alternateMedal:false;
 	
@@ -2053,8 +2056,8 @@ var milsymbol = function(){
 		
 			var anchor = {x:100,y:100}
 			this.octagonAnchor = {
-				x: (anchor.x-this.bbox.x1+this.strokeWidth)*this.size/100, 
-				y: (anchor.y-this.bbox.y1+this.strokeWidth)*this.size/100};
+				x: (anchor.x-this.bbox.x1+parseFloat(this.strokeWidth))*this.size/100, 
+				y: (anchor.y-this.bbox.y1+parseFloat(this.strokeWidth))*this.size/100};
 			//If it is a headquarters the anchor should be at the end of the staf
 			if(this.properties.headquarters){
 				anchor = {
@@ -2062,8 +2065,8 @@ var milsymbol = function(){
 					y:this.properties.baseGeometry.bbox.y2 + MS.hqStafLength}
 			}
 			this.markerAnchor = {
-				x: (anchor.x-this.bbox.x1+this.strokeWidth)*this.size/100, 
-				y: (anchor.y-this.bbox.y1+this.strokeWidth)*this.size/100};
+				x: (anchor.x-this.bbox.x1+parseFloat(this.strokeWidth))*this.size/100, 
+				y: (anchor.y-this.bbox.y1+parseFloat(this.strokeWidth))*this.size/100};
 
 			var xml = '<svg xmlns="'+svgNS+'" version="1.2" baseProfile="tiny" width="'+this.width+'" height="'+this.height+'" viewBox="'+(this.bbox.x1-this.strokeWidth) + " " + (this.bbox.y1-this.strokeWidth) + " " + width + " " + height +'">';
 			xml += g;
@@ -2400,7 +2403,7 @@ MS.addMarkerParts(MSdirectionarrow);
 //Text Fields ############################################################################
 var MStextfields = function textfields(){
 	var bbox = this.properties.baseGeometry.bbox;
-	var fontSize = 40;
+	var fontSize = this.infoSize;
 	var fontFamily = "Arial"
 	var g = '<g  id="TextFields" font-size="'+fontSize+'" font-family="'+fontFamily+'" fill="'+this.colors.frameColor[this.properties.affiliation]+'" stroke="none">';
 
