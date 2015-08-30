@@ -2041,6 +2041,7 @@ var milsymbol = function(){
 			this.colors = this.getColors();
 
 			var g = '';//The geometry
+			this.bbox = MS.bbox();
 			//Processing all parts of the marker, adding them to the geometry and updating the boundingbox
 			for (var i in MS._markerParts){
 				var m = MS._markerParts[i].call(this);
@@ -2361,7 +2362,7 @@ var MSmodifier = function modifier(){
 		g += '<text font-family="Arial" font-weight="bold" stroke="none" text-anchor="middle" x="100" y="'+ (30 + bbox.y2 )+'" font-size="35" >'+this.sigint+'</text>';
 		gbbox = MS.bboxMax(gbbox,{y2:(bbox.y2-28)});
 	}
-	g += '</g>';	
+	g += '</g>';
 	return MS.buildingBlock(g,gbbox);
 };
 MS.addMarkerParts(MSmodifier);
