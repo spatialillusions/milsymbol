@@ -50,6 +50,7 @@
 </style>
 <h1>milsymbol and d3 - Let's draw an orbat tree</h1>
 This is an example of how milsymbol can be integrated into d3.js, it uses the tree functionality in d3 to draw an orbat tree and it is possible to add functionality to drag and drop units between different branches.<br>
+The demo uses the same raw geoJSON data as the map demos, calculates the orbat from the input and renders it as a tree.
 Click on dark colored units to expand sub units.</br>
 <br>
 Orientation of the tree:<input onclick="update()" type="radio" name="orientation" value="vertical">Top to Bottom
@@ -60,12 +61,36 @@ Orientation of the tree:<input onclick="update()" type="radio" name="orientation
 <div id="orbattree">
 </div>
 
-<script src="../../dist/milsymbol.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 
+<script src="../../dist/milsymbol.js"></script>
+<script src="../situation.json"></script>
+
+
 <script>
-//This is the json for our orbat.
-var structure = {"orbatName":"milsymbol Orbat","Hostility":"Friend","name":"VZ","SIDC":"SFGPUCR----F***","children":[{"name":"VZ","SIDC":"SFGPUCR---AF***","children":[]},{"name":"SZ","SIDC":"SFGPUCR----E***","children":[{"name":"AS","SIDC":"SFGPUCR----D***","children":[]},{"name":"BS","SIDC":"SFGPUCR----D***","children":[]},{"name":"EQ","SIDC":"SFGPUUE----B***","children":[]},{"name":"GQ","SIDC":"SFGPUCVUF--B***","children":[]},{"name":"SZ10","SIDC":"SFGPUCR----B***","children":[]}]},{"name":"PZ","SIDC":"SFGPUU-----E***","children":[{"name":"AP","SIDC":"SFGPUSS----D***","children":[]},{"name":"PZ80","SIDC":"SFGPUSMM---D***","children":[]},{"name":"EP","SIDC":"SFGPUUS----B***","children":[]},{"name":"PZ10","SIDC":"SFGPUU-----B***","children":[]}]}]};
+
+function geoJson2tree(data,name,command){
+	var rawdata = {};
+	for (var key in data.features){
+		rawdata[data.features[key].properties[name]] = data.features[key];
+		rawdata[data.features[key].properties[name]].children = [];
+	}
+
+	var tree = {"properties":{"orbatName":"milsymbol Orbat","SIDC":"SUGP"},"children":[]};
+	for (var key in rawdata){
+		if ( rawdata.hasOwnProperty(rawdata[key].properties[command]) ){
+			rawdata[rawdata[key].properties[command]].children.push(rawdata[key]);
+		}else{
+			var newCommand = {"properties":{"name":rawdata[key].properties[command],"SIDC":"SFGP"},"children":[rawdata[key]]};
+			rawdata[rawdata[key].properties[command]] = newCommand;
+			tree.children.push(newCommand);
+		}
+	}
+	
+	return tree;
+}
+
+var structure = geoJson2tree(situation, "name", "command");
 
 var tree, diagonal, svg;
 var p = 0,
@@ -161,7 +186,7 @@ function update(source) {
 	node.append("g")
 	    .attr("class", "symbol")
 		.attr("transform", function (d){
-			d.symbol = new MS.symbol(d.SIDC,{size:30, uniqueDesignation:d.name, colorMode: (d._children && d._children!="" ? MS.getColorMode("Medium") : MS.getColorMode("Light")) }).getMarker();
+			if (d.properties.SIDC) d.symbol = new MS.symbol(d.properties.SIDC,{size:30, uniqueDesignation:(d.properties.name), colorMode: (d._children && d._children!="" ? MS.getColorMode("Medium") : MS.getColorMode("Light")) }).getMarker();
 			return "translate("+(-d.symbol.octagonAnchor.x)+","+(-d.symbol.octagonAnchor.y)+")"})
 		.each(function (d){this.appendChild(d.symbol.asDOM())	})      
 
