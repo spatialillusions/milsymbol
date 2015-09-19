@@ -1,5 +1,6 @@
-var situation = {"name":"Layer","type":"FeatureCollection"
-,"features":[
+var situation = {"name":"Layer","type":"FeatureCollection",
+"crs": {"type": "name","properties": {"name": "EPSG:4326"}},
+"features":[
 {"type":"Feature","geometry":{"type":"Point","coordinates":[13.9264527063343,56.2888907165595]},"properties":{"SIDC":"SFGPU------E***","name":"1.C2 komp","fullname":"1.C2 komp/FTS/INSS","command":"FTS"}}
 ,{"type":"Feature","geometry":{"type":"Point","coordinates":[19.1604869967705,65.5966818958909]},"properties":{"SIDC":"SFGPUCRV---F***","name":"1.Jbat","fullname":"1.Jbat/INSS","command":"INSS"}}
 ,{"type":"Feature","geometry":{"type":"Point","coordinates":[17.0825282191617,59.6410393541284]},"properties":{"SIDC":"SFGPUUMSE--F***","name":"1.TKbat","fullname":"1.TKbat/INSS","command":"INSS"}}
