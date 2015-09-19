@@ -2550,11 +2550,11 @@ var MStextfields = function textfields(){
 		}
 		//Extra space below for field 4
 		if(gStrings.L4 || gStrings.R4){
-			gbbox.y2 = Math.max(gbbox.y2,(100 + 1.5*fontSize));
+			gbbox.y2 = Math.max(gbbox.y2,(100 + 1.7*fontSize));
 		}
 		//Extra space below for field 5
 		if(gStrings.L5 || gStrings.R5){
-			gbbox.y2 = Math.max(gbbox.y2,(100 + 2.5*fontSize));
+			gbbox.y2 = Math.max(gbbox.y2,(100 + 2.7*fontSize));
 		}
 
 		if(gStrings.L1)g += '<text x="' + (bbox.x1-spaceTextIcon) + '" y="'+(100 - 1.5*fontSize)+'" text-anchor="end">' + gStrings.L1 + '</text>';
