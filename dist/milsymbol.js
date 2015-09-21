@@ -2046,7 +2046,7 @@ var milsymbol = function(){
 			for (var i in MS._markerParts){
 				var m = MS._markerParts[i].call(this);
 				g += m.g;
-				this.bbox = MS.bboxMax(this.bbox,m.bbox);
+				if (m.bbox)this.bbox = MS.bboxMax(this.bbox,m.bbox);
 			}
 
 			var width = this.bbox.width() + (this.strokeWidth*2);	//Adding the stoke width as margins
