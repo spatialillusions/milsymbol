@@ -155,10 +155,10 @@ The global namespace for milsymbol is <b>MS</b>, so if you want to use the setSt
 
 
 <tr>
-<td><b>buildingBlock(</b><br>&lt;String&gt;<i><small> <a href="#svgstring">SVG string</a></small></i>,&lt;<a href="#boundingboxobject">Bounding box object</a>&gt;<i><small> Bounding Box</small></i><b>)</b></td>
+<td><b>buildingBlock(</b><br>&lt;String&gt;<i><small> <a href="#svgstring">SVG string</a></small></i>,</b><br>&lt;String&gt;<i><small> <a href="#svgstring">SVG string</a></small></i>,&lt;<a href="#boundingboxobject">Bounding box object</a>&gt;<i><small> Bounding Box</small></i><b>)</b></td>
 <td><i><a href="#buildingblockobject">Building block object</a></i><br></td>
 <td>
-<small>Creates an object with a SVG geometry that creates a part of a milsymbol marker, and the bounding box for that geometry.</small>
+<small>Creates an object with two SVG geometry that creates a part of a milsymbol marker, and the bounding box for that geometry. The first SVG geometry is inserted before existing code and the second after.</small>
 </td>
 </tr>
 
@@ -1519,11 +1519,20 @@ A building block object describes a part that should be added to the marker. It 
 </tr>
 
 <tr>
-<td><b>g</b>
+<td><b>pre</b>
 </td>
 <td><a href="#svgstring">SVG string</a>
 </td>
-<td><small>This is the <a href="#svgstring">SVG string</a> for the SVG geometry we intend to draw. It can be anything from a simple line-element, to a g-element, to a complete SVG by itself.</small>
+<td><small>This is the <a href="#svgstring">SVG string</a> for the SVG geometry we intend to draw. It can be anything from a simple line-element, to a g-element, to a complete SVG by itself. This part is inserted before any previous parts of the marker.</small>
+</td>
+</tr>
+
+<tr>
+<td><b>post</b>
+</td>
+<td><a href="#svgstring">SVG string</a>
+</td>
+<td><small>This is the <a href="#svgstring">SVG string</a> for the SVG geometry we intend to draw. It can be anything from a simple line-element, to a g-element, to a complete SVG by itself. This part is inserted after any existing parts of the marker.</small>
 </td>
 </tr>
 
@@ -1555,7 +1564,7 @@ var MSdebug = function debug(){<br>
 &nbsp;&nbsp;&nbsp;&nbsp;//Draws the icon octagon<br>
 &nbsp;&nbsp;&nbsp;&nbsp;g += '&lt;path fill="none" stroke="black" stroke-width="1" d="m 120,60 0,80 m -40,-80 0,80 m -20,-20 80,0 m 0,-40 -80,0 M 100,50 135.35534,64.64466 150,100 135.35534,135.35534 100,150.00002 64.644661,135.35534 50,100 64.644661,64.64466 z" /&gt;'<br>
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;return <b>MS.buildingBlock(</b>g,gbbox<b>)</b>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return <b>MS.buildingBlock(</b>'',g,gbbox<b>)</b>;<br>
 }<br>
 <b>MS.addMarkerParts(</b>MSdebug<b>)</b>;<br>
 </small>

@@ -48,8 +48,8 @@ var milsymbol = function(){
 		}
 		return false;
 	}
-	this.buildingBlock = function(g,bbox){
-		return {g:g,bbox:bbox};
+	this.buildingBlock = function(pre,post,bbox){
+		return {pre:pre,post:post,bbox:bbox};
 	}
 	
 	this.dashArrays = {
@@ -2045,7 +2045,7 @@ var milsymbol = function(){
 			//Processing all parts of the marker, adding them to the geometry and updating the boundingbox
 			for (var i in MS._markerParts){
 				var m = MS._markerParts[i].call(this);
-				g += m.g;
+				g = m.pre + g + m.post;
 				if (m.bbox)this.bbox = MS.bboxMax(this.bbox,m.bbox);
 			}
 
@@ -2125,7 +2125,7 @@ var MSbasegeometry = function basegeometry(){
 		g += '</g>';
 	}
 	g += '</g>';
-	return MS.buildingBlock(g,this.properties.baseGeometry.bbox);
+	return MS.buildingBlock('',g,this.properties.baseGeometry.bbox);
 };
 MS.addMarkerParts(MSbasegeometry);
 
@@ -2163,7 +2163,7 @@ var MSstatusmodifier = function statusmodifier(){
 		}
 	}
 	//A bounding box only needs the values that might change
-	return MS.buildingBlock(g,{y1:y1,y2:y2});
+	return MS.buildingBlock('',g,{y1:y1,y2:y2});
 };
 MS.addMarkerParts(MSstatusmodifier);
 
@@ -2198,7 +2198,7 @@ var MSaffliationdimension = function affliationdimension(){
 			bbox = new MS.bbox({x2:(bbox.x2 + spacing + 22), y1: (60-25)});
 		}
 	}
-	return MS.buildingBlock(g,bbox );
+	return MS.buildingBlock('',g,bbox );
 };
 MS.addMarkerParts(MSaffliationdimension);
 
@@ -2363,7 +2363,7 @@ var MSmodifier = function modifier(){
 		gbbox = MS.bboxMax(gbbox,{y2:(bbox.y2-28)});
 	}
 	g += '</g>';
-	return MS.buildingBlock(g,gbbox);
+	return MS.buildingBlock('',g,gbbox);
 };
 MS.addMarkerParts(MSmodifier);
 
@@ -2397,7 +2397,7 @@ var MSdirectionarrow = function directionarrow(){
 
 		}
 	}
-	return MS.buildingBlock(g,gbbox );
+	return MS.buildingBlock('',g,gbbox );
 };
 MS.addMarkerParts(MSdirectionarrow);
 
@@ -2570,7 +2570,7 @@ var MStextfields = function textfields(){
 		if(gStrings.R5)g += '<text x="' + (bbox.x2 + spaceTextIcon) + '" y="'+(100 + 2.5*fontSize)+'">' + gStrings.R5 + '</text>';				
 	}
 	g += '</g>';
-	return MS.buildingBlock(g,gbbox );
+	return MS.buildingBlock('',g,gbbox );
 }	
 MS.addMarkerParts(MStextfields);
 
@@ -2758,7 +2758,7 @@ var MSicon = function icon(){
 		
 		g += '</g>';
 	}
-	return MS.buildingBlock(g, gbbox );
+	return MS.buildingBlock('',g, gbbox );
 };
 MS.addMarkerParts(MSicon);
 
@@ -2775,7 +2775,7 @@ var MSdebug = function debug(){
 	//Draws the icon octagon
 	g += '<path d="m 120,60 0,80 m -40,-80 0,80 m -20,-20 80,0 m 0,-40 -80,0 M 100,50 135.35534,64.64466 150,100 135.35534,135.35534 100,150.00002 64.644661,135.35534 50,100 64.644661,64.64466 z" stroke="black" stroke-width="1" fill="none"></path>'
 
-	return MS.buildingBlock(g,gbbox);
+	return MS.buildingBlock('',g,gbbox);
 }
 MS.addMarkerParts(MSdebug);
 */
