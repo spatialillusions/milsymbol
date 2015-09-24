@@ -2312,7 +2312,6 @@ var MSmodifier = function modifier(){
 		//TODO fix this for 2525D
 		if(!this.frame){
 			bbox.y2 = this.properties.iconBottom;
-			console.log("unframed")
 		}
 		if(this.properties.affiliation == "Neutral"){
 			if(this.properties.mobility == "Towed" || this.properties.mobility == "Short towed array" || this.properties.mobility == "Long towed Array"){
