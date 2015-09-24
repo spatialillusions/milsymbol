@@ -1953,7 +1953,7 @@ var milsymbol = function(){
 			if(symbolGeometries.hasOwnProperty(properties.dimension + properties.affiliation)){
 				properties.baseGeometry = symbolGeometries[properties.dimension + properties.affiliation];
 			}else{
-				properties.baseGeometry.bbox = {x1:50, y1:50,x2:50+100,y2:50+100};
+				properties.baseGeometry.bbox = new MS.bbox();
 			}
 			//If both frame and icon is turned off we should just have a position marker
 			if(!this.frame && !this.icon){
@@ -2171,12 +2171,14 @@ MS.addMarkerParts(MSstatusmodifier);
 var MSaffliationdimension = function affliationdimension(){
 	var g = '';
 	var bbox = this.properties.baseGeometry.bbox;
+	//Draws the a question mark for some unknown or other dimension symbols
+	var frameColor = this.colors.frameColor[this.properties.affiliation];
+	if(this.properties.dimensionUnknown){
+		g += '<text fill="'+frameColor+'" x="100" y="127" font-family="Arial" font-size="80" font-weight="bold" text-anchor="middle">?</text>';
+	}
 	//If we don't have a geometry we shouldn't add anything.
 	if(this.properties.baseGeometry.g){
-		var frameColor = this.colors.frameColor[this.properties.affiliation];
-		if(this.properties.dimensionUnknown){
-			g += '<text fill="'+frameColor+'" x="100" y="127" font-family="Arial" font-size="80" font-weight="bold" text-anchor="middle">?</text>';
-		}
+
 		var spacing = 10;
 		if(this.properties.affiliation == "Unknown" || (this.properties.affiliation == "Hostile" && this.properties.dimension != "Subsurface")){
 			spacing = -10;
@@ -2906,7 +2908,7 @@ MS._getLetterProperties = function(properties, mapping){
 		properties.civilian = true;
 	}
 	//Colors will be have to be fixed in symbolColors
-	if(battledimension == 'Z'){
+	if(battledimension == 'Z' || battledimension == 'X'){
 		if((['P','U','F','N','H','A','S','G','W'].indexOf(affiliation) > -1)) properties.dimensionUnknown = true;
 		//To get the correct geometry for a lot of stuff later we will have to modify the affliationType.
 		if(['F','A'].indexOf(affiliation) > -1) properties.dimension = 'Sea';
