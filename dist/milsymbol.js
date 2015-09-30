@@ -2805,7 +2805,7 @@ MS._getLetterProperties = function(properties, mapping){
 	if(['P','U','G','W','O'].indexOf(affiliation) > -1)	properties.affiliation = mapping.affiliation[3];
 
 	if(['P','A'].indexOf(battledimension) > -1)		properties.dimension = mapping.dimension[0];
-	if(['G','Z','F'].indexOf(battledimension) > -1)	properties.dimension = mapping.dimension[1];
+	if(['G','Z','F','X'].indexOf(battledimension) > -1)	properties.dimension = mapping.dimension[1];
 	if(['S'].indexOf(battledimension) > -1)			properties.dimension = mapping.dimension[2];
 	if(['U'].indexOf(battledimension) > -1)			properties.dimension = mapping.dimension[3];
 	
