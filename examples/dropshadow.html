@@ -1,0 +1,117 @@
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>Spatial Illusions</title>
+
+<link rel="stylesheet" href="../spatialillusions.com.css" />
+
+<style type="text/css">
+	.mymap{
+	height: 500px; 
+	width: 100%;
+	}
+</style>
+
+<script src="../dist//milsymbol.js"></script>
+
+</head>
+<body>
+<div class="heading">
+	<a href="http://spatialillusions.com">SPATIAL ILLUSIONS</a>
+	<span class="bannerLinks">
+	<!--<a href="MS.symbolLibrary/index.html">MS.symbol.js</a>
+	<a href="ForceTracker/index.html">Force Tracker</a>-->
+
+	</span>
+	<svg class="logo"
+		viewBox="50 50 100 100"
+		width="30"
+		height="30"> 
+		<path
+			style="fill:none;stroke:#ffffff;stroke-width:3px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+			d="m 105,50 25,15 m -40,20 50,10 m -80,-25 0,35 0,25 45,0 15,15 M 110,80 75,70 l 0,50 45,-25 10,35 20,-35 -20,-30 z m -30,65 20,5 20,-5 20,-15 m -50,15 -10,0 -20,-15 m 90,-35 -10,35 -10,0 -10,15 -30,0 m 45,-80 15,30 -10,0 m -10,-35 5,5 -5,0 m -25,-15 25,10 0,5 m -70,5 20,-15 20,5 M 75,70 60,70 50,105 m 10,25 -10,-25 10,0 m 45,25 -15,15 -30,-15 15,-10 m 25,-60 30,5 10,30 M 75,70 100,60 110,80 m 30,15 -10,35 -25,0 m 15,-35 20,0 -30,-15 -20,5 30,10 -15,35 L 75,120 90,85 75,70 60,105 75,120 m 25,-60 5,-10 -25,5 -5,15">
+				<animateTransform 
+				attributeType="xml"
+				attributeName="transform" type="rotate"
+				from="0 100 100" to="360 100 100"
+				begin="0" dur="60s" 
+				fill="freeze"
+				repeatCount="indefinite"
+				/>
+		</path>
+	</svg>
+</div>
+
+<div class="body">
+<h1>Drop shadow extension</h1>
+This example shows a more complex extension to milsymbol that adds drop shadows to milsymbol markers.
+<h2>Test symbol 1</h2>
+<script>
+
+
+
+var MSdropshadow = function dropshadow(){
+
+	var blurradius = 10;	
+	var pre = '<defs><filter id="dropshadow" x="-50%" y="-50%" width="200%" height="200%"><feOffset result="offOut" in="SourceAlpha" dx="0" dy="0" /><feGaussianBlur result="blurOut" in="offOut" stdDeviation="'+blurradius+'" /><feBlend in="SourceGraphic" in2="blurOut" mode="normal" /></filter></defs><g filter="url(#dropshadow)">';
+	var post = '</g>'
+	//Get a new bounding box and modify it if you have to
+	var gbbox = new MS.bbox();
+	
+	gbbox.x1 = this.bbox.x1 - 1.5*blurradius;
+	gbbox.y1 = this.bbox.y1 - 1.5*blurradius;
+
+	gbbox.x2 = this.bbox.x2 + 1.5*blurradius;
+	gbbox.y2 = this.bbox.y2 + 1.5*blurradius;
+
+	return MS.buildingBlock(pre,post,gbbox);
+}
+MS.addMarkerParts(MSdropshadow);
+
+
+var sidc = "SHA*C-----*****";
+
+var sym = new MS.symbol(sidc, {size:100,uniqueDesignation:"TEST UNIT"});
+document.write(sym.getMarker().XML);
+
+
+
+</script>
+<br>
+
+<code>
+<small>
+
+
+var MSdropshadow = function dropshadow(){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;var blurradius = 10;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;var pre = '&lt;defs&gt;&lt;filter id="dropshadow" x="-50%" y="-50%" width="200%" height="200%"&gt;&lt;feOffset result="offOut" in="SourceAlpha" dx="0" dy="0" /&gt;&lt;feGaussianBlur result="blurOut" in="offOut" stdDeviation="'+blurradius+'" /&gt;&lt;feBlend in="SourceGraphic" in2="blurOut" mode="normal" /&gt;&lt;/filter&gt;&lt;/defs&gt;&lt;g filter="url(#dropshadow)"&gt;';<br>
+&nbsp;&nbsp;&nbsp;&nbsp;var post = '</g>'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;//Get a new bounding box and modify it if you have to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;var gbbox = new MS.bbox();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gbbox.x1 = this.bbox.x1 - 1.5*blurradius;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gbbox.y1 = this.bbox.y1 - 1.5*blurradius;<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gbbox.x2 = this.bbox.x2 + 1.5*blurradius;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gbbox.y2 = this.bbox.y2 + 1.5*blurradius;<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return MS.buildingBlock(pre,post,gbbox);<br>
+}<br>
+MS.addMarkerParts(MSdropshadow);<br>
+<br>
+<br>
+var sidc = "SHA*C-----*****";<br>
+<br>
+var sym = new MS.symbol(sidc, {size:100,uniqueDesignation:"TEST UNIT"});<br>
+document.write(sym.getMarker().XML);<br>
+<br>
+
+</small>
+</code>
+
+
+</div>
+</body>
+</html>
