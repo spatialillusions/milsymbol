@@ -53,8 +53,6 @@ This page shows an extension to milsymbol similar to the getSquareIcon() found i
 
 /* Start square icon extension -------------------------------------------------------- */
 var MSsquareIcon = function squareIcon(){
-	var pre = '';
-	var post = ''
 	var gbbox = new MS.bbox();
 	if(this._squareicon){
 		var maxx = Math.max(100-this.bbox.x1, this.bbox.x2-100);
@@ -65,7 +63,7 @@ var MSsquareIcon = function squareIcon(){
 		gbbox.x2 = 100+max;
 		gbbox.y2 = 100+max;
 	}
-	return MS.buildingBlock(pre,post,gbbox);
+	return MS.buildingBlock('','',gbbox);
 }
 MS.addMarkerParts(MSsquareIcon);
 
