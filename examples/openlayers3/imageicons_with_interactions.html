@@ -1,0 +1,234 @@
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>Spatial Illusions</title>
+
+<link rel="stylesheet" href="../../spatialillusions.com.css" />
+
+<style type="text/css">
+	.mymap{
+	height: 600px; 
+	width: 100%;
+	}
+</style>
+
+<link rel="stylesheet" href="http://openlayers.org/en/v3.9.0/css/ol.css" type="text/css">
+<script src="http://openlayers.org/en/v3.9.0/build/ol-debug.js" type="text/javascript"></script>
+<script src="../../dist/milsymbol.js"></script>
+<script src="../situation.json"></script>
+
+
+<script>
+
+function init(){
+
+	window.app = {};
+	var app = window.app;
+
+	/**
+	 * @constructor
+	 * @extends {ol.interaction.Pointer}
+	 */
+	app.Drag = function() {
+
+	  ol.interaction.Pointer.call(this, {
+		handleDownEvent: app.Drag.prototype.handleDownEvent,
+		handleDragEvent: app.Drag.prototype.handleDragEvent,
+		handleMoveEvent: app.Drag.prototype.handleMoveEvent,
+		handleUpEvent: app.Drag.prototype.handleUpEvent
+	  });
+
+	  /**
+	   * @type {ol.Pixel}
+	   * @private
+	   */
+	  this.coordinate_ = null;
+
+	  /**
+	   * @type {string|undefined}
+	   * @private
+	   */
+	  this.cursor_ = 'pointer';
+
+	  /**
+	   * @type {ol.Feature}
+	   * @private
+	   */
+	  this.feature_ = null;
+
+	  /**
+	   * @type {string|undefined}
+	   * @private
+	   */
+	  this.previousCursor_ = undefined;
+
+	};
+	ol.inherits(app.Drag, ol.interaction.Pointer);
+
+
+	/**
+	 * @param {ol.MapBrowserEvent} evt Map browser event.
+	 * @return {boolean} `true` to start the drag sequence.
+	 */
+	app.Drag.prototype.handleDownEvent = function(evt) {
+	  var map = evt.map;
+
+	  var feature = map.forEachFeatureAtPixel(evt.pixel,
+		  function(feature, layer) {
+			return feature;
+		  });
+
+	  if (feature) {
+		this.coordinate_ = evt.coordinate;
+		this.feature_ = feature;
+	  }
+
+	  return !!feature;
+	};
+
+
+	/**
+	 * @param {ol.MapBrowserEvent} evt Map browser event.
+	 */
+	app.Drag.prototype.handleDragEvent = function(evt) {
+	  var map = evt.map;
+
+	  var feature = map.forEachFeatureAtPixel(evt.pixel,
+		  function(feature, layer) {
+			return feature;
+		  });
+
+	  var deltaX = evt.coordinate[0] - this.coordinate_[0];
+	  var deltaY = evt.coordinate[1] - this.coordinate_[1];
+
+	  var geometry = /** @type {ol.geom.SimpleGeometry} */
+		  (this.feature_.getGeometry());
+	  geometry.translate(deltaX, deltaY);
+
+	  this.coordinate_[0] = evt.coordinate[0];
+	  this.coordinate_[1] = evt.coordinate[1];
+	};
+
+
+	/**
+	 * @param {ol.MapBrowserEvent} evt Event.
+	 */
+	app.Drag.prototype.handleMoveEvent = function(evt) {
+	  if (this.cursor_) {
+		var map = evt.map;
+		var feature = map.forEachFeatureAtPixel(evt.pixel,
+			function(feature, layer) {
+			  return feature;
+			});
+		var element = evt.map.getTargetElement();
+		if (feature) {
+		  if (element.style.cursor != this.cursor_) {
+			this.previousCursor_ = element.style.cursor;
+			element.style.cursor = this.cursor_;
+		  }
+		} else if (this.previousCursor_ !== undefined) {
+		  element.style.cursor = this.previousCursor_;
+		  this.previousCursor_ = undefined;
+		}
+	  }
+	};
+
+
+	/**
+	 * @param {ol.MapBrowserEvent} evt Map browser event.
+	 * @return {boolean} `false` to stop the drag sequence.
+	 */
+	app.Drag.prototype.handleUpEvent = function(evt) {
+	  this.coordinate_ = null;
+	  this.feature_ = null;
+	  return false;
+	};
+
+
+	var iconSize = {"C":15,"D":20,"E":25,"F":30,"G":35,"H":40,"I":45};
+	
+	var styleFunction = function(feature, resolution) {
+		var mysymbol = new MS.symbol(
+				feature.getProperties().SIDC,{
+					size:iconSize[(feature.getProperties().SIDC).charAt(11)],
+					uniqueDesignation:feature.getProperties().name
+				});
+				
+		var myimage = document.createElement('img');
+		myimage.src = mysymbol.getMarker().asImage();
+		
+		return [new ol.style.Style({
+	  		image: new ol.style.Icon( ({
+				anchor: [mysymbol.markerAnchor.x, mysymbol.markerAnchor.y],
+				anchorXUnits: 'pixels',
+				anchorYUnits: 'pixels',
+				imgSize: [Math.floor(mysymbol.width), Math.floor(mysymbol.height)],
+				img: (myimage)
+	  		}))
+		})];
+		
+	};
+
+	var vectorSource = new ol.source.Vector({
+	  features: (new ol.format.GeoJSON()).readFeatures(situation,{featureProjection:'EPSG:3857'})
+	});
+
+	var vectorLayer = new ol.layer.Vector({
+	  source: vectorSource,
+	  style: styleFunction
+	});
+	
+	var rasterLayer = new ol.layer.Tile({
+      preload: 4,
+      source: new ol.source.OSM()
+    });
+	var map = new ol.Map({
+	  interactions: ol.interaction.defaults().extend([new app.Drag()]),
+	  layers: [rasterLayer,vectorLayer],
+	  target: document.getElementById('map'),
+	  view: new ol.View({
+		center: ol.proj.transform([16,59], 'EPSG:4326', 'EPSG:3857'),
+		zoom: 5
+	  })
+	});
+
+}
+
+</script>
+</head>
+<body onload="init()">
+
+
+<div class="heading">
+	<a href="http://spatialillusions.com">SPATIAL ILLUSIONS</a>
+	<span class="bannerLinks">
+
+	</span>
+	<svg class="logo"
+		viewBox="50 50 100 100"
+		width="30"
+		height="30"> 
+		<path
+			style="fill:none;stroke:#ffffff;stroke-width:3px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+			d="m 105,50 25,15 m -40,20 50,10 m -80,-25 0,35 0,25 45,0 15,15 M 110,80 75,70 l 0,50 45,-25 10,35 20,-35 -20,-30 z m -30,65 20,5 20,-5 20,-15 m -50,15 -10,0 -20,-15 m 90,-35 -10,35 -10,0 -10,15 -30,0 m 45,-80 15,30 -10,0 m -10,-35 5,5 -5,0 m -25,-15 25,10 0,5 m -70,5 20,-15 20,5 M 75,70 60,70 50,105 m 10,25 -10,-25 10,0 m 45,25 -15,15 -30,-15 15,-10 m 25,-60 30,5 10,30 M 75,70 100,60 110,80 m 30,15 -10,35 -25,0 m 15,-35 20,0 -30,-15 -20,5 30,10 -15,35 L 75,120 90,85 75,70 60,105 75,120 m 25,-60 5,-10 -25,5 -5,15">
+				<animateTransform 
+				attributeType="xml"
+				attributeName="transform" type="rotate"
+				from="0 100 100" to="360 100 100"
+				begin="0" dur="60s" 
+				fill="freeze"
+				repeatCount="indefinite"
+				/>
+		</path>
+	</svg>
+</div>
+
+<div class="body">
+<h1>milsymbol in open layers 3 - ol.style.Icon()</h1>
+Using the asImage() method in milsymbol makes it possible to assign the output from milsymbol as an image source. This way you can use the output from milsymbol in ol.style.Icon() in Open Layers.
+
+</div>
+<div id="map" class="mymap">
+</div></body>
+</html>
