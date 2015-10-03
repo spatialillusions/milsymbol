@@ -1,0 +1,66 @@
+<html>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<body>
+
+<textarea id="codes">
+TABLE A-II.  Sea surface sector 1 modifier.;;;
+First Modifier;;MILñSTDñ2525D Code;Remarks.
+Unspecified;;0;
+Own Ship;;1;APP6
+Antiair Warfare;;2;
+Antisubmarine Warfare;;3;
+Escort;;4;
+Electronic Warfare;;5;
+Intelligence, Surveillance, Reconnaissance;;6;
+Mine Countermeasures;;7;
+Missile Defense;;8;
+Medical;;9;
+Mine Warfare;;10;
+Remote MultiñMission Vehicle (USVñonly);;11;
+Special Operations Forces (SOF);;12;
+Surface Warfare;;13;
+Ballistic Missile ;;14;
+Guided Missile ;;15;
+Other Guided Missile ;;16;
+Torpedo;;17;
+DroneñEquipped;;18;
+HelicopterñEquipped/VSTOL;;19;
+Ballistic Missile Defense, Shooter ;;20;
+Ballistic Missile Defense, Long-Range Surveillance and Track (LRS&T);;21;
+Sea-Base X-Band;;22;
+Hijacking;;23;
+Reserved for Future Use;;24-98;Assigned by SSMC/JSP only
+Version Extension Flag;;99;
+</textarea>
+
+<script>
+var autotest = "&lt;table border=1&gt;<br>"
+var re = /(^.*);(.*);(.*);(.*$)/gm; 
+var str = document.getElementById("codes").value;
+var m;
+
+String.prototype.replaceAt=function(index, character) {
+    return this.substr(0, index) + character + this.substr(index+character.length);
+}
+
+while ((m = re.exec(str)) != null) {
+    if (m.index === re.lastIndex) {
+        re.lastIndex++;
+    }
+   autotest += "&lt;tr&gt;<br>&lt;td&gt;" + m[1] +"&lt;/td&gt; &lt;td&gt;"+ ((m[3]<10)?'0'+m[3]:m[3]) +"&lt;/td&gt; <br> &lt;td&gt;" + 
+   "&lt;script&gt;document.write(new MilSymbol(\"1001300000000000" + ((m[3]<10)?'0'+m[3]:m[3]) + "\", {size:size}).symbolMarker().textXML);&lt;/script&gt;<br>" +
+   "&lt;script&gt;document.write(new MilSymbol(\"1003300000000000" + ((m[3]<10)?'0'+m[3]:m[3]) + "\", {size:size}).symbolMarker().textXML);&lt;/script&gt;<br>" +
+   "&lt;script&gt;document.write(new MilSymbol(\"1004300000000000" + ((m[3]<10)?'0'+m[3]:m[3]) + "\", {size:size}).symbolMarker().textXML);&lt;/script&gt;<br>" +
+   "&lt;script&gt;document.write(new MilSymbol(\"1006300000000000" + ((m[3]<10)?'0'+m[3]:m[3]) + "\", {size:size}).symbolMarker().textXML);&lt;/script&gt;<br>" +
+    "&lt;/td&gt;<br>&lt;/tr&gt;<br>"
+}
+autotest += "&lt;/table&gt;"
+
+
+document.write("&lt;h3 id=\"TABLEA-I\"&gt;TABLE A-II.  Sea surface sector 1 modifier &lt;/h3&gt;<br>" + autotest)
+
+</script>
+</script>
+</body>
+</html>
