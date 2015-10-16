@@ -1736,77 +1736,77 @@ var milsymbol = function(){
 		this.SIDC = SIDCParameter;
 
 		//The symbol size is actually the L variable in the symbols so the symbol will be larger than this size.
-		this.size 			= options.size!=undefined?options.size:100;	
+		this.size 			= 100;	
 		//Should the icon be filled with color
-		this.fill 			= options.fill!=undefined?options.fill:true;
+		this.fill 			= true;
 		//Possibility to change the fill opacity
-		this.fillOpacity	= options.fillOpacity!=undefined?options.fillOpacity:1;
+		this.fillOpacity	= 1;
 		//Should the icon be framed
-		this.frame 			= options.frame!=undefined?options.frame:true;
+		this.frame 			= true;
 		//The stroke width of he icon frame.
-		this.strokeWidth 	= options.strokeWidth!=undefined?options.strokeWidth:3;
+		this.strokeWidth 	= 3;
 		//Should we display the icon?
-		this.icon 			= options.icon!=undefined?options.icon:true;
+		this.icon 			= true;
 		//Should the icon be monocromatic and if so what color
-		this.monoColor 		= options.monoColor!=undefined?options.monoColor:false;
+		this.monoColor 		= false;
 		//Should we use the Civilian Purple defined in 2525? (We set this to default because I like the color.
-		this.civilianColor 	= options.civilianColor!=undefined||options.civilianColor==''?options.civilianColor:true;
+		this.civilianColor 	= true;
 		//2525C Allows you to use Dark, Medium or Light colors. The values you can set are "Dark","Medium" or "Light"
-		this.colorMode 		= options.colorMode!=undefined||options.colorMode==''?options.colorMode:MS.getColorMode("Light");
+		this.colorMode 		= MS.getColorMode("Light");
 		//If you have set all info fields but don't want the displayed, then just set this to false.
-		this.infoFields 		= options.infoFields!=undefined||options.infoFields==''?options.infoFields:true;
-		this.infoSize 			= options.infoSize!=undefined?options.infoSize:40;	
+		this.infoFields 	= true;
+		this.infoSize 		= 40;	
 
 		
 		//2525D lets you choose between MEDAL icn and alternate MEDAL icn for Mines, default is set to MEDAL.
-		this.alternateMedal 	= options.alternateMedal!=undefined||options.alternateMedal==''?options.alternateMedal:false;
+		this.alternateMedal 	= false;
 	
 		//FieldID C
-		this.quantity			= options.quantity!=undefined?options.quantity:'';	
+		this.quantity			= '';	
 		//FieldID F
-		this.reinforcedReduced	= options.reinforcedReduced!=undefined?options.reinforcedReduced:'';
+		this.reinforcedReduced	= '';
 		//FieldID G
-		this.staffComments		= options.staffComments!=undefined?options.staffComments:'';
+		this.staffComments		= '';
 		//FieldID H
-		this.additionalInformation	= options.additionalInformation!=undefined?options.additionalInformation:'';	
+		this.additionalInformation	= '';	
 		//FieldID J
-		this.evaluationRating	= options.evaluationRating!=undefined?options.evaluationRating:'';	
+		this.evaluationRating	= '';	
 		//FieldID K
-		this.combatEffectiveness	= options.combatEffectiveness!=undefined?options.combatEffectiveness:'';
+		this.combatEffectiveness	= '';
 		//FieldID L
-		this.signatureEquipment	= options.signatureEquipment!=undefined?options.signatureEquipment:'';
+		this.signatureEquipment	= '';
 		//FieldID M
-		this.higherFormation	= options.higherFormation!=undefined?options.higherFormation:'';
+		this.higherFormation	= '';
 		//FieldID N
-		this.hostile			= options.hostile!=undefined?options.hostile:'';	
+		this.hostile			= '';	
 		//FieldID P
-		this.iffSif				= options.iffSif!=undefined?options.iffSif:'';	
+		this.iffSif				= '';	
 		//FieldID Q
-		this.direction			= options.direction!=undefined?options.direction:'';		
+		this.direction			= '';		
 		//FieldID R2
-		this.sigint				= options.sigint!=undefined?options.sigint:'';	
+		this.sigint				= '';	
 		//FieldID T
-		this.uniqueDesignation	= options.uniqueDesignation!=undefined?options.uniqueDesignation:'';	
+		this.uniqueDesignation	= '';	
 		//FieldID V
-		this.type				= options.type!=undefined?options.type:'';	
+		this.type				= '';	
 		//FieldID W
-		this.dtg				= options.dtg!=undefined?options.dtg:'';	
+		this.dtg				= '';	
 		//FieldID X
-		this.altitudeDepth		= options.altitudeDepth!=undefined?options.altitudeDepth:'';	
+		this.altitudeDepth		= '';	
 		//FieldID Y
-		this.location			= options.location!=undefined?options.location:'';		
+		this.location			= '';		
 		//FieldID Z
-		this.speed				= options.speed!=undefined?options.speed:'';	
+		this.speed				= '';	
 		//FieldID AA
-		this.specialHeadquarters	= options.specialHeadquarters!=undefined?options.specialHeadquarters:'';	
+		this.specialHeadquarters	= '';	
 		//FieldID AD
-		this.platformType		= options.platformType!=undefined?options.platformType:'';		
+		this.platformType		= '';		
 		//FieldID AE
-		this.equipmentTeardownTime	= options.equipmentTeardownTime!=undefined?options.equipmentTeardownTime:'';
+		this.equipmentTeardownTime	= '';
 		//FieldID AF
-		this.commonIdentifier	= options.commonIdentifier!=undefined?options.commonIdentifier:'';	
+		this.commonIdentifier	= '';	
 		//FieldID AG
-		this.auxiliaryEquipmentIndicator	= options.auxiliaryEquipmentIndicator!=undefined?options.auxiliaryEquipmentIndicator:'';	
+		this.auxiliaryEquipmentIndicator	= '';	
 
 		//FieldID AM Distance
 	
@@ -1814,7 +1814,11 @@ var milsymbol = function(){
 	
 		//FieldID AO EngagementBar
 
-
+		for (key in options){
+			if (options.hasOwnProperty(key)){ 
+				this[key] = options[key];
+			}
+		}
 	
 		//========================================================================================
 
