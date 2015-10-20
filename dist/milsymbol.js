@@ -2872,7 +2872,7 @@ MS._getLetterProperties = function(properties, mapping){
 	}
 	//Setting up Echelon/Mobility/Towed Array Amplifier
 	if(symbolmodifier12=='A') properties.echelon = mapping.echelonMobility[11];//Team/Crew
-	if(symbolmodifier12=='B') properties.echelon = mapping.echelonMobility[12];//Squad
+	if(symbolmodifier12=='B' && symbolmodifier11 != 'H') properties.echelon = mapping.echelonMobility[12];//Squad
 	if(symbolmodifier12=='C') properties.echelon = mapping.echelonMobility[13];//Section
 	if(symbolmodifier12=='D') properties.echelon = mapping.echelonMobility[14];//Platoon/detachment
 	if(symbolmodifier12=='E') properties.echelon = mapping.echelonMobility[15];//Company/battery/troop
