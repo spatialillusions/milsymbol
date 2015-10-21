@@ -2147,8 +2147,8 @@ var MSstatusmodifier = function statusmodifier(){
 							"Destroyed"		:'rgb(255,0,0)',
 							"FullToCapacity":'rgb(0, 180, 240)'};
 			//If it is unframed and equipment use the bottom of the icon
-			if(!this.properties.frame && equipmentBottom.hasOwnProperty(this.properties.functionid)){
-				y2 = equipmentBottom[this.properties.functionid];
+			if(!this.properties.frame && this.properties.iconBottom){
+				y2 = this.properties.iconBottom;
 			}
 			//If we have a mobility indicator we need to make space for it.
 			y2 += (this.properties.mobility)?25:5;
