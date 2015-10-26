@@ -32,7 +32,7 @@ For updates and more information go to http://www.spatialillusions.com
 ======================================================================================= */
 console.log("milsymbol.js v0.5.2b - Copyright (c) 2015 Måns Beckman  http://www.spatialillusions.com")
 
-var milsymbol = function(){
+var MS = new function(){
 	//Constants
 	var svgNS = "http://www.w3.org/2000/svg";
 	
@@ -2095,10 +2095,11 @@ var milsymbol = function(){
 	};
 };
 
-MS = new milsymbol();
+//MS = new milsymbol();
 
 //Base Geometry for the Symbol ###########################################################
-var MSbasegeometry = function basegeometry(){
+MS.addMarkerParts(
+function basegeometry(){
 	var extraModifier = '';
 	var frameColor = this.colors.frameColor[this.properties.affiliation];
 	//Space Modifiers
@@ -2130,11 +2131,12 @@ var MSbasegeometry = function basegeometry(){
 	}
 	g += '</g>';
 	return MS.buildingBlock('',g,this.properties.baseGeometry.bbox);
-};
-MS.addMarkerParts(MSbasegeometry);
+}
+);
 
 //Sets modifiers depending of status #####################################################
-var MSstatusmodifier = function statusmodifier(){
+MS.addMarkerParts(
+function statusmodifier(){
 	var g = '';//Geometry string
 	var bbox = this.properties.baseGeometry.bbox;
 	var y1 =  bbox.y1;	
@@ -2168,11 +2170,12 @@ var MSstatusmodifier = function statusmodifier(){
 	}
 	//A bounding box only needs the values that might change
 	return MS.buildingBlock('',g,{y1:y1,y2:y2});
-};
-MS.addMarkerParts(MSstatusmodifier);
+}
+);
 
 //Affiliation and dimension addons to base geometries ####################################
-var MSaffliationdimension = function affliationdimension(){
+MS.addMarkerParts(
+function affliationdimension(){
 	var g = '';
 	var bbox = this.properties.baseGeometry.bbox;
 	//Draws the a question mark for some unknown or other dimension symbols
@@ -2205,11 +2208,12 @@ var MSaffliationdimension = function affliationdimension(){
 		}
 	}
 	return MS.buildingBlock('',g,bbox );
-};
-MS.addMarkerParts(MSaffliationdimension);
+}
+);
 
 //Symbol Modifiers #######################################################################
-var MSmodifier = function modifier(){
+MS.addMarkerParts(
+function modifier(){
 	var g = '<g id="symbolModifier" fill="'+this.colors.frameColor[this.properties.affiliation]+'" stroke="'+this.colors.frameColor[this.properties.affiliation]+'" stroke-width="'+this.strokeWidth+'">';
 	var bbox = MS.bboxMax(this.properties.baseGeometry.bbox,{}); //clone the bbox using bboxMax.
 	var gbbox = new MS.bbox(); //bounding box for the added geometries
@@ -2369,11 +2373,12 @@ var MSmodifier = function modifier(){
 	}
 	g += '</g>';
 	return MS.buildingBlock('',g,gbbox);
-};
-MS.addMarkerParts(MSmodifier);
+}
+);
 
 //Direction Arrow ########################################################################
-var MSdirectionarrow = function directionarrow(){
+MS.addMarkerParts(
+function directionarrow(){
 	var bbox = this.properties.baseGeometry.bbox;
 	var g = '';
 	var gbbox = new MS.bbox();
@@ -2403,11 +2408,12 @@ var MSdirectionarrow = function directionarrow(){
 		}
 	}
 	return MS.buildingBlock('',g,gbbox );
-};
-MS.addMarkerParts(MSdirectionarrow);
+}
+);
 
 //Text Fields ############################################################################
-var MStextfields = function textfields(){
+MS.addMarkerParts(
+function textfields(){
 	var bbox = this.properties.baseGeometry.bbox;
 	var fontSize = this.infoSize;
 	var fontFamily = "Arial"
@@ -2577,10 +2583,11 @@ var MStextfields = function textfields(){
 	g += '</g>';
 	return MS.buildingBlock('',g,gbbox );
 }	
-MS.addMarkerParts(MStextfields);
+);
 
 //icn ##################################################################################
-var MSicon = function icon(){
+MS.addMarkerParts(
+function icon(){
 	var g = '';
 	var gbbox = new MS.bbox();
 	
@@ -2764,8 +2771,8 @@ var MSicon = function icon(){
 		g += '</g>';
 	}
 	return MS.buildingBlock('',g, gbbox );
-};
-MS.addMarkerParts(MSicon);
+}
+);
 
 //Debug ##################################################################################
 /*
