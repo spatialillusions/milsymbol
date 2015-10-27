@@ -1723,11 +1723,9 @@ var MS = new function(){
 
 		return icn;
 	}
-	
+
 	this.symbol = function (SIDCParameter,options){
-		//Options
-		if(!options)var options = {};
-	
+
 		//========================================================================================
 
 		//Read / Write properties
@@ -1735,78 +1733,44 @@ var MS = new function(){
 		//The SIDC for the symbol.
 		this.SIDC = SIDCParameter;
 
-		//The symbol size is actually the L variable in the symbols so the symbol will be larger than this size.
-		this.size 			= 100;	
-		//Should the icon be filled with color
-		this.fill 			= true;
-		//Possibility to change the fill opacity
-		this.fillOpacity	= 1;
-		//Should the icon be framed
-		this.frame 			= true;
-		//The stroke width of he icon frame.
-		this.strokeWidth 	= 3;
-		//Should we display the icon?
-		this.icon 			= true;
-		//Should the icon be monocromatic and if so what color
-		this.monoColor 		= false;
-		//Should we use the Civilian Purple defined in 2525? (We set this to default because I like the color.
-		this.civilianColor 	= true;
-		//2525C Allows you to use Dark, Medium or Light colors. The values you can set are "Dark","Medium" or "Light"
-		this.colorMode 		= MS.getColorMode("Light");
-		//If you have set all info fields but don't want the displayed, then just set this to false.
-		this.infoFields 	= true;
-		this.infoSize 		= 40;	
-
-		
-		//2525D lets you choose between MEDAL icn and alternate MEDAL icn for Mines, default is set to MEDAL.
-		this.alternateMedal 	= false;
-	
-		//FieldID C
-		this.quantity			= '';	
-		//FieldID F
-		this.reinforcedReduced	= '';
-		//FieldID G
-		this.staffComments		= '';
-		//FieldID H
-		this.additionalInformation	= '';	
-		//FieldID J
-		this.evaluationRating	= '';	
-		//FieldID K
-		this.combatEffectiveness	= '';
-		//FieldID L
-		this.signatureEquipment	= '';
-		//FieldID M
-		this.higherFormation	= '';
-		//FieldID N
-		this.hostile			= '';	
-		//FieldID P
-		this.iffSif				= '';	
-		//FieldID Q
-		this.direction			= '';		
-		//FieldID R2
-		this.sigint				= '';	
-		//FieldID T
-		this.uniqueDesignation	= '';	
-		//FieldID V
-		this.type				= '';	
-		//FieldID W
-		this.dtg				= '';	
-		//FieldID X
-		this.altitudeDepth		= '';	
-		//FieldID Y
-		this.location			= '';		
-		//FieldID Z
-		this.speed				= '';	
-		//FieldID AA
-		this.specialHeadquarters	= '';	
-		//FieldID AD
-		this.platformType		= '';		
-		//FieldID AE
-		this.equipmentTeardownTime	= '';
-		//FieldID AF
-		this.commonIdentifier	= '';	
-		//FieldID AG
-		this.auxiliaryEquipmentIndicator	= '';	
+		//Setting default values for options
+		this.setOptions.call(this, {
+			size				: 100,	//The symbol size is actually the L variable in the symbols so the symbol will be larger than this size.
+			fill 				: true, //Should the icon be filled with color
+			fillOpacity			: 1, //Possibility to change the fill opacity
+			frame 				: true,//Should the icon be framed
+			strokeWidth 		: 3,//The stroke width of he icon frame.
+			icon 				: true,//Should we display the icon?
+			monoColor 			: false,//Should the icon be monocromatic and if so what color
+			civilianColor 		: true,//Should we use the Civilian Purple defined in 2525? (We set this to default because I like the color.
+			colorMode 			: MS.getColorMode("Light"),//2525C Allows you to use Dark, Medium or Light colors. The values you can set are "Dark","Medium" or "Light"
+			infoFields 			: true,//If you have set all info fields but don't want the displayed, then just set this to false.
+			infoSize 			: 40, //Relative size of the info fields
+			alternateMedal 		: false,//2525D lets you choose between MEDAL icn and alternate MEDAL icn for Mines, default is set to MEDAL.
+			quantity			: '',//FieldID C	
+			reinforcedReduced	: '',//FieldID F
+			staffComments		: '',//FieldID G
+			additionalInformation: '',//FieldID H
+			evaluationRating	: '',//FieldID J
+			combatEffectiveness	: '',//FieldID K
+			signatureEquipment	: '',//FieldID L
+			higherFormation		: '',//FieldID M
+			hostile				: '',//FieldID N	
+			iffSif				: '',//FieldID P
+			direction			: '',//FieldID Q	
+			sigint				: '',//FieldID R2
+			uniqueDesignation	: '',//FieldID T
+			type				: '',//FieldID V
+			dtg					: '',//FieldID W
+			altitudeDepth		: '',//FieldID X
+			location			: '',//FieldID Y	
+			speed				: '',//FieldID Z
+			specialHeadquarters	: '',//FieldID AA
+			platformType		: '',//FieldID AD		
+			equipmentTeardownTime: '',//FieldID AE
+			commonIdentifier	: '',//FieldID AF
+			auxiliaryEquipmentIndicator: ''//FieldID AG	
+		});
 
 		//FieldID AM Distance
 	
@@ -1814,12 +1778,9 @@ var MS = new function(){
 	
 		//FieldID AO EngagementBar
 
-		for (key in options){
-			if (options.hasOwnProperty(key)){ 
-				this[key] = options[key];
-			}
-		}
-	
+		//Setting Options with input
+		if(!options)var options = {};
+		this.setOptions.call(this, options);
 		//========================================================================================
 
 		//Read Only properties
@@ -1864,8 +1825,7 @@ var MS = new function(){
 			}
 		}
 	//========================================================================================								
-
-
+		
 		this.getProperties = function(){
 			var properties = {
 				"activity"			: false,	//Is it an Activity
@@ -2093,6 +2053,16 @@ var MS = new function(){
 			return ("data:image/svg+xml;base64," + btoa(this.XML));
 		};
 	};
+	
+	this.symbol.prototype.setOptions = function(options){
+		for (key in options){
+			if (options.hasOwnProperty(key)){ 
+				this[key] = options[key];
+			}
+		}
+		return this;
+	}
+	
 };
 
 //MS = new milsymbol();
