@@ -2013,8 +2013,8 @@ var MS = new function(){
 				if (m.bbox)this.bbox = MS.bboxMax(this.bbox,m.bbox);
 			}
 
-			var width = this.bbox.width() + (this.strokeWidth*2);	//Adding the stoke width as margins
-			var height = this.bbox.height() + (this.strokeWidth*2);	//Adding the stoke width as margins
+			var width = this.bbox.width() + (this.strokeWidth*3);	//Adding the stoke width as margins and a little bit extra
+			var height = this.bbox.height() + (this.strokeWidth*3);	//Adding the stoke width as margins and a little bit extra
 		
 			this.width = width*this.size/100;
 			this.height = height*this.size/100;
