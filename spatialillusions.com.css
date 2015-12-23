@@ -27,7 +27,7 @@ table {
 	font-variant: normal;
 	font-weight: normal;
 	line-height: 1.2;
-	margin: 5px;
+	margin: auto;	
 }
 
 table, td, th {
@@ -54,7 +54,9 @@ code{
 	width: 100%;
 	min-width: 1110px;
 	background-color:rgb(0,168,220);
+	box-shadow: 0px 0px 8px #888888;
 	position: relative;	
+	
 }
 .heading a{
 	font-size: 20px;
