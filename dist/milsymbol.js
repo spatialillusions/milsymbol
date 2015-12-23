@@ -2849,9 +2849,7 @@ function icon(){
 		}
 
 	// Put all this togheter and return the Icon. ============================================
-		var iconColor = this.colors.iconColor[this.properties.affiliation];
-		//g += '<g id="Icon" fill="'+iconColor+'" stroke="'+iconColor+'" stroke-width="'+this.strokeWidth+'" font-family="Arial" font-weight="bold">';
-		
+		var iconColor = this.colors.iconColor[this.properties.affiliation];		
 		if(this.properties.numberSIDC){
 			//Number based SIDC
 			drawArray2.push(icn[this.properties.functionid.substr(0,6)]);//Main symbol
@@ -2873,10 +2871,7 @@ function icon(){
 				drawArray2.push(icn[this.SIDC.substr(0,1)+'-'+this.SIDC.substr(2,1)+'-'+this.SIDC.substr(4,6)]);
 			}
 		}
-		
-		//g += '</g>';
 	}
-	
 	return MS.buildingBlock(drawArray1,drawArray2, gbbox );
 }
 );
@@ -3303,11 +3298,11 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-G-UCFHX-'] = [icn['GR.IC.FIELD ARTILLERY'],icn['GR.IC.FF.AMPHIBIOUS']];
 	sId['S-G-UCFR--'] = [icn['GR.IC.FF.FIELD ARTILLERY ROCKET']];
 	sId['S-G-UCFRS-'] = [icn['GR.IC.FIELD ARTILLERY'],icn['GR.M1.SINGLE ROCKET LAUNCHER']];
-	sId['S-G-UCFRS-'] = [MS.scale(0.8,icn['GR.IC.FIELD ARTILLERY']),icn['GR.M1.SINGLE ROCKET LAUNCHER'] + (_STD2525 ? [] : icn['GR.IC.ARMOUR'])];
+	sId['S-G-UCFRS-'] = [MS.scale(0.8,icn['GR.IC.FIELD ARTILLERY']),icn['GR.M1.SINGLE ROCKET LAUNCHER'],(_STD2525 ? [] : icn['GR.IC.ARMOUR'])];
 	sId['S-G-UCFRSS'] = [MS.scale(0.8,icn['GR.IC.FIELD ARTILLERY']),icn['GR.M1.SINGLE ROCKET LAUNCHER'],icn['GR.IC.ARMOUR']];
 	sId['S-G-UCFRSR'] = [icn['GR.IC.FIELD ARTILLERY'],icn['GR.M1.SINGLE ROCKET LAUNCHER'],icn['GR.M2.TRUCK']];
 	sId['S-G-UCFRST'] = [icn['GR.IC.FIELD ARTILLERY'],icn['GR.M1.SINGLE ROCKET LAUNCHER'],icn['GR.M2.TOWED']];
-	sId['S-G-UCFRM-'] = [icn['GR.IC.FIELD ARTILLERY'],icn['GR.M1.MULTIPLE ROCKET LAUNCHER'] + (_STD2525 ? '' : icn['GR.M2.CROSS-COUNTRY TRUCK'] )];
+	sId['S-G-UCFRM-'] = [icn['GR.IC.FIELD ARTILLERY'],icn['GR.M1.MULTIPLE ROCKET LAUNCHER'],(_STD2525 ? '' : icn['GR.M2.CROSS-COUNTRY TRUCK'] )];
 	sId['S-G-UCFRMS'] = [icn['GR.IC.FIELD ARTILLERY'],icn['GR.M1.MULTIPLE ROCKET LAUNCHER'],icn['GR.IC.ARMOUR']];
 	sId['S-G-UCFRMR'] = [icn['GR.IC.FIELD ARTILLERY'],icn['GR.M1.MULTIPLE ROCKET LAUNCHER'],icn['GR.M2.TRUCK']];
 	sId['S-G-UCFRMT'] = [icn['GR.IC.FIELD ARTILLERY'],icn['GR.M1.MULTIPLE ROCKET LAUNCHER'],icn['GR.M2.TOWED']];
@@ -3358,7 +3353,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-G-UCRRD-'] =	[icn['GR.IC.FF.RECONNAISSANCE'],icn['GR.IC.FF.AMPHIBIOUS'],(_STD2525?icn['GR.M1.DIVISION']:[])];
 	sId['S-G-UCRRF-'] =	[icn['GR.IC.FF.RECONNAISSANCE'],icn['GR.IC.FF.AMPHIBIOUS'],icn['GR.M1.FORCE']];
 	sId['S-G-UCRRL-'] =	[icn['GR.IC.FF.RECONNAISSANCE'],icn['GR.IC.ARMOUR'],icn['GR.M2.WHEELED']];
-	sId['S-G-UCRX--'] =	[icn['GR.IC.FF.RECONNAISSANCE'],(_STD2525 ? icn['GR.M2.LONG RANGE SURVEILLANCE'] : MS.translate(0,-20,icn['GR.M2.MOUNTAIN'])+icn['GR.M2.LONG RANGE'])];
+	sId['S-G-UCRX--'] =	[icn['GR.IC.FF.RECONNAISSANCE'],(_STD2525 ? icn['GR.M2.LONG RANGE SURVEILLANCE'] : [MS.translate(0,-20,icn['GR.M2.MOUNTAIN']),icn['GR.M2.LONG RANGE']])];
 	sId['S-G-UCM---'] =	[icn['GR.IC.MISSILE']];
 	sId['S-G-UCMT--'] =	[icn['GR.IC.MISSILE'],icn['GR.M2.TACTICAL MISSILE']];
 	sId['S-G-UCMS--'] =	[icn['GR.IC.MISSILE'],icn['GR.M2.STRATEGIC MISSILE']];
@@ -3997,7 +3992,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-F-AFUM--'] = [icn['AR.I.MILITARY FIXED WING'],icn['AIR.M1.SPECIAL OPERATIONS FORCES'],icn['AIR.M2.MEDIUM']];
 	sId['S-F-AFUH--'] = [icn['AR.I.MILITARY FIXED WING'],icn['AIR.M1.SPECIAL OPERATIONS FORCES'],icn['AIR.M2.HEAVY']];
 	sId['S-F-AV----'] = [icn['AR.I.MILITARY FIXED WING'],icn['AIR.M1.SPECIAL OPERATIONS FORCES'],icn['SOF.M2.VSTOL']];
-	sId['S-F-AH----'] = [icn['GR.IC.AVIATION ROTARY WING'] + (_STD2525 ? '<line x1="100" y1="100" x2="100" y2="140" />' : ''),icn['AIR.M1.SPECIAL OPERATIONS FORCES']];
+	sId['S-F-AH----'] = [icn['GR.IC.AVIATION ROTARY WING'],(_STD2525 ? '<line x1="100" y1="100" x2="100" y2="140" />' : ''),icn['AIR.M1.SPECIAL OPERATIONS FORCES']];
 	sId['S-F-AHH---'] = [icn['GR.IC.AVIATION ROTARY WING'],icn['AIR.M1.SPECIAL OPERATIONS FORCES'],icn['SOF.M2.COMBAT SEARCH AND RESCUE']];
 	sId['S-F-AHA---'] = [icn['AR.I.MILITARY FIXED WING'],icn['AIR.M1.SPECIAL OPERATIONS FORCES'],icn['SOF.M2.ATTACK']];
 	sId['S-F-AHU---'] = [icn['AR.I.MILITARY FIXED WING'],icn['AIR.M1.SPECIAL OPERATIONS FORCES'],icn['SOF.M2.UTILITY']];
@@ -4013,7 +4008,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-F-GS----'] = [icn['GR.IC.SPECIAL FORCES']];
 	sId['S-F-GR----'] = sId['S-F-GSR---'] = [icn['GR.IC.FF.INFANTRY'],icn['AIR.M1.RECONNAISSANCE'],icn['GR.M2.AIRBORNE']];
 	sId['S-F-GP----'] = sId['S-F-GSP---'] = [icn['GR.EQ.PSYCHOLOGICAL OPERATIONS EQUIPMENT']];
-	sId['S-F-GPA---'] = sId['S-F-GSPA--'] = [icn['GR.EQ.PSYCHOLOGICAL OPERATIONS EQUIPMENT'] + MS.translate(0,-30,MS.scale(0.7,icn['AR.I.MILITARY FIXED WING']))];
+	sId['S-F-GPA---'] = sId['S-F-GSPA--'] = [icn['GR.EQ.PSYCHOLOGICAL OPERATIONS EQUIPMENT'], MS.translate(0,-30,MS.scale(0.7,icn['AR.I.MILITARY FIXED WING']))];
 	sId['S-F-GC----'] = sId['S-F-GCA---'] = [icn['GR.IC.CIVIL AFFAIRS']];
 	sId['S-F-GB----'] = sId['S-F-B-----'] = [icn['AR.I.SPECIAL OPERATIONS FORCES'],icn['GR.M2.SUPPORT']];
 	sId['I-P-SCD---'] = [icn['SI.IC.COMMUNICATIONS'],icn['SI.M1.SIERRA'],icn['SI.M2.DELTA'],icn['SI.M3.SPACE']];
@@ -4270,7 +4265,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId["E-F-A-----"] = [icn['GR.IN.IC.AGRICULTURE AND FOOD INFRASTRUCTURE']]; 
 	sId["E-F-AA----"] = [icn['GR.IN.IC.AGRICULTURAL LABORATORY']]; 
 	sId["E-F-AB----"] = [icn['GR.IN.IC.ANIMAL FEEDLOT']]; 
-	sId["E-F-AC----"] = [icn['ST.IC.FOOD DISTRIBUTION'] +icn['AC.M1.COMMERCIAL']]; 
+	sId["E-F-AC----"] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.COMMERCIAL']]; 
 	sId["E-F-AD----"] = [icn['GR.IN.IC.FARM/RANCH']]; 
 	sId["E-F-AE----"] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.PRODUCTION']]; 
 	sId["E-F-AF----"] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.RETAIL']]; 
@@ -5387,7 +5382,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['120100'] = [icn['GR.IN.IC.AGRICULTURE AND FOOD INFRASTRUCTURE']];
 		sId['120101'] = [icn['GR.IN.IC.AGRICULTURAL LABORATORY']];
 		sId['120102'] = [icn['GR.IN.IC.ANIMAL FEEDLOT']];
-		sId['120103'] = [icn['ST.IC.FOOD DISTRIBUTION'] +icn['AC.M1.COMMERCIAL']]; 
+		sId['120103'] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.COMMERCIAL']]; 
 		sId['120104'] = [icn['GR.IN.IC.FARM/RANCH']];
 		sId['120105'] = [icn['ST.IC.FOOD DISTRIBUTION']]; 
 		sId['120106'] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.PRODUCTION']]; 
