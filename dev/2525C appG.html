@@ -257,7 +257,7 @@ EMS.INFSTR.WS.WH20TF E * F * MI -- -- H* ** * WASTEWATER TREATMENT FACILITY
 </textarea>
 
 <script>
-var autotest = "&lt;table border=1&gt;<br>"
+var autotest = ""
 var re = /(^\S*\ )(.{25})(.*$)/gm; 
 var str = document.getElementById("codes").value;
 var m;
@@ -270,17 +270,13 @@ while ((m = re.exec(str)) != null) {
     if (m.index === re.lastIndex) {
         re.lastIndex++;
     }
-   autotest += "&lt;tr&gt;<br>&lt;td&gt;" + m[1] +"&lt;br&gt;"+ m[2].replace(/\ /g,"") +"&lt;br&gt;"+ m[3] +"&lt;br&gt;" + "&lt;/td&gt;<br>&lt;td&gt;" + 
-   "&lt;script&gt;document.write(new MilSymbol(\"" + m[2].replace(/\ /g,"").replaceAt(1,"U") + "\", {size:size}).symbolMarker().textXML);&lt;/script&gt;<br>" +
-   "&lt;script&gt;document.write(new MilSymbol(\"" + m[2].replace(/\ /g,"").replaceAt(1,"F") + "\", {size:size}).symbolMarker().textXML);&lt;/script&gt;<br>" +
-   "&lt;script&gt;document.write(new MilSymbol(\"" + m[2].replace(/\ /g,"").replaceAt(1,"N") + "\", {size:size}).symbolMarker().textXML);&lt;/script&gt;<br>" +
-   "&lt;script&gt;document.write(new MilSymbol(\"" + m[2].replace(/\ /g,"").replaceAt(1,"H") + "\", {size:size}).symbolMarker().textXML);&lt;/script&gt;<br>" +
-    "&lt;/td&gt;<br>&lt;/tr&gt;<br>"
+   autotest += '{code:"'+ m[2].replace(/\ /g,"").substr(4,6) +'",name:"'+ m[3] +'"},<br>' 
+
 }
-autotest += "&lt;/table&gt;"
+autotest += ""
 
 
-document.write("TABLE E-III. SIDC table&lt;br&gt;<br>" + autotest)
+document.write("<br>" + autotest)
 
 </script>
 </script>

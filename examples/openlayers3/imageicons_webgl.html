@@ -13,8 +13,8 @@
 	}
 </style>
 
-<link rel="stylesheet" href="http://openlayers.org/en/v3.10.0/css/ol.css" type="text/css">
-<script src="http://openlayers.org/en/v3.9.0/build/ol.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://openlayers.org/en/v3.12.1/css/ol.css" type="text/css">
+<script src="http://openlayers.org/en/v3.12.1/build/ol.js" type="text/javascript"></script>
 <script src="../../dist/milsymbol.js"></script>
 <script src="../situation.json"></script>
 
@@ -24,19 +24,21 @@
 function init(){
 
 	var iconSize = {"C":15,"D":20,"E":25,"F":30,"G":35,"H":40,"I":45};
-	
+	var ratio = window.devicePixelRatio || 1;
+
 	var styleFunction = function(feature, resolution) {
 		var mysymbol = new MS.symbol(
 				feature.getProperties().SIDC,{
-					size:iconSize[(feature.getProperties().SIDC).charAt(11)],
+					size:iconSize[(feature.getProperties().SIDC).charAt(11)]*ratio,
 					uniqueDesignation:feature.getProperties().name
 				});
 				
-		var myimage = document.createElement('img');
-		myimage.src = mysymbol.getMarker().asImage();
+		//var myimage = document.createElement('img');
+		myimage = mysymbol.getMarker().asCanvas();
 		
 		return [new ol.style.Style({
 	  		image: new ol.style.Icon( ({
+	  			scale: 1/ratio,
 				anchor: [mysymbol.markerAnchor.x, mysymbol.markerAnchor.y],
 				anchorXUnits: 'pixels',
 				anchorYUnits: 'pixels',
@@ -89,21 +91,13 @@ function init(){
 		<path
 			style="fill:none;stroke:#ffffff;stroke-width:3px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
 			d="m 105,50 25,15 m -40,20 50,10 m -80,-25 0,35 0,25 45,0 15,15 M 110,80 75,70 l 0,50 45,-25 10,35 20,-35 -20,-30 z m -30,65 20,5 20,-5 20,-15 m -50,15 -10,0 -20,-15 m 90,-35 -10,35 -10,0 -10,15 -30,0 m 45,-80 15,30 -10,0 m -10,-35 5,5 -5,0 m -25,-15 25,10 0,5 m -70,5 20,-15 20,5 M 75,70 60,70 50,105 m 10,25 -10,-25 10,0 m 45,25 -15,15 -30,-15 15,-10 m 25,-60 30,5 10,30 M 75,70 100,60 110,80 m 30,15 -10,35 -25,0 m 15,-35 20,0 -30,-15 -20,5 30,10 -15,35 L 75,120 90,85 75,70 60,105 75,120 m 25,-60 5,-10 -25,5 -5,15">
-				<animateTransform 
-				attributeType="xml"
-				attributeName="transform" type="rotate"
-				from="0 100 100" to="360 100 100"
-				begin="0" dur="60s" 
-				fill="freeze"
-				repeatCount="indefinite"
-				/>
 		</path>
 	</svg>
 </div>
 
 <div class="body">
 <h1>milsymbol in open layers 3 - ol.style.Icon()</h1>
-Using the asImage() method in milsymbol makes it possible to assign the output from milsymbol as an image source. This way you can use the output from milsymbol in ol.style.Icon() in Open Layers.
+Using the asCanvas() method in milsymbol makes it possible to assign the output from milsymbol as an image source. This way you can use the output from milsymbol in ol.style.Icon() in Open Layers.
 
 </div>
 <div id="map" class="mymap">
