@@ -12,6 +12,14 @@ milsymbol is created and maintained by Måns Beckman, and you can visit my homep
 
 If you use milsymbol for some project I'm always interested to hear about it, my contact details can be found on my homepage.
 
+milsymbol 5.5
+-------------
+* **Custom extensions will have to be updated**
+* Native canvas support with the asCanvas() method
+* New storage format for all geometries so that it is possible to support several rendering engines
+* Pushed the version number a bit since there is a lot of changes, was thinking about 0.6, but it was just minor API changes
+
+
 milsymbol 0.5
 -------------
 * Much faster
