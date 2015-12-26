@@ -66,6 +66,43 @@ This combined makes it possible for you to access all parts of the milsymbol lib
 </ul>
 <h2 id="globalmilsymbol">Global milsymbol</h2>
 The global class for milsymbol is <b>MS</b>, so if you want to use the setStandard method, you will call it by using <b>MS.setStandard(</b>"APP6"<b>)</b>. If you need to know the version of milsymbol you are using you can get it from MS.version.
+
+<h3>Global Properties</h3>
+
+<table border="1">
+<tr class="table-heading">
+<td style="min-width:160px;">Option
+</td>
+<td>Type
+</td>
+<td>Default
+</td>
+<td>Description
+</td>
+</tr>
+
+<tr>
+<td><b>version</b></td>
+<td>String
+</td>
+<td><i>current version</i><br></td>
+<td>
+<small>Get the current version of milsymbol</small>
+</td>
+</tr>
+
+<tr>
+<td><b>autoSVG</b></td>
+<td>bool
+</td>
+<td><i>true</i><br></td>
+<td>
+<small>Gets or sets if milsymbol should generate SVG output by default, if you only plan on using Canvas you can set this to false.</small>
+</td>
+</tr>
+</table>
+
+
 <h3>Global Methods</h3>
 
 
@@ -305,6 +342,26 @@ Parses the XML and returns a DOM element.</small><br>
 <td>
 <small>
 Base 64 encodes the XML and returns the output as a SVG image stream that can be set as the source attribute on a image element.</small><br>
+</td>
+</tr>
+
+<tr>
+<td><b>asCanvas()<br>
+</b></td>
+<td><i>canvas element</i><br></td>
+<td>
+<small>
+Draws the marker to a canvas element using native draw instructions and returns the canvas element.</small><br>
+</td>
+</tr>
+
+<tr>
+<td><b>asSVG()<br>
+</b></td>
+<td><i>SVG XML string</i><br></td>
+<td>
+<small>
+This will return the SVG XML string and it will also be stored in the XML property, if autoSVG is set to true the will be called automatically when you call getMarker.</small><br>
 </td>
 </tr>
 </table>
