@@ -56,13 +56,13 @@ This combined makes it possible for you to access all parts of the milsymbol lib
 </ul>
 
 <li><h3><a href="#propertiesobject">Properties object</a></h3></li>
-<li><h3><a href="#svgstring">SVG string</a></h3></li>
+<li><h3><a href="#JSONgeometry">JSON geometry</a></h3></li>
 <li><h3><a href="#dashobject">Dash object</a></h3></li>
 <li><h3><a href="#colorobject">Color object</a></h3></li>
 <li><h3><a href="#symbolcolorsobject">Symbol colors object</a></h3></li>
 <li><h3><a href="#boundingboxobject">Bounding box object</a></h3></li>
 <li><h3><a href="#buildingblockobject">Building block object</a></h3></li>
-<li><h3><a href="#extendingmilsymbol">Extending milsymbol</a></h3></li>
+<!--<li><h3><a href="#extendingmilsymbol">Extending milsymbol</a></h3></li>-->
 </ul>
 <h2 id="globalmilsymbol">Global milsymbol</h2>
 The global class for milsymbol is <b>MS</b>, so if you want to use the setStandard method, you will call it by using <b>MS.setStandard(</b>"APP6"<b>)</b>. If you need to know the version of milsymbol you are using you can get it from MS.version.
@@ -192,7 +192,7 @@ The global class for milsymbol is <b>MS</b>, so if you want to use the setStanda
 
 
 <tr>
-<td><b>buildingBlock(</b><br>&lt;String&gt;<i><small> <a href="#svgstring">SVG string</a></small></i>,</b><br>&lt;String&gt;<i><small> <a href="#svgstring">SVG string</a></small></i>,&lt;<a href="#boundingboxobject">Bounding box object</a>&gt;<i><small> Bounding Box</small></i><b>)</b></td>
+<td><b>buildingBlock(</b><br>&lt;String&gt;<i><small> <a href="#JSONgeometry">JSON geometry</a></small></i>,</b><br>&lt;String&gt;<i><small> <a href="#JSONgeometry">JSON geometry</a></small></i>,&lt;<a href="#boundingboxobject">Bounding box object</a>&gt;<i><small> Bounding Box</small></i><b>)</b></td>
 <td><i><a href="#buildingblockobject">Building block object</a></i><br></td>
 <td>
 <small>Creates an object with two SVG geometry that creates a part of a milsymbol marker, and the bounding box for that geometry. The first SVG geometry is inserted before existing code and the second after.</small>
@@ -241,26 +241,26 @@ The global class for milsymbol is <b>MS</b>, so if you want to use the setStanda
 </tr>
 
 <tr>
-<td><b>translate(</b><br>&lt;Number&gt;<i><small> x</small></i>,&lt;Number&gt;<i><small> y</small></i>,&lt;String&gt;<i><small> <a href="#svgstring">SVG string</a></small></i><b>)<br></b></td>
-<td><i><a href="#svgstring">SVG string</a></i><br></td>
+<td><b>translate(</b><br>&lt;Number&gt;<i><small> x</small></i>,&lt;Number&gt;<i><small> y</small></i>,&lt;String&gt;<i><small> <a href="#JSONgeometry">JSON geometry</a></small></i><b>)<br></b></td>
+<td><i><a href="#JSONgeometry">JSON geometry</a></i><br></td>
 <td>
-<small>Moves the SVG geometry in x,y direction.</small>
+<small>Moves the JSON geometry in x,y direction.</small>
 </td>
 </tr>
 
 <tr>
-<td><b>scale(</b><br>&lt;Number&gt;<i><small> Scale factor</small></i>,&lt;String&gt;<i><small> <a href="#svgstring">SVG string</a></small></i><b>)<br></b></td>
-<td><i><a href="#svgstring">SVG string</a></i><br></td>
+<td><b>scale(</b><br>&lt;Number&gt;<i><small> Scale factor</small></i>,&lt;String&gt;<i><small> <a href="#JSONgeometry">JSON geometry</a></small></i><b>)<br></b></td>
+<td><i><a href="#JSONgeometry">JSON geometry</a></i><br></td>
 <td>
-<small> Scales the SVG geometry.</small>
+<small> Scales the JSON geometry.</small>
 </td>
 </tr>
 
 <tr>
-<td><b>rotate(</b><br>&lt;Number&gt;<i><small> Degrees</small></i>,&lt;String&gt;<i><small> <a href="#svgstring">SVG string</a></small></i><b>)<br></b></td>
-<td><i><a href="#svgstring">SVG string</a></i><br></td>
+<td><b>rotate(</b><br>&lt;Number&gt;<i><small> Degrees</small></i>,&lt;String&gt;<i><small> <a href="#JSONgeometry">JSON geometry</a></small></i><b>)<br></b></td>
+<td><i><a href="#JSONgeometry">JSON geometry</a></i><br></td>
 <td>
-<small> Rotates the SVG geometry.</small>
+<small> Rotates the JSON geometry.</small>
 </td>
 </tr>
 
@@ -1230,12 +1230,12 @@ taskForce		</b></td>
 </table>
 
 
-<h2 id="svgstring">SVG string</h2>
+<h2 id="JSONgeometry">JSON geometry</h2>
 
-A SVG string is a text string representing a SVG element.<br>
+A JSON geometry is an object representing a geometry.<br>
 For example:<br>
-<code>'&lt;path  d="M25,50 l150,0 0,100 -150,0 z"/&gt;'</code> <br>
-This is the SVG string representing the base geometry for a Ground Friend marker.<br> If you are creating your own SVG strings for usage in milsymbol, they should have the origo at 100,100, and the hight and width of the icon octagon is 100.<br>
+<code>{type:'path',d:'M25,50 l150,0 0,100 -150,0 z'}</code> <br>
+This is the JSON geometry representing the base geometry for a Ground Friend marker.<br> If you are creating your own JSON geometries for usage in milsymbol, they should have the origo at 100,100, and the hight and width of the icon octagon is 100.<br>
 
 
 <h2 id="dashobject">Dash object</h2>
@@ -1572,7 +1572,7 @@ This will get the width of the bouding box.</small><br>
 </table>
 
 <h2 id="buildingblockobject">Building block object</h2>
-A building block object describes a part that should be added to the marker. It consists of a <a href="#svgstring">SVG string</a>, and a bounding box for the geometry. 
+A building block object describes a part that should be added to the marker. It consists of two <a href="#JSONgeometry">JSON geometries</a>, and a bounding box for the geometries. 
 
 <table border="1">
 <tr class="table-heading">
@@ -1587,18 +1587,18 @@ A building block object describes a part that should be added to the marker. It 
 <tr>
 <td><b>pre</b>
 </td>
-<td><a href="#svgstring">SVG string</a>
+<td><a href="#JSONgeometry">JSON geometry</a>
 </td>
-<td><small>This is the <a href="#svgstring">SVG string</a> for the SVG geometry we intend to draw. It can be anything from a simple line-element, to a g-element, to a complete SVG by itself. This part is inserted before any previous parts of the marker.</small>
+<td><small>This is the <a href="#JSONgeometry">JSON geometry</a> for the geometry we intend to draw. This part is inserted before any previous parts of the marker.</small>
 </td>
 </tr>
 
 <tr>
 <td><b>post</b>
 </td>
-<td><a href="#svgstring">SVG string</a>
+<td><a href="#JSONgeometry">JSON geometry</a>
 </td>
-<td><small>This is the <a href="#svgstring">SVG string</a> for the SVG geometry we intend to draw. It can be anything from a simple line-element, to a g-element, to a complete SVG by itself. This part is inserted after any existing parts of the marker.</small>
+<td><small>This is the <a href="#JSONgeometry">JSON geometry</a> for the geometry we intend to draw. This part is inserted after any existing parts of the marker.</small>
 </td>
 </tr>
 
@@ -1612,7 +1612,8 @@ A building block object describes a part that should be added to the marker. It 
 </tr>
 
 </table>
-
+<br>
+<!--
 <h2 id="extendingmilsymbol">Extending milsymbol</h2>
 If you want to you can extend the markers in milsymbol with custom code. It's actually possible to remove built in functionality in milsymbol and replace it with custom code, for example you could replace the code for the direction indicator with code for a speed indicator, but the most common use case is to add extra overlays.<br>
 To get an array of all functions that builds the symbols in milsymbol you can use <b>MS.getMarkerParts()</b>, and in the same way you can set a completely new set of functions using <b>MS.setMarkerParts(</b><i>Array of functions</i><b>)</b>.<br>
@@ -1635,7 +1636,7 @@ var MSdebug = function debug(){<br>
 <b>MS.addMarkerParts(</b>MSdebug<b>)</b>;<br>
 </small>
 </code><br>
-
+-->
 
 
 </div>
