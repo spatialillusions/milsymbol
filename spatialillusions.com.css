@@ -14,11 +14,6 @@ body{
 a{
 	color: rgb(0,168,220);
 }
-
-
-
-
-
 table {
     border-collapse: collapse;
     font-family: Helvetica, arial, freesans, clean, sans-serif;
@@ -29,17 +24,15 @@ table {
 	line-height: 1.2;
 	margin: auto;	
 }
-
 table, td, th {
     border: 1px solid rgb(200, 200, 200);
-    	padding: 5px;
+    padding: 5px;
 }
 
 .table-heading{
 	font-weight: bold;
 	background-color:rgb(240, 240, 240);
 }
-
 code{
 	color: rgb(100, 100, 100);
 	font-size: 14px;
@@ -48,12 +41,11 @@ code{
 	display: block;
 	background-color: rgb(240, 240, 240);
 }
-
 .heading{
 	height: 50px;
 	width: 100%;
 	min-width: 1110px;
-	background-color:rgb(0,168,220);
+	background-color: rgb(0,107,140);
 	box-shadow: 0px 0px 8px #888888;
 	position: relative;	
 	
@@ -64,8 +56,8 @@ code{
 	position: relative; 
 	top: 12px;
 	left: 10px;
-font-family: Helvetica, arial, freesans, clean, sans-serif;
-font-weight: normal;
+	font-family: Helvetica, arial, freesans, clean, sans-serif;
+	font-weight: normal;
 	color: #fff;	
 }
 .bannerLinks a{
@@ -74,33 +66,26 @@ font-weight: normal;
 	position: relative; 
 	top: 12px;
 	margin-left: 10px;
-font-family: Helvetica, arial, freesans, clean, sans-serif;
-font-weight: normal;
+	font-family: Helvetica, arial, freesans, clean, sans-serif;
+	font-weight: normal;
 	color: #fff;	
-}	
-
-	.logo{
+}
+.logo{
 	position: absolute; 
 	bottom: 10px;
 	right: 10px;    	
 }
-
 .body{
-
 	margin: auto;
 	width: 640px;
 	word-wrap: break-word;
-
 }
-
 .footer{
 	width:100%;
 	min-height:250px;
 	padding-top: 20px;
 	padding-bottom: 80px;
-
 	background-color: rgb(80, 80, 80);
-
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 	font-size: 0.8em;
 	font-style: normal;
