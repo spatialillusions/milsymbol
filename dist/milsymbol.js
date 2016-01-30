@@ -33,7 +33,7 @@ For updates and more information go to http://www.spatialillusions.com
 
 var MS = new function(){
 	"use strict";
-	this.version = '0.5.5b'
+	this.version = '0.5.5'
 	console.log('milsymbol.js '+this.version+' - Copyright (c) 2015 Måns Beckman  http://www.spatialillusions.com')
 	//Constants
 	var svgNS = "http://www.w3.org/2000/svg";
