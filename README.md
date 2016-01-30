@@ -12,7 +12,7 @@ milsymbol is created and maintained by Måns Beckman, and you can visit my homep
 
 If you use milsymbol for some project I'm always interested to hear about it, my contact details can be found on my homepage.
 
-milsymbol 5.5
+milsymbol 0.5.5
 -------------
 * **Custom extensions will have to be updated**
 * Native canvas support with the asCanvas() method
