@@ -140,7 +140,7 @@ var MS = new function(){
 		}
 	};
 	this.bbox = function(box){
-		if(box == undefined){
+		if(box === undefined){
 			box = {};
 		}
 		return {
@@ -877,13 +877,13 @@ var MS = new function(){
 		icn['GR.EQ.RAILCAR'] = [icn['GR.EQ.UTILITY VEHICLE'],{type:'circle',fill:false,cx:75,cy:135,r:5},{type:'circle',fill:false,cx:85,cy:135,r:5},{type:'circle',fill:false,cx:115,cy:135,r:5},{type:'circle',fill:false,cx:125,cy:135,r:5}];
 		icn['GR.EQ.CBRN EQUIPMENT'] = [{type:'path',d:'M80,140 c0,-20 10,-60 50,-63 m-10,63 c0,-20 -10,-60 -50,-63 ',fill:false},{type:'circle',cx:70,cy:85,r:8},{type:'circle',cx:130,cy:85,r:8}];
 		icn['GR.EQ.COMPUTER SYSTEM'] = {type:'path',d:'m 100,132 0,-10 -35,0 0,-50 70,0 0,50 -35,0 m -25,10 50,0',fill:false};
-		icn['GR.EQ.COMMAND LAUNCH EQUIPMENT (CLE)'] =text('CLE');;
+		icn['GR.EQ.COMMAND LAUNCH EQUIPMENT (CLE)'] =text('CLE');
 		icn['GR.EQ.GENERATOR SET'] =text('G');
 		icn['GR.EQ.GROUND-BASED MIDCOURSE DEFENSE (GMD) FIRE CONTROL (GFC) CENTER'] =text('GFC');
 		icn['GR.EQ.IN-FLIGHT INTERCEPTOR COMMUNICATIONS SYSTEM (IFICS) DATA TERMINAL (IDT)'] = {type:'path',fill:false,d:'m 80,82.4 45,-2 -4,37 m -6,-1 0,-35 -34,9 m 12,21 0,8 M 80,82.4 c 0,25 16,35 41,35'};
 		icn['GR.EQ.LASER'] = {type:'path',fill:false,d:'m 100,55 0,25 10,5 -20,5 20,5 -20,5 10,5 0,15 10,5 -20,5 20,5 -20,5 20,5 M 90,65 100,55 110,65'};
 		icn['GR.EQ.TENT'] = {type:'path',fill:false,d:'m 65,124.4 10,-37 25,-10 25,10 10,37 z'};
-		icn['GR.EQ.UNIT DEPLOYMENT SHIPMENTS'] =text('DPLY');;
+		icn['GR.EQ.UNIT DEPLOYMENT SHIPMENTS'] =text('DPLY');
 		icn['GR.EQ.CIVILIAN VEHICLE.LIGHT'] = {type:'path',fill:false,d:'m 100,125 0,-20'};
 		icn['GR.EQ.CIVILIAN VEHICLE.MEDIUM'] = {type:'path',fill:false,d:'m 103,105 0,20 m -6,-20 0,20'};
 		icn['GR.EQ.CIVILIAN VEHICLE.HEAVY'] = {type:'path',fill:false,d:'m 106,105 0,20 m -12,-20 0,20 m 6,-20 0,20'};
@@ -1639,7 +1639,7 @@ var MS = new function(){
 			defaultProperties.call(this,icn[key]);		
 		}		
 		return icn;
-	}
+	};
 
 	this.symbolGeometries = {
 		'AirHostile' 	: {	g:{type:'path',d:'M 45,150 L45,70 100,20 155,70 155,150'},
@@ -1777,7 +1777,7 @@ var MS = new function(){
 				"numberSIDC"		: false,	//Is the SIDC number based
 				"space"			: false,	//Is it in Space
 				"taskForce"		: false		//Is it a task force
-				}
+				};
 			var mapping = {};
 			mapping.context 	= ["Reality","Exercise","Simulation"];
 			mapping.status 	= ["Present","Planned","FullyCapable","Damaged","Destroyed","FullToCapacity"];
@@ -1815,7 +1815,7 @@ var MS = new function(){
 
 			properties.context = mapping.context[0];
 			
-			if(this.monoColor != ''){
+			if(this.monoColor !== ''){
 				properties.fill = false;
 			}
 			this.SIDC = String(this.SIDC).replace(/\*/g,"-").replace(" ","");
@@ -1876,7 +1876,7 @@ var MS = new function(){
 				baseIconColor.Friend = baseIconColor.Hostile;
 			}
 			//If the user has specified a mono color to use for all symbols.
-			if(this.monoColor != ''){
+			if(this.monoColor !== ''){
 				baseFrameColor.Friend = baseFrameColor.Neutral = baseFrameColor.Hostile= baseFrameColor.Unknown = baseFrameColor.Civilian = this.monoColor;
 				baseColorBlack = baseFrameColor;
 				baseColorWhite = baseFillColor = baseColorNone;
@@ -1934,7 +1934,7 @@ var MS = new function(){
 			//Processing all parts of the marker, adding them to the drawinstruction and updating the boundingbox
 			for (var i in MS._markerParts){
 				var m = MS._markerParts[i].call(this);
-				if(m.pre.length)this.drawInstructions.unshift(m.pre)
+				if(m.pre.length)this.drawInstructions.unshift(m.pre);
 				if(m.post.length)this.drawInstructions.push(m.post);
 				if (m.bbox)this.bbox = MS.bboxMax(this.bbox,m.bbox);
 			}
@@ -1945,7 +1945,7 @@ var MS = new function(){
 			this.width = this.baseWidth*this.size/100;
 			this.height = this.baseHeight*this.size/100;
 		
-			var anchor = {x:100,y:100}
+			var anchor = {x:100,y:100};
 			this.octagonAnchor = {
 				x: (anchor.x-this.bbox.x1+parseFloat(this.strokeWidth))*this.size/100, 
 				y: (anchor.y-this.bbox.y1+parseFloat(this.strokeWidth))*this.size/100};
@@ -1953,7 +1953,7 @@ var MS = new function(){
 			if(this.properties.headquarters){
 				anchor = {
 					x:this.properties.baseGeometry.bbox.x1,
-					y:this.properties.baseGeometry.bbox.y2 + MS.hqStafLength}
+					y:this.properties.baseGeometry.bbox.y2 + MS.hqStafLength};
 			}
 			this.markerAnchor = {
 				x: (anchor.x-this.bbox.x1+parseFloat(this.strokeWidth))*this.size/100, 
@@ -2006,7 +2006,7 @@ var MS = new function(){
 									svg = '<g transform="scale('+instruction[i].factor+')" '; 
 									break;
 							}
-							if(instruction[i].stroke != undefined){
+							if(instruction[i].stroke !== undefined){
 								svg += 'stroke-width="' + (instruction[i].strokewidth || this.strokeWidth) + '" ';
 								if(instruction[i].strokedasharray) svg += 'stroke-dasharray="' + instruction[i].strokedasharray + '" ';
 								if(instruction[i].stroke){
@@ -2015,8 +2015,8 @@ var MS = new function(){
 									svg += 'stroke="none" ';
 								}
 							}
-							if(instruction[i].fill != undefined) svg += 'fill="' + (instruction[i].fill?instruction[i].fill:'none') + '" ';
-							if(instruction[i].fillopacity != undefined) svg += 'fill-opacity="' + instruction[i].fillopacity + '" ';
+							if(instruction[i].fill !== undefined) svg += 'fill="' + (instruction[i].fill?instruction[i].fill:'none') + '" ';
+							if(instruction[i].fillopacity !== undefined) svg += 'fill-opacity="' + instruction[i].fillopacity + '" ';
 							svg += '>';
 							switch (instruction[i].type){
 								case 'path':
@@ -2066,7 +2066,7 @@ var MS = new function(){
 				}else{
 					if(typeof instruction[i] == 'object'){
 						ctx.lineWidth = (instruction[i].strokewidth || this.strokeWidth);
-						if(instruction[i].stroke != undefined){
+						if(instruction[i].stroke !== undefined){
 							if(instruction[i].stroke){
 								ctx.strokeStyle = instruction[i].stroke;
 							}else{
@@ -2076,8 +2076,8 @@ var MS = new function(){
 						if(instruction[i].strokedasharray){
 							ctx.setLineDash(instruction[i].strokedasharray.split(','));
 						}else{
-							if(ctx.getLineDash().length != 0){
-								ctx.setLineDash([])
+							if(ctx.getLineDash().length !== 0){
+								ctx.setLineDash([]);
 							};
 						}
 						
@@ -2085,22 +2085,22 @@ var MS = new function(){
 						//fill is set to false, make it transparent
 						if(!instruction[i].fill){ctx.fillStyle = 'rgba(0,0,0,0)';}
 						
-						if(instruction[i].fillopacity != undefined){ctx.globalAlpha = instruction[i].fillopacity}
+						if(instruction[i].fillopacity !== undefined){ctx.globalAlpha = instruction[i].fillopacity}
 						
 						switch (instruction[i].type){
 							case 'path':
 								var d = new Path2D(instruction[i].d);
-								if(instruction[i].fill == undefined || (instruction[i].fill != undefined && instruction[i].fill))ctx.fill(d);
-								if(instruction[i].stroke == undefined || (instruction[i].stroke != undefined && instruction[i].stroke))ctx.stroke(d);
+								if(instruction[i].fill === undefined || (instruction[i].fill !== undefined && instruction[i].fill))ctx.fill(d);
+								if(instruction[i].stroke === undefined || (instruction[i].stroke !== undefined && instruction[i].stroke))ctx.stroke(d);
 								break;
 							case 'circle':
 								var d = new Path2D();
 								d.arc(instruction[i].cx, instruction[i].cy, instruction[i].r, 0, 2 * Math.PI, false);
-								if(instruction[i].fill == undefined || (instruction[i].fill != undefined && instruction[i].fill))ctx.fill(d);
-								if(instruction[i].stroke == undefined || (instruction[i].stroke != undefined && instruction[i].stroke))ctx.stroke(d);
+								if(instruction[i].fill === undefined || (instruction[i].fill !== undefined && instruction[i].fill))ctx.fill(d);
+								if(instruction[i].stroke === undefined || (instruction[i].stroke !== undefined && instruction[i].stroke))ctx.stroke(d);
 								break;
 							case 'text':
-								ctx.font = (instruction[i].fontweight != undefined ?instruction[i].fontweight + ' ':'') + instruction[i].fontsize + "px " + instruction[i].fontfamily;
+								ctx.font = (instruction[i].fontweight !== undefined ?instruction[i].fontweight + ' ':'') + instruction[i].fontsize + "px " + instruction[i].fontfamily;
 								ctx.textAlign = (instruction[i].textanchor == 'middle'?'center':instruction[i].textanchor);
 								ctx.fillText(instruction[i].text, instruction[i].x, instruction[i].y);
 								if(instruction[i].stroke)ctx.strokeText(instruction[i].text, instruction[i].x, instruction[i].y);
@@ -2127,7 +2127,7 @@ var MS = new function(){
 								ctx.scale(1/instruction[i].factor,1/instruction[i].factor);
 								break;
 						}
-						if(instruction[i].fillopacity != undefined){ctx.globalAlpha = 1;}
+						if(instruction[i].fillopacity !== undefined){ctx.globalAlpha = 1;}
 					}
 				}
 			}
