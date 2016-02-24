@@ -2006,7 +2006,7 @@ var MS = new function(){
 									svg = '<g transform="scale('+instruction[i].factor+')" ';
 									break;
 							}
-							if(instruction[i].stroke != undefined){
+							if(instruction[i].stroke !== undefined){
 								svg += 'stroke-width="' + (instruction[i].strokewidth || this.strokeWidth) + '" ';
 								if(instruction[i].strokedasharray) svg += 'stroke-dasharray="' + instruction[i].strokedasharray + '" ';
 								if(instruction[i].stroke){
@@ -2015,8 +2015,8 @@ var MS = new function(){
 									svg += 'stroke="none" ';
 								}
 							}
-							if(instruction[i].fill != undefined) svg += 'fill="' + (instruction[i].fill?instruction[i].fill:'none') + '" ';
-							if(instruction[i].fillopacity != undefined) svg += 'fill-opacity="' + instruction[i].fillopacity + '" ';
+							if(instruction[i].fill !== undefined) svg += 'fill="' + (instruction[i].fill?instruction[i].fill:'none') + '" ';
+							if(instruction[i].fillopacity !== undefined) svg += 'fill-opacity="' + instruction[i].fillopacity + '" ';
 							svg += '>';
 							switch (instruction[i].type){
 								case 'path':
@@ -2066,7 +2066,7 @@ var MS = new function(){
 				}else{
 					if(typeof instruction[i] == 'object'){
 						ctx.lineWidth = (instruction[i].strokewidth || this.strokeWidth);
-						if(instruction[i].stroke != undefined){
+						if(instruction[i].stroke !== undefined){
 							if(instruction[i].stroke){
 								ctx.strokeStyle = instruction[i].stroke;
 							}else{
@@ -2085,22 +2085,22 @@ var MS = new function(){
 						//fill is set to false, make it transparent
 						if(!instruction[i].fill){ctx.fillStyle = 'rgba(0,0,0,0)';}
 
-						if(instruction[i].fillopacity != undefined){ctx.globalAlpha = instruction[i].fillopacity}
+						if(instruction[i].fillopacity !== undefined){ctx.globalAlpha = instruction[i].fillopacity}
 
 						switch (instruction[i].type){
 							case 'path':
 								var d = new Path2D(instruction[i].d);
-								if(instruction[i].fill == undefined || (instruction[i].fill != undefined && instruction[i].fill))ctx.fill(d);
-								if(instruction[i].stroke == undefined || (instruction[i].stroke != undefined && instruction[i].stroke))ctx.stroke(d);
+								if(instruction[i].fill === undefined || (instruction[i].fill !== undefined && instruction[i].fill))ctx.fill(d);
+								if(instruction[i].stroke === undefined || (instruction[i].stroke !== undefined && instruction[i].stroke))ctx.stroke(d);
 								break;
 							case 'circle':
 								var d = new Path2D();
 								d.arc(instruction[i].cx, instruction[i].cy, instruction[i].r, 0, 2 * Math.PI, false);
-								if(instruction[i].fill == undefined || (instruction[i].fill != undefined && instruction[i].fill))ctx.fill(d);
-								if(instruction[i].stroke == undefined || (instruction[i].stroke != undefined && instruction[i].stroke))ctx.stroke(d);
+								if(instruction[i].fill === undefined || (instruction[i].fill !== undefined && instruction[i].fill))ctx.fill(d);
+								if(instruction[i].stroke === undefined || (instruction[i].stroke !== undefined && instruction[i].stroke))ctx.stroke(d);
 								break;
 							case 'text':
-								ctx.font = (instruction[i].fontweight != undefined ?instruction[i].fontweight + ' ':'') + instruction[i].fontsize + "px " + instruction[i].fontfamily;
+								ctx.font = (instruction[i].fontweight !== undefined ?instruction[i].fontweight + ' ':'') + instruction[i].fontsize + "px " + instruction[i].fontfamily;
 								ctx.textAlign = (instruction[i].textanchor == 'middle'?'center':instruction[i].textanchor);
 								ctx.fillText(instruction[i].text, instruction[i].x, instruction[i].y);
 								if(instruction[i].stroke)ctx.strokeText(instruction[i].text, instruction[i].x, instruction[i].y);
