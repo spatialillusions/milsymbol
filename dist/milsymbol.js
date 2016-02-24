@@ -33,16 +33,16 @@ For updates and more information go to http://www.spatialillusions.com
 
 var MS = new function(){
 	"use strict";
-	this.version = '0.5.5'
-	console.log('milsymbol.js '+this.version+' - Copyright (c) 2015 Måns Beckman  http://www.spatialillusions.com')
+	this.version = '0.5.5';
+	console.log('milsymbol.js '+this.version+' - Copyright (c) 2015 Måns Beckman  http://www.spatialillusions.com');
 	//Constants
 	var svgNS = "http://www.w3.org/2000/svg";
 	if (typeof parseXML=='undefined') {
 		window.parseXML = function (s,doc) {
 			doc = doc || document;
-			var doc2=(new DOMParser()).parseFromString(s, "text/xml");
+			var doc2 = (new DOMParser()).parseFromString(s, "text/xml");
 			return doc.adoptNode(doc2.documentElement);
-		}
+		};
 	}
 	
 	this.autoSVG = true;
@@ -57,10 +57,10 @@ var MS = new function(){
 			return true;
 		}
 		return false;
-	}
+	};
 	this.buildingBlock = function(pre,post,bbox){
 		return {pre:pre,post:post,bbox:bbox};
-	}
+	};
 	
 	this.dashArrays = {
 		pending: "4,4",
@@ -72,20 +72,20 @@ var MS = new function(){
 		this.dashArrays.anticipated = anticipated;
 		this.dashArrays.feintDummy = feintDummy;
 		return this.dashArrays;
-	}
+	};
 	this.getDashArrays = function(){
 		return this.dashArrays;
-	}
+	};
 	
 	this.hqStafLength = 100;
 	this.getHqStafLength = function(){
 		return this.hqStafLength;
-	}
+	};
 	this.setHqStafLength = function(len){
 		this.hqStafLength = len;
 		return this.hqStafLength;
-	}	
-	this._colorModes	= {}
+	};
+	this._colorModes	= {};
 	this.getColorMode = function(mode){
 		var c = this._colorModes[mode];
 		var o = {};
@@ -113,7 +113,7 @@ var MS = new function(){
 		o.Neutral 	= neutral;
 		o.Unknown 	= unknown;
 		return o;
-	}
+	};
 	//Init colorModes
 	this.setColorMode('Light',this.colorMode('rgb(255,161,255)','rgb(128,224,255)','rgb(255,128,128)','rgb(170,255,170)','rgb(255,255,128)'));
 	this.setColorMode('Medium',this.colorMode('rgb(128,0,128)','rgb(0,168,220)','rgb(255,48,49)','rgb(0,226,110)','rgb(255,255,0)'));
@@ -130,15 +130,15 @@ var MS = new function(){
 	this.getMarkerParts = function(){
 		var a = this._markerParts;
 		return a;
-	}
+	};
 	this.setMarkerParts = function(parts){
 		this._markerParts = parts;
-	}
+	};
 	this.addMarkerParts = function(parts){
 		if (typeof parts == 'function'){
 			MS.setMarkerParts(MS.getMarkerParts().concat(parts));
 		}
-	}
+	};
 	this.bbox = function(box){
 		if(box == undefined){
 			box = {};
@@ -155,7 +155,7 @@ var MS = new function(){
 				return this.y2-this.y1;
 			}
 		};
-	}
+	};
 	this.bboxMax = function(box1,box2){
 		return MS.bbox({
 			x1: (typeof box1.x1 === "undefined" || box2.x1<=box1.x1)?box2.x1:box1.x1,
@@ -163,25 +163,25 @@ var MS = new function(){
 			x2: (typeof box1.x2 === "undefined" || box2.x2>=box1.x2)?box2.x2:box1.x2,
 			y2: (typeof box1.y2 === "undefined" || box2.y2>=box1.y2)?box2.y2:box1.y2,
 		});
-	}
+	};
 	//Quck function to move icn and stuff
 	this.translate = function(x, y, instruction){
 		return {type:'translate',x:x,y:y,draw:[instruction]};
-	}
+	};
 	//Quick function to scale icn and stuff, will keep center at center.
 	this.scale = function(factor, instruction){
 		return {type:'translate',x:(100-factor*100),y:(100-factor*100),draw:[{type:'scale',factor:factor,draw:[instruction]}]};
-	}
+	};
 	//Quick function to rotate icn and stuff, will keep center at center.
 	this.rotate = function(angle, instruction){
 		return {type:'rotate',degree:angle,x:100,y:100,draw:[instruction]};
-	}
+	};
 
 	this._iconCache = {}; //A cache of icn to speed stuff up...
 
 	this._geticnParts = function(properties, colors, _STD2525, monoColor, alternateMedal){
 		var icn = {};
-		var frame 				= properties.frame
+		var frame 				= properties.frame;
 		var affiliation			= properties.affiliation;
 		var baseGeometry	 	= properties.baseGeometry;
 		var numberSIDC			= properties.numberSIDC;
