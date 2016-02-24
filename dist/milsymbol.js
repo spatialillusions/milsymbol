@@ -2085,7 +2085,7 @@ var MS = new function(){
 						//fill is set to false, make it transparent
 						if(!instruction[i].fill){ctx.fillStyle = 'rgba(0,0,0,0)';}
 						
-						if(instruction[i].fillopacity !== undefined){ctx.globalAlpha = instruction[i].fillopacity}
+						if(instruction[i].fillopacity !== undefined){ctx.globalAlpha = instruction[i].fillopacity;}
 						
 						switch (instruction[i].type){
 							case 'path':
@@ -2116,14 +2116,14 @@ var MS = new function(){
 								ctx.translate(x, y);
 								ctx.rotate(instruction[i].degree * Math.PI / 180);
 								ctx.translate(-x, -y);
-								this.processCanvasInstructions.call(this,instruction[i].draw, ctx)
+								this.processCanvasInstructions.call(this,instruction[i].draw, ctx);
 								ctx.translate(x, y);
 								ctx.rotate(-instruction[i].degree * Math.PI / 180);
 								ctx.translate(-x, -y);
 								break;
 							case 'scale':
 								ctx.scale(instruction[i].factor,instruction[i].factor);
-								this.processCanvasInstructions.call(this,instruction[i].draw, ctx)
+								this.processCanvasInstructions.call(this,instruction[i].draw, ctx);
 								ctx.scale(1/instruction[i].factor,1/instruction[i].factor);
 								break;
 						}
@@ -2131,11 +2131,11 @@ var MS = new function(){
 					}
 				}
 			}
-		}
+		};
 		this.asCanvas = function(){
 			var canvas = document.createElement("canvas");
 			//TODO fix the pixel ratio
-			var ratio = 1//window.devicePixelRatio || 1;
+			var ratio = 1;//window.devicePixelRatio || 1;
 			canvas.width = this.width*ratio;
 			canvas.height = this.height*ratio;
 			//canvas.style.width = this.width +'px';
@@ -2156,7 +2156,7 @@ var MS = new function(){
 			this[key] = options[key];
 		}
 		return this;
-	}
+	};
 	
 };
 
@@ -2167,7 +2167,7 @@ function basegeometry(){
 	var drawArray2 = [];
 	var frameColor = this.colors.frameColor[this.properties.affiliation];
 	//Clone the base geometry
-	var geom = {type:this.properties.baseGeometry.g.type}
+	var geom = {type:this.properties.baseGeometry.g.type};
 	switch (geom.type){
 		case 'path':
     		geom.d = this.properties.baseGeometry.g.d;
@@ -2203,7 +2203,7 @@ function basegeometry(){
 	//Add a dashed outline to the frame if the status is not present.	
 	if(this.fill && this.frame && this.properties.notpresent && !this.properties.unframed){
 		//Clone the base geometry
-		var geom = {type:this.properties.baseGeometry.g.type}
+		var geom = {type:this.properties.baseGeometry.g.type};
 		switch (geom.type){
 			case 'path':
 				geom.d = this.properties.baseGeometry.g.d;
