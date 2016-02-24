@@ -33,8 +33,8 @@ For updates and more information go to http://www.spatialillusions.com
 
 var MS = new function(){
 	"use strict";
-	this.version = '0.5.5'
-	console.log('milsymbol.js '+this.version+' - Copyright (c) 2015 Måns Beckman  http://www.spatialillusions.com')
+	this.version = '0.5.5';
+	console.log('milsymbol.js '+this.version+' - Copyright (c) 2015 Måns Beckman  http://www.spatialillusions.com');
 	//Constants
 	var svgNS = "http://www.w3.org/2000/svg";
 	if (typeof parseXML=='undefined') {
@@ -126,7 +126,7 @@ var MS = new function(){
 	this.setColorMode('OffWhite',this.colorMode('rgb(239, 239, 239)','rgb(239, 239, 239)','rgb(239, 239, 239)','rgb(239, 239, 239)','rgb(239, 239, 239)'));
 	this.setColorMode('None',this.colorMode(false,false,false,false,false));
 
-	this._markerParts = [];
+	this._markerParts = new Array();
 	this.getMarkerParts = function(){
 		var a = this._markerParts;
 		return a;
@@ -252,7 +252,7 @@ var MS = new function(){
 		icn['SP.I.ANTISATELLITE WEAPON'] = {type:'path',d:'m 100,110 0,9 m 0,-34 0,5 m 0,-9 -2,4 4,0 z m -10,9 0,20 20,0 0,-20 z m 25,0 0,20 25,0 0,-20 z m -30,0 -25,0 0,20 25,0 z m 0,10 5,0 m 20,0 5,0'};
 		icn['SP.I.ASTRONOMICAL SATELLITE'] = {type:'path',d:'m 97,90 -1,-9 8,0 -1,9 m -5,20 1,9 2,0 1,-9 m 8,-10 5,0 m -30,0 5,0 m -5,-10 -25,0 0,20 25,0 z m 30,0 0,20 25,0 0,-20 z m -25,0 0,20 20,0 0,-20 z'};
 		icn['SP.I.BIOSATELLITE'] = {type:'path',d:'m 100,89 c 0,4.4 -3.6,8 -8,8 -4.4,0 -8,-3.6 -8,-8 0,-4.4 3.6,-8 8,-8 4.4,0 8,3.6 8,8 z m -10,10 0,20 20,0 0,-20 z m 25,0 0,20 25,0 0,-20 z m -30,0 -25,0 0,20 25,0 z m 0,10 5,0 m 20,0 5,0 m -17,-25 17,10 -1,2 -14,-7'};
-		icn['SP.I.COMMUNICATIONS SATELLITE'] = [{type:'path',d:'m 110,109 5,0 m -30,0 5,0 m -5,-10 -25,0 0,20 25,0 z m 30,0 0,20 25,0 0,-20 z m -25,0 0,20 20,0 0,-20 z'},{type:'path',fill:false,d:'m 100,90 0,9 M 75,81 c 16,12 34,12 50,0'}];
+		icn['SP.I.COMMUNICATIONS SATELLITE'] = {type:'path',d:'m 110,109 5,0 m -30,0 5,0 m -5,-10 -25,0 0,20 25,0 z m 30,0 0,20 25,0 0,-20 z m -25,0 0,20 20,0 0,-20 z'},{type:'path',fill:false,d:'m 100,90 0,9 M 75,81 c 16,12 34,12 50,0'};
 		icn['SP.I.EARTH OBSERVATION SATELLITE'] = [{type:'path',d:'m 107,113 c 0,3.9 -3.1,7 -7,7 -3.9,0 -7,-3.1 -7,-7 0,-3.9 3.1,-7 7,-7 3.9,0 7,3.1 7,7 z m -17,-33 0,20 20,0 0,-20 z m 25,0 0,20 25,0 0,-20 z m -30,0 -25,0 0,20 25,0 z m 0,10 5,0 m 20,0 5,0'},{type:'path',fill:false,d:'m 88,107 c 8,-9 16,-9 24,0'}];
 		icn['SP.I.MINIATURIZED SATELLITE'] = [{type:'path',d:'m 91.1,92 0,16 17.8,0 0,-16 z m 22.2,0 0,16 22.2,0 0,-16 z m -26.6,0 -22.2,0 0,16 22.2,0 z m 0,8 4.4,0 m 17.8,0 4.4,0'},{type:'path',fill:false,d:'m 90,119 10,-9 10,9 m -20,-38 10,9 10,-9 m 35,9 -10,10 10,10 M 55,90 65,100 55,110'}];
 		icn['SP.I.NAVIGATIONAL SATELLITE'] = [{type:'path',d:'m 110,109 5,0 m -30,0 5,0 m -5,-10 -25,0 0,20 25,0 z m 30,0 0,20 25,0 0,-20 z m -25,0 0,20 20,0 0,-20 z'},{type:'path',fill:false,d:'m 88,87 c 8,6 16,6 24,0 m -20,8 8,-14 8,14'}];
@@ -268,7 +268,7 @@ var MS = new function(){
 		icn['SP.I.CIVILIAN COMMUNICATIONS SATELLITE'] = [{type:'path',fill:(_STD2525 ? iconFillColor : !frame?iconFillColor : false),d:'m 110,109 5,0 m -30,0 5,0 m -5,-10 -25,0 0,20 25,0 z m 30,0 0,20 25,0 0,-20 z m -25,0 0,20 20,0 0,-20 z'},{type:'path',fill:false,d:'m 100,90 0,9 M 75,81 c 16,12 34,12 50,0'}];
 		icn['SP.I.CIVILIAN EARTH OBSERVATION SATELLITE'] = [{type:'path',fill:(_STD2525 ? iconFillColor : !frame?iconFillColor : false),d:'m 107,113 c 0,3.9 -3.1,7 -7,7 -3.9,0 -7,-3.1 -7,-7 0,-3.9 3.1,-7 7,-7 3.9,0 7,3.1 7,7 z m -17,-33 0,20 20,0 0,-20 z m 25,0 0,20 25,0 0,-20 z m -30,0 -25,0 0,20 25,0 z m 0,10 5,0 m 20,0 5,0'},{type:'path',fill:false,d:'m 88,107 c 8,-9 16,-9 24,0'}];
 		icn['SP.I.CIVILIAN MINIATURIZED SATELLITE'] = [{type:'path',fill:(_STD2525 ? iconFillColor : !frame?iconFillColor : false),d:'m 91.1,92 0,16 17.8,0 0,-16 z m 22.2,0 0,16 22.2,0 0,-16 z m -26.6,0 -22.2,0 0,16 22.2,0 z m 0,8 4.4,0 m 17.8,0 4.4,0'},{type:'path',fill:false,d:'m 90,119 10,-9 10,9 m -20,-38 10,9 10,-9 m 35,9 -10,10 10,10 M 55,90 65,100 55,110'}];
-		icn['SP.I.CIVILIAN NAVIGATIONAL SATELLITE'] = [{type:'path',fill:(_STD2525 ? iconFillColor : !frame?iconFillColor : false),d:'m 110,109 5,0 m -30,0 5,0 m -5,-10 -25,0 0,20 25,0 z m 30,0 0,20 25,0 0,-20 z m -25,0 0,20 20,0 0,-20 z'},{type:'path',fill:false,d:'m 88,87 c 8,6 16,6 24,0 m -20,8 8,-14 8,14'}];
+		icn['SP.I.CIVILIAN NAVIGATIONAL SATELLITE'] = {type:'path',fill:(_STD2525 ? iconFillColor : !frame?iconFillColor : false),d:'m 110,109 5,0 m -30,0 5,0 m -5,-10 -25,0 0,20 25,0 z m 30,0 0,20 25,0 0,-20 z m -25,0 0,20 20,0 0,-20 z'},{type:'path',fill:false,d:'m 88,87 c 8,6 16,6 24,0 m -20,8 8,-14 8,14'};
 		icn['SP.I.CIVILIAN SPACE STATION'] = {type:'path',fill:(_STD2525 ? iconFillColor : !frame?iconFillColor : false),d:'m 97.5,112.5 0,7.5 5,0 0,-7.5 z m 0,-32.5 5,0 0,26.4 -5,0 z m -0.3,7.6 C 83.3,88.2 72.5,93.5 72.5,100 c 0,6.9 12.3,12.5 27.5,12.5 15.2,0 27.5,-5.6 27.5,-12.5 0,-6.5 -11,-11.9 -25,-12.4 l 0,5.6 c 9.9,0.4 17.5,3.2 17.5,6.6 0,3.7 -8.9,6.7 -19.8,6.7 -10.9,0 -19.8,-3 -19.8,-6.7 0,-3.4 7.4,-6.1 17.1,-6.6 l 0,-5.6 c -0.1,0 -0.2,-0 -0.3,0 z'};
 		icn['SP.I.CIVILIAN TETHERED SATELLITE'] = {type:'path',fill:(_STD2525 ? iconFillColor : !frame?iconFillColor : false),d:'m 120,87 -20,12 m 33,-12 c 0,3.6 -2.9,6.5 -6.5,6.5 -3.6,0 -6.5,-2.9 -6.5,-6.5 0,-3.6 2.9,-6.5 6.5,-6.5 3.6,0 6.5,2.9 6.5,6.5 z m -23,22 5,0 m -30,0 5,0 m -5,-10 -25,0 0,20 25,0 z m 30,0 0,20 25,0 0,-20 z m -25,0 0,20 20,0 0,-20 z'};
 		icn['SP.I.CIVILIAN WEATHER SATELLITE'] = [{type:'path',fill:(_STD2525 ? iconFillColor : !frame?iconFillColor : false),d:'m 110,109 5,0 m -30,0 5,0 m -5,-10 -25,0 0,20 25,0 z m 30,0 0,20 25,0 0,-20 z m -25,0 0,20 20,0 0,-20 z'},{type:'text',stroke:false,textanchor:"middle",x:100,y:95,fontsize:25,text:'WX'}];
@@ -463,14 +463,14 @@ var MS = new function(){
 		icn['GR.IC.AIR DEFENSE H/MAD HAWK'] = {type:'text',stroke:false,x:100,y:101,fontsize:20,text:'H'};
 		icn['GR.IC.AIR DEFENSE H/MAD PATRIOT'] = {type:'text',stroke:false,x:100,y:101,fontsize:20,text:'P'};
 		icn['GR.IC.AIR DEFENSE MISSILE'] = {type:'path',d:'M90,120 L90,90 C90,80 110,80 110,90 L110,120',fill:false};
-		icn['GR.IC.AIR DEFENSE TARGETING UNIT'] = [{type:'path',d:'M80,100 l20,-15 0,15 20,-15 M75,80 C75,100 85,115 105,115',fill:false},{type:'circle',cx:75,cy:110,r:5}];
+		icn['GR.IC.AIR DEFENSE TARGETING UNIT'] = {type:'path',d:'M80,100 l20,-15 0,15 20,-15 M75,80 C75,100 85,115 105,115',fill:false},{type:'circle',cx:75,cy:110,r:5};
 		icn['GR.IC.AIR DEFENSE THEATER MISSILE DEFENSE UNIT'] =text('TMD');
 		icn['GR.IC.AIR DEFENSE SHORT RANGE'] =text('SRD');
 		icn['GR.IC.AIR DEFENSE STINGER'] = [{type:'path',fill:false,d:'m 85,80 30,0 c 5.54,0 10,4.46 10,10 l 0,5 c 0,5.54 -4.46,10 -10,10 l -30,0 c -5.54,0 -10,-4.46 -10,-10 l 0,-5 c 0,-5.54 4.46,-10 10,-10 z'},{type:'text',stroke:false,x:100,y:101,fontsize:20,text:'S'}];
 		icn['GR.IC.AIR DEFENSE VULCAN'] = [{type:'path',fill:false,d:'m 85,80 30,0 c 5.54,0 10,4.46 10,10 l 0,5 c 0,5.54 -4.46,10 -10,10 l -30,0 c -5.54,0 -10,-4.46 -10,-10 l 0,-5 c 0,-5.54 4.46,-10 10,-10 z'},{type:'text',stroke:false,x:100,y:101,fontsize:20,text:'V'}];
 		icn['GR.IC.AIR DEFENSE GUN UNIT'] = {type:'path',d:'M100,80 L100,120 M92,90 l0,20 M108,90 l0,20',fill:false};
 		icn['GR.IC.AIR TRAFFIC SERVICES'] = {type:'path',d:'m 100,95 0,25 m 7.5,-32.5 c 0,4.1 -3.4,7.5 -7.5,7.5 -4.1,0 -7.5,-3.4 -7.5,-7.5 0,-4.1 3.4,-7.5 7.5,-7.5 4.1,0 7.5,3.4 7.5,7.5 z M 60,85 l 40,15 40,-15 0,30 -40,-15 -40,15 z'};
-		icn['GR.IC.AIRPORT OF DEBARKATION'] = [{type:'path',fill:false,d:'M80,70 l40,0 M80,80 l25,-25 M100,80 l0,40 M81,90.5 l38,19 M81,109.5 l38,-19'},{type:'circle',cx:100,cy:100,r:20,fill:false}];
+		icn['GR.IC.AIRPORT OF DEBARKATION'] = {type:'path',fill:false,d:'M80,70 l40,0 M80,80 l25,-25 M100,80 l0,40 M81,90.5 l38,19 M81,109.5 l38,-19'},{type:'circle',cx:100,cy:100,r:20,fill:false};
 		icn['GR.IC.ALLIED COMMAND EUROPE RAPID REACTION CORPS (ARRC)'] =text('ARRC');
 		icn['GR.IC.ALLIED COMMAND OPERATIONS'] =text('ACO');
 		icn['GR.IC.AMMUNITION'] = {type:'path',d:'m 90,117 0,-25 c 0,-15 20,-15 20,0 l 0,25 m -25,0 30,0',fill:false};
@@ -809,11 +809,11 @@ var MS = new function(){
 		icn['GR.EQ.MACHINE GUN'] = {type:'path',d:'m 100,60 0,80 M 85,75 100,60 115,75 M 80,140 120,140',fill:false};
 		icn['GR.EQ.GRENADE LAUNCHER'] = [icn['GR.EQ.RIFLE'],{type:'circle',cx:100,cy:90,r:15,fill:false}];
 		icn['GR.EQ.FLAME THROWER'] = {type:'path',fill:false,d:'m 90,135 0,-70 c 0,-15 20,-15 20,0'};
-		icn['GR.EQ.AIR DEFENCE GUN'] = [{type:'path',d:'m 85,140 30,0 c 0,-20 -30,-20 -30,0 z m 15,-80 0,65 m 15,-45 0,40 m -30,-40 0,40',fill:false}];if(!_STD2525){icn['GR.EQ.AIR DEFENCE GUN'].push({type:'path',d:'M 85,75 100,60 115,75',fill:false});}
+		icn['GR.EQ.AIR DEFENCE GUN'] = [{type:'path',d:'m 85,140 30,0 c 0,-20 -30,-20 -30,0 z m 15,-80 0,65 m 15,-45 0,40 m -30,-40 0,40',fill:false}];if(!_STD2525){icn['GR.EQ.AIR DEFENCE GUN'].push({type:'path',d:'M 85,75 100,60 115,75',fill:false})};
 		icn['GR.EQ.ANTITANK GUN'] = {type:'path',d:'m 85,140 15,-15 15,15 m -15,-80 0,65 m -15,-45 0,40 m 30,-40 0,40',fill:false};
 		icn['GR.EQ.DIRECT FIRE GUN'] = {type:'path',d:'m 100,60 0,80 m 15,-60 0,40 m -30,-40 0,40',fill:false};
 		icn['GR.EQ.RECOILLESS GUN'] = {type:'path',d:'m 85,75 15,-15 15,15 m 0,5 0,40 m -30,-40 0,40 m 15,-60 0,80',fill:false};
-		icn['GR.EQ.HOWITZER'] = [{type:'circle',cx:100,cy:130,r:10,fill:false},{type:'path',d:'m 115,80 0,40 m -30,-40 0,40 m 15,-60 0,60',fill:false}];if(!_STD2525){icn['GR.EQ.HOWITZER'].push({type:'path',d:'M 85,75 100,60 115,75',fill:false});}
+		icn['GR.EQ.HOWITZER'] = [{type:'circle',cx:100,cy:130,r:10,fill:false},{type:'path',d:'m 115,80 0,40 m -30,-40 0,40 m 15,-60 0,60',fill:false}];if(!_STD2525){icn['GR.EQ.HOWITZER'].push({type:'path',d:'M 85,75 100,60 115,75',fill:false})};
 		icn['GR.EQ.HOWITZER TRACKED'] = {type:'path',d:'M 70,120 l 60,0 c10,0 10,10 0,10 l -60,0 c-10,0 -10,-10 0,-10',fill:false};
 		icn['GR.EQ.MISSILE LAUNCHER'] = {type:'path',d:'m 100,140 0,-80 m -15,80 0,-65 c 0,-20 30,-20 30,0 l 0,65',fill:false};
 		icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'] = {type:'path',d:'m 85,140 30,0 c 0,-20 -30,-20 -30,0 z m 15,-15 0,-65 m -15,80 0,-65 c 0,-20 30,-20 30,0 l 0,65',fill:false};
@@ -821,7 +821,7 @@ var MS = new function(){
 		icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR'] = [{type:'text',stroke:false,x:68,y:110,fontsize:25,text:'E'},{type:'text',stroke:false,x:132,y:110,fontsize:25,text:'R'}];
 		icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR THEATRE'] = {type:'text',stroke:false,x:100,y:145,fontsize:30,text:'T'};
 		icn['GR.EQ.ANTITANK MISSILE LAUNCHER'] = {type:'path',d:'m 85,140 15,-15 15,15 M 85,130 85,75 c 0,-20 30,-20 30,0 l 0,55 m -15,-5 0,-65',fill:false};
-		icn['GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER'] = [icn['GR.EQ.MISSILE LAUNCHER']];if(_STD2525){icn['GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER'].push({type:'path',d:'m 85,140 30,0',fill:false});}
+		icn['GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER'] = [icn['GR.EQ.MISSILE LAUNCHER']];if(_STD2525){icn['GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER'].push({type:'path',d:'m 85,140 30,0',fill:false})};
 		icn['GR.EQ.MORTAR'] = [{type:'path',d:'m 100,60 0,60 M 85,75 100,60 115,75',fill:false },{type:'circle',cx:100,cy:130,r:10,fill:false}];
 		icn['GR.EQ.SINGLE ROCKET LAUNCHER'] = {type:'path',d:'m 85,75 15,-15 15,15 m -15,-5 0,70 M 85,85 100,70 115,85',fill:false};
 		icn['GR.EQ.MULTIPLE ROCKET LAUNCHER'] = {type:'path',d:'m 115,90 0,40 m -30,-40 0,40 m 0,-55 15,-15 15,15 m -15,-5 0,70 M 85,85 100,70 115,85',fill:false};
@@ -832,7 +832,7 @@ var MS = new function(){
 		icn['GR.EQ.LIMITED CROSS-COUNTRY'] = [{type:'path',d:'m 70,130 60,0',fill:false },{type:'circle',cx:75,cy:135,r:5,fill:false},{type:'circle',cx:125,cy:135,r:5,fill:false}];
 		icn['GR.EQ.CROSS-COUNTRY'] = [{type:'path',d:'m 70,130 60,0',fill:false},{type:'circle',cx:75,cy:135,r:5,fill:false},{type:'circle',cx:100,cy:135,r:5,fill:false},{type:'circle',cx:125,cy:135,r:5,fill:false}];
 		icn['GR.EQ.ARMOURED FIGHTING VEHICLE'] = {type:'path',d:'m 70,100 30,-30 30,30 -30,30 z m 60,-30 0,60 m -60,-60 0,60 0,0',fill:false};
-		icn['GR.EQ.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL'] = [icn['GR.EQ.ARMOURED FIGHTING VEHICLE']];if(numberSIDC){icn['GR.EQ.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL'].push([{type:'text',stroke:false,x:100,y:110,fontsize:30,text:'C2'},{type:'path',d:'m 80,90 20,15 0,-10 20,15',fill:false}]);}
+		icn['GR.EQ.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL'] = [icn['GR.EQ.ARMOURED FIGHTING VEHICLE']];if(numberSIDC){icn['GR.EQ.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL'].push([{type:'text',stroke:false,x:100,y:110,fontsize:30,text:'C2'},{type:'path',d:'m 80,90 20,15 0,-10 20,15',fill:false}])};
 		icn['GR.EQ.ARMOURED PERSONNEL CARRIER'] = {type:'path',fill:false,d:'m 70,80 30,-10 30,10 0,0 m -60,50 60,0 m 0,-60 0,60 m -60,-60 0,60 0,0'};
 		icn['GR.EQ.ARMOURED PERSONNEL CARRIER COMBAT SERVICE SUPPORT VEHICLE'] = [icn['GR.EQ.ARMOURED PERSONNEL CARRIER'],{type:'path',d:'m 70,972.4 60,0',fill:false}];
 		icn['GR.EQ.ARMOURED PERSONNEL CARRIER ENGINEER RECON VEHICLE'] = {type:'path',fill:false,d:'M 130,80 70,130'};
@@ -1754,36 +1754,30 @@ var MS = new function(){
 			var properties = {
 				"activity"			: false,	//Is it an Activity
 				"affiliation"		: "",		//Affiliation it is shown as (Friend/Hostile...)
-				"baseAffilation"	: "",		//Affiliation it belongs to (Friend/Hostile...)
+				"baseAffilation"		: "",		//Affiliation it belongs to (Friend/Hostile...)
 				"baseDimension" 	: "",		//Dimension it belongs to (Air/Ground...)
 				"baseGeometry"		: {g:"",bbox:{}},		//Geometry is a combination of dimension and affiliation (AirFriend/GroundHostile...)
 				"civilian"			: false,	//Is it Civilian
-				"condition"			: "",		//What condition is it in
+				"condition"		: "",		//What condition is it in
 				"context"			: "",		//Context of the symbol (Reality/Exercise...)
-				"dimension"			: "",		//Dimension it is shown as (Air/Ground...)
+				"dimension"		: "",		//Dimension it is shown as (Air/Ground...)
 				"dimensionUnknown"	: false,	//Is the dimension unknown
 				"echelon"			: "",		//What echelon (Platoon/Company...)
-				"faker"				: false,	//Is it a Faker
+				"faker"			: false,	//Is it a Faker
 				"fenintDummy"		: false,	//Is it a feint/dummy
 				"fill"				: this.fill,		//Standard says it should be filled
-				"frame"				: this.frame,		//Standard says it should be framed
+				"frame"			: this.frame,		//Standard says it should be framed
 				"functionid" 		: "", 		//Part of SIDC referring to the icon.
 				"headquarters"		: false,	//Is it a Headquarters
 				"iconBottom"		: 150,		//The bottom of the icon
 				"installation" 		: false,	//Is it an Instalation
-				"joker"				: false,	//Is it a Joker
+				"joker"			: false,	//Is it a Joker
 				"mobility"			: "",		//What mobility (Tracked/Sled)
 				"notpresent"		: "",		//Is it Anticipated or Pending
 				"numberSIDC"		: false,	//Is the SIDC number based
-<<<<<<< HEAD
-				"space"				: false,	//Is it in Space
-				"taskForce"			: false		//Is it a task force
-				};
-=======
 				"space"			: false,	//Is it in Space
 				"taskForce"		: false		//Is it a task force
 				}
->>>>>>> parent of fb3676d... changed != to !== and == to ===
 			var mapping = {};
 			mapping.context 	= ["Reality","Exercise","Simulation"];
 			mapping.status 	= ["Present","Planned","FullyCapable","Damaged","Destroyed","FullToCapacity"];
@@ -1816,7 +1810,7 @@ var MS = new function(){
 				"61": "Short towed array",
 				"62": "Long towed Array"};
 							
-			mapping.affiliation = ["Hostile", "Friend", "Neutral", "Unknown"];
+			mapping.affiliation 	= ["Hostile", "Friend", "Neutral", "Unknown"];
 			mapping.dimension 	= ["Air", "Ground", "Sea", "Subsurface"];
 
 			properties.context = mapping.context[0];
@@ -2082,26 +2076,16 @@ var MS = new function(){
 						if(instruction[i].strokedasharray){
 							ctx.setLineDash(instruction[i].strokedasharray.split(','));
 						}else{
-<<<<<<< HEAD
-							if(ctx.getLineDash().length !== 0){
-								ctx.setLineDash([]);
-							}
-=======
 							if(ctx.getLineDash().length != 0){
 								ctx.setLineDash([])
 							};
->>>>>>> parent of fb3676d... changed != to !== and == to ===
 						}
 						
 						if(instruction[i].fill){ctx.fillStyle = instruction[i].fill;}
 						//fill is set to false, make it transparent
 						if(!instruction[i].fill){ctx.fillStyle = 'rgba(0,0,0,0)';}
 						
-<<<<<<< HEAD
-						if(instruction[i].fillopacity !== undefined){ctx.globalAlpha = instruction[i].fillopacity;}
-=======
 						if(instruction[i].fillopacity != undefined){ctx.globalAlpha = instruction[i].fillopacity}
->>>>>>> parent of fb3676d... changed != to !== and == to ===
 						
 						switch (instruction[i].type){
 							case 'path':
@@ -2132,14 +2116,14 @@ var MS = new function(){
 								ctx.translate(x, y);
 								ctx.rotate(instruction[i].degree * Math.PI / 180);
 								ctx.translate(-x, -y);
-								this.processCanvasInstructions.call(this,instruction[i].draw, ctx);
+								this.processCanvasInstructions.call(this,instruction[i].draw, ctx)
 								ctx.translate(x, y);
 								ctx.rotate(-instruction[i].degree * Math.PI / 180);
 								ctx.translate(-x, -y);
 								break;
 							case 'scale':
 								ctx.scale(instruction[i].factor,instruction[i].factor);
-								this.processCanvasInstructions.call(this,instruction[i].draw, ctx);
+								this.processCanvasInstructions.call(this,instruction[i].draw, ctx)
 								ctx.scale(1/instruction[i].factor,1/instruction[i].factor);
 								break;
 						}
@@ -2147,11 +2131,11 @@ var MS = new function(){
 					}
 				}
 			}
-		};
+		}
 		this.asCanvas = function(){
 			var canvas = document.createElement("canvas");
 			//TODO fix the pixel ratio
-			var ratio = 1;//window.devicePixelRatio || 1;
+			var ratio = 1//window.devicePixelRatio || 1;
 			canvas.width = this.width*ratio;
 			canvas.height = this.height*ratio;
 			//canvas.style.width = this.width +'px';
@@ -2172,7 +2156,7 @@ var MS = new function(){
 			this[key] = options[key];
 		}
 		return this;
-	};
+	}
 	
 };
 
@@ -2183,7 +2167,7 @@ function basegeometry(){
 	var drawArray2 = [];
 	var frameColor = this.colors.frameColor[this.properties.affiliation];
 	//Clone the base geometry
-	var geom = {type:this.properties.baseGeometry.g.type};
+	var geom = {type:this.properties.baseGeometry.g.type}
 	switch (geom.type){
 		case 'path':
     		geom.d = this.properties.baseGeometry.g.d;
@@ -2198,7 +2182,7 @@ function basegeometry(){
 	geom.stroke = frameColor;
 	geom.strokewidth = (this.size>=10?this.strokeWidth:10);
 	//Add a dashed outline to the frame if we are using monocolor and the status is not present.	
-	if((this.monoColor !== '' || !this.fill) && this.properties.notpresent) geom.strokedasharray = this.properties.notpresent;
+	if((this.monoColor != '' || !this.fill) && this.properties.notpresent) geom.strokedasharray = this.properties.notpresent;
 	drawArray2.push(geom);
 	//Space Modifiers
 	if(this.properties.space){
@@ -2219,7 +2203,7 @@ function basegeometry(){
 	//Add a dashed outline to the frame if the status is not present.	
 	if(this.fill && this.frame && this.properties.notpresent && !this.properties.unframed){
 		//Clone the base geometry
-		var geom = {type:this.properties.baseGeometry.g.type};
+		var geom = {type:this.properties.baseGeometry.g.type}
 		switch (geom.type){
 			case 'path':
 				geom.d = this.properties.baseGeometry.g.d;
@@ -2249,7 +2233,7 @@ function statusmodifier(){
 	var y2 =  bbox.y2;
 
 	if(this.properties.condition){
-		if(this.properties.fill && this.monoColor === ""){
+		if(this.properties.fill && this.monoColor == ""){
 			var colors = {	"FullyCapable"	:'rgb(0,255,0)',
 							"Damaged"		:'rgb(255,255,0)',
 							"Destroyed"		:'rgb(255,0,0)',
@@ -2472,7 +2456,7 @@ function modifier(){
 				bbox : {y2 :bbox.y2+10}},
 			"Long towed Array": {g :[{type:'path',fill:this.colors.frameColor[this.properties.affiliation],d:'M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M105,0 l-10,0 0,10 10,0 z M75,0 l5,5 -5,5 -5,-5 z  M125,0 l5,5 -5,5 -5,-5 z'}],
 				bbox : {y2 :bbox.y2+10}}
-		};
+		}
 		if(mobilities.hasOwnProperty(this.properties.mobility)){
 			drawArray1.push({type:'translate',x:0,y:bbox.y2,draw:mobilities[this.properties.mobility].g});
 			gbbox = MS.bboxMax(gbbox,mobilities[this.properties.mobility].bbox);
@@ -2508,7 +2492,7 @@ function directionarrow(){
 	var bbox = this.properties.baseGeometry.bbox;
 	var gbbox = new MS.bbox();
 	if(this.infoFields){
-		if(this.direction && this.direction !== ''){
+		if(this.direction && this.direction!=''){
 			//Movement indicator
 			//The length of the lines in a direction of movement indicator is a bit discussed but I use one frame height. (=100px)
 			var arrowLength = 95;
@@ -2522,7 +2506,7 @@ function directionarrow(){
 				arrow = [{type:'translate',x:0,y:bbox.y2,draw:arrow},{type:'path',fill:this.colors.frameColor[this.properties.affiliation],stroke:this.colors.frameColor[this.properties.affiliation],strokewidth:this.strokeWidth,d:'M 100,' + (bbox.y2) +  'l0,' + 100}];
 				gbbox.y2 += bbox.y2+this.strokeWidth;
 			}
-			drawArray2.push(arrow);
+			drawArray2.push(arrow)
 		}
 	}
 	return MS.buildingBlock(drawArray1,drawArray2,gbbox);
@@ -2536,14 +2520,14 @@ function textfields(){
 	var drawArray2 = [];
 	var bbox = this.properties.baseGeometry.bbox;
 	var fontSize = this.infoSize;
-	var fontFamily = "Arial";
+	var fontFamily = "Arial"
 
 	var gbbox = new MS.bbox();
 	var spaceTextIcon = 20;//The distance between the Icon and the labels
 	
 	//Function to calculate the width of a string
 	function strWidth(str){
-		if(str.length === 0)return 0;
+		if(str.length == 0)return 0;
 		//We need to calculate how long our string will be in pixels
 		var strWidths = {" ":9,"!":10,"\"":15,"#":17,"$":17,"%":27,"&":22,"'":8,"(":10,")":10,"*":12,"+":18,",":9,"-":10,".":9,"/":9,"0":17,"1":17,"2":17,"3":17,"4":17,"5":17,"6":17,"7":17,"8":17,"9":17,":":10,";":10,"<":18,"=":18,">":18,"?":19,"@":30,"A":22,"B":22,"C":22,"D":22,"E":21,"F":19,"G":24,"H":22,"I":9,"J":17,"K":22,"L":19,"M":25,"N":22,"O":24,"P":21,"Q":24,"R":22,"S":21,"T":19,"U":22,"V":21,"W":29,"X":21,"Y":21,"Z":19,"[":10,"]":10,"^":18,"_":17,"`":10,"a":17,"b":19,"c":17,"d":19,"e":17,"f":10,"g":19,"h":19,"i":9,"j":9,"k":17,"l":9,"m":27,"n":19,"o":19,"p":19,"q":19,"r":12,"s":17,"t":10,"u":19,"v":17,"w":24,"x":17,"y":17,"z":15,"{":12,"|":9,"}":12,"~":18};
 		var w = 0;
@@ -2568,22 +2552,22 @@ function textfields(){
 		}
 
 		var gStrings = {L1:"",L2:"",L3:"",L4:"",L5:"",R1:"",R2:"",R3:"",R4:"",R5:""};//Text information on left and right sIde.
-		var a;
+
 		//Air & Space (They should be different but we skip that at the moment) TODO
 		if(!isNaN(this.SIDC) && this.properties.dimension == "Air"){
 			gStrings.R1 = this.uniqueDesignation;
 			gStrings.R2 = this.iffSif;
 			gStrings.R3 = this.type;
 			if(this.speed||this.altitudeDepth){
-				a = [];
-				if(this.speed)a.push(this.speed);
-				if(this.location)a.push(this.altitudeDepth);
+				var a = new Array;
+				this.speed?a.push(this.speed):'';
+				this.location?a.push(this.altitudeDepth):'';
 				gStrings.R4 = (a.join(" "));
 			}
 			if(this.staffComments||this.location){
-				a = [];
-				if(this.staffComments)a.push(this.staffComments);
-				if(this.additionalInformation)a.push(this.additionalInformation);
+				var a = new Array;
+				this.staffComments?a.push(this.staffComments):'';
+				this.additionalInformation?a.push(this.additionalInformation):'';
 				gStrings.R5 = (a.join(" "));
 			}
 		}
@@ -2591,16 +2575,16 @@ function textfields(){
 		if(isNaN(this.SIDC) || this.properties.dimension == "Ground"){
 			gStrings.L1 = this.dtg;
 			if(this.altitudeDepth||this.location){
-				a = [];
-				if(this.altitudeDepth)a.push(this.altitudeDepth);
-				if(this.location)a.push(this.location);
+				var a = new Array;
+				this.altitudeDepth?a.push(this.altitudeDepth):'';
+				this.location?a.push(this.location):'';
 				gStrings.L2 = (a.join(" "));
 			}
 			if(this.type||this.platformType||this.commonIdentifier){
-				a = [];
-				if(this.type)a.push(this.type);
-				if(this.platformType)a.push(this.platformType);
-				if(this.commonIdentifier)a.push(this.commonIdentifier);
+				var a = new Array;
+				this.type?a.push(this.type):'';
+				this.platformType?a.push(this.platformType):'';
+				this.commonIdentifier?a.push(this.commonIdentifier):'';
 				gStrings.L3 = (a.join(" "));
 			}
 			gStrings.L4 = this.uniqueDesignation;
@@ -2608,19 +2592,19 @@ function textfields(){
 			gStrings.R1 = this.reinforcedReduced;
 			gStrings.R2 = this.staffComments;
 			if(this.additionalInformation||this.equipmentTeardownTime){
-				a = [];
-				if(this.additionalInformation)a.push(this.additionalInformation);
-				if(this.equipmentTeardownTime)a.push(this.equipmentTeardownTime);
+				var a = new Array;
+				this.additionalInformation?a.push(this.additionalInformation):'';
+				this.equipmentTeardownTime?a.push(this.equipmentTeardownTime):'';
 				gStrings.R3 = (a.join(" "));
 			}						
 			gStrings.R4 = this.higherFormation;
 			if(this.evaluationRating||this.combatEffectiveness||this.signatureEquipment||this.hostile||this.iffSif){
-				a = [];
-				if(this.evaluationRating)a.push(this.evaluationRating);
-				if(this.combatEffectiveness)a.push(this.combatEffectiveness);
-				if(this.signatureEquipment)a.push(this.signatureEquipment);
-				if(this.hostile)a.push(this.hostile);
-				if(this.iffSif)a.push(this.iffSif);
+				var a = new Array;
+				this.evaluationRating?a.push(this.evaluationRating):'';
+				this.combatEffectiveness?a.push(this.combatEffectiveness):'';
+				this.signatureEquipment?a.push(this.signatureEquipment):'';
+				this.hostile?a.push(this.hostile):'';
+				this.iffSif?a.push(this.iffSif):'';
 				gStrings.R5 = (a.join(" "));
 			}
 		}					
@@ -2630,15 +2614,15 @@ function textfields(){
 			gStrings.R2 = this.type;
 			gStrings.R3 = this.iffSif;
 			if(this.staffComments||this.location){
-				a = [];
-				if(this.staffComments)a.push(this.staffComments);
-				if(this.additionalInformation)a.push(this.additionalInformation);
+				var a = new Array;
+				this.staffComments?a.push(this.staffComments):'';
+				this.additionalInformation?a.push(this.additionalInformation):'';
 				gStrings.R4 = (a.join(" "));
 			}
 			if(this.location||this.speed){
-				a = [];
-				if(this.location)a.push(this.location);
-				if(this.speed)a.push(this.speed);
+				var a = new Array;
+				this.location?a.push(this.location):'';
+				this.speed?a.push(this.speed):'';
 				gStrings.R5 = (a.join(" "));
 			}
 		}					
@@ -2743,7 +2727,7 @@ function icon(){
 			//Sea mine exercise has stuff outsIde the boundingbox... 
 			if(["WMGX--","WMMX--","WMFX--","WMX---","WMSX--"].indexOf(this.properties.functionid)!=-1){
 				gbbox.y1 = 10;
-				if(this.properties.affiliation != "Unknown"){gbbox.x2 = this.properties.baseGeometry.bbox.x2+20;}
+				if(this.properties.affiliation != "Unknown"){gbbox.x2 = this.properties.baseGeometry.bbox.x2+20;};
 			}
 			
 			//Try to fetch the icn form the cache
@@ -2898,15 +2882,15 @@ function icon(){
 MS._getLetterProperties = function(properties, mapping){
 	this.SIDC = this.SIDC.toUpperCase();
 
-	var codingscheme 		= this.SIDC.charAt(0)!==''?this.SIDC.charAt(0):'-';
-	var affiliation 		= this.SIDC.charAt(1)!==''?this.SIDC.charAt(1):'-';
-	var battledimension 	= this.SIDC.charAt(2)!==''?this.SIDC.charAt(2):'-';
-	var status 				= this.SIDC.charAt(3)!==''?this.SIDC.charAt(3):'-';
-	var functionid 			= properties.functionid	= this.SIDC.substr(4,6)!==''?this.SIDC.substr(4,6):'------';
-	var symbolmodifier11 	= this.SIDC.charAt(10)!==''?this.SIDC.charAt(10):'-';
-	var symbolmodifier12 	= this.SIDC.charAt(11)!==''?this.SIDC.charAt(11):'-';
-	var countrycode 		= this.SIDC.substr(12,2)!==''?this.SIDC.substr(12,2):'--';
-	var orderofbattle 		= this.SIDC.charAt(14)!==''?this.SIDC.charAt(14):'-';
+	var codingscheme 		= this.SIDC.charAt(0)!=''?this.SIDC.charAt(0):'-';
+	var affiliation 			= this.SIDC.charAt(1)!=''?this.SIDC.charAt(1):'-';
+	var battledimension 		= this.SIDC.charAt(2)!=''?this.SIDC.charAt(2):'-';
+	var status 				= this.SIDC.charAt(3)!=''?this.SIDC.charAt(3):'-';
+	var functionid 			= properties.functionid	= this.SIDC.substr(4,6)!=''?this.SIDC.substr(4,6):'------';
+	var symbolmodifier11 	= this.SIDC.charAt(10)!=''?this.SIDC.charAt(10):'-';
+	var symbolmodifier12 	= this.SIDC.charAt(11)!=''?this.SIDC.charAt(11):'-';
+	var countrycode 		= this.SIDC.substr(12,2)!=''?this.SIDC.substr(12,2):'--';
+	var orderofbattle 		= this.SIDC.charAt(14)!=''?this.SIDC.charAt(14):'-';
 
 	var equipmentBottom = {'E-----':0,'EWM---':140,'EWMA--':140,'EWMAS-':140,'EWMASR':140,'EWMASE':140,'EWMAI-':140,'EWMAIR':140,'EWMAIE':140,'EWMAL-':140,'EWMALR':140,'EWMALE':140,'EWMAT-':153,'EWMATR':153,'EWMATE':153,'EWMS--':140,'EWMSS-':140,'EWMSI-':140,'EWMSL-':140,'EWMT--':140,'EWMTL-':140,'EWMTM-':140,'EWMTH-':140,'EWS---':140,'EWSL--':140,'EWSM--':140,'EWSH--':140,'EWX---':140,'EWXL--':140,'EWXM--':140,'EWXH--':140,'EWT---':140,'EWTL--':140,'EWTM--':140,'EWTH--':140,'EWR---':140,'EWRL--':140,'EWRM--':140,'EWRH--':140,'EWZ---':140,'EWZL--':140,'EWZM--':140,'EWZH--':140,'EWO---':140,'EWOL--':140,'EWOM--':140,'EWOH--':140,'EWH---':140,'EWHL--':140,'EWHLS-':130,'EWHM--':140,'EWHMS-':130,'EWHH--':140,'EWHHS-':130,'EWG---':140,'EWGL--':140,'EWGM--':140,'EWGH--':140,'EWGR--':140,'EWD---':140,'EWDL--':140,'EWDLS-':130,'EWDM--':140,'EWDMS-':130,'EWDH--':140,'EWDHS-':130,'EWA---':140,'EWAL--':140,'EWAM--':140,'EWAH--':140,'EV----':129,'EVA---':129,'EVAT--':130,'EVATL-':130,'EVATLR':130,'EVATM-':130,'EVATMR':130,'EVATH-':130,'EVATHR':130,'EVAA--':130,'EVAAR-':130,'EVAI--':130,'EVAC--':130,'EVAS--':972.3621826171875,'EVAL--':140,'EVU---':130,'EVAB--':130,'EVUS--':140,'EVUSL-':140,'EVUSM-':140,'EVUSH-':140,'EVUL--':140,'EVUX--':140,'EVUR--':130,'EVUTL-':130,'EVUTH-':130,'EVUA--':130,'EVUAA-':130,'EVE---':129,'EVEB--':130,'EVEE--':130,'EVEC--':140,'EVEM--':130,'EVEMA-':130,'EVEMV-':130,'EVEMT-':130,'EVEML-':140,'EVEA--':120,'EVEAA-':130,'EVEAT-':130,'EVEMSM':130,'EVED--':130,'EVEDA-':130,'EVES--':130,'EVER--':130,'EVEH--':140,'EVEF--':140,'EVD---':140,'EVT--':130,'EVC---':119,'EVCA--':132.5,'EVCAL-':132.5,'EVCAM-':132.5,'EVCAH-':132.5,'EVCO--':132.5,'EVCOL-':132.5,'EVCOM-':132.5,'EVCOH-':132.5,'EVCM--':132.5,'EVCML-':132.5,'EVCMM-':132.5,'EVCMH-':132.5,'EVCU--':132.5,'EVCUL-':132.5,'EVCUM-':132.5,'EVCUH-':132.5,'EVCJ--':132.5,'EVCJL-':132.5,'EVCJM-':132.5,'EVCJH-':132.5,'EVCT--':132.5,'EVCTL-':132.5,'EVCTM-':132.5,'EVCTH-':132.5,'EVCF--':132.5,'EVCFL-':132.5,'EVCFM-':132.5,'EVCFH-':132.5,'EVM---':125,'EVS---':129,'EVST--':129,'EVSR--':129,'EVSC--':129,'EVSP--':129,'EVSW--':129,'ES----':140,'ESR---':120,'ESE---':136,'EXI---':119,'EXL---':145,'EXN---':140,'EXF---':135,'EXM---':130,'EXMC--':122,'EXML--':122};
 	if (equipmentBottom.hasOwnProperty(functionid)){ properties.iconBottom = equipmentBottom[functionid];}
@@ -2935,24 +2919,24 @@ MS._getLetterProperties = function(properties, mapping){
 												properties.notpresent = MS.dashArrays.pending;
 	}
 	//Should it have a Condition Bar
-	if(status == 'C')properties.condition = mapping.status[2];
-	if(status == 'D')properties.condition = mapping.status[3];
-	if(status == 'X')properties.condition = mapping.status[4];
-	if(status == 'F')properties.condition = mapping.status[5];
+	if(status == 'C')								properties.condition = mapping.status[2];
+	if(status == 'D')								properties.condition = mapping.status[3];
+	if(status == 'X')								properties.condition = mapping.status[4];
+	if(status == 'F')								properties.condition = mapping.status[5];
 	//Is it part of Exercise Symbols
 	if(['G','W','D','L','M','J','K'].indexOf(affiliation) > -1){
-		properties.context = mapping.context[1];
+											properties.context = mapping.context[1];
 	}
 	//Framing of SO tactical symbols differs slightly from C2 Symbology: UEI tactical symbols in that there is only one battle dimension: ground.
-	if(codingscheme == "O")properties.dimension = mapping.dimension[1];
+	if(codingscheme == "O")						properties.dimension = mapping.dimension[1];
 	//Framing of EMS tactical symbols differs slightly from C2 Symbology: UEI tactical symbols in that there is only one battle dimension: ground.
-	if(codingscheme == "E")properties.dimension = mapping.dimension[1];
+	if(codingscheme == "E")						properties.dimension = mapping.dimension[1];
 	//First save the dimensionType and affiliationType before we modifies it... 
 	properties.baseDimension = properties.dimension;
 	properties.baseAffilation = properties.affiliation;
 	//Joker and faker should have the shape of friendly
-	if(affiliation == 'J')properties.joker = true;
-	if(affiliation == 'K')properties.faker = true;
+	if(affiliation == 'J')							properties.joker = true;
+	if(affiliation == 'K')							properties.faker = true;
 	if(properties.joker || properties.faker){
 		properties.affiliation = mapping.affiliation[1];
 	}
@@ -3070,7 +3054,7 @@ MS._getLetterProperties = function(properties, mapping){
 	}
 	
 	return properties;
-};
+}
 MS._getLetterSIDCicn = function(icn,_STD2525){
 	var sId = [];
 	// SPACE =========================================================================
@@ -4413,7 +4397,7 @@ MS._getNumberProperties = function(properties,mapping){
 	//SymbolSets that are Installations
 	if(symbolSet == '20')properties.installation = true;
 	//Sea Mines with MEDAL icn
-	if(symbolSet == '36' && this.alternateMedal === false)properties.fill = false;
+	if(symbolSet == '36' && this.alternateMedal == false)properties.fill = false;
 	//Sea own track
 	if(symbolSet == '30' && functionid.substr(0,6) == 150000)properties.frame = false;
 		
@@ -4449,7 +4433,7 @@ MS._getNumberProperties = function(properties,mapping){
 	
 	//Ground Equipment should have the same geometry as sea Friend... 
 	//Signal INTELLIGENCE Ground should have the same geometry as sea Friend... 
-	if(symbolSet == '15' || symbolSet == '52' )properties.dimension = mapping.dimension[2];
+	if(symbolSet == '15' || symbolSet == '52' )properties.dimension = mapping.dimension[2];;
 	
 	//Setting up Headquarters/task force/dummy
 	if(['1','3','5','7'].indexOf(headquartersTaskForceDummy) > -1)properties.feintDummy = true;
@@ -4475,7 +4459,7 @@ MS._getNumberProperties = function(properties,mapping){
 	){properties.civilian = true;}
 	
 	return properties;
-};
+}
 MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 	var sId = {};
 	var sIdm1 = {};
@@ -5156,7 +5140,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['111002'] = [icn['GR.EQ.MISSILE LAUNCHER'],icn['GR.EQ.INTERMEDIATE RANGE']];
 		sId['111003'] = [icn['GR.EQ.MISSILE LAUNCHER'],icn['GR.EQ.LONG RANGE']];
 		sId['111100'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR']];
-		sId['111101'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'],icn['GR.EQ.SHORT RANGE']];
+		sId['111101'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'],icn['GR.EQ.SHORT RANGE']];;
 		sId['111102'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'],icn['GR.EQ.SHORT RANGE'],icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR']];
 		sId['111103'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'],icn['GR.EQ.SHORT RANGE'],icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR']];
 		sId['111104'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'],icn['GR.EQ.INTERMEDIATE RANGE']];
@@ -6085,5 +6069,5 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['160800'] = [icn['CY.IC.SERVICE OUTAGE']];
 		sId['160900'] = [icn['CY.IC.DEVICE OUTAGE']];	
 	}
-	return {icn:sId,m1:sIdm1,m2:sIdm2};
+	return {icn:sId,m1:sIdm1,m2:sIdm2}
 };
