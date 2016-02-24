@@ -1754,29 +1754,29 @@ var MS = new function(){
 			var properties = {
 				"activity"			: false,	//Is it an Activity
 				"affiliation"		: "",		//Affiliation it is shown as (Friend/Hostile...)
-				"baseAffilation"		: "",		//Affiliation it belongs to (Friend/Hostile...)
+				"baseAffilation"	: "",		//Affiliation it belongs to (Friend/Hostile...)
 				"baseDimension" 	: "",		//Dimension it belongs to (Air/Ground...)
 				"baseGeometry"		: {g:"",bbox:{}},		//Geometry is a combination of dimension and affiliation (AirFriend/GroundHostile...)
 				"civilian"			: false,	//Is it Civilian
-				"condition"		: "",		//What condition is it in
+				"condition"			: "",		//What condition is it in
 				"context"			: "",		//Context of the symbol (Reality/Exercise...)
-				"dimension"		: "",		//Dimension it is shown as (Air/Ground...)
+				"dimension"			: "",		//Dimension it is shown as (Air/Ground...)
 				"dimensionUnknown"	: false,	//Is the dimension unknown
 				"echelon"			: "",		//What echelon (Platoon/Company...)
-				"faker"			: false,	//Is it a Faker
+				"faker"				: false,	//Is it a Faker
 				"fenintDummy"		: false,	//Is it a feint/dummy
 				"fill"				: this.fill,		//Standard says it should be filled
-				"frame"			: this.frame,		//Standard says it should be framed
+				"frame"				: this.frame,		//Standard says it should be framed
 				"functionid" 		: "", 		//Part of SIDC referring to the icon.
 				"headquarters"		: false,	//Is it a Headquarters
 				"iconBottom"		: 150,		//The bottom of the icon
 				"installation" 		: false,	//Is it an Instalation
-				"joker"			: false,	//Is it a Joker
+				"joker"				: false,	//Is it a Joker
 				"mobility"			: "",		//What mobility (Tracked/Sled)
 				"notpresent"		: "",		//Is it Anticipated or Pending
 				"numberSIDC"		: false,	//Is the SIDC number based
-				"space"			: false,	//Is it in Space
-				"taskForce"		: false		//Is it a task force
+				"space"				: false,	//Is it in Space
+				"taskForce"			: false		//Is it a task force
 				};
 			var mapping = {};
 			mapping.context 	= ["Reality","Exercise","Simulation"];
@@ -1810,7 +1810,7 @@ var MS = new function(){
 				"61": "Short towed array",
 				"62": "Long towed Array"};
 							
-			mapping.affiliation 	= ["Hostile", "Friend", "Neutral", "Unknown"];
+			mapping.affiliation = ["Hostile", "Friend", "Neutral", "Unknown"];
 			mapping.dimension 	= ["Air", "Ground", "Sea", "Subsurface"];
 
 			properties.context = mapping.context[0];
@@ -2883,8 +2883,8 @@ MS._getLetterProperties = function(properties, mapping){
 	this.SIDC = this.SIDC.toUpperCase();
 
 	var codingscheme 		= this.SIDC.charAt(0)!==''?this.SIDC.charAt(0):'-';
-	var affiliation 			= this.SIDC.charAt(1)!==''?this.SIDC.charAt(1):'-';
-	var battledimension 		= this.SIDC.charAt(2)!==''?this.SIDC.charAt(2):'-';
+	var affiliation 		= this.SIDC.charAt(1)!==''?this.SIDC.charAt(1):'-';
+	var battledimension 	= this.SIDC.charAt(2)!==''?this.SIDC.charAt(2):'-';
 	var status 				= this.SIDC.charAt(3)!==''?this.SIDC.charAt(3):'-';
 	var functionid 			= properties.functionid	= this.SIDC.substr(4,6)!==''?this.SIDC.substr(4,6):'------';
 	var symbolmodifier11 	= this.SIDC.charAt(10)!==''?this.SIDC.charAt(10):'-';
@@ -2919,24 +2919,24 @@ MS._getLetterProperties = function(properties, mapping){
 												properties.notpresent = MS.dashArrays.pending;
 	}
 	//Should it have a Condition Bar
-	if(status == 'C')								properties.condition = mapping.status[2];
-	if(status == 'D')								properties.condition = mapping.status[3];
-	if(status == 'X')								properties.condition = mapping.status[4];
-	if(status == 'F')								properties.condition = mapping.status[5];
+	if(status == 'C')properties.condition = mapping.status[2];
+	if(status == 'D')properties.condition = mapping.status[3];
+	if(status == 'X')properties.condition = mapping.status[4];
+	if(status == 'F')properties.condition = mapping.status[5];
 	//Is it part of Exercise Symbols
 	if(['G','W','D','L','M','J','K'].indexOf(affiliation) > -1){
-											properties.context = mapping.context[1];
+		properties.context = mapping.context[1];
 	}
 	//Framing of SO tactical symbols differs slightly from C2 Symbology: UEI tactical symbols in that there is only one battle dimension: ground.
-	if(codingscheme == "O")						properties.dimension = mapping.dimension[1];
+	if(codingscheme == "O")properties.dimension = mapping.dimension[1];
 	//Framing of EMS tactical symbols differs slightly from C2 Symbology: UEI tactical symbols in that there is only one battle dimension: ground.
-	if(codingscheme == "E")						properties.dimension = mapping.dimension[1];
+	if(codingscheme == "E")properties.dimension = mapping.dimension[1];
 	//First save the dimensionType and affiliationType before we modifies it... 
 	properties.baseDimension = properties.dimension;
 	properties.baseAffilation = properties.affiliation;
 	//Joker and faker should have the shape of friendly
-	if(affiliation == 'J')							properties.joker = true;
-	if(affiliation == 'K')							properties.faker = true;
+	if(affiliation == 'J')properties.joker = true;
+	if(affiliation == 'K')properties.faker = true;
 	if(properties.joker || properties.faker){
 		properties.affiliation = mapping.affiliation[1];
 	}
