@@ -42,9 +42,9 @@ var MS = new function(){
 			doc = doc || document;
 			var doc2=(new DOMParser()).parseFromString(s, "text/xml");
 			return doc.adoptNode(doc2.documentElement);
-		}
+		};
 	}
-	
+
 	this.autoSVG = true;
 	this._STD2525 = true;
 	this.setStandard = function(standard){
@@ -57,11 +57,11 @@ var MS = new function(){
 			return true;
 		}
 		return false;
-	}
+	};
 	this.buildingBlock = function(pre,post,bbox){
 		return {pre:pre,post:post,bbox:bbox};
-	}
-	
+	};
+
 	this.dashArrays = {
 		pending: "4,4",
 		anticipated: "8,12",
@@ -72,20 +72,20 @@ var MS = new function(){
 		this.dashArrays.anticipated = anticipated;
 		this.dashArrays.feintDummy = feintDummy;
 		return this.dashArrays;
-	}
+	};
 	this.getDashArrays = function(){
 		return this.dashArrays;
-	}
-	
+	};
+
 	this.hqStafLength = 100;
 	this.getHqStafLength = function(){
 		return this.hqStafLength;
-	}
+	};
 	this.setHqStafLength = function(len){
 		this.hqStafLength = len;
 		return this.hqStafLength;
-	}	
-	this._colorModes	= {}
+	}	;
+	this._colorModes	= {};
 	this.getColorMode = function(mode){
 		var c = this._colorModes[mode];
 		var o = {};
@@ -105,7 +105,7 @@ var MS = new function(){
 		this._colorModes[mode].Civilian = colorMode.Civilian;
 		return this._colorModes[mode];
 	};
-	this.colorMode = function(civilian,friend,hostile,neutral,unknown){		
+	this.colorMode = function(civilian,friend,hostile,neutral,unknown){
 		var o = {};
 		o.Civilian 	= civilian;
 		o.Friend 	= friend;
@@ -113,7 +113,7 @@ var MS = new function(){
 		o.Neutral 	= neutral;
 		o.Unknown 	= unknown;
 		return o;
-	}
+	};
 	//Init colorModes
 	this.setColorMode('Light',this.colorMode('rgb(255,161,255)','rgb(128,224,255)','rgb(255,128,128)','rgb(170,255,170)','rgb(255,255,128)'));
 	this.setColorMode('Medium',this.colorMode('rgb(128,0,128)','rgb(0,168,220)','rgb(255,48,49)','rgb(0,226,110)','rgb(255,255,0)'));
@@ -130,15 +130,15 @@ var MS = new function(){
 	this.getMarkerParts = function(){
 		var a = this._markerParts;
 		return a;
-	}
+	};
 	this.setMarkerParts = function(parts){
 		this._markerParts = parts;
-	}
+	};
 	this.addMarkerParts = function(parts){
 		if (typeof parts == 'function'){
 			MS.setMarkerParts(MS.getMarkerParts().concat(parts));
 		}
-	}
+	};
 	this.bbox = function(box){
 		if(box == undefined){
 			box = {};
@@ -155,7 +155,7 @@ var MS = new function(){
 				return this.y2-this.y1;
 			}
 		};
-	}
+	};
 	this.bboxMax = function(box1,box2){
 		return MS.bbox({
 			x1: (typeof box1.x1 === "undefined" || box2.x1<=box1.x1)?box2.x1:box1.x1,
@@ -163,25 +163,25 @@ var MS = new function(){
 			x2: (typeof box1.x2 === "undefined" || box2.x2>=box1.x2)?box2.x2:box1.x2,
 			y2: (typeof box1.y2 === "undefined" || box2.y2>=box1.y2)?box2.y2:box1.y2,
 		});
-	}
+	};
 	//Quck function to move icn and stuff
 	this.translate = function(x, y, instruction){
 		return {type:'translate',x:x,y:y,draw:[instruction]};
-	}
+	};
 	//Quick function to scale icn and stuff, will keep center at center.
 	this.scale = function(factor, instruction){
 		return {type:'translate',x:(100-factor*100),y:(100-factor*100),draw:[{type:'scale',factor:factor,draw:[instruction]}]};
-	}
+	};
 	//Quick function to rotate icn and stuff, will keep center at center.
 	this.rotate = function(angle, instruction){
 		return {type:'rotate',degree:angle,x:100,y:100,draw:[instruction]};
-	}
+	};
 
 	this._iconCache = {}; //A cache of icn to speed stuff up...
 
 	this._geticnParts = function(properties, colors, _STD2525, monoColor, alternateMedal){
 		var icn = {};
-		var frame 				= properties.frame
+		var frame 				= properties.frame;
 		var affiliation			= properties.affiliation;
 		var baseGeometry	 	= properties.baseGeometry;
 		var numberSIDC			= properties.numberSIDC;
@@ -475,31 +475,31 @@ var MS = new function(){
 		icn['GR.IC.ALLIED COMMAND OPERATIONS'] =text('ACO');
 		icn['GR.IC.AMMUNITION'] = {type:'path',d:'m 90,117 0,-25 c 0,-15 20,-15 20,0 l 0,25 m -25,0 30,0',fill:false};
 		icn['GR.IC.ARMOUR'] = {type:'path',d:'M125,80 C150,80 150,120 125,120 L75,120 C50,120 50,80 75,80 Z',fill:false};
-		icn['GR.IC.AVIATION ROTARY WING'] = icn['AR.I.MILITARY ROTARY WING']; 
-		icn['GR.IC.AVIATION FIXED WING'] = icn['AR.I.MILITARY FIXED WING']; 
+		icn['GR.IC.AVIATION ROTARY WING'] = icn['AR.I.MILITARY ROTARY WING'];
+		icn['GR.IC.AVIATION FIXED WING'] = icn['AR.I.MILITARY FIXED WING'];
 		icn['GR.IC.AVIATION COMPOSITE'] = [MS.scale(0.5,[icn['GR.IC.AVIATION FIXED WING'],MS.rotate(90,icn['GR.IC.AVIATION ROTARY WING'])])];
 		icn['GR.IC.AVIATION TACTICAL AIR CONTROL PARTY'] =text('TACP');
 		icn['GR.IC.AVIATION FORWARD AIR CONTROLLER'] =text('FAC');
-		icn['GR.IC.BAND'] = text('BAND'); 
+		icn['GR.IC.BAND'] = text('BAND');
 		icn['GR.IC.BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF) (DEPARTMENT OF JUSTICE)'] =text('ATF');
 		icn['GR.IC.CBRN'] = [{type:'path',d:'M80,120 c0,-20 10,-40 50,-43 m-10,43 c0,-20 -10,-40 -50,-43',fill:false},{type:'circle',cx:70,cy:85,r:8},{type:'circle',cx:130,cy:85,r:8}];
-		icn['GR.IC.CIVIL AFFAIRS'] =text('CA'); 
+		icn['GR.IC.CIVIL AFFAIRS'] =text('CA');
 		icn['GR.IC.CIVIL-MILITARY-COOPERATION'] = {type:'path',d:'m 60,80 80,0 0,20 c 0,25 -80,25 -80,0 z',fill:false};
-		icn['GR.IC.COMMAND AND CONTROL'] =text('C2'); 
+		icn['GR.IC.COMMAND AND CONTROL'] =text('C2');
 		icn['GR.IC.COMBAT'] =text('CBT');
 		icn['GR.IC.COMBAT SERVICE SUPPORT'] =text('CSS');
 		icn['GR.IC.COMBAT SUPPORT'] =text('CS');
 		icn['GR.IC.COMBAT SUPPORT (MANOEUVRE ENHANCEMENT)'] =  {type:'path',d:'m 85,80 0,25 15,15 15,-15 0,-25 z'};
 		icn['GR.IC.COMBINED ARMS'] = {type:'path',d:'m 70,80 60,40 m 0,-40 -60,40 m 55,-40 c 25,0 25,40 0,40 l -50,0 C 50,120 50,80 75,80 z',fill:false};
-		icn['GR.IC.COUNTER-INTELLIGENCE'] =text('CI'); 		
+		icn['GR.IC.COUNTER-INTELLIGENCE'] =text('CI');
 		icn['GR.IC.CRIMINAL INVESTIGATION DIVISION'] =text('CID');
-		icn['GR.IC.DIVING'] = []; //TODO		
+		icn['GR.IC.DIVING'] = []; //TODO
 		icn['GR.IC.DOG'] =text('DOG');
-		icn['GR.IC.DRILLING'] = {type:'path',d:'m 85,80 5,40 20,0 5,-40 z'}; 			
+		icn['GR.IC.DRILLING'] = {type:'path',d:'m 85,80 5,40 20,0 5,-40 z'};
 		icn['GR.IC.DRUG ENFORCEMENT AGENCY (DEA)'] =text('DEA');
 		icn['GR.IC.ELECTRONIC RANGING'] ={type:'path',d:'M120,130 c-40,20 -80,-45 -40,-70 z M100,95 L140,75',fill:(_STD2525 ? iconFillColor : false)};
-		icn['GR.IC.ELECTRONIC WARFARE'] =text('EW'); 		
-		icn['GR.IC.EMERGENCY MEDICAL OPERATION'] = {type:'path',d:'m 90,60 0,22.7 -19.7,-11.3 -10,17.3 L 80,100 l -19.7,11.3 10,17.3 L 90,117.3 90,140 l 20,0 0,-22.7 19.7,11.3 10,-17.3 L 120,100 l 19.7,-11.3 -10,-17.3 L 110,82.7 110,60 90,60 z'}; 	
+		icn['GR.IC.ELECTRONIC WARFARE'] =text('EW');
+		icn['GR.IC.EMERGENCY MEDICAL OPERATION'] = {type:'path',d:'m 90,60 0,22.7 -19.7,-11.3 -10,17.3 L 80,100 l -19.7,11.3 10,17.3 L 90,117.3 90,140 l 20,0 0,-22.7 19.7,11.3 10,-17.3 L 120,100 l 19.7,-11.3 -10,-17.3 L 110,82.7 110,60 90,60 z'};
 		icn['GR.IC.ENGINEER'] = {type:'path',fill:false,d:'M60,120 L60,80 140,80 140,120 M100,80 L100,110'};
 		icn['GR.IC.ENVIRONMENTAL PROTECTION'] = {type:'path',d:'m 100,80 -10,15 5,0 -10,10 5,0 -10,10 15,0 0,5 10,0 0,-5 15,0 -10,-10 5,0 -10,-10 5,0 z',fill:false};
 		icn['GR.IC.EXPLOSIVE ORDNANCE DISPOSAL'] =text('EOD');
@@ -507,8 +507,8 @@ var MS = new function(){
 		icn['GR.IC.FIELD ARTILLERY'] = {type:'circle',cx:100,cy:100,r:15};
 		icn['GR.IC.FIELD ARTILLERY OBSERVER'] = [{type:'circle',cx:100,cy:108,r:5},{type:'path',d:'m 80,120 30,-20 m -30,20 20,-40 20,40 z',fill:false}];
 		icn['GR.IC.FIELD CAMP CONSTRUCTION'] = [icn['GR.IC.ENGINEER'],{type:'text',stroke:false,x:100,y:77,fontsize:25,text:'CAMP'}];
-		icn['GR.IC.FINANCE'] = {type:'path',d:'m 80,95 10,-10 20,0 10,10 m -40,0 0,20 40,0 0,-20 z',fill:false}; 	
-		icn['GR.IC.FIRE PROTECTION'] = {type:'path',d:'m 120,90 -5,5 -10,-10 5,-5 -20,0 5,5 -10,10 -5,-5 0,20 5,-5 10,10 -5,5 20,0 -5,-5 10,-10 5,5 z'};		
+		icn['GR.IC.FINANCE'] = {type:'path',d:'m 80,95 10,-10 20,0 10,10 m -40,0 0,20 40,0 0,-20 z',fill:false};
+		icn['GR.IC.FIRE PROTECTION'] = {type:'path',d:'m 120,90 -5,5 -10,-10 5,-5 -20,0 5,5 -10,10 -5,-5 0,20 5,-5 10,10 -5,5 20,0 -5,-5 10,-10 5,5 z'};
 		icn['GR.IC.FIXED WING MISO'] = [{type:'path',fill:(_STD2525 ? iconFillColor : false),stroke:black,d:'M70,85 l40,0 10,-10 0,50 -10,-10 -40,0 z M120,85 l10,0 M120,95 l10,0 M120,105 l10,0 M120,115 l10,0'},{type:'path',d:'M 78.8 61.5 C 68.1 61.5 68.1 78.5 78.8 78.5 L 100 70 L 78.8 61.5 z M 100 70 L 121.3 78.5 C 131.9 78.5 131.9 61.5 121.3 61.5 L 100 70 z'}];
 		icn['GR.IC.GEOSPATIAL SUPPORT'] = text('GEO');
 		icn['GR.IC.GOVERNMENT ORGANIZATION'] = text('GO');
@@ -526,9 +526,9 @@ var MS = new function(){
 		icn['GR.IC.MAINTENANCE'] = {type:'path',d:'M70,90 c10,0 10,20 0,20 m10,-10 l40,0 m10,-10 c-10,0 -10,20 0,20',fill:false};
 		icn['GR.IC.MATERIEL'] =text('MAT');
 		icn['GR.IC.METEOROLOGICAL'] =text('MET');
-		icn['GR.IC.MILITARY INFORMATION SUPPORT OPERATIONS (MISO)'] = {type:'path',d:'M70,85 l40,0 10,-10 0,50 -10,-10 -40,0 z M120,85 l10,0 M120,95 l10,0 M120,105 l10,0 M120,115 l10,0'}; 
+		icn['GR.IC.MILITARY INFORMATION SUPPORT OPERATIONS (MISO)'] = {type:'path',d:'M70,85 l40,0 10,-10 0,50 -10,-10 -40,0 z M120,85 l10,0 M120,95 l10,0 M120,105 l10,0 M120,115 l10,0'};
 		icn['GR.IC.MILITARY INTELLIGENCE'] =text('MI');
-		icn['GR.IC.MILITARY POLICE'] =text('MP');		
+		icn['GR.IC.MILITARY POLICE'] =text('MP');
 		icn['GR.IC.MINE'] = {type:'path',d:'m 120,100 c 0,5.5 -9,10 -20,10 -11,0 -20,-4.5 -20,-10 0,-5.5 9,-10 20,-10 11,0 20,4.5 20,10 z m -5,-20 -30,40 m 0,-40 30,40 m -15,-40 0,40'};
 		icn['GR.IC.MINE CLEARING'] = [icn['GR.IC.MINE'],{type:'text',stroke:false,x:100,y:77,fontsize:25,text:'CLR'}];
 		icn['GR.IC.MINE LAUNCHING'] = [icn['GR.IC.MINE'],{type:'path',d:'m 80,125 0,10 40,0 0,-10 z'}];
@@ -550,7 +550,7 @@ var MS = new function(){
 		icn['GR.IC.POSTAL'] = {type:'path',d:'m 80,80 30,0 c -1.4,15.5 0,25 10,35 -20,0 -40,-20 -40,-35 z',fill:false};
 		icn['GR.IC.PUBLIC AFFAIRS'] =text('PA');
 		icn['GR.IC.PUBLIC AFFAIRS BROADCAST'] = text('BPAD');
-		icn['GR.IC.PSYCHOLOGICAL OPERATIONS'] = {type:'path',fill:(_STD2525 ? iconFillColor : false),stroke:black,d:'M70,85 l40,0 10,-10 0,50 -10,-10 -40,0 z M120,85 l10,0 M120,95 l10,0 M120,105 l10,0 M120,115 l10,0'}; //TODO		
+		icn['GR.IC.PSYCHOLOGICAL OPERATIONS'] = {type:'path',fill:(_STD2525 ? iconFillColor : false),stroke:black,d:'M70,85 l40,0 10,-10 0,50 -10,-10 -40,0 z M120,85 l10,0 M120,95 l10,0 M120,105 l10,0 M120,115 l10,0'}; //TODO
 		icn['GR.IC.QUARTERMASTER'] = {type:'path',fill:false,d:'m 115,95 c 0,15 15,15 15,0 0,-15 -15,-15 -15,0 z m 0,0 -45,0 0,10 10,0 0,-10'};
 		icn['GR.IC.RADAR'] = {type:'path',d:'M72,95 l30,-25 0,25 30,-25 M70,70 c0,35 15,50 50,50',fill:false};
 		icn['GR.IC.RADIO'] = [{type:'circle',cx:100,cy:130,r:10,fill:false },{type:'path',fill:false,d:'M100,120 l0,-60 M70,70 l10,-10 10,10 10,-10 10,10 10,-10 10,10'}];
@@ -584,7 +584,7 @@ var MS = new function(){
 		icn['GR.IC.FF.AIR DEFENCE'] = {"Unknown" : {type:'path',d:'M65,140 C65,115 135,115 135,140',fill:false},"Friend" : {type:'path',d:'M25,150 C25,110 175,110 175,150',fill:false},"Neutral" : {type:'path',d:'M45,150 C45,110 155,110 155,150',fill:false},"Hostile" : {type:'path',d:'M70,140 C70,115 130,115 130,140',fill:false}}[affiliation];
 		icn['GR.IC.FF.AIR AND NAVAL GUNFIRE LIAISON COMPANY'] = []; //TODO
 		icn['GR.IC.FF.AMPHIBIOUS'] = {"Unknown" : {type:'path',d:'M30,105 c10,0 0,-15 13.5,-15  c18.8,0 0,20 18.8,20 c18.8,0 0,-20 18.8,-20 c18.8,0 0,20 18.8,20 c18.8,0 0,-20 18.8,-20 c18.8,0 0,20 18.8,20 c18.8,0 0,-20 18.8,-20 c13.5,0 3.5,15 13.5,15',fill:false},"Friend" : {type:'path',d:'M25,110 c18.8,0 0,-20 18.8,-20 c18.8,0 0,20 18.8,20 c18.8,0 0,-20 18.8,-20 c18.8,0 0,20 18.8,20 c18.8,0 0,-20 18.8,-20 c18.8,0 0,20 18.8,20 c18.8,0 0,-20 18.8,-20 c18.8,0 0,20 20,20',fill:false},"Neutral" : {type:'path',d:'M45,90 c18.8,0 0,20 18,20 c18.8,0 0,-20 18.8,-20 c18.8,0 0,20 18.8,20 c18.8,0 0,-20 18.8,-20 c18.8,0 0,20 18.8,20 c18.8,0 0,-20 18,-20',fill:false},"Hostile" : {type:'path',d:'M32,105 c10,0 0,-15 11.5,-15  c18.8,0 0,20 18.8,20 c18.8,0 0,-20 18.8,-20 c18.8,0 0,20 18.8,20 c18.8,0 0,-20 18.8,-20 c18.8,0 0,20 18.8,20 c18.8,0 0,-20 18.8,-20 c11.5,0 1.5,15 11.5,15',fill:false}}[affiliation];
-		icn['GR.IC.FF.ANALYSIS'] = {type:'path',d:'m 100,120 0,-65 m 0,90 -30,-25 60,0 z',fill:false}; 	
+		icn['GR.IC.FF.ANALYSIS'] = {type:'path',d:'m 100,120 0,-65 m 0,90 -30,-25 60,0 z',fill:false};
 		icn['GR.IC.FF.ANTITANK/ANTIARMOUR'] = {"Unknown" : {type:'path',fill:false,d:'M55,135 L100,33 145,135'},"Friend" : {type:'path',fill:false,d:'M25,150 L100,52 175,150'},"Neutral" : {type:'path',fill:false,d:'M45,150 L100,47 155,150'},"Hostile" : {type:'path',fill:false,d:'M60,132 L100,30 140,132'}}[affiliation];
 		icn['GR.IC.FF.BORDER PATROL'] = [{type:'path',stroke:false,d:'M 122.8 66.8 C 119.9 66.8 117.4 68.6 117.4 71.6 L 117.4 73.1 L 128.7 73.1 L 128.7 72.4 C 128.7 68.8 126.5 66.8 122.8 66.8 z M 108.6 74.8 L 108.6 76 L 117.6 76 L 117.5 77.5 L 118 80.8 C 119.1 81.5 118.9 82.5 120.8 83.5 C 122.1 84.1 124 84 125.2 83.4 C 127.5 82.4 129 79.2 128.3 76 L 137.5 76 L 137.5 74.8 L 108.6 74.8 z M 94.8 82.1 C 93.3 82.1 92 83.5 92 85 L 92 85.2 C 92 86.6 96 91.3 97 92.6 C 98.2 94.3 100.8 98.8 103.2 98.8 C 104.5 98.8 111.1 93.7 112.6 92.8 L 112.6 106.2 L 126.4 85.6 C 123 85.6 114.9 85.2 112.2 85.9 C 110.2 86.4 105 91.6 103.6 91.7 C 103.4 91 100.6 87.5 100 86.5 C 99.2 85.4 97.2 82.1 95.6 82.1 L 94.8 82.1 z M 130.4 85.6 C 129.6 85.6 117.5 104.1 116.3 106.2 L 128.1 106.2 L 128.1 110.6 L 112.5 110.6 L 112.5 133.2 L 120.7 133.2 L 122 117.5 L 124.3 117.5 L 125.6 133.2 L 133.5 133.2 L 133.5 87.9 C 133.5 87.2 131.2 85.6 130.4 85.6 z M 66.9 90.7 C 66.5 91.4 62.5 96.9 62.5 96.9 C 62.5 97.8 76.7 107.2 78.5 108.3 C 81.4 110.2 83.9 112.1 86.7 114 C 88.2 115 89.4 115.9 90.8 116.8 C 92.1 117.7 94.1 118.5 94.1 120.4 L 94.1 133.2 L 105.5 133.2 L 105.5 121.7 C 105.5 120.6 107.2 119 107.2 118.8 C 107.2 117.6 106.1 118.6 105.6 116.9 C 105.2 115.4 105.4 115.6 104.5 114.5 C 103.5 113.1 101.9 112 99.8 112 C 96.8 112 97.6 111.8 95.3 110.3 C 93.9 109.3 92.5 108.4 91.2 107.4 C 88.7 105.5 85.8 103.5 83.2 101.8 C 80.9 100.3 68.2 91 66.9 90.7 z M 67.9 92.6 L 72.7 95.7 L 72.8 103 L 67.9 99.9 L 67.9 92.6 z M 77.8 99.3 L 82.6 102.6 L 82.6 110 L 77.8 106.6 L 77.8 99.3 z M 87.4 106.2 L 92.5 109.5 L 92.4 116.9 L 87.4 113.5 L 87.4 106.2 z'},{type:'path',fill:(_STD2525 ? iconFillColor : false) ,stroke:false ,d:'M 117.4 73.1 L 117.4 74.8 L 128.7 74.8 L 128.7 73.1 L 117.4 73.1 z M 126.4 85.6 L 112.6 106.2 L 112.6 110.6 L 128.1 110.6 L 128.1 106.2 L 116.4 106.2 C 117.5 104.1 129.6 85.6 130.4 85.6 L 126.4 85.6 z M 67.9 92.6 L 67.9 99.9 L 72.8 103 L 72.7 95.7 L 67.9 92.6 z M 77.8 99.3 L 77.8 106.6 L 82.6 110 L 82.6 102.6 L 77.8 99.3 z M 87.4 106.2 L 87.4 113.5 L 92.4 116.9 L 92.5 109.5 L 87.4 106.2 z '}];
 		icn['GR.IC.FF.BROADCAST TRANSMITTER ANTENNA'] = {type:'path',fill:false,d:'m 80,60 20,20 20,-20 m -20,0 0,80'};
@@ -600,7 +600,7 @@ var MS = new function(){
 		icn['GR.IC.FF.INFANTRY'] = {"Unknown" : {type:'path',d:'M50,65L150,135M50,135L150,65'},"Friend" : {type:'path',d:'M25,50 L175,150 M25,150 L175,50'},"Neutral" : {type:'path',d:'M45,45L155,155M45,155L155,45'},"Hostile" : {type:'path',d:'M60,70L140,130M60,130L140,70'}}[affiliation];
 		icn['GR.IC.FF.INTERCEPT'] = {type:'path',d:'M100,120 l0,-60 M80,120 l20,20 20,-20'};
 		icn['GR.IC.FF.JAMMING'] = {"Unknown" : {type:'path',d:'M63,60 c10,0 0,10 7,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 7,-10 M40,75 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10',fill:false,strokewidth:2},"Friend" : {type:'path',d:'M25,60 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 M25,75 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10',fill:false,strokewidth:2},"Neutral" : {type:'path',d:'M45,60 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10  M45,75 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10',fill:false,strokewidth:2},"Hostile" : {type:'path',d:'M67,60 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 13,10   M52,75 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 7,-10',fill:false,strokewidth:2}}[affiliation];
-		icn['GR.IC.FF.LAW ENFORCEMENT'] = {type:'path',d:'m 99.6,51 c -2.8,0 -5,2.3 -5,5.3 0,2.1 1.2,3.9 2.8,4.7 L 87.8,78.3 69.5,78.4 c -0.1,-2.8 -2.3,-5.1 -5,-5.1 -2.8,0 -5,2.3 -5,5.3 0,2.9 2.2,5.3 5,5.3 0.7,0 1.4,-0.2 2,-0.4 l 9.2,16.8 -9.4,17.2 c -0.6,-0.2 -1.2,-0.4 -1.8,-0.4 -2.8,0 -5,2.4 -5,5.3 0,2.9 2.2,5.3 5,5.3 2.8,0 5,-2.3 5,-5.3 0,-0.1 -0,-0.2 -0,-0.3 l 18.3,0.1 9.5,17.1 c -1.6,0.9 -2.7,2.6 -2.7,4.6 0,2.9 2.3,5.3 5,5.3 2.8,0 5,-2.3 5,-5.3 0,-1.9 -0.9,-3.5 -2.3,-4.4 l 9.6,-17.3 18.7,-0.1 c -0,0.1 -0,0.2 -0,0.3 0,2.9 2.3,5.3 5,5.3 2.8,0 5,-2.3 5,-5.3 0,-2.9 -2.2,-5.3 -5,-5.3 -0.8,0 -1.5,0.2 -2.1,0.5 l -9.5,-17.4 9.5,-17.4 c 0.6,0.3 1.4,0.5 2.1,0.5 2.8,0 5,-2.4 5,-5.3 0,-2.9 -2.2,-5.3 -5,-5.3 -2.8,0 -5,2.3 -5,5.3 0,0.1 0,0.2 0,0.3 L 111.8,78.3 102.1,60.8 c 1.5,-0.9 2.5,-2.6 2.5,-4.5 0,-2.9 -2.2,-5.3 -5,-5.3 z'}; 
+		icn['GR.IC.FF.LAW ENFORCEMENT'] = {type:'path',d:'m 99.6,51 c -2.8,0 -5,2.3 -5,5.3 0,2.1 1.2,3.9 2.8,4.7 L 87.8,78.3 69.5,78.4 c -0.1,-2.8 -2.3,-5.1 -5,-5.1 -2.8,0 -5,2.3 -5,5.3 0,2.9 2.2,5.3 5,5.3 0.7,0 1.4,-0.2 2,-0.4 l 9.2,16.8 -9.4,17.2 c -0.6,-0.2 -1.2,-0.4 -1.8,-0.4 -2.8,0 -5,2.4 -5,5.3 0,2.9 2.2,5.3 5,5.3 2.8,0 5,-2.3 5,-5.3 0,-0.1 -0,-0.2 -0,-0.3 l 18.3,0.1 9.5,17.1 c -1.6,0.9 -2.7,2.6 -2.7,4.6 0,2.9 2.3,5.3 5,5.3 2.8,0 5,-2.3 5,-5.3 0,-1.9 -0.9,-3.5 -2.3,-4.4 l 9.6,-17.3 18.7,-0.1 c -0,0.1 -0,0.2 -0,0.3 0,2.9 2.3,5.3 5,5.3 2.8,0 5,-2.3 5,-5.3 0,-2.9 -2.2,-5.3 -5,-5.3 -0.8,0 -1.5,0.2 -2.1,0.5 l -9.5,-17.4 9.5,-17.4 c 0.6,0.3 1.4,0.5 2.1,0.5 2.8,0 5,-2.4 5,-5.3 0,-2.9 -2.2,-5.3 -5,-5.3 -2.8,0 -5,2.3 -5,5.3 0,0.1 0,0.2 0,0.3 L 111.8,78.3 102.1,60.8 c 1.5,-0.9 2.5,-2.6 2.5,-4.5 0,-2.9 -2.2,-5.3 -5,-5.3 z'};
 		icn['GR.IC.FF.MAIN GUN SYSTEM'] = {"Unknown" : {type:'path',d:'M55,65L55,135'},"Friend" : {type:'path',d:'M55,50L55,150'},"Neutral" : {type:'path',d:'M55,45L55,155'},"Hostile" : {type:'path',d:'M55,72L55,128'}}[affiliation];
 		icn['GR.IC.FF.MEDICAL'] = {type:'path',d:'M100,'+baseGeometry.bbox.y1+'L100,'+(baseGeometry.bbox.y2)+'M'+baseGeometry.bbox.x1+',100L'+(baseGeometry.bbox.x2)+',100'};
 		icn['GR.IC.FF.MEDICAL THEATER'] = {"Unknown" : {type:'path',d:'M100,170 l0,-140 M40,75 l15,25 -15,25 M160,75 l-15,25 15,25 M55,100 l90,0',fill:false},"Friend" : {type:'path',d:'M100,150 l0,-100 M25,50 l30,50 -30,50 M175,50 l-30,50 30,50 M55,100 l90,0',fill:false},"Neutral" : {type:'path',d:'M100,155 l0,-110  M45,50 l20,50 -20,50 M155,50 l-20,50 20,50 M65,100 l70,0',fill:false},"Hostile" : {type:'path',d:'M100,172 l0,-144 M50,80 l15,20 -15,20 M150,80 l-15,20 15,20 M65,100 l70,0',fill:false}}[affiliation];
@@ -611,7 +611,7 @@ var MS = new function(){
 		icn['GR.IC.FF.PRISON'] = {type:'path',stroke:false,d:'M 62.5 67.9 L 62.5 73.4 L 69.9 73.4 L 69.9 106 C 66.8 106.7 64.4 109.6 64.4 113.4 C 64.4 116 65.8 116.9 65.9 118.4 C 66 120.4 65.6 122.5 65.6 124.7 L 65.6 126.6 L 62.5 126.6 L 62.5 132.1 L 137.5 132.1 L 137.5 126.6 L 136 126.6 L 135.6 117.5 C 138.3 113.4 135.8 107 131.5 106 L 131.5 73.4 L 137.5 73.4 L 137.5 67.9 L 62.5 67.9 z M 74.5 73.4 L 87.2 73.4 L 87.2 108.4 C 87.2 109.2 84.8 109.7 83.9 110.6 C 83.1 111.3 82.2 112.7 81.6 113.6 C 80.5 115.2 78.6 118.7 78.6 121.1 L 76.1 117 C 76.5 116.4 76.9 114.6 76.9 113.7 L 76.9 112.2 C 76.9 109.5 74.5 107.9 74.5 106.5 L 74.5 73.4 z M 91.5 73.4 L 110.2 73.4 L 110.2 90.9 C 109 89.6 108.8 87.8 106.8 85.7 C 105.4 84.3 103.5 83 100.8 83 L 100.3 83 C 98.2 83 96.1 83.6 94.9 84.5 C 94.3 85 93.6 85.4 93.1 86 C 92.4 86.6 92.2 87.3 91.5 87.8 L 91.5 73.4 z M 114.3 73.4 L 127.2 73.4 L 127.2 106.5 C 127.2 106.9 124.8 109.2 124.4 111.1 C 123.7 114.2 124.5 114.6 125 117 L 123.3 120.2 C 122.7 118.3 120.7 115 119.7 113.5 C 118.3 111.4 117.3 109.1 114.3 108.9 L 114.3 73.4 z M 99.7 84.9 L 100.6 84.9 C 104.8 84.9 108.5 90.4 108.5 94.7 L 108.5 96.4 C 108.5 100.4 105 106.2 101.3 106.2 L 99.4 106.2 C 94.9 106.2 91.4 100.2 91.6 95.5 C 91.8 90.7 94.9 84.9 99.7 84.9 z M 110.3 100.5 L 110.2 106.9 L 106.7 106.3 L 110.3 100.5 z M 91.5 103.6 L 94.3 106.8 L 91.5 107.4 L 91.5 103.6 z M 70.7 107.9 C 72.9 107.9 74.7 110.4 74.7 112.7 L 74.7 113.4 C 74.7 117.9 70 120.2 67.6 116.7 C 65.7 113.8 66.9 107.9 70.7 107.9 z M 130.6 107.9 C 132.8 107.9 134.4 110.8 134.4 113.2 L 134.4 113.4 C 134.4 116.7 133 116.7 132 118.2 L 128.9 118.3 L 126.7 115.4 L 126.5 113.2 C 126.1 111 128.2 107.9 130.6 107.9 z M 105.9 108.2 C 107.2 108.2 108.9 109 110.2 109.3 L 110.2 126.6 L 91.5 126.6 L 91.5 110.1 C 91.5 108.6 96.6 108.9 98.4 108.9 C 101.1 108.9 104 108.2 105.9 108.2 z M 114.3 110.8 C 117.2 112.3 117.4 113.4 119 116.4 C 120.1 118.5 121.7 120.9 121.7 124 C 121.9 124.2 122.3 124.9 122.7 124.9 C 124 124.9 125.5 119.8 126.7 118.9 L 126.7 119.4 L 127.2 119.4 L 127.2 126.6 L 114.3 126.6 L 114.3 110.8 z M 87.2 111.3 L 87.2 126.6 L 74.5 126.6 L 74.5 118.9 C 75.8 119.4 77.4 125.4 78.6 125.4 C 80.6 125.4 80.7 119.6 81.9 117.5 C 83.2 115.3 84.4 111.9 87.2 111.3 z M 133.6 119.7 L 133.9 126.6 L 131.5 126.6 L 131.5 120.4 L 133.6 119.7 z M 68.1 119.9 C 68.6 120.1 69.9 120.3 69.9 121.1 L 69.9 126.6 L 67.7 126.6 L 68.1 119.9 z'};
 		icn['GR.IC.FF.JAIL BREAK'] = [icn['GR.IC.FF.PRISON'],{type:'path',strokewidth:5,d:'m 70,130 L130,70',fill:false}];
 		icn['GR.IC.FF.RECONNAISSANCE'] = {"Unknown" : {type:'path',d:'M50,135L150,65'},"Friend" : {type:'path',d:'M25,150L175,50'},"Neutral" : {type:'path',d:'M45,155L155,45'},"Hostile" : {type:'path',d:'M60,130L140,70'}}[affiliation];
-		icn['GR.IC.FF.SEARCH'] = {type:'path',d:'m 100,145 0,-90 m 30,65 -30,25 -30,-25',fill:false}; 
+		icn['GR.IC.FF.SEARCH'] = {type:'path',d:'m 100,145 0,-90 m 30,65 -30,25 -30,-25',fill:false};
 		icn['GR.IC.FF.SENSOR'] = [{type:'path',d:'M'+baseGeometry.bbox.x1+',100 L75,100 M'+(200-baseGeometry.bbox.x1)+',100 L125,100'},{type:'path',d:'M65,85 l70,0 -15,30 -40,0 z',fill:(_STD2525 ? iconFillColor : false)}];
 		icn['GR.IC.FF.SIGNAL'] = {"Unknown" : {type:'path',fill:false,d:'M50,65 100,110 100,90 150,135'},"Friend" : {type:'path',fill:false,d:'M25,50 100,110 100,90 175,150'},"Neutral" : {type:'path',fill:false,d:'M45,45 100,110 100,90 155,155'},"Hostile" : {type:'path',fill:false,d:'M57,70 100,110 100,90 143,130'}}[affiliation];
 		icn['GR.IC.FF.SOUND'] = [{type:'path',d:'M'+baseGeometry.bbox.x1+',100 L75,100 M'+(200-baseGeometry.bbox.x1)+',100 L125,100'},{type:'path',d:'M65,85 l70,0 -15,30 -40,0 z',fill:(_STD2525 ? iconFillColor : false)},{type:'text',stroke:false,x:100,y:110,fontsize:25,text:'S'}];
@@ -621,12 +621,12 @@ var MS = new function(){
 		icn['GR.IC.FF.SUPPLY THEATER'] = {"Unknown" : {type:'path',d:'M40,75 l15,25 -15,25 M160,75 l-15,25 15,25 M45,120 l110,0 ',fill:false},"Friend" : {type:'path',d:'M25,50 l30,50 -30,50 M175,50 l-30,50 30,50 M40,120 l120,0 ',fill:false},"Neutral" : {type:'path',d:' M45,50 l20,50 -20,50 M155,50 l-20,50 20,50 M55,120 l90,0 ',fill:false},"Hostile" : {type:'path',d:'M50,80 l15,20 -15,20 M150,80 l-15,20 15,20 M50,120 l100,0',fill:false}}[affiliation];
 		icn['GR.IC.FF.CLASS ALL'] = {type:'text',stroke:false,x:100,y:110,fontsize:30,text:'ALL'};
 		icn['GR.IC.FF.CLASS MULTIPLE'] = {type:'text',stroke:false,x:100,y:110,fontsize:30,text:'MULT'};
-		icn['GR.IC.FF.CLASS I'] = {type:'path',d:'m 105,85 c -5,10 -5,20 0,30 m 0,-30 c -20,0 -20,30 0,30',fill:false}; 
+		icn['GR.IC.FF.CLASS I'] = {type:'path',d:'m 105,85 c -5,10 -5,20 0,30 m 0,-30 c -20,0 -20,30 0,30',fill:false};
 		icn['GR.IC.FF.NATO SUPPLY CLASS I'] =text('I');
-		icn['GR.IC.FF.CLASS II'] = icn['GR.IC.QUARTERMASTER']; 
+		icn['GR.IC.FF.CLASS II'] = icn['GR.IC.QUARTERMASTER'];
 		icn['GR.IC.FF.NATO SUPPLY CLASS II'] =text('II');
 		icn['GR.IC.FF.CLASS III'] = {type:'path',d:'m 100,120 0,-20 -15,-20 30,0 -15,20 ',fill:false};
-		icn['GR.IC.FF.CLASS IV'] = icn['GR.IC.ENGINEER']; 
+		icn['GR.IC.FF.CLASS IV'] = icn['GR.IC.ENGINEER'];
 		icn['GR.IC.FF.NATO SUPPLY CLASS IV'] =text('IV');
 		icn['GR.IC.FF.CLASS V'] = {type:'path',d:'m 90,115 0,-25 c 0,-10 20,-10 20,0 l 0,25 m -25,0 30,0',fill:false};
 		icn['GR.IC.FF.CLASS VI'] = [{type:'circle',cx:100,cy:85,r:5,fill:false},{type:'path',d:'m 85,95 30,0 m -15,15 0,-20 m -10,30 10,-10 10,10',fill:false}];
@@ -1094,7 +1094,7 @@ var MS = new function(){
 		icn['SE.M2.HYDROFOIL'] = textm2('K');
 		icn['SE.M2.AUTONOMOUS CONTROL'] = textm2('AUT');
 		icn['SE.M2.REMOTELY PILOTED'] = textm2('RP');
-		icn['SE.M2.EXPENDABLE'] = textm2('EXP');		
+		icn['SE.M2.EXPENDABLE'] = textm2('EXP');
 		icn['SU.IC.MILITARY'] =text('MIL');
 		icn['SU.IC.SUBMARINE'] = {type:'path',d:'m 75,85 50,0 15,15 -15,15 -50,0 -15,-15 z'};
 		icn['SU.IC.SUBMARINE CONVENTIONAL PROPULSION'] = {type:'path',d:'m 75,110 -10,-10 10,-10 20,0 0,-10 10,0 0,10 20,0 10,10 -10,10 z'};
@@ -1118,58 +1118,58 @@ var MS = new function(){
 		icn['SU.IC.DIVER, CIVILIAN'] = {type:'path',fill:iconFillColor,d:'M 114.3,94 C 114.3,102.3 107.9,109 100,109 c -7.9,0 -14.2,-6.7 -14.2,-15 0,-8.3 6.4,-15 14.2,-15 7.9,0 14.3,6.7 14.3,15 z m 0,27 14.3,15 -57,0 14.3,-15 M 125.7,79 l 14.3,0 0,30 -14.3,0 m -51.3,0 -14.3,0 0,-30 14.3,0 m 54.2,15 c 0,16.6 -12.8,30 -28.5,30 -15.7,0 -28.5,-13.4 -28.5,-30 C 71.5,77.4 84.3,64 100,64 115.7,64 128.5,77.4 128.5,94 z'};
 		icn['SU.IC.UNDERWATER WEAPON'] = text('WPN');
 		icn['SU.IC.TORPEDO'] = {type:'path',d:'m 65,105 -5,-5 5,-5 60,0 c 0,0 5,5 5,5 l 5,-5 0,10 -5,-5 -5,5 z'};
-		icn['SU.IC.IMPROVISED EXPLOSIVE DEVICE (IED)'] = text('IED');		
-		//Yes the color settings here looks like crap, but the person implementing 2525 mines obviously didn't read the standard so we have to make a lot of special cases... 
+		icn['SU.IC.IMPROVISED EXPLOSIVE DEVICE (IED)'] = text('IED');
+		//Yes the color settings here looks like crap, but the person implementing 2525 mines obviously didn't read the standard so we have to make a lot of special cases...
 		icn['SU.IC.UNDERWATER DECOY'] = {type:'path',stroke:black,d:(_STD2525?'M 105,110 90,95 105,80 z M 85,110 70,95 85,80 z m 40,-30 -15,15 15,15 z m -55,40 0,-5 55,0 0,5 z':'M 105,120 90,105 105,90 z M 85,120 70,105 85,90 z m 40,-30 -15,15 15,15 z m -55,-5 0,-5 55,0 0,5 z'),fill:(_STD2525?iconColor:iconFillColor)};
 		icn['SU.IC.UNDERWATER DECOY DSymbol'] = {type:'path',d:'M 85 81 L 65 98 L 85 119 L 85 81 z M 110 81 L 90 98 L 110 119 L 110 81 z M 135 81 L 115 98 L 135 119 L 135 81 z'};
 		icn['SU.IC.ECHO TRACKER CLASSIFIER (ETC)/POSSIBLE CONTACT (POSCON)'] = {type:'text',stroke:false,x:100,y:130,fontsize:60,text:'?'};
 		icn['SU.IC.FUSED TRACK'] = [text('?'),{type:'path',fill:false,d:'m 70,65 10,35 -10,35 60,0 -10,-35 10,-35'}];
 		icn['SU.IC.SEA MINE'] = {type:'path',fill:(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'M 115.9,73 126.5,62.4 137.1,73 126.5,83.6 m -53,0 L 62.9,73 73.5,62.4 84.1,73 m 8.4,-3 0,-15 15,0 0,15 m 22.5,30 c 0,16.6 -13.4,30 -30,30 -16.6,0 -30,-13.4 -30,-30 0,-16.6 13.4,-30 30,-30 C 116.6,70 130,83.4 130,100 z'};
-		icn['SU.IC.SEA MINE - BOTTOM'] = [icn['SU.IC.SEA MINE'],{type:'path',fill:(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z'}]; 
-		icn['SU.IC.SEA MINE - MOORED'] = [icn['SU.IC.SEA MINE'],{type:'path',fill:(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75.5,136.8 49,0 M 100,124.5 l 0,12.3'}]; 
-		icn['SU.IC.SEA MINE - FLOATING'] = [icn['SU.IC.SEA MINE'],{type:'path',fill:false,stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10'}]; 
+		icn['SU.IC.SEA MINE - BOTTOM'] = [icn['SU.IC.SEA MINE'],{type:'path',fill:(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z'}];
+		icn['SU.IC.SEA MINE - MOORED'] = [icn['SU.IC.SEA MINE'],{type:'path',fill:(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75.5,136.8 49,0 M 100,124.5 l 0,12.3'}];
+		icn['SU.IC.SEA MINE - FLOATING'] = [icn['SU.IC.SEA MINE'],{type:'path',fill:false,stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10'}];
 		icn['SU.IC.SEA MINE - RISING'] = [icn['SU.IC.SEA MINE'],{type:'path',fill:(numberSIDC&&alternateMedal?'':(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconFillColor)),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 100,128 -10,15 20,0 z'}];
 		icn['SU.IC.SEA MINE (IN OTHER POSITION)'] = [icn['SU.IC.SEA MINE'],{type:'path',fill:false,stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 130,100 15,0 M 70,100 l -15,0'}];
 		icn['SU.IC.SEA MINE - KINGFISHER'] = [icn['SU.IC.SEA MINE'],{type:'text',stroke:false,fill:(_STD2525&&!monoColor&&!alternateMedal?black:white),x:100,y:110,fontsize:35,text:'K'}];
 		icn['SU.IC.SEA MINE - SMALL OBJECT'] = [icn['SU.IC.SEA MINE'],{type:'text',stroke:false,fill:(_STD2525&&!monoColor&&!alternateMedal?black:white),x:100,y:112,fontsize:30,text:'SO'}];
 		icn['SU.IC.SEA MINE EXERCISE MINE'] = [{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'M 115.9,73 126.5,62.4 137.1,73 126.5,83.6 m -53,0 L 62.9,73 73.5,62.4 84.1,73 m 8.4,-3 0,-15 15,0 0,15 m 22.5,30 c 0,16.6 -13.4,30 -30,30 -16.6,0 -30,-13.4 -30,-30 0,-16.6 13.4,-30 30,-30 C 116.6,70 130,83.4 130,100 z'},{type:'text',stroke:false,fill:(_STD2525&&!monoColor&&!alternateMedal?black:white),x:100,y:112,fontsize:30,text:'EX'},(numberSIDC?[]:{type:'text',stroke:false,fill:(_STD2525&&!monoColor?black:iconColor),x:150,y:46,fontsize:40,text:'X'})];
-		icn['SU.IC.SEA MINE EXERCISE MINE - BOTTOM'] = [icn['SU.IC.SEA MINE EXERCISE MINE'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z'}]; 
-		icn['SU.IC.SEA MINE EXERCISE MINE - MOORED'] = [icn['SU.IC.SEA MINE EXERCISE MINE'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75.5,136.8 49,0 M 100,124.5 l 0,12.3'}]; 
-		icn['SU.IC.SEA MINE EXERCISE MINE - FLOATING'] = [icn['SU.IC.SEA MINE EXERCISE MINE'],{type:'path',fill:false,stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10'}]; 
-		icn['SU.IC.SEA MINE EXERCISE MINE - RISING'] = [icn['SU.IC.SEA MINE EXERCISE MINE'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 100,128 -10,15 20,0 z'}]; 
+		icn['SU.IC.SEA MINE EXERCISE MINE - BOTTOM'] = [icn['SU.IC.SEA MINE EXERCISE MINE'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z'}];
+		icn['SU.IC.SEA MINE EXERCISE MINE - MOORED'] = [icn['SU.IC.SEA MINE EXERCISE MINE'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75.5,136.8 49,0 M 100,124.5 l 0,12.3'}];
+		icn['SU.IC.SEA MINE EXERCISE MINE - FLOATING'] = [icn['SU.IC.SEA MINE EXERCISE MINE'],{type:'path',fill:false,stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10'}];
+		icn['SU.IC.SEA MINE EXERCISE MINE - RISING'] = [icn['SU.IC.SEA MINE EXERCISE MINE'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 100,128 -10,15 20,0 z'}];
 		icn['SU.IC.SEA MINE DECOY'] = {type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 106.6,101.6 0,26.3 -13.1,-13.1 z m -19.7,0 0,26.3 -13.1,-13.1 z m 39.4,0 0,26.3 -13.1,-13.1 13.1,-13.1 M 100,75.3 c -14.5,0 -26.3,11.8 -26.3,26.3 l 52.5,0 C 126.3,87.1 114.5,75.3 100,75.3 z m -6.6,0 0,-13.1 13.1,0 0,13.1 m -29.8,12.3 -9.3,-9.3 9.3,-9.3 9.3,9.3 m 27.9,0 9.3,-9.3 9.3,9.3 -9.3,9.3'};
-		icn['SU.IC.SEA MINE DECOY, BOTTOM/GROUND'] = [icn['SU.IC.SEA MINE DECOY'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z'}]; 
-		icn['SU.IC.SEA MINE DECOY, MOORED'] = [icn['SU.IC.SEA MINE DECOY'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75,140 50,0 M 100,100 l 0,40'}]; 
+		icn['SU.IC.SEA MINE DECOY, BOTTOM/GROUND'] = [icn['SU.IC.SEA MINE DECOY'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z'}];
+		icn['SU.IC.SEA MINE DECOY, MOORED'] = [icn['SU.IC.SEA MINE DECOY'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75,140 50,0 M 100,100 l 0,40'}];
 		icn['SU.IC.SEA MINE NEUTRALIZED'] = [{type:'path',fill:(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'M 115.9,73 126.5,62.4 137.1,73 126.5,83.6 m -53,0 L 62.9,73 73.5,62.4 84.1,73 m 8.4,-3 0,-15 15,0 0,15 m 22.5,30 c 0,16.6 -13.4,30 -30,30 -16.6,0 -30,-13.4 -30,-30 0,-16.6 13.4,-30 30,-30 C 116.6,70 130,83.4 130,100 z'},{type:'path',strokewidth:5,stroke:(!alternateMedal?black:white),d:'m 135,65 -70,70 m 0,-70 70,70'}];
-		icn['SU.IC.SEA MINE NEUTRALIZED - BOTTOM'] = [icn['SU.IC.SEA MINE NEUTRALIZED'],{type:'path',fill:(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z'}]; 
-		icn['SU.IC.SEA MINE NEUTRALIZED - MOORED'] =  [icn['SU.IC.SEA MINE NEUTRALIZED'],{type:'path',fill:(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75.5,136.8 49,0 M 100,124.5 l 0,12.3'}]; 
-		icn['SU.IC.SEA MINE NEUTRALIZED - FLOATING'] =  [icn['SU.IC.SEA MINE NEUTRALIZED'],{type:'path',fill:false,stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10'}]; 
+		icn['SU.IC.SEA MINE NEUTRALIZED - BOTTOM'] = [icn['SU.IC.SEA MINE NEUTRALIZED'],{type:'path',fill:(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z'}];
+		icn['SU.IC.SEA MINE NEUTRALIZED - MOORED'] =  [icn['SU.IC.SEA MINE NEUTRALIZED'],{type:'path',fill:(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75.5,136.8 49,0 M 100,124.5 l 0,12.3'}];
+		icn['SU.IC.SEA MINE NEUTRALIZED - FLOATING'] =  [icn['SU.IC.SEA MINE NEUTRALIZED'],{type:'path',fill:false,stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10'}];
 		icn['SU.IC.SEA MINE NEUTRALIZED - RISING'] =  [icn['SU.IC.SEA MINE NEUTRALIZED'],{type:'path',fill:(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 100,128 -10,15 20,0 z'}];
 		icn['SU.IC.SEA MINE (IN OTHER POSITION) NEUTRALIZED'] =  [icn['SU.IC.SEA MINE NEUTRALIZED'],{type:'path',fill:false,stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 130,100 15,0 M 70,100 l -15,0'}];
 		icn['SU.IC.SEA MINE MILEC'] = [{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z'},{type:'text',stroke:false,fill:(_STD2525&&!monoColor&&!alternateMedal?black:white),x:100,y:112,fontsize:30,text:'E'}];
-		icn['SU.IC.SEA MINE MILEC - BOTTOM'] = [icn['SU.IC.SEA MINE MILEC'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z'}]; 
-		icn['SU.IC.SEA MINE MILEC - MOORED'] = [icn['SU.IC.SEA MINE MILEC'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75.5,136.8 49,0 M 100,124.5 l 0,12.3'}]; 
-		icn['SU.IC.SEA MINE MILEC - FLOATING'] = [icn['SU.IC.SEA MINE MILEC'],{type:'path',fill:false,stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10'}]; 
+		icn['SU.IC.SEA MINE MILEC - BOTTOM'] = [icn['SU.IC.SEA MINE MILEC'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z'}];
+		icn['SU.IC.SEA MINE MILEC - MOORED'] = [icn['SU.IC.SEA MINE MILEC'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75.5,136.8 49,0 M 100,124.5 l 0,12.3'}];
+		icn['SU.IC.SEA MINE MILEC - FLOATING'] = [icn['SU.IC.SEA MINE MILEC'],{type:'path',fill:false,stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10'}];
 		icn['SU.IC.SEA MINE MINE ANCHOR'] = [{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:false),d:'m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z'},{type:'text',stroke:false, fill:(_STD2525&&!monoColor&&!alternateMedal?black:white),x:100,y:105,fontsize:18,text:'ANCR'}];
 		icn['SU.IC.SEA MINE MILCO'] = [{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,141,42)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z'},(numberSIDC?[]:{type:'text',stroke:false,fill:(_STD2525&&!monoColor?black:iconColor),x:100,y:112,fontsize:30,text:'#'})];
-		icn['SU.IC.SEA MINE MILCO - BOTTOM'] = [icn['SU.IC.SEA MINE MILCO'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,141,42)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z'}]; 
-		icn['SU.IC.SEA MINE MILCO - MOORED'] = [icn['SU.IC.SEA MINE MILCO'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75.5,136.8 49,0 M 100,124.5 l 0,12.3'}]; 
-		icn['SU.IC.SEA MINE MILCO - FLOATING'] = [icn['SU.IC.SEA MINE MILCO'],{type:'path',fill:false,stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10'}]; 
+		icn['SU.IC.SEA MINE MILCO - BOTTOM'] = [icn['SU.IC.SEA MINE MILCO'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,141,42)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z'}];
+		icn['SU.IC.SEA MINE MILCO - MOORED'] = [icn['SU.IC.SEA MINE MILCO'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75.5,136.8 49,0 M 100,124.5 l 0,12.3'}];
+		icn['SU.IC.SEA MINE MILCO - FLOATING'] = [icn['SU.IC.SEA MINE MILCO'],{type:'path',fill:false,stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10'}];
 		icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 1'] = {type:'text',stroke:false,fill:(_STD2525&&!monoColor&&!alternateMedal?black:white),x:100,y:110,fontsize:35,text:'1'};
 		icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 2'] = {type:'text',stroke:false,fill:(_STD2525&&!monoColor&&!alternateMedal?black:white),x:100,y:110,fontsize:35,text:'2'};
 		icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 3'] = {type:'text',stroke:false,fill:(_STD2525&&!monoColor&&!alternateMedal?black:white),x:100,y:110,fontsize:35,text:'3'};
 		icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 4'] = {type:'text',stroke:false,fill:(_STD2525&&!monoColor&&!alternateMedal?black:white),x:100,y:110,fontsize:35,text:'4'};
 		icn['SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 5'] = {type:'text',stroke:false,fill:(_STD2525&&!monoColor&&!alternateMedal?black:white),x:100,y:110,fontsize:35,text:'5'};
 		icn['SU.IC.SEA MINE NEGATIVE REACQUISITION'] = [{type:'path',strokedasharray:"8,4",fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z'},{type:'text',stroke:false,fill:(_STD2525&&!monoColor&&!alternateMedal?black:white),x:100,y:112,fontsize:30,text:'NR'}];
-		icn['SU.IC.SEA MINE NEGATIVE REACQUISITION - BOTTOM'] = [icn['SU.IC.SEA MINE NEGATIVE REACQUISITION'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z'}]; 
-		icn['SU.IC.SEA MINE NEGATIVE REACQUISITION - MOORED'] = [icn['SU.IC.SEA MINE NEGATIVE REACQUISITION'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75.5,136.8 49,0 M 100,124.5 l 0,12.3'}]; 
-		icn['SU.IC.SEA MINE NEGATIVE REACQUISITION - FLOATING'] = [icn['SU.IC.SEA MINE NEGATIVE REACQUISITION'],{type:'path',fill:false,stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10'}]; 
+		icn['SU.IC.SEA MINE NEGATIVE REACQUISITION - BOTTOM'] = [icn['SU.IC.SEA MINE NEGATIVE REACQUISITION'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z'}];
+		icn['SU.IC.SEA MINE NEGATIVE REACQUISITION - MOORED'] = [icn['SU.IC.SEA MINE NEGATIVE REACQUISITION'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75.5,136.8 49,0 M 100,124.5 l 0,12.3'}];
+		icn['SU.IC.SEA MINE NEGATIVE REACQUISITION - FLOATING'] = [icn['SU.IC.SEA MINE NEGATIVE REACQUISITION'],{type:'path',fill:false,stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10'}];
 		icn['SU.IC.SEA MINE GENERAL OBSTRUCTOR'] = [{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(255,255,0)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z'},{type:'text',stroke:false,fill:(_STD2525&&!monoColor&&!alternateMedal?black:white),x:100,y:112,fontsize:30,text:'OB'}];
 		icn['SU.IC.SEA MINE GENERAL OBSTRUCTOR NEUTRALIZED'] = [{type:'path',fill:(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z'},{type:'text',stroke:false,fill:(_STD2525&&!monoColor&&!alternateMedal?black:white),x:100,y:112,fontsize:30,text:'OB'},{type:'path',strokewidth:5,stroke:(!alternateMedal?black:white),d:'m 135,65 -70,70 m 0,-70 70,70'}];
 		icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT'] = [{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z'},{type:'text',stroke:false,fill:(_STD2525&&!monoColor&&!alternateMedal?black:white),x:100,y:112,fontsize:30,text:'N'}];
-		icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT - BOTTOM'] = [icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z'}]; 
-		icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT - MOORED'] = [icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75.5,136.8 49,0 M 100,124.5 l 0,12.3'}]; 
-		icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT - FLOATING'] = [icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT'],{type:'path',fill:false,stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10'}]; 
+		icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT - BOTTOM'] = [icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z'}];
+		icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT - MOORED'] = [icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT'],{type:'path',fill:(_STD2525&&!monoColor?(alternateMedal?black:'rgb(0, 130, 24)'):iconFillColor),stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75.5,136.8 49,0 M 100,124.5 l 0,12.3'}];
+		icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT - FLOATING'] = [icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT'],{type:'path',fill:false,stroke:(_STD2525&&!monoColor?black:iconColor),d:'m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10'}];
 		icn['SU.IC.UNEXPLODED EXPLOSIVE ORDNANCE'] = [{type:'path',strokedasharray:'8,4',fill:false,stroke:(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconColor),d:'m 85,65 30,0 20,20 0,30 -20,20 -30,0 -20,-20 0,-30 z'},{type:'text',stroke:false,fill:(_STD2525&&!monoColor?colors.iconColor['Hostile']:iconColor),x:100,y:110,fontsize:30,text:'UXO'}];
 		icn['SU.IC.ENVIRONMENTAL REPORT LOCATION'] = [{type:'path',fill:false,stroke:(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconColor),d:'m 70,70 0,60 60,0 0,-60 z'},{type:'text',stroke:false,fill:(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconColor),x:100,y:122,fontsize:60,text:'E'}];
 		icn['SU.IC.DIVE REPORT LOCATION'] = [{type:'path',fill:false,stroke:(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconColor),d:'m 70,70 0,60 60,0 0,-60 z'},{type:'text',stroke:false,fill:(_STD2525&&!monoColor?colors.iconColor['Neutral']:iconColor),x:100,y:122,fontsize:60,text:'D'}];
@@ -1425,14 +1425,14 @@ var MS = new function(){
 		icn['ST.M1.THEFT'] = textm1('THF');
 		icn['ST.M1.PIRATE'] = {type:'path',fill:false,d:'M 106.8,60 A 6.8,6.8 0 0 1 100,66.8 6.8,6.8 0 0 1 93.2,60 6.8,6.8 0 0 1 100,53.2 6.8,6.8 0 0 1 106.8,60 Z m 5.7,7 -5,10 m -20,-10 5,10 M 115,75 85,60 m 0,15 30,-15'};
 		icn['ST.M2.LEADER OR LEADERSHIP'] = textm2('LDR');
-		icn['ST.M2.RELIGIOUS'] = textm2('REL');		
+		icn['ST.M2.RELIGIOUS'] = textm2('REL');
 		icn['AC.IC.CRIMINAL.ACTIVITY.INCIDENT'] = [{type:'path',stroke:false,d:'m 98.7,66.7 c -3.2,0.7 -6.3,3.7 -6.4,7 0.3,3.6 5.3,2.8 7,0.6 2,-1.2 1.7,-4.5 4.5,-3.7 2.6,-0.6 3.2,3.2 5.9,3.2 1.6,1.5 4.4,-0.6 5.4,1.2 0.7,1.1 1.5,2.2 2.2,3.3 -2,3.1 -1.3,7.9 1.9,10 3.5,1.1 4.8,-3.5 4.1,-6.2 -0.2,-3 -2.5,-5 -5.1,-5.4 -1.5,-1.9 -2.7,-3.4 -1.6,-5.6 -1,-3.3 -5.1,-4.5 -8.2,-4.3 -2.2,0.3 -2.9,2.6 -5.3,1.9 -1.9,0.4 -1.9,-2.8 -4.3,-2 z m 0.2,1.3 c 2.7,0.5 0.9,0.6 -0.6,1.3 -0.5,2.2 3.8,0.4 1.4,2.9 -0.9,1.9 -5.8,4.7 -5.9,1.1 0.1,-2.5 2.7,-4.8 5.1,-5.2 z m 10.3,0.1 c 2.4,-0.5 7.1,2.3 5.6,3.7 -0.8,-2.1 -3,0 -1.2,1.2 -1.7,0.9 -7.4,-1.6 -5.7,-2.4 2.5,0.8 2.8,-2.7 -0,-1.9 -1.4,0.2 1.1,-0.8 1.3,-0.6 z M 81.9,71.6 c -1.8,1.9 -3.6,3.9 -5.5,5.8 -7.5,-0.1 -14,6.2 -15.7,13.2 -0.6,4.2 0.5,8.5 2.8,12 0.7,3.9 -3.2,6.7 -3,10.7 -0.8,7.4 4.8,14.5 11.7,16.8 2.3,-0.4 1.3,1.3 1.4,2 1.5,-0.4 3,-0.8 4.6,-1.2 -0.2,1.5 -0.1,2.7 1.4,1.2 0.9,-0.3 2.3,-2.2 2.9,-1.5 0.2,2.2 1.2,0.1 2,-0.7 0.8,-1.2 1.6,-2.3 2.4,-0.5 1.2,-2.4 4.1,-7.2 -0.8,-7.3 -3.4,2.3 -7.5,4.6 -11.8,3.5 -6.3,-1.5 -10.9,-8.8 -8.2,-14.9 0.4,-3.9 6.8,-3.4 5,-8.2 -1.8,-2.6 -5.7,-2.9 -5.7,-7 -1.5,-7.3 5.6,-14.7 13,-13.7 4.7,0.5 7.4,4.9 10.8,7.6 1.9,1.9 4.1,5.1 5.9,1.4 2.8,-2 4.3,-4.7 1.8,-7.6 C 94.8,79.7 90.9,77.3 88,74.4 86.3,72.9 83.9,72.6 81.9,71.6 z m 3.3,3.8 c 1.6,1.1 2.9,2.1 0.3,3.3 -0.9,3.7 -5.1,-0.5 -1.5,-1.5 0.4,-0.6 0.9,-1.1 1.2,-1.8 z m 34.2,3.1 c 3,1.4 3.9,6.4 1.4,8.8 -2.9,0.1 -3.6,-4.3 -3.1,-6.6 0.1,-2.9 2.5,2.7 2.5,-0.7 -0.2,-0.5 -0.5,-1 -0.8,-1.4 z M 127.3,90.2 c -4.3,0.4 -8.8,-0 -13.1,1 -2.1,1.1 -5.7,1.5 -4.6,4.5 0.1,1.8 0.2,3.6 0.4,5.4 -4.9,4.9 -5.5,13.3 -2.2,19.2 2.4,4.3 7,7 11.8,7.8 3.3,4.9 7.3,-1.3 11.2,-1.7 5.5,-2.5 8.9,-8.5 8.5,-14.5 0.2,-5 -2.4,-10.1 -6.7,-12.8 -0.1,-2.3 -0.2,-4.6 -0.3,-6.9 -1.6,-0.8 -3.4,-1.4 -5.1,-2.1 z M 127.8,92.5 c -0.9,1.7 0.6,3.8 -0.9,4.9 -2.3,0.7 -1.7,-2.4 -1.9,-3.8 -0.6,-1.7 1.9,-0.7 2.8,-1 z m -2.9,8.3 c 4.1,0.9 8,3.7 9.3,7.9 0.9,3.7 0.5,8 -2.3,10.9 -1.7,2 -5.3,4.3 -7.7,3.1 -3.1,-0.8 -5.8,2.1 -8.6,-0.5 -6.9,-4.2 -7.2,-16 0.2,-19.8 2.7,-1.6 6,-1.6 9.1,-1.6 z'},{type:'path',stroke:false,fill:(_STD2525 ? iconFillColor : false),d:'M 85.1 75.3 C 85 75.8 84.2 76.7 83.9 77.1 C 83.6 77.6 82.4 77.9 82.4 78.6 L 82.4 79 C 82.4 79.4 83.3 80.1 83.6 80.1 L 83.8 80.1 C 84.8 80.1 85 79.1 85.4 78.6 C 85.7 78.2 86.7 77.4 87.2 77 L 85.1 75.3 z M 127.8 92.5 L 125 92.7 L 125.2 96.5 C 125.3 97.5 125.9 97.3 126.5 97.6 C 127.1 97.3 127.8 97.1 127.8 96.3 C 127.8 95.8 127.7 95.6 127.5 95.3 L 127.8 92.5 z'}];
 		icn['AC.IC.CRIMINAL.CIVIL DISTURBANCE'] = {type:'path',stroke:false,d:'m 110.6,142.4 0,-28.6 -7.1,0 0,28.6 z m -21.2,0 7.1,0 0,-28.6 -7.1,0 z m 7.1,-28.6 h 7.1 v -11.8 h 24.4 V 77.2 h -6.3 v 18.6 h -18 v -10.7 c 0,-0.9 2.1,-1.2 3,-1.7 0.8,-0.4 2.1,-1.4 2.7,-2 1.5,-1.4 3.2,-3.6 3.8,-5.9 1.6,-6.3 -0.2,-10.6 -3.8,-14.1 -3,-3.1 -9.2,-4.9 -14.3,-2.7 -3.6,1.6 -8.4,6.2 -8.4,11 v 3.2 c 0,2.8 1.9,6.2 3.3,7.7 1,1 1.8,1.7 3,2.5 1,0.6 3.6,1.3 3.6,2.2 v 10.7 H 78.4 v -18.6 h -6.3 v 24.9 h 24.4 v 11.8 h -0 z'};
 		icn['AC.IC.SHOOTING'] = {type:'path',stroke:false,d:'m 93.2,89.7 h 16.8 v 9.3 c -2.6,0 -7.3,1.6 -9,1 -2.3,-0.8 -5.4,-2 -7.8,-2.6 v -7.8 l 0,0 z m -30,0 h 26.1 v 9.6 c 0,0.9 4.1,2 5,2.3 1.9,0.6 3.6,1.4 5.5,2 2,0.7 3.4,0.4 6,-0.1 1.6,-0.3 5.7,-0.4 6.6,-0.9 0.6,2.7 4.6,14 4.6,15.2 0,1.6 -1.2,4 -1.3,5.7 l 21.5,0 -8.2,-25.9 7.8,-7.7 c -0.8,-1.6 -4.1,-13.4 -5.2,-13.4 h -68.4 v 13.2 l 0,0 z'};
 		icn['AC.IC.FIRE EVENT'] = {type:'path',stroke:false,d:'m 96.5,78.5 c 0,-5.1 4.1,-9.7 4.1,-13 v -0.4 c 0,-1.3 -0,-3.8 -1.1,-4.1 -1,4.5 -3.5,8 -5.9,11.2 -1.2,1.6 -2.4,3.3 -3.6,5 -1,1.4 -3.1,3.5 -3.1,5.5 0,1.4 6.1,17.7 3,17.7 -0.1,0 -3.8,-2.5 -4.2,-2.9 -1.4,-1 -2.4,-2.3 -3.3,-3.7 -3.1,-4.6 -2.4,-4.4 -3.8,-10.3 -1.5,0.4 -2.6,5 -2.9,6.9 -0.4,2.4 -0.3,6.6 0.2,9 0.6,2.8 1.4,5 2.5,7.3 0.6,1.2 3,5.5 3.1,6.5 -2.2,-0.5 -7,-4.6 -8.6,-6.2 -1.5,-1.5 -5.5,-8.3 -5.9,-8.6 0,9.9 5,22.8 9.8,27.6 3.1,3.1 6.3,6.4 10.2,8.6 2.4,1.5 10.5,4.3 14.3,4.3 h 2.4 c 2.8,0 10.8,-3 12.9,-4.2 3.4,-1.9 6.9,-4.7 9,-7.9 4.4,-6.5 8,-15 8,-25.8 v -1.3 l -0.4,-5.8 c -0.7,0.4 -2.2,4.4 -2.5,5.2 -0.5,1.3 -2,3.4 -2.9,4.6 -1.4,2.1 -5.2,6.3 -7.8,6.9 v -1.1 c 0,-4.4 2.8,-8.8 2.8,-12.4 v -1.9 l -1.3,-12.2 h -0.6 c -0.3,3.9 -1.6,7.9 -3.4,10.5 -1.3,2 -5.3,5.6 -7.7,6.2 -0.2,-0.4 -0.4,-0.6 -0.4,-1.3 v -2.3 c 0,-5.1 3,-8.9 3,-12.8 v -0.8 c 0,-1.5 -2.1,-3.9 -2.9,-5.2 -0.7,-1.1 -2.4,-4.3 -3.5,-4.6 v 1.3 c 0,6.2 -1.4,10.6 -5.6,12.6 -1.1,-1.7 -3.6,-3.2 -3.6,-6.2 v -1.9 l 0,0 z'};
 		icn['AC.IC.NON-REsIdENTIAL FIRE'] = {type:'path',stroke:false,d:'m 121.2,122.3 -6.2,0 0,5.9 6.2,0 z m -12.1,0 -6.1,0 0,5.9 6.1,0 z m -12.2,0 -5.9,0 0,5.9 5.9,0 z m -12.3,0 -5.7,0 0,5.9 5.7,0 z m 30.4,-4.8 h 6.1 v -6.2 h -2.5 c -1.2,0 -2.5,1.5 -3.6,1.8 v 4.4 z m -5.9,-6.2 -6.1,0 0,6.2 6.1,0 z m -12.2,0 -5.9,0 0,6.2 5.9,0 z m -12.3,0 -5.7,0 0,6.2 5.7,0 z m 25,-33.4 c 0,-3.4 3.4,-7.4 3.4,-9.1 0,-1.4 -0.8,-4.2 -1.8,-4.6 0,7.1 -8.6,12.8 -8.6,15.7 v 0.4 c 0,0.7 1.9,5.2 2.3,6.6 0.4,1.7 1.4,5.6 1.6,7.3 -6.2,-0.1 -7.3,-9.8 -10.3,-11.8 l -0.3,3 0,4.6 c 0,4.7 3.4,11.4 5.6,13.9 1,1.1 4.2,3.7 5.5,4.3 0.8,0.4 6.3,3 6.6,3 1.4,0 9.2,-7.2 10.5,-8.6 2.5,-2.5 4,-9.6 4,-14.8 v -0.7 l -0.7,-5.7 c -1,0.6 -2.1,5.6 -2.8,7 -1.5,3.2 -1.8,3.1 -5.4,4 -0.3,-12.2 6.7,-8.3 -2.7,-19.1 0,4.9 -0.9,7.9 -4.1,9.6 -1.4,-0.7 -3,-2.7 -3,-4.8 z m -14.8,26.4 h 3.6 c -0.1,-0.6 -0.3,-1.4 -1.1,-1.4 h -1.2 v -2.7 c 0,-0.9 -0.9,-2.4 -1.4,-3 v 7 z m -16.4,-28.6 h 3.9 v 28.6 h 8.9 v -28.6 h 3.6 v 5.4 c 0.3,-0.2 1.4,-1.4 1.4,-1.8 v -5 h -6.4 v 28.6 h -6.4 v -28.6 h -6.1 v 28.6 h -5.2 v 32.7 h 54.8 v -30.7 c -0.4,0.2 -1.1,1 -1.1,1.6 v 27.5 h -52.5 v -29.8 h 5.2 v -28.6 h -0 z'};
 		icn['AC.IC.REsIdENTIAL FIRE'] = {type:'path',stroke:false,d:'m 91.5,88.3 -0.7,-3 -30.1,25.2 15.6,0.1 v 25.6 h 50.5 v -25.6 h 12.4 c -0.4,-0.5 -7.6,-5.9 -8,-5.9 -0.3,0 -1.2,1.6 -1.4,1.9 l 1.4,1.4 h -2.4 c -0.7,0.5 -4.9,3.1 -4.9,3.8 v 22.3 h -18.3 v -12.9 h -8.7 v 12.9 h -18.1 v -23.5 h 22.6 l -2.2,-2.7 -30.7,-0.1 L 91.5,88.3 z m 27.6,28 -8.2,0 0,8.5 8.2,0 z m -27,0.2 -8.7,0 0,8.2 8.7,0 z m 11,-36.4 c 0,0.9 2.1,5.3 2.5,6.9 0.4,1.8 1.5,6.1 1.5,7.8 -7.1,-1.6 -6.9,-9.9 -10.3,-12.2 -1.7,7.5 0.8,15.1 3.7,19.5 2.4,3.6 2.6,3.4 6,6 0.4,0.4 7.9,4.3 7.9,4.3 2,0 9.6,-7.1 11.1,-8.6 1.8,-1.8 5.6,-10.8 5.6,-14.4 V 83.5 c 0,-1.9 -0.3,-3.2 -1.4,-4 0,2 -1.8,7 -2.6,8.4 -0.8,1.8 -4.3,4.2 -6.3,4.7 v -1.7 c 0,-4.4 2.4,-6.8 2.4,-10.1 0,-2 -4,-7.2 -5.2,-8 0,5.4 -0.7,8 -4.2,9.8 -1.2,-0.7 -3.1,-2.6 -3.1,-4.4 v -1 c 0,-1.5 1.8,-5.4 2.5,-6.6 2,-3.9 0.5,-3.8 -0.4,-7 h -0.4 c -1.3,5.5 -0.8,4.8 -3.8,8.9 -1,1.4 -5.4,5.9 -5.4,7.5 z'};
-		icn['AC.IC.SCHOOL FIRE'] = {type:'path',stroke:false,d:'m 131.3,73 c -4,-1 -17,-7.2 -19.8,-7.2 h -2.4 V 96 h -0.7 c 0,5.6 -3.8,15.3 -6.2,18.6 -2,2.7 -3.7,4.1 -6.2,6.2 -0.8,0.6 -7,4.9 -7,5.4 v 8 h 44.1 V 96 h -20.4 l 0,-14.8 18.8,-8.2 z m -49.2,11.8 c 0,-3 3.6,-8 3.6,-10 0,-1.8 -0.8,-3.9 -2,-4.6 -0.4,0.8 -0.4,3.6 -0.9,5 -0.3,0.7 -1.8,2.7 -2.3,3.5 -1.6,2.3 -3.4,4.2 -5.1,6.4 -2.2,2.8 0,5 1.1,8.2 0.8,2.2 1.4,7.9 2.1,9.4 C 71.9,102.4 70.6,91.8 67.6,89.9 l -0.6,7.6 0.1,0.2 c 0,5 3.6,12.3 5.9,15 1.1,1.3 4.3,3.6 5.9,4.6 1.1,0.7 2.5,1 3.7,1.6 0.4,0.2 3.2,1.9 3.2,1.9 2.1,0 9.9,-7.4 11.5,-9 1.8,-1.8 5.8,-11 5.8,-14.4 v -6.3 c 0,-2.1 -0.4,-2.6 -0.7,-4.2 h -0.8 c -0.2,1.9 -2.2,7.1 -3,8.7 -0.7,1.3 -6.3,5.7 -6.3,3.7 v -1.2 c 0,-3.8 2.4,-7.2 2.4,-10 v -0.8 c 0,-1.5 -4.3,-6.8 -5.4,-7.6 0,2.5 0.1,4.8 -0.8,6.5 -0.5,0.9 -2.5,3.5 -3.6,3.5 -1.1,0 -3.2,-3.4 -3.2,-5.1 z'};		
+		icn['AC.IC.SCHOOL FIRE'] = {type:'path',stroke:false,d:'m 131.3,73 c -4,-1 -17,-7.2 -19.8,-7.2 h -2.4 V 96 h -0.7 c 0,5.6 -3.8,15.3 -6.2,18.6 -2,2.7 -3.7,4.1 -6.2,6.2 -0.8,0.6 -7,4.9 -7,5.4 v 8 h 44.1 V 96 h -20.4 l 0,-14.8 18.8,-8.2 z m -49.2,11.8 c 0,-3 3.6,-8 3.6,-10 0,-1.8 -0.8,-3.9 -2,-4.6 -0.4,0.8 -0.4,3.6 -0.9,5 -0.3,0.7 -1.8,2.7 -2.3,3.5 -1.6,2.3 -3.4,4.2 -5.1,6.4 -2.2,2.8 0,5 1.1,8.2 0.8,2.2 1.4,7.9 2.1,9.4 C 71.9,102.4 70.6,91.8 67.6,89.9 l -0.6,7.6 0.1,0.2 c 0,5 3.6,12.3 5.9,15 1.1,1.3 4.3,3.6 5.9,4.6 1.1,0.7 2.5,1 3.7,1.6 0.4,0.2 3.2,1.9 3.2,1.9 2.1,0 9.9,-7.4 11.5,-9 1.8,-1.8 5.8,-11 5.8,-14.4 v -6.3 c 0,-2.1 -0.4,-2.6 -0.7,-4.2 h -0.8 c -0.2,1.9 -2.2,7.1 -3,8.7 -0.7,1.3 -6.3,5.7 -6.3,3.7 v -1.2 c 0,-3.8 2.4,-7.2 2.4,-10 v -0.8 c 0,-1.5 -4.3,-6.8 -5.4,-7.6 0,2.5 0.1,4.8 -0.8,6.5 -0.5,0.9 -2.5,3.5 -3.6,3.5 -1.1,0 -3.2,-3.4 -3.2,-5.1 z'};
 		icn['AC.IC.HOT SPOT'] = [{type:'path',stroke:false,d:'m 96.3,78.5 c 0,-5.1 4.1,-9.7 4.1,-13 v -0.4 c 0,-1.3 -0,-3.8 -1.1,-4.1 -1,4.5 -3.5,8 -5.9,11.2 -1.3,1.6 -2.3,3.3 -3.6,4.9 -1,1.3 -3.1,3.4 -3.1,5.5 0,1.4 6.1,17.7 3,17.7 -0.1,0 -3.7,-2.5 -4.2,-2.9 -1.4,-1 -2.4,-2.3 -3.3,-3.7 -3.1,-4.6 -2.4,-4.4 -3.8,-10.3 -1.5,0.4 -2.6,5 -2.9,6.9 -0.4,2.4 -0.3,6.7 0.3,9 0.6,2.8 1.3,5 2.5,7.3 0.6,1.2 3.1,5.5 3.1,6.5 -2.2,-0.5 -7.1,-4.6 -8.6,-6.1 -1.5,-1.5 -5.5,-8.3 -5.9,-8.6 0,9.9 5,22.8 9.8,27.6 3.1,3.1 6.3,6.4 10.1,8.7 2.5,1.5 10.5,4.3 14.3,4.3 h 2.4 c 2.9,0 10.8,-3 12.9,-4.2 3.4,-1.9 6.9,-4.7 9,-7.9 4.4,-6.5 8,-15 8,-25.7 V 99.9 l -0.4,-5.8 c -0.7,0.4 -2.2,4.4 -2.5,5.2 -0.5,1.3 -2,3.4 -2.8,4.6 -1.4,2.1 -5.2,6.3 -7.9,6.9 v -1.1 c 0,-4.4 2.8,-8.8 2.8,-12.4 v -1.9 l -1.3,-12.2 -0.7,8e-4 c -0.3,3.9 -1.7,7.9 -3.4,10.5 -1.3,2 -5.3,5.6 -7.7,6.2 -0.2,-0.4 -0.4,-0.6 -0.4,-1.3 v -2.4 c 0,-5.1 3,-8.9 3,-12.8 V 82.6 c 0,-1.5 -2.1,-3.9 -2.9,-5.2 -0.7,-1.1 -2.4,-4.3 -3.5,-4.6 v 1.3 c 0,6.2 -1.4,10.6 -5.6,12.6 -1.1,-1.7 -3.6,-3.1 -3.6,-6.2 v -1.9 l 0,0 z'},{type:'path',stroke:false,fill:(_STD2525 ? iconFillColor : false),d:'m 113,126.9 c 0,6.3 -5.1,11.4 -11.4,11.4 -6.3,0 -11.4,-5.1 -11.4,-11.4 0,-6.3 5.1,-11.4 11.4,-11.4 6.3,0 11.4,5.1 11.4,11.4 z'}];
 		icn['AC.IC.FIRE ORIGIN'] = [{type:'path',stroke:false,d:'m 96.3,78.5 c 0,-5.1 4.1,-9.7 4.1,-13 v -0.4 c 0,-1.3 -0,-3.8 -1.1,-4.1 -1,4.5 -3.5,8 -5.9,11.2 -1.3,1.6 -2.3,3.3 -3.6,4.9 -1,1.3 -3.1,3.4 -3.1,5.5 0,1.4 6.1,17.7 3,17.7 -0.1,0 -3.7,-2.5 -4.2,-2.9 -1.4,-1 -2.4,-2.3 -3.3,-3.7 -3.1,-4.6 -2.4,-4.4 -3.8,-10.3 -1.5,0.4 -2.6,5 -2.9,6.9 -0.4,2.4 -0.3,6.7 0.3,9 0.6,2.8 1.3,5 2.5,7.3 0.6,1.2 3.1,5.5 3.1,6.5 -2.2,-0.5 -7.1,-4.6 -8.6,-6.1 -1.5,-1.5 -5.5,-8.3 -5.9,-8.6 0,9.9 5,22.8 9.8,27.6 3.1,3.1 6.3,6.4 10.1,8.7 2.5,1.5 10.5,4.3 14.3,4.3 h 2.4 c 2.9,0 10.8,-3 12.9,-4.2 3.4,-1.9 6.9,-4.7 9,-7.9 4.4,-6.5 8,-15 8,-25.7 V 99.9 l -0.4,-5.8 c -0.7,0.4 -2.2,4.4 -2.5,5.2 -0.5,1.3 -2,3.4 -2.8,4.6 -1.4,2.1 -5.2,6.3 -7.9,6.9 v -1.1 c 0,-4.4 2.8,-8.8 2.8,-12.4 v -1.9 l -1.3,-12.2 -0.7,8e-4 c -0.3,3.9 -1.7,7.9 -3.4,10.5 -1.3,2 -5.3,5.6 -7.7,6.2 -0.2,-0.4 -0.4,-0.6 -0.4,-1.3 v -2.4 c 0,-5.1 3,-8.9 3,-12.8 V 82.6 c 0,-1.5 -2.1,-3.9 -2.9,-5.2 -0.7,-1.1 -2.4,-4.3 -3.5,-4.6 v 1.3 c 0,6.2 -1.4,10.6 -5.6,12.6 -1.1,-1.7 -3.6,-3.1 -3.6,-6.2 v -1.9 l 0,0 z'},{type:'path',stroke:false,fill:(_STD2525 ? iconFillColor : false),d:'M 99.6 105.9 C 93.3 105.9 88.2 111 88.2 117.3 C 88.2 123.6 93.3 128.7 99.6 128.7 C 105.9 128.7 111 123.6 111 117.3 C 111 111 105.9 105.9 99.6 105.9 z M 105 109.4 L 106.8 111 L 101.2 117.1 L 107.3 123.2 L 105.6 124.9 L 99.5 118.8 L 93.7 125.3 L 91.9 123.6 L 97.8 117.2 L 92.1 111.4 L 93.8 109.8 L 99.5 115.4 L 105 109.4 z'}];
 		icn['AC.IC.SMOKE'] = [{type:'path',stroke:false,d:'m 99.3,69.2 c 0.2,-2.6 4.4,-5.5 7.2,-6 4.2,-0.8 6.9,1.2 9.1,3.3 1.1,1.1 1.9,2.7 2.4,4.3 0.6,2.2 1.9,1.3 4,2.5 2.4,1.4 4.9,4.4 5.6,7.4 5.3,0 10.3,4.8 10.3,9.9 v 1.3 c 0,3 -1.2,4.9 -2.8,6.5 -1.1,1.1 -1.2,1.2 -2.6,2.1 -1.3,0.8 -2.5,0.6 -2.7,2 -0.6,4.6 -4.2,9 -9.4,9 3.3,5 2.3,8.7 -0.6,13 0,4.8 -0.2,6.2 -2.8,8.8 -2.4,2.5 -4.5,2.4 -8.6,2.4 0.7,-1 1.2,-1 2,-2.4 0.6,-1.1 0.8,-1.7 1.4,-2.9 1,-2.2 1.8,-3.7 1.8,-6.8 v -2.1 c 0,-1.4 -0.2,-2.4 -0.8,-3.2 -1.2,5.2 -1.4,6.4 -5.7,8.6 0,-8.3 3.8,-6.8 -1.9,-13.4 0,3.8 -0.2,5.6 -2.7,6.9 -0.8,-0.5 -2.1,-1.7 -2.1,-2.9 v -0.4 c 0,-2 2.5,-5.2 2.5,-6.7 v -0.4 c 0,-1.1 -0.4,-2.1 -1,-2.5 0,2.9 -3.4,7.6 -4.9,9.2 -1.6,1.7 -1.1,2.8 -0.2,5 0.7,1.7 1.1,3.5 1.1,5.8 v 1 c -3.2,-0.3 -4.4,-6.2 -6.1,-8.2 0,3.4 -0.8,6.3 0.4,9.4 0.8,1.9 2.4,5.6 4.4,6.1 v 0.4 l -3.4,0.6 -0.2,-0.1 c -3.4,0 -6.4,-2.4 -7.8,-4.4 -0.8,-1.1 -1.5,-2.7 -1.7,-4.4 -0.3,-2.3 0.6,-3.6 0.6,-5 0,0 -5.1,-4.7 -4.4,-9 l 0.2,-1.7 c -0.4,-0.5 -1.4,-1.4 -2,-2.2 -0.6,-0.8 -1.1,-1.8 -1.6,-2.6 -1.4,0 -2,0.6 -3.2,0.6 h -0.6 c -5.4,0 -10.5,-5.2 -10.5,-10.5 v -0.8 c 0,-4.9 4.1,-9.2 9,-9.2 h 2.1 c 0.8,-3.2 5.7,-6.9 10.1,-5.9 -0.4,-1.5 -1,-2.7 -1,-4.8 v -0.4 c 0,-3.8 3.2,-7.8 6.1,-8.8 1.9,-0.7 3.9,-1 6.1,-0.4 2.3,0.6 3.7,2.2 4.8,2.5 l 0,0 z m -0.4,-1.9 c -1.3,-0.1 -2.9,-2.1 -5.9,-2.1 h -1.9 c -5,0 -10.6,5.8 -10,11.4 l 0.5,3.4 h -0.6 c -4.3,0 -7.1,3.2 -8.6,6.1 -2.3,-1.1 -6.8,1.2 -7.9,2.4 -1.6,1.6 -3.6,4.2 -3.6,7.3 v 1.5 c 0,3.6 2.4,7.3 4.5,8.9 1.8,1.3 2,1.6 4.4,2.4 2.7,0.9 3.7,0.1 5.9,0.2 l 3.1,3.7 c -0.6,1.3 0.4,4.9 0.9,6 0.5,1.2 0.7,1.4 1.4,2.4 0.2,0.4 1.7,2 1.7,2 0,1.1 -0.4,1.4 -0.4,2.7 v 0.2 c 0,6.3 4.8,12 10.7,12 2.1,0 3.6,-0.4 5,-1 2.6,1.4 7.1,3 9.2,-0.1 l 3.4,0.5 c 2.7,0.4 6.8,-2.2 7.9,-3.6 1,-1.4 3.7,-6 2.4,-8.8 1.1,-0.7 2.6,-3.7 2.7,-5.5 0.1,-1.7 0.2,-1.8 -0.1,-3.6 -0.2,-1.4 -0.9,-2.2 -1,-3.2 4,-0.3 8.4,-5.2 8.4,-9.7 2.5,-1.6 3.4,-1.2 5.6,-3.8 1.3,-1.4 2.6,-4.4 2.6,-7 0,-6.3 -4.7,-12 -10.7,-12 -0.9,-4 -4.8,-8.3 -9.2,-8.6 -0.4,-4.4 -5.7,-9.4 -10.7,-9.4 -4.1,-0 -8.9,2.7 -9.6,5.6 l 0,0 z m 15.8,38.4 c 0.5,0 1,0.1 1,-0.4 0,-3.1 -4.1,-6.7 -7.6,-6.7 h -1.9 c -0.6,0 -1,0.8 -0.6,1 0.4,0.2 1.6,0.1 2,0.1 1.2,0 2.6,0.5 3.4,1 2.1,1.6 2.8,2.1 3.5,5.1 z m -34.5,-12.6 v 1.7 c 0,1.4 0.6,2.2 0.6,3.2 0,0 -3.6,3.4 -3.8,5.4 l 0.6,0.2 c 1,-0.6 1.6,-2.6 3,-4 1,-0.9 3.1,-2.2 4.8,-2.2 h 0.6 c 1.3,0 3.6,1 3.6,-0.2 0,-0.9 -2.6,-1 -3.6,-1 h -0.2 c -1.6,0 -3,0.6 -4,1.3 -0.1,-1 -0.6,-1.9 -0.6,-3.2 0,-4.6 3.7,-8.6 8.4,-8.6 h 1 c 1,0 1.5,0.2 2.3,0.4 0.1,-0.2 0.4,-0.6 0.4,-0.7 0,-0.7 -1.8,-1 -2.5,-1 h -1.5 c -4.5,-8e-4 -9.2,4.4 -9.2,8.6 z m 19.1,-15.8 0.6,0.6 c 1.6,-0.9 3.4,-2.3 5.9,-2.3 h 1 c 5.5,0 10.1,4.4 10.1,9.7 v 0.6 c -1.5,-0 -2.6,-0.8 -4.6,-0.8 h -1 c -1.5,0 -4.1,0.3 -4.2,1.7 0.6,0.1 0.4,0.2 0.8,0.2 0.9,0 1.4,-0.6 3,-0.6 h 2.3 c 2.2,0 5.6,1.8 6.6,3.1 2,2.6 1.8,3.7 2.6,7.2 0.5,0 1,0.1 1,-0.4 0,-4 -2.6,-8.1 -5.2,-9.4 0,-6.9 -4.5,-12.4 -11.1,-12.4 h -1.3 c -2.3,0 -5.6,1.6 -6.5,2.9 z'}];
@@ -1487,7 +1487,7 @@ var MS = new function(){
 		icn['AC.IC.MEDICAL FACILITIES OUTPATIENT'] = [{type:'path',stroke:false,d:'m 81.8,63.6 26.6,9 0,63.9 -26.6,-9.1 v -63.8 l 0,0 z m -1.6,65 29.9,10.4 v -10.6 h 9.8 V 61 H 80.2 v 67.6 l 0,0 z m 21.4,-18.1 c 0,1.1 1,2.6 2.2,2.6 0.8,0 1.2,-0.8 1.2,-1.6 v -0.4 c 0,-1.2 -1.1,-3 -2,-3 -0.8,0 -1.4,0.8 -1.4,1.6 v 0.8 H 101.5 z M 85.9,90.9 c 0.9,0.1 5.3,1.8 5.3,2.4 v 7.1 l 5.7,2.2 v -7.5 l 5.5,1.9 V 89.1 C 101.5,88.8 96.9,87.2 96.9,86.6 V 79.5 L 91.2,77.6 v 7.4 l -5.3,-2 v 7.9 z'},{type:'path',stroke:false,fill:(_STD2525 ? iconFillColor : false),d:'M 81.8 63.6 L 81.8 127.4 L 108.4 136.6 L 108.4 72.7 L 81.8 63.6 z M 91.2 77.6 L 96.9 79.5 L 96.9 86.6 C 96.9 87.2 101.5 88.9 102.3 89.1 L 102.3 97 L 96.8 95.2 L 96.8 102.6 L 91.1 100.4 L 91.1 93.3 C 91.1 92.6 86.8 91 85.9 90.9 L 85.9 83 L 91.2 85 L 91.2 77.6 z M 102.9 108.1 C 103.9 108.1 105 109.9 105 111.2 L 105 111.6 C 105 112.4 104.6 113.2 103.8 113.2 C 102.5 113.2 101.5 111.6 101.5 110.6 L 101.5 110.6 L 101.5 109.8 C 101.5 108.9 102.1 108.1 102.9 108.1 z '}];
 		icn['AC.IC.OPERATION/EMERGENCY MEDICAL OPERATION'] = [{type:'path',stroke:false,d:'m 73.7,89.7 c 0.4,4.9 2.3,11.3 3.4,15.6 1.4,5.7 3.5,8.7 6.1,13.1 2.2,3.6 3.4,9.6 5.6,13.4 0.7,1.3 2.8,5.3 3.6,6 0.5,0.4 5.5,4 5.6,4 1.6,0 9.7,-0.4 10.4,-0.7 0.3,-0.1 4.1,-6.6 4.1,-7 v -3 h -7.8 c -2.7,0 -5.6,-1.3 -8.4,-1.3 V 112.6 c 0,-2.4 1.3,-17.3 2.1,-18 0.8,-0.7 11.4,-8.2 11.9,-8.3 l -1,-8.5 c -0.5,0.2 -5.6,1 -6,0.9 -1,-0.2 -4.7,-1.4 -5.5,-1.8 -1.9,1.1 -4.4,1.8 -6.5,2.7 -1.6,0.7 -3.5,2.7 -5.5,3.7 -2.4,1.2 -3.9,1.7 -6.7,2.5 -1.6,0.4 -2.4,0.4 -3.3,1.5 -0.7,0.8 -1.7,1.8 -2.2,2.5 z m 27.8,36.1 c 0,-8.1 2,-16.8 1.9,-24.8 0,-1.2 0.2,-1.9 0.2,-3.2 0,-1.4 0.4,-1.4 1.2,-2.2 1.2,-1.1 2.4,-2 3.6,-3 2.1,-1.7 5,-4.8 7.1,-6.1 0.3,0.1 0.3,0.2 0.9,0.2 h 4.9 c 0.2,0.8 4.9,6.4 5.8,7.4 2.6,3.1 3.8,3.9 2.9,9.6 -0.5,3.2 -0.7,8.6 -1,12 -0.3,4 -0.9,8.1 -0.9,12.2 l -26.7,-2.2 z m -1.7,1.3 29.8,2.2 2.4,-31.4 -9.8,-12.6 -7.2,-0.3 c -0.2,0 -6.9,5.9 -7.8,6.5 -1.4,1.1 -2.5,2.3 -3.9,3.2 -1.7,1.2 -1.2,3.3 -1.4,5.9 -0.6,8.4 -2.1,18.1 -2.1,26.5 z m 12.8,-9 0.2,0 c 2.3,0 6.5,2.8 8.1,2.8 h 3 V 119.4 H 121.4 c -0.6,0 -6.1,-2.3 -7.2,-2.7 -1.5,-0.6 -6.6,0.3 -8.6,0.3 v 1.3 l 7.1,-0.3 z m -5.6,-7.9 0.2,1.5 c 3.1,-0.7 5.6,-1.4 8.7,-0.8 1.3,0.3 2.8,0.6 4.2,0.9 2.5,0.6 2.8,1.2 3.3,-1 -1.3,0 -6.8,-1.3 -8.4,-1.7 -2.5,-0.7 -5.5,0.4 -8.1,1.1 z m -0.2,-8.1 0.5,1.4 5.7,-1.9 5,3.7 8,-1 -0.3,-1.7 -7.3,1 c -0.8,-0.6 -4.7,-3.6 -5.3,-3.6 -0.5,0 -5.6,1.9 -6.2,2.2 z m 10.7,-7.3 h 1.1 c 1.2,0 2.5,-1.3 2.5,-2.5 v -0.4 c 0,-1.4 -1.6,-2.5 -3,-2.5 -4.4,-0 -3.6,5.5 -0.6,5.5 z M 67.9,81.8 c 0,1.5 3.2,4.4 4.2,5.1 l 1.5,-1.6 -2.1,-4.7 h -2.2 c -0.5,0 -1.5,1.1 -1.5,1.2 z M 110.2,70.5 c 0.8,0.4 2.4,0.8 2.4,1.9 0,0.9 -0.5,1.4 -0.6,2.1 l -2.6,-0.4 c -1,-0.1 -4.2,0.6 -5.8,0.6 v 1.1 c 0,1.1 4,0 5.6,0 h 0.4 c 1.7,0 5.4,1.2 6.2,1.9 0.5,0.5 1.4,5.2 1.9,6.2 1.8,-0.9 1.3,-0.5 0.6,-3.2 -0.3,-0.9 -1.1,-3.1 -1.1,-4 l -3.9,-1.6 1.2,-2.3 c -1.1,-2.1 -0.8,-3.6 -4,-3.6 l -0.3,1.2 z m -36.5,6.6 c 0,0.9 2,4.6 2.2,6 0.3,0.1 1.1,0.4 1.1,0.4 0.3,0 2.1,-0.9 2.8,-1.1 -0.7,-3.1 -1.7,-6.6 -4.3,-7.9 -0.2,0.7 -1.7,2.3 -1.7,2.5 z m 5.9,-3.6 c 1.9,4.1 0.4,3.7 4.2,7 l 2.4,-1.2 v -3.8 c 0,-1.5 -1.2,-3.6 -1.3,-5.3 l -1.9,-0.2 h -1.7 l -1.6,3.7 z m 7.6,-2.8 2.5,5 3.9,-0.8 c 0,-1 0.6,-2.5 0.6,-3.4 0,-2.2 -1.1,-4.7 -1.1,-6.9 H 88.5 l -1.3,6 z M 97.8,62.8 c 0,0.6 0.2,7.2 0.3,7.4 0.3,1 3.7,2.6 5.5,2.4 0.9,-0.1 2.5,-0.3 3.5,-0.4 1.8,-0.2 1.2,-0.6 1.5,-2.6 0.2,-1.9 0.6,-4.9 1.1,-6.8 -0.4,-0.8 -2.4,-4.7 -3.2,-4.7 h -5.1 c -0.7,0 -3,4 -3.5,4.7 z'},{type:'path',stroke:false,fill:(_STD2525 ? iconFillColor : false),d:'M 115.6 86.6 C 113.5 88 110.6 91 108.5 92.7 C 107.3 93.7 106 94.6 104.8 95.7 C 104 96.4 103.6 96.5 103.6 97.8 C 103.6 99.2 103.4 99.9 103.4 101.1 C 103.5 109.1 101.5 117.8 101.5 125.9 L 128.2 128 C 128.2 124 128.8 119.9 129.1 115.8 C 129.3 112.4 129.6 107.1 130.1 103.8 C 131 98.1 129.8 97.3 127.2 94.2 C 126.3 93.1 121.6 87.6 121.4 86.8 L 116.5 86.8 C 115.9 86.8 115.9 86.7 115.6 86.6 z M 118.2 89.3 C 119.5 89.3 121.1 90.4 121.1 91.9 L 121.1 92.3 C 121.1 93.6 119.8 94.9 118.6 94.9 L 117.5 94.9 C 114.5 94.9 113.8 89.3 118.2 89.3 z M 113.1 100 C 113.7 100 117.6 103.1 118.4 103.7 L 125.7 102.6 L 126 104.3 L 118 105.3 L 113 101.6 L 107.3 103.6 L 106.9 102.2 C 107.5 101.9 112.5 100 113.1 100 z M 113.2 109 C 113.9 109 114.5 109.1 115.2 109.2 C 116.7 109.6 122.2 110.9 123.5 110.9 C 123 113 122.7 112.4 120.2 111.8 C 118.8 111.5 117.3 111.2 116 110.9 C 112.8 110.3 110.4 111 107.3 111.8 L 107.1 110.3 C 109 109.8 111.2 109.1 113.2 109 z M 112.5 116.5 C 113.2 116.5 113.8 116.6 114.2 116.8 C 115.2 117.1 120.8 119.4 121.4 119.4 L 123.9 119.4 L 123.9 121 L 121 121 C 119.4 121 115.1 118.2 112.9 118.2 L 112.6 118.2 L 105.6 118.4 L 105.6 117.1 C 107.1 117.1 110.4 116.5 112.5 116.5 z'}];
 		icn['AC.IC.TRIAGE'] = [{type:'path',stroke:false,d:'M 91.6 69 C 87.3 69 83.6 71.5 83.6 75.3 L 83.6 83.3 L 80.5 83.3 C 74 83.3 73.6 88.1 71.2 91.5 C 69.3 94.3 63 94.4 63 100.9 L 63 131 L 137 131 L 137 102.6 C 137 99.5 136.2 97.3 134.7 95.6 C 133.2 94 130.8 93.6 129.1 92 C 126 88.8 126.9 83.3 119.1 83.3 L 116.2 83.3 L 116.2 75.5 C 116.2 71.3 112.9 69 108.4 69 L 91.6 69 z M 89.9 76 L 110.1 76 L 110.1 83.3 L 89.9 83.3 L 89.9 76 z M 95.3 90.4 L 104.4 90.4 L 104.4 99.4 L 112.2 94.9 L 116.8 102.8 L 109.1 107.3 L 116.8 111.9 L 112.1 119.8 L 104.4 115.3 L 104.4 124.1 L 95.3 124.1 L 95.3 115.3 L 87.6 119.7 L 83 111.8 L 90.7 107.3 L 83 102.8 L 87.6 94.9 L 95.3 99.3 L 95.3 90.4 z '},{type:'path',stroke:false,fill:(_STD2525 ? iconFillColor : false),d:'m 112.1,119.8 4.6,-7.9 -7.6,-4.6 7.7,-4.5 -4.6,-7.9 -7.7,4.4 -0,-8.9 -9.1,0 0,8.9 -7.7,-4.4 -4.5,7.9 7.6,4.5 -7.6,4.5 4.5,7.9 7.7,-4.4 0,8.8 9.1,0 0,-8.8 z'}];
-		icn['AC.IC.EMERGENCY PUBLIC INFORMATION CENTER'] = [icn['GR.IC.FF.EMERGENCY OPERATION'],text('i')]; 
+		icn['AC.IC.EMERGENCY PUBLIC INFORMATION CENTER'] = [icn['GR.IC.FF.EMERGENCY OPERATION'],text('i')];
 		icn['AC.IC.FIRE HYDRANT'] = [{type:'path',stroke:false,d:'m 80,131.3 v -1 c 1.3,0.1 5.7,1.8 7.7,2.2 2.8,0.6 5.8,1 9.1,1 h 6.5 c 3.4,0 6.1,-0.4 8.9,-1 2,-0.4 6.5,-2.1 7.7,-2.2 v 1 c 0,2.9 -12.5,4.5 -16.6,4.5 h -6.4 c -4.1,0 -16.9,-1.6 -16.9,-4.5 l 0,0 z m 17.9,-43.4 4.5,0.1 12.4,0.4 v 8.3 h 6.3 v 11.9 h -6.3 v 17.4 l 4.5,1.3 c -1.2,1.6 -12.2,3.3 -15.8,3.3 h -6.4 c -3.5,0 -15,-1.8 -16,-3.2 l 4.6,-1.6 0.1,-17.2 h -6.3 V 96.7 h 6.3 v -8.3 l 12.4,-0.4 0,0 z m 25.7,5.9 h 3 v 6.7 h 3.2 v 3.9 h -3.2 v 6.7 h -3 V 93.8 z m -50,0 h 2.9 v 17.2 h -2.9 v -6.7 h -3.5 v -3.9 h 3.4 V 93.8 h 0.1 z m 26.1,-8.3 c -5.2,0 -9.7,0.2 -14.8,0.2 -4.4,0 -3.5,-2.6 -1.8,-2.8 2.1,-0.3 4.9,-0.1 6.9,-0.4 5.3,-0.8 23.6,-0.3 28.1,0.8 0.2,1.8 0.4,1.5 -1,2.4 l -15.8,-0.2 -1.6,0.1 z m -1,-21.1 h 2.9 v 3.8 h 2 v 1.8 c 3.2,0.7 5.3,1.1 7.4,3.1 1.3,1.3 3.5,4.3 3.7,6.7 l -10.4,-0.3 -9.9,0.1 0.2,-0.1 -9.1,0.5 c 0.4,-4.7 5.2,-9.7 10.4,-9.7 h 0.8 v -2 h 2 v -3.8 z m -2.6,1.2 h -2 v 2.2 c -5.7,0.5 -10.6,6.6 -11.1,12.5 -2.2,0.2 -2.3,1.3 -3.4,2.1 l -0.2,1.6 c -0.3,2.2 2,3.9 3.6,4.3 v 5.5 h -3.6 v -2.4 h -8.3 v 6.7 h -3.2 V 107 h 3.2 v 6.3 h 8.3 v -2.4 h 3.6 V 123.8 c -2.3,0.6 -5.5,2 -5.5,4.9 v 2 c 0,6.3 12.9,7.7 19.8,7.7 h 5.9 c 6.9,0 19.4,-1.2 19.4,-7.7 v -2 c 0,-2.8 -3,-4.3 -5.3,-4.9 v -12.9 h 3.6 v 2.4 h 8.1 V 107 h 3.2 v -9.1 h -3.2 v -6.4 h -8.1 v 2.4 h -3.6 v -5.5 c 1.6,-0.3 3.6,-1.8 3.6,-3.8 0,-2.2 -1.6,-3.9 -3.6,-4 -0.5,-5.9 -5.7,-12.1 -11.4,-12.6 v -2.2 h -2 V 61.6 h -7.9 v 4 z m 2.9,47.2 c -4,0 -8.3,-5 -8.1,-9.3 0.2,-4.4 4.2,-9 8.3,-9 h 2 c 4.2,0 8.3,4.7 8.3,9.1 0,4.3 -4,9.1 -8.1,9.1 h -2.4 l 0,0 z m -10.5,-9.9 v 1.8 c 0,5.2 5.4,10.8 10.5,10.8 h 2.4 c 5.6,0 10.8,-5.8 10.8,-11.8 0,-6 -5.3,-11.8 -10.9,-11.8 h -2.1 C 93.7,92 88.4,97.5 88.4,103 l 0,0 z m 9.5,0.8 c 0.3,-0.6 0.8,-1.8 1.4,-1.8 h 1.4 c 0.7,0 1.4,1.3 1.4,2 0,0.1 -0.9,1.6 -1.4,1.6 h -1.4 c -0.6,0.1 -1.1,-1.2 -1.4,-1.8 z m -2.9,0 2.2,4.3 h 5 c 0.7,0 2.4,-3.6 2.9,-4.3 l -2.4,-4.5 h -4.9 c -0.8,0.1 -2.5,3.7 -2.9,4.5 z'},{type:'path',stroke:false,fill:(_STD2525 ? iconFillColor : false),d:'m 97.9,103.8 c 0.3,-0.6 0.8,-1.8 1.4,-1.8 h 1.4 c 0.7,0 1.4,1.3 1.4,2 0,0.1 -0.9,1.6 -1.4,1.6 h -1.4 c -0.6,0.1 -1.1,-1.2 -1.4,-1.8 z m 1.2,-9.1 c -4.1,0 -8.1,4.6 -8.3,9 -0.2,4.3 4.1,9.3 8.1,9.3 l 2.4,0 c 4,0 8.1,-4.9 8.1,-9.1 0,-4.4 -4.1,-9.1 -8.3,-9.1 l -2,0 z m -1.2,4.7 4.9,0 2.4,4.5 c -0.4,0.7 -2.1,4.3 -2.9,4.3 l -5,0 -2.3,-4.3 c 0.4,-0.8 2.1,-4.4 2.9,-4.5 z M 98.7,64.5 h 2.9 v 3.8 h 2 v 1.8 c 3.2,0.7 5.3,1.1 7.4,3.1 1.3,1.3 3.5,4.3 3.7,6.7 l -10.4,-0.3 -9.9,0.1 0.2,-0.1 -9.1,0.5 c 0.4,-4.7 5.2,-9.7 10.4,-9.7 h 0.8 v -2 h 2 v -3.8 z m 1,21.1 c -5.2,0 -9.7,0.2 -14.8,0.2 -4.4,0 -3.5,-2.6 -1.8,-2.8 2.1,-0.3 4.9,-0.1 6.9,-0.4 5.3,-0.8 23.6,-0.3 28.1,0.8 0.2,1.8 0.4,1.5 -1,2.4 l -15.8,-0.2 -1.6,0.1 z m -26.1,8.3 h 2.9 v 17.2 h -2.9 v -6.7 h -3.5 v -3.9 h 3.4 V 93.8 h 0.1 z m 50,0 h 3 v 6.7 h 3.2 v 3.9 h -3.2 v 6.7 h -3 V 93.8 z m -25.7,-5.9 -12.4,0.4 0,8.3 -6.3,0 0,11.9 6.3,0 -0.1,17.3 -4.6,1.6 c 1.1,1.5 12.5,3.3 16,3.3 l 6.4,0 c 3.6,0 14.7,-1.7 15.8,-3.3 l -4.5,-1.3 0,-17.4 6.3,0 0,-11.9 -6.3,0 0,-8.3 -12.4,-0.4 -4.5,-0.1 z m 1.2,4.2 2.1,0 c 5.7,0 10.9,5.8 10.9,11.8 0,5.9 -5.2,11.8 -10.8,11.8 l -2.4,0 c -5.2,0 -10.5,-5.6 -10.5,-10.8 l 0,-1.8 c 0,-5.5 5.3,-11 10.7,-10.9 z M 80,131.3 v -1 c 1.3,0.1 5.7,1.8 7.7,2.2 2.8,0.6 5.8,1 9.1,1 h 6.5 c 3.4,0 6.1,-0.4 8.9,-1 2,-0.4 6.5,-2.1 7.7,-2.2 v 1 c 0,2.9 -12.5,4.5 -16.6,4.5 h -6.4 c -4.1,0 -16.9,-1.6 -16.9,-4.5 l 0,0 z'}];
 		icn['AC.IC.OTHER WATER SUPPLY LOCATION'] = [{type:'path',stroke:false,d:'m 113.2,116.5 c 0,-2.9 4.4,-9.3 5.8,-11.8 2.8,-5 3.1,-6.8 4.6,-13 2.1,1.4 2.2,4.3 3,7.1 0.8,2.8 1.6,4.8 2.9,7 2.2,3.8 6.7,8 5,14.1 -1.6,5.8 -5.2,7.8 -12.2,7.5 -5.8,-0.2 -9.1,-4.9 -9.1,-11 z m -1.2,-0.4 v 0.6 c 0,7.5 4.6,12.2 12,12.2 6.8,0 12,-4.6 12,-11 v -1.3 c 0,-5 -4.7,-10 -6.6,-13.8 -1.1,-2.2 -1.6,-5.5 -2.3,-8.1 -0.9,-3.3 -2.4,-4 -4.8,-5.6 0,13.6 -10.3,20 -10.3,26.8 z m 4.8,3.6 c 0,2.4 1.8,4.4 3.8,4.4 0.7,0 1.5,-0.6 1.7,-1.3 -1.6,-0.4 -3.2,-2.5 -3.4,-4.4 l -2.1,1.3 z M 89.2,73 v 15.8 h -2.1 v -15.8 l 0.6,-0.1 1.5,0.1 z m -10.4,2.3 h 6.6 v 11 H 78.8 v -11 z m 37.2,1.1 c 0,-0.5 0.2,-0.6 0.6,-0.6 h 1.5 c 0.5,0 0.6,0.2 0.6,0.6 v 9.1 h -2.8 v -9.1 z m -24.9,-1.3 22.8,2.4 v 6.5 l -22.8,1.9 v -10.7 z m -27,11.8 h 12.9 v 1 l 8.3,0.1 1.2,2.4 1.6,0.3 c 0.6,0.1 1,-0.2 1.8,-0.3 l 0.9,-0.6 0.2,-2.4 22.8,-1.6 c 1.2,2.5 4.2,1.6 6.6,1 0,-0.7 0.2,-0.8 0.2,-1.5 v -9.5 c 0,-1.5 -0.8,-2.1 -2.3,-2.1 h -2.1 c -3.8,0 0.2,2.5 -5,1.6 -2.1,-0.4 -4.6,-0.4 -6.7,-0.7 -3.3,-0.5 -10.4,-1.3 -13.5,-1.3 -0.1,-3.1 -5.6,-3.3 -5.7,0.4 h -8.4 v 0.6 h -13 l 0.1,12.4 0,0 z m 15.6,-4.8 0,1.9 4.6,0 0,-1.9 z m 0,-4.2 0,1.7 4.6,0 0,-1.7 z'},{type:'path',stroke:false,fill:(_STD2525 ? iconFillColor : false),d:'m 91,75.1 22.8,2.4 v 6.5 l -22.8,1.9 v -10.7 z m 24.9,1.3 c 0,-0.5 0.2,-0.6 0.6,-0.6 h 1.5 c 0.5,0 0.6,0.2 0.6,0.6 v 9.1 h -2.8 v -9.1 z M 78.8,75.3 l 0,11 6.6,0 0,-11 -6.6,0 z m 0.8,2.6 4.7,0 0,1.7 -4.7,0 0,-1.7 z m 0,4.2 4.7,0 0,1.9 -4.7,0 0,-1.9 z M 123.5,91.8 c -1.4,6.2 -1.8,8 -4.6,13 -1.3,2.5 -5.8,8.9 -5.8,11.8 0,6.1 3.3,10.8 9.1,11 7,0.2 10.5,-1.7 12.2,-7.5 1.7,-6.1 -2.8,-10.3 -5,-14.1 -1.3,-2.2 -2,-4.3 -2.9,-7 -0.8,-2.8 -0.9,-5.7 -3,-7.1 z m -4.6,26.7 c 0.2,1.9 1.8,4 3.4,4.4 -0.2,0.6 -1,1.3 -1.7,1.3 -2,0 -3.8,-2.1 -3.8,-4.4 l 2.1,-1.3 z M 89.2,73 v 15.8 h -2.1 v -15.8 l 0.6,-0.1 1.5,0.1 z'}];
 		icn['AC.IC.BANKING FINANCE AND INSURANCE INFRASTRUCTURE'] =text('€$£');
@@ -1613,12 +1613,12 @@ var MS = new function(){
 		icn['CY.IC.NETWORK OUTAGE'] = text('NOT');
 		icn['CY.IC.SERVICE OUTAGE'] = text('SOT');
 		icn['CY.IC.DEVICE OUTAGE'] = text('DOT');
-		
+
 		function defaultProperties(instructions){
 			if(typeof instructions == 'object'){
 				if (Array.isArray(instructions)){
 					for (var i = 0; i<instructions.length;i++){
-				
+
 						defaultProperties.call(this,instructions[i]);
 					}
 					return;
@@ -1636,10 +1636,10 @@ var MS = new function(){
 			}
 		}
 		for(var key in icn){
-			defaultProperties.call(this,icn[key]);		
-		}		
+			defaultProperties.call(this,icn[key]);
+		}
 		return icn;
-	}
+	};
 
 	this.symbolGeometries = {
 		'AirHostile' 	: {	g:{type:'path',d:'M 45,150 L45,70 100,20 155,70 155,150'},
@@ -1699,7 +1699,7 @@ var MS = new function(){
 		this.infoFields 		= true;//If you have set all info fields but don't want the displayed; then just set this to false.
 		this.infoSize 			= 40; //Relative size of the info fields
 		this.alternateMedal 	= false;//2525D lets you choose between MEDAL icn and alternate MEDAL icn for Mines; default is set to MEDAL.
-		this.quantity			= '';//FieldID C	
+		this.quantity			= '';//FieldID C
 		this.reinforcedReduced	= '';//FieldID F
 		this.staffComments		= '';//FieldID G
 		this.additionalInformation= '';//FieldID H
@@ -1707,27 +1707,27 @@ var MS = new function(){
 		this.combatEffectiveness= '';//FieldID K
 		this.signatureEquipment	= '';//FieldID L
 		this.higherFormation	= '';//FieldID M
-		this.hostile			= '';//FieldID N	
+		this.hostile			= '';//FieldID N
 		this.iffSif				= '';//FieldID P
-		this.direction			= '';//FieldID Q	
+		this.direction			= '';//FieldID Q
 		this.sigint				= '';//FieldID R2
 		this.uniqueDesignation	= '';//FieldID T
 		this.type				= '';//FieldID V
 		this.dtg				= '';//FieldID W
 		this.altitudeDepth		= '';//FieldID X
-		this.location			= '';//FieldID Y	
+		this.location			= '';//FieldID Y
 		this.speed				= '';//FieldID Z
 		this.specialHeadquarters= '';//FieldID AA
-		this.platformType		= '';//FieldID AD		
+		this.platformType		= '';//FieldID AD
 		this.equipmentTeardownTime= '';//FieldID AE
 		this.commonIdentifier	= '';//FieldID AF
-		this.auxiliaryEquipmentIndicator= '';//FieldID AG	
+		this.auxiliaryEquipmentIndicator= '';//FieldID AG
 		//});
 
 		//FieldID AM Distance
-	
+
 		//FieldID AN Azimuth
-	
+
 		//FieldID AO EngagementBar
 
 		//Setting Options with input
@@ -1748,8 +1748,8 @@ var MS = new function(){
 		//========================================================================================
 
 		var symbolGeometries = MS.symbolGeometries;
-	//========================================================================================								
-		
+	//========================================================================================
+
 		this.getProperties = function(){
 			var properties = {
 				"activity"			: false,	//Is it an Activity
@@ -1777,11 +1777,11 @@ var MS = new function(){
 				"numberSIDC"		: false,	//Is the SIDC number based
 				"space"			: false,	//Is it in Space
 				"taskForce"		: false		//Is it a task force
-				}
+			};
 			var mapping = {};
 			mapping.context 	= ["Reality","Exercise","Simulation"];
 			mapping.status 	= ["Present","Planned","FullyCapable","Damaged","Destroyed","FullToCapacity"];
-			mapping.echelonMobility = {	
+			mapping.echelonMobility = {
 				"11": "Team/Crew",
 				"12": "Squad",
 				"13": "Section",
@@ -1809,12 +1809,12 @@ var MS = new function(){
 				"52": "Amphibious",
 				"61": "Short towed array",
 				"62": "Long towed Array"};
-							
+
 			mapping.affiliation 	= ["Hostile", "Friend", "Neutral", "Unknown"];
 			mapping.dimension 	= ["Air", "Ground", "Sea", "Subsurface"];
 
 			properties.context = mapping.context[0];
-			
+
 			if(this.monoColor != ''){
 				properties.fill = false;
 			}
@@ -1822,20 +1822,20 @@ var MS = new function(){
 
 			properties.numberSIDC = !isNaN(this.SIDC);
 			if(properties.numberSIDC){ //This is for new number based SIDCs
-	
+
 				if (typeof MS._getNumberProperties == 'function'){
 					properties = MS._getNumberProperties.call(this,properties, mapping);
 				}else{
 					console.warn("MS._getNumberProperties() is not present, you will need to load functionality for letter based SIDCs");
-				}	
-	
+				}
+
 			}else{ //This would be old letter based SIDCs
 
 				if (typeof MS._getLetterProperties == 'function'){
 					properties = MS._getLetterProperties.call(this,properties, mapping);
 				}else{
 					console.warn("MS._getNumberProperties() is not present, you will need to load functionality for letter based SIDCs");
-				}	
+				}
 
 			}
 
@@ -1848,7 +1848,7 @@ var MS = new function(){
 			if(!this.frame && !this.icon){
 				properties.baseGeometry = symbolGeometries['PositionMarker'];
 			}
-		
+
 			return properties;
 		};
 
@@ -1863,7 +1863,7 @@ var MS = new function(){
 			var baseColorOffWhite = MS.getColorMode("OffWhite");
 			var baseColorNone = MS.getColorMode("None");
 
-			//If it is a Civilian Symbol and civilian colors not are turned off, use civilian colors... 
+			//If it is a Civilian Symbol and civilian colors not are turned off, use civilian colors...
 			if(	this.civilianColor && this.properties.civilian){
 				baseFillColor.Friend = baseFillColor.Neutral = baseFillColor.Unknown = baseFillColor.Civilian;
 				baseFrameColor.Friend = baseFrameColor.Neutral = baseFrameColor.Unknown = baseFrameColor.Civilian;
@@ -1881,8 +1881,8 @@ var MS = new function(){
 				baseColorBlack = baseFrameColor;
 				baseColorWhite = baseFillColor = baseColorNone;
 			}
-		
-			var colors = {	
+
+			var colors = {
 				fillColor 		: baseFillColor,
 				frameColor 	: baseFrameColor,
 				iconColor 		: baseIconColor,
@@ -1891,13 +1891,13 @@ var MS = new function(){
 				black 		: baseColorBlack,
 				white 		: baseColorWhite
 			};
-			//Turn of the frame 
+			//Turn of the frame
 			if(this.properties.frame/* || (!this.properties.frame && !this.icon)*/){
 				colors.frameColor =  baseColorBlack;
 			}else{
 				colors.frameColor = baseColorNone;
 			}
-			//Filled or not. 
+			//Filled or not.
 			if(this.properties.fill){
 				//I don't think you can have an unframed but filled icon so we turn off the fill as well, unless you have turned off the icon as well.
 				colors.fillColor = ((!this.properties.frame && !(!this.properties.frame && !this.icon)) ? baseColorNone : baseFillColor);
@@ -1907,7 +1907,7 @@ var MS = new function(){
 				colors.white = baseColorOffWhite;
 			}else{
 				colors.fillColor = baseColorNone;
-				//Fix frame color if it should be turned off. 
+				//Fix frame color if it should be turned off.
 				colors.frameColor = (!this.properties.frame ?  baseColorNone : baseFrameColor);
 				colors.iconColor = baseFrameColor;
 				colors.iconFillColor = baseColorNone;
@@ -1928,39 +1928,39 @@ var MS = new function(){
 			this.properties = this.getProperties();
 			//Updating the object with colors
 			this.colors = this.getColors();
-			
+
 			this.drawInstructions = [];
 			this.bbox = MS.bbox();
 			//Processing all parts of the marker, adding them to the drawinstruction and updating the boundingbox
 			for (var i in MS._markerParts){
 				var m = MS._markerParts[i].call(this);
-				if(m.pre.length)this.drawInstructions.unshift(m.pre)
+				if(m.pre.length)this.drawInstructions.unshift(m.pre);
 				if(m.post.length)this.drawInstructions.push(m.post);
 				if (m.bbox)this.bbox = MS.bboxMax(this.bbox,m.bbox);
 			}
 
 			this.baseWidth = this.bbox.width() + (this.strokeWidth*3);//Adding the stoke width as margins and a little bit extra
 			this.baseHeight = this.bbox.height() + (this.strokeWidth*3);//Adding the stoke width as margins and a little bit extra
-		
+
 			this.width = this.baseWidth*this.size/100;
 			this.height = this.baseHeight*this.size/100;
-		
-			var anchor = {x:100,y:100}
+
+			var anchor = {x:100,y:100};
 			this.octagonAnchor = {
-				x: (anchor.x-this.bbox.x1+parseFloat(this.strokeWidth))*this.size/100, 
+				x: (anchor.x-this.bbox.x1+parseFloat(this.strokeWidth))*this.size/100,
 				y: (anchor.y-this.bbox.y1+parseFloat(this.strokeWidth))*this.size/100};
 			//If it is a headquarters the anchor should be at the end of the staf
 			if(this.properties.headquarters){
 				anchor = {
 					x:this.properties.baseGeometry.bbox.x1,
-					y:this.properties.baseGeometry.bbox.y2 + MS.hqStafLength}
+					y:this.properties.baseGeometry.bbox.y2 + MS.hqStafLength};
 			}
 			this.markerAnchor = {
-				x: (anchor.x-this.bbox.x1+parseFloat(this.strokeWidth))*this.size/100, 
+				x: (anchor.x-this.bbox.x1+parseFloat(this.strokeWidth))*this.size/100,
 				y: (anchor.y-this.bbox.y1+parseFloat(this.strokeWidth))*this.size/100};
 
 			if(MS.autoSVG)this.asSVG();
-		
+
 			return this;
 			};
 
@@ -1997,13 +1997,13 @@ var MS = new function(){
 									if(instruction[i].fontweight) svg += 'font-weight="' + instruction[i].fontweight + '" ';
 									break;
 								case 'translate':
-									svg = '<g transform="translate('+instruction[i].x+','+instruction[i].y+')" '; 
+									svg = '<g transform="translate('+instruction[i].x+','+instruction[i].y+')" ';
 									break;
 								case 'rotate':
-									svg = '<g transform="rotate('+instruction[i].degree+','+instruction[i].x+','+instruction[i].y+')" '; 
+									svg = '<g transform="rotate('+instruction[i].degree+','+instruction[i].x+','+instruction[i].y+')" ';
 									break;
 								case 'scale':
-									svg = '<g transform="scale('+instruction[i].factor+')" '; 
+									svg = '<g transform="scale('+instruction[i].factor+')" ';
 									break;
 							}
 							if(instruction[i].stroke != undefined){
@@ -2040,7 +2040,7 @@ var MS = new function(){
 									svg += processInstructions.call(this,instruction[i].draw);
 									svg += '</g>';
 									break;
-							}						
+							}
 							svgxml += svg;
 						}
 					}
@@ -2055,7 +2055,7 @@ var MS = new function(){
 			this.XML = xml;
 			return xml;
 		};
-		
+
 		this.processCanvasInstructions = function(instruction, ctx){
 		//console.log(instruction)
 			for (var i = 0; i< instruction.length;i++){
@@ -2080,13 +2080,13 @@ var MS = new function(){
 								ctx.setLineDash([])
 							};
 						}
-						
+
 						if(instruction[i].fill){ctx.fillStyle = instruction[i].fill;}
 						//fill is set to false, make it transparent
 						if(!instruction[i].fill){ctx.fillStyle = 'rgba(0,0,0,0)';}
-						
+
 						if(instruction[i].fillopacity != undefined){ctx.globalAlpha = instruction[i].fillopacity}
-						
+
 						switch (instruction[i].type){
 							case 'path':
 								var d = new Path2D(instruction[i].d);
@@ -2150,14 +2150,14 @@ var MS = new function(){
 		};
 
 	};
-	
+
 	this.symbol.prototype.setOptions = function(options){
 		for (var key in options){
 			this[key] = options[key];
 		}
 		return this;
 	}
-	
+
 };
 
 //Base Geometry for the Symbol ###########################################################
@@ -2176,12 +2176,12 @@ function basegeometry(){
 			geom.cx = this.properties.baseGeometry.g.cx;
 			geom.cy = this.properties.baseGeometry.g.cy;
 			geom.r = this.properties.baseGeometry.g.r;
-	}	
+	}
 	geom.fill = this.colors.fillColor[this.properties.affiliation];
 	geom.fillopacity = this.fillOpacity;
 	geom.stroke = frameColor;
 	geom.strokewidth = (this.size>=10?this.strokeWidth:10);
-	//Add a dashed outline to the frame if we are using monocolor and the status is not present.	
+	//Add a dashed outline to the frame if we are using monocolor and the status is not present.
 	if((this.monoColor != '' || !this.fill) && this.properties.notpresent) geom.strokedasharray = this.properties.notpresent;
 	drawArray2.push(geom);
 	//Space Modifiers
@@ -2200,7 +2200,7 @@ function basegeometry(){
 							'Unknown' : {type:'path',stroke:false,fill:frameColor,d:'M 107.96875 31.46875 L 92.03125 31.71875 L 92.03125 46.4375 L 107.71875 46.4375 L 107.96875 31.46875 z M 47.03125 92.5 L 31.09375 92.75 L 31.09375 107.5 L 46.78125 107.5 L 47.03125 92.5 z M 168.4375 92.5 L 152.5 92.75 L 152.5 107.5 L 168.1875 107.5 L 168.4375 92.5 z M 107.96875 153.5625 L 92.03125 153.8125 L 92.03125 168.53125 L 107.71875 168.53125 L 107.96875 153.5625 z'}};
 		drawArray2.push(modifier[this.properties.affiliation]);
 	}
-	//Add a dashed outline to the frame if the status is not present.	
+	//Add a dashed outline to the frame if the status is not present.
 	if(this.fill && this.frame && this.properties.notpresent && !this.properties.unframed){
 		//Clone the base geometry
 		var geom = {type:this.properties.baseGeometry.g.type}
@@ -2287,18 +2287,18 @@ function affliationdimension(){
 
 				//g += '<text fill="'+frameColor+'" x="' + (bbox.x2 + spacing )+ '" y="60" font-family="Arial" font-size="35" font-weight="bold">X</text>';
 			}
-			if(this.properties.joker){	
+			if(this.properties.joker){
 				drawArray2.push({type:'text',text:'J',x:(bbox.x2 + spacing),y:60,fill:frameColor,fontfamily:"Arial",fontsize:35,fontweight:"bold",textanchor:"start"});
 
 				//g += '<text fill="'+frameColor+'" x="' + (bbox.x2 + spacing )+ '" y="60" font-family="Arial" font-size="35" font-weight="bold">J</text>';
 			}
-			if(this.properties.faker){	
+			if(this.properties.faker){
 				drawArray2.push({type:'text',text:'K',x:(bbox.x2 + spacing),y:60,fill:frameColor,fontfamily:"Arial",fontsize:35,fontweight:"bold",textanchor:"start"});
 
 				//g += '<text fill="'+frameColor+'" x="' + (bbox.x2 + spacing )+ '" y="60" font-family="Arial" font-size="35" font-weight="bold">K</text>';
 			}
 			bbox = {x2:(bbox.x2 + spacing + 22), y1: (60-25)};
-		}		
+		}
 		if(this.properties.context == "Simulation"){
 			drawArray2.push({type:'text',text:'S',x:(bbox.x2 + spacing),y:60,fill:frameColor,fontfamily:"Arial",fontsize:35,fontweight:"bold",textanchor:"start"});
 
@@ -2424,11 +2424,11 @@ function modifier(){
 		if(this.properties.affiliation == "Neutral"){
 			if(this.properties.mobility == "Towed" || this.properties.mobility == "Short towed array" || this.properties.mobility == "Long towed Array"){
 				bbox.y2 += 8;
-			}	
+			}
 			if(this.properties.mobility == "Over snow (prime mover)" || this.properties.mobility == "Sled"){
 				bbox.y2 += 13;
 			}
-		}		
+		}
 		var mobilities = {
 			"Wheeled limited cross country": {g :[{type:'path',d:'M 50,1 l 100,0'},{type:'circle',cx:55,cy:8,r:8},{type:'circle',cx:145,cy:8,r:8}],
 				bbox : {y2 :bbox.y2+8*2}},
@@ -2473,7 +2473,7 @@ function modifier(){
 		drawArray2[i].stroke = this.colors.iconColor[this.properties.affiliation];
 		if(!drawArray2[i].hasOwnProperty('strokewidth'))drawArray2[i].strokewidth = this.strokeWidth;
 	}
-	
+
 	/*
 	if(this.sigint){
 		g += '<text font-family="Arial" font-weight="bold" stroke="none" text-anchor="middle" x="100" y="'+ (30 + bbox.y2 )+'" font-size="35" >'+this.sigint+'</text>';
@@ -2524,7 +2524,7 @@ function textfields(){
 
 	var gbbox = new MS.bbox();
 	var spaceTextIcon = 20;//The distance between the Icon and the labels
-	
+
 	//Function to calculate the width of a string
 	function strWidth(str){
 		if(str.length == 0)return 0;
@@ -2538,7 +2538,7 @@ function textfields(){
 		//This is for the space between the text and the symbol.
 		w += spaceTextIcon;
 		return w;
-	}	
+	}
 
 	//Check that we have some texts to print
 	var textFields = (this.quantity||this.reinforcedReduced||this.staffComments||this.additionalInformation||this.evaluationRating||this.combatEffectiveness||this.signatureEquipment||this.higherFormation||this.hostile||this.iffSif||this.sigint||this.uniqueDesignation||this.type||this.dtg||this.altitudeDepth||this.location||this.speed||this.specialHeadquarters||this.platformType||this.equipmentTeardownTime||this.commonIdentifier||this.auxiliaryEquipmentIndicator);
@@ -2596,7 +2596,7 @@ function textfields(){
 				this.additionalInformation?a.push(this.additionalInformation):'';
 				this.equipmentTeardownTime?a.push(this.equipmentTeardownTime):'';
 				gStrings.R3 = (a.join(" "));
-			}						
+			}
 			gStrings.R4 = this.higherFormation;
 			if(this.evaluationRating||this.combatEffectiveness||this.signatureEquipment||this.hostile||this.iffSif){
 				var a = new Array;
@@ -2607,7 +2607,7 @@ function textfields(){
 				this.iffSif?a.push(this.iffSif):'';
 				gStrings.R5 = (a.join(" "));
 			}
-		}					
+		}
 		//Sea numberbased SIDC
 		if(!isNaN(this.SIDC) && this.properties.dimension == "Sea"){
 			gStrings.R1 = this.uniqueDesignation;
@@ -2625,7 +2625,7 @@ function textfields(){
 				this.speed?a.push(this.speed):'';
 				gStrings.R5 = (a.join(" "));
 			}
-		}					
+		}
 		//Sub numberbased SIDC
 		if(!isNaN(this.SIDC) && this.properties.dimension == "Subsurface"){
 			gStrings.R1 = this.uniqueDesignation;
@@ -2633,17 +2633,17 @@ function textfields(){
 			gStrings.R3 = this.altitudeDepth;
 			gStrings.R4 = this.staffComments;
 			gStrings.R5 = this.additionalInformation;
-		}					
-	
+		}
+
 		//Add space on left sIde
 		gbbox.x1 =  bbox.x1 - Math.max(
 			this.specialHeadquarters ?(strWidth(this.specialHeadquarters)-this.properties.baseGeometry.bbox.width())/2 :0,
-			strWidth(gStrings.L1), 
+			strWidth(gStrings.L1),
 			strWidth(gStrings.L2),
 			strWidth(gStrings.L3),
 			strWidth(gStrings.L4),
 			strWidth(gStrings.L5));
-		
+
 		//Space on right sIde
 		gbbox.x2 = bbox.x2 + Math.max(
 			this.specialHeadquarters ?(strWidth(this.specialHeadquarters)-this.properties.baseGeometry.bbox.width())/2 :0,
@@ -2652,7 +2652,7 @@ function textfields(){
 			strWidth(gStrings.R3),
 			strWidth(gStrings.R4),
 			strWidth(gStrings.R5));
-	
+
 		//Extra space above for field 1
 		if(gStrings.L1 || gStrings.R1 ){
 			gbbox.y1 = Math.min(gbbox.y1, (100 - 2.5*fontSize));
@@ -2685,7 +2685,7 @@ function textfields(){
 
 	}
 	return MS.buildingBlock(drawArray1,drawArray2,gbbox );
-}	
+}
 );
 
 //Icon ##################################################################################
@@ -2694,7 +2694,7 @@ function icon(){
 	var drawArray1 = [];
 	var drawArray2 = [];
 	var gbbox = new MS.bbox();
-	
+
 	//This is the building blocks we use to create icn
 	var iconParts = [];
 	//Main icn
@@ -2703,10 +2703,10 @@ function icon(){
 	var m1 = [];
 	//Modifier 2 used in number based SIDCs
 	var m2 = [];
-		
+
 	if(this.icon){
 		var fillColor = this.colors.fillColor[this.properties.affiliation];
-		//So we don't happend to use civilian colors 
+		//So we don't happend to use civilian colors
 		var neutralColor = this.colors.fillColor["Neutral"];
 		var iconColor = this.colors.iconColor[this.properties.affiliation];
 		var iconFillColor = this.colors.iconFillColor[this.properties.affiliation];
@@ -2721,15 +2721,15 @@ function icon(){
 			MS._iconCache[icnet] = {};
 			iconParts = MS._iconCache[icnet].iconParts = MS._geticnParts(this.properties, this.colors, MS._STD2525, this.monoColor, this.alternateMedal);
 		}
-	
+
 		//Letter based SIDCs.
-		if(!this.properties.numberSIDC){ 
-			//Sea mine exercise has stuff outsIde the boundingbox... 
+		if(!this.properties.numberSIDC){
+			//Sea mine exercise has stuff outsIde the boundingbox...
 			if(["WMGX--","WMMX--","WMFX--","WMX---","WMSX--"].indexOf(this.properties.functionid)!=-1){
 				gbbox.y1 = 10;
 				if(this.properties.affiliation != "Unknown"){gbbox.x2 = this.properties.baseGeometry.bbox.x2+20;};
 			}
-			
+
 			//Try to fetch the icn form the cache
 			if( MS._iconCache[icnet].hasOwnProperty('letterSIDC')){
 				icn = MS._iconCache[icnet].letterSIDC;
@@ -2759,7 +2759,7 @@ function icon(){
 							svgSymbol.setAttribute("baseProfile", "tiny");
 							svgSymbol.setAttribute("xmlns", svgNS);
 							svgSymbol.appendChild(BaseGeometry);
-					
+
 							var targetElement = document.getElementById(element);
 							if(targetElement.hasChildNodes()){
 								targetElement.removeChild(targetElement.childNodes[0])
@@ -2770,14 +2770,14 @@ function icon(){
 						}
 						}
 					document.getElementById(element).innerHTML=listBBoxes;
-				}				
-		*/	
+				}
+		*/
 				}else{
 					console.warn("MS._getLetterSIDCicn() is not present, you will need to load functionality for letter based SIDCs");
 				}
-			}	
+			}
 		}
-	
+
 		//Number based SIDCs.
 		if(this.properties.numberSIDC){ //Number based SIDCs.
 			var symbolSet = String(this.SIDC).substr(4,2);
@@ -2794,7 +2794,7 @@ function icon(){
 						m2 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
 					}else{
 						console.warn("MS._getNumberSIDCicn() is not present, you will need to load functionality for number based SIDCs");
-					}				
+					}
 				}
 			}else{
 				MS._iconCache[icnet].numberSIDC = {};
@@ -2829,7 +2829,7 @@ function icon(){
 
 							svgSymbol.setAttribute("xmlns", "http://www.w3.org/2000/svg");
 							svgSymbol.appendChild(BaseGeometry);
-					
+
 							var targetElement = document.getElementById(MS._element);
 							if(targetElement.hasChildNodes()){
 								targetElement.removeChild(targetElement.childNodes[0])
@@ -2838,7 +2838,7 @@ function icon(){
 							console.log(targetElement)
 							var BBox = document.getElementById("BaseGeometryEquipment").getBBox()
 							listBBoxes +=  property + ':' + (BBox.y+ BBox.height)+',';
-							
+
 						}
 					document.getElementById(MS._element).innerHTML=listBBoxes;
 					}*/
@@ -2849,7 +2849,7 @@ function icon(){
 		}
 
 	// Put all this togheter and return the Icon. ============================================
-		var iconColor = this.colors.iconColor[this.properties.affiliation];		
+		var iconColor = this.colors.iconColor[this.properties.affiliation];
 		if(this.properties.numberSIDC){
 			//Number based SIDC
 			drawArray2.push(icn[this.properties.functionid.substr(0,6)]);//Main symbol
@@ -2904,7 +2904,7 @@ MS._getLetterProperties = function(properties, mapping){
 	if(['G','Z','F','X'].indexOf(battledimension) > -1)	properties.dimension = mapping.dimension[1];
 	if(['S'].indexOf(battledimension) > -1)			properties.dimension = mapping.dimension[2];
 	if(['U'].indexOf(battledimension) > -1)			properties.dimension = mapping.dimension[3];
-	
+
 	//dimension is in Space
 	if(battledimension == 'P'  && codingscheme != "O")	properties.space = true;
 	//codingscheme that are Activities
@@ -2931,7 +2931,7 @@ MS._getLetterProperties = function(properties, mapping){
 	if(codingscheme == "O")						properties.dimension = mapping.dimension[1];
 	//Framing of EMS tactical symbols differs slightly from C2 Symbology: UEI tactical symbols in that there is only one battle dimension: ground.
 	if(codingscheme == "E")						properties.dimension = mapping.dimension[1];
-	//First save the dimensionType and affiliationType before we modifies it... 
+	//First save the dimensionType and affiliationType before we modifies it...
 	properties.baseDimension = properties.dimension;
 	properties.baseAffilation = properties.affiliation;
 	//Joker and faker should have the shape of friendly
@@ -2940,13 +2940,13 @@ MS._getLetterProperties = function(properties, mapping){
 	if(properties.joker || properties.faker){
 		properties.affiliation = mapping.affiliation[1];
 	}
-	//Ground Equipment should have the same geometry as sea Friend... 
+	//Ground Equipment should have the same geometry as sea Friend...
 	if(codingscheme == 'S' && battledimension == 'G' && functionid.charAt(0)=='E') properties.dimension = mapping.dimension[2];
-	//Signal INTELLIGENCE Ground should have the same geometry as sea Friend... 
+	//Signal INTELLIGENCE Ground should have the same geometry as sea Friend...
 	if(codingscheme == 'I' && battledimension == 'G') properties.dimension = mapping.dimension[2];
-	//Some EMS symbosls should have the same geometry as sea Friend... 
-	if(	codingscheme == 'E' && 
-		((battledimension=='O'&& 
+	//Some EMS symbosls should have the same geometry as sea Friend...
+	if(	codingscheme == 'E' &&
+		((battledimension=='O'&&
 			['AB----','AE----','AF----','BB----','CB----','CC----','DB----','DDB---','DEB---','DFB---','DGB---','DHB---','DIB---','DJB---','DLB---','DMB---','DOB---','EA----','EB----','EC----','ED----','EE----'].indexOf(functionid) > -1)||
 			(battledimension=='F'&& ['BA----','MA----','MC----'].indexOf(functionid) > -1)
 		)){
@@ -2995,7 +2995,7 @@ MS._getLetterProperties = function(properties, mapping){
 		if(symbolmodifier12=='L') properties.mobility = mapping.echelonMobility[62];//Long towed Array
 	}
 	//This is for 2525
-	//Civilian stuff	
+	//Civilian stuff
 	if(
 		(battledimension == 'A' && functionid.charAt(0)=='C')||
 		(battledimension == 'G' && functionid.substring(0,3)=='EVC')||
@@ -3047,12 +3047,12 @@ MS._getLetterProperties = function(properties, mapping){
 			}
 		}
 	}
-	
+
 	//Some symbols in EMS
 	if(this.SIDC.substr(0,3) == "WAS" || this.SIDC.substr(0,1) == "G" || this.SIDC.substr(0,3) == "WOS"){
 		properties.frame = false;
 	}
-	
+
 	return properties;
 }
 MS._getLetterSIDCicn = function(icn,_STD2525){
@@ -3064,7 +3064,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-P-T-----'] = [icn['SP.I.FF.SPACE STATION']];
 	sId['S-P-L-----'] = [icn['SP.I.SPACE LAUNCH VEHICLE']];
 
-	// AIR ===========================================================================	
+	// AIR ===========================================================================
 	sId['S-A-------'] = [];
 	sId['S-A-M-----'] = [icn['AR.I.MILITARY']];
 	sId['S-A-MF----'] = [icn['AR.I.FF.MILITARY FIXED WING']];
@@ -3169,7 +3169,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-A-CH----'] = [icn['AR.I.FF.CIVILIAN ROTARY WING']];
 	sId['S-A-CL----'] = [icn['AR.I.FF.CIVILIAN BALLOON']];
 
-	// GROUND ========================================================================			
+	// GROUND ========================================================================
 	sId['S-G-------'] = [];
 	sId['S-G-U-----'] = [];
 	sId['S-G-UC----'] = [icn['GR.IC.COMBAT']];
@@ -3260,7 +3260,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-G-UCIZ--'] = [icn['GR.IC.FF.INFANTRY'],icn['GR.IC.ARMOUR']];
 	sId['S-G-UCIN--'] = [icn['GR.IC.FF.INFANTRY'],icn['GR.IC.FF.NAVAL']];
 	sId['S-G-UCII--'] = [icn['GR.IC.FF.INFANTRY'],icn['GR.IC.ARMOUR'],icn['GR.IC.FF.MAIN GUN SYSTEM']];
-	sId['S-G-UCIC--'] = [icn['GR.IC.FF.INFANTRY'],icn['GR.M2.ARCTIC']]; 
+	sId['S-G-UCIC--'] = [icn['GR.IC.FF.INFANTRY'],icn['GR.M2.ARCTIC']];
 	//1.X.3.1.1.5.10  WRONG SIDC IN STANDARD APP6B
 	//sId['S-G-UCIC--'] = [icn['GR.IC.FF.INFANTRY'],icn['GR.M1.SNIPER']];
 	sId['S-G-UCE---'] = [icn['GR.IC.ENGINEER']];
@@ -3278,11 +3278,11 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	//1.X.3.1.1.6.1.11  WRONG SIDC IN STANDARD APP6B
 	//sId['S-G-UCEC--'] = [
 	//1.X.3.1.1.6.1.12  WRONG SIDC IN STANDARD APP6B
-	//sId['S-G-UCEC--'] = [		
+	//sId['S-G-UCEC--'] = [
 	//1.X.3.1.1.6.1.13  WRONG SIDC IN STANDARD APP6B
-	//sId['S-G-UCEC--'] = [		
+	//sId['S-G-UCEC--'] = [
 	//1.X.3.1.1.6.1.14  WRONG SIDC IN STANDARD APP6B
-	//sId['S-G-UCEC--'] = [		
+	//sId['S-G-UCEC--'] = [
 	sId['S-G-UCEN--'] = [icn['GR.IC.ENGINEER'],icn['GR.M1.CONSTRUCTION']];
 	sId['S-G-UCENN-'] = [icn['GR.IC.ENGINEER'],icn['GR.M1.NAVAL']];
 	sId['S-G-UCF---'] = [icn['GR.IC.FIELD ARTILLERY']];
@@ -3804,7 +3804,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-G-IXH---'] = [icn['GR.IC.FF.MEDICAL TREATMENT FACILITY']];
 	sId['S-G-IRR---'] = sId['S-G-IRSR--'] = [icn['GR.IN.IC.SEA SURFACE INSTALLATION, OIL RIG/PLATFORM']];
 
-	// SEA ===========================================================================		
+	// SEA ===========================================================================
 	sId['S-S-------'] = [];
 	sId['S-S-C-----'] = [icn['SE.IC.COMBATANT']];
 	sId['S-S-CL----'] = [icn['SE.IC.SURFACE COMBATANT, LINE']];
@@ -3841,9 +3841,9 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-S-G-----'] = [icn['SE.IC.NAVY TASK ORGANIZATION UNIT']];
 	//1.X.4.1.6.1  in 2525 listed as 1.X.4.1.7.1 Different SIDC listed let's support both
 	sId['S-S-GF----'] = sId['S-S-GT----'] = [icn['SE.IC.NAVY TASK FORCE']];
-	//1.X.4.1.6.2  in 2525 listed as 1.X.4.1.7.2 
+	//1.X.4.1.6.2  in 2525 listed as 1.X.4.1.7.2
 	sId['S-S-GG----'] = [icn['SE.IC.NAVY TASK GROUP']];
-	//1.X.4.1.6.3  in 2525 listed as 1.X.4.1.7.3 
+	//1.X.4.1.6.3  in 2525 listed as 1.X.4.1.7.3
 	sId['S-S-GU----'] = [icn['SE.IC.NAVY TASK UNIT']];
 	sId['S-S-GE----'] = [icn['SE.IC.NAVY TASK ELEMENT']];
 	//1.X.4.1.6.5  in 2525 listed as 1.X.4.1.7.4
@@ -4157,97 +4157,97 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['O-R-------'] = [icn['ST.IC.INDIVIDUAL'],icn['ST.M1.RAPE']];
 	sId['O-R-A-----'] = [icn['ST.IC.INDIVIDUAL'],icn['ST.M1.RAPE'],icn['ST.IC.ATTEMPTED CRIMINAL ACTIVITY']];
 //EMS =====================================================================================
-	sId["E-I-A-----"] = [icn['AC.IC.CRIMINAL.CIVIL DISTURBANCE']]; 
-	sId["E-I-AC----"] = [icn['ST.IC.GROUP'],icn['AC.M1.RIOT']]; 
-	sId["E-I-B-----"] = [icn['AC.IC.CRIMINAL.ACTIVITY.INCIDENT']]; 
-	sId["E-I-BA----"] = [icn['ST.IC.BOMB'],icn['AC.M1.THREAT']]; 
-	sId["E-I-BC----"] = [icn['ST.IC.EXPLOSION'],MS.scale(0.6,icn['ST.IC.BOMB'])]; 
-	sId["E-I-BD----"] = [icn['ST.IC.GROUP'],icn['ST.M1.LOOT']]; 
-	sId["E-I-BF----"] = [icn['AC.IC.SHOOTING']]; 
-	sId["E-I-C-----"] = [icn['AC.IC.FIRE EVENT']]; 
-	sId["E-I-CA----"] = [icn['AC.IC.HOT SPOT']]; 
-	sId["E-I-CB----"] = [icn['AC.IC.NON-REsIdENTIAL FIRE']]; 
-	sId["E-I-CC----"] = [icn['AC.IC.FIRE ORIGIN']]; 
-	sId["E-I-CD----"] = [icn['AC.IC.REsIdENTIAL FIRE']]; 
-	sId["E-I-CE----"] = [icn['AC.IC.SCHOOL FIRE']]; 
-	sId["E-I-CF----"] = [icn['AC.IC.SMOKE']]; 
-	sId["E-I-CG----"] = [icn['AC.IC.SPECIAL NEEDS FIRE']]; 
-	sId["E-I-CH----"] = [icn['AC.IC.WILD FIRE']]; 
-	sId["E-I-D-----"] = [icn['AC.IC.HAZARDOUS MATERIALS INCIDENT']]; 
-	sId["E-I-DA----"] = [icn['AC.IC.CHEMICAL AGENT']]; 
-	sId["E-I-DB----"] = [icn['AC.IC.CORROSIVE MATERIAL']]; 
-	sId["E-I-DC----"] = [icn['AC.IC.HAZARDOUS WHEN WET']]; 
-	sId["E-I-DD----"] = [icn['AC.IC.EXPLOSIVE MATERIAL']]; 
-	sId["E-I-DE----"] = [icn['AC.IC.FLAMMABLE GAS']]; 
-	sId["E-I-DF----"] = [icn['AC.IC.FLAMMABLE LIQUID']]; 
-	sId["E-I-DG----"] = [icn['AC.IC.FLAMMABLE SOLID']]; 
-	sId["E-I-DH----"] = [icn['AC.IC.NON-FLAMMABLE GAS']]; 
-	sId["E-I-DI----"] = [icn['AC.IC.ORGANIC PEROXIDE']]; 
-	sId["E-I-DJ----"] = [icn['AC.IC.OXIDIZER']]; 
-	sId["E-I-DK----"] = [icn['AC.IC.RADIOACTIVE MATERIAL']]; 
-	sId["E-I-DL----"] = [icn['AC.IC.SPONTANEOUSLY COMBUSTIBLE MATERIAL']]; 
-	sId["E-I-DM----"] = [icn['AC.IC.TOXIC GAS']]; 
-	sId["E-I-DN----"] = [icn['AC.IC.TOXIC INFECTIOUS MATERIAL']]; 
-	sId["E-I-DO----"] = [icn['AC.IC.UNEXPLODED ORDNANCE']]; 
-	sId["E-I-E-----"] = [icn['ST.M1.INCIDENT'],icn['ST.IC.HIJACKING (AIRPLANE)']]; 
-	sId["E-I-EA----"] = [icn['ST.M1.ACCIDENT'],icn['ST.IC.HIJACKING (AIRPLANE)']]; 
-	sId["E-I-F-----"] = [icn['ST.M1.INCIDENT'],icn['ST.IC.HIJACKING (BOAT)']]; 
-	sId["E-I-FA----"] = [icn['ST.M1.ACCIDENT'],icn['ST.IC.HIJACKING (BOAT)']]; 
-	sId["E-I-G-----"] = [icn['ST.M1.INCIDENT'],icn['GR.EQ.TRAIN LOCOMOTIVE']]; 
-	sId["E-I-GA----"] = [icn['ST.M1.ACCIDENT'],icn['GR.EQ.TRAIN LOCOMOTIVE']]; 
-	sId["E-I-GB----"] = [ icn['GR.EQ.TRAIN LOCOMOTIVE'],icn['ST.M1.HIJACKING/HIJACKED']]; 
-	sId["E-I-H-----"] = [icn['ST.M1.INCIDENT'],icn['ST.IC.KNOWN INSURGENT VEHICLE']]; 
-	sId["E-I-HA----"] = [icn['ST.M1.ACCIDENT'],icn['ST.IC.KNOWN INSURGENT VEHICLE']]; 
-	sId["E-N-AA----"] = [icn['AC.IC.AFTERSHOCK']]; 
-	sId["E-N-AB----"] = [icn['AC.IC.AVALANCHE']]; 
-	sId["E-N-AC----"] = [icn['AC.IC.EARTHQUAKE EPICENTER']]; 
-	sId["E-N-AD----"] = [icn['AC.IC.LANDSLIDE']]; 
-	sId["E-N-AE----"] = [icn['AC.IC.SUBSIDENCE']]; 
-	sId["W-S-WSVE--"] = [icn['AC.IC.VOLCANIC ERUPTION']]; 
-	sId["E-N-AG----"] = [icn['AC.IC.VOLCANIC THREAT']]; 
-	sId["W-S-WSD-LI"] = [icn['ATMOSPHERIC.IC.DRIZZLE.INTERMITTENT LIGHT']]; 
-	sId["E-N-BB----"] = [icn['AC.IC.DROUGHT']]; 
-	sId["E-N-BC----"] = [icn['AC.IC.FLOOD']]; 
-	sId["W-S-WSFGSO"] = [icn['ATMOSPHERIC.IC.FOG.SKY OBSCURED']]; 
-	sId["W-S-WSGRL-"] = [icn['ATMOSPHERIC.IC.HAIL.LIGHT NOT ASSOCIATED WITH THUNDER']]; 
-	sId["E-N-BF----"] = [icn['AC.IC.INVERSION']]; 
-	sId["W-S-WSR-LI"] = [icn['ATMOSPHERIC.IC.RAIN.INTERMITTENT LIGHT']]; 
-	sId["W-S-WSDSLM"] = [icn['ATMOSPHERIC.IC.DUST OR SAND.LIGHT TO MODERATE']]; 
-	sId["W-S-WSS-LI"] = [icn['ATMOSPHERIC.IC.SNOW.INTERMITTENT LIGHT']]; 
-	sId["W-S-WSTMH-"] = [icn['ATMOSPHERIC.IC.STORMS.THUNDERSTORM LIGHT TO MODERATE - WITH HAIL']]; 
-	sId["W-S-WST-FC"] = [icn['ATMOSPHERIC.IC.STORMS.FUNNEL CLOUD (TORNADO/WATERSPOUT)']]; 
-	sId["W-S-WSTSS-"] = [icn['ATMOSPHERIC.IC.TROPICAL STORM SYSTEMS.TROPICAL STORM']]; 
-	sId["E-N-BM----"] = [icn['AC.IC.TSUNAMI']]; 
-	sId["E-N-CA----"] = [icn['AC.IC.BIRD']]; 
-	sId["E-N-CB----"] = [icn['AC.IC.INSECT']]; 
-	sId["E-N-CC----"] = [icn['AC.IC.MICROBIAL']]; 
-	sId["E-N-CD----"] = [icn['AC.IC.REPTILE']]; 
-	sId["E-N-CE----"] = [icn['AC.IC.RODENT']]; 
+	sId["E-I-A-----"] = [icn['AC.IC.CRIMINAL.CIVIL DISTURBANCE']];
+	sId["E-I-AC----"] = [icn['ST.IC.GROUP'],icn['AC.M1.RIOT']];
+	sId["E-I-B-----"] = [icn['AC.IC.CRIMINAL.ACTIVITY.INCIDENT']];
+	sId["E-I-BA----"] = [icn['ST.IC.BOMB'],icn['AC.M1.THREAT']];
+	sId["E-I-BC----"] = [icn['ST.IC.EXPLOSION'],MS.scale(0.6,icn['ST.IC.BOMB'])];
+	sId["E-I-BD----"] = [icn['ST.IC.GROUP'],icn['ST.M1.LOOT']];
+	sId["E-I-BF----"] = [icn['AC.IC.SHOOTING']];
+	sId["E-I-C-----"] = [icn['AC.IC.FIRE EVENT']];
+	sId["E-I-CA----"] = [icn['AC.IC.HOT SPOT']];
+	sId["E-I-CB----"] = [icn['AC.IC.NON-REsIdENTIAL FIRE']];
+	sId["E-I-CC----"] = [icn['AC.IC.FIRE ORIGIN']];
+	sId["E-I-CD----"] = [icn['AC.IC.REsIdENTIAL FIRE']];
+	sId["E-I-CE----"] = [icn['AC.IC.SCHOOL FIRE']];
+	sId["E-I-CF----"] = [icn['AC.IC.SMOKE']];
+	sId["E-I-CG----"] = [icn['AC.IC.SPECIAL NEEDS FIRE']];
+	sId["E-I-CH----"] = [icn['AC.IC.WILD FIRE']];
+	sId["E-I-D-----"] = [icn['AC.IC.HAZARDOUS MATERIALS INCIDENT']];
+	sId["E-I-DA----"] = [icn['AC.IC.CHEMICAL AGENT']];
+	sId["E-I-DB----"] = [icn['AC.IC.CORROSIVE MATERIAL']];
+	sId["E-I-DC----"] = [icn['AC.IC.HAZARDOUS WHEN WET']];
+	sId["E-I-DD----"] = [icn['AC.IC.EXPLOSIVE MATERIAL']];
+	sId["E-I-DE----"] = [icn['AC.IC.FLAMMABLE GAS']];
+	sId["E-I-DF----"] = [icn['AC.IC.FLAMMABLE LIQUID']];
+	sId["E-I-DG----"] = [icn['AC.IC.FLAMMABLE SOLID']];
+	sId["E-I-DH----"] = [icn['AC.IC.NON-FLAMMABLE GAS']];
+	sId["E-I-DI----"] = [icn['AC.IC.ORGANIC PEROXIDE']];
+	sId["E-I-DJ----"] = [icn['AC.IC.OXIDIZER']];
+	sId["E-I-DK----"] = [icn['AC.IC.RADIOACTIVE MATERIAL']];
+	sId["E-I-DL----"] = [icn['AC.IC.SPONTANEOUSLY COMBUSTIBLE MATERIAL']];
+	sId["E-I-DM----"] = [icn['AC.IC.TOXIC GAS']];
+	sId["E-I-DN----"] = [icn['AC.IC.TOXIC INFECTIOUS MATERIAL']];
+	sId["E-I-DO----"] = [icn['AC.IC.UNEXPLODED ORDNANCE']];
+	sId["E-I-E-----"] = [icn['ST.M1.INCIDENT'],icn['ST.IC.HIJACKING (AIRPLANE)']];
+	sId["E-I-EA----"] = [icn['ST.M1.ACCIDENT'],icn['ST.IC.HIJACKING (AIRPLANE)']];
+	sId["E-I-F-----"] = [icn['ST.M1.INCIDENT'],icn['ST.IC.HIJACKING (BOAT)']];
+	sId["E-I-FA----"] = [icn['ST.M1.ACCIDENT'],icn['ST.IC.HIJACKING (BOAT)']];
+	sId["E-I-G-----"] = [icn['ST.M1.INCIDENT'],icn['GR.EQ.TRAIN LOCOMOTIVE']];
+	sId["E-I-GA----"] = [icn['ST.M1.ACCIDENT'],icn['GR.EQ.TRAIN LOCOMOTIVE']];
+	sId["E-I-GB----"] = [ icn['GR.EQ.TRAIN LOCOMOTIVE'],icn['ST.M1.HIJACKING/HIJACKED']];
+	sId["E-I-H-----"] = [icn['ST.M1.INCIDENT'],icn['ST.IC.KNOWN INSURGENT VEHICLE']];
+	sId["E-I-HA----"] = [icn['ST.M1.ACCIDENT'],icn['ST.IC.KNOWN INSURGENT VEHICLE']];
+	sId["E-N-AA----"] = [icn['AC.IC.AFTERSHOCK']];
+	sId["E-N-AB----"] = [icn['AC.IC.AVALANCHE']];
+	sId["E-N-AC----"] = [icn['AC.IC.EARTHQUAKE EPICENTER']];
+	sId["E-N-AD----"] = [icn['AC.IC.LANDSLIDE']];
+	sId["E-N-AE----"] = [icn['AC.IC.SUBSIDENCE']];
+	sId["W-S-WSVE--"] = [icn['AC.IC.VOLCANIC ERUPTION']];
+	sId["E-N-AG----"] = [icn['AC.IC.VOLCANIC THREAT']];
+	sId["W-S-WSD-LI"] = [icn['ATMOSPHERIC.IC.DRIZZLE.INTERMITTENT LIGHT']];
+	sId["E-N-BB----"] = [icn['AC.IC.DROUGHT']];
+	sId["E-N-BC----"] = [icn['AC.IC.FLOOD']];
+	sId["W-S-WSFGSO"] = [icn['ATMOSPHERIC.IC.FOG.SKY OBSCURED']];
+	sId["W-S-WSGRL-"] = [icn['ATMOSPHERIC.IC.HAIL.LIGHT NOT ASSOCIATED WITH THUNDER']];
+	sId["E-N-BF----"] = [icn['AC.IC.INVERSION']];
+	sId["W-S-WSR-LI"] = [icn['ATMOSPHERIC.IC.RAIN.INTERMITTENT LIGHT']];
+	sId["W-S-WSDSLM"] = [icn['ATMOSPHERIC.IC.DUST OR SAND.LIGHT TO MODERATE']];
+	sId["W-S-WSS-LI"] = [icn['ATMOSPHERIC.IC.SNOW.INTERMITTENT LIGHT']];
+	sId["W-S-WSTMH-"] = [icn['ATMOSPHERIC.IC.STORMS.THUNDERSTORM LIGHT TO MODERATE - WITH HAIL']];
+	sId["W-S-WST-FC"] = [icn['ATMOSPHERIC.IC.STORMS.FUNNEL CLOUD (TORNADO/WATERSPOUT)']];
+	sId["W-S-WSTSS-"] = [icn['ATMOSPHERIC.IC.TROPICAL STORM SYSTEMS.TROPICAL STORM']];
+	sId["E-N-BM----"] = [icn['AC.IC.TSUNAMI']];
+	sId["E-N-CA----"] = [icn['AC.IC.BIRD']];
+	sId["E-N-CB----"] = [icn['AC.IC.INSECT']];
+	sId["E-N-CC----"] = [icn['AC.IC.MICROBIAL']];
+	sId["E-N-CD----"] = [icn['AC.IC.REPTILE']];
+	sId["E-N-CE----"] = [icn['AC.IC.RODENT']];
 	sId['E-O-A-----'] = sId['E-O-AA----'] = sId['E-O-AB----'] = sId['E-O-AC----'] = sId['E-O-AD----'] = [icn['GR.IC.EMERGENCY MEDICAL OPERATION']];
-	sId["E-O-AE----"] = [icn['GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE'],icn['GR.M1.MEDEVAC']]; 
-	sId["E-O-AF----"] = [MS.translate(0,10,MS.scale(0.8,icn['AR.I.FF.CIVILIAN ROTARY WING'])),icn['GR.M1.MEDEVAC']]; 
-	sId["E-O-AG----"] = [icn['AC.IC.HEALTH DEPARTMENT FACILITY']]; 
-	sId["E-O-AJ----"] = [icn['AC.IC.MEDICAL FACILITIES OUTPATIENT']]; 
-	sId["E-O-AK----"] = [icn['AC.IC.OPERATION/EMERGENCY MEDICAL OPERATION']]; 
-	sId["E-O-AL----"] = [icn['AC.IC.PHARMACY']]; 
+	sId["E-O-AE----"] = [icn['GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE'],icn['GR.M1.MEDEVAC']];
+	sId["E-O-AF----"] = [MS.translate(0,10,MS.scale(0.8,icn['AR.I.FF.CIVILIAN ROTARY WING'])),icn['GR.M1.MEDEVAC']];
+	sId["E-O-AG----"] = [icn['AC.IC.HEALTH DEPARTMENT FACILITY']];
+	sId["E-O-AJ----"] = [icn['AC.IC.MEDICAL FACILITIES OUTPATIENT']];
+	sId["E-O-AK----"] = [icn['AC.IC.OPERATION/EMERGENCY MEDICAL OPERATION']];
+	sId["E-O-AL----"] = [icn['AC.IC.PHARMACY']];
 	sId["E-O-AM----"] = [icn['AC.IC.TRIAGE']];
 	sId['E-O-B-----'] = sId['E-O-BA----'] = sId['E-O-BB----'] = sId['E-O-BC----'] = [icn['GR.IC.FF.EMERGENCY OPERATION']];
-	sId["E-O-BD----"] = [MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']),icn['AC.M1.EMERGENCY COLLECTION EVACUATION POINT']]; 
-	sId["E-O-BE----"] = [MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']),icn['AC.M1.EMERGENCY INCIDENT COMMAND CENTER']]; 
-	sId["E-O-BF----"] = [MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']),icn['AC.M1.EMERGENCY OPERATIONS CENTER']]; 
-	sId["E-O-BG----"] = [icn['AC.IC.EMERGENCY PUBLIC INFORMATION CENTER']]; 
-	sId["E-O-BH----"] = [MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']),icn['AC.M1.EMERGENCY SHELTER']]; 
-	sId["E-O-BI----"] = [MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']),icn['AC.M1.EMERGENCY STAGING AREA']]; 
-	sId["E-O-BJ----"] = [icn['GR.IC.FF.EMERGENCY OPERATION']]; 
-	sId["E-O-BK----"] = sId["S-G-USSW--"]; 
-	sId["E-O-BL----"] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.EMERGENCY']]; 
+	sId["E-O-BD----"] = [MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']),icn['AC.M1.EMERGENCY COLLECTION EVACUATION POINT']];
+	sId["E-O-BE----"] = [MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']),icn['AC.M1.EMERGENCY INCIDENT COMMAND CENTER']];
+	sId["E-O-BF----"] = [MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']),icn['AC.M1.EMERGENCY OPERATIONS CENTER']];
+	sId["E-O-BG----"] = [icn['AC.IC.EMERGENCY PUBLIC INFORMATION CENTER']];
+	sId["E-O-BH----"] = [MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']),icn['AC.M1.EMERGENCY SHELTER']];
+	sId["E-O-BI----"] = [MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']),icn['AC.M1.EMERGENCY STAGING AREA']];
+	sId["E-O-BJ----"] = [icn['GR.IC.FF.EMERGENCY OPERATION']];
+	sId["E-O-BK----"] = sId["S-G-USSW--"];
+	sId["E-O-BL----"] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.EMERGENCY']];
 	sId['E-O-C-----'] = sId['E-O-CA----'] = sId['E-O-CB----']  = sId['E-O-CE----'] = [icn['GR.IC.FIRE PROTECTION']];
-	sId["E-O-CC----"] = [icn['AC.IC.FIRE HYDRANT']]; 
-	sId["E-O-CD----"] = [icn['AC.IC.OTHER WATER SUPPLY LOCATION']]; 
+	sId["E-O-CC----"] = [icn['AC.IC.FIRE HYDRANT']];
+	sId["E-O-CD----"] = [icn['AC.IC.OTHER WATER SUPPLY LOCATION']];
 	sId['E-O-D-----'] = sId['E-O-DA----'] = sId['E-O-DB----'] = sId['E-O-DC----'] = [icn['GR.IC.FF.LAW ENFORCEMENT']];
-	sId['E-O-DD----'] = sId['E-O-DDA---'] = sId['E-O-DDB---'] = sId['E-O-DDC---'] = [icn['GR.IC.BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF) (DEPARTMENT OF JUSTICE)']]; 
+	sId['E-O-DD----'] = sId['E-O-DDA---'] = sId['E-O-DDB---'] = sId['E-O-DDC---'] = [icn['GR.IC.BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF) (DEPARTMENT OF JUSTICE)']];
 	sId['E-O-DE----'] = sId['E-O-DEA---'] = sId['E-O-DEB---'] = sId['E-O-DEC---'] = [icn['GR.IC.FF.BORDER PATROL']];
-	sId['E-O-DF----'] = sId['E-O-DFA---'] = sId['E-O-DFB---'] = sId['E-O-DFC---'] = [icn['GR.IC.FF.CUSTOMS SERVICE']]; 
+	sId['E-O-DF----'] = sId['E-O-DFA---'] = sId['E-O-DFB---'] = sId['E-O-DFC---'] = [icn['GR.IC.FF.CUSTOMS SERVICE']];
 	sId['E-O-DG----'] = sId['E-O-DGA---'] = sId['E-O-DGB---'] = sId['E-O-DGC---'] = [icn['GR.IC.DRUG ENFORCEMENT AGENCY (DEA)']];
 	sId['E-O-DH----'] = sId['E-O-DHA---'] = sId['E-O-DHB---'] = sId['E-O-DHC---'] = [icn['GR.IC.FF.DEPARTMENT OF JUSTICE (DOJ)']];
 	sId['E-O-DI----'] = sId['E-O-DIA---'] = sId['E-O-DIB---'] = sId['E-O-DIC---'] = [icn['GR.IC.FEDERAL BUREAU OF INVESTIGATION (FBI)']];
@@ -4259,80 +4259,80 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['E-O-DO----'] = sId['E-O-DOA---'] = sId['E-O-DOB---'] = sId['E-O-DOC---'] = [icn['GR.IC.FF.US MARSHALS SERVICE']];
 	sId["E-O-EA----"] = [MS.scale(0.6,icn['GR.EQ.SENSOR']),icn['GR.M1.BIOLOGICAL']];
 	sId["E-O-EB----"] = [MS.scale(0.6,icn['GR.EQ.SENSOR']),icn['GR.M1.CHEMICAL']];
-	sId["E-O-EC----"] = [MS.scale(0.6,icn['GR.EQ.SENSOR']),icn['GR.M1.INTRUSION']]; 
-	sId["E-O-ED----"] = [MS.scale(0.6,icn['GR.EQ.SENSOR']),icn['GR.M1.NUCLEAR']]; 
-	sId["E-O-EE----"] = [MS.scale(0.6,icn['GR.EQ.SENSOR']),icn['GR.M1.RADIOLOGICAL']]; 
-	sId["E-F-A-----"] = [icn['GR.IN.IC.AGRICULTURE AND FOOD INFRASTRUCTURE']]; 
-	sId["E-F-AA----"] = [icn['GR.IN.IC.AGRICULTURAL LABORATORY']]; 
-	sId["E-F-AB----"] = [icn['GR.IN.IC.ANIMAL FEEDLOT']]; 
-	sId["E-F-AC----"] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.COMMERCIAL']]; 
-	sId["E-F-AD----"] = [icn['GR.IN.IC.FARM/RANCH']]; 
-	sId["E-F-AE----"] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.PRODUCTION']]; 
-	sId["E-F-AF----"] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.RETAIL']]; 
-	sId["E-F-AG----"] = [icn['GR.IN.IC.GRAIN STORAGE']]; 
-	sId["E-F-B-----"] = [icn['AC.IC.BANKING FINANCE AND INSURANCE INFRASTRUCTURE']]; 
-	sId["E-F-BA----"] = [icn['GR.IN.IC.ATM']]; 
-	sId["E-F-BB----"] = [icn['GR.IN.IC.BANK']]; 
-	sId["E-F-BC----"] = [icn['GR.IN.IC.BULLION STORAGE']]; 
-	sId["E-F-BD----"] = [icn['GR.IN.IC.FEDERAL RESERVE BANK']]; 
-	sId["E-F-BE----"] = [icn['GR.IN.IC.FINANCIAL EXCHANGE']]; 
-	sId["E-F-BF----"] = [icn['GR.IN.IC.FINANCIAL SERVICES, OTHER']]; 
-	sId["E-F-C-----"] = [icn['GR.IN.IC.COMMERCIAL INFRASTRUCTURE']]; 
-	sId["E-F-CA----"] = [icn['GR.IN.IC.CHEMICAL PLANT']]; 
-	sId["E-F-CB----"] = [icn['GR.IN.IC.FIREARMS MANUFACTURER']]; 
-	sId["E-F-CC----"] = [icn['GR.IN.IC.FIREARMS RETAILER']]; 
-	sId["E-F-CD----"] = [icn['GR.IN.IC.HAZARDOUS MATERIAL PRODUCTION']]; 
-	sId["E-F-CE----"] = [icn['GR.IN.IC.HAZARDOUS MATERIAL STORAGE']]; 
-	sId["E-F-CF----"] = [icn['GR.IN.IC.INDUSTRIAL SITE']]; 
-	sId["E-F-CG----"] = [icn['GR.IN.IC.LANDFILL']]; 
-	sId["E-F-CH----"] = [icn['GR.IN.IC.PHARMACEUTICAL MANUFACTURER']]; 
-	sId["E-F-CI----"] = [icn['GR.IN.IC.CONTAMINATED HAZARDOUS WASTE SITE']]; 
-	sId["E-F-CJ----"] = [icn['GR.IN.IC.TOXIC RELEASE INVENTORY']]; 
-	sId["E-F-D-----"] = [icn['GR.IN.IC.EDUCATIONAL FACILITIES INFRASTRUCTURE']]; 
-	sId["E-F-DA----"] = [icn['GR.IN.IC.COLLEGE/UNIVERSITY']]; 
-	sId["E-F-DB----"] = [icn['GR.IN.IC.SCHOOL']]; 
-	sId["E-F-EA----"] = [icn['GR.IN.IC.ELECTRIC POWER'],icn['AC.M1.GENERATION STATION']]; 
-	sId["E-F-EB----"] = [icn['GR.IN.IC.NATURAL GAS FACILITY']]; 
-	sId["E-F-EE----"] = [icn['GR.IN.IC.PROPANE FACILITY']]; 
-	sId["E-F-F-----"] = [icn['GR.IN.IC.GOVERNMENT SITE INFRASTRUCTURE']]; 
-	sId["E-F-G-----"] = [icn['GR.IN.IC.MILITARY INFRASTRUCTURE']]; 
-	sId["E-F-GA----"] = [icn['GR.IN.IC.BASE'],icn['AC.M1.MILITARY ARMORY']]; 
-	sId["E-F-H-----"] = [icn['GR.IN.IC.POSTAL SERVICE INFRASTRUCTURE']]; 
-	sId["E-F-HA----"] = [icn['GR.IN.IC.POSTAL DISTRIBUTION CENTER']]; 
-	sId["E-F-HB----"] = [icn['GR.IN.IC.POST OFFICE']]; 
-	sId["E-F-I-----"] = [icn['GR.IN.IC.PUBLIC VENUES INFRASTRUCTURE']]; 
-	sId["E-F-IA----"] = [icn['GR.IN.IC.ENCLOSED FACITLITY (PUBLIC VENUE)']]; 
-	sId["E-F-IB----"] = [icn['GR.IN.IC.OPEN FACILITY (OPEN VENUE)']]; 
-	sId["E-F-IC----"] = [icn['GR.IN.IC.RECREATIONAL AREA']]; 
-	sId["E-F-ID----"] = [icn['GR.IN.IC.RELIGIOUS INSTITUTION']]; 
-	sId["E-F-J-----"] = [icn['GR.IN.IC.SPECIAL NEEDS INFRASTRUCTURE']]; 
-	sId["E-F-JA----"] = [icn['GR.IN.IC.ADULT DAY CARE']]; 
-	sId["E-F-JB----"] = [icn['GR.IN.IC.CHILD DAY CARE']]; 
-	sId["E-F-JC----"] = [icn['GR.IN.IC.ELDER CARE']]; 
-	sId["E-F-K-----"] = [icn['GR.IN.IC.TELECOMMUNICATIONS INFRASTRUCTURE']]; 
-	sId["E-F-KB----"] = [icn['GR.IN.IC.TELECOMMUNICATIONS TOWER']]; 
+	sId["E-O-EC----"] = [MS.scale(0.6,icn['GR.EQ.SENSOR']),icn['GR.M1.INTRUSION']];
+	sId["E-O-ED----"] = [MS.scale(0.6,icn['GR.EQ.SENSOR']),icn['GR.M1.NUCLEAR']];
+	sId["E-O-EE----"] = [MS.scale(0.6,icn['GR.EQ.SENSOR']),icn['GR.M1.RADIOLOGICAL']];
+	sId["E-F-A-----"] = [icn['GR.IN.IC.AGRICULTURE AND FOOD INFRASTRUCTURE']];
+	sId["E-F-AA----"] = [icn['GR.IN.IC.AGRICULTURAL LABORATORY']];
+	sId["E-F-AB----"] = [icn['GR.IN.IC.ANIMAL FEEDLOT']];
+	sId["E-F-AC----"] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.COMMERCIAL']];
+	sId["E-F-AD----"] = [icn['GR.IN.IC.FARM/RANCH']];
+	sId["E-F-AE----"] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.PRODUCTION']];
+	sId["E-F-AF----"] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.RETAIL']];
+	sId["E-F-AG----"] = [icn['GR.IN.IC.GRAIN STORAGE']];
+	sId["E-F-B-----"] = [icn['AC.IC.BANKING FINANCE AND INSURANCE INFRASTRUCTURE']];
+	sId["E-F-BA----"] = [icn['GR.IN.IC.ATM']];
+	sId["E-F-BB----"] = [icn['GR.IN.IC.BANK']];
+	sId["E-F-BC----"] = [icn['GR.IN.IC.BULLION STORAGE']];
+	sId["E-F-BD----"] = [icn['GR.IN.IC.FEDERAL RESERVE BANK']];
+	sId["E-F-BE----"] = [icn['GR.IN.IC.FINANCIAL EXCHANGE']];
+	sId["E-F-BF----"] = [icn['GR.IN.IC.FINANCIAL SERVICES, OTHER']];
+	sId["E-F-C-----"] = [icn['GR.IN.IC.COMMERCIAL INFRASTRUCTURE']];
+	sId["E-F-CA----"] = [icn['GR.IN.IC.CHEMICAL PLANT']];
+	sId["E-F-CB----"] = [icn['GR.IN.IC.FIREARMS MANUFACTURER']];
+	sId["E-F-CC----"] = [icn['GR.IN.IC.FIREARMS RETAILER']];
+	sId["E-F-CD----"] = [icn['GR.IN.IC.HAZARDOUS MATERIAL PRODUCTION']];
+	sId["E-F-CE----"] = [icn['GR.IN.IC.HAZARDOUS MATERIAL STORAGE']];
+	sId["E-F-CF----"] = [icn['GR.IN.IC.INDUSTRIAL SITE']];
+	sId["E-F-CG----"] = [icn['GR.IN.IC.LANDFILL']];
+	sId["E-F-CH----"] = [icn['GR.IN.IC.PHARMACEUTICAL MANUFACTURER']];
+	sId["E-F-CI----"] = [icn['GR.IN.IC.CONTAMINATED HAZARDOUS WASTE SITE']];
+	sId["E-F-CJ----"] = [icn['GR.IN.IC.TOXIC RELEASE INVENTORY']];
+	sId["E-F-D-----"] = [icn['GR.IN.IC.EDUCATIONAL FACILITIES INFRASTRUCTURE']];
+	sId["E-F-DA----"] = [icn['GR.IN.IC.COLLEGE/UNIVERSITY']];
+	sId["E-F-DB----"] = [icn['GR.IN.IC.SCHOOL']];
+	sId["E-F-EA----"] = [icn['GR.IN.IC.ELECTRIC POWER'],icn['AC.M1.GENERATION STATION']];
+	sId["E-F-EB----"] = [icn['GR.IN.IC.NATURAL GAS FACILITY']];
+	sId["E-F-EE----"] = [icn['GR.IN.IC.PROPANE FACILITY']];
+	sId["E-F-F-----"] = [icn['GR.IN.IC.GOVERNMENT SITE INFRASTRUCTURE']];
+	sId["E-F-G-----"] = [icn['GR.IN.IC.MILITARY INFRASTRUCTURE']];
+	sId["E-F-GA----"] = [icn['GR.IN.IC.BASE'],icn['AC.M1.MILITARY ARMORY']];
+	sId["E-F-H-----"] = [icn['GR.IN.IC.POSTAL SERVICE INFRASTRUCTURE']];
+	sId["E-F-HA----"] = [icn['GR.IN.IC.POSTAL DISTRIBUTION CENTER']];
+	sId["E-F-HB----"] = [icn['GR.IN.IC.POST OFFICE']];
+	sId["E-F-I-----"] = [icn['GR.IN.IC.PUBLIC VENUES INFRASTRUCTURE']];
+	sId["E-F-IA----"] = [icn['GR.IN.IC.ENCLOSED FACITLITY (PUBLIC VENUE)']];
+	sId["E-F-IB----"] = [icn['GR.IN.IC.OPEN FACILITY (OPEN VENUE)']];
+	sId["E-F-IC----"] = [icn['GR.IN.IC.RECREATIONAL AREA']];
+	sId["E-F-ID----"] = [icn['GR.IN.IC.RELIGIOUS INSTITUTION']];
+	sId["E-F-J-----"] = [icn['GR.IN.IC.SPECIAL NEEDS INFRASTRUCTURE']];
+	sId["E-F-JA----"] = [icn['GR.IN.IC.ADULT DAY CARE']];
+	sId["E-F-JB----"] = [icn['GR.IN.IC.CHILD DAY CARE']];
+	sId["E-F-JC----"] = [icn['GR.IN.IC.ELDER CARE']];
+	sId["E-F-K-----"] = [icn['GR.IN.IC.TELECOMMUNICATIONS INFRASTRUCTURE']];
+	sId["E-F-KB----"] = [icn['GR.IN.IC.TELECOMMUNICATIONS TOWER']];
 	sId["E-F-LA----"] = [icn['GR.IN.IC.AIR TRAFFIC CONTROL FACILITY']];
-	sId["G-M-BCB---"] = [icn['GR.IN.IC.BRIDGE']]; 
-	sId["E-F-LD----"] = [icn['GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE']]; 
-	sId["E-F-LE----"] = [icn['SE.IC.FERRY']]; 
-	sId["E-F-LF----"] = [icn['GR.IN.IC.HELICOPTER LANDING SITE']]; 
-	sId["W-S-ML----"] = [icn['GR.IN.IC.TRANSPORTATION INFRASTRUCTURE LOCK']]; 
-	sId["E-F-LH----"] = [icn['GR.IC.MAINTENANCE']]; 
-	sId["E-F-LJ----"] = [icn['GR.IC.RAILHEAD']]; 
-	sId["E-F-LK----"] = [icn['GR.IN.IC.REST STOP']]; 
-	sId["W-S-HPBA--"] = [icn['GR.IN.IC.TRANSPORTATION INFRASTRUCTURE SHIP ANCHORAGE']]; 
-	sId["E-F-LM----"] = [icn['GR.IN.IC.TOLL FACILITY']]; 
-	sId["G-S-PO----"] = [icn['GR.IN.IC.TRANSPORTATION INFRASTRUCTURE.TRAFFIC CONTROL POINT']]; 
-	sId["E-F-LO----"] = [icn['GR.IN.IC.TRAFFIC INSPECTION FACILITY']]; 
-	sId["E-F-LP----"] = [icn['GR.IN.IC.TUNNEL']]; 
-	sId["E-F-MA----"] = [icn['GR.IN.IC.CONTROL VALVE']]; 
-	sId["E-F-MB----"] = [icn['GR.IN.IC.DAM']]; 
-	sId["E-F-MC----"] = [icn['GR.IN.IC.DISCHARGE OUTFALL']]; 
-	sId["E-F-MD----"] = [icn['GR.IN.IC.GROUND WATER WELL']]; 
-	sId["E-F-ME----"] = [icn['GR.IN.IC.PUMPING STATION']]; 
-	sId["E-F-MF----"] = [icn['GR.IN.IC.RESERVOIR']]; 
-	sId["E-F-MG----"] = [icn['GR.IN.IC.STORAGE TOWER']]; 
-	sId["E-F-MH----"] = [icn['GR.IN.IC.SURFACE WATER INTAKE']]; 
+	sId["G-M-BCB---"] = [icn['GR.IN.IC.BRIDGE']];
+	sId["E-F-LD----"] = [icn['GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE']];
+	sId["E-F-LE----"] = [icn['SE.IC.FERRY']];
+	sId["E-F-LF----"] = [icn['GR.IN.IC.HELICOPTER LANDING SITE']];
+	sId["W-S-ML----"] = [icn['GR.IN.IC.TRANSPORTATION INFRASTRUCTURE LOCK']];
+	sId["E-F-LH----"] = [icn['GR.IC.MAINTENANCE']];
+	sId["E-F-LJ----"] = [icn['GR.IC.RAILHEAD']];
+	sId["E-F-LK----"] = [icn['GR.IN.IC.REST STOP']];
+	sId["W-S-HPBA--"] = [icn['GR.IN.IC.TRANSPORTATION INFRASTRUCTURE SHIP ANCHORAGE']];
+	sId["E-F-LM----"] = [icn['GR.IN.IC.TOLL FACILITY']];
+	sId["G-S-PO----"] = [icn['GR.IN.IC.TRANSPORTATION INFRASTRUCTURE.TRAFFIC CONTROL POINT']];
+	sId["E-F-LO----"] = [icn['GR.IN.IC.TRAFFIC INSPECTION FACILITY']];
+	sId["E-F-LP----"] = [icn['GR.IN.IC.TUNNEL']];
+	sId["E-F-MA----"] = [icn['GR.IN.IC.CONTROL VALVE']];
+	sId["E-F-MB----"] = [icn['GR.IN.IC.DAM']];
+	sId["E-F-MC----"] = [icn['GR.IN.IC.DISCHARGE OUTFALL']];
+	sId["E-F-MD----"] = [icn['GR.IN.IC.GROUND WATER WELL']];
+	sId["E-F-ME----"] = [icn['GR.IN.IC.PUMPING STATION']];
+	sId["E-F-MF----"] = [icn['GR.IN.IC.RESERVOIR']];
+	sId["E-F-MG----"] = [icn['GR.IN.IC.STORAGE TOWER']];
+	sId["E-F-MH----"] = [icn['GR.IN.IC.SURFACE WATER INTAKE']];
 	sId["E-F-MI----"] = [icn['GR.IN.IC.WASTEWATER TREATMENT FACILITY']];
 
 	return sId;
@@ -4380,12 +4380,12 @@ MS._getNumberProperties = function(properties,mapping){
 		'53':'Sea',
 		'54':'Subsurface',
 		'60':'Ground'};
-											
+
 	var functionid = properties.functionid = this.SIDC.substr(10,10);
 
 	var equipmentBottom = {110000:140,110100:140,110101:140,110102:140,110103:140,110200:140,110201:140,110202:140,110203:140,110300:140,110301:140,110302:140,110303:140,110400:135,110500:140,110501:140,110502:140,110503:140,110600:140,110601:140,110602:140,110603:140,110700:140,110701:140,110702:140,110703:140,110800:140,110801:140,110802:140,110803:140,110900:140,110901:140,110902:140,110903:140,111000:140,111001:140,111002:140,111003:140,111100:140,111101:140,111102:140,111103:140,111104:140,111105:140,111106:140,111107:140,111108:140,111109:140,111200:140,111201:140,111202:140,111203:140,111300:140,111301:140,111302:140,111303:140,111400:140,111401:140,111402:140,111403:140,111500:140,111501:140,111502:140,111503:140,111600:140,111601:140,111602:140,111603:140,111701:140,111702:140,111703:140,111800:140,111900:140,112000:140,120000:129,120100:129,120101:130,120102:130,120103:972.3621826171875,120104:130,120105:120,120106:120,120107:120,120108:130,120109:130,120110:140,120200:130,120201:130,120202:130,120203:130,120300:130,120301:130,120302:130,120303:130,130000:129,130100:115,130200:130,130300:130,130400:135,130500:120,130600:120,130700:120,130701:130,130800:130,130801:130,130900:120,130901:130,130902:130,131000:115,131001:130,131002:130,131003:140,131100:130,131101:130,131200:130,131300:130,131400:140,131500:140,131600:140,140100:130,140200:130,140300:130,140400:130,140500:130,140600:140,140601:140,140602:140,140603:140,140700:140,140800:140,140900:130,141000:130,141100:140,141200:130,141201:130,141202:130,150100:130,150200:140,160100:132.5,160101:132.5,160102:132.5,160103:132.5,160200:132.5,160201:132.5,160202:132.5,160203:132.5,160300:132.5,160301:132.5,160302:132.5,160303:132.5,160400:132.5,160401:132.5,160402:132.5,160403:132.5,160500:132.5,160501:132.5,160502:132.5,160503:132.5,160600:132.5,160601:132.5,160602:132.5,160603:132.5,160700:132.5,160701:132.5,160702:132.5,160703:132.5,160800:115,160900:115,170000:149.03125,170100:118.75,170200:133.21875,170300:135.21875,170400:118.75,170500:138.1875,170600:118.75,170700:118.75,170800:118,170900:118,171000:135,171100:135,180000:125,190000:129,190100:129,190200:129,190300:129,190400:129,190500:129,200100:140,200200:118.75,200300:120,200400:140,200500:132,200600:118.75,200700:118.75,200800:118.75,200900:119.36222839355469,201000:145,201100:120,201200:118,201300:124.36222076416016,201400:118.75,201500:140,201501:115,210100:122,210200:122,210300:122,210400:118.75,210500:122,220100:140,220200:136,220300:120,230000:135,230100:132.5,230200:120,240000:118.75};
 	if (symbolSet == 15 && equipmentBottom.hasOwnProperty(functionid.substr(0,6))){ properties.iconBottom = equipmentBottom[functionid.substr(0,6)];}
-	
+
 	properties.context = mapping.context[parseInt(this.SIDC.substr(2,1))];
 	properties.affiliation = affiliationMapping[standardIdentity2];
 	properties.dimension = dimensionMapping[symbolSet];
@@ -4400,7 +4400,7 @@ MS._getNumberProperties = function(properties,mapping){
 	if(symbolSet == '36' && this.alternateMedal == false)properties.fill = false;
 	//Sea own track
 	if(symbolSet == '30' && functionid.substr(0,6) == 150000)properties.frame = false;
-		
+
 	//Planned/Anticipated/Suspect symbols should have a dashed outline
 	if(status == '1' )properties.notpresent = MS.dashArrays.anticipated;
 	if(standardIdentity2 == '0' || standardIdentity2 == '2' || standardIdentity2 == '5')properties.notpresent = MS.dashArrays.pending;
@@ -4411,14 +4411,14 @@ MS._getNumberProperties = function(properties,mapping){
 	if(symbolSet == '35' && functionid.substr(0,6) == 140000)properties.notpresent = MS.dashArrays.pending;
 	if(symbolSet == '35' && functionid.substr(0,6) == 150000)properties.notpresent = MS.dashArrays.pending;
 
-	
+
 	//Should it have a Condition Bar
 	if(status == '2' || status == '3' || status == '4' || status == '5')properties.condition = mapping.status[parseInt(status)];
-	
-	//First save the dimensionType and affiliationType before we modifies it... 
+
+	//First save the dimensionType and affiliationType before we modifies it...
 	properties.baseDimension = properties.dimension;
 	properties.baseAffilation = properties.affiliation;
-	
+
 	//Joker and faker should have the shape of friendly
 	if(standardIdentity2 == '5' && standardIdentity1 == '1')properties.joker = true;
 	if(standardIdentity2 == '6' && standardIdentity1 == '1')properties.faker = true;
@@ -4427,28 +4427,28 @@ MS._getNumberProperties = function(properties,mapping){
 	}
 
 	if(symbolSet=='00')properties.dimensionUnknown = true;
-	
+
 	//If battle dimension is unknown, standard identity is Exersize and other than Unknown we should not have a symbol
 	if(symbolSet=='00' && standardIdentity1 == '1' && properties.affiliation != 'Unknown') properties.affiliation = '';
-	
-	//Ground Equipment should have the same geometry as sea Friend... 
-	//Signal INTELLIGENCE Ground should have the same geometry as sea Friend... 
+
+	//Ground Equipment should have the same geometry as sea Friend...
+	//Signal INTELLIGENCE Ground should have the same geometry as sea Friend...
 	if(symbolSet == '15' || symbolSet == '52' )properties.dimension = mapping.dimension[2];;
-	
+
 	//Setting up Headquarters/task force/dummy
 	if(['1','3','5','7'].indexOf(headquartersTaskForceDummy) > -1)properties.feintDummy = true;
 	if(['2','3','6','7'].indexOf(headquartersTaskForceDummy) > -1)properties.headquarters = true;
 	if(['4','5','6','7'].indexOf(headquartersTaskForceDummy) > -1)properties.taskForce = true;
-	
+
 	//Setting up Echelon/Mobility/Towed Array Amplifier
 	if(echelonMobility <= 30){
 		properties.echelon = mapping.echelonMobility[echelonMobility];
-	}			
+	}
 	if(echelonMobility >= 30){
 		properties.mobility = mapping.echelonMobility[echelonMobility];
 	}
-	
-	//Civilian stuff	
+
+	//Civilian stuff
 	if(
 		(symbolSet == '01' && functionid.substring(0,2)=='12')||
 		(symbolSet == '05' && functionid.substring(0,2)=='12')||
@@ -4457,7 +4457,7 @@ MS._getNumberProperties = function(properties,mapping){
 		(symbolSet == '30' && functionid.substring(0,2)=='14')||
 		(symbolSet == '35' && functionid.substring(0,2)=='12')
 	){properties.civilian = true;}
-	
+
 	return properties;
 }
 MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
@@ -4519,7 +4519,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['130200'] = [icn['AR.I.UNDERWATER DECOY DSymbol']];
 		sId['140000'] = [icn['AR.I.MANUAL TRACK']];
 
-		
+
 		sIdm1['01'] = [icn['AIR.M1.ATTACK']];
 		sIdm1['02'] = [icn['AIR.M1.BOMBER']];
 		sIdm1['03'] = [icn['AIR.M1.CARGO']];
@@ -4571,7 +4571,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sIdm2['09'] = [icn['AIR.M2.MEDIUM RANGE']];
 		sIdm2['10'] = [icn['AIR.M2.LONG RANGE']];
 		sIdm2['11'] = [icn['AIR.M2.DOWNLINKED']];
-	}	
+	}
 
 //Air Missile
 	if(symbolSet == "02" ){
@@ -4602,9 +4602,9 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sIdm2['14'] = [icn['AIR.MISSILE.M2.INTERMEDIATE RANGE']];
 		sIdm2['15'] = [icn['AIR.MISSILE.M2.LONG RANGE']];
 		sIdm2['16'] = [icn['SPACE.MISSILE.M2.SPACE']];
-		
+
 	}
-		
+
 //Space
 	if(symbolSet == "05" ){
 		sId['110000'] = [icn['SP.I.MILITARY']];
@@ -4916,13 +4916,13 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['201100'] = [icn['SE.IC.LAW ENFORCEMENT VESSEL']];
 		sId['201200'] = [icn['GR.IC.FF.US MARSHALS SERVICE']];
 		sId['201300'] = [icn['ST.IC.INTERNAL SECURITY FORCE']];
-		
+
 		sIdm1['01'] = [icn['GR.M1.AIRMOBILE/AIR ASSAULT']];
 		sIdm1['02'] = [icn['GR.M1.AREA']];
 		sIdm1['03'] = [icn['GR.M1.ATTACK']];
 		sIdm1['04'] = [icn['GR.M1.BIOLOGICAL']];
 		sIdm1['05'] = [icn['GR.M1.BORDER']];
-		sIdm1['06'] = [icn['GR.M1.BRIDGING']]; 
+		sIdm1['06'] = [icn['GR.M1.BRIDGING']];
 		sIdm1['07'] = [icn['GR.M1.CHEMICAL']];
 		sIdm1['08'] = [icn['GR.M1.CLOSE PROTECTION']];
 		sIdm1['09'] = [icn['GR.M1.COMBAT']];
@@ -4995,8 +4995,8 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sIdm1['76'] = [icn['GR.M1.RANGER']];
 		sIdm1['77'] = [icn['GR.M1.SUPPORT']];
 		sIdm1['78'] = [icn['GR.M1.AVIATION']];
-		
-		
+
+
 		sIdm2['01'] = [icn['GR.M2.AIRBORNE']];
 		sIdm2['02'] = [icn['GR.M2.ARCTIC']];
 		sIdm2['03'] = [icn['GR.M2.BATTLE DAMAGE REPAIR']];
@@ -5054,7 +5054,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sIdm2['55'] = [icn['GR.M2.REFUEL']];
 		sIdm2['56'] = [icn['GR.M2.UTILITY']];
 		sIdm2['57'] = [icn['GR.M2.COMBAT SEARCH AND RESCUE']];
-	}		
+	}
 
 //Land civilian individuals/organization
 	if(symbolSet == "11" ){
@@ -5069,7 +5069,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['110800'] = [icn['ST.IC.SPY']];
 		sId['110900'] = [icn['ST.IC.COMPOSITE LOSS']];
 		sId['111000'] = [icn['GR.IC.EMERGENCY MEDICAL OPERATION']];
-		
+
 		sIdm1['01'] = [icn['ST.M1.ASSASSINATION']];
 		sIdm1['02'] = [icn['ST.M1.EXECUTION (WRONGFUL KILLING)']];
 		sIdm1['03'] = [icn['ST.M1.MURDER']];
@@ -5097,7 +5097,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 
 		sIdm2['01'] = [icn['ST.M2.LEADER OR LEADERSHIP']];
 
-	}	
+	}
 
 //Land Equipment
 	if(symbolSet == "15" ){
@@ -5274,7 +5274,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['160800'] = [icn['ST.IC.KNOWN INSURGENT VEHICLE']];
 		sId['160900'] = [icn['ST.IC.KNOWN INSURGENT VEHICLE'],icn['ST.M1.DRUG']];
 		sId['170000'] = [icn['GR.IC.FF.LAW ENFORCEMENT']];
-		sId['170100'] = [icn['GR.IC.BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF) (DEPARTMENT OF JUSTICE)']]; 
+		sId['170100'] = [icn['GR.IC.BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF) (DEPARTMENT OF JUSTICE)']];
 		sId['170200'] = [icn['GR.IC.FF.BORDER PATROL']];
 		sId['170300'] = [icn['GR.IC.FF.CUSTOMS SERVICE']];
 		sId['170400'] = [icn['GR.IC.DRUG ENFORCEMENT AGENCY (DEA)']];
@@ -5320,7 +5320,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['220200'] = [icn['GR.EQ.SENSOR EMPLACED']];
 		sId['220300'] = [icn['GR.EQ.RADAR']];
 		sId['230000'] = [icn['GR.IC.FF.EMERGENCY OPERATION']];
-		sId['230100'] = [icn['GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE'],icn['GR.M1.MEDEVAC']]; 
+		sId['230100'] = [icn['GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE'],icn['GR.M1.MEDEVAC']];
 		sId['230200'] = [icn['GR.IC.FIRE PROTECTION']];
 		sId['240000'] = [icn['SP.I.MANUAL TRACK']];
 
@@ -5363,9 +5363,9 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['111902'] = [icn['GR.EQ.TENT'],icn['GR.M1.TRAINING CAMP']];
 		sId['112000'] = [icn['GR.IN.IC.INDUSTRIAL SITE'],icn['GR.IN.IC.WAREHOUSE/STORAGE FACILITY']];  //'Military/Civilian.Warehouse/Storage Facility';
 		sId['112100'] = [icn['GR.IC.FF.LAW ENFORCEMENT']];
-		sId['112101'] = [icn['GR.IC.BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF) (DEPARTMENT OF JUSTICE)']]; 
+		sId['112101'] = [icn['GR.IC.BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF) (DEPARTMENT OF JUSTICE)']];
 		sId['112102'] = [icn['GR.IC.FF.BORDER PATROL']];
-		sId['112103'] = [icn['GR.IC.FF.CUSTOMS SERVICE']]; 
+		sId['112103'] = [icn['GR.IC.FF.CUSTOMS SERVICE']];
 		sId['112104'] = [icn['GR.IC.DRUG ENFORCEMENT AGENCY (DEA)']];
 		sId['112105'] = [icn['GR.IC.FF.DEPARTMENT OF JUSTICE (DOJ)']];
 		sId['112106'] = [icn['GR.IC.FEDERAL BUREAU OF INVESTIGATION (FBI)']];
@@ -5382,13 +5382,13 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['120100'] = [icn['GR.IN.IC.AGRICULTURE AND FOOD INFRASTRUCTURE']];
 		sId['120101'] = [icn['GR.IN.IC.AGRICULTURAL LABORATORY']];
 		sId['120102'] = [icn['GR.IN.IC.ANIMAL FEEDLOT']];
-		sId['120103'] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.COMMERCIAL']]; 
+		sId['120103'] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.COMMERCIAL']];
 		sId['120104'] = [icn['GR.IN.IC.FARM/RANCH']];
-		sId['120105'] = [icn['ST.IC.FOOD DISTRIBUTION']]; 
-		sId['120106'] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.PRODUCTION']]; 
-		sId['120107'] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.RETAIL']]; 
+		sId['120105'] = [icn['ST.IC.FOOD DISTRIBUTION']];
+		sId['120106'] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.PRODUCTION']];
+		sId['120107'] = [icn['ST.IC.FOOD DISTRIBUTION'],icn['AC.M1.RETAIL']];
 		sId['120108'] = [icn['GR.IN.IC.GRAIN STORAGE']];
-		sId['120200'] = [icn['AC.IC.BANKING FINANCE AND INSURANCE INFRASTRUCTURE']]; 
+		sId['120200'] = [icn['AC.IC.BANKING FINANCE AND INSURANCE INFRASTRUCTURE']];
 		sId['120201'] = [icn['GR.IN.IC.ATM']];
 		sId['120202'] = [icn['GR.IN.IC.BANK']];
 		sId['120203'] = [icn['GR.IN.IC.BULLION STORAGE']];
@@ -5412,7 +5412,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['120402'] = [icn['GR.IN.IC.SCHOOL']];
 		sId['120500'] = [MS.scale(1.5,icn['GR.IN.IC.ELECTRIC POWER'])];
 		sId['120501'] = [icn['GR.IN.IC.ELECTRIC POWER']];
-		sId['120502'] = [icn['GR.IN.IC.ELECTRIC POWER'],icn['AC.M1.GENERATION STATION']]; 
+		sId['120502'] = [icn['GR.IN.IC.ELECTRIC POWER'],icn['AC.M1.GENERATION STATION']];
 		sId['120503'] = [icn['GR.IN.IC.NATURAL GAS FACILITY']];
 		sId['120504'] = [MS.scale(1.5,icn['GR.IC.FF.CLASS III'])];
 		sId['120505'] = [icn['GR.IC.FF.CLASS III']];
@@ -5422,7 +5422,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['120701'] = [icn['GR.IC.FF.MEDICAL']];
 		sId['120702'] = [icn['GR.IC.FF.MEDICAL'],icn['GR.IC.FF.MEDICAL TREATMENT FACILITY']];
 		sId['120800'] = [icn['GR.IN.IC.MILITARY INFRASTRUCTURE']];
-		sId['120801'] = [icn['GR.IN.IC.BASE'],icn['AC.M1.MILITARY ARMORY']]; 
+		sId['120801'] = [icn['GR.IN.IC.BASE'],icn['AC.M1.MILITARY ARMORY']];
 		sId['120802'] = [icn['GR.IN.IC.BASE']];
 		sId['120900'] = [icn['GR.IN.IC.POSTAL SERVICE INFRASTRUCTURE']];
 		sId['120901'] = [icn['GR.IN.IC.POSTAL DISTRIBUTION CENTER']];
@@ -5443,11 +5443,11 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['121300'] = [MS.scale(1.5,icn['GR.IC.TRANSPORTATION'])];
 		sId['121301'] = [icn['GR.IC.TRANSPORTATION'],icn['GR.IC.AIRPORT OF DEBARKATION']];
 		sId['121302'] = [icn['GR.IN.IC.AIR TRAFFIC CONTROL FACILITY']];
-		sId['121303'] = [icn['GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE']]; 
-		sId['121304'] = [icn['SE.IC.FERRY']]; 
+		sId['121303'] = [icn['GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE']];
+		sId['121304'] = [icn['SE.IC.FERRY']];
 		sId['121305'] = [icn['GR.IN.IC.HELICOPTER LANDING SITE']];
-		sId['121306'] = [icn['GR.IC.MAINTENANCE']]; 
-		sId['121307'] = [icn['GR.IC.RAILHEAD']]; 
+		sId['121306'] = [icn['GR.IC.MAINTENANCE']];
+		sId['121307'] = [icn['GR.IC.RAILHEAD']];
 		sId['121308'] = [icn['GR.IN.IC.REST STOP']];
 		sId['121309'] = [icn['GR.IC.TRANSPORTATION'],icn['GR.M1.NAVAL']];
 		sId['121310'] = [icn['GR.IC.NAVAL'],icn['GR.M1.YARD']];
@@ -5492,7 +5492,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sIdm2['07'] = [icn['GR.IN.M2.NUCLEAR MATERIAL STORAGE']];
 		sIdm2['08'] = [icn['GR.IN.M2.WEAPONS GRADE PRODUCTION']];
 	}
-	
+
 //Sea
 	if(symbolSet == "30" ){
 		sId['110000'] = [icn['SE.IC.MILITARY']];
@@ -5694,7 +5694,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sIdm2['15'] = [icn['SU.M2.REMOTELY PILOTED']];
 		sIdm2['16'] = [icn['SU.M2.EXPENDABLE']];
 
-	}				
+	}
 
 //Mine Warfare
 	if(symbolSet == "36" ){
@@ -5763,8 +5763,8 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['190300'] = [icn['SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT - FLOATING']];
 		sId['200000'] = [icn['SU.IC.ENVIRONMENTAL REPORT LOCATION']];
 		sId['210000'] = [icn['SU.IC.DIVE REPORT LOCATION']];
-	
-	}		
+
+	}
 
 //Activities
 	if(symbolSet == "40" ){
@@ -5794,7 +5794,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['110122'] = [icn['ST.IC.SABOTAGE']];
 		sId['110123'] = [MS.translate(0,10,MS.scale(0.8,icn['AC.IC.CRIMINAL.ACTIVITY.INCIDENT'])),icn['AC.M1.THREAT']];
 		sId['110200'] = [icn['ST.IC.BOMB']];
-		sId['110201'] = [icn['ST.IC.BOMB'],icn['AC.M1.THREAT']]; 
+		sId['110201'] = [icn['ST.IC.BOMB'],icn['AC.M1.THREAT']];
 		sId['110300'] = [icn['ST.IC.IED']];
 		sId['110301'] = [icn['ST.IC.EXPLOSION'],icn['ST.IC.IED']];
 		sId['110302'] = [MS.translate(0,15,MS.scale(0.7,[icn['ST.IC.EXPLOSION'],icn['ST.IC.IED']])),icn['ST.M1.PREMATURE']];
@@ -5833,9 +5833,9 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['131200'] = [icn['GR.IC.FF.EMERGENCY OPERATION']];
 		sId['131201'] = [MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']),icn['AC.M1.EMERGENCY COLLECTION EVACUATION POINT']];
 		sId['131202'] = [icn['ST.IC.FOOD DISTRIBUTION']];
-		sId['131203'] = [MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']),icn['AC.M1.EMERGENCY INCIDENT COMMAND CENTER']]; 
-		sId['131204'] = [MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']),icn['AC.M1.EMERGENCY OPERATIONS CENTER']]; 
-		sId['131205'] = [icn['AC.IC.EMERGENCY PUBLIC INFORMATION CENTER']]; 
+		sId['131203'] = [MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']),icn['AC.M1.EMERGENCY INCIDENT COMMAND CENTER']];
+		sId['131204'] = [MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']),icn['AC.M1.EMERGENCY OPERATIONS CENTER']];
+		sId['131205'] = [icn['AC.IC.EMERGENCY PUBLIC INFORMATION CENTER']];
 		sId['131206'] = [MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']),icn['AC.M1.EMERGENCY SHELTER']];
 		sId['131207'] = [MS.scale(0.7,icn['GR.IC.FF.EMERGENCY OPERATION']),icn['AC.M1.EMERGENCY STAGING AREA']];
 		sId['131208'] = [icn['GR.IC.FF.SUPPLY'],icn['GR.IC.WATER']];
@@ -5847,9 +5847,9 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['131305'] = [icn['AC.IC.PHARMACY']];
 		sId['131306'] = [icn['AC.IC.TRIAGE']];
 		sId['131400'] = [icn['GR.IC.FIRE PROTECTION']];
-		sId['131401'] = [icn['AC.IC.FIRE HYDRANT']]; 
+		sId['131401'] = [icn['AC.IC.FIRE HYDRANT']];
 		sId['131402'] = [MS.scale(1.5,icn['GR.IC.FIRE PROTECTION'])];
-		sId['131403'] = [icn['AC.IC.OTHER WATER SUPPLY LOCATION']]; 
+		sId['131403'] = [icn['AC.IC.OTHER WATER SUPPLY LOCATION']];
 		sId['131500'] = [icn['GR.IC.FF.LAW ENFORCEMENT']];
 		sId['131501'] = [icn['GR.IC.BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF) (DEPARTMENT OF JUSTICE)']];
 		sId['131502'] = [icn['GR.IC.FF.BORDER PATROL']];
@@ -5891,8 +5891,8 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['150114'] = [icn['AC.IC.TOXIC INFECTIOUS MATERIAL']];
 		sId['150115'] = [icn['AC.IC.UNEXPLODED ORDNANCE']];
 		sId['160000'] = [icn['GR.IC.TRANSPORTATION']];
-		sId['160100'] = [icn['ST.IC.HIJACKING (AIRPLANE)']]; 
-		sId['160200'] = [icn['ST.IC.HIJACKING (BOAT)']]; 
+		sId['160100'] = [icn['ST.IC.HIJACKING (AIRPLANE)']];
+		sId['160200'] = [icn['ST.IC.HIJACKING (BOAT)']];
 		sId['160300'] = [icn['GR.EQ.TRAIN LOCOMOTIVE']];
 		sId['160400'] = [icn['ST.IC.KNOWN INSURGENT VEHICLE']];
 		sId['160500'] = [icn['ST.IC.EXPLOSION'],MS.scale(0.7,icn['ST.IC.KNOWN INSURGENT VEHICLE'])];
@@ -5939,15 +5939,15 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sIdm1['16'] = [icn['ST.M1.ACCIDENT']];
 		sIdm1['17'] = [icn['ST.M1.INCIDENT']];
 		sIdm1['18'] = [icn['ST.M1.THEFT']];
-	}	
-	
+	}
+
 //Signals Intelligence
 	if(	symbolSet == "50" || symbolSet == "51" || symbolSet == "52" || symbolSet == "53" || symbolSet == "54" ){
 		//sId['110000'] = 'Signal Intercept';
 		sId['110100'] = [icn['SI.IC.COMMUNICATIONS']];
 		sId['110200'] = [icn['AR.I.JAMMER / ELECTRONIC COUNTER-MEASURES']];
 		sId['110300'] = [icn['SI.IC.RADAR']];
-	
+
 		//sIdm1['00'] = 'Unspecified';
 		sIdm1['01'] = [icn['SI.M1.ANTI-AIRCRAFT FIRE CONTROL']];
 		sIdm1['02'] = [icn['SI.M1.AIRBORNE SEARCH AND BOMBING']];
@@ -6013,9 +6013,9 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sIdm1['62'] = [icn['SI.M1.UNKNOWN']];
 		sIdm1['63'] = [icn['SI.M1.VIDEO REMOTING']];
 		sIdm1['64'] = [icn['SI.M1.EXPERIMENTAL']];
-	
+
 	}
-	
+
 //Cyberspace
 	if(symbolSet == "60" ){
 		//sId['110000'] = 'Botnet';
@@ -6067,7 +6067,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['160600'] = [icn['CY.IC.POWER OUTAGE']];
 		sId['160700'] = [icn['CY.IC.NETWORK OUTAGE']];
 		sId['160800'] = [icn['CY.IC.SERVICE OUTAGE']];
-		sId['160900'] = [icn['CY.IC.DEVICE OUTAGE']];	
+		sId['160900'] = [icn['CY.IC.DEVICE OUTAGE']];
 	}
 	return {icn:sId,m1:sIdm1,m2:sIdm2}
 };
