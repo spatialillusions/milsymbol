@@ -126,7 +126,7 @@ var MS = new function(){
 	this.setColorMode('OffWhite',this.colorMode('rgb(239, 239, 239)','rgb(239, 239, 239)','rgb(239, 239, 239)','rgb(239, 239, 239)','rgb(239, 239, 239)'));
 	this.setColorMode('None',this.colorMode(false,false,false,false,false));
 
-	this._markerParts = new Array();
+	this._markerParts = [];
 	this.getMarkerParts = function(){
 		var a = this._markerParts;
 		return a;
@@ -463,14 +463,14 @@ var MS = new function(){
 		icn['GR.IC.AIR DEFENSE H/MAD HAWK'] = {type:'text',stroke:false,x:100,y:101,fontsize:20,text:'H'};
 		icn['GR.IC.AIR DEFENSE H/MAD PATRIOT'] = {type:'text',stroke:false,x:100,y:101,fontsize:20,text:'P'};
 		icn['GR.IC.AIR DEFENSE MISSILE'] = {type:'path',d:'M90,120 L90,90 C90,80 110,80 110,90 L110,120',fill:false};
-		icn['GR.IC.AIR DEFENSE TARGETING UNIT'] = {type:'path',d:'M80,100 l20,-15 0,15 20,-15 M75,80 C75,100 85,115 105,115',fill:false},{type:'circle',cx:75,cy:110,r:5};
+		icn['GR.IC.AIR DEFENSE TARGETING UNIT'] = [{type:'path',d:'M80,100 l20,-15 0,15 20,-15 M75,80 C75,100 85,115 105,115',fill:false},{type:'circle',cx:75,cy:110,r:5}];
 		icn['GR.IC.AIR DEFENSE THEATER MISSILE DEFENSE UNIT'] =text('TMD');
 		icn['GR.IC.AIR DEFENSE SHORT RANGE'] =text('SRD');
 		icn['GR.IC.AIR DEFENSE STINGER'] = [{type:'path',fill:false,d:'m 85,80 30,0 c 5.54,0 10,4.46 10,10 l 0,5 c 0,5.54 -4.46,10 -10,10 l -30,0 c -5.54,0 -10,-4.46 -10,-10 l 0,-5 c 0,-5.54 4.46,-10 10,-10 z'},{type:'text',stroke:false,x:100,y:101,fontsize:20,text:'S'}];
 		icn['GR.IC.AIR DEFENSE VULCAN'] = [{type:'path',fill:false,d:'m 85,80 30,0 c 5.54,0 10,4.46 10,10 l 0,5 c 0,5.54 -4.46,10 -10,10 l -30,0 c -5.54,0 -10,-4.46 -10,-10 l 0,-5 c 0,-5.54 4.46,-10 10,-10 z'},{type:'text',stroke:false,x:100,y:101,fontsize:20,text:'V'}];
 		icn['GR.IC.AIR DEFENSE GUN UNIT'] = {type:'path',d:'M100,80 L100,120 M92,90 l0,20 M108,90 l0,20',fill:false};
 		icn['GR.IC.AIR TRAFFIC SERVICES'] = {type:'path',d:'m 100,95 0,25 m 7.5,-32.5 c 0,4.1 -3.4,7.5 -7.5,7.5 -4.1,0 -7.5,-3.4 -7.5,-7.5 0,-4.1 3.4,-7.5 7.5,-7.5 4.1,0 7.5,3.4 7.5,7.5 z M 60,85 l 40,15 40,-15 0,30 -40,-15 -40,15 z'};
-		icn['GR.IC.AIRPORT OF DEBARKATION'] = {type:'path',fill:false,d:'M80,70 l40,0 M80,80 l25,-25 M100,80 l0,40 M81,90.5 l38,19 M81,109.5 l38,-19'},{type:'circle',cx:100,cy:100,r:20,fill:false};
+		icn['GR.IC.AIRPORT OF DEBARKATION'] = [{type:'path',fill:false,d:'M80,70 l40,0 M80,80 l25,-25 M100,80 l0,40 M81,90.5 l38,19 M81,109.5 l38,-19'},{type:'circle',cx:100,cy:100,r:20,fill:false}];
 		icn['GR.IC.ALLIED COMMAND EUROPE RAPID REACTION CORPS (ARRC)'] =text('ARRC');
 		icn['GR.IC.ALLIED COMMAND OPERATIONS'] =text('ACO');
 		icn['GR.IC.AMMUNITION'] = {type:'path',d:'m 90,117 0,-25 c 0,-15 20,-15 20,0 l 0,25 m -25,0 30,0',fill:false};
@@ -809,11 +809,11 @@ var MS = new function(){
 		icn['GR.EQ.MACHINE GUN'] = {type:'path',d:'m 100,60 0,80 M 85,75 100,60 115,75 M 80,140 120,140',fill:false};
 		icn['GR.EQ.GRENADE LAUNCHER'] = [icn['GR.EQ.RIFLE'],{type:'circle',cx:100,cy:90,r:15,fill:false}];
 		icn['GR.EQ.FLAME THROWER'] = {type:'path',fill:false,d:'m 90,135 0,-70 c 0,-15 20,-15 20,0'};
-		icn['GR.EQ.AIR DEFENCE GUN'] = [{type:'path',d:'m 85,140 30,0 c 0,-20 -30,-20 -30,0 z m 15,-80 0,65 m 15,-45 0,40 m -30,-40 0,40',fill:false}];if(!_STD2525){icn['GR.EQ.AIR DEFENCE GUN'].push({type:'path',d:'M 85,75 100,60 115,75',fill:false})};
+		icn['GR.EQ.AIR DEFENCE GUN'] = [{type:'path',d:'m 85,140 30,0 c 0,-20 -30,-20 -30,0 z m 15,-80 0,65 m 15,-45 0,40 m -30,-40 0,40',fill:false}];if(!_STD2525){icn['GR.EQ.AIR DEFENCE GUN'].push({type:'path',d:'M 85,75 100,60 115,75',fill:false});}
 		icn['GR.EQ.ANTITANK GUN'] = {type:'path',d:'m 85,140 15,-15 15,15 m -15,-80 0,65 m -15,-45 0,40 m 30,-40 0,40',fill:false};
 		icn['GR.EQ.DIRECT FIRE GUN'] = {type:'path',d:'m 100,60 0,80 m 15,-60 0,40 m -30,-40 0,40',fill:false};
 		icn['GR.EQ.RECOILLESS GUN'] = {type:'path',d:'m 85,75 15,-15 15,15 m 0,5 0,40 m -30,-40 0,40 m 15,-60 0,80',fill:false};
-		icn['GR.EQ.HOWITZER'] = [{type:'circle',cx:100,cy:130,r:10,fill:false},{type:'path',d:'m 115,80 0,40 m -30,-40 0,40 m 15,-60 0,60',fill:false}];if(!_STD2525){icn['GR.EQ.HOWITZER'].push({type:'path',d:'M 85,75 100,60 115,75',fill:false})};
+		icn['GR.EQ.HOWITZER'] = [{type:'circle',cx:100,cy:130,r:10,fill:false},{type:'path',d:'m 115,80 0,40 m -30,-40 0,40 m 15,-60 0,60',fill:false}];if(!_STD2525){icn['GR.EQ.HOWITZER'].push({type:'path',d:'M 85,75 100,60 115,75',fill:false});}
 		icn['GR.EQ.HOWITZER TRACKED'] = {type:'path',d:'M 70,120 l 60,0 c10,0 10,10 0,10 l -60,0 c-10,0 -10,-10 0,-10',fill:false};
 		icn['GR.EQ.MISSILE LAUNCHER'] = {type:'path',d:'m 100,140 0,-80 m -15,80 0,-65 c 0,-20 30,-20 30,0 l 0,65',fill:false};
 		icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'] = {type:'path',d:'m 85,140 30,0 c 0,-20 -30,-20 -30,0 z m 15,-15 0,-65 m -15,80 0,-65 c 0,-20 30,-20 30,0 l 0,65',fill:false};
@@ -821,7 +821,7 @@ var MS = new function(){
 		icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR'] = [{type:'text',stroke:false,x:68,y:110,fontsize:25,text:'E'},{type:'text',stroke:false,x:132,y:110,fontsize:25,text:'R'}];
 		icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR THEATRE'] = {type:'text',stroke:false,x:100,y:145,fontsize:30,text:'T'};
 		icn['GR.EQ.ANTITANK MISSILE LAUNCHER'] = {type:'path',d:'m 85,140 15,-15 15,15 M 85,130 85,75 c 0,-20 30,-20 30,0 l 0,55 m -15,-5 0,-65',fill:false};
-		icn['GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER'] = [icn['GR.EQ.MISSILE LAUNCHER']];if(_STD2525){icn['GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER'].push({type:'path',d:'m 85,140 30,0',fill:false})};
+		icn['GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER'] = [icn['GR.EQ.MISSILE LAUNCHER']];if(_STD2525){icn['GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER'].push({type:'path',d:'m 85,140 30,0',fill:false});}
 		icn['GR.EQ.MORTAR'] = [{type:'path',d:'m 100,60 0,60 M 85,75 100,60 115,75',fill:false },{type:'circle',cx:100,cy:130,r:10,fill:false}];
 		icn['GR.EQ.SINGLE ROCKET LAUNCHER'] = {type:'path',d:'m 85,75 15,-15 15,15 m -15,-5 0,70 M 85,85 100,70 115,85',fill:false};
 		icn['GR.EQ.MULTIPLE ROCKET LAUNCHER'] = {type:'path',d:'m 115,90 0,40 m -30,-40 0,40 m 0,-55 15,-15 15,15 m -15,-5 0,70 M 85,85 100,70 115,85',fill:false};
@@ -832,7 +832,7 @@ var MS = new function(){
 		icn['GR.EQ.LIMITED CROSS-COUNTRY'] = [{type:'path',d:'m 70,130 60,0',fill:false },{type:'circle',cx:75,cy:135,r:5,fill:false},{type:'circle',cx:125,cy:135,r:5,fill:false}];
 		icn['GR.EQ.CROSS-COUNTRY'] = [{type:'path',d:'m 70,130 60,0',fill:false},{type:'circle',cx:75,cy:135,r:5,fill:false},{type:'circle',cx:100,cy:135,r:5,fill:false},{type:'circle',cx:125,cy:135,r:5,fill:false}];
 		icn['GR.EQ.ARMOURED FIGHTING VEHICLE'] = {type:'path',d:'m 70,100 30,-30 30,30 -30,30 z m 60,-30 0,60 m -60,-60 0,60 0,0',fill:false};
-		icn['GR.EQ.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL'] = [icn['GR.EQ.ARMOURED FIGHTING VEHICLE']];if(numberSIDC){icn['GR.EQ.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL'].push([{type:'text',stroke:false,x:100,y:110,fontsize:30,text:'C2'},{type:'path',d:'m 80,90 20,15 0,-10 20,15',fill:false}])};
+		icn['GR.EQ.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL'] = [icn['GR.EQ.ARMOURED FIGHTING VEHICLE']];if(numberSIDC){icn['GR.EQ.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL'].push([{type:'text',stroke:false,x:100,y:110,fontsize:30,text:'C2'},{type:'path',d:'m 80,90 20,15 0,-10 20,15',fill:false}]);}
 		icn['GR.EQ.ARMOURED PERSONNEL CARRIER'] = {type:'path',fill:false,d:'m 70,80 30,-10 30,10 0,0 m -60,50 60,0 m 0,-60 0,60 m -60,-60 0,60 0,0'};
 		icn['GR.EQ.ARMOURED PERSONNEL CARRIER COMBAT SERVICE SUPPORT VEHICLE'] = [icn['GR.EQ.ARMOURED PERSONNEL CARRIER'],{type:'path',d:'m 70,972.4 60,0',fill:false}];
 		icn['GR.EQ.ARMOURED PERSONNEL CARRIER ENGINEER RECON VEHICLE'] = {type:'path',fill:false,d:'M 130,80 70,130'};
@@ -2078,7 +2078,7 @@ var MS = new function(){
 						}else{
 							if(ctx.getLineDash().length !== 0){
 								ctx.setLineDash([]);
-							};
+							}
 						}
 						
 						if(instruction[i].fill){ctx.fillStyle = instruction[i].fill;}
@@ -2182,7 +2182,7 @@ function basegeometry(){
 	geom.stroke = frameColor;
 	geom.strokewidth = (this.size>=10?this.strokeWidth:10);
 	//Add a dashed outline to the frame if we are using monocolor and the status is not present.	
-	if((this.monoColor != '' || !this.fill) && this.properties.notpresent) geom.strokedasharray = this.properties.notpresent;
+	if((this.monoColor !== '' || !this.fill) && this.properties.notpresent) geom.strokedasharray = this.properties.notpresent;
 	drawArray2.push(geom);
 	//Space Modifiers
 	if(this.properties.space){
@@ -2233,7 +2233,7 @@ function statusmodifier(){
 	var y2 =  bbox.y2;
 
 	if(this.properties.condition){
-		if(this.properties.fill && this.monoColor == ""){
+		if(this.properties.fill && this.monoColor === ""){
 			var colors = {	"FullyCapable"	:'rgb(0,255,0)',
 							"Damaged"		:'rgb(255,255,0)',
 							"Destroyed"		:'rgb(255,0,0)',
@@ -2456,7 +2456,7 @@ function modifier(){
 				bbox : {y2 :bbox.y2+10}},
 			"Long towed Array": {g :[{type:'path',fill:this.colors.frameColor[this.properties.affiliation],d:'M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M105,0 l-10,0 0,10 10,0 z M75,0 l5,5 -5,5 -5,-5 z  M125,0 l5,5 -5,5 -5,-5 z'}],
 				bbox : {y2 :bbox.y2+10}}
-		}
+		};
 		if(mobilities.hasOwnProperty(this.properties.mobility)){
 			drawArray1.push({type:'translate',x:0,y:bbox.y2,draw:mobilities[this.properties.mobility].g});
 			gbbox = MS.bboxMax(gbbox,mobilities[this.properties.mobility].bbox);
@@ -2492,7 +2492,7 @@ function directionarrow(){
 	var bbox = this.properties.baseGeometry.bbox;
 	var gbbox = new MS.bbox();
 	if(this.infoFields){
-		if(this.direction && this.direction!=''){
+		if(this.direction && this.direction !== ''){
 			//Movement indicator
 			//The length of the lines in a direction of movement indicator is a bit discussed but I use one frame height. (=100px)
 			var arrowLength = 95;
@@ -2506,7 +2506,7 @@ function directionarrow(){
 				arrow = [{type:'translate',x:0,y:bbox.y2,draw:arrow},{type:'path',fill:this.colors.frameColor[this.properties.affiliation],stroke:this.colors.frameColor[this.properties.affiliation],strokewidth:this.strokeWidth,d:'M 100,' + (bbox.y2) +  'l0,' + 100}];
 				gbbox.y2 += bbox.y2+this.strokeWidth;
 			}
-			drawArray2.push(arrow)
+			drawArray2.push(arrow);
 		}
 	}
 	return MS.buildingBlock(drawArray1,drawArray2,gbbox);
@@ -2520,14 +2520,14 @@ function textfields(){
 	var drawArray2 = [];
 	var bbox = this.properties.baseGeometry.bbox;
 	var fontSize = this.infoSize;
-	var fontFamily = "Arial"
+	var fontFamily = "Arial";
 
 	var gbbox = new MS.bbox();
 	var spaceTextIcon = 20;//The distance between the Icon and the labels
 	
 	//Function to calculate the width of a string
 	function strWidth(str){
-		if(str.length == 0)return 0;
+		if(str.length === 0)return 0;
 		//We need to calculate how long our string will be in pixels
 		var strWidths = {" ":9,"!":10,"\"":15,"#":17,"$":17,"%":27,"&":22,"'":8,"(":10,")":10,"*":12,"+":18,",":9,"-":10,".":9,"/":9,"0":17,"1":17,"2":17,"3":17,"4":17,"5":17,"6":17,"7":17,"8":17,"9":17,":":10,";":10,"<":18,"=":18,">":18,"?":19,"@":30,"A":22,"B":22,"C":22,"D":22,"E":21,"F":19,"G":24,"H":22,"I":9,"J":17,"K":22,"L":19,"M":25,"N":22,"O":24,"P":21,"Q":24,"R":22,"S":21,"T":19,"U":22,"V":21,"W":29,"X":21,"Y":21,"Z":19,"[":10,"]":10,"^":18,"_":17,"`":10,"a":17,"b":19,"c":17,"d":19,"e":17,"f":10,"g":19,"h":19,"i":9,"j":9,"k":17,"l":9,"m":27,"n":19,"o":19,"p":19,"q":19,"r":12,"s":17,"t":10,"u":19,"v":17,"w":24,"x":17,"y":17,"z":15,"{":12,"|":9,"}":12,"~":18};
 		var w = 0;
@@ -2558,14 +2558,15 @@ function textfields(){
 			gStrings.R1 = this.uniqueDesignation;
 			gStrings.R2 = this.iffSif;
 			gStrings.R3 = this.type;
+      var a;
 			if(this.speed||this.altitudeDepth){
-				var a = new Array;
+				a = [];
 				this.speed?a.push(this.speed):'';
 				this.location?a.push(this.altitudeDepth):'';
 				gStrings.R4 = (a.join(" "));
 			}
 			if(this.staffComments||this.location){
-				var a = new Array;
+				a = [];
 				this.staffComments?a.push(this.staffComments):'';
 				this.additionalInformation?a.push(this.additionalInformation):'';
 				gStrings.R5 = (a.join(" "));
@@ -2575,13 +2576,13 @@ function textfields(){
 		if(isNaN(this.SIDC) || this.properties.dimension == "Ground"){
 			gStrings.L1 = this.dtg;
 			if(this.altitudeDepth||this.location){
-				var a = new Array;
+				a = [];
 				this.altitudeDepth?a.push(this.altitudeDepth):'';
 				this.location?a.push(this.location):'';
 				gStrings.L2 = (a.join(" "));
 			}
 			if(this.type||this.platformType||this.commonIdentifier){
-				var a = new Array;
+				a = [];
 				this.type?a.push(this.type):'';
 				this.platformType?a.push(this.platformType):'';
 				this.commonIdentifier?a.push(this.commonIdentifier):'';
@@ -2592,14 +2593,14 @@ function textfields(){
 			gStrings.R1 = this.reinforcedReduced;
 			gStrings.R2 = this.staffComments;
 			if(this.additionalInformation||this.equipmentTeardownTime){
-				var a = new Array;
+				a = [];
 				this.additionalInformation?a.push(this.additionalInformation):'';
 				this.equipmentTeardownTime?a.push(this.equipmentTeardownTime):'';
 				gStrings.R3 = (a.join(" "));
 			}						
 			gStrings.R4 = this.higherFormation;
 			if(this.evaluationRating||this.combatEffectiveness||this.signatureEquipment||this.hostile||this.iffSif){
-				var a = new Array;
+				a = [];
 				this.evaluationRating?a.push(this.evaluationRating):'';
 				this.combatEffectiveness?a.push(this.combatEffectiveness):'';
 				this.signatureEquipment?a.push(this.signatureEquipment):'';
@@ -2614,13 +2615,13 @@ function textfields(){
 			gStrings.R2 = this.type;
 			gStrings.R3 = this.iffSif;
 			if(this.staffComments||this.location){
-				var a = new Array;
+				a = [];
 				this.staffComments?a.push(this.staffComments):'';
 				this.additionalInformation?a.push(this.additionalInformation):'';
 				gStrings.R4 = (a.join(" "));
 			}
 			if(this.location||this.speed){
-				var a = new Array;
+				a = [];
 				this.location?a.push(this.location):'';
 				this.speed?a.push(this.speed):'';
 				gStrings.R5 = (a.join(" "));
