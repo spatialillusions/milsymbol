@@ -2552,13 +2552,12 @@ function textfields(){
 		}
 
 		var gStrings = {L1:"",L2:"",L3:"",L4:"",L5:"",R1:"",R2:"",R3:"",R4:"",R5:""};//Text information on left and right sIde.
-
+		var a;
 		//Air & Space (They should be different but we skip that at the moment) TODO
 		if(!isNaN(this.SIDC) && this.properties.dimension == "Air"){
 			gStrings.R1 = this.uniqueDesignation;
 			gStrings.R2 = this.iffSif;
 			gStrings.R3 = this.type;
-      var a;
 			if(this.speed||this.altitudeDepth){
 				a = [];
 				if(this.speed)a.push(this.speed);
@@ -2728,7 +2727,7 @@ function icon(){
 			//Sea mine exercise has stuff outsIde the boundingbox... 
 			if(["WMGX--","WMMX--","WMFX--","WMX---","WMSX--"].indexOf(this.properties.functionid)!=-1){
 				gbbox.y1 = 10;
-				if(this.properties.affiliation != "Unknown"){gbbox.x2 = this.properties.baseGeometry.bbox.x2+20;};
+				if(this.properties.affiliation != "Unknown"){gbbox.x2 = this.properties.baseGeometry.bbox.x2+20;}
 			}
 			
 			//Try to fetch the icn form the cache
@@ -2883,15 +2882,15 @@ function icon(){
 MS._getLetterProperties = function(properties, mapping){
 	this.SIDC = this.SIDC.toUpperCase();
 
-	var codingscheme 		= this.SIDC.charAt(0)!=''?this.SIDC.charAt(0):'-';
-	var affiliation 			= this.SIDC.charAt(1)!=''?this.SIDC.charAt(1):'-';
-	var battledimension 		= this.SIDC.charAt(2)!=''?this.SIDC.charAt(2):'-';
-	var status 				= this.SIDC.charAt(3)!=''?this.SIDC.charAt(3):'-';
-	var functionid 			= properties.functionid	= this.SIDC.substr(4,6)!=''?this.SIDC.substr(4,6):'------';
-	var symbolmodifier11 	= this.SIDC.charAt(10)!=''?this.SIDC.charAt(10):'-';
-	var symbolmodifier12 	= this.SIDC.charAt(11)!=''?this.SIDC.charAt(11):'-';
-	var countrycode 		= this.SIDC.substr(12,2)!=''?this.SIDC.substr(12,2):'--';
-	var orderofbattle 		= this.SIDC.charAt(14)!=''?this.SIDC.charAt(14):'-';
+	var codingscheme 		= this.SIDC.charAt(0)!==''?this.SIDC.charAt(0):'-';
+	var affiliation 			= this.SIDC.charAt(1)!==''?this.SIDC.charAt(1):'-';
+	var battledimension 		= this.SIDC.charAt(2)!==''?this.SIDC.charAt(2):'-';
+	var status 				= this.SIDC.charAt(3)!==''?this.SIDC.charAt(3):'-';
+	var functionid 			= properties.functionid	= this.SIDC.substr(4,6)!==''?this.SIDC.substr(4,6):'------';
+	var symbolmodifier11 	= this.SIDC.charAt(10)!==''?this.SIDC.charAt(10):'-';
+	var symbolmodifier12 	= this.SIDC.charAt(11)!==''?this.SIDC.charAt(11):'-';
+	var countrycode 		= this.SIDC.substr(12,2)!==''?this.SIDC.substr(12,2):'--';
+	var orderofbattle 		= this.SIDC.charAt(14)!==''?this.SIDC.charAt(14):'-';
 
 	var equipmentBottom = {'E-----':0,'EWM---':140,'EWMA--':140,'EWMAS-':140,'EWMASR':140,'EWMASE':140,'EWMAI-':140,'EWMAIR':140,'EWMAIE':140,'EWMAL-':140,'EWMALR':140,'EWMALE':140,'EWMAT-':153,'EWMATR':153,'EWMATE':153,'EWMS--':140,'EWMSS-':140,'EWMSI-':140,'EWMSL-':140,'EWMT--':140,'EWMTL-':140,'EWMTM-':140,'EWMTH-':140,'EWS---':140,'EWSL--':140,'EWSM--':140,'EWSH--':140,'EWX---':140,'EWXL--':140,'EWXM--':140,'EWXH--':140,'EWT---':140,'EWTL--':140,'EWTM--':140,'EWTH--':140,'EWR---':140,'EWRL--':140,'EWRM--':140,'EWRH--':140,'EWZ---':140,'EWZL--':140,'EWZM--':140,'EWZH--':140,'EWO---':140,'EWOL--':140,'EWOM--':140,'EWOH--':140,'EWH---':140,'EWHL--':140,'EWHLS-':130,'EWHM--':140,'EWHMS-':130,'EWHH--':140,'EWHHS-':130,'EWG---':140,'EWGL--':140,'EWGM--':140,'EWGH--':140,'EWGR--':140,'EWD---':140,'EWDL--':140,'EWDLS-':130,'EWDM--':140,'EWDMS-':130,'EWDH--':140,'EWDHS-':130,'EWA---':140,'EWAL--':140,'EWAM--':140,'EWAH--':140,'EV----':129,'EVA---':129,'EVAT--':130,'EVATL-':130,'EVATLR':130,'EVATM-':130,'EVATMR':130,'EVATH-':130,'EVATHR':130,'EVAA--':130,'EVAAR-':130,'EVAI--':130,'EVAC--':130,'EVAS--':972.3621826171875,'EVAL--':140,'EVU---':130,'EVAB--':130,'EVUS--':140,'EVUSL-':140,'EVUSM-':140,'EVUSH-':140,'EVUL--':140,'EVUX--':140,'EVUR--':130,'EVUTL-':130,'EVUTH-':130,'EVUA--':130,'EVUAA-':130,'EVE---':129,'EVEB--':130,'EVEE--':130,'EVEC--':140,'EVEM--':130,'EVEMA-':130,'EVEMV-':130,'EVEMT-':130,'EVEML-':140,'EVEA--':120,'EVEAA-':130,'EVEAT-':130,'EVEMSM':130,'EVED--':130,'EVEDA-':130,'EVES--':130,'EVER--':130,'EVEH--':140,'EVEF--':140,'EVD---':140,'EVT--':130,'EVC---':119,'EVCA--':132.5,'EVCAL-':132.5,'EVCAM-':132.5,'EVCAH-':132.5,'EVCO--':132.5,'EVCOL-':132.5,'EVCOM-':132.5,'EVCOH-':132.5,'EVCM--':132.5,'EVCML-':132.5,'EVCMM-':132.5,'EVCMH-':132.5,'EVCU--':132.5,'EVCUL-':132.5,'EVCUM-':132.5,'EVCUH-':132.5,'EVCJ--':132.5,'EVCJL-':132.5,'EVCJM-':132.5,'EVCJH-':132.5,'EVCT--':132.5,'EVCTL-':132.5,'EVCTM-':132.5,'EVCTH-':132.5,'EVCF--':132.5,'EVCFL-':132.5,'EVCFM-':132.5,'EVCFH-':132.5,'EVM---':125,'EVS---':129,'EVST--':129,'EVSR--':129,'EVSC--':129,'EVSP--':129,'EVSW--':129,'ES----':140,'ESR---':120,'ESE---':136,'EXI---':119,'EXL---':145,'EXN---':140,'EXF---':135,'EXM---':130,'EXMC--':122,'EXML--':122};
 	if (equipmentBottom.hasOwnProperty(functionid)){ properties.iconBottom = equipmentBottom[functionid];}
@@ -3055,7 +3054,7 @@ MS._getLetterProperties = function(properties, mapping){
 	}
 	
 	return properties;
-}
+};
 MS._getLetterSIDCicn = function(icn,_STD2525){
 	var sId = [];
 	// SPACE =========================================================================
@@ -4398,7 +4397,7 @@ MS._getNumberProperties = function(properties,mapping){
 	//SymbolSets that are Installations
 	if(symbolSet == '20')properties.installation = true;
 	//Sea Mines with MEDAL icn
-	if(symbolSet == '36' && this.alternateMedal == false)properties.fill = false;
+	if(symbolSet == '36' && this.alternateMedal === false)properties.fill = false;
 	//Sea own track
 	if(symbolSet == '30' && functionid.substr(0,6) == 150000)properties.frame = false;
 		
@@ -4434,7 +4433,7 @@ MS._getNumberProperties = function(properties,mapping){
 	
 	//Ground Equipment should have the same geometry as sea Friend... 
 	//Signal INTELLIGENCE Ground should have the same geometry as sea Friend... 
-	if(symbolSet == '15' || symbolSet == '52' )properties.dimension = mapping.dimension[2];;
+	if(symbolSet == '15' || symbolSet == '52' )properties.dimension = mapping.dimension[2];
 	
 	//Setting up Headquarters/task force/dummy
 	if(['1','3','5','7'].indexOf(headquartersTaskForceDummy) > -1)properties.feintDummy = true;
@@ -4460,7 +4459,7 @@ MS._getNumberProperties = function(properties,mapping){
 	){properties.civilian = true;}
 	
 	return properties;
-}
+};
 MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 	var sId = {};
 	var sIdm1 = {};
@@ -5141,7 +5140,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['111002'] = [icn['GR.EQ.MISSILE LAUNCHER'],icn['GR.EQ.INTERMEDIATE RANGE']];
 		sId['111003'] = [icn['GR.EQ.MISSILE LAUNCHER'],icn['GR.EQ.LONG RANGE']];
 		sId['111100'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR']];
-		sId['111101'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'],icn['GR.EQ.SHORT RANGE']];;
+		sId['111101'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'],icn['GR.EQ.SHORT RANGE']];
 		sId['111102'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'],icn['GR.EQ.SHORT RANGE'],icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR']];
 		sId['111103'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'],icn['GR.EQ.SHORT RANGE'],icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR']];
 		sId['111104'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'],icn['GR.EQ.INTERMEDIATE RANGE']];
@@ -6070,5 +6069,5 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['160800'] = [icn['CY.IC.SERVICE OUTAGE']];
 		sId['160900'] = [icn['CY.IC.DEVICE OUTAGE']];	
 	}
-	return {icn:sId,m1:sIdm1,m2:sIdm2}
+	return {icn:sId,m1:sIdm1,m2:sIdm2};
 };
