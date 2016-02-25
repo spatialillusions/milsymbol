@@ -2131,11 +2131,11 @@ var MS = new function(){
 					}
 				}
 			}
-		}
+		};
 		this.asCanvas = function(){
 			var canvas = document.createElement("canvas");
 			//TODO fix the pixel ratio
-			var ratio = 1//window.devicePixelRatio || 1;
+			var ratio = 1;//window.devicePixelRatio || 1;
 			canvas.width = this.width*ratio;
 			canvas.height = this.height*ratio;
 			//canvas.style.width = this.width +'px';
@@ -2156,7 +2156,7 @@ var MS = new function(){
 			this[key] = options[key];
 		}
 		return this;
-	}
+	};
 
 };
 
@@ -2167,7 +2167,7 @@ function basegeometry(){
 	var drawArray2 = [];
 	var frameColor = this.colors.frameColor[this.properties.affiliation];
 	//Clone the base geometry
-	var geom = {type:this.properties.baseGeometry.g.type}
+	var geom = {type:this.properties.baseGeometry.g.type};
 	switch (geom.type){
 		case 'path':
     		geom.d = this.properties.baseGeometry.g.d;
@@ -2506,7 +2506,7 @@ function directionarrow(){
 				arrow = [{type:'translate',x:0,y:bbox.y2,draw:arrow},{type:'path',fill:this.colors.frameColor[this.properties.affiliation],stroke:this.colors.frameColor[this.properties.affiliation],strokewidth:this.strokeWidth,d:'M 100,' + (bbox.y2) +  'l0,' + 100}];
 				gbbox.y2 += bbox.y2+this.strokeWidth;
 			}
-			drawArray2.push(arrow)
+			drawArray2.push(arrow);
 		}
 	}
 	return MS.buildingBlock(drawArray1,drawArray2,gbbox);
@@ -2520,7 +2520,7 @@ function textfields(){
 	var drawArray2 = [];
 	var bbox = this.properties.baseGeometry.bbox;
 	var fontSize = this.infoSize;
-	var fontFamily = "Arial"
+	var fontFamily = "Arial";
 
 	var gbbox = new MS.bbox();
 	var spaceTextIcon = 20;//The distance between the Icon and the labels
