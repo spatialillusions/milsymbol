@@ -2707,7 +2707,7 @@ function icon(){
 	if(this.icon){
 		var fillColor = this.colors.fillColor[this.properties.affiliation];
 		//So we don't happend to use civilian colors
-		var neutralColor = this.colors.fillColor["Neutral"];
+		var neutralColor = this.colors.fillColor.Neutral;
 		var iconColor = this.colors.iconColor[this.properties.affiliation];
 		var iconFillColor = this.colors.iconFillColor[this.properties.affiliation];
 		var none = this.colors.none[this.properties.affiliation];
