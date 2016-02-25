@@ -2727,7 +2727,7 @@ function icon(){
 			//Sea mine exercise has stuff outsIde the boundingbox...
 			if(["WMGX--","WMMX--","WMFX--","WMX---","WMSX--"].indexOf(this.properties.functionid)!=-1){
 				gbbox.y1 = 10;
-				if(this.properties.affiliation != "Unknown"){gbbox.x2 = this.properties.baseGeometry.bbox.x2+20;};
+				if(this.properties.affiliation != "Unknown"){gbbox.x2 = this.properties.baseGeometry.bbox.x2+20;}
 			}
 
 			//Try to fetch the icn form the cache
