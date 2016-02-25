@@ -2077,15 +2077,15 @@ var MS = new function(){
 							ctx.setLineDash(instruction[i].strokedasharray.split(','));
 						}else{
 							if(ctx.getLineDash().length != 0){
-								ctx.setLineDash([])
-							};
+								ctx.setLineDash([]);
+							}
 						}
 
 						if(instruction[i].fill){ctx.fillStyle = instruction[i].fill;}
 						//fill is set to false, make it transparent
 						if(!instruction[i].fill){ctx.fillStyle = 'rgba(0,0,0,0)';}
 
-						if(instruction[i].fillopacity !== undefined){ctx.globalAlpha = instruction[i].fillopacity}
+						if(instruction[i].fillopacity !== undefined){ctx.globalAlpha = instruction[i].fillopacity;}
 
 						switch (instruction[i].type){
 							case 'path':
@@ -2116,14 +2116,14 @@ var MS = new function(){
 								ctx.translate(x, y);
 								ctx.rotate(instruction[i].degree * Math.PI / 180);
 								ctx.translate(-x, -y);
-								this.processCanvasInstructions.call(this,instruction[i].draw, ctx)
+								this.processCanvasInstructions.call(this,instruction[i].draw, ctx);
 								ctx.translate(x, y);
 								ctx.rotate(-instruction[i].degree * Math.PI / 180);
 								ctx.translate(-x, -y);
 								break;
 							case 'scale':
 								ctx.scale(instruction[i].factor,instruction[i].factor);
-								this.processCanvasInstructions.call(this,instruction[i].draw, ctx)
+								this.processCanvasInstructions.call(this,instruction[i].draw, ctx);
 								ctx.scale(1/instruction[i].factor,1/instruction[i].factor);
 								break;
 						}
@@ -2203,7 +2203,7 @@ function basegeometry(){
 	//Add a dashed outline to the frame if the status is not present.
 	if(this.fill && this.frame && this.properties.notpresent && !this.properties.unframed){
 		//Clone the base geometry
-		var geom = {type:this.properties.baseGeometry.g.type}
+		var geom = {type:this.properties.baseGeometry.g.type};
 		switch (geom.type){
 			case 'path':
 				geom.d = this.properties.baseGeometry.g.d;
@@ -2456,7 +2456,7 @@ function modifier(){
 				bbox : {y2 :bbox.y2+10}},
 			"Long towed Array": {g :[{type:'path',fill:this.colors.frameColor[this.properties.affiliation],d:'M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M105,0 l-10,0 0,10 10,0 z M75,0 l5,5 -5,5 -5,-5 z  M125,0 l5,5 -5,5 -5,-5 z'}],
 				bbox : {y2 :bbox.y2+10}}
-		}
+		};
 		if(mobilities.hasOwnProperty(this.properties.mobility)){
 			drawArray1.push({type:'translate',x:0,y:bbox.y2,draw:mobilities[this.properties.mobility].g});
 			gbbox = MS.bboxMax(gbbox,mobilities[this.properties.mobility].bbox);
