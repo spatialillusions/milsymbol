@@ -3054,7 +3054,7 @@ MS._getLetterProperties = function(properties, mapping){
 	}
 
 	return properties;
-}
+};
 MS._getLetterSIDCicn = function(icn,_STD2525){
 	var sId = [];
 	// SPACE =========================================================================
@@ -4433,7 +4433,7 @@ MS._getNumberProperties = function(properties,mapping){
 
 	//Ground Equipment should have the same geometry as sea Friend...
 	//Signal INTELLIGENCE Ground should have the same geometry as sea Friend...
-	if(symbolSet == '15' || symbolSet == '52' )properties.dimension = mapping.dimension[2];;
+	if(symbolSet == '15' || symbolSet == '52' )properties.dimension = mapping.dimension[2];
 
 	//Setting up Headquarters/task force/dummy
 	if(['1','3','5','7'].indexOf(headquartersTaskForceDummy) > -1)properties.feintDummy = true;
@@ -4459,7 +4459,7 @@ MS._getNumberProperties = function(properties,mapping){
 	){properties.civilian = true;}
 
 	return properties;
-}
+};
 MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 	var sId = {};
 	var sIdm1 = {};
@@ -5140,7 +5140,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['111002'] = [icn['GR.EQ.MISSILE LAUNCHER'],icn['GR.EQ.INTERMEDIATE RANGE']];
 		sId['111003'] = [icn['GR.EQ.MISSILE LAUNCHER'],icn['GR.EQ.LONG RANGE']];
 		sId['111100'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR']];
-		sId['111101'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'],icn['GR.EQ.SHORT RANGE']];;
+		sId['111101'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'],icn['GR.EQ.SHORT RANGE']];
 		sId['111102'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'],icn['GR.EQ.SHORT RANGE'],icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR']];
 		sId['111103'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'],icn['GR.EQ.SHORT RANGE'],icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR']];
 		sId['111104'] = [icn['GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR'],icn['GR.EQ.INTERMEDIATE RANGE']];
@@ -6069,5 +6069,5 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['160800'] = [icn['CY.IC.SERVICE OUTAGE']];
 		sId['160900'] = [icn['CY.IC.DEVICE OUTAGE']];
 	}
-	return {icn:sId,m1:sIdm1,m2:sIdm2}
+	return {icn:sId,m1:sIdm1,m2:sIdm2};
 };
