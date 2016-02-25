@@ -2552,22 +2552,22 @@ function textfields(){
 		}
 
 		var gStrings = {L1:"",L2:"",L3:"",L4:"",L5:"",R1:"",R2:"",R3:"",R4:"",R5:""};//Text information on left and right sIde.
-
+		var a;
 		//Air & Space (They should be different but we skip that at the moment) TODO
 		if(!isNaN(this.SIDC) && this.properties.dimension == "Air"){
 			gStrings.R1 = this.uniqueDesignation;
 			gStrings.R2 = this.iffSif;
 			gStrings.R3 = this.type;
 			if(this.speed||this.altitudeDepth){
-				var a = new Array;
-				this.speed?a.push(this.speed):'';
-				this.location?a.push(this.altitudeDepth):'';
+				a = [];
+				if(this.speed)a.push(this.speed);
+				if(this.location)a.push(this.altitudeDepth);
 				gStrings.R4 = (a.join(" "));
 			}
 			if(this.staffComments||this.location){
-				var a = new Array;
-				this.staffComments?a.push(this.staffComments):'';
-				this.additionalInformation?a.push(this.additionalInformation):'';
+				a = [];
+				if(this.staffComments)a.push(this.staffComments);
+				if(this.additionalInformation)a.push(this.additionalInformation);
 				gStrings.R5 = (a.join(" "));
 			}
 		}
@@ -2575,16 +2575,16 @@ function textfields(){
 		if(isNaN(this.SIDC) || this.properties.dimension == "Ground"){
 			gStrings.L1 = this.dtg;
 			if(this.altitudeDepth||this.location){
-				var a = new Array;
-				this.altitudeDepth?a.push(this.altitudeDepth):'';
-				this.location?a.push(this.location):'';
+				a = [];
+				if(this.altitudeDepth)a.push(this.altitudeDepth);
+				if(this.location)a.push(this.location);
 				gStrings.L2 = (a.join(" "));
 			}
 			if(this.type||this.platformType||this.commonIdentifier){
-				var a = new Array;
-				this.type?a.push(this.type):'';
-				this.platformType?a.push(this.platformType):'';
-				this.commonIdentifier?a.push(this.commonIdentifier):'';
+				a = [];
+				if(this.type)a.push(this.type);
+				if(this.platformType)a.push(this.platformType);
+				if(this.commonIdentifier)a.push(this.commonIdentifier);
 				gStrings.L3 = (a.join(" "));
 			}
 			gStrings.L4 = this.uniqueDesignation;
@@ -2592,19 +2592,19 @@ function textfields(){
 			gStrings.R1 = this.reinforcedReduced;
 			gStrings.R2 = this.staffComments;
 			if(this.additionalInformation||this.equipmentTeardownTime){
-				var a = new Array;
-				this.additionalInformation?a.push(this.additionalInformation):'';
-				this.equipmentTeardownTime?a.push(this.equipmentTeardownTime):'';
+				a = [];
+				if(this.additionalInformation)a.push(this.additionalInformation);
+				if(this.equipmentTeardownTime)a.push(this.equipmentTeardownTime);
 				gStrings.R3 = (a.join(" "));
 			}
 			gStrings.R4 = this.higherFormation;
 			if(this.evaluationRating||this.combatEffectiveness||this.signatureEquipment||this.hostile||this.iffSif){
-				var a = new Array;
-				this.evaluationRating?a.push(this.evaluationRating):'';
-				this.combatEffectiveness?a.push(this.combatEffectiveness):'';
-				this.signatureEquipment?a.push(this.signatureEquipment):'';
-				this.hostile?a.push(this.hostile):'';
-				this.iffSif?a.push(this.iffSif):'';
+				a = [];
+				if(this.evaluationRating)a.push(this.evaluationRating);
+				if(this.combatEffectiveness)a.push(this.combatEffectiveness);
+				if(this.signatureEquipment)a.push(this.signatureEquipment);
+				if(this.hostile)a.push(this.hostile);
+				if(this.iffSif)a.push(this.iffSif);
 				gStrings.R5 = (a.join(" "));
 			}
 		}
@@ -2614,15 +2614,15 @@ function textfields(){
 			gStrings.R2 = this.type;
 			gStrings.R3 = this.iffSif;
 			if(this.staffComments||this.location){
-				var a = new Array;
-				this.staffComments?a.push(this.staffComments):'';
-				this.additionalInformation?a.push(this.additionalInformation):'';
+				a = [];
+				if(this.staffComments)a.push(this.staffComments);
+				if(this.additionalInformation)a.push(this.additionalInformation);
 				gStrings.R4 = (a.join(" "));
 			}
 			if(this.location||this.speed){
-				var a = new Array;
-				this.location?a.push(this.location):'';
-				this.speed?a.push(this.speed):'';
+				a = [];
+				if(this.location)a.push(this.location);
+				if(this.speed)a.push(this.speed);
 				gStrings.R5 = (a.join(" "));
 			}
 		}
