@@ -126,7 +126,7 @@ var MS = new function(){
 	this.setColorMode('OffWhite',this.colorMode('rgb(239, 239, 239)','rgb(239, 239, 239)','rgb(239, 239, 239)','rgb(239, 239, 239)','rgb(239, 239, 239)'));
 	this.setColorMode('None',this.colorMode(false,false,false,false,false));
 
-	this._markerParts = new Array();
+	this._markerParts = [];
 	this.getMarkerParts = function(){
 		var a = this._markerParts;
 		return a;
