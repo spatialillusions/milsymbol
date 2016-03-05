@@ -2504,7 +2504,7 @@ function directionarrow(){
 
 			if(this.properties.baseDimension == 'Ground'){
 				arrow = [{type:'translate',x:0,y:bbox.y2,draw:arrow},{type:'path',fill:this.colors.frameColor[this.properties.affiliation],stroke:this.colors.frameColor[this.properties.affiliation],strokewidth:this.strokeWidth,d:'M 100,' + (bbox.y2) +  'l0,' + 100}];
-				gbbox.y2 += bbox.y2+this.strokeWidth;
+				gbbox.y2 += bbox.y2 + parseFloat(this.strokeWidth);
 			}
 			drawArray2.push(arrow);
 		}
