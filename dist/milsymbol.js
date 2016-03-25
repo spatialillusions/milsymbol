@@ -2349,7 +2349,7 @@ function modifier(){
 	if(this.properties.echelon){
 		var installationPadding = this.properties.installation?15:0;
 		var echelons = {
-			"Team/Crew": {g :[{type:'circle',cx:100,cy:bbox.y1-25,r:15},{type:'path',d:'M80,'+(bbox.y1-15)+'L120,'+(bbox.y1-35)}],
+			"Team/Crew": {g :[{type:'circle',cx:100,cy:bbox.y1-20,r:15},{type:'path',d:'M80,'+(bbox.y1-10)+'L120,'+(bbox.y1-30)}],
 				bbox : {y1:(bbox.y1-40-installationPadding)}
 			},
 			"Squad": {g :[{type:'circle',fill:this.colors.frameColor[this.properties.affiliation],cx:100,cy:bbox.y1-20,r:7.5}],
@@ -2361,49 +2361,49 @@ function modifier(){
 			"Platoon/detachment": {g :[{type:'circle',fill:this.colors.frameColor[this.properties.affiliation],cx:100,cy:bbox.y1-20,r:7.5},{type:'circle',fill:this.colors.frameColor[this.properties.affiliation],cx:70,cy:bbox.y1-20,r:7.5},{type:'circle',fill:this.colors.frameColor[this.properties.affiliation],cx:130,cy:bbox.y1-20,r:7.5}],
 				bbox : {y1:(bbox.y1-20-7.5-installationPadding)}
 			},
-			"Company/battery/troop": {g :[{type:'path',d:'M100,'+(bbox.y1-15)+'L100,'+(bbox.y1-40)}],
+			"Company/battery/troop": {g :[{type:'path',d:'M100,'+(bbox.y1-10)+'L100,'+(bbox.y1-35)}],
 				bbox : {y1:(bbox.y1-40-installationPadding)}
 			},
-			"Battalion/squadron": {g :[{type:'path',d:'M90,'+(bbox.y1-15)+'L90,'+(bbox.y1-40)},{type:'path',d:'M110,'+(bbox.y1-15)+'L110,'+(bbox.y1-40)}],
+			"Battalion/squadron": {g :[{type:'path',d:'M90,'+(bbox.y1-10)+'L90,'+(bbox.y1-35)},{type:'path',d:'M110,'+(bbox.y1-10)+'L110,'+(bbox.y1-35)}],
 				bbox : {y1:(bbox.y1-40-installationPadding)}
 			},
-			"Regiment/group": {g :[{type:'path',d:'M100,'+(bbox.y1-15)+'L100,'+(bbox.y1-40)},{type:'path',d:'M120,'+(bbox.y1-15)+'L120,'+(bbox.y1-40)},{type:'path',d:'M80,'+(bbox.y1-15)+'L80,'+(bbox.y1-40)}],
+			"Regiment/group": {g :[{type:'path',d:'M100,'+(bbox.y1-10)+'L100,'+(bbox.y1-35)},{type:'path',d:'M120,'+(bbox.y1-10)+'L120,'+(bbox.y1-35)},{type:'path',d:'M80,'+(bbox.y1-10)+'L80,'+(bbox.y1-35)}],
 				bbox : {y1:(bbox.y1-40-installationPadding)}
 			},
-			"Brigade": {g :[{type:'path',d:'M87.5,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25'}],
+			"Brigade": {g :[{type:'path',d:'M87.5,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25'}],
 				bbox : {y1:(bbox.y1-15-25-installationPadding)}
 			},
-			"Division": {g :[{type:'path',d:'M70,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25   M105,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25'}],
+			"Division": {g :[{type:'path',d:'M70,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25   M105,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25'}],
 				bbox : {
 					y1:(bbox.y1-15-25-installationPadding),
 					x1:70,
 					x2:130}
 			},
-			"Corps/MEF": {g :[{type:'path',d:'M52.5,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25    M87.5,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25    M122.5,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25'}],
+			"Corps/MEF": {g :[{type:'path',d:'M52.5,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25    M87.5,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25    M122.5,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25'}],
 				bbox : {
 					y1:(bbox.y1-15-25-installationPadding),
 					x1:52.5,
 					x2:147.5}
 			},
-			"Army": {g :[{type:'path',d:'M35,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25   M70,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25   M105,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25    M140,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25'}],
+			"Army": {g :[{type:'path',d:'M35,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25   M70,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25   M105,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25    M140,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25'}],
 				bbox : {
 					y1:(bbox.y1-15-25-installationPadding),
 					x1:35,
 					x2:165}
 			},
-			"Army Group/front": {g :[{type:'path',d:'M17.5,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25    M52.5,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25    M87.5,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25    M122.5,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25       M157.5,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25'}],
+			"Army Group/front": {g :[{type:'path',d:'M17.5,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25    M52.5,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25    M87.5,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25    M122.5,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25       M157.5,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25'}],
 				bbox : {
 					y1:(bbox.y1-15-25-installationPadding),
 					x1:17.5,
 					x2:182.5}
 			},
-			"Region/Theater": {g :[{type:'path',d:'M0,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25   M35,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25   M70,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25   M105,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25    M140,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25     M175,'+ (bbox.y1-15) +' l25,-25 m0,25 l-25,-25'}],
+			"Region/Theater": {g :[{type:'path',d:'M0,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25   M35,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25   M70,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25   M105,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25    M140,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25     M175,'+ (bbox.y1-10) +' l25,-25 m0,25 l-25,-25'}],
 				bbox : {
 					y1:(bbox.y1-15-25-installationPadding),
 					x1:0,
 					x2:200}
 			},
-			"Command": {g :[{type:'path',d:'M70,'+ (bbox.y1-27.5) +' l25,0 m-12.5,12.5 l0,-25   M105,'+ (bbox.y1-27.5) +' l25,0 m-12.5,12.5 l0,-25'}],
+			"Command": {g :[{type:'path',d:'M70,'+ (bbox.y1-22.5) +' l25,0 m-12.5,12.5 l0,-25   M105,'+ (bbox.y1-22.5) +' l25,0 m-12.5,12.5 l0,-25'}],
 				bbox : {
 					y1:(bbox.y1-15-25-installationPadding),
 					x1:70,
