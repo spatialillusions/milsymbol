@@ -1935,6 +1935,7 @@ var MS = new function(){
 			//Processing all parts of the marker, adding them to the drawinstruction and updating the boundingbox
 			for (var i in MS._markerParts){
 				var m = MS._markerParts[i].call(this);
+				if (!m.pre) continue;
 				if(m.pre.length)this.drawInstructions.unshift(m.pre);
 				if(m.post.length)this.drawInstructions.push(m.post);
 				if (m.bbox)this.bbox = MS.bboxMax(this.bbox,m.bbox);
