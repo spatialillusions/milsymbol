@@ -1987,61 +1987,65 @@ var MS = new function(){
 					}else{
 						if(typeof instruction[i] == 'object'){
 							var svg;
-							switch (instruction[i].type){
-								case 'path':
-									svg = '<path d="' + instruction[i].d +'" ';
-									break;
-								case 'circle':
-									svg = '<circle cx="' + instruction[i].cx + '" cy="' + instruction[i].cy + '" r="' + instruction[i].r + '" ';
-									break;
-								case 'text':
-									svg = '<text x="' + instruction[i].x + '" y="' + instruction[i].y + '" text-anchor="' + instruction[i].textanchor + '" font-size="'+ instruction[i].fontsize + '" font-family="'+ instruction[i].fontfamily+'" ';
-									if(instruction[i].fontweight) svg += 'font-weight="' + instruction[i].fontweight + '" ';
-									break;
-								case 'translate':
-									svg = '<g transform="translate('+instruction[i].x+','+instruction[i].y+')" ';
-									break;
-								case 'rotate':
-									svg = '<g transform="rotate('+instruction[i].degree+','+instruction[i].x+','+instruction[i].y+')" ';
-									break;
-								case 'scale':
-									svg = '<g transform="scale('+instruction[i].factor+')" ';
-									break;
-							}
-							if(instruction[i].stroke !== undefined){
-								svg += 'stroke-width="' + (instruction[i].strokewidth || this.strokeWidth) + '" ';
-								if(instruction[i].strokedasharray) svg += 'stroke-dasharray="' + instruction[i].strokedasharray + '" ';
-								if(instruction[i].stroke){
-									svg += 'stroke="' + instruction[i].stroke + '" ';
-								}else{
-									svg += 'stroke="none" ';
+							if(instruction[i].type == 'svg'){
+								svg = instruction[i].svg;
+							}else{
+								switch (instruction[i].type){
+									case 'path':
+										svg = '<path d="' + instruction[i].d +'" ';
+										break;
+									case 'circle':
+										svg = '<circle cx="' + instruction[i].cx + '" cy="' + instruction[i].cy + '" r="' + instruction[i].r + '" ';
+										break;
+									case 'text':
+										svg = '<text x="' + instruction[i].x + '" y="' + instruction[i].y + '" text-anchor="' + instruction[i].textanchor + '" font-size="'+ instruction[i].fontsize + '" font-family="'+ instruction[i].fontfamily+'" ';
+										if(instruction[i].fontweight) svg += 'font-weight="' + instruction[i].fontweight + '" ';
+										break;
+									case 'translate':
+										svg = '<g transform="translate('+instruction[i].x+','+instruction[i].y+')" ';
+										break;
+									case 'rotate':
+										svg = '<g transform="rotate('+instruction[i].degree+','+instruction[i].x+','+instruction[i].y+')" ';
+										break;
+									case 'scale':
+										svg = '<g transform="scale('+instruction[i].factor+')" ';
+										break;
 								}
-							}
-							if(instruction[i].fill !== undefined) svg += 'fill="' + (instruction[i].fill?instruction[i].fill:'none') + '" ';
-							if(instruction[i].fillopacity !== undefined) svg += 'fill-opacity="' + instruction[i].fillopacity + '" ';
-							svg += '>';
-							switch (instruction[i].type){
-								case 'path':
-									svg += '</path>';
-									break;
-								case 'circle':
-									svg += '</circle>';
-									break;
-								case 'text':
-									svg += instruction[i].text + '</text>';
-									break;
-								case 'translate':
-									svg += processInstructions.call(this,instruction[i].draw);
-									svg += '</g>';
-									break;
-								case 'rotate':
-									svg += processInstructions.call(this,instruction[i].draw);
-									svg += '</g>';
-									break;
-								case 'scale':
-									svg += processInstructions.call(this,instruction[i].draw);
-									svg += '</g>';
-									break;
+								if(instruction[i].stroke !== undefined){
+									svg += 'stroke-width="' + (instruction[i].strokewidth || this.strokeWidth) + '" ';
+									if(instruction[i].strokedasharray) svg += 'stroke-dasharray="' + instruction[i].strokedasharray + '" ';
+									if(instruction[i].stroke){
+										svg += 'stroke="' + instruction[i].stroke + '" ';
+									}else{
+										svg += 'stroke="none" ';
+									}
+								}
+								if(instruction[i].fill !== undefined) svg += 'fill="' + (instruction[i].fill?instruction[i].fill:'none') + '" ';
+								if(instruction[i].fillopacity !== undefined) svg += 'fill-opacity="' + instruction[i].fillopacity + '" ';
+								svg += '>';
+								switch (instruction[i].type){
+									case 'path':
+										svg += '</path>';
+										break;
+									case 'circle':
+										svg += '</circle>';
+										break;
+									case 'text':
+										svg += instruction[i].text + '</text>';
+										break;
+									case 'translate':
+										svg += processInstructions.call(this,instruction[i].draw);
+										svg += '</g>';
+										break;
+									case 'rotate':
+										svg += processInstructions.call(this,instruction[i].draw);
+										svg += '</g>';
+										break;
+									case 'scale':
+										svg += processInstructions.call(this,instruction[i].draw);
+										svg += '</g>';
+										break;
+								}
 							}
 							svgxml += svg;
 						}
