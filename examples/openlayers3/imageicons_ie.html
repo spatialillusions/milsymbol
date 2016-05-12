@@ -114,7 +114,9 @@ function init(){
 					size:iconSize[(f.getProperties().SIDC).charAt(11)]*ratio,
 					uniqueDesignation:f.getProperties().name
 				});
-		var mycanvas = mysymbol.getMarker().asCanvas();
+				
+		var myimage = document.createElement('img');
+		myimage.src = mysymbol.getMarker().asImage();
 		
 		f.setStyle(new ol.style.Style({
 	  		image: new ol.style.Icon( ({
@@ -123,7 +125,7 @@ function init(){
 				anchorXUnits: 'pixels',
 				anchorYUnits: 'pixels',
 				imgSize: [Math.floor(mysymbol.width), Math.floor(mysymbol.height)],
-				img: (mycanvas)
+				img: (myimage)
 	  		}))
 		}));	
 	})
@@ -150,9 +152,8 @@ function init(){
 </script>
 
 <div class="main">
-<h1>milsymbol in open layers 3 - ol.style.Icon()</h1>
-Using the asCanvas() method in milsymbol makes it possible to assign the output from milsymbol as an image source. This way you can use the output from milsymbol in ol.style.Icon() in Open Layers.<br>
-This might not work in older versions of Internet Explorer, in that case use the asImage() in the same was as in the <a href="imageicons_ie.html">Open Layers IE example</a>.
+<h1>milsymbol in open layers 3 - work in old IE - ol.style.Icon()</h1>
+Using the asImage() method in milsymbol makes it possible to assign the output from milsymbol as an image source. This way you can use the output from milsymbol in ol.style.Icon() in Open Layers.<br>
 
 </div>
 <div id="map" class="mymap">
