@@ -2094,19 +2094,19 @@ var MS = new function(){
 
 						switch (instruction[i].type){
 							case 'path':
-/*								if (typeof Path2D != 'undefined'){
+								if (typeof Path2D != 'undefined'){
 									var d = new Path2D(instruction[i].d);
 									if(instruction[i].fill === undefined || (instruction[i].fill !== undefined && instruction[i].fill))ctx.fill(d);
 									if(instruction[i].stroke === undefined || (instruction[i].stroke !== undefined && instruction[i].stroke))ctx.stroke(d);
 								}else{
-									if (typeof MS._Path2D == 'function'){*/
+									if (typeof MS._Path2D == 'function'){
 										MS._Path2D(ctx, instruction[i].d)
 										if(instruction[i].fill === undefined || (instruction[i].fill !== undefined && instruction[i].fill))ctx.fill();
 										if(instruction[i].stroke === undefined || (instruction[i].stroke !== undefined && instruction[i].stroke))ctx.stroke();
-									/*}else{
+									}else{
 										console.warn("MS._Path2D() is not present, you will need to load functionality for using Canvas in older version of Internet Explorer.");
 									}
-								}*/
+								}
 								break;
 							case 'circle':
 								ctx.beginPath();
