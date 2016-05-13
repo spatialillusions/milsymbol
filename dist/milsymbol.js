@@ -44,7 +44,6 @@ var MS = new function(){
 			return doc.adoptNode(doc2.documentElement);
 		};
 	}
-
 	this.autoSVG = true;
 	this._STD2525 = true;
 	this.setStandard = function(standard){
@@ -2095,15 +2094,25 @@ var MS = new function(){
 
 						switch (instruction[i].type){
 							case 'path':
-								var d = new Path2D(instruction[i].d);
-								if(instruction[i].fill === undefined || (instruction[i].fill !== undefined && instruction[i].fill))ctx.fill(d);
-								if(instruction[i].stroke === undefined || (instruction[i].stroke !== undefined && instruction[i].stroke))ctx.stroke(d);
+								if (typeof Path2D != 'undefined'){
+									var d = new Path2D(instruction[i].d);
+									if(instruction[i].fill === undefined || (instruction[i].fill !== undefined && instruction[i].fill))ctx.fill(d);
+									if(instruction[i].stroke === undefined || (instruction[i].stroke !== undefined && instruction[i].stroke))ctx.stroke(d);
+								}else{
+									if (typeof MS._Path2D == 'function'){
+										MS._Path2D(ctx, instruction[i].d)
+										if(instruction[i].fill === undefined || (instruction[i].fill !== undefined && instruction[i].fill))ctx.fill();
+										if(instruction[i].stroke === undefined || (instruction[i].stroke !== undefined && instruction[i].stroke))ctx.stroke();
+									}else{
+										console.warn("MS._Path2D() is not present, you will need to load functionality for using Canvas in older version of Internet Explorer.");
+									}
+								}
 								break;
 							case 'circle':
-								var d = new Path2D();
-								d.arc(instruction[i].cx, instruction[i].cy, instruction[i].r, 0, 2 * Math.PI, false);
-								if(instruction[i].fill === undefined || (instruction[i].fill !== undefined && instruction[i].fill))ctx.fill(d);
-								if(instruction[i].stroke === undefined || (instruction[i].stroke !== undefined && instruction[i].stroke))ctx.stroke(d);
+								ctx.beginPath();
+								ctx.arc(instruction[i].cx, instruction[i].cy, instruction[i].r, 0, 2 * Math.PI, false);
+								if(instruction[i].fill === undefined || (instruction[i].fill !== undefined && instruction[i].fill))ctx.fill();
+								if(instruction[i].stroke === undefined || (instruction[i].stroke !== undefined && instruction[i].stroke))ctx.stroke();
 								break;
 							case 'text':
 								ctx.font = (instruction[i].fontweight !== undefined ?instruction[i].fontweight + ' ':'') + instruction[i].fontsize + "px " + instruction[i].fontfamily;
@@ -2456,7 +2465,7 @@ function modifier(){
 				bbox : {y2 :bbox.y2+20}},
 			"Barge": {g :[{type:'path',d:'M 50,1 l 100,0 c0,10 -100,10 -100,0'}],
 				bbox : {y2 :bbox.y2+10}},
-			"Amphibious": {g :[{type:'path',d:'M 65,10 c 0,-10 10,-10 10,0 0,10 10,10 10,0   0,-10 10,-10 10,0 0,10 10,10 10,0   0,-10 10,-10 10,0 0,10 10,10 10,0   0,-10 10,-10 10,0'}],
+			"Amphibious": {g :[{type:'path',d:'M 65,10 c 0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0'}],
 				bbox : {y2 :bbox.y2+20}},
 			"Short towed array": {g :[{type:'path',fill:this.colors.frameColor[this.properties.affiliation],d:'M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M100,0 l5,5 -5,5 -5,-5 z'}],
 				bbox : {y2 :bbox.y2+10}},
@@ -6077,3 +6086,84 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 	}
 	return {icn:sId,m1:sIdm1,m2:sIdm2};
 };
+
+//########################################################################################
+// Support for Path2D in IE 11, if you only use Edge, you can remove the following
+//########################################################################################
+MS._Path2D = function(ctx, d){
+	ctx.beginPath();
+	var x,y;
+	var parts = d.match(/([MCL][^MCL]*)/ig);
+	for (var i = 0; i < parts.length; i++){
+		if(parts[i].charAt(0) == 'M'){
+			var c = parts[i].match(/[-\d].*[\d]/)[0].split(/[\s,]/g);
+			x = parseFloat(c[0]);
+			y = parseFloat(c[1]);
+			ctx.moveTo(x,y);
+			for (var j = 2; j < c.length; j+=2){
+				x = parseFloat(c[j]);
+				y = parseFloat(c[j+1]);
+				ctx.lineTo(x,y);
+			}
+		}
+		if(parts[i].charAt(0) == 'm'){			
+			var c = parts[i].match(/[-\d].*[\d]/)[0].split(/[\s,]/g);
+			x = x?x+parseFloat(c[0]):parseFloat(c[0]);
+			y = y?y+parseFloat(c[1]):parseFloat(c[1]);
+			ctx.moveTo(x,y);
+			for (var j = 2; j < c.length; j+=2){
+				x += parseFloat(c[j]);
+				y += parseFloat(c[j+1]);
+				ctx.lineTo(x,y);
+			}
+		}
+		if(parts[i].charAt(0) == 'L'){
+			var c = parts[i].match(/[-\d].*[\d]/)[0].split(/[\s,]/g);
+			for (var j = 0; j < c.length; j+=2){
+				x = parseFloat(c[j]);
+				y = parseFloat(c[j+1]);
+				ctx.lineTo(x,y);
+			}
+			if(parts[i].charAt(parts[i].length-1).toUpperCase() == 'Z'){
+				ctx.closePath()
+			}
+		}
+		if(parts[i].charAt(0) == 'l'){
+			var c = parts[i].match(/[-\d].*[\d]/)[0].split(/[\s,]/g);
+			for (var j = 0; j < c.length; j+=2){
+				x += parseFloat(c[j]);
+				y += parseFloat(c[j+1]);
+				ctx.lineTo(x,y);
+			}
+			if(parts[i].charAt(parts[i].length-1).toUpperCase() == 'Z'){
+				ctx.closePath()
+			}
+		}
+		if(parts[i].charAt(0) == 'C'){
+			var c = parts[i].match(/[-\d].*[\d]/)[0].split(/[\s,]/g);
+			for (var j = 0; j < c.length; j+=6){
+				x = parseFloat(c[j+4]);
+				y = parseFloat(c[j+5]);
+				ctx.bezierCurveTo(c[j], c[j+1], c[j+2], c[j+3], c[j+4], c[j+5]);
+			}
+			if(parts[i].charAt(parts[i].length-1).toUpperCase() == 'Z'){
+				ctx.closePath()
+			}
+		}
+		if(parts[i].charAt(0) == 'c'){
+			var c = parts[i].match(/[-\d].*[\d]/)[0].split(/[\s,]/g);
+			for (var j = 0; j < c.length; j+=6){
+				x1 = x + parseFloat(c[j]);
+				y1 = y + parseFloat(c[j+1]);
+				x2 = x + parseFloat(c[j+2]);
+				y2 = y + parseFloat(c[j+3]);
+				x =  x + parseFloat(c[j+4]);
+				y =  y + parseFloat(c[j+5]);
+				ctx.bezierCurveTo(x1, y1, x2, y2, x, y);
+			}
+			if(parts[i].charAt(parts[i].length-1).toUpperCase() == 'Z'){
+				ctx.closePath();
+			}
+		}
+	}
+}
