@@ -6088,7 +6088,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 };
 
 //########################################################################################
-// Support for Path2D in IE 11, if you only use Edge, you can remove the following
+// Support for Path2D in IE 11, if you only use other browsers, you can remove the following
 //########################################################################################
 MS._Path2D = function(ctx, d){
 	// This function converts a svg path to canvas instructions, it does not support everything
