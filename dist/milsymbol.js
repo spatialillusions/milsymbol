@@ -6229,8 +6229,5 @@ MS._Path2D = function(ctx, d){
 				ctx.closePath();
 			}
 		}
-		if(parts[i].charAt(0) == 'a' || parts[i].charAt(0) == 'A'){
-			console.log(parts[i]);
-		}
 	}
 };
