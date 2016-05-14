@@ -12,6 +12,11 @@ milsymbol is created and maintained by Måns Beckman, and you can visit my homep
 
 If you use milsymbol for some project I'm always interested to hear about it, my contact details can be found on my homepage.
 
+milsymbol 0.5.6
+-------------
+* asCanvas() is now also supported in Internet Explorer 11, this makes it simpler to integrate with Open Layers 3 and Cesium
+* Added back the possibility to create effects with SVG filters in custom extensions
+
 milsymbol 0.5.5
 -------------
 * **Custom extensions will have to be updated**
