@@ -1940,8 +1940,8 @@ var MS = new function(){
 				if (m.bbox)this.bbox = MS.bboxMax(this.bbox,m.bbox);
 			}
 
-			this.baseWidth = this.bbox.width() + (this.strokeWidth*3);//Adding the stoke width as margins and a little bit extra
-			this.baseHeight = this.bbox.height() + (this.strokeWidth*3);//Adding the stoke width as margins and a little bit extra
+			this.baseWidth = this.bbox.width() + (this.strokeWidth*2);//Adding the stoke width as margins and a little bit extra
+			this.baseHeight = this.bbox.height() + (this.strokeWidth*2);//Adding the stoke width as margins and a little bit extra
 
 			this.width = this.baseWidth*this.size/100;
 			this.height = this.baseHeight*this.size/100;
