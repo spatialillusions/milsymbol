@@ -540,7 +540,7 @@ var MS = new function(){
 		icn['GR.IC.MORTAR'] = [{type:'circle',cx:100,cy:115,r:5,fill:false},{type:'path',d:'M100,111 l0,-30 M90,90 l10,-10 10,10',fill:false}];
 		icn['GR.IC.MORTUARY AFFAIRS'] = {type:'path',d:'m 90,95 20,0 m -10,-10 0,30 m -15,-35 30,0 0,40 -30,0 z',fill:false};
 		icn['GR.IC.MULTINATIONAL (MN)'] =text('MN');
-		icn['GR.IC.NAVAL'] = [{type:'path',d:'m 105,85 c 0,2.8 -2.2,5 -5,5 -2.8,0 -5,-2.2 -5,-5 0,-2.8 2.2,-5 5,-5 2.8,0 5,2.2 5,5 z m -20,5 30,0 m -15,0 0,30',fill:false},{type:'path',d:'m 83.9,105 c -0.8,0.1 0.5,7.7 1.1,8.2 0.3,0.3 1.4,-1.4 1.8,-1 6.8,7.5 12.9,7.3 13.6,7.3 0,0 0.1,-0 0.1,0 0.7,0 6.8,0.2 13.6,-7.3 0.4,-0.4 1.5,1.3 1.8,1 0.6,-0.5 1.9,-8.2 1.1,-8.2 -0.8,-0.1 -1.5,1.5 -2.6,2.4 -1.2,0.9 -2.9,1.3 -3,1.7 -0.1,0.3 1.9,1.3 1.5,1.8 -2,2.3 -5.9,6.2 -12.3,6.3 l -0.1,1.6 -0.1,-1.6 c -6.3,-0.1 -10.3,-4 -12.3,-6.3 -0.4,-0.5 1.6,-1.5 1.5,-1.8 -0.1,-0.4 -1.8,-0.7 -3,-1.7 -1.1,-0.8 -1.8,-2.4 -2.6,-2.4 z',stroke:false}];
+		icn['GR.IC.NAVAL'] = [{type:'path',d:'m 105,85 c 0,2.8 -2.2,5 -5,5 -2.8,0 -5,-2.2 -5,-5 0,-2.8 2.2,-5 5,-5 2.8,0 5,2.2 5,5 z m -20,5 30,0 m -15,0 0,30',fill:false},{type:'path',d:'M 82.3 102.6 C 82.3 113.9 84.2 115.9 84.2 115.9 L 86.5 114.1 C 90.2 117.8 94.8 120.8 99.9 120.9 L 100.5 120.9 L 101 120.9 C 106.2 120.8 110.8 117.8 114.4 114.1 L 116.7 115.9 C 116.7 115.9 118.6 113.9 118.7 102.6 C 113.9 106.8 108.9 109 108.9 109 L 110.9 110.7 C 110.9 110.7 106.8 115.2 100.5 115.2 L 100.5 115.2 C 100.5 115.2 100.4 115.2 100.4 115.2 C 94.2 115.2 90 110.7 90 110.7 L 92 109 C 92 109 87 106.8 82.3 102.6 z',stroke:false}];
 		icn['GR.IC.OBSERVER/OBSERVATION'] = {type:'path',d:'m 100,80 -25,40 50,0 z',fill:false};
 		icn['GR.IC.ORDNANCE'] = {type:'path',d:'M 90,97 83,83 m 27,14 7,-14 M 95,95 90,81 m 15,14 5,-14 m 10,26.5 c 0,6.9 -9,12.5 -20,12.5 -11,0 -20,-5.6 -20,-12.5 0,-6.9 9,-12.5 20,-12.5 11,0 20,5.6 20,12.5 z',fill:false};
 		icn['GR.IC.PERSONNEL SERVICES'] =text('PS');
@@ -578,7 +578,7 @@ var MS = new function(){
 		icn['GR.IC.VIDEO IMAGERY'] = {type:'path',fill:false,d:'m 140,110 -26,0 m 7,-20 19,0 m -15,-10 -65,0 0,40 50,0 z m 15,5 0,30'};
 		icn['GR.IC.UNITED STATES SECRET SERVICE(TREAS) (USSS)'] = text('USSS');
 		icn['GR.IC.WATER'] = {type:'path',d:'m 65,90 50,0 c 10,0 20,10 20,20 m -40,-30 20,0 m -10,0 0,10',fill:false};
-		icn['GR.IC.WATER PURIFICATION'] = [icn['GR.IC.WATER'],{type:'text',stroke:false ,x:65,y:110,fontsize:20,text:'PURE'}];
+		icn['GR.IC.WATER PURIFICATION'] = [icn['GR.IC.WATER'],{type:'text',stroke:false ,x:90,y:110,fontsize:20,text:'PURE'}];
 		icn['GR.IC.FF.AIR ASSAULT WITH ORGANIC LIFT'] = {"Unknown" : {type:'path',d:'M35,120 L 90,120 l10,10 10,-10 L165,120',fill:false},"Friend":{type:'path',d:'M25,120 L 90,120 l10,10 10,-10 L175,120',fill:false},"Neutral" : {type:'path',d:'M45,120 L 90,120 l10,10 10,-10 L155,120',fill:false},"Hostile" : {type:'path',d:'M50,120 L 90,120 l10,10 10,-10 L150,120',fill:false}}[affiliation];
 		icn['GR.IC.FF.AIR DEFENCE'] = {"Unknown" : {type:'path',d:'M65,140 C65,115 135,115 135,140',fill:false},"Friend" : {type:'path',d:'M25,150 C25,110 175,110 175,150',fill:false},"Neutral" : {type:'path',d:'M45,150 C45,110 155,110 155,150',fill:false},"Hostile" : {type:'path',d:'M70,140 C70,115 130,115 130,140',fill:false}}[affiliation];
 		icn['GR.IC.FF.AIR AND NAVAL GUNFIRE LIAISON COMPANY'] = []; //TODO
@@ -4357,7 +4357,6 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 // If you don't have any need for number based SIDC, just remove the following functions
 //########################################################################################
 MS._getNumberProperties = function(properties,mapping){
-
 	var version  			= this.SIDC.substr(0,2);
 	var standardIdentity1 	= this.SIDC.substr(2,1);
 	var standardIdentity2 	= this.SIDC.substr(3,1);
