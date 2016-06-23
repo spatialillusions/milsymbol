@@ -202,7 +202,7 @@ var MS = new function(){
 				size = 35;
 				y = 110;
 			}
-			if(str.length == 4){
+			if(str.length >= 4){
 				size = 32;
 				y = 110;
 			}
@@ -214,7 +214,7 @@ var MS = new function(){
 			if(str.length == 3){
 				size = 25;
 			}
-			if(str.length == 4){
+			if(str.length >= 4){
 				size = 22;
 			}
 			return  {type:'text',stroke:false,textanchor:"middle",x:100,y:77,fontsize:size,text:str};
@@ -227,7 +227,7 @@ var MS = new function(){
 				size = 25;
 				y = 140;
 			}
-			if(str.length == 4){
+			if(str.length >= 4){
 				size = 20;
 				y = 135;
 			}
@@ -520,14 +520,15 @@ var MS = new function(){
 		icn['GR.IC.JUDGE ADVOCATE GENERAL'] = text('JAG');
 		icn['GR.IC.LABOUR'] = {type:'path',d:'m 90,85 20,0 m -10,0 0,25 -10,0 10,10 10,-10 -10,0',fill:false};
 		icn['GR.IC.LAUNDRY/BATH'] = {type:'path',d:'m 95,80 10,10 0,30 m 0,-30 -10,0 m 10,0 -10,10',fill:false};
-		icn['GR.IC.LAW ENFORCEMENT'] = {type:'path',d:'M100,140 c-20,-10 -40,-10 -40,-70 c0,15 40,15 40,0 c0,15 40,15 40,0 c0,60 -20,60 -40,70 z',fill:false};
+		icn['GR.IC.LAW ENFORCEMENT'] = {type:'path',d:'M 100,118 C 76,109 85,95 82,82 c 6,7 12,7 18,0 6,7 12,7 18,0 -3,13 6,27 -18,36 z',fill:false};
 		icn['GR.IC.LIAISON'] =text('LO');
 		icn['GR.IC.MAINTENANCE'] = {type:'path',d:'M70,90 c10,0 10,20 0,20 m10,-10 l40,0 m10,-10 c-10,0 -10,20 0,20',fill:false};
 		icn['GR.IC.MATERIEL'] =text('MAT');
+		icn['GR.IC.MESSENGER'] =text('M');
 		icn['GR.IC.METEOROLOGICAL'] =text('MET');
 		icn['GR.IC.MILITARY INFORMATION SUPPORT OPERATIONS (MISO)'] = {type:'path',d:'M70,85 l40,0 10,-10 0,50 -10,-10 -40,0 z M120,85 l10,0 M120,95 l10,0 M120,105 l10,0 M120,115 l10,0'};
 		icn['GR.IC.MILITARY INTELLIGENCE'] =text('MI');
-		icn['GR.IC.MILITARY POLICE'] =text('MP');
+		icn['GR.IC.MILITARY POLICE'] = text('MP');
 		icn['GR.IC.MINE'] = {type:'path',d:'m 120,100 c 0,5.5 -9,10 -20,10 -11,0 -20,-4.5 -20,-10 0,-5.5 9,-10 20,-10 11,0 20,4.5 20,10 z m -5,-20 -30,40 m 0,-40 30,40 m -15,-40 0,40'};
 		icn['GR.IC.MINE CLEARING'] = [icn['GR.IC.MINE'],{type:'text',stroke:false,x:100,y:77,fontsize:25,text:'CLR'}];
 		icn['GR.IC.MINE LAUNCHING'] = [icn['GR.IC.MINE'],{type:'path',d:'m 80,125 0,10 40,0 0,-10 z'}];
@@ -597,22 +598,27 @@ var MS = new function(){
 		icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT'] = {"Unknown" : {type:'path',d:'M35,80 l130,0 ',fill:false},"Friend" : {type:'path',d:'M25,80 l150,0 ',fill:false},"Neutral" : {type:'path',d:'M45,80 l110,0 ',fill:false},"Hostile" : {type:'path',d:'M50,80 l100,0 ',fill:false}}[affiliation];
 		icn['GR.IC.FF.HORSE'] = {type:'path',d:'m 129,72.8 c 0,0 -6.3,2 -9,2.6 -3.4,0.7 -4.9,1.8 -7.7,3.1 -4.2,1.9 -6.8,3.6 -11.3,4.3 -3.3,0.5 -7.7,1.7 -11,1 -3.9,-0.9 -6.1,-2.9 -10.1,-2.9 -3.7,-0 -7.4,-0.6 -10.6,1.3 -2.6,1.6 -4.7,4.2 -5.8,7.1 -2.3,5.4 -0.8,12.5 -1.2,18.4 -0.2,3.1 -0.4,9.3 -0.6,10.2 0,0 1.6,-0 3.4,-2.5 0.9,-1.2 1.7,-3.4 1.9,-4.9 0.5,-3.1 -0.7,-7.5 -0.4,-10 1.1,-0.3 2.4,2.8 2.6,4.7 0.2,2 -1,3.3 -1.4,5.2 -0.5,3 0.3,5 0.6,8.3 0.1,1.6 0.8,3.9 0.5,6 -0.2,2 -0.2,4.3 -0.2,4.3 l 6.9,0 -0.4,-3.8 c 0,0 -1.8,-2.5 -2.1,-4.3 -0.5,-2.7 -0.5,-5.4 0.2,-8 0.5,-2 3.1,-4.3 4.1,-6.1 1.8,-3.1 3.1,-7.1 3.1,-7.1 0,0 5.1,3.4 9.1,4.2 3.8,0.8 11.6,1.4 11.6,1.4 0,0 -0.2,7.3 0.1,12.4 -0,0.1 0.3,3.9 0.3,3.1 -1.4,3.2 -0,8.2 -0,8.2 0,0 2.9,0 6.3,-0 l -0.3,-3.4 c 0,0 -1.5,-3.5 -1.5,-5.3 0,-3.1 0.1,-5.9 0.9,-8.9 0.4,-1.2 0.7,-2.9 1.3,-4 1.4,-2.2 3.1,-3.8 4.2,-6.1 1.1,-2.6 2.3,-5.3 3.6,-7.9 1.6,-3.3 7.8,-7.3 7.8,-7.3 0,0 5,2.9 8.4,4.9 1.2,0.7 3,0.1 3.7,-1 0.7,-1.1 0.8,-2.2 0.3,-3.3 -3.2,-6.7 -7.8,-9.4 -7.8,-9.4 z',stroke:false};
 		icn['GR.IC.FF.INFANTRY'] = {"Unknown" : {type:'path',d:'M50,65L150,135M50,135L150,65'},"Friend" : {type:'path',d:'M25,50 L175,150 M25,150 L175,50'},"Neutral" : {type:'path',d:'M45,45L155,155M45,155L155,45'},"Hostile" : {type:'path',d:'M60,70L140,130M60,130L140,70'}}[affiliation];
+		icn['GR.IC.FF.INFANTRY DISMOUNTED'] = {"Unknown" : {type:'path',d:'M 55.7,75.8 148.2,126.3 M 52,126.1 144.4,75.7'},"Friend" : {type:'path',d:'m 45,70 110,60 M 45,130 155,70'},"Neutral" : {type:'path',d:'m 45,70 110,60 M 45,130 155,70'},"Hostile" : {type:'path',d:'M 51.7,73.6 144.3,124.1 m -88.4,0 92.6,-50.5'}}[affiliation];
 		icn['GR.IC.FF.INTERCEPT'] = {type:'path',d:'M100,120 l0,-60 M80,120 l20,20 20,-20'};
 		icn['GR.IC.FF.JAMMING'] = {"Unknown" : {type:'path',d:'M63,60 c10,0 0,10 7,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 7,-10 M40,75 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10',fill:false},"Friend" : {type:'path',d:'M25,60 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 M25,75 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10',fill:false},"Neutral" : {type:'path',d:'M45,60 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10  M45,75 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10',fill:false},"Hostile" : {type:'path',d:'M67,60 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 13,10   M52,75 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 10,-10 c10,0 0,10 10,10 c10,0 0,-10 7,-10',fill:false}}[affiliation];
 		icn['GR.IC.FF.LAW ENFORCEMENT'] = {type:'path',d:'m 99.6,51 c -2.8,0 -5,2.3 -5,5.3 0,2.1 1.2,3.9 2.8,4.7 L 87.8,78.3 69.5,78.4 c -0.1,-2.8 -2.3,-5.1 -5,-5.1 -2.8,0 -5,2.3 -5,5.3 0,2.9 2.2,5.3 5,5.3 0.7,0 1.4,-0.2 2,-0.4 l 9.2,16.8 -9.4,17.2 c -0.6,-0.2 -1.2,-0.4 -1.8,-0.4 -2.8,0 -5,2.4 -5,5.3 0,2.9 2.2,5.3 5,5.3 2.8,0 5,-2.3 5,-5.3 0,-0.1 -0,-0.2 -0,-0.3 l 18.3,0.1 9.5,17.1 c -1.6,0.9 -2.7,2.6 -2.7,4.6 0,2.9 2.3,5.3 5,5.3 2.8,0 5,-2.3 5,-5.3 0,-1.9 -0.9,-3.5 -2.3,-4.4 l 9.6,-17.3 18.7,-0.1 c -0,0.1 -0,0.2 -0,0.3 0,2.9 2.3,5.3 5,5.3 2.8,0 5,-2.3 5,-5.3 0,-2.9 -2.2,-5.3 -5,-5.3 -0.8,0 -1.5,0.2 -2.1,0.5 l -9.5,-17.4 9.5,-17.4 c 0.6,0.3 1.4,0.5 2.1,0.5 2.8,0 5,-2.4 5,-5.3 0,-2.9 -2.2,-5.3 -5,-5.3 -2.8,0 -5,2.3 -5,5.3 0,0.1 0,0.2 0,0.3 L 111.8,78.3 102.1,60.8 c 1.5,-0.9 2.5,-2.6 2.5,-4.5 0,-2.9 -2.2,-5.3 -5,-5.3 z'};
 		icn['GR.IC.FF.MAIN GUN SYSTEM'] = {"Unknown" : {type:'path',d:'M55,65L55,135'},"Friend" : {type:'path',d:'M55,50L55,150'},"Neutral" : {type:'path',d:'M55,45L55,155'},"Hostile" : {type:'path',d:'M55,72L55,128'}}[affiliation];
 		icn['GR.IC.FF.MEDICAL'] = {type:'path',d:'M100,'+baseGeometry.bbox.y1+'L100,'+(baseGeometry.bbox.y2)+'M'+baseGeometry.bbox.x1+',100L'+(baseGeometry.bbox.x2)+',100'};
+		icn['GR.IC.FF.MEDICAL DISMOUNTED'] = {"Unknown" : {type:'path',d:'m 47.9,100 104,0 M 100,49.1 100,162'},"Friend" : {type:'path',d:'m 45,100 110,0 m -55,-55 0,110'},"Neutral" : {type:'path',d:'m 45,100 110,0 m -55,-55 0,110'},"Hostile" : {type:'path',d:'m 48.1,100 103.7,0 M 100,37.8 100,150.5'}}[affiliation];
 		icn['GR.IC.FF.MEDICAL THEATER'] = {"Unknown" : {type:'path',d:'M100,170 l0,-140 M40,75 l15,25 -15,25 M160,75 l-15,25 15,25 M55,100 l90,0',fill:false},"Friend" : {type:'path',d:'M100,150 l0,-100 M25,50 l30,50 -30,50 M175,50 l-30,50 30,50 M55,100 l90,0',fill:false},"Neutral" : {type:'path',d:'M100,155 l0,-110  M45,50 l20,50 -20,50 M155,50 l-20,50 20,50 M65,100 l70,0',fill:false},"Hostile" : {type:'path',d:'M100,172 l0,-144 M50,80 l15,20 -15,20 M150,80 l-15,20 15,20 M65,100 l70,0',fill:false}}[affiliation];
 		icn['GR.IC.FF.MEDICAL CORPS'] = {"Unknown" : {type:'path',d:'M100,170 l0,-140 M160,75 l-15,25 15,25 M30,100 l115,0',fill:false},"Friend" : {type:'path',d:'M100,150 l0,-100  M175,50 l-30,50 30,50 M25,100 l120,0',fill:false},"Neutral" : {type:'path',d:'M100,155 l0,-110 M155,50 l-20,50 20,50 M45,100 l90,0',fill:false},"Hostile" : {type:'path',d:'M100,172 l0,-144  M150,80 l-15,20 15,20 M28,100 l110,0',fill:false}}[affiliation];
 		icn['GR.IC.FF.MEDICAL TREATMENT FACILITY'] =  [icn['GR.IC.FF.MEDICAL'],{type:'path',fill:false,d:'M70,90 l0,20  M130,90 l0,20'}];
+		icn['GR.IC.FF.MILITARY POLICE'] = {type:'path',d:'M 100,140 C 53.7465,122.654 71.0916,95.6737 65.3099,70.6197 c 11.5634,13.4906 23.1267,13.4906 34.6901,0 11.564,13.4906 23.126,13.4906 34.69,0 C 128.908,95.6737 146.254,122.654 100,140 Z',fill:false};
 		icn['GR.IC.FF.MOTORIZED'] = {type:'path',d:'M100,'+baseGeometry.bbox.y1+'L100,'+(baseGeometry.bbox.y2)};
 		icn['GR.IC.FF.NAVAL'] = [{type:'path',d:'M 100,145 100,65',fill:false},{type:'path',d:'m 70,70 60,0',fill:false},{type:'path',d:'m 57.8,105.5 c -2.2,0.1 1.3,20.6 2.8,22.1 0.8,0.8 3.5,-3.8 4.6,-2.6 17.4,20.2 33,19.7 34.7,19.6 0,0 0.2,-0 0.3,0 1.7,0.1 17.3,0.5 34.7,-19.6 1,-1.2 3.7,3.4 4.6,2.6 1.4,-1.5 4.9,-21.9 2.8,-22.1 -2.2,-0.1 -4,4.2 -6.7,6.4 -3,2.4 -7.5,3.4 -7.7,4.5 -0.1,0.8 4.9,3.5 3.9,4.9 -5.1,6.3 -15.1,16.6 -31.3,17 l -0.3,4.3 -0.3,-4.3 c -16.2,-0.4 -26.3,-10.7 -31.3,-17 -1.1,-1.3 4,-4.1 3.9,-4.9 -0.2,-1 -4.7,-2 -7.7,-4.5 -2.7,-2.3 -4.5,-6.6 -6.7,-6.4 z',stroke:false},{type:'circle',cx:100,cy:60,r:5,fill:false}];
 		icn['GR.IC.FF.PRISON'] = {type:'path',stroke:false,d:'M 62.5 67.9 L 62.5 73.4 L 69.9 73.4 L 69.9 106 C 66.8 106.7 64.4 109.6 64.4 113.4 C 64.4 116 65.8 116.9 65.9 118.4 C 66 120.4 65.6 122.5 65.6 124.7 L 65.6 126.6 L 62.5 126.6 L 62.5 132.1 L 137.5 132.1 L 137.5 126.6 L 136 126.6 L 135.6 117.5 C 138.3 113.4 135.8 107 131.5 106 L 131.5 73.4 L 137.5 73.4 L 137.5 67.9 L 62.5 67.9 z M 74.5 73.4 L 87.2 73.4 L 87.2 108.4 C 87.2 109.2 84.8 109.7 83.9 110.6 C 83.1 111.3 82.2 112.7 81.6 113.6 C 80.5 115.2 78.6 118.7 78.6 121.1 L 76.1 117 C 76.5 116.4 76.9 114.6 76.9 113.7 L 76.9 112.2 C 76.9 109.5 74.5 107.9 74.5 106.5 L 74.5 73.4 z M 91.5 73.4 L 110.2 73.4 L 110.2 90.9 C 109 89.6 108.8 87.8 106.8 85.7 C 105.4 84.3 103.5 83 100.8 83 L 100.3 83 C 98.2 83 96.1 83.6 94.9 84.5 C 94.3 85 93.6 85.4 93.1 86 C 92.4 86.6 92.2 87.3 91.5 87.8 L 91.5 73.4 z M 114.3 73.4 L 127.2 73.4 L 127.2 106.5 C 127.2 106.9 124.8 109.2 124.4 111.1 C 123.7 114.2 124.5 114.6 125 117 L 123.3 120.2 C 122.7 118.3 120.7 115 119.7 113.5 C 118.3 111.4 117.3 109.1 114.3 108.9 L 114.3 73.4 z M 99.7 84.9 L 100.6 84.9 C 104.8 84.9 108.5 90.4 108.5 94.7 L 108.5 96.4 C 108.5 100.4 105 106.2 101.3 106.2 L 99.4 106.2 C 94.9 106.2 91.4 100.2 91.6 95.5 C 91.8 90.7 94.9 84.9 99.7 84.9 z M 110.3 100.5 L 110.2 106.9 L 106.7 106.3 L 110.3 100.5 z M 91.5 103.6 L 94.3 106.8 L 91.5 107.4 L 91.5 103.6 z M 70.7 107.9 C 72.9 107.9 74.7 110.4 74.7 112.7 L 74.7 113.4 C 74.7 117.9 70 120.2 67.6 116.7 C 65.7 113.8 66.9 107.9 70.7 107.9 z M 130.6 107.9 C 132.8 107.9 134.4 110.8 134.4 113.2 L 134.4 113.4 C 134.4 116.7 133 116.7 132 118.2 L 128.9 118.3 L 126.7 115.4 L 126.5 113.2 C 126.1 111 128.2 107.9 130.6 107.9 z M 105.9 108.2 C 107.2 108.2 108.9 109 110.2 109.3 L 110.2 126.6 L 91.5 126.6 L 91.5 110.1 C 91.5 108.6 96.6 108.9 98.4 108.9 C 101.1 108.9 104 108.2 105.9 108.2 z M 114.3 110.8 C 117.2 112.3 117.4 113.4 119 116.4 C 120.1 118.5 121.7 120.9 121.7 124 C 121.9 124.2 122.3 124.9 122.7 124.9 C 124 124.9 125.5 119.8 126.7 118.9 L 126.7 119.4 L 127.2 119.4 L 127.2 126.6 L 114.3 126.6 L 114.3 110.8 z M 87.2 111.3 L 87.2 126.6 L 74.5 126.6 L 74.5 118.9 C 75.8 119.4 77.4 125.4 78.6 125.4 C 80.6 125.4 80.7 119.6 81.9 117.5 C 83.2 115.3 84.4 111.9 87.2 111.3 z M 133.6 119.7 L 133.9 126.6 L 131.5 126.6 L 131.5 120.4 L 133.6 119.7 z M 68.1 119.9 C 68.6 120.1 69.9 120.3 69.9 121.1 L 69.9 126.6 L 67.7 126.6 L 68.1 119.9 z'};
 		icn['GR.IC.FF.JAIL BREAK'] = [icn['GR.IC.FF.PRISON'],{type:'path',strokewidth:5,d:'m 70,130 L130,70',fill:false}];
 		icn['GR.IC.FF.RECONNAISSANCE'] = {"Unknown" : {type:'path',d:'M50,135L150,65'},"Friend" : {type:'path',d:'M25,150L175,50'},"Neutral" : {type:'path',d:'M45,155L155,45'},"Hostile" : {type:'path',d:'M60,130L140,70'}}[affiliation];
+		icn['GR.IC.FF.RECONNAISSANCE DISMOUNTED'] = {"Unknown" : {type:'path',d:'M 52,126.1 144.4,75.7'},"Friend" : {type:'path',d:'M 45,130 155,70'},"Neutral" : {type:'path',d:'M 45,130 155,70'},"Hostile" : {type:'path',d:'M 54,126.1 148.5,73.5'}}[affiliation];
 		icn['GR.IC.FF.SEARCH'] = {type:'path',d:'m 100,145 0,-90 m 30,65 -30,25 -30,-25',fill:false};
 		icn['GR.IC.FF.SENSOR'] = [{type:'path',d:'M'+baseGeometry.bbox.x1+',100 L75,100 M'+(200-baseGeometry.bbox.x1)+',100 L125,100'},{type:'path',d:'M65,85 l70,0 -15,30 -40,0 z',fill:(_STD2525 ? iconFillColor : false)}];
 		icn['GR.IC.FF.SIGNAL'] = {"Unknown" : {type:'path',fill:false,d:'M50,65 100,110 100,90 150,135'},"Friend" : {type:'path',fill:false,d:'M25,50 100,110 100,90 175,150'},"Neutral" : {type:'path',fill:false,d:'M45,45 100,110 100,90 155,155'},"Hostile" : {type:'path',fill:false,d:'M57,70 100,110 100,90 143,130'}}[affiliation];
+		icn['GR.IC.FF.SIGNAL DISMOUNTED'] = {"Unknown" : {type:'path',fill:false,d:'M 57.1,71.4 100,110 l 0,-20 43.8,39.5'},"Friend" : {type:'path',fill:false,d:'M 52,66.8 100,110 l 0,-20 47.9,43.1'},"Neutral" : {type:'path',fill:false,d:'M 52,66.8 100,110 l 0,-20 47.9,43.1'},"Hostile" : {type:'path',fill:false,d:'M 56,70.4 100,110 l 0,-20 42.9,38.6'}}[affiliation];
 		icn['GR.IC.FF.SOUND'] = [{type:'path',d:'M'+baseGeometry.bbox.x1+',100 L75,100 M'+(200-baseGeometry.bbox.x1)+',100 L125,100'},{type:'path',d:'M65,85 l70,0 -15,30 -40,0 z',fill:(_STD2525 ? iconFillColor : false)},{type:'text',stroke:false,x:100,y:110,fontsize:25,text:'S'}];
 		icn['GR.IC.FF.SUPPLY'] = {"Unknown" : {type:'path',d:'M35,120 l130,0 ',fill:false},"Friend" : {type:'path',d:'M25,120 l150,0',fill:false},"Neutral" : {type:'path',d:'M45,120 l110,0',fill:false},"Hostile" : {type:'path',d:'M50,120 l100,0 ',fill:false}}[affiliation];
 		icn['GR.IC.FF.SUPPLY CORPS'] = {"Unknown" : {type:'path',d:'M160,75 l-15,25 15,25 M35,120 l120,0',fill:false},"Friend" : {type:'path',d:'M175,50 l-30,50 30,50 M25,120 l135,0',fill:false},"Neutral" : {type:'path',d:'M155,50 l-20,50 20,50 M45,120 l100,0',fill:false},"Hostile" : {type:'path',d:'M150,80 l-15,20 15,20 M50,120 l100,0',fill:false}}[affiliation];
@@ -644,9 +650,11 @@ var MS = new function(){
 		icn['GR.M1.AREA'] =  textm1('AREA');
 		icn['GR.M1.ATTACK'] = textm1('A');
 		icn['GR.M1.AVIATION'] = {type:'path',d:'m 75,60 0,15 50,-15 0,15 z'};
+		icn['GR.M1.BATTALION'] = textm1('II');
 		icn['GR.M1.BIOLOGICAL'] = textm1('B');
 		icn['GR.M1.BORDER'] = textm1('BOR');
 		icn['GR.M1.BRIDGING'] = {type:'path',fill:false,d:'m 80,80 5,-5 30,0 5,5 m -40,-20 5,5 30,0 5,-5'};
+		icn['GR.M1.BRIGADE'] = textm1('X');
 		icn['GR.M1.CHEMICAL'] = textm1('C');
 		icn['GR.M1.INTRUSION'] = textm1('I');
 		icn['GR.M1.CHEMICAL SURVEILLANCE'] = textm1('RS');
@@ -656,10 +664,12 @@ var MS = new function(){
 		icn['GR.M1.COMMAND AND CONTROL'] = (_STD2525 ? textm1('Y') : textm1('C2'));
 		icn['GR.M1.COMMUNICATIONS CONTINGENCY PACKAGE'] = textm1('CCP');
 		icn['GR.M1.CONSTRUCTION'] = {type:'text',stroke:false,x:100,y:75,fontsize:20,text:'CONST'};
+		icn['GR.M1.COMPANY'] = textm1('I');
 		icn['GR.M1.CROSS CULTURAL COMMUNICATION'] = textm1('CCC');
 		icn['GR.M1.CROWD AND RIOT CONTROL'] = textm1('CRC');
 		icn['GR.M1.DECONTAMINATION'] =textm1('D');
 		icn['GR.M1.DETENTION'] = textm1('DET');
+		icn['GR.M1.DEPUTY'] = textm1('DEP');
 		icn['GR.M1.DIRECT COMMUNICATIONS'] = {type:'path',fill:false,d:'m 95,65 -5,5 5,5 m 10,-10 5,5 -5,5 M 90,70 c 20,0 20,0 20,0 m 15,0 c 0,2.8 -2.2,5 -5,5 -2.8,0 -5,-2.2 -5,-5 0,-2.8 2.2,-5 5,-5 2.8,0 5,2.2 5,5 z m -40,0 c 0,2.8 -2.2,5 -5,5 -2.8,0 -5,-2.2 -5,-5 0,-2.8 2.2,-5 5,-5 2.8,0 5,2.2 5,5 z'};
 		icn['GR.M1.DIVING'] = {type:'path',fill:false,d:'m 104.6,64.8 c 0,2.7 -2.1,4.8 -4.6,4.8 -2.5,0 -4.6,-2.2 -4.6,-4.8 0,-2.7 2.1,-4.8 4.6,-4.8 2.5,0 4.6,2.2 4.6,4.8 z m 0,8.7 4.6,4.8 -18.3,0 4.6,-4.8 M 108.3,60 l 4.6,0 0,9.6 -4.6,0 m -16.5,0 -4.6,0 0,-9.6 4.6,0 m 17.4,4.8 c 0,5.3 -4.1,9.6 -9.2,9.6 -5.1,0 -9.2,-4.3 -9.2,-9.6 0,-5.3 4.1,-9.6 9.2,-9.6 5.1,0 9.2,4.3 9.2,9.6 z'};
 		icn['GR.M1.DIVISION'] = textm1('XX');
@@ -674,6 +684,15 @@ var MS = new function(){
 		icn['GR.M1.FORWARD'] = textm1('FWD');
 		icn['GR.M1.GROUND STATION MODULE'] = textm1('GSM');
 		icn['GR.M1.INTRUSION'] = textm1('I');
+		icn['GR.M1.J1'] = textm1('J1');
+		icn['GR.M1.J2'] = textm1('J2');
+		icn['GR.M1.J3'] = textm1('J3');
+		icn['GR.M1.J4'] = textm1('J4');
+		icn['GR.M1.J5'] = textm1('J5');
+		icn['GR.M1.J6'] = textm1('J6');
+		icn['GR.M1.J7'] = textm1('J7');
+		icn['GR.M1.J8'] = textm1('J8');
+		icn['GR.M1.J9'] = textm1('J9');
 		icn['GR.M1.LANDING SUPPORT'] = textm1('LS');
 		icn['GR.M1.LARGE COMMUNICATIONS CONTINGENCY PACKAGE'] = textm1('LCCP');
 		icn['GR.M1.LARGE EXTENSION NODE'] = textm1('LEN');
@@ -696,17 +715,40 @@ var MS = new function(){
 		icn['GR.M1.NAVAL'] = MS.translate(0,-35,MS.scale(0.6, icn['GR.IC.NAVAL']));
 		icn['GR.M1.NODE CENTRE'] = textm1('NC');
 		icn['GR.M1.NUCLEAR'] = textm1('N');
+		icn['GR.M1.OF-1'] = textm1('OF-1');
+		icn['GR.M1.OF-2'] = textm1('OF-2');
+		icn['GR.M1.OF-3'] = textm1('OF-3');
+		icn['GR.M1.OF-4'] = textm1('OF-4');
+		icn['GR.M1.OF-5'] = textm1('OF-5');
+		icn['GR.M1.OF-6'] = textm1('OF-6');
+		icn['GR.M1.OF-7'] = textm1('OF-7');
+		icn['GR.M1.OF-8'] = textm1('OF-8');
+		icn['GR.M1.OF-9'] = textm1('OF-9');
+		icn['GR.M1.OF-10'] = textm1('OF-10');
+		icn['GR.M1.OF-D'] = textm1('OF-D');
 		icn['GR.M1.OPERATIONS'] = textm1('OPS');
 		icn['GR.M1.OPTICAL'] = textm1('OPT');
+		icn['GR.M1.OR-1'] = textm1('OR-1');
+		icn['GR.M1.OR-2'] = textm1('OR-2');
+		icn['GR.M1.OR-3'] = textm1('OR-3');
+		icn['GR.M1.OR-4'] = textm1('OR-4');
+		icn['GR.M1.OR-5'] = textm1('OR-5');
+		icn['GR.M1.OR-6'] = textm1('OR-6');
+		icn['GR.M1.OR-7'] = textm1('OR-7');
+		icn['GR.M1.OR-8'] = textm1('OR-8');
+		icn['GR.M1.OR-9'] = textm1('OR-9');
 		icn['GR.M1.OTHER'] = textm1('OTH');
 		icn['GR.M1.PERSONNEL RECOVERY'] = textm1('H');
+		icn['GR.M1.PLATOON'] = [{type:'circle',stroke:false,cx:80,cy:68,r:8},{type:'circle',stroke:false,cx:100,cy:68,r:8},{type:'circle',stroke:false,cx:120,cy:68,r:8}];
 		icn['GR.M1.RADAR'] =  {type:'path',fill:false,d:'m 85,55 c 0.1,21.4 11.7,24.6 25,25 M 116,55 101,67.5 101,55 86.6,66.9'};
 		icn['GR.M1.RADIO FREQUENCY IDENTIFICATION (RFID) INTERROGATOR/ SENSOR'] = textm1('RF');
 		icn['GR.M1.RAILROAD'] = MS.translate(0,-50,[{type:'path',d:'M60,120 l80,0',fill:false},{type:'circle',fill:false,cx:65,cy:125,r:5},{type:'circle',fill:false,cx:75,cy:125,r:5},{type:'circle',fill:false,cx:125,cy:125,r:5},{type:'circle',fill:false,cx:135,cy:125,r:5}]);
 		icn['GR.M1.RADIOLOGICAL'] = textm1('RAD');
 		icn['GR.M1.RANGER'] = textm1('RGR');
 		icn['GR.M1.RECON'] =textm1('R');
+		icn['GR.M1.REGIMENT'] =textm1('III');
 		icn['GR.M1.SEARCH AND RESCUE'] = textm1('SAR');
+		icn['GR.M1.SECTION'] = [{type:'circle',stroke:false,cx:90,cy:68,r:8},{type:'circle',stroke:false,cx:110,cy:68,r:8}];
 		icn['GR.M1.SECURITY'] = textm1('SEC');
 		icn['GR.M1.SENSOR'] = {type:'path',d:'m 100,55 c -2,5 -5,8 -10,10 5,2 8,5 10,10 2,-5 5,-8 10,-10 -5,-2 -8,-5 -10,-10 z'};
 		icn['GR.M1.SENSOR CONTROL MODULE'] = textm1('SCM');
@@ -717,20 +759,27 @@ var MS = new function(){
 		icn['GR.M1.SMALL EXTENSION NODE'] = textm1('SEN');
 		icn['GR.M1.SMOKE'] = textm1('S');
 		icn['GR.M1.SMOKE/DECON'] = textm1('SD');
-		icn['GR.M1.SNIPER'] = {type:'path',d:'M75,55 l20,0 M100,80 l0,-20 M125,55 l-20,0',fill:false};
+		icn['GR.M1.SNIPER'] = {type:'path',d:'M75,60 l20,0 M100,80 l0,-20 M125,60 l-20,0',fill:false};
 		icn['GR.M1.SOUND RANGING'] = textm1('SDR');
 		icn['GR.M1.SPECIAL OPERATIONS FORCES (SOF)'] = textm1('SOF');
 		icn['GR.M1.SPECIAL WEAPONS AND TACTICS'] = {type:'text',stroke:false,x:100,y:77,fontsize:23,text:'SWAT'};
+		icn['GR.M1.SQUAD'] = {type:'circle',stroke:false,cx:100,cy:68,r:8};
 		icn['GR.M1.SUPPORT'] = textm1('SPT');
 		icn['GR.M1.SURVEY'] = {type:'path',d:'m 108,78 -8,-8 m 0,0 -8,8 m 8,-8 0,-15 15,8 z'};
 		icn['GR.M1.TACTICAL EXPLOITATION'] = textm1('TE');
 		icn['GR.M1.TARGET ACQUISITION'] = textm1('TA');
+		icn['GR.M1.TEAM'] = [{type:'circle',fill:false,cx:100,cy:65,r:10},{type:'path',d:'m 90,75 l20,-20'}];
 		icn['GR.M1.TOPOGRAPHIC'] = {type:'path',fill:false,d:'m 92,65 c 6,3 10,3 16,0 m -18,13 10,-23 10,23'};
 		icn['GR.M1.TRAINING CAMP'] = textm1('TNG');
 		icn['GR.M1.UNMANNED AERIAL VEHICLE'] = icn['AIR.M1.UNMANNED AERIAL VEHICLE'];
 		icn['GR.M1.UPGRADED EARLY WARNING RADAR'] = textm1('UEW');
 		icn['GR.M1.UTILITY'] = textm1('U');
 		icn['GR.M1.VIDEO IMAGERY'] = {type:'path',fill:false,d:'m 120,65 -11,0 m 11,10 -14,0 m 4,-14 -30,0 0,18 25,0 z m 10,2 0,14'};
+		icn['GR.M1.WO-1'] = textm1('WO-1');
+		icn['GR.M1.WO-2'] = textm1('WO-2');
+		icn['GR.M1.WO-3'] = textm1('WO-3');
+		icn['GR.M1.WO-4'] = textm1('WO-4');
+		icn['GR.M1.WO-5'] = textm1('WO-5');
 		icn['GR.M1.YARD'] = textm1('YRD');
 		icn['GR.M2.AIRBORNE'] = {type:'path',d:'M75,140 C75,125 100,125 100,140 C100,125 125,125 125,140',fill:false};
 		icn['GR.M2.ARCTIC'] = {type:'path',d:'M115,125 C125,125 125,135 115,135 L85,135 C75,135 75,125 85,125',fill:false};
@@ -757,6 +806,15 @@ var MS = new function(){
 		icn['GR.M2.HIGH TO LOW ALTITUDE'] = textm2('HLA');
 		icn['GR.M2.INTERMODAL'] = {type:'path',d:'m 80,125 40,0 0,-4 8,9 -8,9 0,-4 -40,0 0,4 -8,-9 8,-9 z',fill:false};
 		icn['GR.M2.INTENSIVE CARE'] = textm2('IC');
+		icn['GR.M2.J1'] = textm2('J1');
+		icn['GR.M2.J2'] = textm2('J2');
+		icn['GR.M2.J3'] = textm2('J3');
+		icn['GR.M2.J4'] = textm2('J4');
+		icn['GR.M2.J5'] = textm2('J5');
+		icn['GR.M2.J6'] = textm2('J6');
+		icn['GR.M2.J7'] = textm2('J7');
+		icn['GR.M2.J8'] = textm2('J8');
+		icn['GR.M2.J9'] = textm2('J9');
 		icn['GR.M2.LIGHT'] = textm2('L');
 		icn['GR.M2.LABORATORY'] = textm2('LAB');
 		icn['GR.M2.LAUNCHER'] = {type:'path',fill:false,d:'M80,140 L115,120 120,140'};
@@ -770,7 +828,27 @@ var MS = new function(){
 		icn['GR.M2.MOUNTAIN'] = {type:'path',stroke:false,d:'M90,140 L100,120 110,140'};
 		icn['GR.M2.MULTIPLE ALTITUDES'] = textm2('H/MA');
 		icn['GR.M2.MULTI-CHANNEL'] = textm2('MC');
+		icn['GR.M2.OF-1'] = textm2('OF-1');
+		icn['GR.M2.OF-2'] = textm2('OF-2');
+		icn['GR.M2.OF-3'] = textm2('OF-3');
+		icn['GR.M2.OF-4'] = textm2('OF-4');
+		icn['GR.M2.OF-5'] = textm2('OF-5');
+		icn['GR.M2.OF-6'] = textm2('OF-6');
+		icn['GR.M2.OF-7'] = textm2('OF-7');
+		icn['GR.M2.OF-8'] = textm2('OF-8');
+		icn['GR.M2.OF-9'] = textm2('OF-9');
+		icn['GR.M2.OF-10'] = textm2('OF-10');
+		icn['GR.M2.OF-D'] = textm2('OF-D');
 		icn['GR.M2.OPTICAL'] = textm2('OPT');
+		icn['GR.M2.OR-1'] = textm2('OR-1');
+		icn['GR.M2.OR-2'] = textm2('OR-2');
+		icn['GR.M2.OR-3'] = textm2('OR-3');
+		icn['GR.M2.OR-4'] = textm2('OR-4');
+		icn['GR.M2.OR-5'] = textm2('OR-5');
+		icn['GR.M2.OR-6'] = textm2('OR-6');
+		icn['GR.M2.OR-7'] = textm2('OR-7');
+		icn['GR.M2.OR-8'] = textm2('OR-8');
+		icn['GR.M2.OR-9'] = textm2('OR-9');
 		icn['GR.M2.PACK ANIMAL'] = {type:'path',d:'m 84,140 9,-15 7,15 7,-15 9,15',fill:false};
 		icn['GR.M2.PATIENT EVACUATION COORDINATION'] = textm2('PEC');
 		icn['GR.M2.PREVENTIVE MAINTENANCE'] = textm2('PM');
@@ -800,12 +878,18 @@ var MS = new function(){
 		icn['GR.M2.VETERINARY'] = {type:'text',stroke:false ,x:115,y:133,fontsize:25,text:'V'};
 		icn['GR.M2.WHEELED'] = [{type:'circle',cx:70,cy:125,r:5,fill:false},{type:'circle',cx:100,cy:125,r:5,fill:false},{type:'circle',cx:130,cy:125,r:5,fill:false}];
 		icn['GR.M2.WHEELED LIMITED'] = [{type:'circle',cx:70,cy:125,r:5,fill:false},{type:'circle',cx:130,cy:125,r:5,fill:false}];
+		icn['GR.M2.WO-1'] = textm2('WO-1');
+		icn['GR.M2.WO-2'] = textm2('WO-2');
+		icn['GR.M2.WO-3'] = textm2('WO-3');
+		icn['GR.M2.WO-4'] = textm2('WO-4');
+		icn['GR.M2.WO-5'] = textm2('WO-5');
 		// Ground Equipment --------------------------------------------------------------
 		icn['GR.EQ.SHORT RANGE'] = {type:'path',d:'m 85,100 30,0',fill:false};
 		icn['GR.EQ.INTERMEDIATE RANGE'] = {type:'path',d:'m 85,105 30,0 m -30,-10 30,0',fill:false};
 		icn['GR.EQ.LONG RANGE'] = {type:'path',d:'m 85,110 30,0 m -30,-20 30,0 m -30,10 30,0',fill:false};
 		icn['GR.EQ.WEAPON'] = {type:'path',d:'m 100,60 0,80',fill:false};
 		icn['GR.EQ.RIFLE'] = {type:'path',d:'m 100,60 0,80 M 85,75 100,60 115,75',fill:false};
+		icn['GR.EQ.RIFLE DISMOUNTED1'] = {type:'path',d:'m 90,90 10,-10 10,10 m -10,-10 0,40',fill:false};
 		icn['GR.EQ.MACHINE GUN'] = {type:'path',d:'m 100,60 0,80 M 85,75 100,60 115,75 M 80,140 120,140',fill:false};
 		icn['GR.EQ.GRENADE LAUNCHER'] = [icn['GR.EQ.RIFLE'],{type:'circle',cx:100,cy:90,r:15,fill:false}];
 		icn['GR.EQ.FLAME THROWER'] = {type:'path',fill:false,d:'m 90,135 0,-70 c 0,-15 20,-15 20,0'};
@@ -827,6 +911,7 @@ var MS = new function(){
 		icn['GR.EQ.MULTIPLE ROCKET LAUNCHER'] = {type:'path',d:'m 115,90 0,40 m -30,-40 0,40 m 0,-55 15,-15 15,15 m -15,-5 0,70 M 85,85 100,70 115,85',fill:false};
 		icn['GR.EQ.ANTITANK ROCKET LAUNCHER'] = {type:'path',d:'m 85,140 15,-15 15,15 M 85,85 100,70 115,85 m -15,-15 0,55 M 85,75 100,60 115,75',fill:false};
 		icn['GR.EQ.NON-LETHAL WEAPON'] = {type:'path',d:'m 100,60 0,80 M 80,60 l40,0',fill:false};
+		icn['GR.EQ.NON-LETHAL GRENADE LAUNCHER'] = [icn['GR.EQ.NON-LETHAL WEAPON'],{type:'circle',cx:100,cy:90,r:15,fill:false}];
 		icn['GR.EQ.TASER'] = [icn['GR.EQ.NON-LETHAL WEAPON'],text('Z')];
 		icn['GR.EQ.WATER CANNON'] = [icn['GR.EQ.NON-LETHAL WEAPON'],text('W')];
 		icn['GR.EQ.LIMITED CROSS-COUNTRY'] = [{type:'path',d:'m 70,130 60,0',fill:false },{type:'circle',cx:75,cy:135,r:5,fill:false},{type:'circle',cx:125,cy:135,r:5,fill:false}];
@@ -1174,6 +1259,8 @@ var MS = new function(){
 		icn['SU.IC.ENVIRONMENTAL REPORT LOCATION'] = [{type:'path',fill:false,stroke:(_STD2525&&!monoColor?colors.iconColor.Neutral:iconColor),d:'m 70,70 0,60 60,0 0,-60 z'},{type:'text',stroke:false,fill:(_STD2525&&!monoColor?colors.iconColor.Neutral:iconColor),x:100,y:122,fontsize:60,text:'E'}];
 		icn['SU.IC.DIVE REPORT LOCATION'] = [{type:'path',fill:false,stroke:(_STD2525&&!monoColor?colors.iconColor.Neutral:iconColor),d:'m 70,70 0,60 60,0 0,-60 z'},{type:'text',stroke:false,fill:(_STD2525&&!monoColor?colors.iconColor.Neutral:iconColor),x:100,y:122,fontsize:60,text:'D'}];
 		icn['SU.IC.SEABED INSTALLATION/MANMADE'] = {type:'path',fill:iconFillColor,stroke:black,d:'m 140,125 -80,0 10,-30 10,20 20,-50 20,50 10,-25 z'};
+		icn['SU.IC.SEABED INSTALLATION, MAN-MADE, MILITARY'] = {type:'path',d:'m 75,80 0,40 50,0 0,-15 -15,0 0,-10 -20,0 0,-15 z'};
+		icn['SU.IC.SEABED INSTALLATION, MAN-MADE, NON-MILITARY'] = {type:'path',fill:iconFillColor,d:'m 75,80 0,40 50,0 0,-15 -15,0 0,-10 -20,0 0,-15 z'};
 		icn['SU.IC.SEABED ROCK/STONE, OBSTACLE, OTHER'] = {type:'path',d:'m 140,125 -80,0 10,-30 10,20 20,-50 20,50 10,-25 z'};
 		icn['SU.IC.WRECK'] = {type:'path',d:'m 125,85 0,30 m -50,-30 0,30 m 25,-40 0,45 m -40,-20 80,0'};
 		icn['SU.IC.MARINE LIFE'] = {type:'path',d:'m 60,100 20,-20 45,20 15,-10 0,20 -15,-10 -45,20 z'};
@@ -1658,6 +1745,14 @@ var MS = new function(){
 							bbox:new this.bbox({ x1: 45, y1:45, x2: 45+110 , y2:45+110})},
 		'GroundUnknown'	: {	g:{type:'path',d:'M63,63 C63,20 137,20 137,63 C180,63 180,137 137,137 C137,180 63,180 63,137 C20,137 20,63 63,63 Z'},
 							bbox:new this.bbox({ x1: 30.75, y1:30.75, x2: 30.75+138.5 , y2:30.75+138.5})},
+		'LandDismountedIndividualHostile'	: {	g:{type:'path',d:'M 99.8,37.7 158,80.5 136.1,150.3 64.4,150.7 42,81 Z'},
+							bbox:new this.bbox({ x1: 42, y1:38, x2: 42+116 , y2:38+113})},
+		'LandDismountedIndividualFriend'	: {	g:{type:'path',d:'m 100,45 55,25 0,60 -55,25 -55,-25 0,-60 z'},
+							bbox:new this.bbox({ x1: 45, y1:45, x2: 45+110 , y2:45+110})},
+		'LandDismountedIndividualNeutral'	: {	g:{type:'path',d:'m 100,45 55,25 0,60 -55,25 -55,-25 0,-60 z M 42,156 158,156'},
+							bbox:new this.bbox({ x1: 45, y1:45, x2: 45+110 , y2:45+110})},
+		'LandDismountedIndividualUnknown'	: {	g:{type:'path',d:'M 99.8,162 158,119.1 136.1,49.3 64.4,49 42.0,118.6 Z M 42,162 158,162'},
+							bbox:new this.bbox({ x1: 42, y1:49, x2: 42+116 , y2:49+113})},
 		'SeaHostile'	: {	g:{type:'path',d:'M100,28 L172,100 100,172 28,100 100,28'},
 							bbox:new this.bbox({ x1: 28, y1:28, x2: 28+144 , y2:28+144})},
 		'SeaFriend'		: {	g:{type:'circle',cx:100,cy:100,r:60},
@@ -1808,7 +1903,9 @@ var MS = new function(){
 				"51": "Barge",
 				"52": "Amphibious",
 				"61": "Short towed array",
-				"62": "Long towed Array"};
+				"62": "Long towed Array",
+				"71": "Leader Individual",
+				"72": "Deputy Individual"};
 
 			mapping.affiliation 	= ["Hostile", "Friend", "Neutral", "Unknown"];
 			mapping.dimension 	= ["Air", "Ground", "Sea", "Subsurface"];
@@ -2178,6 +2275,7 @@ var MS = new function(){
 //Base Geometry for the Symbol ###########################################################
 MS.addMarkerParts(
 function basegeometry(){
+	var modifier;
 	var drawArray1 = [];
 	var drawArray2 = [];
 	var frameColor = this.colors.frameColor[this.properties.affiliation];
@@ -2199,17 +2297,24 @@ function basegeometry(){
 	//Add a dashed outline to the frame if we are using monocolor and the status is not present.
 	if((this.monoColor != '' || !this.fill) && this.properties.notpresent) geom.strokedasharray = this.properties.notpresent;
 	drawArray2.push(geom);
-	//Space Modifiers
+	
+	// Dismounted Individual
+	if(this.properties.dismounted){
+		modifier = {	'Neutral' : {type:'path',stroke:false,fill:frameColor,d:'M 92.6 140.1 L 92.6 151.6 L 100 155 L 108 151.3 L 108 140.1 L 92.6 140.1 z '},
+							'Unknown' : {type:'path',stroke:false,fill:frameColor,d:'M 92.5 147.1 L 92.5 156.5 L 99.8 162 L 107.5 156.3 L 107.5 147.1 L 92.5 147.1 z '}};
+		if(modifier.hasOwnProperty(this.properties.affiliation))drawArray2.push(modifier[this.properties.affiliation]);
+	}
+	// Space Modifiers
 	if(this.properties.space){
-		var modifier = {	'Friend'  : {type:'path',stroke:false,fill:frameColor,d:'M 100,30 C 90,30 80,35 68.65625,50 l 62.6875,0 C 120,35 110,30 100,30'},
+		modifier = {	'Friend'  : {type:'path',stroke:false,fill:frameColor,d:'M 100,30 C 90,30 80,35 68.65625,50 l 62.6875,0 C 120,35 110,30 100,30'},
 							'Hostile' : {type:'path',stroke:false,fill:frameColor,d:'M67,50 L100,20 133,50 z'},
 							'Neutral' : {type:'path',stroke:false,fill:frameColor,d:'M45,50 l0,-20 110,0 0,20 z'},
 							'Unknown' : {type:'path',stroke:false,fill:frameColor,d:'M 100 22.5 C 85 22.5 70 31.669211 66 50 L 134 50 C 130 31.669204 115 22.5 100 22.5 z'}};
 		drawArray2.push(modifier[this.properties.affiliation]);
 	}
-	//Modifiers for activity.
+	// Modifiers for activity.
 	if(this.properties.activity){
-		var modifier = {	'Friend'  : {type:'path',stroke:false,fill:frameColor,d:'m 160,135 0,15 15,0 0,-15 z m -135,0 15,0 0,15 -15,0 z m 135,-85 0,15 15,0 0,-15 z m -135,0 15,0 0,15 -15,0 z'},
+		modifier = {	'Friend'  : {type:'path',stroke:false,fill:frameColor,d:'m 160,135 0,15 15,0 0,-15 z m -135,0 15,0 0,15 -15,0 z m 135,-85 0,15 15,0 0,-15 z m -135,0 15,0 0,15 -15,0 z'},
 							'Hostile' : {type:'path',stroke:false,fill:frameColor,d:'M 100 28 L 89.40625 38.59375 L 100 49.21875 L 110.59375 38.59375 L 100 28 z M 38.6875 89.3125 L 28.0625 99.9375 L 38.6875 110.53125 L 49.28125 99.9375 L 38.6875 89.3125 z M 161.40625 89.40625 L 150.78125 100 L 161.40625 110.59375 L 172 100 L 161.40625 89.40625 z M 99.9375 150.71875 L 89.3125 161.3125 L 99.9375 171.9375 L 110.53125 161.3125 L 99.9375 150.71875'},
 							'Neutral' : {type:'path',stroke:false,fill:frameColor,d:'m 140,140 15,0 0,15 -15,0 z m -80,0 0,15 -15,0 0,-15 z m 80,-80 0,-15 15,0 0,15 z m -80,0 -15,0 0,-15 15,0 z'},
 							'Unknown' : {type:'path',stroke:false,fill:frameColor,d:'M 107.96875 31.46875 L 92.03125 31.71875 L 92.03125 46.4375 L 107.71875 46.4375 L 107.96875 31.46875 z M 47.03125 92.5 L 31.09375 92.75 L 31.09375 107.5 L 46.78125 107.5 L 47.03125 92.5 z M 168.4375 92.5 L 152.5 92.75 L 152.5 107.5 L 168.1875 107.5 L 168.4375 92.5 z M 107.96875 153.5625 L 92.03125 153.8125 L 92.03125 168.53125 L 107.71875 168.53125 L 107.96875 153.5625 z'}};
@@ -2218,7 +2323,7 @@ function basegeometry(){
 	//Add a dashed outline to the frame if the status is not present.
 	if(this.fill && this.frame && this.properties.notpresent && !this.properties.unframed){
 		//Clone the base geometry
-		var geom = {type:this.properties.baseGeometry.g.type};
+		geom = {type:this.properties.baseGeometry.g.type};
 		switch (geom.type){
 			case 'path':
 				geom.d = this.properties.baseGeometry.g.d;
@@ -2476,6 +2581,14 @@ function modifier(){
 			drawArray1.push({type:'translate',x:0,y:bbox.y2,draw:mobilities[this.properties.mobility].g});
 			gbbox = MS.bboxMax(gbbox,mobilities[this.properties.mobility].bbox);
 		}
+	}
+	
+	//Dismounted Leadership
+	if(this.properties.leadership){
+		var leadership = {'Friend':{type:'path',d:'m 45,60 55,-25 55,25'},'Neutral':{type:'path',d:'m 45,60 55,-25 55,25'},'Hostile':{type:'path',d:'m 42,71 57.8,-43.3 58.2,42.8'},'Unknown':{type:'path',d:'m 50,60 10,-20 80,0 10,20'}}[this.properties.affiliation];
+		if(this.properties.leadership == "Deputy Individual")leadership.strokedasharray = MS.dashArrays.feintDummy;
+		drawArray1.push(leadership)
+		gbbox = MS.bboxMax(gbbox,{y1:(gbbox.y1 - 20)});
 	}
 	//Assign fill, stroke and stroke-width
 	for(var i = 0; i<drawArray1.length;i++){
@@ -2891,6 +3004,20 @@ function icon(){
 }
 );
 
+//Debug ##################################################################################
+/*
+MS.addMarkerParts(function debug(){
+	//This debug function is a minimal example of how to extend milsymbol.
+	//Create a variable to store your geometries
+	var drawArray1 = [];
+	var drawArray2 = [];
+	//Get a new bounding box and modify it if your geometry extends outside the current bounds.
+	var gbbox = new MS.bbox();
+	//Draws the icon octagon
+	drawArray2.push({type:'path',fill:false,stroke:'rgb(0,0,255)',d:'m 120,60 0,80 m -40,-80 0,80 m -20,-20 80,0 m 0,-40 -80,0 M 100,50 135.35534,64.64466 150,100 135.35534,135.35534 100,150.00002 64.644661,135.35534 50,100 64.644661,64.64466 z'});
+	return MS.buildingBlock(drawArray1,drawArray2,gbbox);
+});
+*/
 //########################################################################################
 // If you don't have any need for letter based SIDC, just remove the following functions
 //########################################################################################
@@ -3424,7 +3551,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-G-UUMT--'] = [icn['GR.IC.MILITARY INTELLIGENCE'],icn['GR.M1.TACTICAL EXPLOITATION']];
 	sId['S-G-UUMQ--'] = [icn['GR.IC.INTERROGATION']];
 	sId['S-G-UUMJ--'] = [icn['GR.IC.JOINT INTELLIGENCE CENTRE']];
-	sId['S-G-UUL---'] = [icn['GR.IC.LAW ENFORCEMENT'],icn['GR.IC.MILITARY POLICE']];
+	sId['S-G-UUL---'] = [icn['GR.IC.FF.MILITARY POLICE'],icn['GR.IC.MILITARY POLICE']];
 	sId['S-G-UULS--'] = [icn['GR.IC.SHORE PATROL']];
 	sId['S-G-UULM--'] = [icn['GR.IC.MILITARY POLICE']];
 	sId['S-G-UULC--'] = [icn['GR.IC.LAW ENFORCEMENT']];
@@ -4382,11 +4509,13 @@ MS._getNumberProperties = function(properties,mapping){
 		'06':'Air',
 		'10':'Ground',
 		'11':'Ground',
+		'12':'Ground',
 		'15':'Ground',
 		'20':'Ground',
 		'30':'Sea',
 		'35':'Subsurface',
 		'36':'Subsurface',
+		'39':'Subsurface',
 		'40':'Ground',
 		'50':'Air',
 		'51':'Air',
@@ -4445,6 +4574,12 @@ MS._getNumberProperties = function(properties,mapping){
 	//If battle dimension is unknown, standard identity is Exersize and other than Unknown we should not have a symbol
 	if(symbolSet=='00' && standardIdentity1 == '1' && properties.affiliation != 'Unknown') properties.affiliation = '';
 
+	//Land Dismounted Individual should have special icons
+	if(symbolSet == '12'){
+		properties.dimension = 'LandDismountedIndividual';
+		properties.dismounted = true;
+	}
+	
 	//Ground Equipment should have the same geometry as sea Friend...
 	//Signal INTELLIGENCE Ground should have the same geometry as sea Friend...
 	if(symbolSet == '15' || symbolSet == '52' )properties.dimension = mapping.dimension[2];
@@ -4458,18 +4593,22 @@ MS._getNumberProperties = function(properties,mapping){
 	if(echelonMobility <= 30){
 		properties.echelon = mapping.echelonMobility[echelonMobility];
 	}
-	if(echelonMobility >= 30){
+	if(echelonMobility >= 30 && echelonMobility < 70){
 		properties.mobility = mapping.echelonMobility[echelonMobility];
 	}
-
+	if(echelonMobility >= 70 && echelonMobility < 80){
+		properties.leadership = mapping.echelonMobility[echelonMobility];
+	}
 	//Civilian stuff
 	if(
 		(symbolSet == '01' && functionid.substring(0,2)=='12')||
 		(symbolSet == '05' && functionid.substring(0,2)=='12')||
 		(symbolSet == '11')||
+		(symbolSet == '12' && functionid.substring(0,2)=='12')||
 		(symbolSet == '15' && functionid.substring(0,2)=='16')||
 		(symbolSet == '30' && functionid.substring(0,2)=='14')||
 		(symbolSet == '35' && functionid.substring(0,2)=='12')
+		
 	){properties.civilian = true;}
 
 	return properties;
@@ -5113,6 +5252,208 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 
 	}
 
+//Land Dismounted Individual	
+	if(symbolSet == "12" ){
+		//sId['110000'] = [icn[']];
+		//sId['110100'] = [icn['']];
+		sId['110101'] = [icn['GR.IC.FF.INFANTRY DISMOUNTED']];
+		sId['110102'] = [icn['GR.IC.FF.MEDICAL DISMOUNTED']];
+		sId['110103'] = [icn['GR.IC.FF.RECONNAISSANCE DISMOUNTED']];
+		sId['110104'] = [icn['GR.IC.FF.SIGNAL DISMOUNTED']];
+		//sId['110200'] = [icn['']];
+		sId['110201'] = [icn['GR.IC.EXPLOSIVE ORDNANCE DISPOSAL']];
+		sId['110202'] = [icn['GR.IC.FIELD ARTILLERY OBSERVER']];
+		sId['110203'] = [icn['GR.IC.JOINT FIRE SUPPORT']];
+		sId['110204'] = [icn['GR.IC.LIAISON']];
+		sId['110205'] = [icn['GR.IC.MESSENGER']];
+		sId['110206'] = [icn['GR.IC.MILITARY POLICE']];
+		sId['110207'] = [icn['GR.IC.OBSERVER/OBSERVATION']];
+		sId['110208'] = [icn['GR.IC.SECURITY']];
+		sId['110209'] = [icn['GR.IC.SNIPER']];
+		sId['110210'] = [icn['GR.IC.SPECIAL OPERATIONS FORCES']];
+		//sId['110300'] = [icn['']];
+		sId['110301'] = [icn['GR.EQ.RIFLE']];
+		sId['110302'] = [MS.scale(0.5,icn['GR.EQ.RIFLE'])];
+		sId['110303'] = [MS.translate(0,-10,MS.scale(0.7,icn['GR.EQ.RIFLE']))];
+		sId['110304'] = [MS.translate(0,10,MS.scale(0.7,icn['GR.EQ.RIFLE']))];
+		sId['110305'] = [icn['GR.EQ.RIFLE'],icn['GR.EQ.SHORT RANGE']];
+		sId['110306'] = [MS.scale(0.5,[icn['GR.EQ.RIFLE'],icn['GR.EQ.SHORT RANGE']])];
+		sId['110307'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.RIFLE'],icn['GR.EQ.SHORT RANGE']]))];
+		sId['110308'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.RIFLE'],icn['GR.EQ.SHORT RANGE']]))];
+		sId['110309'] = [icn['GR.EQ.RIFLE'],icn['GR.EQ.INTERMEDIATE RANGE']];
+		sId['110310'] = [MS.scale(0.5,[icn['GR.EQ.RIFLE'],icn['GR.EQ.INTERMEDIATE RANGE']])];
+		sId['110311'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.RIFLE'],icn['GR.EQ.INTERMEDIATE RANGE']]))];
+		sId['110312'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.RIFLE'],icn['GR.EQ.INTERMEDIATE RANGE']]))];
+		sId['110313'] = [icn['GR.EQ.RIFLE'],icn['GR.EQ.LONG RANGE']];
+		sId['110314'] = [MS.scale(0.5,[icn['GR.EQ.RIFLE'],icn['GR.EQ.LONG RANGE']])];
+		sId['110315'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.RIFLE'],icn['GR.EQ.LONG RANGE']]))];
+		sId['110316'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.RIFLE'],icn['GR.EQ.LONG RANGE']]))];
+		sId['110317'] = [icn['GR.EQ.MACHINE GUN']];
+		sId['110318'] = [MS.scale(0.5,[icn['GR.EQ.MACHINE GUN']])];
+		sId['110319'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.MACHINE GUN']]))];
+		sId['110320'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.MACHINE GUN']]))];
+		sId['110321'] = [icn['GR.EQ.MACHINE GUN'],icn['GR.EQ.SHORT RANGE']];
+		sId['110322'] = [MS.scale(0.5,[icn['GR.EQ.MACHINE GUN'],icn['GR.EQ.SHORT RANGE']])];
+		sId['110323'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.MACHINE GUN'],icn['GR.EQ.SHORT RANGE']]))];
+		sId['110324'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.MACHINE GUN'],icn['GR.EQ.SHORT RANGE']]))];
+		sId['110325'] = [icn['GR.EQ.MACHINE GUN'],icn['GR.EQ.INTERMEDIATE RANGE']];
+		sId['110326'] = [MS.scale(0.5,[icn['GR.EQ.MACHINE GUN'],icn['GR.EQ.INTERMEDIATE RANGE']])];
+		sId['110327'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.MACHINE GUN'],icn['GR.EQ.INTERMEDIATE RANGE']]))];
+		sId['110328'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.MACHINE GUN'],icn['GR.EQ.INTERMEDIATE RANGE']]))];
+		sId['110329'] = [icn['GR.EQ.MACHINE GUN'],icn['GR.EQ.LONG RANGE']];
+		sId['110330'] = [MS.scale(0.5,[icn['GR.EQ.MACHINE GUN'],icn['GR.EQ.LONG RANGE']])];
+		sId['110331'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.MACHINE GUN'],icn['GR.EQ.LONG RANGE']]))];
+		sId['110332'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.MACHINE GUN'],icn['GR.EQ.LONG RANGE']]))];
+		sId['110333'] = [icn['GR.EQ.GRENADE LAUNCHER']];
+		sId['110334'] = [MS.scale(0.5,[icn['GR.EQ.GRENADE LAUNCHER']])];
+		sId['110335'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.GRENADE LAUNCHER']]))];
+		sId['110336'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.GRENADE LAUNCHER']]))];
+		sId['110337'] = [icn['GR.EQ.GRENADE LAUNCHER'],MS.translate(0,20,icn['GR.EQ.SHORT RANGE'])];
+		sId['110338'] = [MS.scale(0.5,[icn['GR.EQ.GRENADE LAUNCHER'],MS.translate(0,20,icn['GR.EQ.SHORT RANGE'])])];
+		sId['110339'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.GRENADE LAUNCHER'],MS.translate(0,20,icn['GR.EQ.SHORT RANGE'])]))];
+		sId['110340'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.GRENADE LAUNCHER'],MS.translate(0,20,icn['GR.EQ.SHORT RANGE'])]))];
+		sId['110341'] = [icn['GR.EQ.GRENADE LAUNCHER'],MS.translate(0,20,icn['GR.EQ.INTERMEDIATE RANGE'])];
+		sId['110342'] = [MS.scale(0.5,[icn['GR.EQ.GRENADE LAUNCHER'],MS.translate(0,20,icn['GR.EQ.INTERMEDIATE RANGE'])])];
+		sId['110343'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.GRENADE LAUNCHER'],MS.translate(0,20,icn['GR.EQ.INTERMEDIATE RANGE'])]))];
+		sId['110344'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.GRENADE LAUNCHER'],MS.translate(0,20,icn['GR.EQ.INTERMEDIATE RANGE'])]))];
+		sId['110345'] = [icn['GR.EQ.GRENADE LAUNCHER'],MS.translate(0,20,icn['GR.EQ.LONG RANGE'])];
+		sId['110346'] = [MS.scale(0.5,[icn['GR.EQ.GRENADE LAUNCHER'],MS.translate(0,20,icn['GR.EQ.LONG RANGE'])])];
+		sId['110347'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.GRENADE LAUNCHER'],MS.translate(0,20,icn['GR.EQ.LONG RANGE'])]))];
+		sId['110348'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.GRENADE LAUNCHER'],MS.translate(0,20,icn['GR.EQ.LONG RANGE'])]))];
+		sId['110349'] = [icn['GR.EQ.FLAME THROWER']];
+		sId['110350'] = [MS.scale(0.5,[icn['GR.EQ.FLAME THROWER']])];
+		sId['110351'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.FLAME THROWER']]))];
+		sId['110352'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.FLAME THROWER']]))];
+		sId['110353'] = [icn['GR.EQ.MORTAR']];
+		sId['110354'] = [MS.scale(0.5,[icn['GR.EQ.MORTAR']])];
+		sId['110355'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.MORTAR']]))];
+		sId['110356'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.MORTAR']]))];
+		sId['110357'] = [icn['GR.EQ.SINGLE ROCKET LAUNCHER']];
+		sId['110358'] = [MS.scale(0.5,[icn['GR.EQ.SINGLE ROCKET LAUNCHER']])];
+		sId['110359'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.SINGLE ROCKET LAUNCHER']]))];
+		sId['110360'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.SINGLE ROCKET LAUNCHER']]))];
+		sId['110361'] = [icn['GR.EQ.ANTITANK ROCKET LAUNCHER']];
+		sId['110362'] = [MS.scale(0.5,[icn['GR.EQ.ANTITANK ROCKET LAUNCHER']])];
+		sId['110363'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.ANTITANK ROCKET LAUNCHER']]))];
+		sId['110364'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.ANTITANK ROCKET LAUNCHER']]))];
+		sId['110400'] = [icn['']];
+		sId['110401'] = [icn['GR.EQ.NON-LETHAL WEAPON']];
+		sId['110402'] = [MS.scale(0.5,[icn['GR.EQ.NON-LETHAL WEAPON']])];
+		sId['110403'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.NON-LETHAL WEAPON']]))];
+		sId['110404'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.NON-LETHAL WEAPON']]))];
+		sId['110405'] = [icn['GR.EQ.NON-LETHAL GRENADE LAUNCHER']];
+		sId['110406'] = [MS.scale(0.5,[icn['GR.EQ.NON-LETHAL GRENADE LAUNCHER']])];
+		sId['110407'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.NON-LETHAL GRENADE LAUNCHER']]))];
+		sId['110408'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.NON-LETHAL GRENADE LAUNCHER']]))];
+		sId['110409'] = [icn['GR.EQ.TASER']];
+		sId['110410'] = [MS.scale(0.5,[icn['GR.EQ.TASER']])];
+		sId['110411'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.TASER']]))];
+		sId['110412'] = [MS.translate(0,10,MS.scale(0.7,[icn['GR.EQ.TASER']]))];
+		//sId['120000'] = [icn['']];
+		//sId['120100'] = [icn['']];
+		sId['120101'] = [icn['GR.IC.LAW ENFORCEMENT']];
+
+	
+		//sIdm1['00'] = [icn['']];
+		sIdm1['01'] = [icn['GR.M1.BATTALION']];
+		sIdm1['02'] = [icn['GR.M1.BRIGADE']];
+		sIdm1['03'] = [icn['GR.M1.COMPANY']];
+		sIdm1['04'] = [icn['GR.M1.CLOSE PROTECTION']];
+		sIdm1['05'] = [icn['GR.M1.CROWD AND RIOT CONTROL']];
+		sIdm1['06'] = [icn['GR.M1.DEPUTY']];
+		sIdm1['07'] = [icn['GR.M1.DIVISION']];
+		sIdm1['08'] = [icn['GR.M1.EXPLOSIVE ORDNANCE DISPOSAL']];
+		sIdm1['09'] = [icn['GR.M1.J1']];
+		sIdm1['10'] = [icn['GR.M1.J2']];
+		sIdm1['11'] = [icn['GR.M1.J3']];
+		sIdm1['12'] = [icn['GR.M1.J4']];
+		sIdm1['13'] = [icn['GR.M1.J5']];
+		sIdm1['14'] = [icn['GR.M1.J6']];
+		sIdm1['15'] = [icn['GR.M1.J7']];
+		sIdm1['16'] = [icn['GR.M1.J8']];
+		sIdm1['17'] = [icn['GR.M1.J9']];
+		sIdm1['18'] = [icn['ST.M1.GOVERNMENT ORGANIZATION']];
+		sIdm1['19'] = [icn['ST.M1.LEADER']];
+		sIdm1['20'] = [icn['GR.M1.MULTINATIONAL']];
+		sIdm1['21'] = [icn['GR.M1.MULTINATIONAL SPECIALIZED UNIT']];
+		sIdm1['22'] = [icn['ST.M1.NONGOVERNMENTAL ORGANIZATION (NGO)']];
+		sIdm1['23'] = [icn['GR.M1.PLATOON']];
+		sIdm1['24'] = [icn['GR.M1.OF-1']];
+		sIdm1['25'] = [icn['GR.M1.OF-2']];
+		sIdm1['26'] = [icn['GR.M1.OF-3']];
+		sIdm1['27'] = [icn['GR.M1.OF-4']];
+		sIdm1['28'] = [icn['GR.M1.OF-5']];
+		sIdm1['29'] = [icn['GR.M1.OF-6']];
+		sIdm1['30'] = [icn['GR.M1.OF-7']];
+		sIdm1['31'] = [icn['GR.M1.OF-8']];
+		sIdm1['32'] = [icn['GR.M1.OF-9']];
+		sIdm1['33'] = [icn['GR.M1.OF-10']];
+		sIdm1['34'] = [icn['GR.M1.OF-D']];
+		sIdm1['35'] = [icn['GR.M1.OR-1']];
+		sIdm1['36'] = [icn['GR.M1.OR-2']];
+		sIdm1['37'] = [icn['GR.M1.OR-3']];
+		sIdm1['38'] = [icn['GR.M1.OR-4']];
+		sIdm1['39'] = [icn['GR.M1.OR-5']];
+		sIdm1['40'] = [icn['GR.M1.OR-6']];
+		sIdm1['41'] = [icn['GR.M1.OR-7']];
+		sIdm1['42'] = [icn['GR.M1.OR-8']];
+		sIdm1['43'] = [icn['GR.M1.OR-9']];
+		sIdm1['44'] = [icn['GR.M1.WO-1']];
+		sIdm1['45'] = [icn['GR.M1.WO-2']];
+		sIdm1['46'] = [icn['GR.M1.WO-3']];
+		sIdm1['47'] = [icn['GR.M1.WO-4']];
+		sIdm1['48'] = [icn['GR.M1.WO-5']];
+		sIdm1['49'] = [icn['GR.M1.REGIMENT']];
+		sIdm1['50'] = [icn['GR.M1.SECTION']];
+		sIdm1['51'] = [icn['GR.M1.SECURITY']];
+		sIdm1['52'] = [icn['GR.M1.SNIPER']];
+		sIdm1['53'] = [icn['GR.M1.SPECIAL WEAPONS AND TACTICS']];
+		sIdm1['54'] = [icn['GR.M1.SQUAD']];
+		sIdm1['55'] = [icn['GR.M1.TEAM']];
+		sIdm1['56'] = [icn['GR.M1.VIDEO IMAGERY']];
+		
+		//sIdm2['00'] = [icn['']];
+		sIdm2['01'] = [icn['GR.M2.AIRBORNE']];
+		sIdm2['02'] = [icn['GR.M2.BICYCLE EQUIPPED']];
+		sIdm2['03'] = [icn['GR.M2.DEMOLITION']];
+		sIdm2['04'] = [icn['GR.M2.J1']];
+		sIdm2['05'] = [icn['GR.M2.J2']];
+		sIdm2['06'] = [icn['GR.M2.J3']];
+		sIdm2['07'] = [icn['GR.M2.J4']];
+		sIdm2['08'] = [icn['GR.M2.J5']];
+		sIdm2['09'] = [icn['GR.M2.J6']];
+		sIdm2['10'] = [icn['GR.M2.J7']];
+		sIdm2['11'] = [icn['GR.M2.J8']];
+		sIdm2['12'] = [icn['GR.M2.J9']];
+		sIdm2['13'] = [icn['GR.M2.MOUNTAIN']];
+		sIdm2['14'] = [icn['GR.M2.OF-1']];
+		sIdm2['15'] = [icn['GR.M2.OF-2']];
+		sIdm2['16'] = [icn['GR.M2.OF-3']];
+		sIdm2['17'] = [icn['GR.M2.OF-4']];
+		sIdm2['18'] = [icn['GR.M2.OF-5']];
+		sIdm2['19'] = [icn['GR.M2.OF-6']];
+		sIdm2['20'] = [icn['GR.M2.OF-7']];
+		sIdm2['21'] = [icn['GR.M2.OF-8']];
+		sIdm2['22'] = [icn['GR.M2.OF-9']];
+		sIdm2['23'] = [icn['GR.M2.OF-10']];
+		sIdm2['24'] = [icn['GR.M2.OF-D']];
+		sIdm2['25'] = [icn['GR.M2.OR-1']];
+		sIdm2['26'] = [icn['GR.M2.OR-2']];
+		sIdm2['27'] = [icn['GR.M2.OR-3']];
+		sIdm2['28'] = [icn['GR.M2.OR-4']];
+		sIdm2['29'] = [icn['GR.M2.OR-5']];
+		sIdm2['30'] = [icn['GR.M2.OR-6']];
+		sIdm2['31'] = [icn['GR.M2.OR-7']];
+		sIdm2['32'] = [icn['GR.M2.OR-8']];
+		sIdm2['33'] = [icn['GR.M2.OR-9']];
+		sIdm2['34'] = [icn['GR.M2.WO-1']];
+		sIdm2['35'] = [icn['GR.M2.WO-2']];
+		sIdm2['36'] = [icn['GR.M2.WO-3']];
+		sIdm2['37'] = [icn['GR.M2.WO-4']];
+		sIdm2['38'] = [icn['GR.M2.WO-5']];
+		sIdm2['39'] = [icn['GR.M2.SKI']];	
+		
+}
 //Land Equipment
 	if(symbolSet == "15" ){
 		sId['110000'] = [icn['GR.EQ.WEAPON']];
@@ -5183,7 +5524,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 		sId['111601'] = [icn['GR.EQ.MULTIPLE ROCKET LAUNCHER'],MS.translate(0,10,icn['GR.EQ.SHORT RANGE'])];
 		sId['111602'] = [icn['GR.EQ.MULTIPLE ROCKET LAUNCHER'],MS.translate(0,10,icn['GR.EQ.INTERMEDIATE RANGE'])];
 		sId['111603'] = [icn['GR.EQ.MULTIPLE ROCKET LAUNCHER'],MS.translate(0,10,icn['GR.EQ.LONG RANGE'])];
-		sId['111701'] = [icn['GR.EQ.ANTITANK ROCKET LAUNCHER']];
+		sId['111700'] = [icn['GR.EQ.ANTITANK ROCKET LAUNCHER']];
 		sId['111701'] = [icn['GR.EQ.ANTITANK ROCKET LAUNCHER'],icn['GR.EQ.SHORT RANGE']];
 		sId['111702'] = [icn['GR.EQ.ANTITANK ROCKET LAUNCHER'],icn['GR.EQ.INTERMEDIATE RANGE']];
 		sId['111703'] = [icn['GR.EQ.ANTITANK ROCKET LAUNCHER'],icn['GR.EQ.LONG RANGE']];
@@ -5780,6 +6121,11 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 
 	}
 
+//Seabed Installations
+	if(symbolSet == "39" ){
+		sId['110000'] = [icn['SU.IC.SEABED INSTALLATION, MAN-MADE, MILITARY']];
+		sId['120000'] = [icn['SU.IC.SEABED INSTALLATION, MAN-MADE, NON-MILITARY']];
+	}
 //Activities
 	if(symbolSet == "40" ){
 		//sId['110000'] = 'Incident';
@@ -6093,11 +6439,11 @@ MS._Path2D = function(ctx, d){
 	// This function converts a svg path to canvas instructions, it does not support everything
 	// but most of the commands in paths.
 	ctx.beginPath();
-	var x,y;
+	var x,y,i,j;
 	var x0,y0;
 	var c;
 	var parts = d.match(/([MCLHV][^MCLHV]*)/ig);
-	for (var i = 0; i < parts.length; i++){
+	for (i = 0; i < parts.length; i++){
 		if(parts[i].charAt(0) == 'M'){
 			c = parts[i].match(/[-\d].*[\d]/)[0].split(/[\s,]/g);
 			x = parseFloat(c[0]);
@@ -6105,7 +6451,7 @@ MS._Path2D = function(ctx, d){
 			x0 = x;
 			y0 = y;
 			ctx.moveTo(x,y);
-			for (var j = 2; j < c.length; j+=2){
+			for (j = 2; j < c.length; j+=2){
 				x = parseFloat(c[j]);
 				y = parseFloat(c[j+1]);
 				ctx.lineTo(x,y);
@@ -6123,7 +6469,7 @@ MS._Path2D = function(ctx, d){
 			x0 = x;
 			y0 = y;
 			ctx.moveTo(x,y);
-			for (var j = 2; j < c.length; j+=2){
+			for (j = 2; j < c.length; j+=2){
 				x += parseFloat(c[j]);
 				y += parseFloat(c[j+1]);
 				ctx.lineTo(x,y);
@@ -6136,20 +6482,20 @@ MS._Path2D = function(ctx, d){
 		}
 		if(parts[i].charAt(0) == 'L'){
 			c = parts[i].match(/[-\d].*[\d]/)[0].split(/[\s,]/g);
-			for (var j = 0; j < c.length; j+=2){
+			for (j = 0; j < c.length; j+=2){
 				x = parseFloat(c[j]);
 				y = parseFloat(c[j+1]);
 				ctx.lineTo(x,y);
 			}
 			if(parts[i].replace(/\s/g,'').substr(-1, 1).toUpperCase() == 'Z'){
-				ctx.closePath()
+				ctx.closePath();
 				x = x0;
 				y = y0;
 			}
 		}
 		if(parts[i].charAt(0) == 'l'){
 			c = parts[i].match(/[-\d].*[\d]/)[0].split(/[\s,]/g);
-			for (var j = 0; j < c.length; j+=2){
+			for (j = 0; j < c.length; j+=2){
 				x += parseFloat(c[j]);
 				y += parseFloat(c[j+1]);
 				ctx.lineTo(x,y);
@@ -6160,7 +6506,7 @@ MS._Path2D = function(ctx, d){
 		}
 		if(parts[i].charAt(0) == 'C'){
 			c = parts[i].match(/[-\d].*[\d]/)[0].split(/[\s,]/g);
-			for (var j = 0; j < c.length; j+=6){
+			for (j = 0; j < c.length; j+=6){
 				x = parseFloat(c[j+4]);
 				y = parseFloat(c[j+5]);
 				ctx.bezierCurveTo(c[j], c[j+1], c[j+2], c[j+3], c[j+4], c[j+5]);
@@ -6171,11 +6517,11 @@ MS._Path2D = function(ctx, d){
 		}
 		if(parts[i].charAt(0) == 'c'){
 			c = parts[i].match(/[-\d].*[\d]/)[0].split(/[\s,]/g);
-			for (var j = 0; j < c.length; j+=6){
-				x1 = x + parseFloat(c[j]);
-				y1 = y + parseFloat(c[j+1]);
-				x2 = x + parseFloat(c[j+2]);
-				y2 = y + parseFloat(c[j+3]);
+			for (j = 0; j < c.length; j+=6){
+				var x1 = x + parseFloat(c[j]);
+				var y1 = y + parseFloat(c[j+1]);
+				var x2 = x + parseFloat(c[j+2]);
+				var y2 = y + parseFloat(c[j+3]);
 				x =  x + parseFloat(c[j+4]);
 				y =  y + parseFloat(c[j+5]);
 				ctx.bezierCurveTo(x1, y1, x2, y2, x, y);
@@ -6186,7 +6532,7 @@ MS._Path2D = function(ctx, d){
 		}
 		if(parts[i].charAt(0) == 'H'){
 			c = parts[i].match(/[-\d](.*[\d])?/)[0].split(/[\s,]/g);
-			for (var j = 0; j < c.length; j++){
+			for (j = 0; j < c.length; j++){
 				x = parseFloat(c[j]);
 				//y = parseFloat(c[j+5]);
 				ctx.lineTo(x,y);
@@ -6197,7 +6543,7 @@ MS._Path2D = function(ctx, d){
 		}
 		if(parts[i].charAt(0) == 'h'){
 			c = parts[i].match(/[-\d](.*[\d])?/)[0].split(/[\s,]/g);
-			for (var j = 0; j < c.length; j++){
+			for (j = 0; j < c.length; j++){
 				x += parseFloat(c[j]);
 				//y = parseFloat(c[j+5]);
 				ctx.lineTo(x,y);
@@ -6208,7 +6554,7 @@ MS._Path2D = function(ctx, d){
 		}
 		if(parts[i].charAt(0) == 'V'){
 			c = parts[i].match(/[-\d](.*[\d])?/)[0].split(/[\s,]/g);
-			for (var j = 0; j < c.length; j++){
+			for (j = 0; j < c.length; j++){
 				//x = parseFloat(c[j]);
 				y = parseFloat(c[j]);
 				ctx.lineTo(x,y);
@@ -6219,7 +6565,7 @@ MS._Path2D = function(ctx, d){
 		}
 		if(parts[i].charAt(0) == 'v'){
 			c = parts[i].match(/[-\d](.*[\d])?/)[0].split(/[\s,]/g);
-			for (var j = 0; j < c.length; j++){
+			for (j = 0; j < c.length; j++){
 				//x = parseFloat(c[j]);
 				y += parseFloat(c[j]);
 				ctx.lineTo(x,y);
