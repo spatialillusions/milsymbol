@@ -146,7 +146,7 @@ This page shows <i>some of the</i> figures and tables from MIL-STD-2525D drawn w
 <div class="main">
 <h3 id="TABLEI">TABLE I. Frames depicting standard identities and dimensions.</h3>
 </div>
-<table>
+<table border=1 style="table-layout: fixed;width: 906px; ">
 <tr class="table-heading">
 <td>
 </td>
@@ -506,7 +506,7 @@ document.write(new MS.symbol(100540, {size:size}).getMarker().XML);
 <div class="main">
 <h3 id="TABLEII">TABLE II. Exercise frames.</h3>
 </div>
-<table>
+<table border=1 style="table-layout: fixed;width: 906px; ">
 <tr class="table-heading">
 <td>
 EXERCISE<br>
@@ -839,7 +839,7 @@ document.write(new MS.symbol(101640, {size:size}).getMarker().XML);
 <div class="main">
 <h3 id="TABLEIII">TABLE II. Simulation frames.</h3>
 </div>
-<table>
+<table border=1 style="table-layout: fixed;width: 906px; ">
 <tr class="table-heading">
 <td>
 SIMULATED<br>PENDING
@@ -1284,13 +1284,12 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </table>
 
 <div class="main">
+<h2>Air</h2>
   <h3 id="TABLEA-VII">TABLE A-VII. Air entity/entity type/entity subtype </h3>
 </div>
-<table border=1 style="width:1050px">
-<tr>
-<td style="width:150px">Entity</td> <td style="width:250px">Entity Type</td> <td style="width:250px">Entity Subtype</td> <td style="width:50px">Code</td> 
-<td>
-</td>
+<table border=1 style="table-layout: fixed;width: 900px; ">
+<tr class="table-heading">
+<td>Entity</td><td>Entity Type</td><td>Entity Subtype</td><td>Code</td><td style="width:220px"></td>
 </tr>
 <tr>
 <td>Military</td> <td></td> <td></td> <td>110000</td> 
@@ -1710,9 +1709,11 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 
 <div class="main">
  <h3 id="TABLEA-VIII">TABLE A-VIII. Air sector 1 modifier </h3>
-</div>
-<table>
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
+<td>First Modifier</td><td>Code</td><td style="width:220px"></td>
+</tr>
+<tr>
 <td>Not Applicable</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("100101000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("100301000000000000", {size:size}).getMarker().XML);</script>
@@ -2049,14 +2050,15 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
  <h3 id="TABLEA-IX">TABLE A-IX. Air sector 2 modifier </h3>
-</div>
-<table>
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
-<td>Not Applicable</td> <td>00</td> 
+<td>Second Modifier</td><td>Code</td><td style="width:220px"></td>
+</tr>
+<tr><td>Not Applicable</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("10010100000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("10030100000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("10040100000000000000", {size:size}).getMarker().XML);</script>
@@ -2168,16 +2170,15 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
+<h2>Air missile</h2>
  <h3 id="TABLEA-X">TABLE A-X. Air missile entity/entity type/entity subtype. </h3>
 </div>
-<table border=1 style="width:1050px">
-<tr>
-<td style="width:150px">Entity</td> <td style="width:250px">Entity Type</td> <td style="width:250px">Entity Subtype</td> <td style="width:50px">Code</td> 
-<td>
-</td>
+<table border=1 style="table-layout: fixed;width: 900px; ">
+<tr class="table-heading">
+<td>Entity</td><td>Entity Type</td><td>Entity Subtype</td><td>Code</td><td style="width:220px"></td>
 </tr>
 <tr>
 <td>Missile</td> <td></td> <td></td> <td>110000</td> 
@@ -2192,9 +2193,12 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 
 <div class="main">
  <h3 id="TABLEA-XI">TABLE A-XI. Air missile sector 1 modifier </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
+<td>First Modifier</td><td>Code</td><td style="width:220px"></td>
+</tr>
+<tr>
 <td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("100102000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("100302000000000000", {size:size}).getMarker().XML);</script>
@@ -2283,14 +2287,16 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
  <h3 id="TABLEA-XII">TABLE A-XII. Air missile sector 2 modifier </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
-<td>Unspecified</td> <td>00</td> 
+<td>Second Modifier</td><td>Code</td><td style="width:220px"></td>
+</tr>
+<tr><td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("10010200000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("10030200000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("10040200000000000000", {size:size}).getMarker().XML);</script>
@@ -2442,16 +2448,15 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
+<h2>Space</h2>
  <h3 id="TABLEA-XIII">TABLE A-XIII. Space entity/entity type/entity subtype. </h3>
 </div>
-<table border=1 style="width:1050px">
-<tr>
-<td style="width:150px">Entity</td> <td style="width:250px">Entity Type</td> <td style="width:250px">Entity Subtype</td> <td style="width:50px">Code</td> 
-<td>
-</td>
+<table border=1 style="table-layout: fixed;width: 900px; ">
+<tr class="table-heading">
+<td>Entity</td><td>Entity Type</td><td>Entity Subtype</td><td>Code</td><td style="width:220px"></td>
 </tr>
 <tr>
 <td>Military</td> <td></td> <td></td> <td>110000</td> 
@@ -2730,9 +2735,12 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 
 <div class="main">
  <h3 id="TABLEA-XIV">TABLE A-XIV. Space sector 1 modifier. </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
+<td>First Modifier</td><td>Code</td><td style="width:220px"></td>
+</tr>
+<tr>
 <td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("100105000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("100305000000000000", {size:size}).getMarker().XML);</script>
@@ -2805,14 +2813,16 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
  <h3 id="TABLEA-XV">TABLE A-XV. Space sector 2 modifier. </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
-<td>Unspecified</td> <td>00</td> 
+<td>Second Modifier</td><td>Code</td><td style="width:220px"></td>
+</tr>
+<tr><td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("10010500000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("10030500000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("10040500000000000000", {size:size}).getMarker().XML);</script>
@@ -2868,16 +2878,15 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
+<h2>Space missile</h2>
  <h3 id="TABLEA-XVI">TABLE A-XVI. Space missile entity/entity type/entity subtype. </h3>
 </div>
-<table border=1 style="width:1050px">
-<tr>
-<td style="width:150px">Entity</td> <td style="width:250px">Entity Type</td> <td style="width:250px">Entity Subtype</td> <td style="width:50px">Code</td> 
-<td>
-</td>
+<table border=1 style="table-layout: fixed;width: 900px; ">
+<tr class="table-heading">
+<td>Entity</td><td>Entity Type</td><td>Entity Subtype</td><td>Code</td><td style="width:220px"></td>
 </tr>
 <tr>
 <td>Missile</td> <td></td> <td></td> <td>110000</td> 
@@ -2892,9 +2901,12 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 
 <div class="main">
  <h3 id="TABLEA-XVII">TABLE A-XVII. Space missile sector 1 modifier </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
+<td>First Modifier</td><td>Code</td><td style="width:220px"></td>
+</tr>
+<tr>
 <td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("100106000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("100306000000000000", {size:size}).getMarker().XML);</script>
@@ -2943,14 +2955,16 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
  <h3 id="TABLEA-XVIII">TABLE A-XVIII. Space missile sector 2 modifier </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
-<td>Unspecified</td> <td>00</td> 
+<td>Second Modifier</td><td>Code</td><td style="width:220px"></td>
+</tr>
+<tr><td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("10010600000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("10030600000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("10040600000000000000", {size:size}).getMarker().XML);</script>
@@ -3070,16 +3084,15 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
+<h2>Land unit</h2>
  <h3 id="TABLEA-XIX">TABLE A-XIX. Land unit entity/entity type/entity subtype. </h3>
 </div>
-<table border=1 style="width:1100px">
-<tr>
-<td style="width:150px">Entity</td> <td style="width:250px">Entity Type</td> <td style="width:250px">Entity Subtype</td> <td style="width:50px">Code</td> 
-<td>
-</td>
+<table border=1 style="table-layout: fixed;width: 900px; ">
+<tr class="table-heading">
+<td>Entity</td><td>Entity Type</td><td>Entity Subtype</td><td>Code</td><td style="width:245px"></td>
 </tr>
 <tr>
 <td>Command and Control</td> <td></td> <td></td> <td>110000</td> 
@@ -5004,9 +5017,12 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 
 <div class="main">
  <h3 id="TABLEA-XX">TABLE A-XX. Land unit sector 1 modifier </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
+<td>First Modifier</td><td>Code</td><td style="width:245px"></td>
+</tr>
+<tr>
 <td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("100110000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("100310000000000000", {size:size}).getMarker().XML);</script>
@@ -5655,14 +5671,16 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
  <h3 id="TABLEA-XXI">TABLE A-XXI. Land unit sector 2 modifier </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
-<td>Unspecified</td> <td>00</td> 
+<td>Second Modifier</td><td>Code</td><td style="width:245px"></td>
+</tr>
+<tr><td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("10011000000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("10031000000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("10041000000000000000", {size:size}).getMarker().XML);</script>
@@ -6142,16 +6160,15 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
+<h2>Land civilian</h2>
  <h3 id="TABLEA-XXII">TABLE A-XXII. Land civilian unit/organization entity/entity type/entity subtype. </h3>
 </div>
-<table border=1 style="width:1050px">
-<tr>
-<td style="width:150px">Entity</td> <td style="width:250px">Entity Type</td> <td style="width:250px">Entity Subtype</td> <td style="width:50px">Code</td> 
-<td>
-</td>
+<table border=1 style="table-layout: fixed;width: 900px; ">
+<tr class="table-heading">
+<td>Entity</td><td>Entity Type</td><td>Entity Subtype</td><td>Code</td><td style="width:245px"></td>
 </tr>
 <tr>
 <td>Civilian</td> <td></td> <td></td> <td>110000</td> 
@@ -6246,9 +6263,12 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 
 <div class="main">
  <h3 id="TABLEA-XXIII">TABLE A-XXIII. Land civilian unit/organization sector 1 modifier </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
+<td>First Modifier</td><td>Code</td><td style="width:245px"></td>
+</tr>
+<tr>
 <td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("100111000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("100311000000000000", {size:size}).getMarker().XML);</script>
@@ -6465,14 +6485,15 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
  <h3 id="TABLEA-XXIV">TABLE A-XXIV. Land civilian unit/organization sector 2 modifier </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
-<td>Unspecified</td> <td>00</td> 
+<td>Second Modifier</td><td>Code</td><td style="width:245px"></td>
+</tr><td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("10011100000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("10031100000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("10041100000000000000", {size:size}).getMarker().XML);</script>
@@ -6504,16 +6525,15 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
+<h2>Land equipment</h2>
  <h3 id="TABLEA-XXV">TABLE A-XXV. Land equipment entity/entity type/entity subtype </h3>
 </div>
-<table border=1 style="width:1050px">
-<tr>
-<td style="width:150px">Entity</td> <td style="width:250px">Entity Type</td> <td style="width:250px">Entity Subtype</td> <td style="width:50px">Code</td> 
-<td>
-</td>
+<table border=1 style="table-layout: fixed;width: 900px; ">
+<tr class="table-heading">
+<td>Entity</td><td>Entity Type</td><td>Entity Subtype</td><td>Code</td><td style="width:230px"></td>
 </tr>
 <tr>
 <td>Weapons/Weapons System</td> <td></td> <td></td> <td>110000</td> 
@@ -8278,9 +8298,12 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 
 <div class="main">
  <h3 id="TABLEA-XXVI">TABLE A-XXVI. Land equipment sector 1 modifier </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
+<td>First Modifier</td><td>Code</td><td style="width:230px"></td>
+</tr>
+<tr>
 <td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("100115000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("100315000000000000", {size:size}).getMarker().XML);</script>
@@ -8377,16 +8400,15 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
+<h2>Land installation</h2>
  <h3 id="TABLEA-XXVII">TABLE A-XXVII. Land installation entity/entity type/entity subtype </h3>
 </div>
-<table border=1 style="width:1050px">
-<tr>
-<td style="width:150px">Entity</td> <td style="width:250px">Entity Type</td> <td style="width:250px">Entity Subtype</td> <td style="width:50px">Code</td> 
-<td>
-</td>
+<table border=1 style="table-layout: fixed;width: 900px; ">
+<tr class="table-heading">
+<td>Entity</td><td>Entity Type</td><td>Entity Subtype</td><td>Code</td><td style="width:245px"></td>
 </tr>
 <tr>
 <td>Military/Civilian</td> <td></td> <td></td> <td>110000</td> 
@@ -9411,9 +9433,12 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 
 <div class="main">
  <h3 id="TABLEA-XXVIII">TABLE A-XXVIII. Land installation sector 1 modifier </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
+<td>First Modifier</td><td>Code</td><td style="width:245px"></td>
+</tr>
+<tr>
 <td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("100120000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("100320000000000000", {size:size}).getMarker().XML);</script>
@@ -9542,14 +9567,15 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
  <h3 id="TABLEA-XXIX">TABLE A-XXIX. Land installation sector 2 modifier </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
-<td>Unspecified</td> <td>00</td> 
+<td>Second Modifier</td><td>Code</td><td style="width:245px"></td>
+</tr><td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("10012000000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("10032000000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("10042000000000000000", {size:size}).getMarker().XML);</script>
@@ -9637,16 +9663,15 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
+<h2>Sea surface</h2>
  <h3 id="TABLEA-XXXI">TABLE A-XXXI. Sea surface entity/entity type/entity subtype </h3>
 </div>
-<table border=1 style="width:1050px">
-<tr>
-<td style="width:150px">Entity</td> <td style="width:250px">Entity Type</td> <td style="width:250px">Entity Subtype</td> <td style="width:50px">Code</td> 
-<td>
-</td>
+<table border=1 style="table-layout: fixed;width: 900px; ">
+<tr class="table-heading">
+<td>Entity</td><td>Entity Type</td><td>Entity Subtype</td><td>Code</td><td style="width:230px"></td>
 </tr>
 <tr>
 <td>Military</td> <td></td> <td></td> <td>110000</td> 
@@ -10397,9 +10422,12 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 
 <div class="main">
  <h3 id="TABLEA-XXXII">TABLE A-XXXII. Sea surface sector 1 modifier </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
+<td>First Modifier</td><td>Code</td><td style="width:230px"></td>
+</tr>
+<tr>
 <td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("100130000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("100330000000000000", {size:size}).getMarker().XML);</script>
@@ -10608,13 +10636,16 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
  <h3 id="TABLEA-XXXIII">TABLE A-XXXIII. Sea surface sector 2 modifier </h3>
-</div>
- <table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
+<td>Second Modifier</td><td>Code</td><td style="width:230px"></td>
+</tr>
+<tr>
 <td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("10013000000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("10033000000000000000", {size:size}).getMarker().XML);</script>
@@ -10759,16 +10790,15 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
+<h2>Sea Subsurface</h2>
  <h3 id="TABLEA-XXXIV">TABLE A-XXXIV. Sea Subsurface entity/entity type/entity subtype </h3>
 </div>
-<table border=1 style="width:1050px">
-<tr>
-<td style="width:150px">Entity</td> <td style="width:250px">Entity Type</td> <td style="width:250px">Entity Subtype</td> <td style="width:50px">Code</td> 
-<td>
-</td>
+<table border=1 style="table-layout: fixed;width: 900px; ">
+<tr class="table-heading">
+<td>Entity</td><td>Entity Type</td><td>Entity Subtype</td><td>Code</td><td style="width:220px"></td>
 </tr>
 <tr>
 <td>Military</td> <td></td> <td></td> <td>110000</td> 
@@ -10935,9 +10965,12 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 
 <div class="main">
  <h3 id="TABLEA-XXXV">TABLE A-XXXV. Sea subsurface sector 1 modifier </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
+<td>First Modifier</td><td>Code</td><td style="width:220px"></td>
+</tr>
+<tr>
 <td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("100135000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("100335000000000000", {size:size}).getMarker().XML);</script>
@@ -11122,14 +11155,16 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
  <h3 id="TABLEA-XXXVI">TABLE A-XXXVI. Sea subsurface sector 2 modifier </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
-<td>Unspecified</td> <td>00</td> 
+<td>Second Modifier</td><td>Code</td><td style="width:220px"></td>
+</tr>
+<tr><td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("10013500000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("10033500000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("10043500000000000000", {size:size}).getMarker().XML);</script>
@@ -11281,16 +11316,15 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
+<h2>Mine warfare</h2>
  <h3 id="TABLEA-XXXVII">TABLE A-XXXVII. Mine warfare entity/entity type/entity subtype </h3>
 </div>
-<table border=1 style="width:1050px">
-<tr>
-<td style="width:150px">Entity</td> <td style="width:250px">Entity Type</td> <td style="width:250px">Entity Subtype</td> <td style="width:50px">Code</td> 
-<td>
-</td>
+<table border=1 style="table-layout: fixed;width: 900px; ">
+<tr class="table-heading">
+<td>Entity</td><td>Entity Type</td><td>Entity Subtype</td><td>Code</td><td style="width:260px"></td>
 </tr>
 <tr>
 <td>Sea Mine, General</td> <td></td> <td></td> <td>110000</td> 
@@ -12136,13 +12170,12 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 
 
 <div class="main">
+<h2>Activities</h2>
  <h3 id="TABLEA-XXXVIII">TABLE A-XXXVIII. Activities entity/entity type/entity subtype </h3>
 </div>
-<table border=1 style="width:1050px">
-<tr>
-<td style="width:150px">Entity</td> <td style="width:250px">Entity Type</td> <td style="width:250px">Entity Subtype</td> <td style="width:50px">Code</td> 
-<td>
-</td>
+<table border=1 style="table-layout: fixed;width: 900px; ">
+<tr class="table-heading">
+<td>Entity</td><td>Entity Type</td><td>Entity Subtype</td><td>Code</td><td style="width:245px"></td>
 </tr>
 <tr>
 <td>Incident</td> <td></td> <td></td> <td>110000</td> 
@@ -13341,10 +13374,12 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 
 <div class="main">
  <h3 id="TABLEA-XXXIX">TABLE A-XXXIX. Activities sector 1 modifier </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
-<td>Unspecified</td> <td>00</td> 
+<td>First Modifier</td><td>Code</td><td style="width:245px"></td>
+</tr>
+<tr><td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("100140000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("100340000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("100440000000000000", {size:size}).getMarker().XML);</script>
@@ -13512,16 +13547,16 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
+<h2>Signals intelligence</h2>
+Only space is shown, but all codes for signals intelligence can be used.
  <h3 id="TABLEA-XLIII">TABLE A-XLIII. Signals intelligence equipment entity/entity type/entity subtype </h3>
 </div>
-<table border=1 style="width:1050px">
-<tr>
-<td style="width:150px">Entity</td> <td style="width:250px">Entity Type</td> <td style="width:250px">Entity Subtype</td> <td style="width:50px">Code</td> 
-<td>
-</td>
+<table border=1 style="table-layout: fixed;width: 900px; ">
+<tr class="table-heading">
+<td>Entity</td><td>Entity Type</td><td>Entity Subtype</td><td>Code</td><td style="width:220px"></td>
 </tr>
 <tr>
 <td>Signal Intercept</td> <td></td> <td></td> <td>110000</td> 
@@ -13557,10 +13592,12 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 
 <div class="main">
  <h3 id="TABLEA-XLIV">TABLE A-XLIV. Signals intelligence equipment sector 1 modifier </h3>
-</div>
-<table>
+
+<table border=1 style="table-layout: fixed;width: 100%; ">
 <tr class="table-heading">
-<td>Unspecified</td> <td>00</td> 
+<td>First Modifier</td><td>Code</td><td style="width:220px"></td>
+</tr>
+<tr><td>Unspecified</td> <td>00</td> 
 <td><script>document.write(new MS.symbol("100150000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("100350000000000000", {size:size}).getMarker().XML);</script>
 <script>document.write(new MS.symbol("100450000000000000", {size:size}).getMarker().XML);</script>
@@ -14096,16 +14133,15 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </td>
 </tr>
 </table>
-
+</div>
 
 <div class="main">
+<h2>Cyberspace</h2>
  <h3 id="TABLEA-XLV">TABLE A-XLV. Cyberspace entity/entity type/entity subtype </h3>
 </div>
-<table border=1 style="width:1050px">
-<tr>
-<td style="width:150px">Entity</td> <td style="width:250px">Entity Type</td> <td style="width:250px">Entity Subtype</td> <td style="width:50px">Code</td> 
-<td>
-</td>
+<table border=1 style="table-layout: fixed;width: 900px; ">
+<tr class="table-heading">
+<td>Entity</td><td>Entity Type</td><td>Entity Subtype</td><td>Code</td><td style="width:245px"></td>
 </tr>
 <tr>
 <td>Botnet</td> <td></td> <td></td> <td>110000</td> 
@@ -14492,7 +14528,8 @@ document.write(new MS.symbol(10061500001601000000, {size:size}).getMarker().XML)
 </table>
 
 
-
+<br>
+<br>
 
 
 </body>
