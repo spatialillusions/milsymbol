@@ -1797,7 +1797,7 @@ var MS = new function(){
 		this.quantity			= '';//FieldID C
 		this.reinforcedReduced	= '';//FieldID F
 		this.staffComments		= '';//FieldID G
-		this.additionalInformation= '';//FieldID H
+		this.additionalInformation = '';//FieldID H
 		this.evaluationRating	= '';//FieldID J
 		this.combatEffectiveness= '';//FieldID K
 		this.signatureEquipment	= '';//FieldID L
@@ -1812,11 +1812,12 @@ var MS = new function(){
 		this.altitudeDepth		= '';//FieldID X
 		this.location			= '';//FieldID Y
 		this.speed				= '';//FieldID Z
-		this.specialHeadquarters= '';//FieldID AA
+		this.specialHeadquarters = '';//FieldID AA
 		this.platformType		= '';//FieldID AD
-		this.equipmentTeardownTime= '';//FieldID AE
+		this.equipmentTeardownTime = '';//FieldID AE
 		this.commonIdentifier	= '';//FieldID AF
-		this.auxiliaryEquipmentIndicator= '';//FieldID AG
+		this.auxiliaryEquipmentIndicator = '';//FieldID AG
+		this.headquartersElement = ''; //FieldID AH
 		//});
 
 		//FieldID AM Distance
@@ -2669,14 +2670,41 @@ function textfields(){
 	}
 
 	//Check that we have some texts to print
-	var textFields = (this.quantity||this.reinforcedReduced||this.staffComments||this.additionalInformation||this.evaluationRating||this.combatEffectiveness||this.signatureEquipment||this.higherFormation||this.hostile||this.iffSif||this.sigint||this.uniqueDesignation||this.type||this.dtg||this.altitudeDepth||this.location||this.speed||this.specialHeadquarters||this.platformType||this.equipmentTeardownTime||this.commonIdentifier||this.auxiliaryEquipmentIndicator);
+	var textFields = (this.quantity||this.reinforcedReduced||this.staffComments||this.additionalInformation||this.evaluationRating||this.combatEffectiveness||this.signatureEquipment||this.higherFormation||this.hostile||this.iffSif||this.sigint||this.uniqueDesignation||this.type||this.dtg||this.altitudeDepth||this.location||this.speed||this.specialHeadquarters||this.platformType||this.equipmentTeardownTime||this.commonIdentifier||this.auxiliaryEquipmentIndicator||this.headquartersElement);
 	if(this.infoFields && textFields){
 		if(this.specialHeadquarters){
-			drawArray2.push({type:'text',text:this.specialHeadquarters,x:100,y:110,textanchor:"middle",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
+			function text(str){
+				var size = 42;
+				var y = 115;
+				if(str.length == 1){
+					size = 45;
+					y = 115;
+				}
+				if(str.length == 3){
+					size = 35;
+					y = 110;
+				}
+				if(str.length >= 4){
+					size = 32;
+					y = 110;
+				}
+				var t = {type:'text',stroke:false,textanchor:"middle",x:100,y:y,fontsize:size,fontfamily:fontFamily,fontweight:'bold',text:str,stroke:false};
+				return t;
+			}
+			//drawArray2.push({type:'text',text:this.specialHeadquarters,x:100,y:110,textanchor:"middle",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
+			drawArray2.push(text(this.specialHeadquarters));
 		}
 		if(this.quantity){
 			drawArray2.push({type:'text',text:this.quantity,x:100,y:(bbox.y1-10),textanchor:"middle",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
 			gbbox.y1 = (bbox.y1-10-fontSize);
+		}
+		if(this.headquartersElement){
+			if(this.properties.condition && this.properties.fill && this.monoColor == ""){
+				//Add the hight of the codition bar to the geometry bounds
+				bbox.y2 += 15;
+			}
+			drawArray2.push({type:'text',text:this.headquartersElement,x:100,y:(bbox.y2+35),textanchor:"middle",fontsize:35,fontfamily:fontFamily,fontweight:'bold',fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
+			gbbox.y2 = (bbox.y2+35);
 		}
 
 		var gStrings = {L1:"",L2:"",L3:"",L4:"",L5:"",R1:"",R2:"",R3:"",R4:"",R5:""};//Text information on left and right sIde.
