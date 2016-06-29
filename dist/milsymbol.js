@@ -2728,7 +2728,7 @@ function textfields(){
 			}
 		}
 		//Land or letterbased SIDC
-		if(isNaN(this.SIDC) || this.properties.dimension == "Ground"){
+		if(isNaN(this.SIDC) || this.properties.baseDimension == "Ground"){
 			gStrings.L1 = this.dtg;
 			if(this.altitudeDepth||this.location){
 				a = [];
