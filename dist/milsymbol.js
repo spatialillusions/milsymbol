@@ -2031,6 +2031,7 @@ var MS = new function(){
 			this.bbox = MS.bbox();
 			//Processing all parts of the marker, adding them to the drawinstruction and updating the boundingbox
 			for (var i in MS._markerParts){
+				if (!MS._markerParts.hasOwnProperty(i)) continue;
 				var m = MS._markerParts[i].call(this);
 				if (!m.pre) continue;
 				if(m.pre.length)this.drawInstructions.unshift(m.pre);
