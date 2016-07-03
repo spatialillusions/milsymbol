@@ -2264,7 +2264,7 @@ var MS = new function(){
 		};
 
 	};
-
+	// This is here so that we have it initiated in this.symbol from the beginning 
 	this.symbol.prototype.setOptions = function(options){
 		for (var key in options){
 			this[key] = options[key];
