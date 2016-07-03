@@ -127,8 +127,7 @@ var MS = new function(){
 
 	this._markerParts = [];
 	this.getMarkerParts = function(){
-		var a = this._markerParts;
-		return a;
+		return this._markerParts.slice(0);
 	};
 	this.setMarkerParts = function(parts){
 		this._markerParts = parts;
