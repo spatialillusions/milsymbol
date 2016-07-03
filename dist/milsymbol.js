@@ -2440,7 +2440,6 @@ function modifier(){
 	var gbbox = new MS.bbox(); //bounding box for the added geometries
 	if(this.properties.headquarters){
 		//HEADQUARTERS
-		//HQ staf should go down one octagon =100px from bottom of icon.
 		var y = 100;
 		if(['AirFriend','AirNeutral','GroundFriend','GroundNeutral','SeaNeutral','SubsurfaceNeutral'].indexOf(this.properties.dimension + this.properties.affiliation) > -1 )y = bbox.y2;
 		if((this.properties.dimensionType + this.properties.affiliationType) == 'SubsurfaceFriend')y = bbox.y1;
