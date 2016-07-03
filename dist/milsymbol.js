@@ -83,7 +83,7 @@ var MS = new function(){
 	this.setHqStafLength = function(len){
 		this.hqStafLength = len;
 		return this.hqStafLength;
-	}	;
+	};
 	this._colorModes	= {};
 	this.getColorMode = function(mode){
 		var c = this._colorModes[mode];
