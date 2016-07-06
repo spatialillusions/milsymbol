@@ -42,7 +42,7 @@ Then to get a SVG symbol in a client or server you can simply do:
 
 milsymbol supports a lot of different options:
  - Both letter and number based SIDC
- - NATO or US standards
+ - NATO or US standards (MIL-STD-2525C, MIL-STD-2525D, STANAG APP6-(B), STANAG APP6-(D) Draft)
  - Filled/Unfilled symbols
  - Framed/Unframed symbols
  - Text fields
@@ -63,14 +63,16 @@ milsymbol can be integrated with most common javascript libraries, such as:
 Technology
 ----------
 
-milsymbol uses pure javascript to create SVG, Scalable Vector Graphics, symbols for all types of unit and equipment symbols in APP6b, MIL-STD-2525C (not full support for emergency management symbols yet) and parts of 2525D. The symbols are created using building blocks defined in the code and no images or fonts are used, this makes it possible to modify almost every aspect of the symbols, such as fill, frame, color, size, stroke width and easily switch between APP6 and 2525 symbology.
+milsymbol uses pure javascript to create SVG, Scalable Vector Graphics, and also has built in for native Canvas support. 
+
+ - No external dependencies, just one javascript file required
+ - Super fast, can create 1000 symbols in less than 50milliseconds (SVG output)
+ 
+The symbols are created using building blocks defined in the code and no images or fonts are used, this makes it possible to modify almost every aspect of the symbols, such as fill, frame, color, size, stroke width and easily switch between APP6 and 2525 symbology.
 
 To see what is possible with milsymbol use the unit test documents in the docs folder that lists all tabels and figures from the different standards using MilSymbol. (The documents uses milsymbol to render every image that you see, look into the code if you want to see how it is done.)
 
-Dependencies
-------------
-
-milsymbol has no dependencies, all the code you need is in one javascript file, no external images, fonts or css needs to be loaded. 
+milsymbol can easily be extended with new functionality and examples of this can be found at: https://github.com/spatialillusions/milsymbol-extensions
 
 Contact
 -------
