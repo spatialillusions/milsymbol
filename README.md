@@ -17,7 +17,7 @@ new MS.symbol("sfgpewrh--mt", {
 	type: "machine gun".toUpperCase(),
 	dtg: "30140000ZSEP97",
 	location: "0900000.0E570306.0N"
-}).getMarker().XML);
+}).getMarker().XML;
 ```
 
 Compared to reference figure from MIL-STD-2525C:
