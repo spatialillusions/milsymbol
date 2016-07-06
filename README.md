@@ -1,36 +1,64 @@
 milsymbol
 =========
 
-milsymbol is a small library in pure javascript that creates SVG symbols according to MIL-STD-2525 and APP6. All unit symbols with SIDCs in both 2525(c) and APP6(b) are supported. The symbols are created according to APP6(c) symbology and might therefore differ from the  symbols in shown in the standard documents, but they are made according to the standards and follows the way that symbols are created in ADRP 1-02 (US Army Doctrine Reference Publication).
+milsymbol is a small library in pure javascript that creates military unit symbols according to to MIL-STD-2525 and APP6. 
 
-At the moment APP6(B) ANNEX D / 2525C APPENDIX A (Unit Symbols) and 2525C APPENDIX D (Signals intelligence symbols) and APPENDIX E (Stability operations symbols) /  symbols for 2525D are implemented in this library.
+Example:
+
+![Figure 13](docs/samples/figure13.svg?raw=true)
+
+```javascript
+new MS.symbol("sfgpewrh--mt", {
+	size: 35,
+	quantity: 200,
+	staffComments: "for reinforcements".toUpperCase(),
+	additionalInformation: "added support for JJ".toUpperCase(),
+	direction: (750*360/6400),
+	type: "machine gun".toUpperCase(),
+	dtg: "30140000ZSEP97",
+	location: "0900000.0E570306.0N"
+}).getMarker().XML);
+```
+
+Compared to reference figure from MIL-STD-2525C:
+
+
+![Figure 13](docs/figure13.png?raw=true)
+
 
 You can find all documentaion and examples at:
 http://spatialillusions.com/milsymbol/
 
-milsymbol is created and maintained by Måns Beckman, and you can visit my homepage http://www.spatialillusions.com to read more about who I am and see more examples of what MilSymbol can be used for. milsymbol is a hobby project created during weekends and evenings, so I'll try to work as fast as I can but my time for the project is limited.
 
-If you use milsymbol for some project I'm always interested to hear about it, my contact details can be found on my homepage.
+Setup/Usage
+-----------
+You can get milsymbol using npm:
 
-milsymbol 0.5.6
--------------
-* asCanvas() is now also supported in Internet Explorer 11, this makes it simpler to integrate with Open Layers 3 and Cesium
-* Added back the possibility to create effects with SVG filters in custom extensions
+`npm install milsymbol`
 
-milsymbol 0.5.5
--------------
-* **Custom extensions will have to be updated**
-* Native canvas support with the asCanvas() method
-* New storage format for all geometries so that it is possible to support several rendering engines
-* Pushed the version number a bit since there is a lot of changes, was thinking about 0.6, but it was just minor API changes
+Then to get a SVG symbol in a client or server you can simply do:
 
+`new MS.symbol("SFG-UCI----D").getMarker().XML`
 
-milsymbol 0.5
--------------
-* Much faster
-* New API
-* Support point symbols from MIL-STD-2525D
-* New examples
+milsymbol supports a lot of different options:
+ - Both letter and number based SIDC
+ - NATO or US standards
+ - Filled/Unfilled symbols
+ - Framed/Unframed symbols
+ - Text fields
+ - Movement indicators
+ - SVG/Canvas output (using SVG or Canvas draw instructions)
+ - and much more... 
+ 
+For detaild descriptions of what is possible with milsymbol, see the API documentation.
+
+milsymbol can be integrated with most common javascript libraries, such as:
+ - Open Layers 3
+ - Cesium
+ - LeafLet
+ - d3
+ - Angular
+ - and many more...
 
 Technology
 ----------
@@ -44,13 +72,13 @@ Dependencies
 
 milsymbol has no dependencies, all the code you need is in one javascript file, no external images, fonts or css needs to be loaded. 
 
-Limitations
------------
-
-* milsymbol will need at least IE9 to work and will work in all other modern browsers on desktop and mobile.
-* milsymbol does not render tactical graphics at the moment.
+Contact
+-------
+milsymbol is created and maintained by Måns Beckman
+ - http://www.spatialillusions.com to see more examples of what milsymbol can be used for
+ - https://twitter.com/spatialillusion for milsymbol and mapping/military related information 
 
 Licensing
 ---------
 
-BSD, See License.txt for details
+MIT, See License.txt for details
