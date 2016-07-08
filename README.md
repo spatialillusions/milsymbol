@@ -1,9 +1,7 @@
 milsymbol
 =========
 
-milsymbol is a small library in pure javascript that creates military unit symbols according to to MIL-STD-2525 and STANAG APP6. 
-
-Example of unit symbol generated with milsymbol:
+milsymbol is a small library in pure javascript that creates military unit symbols according to to MIL-STD-2525 and STANAG APP6.
 
 ![Figure 13](docs/samples/milsymbol.png?raw=true)
 
