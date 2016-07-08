@@ -23,6 +23,7 @@ Compared to reference figure from MIL-STD-2525C:
 
 ![Figure 13](docs/figure13.png?raw=true)
 
+milsymbol summary
 ----
 
 milsymbol supports a lot of different options:
@@ -37,7 +38,6 @@ milsymbol supports a lot of different options:
  
 For detaild descriptions of what is possible with milsymbol, see the API documentation.
 
-----
 
 milsymbol can be integrated with most common javascript libraries, such as:
  - Open Layers 3
@@ -49,7 +49,6 @@ milsymbol can be integrated with most common javascript libraries, such as:
 
 Examples of some of the integrations are included with milsymbol.
 
----
 You can find all documentaion and examples at:
 http://spatialillusions.com/milsymbol/
 
