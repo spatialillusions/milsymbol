@@ -5,7 +5,7 @@ milsymbol is a small library in pure javascript that creates military unit symbo
 
 Example of unit symbol generated with milsymbol:
 
-![Figure 13](docs/samples/figure13.png?raw=true)
+![Figure 13](docs/samples/milsymbol.png?raw=true)
 
 ```javascript
 new MS.symbol("sfgpewrh--mt", {
