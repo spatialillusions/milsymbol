@@ -1,0 +1,257 @@
+/* spatial-white */
+body {
+	margin-top: 50px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	
+	background-color:#fff;
+	
+	color: rgb(51, 51, 51);
+	font-family: arial, sans-serif;
+	font-size: 100%;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1.4rem;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	color:rgb(0,107,140);
+}
+
+h1 {
+	color: rgb(0, 0, 0);
+	font-size: 2rem;
+	font-weight: normal;
+	margin-top: 0.2rem;
+	margin-bottom: 0.2rem;
+}
+
+h2 {
+	color: rgb(0, 0, 0);
+	font-size: 1.5rem;
+	font-weight: normal;
+	margin-top: 0.2rem;
+	margin-bottom: 0.2rem;
+}
+
+h3 {
+	color: rgb(0, 0, 0);
+	font-size: 1.3rem;
+	font-weight: normal;
+	margin-top: 0.2rem;
+	margin-bottom: 0.2rem;
+}
+
+.page-width {
+	max-width:900px;
+	margin: auto;
+	padding: 5px;
+}
+
+.main {
+	max-width:700px;
+	margin: auto;
+	padding: 5px;
+
+}
+.link-button {
+	display:inline-block;
+	margin-top:10px;
+	background-color:rgb(0,168,220);
+	box-shadow: 0px 0px 8px #888888;
+
+
+	color: rgb(255,255,255);
+	text-transform: capitalize;
+	text-decoration: none;
+	padding: 5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#header {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 8px #888888;
+	
+	color: rgb(120, 120, 120);
+	font-size: 20px;
+	font-family: arial, sans-serif;
+	font-weight: normal;
+	text-decoration: none;
+}
+#header h1 {
+	display: inline;
+	font-weight: normal;
+	text-decoration: none;
+	font-size: 1em;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+}
+#header a {
+	color: rgb(120, 120, 120);
+	font-weight: normal;
+	text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 14px;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1.4;
+}
+
+table, td, th {
+    border: solid 1px hsla(195,50%,80%,1);
+    padding: 5px;
+}
+
+.table-heading{
+	font-weight: bold;
+	background-color: rgb(243, 243, 243);
+}
+
+footer {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	
+	background-color: rgb(120, 120, 120);
+	
+	font-family: arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1.5;
+	color: rgb(255, 255, 255);
+	letter-spacing: -0.01em;
+}
+footer a {
+	color: rgb(255, 255, 255);
+}
+address {
+	padding-bottom: 150px;
+}
+</style>
+<style type="text/css">
+body {
+	background-color:rgb(243, 243, 243);
+}
+
+select{
+	font-size: 1.2rem;
+}
+.baseproperty{
+	width: 150px;
+}
+
+#selectionstuff{
+	padding-top: 5px;
+}
+
+.tabs .tabOuter {
+	list-style: none;
+	padding:0px;
+}
+
+.tabs .tabOuter div {
+	float: left;
+	background-color: rgb(255,255,255);
+	border: solid 1px hsla(195,50%,80%,1);
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom: none;
+	max-width: 25%;
+	margin-right: 2px;
+	margin-left:0px;
+	padding: 5px;
+}
+.tabs .tabOuter div a{
+	color: #888;
+	font-size: 1.1rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.tabs .tabOuter div.active {
+	margin-bottom: -1px;
+	padding-bottom: 6px;
+}
+.tabs .tabOuter div.active a{
+	color: rgb(0,0,0);
+
+}
+.tabInner {
+	clear: both;
+	border: solid 1px hsla(195,50%,80%,1);
+	overflow: hidden;
+	background-color: rgb(255,255,255);
+}
+
+.tabInner div {
+	padding: 10px;
+	display: none;
+
+}
+
+.tabInner .active {
+	display: block;
+}
+
+#symbolstuff{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	overflow-x: auto;
+	background-color: rgb(255,255,255);
+	border-radius: 6px;
+	border: solid 1px hsla(195,50%,80%,1);
+}
+#symbolstuff table {
+	border: 0px;
+}
+#symbolstuff td {
+	border: 0px;
+}
+
+#MapMarker {
+	text-align: center;
+}
+
+#textstuff {
+	overflow-x: auto;
+}
+
+#textField{
+	background-color: rgb(255,255,255);
+	border-collapse:collapse;
+	font-size: 0.9rem;
+}
+
+#textField td{
+	border: solid 1px hsla(195,50%,80%,1);
+}
+
+#textField input{
+	background-color: rgb(255,255,255);
+	border-collapse:collapse;
+	font-size: 1.2rem;
+}
+
+.textError{
+	background-color: rgb(255,220,220);
+}
+
+code{
+	color: rgb(100, 100, 100);
+	font-size: 1rem;
+	display: block;
+}
