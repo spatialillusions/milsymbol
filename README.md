@@ -95,7 +95,9 @@ sym.size = 35;
 var canvasElement = sym.getMarker().asCanvas();
 ```
 
-When you have requested your symbol using `getMarker()` your symbol object will also contain information about what offset that should be used to get a correct placement, this is stored in the `markerAnchor {x:Number,y:Number}` property.
+When you have requested your symbol using `getMarker()` your symbol object will also contain information about what offset that should be used to get a correct placement, this is stored in the `markerAnchor {x:Number,y:Number}` property, you will also have access to information about what size the created symbol have and detailed information about colors used. 
+
+The library is built on the idea that everything used inside milsymbol should be accessable outside milsymbol so that it is easy to extend the library with custom functionallity.
 
 Technology
 ----------
