@@ -71,7 +71,7 @@ Now `sym` will be a symbol object, but that is not a rendered symbol, this is ju
 
 And `marker` will now be a symbol object containing information about the size and draw instructions. (For this particular symbol, and in this case `marker` and `sym` will be te same symbol object since `getMarker()` just updates the current object.) 
 
-But you want something to put on your screen, and since milsymbol provides different ways to draw symbol, using SVG or Canvas, you will have to use the method that provides you with the output you want, and for Cesium we want canvas output, so we use `asCanvas()` that returns a canvas element containing the symbol:
+But you want something to put on your screen, and since milsymbol provides different ways to draw symbol, using SVG or Canvas, you will have to use the method that provides you with the output you want, so we use `asCanvas()` or `asSVG()` that returns a canvas element containing the symbol or a XML representation of the SVG:
 
 `var canvasElement = marker.asCanvas();`
 
