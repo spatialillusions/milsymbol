@@ -1722,6 +1722,7 @@ var MS = new function(){
 			}
 		}
 		for(var key in icn){
+			if (!icn.hasOwnProperty(key)) continue;
 			defaultProperties.call(this,icn[key]);
 		}
 		return icn;
@@ -2266,6 +2267,7 @@ var MS = new function(){
 	// This is here so that we have it initiated in this.symbol from the beginning 
 	this.symbol.prototype.setOptions = function(options){
 		for (var key in options){
+			if (!options.hasOwnProperty(key)) continue;
 			this[key] = options[key];
 		}
 		return this;
@@ -2660,6 +2662,7 @@ function textfields(){
 		var strWidths = {" ":9,"!":10,"\"":15,"#":17,"$":17,"%":27,"&":22,"'":8,"(":10,")":10,"*":12,"+":18,",":9,"-":10,".":9,"/":9,"0":17,"1":17,"2":17,"3":17,"4":17,"5":17,"6":17,"7":17,"8":17,"9":17,":":10,";":10,"<":18,"=":18,">":18,"?":19,"@":30,"A":22,"B":22,"C":22,"D":22,"E":21,"F":19,"G":24,"H":22,"I":9,"J":17,"K":22,"L":19,"M":25,"N":22,"O":24,"P":21,"Q":24,"R":22,"S":21,"T":19,"U":22,"V":21,"W":29,"X":21,"Y":21,"Z":19,"[":10,"]":10,"^":18,"_":17,"`":10,"a":17,"b":19,"c":17,"d":19,"e":17,"f":10,"g":19,"h":19,"i":9,"j":9,"k":17,"l":9,"m":27,"n":19,"o":19,"p":19,"q":19,"r":12,"s":17,"t":10,"u":19,"v":17,"w":24,"x":17,"y":17,"z":15,"{":12,"|":9,"}":12,"~":18};
 		var w = 0;
 		for(var i in str){
+			if (!str.hasOwnProperty(i)) continue;
 			//If we dont know how wide the char is, set it to 28.5 that is the width of W and no char is wider than that.
 			w += fontSize/30*(strWidths[str[i]]?strWidths[str[i]]:28.5);
 		}
