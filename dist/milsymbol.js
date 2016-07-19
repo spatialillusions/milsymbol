@@ -6606,3 +6606,8 @@ MS._Path2D = function(ctx, d){
 		}
 	}
 };
+
+// Add support for CommonJS and Browserify/webpack etc.
+if (typeof module === 'object' && typeof module.exports === 'object') {
+	module.exports = MS;
+}
