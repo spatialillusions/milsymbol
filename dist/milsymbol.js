@@ -2070,7 +2070,7 @@ var MS = new function(){
 		};
 
 		//Returns the marker as a base 64 encoded string
-		this.asImage = function(){
+		this.toDataURL = function(){
 			return ("data:image/svg+xml;base64," + btoa(this.XML));
 		};
 
