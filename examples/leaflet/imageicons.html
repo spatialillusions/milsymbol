@@ -118,7 +118,7 @@ function init(){
 				})
 				
 			var myicon = L.icon({
-				iconUrl: mysymbol.getMarker().asImage(),
+				iconUrl: mysymbol.getMarker().toDataURL(),
 				iconAnchor: [mysymbol.markerAnchor.x, mysymbol.markerAnchor.y],
 			});
 				
@@ -130,7 +130,7 @@ function init(){
 
 <div class="main">
 <h1>milsymbol in LeafLet - L.icon()</h1>
-Using the asImage() method in milsymbol makes it possible to assign the output from milsymbol as an image source. This way you can use the output from milsymbol in ordinary L.icon() markers in LeafLet.<br>
+Using the toDataURL() method in milsymbol makes it possible to assign the output from milsymbol as an image source. This way you can use the output from milsymbol in ordinary L.icon() markers in LeafLet.<br>
 </div>
 <div id="map" class="mymap">
 </div></body>

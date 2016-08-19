@@ -116,7 +116,7 @@ function init(){
 				});
 				
 		var myimage = document.createElement('img');
-		myimage.src = mysymbol.getMarker().asImage();
+		myimage.src = mysymbol.getMarker().toDataURL();
 		
 		f.setStyle(new ol.style.Style({
 	  		image: new ol.style.Icon( ({
@@ -153,7 +153,7 @@ function init(){
 
 <div class="main">
 <h1>milsymbol in open layers 3 - work in old IE - ol.style.Icon()</h1>
-Using the asImage() method in milsymbol makes it possible to assign the output from milsymbol as an image source. This way you can use the output from milsymbol in ol.style.Icon() in Open Layers.<br>
+Using the toDataURL() method in milsymbol makes it possible to assign the output from milsymbol as an image source. This way you can use the output from milsymbol in ol.style.Icon() in Open Layers.<br>
 
 </div>
 <div id="map" class="mymap">
