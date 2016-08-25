@@ -7,5 +7,5 @@
   ],
   "description": "milsymbol is a small library in pure javascript that creates SVG symbols according to MIL-STD-2525 and APP6.",
   "main": "dist/milsymbol.js",
-  "license": "BSD"
+  "license": "MIT"
 }
