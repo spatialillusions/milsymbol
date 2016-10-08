@@ -160,6 +160,7 @@ var MS = new function(){
 				clone.strokewidth = clone.stroke != false ? (Number(clone.strokewidth||stroke) + 2*outline) : 2*outline;
 				clone.stroke = color;
 				clone.fill = false;
+				clone.linecap = 'round';
 			}
 		}
 		return clone;
@@ -2142,6 +2143,10 @@ var MS = new function(){
 								if(instruction[i].stroke !== undefined){
 									svg += 'stroke-width="' + (instruction[i].strokewidth || this.strokeWidth) + '" ';
 									if(instruction[i].strokedasharray) svg += 'stroke-dasharray="' + instruction[i].strokedasharray + '" ';
+									if(instruction[i].linecap){
+										svg += 'stroke-linecap="' + instruction[i].linecap + '" ';
+										svg += 'stroke-linejoin="' + instruction[i].linecap + '" ';
+									}
 									if(instruction[i].stroke){
 										svg += 'stroke="' + instruction[i].stroke + '" ';
 									}else{
@@ -2214,7 +2219,10 @@ var MS = new function(){
 								ctx.setLineDash([]);
 							}
 						}
-
+						if(instruction[i].linecap){
+							ctx.lineCap = instruction[i].linecap;
+							ctx.lineJoin = instruction[i].linecap;
+						}
 						if(instruction[i].fill){ctx.fillStyle = instruction[i].fill;}
 						//fill is set to false, make it transparent
 						if(!instruction[i].fill){ctx.fillStyle = 'rgba(0,0,0,0)';}
@@ -2270,6 +2278,10 @@ var MS = new function(){
 								this.processCanvasInstructions.call(this,instruction[i].draw, ctx);
 								ctx.scale(1/instruction[i].factor,1/instruction[i].factor);
 								break;
+						}
+						if(instruction[i].linecap){
+							ctx.lineCap = 'butt';
+							ctx.lineJoin = 'miter';
 						}
 						if(instruction[i].fillopacity != undefined){ctx.globalAlpha = 1;}
 					}
