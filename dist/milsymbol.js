@@ -158,7 +158,7 @@ var MS = new function(){
 					clone.draw.push(MS.outline(geom.draw[draw],outline,stroke,color));
 				}
 			}else{
-				clone.strokewidth = clone.stroke != false ? (Number(stroke) + 2*outline) : outline;
+				clone.strokewidth = clone.stroke != false ? (Number(clone.strokewidth||stroke) + 2*outline) : 2*outline;
 				clone.stroke = color;
 				clone.fill = false;
 			}
