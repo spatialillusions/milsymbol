@@ -139,7 +139,6 @@ var MS = new function(){
 	};
 
 	this.outline = function(geom,outline,stroke,color){
-	console.log('active')
 		if(Array.isArray(geom)){
 			var clone = [];
 			for(var i in geom){
