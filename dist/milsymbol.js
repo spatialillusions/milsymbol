@@ -2342,7 +2342,14 @@ function basegeometry(){
 	geom.strokewidth = (this.size>=10?this.strokeWidth:10);
 	//outline
 	if(this.frame && this.outlineWidth > 0){
-		drawArray1.push(MS.outline(geom,this.outlineWidth, this.strokeWidth, this.outlineColor));
+		if(geom.type == 'path' && this.fill && !this.monoColor){
+			outline = {type:this.properties.baseGeometry.g.type};
+			outline.d = this.properties.baseGeometry.g.d + ' Z'; //Making sure the path is closed
+			outline.strokewidth = (this.size>=10?this.strokeWidth:10);
+		}else{
+			outline = geom;
+		}
+		drawArray1.push(MS.outline(outline,this.outlineWidth, this.strokeWidth, this.outlineColor));
 	}
 	//Add a dashed outline to the frame if we are using monocolor and the status is not present.
 	if((this.monoColor != '' || !this.fill) && this.properties.notpresent) geom.strokedasharray = this.properties.notpresent;
