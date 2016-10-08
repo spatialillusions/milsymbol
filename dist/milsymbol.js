@@ -137,6 +137,35 @@ var MS = new function(){
 			MS.setMarkerParts(MS.getMarkerParts().concat(parts));
 		}
 	};
+
+	this.outline = function(geom,outline,stroke,color){
+	console.log('active')
+		if(Array.isArray(geom)){
+			var clone = [];
+			for(var i in geom){
+				clone.push(MS.outline(geom[i],outline,stroke,color));
+			}
+		}else{
+			var clone = {};
+			for (var key in geom){
+				if(['fill','fillopacity'].indexOf(key) == -1){
+					clone[key] = geom[key];
+				}
+			}
+			if(geom.type == 'translate' || geom.type == 'rotate'  || geom.type == 'scale'){
+				clone.draw = [];
+				for (var draw in geom.draw){
+					clone.draw.push(MS.outline(geom.draw[draw],outline,stroke,color));
+				}
+			}else{
+				clone.strokewidth = clone.stroke != false ? (Number(stroke) + 2*outline) : outline;
+				clone.stroke = color;
+				clone.fill = false;
+			}
+		}
+		return clone;
+	};
+
 	this.bbox = function(box){
 		if(box == undefined){
 			box = {};
@@ -1737,7 +1766,7 @@ var MS = new function(){
 							bbox:new this.bbox({ x1: 45, y1:30, x2: 45+110 , y2:30+120})},
 		'AirUnknown'	: {	g:{type:'path',d:'M 65,150 c -55,0 -50,-90 0,-90 0,-50 70,-50 70,0 50,0 55,90 0,90'},
 							bbox:new this.bbox({ x1: 25, y1:20, x2: 25+150 , y2:20+130})},
-		'GroundHostile'	: {	g:{type:'path',d:'M 100,28 L172,100 100,172 28,100 100,28z'},
+		'GroundHostile'	: {	g:{type:'path',d:'M 100,28 L172,100 100,172 28,100 100,28 Z'},
 							bbox:new this.bbox({ x1: 28, y1:28, x2: 28+144 , y2:28+144})},
 		'GroundFriend'	: {	g:{type:'path',d:'M25,50 l150,0 0,100 -150,0 z'},
 							bbox:new this.bbox({ x1: 25, y1:50, x2: 25+150 , y2:50+100})},
@@ -1753,7 +1782,7 @@ var MS = new function(){
 							bbox:new this.bbox({ x1: 45, y1:45, x2: 45+110 , y2:45+110})},
 		'LandDismountedIndividualUnknown'	: {	g:{type:'path',d:'M 99.8,162 158,119.1 136.1,49.3 64.4,49 42.0,118.6 Z M 42,162 158,162'},
 							bbox:new this.bbox({ x1: 42, y1:49, x2: 42+116 , y2:49+113})},
-		'SeaHostile'	: {	g:{type:'path',d:'M100,28 L172,100 100,172 28,100 100,28'},
+		'SeaHostile'	: {	g:{type:'path',d:'M100,28 L172,100 100,172 28,100 100,28 Z'},
 							bbox:new this.bbox({ x1: 28, y1:28, x2: 28+144 , y2:28+144})},
 		'SeaFriend'		: {	g:{type:'circle',cx:100,cy:100,r:60},
 							bbox:new this.bbox({ x1: 40, y1:40, x2: 40+120 , y2:40+120})},
@@ -1787,6 +1816,8 @@ var MS = new function(){
 		this.fillOpacity		= 1; //Possibility to change the fill opacity
 		this.frame 				= true;//Should the icon be framed
 		this.strokeWidth 		= 4;//The stroke width of he icon frame.
+		this.outlineColor		= 'rgb(239, 239, 239)' //Color of the outline
+		this.outlineWidth		= 0; //Width of the outline.
 		this.icon 				= true;//Should we display the icon?
 		this.monoColor 			= false;//Should the icon be monocromatic and if so what color
 		this.civilianColor 		= true;//Should we use the Civilian Purple defined in 2525? (We set this to default because I like the color.
@@ -2039,16 +2070,16 @@ var MS = new function(){
 				if (m.bbox)this.bbox = MS.bboxMax(this.bbox,m.bbox);
 			}
 
-			this.baseWidth = this.bbox.width() + (this.strokeWidth*2);//Adding the stoke width as margins and a little bit extra
-			this.baseHeight = this.bbox.height() + (this.strokeWidth*2);//Adding the stoke width as margins and a little bit extra
+			this.baseWidth = this.bbox.width() + Number(this.strokeWidth*2) + Number(this.outlineWidth*2);//Adding the stoke width as margins and a little bit extra
+			this.baseHeight = this.bbox.height() + Number(this.strokeWidth*2) + Number(this.outlineWidth*2);//Adding the stoke width as margins and a little bit extra
 
 			this.width = this.baseWidth*this.size/100;
 			this.height = this.baseHeight*this.size/100;
 
 			var anchor = {x:100,y:100};
 			this.octagonAnchor = {
-				x: (anchor.x-this.bbox.x1+parseFloat(this.strokeWidth))*this.size/100,
-				y: (anchor.y-this.bbox.y1+parseFloat(this.strokeWidth))*this.size/100};
+				x: (anchor.x-this.bbox.x1+parseFloat(this.strokeWidth) + parseFloat(this.outlineWidth))*this.size/100,
+				y: (anchor.y-this.bbox.y1+parseFloat(this.strokeWidth) + parseFloat(this.outlineWidth))*this.size/100};
 			//If it is a headquarters the anchor should be at the end of the staf
 			if(this.properties.headquarters){
 				anchor = {
@@ -2056,8 +2087,8 @@ var MS = new function(){
 					y:this.properties.baseGeometry.bbox.y2 + MS.hqStafLength};
 			}
 			this.markerAnchor = {
-				x: (anchor.x-this.bbox.x1+parseFloat(this.strokeWidth))*this.size/100,
-				y: (anchor.y-this.bbox.y1+parseFloat(this.strokeWidth))*this.size/100};
+				x: (anchor.x-this.bbox.x1+parseFloat(this.strokeWidth) + parseFloat(this.outlineWidth))*this.size/100,
+				y: (anchor.y-this.bbox.y1+parseFloat(this.strokeWidth) + parseFloat(this.outlineWidth))*this.size/100};
 
 			if(MS.autoSVG)this.asSVG();
 
@@ -2151,7 +2182,7 @@ var MS = new function(){
 				}
 				return svgxml;
 			}
-			var xml = '<svg xmlns="'+svgNS+'" version="1.2" baseProfile="tiny" width="'+this.width+'" height="'+this.height+'" viewBox="'+(this.bbox.x1-this.strokeWidth) + " " + (this.bbox.y1-this.strokeWidth) + " " + this.baseWidth + " " + this.baseHeight +'">';
+			var xml = '<svg xmlns="'+svgNS+'" version="1.2" baseProfile="tiny" width="'+this.width+'" height="'+this.height+'" viewBox="'+(this.bbox.x1-this.strokeWidth-this.outlineWidth) + " " + (this.bbox.y1-this.strokeWidth-this.outlineWidth) + " " + this.baseWidth + " " + this.baseHeight +'">';
 			for (var i = 0; i<this.drawInstructions.length; i++){
 				xml += processInstructions.call(this,this.drawInstructions[i]);
 			}
@@ -2246,17 +2277,17 @@ var MS = new function(){
 				}
 			}
 		};
-		this.asCanvas = function(){
+		this.asCanvas = function(ratio){
 			var canvas = document.createElement("canvas");
 			//TODO fix the pixel ratio
-			var ratio = 1;//window.devicePixelRatio || 1;
+			var ratio = ratio || 1;//window.devicePixelRatio || 1;
 			canvas.width = this.width*ratio;
 			canvas.height = this.height*ratio;
 			//canvas.style.width = this.width +'px';
 			//canvas.style.height = this.height +'px';
 			var ctx = canvas.getContext("2d");
 			ctx.scale((ratio*this.size/100),(ratio*this.size/100));
-			ctx.translate(-(this.bbox.x1-this.strokeWidth), -(this.bbox.y1-this.strokeWidth));
+			ctx.translate(-(this.bbox.x1-this.strokeWidth-this.outlineWidth), -(this.bbox.y1-this.strokeWidth-this.outlineWidth));
 			for (var i = 0; i < this.drawInstructions.length; i++){
 				this.processCanvasInstructions.call(this,this.drawInstructions[i],ctx);
 			}
@@ -2282,6 +2313,7 @@ function basegeometry(){
 	var drawArray1 = [];
 	var drawArray2 = [];
 	var frameColor = this.colors.frameColor[this.properties.affiliation];
+
 	//Clone the base geometry
 	var geom = {type:this.properties.baseGeometry.g.type};
 	switch (geom.type){
@@ -2297,6 +2329,10 @@ function basegeometry(){
 	geom.fillopacity = this.fillOpacity;
 	geom.stroke = frameColor;
 	geom.strokewidth = (this.size>=10?this.strokeWidth:10);
+	//outline
+	if(this.frame && this.outlineWidth > 0){
+		drawArray1.push(MS.outline(geom,this.outlineWidth, this.strokeWidth, this.outlineColor));
+	}
 	//Add a dashed outline to the frame if we are using monocolor and the status is not present.
 	if((this.monoColor != '' || !this.fill) && this.properties.notpresent) geom.strokedasharray = this.properties.notpresent;
 	drawArray2.push(geom);
@@ -2371,6 +2407,8 @@ function statusmodifier(){
 			drawArray2.push({type:'path',strokewidth:this.strokeWidth,fill:colors[this.properties.condition],stroke:this.colors.frameColor[this.properties.affiliation],d:'M' + bbox.x1 + ',' + y2 + ' l' + bbox.width() + ',0 0,15 -' + bbox.width() + ',0 z'});
 			//Add the hight of the codition bar to the geometry bounds
 			y2 += 15;
+			//outline
+			if (this.outlineWidth > 0) drawArray1.push(MS.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor));
 		}else{
 			if(this.properties.condition == "Damaged" || this.properties.condition == "Destroyed"){
 				drawArray2.push({type:'path',d:'M150,20 L50,180',strokewidth:(this.strokeWidth * 2 ),stroke:this.colors.frameColor[this.properties.affiliation]});
@@ -2379,8 +2417,11 @@ function statusmodifier(){
 				y2 = 180;
 				}
 			if(this.properties.condition == "Destroyed")drawArray2.push({type:'path',d:"M50,20 L150,180",strokewidth:(this.strokeWidth * 2 ),stroke:this.colors.frameColor[this.properties.affiliation]});
+			//outline
+			if (this.outlineWidth > 0) drawArray1.push(MS.outline(drawArray2,this.outlineWidth, this.strokeWidth, this.outlineColor));
 		}
 	}
+
 	//A bounding box only needs the values that might change
 	return MS.buildingBlock(drawArray1,drawArray2,{y1:y1,y2:y2});
 }
@@ -2392,14 +2433,13 @@ function affliationdimension(){
 	var drawArray1 = [];
 	var drawArray2 = [];
 	var bbox = this.properties.baseGeometry.bbox;
-	//Draws the a question mark for some unknown or other dimension symbols
 	var frameColor = this.colors.frameColor[this.properties.affiliation];
+	//Draws the a question mark for some unknown or other dimension symbols
 	if(this.properties.dimensionUnknown && frameColor){
 		drawArray2.push({type:'text',text:'?',x:100,y:127,fill:frameColor,fontfamily:"Arial",fontsize:80,fontweight:"bold",textanchor:"middle"});
 	}
 	//If we don't have a geometry we shouldn't add anything.
-	if(this.properties.baseGeometry.g){
-
+	if(this.properties.baseGeometry.g && frameColor){
 		var spacing = 10;
 		if(this.properties.affiliation == "Unknown" || (this.properties.affiliation == "Hostile" && this.properties.dimension != "Subsurface")){
 			spacing = -10;
@@ -2407,28 +2447,22 @@ function affliationdimension(){
 		if(this.properties.context == "Exercise"){
 			if(!(this.properties.joker || this.properties.faker)){
 				drawArray2.push({type:'text',text:'X',x:(bbox.x2 + spacing ),y:60,fill:frameColor,fontfamily:"Arial",fontsize:35,fontweight:"bold",textanchor:"start"});
-
-				//g += '<text fill="'+frameColor+'" x="' + (bbox.x2 + spacing )+ '" y="60" font-family="Arial" font-size="35" font-weight="bold">X</text>';
 			}
 			if(this.properties.joker){
 				drawArray2.push({type:'text',text:'J',x:(bbox.x2 + spacing),y:60,fill:frameColor,fontfamily:"Arial",fontsize:35,fontweight:"bold",textanchor:"start"});
-
-				//g += '<text fill="'+frameColor+'" x="' + (bbox.x2 + spacing )+ '" y="60" font-family="Arial" font-size="35" font-weight="bold">J</text>';
 			}
 			if(this.properties.faker){
 				drawArray2.push({type:'text',text:'K',x:(bbox.x2 + spacing),y:60,fill:frameColor,fontfamily:"Arial",fontsize:35,fontweight:"bold",textanchor:"start"});
-
-				//g += '<text fill="'+frameColor+'" x="' + (bbox.x2 + spacing )+ '" y="60" font-family="Arial" font-size="35" font-weight="bold">K</text>';
 			}
 			bbox = {x2:(bbox.x2 + spacing + 22), y1: (60-25)};
 		}
 		if(this.properties.context == "Simulation"){
 			drawArray2.push({type:'text',text:'S',x:(bbox.x2 + spacing),y:60,fill:frameColor,fontfamily:"Arial",fontsize:35,fontweight:"bold",textanchor:"start"});
-
-			//g += '<text fill="'+frameColor+'" x="' + (bbox.x2 + spacing )+ '" y="60" font-family="Arial" font-size="35" font-weight="bold">S</text>';
 			bbox = new MS.bbox({x2:(bbox.x2 + spacing + 22), y1: (60-25)});
 		}
 	}
+	//outline
+	if (this.outlineWidth > 0) drawArray1.push(MS.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor));
 	return MS.buildingBlock(drawArray1,drawArray2,bbox );
 }
 );
@@ -2440,17 +2474,28 @@ function modifier(){
 	var drawArray2 = [];
 	var bbox = MS.bboxMax(this.properties.baseGeometry.bbox,{}); //clone the bbox using bboxMax.
 	var gbbox = new MS.bbox(); //bounding box for the added geometries
+	var geom;
 	if(this.properties.headquarters){
 		//HEADQUARTERS
 		var y = 100;
 		if(['AirFriend','AirNeutral','GroundFriend','GroundNeutral','SeaNeutral','SubsurfaceNeutral'].indexOf(this.properties.dimension + this.properties.affiliation) > -1 )y = bbox.y2;
 		if((this.properties.dimensionType + this.properties.affiliationType) == 'SubsurfaceFriend')y = bbox.y1;
-		drawArray1.push({type:'path',d:'M'+(bbox.x1)+','+y+' L'+bbox.x1+','+(bbox.y2+MS.hqStafLength)});
+		geom = {type:'path',d:'M'+(bbox.x1)+','+y+' L'+bbox.x1+','+(bbox.y2+MS.hqStafLength)};
+		
+		//outline
+		if (this.outlineWidth > 0) drawArray1.push(MS.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
+
+		drawArray2.push(geom);
 		gbbox.y2 = bbox.y2 + MS.hqStafLength;
 	}
 	if(this.properties.taskForce){
 		//TASK FORCE
-		drawArray1.push({type:'path',d:'M55,' + (bbox.y1) + ' L55,' + (bbox.y1-40) + ' 145,' + (bbox.y1-40) +' 145,'+(bbox.y1)});
+		geom = {type:'path',d:'M55,' + (bbox.y1) + ' L55,' + (bbox.y1-40) + ' 145,' + (bbox.y1-40) +' 145,'+(bbox.y1)};
+		
+		//outline
+		if (this.outlineWidth > 0) drawArray1.push(MS.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
+
+		drawArray2.push(geom);
 		gbbox.y1 = bbox.y1-40;
 	}
 	if(this.properties.installation){
@@ -2458,12 +2503,22 @@ function modifier(){
 		var gapFiller = 0;
 		if(['AirHostile','GroundHostile','SeaHostile'].indexOf(this.properties.dimension + this.properties.affiliation) > -1) gapFiller = 14;
 		if(['AirUnknown','GroundUnknown','SeaUnknown','AirFriend','SeaFriend'].indexOf(this.properties.dimension + this.properties.affiliation) > -1) gapFiller = 2;
-		drawArray1.push({type:'path',fill:this.colors.frameColor[this.properties.affiliation],d:'M85,' + (bbox.y1+gapFiller-(this.strokeWidth/2)) + ' 85,' + (bbox.y1-10) + ' 115,' + (bbox.y1-10) +' 115,'+(bbox.y1+gapFiller-(this.strokeWidth/2)) +' 100,'+(bbox.y1-(this.strokeWidth))+' Z'});
+		geom = {type:'path',fill:this.colors.frameColor[this.properties.affiliation],d:'M85,' + (bbox.y1+gapFiller-(this.strokeWidth/2)) + ' 85,' + (bbox.y1-10) + ' 115,' + (bbox.y1-10) +' 115,'+(bbox.y1+gapFiller-(this.strokeWidth/2)) +' 100,'+(bbox.y1-(this.strokeWidth))+' Z'};
+		
+		//outline
+		if (this.outlineWidth > 0) drawArray1.push(MS.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
+		
+		drawArray2.push(geom);
 		gbbox = MS.bboxMax(gbbox,{y1:(bbox.y1-10)});
 	}
 	if(this.properties.feintDummy){
 		//FEINT DUMMY
-		drawArray1.push({type:'path',strokedasharray:MS.dashArrays.feintDummy,d:'M'+bbox.x1+','+bbox.y1+' L100,-28 '+bbox.x2+','+bbox.y1});
+		geom = {type:'path',strokedasharray:MS.dashArrays.feintDummy,d:'M'+bbox.x1+','+bbox.y1+' L100,-28 '+bbox.x2+','+bbox.y1};
+
+		//outline
+		if (this.outlineWidth > 0) drawArray1.push(MS.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
+			
+		drawArray2.push(geom);
 		gbbox = MS.bboxMax(gbbox,{y1:(-28)});
 	}
 	//Unit Size
@@ -2532,7 +2587,12 @@ function modifier(){
 			}
 		};
 		if(echelons.hasOwnProperty(this.properties.echelon)){
-			drawArray1.push({type:'translate',x:0,y:-installationPadding,draw:echelons[this.properties.echelon].g});
+			geom = echelons[this.properties.echelon].g;
+			
+			//outline
+			if (this.outlineWidth > 0) drawArray1.push(MS.outline({type:'translate',x:0,y:-installationPadding,draw:geom}, this.outlineWidth, this.strokeWidth, this.outlineColor));
+			//geometry
+			drawArray2.push({type:'translate',x:0,y:-installationPadding,draw:geom});
 			gbbox = MS.bboxMax(gbbox,echelons[this.properties.echelon].bbox);
 		}
 
@@ -2580,7 +2640,12 @@ function modifier(){
 				bbox : {y2 :bbox.y2+10}}
 		};
 		if(mobilities.hasOwnProperty(this.properties.mobility)){
-			drawArray1.push({type:'translate',x:0,y:bbox.y2,draw:mobilities[this.properties.mobility].g});
+			geom = mobilities[this.properties.mobility].g
+
+			//outline
+			if (this.outlineWidth > 0) drawArray1.push(MS.outline({type:'translate',x:0,y:bbox.y2,draw:geom}, this.outlineWidth, this.strokeWidth, this.outlineColor));
+			//geometry
+			drawArray2.push({type:'translate',x:0,y:bbox.y2,draw:geom});
 			gbbox = MS.bboxMax(gbbox,mobilities[this.properties.mobility].bbox);
 		}
 	}
@@ -2595,12 +2660,12 @@ function modifier(){
 	//Assign fill, stroke and stroke-width
 	for(var i = 0; i<drawArray1.length;i++){
 		if(!drawArray1[i].hasOwnProperty('fill'))drawArray1[i].fill = false;
-		drawArray1[i].stroke = this.colors.iconColor[this.properties.affiliation];
+		if(!drawArray1[i].hasOwnProperty('stroke'))drawArray1[i].stroke = this.colors.iconColor[this.properties.affiliation];
 		if(!drawArray1[i].hasOwnProperty('strokewidth'))drawArray1[i].strokewidth = this.strokeWidth;
 	}
 	for(var i = 0; i<drawArray2.length;i++){
 		if(!drawArray2[i].hasOwnProperty('fill'))drawArray2[i].fill = false;
-		drawArray2[i].stroke = this.colors.iconColor[this.properties.affiliation];
+		if(!drawArray2[i].hasOwnProperty('stroke'))drawArray2[i].stroke = this.colors.iconColor[this.properties.affiliation];
 		if(!drawArray2[i].hasOwnProperty('strokewidth'))drawArray2[i].strokewidth = this.strokeWidth;
 	}
 
@@ -2636,6 +2701,9 @@ function directionarrow(){
 				arrow = [{type:'translate',x:0,y:bbox.y2,draw:arrow},{type:'path',fill:this.colors.frameColor[this.properties.affiliation],stroke:this.colors.frameColor[this.properties.affiliation],strokewidth:this.strokeWidth,d:'M 100,' + (bbox.y2) +  'l0,' + 100}];
 				gbbox.y2 += bbox.y2 + parseFloat(this.strokeWidth);
 			}
+			//outline
+			if (this.outlineWidth > 0) drawArray1.push(MS.outline(arrow, this.outlineWidth, this.strokeWidth, this.outlineColor));
+			//geometry
 			drawArray2.push(arrow);
 		}
 	}
@@ -2693,10 +2761,10 @@ function textfields(){
 				var t = {type:'text',stroke:false,textanchor:"middle",x:100,y:y,fontsize:size,fontfamily:fontFamily,fontweight:'bold',text:str,stroke:false};
 				return t;
 			}
-			//drawArray2.push({type:'text',text:this.specialHeadquarters,x:100,y:110,textanchor:"middle",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
 			drawArray2.push(text(this.specialHeadquarters));
 		}
 		if(this.quantity){
+			//geometry
 			drawArray2.push({type:'text',text:this.quantity,x:100,y:(bbox.y1-10),textanchor:"middle",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
 			gbbox.y1 = (bbox.y1-10-fontSize);
 		}
@@ -2705,6 +2773,7 @@ function textfields(){
 				//Add the hight of the codition bar to the geometry bounds
 				bbox.y2 += 15;
 			}
+			//geometry
 			drawArray2.push({type:'text',text:this.headquartersElement,x:100,y:(bbox.y2+35),textanchor:"middle",fontsize:35,fontfamily:fontFamily,fontweight:'bold',fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
 			gbbox.y2 = (bbox.y2+35);
 		}
@@ -2828,18 +2897,22 @@ function textfields(){
 			gbbox.y2 = Math.max(gbbox.y2,(100 + 2.7*fontSize));
 		}
 
+		//geometries
 		if(gStrings.L1)drawArray2.push({type:'text',text:gStrings.L1,x:(bbox.x1-spaceTextIcon),y:(100 - 1.5*fontSize),textanchor:"end",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
 		if(gStrings.L2)drawArray2.push({type:'text',text:gStrings.L2,x:(bbox.x1-spaceTextIcon),y:(100 - 0.5*fontSize),textanchor:"end",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
 		if(gStrings.L3)drawArray2.push({type:'text',text:gStrings.L3,x:(bbox.x1-spaceTextIcon),y:(100 + 0.5*fontSize),textanchor:"end",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
 		if(gStrings.L4)drawArray2.push({type:'text',text:gStrings.L4,x:(bbox.x1-spaceTextIcon),y:(100 + 1.5*fontSize),textanchor:"end",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
 		if(gStrings.L5)drawArray2.push({type:'text',text:gStrings.L5,x:(bbox.x1-spaceTextIcon),y:(100 + 2.5*fontSize),textanchor:"end",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
 
-
+		//geometries
 		if(gStrings.R1)drawArray2.push({type:'text',text:gStrings.R1,x:(bbox.x2 + spaceTextIcon),y:(100 - 1.5*fontSize),textanchor:"start",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
 		if(gStrings.R2)drawArray2.push({type:'text',text:gStrings.R2,x:(bbox.x2 + spaceTextIcon),y:(100 - 0.5*fontSize),textanchor:"start",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
 		if(gStrings.R3)drawArray2.push({type:'text',text:gStrings.R3,x:(bbox.x2 + spaceTextIcon),y:(100 + 0.5*fontSize),textanchor:"start",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
 		if(gStrings.R4)drawArray2.push({type:'text',text:gStrings.R4,x:(bbox.x2 + spaceTextIcon),y:(100 + 1.5*fontSize),textanchor:"start",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
 		if(gStrings.R5)drawArray2.push({type:'text',text:gStrings.R5,x:(bbox.x2 + spaceTextIcon),y:(100 + 2.5*fontSize),textanchor:"start",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
+
+		//outline
+		if (this.outlineWidth > 0) drawArray1.push(MS.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor))
 
 	}
 	return MS.buildingBlock(drawArray1,drawArray2,gbbox );
@@ -2871,7 +2944,7 @@ function icon(){
 		var none = this.colors.none[this.properties.affiliation];
 		var black = this.colors.black[this.properties.affiliation];
 		var white = this.colors.white[this.properties.affiliation];
-		//Cacheing of icnets.
+		//Store previous used icons in memory.
 		var icnet = (MS._STD2525?"2525":"APP6")+","+this.properties.dimension+this.properties.affiliation+',frame:'+this.frame+',alternateMedal:'+this.alternateMedal+',colors:{fillcolor:'+fillColor+',neutralColor'+neutralColor+',iconColor:'+iconColor+',iconFillColor:'+iconFillColor+',none:'+none+',black:'+black+',white:'+white+"}";
 		if(MS._iconCache.hasOwnProperty(icnet)){
 			iconParts = MS._iconCache[icnet].iconParts;
@@ -3030,6 +3103,11 @@ function icon(){
 			}
 		}
 	}
+	//outline
+	if(!(this.frame && this.fill) || this.monoColor){
+		if (this.outlineWidth > 0) drawArray1.push(MS.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor));
+	}
+	
 	return MS.buildingBlock(drawArray1,drawArray2, gbbox );
 }
 );
