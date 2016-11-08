@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+	<title>ArcGIS JS API and milsymbol</title>
+
+	<link rel="stylesheet" href="https://js.arcgis.com/4.1/esri/css/main.css">
+	<script src="https://js.arcgis.com/4.1/"></script>
+	<script src="../../dist/milsymbol.js"></script>
+	
+	<style>
+		html,
+		body,
+		#viewDiv {
+			padding: 0;
+			margin: 0;
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+
+	<script>
+		require([
+			"esri/Map",
+			"esri/views/MapView",
+			"esri/Graphic",
+			"esri/geometry/Point",
+			"esri/geometry/Polygon",
+			"esri/symbols/SimpleMarkerSymbol",
+			"esri/symbols/PictureMarkerSymbol",
+			"dojo/domReady!"
+		], function(
+			Map, MapView,
+			Graphic, Point, Polygon,
+			SimpleMarkerSymbol, PictureMarkerSymbol
+		) {
+
+			var map = new Map({
+				basemap: "hybrid"
+			});
+
+			var view = new MapView({
+				center: [-80, 35],
+				container: "viewDiv",
+				map: map,
+				zoom: 3
+			});
+
+			/**********************
+			* Create a point graphic
+			**********************/
+
+			// First create a point geometry (this is the location of the Titanic)
+			var point = new Point({
+				longitude: -49.97,
+				latitude: 41.73
+			});
+
+			
+			var mysymbol = new MS.symbol("SFS-XMP-----",{size:30}).getMarker();
+
+			var symbol = new PictureMarkerSymbol({
+				"xoffset": -mysymbol.markerAnchor.x + 'px',
+				"yoffset": -mysymbol.markerAnchor.y + 'px',
+				"url": mysymbol.toDataURL(),
+				"width": Math.floor(mysymbol.width) + 'px',
+				"height": Math.floor(mysymbol.height) + 'px'
+			});  
+
+			// Create a graphic and add the geometry and symbol to it
+			var pointGraphic = new Graphic({
+				geometry: point,
+				symbol: symbol
+			});
+
+			// Add the graphics to the view's graphics layer
+			view.graphics.addMany([pointGraphic]);
+		});
+	</script>
+</head>
+
+<body>
+	<div id="viewDiv"></div>
+</body>
+
+</html>
