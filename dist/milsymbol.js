@@ -4303,7 +4303,7 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 };
 
 MS.addLetterSIDCicons(
-function si(sId,icn,_STD2525){
+function signalsIntelligence(sId,icn,_STD2525){
 	//Adds support for 2525C Signals Intelligence 
 	sId['I-P-SCD---'] = [icn['SI.IC.COMMUNICATIONS'],icn['SI.M1.SIERRA'],icn['SI.M2.DELTA'],icn['SI.M3.SPACE']];
 	sId['I-P-SRD---'] = [icn['SI.IC.RADAR'],icn['SI.M1.DELTA'],icn['SI.M2.TANGO'],icn['SI.M3.SPACE']];
@@ -4394,7 +4394,7 @@ function si(sId,icn,_STD2525){
 );
 
 MS.addLetterSIDCicons(
-function so(sId,icn,_STD2525){
+function stabilityOperations(sId,icn,_STD2525){
 	//Adds support for 2525C Stability Operations
 	sId['O-V-A-----'] = [icn['ST.IC.ARSON/FIRE']];
 	sId['O-V-M-----'] = [icn['ST.IC.KILLING VICTIM']];
@@ -4460,7 +4460,7 @@ function so(sId,icn,_STD2525){
 );
 
 MS.addLetterSIDCicons(
-function ems(sId,icn,_STD2525){
+function emergencyManagementSymbols(sId,icn,_STD2525){
 	//Adds support for 2525C Emergency Management Symbols
 	sId["E-I-A-----"] = [icn['AC.IC.CRIMINAL.CIVIL DISTURBANCE']];
 	sId["E-I-AC----"] = [icn['ST.IC.GROUP'],icn['AC.M1.RIOT']];
