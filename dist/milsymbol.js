@@ -137,6 +137,14 @@ var MS = new function(){
 			MS.setMarkerParts(MS.getMarkerParts().concat(parts));
 		}
 	};
+	
+	//This adds letter sidc SIDC 
+	this._letterSIDCicons = [];
+	this.addLetterSIDCicons = function(parts){
+		if (typeof parts == 'function'){
+			this._letterSIDCicons = this._letterSIDCicons.concat(parts);
+		}
+	};
 
 	this.outline = function(geom,outline,stroke,color){
 		if(Array.isArray(geom)){
@@ -4279,6 +4287,17 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['S-F-GPA---'] = sId['S-F-GSPA--'] = [icn['GR.EQ.PSYCHOLOGICAL OPERATIONS EQUIPMENT'], MS.translate(0,-30,MS.scale(0.7,icn['AR.I.MILITARY FIXED WING']))];
 	sId['S-F-GC----'] = sId['S-F-GCA---'] = [icn['GR.IC.CIVIL AFFAIRS']];
 	sId['S-F-GB----'] = sId['S-F-B-----'] = [icn['AR.I.SPECIAL OPERATIONS FORCES'],icn['GR.M2.SUPPORT']];
+
+	for (var i in MS._letterSIDCicons){
+		if (!MS._letterSIDCicons.hasOwnProperty(i)) continue;
+		MS._letterSIDCicons[i].call(this,sId,icn,_STD2525);
+	}
+	return sId;
+};
+
+MS.addLetterSIDCicons(
+function si(sId,icn,_STD2525){
+	//Adds support for 2525C Signals Intelligence 
 	sId['I-P-SCD---'] = [icn['SI.IC.COMMUNICATIONS'],icn['SI.M1.SIERRA'],icn['SI.M2.DELTA'],icn['SI.M3.SPACE']];
 	sId['I-P-SRD---'] = [icn['SI.IC.RADAR'],icn['SI.M1.DELTA'],icn['SI.M2.TANGO'],icn['SI.M3.SPACE']];
 	sId['I-P-SRE---'] = [icn['SI.IC.RADAR'],icn['SI.M1.ECHO'],icn['SI.M2.SIERRA'],icn['SI.M3.SPACE']];
@@ -4364,6 +4383,12 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['I-U-SRS---'] = [icn['SI.IC.RADAR'],icn['SI.M1.SIERRA'],icn['SI.M2.SIERRA']];
 	sId['I-U-SRT---'] = [icn['SI.IC.RADAR'],icn['SI.M1.TANGO'],icn['SI.M2.ALPHA']];
 	sId['I-U-SRU---'] = [icn['SI.IC.RADAR'],icn['SI.M1.UNIFORM'],icn['SI.M2.NOVEMBER']];
+}
+);
+
+MS.addLetterSIDCicons(
+function so(sId,icn,_STD2525){
+	//Adds support for 2525C Stability Operations
 	sId['O-V-A-----'] = [icn['ST.IC.ARSON/FIRE']];
 	sId['O-V-M-----'] = [icn['ST.IC.KILLING VICTIM']];
 	sId['O-V-MA----'] = [icn['ST.IC.KILLING VICTIM'],icn['ST.M1.MURDER']];
@@ -4424,7 +4449,12 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId['O-G-F-----'] = [icn['ST.IC.GROUP'],icn['ST.M1.GANG']];
 	sId['O-R-------'] = [icn['ST.IC.INDIVIDUAL'],icn['ST.M1.RAPE']];
 	sId['O-R-A-----'] = [icn['ST.IC.INDIVIDUAL'],icn['ST.M1.RAPE'],icn['ST.IC.ATTEMPTED CRIMINAL ACTIVITY']];
-//EMS =====================================================================================
+}
+);
+
+MS.addLetterSIDCicons(
+function ems(sId,icn,_STD2525){
+	//Adds support for 2525C Emergency Management Symbols
 	sId["E-I-A-----"] = [icn['AC.IC.CRIMINAL.CIVIL DISTURBANCE']];
 	sId["E-I-AC----"] = [icn['ST.IC.GROUP'],icn['AC.M1.RIOT']];
 	sId["E-I-B-----"] = [icn['AC.IC.CRIMINAL.ACTIVITY.INCIDENT']];
@@ -4602,10 +4632,8 @@ MS._getLetterSIDCicn = function(icn,_STD2525){
 	sId["E-F-MG----"] = [icn['GR.IN.IC.STORAGE TOWER']];
 	sId["E-F-MH----"] = [icn['GR.IN.IC.SURFACE WATER INTAKE']];
 	sId["E-F-MI----"] = [icn['GR.IN.IC.WASTEWATER TREATMENT FACILITY']];
-
-	return sId;
-};
-
+}
+);
 //########################################################################################
 // If you don't have any need for number based SIDC, just remove the following functions
 //########################################################################################
