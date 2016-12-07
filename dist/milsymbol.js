@@ -2342,7 +2342,12 @@ function basegeometry(){
 	var drawArray1 = [];
 	var drawArray2 = [];
 	var frameColor = this.colors.frameColor[this.properties.affiliation];
-
+	
+	//If unframed and unfilled but not as a position marker, then just return.
+	if(!this.frame && !this.fill && this.icon){
+		return [];
+	}
+	
 	//Clone the base geometry
 	var geom = {type:this.properties.baseGeometry.g.type};
 	switch (geom.type){
