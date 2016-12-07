@@ -2119,7 +2119,10 @@ var MS = new function(){
 		this.toDataURL = function(){
 			return ("data:image/svg+xml;base64," + btoa(this.XML));
 		};
-
+		
+		//For backward compatibility
+		this.asImage = this.toDataURL;
+		
 		this.asSVG = function(){
 			function processInstructions(instruction){
 			 	var svgxml = '';
