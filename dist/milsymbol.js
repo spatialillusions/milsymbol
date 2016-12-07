@@ -3339,8 +3339,8 @@ MS._getLetterProperties = function(properties, mapping){
 		}
 	}
 
-	//Some symbols in EMS
-	if(this.SIDC.substr(0,3) == "WAS" || this.SIDC.substr(0,1) == "G" || this.SIDC.substr(0,3) == "WOS"){
+	//Some symbols in EMS and symbols from tactical graphics
+	if(this.SIDC.substr(0,3) == "WAS" || this.SIDC.substr(0,3) == "WOS" || this.SIDC.substr(0,1) == "G"){
 		properties.frame = false;
 	}
 
@@ -4776,8 +4776,7 @@ MS._getNumberProperties = function(properties,mapping){
 		(symbolSet == '12' && functionid.substring(0,2)=='12')||
 		(symbolSet == '15' && functionid.substring(0,2)=='16')||
 		(symbolSet == '30' && functionid.substring(0,2)=='14')||
-		(symbolSet == '35' && functionid.substring(0,2)=='12')
-		
+		(symbolSet == '35' && functionid.substring(0,2)=='12')	
 	){properties.civilian = true;}
 
 	return properties;
