@@ -6092,7 +6092,7 @@ MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
 	}
 	return {icn:sId,m1:sIdm1,m2:sIdm2};
 };
-
+/*
 MS.addNumberSIDCicons(
 function dismountedIndividual(sId,sIdm1,sIdm2,symbolSet,icn,_STD2525){
 	//Adds support for Dismounted Individual
@@ -6298,7 +6298,7 @@ function dismountedIndividual(sId,sIdm1,sIdm2,symbolSet,icn,_STD2525){
 	}
 }
 );
-
+*/
 MS.addNumberSIDCicons(
 function activites(sId,sIdm1,sIdm2,symbolSet,icn,_STD2525){
 	//Adds support for Activities
