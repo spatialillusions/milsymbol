@@ -8,15 +8,15 @@
 
 - Support for outlines on symbols using properties `outlineColor` and `outlineWidth`
 
-- toDataURL() that returns a base 64 encoding of the SVG symbol. ( See removal of asImage() ) 
+- toDataURL() that returns a base 64 encoding of the SVG symbol. ( See deprication of asImage() ) 
 
 ### Changed
 
 ### Deprecated
 
-### Removed
-
 - asImage() since it returns a data url and not an image.
+
+### Removed
 
 ### Fixed
 
