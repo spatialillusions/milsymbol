@@ -2343,8 +2343,8 @@ function basegeometry(){
 	var drawArray2 = [];
 	var frameColor = this.colors.frameColor[this.properties.affiliation];
 	
-	//If unframed and unfilled but not as a position marker, then just return.
-	if(!this.frame && !this.fill && this.icon){
+	//If unframed but with icon, then just return.
+	if(!this.properties.frame && this.icon){
 		return [];
 	}
 	
