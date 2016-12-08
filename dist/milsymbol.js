@@ -186,10 +186,10 @@ var MS = new function(){
 			box = {};
 		}
 		return {
-			x1: (typeof box.x1 != "undefined")?box.x1 : 50,
-			y1: (typeof box.y1 != "undefined")?box.y1 : 50,
-			x2: (typeof box.x2 != "undefined")?box.x2 : 150,
-			y2: (typeof box.y2 != "undefined")?box.y2 : 150,
+			x1: (typeof box.x1 != "undefined")?box.x1 : 100,
+			y1: (typeof box.y1 != "undefined")?box.y1 : 100,
+			x2: (typeof box.x2 != "undefined")?box.x2 : 100,
+			y2: (typeof box.y2 != "undefined")?box.y2 : 100,
 			width:function(){
 				return this.x2-this.x1;
 			},
@@ -1911,7 +1911,7 @@ var MS = new function(){
 				"frame"			: this.frame,		//Standard says it should be framed
 				"functionid" 		: "", 		//Part of SIDC referring to the icon.
 				"headquarters"		: false,	//Is it a Headquarters
-				"iconBottom"		: 150,		//The bottom of the icon
+				"iconBottom"		: 100,		//The bottom of the icon
 				"installation" 		: false,	//Is it an Instalation
 				"joker"			: false,	//Is it a Joker
 				"mobility"			: "",		//What mobility (Tracked/Sled)
