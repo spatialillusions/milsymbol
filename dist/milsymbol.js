@@ -3356,15 +3356,15 @@ MS._getLetterProperties = function(properties, mapping){
 
 	return properties;
 };
-MS._getLetterSIDCicn = function(icn,_STD2525){
-	var sId = {};
-	var bbox = {};
+MS._getLetterSIDCicn = function(iconParts,STD2525){
+	var iconSIDC = {};
+	var iconBbox = {};
 
 	for (var i in MS._letterSIDCicons){
 		if (!MS._letterSIDCicons.hasOwnProperty(i)) continue;
-		MS._letterSIDCicons[i].call(this,sId,bbox,icn,_STD2525);
+		MS._letterSIDCicons[i].call(this,iconSIDC,iconBbox,iconParts,STD2525);
 	}
-	return {icons:sId,bbox:bbox};
+	return {icons:iconSIDC,bbox:iconBbox};
 };
 
 MS.addLetterSIDCicons(
@@ -4833,17 +4833,17 @@ MS._getNumberProperties = function(properties,mapping){
 
 	return properties;
 };
-MS._getNumberSIDCicn = function(symbolSet,icn,_STD2525){
-	var sId = {};
-	var sIdm1 = {};
-	var sIdm2 = {};
-	var bbox = {};
+MS._getNumberSIDCicn = function(symbolSet,iconParts,STD2525){
+	var iconSIDC = {};
+	var iconModifier1 = {};
+	var iconModifier2 = {};
+	var iconBbox = {};
 
 	for (var i in MS._numberSIDCicons){
 		if (!MS._numberSIDCicons.hasOwnProperty(i)) continue;
-		MS._numberSIDCicons[i].call(this,sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525);
+		MS._numberSIDCicons[i].call(this,iconSIDC,iconModifier1,iconModifier2,iconBbox,symbolSet,iconParts,STD2525);
 	}
-	return {icons:sId,m1:sIdm1,m2:sIdm2,bbox:bbox};
+	return {icons:iconSIDC,m1:iconModifier1,m2:iconModifier2,bbox:iconBbox};
 };
 
 MS.addNumberSIDCicons(
