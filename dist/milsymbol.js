@@ -2462,6 +2462,7 @@ function icon(){
 		//Letter based SIDCs.
 		if(!this.properties.numberSIDC){
 			//Sea mine exercise has stuff outsIde the boundingbox...
+			//TODO see if we can fix this in another way.
 			if(["WMGX--","WMMX--","WMFX--","WMX---","WMSX--"].indexOf(this.properties.functionid)!=-1){
 				gbbox.y1 = 10;
 				if(this.properties.affiliation != "Unknown"){gbbox.x2 = this.properties.baseGeometry.bbox.x2+20;}
