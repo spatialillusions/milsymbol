@@ -8,7 +8,11 @@
 
 - Support for outlines on symbols using properties `outlineColor` and `outlineWidth`
 
-- toDataURL() that returns a base 64 encoding of the SVG symbol. ( See deprication of asImage() ) 
+- toDataURL() that returns a base 64 encoding of the SVG symbol. ( See deprication of asImage() )
+
+- Possibility to Add/Update existing SIDC
+
+- Possibility to Add/Update the icon parts that constructs the icons 
 
 ### Changed
 
