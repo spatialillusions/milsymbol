@@ -1754,7 +1754,7 @@ var MS = new function(){
 
 		for (var i in MS._iconParts){
 			if (!MS._iconParts.hasOwnProperty(i)) continue;
-			MS._iconParts[i].call(this,properties, colors, _STD2525, monoColor, alternateMedal);
+			MS._iconParts[i].call(this,icn,properties, colors, _STD2525, monoColor, alternateMedal);
 		}
 		
 		function defaultProperties(instructions){
