@@ -137,7 +137,15 @@ var MS = new function(){
 			MS.setMarkerParts(MS.getMarkerParts().concat(parts));
 		}
 	};
-	
+
+	//This adds icon parts
+	this._iconParts = [];
+	this.addIconParts = function(parts){
+		if (typeof parts == 'function'){
+			this._iconParts = this._iconParts.concat(parts);
+		}
+	};
+		
 	//This adds letter sidc SIDC 
 	this._letterSIDCicons = [];
 	this.addLetterSIDCicons = function(parts){
@@ -1744,11 +1752,15 @@ var MS = new function(){
 		icn['CY.IC.SERVICE OUTAGE'] = text('SOT');
 		icn['CY.IC.DEVICE OUTAGE'] = text('DOT');
 
+		for (var i in MS._iconParts){
+			if (!MS._iconParts.hasOwnProperty(i)) continue;
+			MS._iconParts[i].call(this,properties, colors, _STD2525, monoColor, alternateMedal);
+		}
+		
 		function defaultProperties(instructions){
 			if(typeof instructions == 'object'){
 				if (Array.isArray(instructions)){
 					for (var i = 0; i<instructions.length;i++){
-
 						defaultProperties.call(this,instructions[i]);
 					}
 					return;
