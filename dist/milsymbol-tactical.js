@@ -57,6 +57,11 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	alternateMedal
 	true/false for sea mine stuff
 	*/
+	iconParts['TP.DESTROY'] = [{type:'path',fill:false,d:'m 0,45 85,46.75 m 30,16.5 85,46.75 M 0,155 85,108.25 M 115,91.75 200,45'},{type:'text',stroke:false,textanchor:"middle",x:100,y:110,fontsize:32,text:'D'}];
+	iconParts['TP.INTERDICT'] = [{type:'path',fill:false,d:'m 194.203,65.6674 5.49,-20.4904 -20.49,-5.4904 M 115,91.75 200,45 M 0,155 85,108.25 M 185,85 l 15,15 -15,15 m -70,-15 85,0 m -200,0 85,0'},{type:'text',stroke:false,textanchor:"middle",x:100,y:110,fontsize:32,text:'I'}];
+	iconParts['TP.NEUTRALIZE'] = [{type:'path',fill:false,d:'M 115,108.25 200,155 M 0,45 85,91.75'},{type:'path',fill:false,strokedasharray:'12,5',d:'M 115,91.75 200,45 M 0,155 85,108.25'},{type:'text',stroke:false,textanchor:"middle",x:100,y:110,fontsize:32,text:'N'}];
+
+	
 	iconParts['TP.AIM POINT'] = [{type:'circle',cx:100,cy:100,r:15},{type:'circle',cx:100,cy:100,r:35,fill:false},{type:'circle',cx:100,cy:100,r:45,fill:false}];
 	
 	iconParts['TP.ENTRY POINT'] = {type:'path',fill:false,d:'m 100,100 0,-50 m -35,15 35,35 35,-35 m -85,35 100,0'};
@@ -95,9 +100,12 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 MS.addLetterSIDCicons(
 function tacticalPoints(sidc,bbox,icn,_STD2525){
 	// Tactical Point Symbols =========================================================================
-	sidc['G-T-D-----'] = [];//TACGRP.TSK.DSTY
-	sidc['G-T-I-----'] = [];//TACGRP.TSK.ITDT
-	sidc['G-T-N-----'] = [];//TACGRP.TSK.NEUT
+	sidc['G-T-D-----'] = icn['TP.DESTROY'];//TACGRP.TSK.DSTY
+	bbox['G-T-D-----'] = {x1:0,x2:200,y1:40,y2:160};
+	sidc['G-T-I-----'] = icn['TP.INTERDICT'];//TACGRP.TSK.ITDT
+	bbox['G-T-I-----'] = {x1:0,x2:200,y1:40,y2:160};
+	sidc['G-T-N-----'] = icn['TP.NEUTRALIZE'];//TACGRP.TSK.NEUT
+	bbox['G-T-N-----'] = {x1:0,x2:200,y1:40,y2:160};
 	sidc['G-G-GPUUD-'] = [];//TACGRP.C2GM.GNL.PNT.USW.UH2.DTM
 	sidc['G-G-GPUUB-'] = [];//TACGRP.C2GM.GNL.PNT.USW.UH2.BCON
 	sidc['G-G-GPUUL-'] = [];//TACGRP.C2GM.GNL.PNT.USW.UH2.LCON
