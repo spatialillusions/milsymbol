@@ -71,7 +71,22 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.HARBOR POINT Y'] = [iconParts['TP.HARBOR'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'Y'}];
 	iconParts['TP.HARBOR POINT X'] = [iconParts['TP.HARBOR'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'X'}];
 
+	iconParts['TP.AIR CONTROL'] = {type:'path',fill:false,d:'m 140,165 0,-130 m -80,0 0,130'};
+	iconParts['TP.AIR CONTROL POINT'] = [iconParts['TP.AIR CONTROL'],{type:'circle',cx:100,cy:100,r:15}];
+	iconParts['TP.COMBAT AIR PATROL (CAP)'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'C'}];
+	iconParts['TP.AIRBORNE EARLY WARNING (AEW)'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'W'}];
+	iconParts['TP.TANKING'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'K'}];
 
+	iconParts['TP.STRIKE IP'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'S'}];
+	iconParts['TP.TACAN'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'T'}];
+	iconParts['TP.TOMCAT'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'TC'}];
+	iconParts['TP.RESCUE'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'RC'}];
+	iconParts['TP.REPLENISH'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'RP'}];
+
+	iconParts['TP.ORBIT'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'O'}];
+	iconParts['TP.ORBIT - FIGURE EIGHT'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'O'},{type:'text',stroke:false,textanchor:"middle",x:100,y:150,fontsize:40,text:'F8'}];
+	iconParts['TP.ORBIT - RACE TRACK'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'O'},{type:'text',stroke:false,textanchor:"middle",x:100,y:150,fontsize:40,text:'RT'}];
+	iconParts['TP.ORBIT - RANDOM, CLOSED'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'O'},{type:'text',stroke:false,textanchor:"middle",x:100,y:150,fontsize:40,text:'RC'}];
 
 }
 );
@@ -145,27 +160,42 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	sidc['G-G-GPOW--'] = [];//TACGRP.C2GM.GNL.PNT.RTE.WAP
 	sidc['G-G-GPOP--'] = [];//TACGRP.C2GM.GNL.PNT.RTE.PIM
 	sidc['G-G-GPOR--'] = [];//TACGRP.C2GM.GNL.PNT.RTE.PNTR
-	sidc['G-G-GPA---'] = [];//TACGRP.C2GM.GNL.PNT.ACTL
-	sidc['G-G-GPAP--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.CAP
-	sidc['G-G-GPAW--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.ABNEW
-	sidc['G-G-GPAK--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.TAK
+	sidc['G-G-GPA---'] = icn['TP.AIR CONTROL POINT'];//TACGRP.C2GM.GNL.PNT.ACTL
+	bbox['G-G-GPA---'] = {x1:60,x2:140,y1:40,y2:160};
+	sidc['G-G-GPAP--'] = icn['TP.COMBAT AIR PATROL (CAP)'];//TACGRP.C2GM.GNL.PNT.ACTL.CAP
+	bbox['G-G-GPAP--'] = {x1:60,x2:140,y1:40,y2:160};
+	sidc['G-G-GPAW--'] = icn['TP.AIRBORNE EARLY WARNING (AEW)'];//TACGRP.C2GM.GNL.PNT.ACTL.ABNEW
+	bbox['G-G-GPAW--'] = {x1:60,x2:140,y1:40,y2:160};
+	sidc['G-G-GPAK--'] = icn['TP.TANKING'];//TACGRP.C2GM.GNL.PNT.ACTL.TAK
+	bbox['G-G-GPAK--'] = {x1:60,x2:140,y1:40,y2:160};
 	sidc['G-G-GPAA--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.ASBWF
 	sidc['G-G-GPAH--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.ASBWR
 	sidc['G-G-GPAB--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.SUWF
 	sidc['G-G-GPAC--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.SUWR
 	sidc['G-G-GPAD--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.MIWF
 	sidc['G-G-GPAE--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.MIWR
-	sidc['G-G-GPAS--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.SKEIP
-	sidc['G-G-GPAT--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.TCN
-	sidc['G-G-GPAO--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.TMC
-	sidc['G-G-GPAR--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.RSC
-	sidc['G-G-GPAL--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.RPH
+	sidc['G-G-GPAS--'] = icn['TP.STRIKE IP'];//TACGRP.C2GM.GNL.PNT.ACTL.SKEIP
+	bbox['G-G-GPAS--'] = {x1:60,x2:140,y1:40,y2:160};
+	sidc['G-G-GPAT--'] = icn['TP.TACAN'];//TACGRP.C2GM.GNL.PNT.ACTL.TCN
+	bbox['G-G-GPAT--'] = {x1:60,x2:140,y1:40,y2:160};
+	sidc['G-G-GPAO--'] = icn['TP.TOMCAT'];//TACGRP.C2GM.GNL.PNT.ACTL.TMC
+	bbox['G-G-GPAO--'] = {x1:60,x2:140,y1:40,y2:160};
+	sidc['G-G-GPAR--'] = icn['TP.RESCUE'];//TACGRP.C2GM.GNL.PNT.ACTL.RSC
+	bbox['G-G-GPAR--'] = {x1:60,x2:140,y1:40,y2:160};
+	sidc['G-G-GPAL--'] = icn['TP.REPLENISH'];//TACGRP.C2GM.GNL.PNT.ACTL.RPH
+	bbox['G-G-GPAL--'] = {x1:60,x2:140,y1:40,y2:160};
 	sidc['G-G-GPAF--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.UA
+	bbox['G-G-GPAF--'] = {x1:60,x2:140,y1:40,y2:160};
 	sidc['G-G-GPAG--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.VTUA
-	sidc['G-G-GPAI--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.ORB
-	sidc['G-G-GPAJ--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.ORBF8
-	sidc['G-G-GPAM--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.ORBRT
-	sidc['G-G-GPAN--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.ORBRD
+	bbox['G-G-GPAG--'] = {x1:60,x2:140,y1:40,y2:160};
+	sidc['G-G-GPAI--'] = icn['TP.ORBIT'];//TACGRP.C2GM.GNL.PNT.ACTL.ORB
+	bbox['G-G-GPAI--'] = {x1:60,x2:140,y1:40,y2:160};
+	sidc['G-G-GPAJ--'] = icn['TP.ORBIT - FIGURE EIGHT'];//TACGRP.C2GM.GNL.PNT.ACTL.ORBF8
+	bbox['G-G-GPAJ--'] = {x1:60,x2:140,y1:40,y2:160};
+	sidc['G-G-GPAM--'] = icn['TP.ORBIT - RACE TRACK'];//TACGRP.C2GM.GNL.PNT.ACTL.ORBRT
+	bbox['G-G-GPAM--'] = {x1:60,x2:140,y1:40,y2:160};
+	sidc['G-G-GPAN--'] = icn['TP.ORBIT - RANDOM, CLOSED'];//TACGRP.C2GM.GNL.PNT.ACTL.ORBRD
+	bbox['G-G-GPAN--'] = {x1:60,x2:140,y1:40,y2:160};
 	sidc['G-G-GPP---'] = [];//TACGRP.C2GM.GNL.PNT.ACTPNT
 	sidc['G-G-GPPK--'] = [];//TACGRP.C2GM.GNL.PNT.ACTPNT.CHKPNT
 	sidc['G-G-GPPC--'] = [];//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
