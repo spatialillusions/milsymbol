@@ -61,14 +61,27 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.INTERDICT'] = [{type:'path',fill:false,d:'m 194.203,65.6674 5.49,-20.4904 -20.49,-5.4904 M 115,91.75 200,45 M 0,155 85,108.25 M 185,85 l 15,15 -15,15 m -70,-15 85,0 m -200,0 85,0'},{type:'text',stroke:false,textanchor:"middle",x:100,y:110,fontsize:32,text:'I'}];
 	iconParts['TP.NEUTRALIZE'] = [{type:'path',fill:false,d:'M 115,108.25 200,155 M 0,45 85,91.75'},{type:'path',fill:false,strokedasharray:'12,5',d:'M 115,91.75 200,45 M 0,155 85,108.25'},{type:'text',stroke:false,textanchor:"middle",x:100,y:110,fontsize:32,text:'N'}];
 
+
+	iconParts['TP.SONOBUOY'] = [{type:'path',fill:false,d:'M 100,60 l 0,-35 10,10 0,-45'},{type:'circle',fill:false,cx:100,cy:100,r:40}];
+	iconParts['TP.SONOBUOY PATTERN CENTER'] = [iconParts['TP.SONOBUOY'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'P'}];
+	iconParts['TP.SONOBUOY DIFAR'] = [iconParts['TP.SONOBUOY'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'D'}];
+	iconParts['TP.SONOBUOY LOFAR'] = [iconParts['TP.SONOBUOY'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'L'}];
+	iconParts['TP.SONOBUOY CASS'] = [iconParts['TP.SONOBUOY'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'C'}];
+	iconParts['TP.SONOBUOY DICASS'] = [iconParts['TP.SONOBUOY'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'S'}];
+	iconParts['TP.SONOBUOY BT'] = [iconParts['TP.SONOBUOY'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'B'}];
+	iconParts['TP.SONOBUOY ANM'] = [iconParts['TP.SONOBUOY'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'A'}];
+	iconParts['TP.SONOBUOY VLAD'] = [iconParts['TP.SONOBUOY'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'V'}];
+	iconParts['TP.SONOBUOY ATAC'] = [iconParts['TP.SONOBUOY'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'T'}];
+	iconParts['TP.SONOBUOY RO'] = [iconParts['TP.SONOBUOY'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'R'}];
+	iconParts['TP.SONOBUOY KINGPIN'] = [iconParts['TP.SONOBUOY'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'K'}];
+	iconParts['TP.SONOBUOY EXPIRED'] = [iconParts['TP.SONOBUOY'],{type:'path',fill:false,d:'M 40,60 l 120,80 M 40,140 l 120,-80'}];
+
+
 	
 	iconParts['TP.AIM POINT'] = [{type:'circle',cx:100,cy:100,r:15},{type:'circle',cx:100,cy:100,r:35,fill:false},{type:'circle',cx:100,cy:100,r:45,fill:false}];
 	iconParts['TP.DROP POINT'] = {type:'path',fill:false,d:'m 130,100 0,-40 m -60,40 0,-40 m 60,40 0,0 a 15,15 0 0 1 -15,15 15,15 0 0 1 -15,-15 m 0,0 0,0 A 15,15 0 0 1 85,115 15,15 0 0 1 70,100 m 30,-40 0,40'};
-
-
 	iconParts['TP.ENTRY POINT'] = {type:'path',fill:false,d:'m 100,100 0,-50 m -35,15 35,35 35,-35 m -85,35 100,0'};
 	iconParts['TP.GROUND ZERO'] = {type:'path',stroke:false,d:'M 100 28 C 100 28 65.4398 29.8261 61.6543 55 C 60.2826 64.1213 75.0115 70.4884 82.2363 71.6543 C 89.4611 72.8201 91.7277 55.3462 98.5098 56.0371 L 93 90 C 93 90 70 90 67 97 C 65.0304 101.596 100 100 100 100 C 100 100 134.97 101.596 133 97 C 130 90 107 90 107 90 L 101.49 56.0371 C 108.272 55.3462 110.539 72.8201 117.764 71.6543 C 124.988 70.4884 139.718 64.1213 138.346 55 C 134.56 29.8261 100 28 100 28 z'};
-
 	iconParts['TP.MSL DETECT POINT'] = {type:'path',d:'m 95,100 0,-55 -10,0 15,-15 15,15 -10,0 0,55 m -55,0 100,0'};
 	iconParts['TP.IMPACT POINT'] = {type:'path',d:'m 50,100 40,-10 10,-40 10,40 40,10 -40,10 -10,40 -10,-40 -40,-10'};
 	iconParts['TP.PREDICTED IMPACT POINT'] = {type:'path',fill:false,strokedasharray:'12,5',d:'m 50,100 40,-10 10,-40 10,40 40,10 -40,10 -10,40 -10,-40 -40,-10'};
@@ -149,19 +162,34 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	sidc['G-G-GPUUB-'] = [];//TACGRP.C2GM.GNL.PNT.USW.UH2.BCON
 	sidc['G-G-GPUUL-'] = [];//TACGRP.C2GM.GNL.PNT.USW.UH2.LCON
 	sidc['G-G-GPUUS-'] = [];//TACGRP.C2GM.GNL.PNT.USW.UH2.SNK
-	sidc['G-G-GPUY--'] = [];//TACGRP.C2GM.GNL.PNT.USW.SNBY
-	sidc['G-G-GPUYP-'] = [];//TACGRP.C2GM.GNL.PNT.USW.SNBY.PTNCTR
-	sidc['G-G-GPUYD-'] = [];//TACGRP.C2GM.GNL.PNT.USW.SNBY.DIFAR
-	sidc['G-G-GPUYL-'] = [];//TACGRP.C2GM.GNL.PNT.USW.SNBY.LOFAR
-	sidc['G-G-GPUYC-'] = [];//TACGRP.C2GM.GNL.PNT.USW.SNBY.CASS
-	sidc['G-G-GPUYS-'] = [];//TACGRP.C2GM.GNL.PNT.USW.SNBY.DICASS
-	sidc['G-G-GPUYB-'] = [];//TACGRP.C2GM.GNL.PNT.USW.SNBY.BT
-	sidc['G-G-GPUYA-'] = [];//TACGRP.C2GM.GNL.PNT.USW.SNBY.ANM
-	sidc['G-G-GPUYV-'] = [];//TACGRP.C2GM.GNL.PNT.USW.SNBY.VLAD
-	sidc['G-G-GPUYT-'] = [];//TACGRP.C2GM.GNL.PNT.USW.SNBY.ATAC
-	sidc['G-G-GPUYR-'] = [];//TACGRP.C2GM.GNL.PNT.USW.SNBY.RO
-	sidc['G-G-GPUYK-'] = [];//TACGRP.C2GM.GNL.PNT.USW.SNBY.KGP
-	sidc['G-G-GPUYX-'] = [];//TACGRP.C2GM.GNL.PNT.USW.SNBY.EXP
+	sidc['G-G-GPUY--'] = icn['TP.SONOBUOY'];//TACGRP.C2GM.GNL.PNT.USW.SNBY
+	bbox['G-G-GPUY--'] = {x1:60,x2:140,y1:-10,y2:160};
+	sidc['G-G-GPUYP-'] = icn['TP.SONOBUOY PATTERN CENTER'];//TACGRP.C2GM.GNL.PNT.USW.SNBY.PTNCTR
+	bbox['G-G-GPUYP-'] = {x1:60,x2:140,y1:-10,y2:160};
+	sidc['G-G-GPUYD-'] = icn['TP.SONOBUOY DIFAR'];//TACGRP.C2GM.GNL.PNT.USW.SNBY.DIFAR
+	bbox['G-G-GPUYD-'] = {x1:60,x2:140,y1:-10,y2:160};
+	sidc['G-G-GPUYL-'] = icn['TP.SONOBUOY LOFAR'];//TACGRP.C2GM.GNL.PNT.USW.SNBY.LOFAR
+	bbox['G-G-GPUYL-'] = {x1:60,x2:140,y1:-10,y2:160};
+	sidc['G-G-GPUYC-'] = icn['TP.SONOBUOY CASS'];//TACGRP.C2GM.GNL.PNT.USW.SNBY.CASS
+	bbox['G-G-GPUYC-'] = {x1:60,x2:140,y1:-10,y2:160};
+	sidc['G-G-GPUYS-'] = icn['TP.SONOBUOY DICASS'];//TACGRP.C2GM.GNL.PNT.USW.SNBY.DICASS
+	bbox['G-G-GPUYS-'] = {x1:60,x2:140,y1:-10,y2:160};
+	sidc['G-G-GPUYB-'] = icn['TP.SONOBUOY BT'];//TACGRP.C2GM.GNL.PNT.USW.SNBY.BT
+	bbox['G-G-GPUYB-'] = {x1:60,x2:140,y1:-10,y2:160};
+	sidc['G-G-GPUYA-'] = icn['TP.SONOBUOY ANM'];//TACGRP.C2GM.GNL.PNT.USW.SNBY.ANM
+	bbox['G-G-GPUYA-'] = {x1:60,x2:140,y1:-10,y2:160};
+	sidc['G-G-GPUYV-'] = icn['TP.SONOBUOY VLAD'];//TACGRP.C2GM.GNL.PNT.USW.SNBY.VLAD
+	bbox['G-G-GPUYV-'] = {x1:60,x2:140,y1:-10,y2:160};	
+	sidc['G-G-GPUYT-'] = icn['TP.SONOBUOY ATAC'];//TACGRP.C2GM.GNL.PNT.USW.SNBY.ATAC
+	bbox['G-G-GPUYT-'] = {x1:60,x2:140,y1:-10,y2:160};
+	sidc['G-G-GPUYR-'] = icn['TP.SONOBUOY RO'];//TACGRP.C2GM.GNL.PNT.USW.SNBY.RO
+	bbox['G-G-GPUYR-'] = {x1:60,x2:140,y1:-10,y2:160};
+	sidc['G-G-GPUYK-'] = icn['TP.SONOBUOY KINGPIN'];//TACGRP.C2GM.GNL.PNT.USW.SNBY.KGP
+	bbox['G-G-GPUYK-'] = {x1:60,x2:140,y1:-10,y2:160};
+	sidc['G-G-GPUYX-'] = icn['TP.SONOBUOY EXPIRED'];//TACGRP.C2GM.GNL.PNT.USW.SNBY.EXP
+	bbox['G-G-GPUYX-'] = {x1:40,x2:160,y1:-10,y2:160};
+
+
 	sidc['G-G-GPUS--'] = [];//TACGRP.C2GM.GNL.PNT.USW.SRH
 	sidc['G-G-GPUSA-'] = [];//TACGRP.C2GM.GNL.PNT.USW.SRH.ARA
 	sidc['G-G-GPUSD-'] = [];//TACGRP.C2GM.GNL.PNT.USW.SRH.DIPPSN
