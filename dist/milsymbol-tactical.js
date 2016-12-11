@@ -78,6 +78,13 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.HARBOR POINT A'] = [iconParts['TP.HARBOR'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'A'}];
 	iconParts['TP.HARBOR POINT Y'] = [iconParts['TP.HARBOR'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'Y'}];
 	iconParts['TP.HARBOR POINT X'] = [iconParts['TP.HARBOR'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'X'}];
+	iconParts['TP.ROUTE'] = {type:'path',fill:false,d:'m 138.484,76.82 a 13.5484,13.5484 0 0 1 13.548,-13.548 13.5484,13.5484 0 0 1 13.549,13.548 m -27.097,0 0,0 A 12.5807,12.5807 0 0 1 125.902,89.4 12.5807,12.5807 0 0 1 113.322,76.82 m -27.097,0 A 13.5484,13.5484 0 0 1 99.773,63.272 13.5484,13.5484 0 0 1 113.322,76.82 m -79.3554,0 A 13.5484,13.5484 0 0 1 47.515,63.272 13.5484,13.5484 0 0 1 61.0634,76.82 m 25.1616,0 0,0 A 12.5807,12.5807 0 0 1 73.6437,89.4 12.5807,12.5807 0 0 1 61.0634,76.82 m 77.4206,47.328 a 13.5484,13.5484 0 0 1 13.548,-13.548 13.5484,13.5484 0 0 1 13.549,13.548 m -27.097,0 0,0 a 12.5807,12.5807 0 0 1 -12.582,12.58 12.5807,12.5807 0 0 1 -12.58,-12.58 m -27.097,0 a 13.5484,13.5484 0 0 1 13.548,-13.548 13.5484,13.5484 0 0 1 13.549,13.548 m -79.3554,0 A 13.5484,13.5484 0 0 1 47.515,110.6 13.5484,13.5484 0 0 1 61.0634,124.148 m 25.1616,0 0,0 a 12.5807,12.5807 0 0 1 -12.5813,12.58 12.5807,12.5807 0 0 1 -12.5803,-12.58 m -27.0968,-23.664 132.5184,0'};
+	iconParts['TP.ROUTE RENDEZVOUS'] = [iconParts['TP.ROUTE'],{type:'text',stroke:false,textanchor:"middle",x:100,y:170,fontsize:45,text:'R'}];
+	iconParts['TP.ROUTE DIVERSIONS'] = [iconParts['TP.ROUTE'],{type:'text',stroke:false,textanchor:"middle",x:100,y:170,fontsize:45,text:'D'}];
+	iconParts['TP.ROUTE WAYPOINT'] = [iconParts['TP.ROUTE'],{type:'text',stroke:false,textanchor:"middle",x:100,y:170,fontsize:45,text:'W'}];
+	iconParts['TP.ROUTE PIM'] = [iconParts['TP.ROUTE'],{type:'text',stroke:false,textanchor:"middle",x:100,y:170,fontsize:45,text:'M'}];
+	iconParts['TP.ROUTE POINT R'] = [iconParts['TP.ROUTE'],{type:'text',stroke:false,textanchor:"middle",x:100,y:170,fontsize:45,text:'P'}];
+
 
 	iconParts['TP.AIR CONTROL'] = {type:'path',fill:false,d:'m 140,165 0,-130 m -80,0 0,130'};
 	iconParts['TP.AIR CONTROL POINT'] = [iconParts['TP.AIR CONTROL'],{type:'circle',cx:100,cy:100,r:15}];
@@ -196,12 +203,18 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	sidc['G-G-GPHX--'] = icn['TP.HARBOR POINT X'];//TACGRP.C2GM.GNL.PNT.HBR.PNTX
 	bbox['G-G-GPHX--'] = {x1:50,x2:150,y1:50,y2:150};
 
-	sidc['G-G-GPO---'] = [];//TACGRP.C2GM.GNL.PNT.RTE
-	sidc['G-G-GPOZ--'] = [];//TACGRP.C2GM.GNL.PNT.RTE.RDV
-	sidc['G-G-GPOD--'] = [];//TACGRP.C2GM.GNL.PNT.RTE.DVSN
-	sidc['G-G-GPOW--'] = [];//TACGRP.C2GM.GNL.PNT.RTE.WAP
-	sidc['G-G-GPOP--'] = [];//TACGRP.C2GM.GNL.PNT.RTE.PIM
-	sidc['G-G-GPOR--'] = [];//TACGRP.C2GM.GNL.PNT.RTE.PNTR
+	sidc['G-G-GPO---'] = icn['TP.ROUTE'];//TACGRP.C2GM.GNL.PNT.RTE
+	bbox['G-G-GPO---'] = {x1:30,x2:170,y1:60,y2:140};
+	sidc['G-G-GPOZ--'] = icn['TP.ROUTE RENDEZVOUS'];//TACGRP.C2GM.GNL.PNT.RTE.RDV
+	bbox['G-G-GPOZ--'] = {x1:30,x2:170,y1:60,y2:170};
+	sidc['G-G-GPOD--'] = icn['TP.ROUTE DIVERSIONS'];//TACGRP.C2GM.GNL.PNT.RTE.DVSN
+	bbox['G-G-GPOD--'] = {x1:30,x2:170,y1:60,y2:170};
+	sidc['G-G-GPOW--'] = icn['TP.ROUTE WAYPOINT'];//TACGRP.C2GM.GNL.PNT.RTE.WAP
+	bbox['G-G-GPOW--'] = {x1:30,x2:170,y1:60,y2:170};
+	sidc['G-G-GPOP--'] = icn['TP.ROUTE PIM'];//TACGRP.C2GM.GNL.PNT.RTE.PIM
+	bbox['G-G-GPOP--'] = {x1:30,x2:170,y1:60,y2:170};
+	sidc['G-G-GPOR--'] = icn['TP.ROUTE POINT R'];//TACGRP.C2GM.GNL.PNT.RTE.PNTR
+	bbox['G-G-GPOR--'] = {x1:30,x2:170,y1:60,y2:170};
 	sidc['G-G-GPA---'] = icn['TP.AIR CONTROL POINT'];//TACGRP.C2GM.GNL.PNT.ACTL
 	bbox['G-G-GPA---'] = {x1:60,x2:140,y1:40,y2:160};
 	sidc['G-G-GPAP--'] = icn['TP.COMBAT AIR PATROL (CAP)'];//TACGRP.C2GM.GNL.PNT.ACTL.CAP
