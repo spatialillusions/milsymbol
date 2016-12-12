@@ -104,13 +104,12 @@ This page shows all points from APPENDIX B that are implemented in milsymbol.<br
 At the moment the plan is to implement all point symbols from APPENDIX B and enable them 
 to be labeled in the correct way. There is at the moment no plan for full support for 
 tactical graphics.<br>
-</div>
 
-<table><tr><td>
+<table><tr width="50%"><td>
 <b>TACGRP.TSK.BLK</b><br>
 BLOCK<br>
 G*T*B-----****X<br>
-</td><td>
+</td><td width="50%">
 N/A</td></tr>
 <tr><td>
 <b>TACGRP.TSK.BRH</b><br>
@@ -985,8 +984,13 @@ document.write(new MS.symbol("G*G*GPP---****X", {size:size}).getMarker().XML)
 CHECK POINT<br>
 G*G*GPPK--****X<br>
 </td><td>
+Template<br>
 <script>
-document.write(new MS.symbol("G*G*GPPK--****X", {size:size}).getMarker().XML)
+document.write(new MS.symbol("G*G*GPPK--****X", {size:size,additionalInformation:'H',additionalInformation1:'H1',hostile:'N',uniqueDesignation:'T',dtg:'W',dtg1:'W1'}).getMarker().XML)
+</script><br>
+Example<br>
+<script>
+document.write(new MS.symbol("G*G*GPPK--****X", {size:size,uniqueDesignation:'8'}).getMarker().XML)
 </script>
 </td></tr>
 <tr><td>
@@ -1311,69 +1315,69 @@ G*G*GA----****X<br>
 </td><td>
 N/A</td></tr>
 <tr><td>
-<b>G</b><br>
-undefined<br>
-*G*GAG---****XGENERAL AREA<br>
+<b>TACGRP.C2GM.GNL.ARS.GENARA</b><br>
+GENERAL AREA<br>
+G*G*GAG---****X<br>
 </td><td>
 N/A</td></tr>
 <tr><td>
-<b>G</b><br>
-undefined<br>
-*G*GAA---****XASSEMBLY AREA<br>
+<b>TACGRP.C2GM.GNL.ARS.ABYARA</b><br>
+ASSEMBLY AREA<br>
+G*G*GAA---****X<br>
 </td><td>
 N/A</td></tr>
 <tr><td>
-<b>G</b><br>
-undefined<br>
-*G*GAE---****XENGAGEMENT AREA<br>
+<b>TACGRP.C2GM.GNL.ARS.EMTARA</b><br>
+ENGAGEMENT AREA<br>
+G*G*GAE---****X<br>
 </td><td>
 N/A</td></tr>
 <tr><td>
-<b>G</b><br>
-undefined<br>
-*G*GAF---****XFORTIFIED AREA<br>
+<b>TACGRP.C2GM.GNL.ARS.FTFDAR</b><br>
+FORTIFIED AREA<br>
+G*G*GAF---****X<br>
 </td><td>
 N/A</td></tr>
 <tr><td>
-<b>G</b><br>
-undefined<br>
-*G*GAD---****XDROP ZONE<br>
+<b>TACGRP.C2GM.GNL.ARS.DRPZ</b><br>
+DROP ZONE<br>
+G*G*GAD---****X<br>
 </td><td>
 N/A</td></tr>
 <tr><td>
-<b>G</b><br>
-undefined<br>
-*G*GAX---****XEXTRACTION ZONE (EZ)<br>
+<b>TACGRP.C2GM.GNL.ARS.EZ</b><br>
+EXTRACTION ZONE (EZ)<br>
+G*G*GAX---****X<br>
 </td><td>
 N/A</td></tr>
 <tr><td>
-<b>G</b><br>
-undefined<br>
-*G*GAL---****XLANDING ZONE (LZ)<br>
+<b>TACGRP.C2GM.GNL.ARS.LZ</b><br>
+LANDING ZONE (LZ)<br>
+G*G*GAL---****X<br>
 </td><td>
 N/A</td></tr>
 <tr><td>
-<b>G</b><br>
-undefined<br>
-*G*GAP---****XPICKUP ZONE (PZ)<br>
+<b>TACGRP.C2GM.GNL.ARS.PZ</b><br>
+PICKUP ZONE (PZ)<br>
+G*G*GAP---****X<br>
 </td><td>
 N/A</td></tr>
 <tr><td>
-<b>G</b><br>
-undefined<br>
-*G*GAS---****XSEARCH AREA/RECONNAISSANCE AREA<br>
+<b>TACGRP.C2GM.GNL.ARS.SRHARA</b><br>
+SEARCH AREA/RECONNAISSANCE AREA<br>
+G*G*GAS---****X<br>
 </td><td>
 N/A</td></tr>
 <tr><td>
-<b>G</b><br>
-undefined<br>
-*G*GAY---****XLIMITED ACCESS AREA<br>
+<b>TACGRP.C2GM.GNL.ARS.LAARA</b><br>
+LIMITED ACCESS AREA<br>
+G*G*GAY---****X<br>
 </td><td>
 N/A</td></tr>
 <tr><td>
-<b>G</b><br>
-<br>
-*G*GAZ---****XAIRFIELD ZONE<br>
+<b>TACGRP.C2GM.GNL.ARS.AIRFZ</b><br>
+AIRFIELD ZONE<br>
+G*G*GAZ---****X<br>
 </td><td>
 N/A</td></tr>
 <tr><td>
@@ -3879,6 +3883,8 @@ document.write(new MS.symbol("G*O*FO----****X", {size:size}).getMarker().XML)
 </script>
 </td></tr>
 </table>
+
+</div>
 
 </body>
 </html>
