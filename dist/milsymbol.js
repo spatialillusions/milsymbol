@@ -161,6 +161,7 @@ var MS = new function(){
 			this._numberSIDCicons = this._numberSIDCicons.concat(parts);
 		}
 	};
+	
 	this.outline = function(geom,outline,stroke,color){
 		if(Array.isArray(geom)){
 			var clone = [];
@@ -229,6 +230,23 @@ var MS = new function(){
 
 	this._iconCache = {}; //A cache of icn to speed stuff up...
 
+	//This adds letter sidc SIDC label overrides
+	this._labelOverrides = {};
+	this._labelCache = {}; //A cache of label overrides to speed stuff up...
+	this.addLetterLabelOverrides = function(parts){
+		if (typeof parts == 'function'){
+			if (!this._labelOverrides.hasOwnProperty('letter')) this._labelOverrides['letter'] = [];
+			this._labelOverrides['letter'] = this._labelOverrides['letter'].concat(parts);
+		}
+	};
+	//This adds number sidc SIDC label overrides
+	this.addNumberLabelOverrides = function(parts){
+		if (typeof parts == 'function'){
+			if (!this._labelOverrides.hasOwnProperty('number')) this._labelOverrides['number'] = [];
+			this._labelOverrides['number'] = this._labelOverrides['number'].concat(parts);
+		}
+	};
+	
 	this._geticnParts = function(properties, colors, _STD2525, monoColor, alternateMedal){
 		var icn = {};
 		var frame 				= properties.frame;
@@ -2998,6 +3016,55 @@ function textfields(){
 		return w;
 	}
 
+
+	//Text fields overrides
+	function labelOverride(label){
+		var texts = [];
+		for (var i in label){
+			if(this.hasOwnProperty(i) && this[i] != ''){
+				if (!label.hasOwnProperty(i)) continue;
+				labelbox = {y2:label[i].y, y1:(label[i].y-label[i].fontsize)};
+				if(label[i].textanchor == 'start'){
+					labelbox.x1 = label[i].x;
+					labelbox.x2 = label[i].x + strWidth(this[i]);
+				}
+				//if(label[i].textanchor == 'middle'){}
+				if(label[i].textanchor == 'end'){
+					labelbox.x1 = label[i].x - strWidth(this[i]);
+					labelbox.x2 = label[i].x;
+				}
+				gbbox = MS.bboxMax(gbbox,labelbox);
+				var text = {type:'text',fontfamily:fontFamily};
+				if(label[i].hasOwnProperty('stroke'))text.stroke = label[i].stroke;
+				if(label[i].hasOwnProperty('textanchor'))text.textanchor = label[i].textanchor;
+				if(label[i].hasOwnProperty('fontsize'))text.fontsize = label[i].fontsize;
+				if(label[i].hasOwnProperty('fontweight'))text.fontweight = label[i].fontweight;
+				text.x = label[i].x;
+				text.y = label[i].y;
+				text.text = this[i];
+				texts.push(text)
+			}
+		}
+		return texts;
+	}
+	if(this.properties.numberSIDC){ //Number based SIDCs.
+		var symbolSet = String(this.SIDC).substr(4,2);
+		//TODO fix add code for Number based labels
+	}else{	//Letter based SIDCs.
+		if(!MS._labelCache.hasOwnProperty('letter')){
+			MS._labelCache['letter'] = {};
+			for (var i in MS._labelOverrides['letter']){
+				if (!MS._labelOverrides['letter'].hasOwnProperty(i)) continue;
+				MS._labelOverrides['letter'][i].call(this,MS._labelCache['letter']);
+			}
+		}
+		var genericSIDC = this.SIDC.substr(0,1)+'-'+this.SIDC.substr(2,1)+'-'+this.SIDC.substr(4,6);
+		if(MS._labelCache['letter'].hasOwnProperty(genericSIDC)){
+			drawArray2.push(labelOverride.call(this,MS._labelCache['letter'][genericSIDC]));
+			return MS.buildingBlock(drawArray1,drawArray2,gbbox);
+		}			
+	}
+	
 	//Check that we have some texts to print
 	var textFields = (this.quantity||this.reinforcedReduced||this.staffComments||this.additionalInformation||this.evaluationRating||this.combatEffectiveness||this.signatureEquipment||this.higherFormation||this.hostile||this.iffSif||this.sigint||this.uniqueDesignation||this.type||this.dtg||this.altitudeDepth||this.location||this.speed||this.specialHeadquarters||this.platformType||this.equipmentTeardownTime||this.commonIdentifier||this.auxiliaryEquipmentIndicator||this.headquartersElement);
 	if(this.infoFields && textFields){
