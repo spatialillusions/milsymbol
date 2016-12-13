@@ -60,6 +60,7 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.DESTROY'] = [{type:'path',fill:false,d:'m 0,45 85,46.75 m 30,16.5 85,46.75 M 0,155 85,108.25 M 115,91.75 200,45'},{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'D'}];
 	iconParts['TP.INTERDICT'] = [{type:'path',fill:false,d:'m 194.203,65.6674 5.49,-20.4904 -20.49,-5.4904 M 115,91.75 200,45 M 0,155 85,108.25 M 185,85 l 15,15 -15,15 m -70,-15 85,0 m -200,0 85,0'},{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'I'}];
 	iconParts['TP.NEUTRALIZE'] = [{type:'path',fill:false,d:'M 115,108.25 200,155 M 0,45 85,91.75'},{type:'path',fill:false,strokedasharray:'12,5',d:'M 115,91.75 200,45 M 0,155 85,108.25'},{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'N'}];
+	iconParts['TP.DATUM'] = [{type:'path',stroke:false,d:'M 100 50 L 100 100 L 150 100 A 50 50 0 0 0 100 50 z M 100 100 L 50 100 A 50 50 0 0 0 100 150 L 100 100 z '},{type:'circle',fill:false,cx:100,cy:100,r:50}];
 
 
 	iconParts['TP.SONOBUOY'] = [{type:'path',fill:false,d:'M 100,60 l 0,-35 10,10 0,-45'},{type:'circle',fill:false,cx:100,cy:100,r:40}];
@@ -77,7 +78,8 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.SONOBUOY EXPIRED'] = [iconParts['TP.SONOBUOY'],{type:'path',fill:false,d:'M 40,60 l 120,80 M 40,140 l 120,-80'}];
 
 
-	
+	iconParts['TP.POINT OF INTEREST'] = [{type:'path',d:'M 129.021,41.957 A 40,40 0 0 1 100,54.5 40,40 0 0 1 71.0234,42.0469 L 100,100 129.021,41.957 Z'},{type:'circle',fill:false,cx:100,cy:15,r:40}];
+
 	iconParts['TP.AIM POINT'] = [{type:'circle',cx:100,cy:100,r:15},{type:'circle',cx:100,cy:100,r:35,fill:false},{type:'circle',cx:100,cy:100,r:45,fill:false}];
 	iconParts['TP.DROP POINT'] = {type:'path',fill:false,d:'m 130,100 0,-40 m -60,40 0,-40 m 60,40 0,0 a 15,15 0 0 1 -15,15 15,15 0 0 1 -15,-15 m 0,0 0,0 A 15,15 0 0 1 85,115 15,15 0 0 1 70,100 m 30,-40 0,40'};
 	iconParts['TP.ENTRY POINT'] = {type:'path',fill:false,d:'m 100,100 0,-50 m -35,15 35,35 35,-35 m -85,35 100,0'};
@@ -146,14 +148,53 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 
 	iconParts['TP.ACTION POINT'] = [{type:'path',fill:false,d:'m 60,45 80,0 m -40,55 -40,-55 0,-105 80,0 0,105 z'}];
 	iconParts['TP.ACTION CHECK POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'CKP'}];
-
+	iconParts['TP.CONTACT POINT'] = {type:'path',fill:false,d:'m 100,100 0,-35 -45,0 0,-75 90,0 0,75 -45,0'};
+	iconParts['TP.COORDINATION POINT'] = [{type:'path',fill:false,d:'m 65,135 70,-70 m -70,0 70,70'},{type:'circle',fill:false,cx:100,cy:100,r:50}];
+	iconParts['TP.DECISION POINT'] = {type:'path',fill:false,d:'M 99.9998,25.5886 117.061,76.5192 170.77,77.0054 127.604,108.968 143.738,160.2 100,129.024 56.2624,160.2 72.3967,108.968 29.2306,77.0059 82.9403,76.5192 Z'};
 	iconParts['TP.ACTION LINKUP POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'LU'}];
 	iconParts['TP.ACTION PASSAGE POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'PP'}];
 	iconParts['TP.ACTION RALLY POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'RLY'}];
 	iconParts['TP.ACTION RELEASE POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'RP'}];
 	iconParts['TP.ACTION START POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'SP'}];
 	iconParts['TP.ACTION AMNESTY POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'AMN'}];
+	iconParts['TP.WAYPOINT'] = {type:'path',fill:false,strokewidth:8,d:'m 65,135 70,-70 m -70,0 70,70'};
 
+
+
+	iconParts['TP.POINT OF DEPARTURE'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'PD'}];
+
+
+	iconParts['TP.ENGINEER REGULATING POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'ERP'}];
+
+
+
+	iconParts['TP.DECON SITE/POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'}];
+	iconParts['TP.ALTERNATE DECON SITE/POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'},{type:'text',stroke:false,textanchor:"middle",x:100,y:10,fontsize:35,text:'ALT'}];
+	iconParts['TP.DECON SITE/POINT (TROOPS)'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'},{type:'text',stroke:false,textanchor:"middle",x:100,y:10,fontsize:35,text:'T'}];
+	iconParts['TP.DECON SITE/POINT (EQUIPMENT)'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'},{type:'text',stroke:false,textanchor:"middle",x:100,y:10,fontsize:35,text:'E'}];
+	iconParts['TP.DECON SITE/POINT (EQUIPMENT AND TROOPS)'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'},{type:'text',stroke:false,textanchor:"middle",x:100,y:10,fontsize:35,text:'E/T'}];
+	iconParts['TP.DECON SITE/POINT (OPERATIONAL DECONTAMINATION)'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'},{type:'text',stroke:false,textanchor:"middle",x:100,y:10,fontsize:35,text:'O'}];
+	iconParts['TP.DECON SITE/POINT (THOROUGH DECONTAMINATION)'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'},{type:'text',stroke:false,textanchor:"middle",x:100,y:10,fontsize:35,text:'TH'}];
+
+
+
+	iconParts['TP.SURVEY CONTROL POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'SCP'}];
+	iconParts['TP.FIRING POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'FP'}];
+	iconParts['TP.RELOAD POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'RLP'}];
+	iconParts['TP.HIDE POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'HP'}];
+	iconParts['TP.LAUNCH POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'LP'}];
+	iconParts['TP.AMBULANCE EXCHANGE POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'AXP'}];
+	iconParts['TP.CANNIBALIZATION POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'CAN'}];
+	iconParts['TP.CASUALTY COLLECTION POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'CCP'}];
+	iconParts['TP.CIVILIAN COLLECTION POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'CIV'}];
+	iconParts['TP.DETAINEE COLLECTION POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DET'}];
+	iconParts['TP.EPW COLLECTION POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'EPW'}];
+	iconParts['TP.LOGISTICS RELEASE POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'LRP'}];
+	iconParts['TP.MAINTENANCE COLLECTION POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'MCP'}];
+	iconParts['TP.REARM, REFUEL AND RESUPPLY POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'R3P'}];
+	iconParts['TP.REFUEL ON THE MOVE POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'ROM'}];
+	iconParts['TP.TRAFFIC CONTROL POST'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'TCP'}];
+	iconParts['TP.TRAILER TRANSFER POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'TTP'}];
 
 
 }
@@ -169,7 +210,8 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-T-I-----'] = {x1:0,x2:200,y1:40,y2:160};
 	sidc['G-T-N-----'] = icn['TP.NEUTRALIZE'];//TACGRP.TSK.NEUT
 	bbox['G-T-N-----'] = {x1:0,x2:200,y1:40,y2:160};
-	sidc['G-G-GPUUD-'] = [];//TACGRP.C2GM.GNL.PNT.USW.UH2.DTM
+	sidc['G-G-GPUUD-'] = icn['TP.DATUM'];//TACGRP.C2GM.GNL.PNT.USW.UH2.DTM
+	bbox['G-G-GPUUD-'] = {x1:50,x2:150,y1:50,y2:150};
 	sidc['G-G-GPUUB-'] = [];//TACGRP.C2GM.GNL.PNT.USW.UH2.BCON
 	sidc['G-G-GPUUL-'] = [];//TACGRP.C2GM.GNL.PNT.USW.UH2.LCON
 	sidc['G-G-GPUUS-'] = [];//TACGRP.C2GM.GNL.PNT.USW.UH2.SNK
@@ -213,8 +255,8 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	sidc['G-G-GPRM--'] = [];//TACGRP.C2GM.GNL.PNT.REFPNT.MRSH
 	sidc['G-G-GPRW--'] = [];//TACGRP.C2GM.GNL.PNT.REFPNT.WAP
 	sidc['G-G-GPRC--'] = [];//TACGRP.C2GM.GNL.PNT.REFPNT.CRDRTB
-	sidc['G-G-GPRI--'] = [];//TACGRP.C2GM.GNL.PNT.REFPNT.PNTINR
-	bbox['G-G-GPRI--'] = {x1:50,x2:150,y1:50,y2:150};
+	sidc['G-G-GPRI--'] = icn['TP.POINT OF INTEREST'];//TACGRP.C2GM.GNL.PNT.REFPNT.PNTINR
+	bbox['G-G-GPRI--'] = {x1:50,x2:150,y1:-25};
 	sidc['G-G-GPWA--'] = icn['TP.AIM POINT'];//TACGRP.C2GM.GNL.PNT.WPN.AIMPNT
 	bbox['G-G-GPWA--'] = {x1:50,x2:150,y1:50,y2:150};
 	sidc['G-G-GPWD--'] = icn['TP.DROP POINT'];//TACGRP.C2GM.GNL.PNT.WPN.DRPPNT
@@ -294,9 +336,12 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-G-GPP---'] = {x1:60,x2:140,y1:-60};
 	sidc['G-G-GPPK--'] = icn['TP.ACTION CHECK POINT'];//TACGRP.C2GM.GNL.PNT.ACTPNT.CHKPNT
 	bbox['G-G-GPPK--'] = {x1:60,x2:140,y1:-60};
-	sidc['G-G-GPPC--'] = [];//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
-	sidc['G-G-GPPO--'] = [];//TACGRP.C2GM.GNL.PNT.ACTPNT.CRDPNT
-	sidc['G-G-GPPD--'] = [];//TACGRP.C2GM.GNL.PNT.ACTPNT.DCNPNT
+	sidc['G-G-GPPC--'] = icn['TP.CONTACT POINT'];//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
+	bbox['G-G-GPPC--'] = {x1:55,x2:145,y1:-10};
+	sidc['G-G-GPPO--'] = icn['TP.COORDINATION POINT'];//TACGRP.C2GM.GNL.PNT.ACTPNT.CRDPNT
+	bbox['G-G-GPPO--'] = {x1:50,x2:150,y1:50,y2:150};
+	sidc['G-G-GPPD--'] = icn['TP.DECISION POINT'];//TACGRP.C2GM.GNL.PNT.ACTPNT.DCNPNT
+	bbox['G-G-GPPD--'] = {x1:30,x2:170,y1:25,y2:160};
 	sidc['G-G-GPPL--'] = icn['TP.ACTION LINKUP POINT'];//TACGRP.C2GM.GNL.PNT.ACTPNT.LNKUPT
 	bbox['G-G-GPPL--'] = {x1:60,x2:140,y1:-60};
 	sidc['G-G-GPPP--'] = icn['TP.ACTION PASSAGE POINT'];//TACGRP.C2GM.GNL.PNT.ACTPNT.PSSPNT
@@ -309,7 +354,8 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-G-GPPS--'] = {x1:60,x2:140,y1:-60};
 	sidc['G-G-GPPA--'] = icn['TP.ACTION AMNESTY POINT'];//TACGRP.C2GM.GNL.PNT.ACTPNT.AMNPNT
 	bbox['G-G-GPPA--'] = {x1:60,x2:140,y1:-60};
-	sidc['G-G-GPPW--'] = [];//TACGRP.C2GM.GNL.PNT.ACTPNT.WAP
+	sidc['G-G-GPPW--'] = icn['TP.WAYPOINT'];//TACGRP.C2GM.GNL.PNT.ACTPNT.WAP
+	bbox['G-G-GPPW--'] = {x1:60,x2:140,y1:60,y2:140};
 	sidc['G-G-GPC---'] = icn['TP.SEA SURFACE CONTROL STATION'];//TACGRP.C2GM.GNL.PNT.SCTL
 	bbox['G-G-GPC---'] = {x1:30,x2:170,y1:60,y2:140};
 	sidc['G-G-GPCU--'] = icn['TP.(USV) CONTROL STATION'];//TACGRP.C2GM.GNL.PNT.SCTL.USV
@@ -362,7 +408,8 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	sidc['G-G-DPOF--'] = [];//TACGRP.C2GM.DEF.PNT.OBSPST.FWDOP
 	sidc['G-G-DPOS--'] = [];//TACGRP.C2GM.DEF.PNT.OBSPST.SOP
 	sidc['G-G-DPON--'] = [];//TACGRP.C2GM.DEF.PNT.OBSPST.CBRNOP
-	sidc['G-G-OPP---'] = [];//TACGRP.C2GM.OFF.PNT.PNTD
+	sidc['G-G-OPP---'] = icn['TP.POINT OF DEPARTURE'];//TACGRP.C2GM.OFF.PNT.PNTD
+	bbox['G-G-OPP---'] = {x1:60,x2:140,y1:-60};
 	sidc['G-M-OAOF--'] = [];//TACGRP.MOBSU.OBST.ATO.TDTSM.FIXPFD
 	sidc['G-M-OAOM--'] = [];//TACGRP.MOBSU.OBST.ATO.TDTSM.MVB
 	sidc['G-M-OAOP--'] = [];//TACGRP.MOBSU.OBST.ATO.TDTSM.MVBPFD
@@ -376,7 +423,8 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	sidc['G-M-OFS---'] = [];//TACGRP.MOBSU.OBST.MNEFLD.STC
 	sidc['G-M-OHTL--'] = [];//TACGRP.MOBSU.OBST.AVN.TWR.LOW
 	sidc['G-M-OHTH--'] = [];//TACGRP.MOBSU.OBST.AVN.TWR.HIGH
-	sidc['G-M-BCP---'] = [];//TACGRP.MOBSU.OBSTBP.CSGSTE.ERP
+	sidc['G-M-BCP---'] = icn['TP.ENGINEER REGULATING POINT'];//TACGRP.MOBSU.OBSTBP.CSGSTE.ERP
+	bbox['G-M-BCP---'] = {x1:60,x2:140,y1:-60};
 	sidc['G-M-SE----'] = [];//TACGRP.MOBSU.SU.ESTOF
 	sidc['G-M-SF----'] = [];//TACGRP.MOBSU.SU.FRT
 	sidc['G-M-SS----'] = [];//TACGRP.MOBSU.SU.SUFSHL
@@ -385,49 +433,58 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	sidc['G-M-NF----'] = [];//TACGRP.MOBSU.CBRN.FAOTP
 	sidc['G-M-NEB---'] = [];//TACGRP.MOBSU.CBRN.REEVNT.BIO
 	sidc['G-M-NEC---'] = [];//TACGRP.MOBSU.CBRN.REEVNT.CML
-	sidc['G-M-NDP---'] = [];//TACGRP.MOBSU.CBRN.DECONP.USP
-	sidc['G-M-NDA---'] = [];//TACGRP.MOBSU.CBRN.DECONP.ALTUSP
-	sidc['G-M-NDT---'] = [];//TACGRP.MOBSU.CBRN.DECONP.TRP
-	sidc['G-M-NDE---'] = [];//TACGRP.MOBSU.CBRN.DECONP.EQT
-	sidc['G-M-NDB---'] = [];//TACGRP.MOBSU.CBRN.DECONP.EQTTRP
-	sidc['G-M-NDO---'] = [];//TACGRP.MOBSU.CBRN.DECONP.OPDECN
-	sidc['G-M-NDD---'] = [];//TACGRP.MOBSU.CBRN.DECONP.TRGH
+	sidc['G-M-NDP---'] = icn['TP.DECON SITE/POINT'];//TACGRP.MOBSU.CBRN.DECONP.USP
+	bbox['G-M-NDP---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-M-NDA---'] = icn['TP.ALTERNATE DECON SITE/POINT'];//TACGRP.MOBSU.CBRN.DECONP.ALTUSP
+	bbox['G-M-NDA---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-M-NDT---'] = icn['TP.DECON SITE/POINT (TROOPS)'];//TACGRP.MOBSU.CBRN.DECONP.TRP
+	bbox['G-M-NDT---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-M-NDE---'] = icn['TP.DECON SITE/POINT (EQUIPMENT)'];//TACGRP.MOBSU.CBRN.DECONP.EQT
+	bbox['G-M-NDE---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-M-NDB---'] = icn['TP.DECON SITE/POINT (EQUIPMENT AND TROOPS)'];//TACGRP.MOBSU.CBRN.DECONP.EQTTRP
+	bbox['G-M-NDB---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-M-NDO---'] = icn['TP.DECON SITE/POINT (OPERATIONAL DECONTAMINATION)'];//TACGRP.MOBSU.CBRN.DECONP.OPDECN
+	bbox['G-M-NDO---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-M-NDD---'] = icn['TP.DECON SITE/POINT (THOROUGH DECONTAMINATION)'];//TACGRP.MOBSU.CBRN.DECONP.TRGH
+	bbox['G-M-NDD---'] = {x1:60,x2:140,y1:-60};
 	sidc['G-F-PTS---'] = [];//TACGRP.FSUPP.PNT.TGT.PTGT
 	sidc['G-F-PTN---'] = [];//TACGRP.FSUPP.PNT.TGT.NUCTGT
 	sidc['G-F-PCF---'] = [];//TACGRP.FSUPP.PNT.C2PNT.FSS
-	sidc['G-F-PCS---'] = [];//TACGRP.FSUPP.PNT.C2PNT.SCP
-	sidc['G-F-PCB---'] = [];//TACGRP.FSUPP.PNT.C2PNT.FP
-	sidc['G-F-PCR---'] = [];//TACGRP.FSUPP.PNT.C2PNT.RP
-	sidc['G-F-PCH---'] = [];//TACGRP.FSUPP.PNT.C2PNT.HP
-	sidc['G-F-PCL---'] = [];//TACGRP.FSUPP.PNT.C2PNT.LP
-	sidc['G-F-ATR---'] = [];//TACGRP.FSUPP.ARS.ARATGT.RTGTGT
-	sidc['G-F-ATC---'] = [];//TACGRP.FSUPP.ARS.ARATGT.CIRTGT
-	sidc['G-F-ACSC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.FSA.CIRCLR
-	sidc['G-F-ACAC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.ACA.CIRCLR
-	sidc['G-F-ACFC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.FFA.CIRCLR
-	sidc['G-F-ACNC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.NFA.CIRCLR
-	sidc['G-F-ACRC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.RFA.CIRCLR
-	sidc['G-F-ACPC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.PAA.CIRCLR
-	sidc['G-F-ACEC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.SNSZ.CIRCLR
-	sidc['G-F-ACDC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.DA.CIRCLR
-	sidc['G-F-ACZC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.ZOR.CIRCLR
-	sidc['G-F-ACBC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.TBA.CIRCLR
-	sidc['G-F-ACVC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.TVAR.CIRCLR
-	sidc['G-F-AXC---'] = [];//TACGRP.FSUPP.ARS.WPNRF.CIRCLR
-	sidc['G-F-AKBC--'] = [];//TACGRP.FSUPP.ARS.KLBOX.BLUE.CIRCLR
-	sidc['G-F-AKPC--'] = [];//TACGRP.FSUPP.ARS.KLBOX.PURPLE.CIRCLR
-	sidc['G-S-PX----'] = [];//TACGRP.CSS.PNT.AEP
-	sidc['G-S-PC----'] = [];//TACGRP.CSS.PNT.CBNP
-	sidc['G-S-PY----'] = [];//TACGRP.CSS.PNT.CCP
-	sidc['G-S-PT----'] = [];//TACGRP.CSS.PNT.CVP
-	sidc['G-S-PD----'] = [];//TACGRP.CSS.PNT.DCP
-	sidc['G-S-PE----'] = [];//TACGRP.CSS.PNT.EPWCP
-	sidc['G-S-PL----'] = [];//TACGRP.CSS.PNT.LRP
-	sidc['G-S-PM----'] = [];//TACGRP.CSS.PNT.MCP
-	sidc['G-S-PR----'] = [];//TACGRP.CSS.PNT.RRRP
-	sidc['G-S-PU----'] = [];//TACGRP.CSS.PNT.ROM
-	sidc['G-S-PO----'] = [];//TACGRP.CSS.PNT.TCP
-	sidc['G-S-PI----'] = [];//TACGRP.CSS.PNT.TTP
+	sidc['G-F-PCS---'] = icn['TP.SURVEY CONTROL POINT'];//TACGRP.FSUPP.PNT.C2PNT.SCP
+	bbox['G-F-PCS---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-F-PCB---'] = icn['TP.FIRING POINT'];//TACGRP.FSUPP.PNT.C2PNT.FP
+	bbox['G-F-PCB---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-F-PCR---'] = icn['TP.RELOAD POINT'];//TACGRP.FSUPP.PNT.C2PNT.RP
+	bbox['G-F-PCR---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-F-PCH---'] = icn['TP.HIDE POINT'];//TACGRP.FSUPP.PNT.C2PNT.HP
+	bbox['G-F-PCH---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-F-PCL---'] = icn['TP.LAUNCH POINT'];//TACGRP.FSUPP.PNT.C2PNT.LP
+	bbox['G-F-PCL---'] = {x1:60,x2:140,y1:-60};
+
+	sidc['G-S-PX----'] = icn['TP.AMBULANCE EXCHANGE POINT'];//TACGRP.CSS.PNT.AEP
+	bbox['G-S-PX----'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PC----'] = icn['TP.CANNIBALIZATION POINT'];//TACGRP.CSS.PNT.CBNP
+	bbox['G-S-PC----'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PY----'] = icn['TP.CASUALTY COLLECTION POINT'];//TACGRP.CSS.PNT.CCP
+	bbox['G-S-PY----'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PT----'] = icn['TP.CIVILIAN COLLECTION POINT'];//TACGRP.CSS.PNT.CVP
+	bbox['G-S-PT----'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PD----'] = icn['TP.DETAINEE COLLECTION POINT'];//TACGRP.CSS.PNT.DCP
+	bbox['G-S-PD----'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PE----'] = icn['TP.EPW COLLECTION POINT'];//TACGRP.CSS.PNT.EPWCP
+	bbox['G-S-PE----'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PL----'] = icn['TP.LOGISTICS RELEASE POINT'];//TACGRP.CSS.PNT.LRP
+	bbox['G-S-PL----'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PM----'] = icn['TP.MAINTENANCE COLLECTION POINT'];//TACGRP.CSS.PNT.MCP
+	bbox['G-S-PM----'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PR----'] = icn['TP.REARM, REFUEL AND RESUPPLY POINT'];//TACGRP.CSS.PNT.RRRP
+	bbox['G-S-PR----'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PU----'] = icn['TP.REFUEL ON THE MOVE POINT'];//TACGRP.CSS.PNT.ROM
+	bbox['G-S-PU----'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PO----'] = icn['TP.TRAFFIC CONTROL POST'];//TACGRP.CSS.PNT.TCP
+	bbox['G-S-PO----'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PI----'] = icn['TP.TRAILER TRANSFER POINT'];//TACGRP.CSS.PNT.TTP
+	bbox['G-S-PI----'] = {x1:60,x2:140,y1:-60};
 	sidc['G-S-PN----'] = [];//TACGRP.CSS.PNT.UMC
 	sidc['G-S-PS----'] = [];//TACGRP.CSS.PNT.SPT
 	sidc['G-S-PSZ---'] = [];//TACGRP.CSS.PNT.SPT.GNL
@@ -498,7 +555,7 @@ function tacticalPoints(sidc){
 	//sidc['G-G-GPRM--'] = [];//TACGRP.C2GM.GNL.PNT.REFPNT.MRSH
 	//sidc['G-G-GPRW--'] = [];//TACGRP.C2GM.GNL.PNT.REFPNT.WAP
 	//sidc['G-G-GPRC--'] = [];//TACGRP.C2GM.GNL.PNT.REFPNT.CRDRTB
-	//sidc['G-G-GPRI--'] = [];//TACGRP.C2GM.GNL.PNT.REFPNT.PNTINR
+	sidc['G-G-GPRI--'] = {	uniqueDesignation:{stroke:false,textanchor:"middle",x:100,y:30,fontsize:45,fontweight:'bold'}};//TACGRP.C2GM.GNL.PNT.REFPNT.PNTINR
 	//sidc['G-G-GPWA--'] = [];//TACGRP.C2GM.GNL.PNT.WPN.AIMPNT
 	//sidc['G-G-GPWD--'] = [];//TACGRP.C2GM.GNL.PNT.WPN.DRPPNT
 	//sidc['G-G-GPWE--'] = [];//TACGRP.C2GM.GNL.PNT.WPN.ENTPNT
@@ -507,7 +564,7 @@ function tacticalPoints(sidc){
 	//sidc['G-G-GPWI--'] = [];//TACGRP.C2GM.GNL.PNT.WPN.IMTPNT
 	//sidc['G-G-GPWP--'] = [];//TACGRP.C2GM.GNL.PNT.WPN.PIPNT
 	//sidc['G-G-GPF---'] = [];//TACGRP.C2GM.GNL.PNT.FRMN
-	sidc['G-G-GPH---'] = {additionalInformation:{stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,fontweight:'bold'}};//TACGRP.C2GM.GNL.PNT.HBR
+	sidc['G-G-GPH---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,fontweight:'bold'}};//TACGRP.C2GM.GNL.PNT.HBR
 	//sidc['G-G-GPHQ--'] = [];//TACGRP.C2GM.GNL.PNT.HBR.PNTQ
 	//sidc['G-G-GPHA--'] = [];//TACGRP.C2GM.GNL.PNT.HBR.PNTA
 	//sidc['G-G-GPHY--'] = [];//TACGRP.C2GM.GNL.PNT.HBR.PNTY
@@ -541,49 +598,50 @@ function tacticalPoints(sidc){
 	//sidc['G-G-GPAN--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.ORBRD
 	sidc['G-G-GPP---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
 							additionalInformation1:{stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,fontweight:'bold'},
-							hostile:{stroke:false,textanchor:"start",x:150,y:50,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
 							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
 							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
 							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};//TACGRP.C2GM.GNL.PNT.ACTPNT
 	sidc['G-G-GPPK--'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
-							hostile:{stroke:false,textanchor:"start",x:150,y:50,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
 							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
 							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
 							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
-
-	//sidc['G-G-GPPC--'] = [];//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
+	sidc['G-G-GPPC--'] = {	uniqueDesignation:{stroke:false,textanchor:"middle",x:100,y:40,fontsize:45,fontweight:'bold'}};//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
 	//sidc['G-G-GPPO--'] = [];//TACGRP.C2GM.GNL.PNT.ACTPNT.CRDPNT
-	//sidc['G-G-GPPD--'] = [];//TACGRP.C2GM.GNL.PNT.ACTPNT.DCNPNT
+	sidc['G-G-GPPD--'] = {	uniqueDesignation:{stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,fontweight:'bold'}};//TACGRP.C2GM.GNL.PNT.ACTPNT.DCNPNT
 	sidc['G-G-GPPL--'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
-							hostile:{stroke:false,textanchor:"start",x:150,y:50,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
 							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
 							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
 							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
 	sidc['G-G-GPPP--'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
-							hostile:{stroke:false,textanchor:"start",x:150,y:50,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
 							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
 							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
 							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
 	sidc['G-G-GPPR--'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
-							hostile:{stroke:false,textanchor:"start",x:150,y:50,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
 							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
 							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
 							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
 	sidc['G-G-GPPE--'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
-							hostile:{stroke:false,textanchor:"start",x:150,y:50,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
 							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
 							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
 							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
 	sidc['G-G-GPPS--'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
-							hostile:{stroke:false,textanchor:"start",x:150,y:50,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
 							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
 							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
 							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
 	sidc['G-G-GPPA--'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
-							hostile:{stroke:false,textanchor:"start",x:150,y:50,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
 							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
 							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
 							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+	sidc['G-G-GPPW--'] = {	uniqueDesignation:{stroke:false,textanchor:"start",x:140,y:125,fontsize:70}};//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
+
 	//sidc['G-G-GPPW--'] = [];//TACGRP.C2GM.GNL.PNT.ACTPNT.WAP
 	//sidc['G-G-GPC---'] = [];//TACGRP.C2GM.GNL.PNT.SCTL
 	//sidc['G-G-GPCU--'] = [];//TACGRP.C2GM.GNL.PNT.SCTL.USV
@@ -618,7 +676,12 @@ function tacticalPoints(sidc){
 	//sidc['G-G-DPOF--'] = [];//TACGRP.C2GM.DEF.PNT.OBSPST.FWDOP
 	//sidc['G-G-DPOS--'] = [];//TACGRP.C2GM.DEF.PNT.OBSPST.SOP
 	//sidc['G-G-DPON--'] = [];//TACGRP.C2GM.DEF.PNT.OBSPST.CBRNOP
-	//sidc['G-G-OPP---'] = [];//TACGRP.C2GM.OFF.PNT.PNTD
+	sidc['G-G-OPP---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-M-OAOF--'] = [];//TACGRP.MOBSU.OBST.ATO.TDTSM.FIXPFD
 	//sidc['G-M-OAOM--'] = [];//TACGRP.MOBSU.OBST.ATO.TDTSM.MVB
 	//sidc['G-M-OAOP--'] = [];//TACGRP.MOBSU.OBST.ATO.TDTSM.MVBPFD
@@ -632,7 +695,13 @@ function tacticalPoints(sidc){
 	//sidc['G-M-OFS---'] = [];//TACGRP.MOBSU.OBST.MNEFLD.STC
 	//sidc['G-M-OHTL--'] = [];//TACGRP.MOBSU.OBST.AVN.TWR.LOW
 	//sidc['G-M-OHTH--'] = [];//TACGRP.MOBSU.OBST.AVN.TWR.HIGH
-	//sidc['G-M-BCP---'] = [];//TACGRP.MOBSU.OBSTBP.CSGSTE.ERP
+	//sidc[] = [];//TACGRP.MOBSU.OBSTBP.CSGSTE.ERP
+	sidc['G-M-BCP---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-M-SE----'] = [];//TACGRP.MOBSU.SU.ESTOF
 	//sidc['G-M-SF----'] = [];//TACGRP.MOBSU.SU.FRT
 	//sidc['G-M-SS----'] = [];//TACGRP.MOBSU.SU.SUFSHL
@@ -641,50 +710,179 @@ function tacticalPoints(sidc){
 	//sidc['G-M-NF----'] = [];//TACGRP.MOBSU.CBRN.FAOTP
 	//sidc['G-M-NEB---'] = [];//TACGRP.MOBSU.CBRN.REEVNT.BIO
 	//sidc['G-M-NEC---'] = [];//TACGRP.MOBSU.CBRN.REEVNT.CML
-	//sidc['G-M-NDP---'] = [];//TACGRP.MOBSU.CBRN.DECONP.USP
-	//sidc['G-M-NDA---'] = [];//TACGRP.MOBSU.CBRN.DECONP.ALTUSP
-	//sidc['G-M-NDT---'] = [];//TACGRP.MOBSU.CBRN.DECONP.TRP
+	//sidc[] = [];//TACGRP.MOBSU.CBRN.DECONP.USP
+	sidc['G-M-NDP---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
+	//sidc[] = [];//TACGRP.MOBSU.CBRN.DECONP.ALTUSP
+	sidc['G-M-NDA---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+	//sidc[] = [];//TACGRP.MOBSU.CBRN.DECONP.TRP
+	sidc['G-M-NDT---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-M-NDE---'] = [];//TACGRP.MOBSU.CBRN.DECONP.EQT
+	sidc['G-M-NDE---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-M-NDB---'] = [];//TACGRP.MOBSU.CBRN.DECONP.EQTTRP
+	sidc['G-M-NDB---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-M-NDO---'] = [];//TACGRP.MOBSU.CBRN.DECONP.OPDECN
+	sidc['G-M-NDO---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
 	//sidc['G-M-NDD---'] = [];//TACGRP.MOBSU.CBRN.DECONP.TRGH
+	sidc['G-M-NDD---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
 	//sidc['G-F-PTS---'] = [];//TACGRP.FSUPP.PNT.TGT.PTGT
 	//sidc['G-F-PTN---'] = [];//TACGRP.FSUPP.PNT.TGT.NUCTGT
 	//sidc['G-F-PCF---'] = [];//TACGRP.FSUPP.PNT.C2PNT.FSS
 	//sidc['G-F-PCS---'] = [];//TACGRP.FSUPP.PNT.C2PNT.SCP
+	sidc['G-F-PCS---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
 	//sidc['G-F-PCB---'] = [];//TACGRP.FSUPP.PNT.C2PNT.FP
+	sidc['G-F-PCB---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-F-PCR---'] = [];//TACGRP.FSUPP.PNT.C2PNT.RP
+	sidc['G-F-PCR---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-F-PCH---'] = [];//TACGRP.FSUPP.PNT.C2PNT.HP
+	sidc['G-F-PCH---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-F-PCL---'] = [];//TACGRP.FSUPP.PNT.C2PNT.LP
-	//sidc['G-F-ATR---'] = [];//TACGRP.FSUPP.ARS.ARATGT.RTGTGT
-	//sidc['G-F-ATC---'] = [];//TACGRP.FSUPP.ARS.ARATGT.CIRTGT
-	//sidc['G-F-ACSC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.FSA.CIRCLR
-	//sidc['G-F-ACAC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.ACA.CIRCLR
-	//sidc['G-F-ACFC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.FFA.CIRCLR
-	//sidc['G-F-ACNC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.NFA.CIRCLR
-	//sidc['G-F-ACRC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.RFA.CIRCLR
-	//sidc['G-F-ACPC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.PAA.CIRCLR
-	//sidc['G-F-ACEC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.SNSZ.CIRCLR
-	//sidc['G-F-ACDC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.DA.CIRCLR
-	//sidc['G-F-ACZC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.ZOR.CIRCLR
-	//sidc['G-F-ACBC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.TBA.CIRCLR
-	//sidc['G-F-ACVC--'] = [];//TACGRP.FSUPP.ARS.C2ARS.TVAR.CIRCLR
-	//sidc['G-F-AXC---'] = [];//TACGRP.FSUPP.ARS.WPNRF.CIRCLR
-	//sidc['G-F-AKBC--'] = [];//TACGRP.FSUPP.ARS.KLBOX.BLUE.CIRCLR
-	//sidc['G-F-AKPC--'] = [];//TACGRP.FSUPP.ARS.KLBOX.PURPLE.CIRCLR
+	sidc['G-F-PCL---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
 	//sidc['G-S-PX----'] = [];//TACGRP.CSS.PNT.AEP
+	sidc['G-S-PX----'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							uniqueDesignation1:{stroke:false,textanchor:"middle",x:100,y:10,fontsize:35,fontweight:'bold'},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};//TACGRP.C2GM.GNL.PNT.ACTPNT
 	//sidc['G-S-PC----'] = [];//TACGRP.CSS.PNT.CBNP
+	sidc['G-S-PC----'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PY----'] = [];//TACGRP.CSS.PNT.CCP
+	sidc['G-S-PY----'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PT----'] = [];//TACGRP.CSS.PNT.CVP
+	sidc['G-S-PT----'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PD----'] = [];//TACGRP.CSS.PNT.DCP
+	sidc['G-S-PD----'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PE----'] = [];//TACGRP.CSS.PNT.EPWCP
+	sidc['G-S-PE----'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PL----'] = [];//TACGRP.CSS.PNT.LRP
+	sidc['G-S-PL----'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PM----'] = [];//TACGRP.CSS.PNT.MCP
+	sidc['G-S-PM----'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PR----'] = [];//TACGRP.CSS.PNT.RRRP
+	sidc['G-S-PR----'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PU----'] = [];//TACGRP.CSS.PNT.ROM
+	sidc['G-S-PU----'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PO----'] = [];//TACGRP.CSS.PNT.TCP
+	sidc['G-S-PO----'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PI----'] = [];//TACGRP.CSS.PNT.TTP
+	sidc['G-S-PI----'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PN----'] = [];//TACGRP.CSS.PNT.UMC
+	sidc['G-S-PN----'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PS----'] = [];//TACGRP.CSS.PNT.SPT
 	//sidc['G-S-PSZ---'] = [];//TACGRP.CSS.PNT.SPT.GNL
 	//sidc['G-S-PSA---'] = [];//TACGRP.CSS.PNT.SPT.CLS1
@@ -699,7 +897,19 @@ function tacticalPoints(sidc){
 	//sidc['G-S-PSJ---'] = [];//TACGRP.CSS.PNT.SPT.CLS10
 	//sidc['G-S-PA----'] = [];//TACGRP.CSS.PNT.AP
 	//sidc['G-S-PAS---'] = [];//TACGRP.CSS.PNT.AP.ASP
+	sidc['G-S-PAS---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PAT---'] = [];//TACGRP.CSS.PNT.AP.ATP
+	sidc['G-S-PAT---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:0,fontsize:80},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-O-ED----'] = [];//TACGRP.OTH.ER.DTHAC
 	//sidc['G-O-EP----'] = [];//TACGRP.OTH.ER.PIW
 	//sidc['G-O-EV----'] = [];//TACGRP.OTH.ER.DSTVES
