@@ -67,9 +67,6 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.BRIEF CONTACT'] = [{type:'path',d:'m 65,0 70,0 m -35,80 0,-80 m 0,100 -45,-20 90,0 z'},{type:'text',stroke:false,textanchor:"middle",x:75,y:55,fontsize:45,text:'B'},{type:'text',stroke:false,textanchor:"middle",x:125,y:55,fontsize:45,text:'C'}];
 	iconParts['TP.LOST CONTACT'] = [{type:'path',d:'m 65,0 70,0 m -35,80 0,-80 m 0,100 -45,-20 90,0 z'},{type:'text',stroke:false,textanchor:"middle",x:75,y:55,fontsize:45,text:'L'},{type:'text',stroke:false,textanchor:"middle",x:125,y:55,fontsize:45,text:'C'}];
 	iconParts['TP.SINKER'] = [{type:'path',fill:false,d:'m 100,15 0,65 M 60,15 80,0 100,15 120,0 140,15'},{type:'path',d:'M 100,100 55,80 145,80 Z'}];
-
-
-
 	iconParts['TP.SONOBUOY'] = [{type:'path',fill:false,d:'M 100,60 l 0,-35 10,10 0,-45'},{type:'circle',fill:false,cx:100,cy:100,r:40}];
 	iconParts['TP.SONOBUOY PATTERN CENTER'] = [iconParts['TP.SONOBUOY'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'P'}];
 	iconParts['TP.SONOBUOY DIFAR'] = [iconParts['TP.SONOBUOY'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'D'}];
@@ -83,10 +80,19 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.SONOBUOY RO'] = [iconParts['TP.SONOBUOY'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'R'}];
 	iconParts['TP.SONOBUOY KINGPIN'] = [iconParts['TP.SONOBUOY'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'K'}];
 	iconParts['TP.SONOBUOY EXPIRED'] = [iconParts['TP.SONOBUOY'],{type:'path',fill:false,d:'M 40,60 l 120,80 M 40,140 l 120,-80'}];
-
-
+	iconParts['TP.SEARCH'] = {type:'path',d:'m 80,80 20,20 -20,20 40,0 -20,-20 20,-20 z M 50,150 150,50 M 50,50 150,150'};
+	iconParts['TP.SEARCH AREA'] = [iconParts['TP.SEARCH'],{type:'text',stroke:false,textanchor:"middle",x:60,y:115,fontsize:45,text:'S'},{type:'text',stroke:false,textanchor:"middle",x:140,y:115,fontsize:45,text:'A'}];;
+	iconParts['TP.DIP POSITION'] = [iconParts['TP.SEARCH'],{type:'text',stroke:false,textanchor:"middle",x:60,y:115,fontsize:45,text:'D'},{type:'text',stroke:false,textanchor:"middle",x:140,y:115,fontsize:45,text:'P'}];;
+	iconParts['TP.SEARCH CENTER'] = {type:'path',stroke:false,d:'m 100,100 -50,10 0,-20 z m 0,0 10,50 -20,0 z m 0,0 50,-10 0,20 z m 0,0 -10,-50 20,0 z'};
+	iconParts['TP.REFERENCE POINT'] = [{type:'path',fill:false,d:'M 160,160 40,160 40,40 160,40 Z'},{type:'circle',cx:100,cy:100,r:15}];
+	iconParts['TP.NAVIGATIONAL REFERENCE'] = {type:'path',fill:false,d:'M 160,160 40,160 40,40 160,40 Z M 160,160 40,40 M 40,160 160,40'};
+	iconParts['TP.SPECIAL POINT'] = [iconParts['TP.NAVIGATIONAL REFERENCE'],{type:'circle',cx:100,cy:100,r:15}];
+	iconParts['TP.DLRP'] = [iconParts['TP.SPECIAL POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:150,fontsize:40,text:'D'}];
+	iconParts['TP.POINT OF INTENDED MOVEMENT'] = [iconParts['TP.REFERENCE POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:150,fontsize:40,text:'P'}];
+	iconParts['TP.MARSHALL POINT'] = [iconParts['TP.REFERENCE POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:150,fontsize:40,text:'M'}];
+	iconParts['TP.REFERENCE POINT WAYPOINT'] = [iconParts['TP.REFERENCE POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:150,fontsize:40,text:'W'}];
+	iconParts['TP.CORRIDOR TAB'] = [iconParts['TP.REFERENCE POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:150,fontsize:40,text:'C'}];
 	iconParts['TP.POINT OF INTEREST'] = [{type:'path',d:'M 129.021,41.957 A 40,40 0 0 1 100,54.5 40,40 0 0 1 71.0234,42.0469 L 100,100 129.021,41.957 Z'},{type:'circle',fill:false,cx:100,cy:15,r:40}];
-
 	iconParts['TP.AIM POINT'] = [{type:'circle',cx:100,cy:100,r:15},{type:'circle',cx:100,cy:100,r:35,fill:false},{type:'circle',cx:100,cy:100,r:45,fill:false}];
 	iconParts['TP.DROP POINT'] = {type:'path',fill:false,d:'m 130,100 0,-40 m -60,40 0,-40 m 60,40 0,0 a 15,15 0 0 1 -15,15 15,15 0 0 1 -15,-15 m 0,0 0,0 A 15,15 0 0 1 85,115 15,15 0 0 1 70,100 m 30,-40 0,40'};
 	iconParts['TP.ENTRY POINT'] = {type:'path',fill:false,d:'m 100,100 0,-50 m -35,15 35,35 35,-35 m -85,35 100,0'};
@@ -251,20 +257,30 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-G-GPUYK-'] = {x1:60,x2:140,y1:-10,y2:160};
 	sidc['G-G-GPUYX-'] = icn['TP.SONOBUOY EXPIRED'];//TACGRP.C2GM.GNL.PNT.USW.SNBY.EXP
 	bbox['G-G-GPUYX-'] = {x1:40,x2:160,y1:-10,y2:160};
-
-
-	sidc['G-G-GPUS--'] = [];//TACGRP.C2GM.GNL.PNT.USW.SRH
-	sidc['G-G-GPUSA-'] = [];//TACGRP.C2GM.GNL.PNT.USW.SRH.ARA
-	sidc['G-G-GPUSD-'] = [];//TACGRP.C2GM.GNL.PNT.USW.SRH.DIPPSN
-	sidc['G-G-GPUSC-'] = [];//TACGRP.C2GM.GNL.PNT.USW.SRH.CTR
-	sidc['G-G-GPR---'] = [];//TACGRP.C2GM.GNL.PNT.REFPNT
-	sidc['G-G-GPRN--'] = [];//TACGRP.C2GM.GNL.PNT.REFPNT.NAVREF
-	sidc['G-G-GPRS--'] = [];//TACGRP.C2GM.GNL.PNT.REFPNT.SPLPNT
-	sidc['G-G-GPRD--'] = [];//TACGRP.C2GM.GNL.PNT.REFPNT.DLRP
-	sidc['G-G-GPRP--'] = [];//TACGRP.C2GM.GNL.PNT.REFPNT.PIM
-	sidc['G-G-GPRM--'] = [];//TACGRP.C2GM.GNL.PNT.REFPNT.MRSH
-	sidc['G-G-GPRW--'] = [];//TACGRP.C2GM.GNL.PNT.REFPNT.WAP
-	sidc['G-G-GPRC--'] = [];//TACGRP.C2GM.GNL.PNT.REFPNT.CRDRTB
+	sidc['G-G-GPUS--'] = icn['TP.SEARCH'];//TACGRP.C2GM.GNL.PNT.USW.SRH
+	bbox['G-G-GPUS--'] = {x1:50,x2:150,y1:50,y2:150};
+	sidc['G-G-GPUSA-'] = icn['TP.SEARCH AREA'];//TACGRP.C2GM.GNL.PNT.USW.SRH.ARA
+	bbox['G-G-GPUSA-'] = {x1:50,x2:150,y1:50,y2:150};
+	sidc['G-G-GPUSD-'] = icn['TP.DIP POSITION'];//TACGRP.C2GM.GNL.PNT.USW.SRH.DIPPSN
+	bbox['G-G-GPUSD-'] = {x1:50,x2:150,y1:50,y2:150};
+	sidc['G-G-GPUSC-'] = icn['TP.SEARCH CENTER'];//TACGRP.C2GM.GNL.PNT.USW.SRH.CTR
+	bbox['G-G-GPUSC-'] = {x1:50,x2:150,y1:50,y2:150};
+	sidc['G-G-GPR---'] = icn['TP.REFERENCE POINT'];//TACGRP.C2GM.GNL.PNT.REFPNT
+	bbox['G-G-GPR---'] = {x1:40,x2:160,y1:40,y2:160};
+	sidc['G-G-GPRN--'] = icn['TP.NAVIGATIONAL REFERENCE'];//TACGRP.C2GM.GNL.PNT.REFPNT.NAVREF
+	bbox['G-G-GPRN--'] = {x1:40,x2:160,y1:40,y2:160};
+	sidc['G-G-GPRS--'] = icn['TP.SPECIAL POINT'];//TACGRP.C2GM.GNL.PNT.REFPNT.SPLPNT
+	bbox['G-G-GPRS--'] = {x1:40,x2:160,y1:40,y2:160};
+	sidc['G-G-GPRD--'] = icn['TP.DLRP'];//TACGRP.C2GM.GNL.PNT.REFPNT.DLRP
+	bbox['G-G-GPRD--'] = {x1:40,x2:160,y1:40,y2:160};
+	sidc['G-G-GPRP--'] = icn['TP.POINT OF INTENDED MOVEMENT'];//TACGRP.C2GM.GNL.PNT.REFPNT.PIM
+	bbox['G-G-GPRP--'] = {x1:40,x2:160,y1:40,y2:160};
+	sidc['G-G-GPRM--'] = icn['TP.MARSHALL POINT'];//TACGRP.C2GM.GNL.PNT.REFPNT.MRSH
+	bbox['G-G-GPRM--'] = {x1:40,x2:160,y1:40,y2:160};
+	sidc['G-G-GPRW--'] = icn['TP.REFERENCE POINT WAYPOINT'];//TACGRP.C2GM.GNL.PNT.REFPNT.WAP
+	bbox['G-G-GPRW--'] = {x1:40,x2:160,y1:40,y2:160};
+	sidc['G-G-GPRC--'] = icn['TP.CORRIDOR TAB'];//TACGRP.C2GM.GNL.PNT.REFPNT.CRDRTB
+	bbox['G-G-GPRC--'] = {x1:40,x2:160,y1:40,y2:160};
 	sidc['G-G-GPRI--'] = icn['TP.POINT OF INTEREST'];//TACGRP.C2GM.GNL.PNT.REFPNT.PNTINR
 	bbox['G-G-GPRI--'] = {x1:50,x2:150,y1:-25};
 	sidc['G-G-GPWA--'] = icn['TP.AIM POINT'];//TACGRP.C2GM.GNL.PNT.WPN.AIMPNT
