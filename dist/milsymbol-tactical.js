@@ -35,6 +35,9 @@ This is an extension to milsymbol that provides support for tactical point symbo
 Simply load this file after milsymbol has been loaded and it will extend milsymbol 
 with the needed symbol codes and graphics.
 
+Tactcial points will only support MIL-STD-2525C untill MIL-STD-2525D change 1 and 
+APP6-D are released.
+
 */
 
 
@@ -61,6 +64,10 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.INTERDICT'] = [{type:'path',fill:false,d:'m 194.203,65.6674 5.49,-20.4904 -20.49,-5.4904 M 115,91.75 200,45 M 0,155 85,108.25 M 185,85 l 15,15 -15,15 m -70,-15 85,0 m -200,0 85,0'},{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'I'}];
 	iconParts['TP.NEUTRALIZE'] = [{type:'path',fill:false,d:'M 115,108.25 200,155 M 0,45 85,91.75'},{type:'path',fill:false,strokedasharray:'12,5',d:'M 115,91.75 200,45 M 0,155 85,108.25'},{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'N'}];
 	iconParts['TP.DATUM'] = [{type:'path',stroke:false,d:'M 100 50 L 100 100 L 150 100 A 50 50 0 0 0 100 50 z M 100 100 L 50 100 A 50 50 0 0 0 100 150 L 100 100 z '},{type:'circle',fill:false,cx:100,cy:100,r:50}];
+	iconParts['TP.BRIEF CONTACT'] = [{type:'path',d:'m 65,0 70,0 m -35,80 0,-80 m 0,100 -45,-20 90,0 z'},{type:'text',stroke:false,textanchor:"middle",x:75,y:55,fontsize:45,text:'B'},{type:'text',stroke:false,textanchor:"middle",x:125,y:55,fontsize:45,text:'C'}];
+	iconParts['TP.LOST CONTACT'] = [{type:'path',d:'m 65,0 70,0 m -35,80 0,-80 m 0,100 -45,-20 90,0 z'},{type:'text',stroke:false,textanchor:"middle",x:75,y:55,fontsize:45,text:'L'},{type:'text',stroke:false,textanchor:"middle",x:125,y:55,fontsize:45,text:'C'}];
+	iconParts['TP.SINKER'] = [{type:'path',fill:false,d:'m 100,15 0,65 M 60,15 80,0 100,15 120,0 140,15'},{type:'path',d:'M 100,100 55,80 145,80 Z'}];
+
 
 
 	iconParts['TP.SONOBUOY'] = [{type:'path',fill:false,d:'M 100,60 l 0,-35 10,10 0,-45'},{type:'circle',fill:false,cx:100,cy:100,r:40}];
@@ -212,9 +219,12 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-T-N-----'] = {x1:0,x2:200,y1:40,y2:160};
 	sidc['G-G-GPUUD-'] = icn['TP.DATUM'];//TACGRP.C2GM.GNL.PNT.USW.UH2.DTM
 	bbox['G-G-GPUUD-'] = {x1:50,x2:150,y1:50,y2:150};
-	sidc['G-G-GPUUB-'] = [];//TACGRP.C2GM.GNL.PNT.USW.UH2.BCON
-	sidc['G-G-GPUUL-'] = [];//TACGRP.C2GM.GNL.PNT.USW.UH2.LCON
-	sidc['G-G-GPUUS-'] = [];//TACGRP.C2GM.GNL.PNT.USW.UH2.SNK
+	sidc['G-G-GPUUB-'] = icn['TP.BRIEF CONTACT'];//TACGRP.C2GM.GNL.PNT.USW.UH2.BCON
+	bbox['G-G-GPUUB-'] = {x1:50,x2:150,y1:0,y2:100};
+	sidc['G-G-GPUUL-'] = icn['TP.LOST CONTACT'];//TACGRP.C2GM.GNL.PNT.USW.UH2.LCON
+	bbox['G-G-GPUUL-'] = {x1:50,x2:150,y1:0,y2:100};
+	sidc['G-G-GPUUS-'] = icn['TP.SINKER'];//TACGRP.C2GM.GNL.PNT.USW.UH2.SNK
+	bbox['G-G-GPUUS-'] = {x1:50,x2:150,y1:0,y2:100};
 	sidc['G-G-GPUY--'] = icn['TP.SONOBUOY'];//TACGRP.C2GM.GNL.PNT.USW.SNBY
 	bbox['G-G-GPUY--'] = {x1:60,x2:140,y1:-10,y2:160};
 	sidc['G-G-GPUYP-'] = icn['TP.SONOBUOY PATTERN CENTER'];//TACGRP.C2GM.GNL.PNT.USW.SNBY.PTNCTR
