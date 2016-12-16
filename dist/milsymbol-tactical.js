@@ -112,14 +112,17 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.ROUTE WAYPOINT'] = [iconParts['TP.ROUTE'],{type:'text',stroke:false,textanchor:"middle",x:100,y:170,fontsize:45,text:'W'}];
 	iconParts['TP.ROUTE PIM'] = [iconParts['TP.ROUTE'],{type:'text',stroke:false,textanchor:"middle",x:100,y:170,fontsize:45,text:'M'}];
 	iconParts['TP.ROUTE POINT R'] = [iconParts['TP.ROUTE'],{type:'text',stroke:false,textanchor:"middle",x:100,y:170,fontsize:45,text:'P'}];
-
-
 	iconParts['TP.AIR CONTROL'] = {type:'path',fill:false,d:'m 140,165 0,-130 m -80,0 0,130'};
 	iconParts['TP.AIR CONTROL POINT'] = [iconParts['TP.AIR CONTROL'],{type:'circle',cx:100,cy:100,r:15}];
 	iconParts['TP.COMBAT AIR PATROL (CAP)'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'C'}];
 	iconParts['TP.AIRBORNE EARLY WARNING (AEW)'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'W'}];
 	iconParts['TP.TANKING'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'K'}];
-
+	iconParts['TP.FIXED WING'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:75,fontsize:32,text:'ASW'},{type:'path',d:'m 100,81.3203 c -1.5135,-0 -2.5365,2.6426 -2.5365,2.6426 l -0.1365,14.1465 -28.3641,29.9996 0.1484,4.604 28.5162,-18.748 -0.2929,24.43 -6.3073,6.017 -0.096,3.766 8.0313,-3.524 1.0312,3.326 0,0.02 0,-0.01 0,0.01 0,-0.02 1.0312,-3.326 8.031,3.524 -0.09,-3.766 -6.309,-6.017 -0.293,-24.43 28.518,18.748 0.146,-4.604 -28.364,-29.9996 -0.136,-14.1465 c 0,0 -1.014,-2.6416 -2.528,-2.6426 z',stroke:false}];
+	iconParts['TP.ROTARY WING'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:75,fontsize:32,text:'ASW'},{type:'path',d:'m 65,80 0,40 70,-40 0,40 -70,-40',stroke:false}];
+	iconParts['TP.SUCAP - FIXED WING'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:75,fontsize:32,text:'SUW'},{type:'path',d:'m 100,81.3203 c -1.5135,-0 -2.5365,2.6426 -2.5365,2.6426 l -0.1365,14.1465 -28.3641,29.9996 0.1484,4.604 28.5162,-18.748 -0.2929,24.43 -6.3073,6.017 -0.096,3.766 8.0313,-3.524 1.0312,3.326 0,0.02 0,-0.01 0,0.01 0,-0.02 1.0312,-3.326 8.031,3.524 -0.09,-3.766 -6.309,-6.017 -0.293,-24.43 28.518,18.748 0.146,-4.604 -28.364,-29.9996 -0.136,-14.1465 c 0,0 -1.014,-2.6416 -2.528,-2.6426 z',stroke:false}];
+	iconParts['TP.SUCAP - ROTARY WING'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:75,fontsize:32,text:'ASW'},{type:'path',d:'m 65,80 0,40 70,-40 0,40 -70,-40',stroke:false}];
+	iconParts['TP.MIW - FIXED WING'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:75,fontsize:32,text:'MIW'},{type:'path',d:'m 100,81.3203 c -1.5135,-0 -2.5365,2.6426 -2.5365,2.6426 l -0.1365,14.1465 -28.3641,29.9996 0.1484,4.604 28.5162,-18.748 -0.2929,24.43 -6.3073,6.017 -0.096,3.766 8.0313,-3.524 1.0312,3.326 0,0.02 0,-0.01 0,0.01 0,-0.02 1.0312,-3.326 8.031,3.524 -0.09,-3.766 -6.309,-6.017 -0.293,-24.43 28.518,18.748 0.146,-4.604 -28.364,-29.9996 -0.136,-14.1465 c 0,0 -1.014,-2.6416 -2.528,-2.6426 z',stroke:false}];
+	iconParts['TP.MIW - ROTARY WING'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:75,fontsize:32,text:'MIW'},{type:'path',d:'m 65,80 0,40 70,-40 0,40 -70,-40',stroke:false}];
 	iconParts['TP.STRIKE IP'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'S'}];
 	iconParts['TP.TACAN'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'T'}];
 	iconParts['TP.TOMCAT'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'TC'}];
@@ -131,8 +134,18 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.ORBIT - FIGURE EIGHT'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'O'},{type:'text',stroke:false,textanchor:"middle",x:100,y:150,fontsize:40,text:'F8'}];
 	iconParts['TP.ORBIT - RACE TRACK'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'O'},{type:'text',stroke:false,textanchor:"middle",x:100,y:150,fontsize:40,text:'RT'}];
 	iconParts['TP.ORBIT - RANDOM, CLOSED'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'O'},{type:'text',stroke:false,textanchor:"middle",x:100,y:150,fontsize:40,text:'RC'}];
-
-
+	iconParts['TP.ACTION POINT'] = [{type:'path',fill:false,d:'m 60,45 80,0 m -40,55 -40,-55 0,-105 80,0 0,105 z'}];
+	iconParts['TP.ACTION CHECK POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'CKP'}];
+	iconParts['TP.CONTACT POINT'] = {type:'path',fill:false,d:'m 100,100 0,-35 -45,0 0,-75 90,0 0,75 -45,0'};
+	iconParts['TP.COORDINATION POINT'] = [{type:'path',fill:false,d:'m 65,135 70,-70 m -70,0 70,70'},{type:'circle',fill:false,cx:100,cy:100,r:50}];
+	iconParts['TP.DECISION POINT'] = {type:'path',fill:false,d:'M 99.9998,25.5886 117.061,76.5192 170.77,77.0054 127.604,108.968 143.738,160.2 100,129.024 56.2624,160.2 72.3967,108.968 29.2306,77.0059 82.9403,76.5192 Z'};
+	iconParts['TP.ACTION LINKUP POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'LU'}];
+	iconParts['TP.ACTION PASSAGE POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'PP'}];
+	iconParts['TP.ACTION RALLY POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'RLY'}];
+	iconParts['TP.ACTION RELEASE POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'RP'}];
+	iconParts['TP.ACTION START POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'SP'}];
+	iconParts['TP.ACTION AMNESTY POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'AMN'}];
+	iconParts['TP.WAYPOINT'] = {type:'path',fill:false,strokewidth:8,d:'m 65,135 70,-70 m -70,0 70,70'};
 	iconParts['TP.SEA SURFACE CONTROL'] = {type:'path',fill:false,d:'m 30,60 140,0 m -140,80 140,0'};
 	iconParts['TP.SEA SURFACE CONTROL STATION'] = [iconParts['TP.SEA SURFACE CONTROL'],{type:'circle',cx:100,cy:100,r:15}];
 	iconParts['TP.(USV) CONTROL STATION'] = [iconParts['TP.SEA SURFACE CONTROL'],{type:'path',stroke:false,d:'m 100,115 45,-20 0,-15 -45,20 -45,-20 0,15 z'}];
@@ -149,7 +162,6 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.RESCUE CONTROL POINT'] = [iconParts['TP.SEA SURFACE CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'RS'}];
 	iconParts['TP.REPLENISHMENT CONTROL POINT'] = [iconParts['TP.SEA SURFACE CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'RP'}];
 	iconParts['TP.NONCOMBATANT CONTROL STATION'] = [iconParts['TP.SEA SURFACE CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'NC'}];
-
 	iconParts['TP.SUB SURFACE CONTROL'] = [{type:'path',fill:false,d:'m 30,140 140,0'},{type:'path',fill:false,strokedasharray:'12,4',d:'m 30,60 140,0'}];
 	iconParts['TP.SUB SURFACE CONTROL STATION'] = [iconParts['TP.SUB SURFACE CONTROL'],{type:'circle',cx:100,cy:100,r:15}];
 	iconParts['TP.(UUV) CONTROL STATION'] = [iconParts['TP.SUB SURFACE CONTROL'],{type:'path',stroke:false,d:'m 100,115 45,-20 0,-15 -45,20 -45,-20 0,15 z'}];
@@ -157,20 +169,15 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.UUV - ASW CONTROL STATION'] = [iconParts['TP.(UUV)'],{type:'text',stroke:false,textanchor:"middle",x:100,y:95,fontsize:40,text:'ASW'}];
 	iconParts['TP.UUV - SUW CONTROL STATION'] = [iconParts['TP.(UUV)'],{type:'text',stroke:false,textanchor:"middle",x:100,y:95,fontsize:40,text:'SUW'}];
 	iconParts['TP.UUV - MIW CONTROL STATION'] = [iconParts['TP.(UUV)'],{type:'text',stroke:false,textanchor:"middle",x:100,y:95,fontsize:40,text:'MIW'}];
+	iconParts['TP.SUBMARINE CONTROL STATION'] = [iconParts['TP.SUB SURFACE CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:130,fontsize:35,text:'SS'},{type:'path',d:'m 75,95 0,-20 50,0 0,20 z m 25,-30 0,40'}];
+	iconParts['TP.ASW SUBMARINE CONTROL STATION'] = [iconParts['TP.SUB SURFACE CONTROL'],{type:'path',d:'m 68.75,105 -12.5,12.5 12.5,12.5 62.5,0 12.5,-12.5 -12.5,-12.5 z M 75,95 l 0,-20 50,0 0,20 z m 25,-30 0,40'}];
 
 
-	iconParts['TP.ACTION POINT'] = [{type:'path',fill:false,d:'m 60,45 80,0 m -40,55 -40,-55 0,-105 80,0 0,105 z'}];
-	iconParts['TP.ACTION CHECK POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'CKP'}];
-	iconParts['TP.CONTACT POINT'] = {type:'path',fill:false,d:'m 100,100 0,-35 -45,0 0,-75 90,0 0,75 -45,0'};
-	iconParts['TP.COORDINATION POINT'] = [{type:'path',fill:false,d:'m 65,135 70,-70 m -70,0 70,70'},{type:'circle',fill:false,cx:100,cy:100,r:50}];
-	iconParts['TP.DECISION POINT'] = {type:'path',fill:false,d:'M 99.9998,25.5886 117.061,76.5192 170.77,77.0054 127.604,108.968 143.738,160.2 100,129.024 56.2624,160.2 72.3967,108.968 29.2306,77.0059 82.9403,76.5192 Z'};
-	iconParts['TP.ACTION LINKUP POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'LU'}];
-	iconParts['TP.ACTION PASSAGE POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'PP'}];
-	iconParts['TP.ACTION RALLY POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'RLY'}];
-	iconParts['TP.ACTION RELEASE POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'RP'}];
-	iconParts['TP.ACTION START POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'SP'}];
-	iconParts['TP.ACTION AMNESTY POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'AMN'}];
-	iconParts['TP.WAYPOINT'] = {type:'path',fill:false,strokewidth:8,d:'m 65,135 70,-70 m -70,0 70,70'};
+	iconParts['TP.AIR CONTROL POINT'] = [{type:'circle',fill:false,cx:100,cy:100,r:50},{type:'text',stroke:false,textanchor:"middle",x:100,y:90,fontsize:30,text:'ACP'}];
+	iconParts['TP.COMMUNICATIONS CHECKPOINT'] = [{type:'circle',fill:false,cx:100,cy:100,r:50},{type:'text',stroke:false,textanchor:"middle",x:100,y:90,fontsize:30,text:'CCP'}];
+	iconParts['TP.PULL-UP POINT'] = [{type:'circle',fill:false,cx:100,cy:100,r:50},{type:'text',stroke:false,textanchor:"start",x:160,y:115,fontsize:40,text:'PUP'},{type:'path',fill:false,d:'m 65,80 0,40 70,-40 0,40 z'}];
+	iconParts['TP.DOWNED AIRCREW PICKUP POINT'] = [iconParts['TP.ACTION POINT'],{type:'circle',cx:100,cy:-35,r:12},{type:'path',fill:false,d:'m 75,35 50,0 m -25,-45 0,45 m -30,-75 30,30 30,-30'}];
+
 
 
 
@@ -309,7 +316,6 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-G-GPHY--'] = {x1:50,x2:150,y1:50,y2:150};
 	sidc['G-G-GPHX--'] = icn['TP.HARBOR POINT X'];//TACGRP.C2GM.GNL.PNT.HBR.PNTX
 	bbox['G-G-GPHX--'] = {x1:50,x2:150,y1:50,y2:150};
-
 	sidc['G-G-GPO---'] = icn['TP.ROUTE'];//TACGRP.C2GM.GNL.PNT.RTE
 	bbox['G-G-GPO---'] = {x1:30,x2:170,y1:60,y2:140};
 	sidc['G-G-GPOZ--'] = icn['TP.ROUTE RENDEZVOUS'];//TACGRP.C2GM.GNL.PNT.RTE.RDV
@@ -330,12 +336,18 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-G-GPAW--'] = {x1:60,x2:140,y1:40,y2:160};
 	sidc['G-G-GPAK--'] = icn['TP.TANKING'];//TACGRP.C2GM.GNL.PNT.ACTL.TAK
 	bbox['G-G-GPAK--'] = {x1:60,x2:140,y1:40,y2:160};
-	sidc['G-G-GPAA--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.ASBWF
-	sidc['G-G-GPAH--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.ASBWR
-	sidc['G-G-GPAB--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.SUWF
-	sidc['G-G-GPAC--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.SUWR
-	sidc['G-G-GPAD--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.MIWF
-	sidc['G-G-GPAE--'] = [];//TACGRP.C2GM.GNL.PNT.ACTL.MIWR
+	sidc['G-G-GPAA--'] = icn['TP.FIXED WING'];//TACGRP.C2GM.GNL.PNT.ACTL.ASBWF
+	bbox['G-G-GPAA--'] = {x1:60,x2:140,y1:40,y2:160};
+	sidc['G-G-GPAH--'] = icn['TP.ROTARY WING'];//TACGRP.C2GM.GNL.PNT.ACTL.ASBWR
+	bbox['G-G-GPAH--'] = {x1:60,x2:140,y1:40,y2:160};
+	sidc['G-G-GPAB--'] = icn['TP.SUCAP - FIXED WING'];//TACGRP.C2GM.GNL.PNT.ACTL.SUWF
+	bbox['G-G-GPAB--'] = {x1:60,x2:140,y1:40,y2:160};
+	sidc['G-G-GPAC--'] = icn['TP.SUCAP - ROTARY WING'];//TACGRP.C2GM.GNL.PNT.ACTL.SUWR
+	bbox['G-G-GPAC--'] = {x1:60,x2:140,y1:40,y2:160};
+	sidc['G-G-GPAD--'] = icn['TP.MIW - FIXED WING'];//TACGRP.C2GM.GNL.PNT.ACTL.MIWF
+	bbox['G-G-GPAD--'] = {x1:60,x2:140,y1:40,y2:160};
+	sidc['G-G-GPAE--'] = icn['TP.MIW - ROTARY WING'];//TACGRP.C2GM.GNL.PNT.ACTL.MIWR
+	bbox['G-G-GPAE--'] = {x1:60,x2:140,y1:40,y2:160};
 	sidc['G-G-GPAS--'] = icn['TP.STRIKE IP'];//TACGRP.C2GM.GNL.PNT.ACTL.SKEIP
 	bbox['G-G-GPAS--'] = {x1:60,x2:140,y1:30,y2:170};
 	sidc['G-G-GPAT--'] = icn['TP.TACAN'];//TACGRP.C2GM.GNL.PNT.ACTL.TCN
@@ -420,12 +432,19 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-G-GPBUS-'] = {x1:30,x2:170,y1:60,y2:140};
 	sidc['G-G-GPBUM-'] = icn['TP.UUV - MIW CONTROL STATION'];//TACGRP.C2GM.GNL.PNT.UCTL.UUV.MIW
 	bbox['G-G-GPBUM-'] = {x1:30,x2:170,y1:60,y2:140};
-	sidc['G-G-GPBS--'] = [];//TACGRP.C2GM.GNL.PNT.UCTL.SBSTN
-	sidc['G-G-GPBSA-'] = [];//TACGRP.C2GM.GNL.PNT.UCTL.SBSTN.ASW
-	sidc['G-G-APP---'] = [];//TACGRP.C2GM.AVN.PNT.ACP
-	sidc['G-G-APC---'] = [];//TACGRP.C2GM.AVN.PNT.COMMCP
-	sidc['G-G-APU---'] = [];//TACGRP.C2GM.AVN.PNT.PUP
-	sidc['G-G-APD---'] = [];//TACGRP.C2GM.AVN.PNT.DAPP
+	sidc['G-G-GPBS--'] = icn['TP.SUBMARINE CONTROL STATION'];//TACGRP.C2GM.GNL.PNT.UCTL.SBSTN
+	bbox['G-G-GPBS--'] = {x1:30,x2:170,y1:60,y2:140};
+	sidc['G-G-GPBSA-'] = icn['TP.ASW SUBMARINE CONTROL STATION'];//TACGRP.C2GM.GNL.PNT.UCTL.SBSTN.ASW
+	bbox['G-G-GPBSA-'] = {x1:30,x2:170,y1:60,y2:140};
+	sidc['G-G-APP---'] = icn['TP.AIR CONTROL POINT'];//TACGRP.C2GM.AVN.PNT.ACP
+	bbox['G-G-APP---'] = {x1:50,x2:150,y1:50,y2:150};
+	sidc['G-G-APC---'] = icn['TP.COMMUNICATIONS CHECKPOINT'];//TACGRP.C2GM.AVN.PNT.COMMCP
+	bbox['G-G-APC---'] = {x1:50,x2:150,y1:50,y2:150};
+	sidc['G-G-APU---'] = icn['TP.PULL-UP POINT'];//TACGRP.C2GM.AVN.PNT.PUP
+	bbox['G-G-APU---'] = {x1:50,x2:240,y1:50,y2:150};
+
+	sidc['G-G-APD---'] = icn['TP.DOWNED AIRCREW PICKUP POINT'];//TACGRP.C2GM.AVN.PNT.DAPP
+	bbox['G-G-APD---'] = {x1:60,x2:140,y1:-60};
 	sidc['G-G-PN----'] = [];//TACGRP.C2GM.DCPN.DMYMS
 	sidc['G-G-DPT---'] = [];//TACGRP.C2GM.DEF.PNT.TGTREF
 	sidc['G-G-DPO---'] = [];//TACGRP.C2GM.DEF.PNT.OBSPST
@@ -691,7 +710,11 @@ function tacticalPoints(sidc){
 	//sidc['G-G-GPBS--'] = [];//TACGRP.C2GM.GNL.PNT.UCTL.SBSTN
 	//sidc['G-G-GPBSA-'] = [];//TACGRP.C2GM.GNL.PNT.UCTL.SBSTN.ASW
 	//sidc['G-G-APP---'] = [];//TACGRP.C2GM.AVN.PNT.ACP
+	sidc['G-G-APP---'] = {	uniqueDesignation:{stroke:false,textanchor:"middle",x:100,y:135,fontsize:45,fontweight:'bold'}};//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
+
 	//sidc['G-G-APC---'] = [];//TACGRP.C2GM.AVN.PNT.COMMCP
+	sidc['G-G-APC---'] = {	uniqueDesignation:{stroke:false,textanchor:"middle",x:100,y:135,fontsize:45,fontweight:'bold'}};//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
+
 	//sidc['G-G-APU---'] = [];//TACGRP.C2GM.AVN.PNT.PUP
 	//sidc['G-G-APD---'] = [];//TACGRP.C2GM.AVN.PNT.DAPP
 	//sidc['G-G-PN----'] = [];//TACGRP.C2GM.DCPN.DMYMS
