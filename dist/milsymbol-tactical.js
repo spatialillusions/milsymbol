@@ -183,7 +183,14 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 
 	iconParts['TP.POINT OF DEPARTURE'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'PD'}];
 
+	iconParts['TP.FIXED AND PREFABRICATED'] = {type:'path',d:'m 60,100 40,-65 40,65 z'};
+	iconParts['TP.TETRAHEDRONS'] = {type:'path',fill:false,d:'m 60,100 40,-65 40,65'};
+	iconParts['TP.TETRAHEDRONS MOVABLE'] = {type:'path',fill:false,d:'m 60,100 40,-65 40,65 z'};
 
+
+
+	iconParts['TP.TOWER LOW'] = [{type:'circle',stroke:false,cx:100,cy:100,r:7},{type:'path',fill:false,strokewidth:8,d:'m 75,105 25,-65 25,65'}];
+	iconParts['TP.TOWER HIGH'] = [{type:'circle',stroke:false,cx:100,cy:100,r:7},{type:'path',fill:false,strokewidth:8,d:'m 100,40 c 2.358,31.6754 7.162,59.2531 25,64.999 M 100,40 c -2.358,31.6754 -7.1624,59.2531 -25,65'}];
 	iconParts['TP.ENGINEER REGULATING POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'ERP'}];
 
 
@@ -455,9 +462,14 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	sidc['G-G-DPON--'] = [];//TACGRP.C2GM.DEF.PNT.OBSPST.CBRNOP
 	sidc['G-G-OPP---'] = icn['TP.POINT OF DEPARTURE'];//TACGRP.C2GM.OFF.PNT.PNTD
 	bbox['G-G-OPP---'] = {x1:60,x2:140,y1:-60};
-	sidc['G-M-OAOF--'] = [];//TACGRP.MOBSU.OBST.ATO.TDTSM.FIXPFD
-	sidc['G-M-OAOM--'] = [];//TACGRP.MOBSU.OBST.ATO.TDTSM.MVB
-	sidc['G-M-OAOP--'] = [];//TACGRP.MOBSU.OBST.ATO.TDTSM.MVBPFD
+	sidc['G-M-OAOF--'] = icn['TP.FIXED AND PREFABRICATED'];//TACGRP.MOBSU.OBST.ATO.TDTSM.FIXPFD
+	bbox['G-M-OAOF--'] = {x1:60,x2:140,y1:30};
+	sidc['G-M-OAOM--'] = icn['TP.TETRAHEDRONS'];//TACGRP.MOBSU.OBST.ATO.TDTSM.MVB
+	bbox['G-M-OAOM--'] = {x1:60,x2:140,y1:30};
+	sidc['G-M-OAOP--'] = icn['TP.TETRAHEDRONS MOVABLE'];//TACGRP.MOBSU.OBST.ATO.TDTSM.MVBPFD
+	bbox['G-M-OAOP--'] = {x1:60,x2:140,y1:30};
+
+
 	sidc['G-M-OB----'] = [];//TACGRP.MOBSU.OBST.BBY
 	sidc['G-M-OMU---'] = [];//TACGRP.MOBSU.OBST.MNE.USPMNE
 	sidc['G-M-OMT---'] = [];//TACGRP.MOBSU.OBST.MNE.ATMNE
@@ -466,8 +478,10 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	sidc['G-M-OMP---'] = [];//TACGRP.MOBSU.OBST.MNE.APMNE
 	sidc['G-M-OMW---'] = [];//TACGRP.MOBSU.OBST.MNE.WAMNE
 	sidc['G-M-OFS---'] = [];//TACGRP.MOBSU.OBST.MNEFLD.STC
-	sidc['G-M-OHTL--'] = [];//TACGRP.MOBSU.OBST.AVN.TWR.LOW
-	sidc['G-M-OHTH--'] = [];//TACGRP.MOBSU.OBST.AVN.TWR.HIGH
+	sidc['G-M-OHTL--'] = icn['TP.TOWER LOW'];//TACGRP.MOBSU.OBST.AVN.TWR.LOW
+	bbox['G-M-OHTL--'] = {x1:50,x2:150,y1:30,y2:120};
+	sidc['G-M-OHTH--'] = icn['TP.TOWER HIGH'];//TACGRP.MOBSU.OBST.AVN.TWR.HIGH
+	bbox['G-M-OHTH--'] = {x1:50,x2:150,y1:30,y2:120};
 	sidc['G-M-BCP---'] = icn['TP.ENGINEER REGULATING POINT'];//TACGRP.MOBSU.OBSTBP.CSGSTE.ERP
 	bbox['G-M-BCP---'] = {x1:60,x2:140,y1:-60};
 	sidc['G-M-SE----'] = [];//TACGRP.MOBSU.SU.ESTOF
@@ -743,7 +757,10 @@ function tacticalPoints(sidc){
 	//sidc['G-M-OMW---'] = [];//TACGRP.MOBSU.OBST.MNE.WAMNE
 	//sidc['G-M-OFS---'] = [];//TACGRP.MOBSU.OBST.MNEFLD.STC
 	//sidc['G-M-OHTL--'] = [];//TACGRP.MOBSU.OBST.AVN.TWR.LOW
+	sidc['G-M-OHTL--'] = {	altitudeDepth:{stroke:false,textanchor:"start",x:120,y:60,fontsize:35,fontweight:'bold'}};//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
 	//sidc['G-M-OHTH--'] = [];//TACGRP.MOBSU.OBST.AVN.TWR.HIGH
+	sidc['G-M-OHTH--'] = {	altitudeDepth:{stroke:false,textanchor:"start",x:115,y:60,fontsize:35,fontweight:'bold'}};//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
+
 	//sidc[] = [];//TACGRP.MOBSU.OBSTBP.CSGSTE.ERP
 	sidc['G-M-BCP---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
 							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
