@@ -3034,7 +3034,7 @@ function textfields(){
 					labelbox.x2 = label[i].x;
 				}
 				gbbox = MS.bboxMax(gbbox,labelbox);
-				var text = {type:'text',fontfamily:fontFamily};
+				var text = {type:'text',fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation]};
 				if(label[i].hasOwnProperty('stroke'))text.stroke = label[i].stroke;
 				if(label[i].hasOwnProperty('textanchor'))text.textanchor = label[i].textanchor;
 				if(label[i].hasOwnProperty('fontsize'))text.fontsize = label[i].fontsize;
@@ -3061,6 +3061,9 @@ function textfields(){
 		var genericSIDC = this.SIDC.substr(0,1)+'-'+this.SIDC.substr(2,1)+'-'+this.SIDC.substr(4,6);
 		if(MS._labelCache['letter'].hasOwnProperty(genericSIDC)){
 			drawArray2.push(labelOverride.call(this,MS._labelCache['letter'][genericSIDC]));
+			
+			//outline
+			if (this.outlineWidth > 0) drawArray1.push(MS.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor))
 			return MS.buildingBlock(drawArray1,drawArray2,gbbox);
 		}			
 	}
