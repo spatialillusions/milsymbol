@@ -223,8 +223,8 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.TRAFFIC CONTROL POST'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'TCP'}];
 	iconParts['TP.TRAILER TRANSFER POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'TTP'}];
 
-
-
+	iconParts['TP.BOTTOM RETURN'] = {type:'path',d:'m 50,100 15,-35 15,30 20,-55 20,55 15,-35 15,40 z'};
+	iconParts['TP.INSTALLATION/MANMADE'] = {type:'path',fill:false,d:'m 50,100 15,-35 15,30 20,-55 20,55 15,-35 15,40 z'};
 	iconParts['TP.WRECK, NON DANGEROUS'] = {type:'path',fill:false,d:'m 135,85 0,30 m -85,-15 100,0 m -85,-15 0,30 m 35,-40 0,50'};
 	iconParts['TP.WRECK, DANGEROUS'] = [iconParts['TP.WRECK, NON DANGEROUS'],{type:'path',strokedasharray:'5,5',fill:false,d:'M 156.547,100 A 56.2017,29.6618 0 0 1 100.345,129.662 56.2017,29.6618 0 0 1 44.1433,100 56.2017,29.6618 0 0 1 100.345,70.3382 56.2017,29.6618 0 0 1 156.547,100 Z'},];
 	iconParts['TP.MARINE LIFE'] = {type:'path',stroke:false,d:'m 132,75 0,50 83,-37.5 0,25 L 132,75 m -32,25 25.5,-25 0,50 z'};
@@ -573,9 +573,12 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	sidc['G-O-HM----'] = [];//TACGRP.OTH.HAZ.SML
 	sidc['G-O-HI----'] = [];//TACGRP.OTH.HAZ.IB
 	sidc['G-O-HO----'] = [];//TACGRP.OTH.HAZ.OLRG
-	sidc['G-O-SB----'] = [];//TACGRP.OTH.SSUBSR.BTMRTN
-	sidc['G-O-SBM---'] = [];//TACGRP.OTH.SSUBSR.BTMRTN.INS
-	sidc['G-O-SBN---'] = [];//TACGRP.OTH.SSUBSR.BTMRTN.SBRSOO
+	sidc['G-O-SB----'] = icn['TP.BOTTOM RETURN'];//TACGRP.OTH.SSUBSR.BTMRTN
+	bbox['G-O-SB----'] = {x1:40,x2:160,y1:40,y2:100};
+	sidc['G-O-SBM---'] = icn['TP.INSTALLATION/MANMADE'];//TACGRP.OTH.SSUBSR.BTMRTN.INS
+	bbox['G-O-SBM---'] = {x1:40,x2:160,y1:40,y2:100};
+	sidc['G-O-SBN---'] = icn['TP.BOTTOM RETURN'];//TACGRP.OTH.SSUBSR.BTMRTN.SBRSOO
+	bbox['G-O-SBN---'] = {x1:40,x2:160,y1:40,y2:100};
 	sidc['G-O-SBW---'] = icn['TP.WRECK, NON DANGEROUS'];//TACGRP.OTH.SSUBSR.BTMRTN.WRKND
 	bbox['G-O-SBW---'] = {x1:40,x2:160,y1:70,y2:130};
 	sidc['G-O-SBX---'] = icn['TP.WRECK, DANGEROUS'];//TACGRP.OTH.SSUBSR.BTMRTN.WRKD
