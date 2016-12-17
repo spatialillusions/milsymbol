@@ -224,6 +224,14 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.TRAILER TRANSFER POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'TTP'}];
 
 
+
+	iconParts['TP.WRECK, NON DANGEROUS'] = {type:'path',fill:false,d:'m 135,85 0,30 m -85,-15 100,0 m -85,-15 0,30 m 35,-40 0,50'};
+	iconParts['TP.WRECK, DANGEROUS'] = [iconParts['TP.WRECK, NON DANGEROUS'],{type:'path',strokedasharray:'5,5',fill:false,d:'M 156.547,100 A 56.2017,29.6618 0 0 1 100.345,129.662 56.2017,29.6618 0 0 1 44.1433,100 56.2017,29.6618 0 0 1 100.345,70.3382 56.2017,29.6618 0 0 1 156.547,100 Z'},];
+	iconParts['TP.MARINE LIFE'] = {type:'path',stroke:false,d:'m 132,75 0,50 83,-37.5 0,25 L 132,75 m -32,25 25.5,-25 0,50 z'};
+	iconParts['TP.SEA ANOMALY'] = {type:'path',fill:false,d:'M 150,80 130,35 100,100 70,35 50,80 m 0,20 20,-45 30,65 30,-65 20,45'};
+
+
+
 }
 );
 
@@ -449,7 +457,6 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-G-APC---'] = {x1:50,x2:150,y1:50,y2:150};
 	sidc['G-G-APU---'] = icn['TP.PULL-UP POINT'];//TACGRP.C2GM.AVN.PNT.PUP
 	bbox['G-G-APU---'] = {x1:50,x2:240,y1:50,y2:150};
-
 	sidc['G-G-APD---'] = icn['TP.DOWNED AIRCREW PICKUP POINT'];//TACGRP.C2GM.AVN.PNT.DAPP
 	bbox['G-G-APD---'] = {x1:60,x2:140,y1:-60};
 	sidc['G-G-PN----'] = [];//TACGRP.C2GM.DCPN.DMYMS
@@ -569,10 +576,14 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	sidc['G-O-SB----'] = [];//TACGRP.OTH.SSUBSR.BTMRTN
 	sidc['G-O-SBM---'] = [];//TACGRP.OTH.SSUBSR.BTMRTN.INS
 	sidc['G-O-SBN---'] = [];//TACGRP.OTH.SSUBSR.BTMRTN.SBRSOO
-	sidc['G-O-SBW---'] = [];//TACGRP.OTH.SSUBSR.BTMRTN.WRKND
-	sidc['G-O-SBX---'] = [];//TACGRP.OTH.SSUBSR.BTMRTN.WRKD
-	sidc['G-O-SM----'] = [];//TACGRP.OTH.SSUBSR.MARLFE
-	sidc['G-O-SS----'] = [];//TACGRP.OTH.SSUBSR.SA
+	sidc['G-O-SBW---'] = icn['TP.WRECK, NON DANGEROUS'];//TACGRP.OTH.SSUBSR.BTMRTN.WRKND
+	bbox['G-O-SBW---'] = {x1:40,x2:160,y1:70,y2:130};
+	sidc['G-O-SBX---'] = icn['TP.WRECK, DANGEROUS'];//TACGRP.OTH.SSUBSR.BTMRTN.WRKD
+	bbox['G-O-SBX---'] = {x1:40,x2:160,y1:70,y2:130};
+	sidc['G-O-SM----'] = icn['TP.MARINE LIFE'];//TACGRP.OTH.SSUBSR.MARLFE
+	bbox['G-O-SM----'] = {x1:100,x2:220,y1:70,y2:130};
+	sidc['G-O-SS----'] = icn['TP.SEA ANOMALY'];//TACGRP.OTH.SSUBSR.SA
+	bbox['G-O-SS----'] = {x1:50,x2:150,y1:30,y2:120};
 	sidc['G-O-FA----'] = [];//TACGRP.OTH.FIX.ACU
 	sidc['G-O-FE----'] = [];//TACGRP.OTH.FIX.EM
 	sidc['G-O-FO----'] = [];//TACGRP.OTH.FIX.EOP
@@ -757,9 +768,9 @@ function tacticalPoints(sidc){
 	//sidc['G-M-OMW---'] = [];//TACGRP.MOBSU.OBST.MNE.WAMNE
 	//sidc['G-M-OFS---'] = [];//TACGRP.MOBSU.OBST.MNEFLD.STC
 	//sidc['G-M-OHTL--'] = [];//TACGRP.MOBSU.OBST.AVN.TWR.LOW
-	sidc['G-M-OHTL--'] = {	altitudeDepth:{stroke:false,textanchor:"start",x:120,y:60,fontsize:35,fontweight:'bold'}};//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
+	sidc['G-M-OHTL--'] = {	altitudeDepth:{stroke:false,textanchor:"start",x:120,y:60,fontsize:40,fontweight:'bold'}};//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
 	//sidc['G-M-OHTH--'] = [];//TACGRP.MOBSU.OBST.AVN.TWR.HIGH
-	sidc['G-M-OHTH--'] = {	altitudeDepth:{stroke:false,textanchor:"start",x:115,y:60,fontsize:35,fontweight:'bold'}};//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
+	sidc['G-M-OHTH--'] = {	altitudeDepth:{stroke:false,textanchor:"start",x:115,y:60,fontsize:40,fontweight:'bold'}};//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
 
 	//sidc[] = [];//TACGRP.MOBSU.OBSTBP.CSGSTE.ERP
 	sidc['G-M-BCP---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
