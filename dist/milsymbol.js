@@ -2994,9 +2994,10 @@ function textfields(){
 	var drawArray1 = [];
 	var drawArray2 = [];
 	var bbox = this.properties.baseGeometry.bbox;
-	var fontSize = this.infoSize;
+	var fontColor = this.infoColor || this.colors.frameColor[this.properties.affiliation];
 	var fontFamily = "Arial";
-
+	var fontSize = this.infoSize;
+	
 	var gbbox = new MS.bbox();
 	var spaceTextIcon = 20;//The distance between the Icon and the labels
 
@@ -3034,7 +3035,7 @@ function textfields(){
 					labelbox.x2 = label[i].x;
 				}
 				gbbox = MS.bboxMax(gbbox,labelbox);
-				var text = {type:'text',fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation]};
+				var text = {type:'text',fontfamily:fontFamily,fill:fontColor};
 				if(label[i].hasOwnProperty('stroke'))text.stroke = label[i].stroke;
 				if(label[i].hasOwnProperty('textanchor'))text.textanchor = label[i].textanchor;
 				if(label[i].hasOwnProperty('fontsize'))text.fontsize = label[i].fontsize;
@@ -3094,7 +3095,7 @@ function textfields(){
 		}
 		if(this.quantity){
 			//geometry
-			drawArray2.push({type:'text',text:this.quantity,x:100,y:(bbox.y1-10),textanchor:"middle",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
+			drawArray2.push({type:'text',text:this.quantity,x:100,y:(bbox.y1-10),textanchor:"middle",fontsize:fontSize,fontfamily:fontFamily,fill:fontColor,stroke:false});
 			gbbox.y1 = (bbox.y1-10-fontSize);
 		}
 		if(this.headquartersElement){
@@ -3103,7 +3104,7 @@ function textfields(){
 				bbox.y2 += 15;
 			}
 			//geometry
-			drawArray2.push({type:'text',text:this.headquartersElement,x:100,y:(bbox.y2+35),textanchor:"middle",fontsize:35,fontfamily:fontFamily,fontweight:'bold',fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
+			drawArray2.push({type:'text',text:this.headquartersElement,x:100,y:(bbox.y2+35),textanchor:"middle",fontsize:35,fontfamily:fontFamily,fontweight:'bold',fill:fontColor,stroke:false});
 			gbbox.y2 = (bbox.y2+35);
 		}
 
@@ -3227,18 +3228,18 @@ function textfields(){
 		}
 
 		//geometries
-		if(gStrings.L1)drawArray2.push({type:'text',text:gStrings.L1,x:(bbox.x1-spaceTextIcon),y:(100 - 1.5*fontSize),textanchor:"end",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
-		if(gStrings.L2)drawArray2.push({type:'text',text:gStrings.L2,x:(bbox.x1-spaceTextIcon),y:(100 - 0.5*fontSize),textanchor:"end",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
-		if(gStrings.L3)drawArray2.push({type:'text',text:gStrings.L3,x:(bbox.x1-spaceTextIcon),y:(100 + 0.5*fontSize),textanchor:"end",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
-		if(gStrings.L4)drawArray2.push({type:'text',text:gStrings.L4,x:(bbox.x1-spaceTextIcon),y:(100 + 1.5*fontSize),textanchor:"end",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
-		if(gStrings.L5)drawArray2.push({type:'text',text:gStrings.L5,x:(bbox.x1-spaceTextIcon),y:(100 + 2.5*fontSize),textanchor:"end",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
+		if(gStrings.L1)drawArray2.push({type:'text',text:gStrings.L1,x:(bbox.x1-spaceTextIcon),y:(100 - 1.5*fontSize),textanchor:"end",fontsize:fontSize,fontfamily:fontFamily,fill:fontColor,stroke:false});
+		if(gStrings.L2)drawArray2.push({type:'text',text:gStrings.L2,x:(bbox.x1-spaceTextIcon),y:(100 - 0.5*fontSize),textanchor:"end",fontsize:fontSize,fontfamily:fontFamily,fill:fontColor,stroke:false});
+		if(gStrings.L3)drawArray2.push({type:'text',text:gStrings.L3,x:(bbox.x1-spaceTextIcon),y:(100 + 0.5*fontSize),textanchor:"end",fontsize:fontSize,fontfamily:fontFamily,fill:fontColor,stroke:false});
+		if(gStrings.L4)drawArray2.push({type:'text',text:gStrings.L4,x:(bbox.x1-spaceTextIcon),y:(100 + 1.5*fontSize),textanchor:"end",fontsize:fontSize,fontfamily:fontFamily,fill:fontColor,stroke:false});
+		if(gStrings.L5)drawArray2.push({type:'text',text:gStrings.L5,x:(bbox.x1-spaceTextIcon),y:(100 + 2.5*fontSize),textanchor:"end",fontsize:fontSize,fontfamily:fontFamily,fill:fontColor,stroke:false});
 
 		//geometries
-		if(gStrings.R1)drawArray2.push({type:'text',text:gStrings.R1,x:(bbox.x2 + spaceTextIcon),y:(100 - 1.5*fontSize),textanchor:"start",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
-		if(gStrings.R2)drawArray2.push({type:'text',text:gStrings.R2,x:(bbox.x2 + spaceTextIcon),y:(100 - 0.5*fontSize),textanchor:"start",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
-		if(gStrings.R3)drawArray2.push({type:'text',text:gStrings.R3,x:(bbox.x2 + spaceTextIcon),y:(100 + 0.5*fontSize),textanchor:"start",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
-		if(gStrings.R4)drawArray2.push({type:'text',text:gStrings.R4,x:(bbox.x2 + spaceTextIcon),y:(100 + 1.5*fontSize),textanchor:"start",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
-		if(gStrings.R5)drawArray2.push({type:'text',text:gStrings.R5,x:(bbox.x2 + spaceTextIcon),y:(100 + 2.5*fontSize),textanchor:"start",fontsize:fontSize,fontfamily:fontFamily,fill:this.colors.frameColor[this.properties.affiliation],stroke:false});
+		if(gStrings.R1)drawArray2.push({type:'text',text:gStrings.R1,x:(bbox.x2 + spaceTextIcon),y:(100 - 1.5*fontSize),textanchor:"start",fontsize:fontSize,fontfamily:fontFamily,fill:fontColor,stroke:false});
+		if(gStrings.R2)drawArray2.push({type:'text',text:gStrings.R2,x:(bbox.x2 + spaceTextIcon),y:(100 - 0.5*fontSize),textanchor:"start",fontsize:fontSize,fontfamily:fontFamily,fill:fontColor,stroke:false});
+		if(gStrings.R3)drawArray2.push({type:'text',text:gStrings.R3,x:(bbox.x2 + spaceTextIcon),y:(100 + 0.5*fontSize),textanchor:"start",fontsize:fontSize,fontfamily:fontFamily,fill:fontColor,stroke:false});
+		if(gStrings.R4)drawArray2.push({type:'text',text:gStrings.R4,x:(bbox.x2 + spaceTextIcon),y:(100 + 1.5*fontSize),textanchor:"start",fontsize:fontSize,fontfamily:fontFamily,fill:fontColor,stroke:false});
+		if(gStrings.R5)drawArray2.push({type:'text',text:gStrings.R5,x:(bbox.x2 + spaceTextIcon),y:(100 + 2.5*fontSize),textanchor:"start",fontsize:fontSize,fontfamily:fontFamily,fill:fontColor,stroke:false});
 
 		//outline
 		if (this.outlineWidth > 0) drawArray1.push(MS.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor))
