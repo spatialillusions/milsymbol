@@ -173,7 +173,7 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.ASW SUBMARINE CONTROL STATION'] = [iconParts['TP.SUB SURFACE CONTROL'],{type:'path',d:'m 68.75,105 -12.5,12.5 12.5,12.5 62.5,0 12.5,-12.5 -12.5,-12.5 z M 75,95 l 0,-20 50,0 0,20 z m 25,-30 0,40'}];
 
 
-	iconParts['TP.AIR CONTROL POINT'] = [{type:'circle',fill:false,cx:100,cy:100,r:50},{type:'text',stroke:false,textanchor:"middle",x:100,y:90,fontsize:30,text:'ACP'}];
+	iconParts['TP.AIR CONTROL POINT (ACP)'] = [{type:'circle',fill:false,cx:100,cy:100,r:50},{type:'text',stroke:false,textanchor:"middle",x:100,y:90,fontsize:30,text:'ACP'}];
 	iconParts['TP.COMMUNICATIONS CHECKPOINT'] = [{type:'circle',fill:false,cx:100,cy:100,r:50},{type:'text',stroke:false,textanchor:"middle",x:100,y:90,fontsize:30,text:'CCP'}];
 	iconParts['TP.PULL-UP POINT'] = [{type:'circle',fill:false,cx:100,cy:100,r:50},{type:'text',stroke:false,textanchor:"start",x:160,y:115,fontsize:40,text:'PUP'},{type:'path',fill:false,d:'m 65,80 0,40 70,-40 0,40 z'}];
 	iconParts['TP.DOWNED AIRCREW PICKUP POINT'] = [iconParts['TP.ACTION POINT'],{type:'circle',cx:100,cy:-35,r:12},{type:'path',fill:false,d:'m 75,35 50,0 m -25,-45 0,45 m -30,-75 30,30 30,-30'}];
@@ -451,7 +451,7 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-G-GPBS--'] = {x1:30,x2:170,y1:60,y2:140};
 	sidc['G-G-GPBSA-'] = icn['TP.ASW SUBMARINE CONTROL STATION'];//TACGRP.C2GM.GNL.PNT.UCTL.SBSTN.ASW
 	bbox['G-G-GPBSA-'] = {x1:30,x2:170,y1:60,y2:140};
-	sidc['G-G-APP---'] = icn['TP.AIR CONTROL POINT'];//TACGRP.C2GM.AVN.PNT.ACP
+	sidc['G-G-APP---'] = icn['TP.AIR CONTROL POINT (ACP)'];//TACGRP.C2GM.AVN.PNT.ACP
 	bbox['G-G-APP---'] = {x1:50,x2:150,y1:50,y2:150};
 	sidc['G-G-APC---'] = icn['TP.COMMUNICATIONS CHECKPOINT'];//TACGRP.C2GM.AVN.PNT.COMMCP
 	bbox['G-G-APC---'] = {x1:50,x2:150,y1:50,y2:150};
