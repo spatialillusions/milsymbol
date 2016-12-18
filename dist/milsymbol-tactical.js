@@ -134,7 +134,7 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.ORBIT - FIGURE EIGHT'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'O'},{type:'text',stroke:false,textanchor:"middle",x:100,y:150,fontsize:40,text:'F8'}];
 	iconParts['TP.ORBIT - RACE TRACK'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'O'},{type:'text',stroke:false,textanchor:"middle",x:100,y:150,fontsize:40,text:'RT'}];
 	iconParts['TP.ORBIT - RANDOM, CLOSED'] = [iconParts['TP.AIR CONTROL'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'O'},{type:'text',stroke:false,textanchor:"middle",x:100,y:150,fontsize:40,text:'RC'}];
-	iconParts['TP.ACTION POINT'] = [{type:'path',fill:false,d:'m 60,45 80,0 m -40,55 -40,-55 0,-105 80,0 0,105 z'}];
+	iconParts['TP.ACTION POINT'] = {type:'path',fill:false,d:'m 60,45 80,0 m -40,55 -40,-55 0,-105 80,0 0,105 z'};
 	iconParts['TP.ACTION CHECK POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'CKP'}];
 	iconParts['TP.CONTACT POINT'] = {type:'path',fill:false,d:'m 100,100 0,-35 -45,0 0,-75 90,0 0,75 -45,0'};
 	iconParts['TP.COORDINATION POINT'] = [{type:'path',fill:false,d:'m 65,135 70,-70 m -70,0 70,70'},{type:'circle',fill:false,cx:100,cy:100,r:50}];
@@ -222,6 +222,28 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.REFUEL ON THE MOVE POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'ROM'}];
 	iconParts['TP.TRAFFIC CONTROL POST'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'TCP'}];
 	iconParts['TP.TRAILER TRANSFER POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'TTP'}];
+	iconParts['TP.UNIT MAINTENANCE COLLECTION POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:25,text:'UMCP'}];
+	iconParts['TP.SUPPLY POINT'] = {type:'path',fill:false,d:'m 60,30 80,0 m -80,15 80,0 m -40,55 -40,-55 0,-105 80,0 0,105 z'};
+	iconParts['TP.SP CLASS I'] = [iconParts['TP.SUPPLY POINT'],{type:'path',fill:false,d:'m 115,-50 c -45,5 -45,65 0,70 -20,-25 -20,-50 0,-70 z'}];
+	iconParts['TP.SP CLASS II'] = [iconParts['TP.SUPPLY POINT'],{type:'path',stroke:false,d:'m 101.143,3.91602 q 3.662,-0.26368 4.746,-1.08399 1.084,-0.84961 1.084,-4.33594 l 0,-26.68949 q 0,-3.3105 -1.084,-4.248 -1.084,-0.9668 -4.746,-1.1426 l 0,-1.1133 17.753,0 0,1.1133 q -3.662,0.1758 -4.746,1.1426 -1.084,0.9375 -1.084,4.248 l 0,26.68949 q 0,3.48633 1.084,4.33594 1.084,0.82031 4.746,1.08399 l 0,1.08398 -17.753,0 0,-1.08398 z m 8.877,-38.61332 0,0 z M 81.1035,3.91602 q 3.6621,-0.26368 4.7461,-1.08399 1.084,-0.84961 1.084,-4.33594 l 0,-26.68949 q 0,-3.3105 -1.084,-4.248 -1.084,-0.9668 -4.7461,-1.1426 l 0,-1.1133 17.7539,0 0,1.1133 q -3.6621,0.1758 -4.7461,1.1426 -1.084,0.9375 -1.084,4.248 l 0,26.68949 q 0,3.48633 1.084,4.33594 1.084,0.82031 4.7461,1.08399 l 0,1.08398 -17.7539,0 0,-1.08398 z m 8.877,-38.61332 0,0 z'}];
+	iconParts['TP.SP CLASS III'] = [iconParts['TP.SUPPLY POINT'],{type:'path',fill:false,d:'m 100,20 0,-30 -20,-40 40,0 -20,40'}];
+	iconParts['TP.SP CLASS IV'] = [iconParts['TP.SUPPLY POINT'],{type:'path',fill:false,d:'m 100,-40 0,20 m -25,10 0,-30 50,0 0,30'}];
+	iconParts['TP.SP CLASS V'] = [iconParts['TP.SUPPLY POINT'],{type:'path',fill:false,d:'m 80,15 0,-50 c 0,-20 40,-20 40,0 l 0,50 m -50,0 60,0'}];
+	iconParts['TP.SP CLASS VI'] = [iconParts['TP.SUPPLY POINT'],{type:'path',fill:false,d:'m 75,-20 50,0 m -25,15 15,25 m -15,-50 0,25 -20,25 m 30,-60 a 10,10 0 0 1 -10,10 10,10 0 0 1 -10,-10 10,10 0 0 1 10,-10 10,10 0 0 1 10,10 z'}];
+	iconParts['TP.SP CLASS VII'] = [iconParts['TP.SUPPLY POINT'],{type:'path',fill:false,d:'m 85,-25 c 10,-10 20,-10 30,0'},{type:'path',d:'M 129.6,-20 A 9.59984,9.59984 0 0 1 120,-10.4002 9.59984,9.59984 0 0 1 110.4,-20 9.59984,9.59984 0 0 1 120,-29.5998 9.59984,9.59984 0 0 1 129.6,-20 Z m -40.4886,0 A 9.11138,9.11138 0 0 1 80,-10.8886 9.11138,9.11138 0 0 1 70.8886,-20 9.11138,9.11138 0 0 1 80,-29.1114 9.11138,9.11138 0 0 1 89.1114,-20 Z'}];
+	iconParts['TP.SP CLASS VIII'] = [iconParts['TP.SUPPLY POINT'],{type:'path',fill:false,d:'m 60,-15 80,0 m -40,-45 0,90'}];
+	iconParts['TP.SP CLASS IX'] = [iconParts['TP.SUPPLY POINT'],{type:'path',fill:false,d:'m 121.213,-36.2132 -7.08,7.0802 M 85.8669,-0.866982 78.7868,6.2132 m 0,-42.4264 7.0801,7.0802 m 28.2661,28.266018 7.08,7.080182 M 100,-45 l 0,10 m 0,40 0,10 m -30,-30 10,0 m 40,0 10,0 m -10,0 a 20,20 0 0 1 -20,20 20,20 0 0 1 -20,-20 20,20 0 0 1 20,-20 20,20 0 0 1 20,20 z'}];
+	iconParts['TP.SP CLASS X'] = [iconParts['TP.SUPPLY POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-10,fontsize:40,text:'CA'}];
+	iconParts['TP.AMMUNITION SUPPLY POINT (ASP)'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'ASP'}];
+	iconParts['TP.AMMUNITION TRANSFER POINT (ATP)'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'CIV'}];
+
+
+
+
+	iconParts['TP.SEA MINELIKE'] = {type:'path',d:'M 75,75 55,55 m 45,-15 0,25 m 25,10 20,-20 m -80,60 0,-30 20,-20 30,0 20,20 0,30 -20,20 -30,0 z'};
+	iconParts['TP.ICEBERG'] = {type:'path',d:'m 75,100 25,-30 25,30 -5,15 -5,-5 -15,20 -15,-20 -5,5 z m -15,0 80,0'};
+	iconParts['TP.OIL RIG/PLATFORM'] = [{type:'path',d:'m 55,100 0,-50 m 75,50 0,40 m 20,-40 0,40 m -115,0 0,-40 130,0',fill:false },{type:'path',d:'m 55,100 0,-15 25,0 0,15 z'}];
+
 
 	iconParts['TP.BOTTOM RETURN'] = {type:'path',d:'m 50,100 15,-35 15,30 20,-55 20,55 15,-35 15,40 z'};
 	iconParts['TP.INSTALLATION/MANMADE'] = {type:'path',fill:false,d:'m 50,100 15,-35 15,30 20,-55 20,55 15,-35 15,40 z'};
@@ -230,7 +252,9 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.MARINE LIFE'] = {type:'path',stroke:false,d:'m 132,75 0,50 83,-37.5 0,25 L 132,75 m -32,25 25.5,-25 0,50 z'};
 	iconParts['TP.SEA ANOMALY'] = {type:'path',fill:false,d:'M 150,80 130,35 100,100 70,35 50,80 m 0,20 20,-45 30,65 30,-65 20,45'};
 
-
+	iconParts['TP.FIX ACOUSTIC'] = {type:'path',fill:false,d:'M 50,150 150,50 M 50,50 150,150 m -50,-100 0,100'};
+	iconParts['TP.FIX ELECTRO-MAGNETIC'] = {type:'path',fill:false,d:'m 50,90 15,20 5,-20 15,20 5,-20 20,20 5,-20 15,20 5,-20 15,20 M 50,150 150,50 M 50,50 150,150 m -50,-100 0,100'};
+	iconParts['TP.FIX ELECTRO-OPTICAL'] = {type:'path',fill:false,d:'M 150,100 A 50,12.5 0 0 1 100,112.5 50,12.5 0 0 1 50,100 50,12.5 0 0 1 100,87.5 50,12.5 0 0 1 150,100 Z M 50,150 150,50 M 50,50 150,150 m -50,-100 0,100'};
 
 }
 );
@@ -475,8 +499,6 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-M-OAOM--'] = {x1:60,x2:140,y1:30};
 	sidc['G-M-OAOP--'] = icn['TP.TETRAHEDRONS MOVABLE'];//TACGRP.MOBSU.OBST.ATO.TDTSM.MVBPFD
 	bbox['G-M-OAOP--'] = {x1:60,x2:140,y1:30};
-
-
 	sidc['G-M-OB----'] = [];//TACGRP.MOBSU.OBST.BBY
 	sidc['G-M-OMU---'] = [];//TACGRP.MOBSU.OBST.MNE.USPMNE
 	sidc['G-M-OMT---'] = [];//TACGRP.MOBSU.OBST.MNE.ATMNE
@@ -551,28 +573,43 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-S-PO----'] = {x1:60,x2:140,y1:-60};
 	sidc['G-S-PI----'] = icn['TP.TRAILER TRANSFER POINT'];//TACGRP.CSS.PNT.TTP
 	bbox['G-S-PI----'] = {x1:60,x2:140,y1:-60};
-	sidc['G-S-PN----'] = [];//TACGRP.CSS.PNT.UMC
-	sidc['G-S-PS----'] = [];//TACGRP.CSS.PNT.SPT
-	sidc['G-S-PSZ---'] = [];//TACGRP.CSS.PNT.SPT.GNL
-	sidc['G-S-PSA---'] = [];//TACGRP.CSS.PNT.SPT.CLS1
-	sidc['G-S-PSB---'] = [];//TACGRP.CSS.PNT.SPT.CLS2
-	sidc['G-S-PSC---'] = [];//TACGRP.CSS.PNT.SPT.CLS3
-	sidc['G-S-PSD---'] = [];//TACGRP.CSS.PNT.SPT.CLS4
-	sidc['G-S-PSE---'] = [];//TACGRP.CSS.PNT.SPT.CLS5
-	sidc['G-S-PSF---'] = [];//TACGRP.CSS.PNT.SPT.CLS6
-	sidc['G-S-PSG---'] = [];//TACGRP.CSS.PNT.SPT.CLS7
-	sidc['G-S-PSH---'] = [];//TACGRP.CSS.PNT.SPT.CLS8
-	sidc['G-S-PSI---'] = [];//TACGRP.CSS.PNT.SPT.CLS9
-	sidc['G-S-PSJ---'] = [];//TACGRP.CSS.PNT.SPT.CLS10
-	sidc['G-S-PA----'] = [];//TACGRP.CSS.PNT.AP
-	sidc['G-S-PAS---'] = [];//TACGRP.CSS.PNT.AP.ASP
-	sidc['G-S-PAT---'] = [];//TACGRP.CSS.PNT.AP.ATP
+	sidc['G-S-PN----'] = icn['TP.UNIT MAINTENANCE COLLECTION POINT'];//TACGRP.CSS.PNT.UMC
+	bbox['G-S-PN----'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PSZ---'] = icn['TP.SUPPLY POINT'];//TACGRP.CSS.PNT.SPT.GNL
+	bbox['G-S-PSZ---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PSA---'] = icn['TP.SP CLASS I'];//TACGRP.CSS.PNT.SPT.CLS1
+	bbox['G-S-PSA---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PSB---'] = icn['TP.SP CLASS II'];//TACGRP.CSS.PNT.SPT.CLS2
+	bbox['G-S-PSB---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PSC---'] = icn['TP.SP CLASS III'];//TACGRP.CSS.PNT.SPT.CLS3
+	bbox['G-S-PSC---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PSD---'] = icn['TP.SP CLASS IV'];//TACGRP.CSS.PNT.SPT.CLS4
+	bbox['G-S-PSD---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PSE---'] = icn['TP.SP CLASS V'];//TACGRP.CSS.PNT.SPT.CLS5
+	bbox['G-S-PSE---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PSF---'] = icn['TP.SP CLASS VI'];//TACGRP.CSS.PNT.SPT.CLS6
+	bbox['G-S-PSF---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PSG---'] = icn['TP.SP CLASS VII'];//TACGRP.CSS.PNT.SPT.CLS7
+	bbox['G-S-PSG---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PSH---'] = icn['TP.SP CLASS VIII'];//TACGRP.CSS.PNT.SPT.CLS8
+	bbox['G-S-PSH---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PSI---'] = icn['TP.SP CLASS IX'];//TACGRP.CSS.PNT.SPT.CLS9
+	bbox['G-S-PSI---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PSJ---'] = icn['TP.SP CLASS X'];//TACGRP.CSS.PNT.SPT.CLS10
+	bbox['G-S-PSJ---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PAS---'] = icn['TP.AMMUNITION SUPPLY POINT (ASP)'];//TACGRP.CSS.PNT.AP.ASP
+	bbox['G-S-PAS---'] = {x1:60,x2:140,y1:-60};
+	sidc['G-S-PAT---'] = icn['TP.AMMUNITION TRANSFER POINT (ATP)'];//TACGRP.CSS.PNT.AP.ATP
+	bbox['G-S-PAT---'] = {x1:60,x2:140,y1:-60};
 	sidc['G-O-ED----'] = [];//TACGRP.OTH.ER.DTHAC
 	sidc['G-O-EP----'] = [];//TACGRP.OTH.ER.PIW
 	sidc['G-O-EV----'] = [];//TACGRP.OTH.ER.DSTVES
-	sidc['G-O-HM----'] = [];//TACGRP.OTH.HAZ.SML
-	sidc['G-O-HI----'] = [];//TACGRP.OTH.HAZ.IB
-	sidc['G-O-HO----'] = [];//TACGRP.OTH.HAZ.OLRG
+	sidc['G-O-HM----'] = icn['TP.SEA MINELIKE'];//TACGRP.OTH.HAZ.SML
+	bbox['G-O-HM----'] = {x1:40,x2:160,y1:40,y2:150};
+	sidc['G-O-HI----'] = icn['TP.ICEBERG'];//TACGRP.OTH.HAZ.IB
+	bbox['G-O-HI----'] = {x1:50,x2:150,y1:50,y2:150};
+	sidc['G-O-HO----'] = icn['TP.OIL RIG/PLATFORM'];//TACGRP.OTH.HAZ.OLRG
+	bbox['G-O-HO----'] = {x1:30,x2:170,y1:60,y2:140};
 	sidc['G-O-SB----'] = icn['TP.BOTTOM RETURN'];//TACGRP.OTH.SSUBSR.BTMRTN
 	bbox['G-O-SB----'] = {x1:40,x2:160,y1:40,y2:100};
 	sidc['G-O-SBM---'] = icn['TP.INSTALLATION/MANMADE'];//TACGRP.OTH.SSUBSR.BTMRTN.INS
@@ -587,9 +624,9 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-O-SM----'] = {x1:100,x2:220,y1:70,y2:130};
 	sidc['G-O-SS----'] = icn['TP.SEA ANOMALY'];//TACGRP.OTH.SSUBSR.SA
 	bbox['G-O-SS----'] = {x1:50,x2:150,y1:30,y2:120};
-	sidc['G-O-FA----'] = [];//TACGRP.OTH.FIX.ACU
-	sidc['G-O-FE----'] = [];//TACGRP.OTH.FIX.EM
-	sidc['G-O-FO----'] = [];//TACGRP.OTH.FIX.EOP
+	sidc['G-O-FA----'] = icn['TP.FIX ACOUSTIC'];//TACGRP.OTH.FIX.ACU
+	sidc['G-O-FE----'] = icn['TP.FIX ELECTRO-MAGNETIC'];//TACGRP.OTH.FIX.EM
+	sidc['G-O-FO----'] = icn['TP.FIX ELECTRO-OPTICAL'];//TACGRP.OTH.FIX.EOP
 }
 );
 
@@ -965,16 +1002,82 @@ function tacticalPoints(sidc){
 
 	//sidc['G-S-PS----'] = [];//TACGRP.CSS.PNT.SPT
 	//sidc['G-S-PSZ---'] = [];//TACGRP.CSS.PNT.SPT.GNL
+	sidc['G-S-PSZ---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:-30,fontsize:40},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PSA---'] = [];//TACGRP.CSS.PNT.SPT.CLS1
+	sidc['G-S-PSA---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:-30,fontsize:40},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PSB---'] = [];//TACGRP.CSS.PNT.SPT.CLS2
+	sidc['G-S-PSB---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:-30,fontsize:40},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PSC---'] = [];//TACGRP.CSS.PNT.SPT.CLS3
+	sidc['G-S-PSC---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:-30,fontsize:40},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PSD---'] = [];//TACGRP.CSS.PNT.SPT.CLS4
+	sidc['G-S-PSD---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:-30,fontsize:40},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PSE---'] = [];//TACGRP.CSS.PNT.SPT.CLS5
+	sidc['G-S-PSE---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:-30,fontsize:40},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PSF---'] = [];//TACGRP.CSS.PNT.SPT.CLS6
+	sidc['G-S-PSF---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:-30,fontsize:40},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PSG---'] = [];//TACGRP.CSS.PNT.SPT.CLS7
+	sidc['G-S-PSG---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:-30,fontsize:40},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PSH---'] = [];//TACGRP.CSS.PNT.SPT.CLS8
+	sidc['G-S-PSH---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:-30,fontsize:40},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PSI---'] = [];//TACGRP.CSS.PNT.SPT.CLS9
+	sidc['G-S-PSI---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:-30,fontsize:40},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
+
 	//sidc['G-S-PSJ---'] = [];//TACGRP.CSS.PNT.SPT.CLS10
+
+	sidc['G-S-PSJ---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
+							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:150,y:-30,fontsize:40},
+							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
+							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
 	//sidc['G-S-PA----'] = [];//TACGRP.CSS.PNT.AP
 	//sidc['G-S-PAS---'] = [];//TACGRP.CSS.PNT.AP.ASP
 	sidc['G-S-PAS---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
