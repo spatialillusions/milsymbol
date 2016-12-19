@@ -209,6 +209,13 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.SURFACE SHELTER'] = {type:'path',d:'m 135,135 15,0 m -100,0 15,0 m 0,-70 0,70 70,0 0,-70 -70,0'};
 	iconParts['TP.UNDERGROUND SHELTER'] = {type:'path',d:'m 135,65 15,0 m -100,0 15,0 m 0,70 0,-70 70,0 0,70 -70,0'};
 
+	iconParts['TP.NUCLEAR DETONATIONS GROUND ZERO'] = [{type:'path',fill:'rgb(255,255,0)',d:'m 65,35 c 0,-40 70,-40 70,0 z m 20,0 0,65 30,0 0,-65'},{type:'text',stroke:false,textanchor:"middle",x:100,y:75,fontsize:35,text:'N'}];
+	iconParts['TP.NUCLEAR FALLOUT PRODUCING'] = [{type:'path',fill:false,d:'m 115,90 -10,10 M 115,75 90,100 M 85,90 115,60 M 85,75 115,45 M 85,60 110,35 m -25,10 10,-10 0,0 m -30,0 c 0,-40 70,-40 70,0 z m 20,0 0,65 30,0 0,-65'},{type:'text',stroke:false,textanchor:"middle",x:100,y:75,fontsize:35,text:'N'}];
+
+	iconParts['TP.RELEASE EVENTS BIOLOGICAL'] = [{type:'path',fill:'rgb(255,255,0)',d:'m 85,5 0,55 -20,40 70,0 -20,-40 0,-55 z'},{type:'text',stroke:false,textanchor:"middle",x:100,y:85,fontsize:35,text:'B'},{type:'text',stroke:false,textanchor:"end",x:50,y:65,fontsize:35,text:'BIO'}];
+	iconParts['TP.RELEASE EVENTS CHEMICAL'] = [{type:'path',fill:'rgb(255,255,0)',d:'M 85 5 L 85 44.0625 A 30 30 0 0 0 70 70 A 30 30 0 0 0 100 100 A 30 30 0 0 0 130 70 A 30 30 0 0 0 115 44.0508 L 115 5 L 85 5 z '},{type:'text',stroke:false,textanchor:"middle",x:100,y:80,fontsize:35,text:'C'},{type:'text',stroke:false,textanchor:"end",x:50,y:65,fontsize:35,text:'CML'}];
+
+
 	iconParts['TP.DECON SITE/POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'}];
 	iconParts['TP.ALTERNATE DECON SITE/POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'},{type:'text',stroke:false,textanchor:"middle",x:100,y:10,fontsize:35,text:'ALT'}];
 	iconParts['TP.DECON SITE/POINT (TROOPS)'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'},{type:'text',stroke:false,textanchor:"middle",x:100,y:10,fontsize:35,text:'T'}];
@@ -535,10 +542,14 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	sidc['G-M-SF----'] = icn['TP.FORT'];//TACGRP.MOBSU.SU.FRT
 	sidc['G-M-SS----'] = icn['TP.SURFACE SHELTER'];//TACGRP.MOBSU.SU.SUFSHL
 	sidc['G-M-SU----'] = icn['TP.UNDERGROUND SHELTER'];//TACGRP.MOBSU.SU.UGDSHL
-	sidc['G-M-NZ----'] = [];//TACGRP.MOBSU.CBRN.NDGZ
-	sidc['G-M-NF----'] = [];//TACGRP.MOBSU.CBRN.FAOTP
-	sidc['G-M-NEB---'] = [];//TACGRP.MOBSU.CBRN.REEVNT.BIO
-	sidc['G-M-NEC---'] = [];//TACGRP.MOBSU.CBRN.REEVNT.CML
+	sidc['G-M-NZ----'] = icn['TP.NUCLEAR DETONATIONS GROUND ZERO'];//TACGRP.MOBSU.CBRN.NDGZ
+	bbox['G-M-NZ----'] = {x1:60,x2:140,y1:0};
+	sidc['G-M-NF----'] = icn['TP.NUCLEAR FALLOUT PRODUCING'];//TACGRP.MOBSU.CBRN.FAOTP
+	bbox['G-M-NF----'] = {x1:60,x2:140,y1:0};
+	sidc['G-M-NEB---'] = icn['TP.RELEASE EVENTS BIOLOGICAL'];//TACGRP.MOBSU.CBRN.REEVNT.BIO
+	bbox['G-M-NEB---'] = {x1:-10,x2:140,y1:0};
+	sidc['G-M-NEC---'] = icn['TP.RELEASE EVENTS CHEMICAL'];//TACGRP.MOBSU.CBRN.REEVNT.CML
+	bbox['G-M-NEC---'] = {x1:-20,x2:140,y1:0};
 	sidc['G-M-NDP---'] = icn['TP.DECON SITE/POINT'];//TACGRP.MOBSU.CBRN.DECONP.USP
 	bbox['G-M-NDP---'] = {x1:60,x2:140,y1:-60};
 	sidc['G-M-NDA---'] = icn['TP.ALTERNATE DECON SITE/POINT'];//TACGRP.MOBSU.CBRN.DECONP.ALTUSP
@@ -843,9 +854,29 @@ function tacticalPoints(sidc){
 	//sidc['G-M-SS----'] = [];//TACGRP.MOBSU.SU.SUFSHL
 	//sidc['G-M-SU----'] = [];//TACGRP.MOBSU.SU.UGDSHL
 	//sidc['G-M-NZ----'] = [];//TACGRP.MOBSU.CBRN.NDGZ
+	sidc['G-M-NZ----'] = {	additionalInformation:{stroke:false,textanchor:"start",x:150,y:30,fontsize:35},
+							dtg:{stroke:false,textanchor:"end",x:50,y:30,fontsize:35},
+							hostile:{stroke:false,textanchor:"start",x:150,y:100,fontsize:35},
+							location:{stroke:false,textanchor:"middle",x:100,y:130,fontsize:35},
+							quantity:{stroke:false,textanchor:"middle",x:100,y:-5,fontsize:35},
+							type:{stroke:false,textanchor:"end",x:50,y:65,fontsize:35},
+							uniqueDesignation:{stroke:false,textanchor:"end",x:50,y:100,fontsize:35}};
 	//sidc['G-M-NF----'] = [];//TACGRP.MOBSU.CBRN.FAOTP
 	//sidc['G-M-NEB---'] = [];//TACGRP.MOBSU.CBRN.REEVNT.BIO
+
+	sidc['G-M-NEB---'] = {	additionalInformation:{stroke:false,textanchor:"start",x:150,y:30,fontsize:35},
+							dtg:{stroke:false,textanchor:"end",x:50,y:30,fontsize:35},
+							hostile:{stroke:false,textanchor:"start",x:150,y:100,fontsize:35},
+							location:{stroke:false,textanchor:"middle",x:100,y:130,fontsize:35},
+							quantity:{stroke:false,textanchor:"middle",x:100,y:-5,fontsize:35},
+							uniqueDesignation:{stroke:false,textanchor:"end",x:50,y:100,fontsize:35}};
 	//sidc['G-M-NEC---'] = [];//TACGRP.MOBSU.CBRN.REEVNT.CML
+	sidc['G-M-NEC---'] = {	additionalInformation:{stroke:false,textanchor:"start",x:150,y:30,fontsize:35},
+							dtg:{stroke:false,textanchor:"end",x:50,y:30,fontsize:35},
+							hostile:{stroke:false,textanchor:"start",x:150,y:100,fontsize:35},
+							location:{stroke:false,textanchor:"middle",x:100,y:130,fontsize:35},
+							quantity:{stroke:false,textanchor:"middle",x:100,y:-5,fontsize:35},
+							uniqueDesignation:{stroke:false,textanchor:"end",x:50,y:100,fontsize:35}};
 	//sidc[] = [];//TACGRP.MOBSU.CBRN.DECONP.USP
 	sidc['G-M-NDP---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
 							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
