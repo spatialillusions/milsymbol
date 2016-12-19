@@ -177,6 +177,13 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.COMMUNICATIONS CHECKPOINT'] = [{type:'circle',fill:false,cx:100,cy:100,r:50},{type:'text',stroke:false,textanchor:"middle",x:100,y:90,fontsize:30,text:'CCP'}];
 	iconParts['TP.PULL-UP POINT'] = [{type:'circle',fill:false,cx:100,cy:100,r:50},{type:'text',stroke:false,textanchor:"start",x:160,y:115,fontsize:40,text:'PUP'},{type:'path',fill:false,d:'m 65,80 0,40 70,-40 0,40 z'}];
 	iconParts['TP.DOWNED AIRCREW PICKUP POINT'] = [iconParts['TP.ACTION POINT'],{type:'circle',cx:100,cy:-35,r:12},{type:'path',fill:false,d:'m 75,35 50,0 m -25,-45 0,45 m -30,-75 30,30 30,-30'}];
+	iconParts['TP.TARGET REFERENCE'] = {type:'path',fill:false,d:'m 50,100 100,0 m -50,-50 0,100'};
+	iconParts['TP.OBSERVATION POST/OUTPOST'] = {type:'path',fill:false,d:'m 100,45 47.6,82.5 -95.2,0 z'};
+	iconParts['TP.COMBAT OUTPOST'] = {type:'path',fill:false,d:'m 140,140 0,-12.5 m -16,12.5 0,-12.5 m -16,12.5 0,-12.5 m -48.0001,12.5 3e-4,-12.5 m 15.9993,12.5 4e-4,-12.501 m 16,12.501 3e-4,-12.5 m -46.43,-12.493 10.8256,6.25 m -2.8256,-20.107 10.8256,6.251 m -2.8257,-20.1071 10.8257,6.2506 m 13.1743,-47.8198 10.8257,6.2506 m -18.8253,7.6056 10.8256,6.2506 m -18.826,7.606 10.8257,6.2506 M 114.43,45.725 l -10.826,6.25 m 18.826,7.6064 -10.826,6.25 m 18.826,7.6064 -10.826,6.25 m 34.826,35.3192 -10.826,6.25 m 2.826,-20.106 -10.826,6.25 m 2.826,-20.1068 -10.826,6.25 M 99.9998,45 l 47.6312,82.5 -95.2623,0 z'};
+	iconParts['TP.OBSERVATION POST/RECONNAISSANCE'] = {type:'path',fill:false,d:'M 52.3687,127.5 123.816,86.2499 M 99.9998,45 l 47.6312,82.5 -95.2623,0 z'};
+	iconParts['TP.FORWARD OBSERVER POSITION'] = [iconParts['TP.OBSERVATION POST/RECONNAISSANCE'],{type:'path',d:'m 115,100 a 15,15 0 0 1 -15,15 15,15 0 0 1 -15,-15 15,15 0 0 1 15,-15 15,15 0 0 1 15,15 z'}];
+	iconParts['TP.SENSOR OUTPOST'] = {type:'path',fill:false,d:'m 61.1738,112.25 23.6601,0 m 30.3321,0 23.66,0 M 80,105 l 10,15 20,0 10,-15 z m 19.9998,-60 47.6312,82.5 -95.2623,0 z'};
+	iconParts['TP.CBRN OBSERVATION POST'] = [{type:'path',fill:false,d:'M 52.3687,127.5 123.816,86.2499 M 109.829,115 C 107.845,103.545 102.815,94.1207 89.8293,90 M 90,115 c 1.984,-11.455 7.0143,-20.8793 20,-25 m -10.0002,-45 47.6312,82.5 -95.2623,0 z'},{type:'path',d:'M 115.011,90 A 5.01149,5.01149 0 0 1 110,95.0115 5.01149,5.01149 0 0 1 104.989,90 5.01149,5.01149 0 0 1 110,84.9885 5.01149,5.01149 0 0 1 115.011,90 Z M 95,90 a 5,5 0 0 1 -5,5 5,5 0 0 1 -5,-5 5,5 0 0 1 5,-5 5,5 0 0 1 5,5 z'}];
 
 
 
@@ -186,8 +193,13 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.FIXED AND PREFABRICATED'] = {type:'path',d:'m 60,100 40,-65 40,65 z'};
 	iconParts['TP.TETRAHEDRONS'] = {type:'path',fill:false,d:'m 60,100 40,-65 40,65'};
 	iconParts['TP.TETRAHEDRONS MOVABLE'] = {type:'path',fill:false,d:'m 60,100 40,-65 40,65 z'};
-
-
+	iconParts['TP.BOOBY TRAP'] = {type:'path',fill:false,d:'M 77.2413,87.9311 100,50 122.781,87.9687 M 130,100 A 30,18.541 0 0 1 100,118.541 30,18.541 0 0 1 70,100 30,18.541 0 0 1 100,81.459 30,18.541 0 0 1 130,100 Z'};
+	iconParts['TP.UNSPECIFIED MINE'] = {type:'path',fill:false,d:'M 129,100 A 29,29 0 0 1 100,129 29,29 0 0 1 71,100 29,29 0 0 1 100,71 29,29 0 0 1 129,100 Z'};
+	iconParts['TP.ANTITANK MINE (AT)'] = {type:'path',d:'M 129,100 A 29,29 0 0 1 100,129 29,29 0 0 1 71,100 29,29 0 0 1 100,71 29,29 0 0 1 129,100 Z'};
+	iconParts['TP.(AT) ANTIHANDLING DEVICE'] = [iconParts['TP.ANTITANK MINE (AT)'],{type:'path',fill:false,d:'m 100,130 0,65 15,-15'}];
+	iconParts['TP.(AT) DIRECTIONAL'] = [iconParts['TP.ANTITANK MINE (AT)'],{type:'path',fill:false,strokedasharray:'5,5',d:'m 100,70 0,-60'},{type:'path',fill:false,d:'m 90,20 10,-10 10,10'}];
+	iconParts['TP.ANTIPERSONNEL (AP) MINES'] = [iconParts['TP.ANTITANK MINE (AT)'],{type:'path',fill:false,d:'m 50,50 29.5,29.5 m 41,0 L 150,50'}];
+	iconParts['TP.WIDE AREA MINES'] = [iconParts['TP.ANTITANK MINE (AT)'],{type:'path',fill:false,d:'m 50,110 25,40 12,-24 M 113,126 125,150 150,110'}];
 
 	iconParts['TP.TOWER LOW'] = [{type:'circle',stroke:false,cx:100,cy:100,r:7},{type:'path',fill:false,strokewidth:8,d:'m 75,105 25,-65 25,65'}];
 	iconParts['TP.TOWER HIGH'] = [{type:'circle',stroke:false,cx:100,cy:100,r:7},{type:'path',fill:false,strokewidth:8,d:'m 100,40 c 2.358,31.6754 7.162,59.2531 25,64.999 M 100,40 c -2.358,31.6754 -7.1624,59.2531 -25,65'}];
@@ -196,8 +208,6 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.FORT'] = {type:'path',fill:false,d:'m 135,65 15,-15 m -15,85 15,15 M 65,135 50,150 m 15,-85 0,70 70,0 0,-70 -70,0 -15,-15'};
 	iconParts['TP.SURFACE SHELTER'] = {type:'path',d:'m 135,135 15,0 m -100,0 15,0 m 0,-70 0,70 70,0 0,-70 -70,0'};
 	iconParts['TP.UNDERGROUND SHELTER'] = {type:'path',d:'m 135,65 15,0 m -100,0 15,0 m 0,70 0,-70 70,0 0,70 -70,0'};
-
-
 
 	iconParts['TP.DECON SITE/POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'}];
 	iconParts['TP.ALTERNATE DECON SITE/POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'},{type:'text',stroke:false,textanchor:"middle",x:100,y:10,fontsize:35,text:'ALT'}];
@@ -484,13 +494,19 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	sidc['G-G-APD---'] = icn['TP.DOWNED AIRCREW PICKUP POINT'];//TACGRP.C2GM.AVN.PNT.DAPP
 	bbox['G-G-APD---'] = {x1:60,x2:140,y1:-60};
 	sidc['G-G-PN----'] = [];//TACGRP.C2GM.DCPN.DMYMS
-	sidc['G-G-DPT---'] = [];//TACGRP.C2GM.DEF.PNT.TGTREF
-	sidc['G-G-DPO---'] = [];//TACGRP.C2GM.DEF.PNT.OBSPST
-	sidc['G-G-DPOC--'] = [];//TACGRP.C2GM.DEF.PNT.OBSPST.CBTPST
-	sidc['G-G-DPOR--'] = [];//TACGRP.C2GM.DEF.PNT.OBSPST.RECON
-	sidc['G-G-DPOF--'] = [];//TACGRP.C2GM.DEF.PNT.OBSPST.FWDOP
-	sidc['G-G-DPOS--'] = [];//TACGRP.C2GM.DEF.PNT.OBSPST.SOP
-	sidc['G-G-DPON--'] = [];//TACGRP.C2GM.DEF.PNT.OBSPST.CBRNOP
+	sidc['G-G-DPT---'] = icn['TP.TARGET REFERENCE'];//TACGRP.C2GM.DEF.PNT.TGTREF
+	sidc['G-G-DPO---'] = icn['TP.OBSERVATION POST/OUTPOST'];//TACGRP.C2GM.DEF.PNT.OBSPST
+	bbox['G-G-DPO---'] = {x1:50,x2:150,y1:40,y2:150};
+	sidc['G-G-DPOC--'] = icn['TP.COMBAT OUTPOST'];//TACGRP.C2GM.DEF.PNT.OBSPST.CBTPST
+	bbox['G-G-DPOC--'] = {x1:50,x2:150,y1:40,y2:150};
+	sidc['G-G-DPOR--'] = icn['TP.OBSERVATION POST/RECONNAISSANCE'];//TACGRP.C2GM.DEF.PNT.OBSPST.RECON
+	bbox['G-G-DPOR--'] = {x1:50,x2:150,y1:40,y2:150};
+	sidc['G-G-DPOF--'] = icn['TP.FORWARD OBSERVER POSITION'];//TACGRP.C2GM.DEF.PNT.OBSPST.FWDOP
+	bbox['G-G-DPOF--'] = {x1:50,x2:150,y1:40,y2:150};
+	sidc['G-G-DPOS--'] = icn['TP.SENSOR OUTPOST'];//TACGRP.C2GM.DEF.PNT.OBSPST.SOP
+	bbox['G-G-DPOS--'] = {x1:50,x2:150,y1:40,y2:150};
+	sidc['G-G-DPON--'] = icn['TP.CBRN OBSERVATION POST'];//TACGRP.C2GM.DEF.PNT.OBSPST.CBRNOP
+	bbox['G-G-DPON--'] = {x1:50,x2:150,y1:40,y2:150};
 	sidc['G-G-OPP---'] = icn['TP.POINT OF DEPARTURE'];//TACGRP.C2GM.OFF.PNT.PNTD
 	bbox['G-G-OPP---'] = {x1:60,x2:140,y1:-60};
 	sidc['G-M-OAOF--'] = icn['TP.FIXED AND PREFABRICATED'];//TACGRP.MOBSU.OBST.ATO.TDTSM.FIXPFD
@@ -499,13 +515,15 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-M-OAOM--'] = {x1:60,x2:140,y1:30};
 	sidc['G-M-OAOP--'] = icn['TP.TETRAHEDRONS MOVABLE'];//TACGRP.MOBSU.OBST.ATO.TDTSM.MVBPFD
 	bbox['G-M-OAOP--'] = {x1:60,x2:140,y1:30};
-	sidc['G-M-OB----'] = [];//TACGRP.MOBSU.OBST.BBY
-	sidc['G-M-OMU---'] = [];//TACGRP.MOBSU.OBST.MNE.USPMNE
-	sidc['G-M-OMT---'] = [];//TACGRP.MOBSU.OBST.MNE.ATMNE
-	sidc['G-M-OMD---'] = [];//TACGRP.MOBSU.OBST.MNE.ATMAHD
-	sidc['G-M-OME---'] = [];//TACGRP.MOBSU.OBST.MNE.ATMDIR
-	sidc['G-M-OMP---'] = [];//TACGRP.MOBSU.OBST.MNE.APMNE
-	sidc['G-M-OMW---'] = [];//TACGRP.MOBSU.OBST.MNE.WAMNE
+	sidc['G-M-OB----'] = icn['TP.BOOBY TRAP'];//TACGRP.MOBSU.OBST.BBY
+	sidc['G-M-OMU---'] = icn['TP.UNSPECIFIED MINE'];//TACGRP.MOBSU.OBST.MNE.USPMNE
+	sidc['G-M-OMT---'] = icn['TP.ANTITANK MINE (AT)'];//TACGRP.MOBSU.OBST.MNE.ATMNE
+	sidc['G-M-OMD---'] = icn['TP.(AT) ANTIHANDLING DEVICE'];//TACGRP.MOBSU.OBST.MNE.ATMAHD
+	bbox['G-M-OMD---'] = {x1:60,x2:140,y1:40,y2:195};
+	sidc['G-M-OME---'] = icn['TP.(AT) DIRECTIONAL'];//TACGRP.MOBSU.OBST.MNE.ATMDIR
+	bbox['G-M-OME---'] = {x1:60,x2:140,y1:10,y2:140};
+	sidc['G-M-OMP---'] = icn['TP.ANTIPERSONNEL (AP) MINES'];//TACGRP.MOBSU.OBST.MNE.APMNE
+	sidc['G-M-OMW---'] = icn['TP.WIDE AREA MINES'];//TACGRP.MOBSU.OBST.MNE.WAMNE
 	sidc['G-M-OFS---'] = [];//TACGRP.MOBSU.OBST.MNEFLD.STC
 	sidc['G-M-OHTL--'] = icn['TP.TOWER LOW'];//TACGRP.MOBSU.OBST.AVN.TWR.LOW
 	bbox['G-M-OHTL--'] = {x1:50,x2:150,y1:30,y2:120};
@@ -783,6 +801,8 @@ function tacticalPoints(sidc){
 	//sidc['G-G-APD---'] = [];//TACGRP.C2GM.AVN.PNT.DAPP
 	//sidc['G-G-PN----'] = [];//TACGRP.C2GM.DCPN.DMYMS
 	//sidc['G-G-DPT---'] = [];//TACGRP.C2GM.DEF.PNT.TGTREF
+	sidc['G-G-DPT---'] = {	uniqueDesignation:{stroke:false,textanchor:"start",x:115,y:85,fontsize:45,fontweight:'bold'}};//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
+
 	//sidc['G-G-DPO---'] = [];//TACGRP.C2GM.DEF.PNT.OBSPST
 	//sidc['G-G-DPOC--'] = [];//TACGRP.C2GM.DEF.PNT.OBSPST.CBTPST
 	//sidc['G-G-DPOR--'] = [];//TACGRP.C2GM.DEF.PNT.OBSPST.RECON
