@@ -2766,8 +2766,13 @@ N/A</td></tr>
 POINT/SINGLE TARGET<br>
 G*F*PTS---****X<br>
 </td><td>
+Template<br>
 <script>
-document.write(new MS.symbol("G*F*PTS---****X", {size:size}).getMarker().XML)
+document.write(new MS.symbol("G*F*PTS---****X", {size:size,additionalInformation:'H',additionalInformation1:'H1',hostile:'N',uniqueDesignation:'T',dtg:'W',dtg1:'W1'}).getMarker().XML)
+</script><br>
+Example<br>
+<script>
+document.write(new MS.symbol("G*F*PTS---****X", {size:size,additionalInformation:'Target Description',additionalInformation1:'Target Altitude',uniqueDesignation:'AG9999'}).getMarker().XML)
 </script>
 </td></tr>
 <tr><td>
@@ -2775,8 +2780,13 @@ document.write(new MS.symbol("G*F*PTS---****X", {size:size}).getMarker().XML)
 NUCLEAR TARGET<br>
 G*F*PTN---****X<br>
 </td><td>
+Template<br>
 <script>
-document.write(new MS.symbol("G*F*PTN---****X", {size:size}).getMarker().XML)
+document.write(new MS.symbol("G*F*PTN---****X", {size:size,uniqueDesignation:'T'}).getMarker().XML)
+</script><br>
+Example<br>
+<script>
+document.write(new MS.symbol("G*F*PTN---****X", {size:size,uniqueDesignation:'AG9998'}).getMarker().XML)
 </script>
 </td></tr>
 <tr><td>
@@ -2790,8 +2800,13 @@ N/A</td></tr>
 FIRE SUPPORT STATION<br>
 G*F*PCF---****X<br>
 </td><td>
+Template<br>
 <script>
-document.write(new MS.symbol("G*F*PCF---****X", {size:size}).getMarker().XML)
+document.write(new MS.symbol("G*F*PCF---****X", {size:size,uniqueDesignation:'T'}).getMarker().XML)
+</script><br>
+Example<br>
+<script>
+document.write(new MS.symbol("G*F*PCF---****X", {size:size,uniqueDesignation:'FSS 7'}).getMarker().XML)
 </script>
 </td></tr>
 <tr><td>

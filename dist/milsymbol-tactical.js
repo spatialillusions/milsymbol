@@ -192,6 +192,10 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.TOWER LOW'] = [{type:'circle',stroke:false,cx:100,cy:100,r:7},{type:'path',fill:false,strokewidth:8,d:'m 75,105 25,-65 25,65'}];
 	iconParts['TP.TOWER HIGH'] = [{type:'circle',stroke:false,cx:100,cy:100,r:7},{type:'path',fill:false,strokewidth:8,d:'m 100,40 c 2.358,31.6754 7.162,59.2531 25,64.999 M 100,40 c -2.358,31.6754 -7.1624,59.2531 -25,65'}];
 	iconParts['TP.ENGINEER REGULATING POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'ERP'}];
+	iconParts['TP.EARTHWORK/FORTIFICATION'] = {type:'path',d:'m 65,65 0,70 70,0 0,-70 -70,0z'};
+	iconParts['TP.FORT'] = {type:'path',fill:false,d:'m 135,65 15,-15 m -15,85 15,15 M 65,135 50,150 m 15,-85 0,70 70,0 0,-70 -70,0 -15,-15'};
+	iconParts['TP.SURFACE SHELTER'] = {type:'path',d:'m 135,135 15,0 m -100,0 15,0 m 0,-70 0,70 70,0 0,-70 -70,0'};
+	iconParts['TP.UNDERGROUND SHELTER'] = {type:'path',d:'m 135,65 15,0 m -100,0 15,0 m 0,70 0,-70 70,0 0,70 -70,0'};
 
 
 
@@ -202,9 +206,9 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.DECON SITE/POINT (EQUIPMENT AND TROOPS)'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'},{type:'text',stroke:false,textanchor:"middle",x:100,y:10,fontsize:35,text:'E/T'}];
 	iconParts['TP.DECON SITE/POINT (OPERATIONAL DECONTAMINATION)'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'},{type:'text',stroke:false,textanchor:"middle",x:100,y:10,fontsize:35,text:'O'}];
 	iconParts['TP.DECON SITE/POINT (THOROUGH DECONTAMINATION)'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'},{type:'text',stroke:false,textanchor:"middle",x:100,y:10,fontsize:35,text:'TH'}];
-
-
-
+	iconParts['TP.POINT/SINGLE TARGET'] = {type:'path',fill:false,d:'m 50,100 100,0 m -50,-50 0,100'};
+	iconParts['TP.NUCLEAR TARGET'] = {type:'path',fill:false,d:'m 90,100 -40,0 m 50,10 0,40 m 10,-50 40,0 m -50,-10 0,-40 m 2.5,50 a 2.5,2.5 0 0 1 -2.5,2.5 2.5,2.5 0 0 1 -2.5,-2.5 2.5,2.5 0 0 1 2.5,-2.5 2.5,2.5 0 0 1 2.5,2.5 z'};
+	iconParts['TP.FIRE SUPPORT STATION'] = {type:'path',fill:false,d:'M 50,50 150,150 M 50,150 150,50'};
 	iconParts['TP.SURVEY CONTROL POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'SCP'}];
 	iconParts['TP.FIRING POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'FP'}];
 	iconParts['TP.RELOAD POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'RLP'}];
@@ -236,22 +240,18 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.SP CLASS X'] = [iconParts['TP.SUPPLY POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-10,fontsize:40,text:'CA'}];
 	iconParts['TP.AMMUNITION SUPPLY POINT (ASP)'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'ASP'}];
 	iconParts['TP.AMMUNITION TRANSFER POINT (ATP)'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'CIV'}];
-
-
-
-
+	iconParts['TP.DITCHED AIRCRAFT'] = {type:'path',d:'m 145,120 -15,-15 m -15,15 15,-15 m -75,15 15,-15 m 15,15 -15,-15 m 10,10 25,-30 -10,-10 10,-10 20,20 -10,35 -15,-15 -15,15 z'};
+	iconParts['TP.PERSON IN WATER'] = {type:'path',d:'m 105,110 10,-10 0,-15 5,0 0,20 -10,10 z m -10,0 -10,-10 0,-15 -5,0 0,20 10,10 z m 5,-5 0,-10 -5,0 -5,-5 0,-10 5,-5 10,0 5,5 0,10 -5,5 -5,0 m -15,25 15,-15 m 45,15 -15,-15 m -15,15 15,-15 m -75,15 15,-15 m 15,15 -15,-15 m 45,15 -15,-15'};
+	iconParts['TP.DISTRESSED VESSEL'] = {type:'path',d:'m 120,65 -20,20 20,-20 m -5,55 -35,-35 0,-20 45,45 z m -30,0 -15,-15 m -15,15 15,-15 m 45,15 15,-15 m 15,15 -15,-15 m -45,15 15,-15'};
 	iconParts['TP.SEA MINELIKE'] = {type:'path',d:'M 75,75 55,55 m 45,-15 0,25 m 25,10 20,-20 m -80,60 0,-30 20,-20 30,0 20,20 0,30 -20,20 -30,0 z'};
 	iconParts['TP.ICEBERG'] = {type:'path',d:'m 75,100 25,-30 25,30 -5,15 -5,-5 -15,20 -15,-20 -5,5 z m -15,0 80,0'};
 	iconParts['TP.OIL RIG/PLATFORM'] = [{type:'path',d:'m 55,100 0,-50 m 75,50 0,40 m 20,-40 0,40 m -115,0 0,-40 130,0',fill:false },{type:'path',d:'m 55,100 0,-15 25,0 0,15 z'}];
-
-
 	iconParts['TP.BOTTOM RETURN'] = {type:'path',d:'m 50,100 15,-35 15,30 20,-55 20,55 15,-35 15,40 z'};
 	iconParts['TP.INSTALLATION/MANMADE'] = {type:'path',fill:false,d:'m 50,100 15,-35 15,30 20,-55 20,55 15,-35 15,40 z'};
 	iconParts['TP.WRECK, NON DANGEROUS'] = {type:'path',fill:false,d:'m 135,85 0,30 m -85,-15 100,0 m -85,-15 0,30 m 35,-40 0,50'};
 	iconParts['TP.WRECK, DANGEROUS'] = [iconParts['TP.WRECK, NON DANGEROUS'],{type:'path',strokedasharray:'5,5',fill:false,d:'M 156.547,100 A 56.2017,29.6618 0 0 1 100.345,129.662 56.2017,29.6618 0 0 1 44.1433,100 56.2017,29.6618 0 0 1 100.345,70.3382 56.2017,29.6618 0 0 1 156.547,100 Z'},];
 	iconParts['TP.MARINE LIFE'] = {type:'path',stroke:false,d:'m 132,75 0,50 83,-37.5 0,25 L 132,75 m -32,25 25.5,-25 0,50 z'};
 	iconParts['TP.SEA ANOMALY'] = {type:'path',fill:false,d:'M 150,80 130,35 100,100 70,35 50,80 m 0,20 20,-45 30,65 30,-65 20,45'};
-
 	iconParts['TP.FIX ACOUSTIC'] = {type:'path',fill:false,d:'M 50,150 150,50 M 50,50 150,150 m -50,-100 0,100'};
 	iconParts['TP.FIX ELECTRO-MAGNETIC'] = {type:'path',fill:false,d:'m 50,90 15,20 5,-20 15,20 5,-20 20,20 5,-20 15,20 5,-20 15,20 M 50,150 150,50 M 50,50 150,150 m -50,-100 0,100'};
 	iconParts['TP.FIX ELECTRO-OPTICAL'] = {type:'path',fill:false,d:'M 150,100 A 50,12.5 0 0 1 100,112.5 50,12.5 0 0 1 50,100 50,12.5 0 0 1 100,87.5 50,12.5 0 0 1 150,100 Z M 50,150 150,50 M 50,50 150,150 m -50,-100 0,100'};
@@ -513,10 +513,10 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-M-OHTH--'] = {x1:50,x2:150,y1:30,y2:120};
 	sidc['G-M-BCP---'] = icn['TP.ENGINEER REGULATING POINT'];//TACGRP.MOBSU.OBSTBP.CSGSTE.ERP
 	bbox['G-M-BCP---'] = {x1:60,x2:140,y1:-60};
-	sidc['G-M-SE----'] = [];//TACGRP.MOBSU.SU.ESTOF
-	sidc['G-M-SF----'] = [];//TACGRP.MOBSU.SU.FRT
-	sidc['G-M-SS----'] = [];//TACGRP.MOBSU.SU.SUFSHL
-	sidc['G-M-SU----'] = [];//TACGRP.MOBSU.SU.UGDSHL
+	sidc['G-M-SE----'] = icn['TP.EARTHWORK/FORTIFICATION'];//TACGRP.MOBSU.SU.ESTOF
+	sidc['G-M-SF----'] = icn['TP.FORT'];//TACGRP.MOBSU.SU.FRT
+	sidc['G-M-SS----'] = icn['TP.SURFACE SHELTER'];//TACGRP.MOBSU.SU.SUFSHL
+	sidc['G-M-SU----'] = icn['TP.UNDERGROUND SHELTER'];//TACGRP.MOBSU.SU.UGDSHL
 	sidc['G-M-NZ----'] = [];//TACGRP.MOBSU.CBRN.NDGZ
 	sidc['G-M-NF----'] = [];//TACGRP.MOBSU.CBRN.FAOTP
 	sidc['G-M-NEB---'] = [];//TACGRP.MOBSU.CBRN.REEVNT.BIO
@@ -535,9 +535,9 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-M-NDO---'] = {x1:60,x2:140,y1:-60};
 	sidc['G-M-NDD---'] = icn['TP.DECON SITE/POINT (THOROUGH DECONTAMINATION)'];//TACGRP.MOBSU.CBRN.DECONP.TRGH
 	bbox['G-M-NDD---'] = {x1:60,x2:140,y1:-60};
-	sidc['G-F-PTS---'] = [];//TACGRP.FSUPP.PNT.TGT.PTGT
-	sidc['G-F-PTN---'] = [];//TACGRP.FSUPP.PNT.TGT.NUCTGT
-	sidc['G-F-PCF---'] = [];//TACGRP.FSUPP.PNT.C2PNT.FSS
+	sidc['G-F-PTS---'] = icn['TP.POINT/SINGLE TARGET'];//TACGRP.FSUPP.PNT.TGT.PTGT
+	sidc['G-F-PTN---'] = icn['TP.NUCLEAR TARGET'];//TACGRP.FSUPP.PNT.TGT.NUCTGT
+	sidc['G-F-PCF---'] = icn['TP.FIRE SUPPORT STATION'];//TACGRP.FSUPP.PNT.C2PNT.FSS
 	sidc['G-F-PCS---'] = icn['TP.SURVEY CONTROL POINT'];//TACGRP.FSUPP.PNT.C2PNT.SCP
 	bbox['G-F-PCS---'] = {x1:60,x2:140,y1:-60};
 	sidc['G-F-PCB---'] = icn['TP.FIRING POINT'];//TACGRP.FSUPP.PNT.C2PNT.FP
@@ -548,7 +548,6 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-F-PCH---'] = {x1:60,x2:140,y1:-60};
 	sidc['G-F-PCL---'] = icn['TP.LAUNCH POINT'];//TACGRP.FSUPP.PNT.C2PNT.LP
 	bbox['G-F-PCL---'] = {x1:60,x2:140,y1:-60};
-
 	sidc['G-S-PX----'] = icn['TP.AMBULANCE EXCHANGE POINT'];//TACGRP.CSS.PNT.AEP
 	bbox['G-S-PX----'] = {x1:60,x2:140,y1:-60};
 	sidc['G-S-PC----'] = icn['TP.CANNIBALIZATION POINT'];//TACGRP.CSS.PNT.CBNP
@@ -601,9 +600,9 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-S-PAS---'] = {x1:60,x2:140,y1:-60};
 	sidc['G-S-PAT---'] = icn['TP.AMMUNITION TRANSFER POINT (ATP)'];//TACGRP.CSS.PNT.AP.ATP
 	bbox['G-S-PAT---'] = {x1:60,x2:140,y1:-60};
-	sidc['G-O-ED----'] = [];//TACGRP.OTH.ER.DTHAC
-	sidc['G-O-EP----'] = [];//TACGRP.OTH.ER.PIW
-	sidc['G-O-EV----'] = [];//TACGRP.OTH.ER.DSTVES
+	sidc['G-O-ED----'] = icn['TP.DITCHED AIRCRAFT'];//TACGRP.OTH.ER.DTHAC
+	sidc['G-O-EP----'] = icn['TP.PERSON IN WATER'];//TACGRP.OTH.ER.PIW
+	sidc['G-O-EV----'] = icn['TP.DISTRESSED VESSEL'];//TACGRP.OTH.ER.DSTVES
 	sidc['G-O-HM----'] = icn['TP.SEA MINELIKE'];//TACGRP.OTH.HAZ.SML
 	bbox['G-O-HM----'] = {x1:40,x2:160,y1:40,y2:150};
 	sidc['G-O-HI----'] = icn['TP.ICEBERG'];//TACGRP.OTH.HAZ.IB
@@ -874,8 +873,16 @@ function tacticalPoints(sidc){
 							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
 							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
 	//sidc['G-F-PTS---'] = [];//TACGRP.FSUPP.PNT.TGT.PTGT
+	sidc['G-F-PTS---'] = {	additionalInformation:{stroke:false,textanchor:"start",x:120,y:145,fontsize:40},
+							additionalInformation1:{stroke:false,textanchor:"end",x:80,y:145,fontsize:40},
+							uniqueDesignation:{stroke:false,textanchor:"start",x:120,y:80,fontsize:40}};
+
 	//sidc['G-F-PTN---'] = [];//TACGRP.FSUPP.PNT.TGT.NUCTGT
+	sidc['G-F-PTN---'] = {	uniqueDesignation:{stroke:false,textanchor:"start",x:120,y:80,fontsize:40,fontweight:'bold'}};//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
+
 	//sidc['G-F-PCF---'] = [];//TACGRP.FSUPP.PNT.C2PNT.FSS
+	sidc['G-F-PCF---'] = {	uniqueDesignation:{stroke:false,textanchor:"start",x:125,y:115,fontsize:40,fontweight:'bold'}};//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
+
 	//sidc['G-F-PCS---'] = [];//TACGRP.FSUPP.PNT.C2PNT.SCP
 	sidc['G-F-PCS---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:-70,fontsize:40},
 							hostile:{stroke:false,textanchor:"start",x:150,y:45,fontsize:40},
