@@ -204,7 +204,9 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.(AT) DIRECTIONAL'] = [iconParts['TP.ANTITANK MINE (AT)'],{type:'path',fill:false,strokedasharray:'5,5',d:'m 100,70 0,-60'},{type:'path',fill:false,d:'m 90,20 10,-10 10,10'}];
 	iconParts['TP.ANTIPERSONNEL (AP) MINES'] = [iconParts['TP.ANTITANK MINE (AT)'],{type:'path',fill:false,d:'m 50,50 29.5,29.5 m 41,0 L 150,50'}];
 	iconParts['TP.WIDE AREA MINES'] = [iconParts['TP.ANTITANK MINE (AT)'],{type:'path',fill:false,d:'m 50,110 25,40 12,-24 M 113,126 125,150 150,110'}];
-
+	iconParts['TP.MINEFIELDS STATIC'] = {type:'path',fill:false,d:'m 40,65 0,70 120,0 0,-70 z m 70,35 c 0,5.523 -4.477,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.523,0 10,4.4772 10,10 z m 35,0 c 0,5.523 -4.477,10 -10,10 -5.523,0 -10,-4.477 -10,-10 0,-5.5228 4.477,-10 10,-10 5.523,0 10,4.4772 10,10 z m -70,0 c 0,5.523 -4.4772,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.5228,0 10,4.4772 10,10 z'};
+	//This is to solve anticipated minefields... Don't we just love special cases...
+	if(properties.notpresent)iconParts['TP.MINEFIELDS STATIC'] = [{type:'path',fill:false,strokedasharray:'15,15',d:'m 40,65 0,70 120,0 0,-70 z'},{type:'path',fill:false,d:'m 75,100 c 0,5.523 -4.4772,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.5228,0 10,4.4772 10,10 z m 70,0 c 0,5.523 -4.477,10 -10,10 -5.523,0 -10,-4.477 -10,-10 0,-5.5228 4.477,-10 10,-10 5.523,0 10,4.4772 10,10 z m -35,0 c 0,5.523 -4.477,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.523,0 10,4.4772 10,10 z'}];
 	iconParts['TP.TOWER LOW'] = [{type:'circle',stroke:false,cx:100,cy:100,r:7},{type:'path',fill:false,strokewidth:8,d:'m 75,105 25,-65 25,65'}];
 	iconParts['TP.TOWER HIGH'] = [{type:'circle',stroke:false,cx:100,cy:100,r:7},{type:'path',fill:false,strokewidth:8,d:'m 100,40 c 2.358,31.6754 7.162,59.2531 25,64.999 M 100,40 c -2.358,31.6754 -7.1624,59.2531 -25,65'}];
 	iconParts['TP.ENGINEER REGULATING POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'ERP'}];
@@ -212,14 +214,10 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.FORT'] = {type:'path',fill:false,d:'m 135,65 15,-15 m -15,85 15,15 M 65,135 50,150 m 15,-85 0,70 70,0 0,-70 -70,0 -15,-15'};
 	iconParts['TP.SURFACE SHELTER'] = {type:'path',d:'m 135,135 15,0 m -100,0 15,0 m 0,-70 0,70 70,0 0,-70 -70,0'};
 	iconParts['TP.UNDERGROUND SHELTER'] = {type:'path',d:'m 135,65 15,0 m -100,0 15,0 m 0,70 0,-70 70,0 0,70 -70,0'};
-
 	iconParts['TP.NUCLEAR DETONATIONS GROUND ZERO'] = [{type:'path',fill:(!monoColor?'rgb(255,255,0)':false),d:'m 85,25 0,75 30,0 0,-75 m -50,0 c 0,-50 70,-50 70,0 z'},{type:'text',stroke:false,textanchor:"middle",x:100,y:75,fontsize:35,text:'N'}];
 	iconParts['TP.NUCLEAR FALLOUT PRODUCING'] = [{type:'path',fill:false,d:'m 120,85 -15,15 m -25,0 40,-35 M 80,80 120,40 M 80,55 115,25 M 80,40 95,25 m -40,0 c 0,-60 90,-60 90,0 z m 25,0 0,75 40,0 0,-75'},{type:'text',stroke:false,textanchor:"middle",x:100,y:75,fontsize:35,text:'N'}];
-
 	iconParts['TP.RELEASE EVENTS BIOLOGICAL'] = [{type:'path',fill:(!monoColor?'rgb(255,255,0)':false),d:'m 85,-15 0,60 -25,55 80,0 -25,-55 0,-60 z'},{type:'text',stroke:false,textanchor:"middle",x:100,y:85,fontsize:35,text:'B'},{type:'text',stroke:false,textanchor:"end",x:50,y:60,fontsize:35,text:'BIO'}];
 	iconParts['TP.RELEASE EVENTS CHEMICAL'] = [{type:'path',fill:(!monoColor?'rgb(255,255,0)':false),d:'M 85 -15 L 85 44.0625 A 30 30 0 0 0 70 70 A 30 30 0 0 0 100 100 A 30 30 0 0 0 130 70 A 30 30 0 0 0 115 44.0508 L 115 -15 L 85 -15 z'},{type:'text',stroke:false,textanchor:"middle",x:100,y:80,fontsize:35,text:'C'},{type:'text',stroke:false,textanchor:"end",x:50,y:60,fontsize:35,text:'CML'}];
-
-
 	iconParts['TP.DECON SITE/POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'}];
 	iconParts['TP.ALTERNATE DECON SITE/POINT'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'},{type:'text',stroke:false,textanchor:"middle",x:100,y:10,fontsize:35,text:'ALT'}];
 	iconParts['TP.DECON SITE/POINT (TROOPS)'] = [iconParts['TP.ACTION POINT'],{type:'text',stroke:false,textanchor:"middle",x:100,y:-20,fontsize:35,text:'DCN'},{type:'text',stroke:false,textanchor:"middle",x:100,y:10,fontsize:35,text:'T'}];
@@ -282,7 +280,7 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 
 
 MS.addLetterSIDCicons(
-function tacticalPoints(sidc,bbox,icn,_STD2525){
+function tacticalPoints(sidc,bbox,icn,std2525){
 	// Tactical Point Symbols =========================================================================
 	sidc['G-T-D-----'] = icn['TP.DESTROY'];//TACGRP.TSK.DSTY
 	bbox['G-T-D-----'] = {x1:0,x2:200,y1:40,y2:160};
@@ -536,7 +534,16 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-M-OME---'] = {x1:60,x2:140,y1:10,y2:140};
 	sidc['G-M-OMP---'] = icn['TP.ANTIPERSONNEL (AP) MINES'];//TACGRP.MOBSU.OBST.MNE.APMNE
 	sidc['G-M-OMW---'] = icn['TP.WIDE AREA MINES'];//TACGRP.MOBSU.OBST.MNE.WAMNE
-	sidc['G-M-OFS---'] = [];//TACGRP.MOBSU.OBST.MNEFLD.STC
+	//Oh this is bad, but we have to solv this in some way... 
+	
+	
+	
+	sidc['G-M-OFS---'] = icn['TP.MINEFIELDS STATIC'];//TACGRP.MOBSU.OBST.MNEFLD.STC
+	bbox['G-M-OFS---'] = {x1:40,x2:1560,y1:60,y2:140};
+
+	
+	
+	
 	sidc['G-M-OHTL--'] = icn['TP.TOWER LOW'];//TACGRP.MOBSU.OBST.AVN.TWR.LOW
 	bbox['G-M-OHTL--'] = {x1:50,x2:150,y1:30,y2:120};
 	sidc['G-M-OHTH--'] = icn['TP.TOWER HIGH'];//TACGRP.MOBSU.OBST.AVN.TWR.HIGH
@@ -842,6 +849,10 @@ function tacticalPoints(sidc){
 	//sidc['G-M-OMP---'] = [];//TACGRP.MOBSU.OBST.MNE.APMNE
 	//sidc['G-M-OMW---'] = [];//TACGRP.MOBSU.OBST.MNE.WAMNE
 	//sidc['G-M-OFS---'] = [];//TACGRP.MOBSU.OBST.MNEFLD.STC
+	sidc['G-M-OFS---'] = {	additionalInformation:{stroke:false,textanchor:"middle",x:100,y:55,fontsize:40},
+							hostile:[{stroke:false,textanchor:"end",x:35,y:110,fontsize:30,fontweight:'bold'},
+								{stroke:false,textanchor:"start",x:165,y:110,fontsize:30,fontweight:'bold'}],
+							dtg:{stroke:false,textanchor:"middle",x:100,y:175,fontsize:40}};
 	//sidc['G-M-OHTL--'] = [];//TACGRP.MOBSU.OBST.AVN.TWR.LOW
 	sidc['G-M-OHTL--'] = {	altitudeDepth:{stroke:false,textanchor:"start",x:120,y:60,fontsize:40,fontweight:'bold'}};//TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
 	//sidc['G-M-OHTH--'] = [];//TACGRP.MOBSU.OBST.AVN.TWR.HIGH
