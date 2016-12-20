@@ -177,6 +177,10 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 	iconParts['TP.COMMUNICATIONS CHECKPOINT'] = [{type:'circle',fill:false,cx:100,cy:100,r:50},{type:'text',stroke:false,textanchor:"middle",x:100,y:90,fontsize:30,text:'CCP'}];
 	iconParts['TP.PULL-UP POINT'] = [{type:'circle',fill:false,cx:100,cy:100,r:50},{type:'text',stroke:false,textanchor:"start",x:160,y:115,fontsize:40,text:'PUP'},{type:'path',fill:false,d:'m 65,80 0,40 70,-40 0,40 z'}];
 	iconParts['TP.DOWNED AIRCREW PICKUP POINT'] = [iconParts['TP.ACTION POINT'],{type:'circle',cx:100,cy:-35,r:12},{type:'path',fill:false,d:'m 75,35 50,0 m -25,-45 0,45 m -30,-75 30,30 30,-30'}];
+
+	iconParts['TP.DUMMY MINEFIELD'] = [{type:'path',fill:false,d:'M 75,100 A 10,10 0 0 1 65,110 10,10 0 0 1 55,100 10,10 0 0 1 65,90 10,10 0 0 1 75,100 Z m 70,0 a 10,10 0 0 1 -10,10 10,10 0 0 1 -10,-10 10,10 0 0 1 10,-10 10,10 0 0 1 10,10 z m -35,0 a 10,10 0 0 1 -10,10 10,10 0 0 1 -10,-10 10,10 0 0 1 10,-10 10,10 0 0 1 10,10 z m -70,-40 0,80 120,0 0,-80 z'},{type:'path',fill:false,strokedasharray:'15,10',d:'M 160,60 100,-5 M 40,60 100,-5'}];
+
+
 	iconParts['TP.TARGET REFERENCE'] = {type:'path',fill:false,d:'m 50,100 100,0 m -50,-50 0,100'};
 	iconParts['TP.OBSERVATION POST/OUTPOST'] = {type:'path',fill:false,d:'m 100,45 47.6,82.5 -95.2,0 z'};
 	iconParts['TP.COMBAT OUTPOST'] = {type:'path',fill:false,d:'m 140,140 0,-12.5 m -16,12.5 0,-12.5 m -16,12.5 0,-12.5 m -48.0001,12.5 3e-4,-12.5 m 15.9993,12.5 4e-4,-12.501 m 16,12.501 3e-4,-12.5 m -46.43,-12.493 10.8256,6.25 m -2.8256,-20.107 10.8256,6.251 m -2.8257,-20.1071 10.8257,6.2506 m 13.1743,-47.8198 10.8257,6.2506 m -18.8253,7.6056 10.8256,6.2506 m -18.826,7.606 10.8257,6.2506 M 114.43,45.725 l -10.826,6.25 m 18.826,7.6064 -10.826,6.25 m 18.826,7.6064 -10.826,6.25 m 34.826,35.3192 -10.826,6.25 m 2.826,-20.106 -10.826,6.25 m 2.826,-20.1068 -10.826,6.25 M 99.9998,45 l 47.6312,82.5 -95.2623,0 z'};
@@ -500,7 +504,8 @@ function tacticalPoints(sidc,bbox,icn,_STD2525){
 	bbox['G-G-APU---'] = {x1:50,x2:240,y1:50,y2:150};
 	sidc['G-G-APD---'] = icn['TP.DOWNED AIRCREW PICKUP POINT'];//TACGRP.C2GM.AVN.PNT.DAPP
 	bbox['G-G-APD---'] = {x1:60,x2:140,y1:-60};
-	sidc['G-G-PN----'] = [];//TACGRP.C2GM.DCPN.DMYMS
+	sidc['G-G-PN----'] = icn['TP.DUMMY MINEFIELD'];//TACGRP.C2GM.DCPN.DMYMS
+	bbox['G-G-PN----'] = {x1:40,x2:160,y1:-10,y2:140};
 	sidc['G-G-DPT---'] = icn['TP.TARGET REFERENCE'];//TACGRP.C2GM.DEF.PNT.TGTREF
 	sidc['G-G-DPO---'] = icn['TP.OBSERVATION POST/OUTPOST'];//TACGRP.C2GM.DEF.PNT.OBSPST
 	bbox['G-G-DPO---'] = {x1:50,x2:150,y1:40,y2:150};
