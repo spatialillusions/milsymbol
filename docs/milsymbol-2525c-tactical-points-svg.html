@@ -2587,7 +2587,15 @@ Template<br>
 <script>
 document.write(new MS.symbol("G*M*NZ----****X", {size:size,additionalInformation:'H',direction:'45',dtg:'W',hostile:'N',location:'Y',type:'V',quantity:'C',uniqueDesignation:'T'}).getMarker().XML)
 </script><br>
-Example<br>
+Examples<br>
+<script>
+document.write(new MS.symbol("G*M*NZ----****X", {size:size}).getMarker().XML)
+</script>
+<br>
+<script>
+document.write(new MS.symbol("G*M*NZ----****X", {size:size,additionalInformation:'',direction:'45',dtg:'10095900ZJAN92',hostile:'',type:'B83',quantity:'15',uniqueDesignation:'X691'}).getMarker().XML)
+</script>
+<br>
 <script>
 document.write(new MS.symbol("G*M*NZ----****X", {size:size,additionalInformation:'',direction:'45',dtg:'10095900ZJAN92',hostile:'',location:'453100.0N0095900.0E',type:'B83',quantity:'15',uniqueDesignation:'X691'}).getMarker().XML)
 </script>
