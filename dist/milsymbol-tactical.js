@@ -534,16 +534,8 @@ function tacticalPoints(sidc,bbox,icn,std2525){
 	bbox['G-M-OME---'] = {x1:60,x2:140,y1:10,y2:140};
 	sidc['G-M-OMP---'] = icn['TP.ANTIPERSONNEL (AP) MINES'];//TACGRP.MOBSU.OBST.MNE.APMNE
 	sidc['G-M-OMW---'] = icn['TP.WIDE AREA MINES'];//TACGRP.MOBSU.OBST.MNE.WAMNE
-	//Oh this is bad, but we have to solv this in some way... 
-	
-	
-	
 	sidc['G-M-OFS---'] = icn['TP.MINEFIELDS STATIC'];//TACGRP.MOBSU.OBST.MNEFLD.STC
-	bbox['G-M-OFS---'] = {x1:40,x2:1560,y1:60,y2:140};
-
-	
-	
-	
+	bbox['G-M-OFS---'] = {x1:40,x2:160,y1:60,y2:140};
 	sidc['G-M-OHTL--'] = icn['TP.TOWER LOW'];//TACGRP.MOBSU.OBST.AVN.TWR.LOW
 	bbox['G-M-OHTL--'] = {x1:50,x2:150,y1:30,y2:120};
 	sidc['G-M-OHTH--'] = icn['TP.TOWER HIGH'];//TACGRP.MOBSU.OBST.AVN.TWR.HIGH
