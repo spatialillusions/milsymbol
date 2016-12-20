@@ -2481,7 +2481,7 @@ function icon(){
 		var black = this.colors.black[this.properties.affiliation];
 		var white = this.colors.white[this.properties.affiliation];
 		//Store previous used icons in memory.
-		var icnet = (MS._STD2525?"2525":"APP6")+","+this.properties.dimension+this.properties.affiliation+',frame:'+this.frame+',alternateMedal:'+this.alternateMedal+',colors:{fillcolor:'+fillColor+',neutralColor'+neutralColor+',iconColor:'+iconColor+',iconFillColor:'+iconFillColor+',none:'+none+',black:'+black+',white:'+white+"}";
+		var icnet = (MS._STD2525?"2525":"APP6")+","+this.properties.dimension+this.properties.affiliation+this.properties.notpresent+',frame:'+this.frame+',alternateMedal:'+this.alternateMedal+',colors:{fillcolor:'+fillColor+',neutralColor'+neutralColor+',iconColor:'+iconColor+',iconFillColor:'+iconFillColor+',none:'+none+',black:'+black+',white:'+white+"}";
 		if(MS._iconCache.hasOwnProperty(icnet)){
 			iconParts = MS._iconCache[icnet].iconParts;
 		}else{
@@ -2992,31 +2992,39 @@ function textfields(){
 		for (var i in label){
 			if(this.hasOwnProperty(i) && this[i] != ''){
 				if (!label.hasOwnProperty(i)) continue;
-				labelbox = {y2:label[i].y, y1:(label[i].y-label[i].fontsize)};
-				if(label[i].textanchor == 'start'){
-					labelbox.x1 = label[i].x;
-					labelbox.x2 = label[i].x + strWidth(this[i]);
+				for (var j = 0; j < (label[i].length || 1); j++ ){
+					var lbl;
+					if(Array.isArray(label[i])){
+						lbl = label[i][j];
+					}else{
+						lbl = label[i];
+					}
+					labelbox = {y2:lbl.y, y1:(lbl.y-lbl.fontsize)};
+					if(lbl.textanchor == 'start'){
+						labelbox.x1 = lbl.x;
+						labelbox.x2 = lbl.x + strWidth(this[i]);
+					}
+					if(lbl.textanchor == 'middle'){
+						var w = strWidth(this[i]);
+						labelbox.x1 = lbl.x - (w/2);
+						labelbox.x2 = lbl.x + (w/2);
+					}
+					//if(lbl.textanchor == 'middle'){}
+					if(lbl.textanchor == 'end'){
+						labelbox.x1 = lbl.x - strWidth(this[i]);
+						labelbox.x2 = lbl.x;
+					}
+					gbbox = MS.bboxMax(gbbox,labelbox);
+					var text = {type:'text',fontfamily:fontFamily,fill:fontColor};
+					if(lbl.hasOwnProperty('stroke'))text.stroke = lbl.stroke;
+					if(lbl.hasOwnProperty('textanchor'))text.textanchor = lbl.textanchor;
+					if(lbl.hasOwnProperty('fontsize'))text.fontsize = lbl.fontsize;
+					if(lbl.hasOwnProperty('fontweight'))text.fontweight = lbl.fontweight;
+					text.x = lbl.x;
+					text.y = lbl.y;
+					text.text = this[i];
+					texts.push(text)
 				}
-				if(label[i].textanchor == 'middle'){
-					var w = strWidth(this[i]);
-					labelbox.x1 = label[i].x - (w/2);
-					labelbox.x2 = label[i].x + (w/2);
-				}
-				//if(label[i].textanchor == 'middle'){}
-				if(label[i].textanchor == 'end'){
-					labelbox.x1 = label[i].x - strWidth(this[i]);
-					labelbox.x2 = label[i].x;
-				}
-				gbbox = MS.bboxMax(gbbox,labelbox);
-				var text = {type:'text',fontfamily:fontFamily,fill:fontColor};
-				if(label[i].hasOwnProperty('stroke'))text.stroke = label[i].stroke;
-				if(label[i].hasOwnProperty('textanchor'))text.textanchor = label[i].textanchor;
-				if(label[i].hasOwnProperty('fontsize'))text.fontsize = label[i].fontsize;
-				if(label[i].hasOwnProperty('fontweight'))text.fontweight = label[i].fontweight;
-				text.x = label[i].x;
-				text.y = label[i].y;
-				text.text = this[i];
-				texts.push(text)
 			}
 		}
 		return texts;
