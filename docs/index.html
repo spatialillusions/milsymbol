@@ -89,8 +89,8 @@
 <script src="../dist/milsymbol.js"></script>
 <div class="main">
 
-	<h1>milsymbol API Documentation - 0.5</h1>
-milsymbol 0.5 introduces a new API for the milsymbol library. This API is designed to make the library even more flexible and make it easy to extend the markers with custom code. It also exposes most information about the markers that used to be hidden in the code, and the milsybmol library now uses the milsymbol API to create itself. All information around the base symbol is added using the MS.addMarkerParts() method, and all information used to build the symbols are exposed through the API.<br>
+	<h1>milsymbol API Documentation - 0.6</h1>
+This API is designed to make the library flexible and make it easy to extend the markers with custom code. It also exposes most information about the markers that used to be hidden in the code, and the milsybmol library now uses the milsymbol API to create itself. All information around the base symbol is added using the MS.addMarkerParts() method, and all information used to build the symbols are exposed through the API.<br>
 This combined makes it possible for you to access all parts of the milsymbol library and redefine, modify and expand the functionality in milsymbol, and that is kind of awesome.<br>
 	<h2>milsymbol Documentation</h2>
 		If you don't know what milsymbol is you should start with reading the <a href="../index.html">milsymbol introduction</a>, and before you start coding you might should have a look at the <a href="../license.txt">license</a>, but it is a MIT license so it shouldn't be any problems for your project.<br>
@@ -263,6 +263,22 @@ The global class for milsymbol is <b>MS</b>, so if you want to use the setStanda
 <td><i><a href="#boundingboxobject">Bounding box object</a></i><br></td>
 <td>
 <small>The max bounds of two bounding boxes.</small>
+</td>
+</tr>
+
+<tr>
+<td><b>addIconParts(</b>function<b>)<br></b></td>
+<td><i>Array</i><br></td>
+<td>
+<small>Adds new icon parts that the symbol icons are built by, this is used internally to add icon parts, but can also be used to modify existing icons.</small>
+</td>
+</tr>
+
+<tr>
+<td><b>addLetterSIDCicons(</b>function<b>)<br></b></td>
+<td><i>Array</i><br></td>
+<td>
+<small>Adds new SIDC to the library, this is used internally to add different appendixes to the library, but can also be used for custom extensions to milsymbol.</small>
 </td>
 </tr>
 
