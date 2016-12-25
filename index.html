@@ -91,28 +91,28 @@
 
 	<h1>milsymbol.js - 0.6</h1>
 
-milsymbol is a library in pure javascript that creates SVG symbols according to 
+Milsymbol is a library in pure javascript that creates SVG symbols according to 
 <b>MIL-STD-2525C</b>, <b>MIL-STD-2525D</b> and <b>NATO STANAG APP6(b)</b>. Since version 0.5.5 native canvas output is supported as well as SVG.<br>
 <br>
 All unit symbols with SIDCs in both 2525 and APP6 are supported. 
 The symbols are created according to APP6(c)/MIL-STD-2525D symbology and might therefore differ from the symbols in shown in the standard documents, but they are made according to the standards and follows the way that symbols are created in ADRP 1-02 (US Army Doctrine Reference Publication).<br>
 <br>
-milsymbol is just a <a href="dist/milsymbol.js">single file</a>, and you just have to load it once to get access to all symbols available. This makes it very effective in low bandwidth enviroments, and did I say that it is <a href="examples/1000symbols_speed_test-svg.html">super fast</a> as well.<br>
+Milsymbol is just a <a href="dist/milsymbol.js">single file</a>, and you just have to load it once to get access to all symbols available.<br>
 <br>
-
-It's easy to integrate milsymbol with other libraries like <a href="examples/leaflet/imageicons.html">Leaflet (example)</a>, <a href="examples/openlayers3/imageicons.html">Open Layers 3 (example)</a> or <a href="examples/d3/list_view.html">d3 (example)</a>, and examples of this is included with the library. Others has also been using milsymbol successfully togheter with Cesiumjs as well as Angular, it can also be integrated with node.js for server solutions. All information you might need is available in the <a href="docs/index.html">API documentation</a>.<br>
+The <a href="docs/index.html">API documentation</a> will show you everything about how milsymbol is used.<br>
 <br>
 The library is published under a <a href="license.txt">MIT-license</a> so you can do basically anything you want with it as long as you keep the copyright notice. <br>
 <br>
 Please let me know if you have used milsymbol in any public projects, it would be nice to have a usage gallery here.<br>
 
-<h2>milsymbol is drawn according to standards</h2>
+<h2>Milsymbol is drawn according to standards</h2>
 <h3>Implemented standards</h3>
 This library implements several different standards, and you can select if you want it to draw according MIL-STD-2525 or NATO APP6, but every SIDC will always return a symbol, so even if you specify that you want symbols according to MIL-STD-2525 and give milsymbol a SIDC that only exists in APP6, you will get the correct symbol.<br>
 The following pages tries to display most of the tables and figures in the different standards, using milsymbol to draw all symbols so that you can compare milsymbol with the standard documents.<br>
 <ul>
-<li><a href="docs/milsymbol-2525c-svg.html">MIL-STD-2525C, implemented in milsymbol.</a><br></li>
 <li><a href="docs/milsymbol-APP6b-svg.html">APP6b, implemented in milsymbol.</a><br></li>
+<li><a href="docs/milsymbol-2525c-svg.html">MIL-STD-2525C, implemented in milsymbol.</a><br></li>
+<li><a href="docs/milsymbol-2525c-tactical-points-svg.html">MIL-STD-2525C, tactical point symbols.</a><br></li>
 <li><a href="docs/milsymbol-2525d-svg.html">MIL-STD-2525D, implemented in 
 milsymbol.</a><br></li>
 </ul>
@@ -484,6 +484,19 @@ MS.symbol("SFG-EWHLS---", {size:35,fill:false,icon:false,frame:false})
 </td>
 </tr>
 </table><br>
+
+<h2>Milsymbol Examples</h2>
+
+<a href="examples/angular/index.html">Angular (example)</a> This example shows using milsymbol with Angular.<br>
+<a href="examples/arcgis/index.html">ArcGIS API (example)</a> This example shows using milsymbol with the ArcGIS JavaScript API<br>
+<a href="examples/d3-list/index.html">D3 (example)</a> This example shows drawing an orbat list using milsymbol.<br>
+<a href="examples/d3-tree/index.html">D3 (example)</a> This example shows drawing an orbat tree using milsymbol and D3.<br>
+<a href="examples/leaflet-divicons/index.html">Leaflet (example)</a> This example shows usage of image icons similar to the Open Layers example.<br>
+<a href="examples/leaflet-divicons/index.html">Leaflet (example)</a> This example shows writing the icon to a div element.<br>
+<a href="examples/openlayers3/index.html">Open Layers 3 (example)</a><br>
+<a href="examples/speed-canvas/index.html">Speed test Canvas</a> This is slower than SVG but still very fast.<br>
+<a href="examples/speed-svg/index.html">Speed test SVG</a> Lightning fast SVG generation.<br>
+
 
 <h2>About</h2>
 All of the code started out as a proof of concept and was initially just thought as a simple way for me to get symbols for some webmapping demos I was making as a hobby, but the code expanded into something much more. The development is still a hobby project coded during late nights and weekends by Måns Beckman. If you want to contact me, you can find my contact details on my homepage <a href="http://www.spatialillusions.com">spatialillusions.com</a>, where you also find the latest information about milsymbol. 
