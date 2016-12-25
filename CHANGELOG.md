@@ -4,21 +4,21 @@
 
 ### Added
 
-- Support for APP6-D Draft
+- Support for outlines on symbols using properties `outlineColor` and `outlineWidth`.
 
-- Support for outlines on symbols using properties `outlineColor` and `outlineWidth`
+- toDataURL() that returns a base 64 encoding of the SVG symbol. (See deprication of *asImage()*)
 
-- toDataURL() that returns a base 64 encoding of the SVG symbol. ( See deprication of asImage() )
+- Possibility to Add/Update existing SIDC.
 
-- Possibility to Add/Update existing SIDC
+- Possibility to Add/Update the icon parts that constructs the icons.
 
-- Possibility to Add/Update the icon parts that constructs the icons 
+- Support for tactical point symbols in MIL-STD-2525C.
 
 ### Changed
 
 ### Deprecated
 
-- asImage() since it returns a data url and not an image.
+- *asImage()* since it returns a data url and not an image.
 
 ### Removed
 
