@@ -29,8 +29,8 @@ function makeSymbols(){
 
 	document.getElementById("speed").innerHTML = "Time to create 1000 symbols: " + totaltime + "seconds.";
 	var symbols = document.getElementById("symbols");
-	for(key in renderedContent){
-		symbols.appendChild(renderedContent[key]);
+	for(var j = 0; j < renderedContent.length; j++){
+		symbols.appendChild(renderedContent[j]);
 	}
 }
 
