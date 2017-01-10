@@ -2307,25 +2307,31 @@ var MS = new function(){
 								if(instruction[i].stroke)ctx.strokeText(instruction[i].text, instruction[i].x, instruction[i].y);
 								break;
 							case 'translate':
+								ctx.save();
 								ctx.translate(instruction[i].x, instruction[i].y);
 								this.processCanvasInstructions.call(this,instruction[i].draw, ctx);
-								ctx.translate(-instruction[i].x, -instruction[i].y);
+								ctx.restore();
+								//ctx.translate(-instruction[i].x, -instruction[i].y);
 								break;
 							case 'rotate':
 								var x= instruction[i].x;
 								var y= instruction[i].y;
+								ctx.save();
 								ctx.translate(x, y);
 								ctx.rotate(instruction[i].degree * Math.PI / 180);
 								ctx.translate(-x, -y);
 								this.processCanvasInstructions.call(this,instruction[i].draw, ctx);
-								ctx.translate(x, y);
-								ctx.rotate(-instruction[i].degree * Math.PI / 180);
-								ctx.translate(-x, -y);
+								ctx.restore();
+								//ctx.translate(x, y);
+								//ctx.rotate(-instruction[i].degree * Math.PI / 180);
+								//ctx.translate(-x, -y);
 								break;
 							case 'scale':
+								ctx.save();
 								ctx.scale(instruction[i].factor,instruction[i].factor);
 								this.processCanvasInstructions.call(this,instruction[i].draw, ctx);
-								ctx.scale(1/instruction[i].factor,1/instruction[i].factor);
+								ctx.restore()
+								//ctx.scale(1/instruction[i].factor,1/instruction[i].factor);
 								break;
 						}
 						if(instruction[i].linecap){
