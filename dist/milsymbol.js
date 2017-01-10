@@ -58,6 +58,8 @@ var MS = new function(){
 		return false;
 	};
 	this.buildingBlock = function(pre,post,bbox){
+		if(pre.length == 1 && Array.isArray(pre[0]))pre = pre[0];
+		if(post.length == 1 && Array.isArray(post[0]))post = post[0];
 		return {pre:pre,post:post,bbox:bbox};
 	};
 
@@ -2244,7 +2246,6 @@ var MS = new function(){
 		};
 
 		this.processCanvasInstructions = function(instruction, ctx){
-		//console.log(instruction)
 			for (var i = 0; i< instruction.length;i++){
 				if (Array.isArray(instruction[i])){
 					if(instruction[i].length){
@@ -2656,7 +2657,6 @@ function icon(){
 	if(!(this.frame && this.fill) || this.monoColor){
 		if (this.outlineWidth > 0) drawArray1.push(MS.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor));
 	}
-	
 	return MS.buildingBlock(drawArray1,drawArray2, gbbox );
 }
 );
