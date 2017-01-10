@@ -412,12 +412,12 @@ Base 64 encodes the XML and returns the output as a SVG image stream that can be
 </tr>
 
 <tr>
-<td><b>asCanvas()<br>
+<td><b>asCanvas(ratio?)<br>
 </b></td>
 <td><i>canvas element</i><br></td>
 <td>
 <small>
-Draws the marker to a canvas element using native draw instructions and returns the canvas element.</small><br>
+Draws the marker to a canvas element using native draw instructions and returns the canvas element. You can provide and optional ratio, for example window.devicePixelRatio, to upscale the canvas if needed, the symbol width and hight will still represent the unscaled values. </small><br>
 </td>
 </tr>
 
