@@ -39,7 +39,7 @@ var MS = new function(){
 	}
 	//Constants
 	var svgNS = "http://www.w3.org/2000/svg";
-	if (typeof parseXML=='undefined') {
+	if (typeof parseXML === 'undefined') {
 		window.parseXML = function (s,doc) {
 			doc = doc || document;
 			var doc2=(new DOMParser()).parseFromString(s, "text/xml");
@@ -137,7 +137,7 @@ var MS = new function(){
 		this._markerParts = parts;
 	};
 	this.addMarkerParts = function(parts){
-		if (typeof parts == 'function'){
+		if (typeof parts === 'function') {
 			MS.setMarkerParts(MS.getMarkerParts().concat(parts));
 		}
 	};
@@ -145,7 +145,7 @@ var MS = new function(){
 	//This adds icon parts
 	this._iconParts = [];
 	this.addIconParts = function(parts){
-		if (typeof parts == 'function'){
+		if (typeof parts === 'function') {
 			this._iconParts = this._iconParts.concat(parts);
 		}
 	};
@@ -153,7 +153,7 @@ var MS = new function(){
 	//This adds letter sidc SIDC 
 	this._letterSIDCicons = [];
 	this.addLetterSIDCicons = function(parts){
-		if (typeof parts == 'function'){
+		if (typeof parts === 'function') {
 			this._letterSIDCicons = this._letterSIDCicons.concat(parts);
 		}
 	};
@@ -161,7 +161,7 @@ var MS = new function(){
 	//This adds number sidc SIDC 
 	this._numberSIDCicons = [];
 	this.addNumberSIDCicons = function(parts){
-		if (typeof parts == 'function'){
+		if (typeof parts === 'function') {
 			this._numberSIDCicons = this._numberSIDCicons.concat(parts);
 		}
 	};
@@ -195,14 +195,14 @@ var MS = new function(){
 	};
 
 	this.bbox = function(box){
-		if(box == undefined){
+		if(typeof box === 'undefined') {
 			box = {};
 		}
 		return {
-			x1: (typeof box.x1 != "undefined")?box.x1 : 100,
-			y1: (typeof box.y1 != "undefined")?box.y1 : 100,
-			x2: (typeof box.x2 != "undefined")?box.x2 : 100,
-			y2: (typeof box.y2 != "undefined")?box.y2 : 100,
+			x1: (typeof box.x1 !== 'undefined')?box.x1 : 100,
+			y1: (typeof box.y1 !== 'undefined')?box.y1 : 100,
+			x2: (typeof box.x2 !== 'undefined')?box.x2 : 100,
+			y2: (typeof box.y2 !== 'undefined')?box.y2 : 100,
 			width:function(){
 				return this.x2-this.x1;
 			},
@@ -213,10 +213,10 @@ var MS = new function(){
 	};
 	this.bboxMax = function(box1,box2){
 		return MS.bbox({
-			x1: (typeof box1.x1 === "undefined" || box2.x1<=box1.x1)?box2.x1:box1.x1,
-			y1: (typeof box1.y1 === "undefined" || box2.y1<=box1.y1)?box2.y1:box1.y1,
-			x2: (typeof box1.x2 === "undefined" || box2.x2>=box1.x2)?box2.x2:box1.x2,
-			y2: (typeof box1.y2 === "undefined" || box2.y2>=box1.y2)?box2.y2:box1.y2,
+			x1: (typeof box1.x1 === 'undefined' || box2.x1<=box1.x1)?box2.x1:box1.x1,
+			y1: (typeof box1.y1 === 'undefined' || box2.y1<=box1.y1)?box2.y1:box1.y1,
+			x2: (typeof box1.x2 === 'undefined' || box2.x2>=box1.x2)?box2.x2:box1.x2,
+			y2: (typeof box1.y2 === 'undefined' || box2.y2>=box1.y2)?box2.y2:box1.y2,
 		});
 	};
 	//Quck function to move icn and stuff
@@ -238,14 +238,14 @@ var MS = new function(){
 	this._labelOverrides = {};
 	this._labelCache = {}; //A cache of label overrides to speed stuff up...
 	this.addLetterLabelOverrides = function(parts){
-		if (typeof parts == 'function'){
+		if (typeof parts === 'function') {
 			if (!this._labelOverrides.hasOwnProperty('letter')) this._labelOverrides['letter'] = [];
 			this._labelOverrides['letter'] = this._labelOverrides['letter'].concat(parts);
 		}
 	};
 	//This adds number sidc SIDC label overrides
 	this.addNumberLabelOverrides = function(parts){
-		if (typeof parts == 'function'){
+		if (typeof parts === 'function') {
 			if (!this._labelOverrides.hasOwnProperty('number')) this._labelOverrides['number'] = [];
 			this._labelOverrides['number'] = this._labelOverrides['number'].concat(parts);
 		}
@@ -1780,7 +1780,7 @@ var MS = new function(){
 		}
 		
 		function defaultProperties(instructions){
-			if(typeof instructions == 'object'){
+			if (typeof instructions === 'object') {
 				if (Array.isArray(instructions)){
 					for (var i = 0; i<instructions.length;i++){
 						defaultProperties.call(this,instructions[i]);
@@ -2001,7 +2001,7 @@ var MS = new function(){
 			properties.numberSIDC = !isNaN(this.SIDC);
 			if(properties.numberSIDC){ //This is for new number based SIDCs
 
-				if (typeof MS._getNumberProperties == 'function'){
+				if (typeof MS._getNumberProperties === 'function') {
 					properties = MS._getNumberProperties.call(this,properties, mapping);
 				}else{
 					console.warn("MS._getNumberProperties() is not present, you will need to load functionality for letter based SIDCs");
@@ -2009,7 +2009,7 @@ var MS = new function(){
 
 			}else{ //This would be old letter based SIDCs
 
-				if (typeof MS._getLetterProperties == 'function'){
+				if (typeof MS._getLetterProperties === 'function') {
 					properties = MS._getLetterProperties.call(this,properties, mapping);
 				}else{
 					console.warn("MS._getNumberProperties() is not present, you will need to load functionality for letter based SIDCs");
@@ -2166,7 +2166,7 @@ var MS = new function(){
 							svgxml += processInstructions.call(this,instruction[i]);
 						}
 					}else{
-						if(typeof instruction[i] == 'object'){
+						if (typeof instruction[i] === 'object') {
 							var svg;
 							if(instruction[i].type == 'svg'){
 								svg = instruction[i].svg;
@@ -2192,7 +2192,7 @@ var MS = new function(){
 										svg = '<g transform="scale('+instruction[i].factor+')" ';
 										break;
 								}
-								if(instruction[i].stroke !== undefined){
+								if (typeof instruction[i].stroke !== 'undefined') {
 									svg += 'stroke-width="' + (instruction[i].strokewidth || this.strokeWidth) + '" ';
 									if(instruction[i].strokedasharray) svg += 'stroke-dasharray="' + instruction[i].strokedasharray + '" ';
 									if(instruction[i].linecap){
@@ -2205,8 +2205,8 @@ var MS = new function(){
 										svg += 'stroke="none" ';
 									}
 								}
-								if(instruction[i].fill !== undefined) svg += 'fill="' + (instruction[i].fill?instruction[i].fill:'none') + '" ';
-								if(instruction[i].fillopacity !== undefined) svg += 'fill-opacity="' + instruction[i].fillopacity + '" ';
+								if (typeof instruction[i].fill !== 'undefined') svg += 'fill="' + (instruction[i].fill?instruction[i].fill:'none') + '" ';
+								if (typeof instruction[i].fillopacity !== 'undefined') svg += 'fill-opacity="' + instruction[i].fillopacity + '" ';
 								svg += '>';
 								switch (instruction[i].type){
 									case 'path':
@@ -2254,9 +2254,9 @@ var MS = new function(){
 						this.processCanvasInstructions.call(this,instruction[i],ctx);
 					}
 				}else{
-					if(typeof instruction[i] == 'object'){
+					if (typeof instruction[i] === 'object') {
 						ctx.lineWidth = (instruction[i].strokewidth || this.strokeWidth);
-						if(instruction[i].stroke !== undefined){
+						if(typeof instruction[i].stroke !== 'undefined'){
 							if(instruction[i].stroke){
 								ctx.strokeStyle = instruction[i].stroke;
 							}else{
@@ -2278,19 +2278,19 @@ var MS = new function(){
 						//fill is set to false, make it transparent
 						if(!instruction[i].fill){ctx.fillStyle = 'rgba(0,0,0,0)';}
 
-						if(instruction[i].fillopacity !== undefined){ctx.globalAlpha = instruction[i].fillopacity;}
+						if (typeof instruction[i].fillopacity !== 'undefined') {ctx.globalAlpha = instruction[i].fillopacity;}
 
 						switch (instruction[i].type){
 							case 'path':
 								if (typeof Path2D != 'undefined'){
 									var d = new Path2D(instruction[i].d);
-									if(instruction[i].fill === undefined || (instruction[i].fill !== undefined && instruction[i].fill))ctx.fill(d);
-									if(instruction[i].stroke === undefined || (instruction[i].stroke !== undefined && instruction[i].stroke))ctx.stroke(d);
+									if (typeof instruction[i].fill  === 'undefined' || (typeof instruction[i].fill !== 'undefined' && instruction[i].fill) ) ctx.fill(d);
+									if (typeof instruction[i].stroke === 'undefined' || (typeof instruction[i].stroke !== 'undefined' && instruction[i].stroke) ) ctx.stroke(d);
 								}else{
-									if (typeof MS._Path2D == 'function'){
+									if (typeof MS._Path2D === 'function') {
 										MS._Path2D(ctx, instruction[i].d)
-										if(instruction[i].fill === undefined || (instruction[i].fill !== undefined && instruction[i].fill))ctx.fill();
-										if(instruction[i].stroke === undefined || (instruction[i].stroke !== undefined && instruction[i].stroke))ctx.stroke();
+										if (typeof instruction[i].fill === 'undefined' || (typeof instruction[i].fill !== 'undefined' && instruction[i].fill))ctx.fill();
+										if (typeof instruction[i].stroke === 'undefined' || (typeof instruction[i].stroke !== 'undefined' && instruction[i].stroke))ctx.stroke();
 									}else{
 										console.warn("MS._Path2D() is not present, you will need to load functionality for using Canvas in older version of Internet Explorer.");
 									}
@@ -2299,11 +2299,11 @@ var MS = new function(){
 							case 'circle':
 								ctx.beginPath();
 								ctx.arc(instruction[i].cx, instruction[i].cy, instruction[i].r, 0, 2 * Math.PI, false);
-								if(instruction[i].fill === undefined || (instruction[i].fill !== undefined && instruction[i].fill))ctx.fill();
-								if(instruction[i].stroke === undefined || (instruction[i].stroke !== undefined && instruction[i].stroke))ctx.stroke();
+								if (typeof instruction[i].fill === 'undefined' || (typeof instruction[i].fill !== 'undefined' && instruction[i].fill) ) ctx.fill();
+								if (typeof instruction[i].stroke === 'undefined' || (typeof instruction[i].stroke !== 'undefined' && instruction[i].stroke) ) ctx.stroke();
 								break;
 							case 'text':
-								ctx.font = (instruction[i].fontweight !== undefined ?instruction[i].fontweight + ' ':'') + instruction[i].fontsize + "px " + instruction[i].fontfamily;
+								ctx.font = (typeof instruction[i].fontweight !== 'undefined' ? instruction[i].fontweight + ' ' : '') + instruction[i].fontsize + "px " + instruction[i].fontfamily;
 								ctx.textAlign = (instruction[i].textanchor == 'middle'?'center':instruction[i].textanchor);
 								ctx.fillText(instruction[i].text, instruction[i].x, instruction[i].y);
 								if(instruction[i].stroke)ctx.strokeText(instruction[i].text, instruction[i].x, instruction[i].y);
@@ -2340,7 +2340,7 @@ var MS = new function(){
 							ctx.lineCap = 'butt';
 							ctx.lineJoin = 'miter';
 						}
-						if(instruction[i].fillopacity != undefined){ctx.globalAlpha = 1;}
+						if (typeof instruction[i].fillopacity !== 'undefined') {ctx.globalAlpha = 1;}
 					}
 				}
 			}
@@ -2512,7 +2512,7 @@ function icon(){
 				icons = MS._iconCache[icnet].letterSIDC.icons;
 				specialbbox  = MS._iconCache[icnet].letterSIDC.bbox;
 			}else{
-				if (typeof MS._getLetterSIDCicn == 'function'){
+				if (typeof MS._getLetterSIDCicn === 'function') {
 					MS._iconCache[icnet].letterSIDC = MS._getLetterSIDCicn(iconParts,MS._STD2525);
 					icons = MS._iconCache[icnet].letterSIDC.icons;
 					specialbbox  = MS._iconCache[icnet].letterSIDC.bbox;
@@ -2567,7 +2567,7 @@ function icon(){
 					m2 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
 					specialbbox = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].bbox;
 				}else{
-					if (typeof MS._getNumberSIDCicn == 'function'){
+					if (typeof MS._getNumberSIDCicn === 'function') {
 						MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet] = MS._getNumberSIDCicn(symbolSet,iconParts,MS._STD2525);
 						icons = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
 						m1 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
@@ -2580,7 +2580,7 @@ function icon(){
 			}else{
 				MS._iconCache[icnet].numberSIDC = {};
 				MS._iconCache[icnet].numberSIDC.symbolSet = {};
-				if (typeof MS._getNumberSIDCicn == 'function'){
+				if (typeof MS._getNumberSIDCicn === 'function') {
 					MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet] = MS._getNumberSIDCicn(symbolSet,iconParts,MS._STD2525);
 					icons = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
 					m1 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
