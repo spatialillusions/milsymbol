@@ -1937,8 +1937,4 @@ MS.setColorMode('None',
 	)
 );
 
-
-// Add support for CommonJS and Browserify/webpack etc.
-/*if (typeof module === 'object' && typeof module.exports === 'object') {
-	module.exports = MS;
-}*/
+module.exports = MS;

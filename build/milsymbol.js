@@ -1,6 +1,8 @@
 var MS = require('../src/ms.js');
 MS.symbol = require('../src/ms.symbol.js');
 
+//MS.setColorMode('Light',require('../src/colormodes/light.js'));
+
 // Letter SIDC
 MS._getLetterProperties = require('../src/sidc-letter/properties.js');
 MS._getLetterSIDCicn = require('../src/sidc-letter/geticon.js');

@@ -1920,6 +1920,7 @@ var MS = new function(){
 
 
 //Init colorModes ########################################################################
+// TODO: make into modules
 MS.setColorMode('Light',
 	MS.colorMode(
 		'rgb(255,161,255)',
@@ -2010,11 +2011,7 @@ MS.setColorMode('None',
 	)
 );
 
-
-// Add support for CommonJS and Browserify/webpack etc.
-/*if (typeof module === 'object' && typeof module.exports === 'object') {
-	module.exports = MS;
-}*/
+module.exports = MS;
 
 
 /***/ }),
@@ -6801,6 +6798,8 @@ module.exports = function(properties,mapping){
 
 var MS = __webpack_require__(0);
 MS.symbol = __webpack_require__(9);
+
+//MS.setColorMode('Light',require('../src/colormodes/light.js'));
 
 // Letter SIDC
 MS._getLetterProperties = __webpack_require__(22);
