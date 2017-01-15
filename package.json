@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/spatialillusions/milsymbol/issues"
   },
-  "homepage": "https://github.com/spatialillusions/milsymbol"
+  "homepage": "https://github.com/spatialillusions/milsymbol",
+  "devDependencies": {
+    "webpack": "^2.2.0-rc.4"
+  }
 }
