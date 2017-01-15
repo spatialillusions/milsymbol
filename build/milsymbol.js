@@ -1,7 +1,16 @@
 var MS = require('../src/ms.js');
 MS.symbol = require('../src/ms.symbol.js');
 
-//MS.setColorMode('Light',require('../src/colormodes/light.js'));
+// Standard colors for symbols
+MS.setColorMode('Light',require('../src/colormodes/light.js'));
+MS.setColorMode('Medium',require('../src/colormodes/medium.js'));
+MS.setColorMode('Dark',require('../src/colormodes/dark.js'));
+MS.setColorMode('FrameColor',require('../src/colormodes/framecolor.js'));
+MS.setColorMode('IconColor',require('../src/colormodes/iconcolor.js'));
+MS.setColorMode('Black',require('../src/colormodes/black.js'));
+MS.setColorMode('White',require('../src/colormodes/white.js'));
+MS.setColorMode('OffWhite',require('../src/colormodes/offwhite.js'));
+MS.setColorMode('None',require('../src/colormodes/none.js'));
 
 // Letter SIDC
 MS._getLetterProperties = require('../src/sidc-letter/properties.js');

@@ -64,7 +64,7 @@ var MS =
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 37);
+/******/ 	return __webpack_require__(__webpack_require__.s = 46);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1918,104 +1918,129 @@ var MS = new function(){
 	};
 };
 
-
-//Init colorModes ########################################################################
-// TODO: make into modules
-MS.setColorMode('Light',
-	MS.colorMode(
-		'rgb(255,161,255)',
-		'rgb(128,224,255)',
-		'rgb(255,128,128)',
-		'rgb(170,255,170)',
-		'rgb(255,255,128)'
-	)
-);
-
-MS.setColorMode('Medium',
-	MS.colorMode(
-		'rgb(128,0,128)',
-		'rgb(0,168,220)',
-		'rgb(255,48,49)',
-		'rgb(0,226,110)',
-		'rgb(255,255,0)'
-	)
-);
-
-MS.setColorMode('Dark',
-	MS.colorMode(
-		'rgb(80,0,80)',
-		'rgb(0,107,140)',
-		'rgb(200,0,0)',
-		'rgb(0,160,0)',
-		'rgb(225,220,0)'
-	)
-);
-
-MS.setColorMode('FrameColor',
-	MS.colorMode(
-		'rgb(255,0,255)',
-		'rgb(0, 255, 255)',
-		'rgb(255, 0, 0)',
-		'rgb(0, 255, 0)',
-		'rgb(255, 255, 0)'
-	)
-);
-
-MS.setColorMode('IconColor',
-	MS.colorMode(
-		'rgb(255,0,255)',
-		'rgb(0, 255, 255)',
-		'rgb(255, 0, 0)',
-		'rgb(0, 255, 0)',
-		'rgb(255, 255, 0)'
-	)
-);
-
-MS.setColorMode('Black',
-	MS.colorMode(
-		'black',
-		'black',
-		'black',
-		'black',
-		'black'
-	)
-);
-
-MS.setColorMode('White',
-	MS.colorMode(
-		'white',
-		'white',
-		'white',
-		'white',
-		'white'
-	)
-);
-
-MS.setColorMode('OffWhite',
-	MS.colorMode(
-		'rgb(239, 239, 239)',
-		'rgb(239, 239, 239)',
-		'rgb(239, 239, 239)',
-		'rgb(239, 239, 239)',
-		'rgb(239, 239, 239)'
-	)
-);
-
-MS.setColorMode('None',
-	MS.colorMode(
-		false,
-		false,
-		false,
-		false,
-		false
-	)
-);
-
 module.exports = MS;
 
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
+module.exports = MS.colorMode(
+  'black',
+  'black',
+  'black',
+  'black',
+  'black'
+);
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
+module.exports = MS.colorMode(
+  'rgb(80,0,80)',
+  'rgb(0,107,140)',
+  'rgb(200,0,0)',
+  'rgb(0,160,0)',
+  'rgb(225,220,0)'
+);
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
+module.exports = MS.colorMode(
+  'rgb(255,0,255)',
+  'rgb(0, 255, 255)',
+  'rgb(255, 0, 0)',
+  'rgb(0, 255, 0)',
+  'rgb(255, 255, 0)'
+);
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
+module.exports = MS.colorMode(
+  'rgb(255,0,255)',
+  'rgb(0, 255, 255)',
+  'rgb(255, 0, 0)',
+  'rgb(0, 255, 0)',
+  'rgb(255, 255, 0)'
+);
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
+module.exports = MS.colorMode(
+  'rgb(255,161,255)',
+  'rgb(128,224,255)',
+  'rgb(255,128,128)',
+  'rgb(170,255,170)',
+  'rgb(255,255,128)'
+);
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
+module.exports = MS.colorMode(
+  'rgb(128,0,128)',
+  'rgb(0,168,220)',
+  'rgb(255,48,49)',
+  'rgb(0,226,110)',
+  'rgb(255,255,0)'
+);
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
+module.exports = MS.colorMode(
+  false,
+  false,
+  false,
+  false,
+  false
+);
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
+module.exports = MS.colorMode(
+  'rgb(239, 239, 239)',
+  'rgb(239, 239, 239)',
+  'rgb(239, 239, 239)',
+  'rgb(239, 239, 239)',
+  'rgb(239, 239, 239)'
+);
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
+module.exports = MS.colorMode(
+  'white',
+  'white',
+  'white',
+  'white',
+  'white'
+);
+
+/***/ }),
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //Affiliation and dimension addons to base geometries ####################################
@@ -2059,7 +2084,7 @@ module.exports = function affliationdimension(){
 }
 
 /***/ }),
-/* 2 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //Base Geometry for the Symbol ###########################################################
@@ -2151,7 +2176,7 @@ module.exports = function basegeometry(){
 }
 
 /***/ }),
-/* 3 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //Direction Arrow ########################################################################
@@ -2193,7 +2218,7 @@ module.exports = function directionarrow(){
 }
 
 /***/ }),
-/* 4 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
@@ -2405,7 +2430,7 @@ module.exports = function icon(){
 }
 
 /***/ }),
-/* 5 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //Symbol Modifiers #######################################################################
@@ -2619,7 +2644,7 @@ module.exports = function modifier(){
 }
 
 /***/ }),
-/* 6 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //Sets modifiers depending of status #####################################################
@@ -2668,7 +2693,7 @@ module.exports = function statusmodifier(){
 }
 
 /***/ }),
-/* 7 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //Text Fields ############################################################################
@@ -2945,7 +2970,7 @@ module.exports = function textfields(){
 }
 
 /***/ }),
-/* 8 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
@@ -3096,7 +3121,7 @@ module.exports = function(ctx, d){
 };
 
 /***/ }),
-/* 9 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
@@ -3625,7 +3650,7 @@ symbol.prototype.setOptions = function(options){
 module.exports = symbol;
 
 /***/ }),
-/* 10 */
+/* 19 */
 /***/ (function(module, exports) {
 
 module.exports = function(iconParts,STD2525){
@@ -3640,7 +3665,7 @@ module.exports = function(iconParts,STD2525){
 };
 
 /***/ }),
-/* 11 */
+/* 20 */
 /***/ (function(module, exports) {
 
 module.exports = function air(sId,bbox,icn,_STD2525){
@@ -3751,7 +3776,7 @@ module.exports = function air(sId,bbox,icn,_STD2525){
 }
 
 /***/ }),
-/* 12 */
+/* 21 */
 /***/ (function(module, exports) {
 
 module.exports = function emergencymanagementsymbols(sId,bbox,icn,_STD2525){
@@ -3937,7 +3962,7 @@ module.exports = function emergencymanagementsymbols(sId,bbox,icn,_STD2525){
 }
 
 /***/ }),
-/* 13 */
+/* 22 */
 /***/ (function(module, exports) {
 
 module.exports = function equipment(sId,bbox,icn,_STD2525){
@@ -4121,7 +4146,7 @@ module.exports = function equipment(sId,bbox,icn,_STD2525){
 }
 
 /***/ }),
-/* 14 */
+/* 23 */
 /***/ (function(module, exports) {
 
 module.exports = function ground(sId,bbox,icn,_STD2525){
@@ -4551,7 +4576,7 @@ module.exports = function ground(sId,bbox,icn,_STD2525){
 }
 
 /***/ }),
-/* 15 */
+/* 24 */
 /***/ (function(module, exports) {
 
 module.exports = function installations(sId,bbox,icn,_STD2525){
@@ -4600,7 +4625,7 @@ module.exports = function installations(sId,bbox,icn,_STD2525){
 }
 
 /***/ }),
-/* 16 */
+/* 25 */
 /***/ (function(module, exports) {
 
 module.exports = function sea(sId,bbox,icn,_STD2525){
@@ -4698,7 +4723,7 @@ module.exports = function sea(sId,bbox,icn,_STD2525){
 }
 
 /***/ }),
-/* 17 */
+/* 26 */
 /***/ (function(module, exports) {
 
 module.exports = function signalsIntelligence(sId,bbox,icn,_STD2525){
@@ -4791,7 +4816,7 @@ module.exports = function signalsIntelligence(sId,bbox,icn,_STD2525){
 }
 
 /***/ }),
-/* 18 */
+/* 27 */
 /***/ (function(module, exports) {
 
 module.exports = function sof(sId,bbox,icn,_STD2525){
@@ -4828,7 +4853,7 @@ module.exports = function sof(sId,bbox,icn,_STD2525){
 }
 
 /***/ }),
-/* 19 */
+/* 28 */
 /***/ (function(module, exports) {
 
 
@@ -4842,7 +4867,7 @@ module.exports = function space(sId,bbox,icn,_STD2525){
 }
 
 /***/ }),
-/* 20 */
+/* 29 */
 /***/ (function(module, exports) {
 
 module.exports = function stabilityoperations(sId,bbox,icn,_STD2525){
@@ -4910,7 +4935,7 @@ module.exports = function stabilityoperations(sId,bbox,icn,_STD2525){
 }
 
 /***/ }),
-/* 21 */
+/* 30 */
 /***/ (function(module, exports) {
 
 module.exports = function subsurface(sId,bbox,icn,_STD2525){
@@ -5001,7 +5026,7 @@ module.exports = function subsurface(sId,bbox,icn,_STD2525){
 }
 
 /***/ }),
-/* 22 */
+/* 31 */
 /***/ (function(module, exports) {
 
 module.exports = function(properties, mapping){
@@ -5179,7 +5204,7 @@ module.exports = function(properties, mapping){
 };
 
 /***/ }),
-/* 23 */
+/* 32 */
 /***/ (function(module, exports) {
 
 module.exports = function(symbolSet,iconParts,STD2525){
@@ -5197,7 +5222,7 @@ module.exports = function(symbolSet,iconParts,STD2525){
 
 
 /***/ }),
-/* 24 */
+/* 33 */
 /***/ (function(module, exports) {
 
 module.exports = function activites(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
@@ -5378,7 +5403,7 @@ module.exports = function activites(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525)
 }
 
 /***/ }),
-/* 25 */
+/* 34 */
 /***/ (function(module, exports) {
 
 module.exports = function air(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
@@ -5493,7 +5518,7 @@ module.exports = function air(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 }
 
 /***/ }),
-/* 26 */
+/* 35 */
 /***/ (function(module, exports) {
 
 module.exports = function airmissile(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
@@ -5530,7 +5555,7 @@ module.exports = function airmissile(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525
 }
 
 /***/ }),
-/* 27 */
+/* 36 */
 /***/ (function(module, exports) {
 
 module.exports = function cyberspace(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
@@ -5590,7 +5615,7 @@ module.exports = function cyberspace(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525
 }
 
 /***/ }),
-/* 28 */
+/* 37 */
 /***/ (function(module, exports) {
 
 module.exports = function landequipment(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
@@ -5840,7 +5865,7 @@ module.exports = function landequipment(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2
 }
 
 /***/ }),
-/* 29 */
+/* 38 */
 /***/ (function(module, exports) {
 
 module.exports = function landunit(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
@@ -6224,7 +6249,7 @@ module.exports = function landunit(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 }
 
 /***/ }),
-/* 30 */
+/* 39 */
 /***/ (function(module, exports) {
 
 module.exports = function minewarfare(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
@@ -6299,7 +6324,7 @@ module.exports = function minewarfare(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD252
 }
 
 /***/ }),
-/* 31 */
+/* 40 */
 /***/ (function(module, exports) {
 
 module.exports = function sea(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
@@ -6444,7 +6469,7 @@ module.exports = function sea(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 }
 
 /***/ }),
-/* 32 */
+/* 41 */
 /***/ (function(module, exports) {
 
 module.exports = function seabedinstallations(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
@@ -6456,7 +6481,7 @@ module.exports = function seabedinstallations(sId,sIdm1,sIdm2,bbox,symbolSet,icn
 }
 
 /***/ }),
-/* 33 */
+/* 42 */
 /***/ (function(module, exports) {
 
 module.exports = function signalsintelligence(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
@@ -6537,7 +6562,7 @@ module.exports = function signalsintelligence(sId,sIdm1,sIdm2,bbox,symbolSet,icn
 }
 
 /***/ }),
-/* 34 */
+/* 43 */
 /***/ (function(module, exports) {
 
 module.exports = function space(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
@@ -6594,7 +6619,7 @@ module.exports = function space(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 }
 
 /***/ }),
-/* 35 */
+/* 44 */
 /***/ (function(module, exports) {
 
 module.exports = function subsurface(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
@@ -6662,7 +6687,7 @@ module.exports = function subsurface(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525
 }
 
 /***/ }),
-/* 36 */
+/* 45 */
 /***/ (function(module, exports) {
 
 module.exports = function(properties,mapping){
@@ -6793,59 +6818,68 @@ module.exports = function(properties,mapping){
 };
 
 /***/ }),
-/* 37 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var MS = __webpack_require__(0);
-MS.symbol = __webpack_require__(9);
+MS.symbol = __webpack_require__(18);
 
-//MS.setColorMode('Light',require('../src/colormodes/light.js'));
+// Standard colors for symbols
+MS.setColorMode('Light',__webpack_require__(5));
+MS.setColorMode('Medium',__webpack_require__(6));
+MS.setColorMode('Dark',__webpack_require__(2));
+MS.setColorMode('FrameColor',__webpack_require__(3));
+MS.setColorMode('IconColor',__webpack_require__(4));
+MS.setColorMode('Black',__webpack_require__(1));
+MS.setColorMode('White',__webpack_require__(9));
+MS.setColorMode('OffWhite',__webpack_require__(8));
+MS.setColorMode('None',__webpack_require__(7));
 
 // Letter SIDC
-MS._getLetterProperties = __webpack_require__(22);
-MS._getLetterSIDCicn = __webpack_require__(10);
+MS._getLetterProperties = __webpack_require__(31);
+MS._getLetterSIDCicn = __webpack_require__(19);
 
-MS.addLetterSIDCicons(__webpack_require__(19));
-MS.addLetterSIDCicons(__webpack_require__(11));
-MS.addLetterSIDCicons(__webpack_require__(14));
-MS.addLetterSIDCicons(__webpack_require__(13));
-MS.addLetterSIDCicons(__webpack_require__(15));
-MS.addLetterSIDCicons(__webpack_require__(16));
-MS.addLetterSIDCicons(__webpack_require__(21));
-MS.addLetterSIDCicons(__webpack_require__(18));
-MS.addLetterSIDCicons(__webpack_require__(17));
+MS.addLetterSIDCicons(__webpack_require__(28));
 MS.addLetterSIDCicons(__webpack_require__(20));
-MS.addLetterSIDCicons(__webpack_require__(12));
+MS.addLetterSIDCicons(__webpack_require__(23));
+MS.addLetterSIDCicons(__webpack_require__(22));
+MS.addLetterSIDCicons(__webpack_require__(24));
+MS.addLetterSIDCicons(__webpack_require__(25));
+MS.addLetterSIDCicons(__webpack_require__(30));
+MS.addLetterSIDCicons(__webpack_require__(27));
+MS.addLetterSIDCicons(__webpack_require__(26));
+MS.addLetterSIDCicons(__webpack_require__(29));
+MS.addLetterSIDCicons(__webpack_require__(21));
 
 // Number SIDC
-MS._getNumberProperties = __webpack_require__(36);
-MS._getNumberSIDCicn = __webpack_require__(23);
+MS._getNumberProperties = __webpack_require__(45);
+MS._getNumberSIDCicn = __webpack_require__(32);
 
-MS.addNumberSIDCicons(__webpack_require__(25));
-MS.addNumberSIDCicons(__webpack_require__(26));
 MS.addNumberSIDCicons(__webpack_require__(34));
-MS.addNumberSIDCicons(__webpack_require__(29));
-MS.addNumberSIDCicons(__webpack_require__(28));
-MS.addNumberSIDCicons(__webpack_require__(31));
 MS.addNumberSIDCicons(__webpack_require__(35));
-MS.addNumberSIDCicons(__webpack_require__(30));
-MS.addNumberSIDCicons(__webpack_require__(32));
-MS.addNumberSIDCicons(__webpack_require__(24));
+MS.addNumberSIDCicons(__webpack_require__(43));
+MS.addNumberSIDCicons(__webpack_require__(38));
+MS.addNumberSIDCicons(__webpack_require__(37));
+MS.addNumberSIDCicons(__webpack_require__(40));
+MS.addNumberSIDCicons(__webpack_require__(44));
+MS.addNumberSIDCicons(__webpack_require__(39));
+MS.addNumberSIDCicons(__webpack_require__(41));
 MS.addNumberSIDCicons(__webpack_require__(33));
-MS.addNumberSIDCicons(__webpack_require__(27));
+MS.addNumberSIDCicons(__webpack_require__(42));
+MS.addNumberSIDCicons(__webpack_require__(36));
 
 // Functions that builds the symbol
-MS.addMarkerParts(__webpack_require__(2));
-MS.addMarkerParts(__webpack_require__(4));
-MS.addMarkerParts(__webpack_require__(5));
-MS.addMarkerParts(__webpack_require__(6));
-MS.addMarkerParts(__webpack_require__(1));
-MS.addMarkerParts(__webpack_require__(7));
-MS.addMarkerParts(__webpack_require__(3));
+MS.addMarkerParts(__webpack_require__(11));
+MS.addMarkerParts(__webpack_require__(13));
+MS.addMarkerParts(__webpack_require__(14));
+MS.addMarkerParts(__webpack_require__(15));
+MS.addMarkerParts(__webpack_require__(10));
+MS.addMarkerParts(__webpack_require__(16));
+MS.addMarkerParts(__webpack_require__(12));
 //MS.addMarkerParts(require('../src/markerparts/debug.js'));
 
 // This makes it possible to draw canvas paths in IE11
-MS._Path2D = __webpack_require__(8);
+MS._Path2D = __webpack_require__(17);
 
 // And export out MS to to world to use
 module.exports = MS;
