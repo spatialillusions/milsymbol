@@ -1,5 +1,21 @@
 # Change Log
 
+## Master
+
+### Added
+
+### Changed
+
+- Fixed a bug that prevented specialHeadquarters to be drawn on Canvas output.
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
 ## 0.6.0 25 DEC 2016
 
 ### Added
