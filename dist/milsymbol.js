@@ -2809,7 +2809,7 @@ module.exports = function textfields(){
 					size = 32;
 					y = 110;
 				}
-				var t = {type:'text',stroke:false,textanchor:"middle",x:100,y:y,fontsize:size,fontfamily:fontFamily,fontweight:'bold',text:str,stroke:false};
+				var t = {type:'text', text:str, x:100, y:y, textanchor:"middle", fontsize:size, fontfamily:fontFamily, fill:fontColor, stroke:false, fontweight:'bold'};
 				return t;
 			}
 			drawArray2.push(text(this.specialHeadquarters));
