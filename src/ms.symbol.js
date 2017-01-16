@@ -180,7 +180,7 @@ function symbol(SIDCParameter,options){
 
   //SymbolColors ###########################################################################
   this.getColors = function(){
-    var baseFillColor = this.colorMode;
+    var baseFillColor = (typeof this.colorMode === 'object') ? this.colorMode : MS.getColorMode(this.colorMode);
     var baseFrameColor = MS.getColorMode("FrameColor");
     var baseIconColor =  MS.getColorMode("IconColor");
     var baseIconFillColor = baseFillColor;
