@@ -1,3 +1,5 @@
+var MS = require('../ms.js');
+
 module.exports = function subsurface(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 //Subsurface
 	if(symbolSet == "35" ){

@@ -1,3 +1,5 @@
+var MS = require('../ms.js');
+
 module.exports = function subsurface(sId,bbox,icn,_STD2525){
 	// SUBSURFACE ====================================================================
 	sId['S-U-------'] = [];

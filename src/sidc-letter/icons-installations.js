@@ -1,3 +1,5 @@
+var MS = require('../ms.js');
+
 module.exports = function installations(sId,bbox,icn,_STD2525){
 	//Adds support for installations
 	sId['S-G-I-----'] = [];

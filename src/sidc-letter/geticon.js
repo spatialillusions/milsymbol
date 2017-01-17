@@ -1,3 +1,5 @@
+var MS = require('../ms.js');
+
 module.exports = function(iconParts,STD2525){
 	var iconSIDC = {};
 	var iconBbox = {};

@@ -1,6 +1,6 @@
-require('../ms.js');
-
 //Icon ##################################################################################
+var MS = require('../ms.js');
+
 module.exports = function icon(){
 	var drawArray1 = [];
 	var drawArray2 = [];

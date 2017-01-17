@@ -1,3 +1,5 @@
+var MS = require('../ms.js');
+
 module.exports = function airmissile(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 //Air Missile
 	if(symbolSet == "02" ){

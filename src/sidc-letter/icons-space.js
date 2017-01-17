@@ -1,3 +1,4 @@
+var MS = require('../ms.js');
 
 module.exports = function space(sId,bbox,icn,_STD2525){
 	// SPACE =========================================================================

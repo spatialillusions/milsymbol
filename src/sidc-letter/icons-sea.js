@@ -1,3 +1,5 @@
+var MS = require('../ms.js');
+
 module.exports = function sea(sId,bbox,icn,_STD2525){
 	// SEA ===========================================================================
 	sId['S-S-------'] = [];

@@ -1,3 +1,5 @@
+var MS = require('../ms.js');
+
 module.exports = function air(sId,bbox,icn,_STD2525){
 	// AIR ===========================================================================
 	sId['S-A-------'] = [];

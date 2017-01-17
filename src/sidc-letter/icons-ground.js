@@ -1,3 +1,5 @@
+var MS = require('../ms.js');
+
 module.exports = function ground(sId,bbox,icn,_STD2525){
 	// GROUND ========================================================================
 	sId['S-G-------'] = [];

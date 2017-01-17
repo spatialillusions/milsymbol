@@ -1,5 +1,5 @@
 //Debug ##################################################################################
-require('../ms.js');
+var MS = require('../ms.js');
 
 module.exports = function debug(){
 	//This debug function is a minimal example of how to extend milsymbol.

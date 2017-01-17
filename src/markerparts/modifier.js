@@ -1,5 +1,5 @@
 //Symbol Modifiers #######################################################################
-require('../ms.js');
+var MS = require('../ms.js');
 
 module.exports = function modifier(){
 	var drawArray1 = [];

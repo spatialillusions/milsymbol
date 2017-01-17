@@ -1,3 +1,5 @@
+var MS = require('../ms.js');
+
 module.exports = function sof(sId,bbox,icn,_STD2525){
 	// SOF ===========================================================================
 	sId['S-F-------'] = [icn['AR.I.SPECIAL OPERATIONS FORCES']];

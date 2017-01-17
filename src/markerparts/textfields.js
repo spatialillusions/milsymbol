@@ -1,5 +1,5 @@
 //Text Fields ############################################################################
-require('../ms.js');
+var MS = require('../ms.js');
 
 module.exports = function textfields(){
 	var drawArray1 = [];

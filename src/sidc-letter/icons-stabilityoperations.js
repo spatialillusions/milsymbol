@@ -1,3 +1,5 @@
+var MS = require('../ms.js');
+
 module.exports = function stabilityoperations(sId,bbox,icn,_STD2525){
 	//Adds support for 2525C Stability Operations
 	sId['O-V-A-----'] = [icn['ST.IC.ARSON/FIRE']];

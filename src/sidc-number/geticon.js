@@ -1,3 +1,5 @@
+var MS = require('../ms.js');
+
 module.exports = function(symbolSet,iconParts,STD2525){
 	var iconSIDC = {};
 	var iconModifier1 = {};

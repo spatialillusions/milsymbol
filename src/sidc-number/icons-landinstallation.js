@@ -1,3 +1,5 @@
+var MS = require('../ms.js');
+
 module.exports = function landinstallation(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 //Land Installation
 	if(symbolSet == "20" ){

@@ -1,3 +1,5 @@
+var MS = require('../ms.js');
+
 module.exports = function(properties, mapping){
 	this.SIDC = this.SIDC.toUpperCase();
 

@@ -1,5 +1,5 @@
 //Base Geometry for the Symbol ###########################################################
-require('../ms.js');
+var MS = require('../ms.js');
 
 module.exports = function basegeometry(){
 	var modifier;

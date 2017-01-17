@@ -1,3 +1,5 @@
+var MS = require('../ms.js');
+
 module.exports = function signalsintelligence(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 	//Adds support for Signals Intelligence
 	if(	symbolSet == "50" || symbolSet == "51" || symbolSet == "52" || symbolSet == "53" || symbolSet == "54" ){

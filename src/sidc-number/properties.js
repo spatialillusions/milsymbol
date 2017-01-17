@@ -1,3 +1,5 @@
+var MS = require('../ms.js');
+
 module.exports = function(properties,mapping){
 	var version  			= this.SIDC.substr(0,2);
 	var standardIdentity1 	= this.SIDC.substr(2,1);

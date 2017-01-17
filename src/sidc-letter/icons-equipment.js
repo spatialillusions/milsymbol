@@ -1,3 +1,5 @@
+var MS = require('../ms.js');
+
 module.exports = function equipment(sId,bbox,icn,_STD2525){
 	//Adds support for equipment
 	sId['S-G-E-----'] = [];

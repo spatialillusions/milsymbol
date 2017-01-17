@@ -1,5 +1,5 @@
 //Affiliation and dimension addons to base geometries ####################################
-require('../ms.js');
+var MS = require('../ms.js');
 
 module.exports = function affliationdimension(){
 	var drawArray1 = [];

@@ -1,3 +1,5 @@
+var MS = require('../ms.js');
+
 module.exports = function signalsIntelligence(sId,bbox,icn,_STD2525){
 	//Adds support for 2525C Signals Intelligence 
 	sId['I-P-SCD---'] = [icn['SI.IC.COMMUNICATIONS'],icn['SI.M1.SIERRA'],icn['SI.M2.DELTA'],icn['SI.M3.SPACE']];

@@ -1,5 +1,5 @@
 //Sets modifiers depending of status #####################################################
-require('../ms.js');
+var MS = require('../ms.js');
 
 module.exports = function statusmodifier(){
 	var drawArray1 = [];

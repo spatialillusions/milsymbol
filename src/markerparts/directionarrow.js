@@ -1,5 +1,5 @@
 //Direction Arrow ########################################################################
-require('../ms.js');
+var MS = require('../ms.js');
 
 module.exports = function directionarrow(){
 	var drawArray1 = [];

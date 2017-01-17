@@ -1,4 +1,4 @@
-require('./ms.js');
+var MS = require('./ms.js');
 
 function symbol(SIDCParameter,options){
   //=======================================================================================

@@ -2053,7 +2053,7 @@ module.exports = MS.colorMode(
 /***/ (function(module, exports, __webpack_require__) {
 
 //Affiliation and dimension addons to base geometries ####################################
-__webpack_require__(0);
+var MS = __webpack_require__(0);
 
 module.exports = function affliationdimension(){
 	var drawArray1 = [];
@@ -2097,7 +2097,7 @@ module.exports = function affliationdimension(){
 /***/ (function(module, exports, __webpack_require__) {
 
 //Base Geometry for the Symbol ###########################################################
-__webpack_require__(0);
+var MS = __webpack_require__(0);
 
 module.exports = function basegeometry(){
 	var modifier;
@@ -2189,7 +2189,7 @@ module.exports = function basegeometry(){
 /***/ (function(module, exports, __webpack_require__) {
 
 //Direction Arrow ########################################################################
-__webpack_require__(0);
+var MS = __webpack_require__(0);
 
 module.exports = function directionarrow(){
 	var drawArray1 = [];
@@ -2230,9 +2230,9 @@ module.exports = function directionarrow(){
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(0);
-
 //Icon ##################################################################################
+var MS = __webpack_require__(0);
+
 module.exports = function icon(){
 	var drawArray1 = [];
 	var drawArray2 = [];
@@ -2443,7 +2443,7 @@ module.exports = function icon(){
 /***/ (function(module, exports, __webpack_require__) {
 
 //Symbol Modifiers #######################################################################
-__webpack_require__(0);
+var MS = __webpack_require__(0);
 
 module.exports = function modifier(){
 	var drawArray1 = [];
@@ -2657,7 +2657,7 @@ module.exports = function modifier(){
 /***/ (function(module, exports, __webpack_require__) {
 
 //Sets modifiers depending of status #####################################################
-__webpack_require__(0);
+var MS = __webpack_require__(0);
 
 module.exports = function statusmodifier(){
 	var drawArray1 = [];
@@ -2706,7 +2706,7 @@ module.exports = function statusmodifier(){
 /***/ (function(module, exports, __webpack_require__) {
 
 //Text Fields ############################################################################
-__webpack_require__(0);
+var MS = __webpack_require__(0);
 
 module.exports = function textfields(){
 	var drawArray1 = [];
@@ -3133,7 +3133,7 @@ module.exports = function(ctx, d){
 /* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(0);
+var MS = __webpack_require__(0);
 
 function symbol(SIDCParameter,options){
   //=======================================================================================
@@ -3660,7 +3660,9 @@ module.exports = symbol;
 
 /***/ }),
 /* 19 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function(iconParts,STD2525){
 	var iconSIDC = {};
@@ -3675,7 +3677,9 @@ module.exports = function(iconParts,STD2525){
 
 /***/ }),
 /* 20 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function air(sId,bbox,icn,_STD2525){
 	// AIR ===========================================================================
@@ -3786,7 +3790,9 @@ module.exports = function air(sId,bbox,icn,_STD2525){
 
 /***/ }),
 /* 21 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function emergencymanagementsymbols(sId,bbox,icn,_STD2525){
 	//Adds support for 2525C Emergency Management Symbols
@@ -3972,7 +3978,9 @@ module.exports = function emergencymanagementsymbols(sId,bbox,icn,_STD2525){
 
 /***/ }),
 /* 22 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function equipment(sId,bbox,icn,_STD2525){
 	//Adds support for equipment
@@ -4156,7 +4164,9 @@ module.exports = function equipment(sId,bbox,icn,_STD2525){
 
 /***/ }),
 /* 23 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function ground(sId,bbox,icn,_STD2525){
 	// GROUND ========================================================================
@@ -4586,7 +4596,9 @@ module.exports = function ground(sId,bbox,icn,_STD2525){
 
 /***/ }),
 /* 24 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function installations(sId,bbox,icn,_STD2525){
 	//Adds support for installations
@@ -4635,7 +4647,9 @@ module.exports = function installations(sId,bbox,icn,_STD2525){
 
 /***/ }),
 /* 25 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function sea(sId,bbox,icn,_STD2525){
 	// SEA ===========================================================================
@@ -4733,7 +4747,9 @@ module.exports = function sea(sId,bbox,icn,_STD2525){
 
 /***/ }),
 /* 26 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function signalsIntelligence(sId,bbox,icn,_STD2525){
 	//Adds support for 2525C Signals Intelligence 
@@ -4826,7 +4842,9 @@ module.exports = function signalsIntelligence(sId,bbox,icn,_STD2525){
 
 /***/ }),
 /* 27 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function sof(sId,bbox,icn,_STD2525){
 	// SOF ===========================================================================
@@ -4863,8 +4881,9 @@ module.exports = function sof(sId,bbox,icn,_STD2525){
 
 /***/ }),
 /* 28 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
+var MS = __webpack_require__(0);
 
 module.exports = function space(sId,bbox,icn,_STD2525){
 	// SPACE =========================================================================
@@ -4877,7 +4896,9 @@ module.exports = function space(sId,bbox,icn,_STD2525){
 
 /***/ }),
 /* 29 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function stabilityoperations(sId,bbox,icn,_STD2525){
 	//Adds support for 2525C Stability Operations
@@ -4945,7 +4966,9 @@ module.exports = function stabilityoperations(sId,bbox,icn,_STD2525){
 
 /***/ }),
 /* 30 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function subsurface(sId,bbox,icn,_STD2525){
 	// SUBSURFACE ====================================================================
@@ -5036,7 +5059,9 @@ module.exports = function subsurface(sId,bbox,icn,_STD2525){
 
 /***/ }),
 /* 31 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function(properties, mapping){
 	this.SIDC = this.SIDC.toUpperCase();
@@ -5214,7 +5239,9 @@ module.exports = function(properties, mapping){
 
 /***/ }),
 /* 32 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function(symbolSet,iconParts,STD2525){
 	var iconSIDC = {};
@@ -5232,7 +5259,9 @@ module.exports = function(symbolSet,iconParts,STD2525){
 
 /***/ }),
 /* 33 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function activites(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 	//Adds support for Activities
@@ -5413,7 +5442,9 @@ module.exports = function activites(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525)
 
 /***/ }),
 /* 34 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function air(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 //Air
@@ -5528,7 +5559,9 @@ module.exports = function air(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 
 /***/ }),
 /* 35 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function airmissile(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 //Air Missile
@@ -5565,7 +5598,9 @@ module.exports = function airmissile(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525
 
 /***/ }),
 /* 36 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function cyberspace(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 	//Adds support for Cyberspace
@@ -5625,7 +5660,9 @@ module.exports = function cyberspace(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525
 
 /***/ }),
 /* 37 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function landequipment(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 //Land Equipment
@@ -5875,7 +5912,9 @@ module.exports = function landequipment(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2
 
 /***/ }),
 /* 38 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function landunit(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 //Land Unit
@@ -6259,7 +6298,9 @@ module.exports = function landunit(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 
 /***/ }),
 /* 39 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function minewarfare(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 //Mine Warfare
@@ -6334,7 +6375,9 @@ module.exports = function minewarfare(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD252
 
 /***/ }),
 /* 40 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function sea(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 //Sea
@@ -6479,7 +6522,9 @@ module.exports = function sea(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 
 /***/ }),
 /* 41 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function seabedinstallations(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 	//Seabed Installations
@@ -6491,7 +6536,9 @@ module.exports = function seabedinstallations(sId,sIdm1,sIdm2,bbox,symbolSet,icn
 
 /***/ }),
 /* 42 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function signalsintelligence(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 	//Adds support for Signals Intelligence
@@ -6572,7 +6619,9 @@ module.exports = function signalsintelligence(sId,sIdm1,sIdm2,bbox,symbolSet,icn
 
 /***/ }),
 /* 43 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function space(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 //Space
@@ -6629,7 +6678,9 @@ module.exports = function space(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 
 /***/ }),
 /* 44 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function subsurface(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 //Subsurface
@@ -6697,7 +6748,9 @@ module.exports = function subsurface(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525
 
 /***/ }),
 /* 45 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var MS = __webpack_require__(0);
 
 module.exports = function(properties,mapping){
 	var version  			= this.SIDC.substr(0,2);
