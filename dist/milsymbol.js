@@ -1,5 +1,14 @@
-var MS =
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define("MS", [], factory);
+	else if(typeof exports === 'object')
+		exports["MS"] = factory();
+	else
+		root["MS"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 
@@ -3306,7 +3315,7 @@ function symbol(SIDCParameter,options){
 
   //SymbolColors ###########################################################################
   this.getColors = function(){
-    var baseFillColor = this.colorMode;
+    var baseFillColor = (typeof this.colorMode === 'object') ? this.colorMode : MS.getColorMode(this.colorMode);
     var baseFrameColor = MS.getColorMode("FrameColor");
     var baseIconColor =  MS.getColorMode("IconColor");
     var baseIconFillColor = baseFillColor;
@@ -6886,3 +6895,4 @@ module.exports = MS;
 
 /***/ })
 /******/ ]);
+});

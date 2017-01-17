@@ -3,6 +3,8 @@ module.exports = {
   output: {
     filename: 'milsymbol.js',
     path: '../dist',
-    library: "MS"
+    library: 'MS',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   }
 }
