@@ -15,12 +15,12 @@
     "url": "https://github.com/spatialillusions/milsymbol"
   },
   "author": "Måns Beckman (http://www.spatialillusions.com)",
-  "license": "MIT, See License.txt for details",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/spatialillusions/milsymbol/issues"
   },
   "homepage": "https://github.com/spatialillusions/milsymbol",
   "devDependencies": {
-    "webpack": "^2.2.0-rc.4"
+    "webpack": "^2.2.0"
   }
 }
