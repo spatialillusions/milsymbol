@@ -4,6 +4,8 @@
 
 ### Added
 
+- colorMode property can now be set to a string representing the name of a registered color mode.
+
 ### Changed
 
 - Fixed a bug that prevented specialHeadquarters to be drawn on Canvas output.
