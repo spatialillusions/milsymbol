@@ -2,6 +2,8 @@
 
 ## Master
 
+- Milsymbol is now split into several modules and built with webpack, this makes the code easier to maintain.
+
 ### Added
 
 - colorMode property can now be set to a string representing the name of a registered color mode.
