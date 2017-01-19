@@ -8,11 +8,19 @@
 
 - colorMode property can now be set to a string representing the name of a registered color mode.
 
+- symbol.getSize() returns an object with the width and height of the symbol.
+
 ### Changed
 
 - Fixed a bug that prevented specialHeadquarters to be drawn on Canvas output.
 
 ### Deprecated
+
+- Avoid setting properties directly, use setOptions(options) instead.
+
+- Do not use .XML anymore, use asSVG() instead.
+
+- getMarker(), it's not needed anymore, symbols are automatically updated when options are updated using setOptions().
 
 ### Removed
 
