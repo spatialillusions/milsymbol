@@ -1,4 +1,4 @@
-/* =======================================================================================
+/*! ======================================================================================
 
 Copyright (c) 2015 Måns Beckman  http://www.spatialillusions.com
 All rights reserved.
@@ -1839,8 +1839,6 @@ var MS = new function(){
 								bbox:new this.bbox({ x1: 25, y1:50, x2: 25+150 , y2:50+130})},
 		'PositionMarker'	: {	g:{type:'circle',cx:100,cy:100,r:15},
 								bbox:new this.bbox({ x1: 85, y1:85, x2: 115 , y2:115})}
-
-		//'BBox' : {AirHostile: ,AirFriend: ,AirNeutral: ,AirUnknown: ,GroundHostile: ,GroundFriend: ,GroundNeutral: ,GroundUnknown: ,Groundnone: { x: 0, y:0, width: 0 , height:0},SeaHostile: ,SeaFriend: ,SeaNeutral: ,SeaUnknown: ,SubsurfaceHostile: ,SubsurfaceFriend: ,SubsurfaceNeutral:,SubsurfaceUnknown: }
 	};
 };
 
