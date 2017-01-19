@@ -65,7 +65,7 @@ To make a symbol for an infantry platoon the syntax would be:
 
 `var sym = new MS.symbol("SFG-UCI----D");`
 
-And `sym` will now be a symbol object containing information about the size and draw instructions. (For this particular symbol, and in this case `marker` and `sym` will be te same symbol object since `getMarker()` just updates the current object.) 
+And `sym` will now be a symbol object containing information about the size and draw instructions.
 
 But you want something to put on your screen, and since milsymbol provides different ways to draw symbol, using SVG or Canvas, you will have to use the method that provides you with the output you want, so we use `asCanvas()` or `asSVG()` that returns a canvas element containing the symbol or a XML representation of the SVG:
 
@@ -101,17 +101,17 @@ Technology
 milsymbol uses pure javascript to create SVG, Scalable Vector Graphics, and also has built in for native Canvas support. 
 
  - No external dependencies, just one javascript file required
- - Super fast, can create 1000 symbols in less than 50milliseconds (SVG output)
+ - Super fast, can create 1000 symbols in less than 25 milliseconds (SVG output)
  
 The symbols are created using building blocks defined in the code and no images or fonts are used, this makes it possible to modify almost every aspect of the symbols, such as fill, frame, color, size, stroke width and easily switch between APP6 and 2525 symbology.
 
 To see what is possible with milsymbol use the unit test documents in the docs folder that lists all tabels and figures from the different standards using MilSymbol. (The documents uses milsymbol to render every image that you see, look into the code if you want to see how it is done.)
 
-milsymbol can easily be extended with new functionality and examples of this can be found at: https://github.com/spatialillusions/milsymbol-extensions
+Milsymbol can easily be extended with new functionality and examples of this can be found at: https://github.com/spatialillusions/milsymbol-extensions
 
 Contact
 -------
-milsymbol is created and maintained by Måns Beckman
+Milsymbol is created and maintained by Måns Beckman
  - http://www.spatialillusions.com to see more examples of what milsymbol can be used for
  - https://twitter.com/spatialillusion for milsymbol and mapping/military related information 
 
