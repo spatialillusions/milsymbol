@@ -15,7 +15,7 @@ new MS.symbol("sfgpewrh--mt", {
 	type: "machine gun".toUpperCase(),
 	dtg: "30140000ZSEP97",
 	location: "0900000.0E570306.0N"
-}).getMarker().XML;
+}).asSVG();
 ```
 
 Compared to reference figure from MIL-STD-2525C:
@@ -65,19 +65,15 @@ To make a symbol for an infantry platoon the syntax would be:
 
 `var sym = new MS.symbol("SFG-UCI----D");`
 
-Now `sym` will be a symbol object, but that is not a rendered symbol, this is just information about a symbol, so to create a symbol you use the `getMarker()` method on your symbol object:
-
-`var marker = sym.getMarker();`
-
-And `marker` will now be a symbol object containing information about the size and draw instructions. (For this particular symbol, and in this case `marker` and `sym` will be te same symbol object since `getMarker()` just updates the current object.) 
+And `sym` will now be a symbol object containing information about the size and draw instructions. (For this particular symbol, and in this case `marker` and `sym` will be te same symbol object since `getMarker()` just updates the current object.) 
 
 But you want something to put on your screen, and since milsymbol provides different ways to draw symbol, using SVG or Canvas, you will have to use the method that provides you with the output you want, so we use `asCanvas()` or `asSVG()` that returns a canvas element containing the symbol or a XML representation of the SVG:
 
-`var canvasElement = marker.asCanvas();`
+`var canvasElement = sym.asCanvas();`
 
 And if you don't want to make it step by step, you can chain it all togheter like this:
 
-`var canvasElement = new MS.symbol("SFG-UCI----D").getMarker().asCanvas();`
+`var canvasElement = new MS.symbol("SFG-UCI----D").asCanvas();`
 
 ![Infantry Platoon](docs/samples/infantry-platoon.png?raw=true)
 
@@ -85,17 +81,17 @@ Options you provided to your symbol can change the size of the symbol, define if
 
 The options can be set when you create your symbol: 
 
-`var sym = new MS.symbol("SFG-UCI----D",{size:35}).getMarker().asCanvas();`
+`var sym = new MS.symbol("SFG-UCI----D",{size:35}).asCanvas();`
 
-Or they can be updated at any time before you call `getMarker()`:
+Or they can be updated at any time using `setOptions(options)`:
 
 ```
 var sym = new MS.symbol("SFG-UCI----D");
-sym.size = 35;
-var canvasElement = sym.getMarker().asCanvas();
+sym.setOptions({size:35});
+var canvasElement = sym.asCanvas();
 ```
 
-When you have requested your symbol using `getMarker()` your symbol object will also contain information about what offset that should be used to get a correct placement, this is stored in the `markerAnchor {x:Number,y:Number}` property, you will also have access to information about what size the created symbol have and detailed information about colors used. 
+Your symbol object will also contain information about what offset that should be used to get a correct placement, this information can be retrieved with  `getAnchor()` and it will return an object with the x and y offset, you will also have access to information about what size the created symbol have and detailed information about colors used. 
 
 The library is built on the idea that everything used inside milsymbol should be accessable outside milsymbol so that it is easy to extend the library with custom functionallity.
 
