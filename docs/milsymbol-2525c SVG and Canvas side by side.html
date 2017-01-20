@@ -95,6 +95,7 @@ table {
 </style>
 <script>
 var size = 40;
+MS.autoSVG = false;
 </script>
 
 <h1>milsymbol 2525C Implementation</h1>
@@ -167,9 +168,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SPZ---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SPZ---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SPZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SPZ---------", {size:size}).asSVG());
 
 </script>
 </td>
@@ -179,10 +180,10 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SPP---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SPP---------", {size:size}).asCanvas());
 
 
-document.write(new MS.symbol("SPP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SPP---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -191,9 +192,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SPA---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SPA---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SPA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SPA---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -202,9 +203,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SPG-U-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SPG-U-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SPG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SPG-U-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -213,9 +214,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SPG-E-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SPG-E-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SPG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SPG-E-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -224,9 +225,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SPG-I-----H-", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SPG-I-----H-", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SPG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SPG-I-----H-", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -235,9 +236,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SPS---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SPS---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SPS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SPS---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -246,9 +247,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SPU---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SPU---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SPU---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SPU---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -257,9 +258,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SPF---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SPF---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SPF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SPF---------", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -274,9 +275,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUZ---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUZ---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUZ---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -285,9 +286,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUP---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUP---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUP---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -296,9 +297,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUA---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUA---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUA---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -307,9 +308,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUG-U-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUG-U-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUG-U-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -318,9 +319,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUG-E-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUG-E-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUG-E-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -329,9 +330,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUG-I-----H-", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUG-I-----H-", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUG-I-----H-", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -340,9 +341,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUS---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUS---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUS---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -351,9 +352,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUU---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUU---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUU---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUU---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -362,9 +363,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUF---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUF---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUF---------", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -379,9 +380,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFZ---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFZ---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFZ---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -390,9 +391,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFP---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFP---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFP---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -401,9 +402,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFA---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFA---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFA---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -412,9 +413,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-U-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-U-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG-U-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -423,9 +424,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-E-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-E-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG-E-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -434,9 +435,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-I-----H-", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-I-----H-", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG-I-----H-", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -445,9 +446,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFS---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFS---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFS---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -456,9 +457,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFU---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFU---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFU---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFU---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -467,9 +468,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFF---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFF---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFF---------", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -484,9 +485,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNZ---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNZ---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNZ---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -495,9 +496,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNP---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNP---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNP---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -506,9 +507,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNA---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNA---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNA---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -517,9 +518,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNG-U-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNG-U-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNG-U-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -528,9 +529,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNG-E-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNG-E-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNG-E-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -539,9 +540,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNG-I-----H-", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNG-I-----H-", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNG-I-----H-", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -550,9 +551,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNS---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNS---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNS---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -561,9 +562,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNU---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNU---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNU---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNU---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -572,9 +573,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNF---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNF---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNF---------", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -589,9 +590,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHZ---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHZ---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHZ---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -600,9 +601,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHP---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHP---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHP---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -611,9 +612,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHA---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHA---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHA---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -622,9 +623,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHG-U-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHG-U-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHG-U-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -633,9 +634,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHG-E-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHG-E-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHG-E-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -644,9 +645,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHG-I-----H-", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHG-I-----H-", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHG-I-----H-", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -655,9 +656,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHS---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHS---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHS---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -666,9 +667,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHU---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHU---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHU---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHU---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -677,9 +678,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHF---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHF---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHF---------", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -694,9 +695,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SAZ---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SAZ---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SAZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SAZ---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -705,9 +706,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SAP---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SAP---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SAP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SAP---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -716,9 +717,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SAA---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SAA---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SAA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SAA---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -727,9 +728,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SAG-U-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SAG-U-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SAG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SAG-U-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -738,9 +739,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SAG-E-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SAG-E-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SAG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SAG-E-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -749,9 +750,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SAG-I-----H-", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SAG-I-----H-", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SAG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SAG-I-----H-", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -760,9 +761,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SAS---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SAS---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SAS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SAS---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -771,9 +772,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SAU---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SAU---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SAU---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SAU---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -782,9 +783,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SAF---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SAF---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SAF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SAF---------", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -799,9 +800,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SSZ---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SSZ---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SSZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SSZ---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -810,9 +811,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SSP---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SSP---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SSP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SSP---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -821,9 +822,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SSA---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SSA---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SSA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SSA---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -832,9 +833,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SSG-U-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SSG-U-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SSG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SSG-U-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -843,9 +844,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SSG-E-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SSG-E-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SSG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SSG-E-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -854,9 +855,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SSG-I-----H-", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SSG-I-----H-", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SSG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SSG-I-----H-", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -865,9 +866,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SSS---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SSS---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SSS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SSS---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -876,9 +877,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SSU---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SSU---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SSU---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SSU---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -887,9 +888,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SSF---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SSF---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SSF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SSF---------", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -905,9 +906,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SGZ---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SGZ---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SGZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SGZ---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -916,9 +917,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SGP---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SGP---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SGP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SGP---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -927,9 +928,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SGA---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SGA---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SGA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SGA---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -938,9 +939,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SGG-U-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SGG-U-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SGG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SGG-U-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -949,9 +950,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SGG-E-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SGG-E-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SGG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SGG-E-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -960,9 +961,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SGG-I-----H-", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SGG-I-----H-", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SGG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SGG-I-----H-", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -971,9 +972,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SGS---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SGS---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SGS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SGS---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -982,9 +983,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SGU---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SGU---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SGU---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SGU---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -993,9 +994,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SGF---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SGF---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SGF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SGF---------", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -1011,9 +1012,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SWZ---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SWZ---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SWZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SWZ---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1022,9 +1023,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SWP---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SWP---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SWP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SWP---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1033,9 +1034,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SWA---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SWA---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SWA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SWA---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1044,9 +1045,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SWG-U-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SWG-U-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SWG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SWG-U-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1055,9 +1056,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SWG-E-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SWG-E-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SWG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SWG-E-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1066,9 +1067,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SWG-I-----H-", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SWG-I-----H-", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SWG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SWG-I-----H-", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1077,9 +1078,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SWS---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SWS---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SWS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SWS---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1088,9 +1089,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SWU---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SWU---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SWU---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SWU---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1099,9 +1100,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SWF---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SWF---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SWF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SWF---------", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -1117,9 +1118,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SDZ---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SDZ---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SDZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SDZ---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1128,9 +1129,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SDP---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SDP---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SDP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SDP---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1139,9 +1140,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SDA---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SDA---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SDA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SDA---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1150,9 +1151,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SDG-U-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SDG-U-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SDG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SDG-U-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1161,9 +1162,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SDG-E-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SDG-E-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SDG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SDG-E-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1172,9 +1173,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SDG-I-----H-", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SDG-I-----H-", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SDG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SDG-I-----H-", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1183,9 +1184,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SDS---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SDS---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SDS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SDS---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1194,9 +1195,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SDU---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SDU---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SDU---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SDU---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1205,9 +1206,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SDF---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SDF---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SDF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SDF---------", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -1223,9 +1224,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SLZ---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SLZ---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SLZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SLZ---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1234,9 +1235,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SLP---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SLP---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SLP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SLP---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1245,9 +1246,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SLA---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SLA---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SLA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SLA---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1256,9 +1257,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SLG-U-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SLG-U-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SLG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SLG-U-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1267,9 +1268,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SLG-E-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SLG-E-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SLG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SLG-E-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1278,9 +1279,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SLG-I-----H-", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SLG-I-----H-", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SLG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SLG-I-----H-", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1289,9 +1290,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SLS---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SLS---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SLS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SLS---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1300,9 +1301,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SLU---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SLU---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SLU---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SLU---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1311,9 +1312,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SLF---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SLF---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SLF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SLF---------", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -1329,9 +1330,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SMZ---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SMZ---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SMZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SMZ---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1340,9 +1341,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SMP---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SMP---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SMP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SMP---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1351,9 +1352,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SMA---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SMA---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SMA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SMA---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1362,9 +1363,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SMG-U-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SMG-U-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SMG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SMG-U-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1373,9 +1374,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SMG-E-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SMG-E-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SMG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SMG-E-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1384,9 +1385,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SMG-I-----H-", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SMG-I-----H-", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SMG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SMG-I-----H-", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1395,9 +1396,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SMS---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SMS---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SMS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SMS---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1406,9 +1407,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SMU---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SMU---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SMU---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SMU---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1417,9 +1418,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SMF---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SMF---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SMF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SMF---------", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -1434,9 +1435,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SJZ---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SJZ---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SJZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SJZ---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1445,9 +1446,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SJP---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SJP---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SJP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SJP---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1456,9 +1457,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SJA---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SJA---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SJA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SJA---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1467,9 +1468,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SJG-U-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SJG-U-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SJG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SJG-U-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1478,9 +1479,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SJG-E-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SJG-E-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SJG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SJG-E-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1489,9 +1490,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SJG-I-----H-", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SJG-I-----H-", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SJG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SJG-I-----H-", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1500,9 +1501,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SJS---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SJS---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SJS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SJS---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1511,9 +1512,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SJU---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SJU---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SJU---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SJU---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1522,9 +1523,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SJF---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SJF---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SJF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SJF---------", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -1539,9 +1540,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SKZ---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SKZ---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SKZ---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SKZ---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1550,9 +1551,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SKP---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SKP---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SKP---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SKP---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1561,9 +1562,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SKA---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SKA---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SKA---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SKA---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1572,9 +1573,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SKG-U-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SKG-U-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SKG-U-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SKG-U-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1583,9 +1584,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SKG-E-------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SKG-E-------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SKG-E-------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SKG-E-------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1594,9 +1595,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SKG-I-----H-", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SKG-I-----H-", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SKG-I-----H-", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SKG-I-----H-", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1605,9 +1606,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SKS---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SKS---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SKS---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SKS---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1616,9 +1617,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SKU---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SKU---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SKU---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SKU---------", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -1627,9 +1628,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SKF---------", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SKF---------", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SKF---------", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SKF---------", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -1669,9 +1670,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFGPUCI-----", {size:size,monoColor:"black"}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFGPUCI-----", {size:size,monoColor:"black"}).asCanvas());
 
-document.write(new MS.symbol("SFGPUCI-----", {size:size,monoColor:"black"}).getMarker().XML);
+document.write(new MS.symbol("SFGPUCI-----", {size:size,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
@@ -1710,9 +1711,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFAAMFR-----", {size:size,monoColor:"black"}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFAAMFR-----", {size:size,monoColor:"black"}).asCanvas());
 
-document.write(new MS.symbol("SFAAMFR-----", {size:size,monoColor:"black"}).getMarker().XML);
+document.write(new MS.symbol("SFAAMFR-----", {size:size,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
@@ -1721,9 +1722,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFGAUCI-----", {size:size,monoColor:"black"}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFGAUCI-----", {size:size,monoColor:"black"}).asCanvas());
 
-document.write(new MS.symbol("SFGAUCI-----", {size:size,monoColor:"black"}).getMarker().XML);
+document.write(new MS.symbol("SFGAUCI-----", {size:size,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
@@ -1732,9 +1733,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFGAEWHLS---", {size:size,monoColor:"black"}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFGAEWHLS---", {size:size,monoColor:"black"}).asCanvas());
 
-document.write(new MS.symbol("SFGAEWHLS---", {size:size,monoColor:"black"}).getMarker().XML);
+document.write(new MS.symbol("SFGAEWHLS---", {size:size,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
@@ -1743,9 +1744,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFSACLCV----", {size:size,monoColor:"black"}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFSACLCV----", {size:size,monoColor:"black"}).asCanvas());
 
-document.write(new MS.symbol("SFSACLCV----", {size:size,monoColor:"black"}).getMarker().XML);
+document.write(new MS.symbol("SFSACLCV----", {size:size,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
@@ -1754,9 +1755,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFUASC------", {size:size,monoColor:"black"}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFUASC------", {size:size,monoColor:"black"}).asCanvas());
 
-document.write(new MS.symbol("SFUASC------", {size:size,monoColor:"black"}).getMarker().XML);
+document.write(new MS.symbol("SFUASC------", {size:size,monoColor:"black"}).asSVG());
 </script>
 </td>
 </tr>
@@ -1806,9 +1807,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG--------A", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG--------A", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG--------A", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG--------A", {size:size}).asSVG());
 </script>
 </td>
 <td>TEAM/CREW
@@ -1822,9 +1823,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG--------B", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG--------B", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG--------B", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG--------B", {size:size}).asSVG());
 </script>
 </td>
 <td>SQUAD
@@ -1838,9 +1839,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG--------C", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG--------C", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG--------C", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG--------C", {size:size}).asSVG());
 </script>
 </td>
 <td>SECTION
@@ -1854,9 +1855,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG--------D", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG--------D", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG--------D", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG--------D", {size:size}).asSVG());
 </script>
 </td>
 <td>PLATOON/DETACHMENT
@@ -1870,9 +1871,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG--------E", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG--------E", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG--------E", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG--------E", {size:size}).asSVG());
 </script>
 </td>
 <td>COMPANY/BATTERY/TROOP
@@ -1886,9 +1887,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG--------F", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG--------F", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG--------F", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG--------F", {size:size}).asSVG());
 </script>
 </td>
 <td>BATTALION/SQUADRON
@@ -1902,9 +1903,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG--------G", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG--------G", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG--------G", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG--------G", {size:size}).asSVG());
 </script>
 </td>
 <td>REGIMENT/GROUP
@@ -1918,9 +1919,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG--------H", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG--------H", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG--------H", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG--------H", {size:size}).asSVG());
 </script>
 </td>
 <td>BRIGADE
@@ -1934,9 +1935,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG--------I", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG--------I", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG--------I", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG--------I", {size:size}).asSVG());
 </script>
 </td>
 <td>DIVISION
@@ -1950,9 +1951,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG--------J", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG--------J", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG--------J", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG--------J", {size:size}).asSVG());
 </script>
 </td>
 <td>CORPS
@@ -1966,9 +1967,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG--------K", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG--------K", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG--------K", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG--------K", {size:size}).asSVG());
 </script>
 </td>
 <td>ARMY
@@ -1982,9 +1983,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG--------L", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG--------L", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG--------L", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG--------L", {size:size}).asSVG());
 </script>
 </td>
 <td>ARMY GROUP/FRONT
@@ -1998,9 +1999,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG--------M", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG--------M", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG--------M", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG--------M", {size:size}).asSVG());
 </script>
 </td>
 <td>REGION
@@ -2014,9 +2015,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG--------N", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG--------N", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG--------N", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG--------N", {size:size}).asSVG());
 </script>
 </td>
 <td>COMMAND
@@ -2056,9 +2057,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MO", {size:size,frame:false}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MO", {size:size,frame:false}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MO", {size:size,frame:false}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MO", {size:size,frame:false}).asSVG());
 </script>
 </td>
 <td>
@@ -2067,9 +2068,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MO", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MO", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUG-EWRL--MO", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUG-EWRL--MO", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2078,9 +2079,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MO", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MO", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MO", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MO", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2089,9 +2090,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MO", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MO", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNG-EWRL--MO", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNG-EWRL--MO", {size:size}).asSVG());
 </script>
 </td>
 <td><script>
@@ -2099,9 +2100,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MO", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MO", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHG-EWRL--MO", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHG-EWRL--MO", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -2115,9 +2116,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MP", {size:size,frame:false}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MP", {size:size,frame:false}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MP", {size:size,frame:false}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MP", {size:size,frame:false}).asSVG());
 </script>
 </td>
 <td>
@@ -2126,9 +2127,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MP", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MP", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUG-EWRL--MP", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUG-EWRL--MP", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2137,9 +2138,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MP", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MP", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MP", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MP", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2148,9 +2149,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MP", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MP", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNG-EWRL--MP", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNG-EWRL--MP", {size:size}).asSVG());
 </script>
 </td>
 <td><script>
@@ -2158,9 +2159,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MP", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MP", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHG-EWRL--MP", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHG-EWRL--MP", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -2174,9 +2175,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MQ", {size:size,frame:false}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MQ", {size:size,frame:false}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MQ", {size:size,frame:false}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MQ", {size:size,frame:false}).asSVG());
 </script>
 </td>
 <td>
@@ -2185,9 +2186,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MQ", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MQ", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUG-EWRL--MQ", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUG-EWRL--MQ", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2196,9 +2197,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MQ", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MQ", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MQ", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MQ", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2207,9 +2208,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MQ", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MQ", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNG-EWRL--MQ", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNG-EWRL--MQ", {size:size}).asSVG());
 </script>
 </td>
 <td><script>
@@ -2217,9 +2218,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MQ", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MQ", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHG-EWRL--MQ", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHG-EWRL--MQ", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -2235,9 +2236,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MR", {size:size,frame:false}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MR", {size:size,frame:false}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MR", {size:size,frame:false}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MR", {size:size,frame:false}).asSVG());
 </script>
 </td>
 <td>
@@ -2246,9 +2247,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MR", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MR", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUG-EWRL--MR", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUG-EWRL--MR", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2257,9 +2258,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MR", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MR", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MR", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MR", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2268,9 +2269,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MR", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MR", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNG-EWRL--MR", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNG-EWRL--MR", {size:size}).asSVG());
 </script>
 </td>
 <td><script>
@@ -2278,9 +2279,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MR", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MR", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHG-EWRL--MR", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHG-EWRL--MR", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -2294,9 +2295,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MS", {size:size,frame:false}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MS", {size:size,frame:false}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MS", {size:size,frame:false}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MS", {size:size,frame:false}).asSVG());
 </script>
 </td>
 <td>
@@ -2305,9 +2306,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MS", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MS", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUG-EWRL--MS", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUG-EWRL--MS", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2316,9 +2317,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MS", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MS", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MS", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MS", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2327,9 +2328,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MS", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MS", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNG-EWRL--MS", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNG-EWRL--MS", {size:size}).asSVG());
 </script>
 </td>
 <td><script>
@@ -2337,9 +2338,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MS", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MS", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHG-EWRL--MS", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHG-EWRL--MS", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -2353,9 +2354,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MT", {size:size,frame:false}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MT", {size:size,frame:false}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MT", {size:size,frame:false}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MT", {size:size,frame:false}).asSVG());
 </script>
 </td>
 <td>
@@ -2364,9 +2365,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MT", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MT", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUG-EWRL--MT", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUG-EWRL--MT", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2375,9 +2376,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MT", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MT", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MT", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MT", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2386,9 +2387,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MT", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MT", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNG-EWRL--MT", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNG-EWRL--MT", {size:size}).asSVG());
 </script>
 </td>
 <td><script>
@@ -2396,9 +2397,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MT", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MT", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHG-EWRL--MT", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHG-EWRL--MT", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -2413,9 +2414,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MU", {size:size,frame:false}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MU", {size:size,frame:false}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MU", {size:size,frame:false}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MU", {size:size,frame:false}).asSVG());
 </script>
 </td>
 <td>
@@ -2424,9 +2425,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MU", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MU", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUG-EWRL--MU", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUG-EWRL--MU", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2435,9 +2436,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MU", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MU", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MU", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MU", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2446,9 +2447,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MU", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MU", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNG-EWRL--MU", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNG-EWRL--MU", {size:size}).asSVG());
 </script>
 </td>
 <td><script>
@@ -2456,9 +2457,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MU", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MU", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHG-EWRL--MU", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHG-EWRL--MU", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -2472,9 +2473,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MV", {size:size,frame:false}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MV", {size:size,frame:false}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MV", {size:size,frame:false}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MV", {size:size,frame:false}).asSVG());
 </script>
 </td>
 <td>
@@ -2483,9 +2484,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MV", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MV", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUG-EWRL--MV", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUG-EWRL--MV", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2494,9 +2495,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MV", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MV", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MV", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MV", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2505,9 +2506,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MV", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MV", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNG-EWRL--MV", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNG-EWRL--MV", {size:size}).asSVG());
 </script>
 </td>
 <td><script>
@@ -2515,9 +2516,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MV", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MV", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHG-EWRL--MV", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHG-EWRL--MV", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -2531,9 +2532,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MW", {size:size,frame:false}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MW", {size:size,frame:false}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MW", {size:size,frame:false}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MW", {size:size,frame:false}).asSVG());
 </script>
 </td>
 <td>
@@ -2542,9 +2543,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MW", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MW", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUG-EWRL--MW", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUG-EWRL--MW", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2553,9 +2554,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MW", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MW", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MW", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MW", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2564,9 +2565,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MW", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MW", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNG-EWRL--MW", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNG-EWRL--MW", {size:size}).asSVG());
 </script>
 </td>
 <td><script>
@@ -2574,9 +2575,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MW", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MW", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHG-EWRL--MW", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHG-EWRL--MW", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -2590,9 +2591,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MY", {size:size,frame:false}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MY", {size:size,frame:false}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MY", {size:size,frame:false}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MY", {size:size,frame:false}).asSVG());
 </script>
 </td>
 <td>
@@ -2601,9 +2602,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MY", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MY", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUG-EWRL--MY", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUG-EWRL--MY", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2612,9 +2613,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MY", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MY", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MY", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MY", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2623,9 +2624,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MY", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MY", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNG-EWRL--MY", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNG-EWRL--MY", {size:size}).asSVG());
 </script>
 </td>
 <td><script>
@@ -2633,9 +2634,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MY", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MY", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHG-EWRL--MY", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHG-EWRL--MY", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -2649,9 +2650,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MZ", {size:size,frame:false}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MZ", {size:size,frame:false}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MZ", {size:size,frame:false}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MZ", {size:size,frame:false}).asSVG());
 </script>
 </td>
 <td>
@@ -2660,9 +2661,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MZ", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUG-EWRL--MZ", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUG-EWRL--MZ", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUG-EWRL--MZ", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2671,9 +2672,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MZ", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFG-EWRL--MZ", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFG-EWRL--MZ", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFG-EWRL--MZ", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2682,9 +2683,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MZ", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNG-EWRL--MZ", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNG-EWRL--MZ", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNG-EWRL--MZ", {size:size}).asSVG());
 </script>
 </td>
 <td><script>
@@ -2692,9 +2693,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MZ", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHG-EWRL--MZ", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHG-EWRL--MZ", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -2731,9 +2732,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFU-S-----NS", {size:size,frame:false}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFU-S-----NS", {size:size,frame:false}).asCanvas());
 
-document.write(new MS.symbol("SFU-S-----NS", {size:size,frame:false}).getMarker().XML);
+document.write(new MS.symbol("SFU-S-----NS", {size:size,frame:false}).asSVG());
 </script>
 </td>
 <td>
@@ -2742,9 +2743,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUU-S-----NS", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUU-S-----NS", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUU-S-----NS", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUU-S-----NS", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2753,9 +2754,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFU-S-----NS", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFU-S-----NS", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFU-S-----NS", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFU-S-----NS", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2764,9 +2765,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNU-S-----NS", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNU-S-----NS", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNU-S-----NS", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNU-S-----NS", {size:size}).asSVG());
 </script>
 </td>
 <td><script>
@@ -2774,9 +2775,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHU-S-----NS", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHU-S-----NS", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHU-S-----NS", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHU-S-----NS", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -2791,9 +2792,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFU-S-----NL", {size:size,frame:false}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFU-S-----NL", {size:size,frame:false}).asCanvas());
 
-document.write(new MS.symbol("SFU-S-----NL", {size:size,frame:false}).getMarker().XML);
+document.write(new MS.symbol("SFU-S-----NL", {size:size,frame:false}).asSVG());
 </script>
 </td>
 <td>
@@ -2802,9 +2803,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SUU-S-----NL", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SUU-S-----NL", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SUU-S-----NL", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SUU-S-----NL", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2813,9 +2814,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SFU-S-----NL", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SFU-S-----NL", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SFU-S-----NL", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SFU-S-----NL", {size:size}).asSVG());
 </script>
 </td>
 <td>
@@ -2824,9 +2825,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SNU-S-----NL", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SNU-S-----NL", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SNU-S-----NL", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SNU-S-----NL", {size:size}).asSVG());
 </script>
 </td>
 <td><script>
@@ -2834,9 +2835,9 @@ var target = document.documentElement; // start at the root element
 while (target.childNodes.length && target.lastChild.nodeType == 1) { // find last HTMLElement child node
     target = target.lastChild;
 }
-target.parentNode.appendChild(new MS.symbol("SHU-S-----NL", {size:size}).getMarker().asCanvas());
+target.parentNode.appendChild(new MS.symbol("SHU-S-----NL", {size:size}).asCanvas());
 
-document.write(new MS.symbol("SHU-S-----NL", {size:size}).getMarker().XML);
+document.write(new MS.symbol("SHU-S-----NL", {size:size}).asSVG());
 </script>
 </td>
 </tr>
@@ -2870,7 +2871,7 @@ var node = target.parentNode.appendChild(new MS.symbol("sfgpewrh--mt", {	size:35
 												type: "machine gun".toUpperCase(),
 												dtg: "30140000ZSEP97",
 												location: "0900000.0E570306.0N"
-												}).getMarker().asCanvas());
+												}).asCanvas());
 </script>
 <br><center>This is drawn using canvas draw instructions</center>
 </td>
@@ -2889,7 +2890,7 @@ document.write(new MS.symbol("sfgpewrh--mt", {	size:35,
 												type: "machine gun".toUpperCase(),
 												dtg: "30140000ZSEP97",
 												location: "0900000.0E570306.0N"
-												}).getMarker().XML);
+												}).asSVG());
 </script>
 <br><center>This is SVG XML output</center>
 </td>
