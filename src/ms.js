@@ -33,7 +33,7 @@ For updates and more information go to http://www.spatialillusions.com
 'use strict';
 
 var MS = new function(){
-  this._colorModes	= {};
+  this._colorModes = {};
   this._dashArrays = {
     pending: "4,4",
     anticipated: "8,12",
@@ -98,12 +98,12 @@ MS.addNumberSIDCicons = function(parts){
   }
 };
 MS.bbox = require('./ms/bbox.js');
-MS.buildingBlock = function(pre,post,bbox) {
+MS.buildingBlock = function(pre, post, bbox) {
   if ( pre.length == 1 && Array.isArray(pre[0]) ) pre = pre[0];
   if ( post.length == 1 && Array.isArray(post[0]) ) post = post[0];
   return {pre: pre, post: post, bbox: bbox};
 };
-MS.colorMode = function(civilian,friend,hostile,neutral,unknown) {
+MS.colorMode = function(civilian, friend, hostile, neutral, unknown) {
   var o = {};
   o.Civilian = civilian;
   o.Friend 	= friend;
@@ -114,14 +114,8 @@ MS.colorMode = function(civilian,friend,hostile,neutral,unknown) {
 };
 MS.getColorMode = function(mode) {
   var c = this._colorModes[mode];
-  // TODO call MS.colorMode instead.
-  var o = {};
-  o.Hostile = c.Hostile;
-  o.Friend = c.Friend;
-  o.Neutral = c.Neutral;
-  o.Unknown = c.Unknown;
-  o.Civilian = c.Civilian;
-  return o;
+  // Clone the mode and return the clone
+  return MS.colorMode(c.Civilian, c.Friend, c.Hostile, c.Neutral, c.Unknown); 
 };
 MS.getDashArrays = function() {
   return this._dashArrays;
@@ -132,7 +126,7 @@ MS.getHqStafLength = function() {
 MS.getMarkerParts = function() {
   return this._markerParts.slice(0);
 };
-MS.outline = function(geom,outline,stroke,color){
+MS.outline = function(geom, outline, stroke, color){
   if(Array.isArray(geom)){
     var clone = [];
     for(var i in geom){
@@ -165,7 +159,7 @@ MS.rotate = function(angle, instruction){
 MS.scale = function(factor, instruction){
   return {type:'translate',x:(100-factor*100),y:(100-factor*100),draw:[{type:'scale',factor:factor,draw:[instruction]}]};
 };
-MS.setColorMode = function(mode,colorMode) {
+MS.setColorMode = function(mode, colorMode) {
   this._colorModes[mode] = {};
   this._colorModes[mode].Hostile 	= colorMode.Hostile;
   this._colorModes[mode].Friend 	= colorMode.Friend;
@@ -174,7 +168,7 @@ MS.setColorMode = function(mode,colorMode) {
   this._colorModes[mode].Civilian = colorMode.Civilian;
   return this._colorModes[mode];
 };
-MS.setDashArrays = function(pending,anticipated,feintDummy) {
+MS.setDashArrays = function(pending, anticipated, feintDummy) {
   this._dashArrays.pending = pending;
   this._dashArrays.anticipated = anticipated;
   this._dashArrays.feintDummy = feintDummy;
@@ -194,7 +188,7 @@ MS.translate = function(x, y, instruction){
 
 
 // For backward compability
-MS.bboxMax = function(box1,box2){
+MS.bboxMax = function(box1, box2){
 	return box1.merge(box2);
 };
 
