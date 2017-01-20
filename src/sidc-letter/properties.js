@@ -32,9 +32,9 @@ module.exports = function(properties, mapping){
 	//symbolmodifier11 that are Installations
 	if(symbolmodifier11 == "H")				properties.installation = true;
 	//Planned/Anticipated/Suspect symbols should have a dashed outline
-	if(this.frame && status == 'A' )		properties.notpresent = MS.dashArrays.anticipated;
+	if(this.frame && status == 'A' )		properties.notpresent = MS._dashArrays.anticipated;
 	if(this.frame && (['P','A','S','G','M'].indexOf(affiliation) > -1)){
-											properties.notpresent = MS.dashArrays.pending;
+											properties.notpresent = MS._dashArrays.pending;
 	}
 	//Should it have a Condition Bar
 	if(status == 'C')						properties.condition = mapping.status[2];

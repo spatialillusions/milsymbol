@@ -40,7 +40,7 @@ module.exports = function(options){
   if(this.properties.headquarters){
     anchor = {
       x:this.properties.baseGeometry.bbox.x1,
-      y:this.properties.baseGeometry.bbox.y2 + MS.hqStafLength};
+      y:this.properties.baseGeometry.bbox.y2 + MS._hqStafLength};
   }
   this.markerAnchor = {
     x: (anchor.x-this.bbox.x1+parseFloat(this.strokeWidth) + parseFloat(this.outlineWidth))*this.size/100,

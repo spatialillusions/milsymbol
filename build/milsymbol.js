@@ -1,4 +1,8 @@
 var MS = require('../src/ms.js');
+
+MS._geticnParts = require('../src/ms/iconparts.js');
+MS._symbolGeometries = require('../src/ms/symbolgeometries.js');
+
 MS.symbol = require('../src/ms.symbol.js');
 
 // Standard colors for symbols

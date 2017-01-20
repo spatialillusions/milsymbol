@@ -12,13 +12,13 @@ module.exports = function modifier(){
 		var y = 100;
 		if(['AirFriend','AirNeutral','GroundFriend','GroundNeutral','SeaNeutral','SubsurfaceNeutral'].indexOf(this.properties.dimension + this.properties.affiliation) > -1 )y = bbox.y2;
 		if((this.properties.dimensionType + this.properties.affiliationType) == 'SubsurfaceFriend')y = bbox.y1;
-		geom = {type:'path',d:'M'+(bbox.x1)+','+y+' L'+bbox.x1+','+(bbox.y2+MS.hqStafLength)};
+		geom = {type:'path',d:'M'+(bbox.x1)+','+y+' L'+bbox.x1+','+(bbox.y2+MS._hqStafLength)};
 		
 		//outline
 		if (this.outlineWidth > 0) drawArray1.push(MS.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
 
 		drawArray2.push(geom);
-		gbbox.y2 = bbox.y2 + MS.hqStafLength;
+		gbbox.y2 = bbox.y2 + MS._hqStafLength;
 	}
 	if(this.properties.taskForce){
 		//TASK FORCE
@@ -45,7 +45,7 @@ module.exports = function modifier(){
 	}
 	if(this.properties.feintDummy){
 		//FEINT DUMMY
-		geom = {type:'path',strokedasharray:MS.dashArrays.feintDummy,d:'M'+bbox.x1+','+bbox.y1+' L100,-28 '+bbox.x2+','+bbox.y1};
+		geom = {type:'path',strokedasharray:MS._dashArrays.feintDummy,d:'M'+bbox.x1+','+bbox.y1+' L100,-28 '+bbox.x2+','+bbox.y1};
 
 		//outline
 		if (this.outlineWidth > 0) drawArray1.push(MS.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
@@ -183,7 +183,7 @@ module.exports = function modifier(){
 	//Dismounted Leadership
 	if(this.properties.leadership){
 		var leadership = {'Friend':{type:'path',d:'m 45,60 55,-25 55,25'},'Neutral':{type:'path',d:'m 45,60 55,-25 55,25'},'Hostile':{type:'path',d:'m 42,71 57.8,-43.3 58.2,42.8'},'Unknown':{type:'path',d:'m 50,60 10,-20 80,0 10,20'}}[this.properties.affiliation];
-		if(this.properties.leadership == "Deputy Individual")leadership.strokedasharray = MS.dashArrays.feintDummy;
+		if(this.properties.leadership == "Deputy Individual")leadership.strokedasharray = MS._dashArrays.feintDummy;
 		drawArray1.push(leadership)
 		gbbox = MS.bboxMax(gbbox,{y1:(gbbox.y1 - 20)});
 	}

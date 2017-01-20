@@ -60,21 +60,21 @@ module.exports = function icon(){
 					listBBoxes = '';
 					for (var property in sId) {
 						if(property.substr(4,1) == 'E'){
-							var BaseGeometry = document.createElementNS(svgNS, "g");
+							var BaseGeometry = document.createElementNS(MS._svgNS, "g");
 							BaseGeometry.setAttribute('id', 'BaseGeometryEquipment');
 								BaseGeometry.appendChild(
 									BaseGeometry.ownerDocument.importNode(
 										parseXML(
-											'<g xmlns="'+svgNS+'">' + sId[property] + '</g>'
+											'<g xmlns="'+MS._svgNS+'">' + sId[property] + '</g>'
 										), true
 									)
 								);
-							var svgSymbol = document.createElementNS(svgNS, "svg");
+							var svgSymbol = document.createElementNS(MS._svgNS, "svg");
 							svgSymbol.setAttribute("width", 200);
 							svgSymbol.setAttribute("height", 200);
 							svgSymbol.setAttribute("version", 1.1);
 							svgSymbol.setAttribute("baseProfile", "tiny");
-							svgSymbol.setAttribute("xmlns", svgNS);
+							svgSymbol.setAttribute("xmlns", MS._svgNS);
 							svgSymbol.appendChild(BaseGeometry);
 
 							var targetElement = document.getElementById(element);

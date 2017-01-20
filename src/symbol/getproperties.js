@@ -91,14 +91,14 @@ module.exports = function(){
 
   }
 
-  if(MS.symbolGeometries.hasOwnProperty(properties.dimension + properties.affiliation)){
-    properties.baseGeometry = MS.symbolGeometries[properties.dimension + properties.affiliation];
+  if(MS._symbolGeometries.hasOwnProperty(properties.dimension + properties.affiliation)){
+    properties.baseGeometry = MS._symbolGeometries[properties.dimension + properties.affiliation];
   }else{
     properties.baseGeometry.bbox = new MS.bbox();
   }
   //If both frame and icon is turned off we should just have a position marker
   if(!this.frame && !this.icon){
-    properties.baseGeometry = MS.symbolGeometries.PositionMarker;
+    properties.baseGeometry = MS._symbolGeometries.PositionMarker;
   }
 
   return properties;
