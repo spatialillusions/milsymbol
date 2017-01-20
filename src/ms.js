@@ -1,6 +1,6 @@
 /*! ======================================================================================
 
-Copyright (c) 2015 Måns Beckman  http://www.spatialillusions.com
+Copyright (c) 2017 Måns Beckman  http://www.spatialillusions.com
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
