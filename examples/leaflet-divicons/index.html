@@ -36,8 +36,8 @@ function init(){
 				})
 				
 			var myicon = L.divIcon({className: '', 
-				html : mysymbol.getMarker().XML, 
-				iconAnchor: new L.Point(mysymbol.markerAnchor.x, mysymbol.markerAnchor.y)});
+				html : mysymbol.asSVG(), 
+				iconAnchor: new L.Point(mysymbol.getAnchor().x, mysymbol.getAnchor().y)});
 				
 			return L.marker(latlng,{icon:myicon, draggable:true});
 		}

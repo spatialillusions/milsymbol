@@ -6,14 +6,14 @@ angular.module('symbolTestApp', [])
         function createSymbolCode(scope) {
             var size = scope.size || 20;
             var symbol = new MS.symbol(scope.sic, {size: size, uniqueDesignation: scope.uniqueDesignation});
-            scope.code = symbol.getMarker().toDataURL();
-            return symbol.getMarker()
+            scope.code = symbol.toDataURL();
+            return symbol;
         }
 
 
         function link(scope, element, attrs) {
             var mysymbol = createSymbolCode(scope);
-            scope.code = mysymbol.getMarker().toDataURL();
+            scope.code = mysymbol.toDataURL();
 
 
             scope.$watch("sic", function (newValue, oldValue) {
@@ -23,15 +23,15 @@ angular.module('symbolTestApp', [])
             });
             scope.$watch("uniqueDesignation", function (newValue, oldValue) {
                 if (newValue !== oldValue) {
-                    mysymbol.uniqueDesignation = scope.uniqueDesignation;
-                    scope.code = mysymbol.getMarker().toDataURL();
+                    mysymbol.setOptions({uniqueDesignation: scope.uniqueDesignation});
+                    scope.code = mysymbol.toDataURL();
                 }
             });
 
             scope.$watch("size", function (newValue, oldValue) {
                 if (newValue !== oldValue) {
-                    mysymbol.size = scope.size;
-                    scope.code = mysymbol.getMarker().toDataURL();
+                    mysymbol.setOptions({size: scope.size});
+                    scope.code = mysymbol.toDataURL();
                 }
             });
 

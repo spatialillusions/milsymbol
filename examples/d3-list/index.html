@@ -133,8 +133,8 @@ function update(svg, d3cluster, d3hirarcy, source) {
 	newNode.append("g")
 	    .attr("class", "symbol")
 		.attr("transform", function(d) {
-			if (d.data.sidc) d.data.symbol = new MS.symbol(d.data.sidc,{size:15}).getMarker();
-			return "translate("+(-d.data.symbol.octagonAnchor.x)+","+(-d.data.symbol.octagonAnchor.y)+")";
+			if (d.data.sidc) d.data.symbol = new MS.symbol(d.data.sidc,{size:15});
+			return "translate("+(-d.data.symbol.getOctagonAnchor().x)+","+(-d.data.symbol.getOctagonAnchor().y)+")";
 		})
 		.each(function(d) { this.appendChild(d.data.symbol.asDOM()) })      
 	

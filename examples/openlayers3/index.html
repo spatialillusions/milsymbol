@@ -33,15 +33,15 @@ function init(){
 					size:iconSize[(f.getProperties().SIDC).charAt(11)]*ratio,
 					uniqueDesignation:f.getProperties().name
 				});
-		var mycanvas = mysymbol.getMarker().asCanvas();
+		var mycanvas = mysymbol.asCanvas();
 		
 		f.setStyle(new ol.style.Style({
 	  		image: new ol.style.Icon( ({
 	  			scale: 1/ratio,
-				anchor: [mysymbol.markerAnchor.x, mysymbol.markerAnchor.y],
+				anchor: [mysymbol.getAnchor().x, mysymbol.getAnchor().y],
 				anchorXUnits: 'pixels',
 				anchorYUnits: 'pixels',
-				imgSize: [Math.floor(mysymbol.width), Math.floor(mysymbol.height)],
+				imgSize: [Math.floor(mysymbol.getSize().width), Math.floor(mysymbol.getSize().height)],
 				img: (mycanvas)
 	  		}))
 		}));	

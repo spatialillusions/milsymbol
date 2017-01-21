@@ -6,8 +6,8 @@
 	<title>ArcGIS JS API and milsymbol</title>
 
 	<link rel="stylesheet" href="https://js.arcgis.com/4.1/esri/css/main.css">
-	<script src="https://js.arcgis.com/4.1/"></script>
 	<script src="../../dist/milsymbol.js"></script>
+	<script src="https://js.arcgis.com/4.1/"></script>
 	
 	<style>
 		html,
@@ -35,7 +35,6 @@
 			Graphic, Point, Polygon,
 			SimpleMarkerSymbol, PictureMarkerSymbol
 		) {
-
 			var map = new Map({
 				basemap: "hybrid"
 			});
@@ -58,14 +57,14 @@
 			});
 
 			
-			var mysymbol = new MS.symbol("SFS-XMP-----",{size:30}).getMarker();
+			var mysymbol = new MS.symbol("SFS-XMP-----",{size:30});
 
 			var symbol = new PictureMarkerSymbol({
-				"xoffset": -mysymbol.markerAnchor.x + 'px',
-				"yoffset": -mysymbol.markerAnchor.y + 'px',
+				"xoffset": -mysymbol.getAnchor().x + 'px',
+				"yoffset": -mysymbol.getAnchor().y + 'px',
 				"url": mysymbol.toDataURL(),
-				"width": Math.floor(mysymbol.width) + 'px',
-				"height": Math.floor(mysymbol.height) + 'px'
+				"width": Math.floor(mysymbol.getSize().width) + 'px',
+				"height": Math.floor(mysymbol.getSize().height) + 'px'
 			});  
 
 			// Create a graphic and add the geometry and symbol to it
