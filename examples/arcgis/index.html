@@ -6,9 +6,9 @@
 	<title>ArcGIS JS API and milsymbol</title>
 
 	<link rel="stylesheet" href="https://js.arcgis.com/4.1/esri/css/main.css">
-	<script src="../../dist/milsymbol.js"></script>
 	<script src="https://js.arcgis.com/4.1/"></script>
-	
+	<script src="../../dist/milsymbol.js"></script>
+
 	<style>
 		html,
 		body,
@@ -29,11 +29,13 @@
 			"esri/geometry/Polygon",
 			"esri/symbols/SimpleMarkerSymbol",
 			"esri/symbols/PictureMarkerSymbol",
+			"MS",
 			"dojo/domReady!"
 		], function(
 			Map, MapView,
 			Graphic, Point, Polygon,
-			SimpleMarkerSymbol, PictureMarkerSymbol
+			SimpleMarkerSymbol, PictureMarkerSymbol,
+			MS
 		) {
 			var map = new Map({
 				basemap: "hybrid"
