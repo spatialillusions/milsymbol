@@ -10,6 +10,8 @@
 
 - symbol.getSize() returns an object with the width and height of the symbol.
 
+- bbox.merge(another-bbox), use this instead of MS.bboxMax for merging bounding boxes.
+
 ### Changed
 
 - Fixed a bug that prevented specialHeadquarters to be drawn on Canvas output.
@@ -21,6 +23,8 @@
 - Do not use .XML anymore, use asSVG() instead.
 
 - getMarker(), it's not needed anymore, symbols are automatically updated when options are updated using setOptions().
+
+- MS.bboxMax(), use bbox.merge() instead.
 
 ### Removed
 
