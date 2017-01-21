@@ -69,7 +69,7 @@ symbol.prototype.getAnchor = function() { return this.markerAnchor; };
 symbol.prototype.getColors = require('./symbol/getcolors.js');
 symbol.prototype.getOctagonAnchor = function() { return this.octagonAnchor; };
 symbol.prototype.getProperties = require('./symbol/getproperties.js');
-symbol.prototype.getWidth = require('./symbol/getwidth.js');
+symbol.prototype.getSize = require('./symbol/getsize.js');
 symbol.prototype.setOptions = require('./symbol/setoptions.js');
 symbol.prototype.toDataURL = function() { return ("data:image/svg+xml;base64," + btoa(this.asSVG())); };
 
