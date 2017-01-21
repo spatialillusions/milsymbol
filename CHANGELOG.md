@@ -4,6 +4,8 @@
 
 - Milsymbol is now split into several modules and built with webpack, this makes the code easier to maintain.
 
+- Avoid getting and setting properties directly, use methods for this when they are available, in the future properties might change names.
+
 ### Added
 
 - colorMode property can now be set to a string representing the name of a registered color mode.
@@ -24,7 +26,7 @@
 
 - Avoid setting properties directly, use setOptions(options) instead.
 
-- Do not use .XML anymore, use asSVG() instead.
+- Do not use .XML anymore, use asSVG() instead, in the future autoSVG will be set to false and .XML removed.
 
 - getMarker(), it's not needed anymore, symbols are automatically updated when options are updated using setOptions().
 
