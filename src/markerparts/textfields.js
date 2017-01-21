@@ -56,7 +56,7 @@ module.exports = function textfields(){
 						labelbox.x1 = lbl.x - strWidth(this[i]);
 						labelbox.x2 = lbl.x;
 					}
-					gbbox = MS.bboxMax(gbbox,labelbox);
+					gbbox.merge(labelbox);
 					var text = {type:'text',fontfamily:fontFamily,fill:fontColor};
 					if(lbl.hasOwnProperty('stroke'))text.stroke = lbl.stroke;
 					if(lbl.hasOwnProperty('textanchor'))text.textanchor = lbl.textanchor;

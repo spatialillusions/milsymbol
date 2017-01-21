@@ -23,7 +23,7 @@ module.exports = function(options){
     if (!m.pre) continue;
     if(m.pre.length)this.drawInstructions.unshift(m.pre);
     if(m.post.length)this.drawInstructions.push(m.post);
-    if (m.bbox)this.bbox = MS.bboxMax(this.bbox,m.bbox);
+    if (m.bbox)this.bbox.merge(m.bbox);
   }
 
   this.baseWidth = this.bbox.width() + Number(this.strokeWidth*2) + Number(this.outlineWidth*2);//Adding the stoke width as margins and a little bit extra

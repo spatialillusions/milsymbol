@@ -186,7 +186,8 @@ MS.translate = function(x, y, instruction){
 
 // For backward compability
 MS.bboxMax = function(box1, box2){
-	return box1.merge(box2);
+  console.log('bboxMax() is deprecated and should not be used, use bbox.merge() instead.');
+  return box1.merge(box2);
 };
 
 module.exports = MS;

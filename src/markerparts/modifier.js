@@ -41,7 +41,7 @@ module.exports = function modifier(){
 		if (this.outlineWidth > 0) drawArray1.push(MS.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
 		
 		drawArray2.push(geom);
-		gbbox = MS.bboxMax(gbbox,{y1:(bbox.y1-10)});
+		gbbox.merge({y1:(bbox.y1-10)});
 	}
 	if(this.properties.feintDummy){
 		//FEINT DUMMY
@@ -51,7 +51,7 @@ module.exports = function modifier(){
 		if (this.outlineWidth > 0) drawArray1.push(MS.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
 			
 		drawArray2.push(geom);
-		gbbox = MS.bboxMax(gbbox,{y1:(-28)});
+		gbbox.merge({y1:(-28)});
 	}
 	//Unit Size
 	if(this.properties.echelon){
@@ -125,7 +125,7 @@ module.exports = function modifier(){
 			if (this.outlineWidth > 0) drawArray1.push(MS.outline({type:'translate',x:0,y:-installationPadding,draw:geom}, this.outlineWidth, this.strokeWidth, this.outlineColor));
 			//geometry
 			drawArray2.push({type:'translate',x:0,y:-installationPadding,draw:geom});
-			gbbox = MS.bboxMax(gbbox,echelons[this.properties.echelon].bbox);
+			gbbox.merge(echelons[this.properties.echelon].bbox);
 		}
 
 	}
@@ -176,7 +176,7 @@ module.exports = function modifier(){
 			if (this.outlineWidth > 0) drawArray1.push(MS.outline({type:'translate',x:0,y:bbox.y2,draw:geom}, this.outlineWidth, this.strokeWidth, this.outlineColor));
 			//geometry
 			drawArray2.push({type:'translate',x:0,y:bbox.y2,draw:geom});
-			gbbox = MS.bboxMax(gbbox,mobilities[this.properties.mobility].bbox);
+			gbbox.merge(mobilities[this.properties.mobility].bbox);
 		}
 	}
 	
@@ -185,7 +185,7 @@ module.exports = function modifier(){
 		var leadership = {'Friend':{type:'path',d:'m 45,60 55,-25 55,25'},'Neutral':{type:'path',d:'m 45,60 55,-25 55,25'},'Hostile':{type:'path',d:'m 42,71 57.8,-43.3 58.2,42.8'},'Unknown':{type:'path',d:'m 50,60 10,-20 80,0 10,20'}}[this.properties.affiliation];
 		if(this.properties.leadership == "Deputy Individual")leadership.strokedasharray = MS._dashArrays.feintDummy;
 		drawArray1.push(leadership)
-		gbbox = MS.bboxMax(gbbox,{y1:(gbbox.y1 - 20)});
+		gbbox.merge({y1:(gbbox.y1 - 20)});
 	}
 	//Assign fill, stroke and stroke-width
 	for(var i = 0; i<drawArray1.length;i++){
@@ -202,7 +202,7 @@ module.exports = function modifier(){
 	/*
 	if(this.sigint){
 		g += '<text font-family="Arial" font-weight="bold" stroke="none" text-anchor="middle" x="100" y="'+ (30 + bbox.y2 )+'" font-size="35" >'+this.sigint+'</text>';
-		gbbox = MS.bboxMax(gbbox,{y2:(bbox.y2-28)});
+		gbbox.merge({y2:(bbox.y2-28)});
 	}
 	g += '</g>';*/
 	return MS.buildingBlock(drawArray1,drawArray2,gbbox);
