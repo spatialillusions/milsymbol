@@ -10,6 +10,10 @@
 
 - symbol.getSize() returns an object with the width and height of the symbol.
 
+- symbol.getAnchor() returns an object with the x and y offset of the symbol.
+
+- symbol.getOctagonAnchor() returns an object with the x and y offset of the octagon center.
+
 - bbox.merge(another-bbox), use this instead of MS.bboxMax for merging bounding boxes.
 
 ### Changed
