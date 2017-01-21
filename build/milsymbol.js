@@ -1,8 +1,10 @@
 var MS = require('../src/ms.js');
 
+// Adding things to MS that can't be done in ms.js since they reference ms.js
 MS._geticnParts = require('../src/ms/iconparts.js');
 MS._symbolGeometries = require('../src/ms/symbolgeometries.js');
 
+// Initiating the symbol class
 MS.symbol = require('../src/ms.symbol.js');
 
 // Standard colors for symbols
@@ -57,7 +59,7 @@ MS.addMarkerParts(require('../src/markerparts/statusmodifier.js'));
 MS.addMarkerParts(require('../src/markerparts/affliationdimension.js'));
 MS.addMarkerParts(require('../src/markerparts/textfields.js'));
 MS.addMarkerParts(require('../src/markerparts/directionarrow.js'));
-//MS.addMarkerParts(require('../src/markerparts/debug.js'));
+//MS.addMarkerParts(require('../src/markerparts/debug.js')); // This draws the symbol octagon, can be good for debugging.
 
 // This makes it possible to draw canvas paths in IE11
 MS._Path2D = require('../src/ms.path2d.js');
