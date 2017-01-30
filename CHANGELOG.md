@@ -18,6 +18,8 @@
 
 - bbox.merge(another-bbox), use this instead of MS.bboxMax for merging bounding boxes.
 
+- Milsymbol can now be used as a AMD/CommonJS/etc... module, by requiering `milsymbol`, the global `var` is still called MS.
+
 ### Changed
 
 - Fixed a bug that prevented specialHeadquarters to be drawn on Canvas output.
