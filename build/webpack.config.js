@@ -1,10 +1,17 @@
+var CustomVarLibraryNamePlugin = require('webpack-custom-var-library-name-plugin');
+
 module.exports = {
   entry: './milsymbol.js',
   output: {
     filename: 'milsymbol.js',
     path: '../dist',
-    library: 'MS',
+    library: 'milsymbol',
     libraryTarget: 'umd',
     umdNamedDefine: true
-  }
+  },
+  plugins: [
+    new CustomVarLibraryNamePlugin({
+      name: 'MS'
+    })
+  ]
 }

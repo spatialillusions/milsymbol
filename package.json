@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/spatialillusions/milsymbol",
   "devDependencies": {
-    "webpack": "^2.2.0"
+    "webpack": "^2.2.0",
+    "webpack-custom-var-library-name-plugin": "^1.0.2"
   }
 }
