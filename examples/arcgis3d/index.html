@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>ArcGIS JS API + milsymbol</title>
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <!-- 
+  This is GeoJSON containing our units.
+  It will be availabel in a global variable called 'situation'
+  -->
+	<script src="../situation.json"></script>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.2/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.2/"></script>
+	<script src="../../dist/milsymbol.js"></script>
+
+  <script>
+  require([
+      "esri/Map",
+      "esri/views/SceneView",
+      "esri/layers/FeatureLayer",
+      "esri/layers/support/Field",
+      "esri/renderers/UniqueValueRenderer",
+      "esri/geometry/Point",
+      "esri/symbols/PointSymbol3D",
+      "esri/symbols/IconSymbol3DLayer",
+      "milsymbol",
+      "dojo/_base/array",
+      "dojo/on",
+      "dojo/dom",
+      "dojo/domReady!"
+    ], function(
+      Map, SceneView, FeatureLayer, Field, UniqueValueRenderer, Point, PointSymbol3D,
+      IconSymbol3DLayer,
+      MS, 
+      arrayUtils, on, dom
+    ) {
+
+      var map = new Map({
+        basemap: "dark-gray",
+        ground: "world-elevation"
+      });
+
+      var view = new SceneView({
+        container: "viewDiv",
+        map: map,
+        camera: {
+          position: {
+            x: 16, // lon
+            y: 45,   // lat
+            z: 1500000 // elevation in meters
+          },
+          //scale: 15000000,
+          //center: [16, 60],
+          tilt: 45
+        }
+      });
+
+      // Create iconSymbol and add to renderer
+      var unknown = new MS.symbol("SPZ---------", {size:15});
+      var unknownUnit = new PointSymbol3D({
+        symbolLayers: [new IconSymbol3DLayer({
+          resource: {
+            href: unknown.toDataURL()
+          }, 
+          size: unknown.getSize().width
+        })]
+      });
+      
+      var renderer = new UniqueValueRenderer({
+        field: "name", // I know the name is the Unique Designation for the unit
+        defaultSymbol: unknownUnit
+      });
+      // Add a unique icon for each unit
+      arrayUtils.map(situation.features, function(feature, i) {
+        var unit = new MS.symbol(feature.properties.SIDC, {size:20});
+        
+        renderer.addUniqueValueInfo(feature.properties.name,
+          new PointSymbol3D({
+            symbolLayers: [new IconSymbol3DLayer({
+              resource: {
+                href: unit.toDataURL()
+              }, 
+              size: Math.max(unit.getSize().height, unit.getSize().width)
+            })]
+          })
+        )
+      });
+      
+      
+      var fields = [
+      {
+        name: "ObjectID",
+        alias: "ObjectID",
+        type: "oid"
+      }, {
+        name: "name",
+        alias: "name",
+        type: "string"
+      }, {
+        name: "SIDC",
+        alias: "SIDC",
+        type: "string"
+      }];
+      
+      var graphics = arrayUtils.map(situation.features, function(feature, i) {
+          return {
+            geometry: new Point({
+              x: feature.geometry.coordinates[0],
+              y: feature.geometry.coordinates[1]
+            }),
+            // select only the attributes you care about
+            attributes: {
+              ObjectID: i,
+              name: feature.properties.name,
+              SIDC: feature.properties.SIDC,
+            }
+          };
+        });
+      
+      var lyr = new FeatureLayer({
+          source: graphics,
+          fields: fields, 
+          objectIdField: "ObjectID", 
+          renderer: renderer, 
+          spatialReference: {
+            wkid: 4326
+          },
+          geometryType: "point" 
+        });
+
+      map.add(lyr);
+
+    });
+  </script>
+</head>
+
+<body>
+  <div id="viewDiv"></div>
+</body>
+
+</html>
