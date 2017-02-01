@@ -45,6 +45,31 @@
       MS, 
       arrayUtils, on, dom
     ) {
+	  // Since we can define a insertion point for a IconSymbol3DLayer in ArcGIS JS API,
+	  // and we can't really handle non square icons, we have to go around the problem by 
+	  // making the icons square around the anchor point, so we add a custom extension to 
+	  // milsymbol to do that.
+	  MS.addMarkerParts(
+		function squareIcon(){
+		  var gbbox = new MS.bbox();
+		  if(this.square){
+		  	var anchor = {x:100, y:100};
+		  	if(this.properties.headquarters){
+    		  anchor = {
+       			x:this.properties.baseGeometry.bbox.x1,
+      			y:this.properties.baseGeometry.bbox.y2 + MS._hqStafLength};
+  			}
+		    var maxx = Math.max(anchor.x-this.bbox.x1, this.bbox.x2-anchor.x);
+		    var maxy = Math.max(anchor.y-this.bbox.y1, this.bbox.y2-anchor.y);
+			var max = Math.max(maxx,maxy);
+			gbbox.x1 = anchor.x-max;
+			gbbox.y1 = anchor.y-max;
+			gbbox.x2 = anchor.x+max;
+			gbbox.y2 = anchor.y+max;
+		  }
+		return MS.buildingBlock([],[],gbbox);
+		}
+	  );
 
       var map = new Map({
         basemap: "dark-gray",
@@ -67,7 +92,7 @@
       });
 
       // Create iconSymbol and add to renderer
-      var unknown = new MS.symbol("SPZ---------", {size:15});
+      var unknown = new MS.symbol("SPZ---------", {size:15, square:true});
       var unknownUnit = new PointSymbol3D({
         symbolLayers: [new IconSymbol3DLayer({
           resource: {
@@ -83,13 +108,13 @@
       });
       // Add a unique icon for each unit
       arrayUtils.map(situation.features, function(feature, i) {
-        var unit = new MS.symbol(feature.properties.SIDC, {size:20});
+        var unit = new MS.symbol(feature.properties.SIDC, {size:20, square:true});
         
         renderer.addUniqueValueInfo(feature.properties.name,
           new PointSymbol3D({
             symbolLayers: [new IconSymbol3DLayer({
               resource: {
-                href: unit.toDataURL()
+                href: unit.asCanvas(3).toDataURL()
               }, 
               size: Math.max(unit.getSize().height, unit.getSize().width)
             })]
