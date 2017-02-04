@@ -56,25 +56,80 @@ Describe MS.symbol here
 
 ## MS.symbol
 
-### asCanvas
 
-### asDOM
 
-### asSVG
+**Returns**
 
-### getAnchor
+this
 
-### getColors
+### asCanvas()
 
-### getOctagonAnchor
+**Returns**
 
-### getProperties
+Canvas Element
 
-### getSize
 
-### setOptions
+### asDOM()
 
-### toDataURL
+**Returns**
+
+DOM Element
+
+
+### asSVG()
+
+**Returns**
+
+String
+
+
+### getAnchor()
+
+**Returns**
+
+Object {x, y}
+
+
+### getColors()
+
+**Returns**
+
+Object
+
+### getOctagonAnchor()
+
+**Returns**
+
+Object {x, y}
+
+
+### getProperties()
+
+**Returns**
+
+Object
+
+
+### getSize()
+
+**Returns**
+
+Object {width, height}
+
+
+### setOptions()
+
+**Returns**
+
+this
+
+
+### toDataURL()
+
+**Returns**
+
+String
+
 
 # Developing milsymbol
 
