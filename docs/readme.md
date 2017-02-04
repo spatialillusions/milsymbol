@@ -52,15 +52,47 @@ If you only are using it with local sources, you can set `umdNamedDefine:false` 
 
 # Creating military unit symbols
 
-Describe MS.symbol here
+Each symbol created with milsymbol is its own object and the properties of the object can be updated or added after that the symbol object is created. The symbol object also has methods to provide the symbol in different formats, and to provide information about the created symbol.
+
+All functionality in milsymbol is normally found under the `MS` namespace, but if you have imported milsymbol to another variable, you will have to use that instead of `MS`.
 
 ## MS.symbol(SIDC,*{Options}*)
 
-Add information and how to create a symbol and options that can be provided.
+Initiates a new symbol object, you should always provide a SIDC for the symbol, and it is optional to provide other options. 
+
+Even if options can be provided or updated after the symbol object is created, the performance will be better if you provide them directly when you create the symbol, because every time you update some options the symbol will automatically be updated. 
 
 ```
-var symbol = new MS.symbol('SFG-UCI----D',{size:30,fill:false};
+var symbol = new MS.symbol('SFG-UCI----D',{size:30});
 ```
+
+**Modifier options**
+
+The following options are modifiers, text or graphical, that are defined in the standard documents.
+
+*Insert options table here*
+
+**Style options**
+
+The following options are style options that changes the look of the symbol in different ways.
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| alternateMedal | Boolean | false | MIL-STD-2525D lets you choose between MEDAL and alternate MEDAL icons for mine warefare symbols, the default in milsymbol is using MEDAL icons, but you can change this using setting this property to true. | 
+| civilianColor | Boolean	 | true | 2525C specifics purple as an optional color for civilian symbols. Of corse we like color so we set this as default. | 
+| colorMode | Color object or String| 'Light' | This is the option for setting what Color object to use for the fill of the symbols. It can be set to a Color object, or a string representing the name of a registered Color objext. You can use MS.colorMode to create a new color mode, or MS.getColorMode to get an existing color mode. | 
+| fill | Boolean | true | Should your symbol be filled with color. |
+| fillOpacity | Number | 1 | The opacity of the symbol fill color. |
+| frame | 	Boolean	 | true | Should your symbol have a frame. All symbols support to be unframed, not just the ones specified in 2525B. | 
+| icon | Boolean | true | Should your symbol have an icon. | 
+| infoColor | String | Same color as the frame outline | This will be used for texts in the text fields surrounding the symbol. It is a color that is either a keyword or a numerical RGB specification. | 
+| infoFields | Boolean | true | If you have set some text fields and direction but don't want them to be displayed you can set infoFields to false. This makes it possible to initiate the object with all information you got but not display it. | 
+| infoSize | Number | 40 | The size of the text fields surrounding the symbol.
+| monoColor | String | '' | A color that is either a keyword or a numerical RGB specification. If you set this the symbol will be monochrome and unfilled using the color provided. | 
+| outlineColor | String | rgb(239, 239, 239) | A color that is either a keyword or a numerical RGB specification. The color of the outline of the symbol, if any. Defaults to an off-white color. | 
+| outlineWidth | 	Real | 0 | The width of the outline of the symbol, if any. | 
+| size | Number | 100 | The L value for your symbol, where the L value is the width of the icon octagon. | 
+| strokeWidth | Real | 3 | The stroke width of the symbol. | 
 
 **Returns**
 
