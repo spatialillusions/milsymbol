@@ -125,6 +125,7 @@ MS.getHqStafLength = function() {
 MS.getMarkerParts = function() {
   return this._markerParts.slice(0);
 };
+MS.getVersion = function() {return this.version};
 MS.outline = function(geom, outline, stroke, color){
   if(Array.isArray(geom)){
     var clone = [];
@@ -158,6 +159,7 @@ MS.rotate = function(angle, instruction){
 MS.scale = function(factor, instruction){
   return {type:'translate',x:(100-factor*100),y:(100-factor*100),draw:[{type:'scale',factor:factor,draw:[instruction]}]};
 };
+MS.setAutoSVG = function(mode) {this.autoSVG = mode; return this.autoSVG;};
 MS.setColorMode = function(mode, colorMode) {
   this._colorModes[mode] = {};
   this._colorModes[mode].Hostile 	= colorMode.Hostile;
