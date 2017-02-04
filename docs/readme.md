@@ -54,6 +54,27 @@ If you only are using it with local sources, you can set `umdNamedDefine:false` 
 
 Describe MS.symbol here
 
+## MS.symbol
+
+### asCanvas
+
+### asDOM
+
+### asSVG
+
+### getAnchor
+
+### getColors
+
+### getOctagonAnchor
+
+### getProperties
+
+### getSize
+
+### setOptions
+
+### toDataURL
 
 # Developing milsymbol
 
