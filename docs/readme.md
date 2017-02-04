@@ -54,15 +54,21 @@ If you only are using it with local sources, you can set `umdNamedDefine:false` 
 
 Describe MS.symbol here
 
-## MS.symbol
+## MS.symbol(SIDC,*{Options}*)
 
+Add information and how to create a symbol and options that can be provided.
 
+```
+var symbol = new MS.symbol('SFG-UCI----D',{size:30,fill:false};
+```
 
 **Returns**
 
 this
 
-### asCanvas()
+### asCanvas(*factor*)
+
+Returns the symbol as a Canvas Element. It is possible to provide a resolution  factor if a symbol symbol with a higher resolution is wanted, this won't effect numbers reported by `getSize()`, `getAnchor()` or `getOctagonAnchor()`. 
 
 **Returns**
 
@@ -71,6 +77,8 @@ Canvas Element
 
 ### asDOM()
 
+Returns the symbol as a SVG DOM Element.
+
 **Returns**
 
 DOM Element
@@ -78,12 +86,16 @@ DOM Element
 
 ### asSVG()
 
+Returns the symbol as a SVG string. 
+
 **Returns**
 
 String
 
 
 ### getAnchor()
+
+Getting the anchor point where symbol should be inserted measured from the top left corner of the symbol.
 
 **Returns**
 
@@ -96,7 +108,10 @@ Object {x, y}
 
 Object
 
+
 ### getOctagonAnchor()
+
+Getting the center of the symbol octagon measured from the top left corner of the symbol.
 
 **Returns**
 
@@ -112,12 +127,16 @@ Object
 
 ### getSize()
 
+Gets the size of the current symbol.
+
 **Returns**
 
 Object {width, height}
 
 
-### setOptions()
+### setOptions(*{Options}*)
+
+This sets the options for a symbol and updates the symbol, the options are the same as when you create a new symbol, where an updated SIDC can be included in the options object. If setOptions is called without an options object, the symbol is simply updated.
 
 **Returns**
 
@@ -126,6 +145,8 @@ this
 
 ### toDataURL()
 
+Returns the SVG of a symbol as a base 64 encoded string, this can be useful in some cases where you want to assign the output as a source for an image element. If you want a PNG as a base 64 encoded string, simply call `.asCanvas().toDataURL()`.
+
 **Returns**
 
 String
@@ -133,4 +154,4 @@ String
 
 # Developing milsymbol
 
-Describe MS global here, and how to do extensions and other cool things
+Describe MS global here, and how to do extensions and other cool things. The API for MS global is under further development.
