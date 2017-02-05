@@ -30,7 +30,7 @@ It is suggested that you require milsymbol to a variable named `MS` but other va
 
 Webpack packages milsymbol as an UMD module when it is built, this will make it work with CommonJS, AMD and as global variable, so it is possible to simply use milsymbol in other frameworks, such as Dojo, as well.
 
-```
+```html
 <html>
   <body>
     <script src="dojo/dojo.js" data-dojo-config="async: true"></script>
