@@ -10,7 +10,9 @@ https://github.com/spatialillusions/milsymbol/releases/latest
 
 Include the JavaScript file and you are ready to go.
 
-`<script src="dist/milsymbol.js"></script>`
+```html
+<script src="dist/milsymbol.js"></script>
+```
 
 The global object `MS` will now contain all milsymbols functionality.
 
@@ -18,11 +20,15 @@ The global object `MS` will now contain all milsymbols functionality.
 
 You can get milsymbol using npm:
 
-`npm install milsymbol --save`
+```
+npm install milsymbol --save
+```
 
 Require the milsymbol module and you are ready to go.
 
-`var MS = require('milsymbol');`
+```javascript
+var MS = require('milsymbol');
+```
 
 It is suggested that you require milsymbol to a variable named `MS` but other variable names should work as well.
 
@@ -62,7 +68,7 @@ Initiates a new symbol object, you should always provide a SIDC for the symbol, 
 
 Even if options can be provided or updated after the symbol object is created, the performance will be better if you provide them directly when you create the symbol, because every time you update some options the symbol will automatically be updated. 
 
-```
+```javascript
 var symbol = new MS.symbol('SFG-UCI----D',{size:30});
 ```
 
