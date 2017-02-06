@@ -186,13 +186,13 @@ Gets the colors used for this symbol.
 
 ```javascript
 Object {
-  black: String, // Black parts of the marker.
-  fillColor: String, // Marker fill color.
-  frameColor: String, // Marker frame color.
+  black: String, // Black parts of the symbol.
+  fillColor: String, // Symbol fill color.
+  frameColor: String, // Symbol frame color.
   iconColor: String, // Icon color.
   iconFillColor: String, // Icon fill color.
-  none: String, // Transparent parts of the marker.
-  white: String // White parts of the marker.
+  none: String, // Transparent parts of the symbol.
+  white: String // White parts of the symbol.
 }
 ```
 ----
