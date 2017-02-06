@@ -373,7 +373,34 @@ The following different kinds of draw instructions can be used in milsymbol:
 
 ## MS.addNumberSIDCicons
 
-## MS.bbox
+## MS.bbox({box})
+
+This is a function for creating bounding boxes. It is initiated with an optional object:
+
+```javascript
+Object {
+  x1: Number, // Left coordinate {Optional}
+  y1: Number, // Top coordinate {Optional}
+  x2: Number, // Right coordinate {Optional}
+  y2: Number, // Bottom coordinate {Optional}
+}
+```
+
+Values that are omitted will default to 100.
+
+**Returns**
+
+```javascript
+Object {
+  x1: Number, // Left coordinate
+  y1: Number, // Top coordinate
+  x2: Number, // Right coordinate
+  y2: Number, // Bottom coordinate
+  width: function(), // Returns box width
+  height: function(), // Returns box width
+  merge: function(box) // Merges one box with another and returns the original box
+}
+```
 
 ## MS.colorMode
 
