@@ -22,6 +22,8 @@
 
 - MS.getVersion() that returns the version as a string.
 
+- MS.addSIDCicons(iconFunction, type) instead for adding icon functions.
+
 ### Changed
 
 - Fixed a bug that prevented specialHeadquarters to be drawn on Canvas output.
@@ -35,6 +37,10 @@
 - getMarker(), it's not needed anymore, symbols are automatically updated when options are updated using setOptions().
 
 - MS.bboxMax(), use bbox.merge() instead.
+
+- MS.addLetterSIDCicons(), use MS.addSIDCicons() instead.
+
+- MS.addNumberSIDCicons(), use MS.addSIDCicons() instead.
 
 ### Removed
 

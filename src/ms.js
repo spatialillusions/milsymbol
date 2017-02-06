@@ -75,11 +75,7 @@ MS.addLetterLabelOverrides = function(parts){
       this._labelOverrides['letter'] = this._labelOverrides['letter'].concat(parts);
     }
 };
-MS.addLetterSIDCicons = function(parts){
-  if (typeof parts === 'function') {
-    this._letterSIDCicons = this._letterSIDCicons.concat(parts);
-  }
-};
+
 MS.addMarkerParts = function(parts) {
   if (typeof parts === 'function') {
     MS.setMarkerParts(MS.getMarkerParts().concat(parts));
@@ -91,9 +87,9 @@ MS.addNumberLabelOverrides = function(parts){
       this._labelOverrides['number'] = this._labelOverrides['number'].concat(parts);
     }
 };
-MS.addNumberSIDCicons = function(parts){
+MS.addSIDCicons = function(parts, type){
   if (typeof parts === 'function') {
-    this._numberSIDCicons = this._numberSIDCicons.concat(parts);
+    this['_' + type + 'SIDCicons'] = this['_' + type + 'SIDCicons'].concat(parts);
   }
 };
 MS.bbox = require('./ms/bbox.js');
@@ -194,4 +190,19 @@ MS.bboxMax = function(box1, box2){
   return box1.merge(box2);
 };
 
+MS.addLetterSIDCicons = function(parts){
+  console.log('addLetterSIDCicons() is deprecated and should not be used, use MS.addSIDCicons() instead.');
+
+  if (typeof parts === 'function') {
+    this._letterSIDCicons = this._letterSIDCicons.concat(parts);
+  }
+};
+
+MS.addNumberSIDCicons = function(parts){
+  console.log('addNumberSIDCicons() is deprecated and should not be used, use MS.addSIDCicons() instead.');
+
+  if (typeof parts === 'function') {
+    this._numberSIDCicons = this._numberSIDCicons.concat(parts);
+  }
+};
 module.exports = MS;

@@ -382,13 +382,17 @@ Several draw instructions can be grouped together in an Array to for a more comp
 
 ## MS.addLetterLabelOverrides
 
-## MS.addLetterSIDCicons
-
 ## MS.addMarkerParts
 
 ## MS.addNumberLabelOverrides
 
-## MS.addNumberSIDCicons
+## MS.addSIDCicons(iconFunction, type)
+
+```javascript
+iconFunction: function,
+type: String // 'letter' or 'number' depending of the type of the SIDC
+```
+
 
 ## MS.bbox({box})
 

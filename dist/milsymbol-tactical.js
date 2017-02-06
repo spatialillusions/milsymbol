@@ -279,7 +279,7 @@ function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
 );
 
 
-MS.addLetterSIDCicons(
+MS.addSIDCicons(
 function tacticalPoints(sidc,bbox,icn,std2525){
 	// Tactical Point Symbols =========================================================================
 	sidc['G-T-D-----'] = icn['TP.DESTROY'];//TACGRP.TSK.DSTY
@@ -1176,5 +1176,5 @@ function tacticalPoints(sidc){
 	//sidc['G-O-FE----'] = [];//TACGRP.OTH.FIX.EM
 	//sidc['G-O-FO----'] = [];//TACGRP.OTH.FIX.EOP
 
-}
+}, 'letter'
 );
