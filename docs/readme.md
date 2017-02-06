@@ -127,7 +127,9 @@ The following options are style options that changes the look of the symbol in d
 
 **Returns**
 
+```javascript
 this
+```
 
 -----
 
@@ -137,7 +139,9 @@ Returns the symbol as a Canvas Element. It is possible to provide a resolution  
 
 **Returns**
 
+```javascript
 Canvas Element
+```
 
 -----
 
@@ -147,8 +151,9 @@ Returns the symbol as a SVG DOM Element.
 
 **Returns**
 
+```javascript
 DOM Element
-
+```
 -----
 
 ### asSVG()
@@ -157,8 +162,9 @@ Returns the symbol as a SVG string.
 
 **Returns**
 
+```javascript
 String
-
+```
 -----
 
 ### getAnchor()
@@ -167,16 +173,18 @@ Getting the anchor point where symbol should be inserted measured from the top l
 
 **Returns**
 
-Object {x, y}
-
+```javascript
+Object {x:Number, y:Number}
+```
 ----
 
 ### getColors()
 
 **Returns**
 
+```javascript
 Object
-
+```
 ----
 
 ### getOctagonAnchor()
@@ -185,16 +193,18 @@ Getting the center of the symbol octagon measured from the top left corner of th
 
 **Returns**
 
-Object {x, y}
-
+```javascript
+Object {x:Number, y:Number}
+```
 ----
 
 ### getProperties()
 
 **Returns**
 
+```javascript
 Object
-
+```
 ----
 
 ### getSize()
@@ -203,8 +213,9 @@ Gets the size of the current symbol.
 
 **Returns**
 
-Object {width, height}
-
+```javascript
+Object {width:Number, height:Number}
+```
 ----
 
 ### setOptions(*{Options}*)
@@ -213,8 +224,9 @@ This sets the options for a symbol and updates the symbol, the options are the s
 
 **Returns**
 
+```javascript
 this
-
+```
 ----
 
 ### toDataURL()
@@ -223,8 +235,9 @@ Returns the SVG of a symbol as a base 64 encoded string, this can be useful in s
 
 **Returns**
 
+```javascript
 String
-
+```
 ----
 
 # Developing milsymbol
