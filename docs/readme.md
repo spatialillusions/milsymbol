@@ -466,7 +466,7 @@ Object {
 }
 ```
 
-## MS.setHqStafLength()
+## MS.setHqStafLength(Number)
 
 Sets the length of the HQ staf used for HQ symbols.
 
