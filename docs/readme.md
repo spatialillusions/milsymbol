@@ -420,7 +420,15 @@ Object {
 }
 ```
 
-## MS.getHqStafLength
+## MS.getHqStafLength()
+
+Gets the length of the HQ staf used for HQ symbols.
+
+**Returns**
+
+```javascript
+Number
+```
 
 ## MS.getMarkerParts
 
@@ -458,7 +466,16 @@ Object {
 }
 ```
 
-## MS.setHqStafLength
+## MS.setHqStafLength()
+
+Sets the length of the HQ staf used for HQ symbols.
+
+**Returns**
+
+```javascript
+Number
+```
+
 
 ## MS.setMarkerParts
 
