@@ -444,7 +444,19 @@ String
 
 ## MS.setColorMode
 
-## MS.setDashArrays
+## MS.setDashArrays(dash_object)
+
+Sets the dash arrays used for dashed lines, the dash object should be structured in the same way as the return object, and all options should be present.
+
+**Returns**
+
+```javascript
+Object {
+  pending: String, // The value for the stroke-dasharray used for markers with a pending status.
+  anticipated: String, // The value for the stroke-dasharray used for markers with a anticipated status.
+  feintDummy: String // The value for the stroke-dasharray used for the feint/dummy modifier.
+}
+```
 
 ## MS.setHqStafLength
 
