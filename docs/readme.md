@@ -378,8 +378,6 @@ Several draw instructions can be grouped together in an Array to for a more comp
 ] 
 ```
 
-
-
 ## MS.addIconParts
 
 ## MS.addLetterLabelOverrides
@@ -394,8 +392,6 @@ Several draw instructions can be grouped together in an Array to for a more comp
 
 ## MS.bbox({box})
 
-This is a function for creating bounding boxes. It is initiated with an optional object:
-
 ```javascript
 Object {
   x1: Number, // Left coordinate {Optional}
@@ -405,7 +401,7 @@ Object {
 }
 ```
 
-Values that are omitted will default to 100.
+This is a function for creating bounding boxes. It is initiated with an optional object. Values that are omitted will default to 100, and if an object isn't provided all values will default to 100.
 
 **Returns**
 
@@ -461,9 +457,16 @@ Gets the version of milsymbol.
 String
 ```
 
-## MS.outline(draw_instruction, outline, stroke, color)
+## MS.outline(drawInstruction, outline, stroke, color)
 
-Takes the draw instruction(s) in the input and modifies them so that they only are stroked.
+```javascript
+drawInstruction: drawInstruction,
+outline: Number,
+stroke: Number,
+color: String
+```
+
+Takes the drawInstruction in the input and modifies them so that they only are stroked.
 
 Outline is the outline width, stroke is the original stroke width, and color is the color the outline should have.
 
@@ -479,13 +482,9 @@ Array or Object
 
 ## MS.setAutoSVG(Boolean)
 
-## MS.setColorMode
+## MS.setColorMode(name, colormode)
 
 ## MS.setDashArrays(dash_object)
-
-Sets the dash arrays used for dashed lines, the dash object should be structured in the same way as the return object, and all options should be present.
-
-**Returns**
 
 ```javascript
 Object {
@@ -495,7 +494,23 @@ Object {
 }
 ```
 
+Sets the dash arrays used for dashed lines, the dash object should be structured in the same way as the return object, and all options should be present.
+
+**Returns**
+
+```javascript
+Object {
+  pending: String,
+  anticipated: String,
+  feintDummy: String
+}
+```
+
 ## MS.setHqStafLength(Number)
+
+```javascript
+Number
+```
 
 Sets the length of the HQ staf used for HQ symbols.
 
