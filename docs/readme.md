@@ -412,7 +412,15 @@ Object {
 
 ## MS.getMarkerParts
 
-## MS.getVersion
+## MS.getVersion()
+
+Gets the version of milsymbol.
+
+**Returns**
+
+```javascript
+String
+```
 
 ## MS.outline
 
