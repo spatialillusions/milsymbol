@@ -397,7 +397,7 @@ Object {
   x2: Number, // Right coordinate
   y2: Number, // Bottom coordinate
   width: function(), // Returns box width
-  height: function(), // Returns box width
+  height: function(), // Returns box height
   merge: function(box) // Merges one box with another and returns the original box
 }
 ```
