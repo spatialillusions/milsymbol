@@ -180,10 +180,20 @@ Object {x:Number, y:Number}
 
 ### getColors()
 
+Gets the colors used for this symbol.
+
 **Returns**
 
 ```javascript
-Object
+Object {
+  black: String, // Black parts of the marker.
+  fillColor: String, // Marker fill color.
+  frameColor: String, // Marker frame color.
+  iconColor: String, // Icon color.
+  iconFillColor: String, // Icon fill color.
+  none: String, // Transparent parts of the marker.
+  white: String // White parts of the marker.
+}
 ```
 ----
 
@@ -199,6 +209,8 @@ Object {x:Number, y:Number}
 ----
 
 ### getProperties()
+
+Gets all properties that are computed for the SIDC of this symbol.
 
 **Returns**
 
