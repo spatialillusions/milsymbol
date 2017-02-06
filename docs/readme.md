@@ -118,7 +118,7 @@ The following options are style options that changes the look of the symbol in d
 | icon | Boolean | true | Should your symbol have an icon. | 
 | infoColor | String | Same color as the frame outline | This will be used for texts in the text fields surrounding the symbol. It is a color that is either a keyword or a numerical RGB specification. | 
 | infoFields | Boolean | true | If you have set some text fields and direction but don't want them to be displayed you can set infoFields to false. This makes it possible to initiate the object with all information you got but not display it. | 
-| infoSize | Number | 40 | The size of the text fields surrounding the symbol.
+| infoSize | Number | 40 | The size of the text fields surrounding the symbol. This is relative to the size of the symbol, so you can consider 40 to be 40% of the default size that is 100.
 | monoColor | String | '' | A color that is either a keyword or a numerical RGB specification. If you set this the symbol will be monochrome and unfilled using the color provided. | 
 | outlineColor | String | rgb(239, 239, 239) | A color that is either a keyword or a numerical RGB specification. The color of the outline of the symbol, if any. Defaults to an off-white color. | 
 | outlineWidth | Number | 0 | The width of the outline of the symbol, if any. | 
