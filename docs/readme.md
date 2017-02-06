@@ -216,30 +216,30 @@ Gets all properties that are computed for the SIDC of this symbol.
 
 ```javascript
 Object {
-  activity: Bool, // Is it an Activity
+  activity: Boolean, // Is it an Activity
   affiliation: String, // Affiliation it is shown as (Friend/Hostile...)
   baseAffilation: String, // Affiliation it belongs to (Friend/Hostile...)
   baseDimension: String, // Dimension it belongs to (Air/Ground...)
   baseGeometry: Object, // Geometry is a combination of dimension and affiliation (AirFriend/GroundHostile...)
-  civilian: Bool, // Is it Civilian
+  civilian: Boolean, // Is it Civilian
   condition: String, // What condition is it in
   context: String, // Context of the symbol (Reality/Exercise...)
   dimension: String, // Dimension it is shown as (Air/Ground...) for example Ground Equipment is shown with the same shape as Sea.
-  dimensionUnknown: Bool, // Is the dimension unknown
+  dimensionUnknown: Boolean, // Is the dimension unknown
   echelon: String, //What echelon (Platoon/Company...)
-  faker: Bool, // Is it a Faker
-  fenintDummy: Bool, // Is it a feint/dummy
-  fill: Bool, // Standard says it should be filled
-  frame: Bool, // Standard says it should be framed
+  faker: Boolean, // Is it a Faker
+  fenintDummy: Boolean, // Is it a feint/dummy
+  fill: Boolean, // Standard says it should be filled
+  frame: Boolean, // Standard says it should be framed
   functionid: String, // Part of SIDC referring to the icon.
-  headquarters: Bool, // Is it a Headquarters
-  installation: Bool, // Is it an Instalation
-  joker: Bool, // Is it a Joker
+  headquarters: Boolean, // Is it a Headquarters
+  installation: Boolean, // Is it an Instalation
+  joker: Boolean, // Is it a Joker
   mobility: String, // What mobility (Tracked/Sled...)
   notpresent: String, // Is it Anticipated or Pending
-  numberSIDC: Bool, // Is the SIDC number based
-  space: Bool, // Is it in Space
-  taskForce: Bool // Is it a task force
+  numberSIDC: Boolean, // Is the SIDC number based
+  space: Boolean, // Is it in Space
+  taskForce: Boolean // Is it a task force
 }
 ```
 ----
@@ -448,7 +448,7 @@ String
 
 ## MS.scale
 
-## MS.setAutoSVG(Bool)
+## MS.setAutoSVG(Boolean)
 
 ## MS.setColorMode
 
