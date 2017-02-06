@@ -506,10 +506,10 @@ Object {
 }
 ```
 
-## MS.setHqStafLength(Number)
+## MS.setHqStafLength(staf_length)
 
 ```javascript
-Number
+staf_length: Number
 ```
 
 Sets the length of the HQ staf used for HQ symbols.
