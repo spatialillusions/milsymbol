@@ -382,6 +382,8 @@ Several draw instructions can be grouped together in an Array to for a more comp
 
 ## MS.addIconParts(iconFunction)
 
+TODO
+
 ## MS.addLabelOverrides(labelFunction, type)
 
 ```javascript
@@ -391,13 +393,14 @@ type: String // 'letter' or 'number' depending of the type of the SIDC
 
 ## MS.addMarkerParts
 
+TODO might be name change.
+
 ## MS.addSIDCicons(sidcFunction, type)
 
 ```javascript
 sidcFunction: function,
 type: String // 'letter' or 'number' depending of the type of the SIDC
 ```
-
 
 ## MS.bbox({box})
 
@@ -428,7 +431,11 @@ Object {
 
 ## MS.colorMode
 
+TODO
+
 ## MS.getColorMode
+
+TODO
 
 ## MS.getDashArrays()
 
@@ -455,6 +462,8 @@ Number
 ```
 
 ## MS.getMarkerParts
+
+TODO might be name change
 
 ## MS.getVersion()
 
@@ -487,11 +496,19 @@ Array or Object
 
 ## MS.rotate
 
+TODO might be removed
+
 ## MS.scale
+
+TODO might be removed
 
 ## MS.setAutoSVG(Boolean)
 
+TODO 
+
 ## MS.setColorMode(name, colormode)
+
+TODO
 
 ## MS.setDashArrays(dash_object)
 
@@ -532,6 +549,8 @@ Number
 
 ## MS.setMarkerParts
 
+TODO might be name change
+
 ## MS.setStandard(standard)
 
 ```javascript
@@ -549,3 +568,5 @@ Boolean // true if the standard was set, otherwise false
 ```
 
 ## MS.translate
+
+TODO might be removed
