@@ -20,6 +20,8 @@
 
 - Milsymbol can now be used as a AMD/CommonJS/etc... module, by requiering `milsymbol`, the global `var` is still called MS.
 
+- MS.getVersion() that returns the version as a string.
+
 ### Changed
 
 - Fixed a bug that prevented specialHeadquarters to be drawn on Canvas output.
