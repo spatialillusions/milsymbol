@@ -3,7 +3,7 @@ milsymbol
 
 milsymbol is a small library in pure javascript that creates military unit symbols according to to MIL-STD-2525 and STANAG APP6.
 
-![Figure 13](docs/samples/milsymbol.png?raw=true)
+![Figure 13](docs/images/milsymbol.png?raw=true)
 
 ```javascript
 new MS.symbol("sfgpewrh--mt", {
@@ -75,7 +75,7 @@ And if you don't want to make it step by step, you can chain it all togheter lik
 
 `var canvasElement = new MS.symbol("SFG-UCI----D").asCanvas();`
 
-![Infantry Platoon](docs/samples/infantry-platoon.png?raw=true)
+![Infantry Platoon](docs/images/infantry-platoon.png?raw=true)
 
 Options you provided to your symbol can change the size of the symbol, define if it should be filled/unfilled, add text information, and much more; you can read more about all properties and methods in the API documentation provided with milsymbol.
 
