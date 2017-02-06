@@ -129,6 +129,8 @@ The following options are style options that changes the look of the symbol in d
 
 this
 
+-----
+
 ### asCanvas(*factor*)
 
 Returns the symbol as a Canvas Element. It is possible to provide a resolution  factor if a symbol symbol with a higher resolution is wanted, this won't effect numbers reported by `getSize()`, `getAnchor()` or `getOctagonAnchor()`. 
@@ -137,6 +139,7 @@ Returns the symbol as a Canvas Element. It is possible to provide a resolution  
 
 Canvas Element
 
+-----
 
 ### asDOM()
 
@@ -146,6 +149,7 @@ Returns the symbol as a SVG DOM Element.
 
 DOM Element
 
+-----
 
 ### asSVG()
 
@@ -155,6 +159,7 @@ Returns the symbol as a SVG string.
 
 String
 
+-----
 
 ### getAnchor()
 
@@ -164,6 +169,7 @@ Getting the anchor point where symbol should be inserted measured from the top l
 
 Object {x, y}
 
+----
 
 ### getColors()
 
@@ -171,6 +177,7 @@ Object {x, y}
 
 Object
 
+----
 
 ### getOctagonAnchor()
 
@@ -180,6 +187,7 @@ Getting the center of the symbol octagon measured from the top left corner of th
 
 Object {x, y}
 
+----
 
 ### getProperties()
 
@@ -187,6 +195,7 @@ Object {x, y}
 
 Object
 
+----
 
 ### getSize()
 
@@ -196,6 +205,7 @@ Gets the size of the current symbol.
 
 Object {width, height}
 
+----
 
 ### setOptions(*{Options}*)
 
@@ -205,6 +215,7 @@ This sets the options for a symbol and updates the symbol, the options are the s
 
 this
 
+----
 
 ### toDataURL()
 
@@ -214,6 +225,7 @@ Returns the SVG of a symbol as a base 64 encoded string, this can be useful in s
 
 String
 
+----
 
 # Developing milsymbol
 
