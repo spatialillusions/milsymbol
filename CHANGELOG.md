@@ -22,7 +22,9 @@
 
 - MS.getVersion() that returns the version as a string.
 
-- MS.addSIDCicons(iconFunction, type) instead for adding icon functions.
+- MS.addSIDCicons(sidcFunction, type) for adding sidc functions.
+
+- MS.addLabelOverrides(labelFunction, type) for adding label functions.
 
 ### Changed
 
@@ -41,6 +43,10 @@
 - MS.addLetterSIDCicons(), use MS.addSIDCicons() instead.
 
 - MS.addNumberSIDCicons(), use MS.addSIDCicons() instead.
+
+- MS.addLetterLabelOverrides(), use MS.addLabelOverrides() instead.
+
+- MS.addNumberLabelOverrides(), use MS.addLabelOverrides() instead.
 
 ### Removed
 

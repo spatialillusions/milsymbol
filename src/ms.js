@@ -69,23 +69,16 @@ MS.addIconParts = function(parts) {
     this._iconParts = this._iconParts.concat(parts);
   }
 };
-MS.addLetterLabelOverrides = function(parts){
+MS.addLabelOverrides = function(parts, type){
   if (typeof parts === 'function') {
-    if (!this._labelOverrides.hasOwnProperty('letter')) this._labelOverrides['letter'] = [];
-      this._labelOverrides['letter'] = this._labelOverrides['letter'].concat(parts);
+    if (!this._labelOverrides.hasOwnProperty(type)) this._labelOverrides[type] = [];
+      this._labelOverrides[type] = this._labelOverrides[type].concat(parts);
     }
 };
-
 MS.addMarkerParts = function(parts) {
   if (typeof parts === 'function') {
     MS.setMarkerParts(MS.getMarkerParts().concat(parts));
   }
-};
-MS.addNumberLabelOverrides = function(parts){
-  if (typeof parts === 'function') {
-    if (!this._labelOverrides.hasOwnProperty('number')) this._labelOverrides['number'] = [];
-      this._labelOverrides['number'] = this._labelOverrides['number'].concat(parts);
-    }
 };
 MS.addSIDCicons = function(parts, type){
   if (typeof parts === 'function') {
@@ -190,17 +183,31 @@ MS.bboxMax = function(box1, box2){
   return box1.merge(box2);
 };
 
+MS.addLetterLabelOverrides = function(parts){
+  console.log('addLetterLabelOverrides() is deprecated and should not be used, use MS.addLabelOverrides() instead.');
+  if (typeof parts === 'function') {
+    if (!this._labelOverrides.hasOwnProperty('letter')) this._labelOverrides['letter'] = [];
+      this._labelOverrides['letter'] = this._labelOverrides['letter'].concat(parts);
+    }
+};
+
 MS.addLetterSIDCicons = function(parts){
   console.log('addLetterSIDCicons() is deprecated and should not be used, use MS.addSIDCicons() instead.');
-
   if (typeof parts === 'function') {
     this._letterSIDCicons = this._letterSIDCicons.concat(parts);
   }
 };
 
+MS.addNumberLabelOverrides = function(parts){
+  console.log('addNumberLabelOverrides() is deprecated and should not be used, use MS.addLabelOverrides() instead.');
+  if (typeof parts === 'function') {
+    if (!this._labelOverrides.hasOwnProperty('number')) this._labelOverrides['number'] = [];
+      this._labelOverrides['number'] = this._labelOverrides['number'].concat(parts);
+    }
+};
+
 MS.addNumberSIDCicons = function(parts){
   console.log('addNumberSIDCicons() is deprecated and should not be used, use MS.addSIDCicons() instead.');
-
   if (typeof parts === 'function') {
     this._numberSIDCicons = this._numberSIDCicons.concat(parts);
   }

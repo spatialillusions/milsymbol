@@ -659,10 +659,10 @@ function tacticalPoints(sidc,bbox,icn,std2525){
 	sidc['G-O-FA----'] = icn['TP.FIX ACOUSTIC'];//TACGRP.OTH.FIX.ACU
 	sidc['G-O-FE----'] = icn['TP.FIX ELECTRO-MAGNETIC'];//TACGRP.OTH.FIX.EM
 	sidc['G-O-FO----'] = icn['TP.FIX ELECTRO-OPTICAL'];//TACGRP.OTH.FIX.EOP
-}
+}, 'letter'
 );
 
-MS.addLetterLabelOverrides(
+MS.addLabelOverrides(
 function tacticalPoints(sidc){
 	// Tactical Point Symbols =========================================================================
 	//sidc['G-T-D-----'] = [];//TACGRP.TSK.DSTY

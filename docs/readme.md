@@ -378,18 +378,21 @@ Several draw instructions can be grouped together in an Array to for a more comp
 ] 
 ```
 
-## MS.addIconParts
+## MS.addIconParts(iconFunction)
 
-## MS.addLetterLabelOverrides
+## MS.addLabelOverrides(labelFunction, type)
+
+```javascript
+labelFunction: function,
+type: String // 'letter' or 'number' depending of the type of the SIDC
+```
 
 ## MS.addMarkerParts
 
-## MS.addNumberLabelOverrides
-
-## MS.addSIDCicons(iconFunction, type)
+## MS.addSIDCicons(sidcFunction, type)
 
 ```javascript
-iconFunction: function,
+sidcFunction: function,
 type: String // 'letter' or 'number' depending of the type of the SIDC
 ```
 
