@@ -406,7 +406,19 @@ Object {
 
 ## MS.getColorMode
 
-## MS.getDashArrays
+## MS.getDashArrays()
+
+Gets the diffrent dash arrays used for dashed lines.
+
+**Returns**
+
+```javascript
+Object {
+  pending: String, // The value for the stroke-dasharray used for markers with a pending status.
+  anticipated: String, // The value for the stroke-dasharray used for markers with a anticipated status.
+  feintDummy: String // The value for the stroke-dasharray used for the feint/dummy modifier.
+}
+```
 
 ## MS.getHqStafLength
 
