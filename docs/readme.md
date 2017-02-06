@@ -279,7 +279,9 @@ String
 
 # Developing milsymbol
 
-Describe MS global here, and how to do extensions and other cool things. The API for MS global is under further development.
+This describes more advanced development with milsymbol, this includes adding your own symbols, overwriting existing icons and in other ways modifying the standard output from milsymbol.
+
+The base concept for milsymbol has been that everything that is used internally to build up the symbols should be possible to modify, this makes it possible to do everything from changing colors to adding completely new parts to the generated symbols.
 
 ## Draw instruction
 
