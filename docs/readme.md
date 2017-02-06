@@ -530,6 +530,20 @@ Number
 
 ## MS.setMarkerParts
 
-## MS.setStandard
+## MS.setStandard(standard)
+
+```javascript
+standard: String // '2525' or 'APP6'
+```
+
+This sets the preferred standard.  
+
+Sometimes APP6 and 2525 differ in symbols. Default we are using 2525 symbology, but you can select to follow APP6 instead. (All possible SIDC will have some kind of symbol no matter setting, so you will always get a symbol.)
+
+**Returns**
+
+```javascript
+Boolean // true if the standard was set, otherwise false
+```
 
 ## MS.translate
