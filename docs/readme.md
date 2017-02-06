@@ -442,7 +442,17 @@ Gets the version of milsymbol.
 String
 ```
 
-## MS.outline
+## MS.outline(draw_instruction, outline, stroke, color)
+
+Takes the draw instruction(s) in the input and modifies them so that they only are stroked.
+
+Outline is the outline width, stroke is the original stroke width, and color is the color the outline should have.
+
+**Returns**
+
+```javascript
+Array or Object
+```
 
 ## MS.rotate
 
