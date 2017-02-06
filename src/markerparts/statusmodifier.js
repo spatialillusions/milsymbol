@@ -40,5 +40,5 @@ module.exports = function statusmodifier(){
 	}
 
 	//A bounding box only needs the values that might change
-	return MS.buildingBlock(drawArray1,drawArray2,{y1:y1,y2:y2});
+	return {pre: drawArray1, post: drawArray2, bbox: {y1: y1, y2: y2}};
 }

@@ -205,5 +205,5 @@ module.exports = function modifier(){
 		gbbox.merge({y2:(bbox.y2-28)});
 	}
 	g += '</g>';*/
-	return MS.buildingBlock(drawArray1,drawArray2,gbbox);
+	return {pre: drawArray1, post: drawArray2, bbox: gbbox};
 }

@@ -203,5 +203,5 @@ module.exports = function icon(){
 	if(!(this.frame && this.fill) || this.monoColor){
 		if (this.outlineWidth > 0) drawArray1.push(MS.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor));
 	}
-	return MS.buildingBlock(drawArray1,drawArray2, gbbox );
+	return {pre: drawArray1, post: drawArray2, bbox: gbbox};
 }

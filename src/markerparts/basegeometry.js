@@ -83,5 +83,5 @@ module.exports = function basegeometry(){
 		geom.strokedasharray = this.properties.notpresent;
 		drawArray2.push(geom);
 	}
-	return MS.buildingBlock(drawArray1,drawArray2,this.properties.baseGeometry.bbox);
+	return {pre: drawArray1, post: drawArray2, bbox: this.properties.baseGeometry.bbox};
 }

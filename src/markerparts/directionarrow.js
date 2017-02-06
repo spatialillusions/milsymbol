@@ -33,5 +33,5 @@ module.exports = function directionarrow(){
 			drawArray2.push(arrow);
 		}
 	}
-	return MS.buildingBlock(drawArray1,drawArray2,gbbox);
+	return {pre: drawArray1, post: drawArray2, bbox: gbbox};
 }

@@ -86,11 +86,6 @@ MS.addSIDCicons = function(parts, type){
   }
 };
 MS.bbox = require('./ms/bbox.js');
-MS.buildingBlock = function(pre, post, bbox) {
-  if ( pre.length == 1 && Array.isArray(pre[0]) ) pre = pre[0];
-  if ( post.length == 1 && Array.isArray(post[0]) ) post = post[0];
-  return {pre: pre, post: post, bbox: bbox};
-};
 MS.colorMode = function(civilian, friend, hostile, neutral, unknown) {
   var o = {};
   o.Civilian = civilian;
@@ -181,6 +176,13 @@ MS.translate = function(x, y, instruction){
 MS.bboxMax = function(box1, box2){
   console.log('bboxMax() is deprecated and should not be used, use bbox.merge() instead.');
   return box1.merge(box2);
+};
+
+MS.buildingBlock = function(pre, post, bbox) {
+  console.log('buildingBlock() is deprecated and should not be used.');
+  if ( pre.length == 1 && Array.isArray(pre[0]) ) pre = pre[0];
+  if ( post.length == 1 && Array.isArray(post[0]) ) post = post[0];
+  return {pre: pre, post: post, bbox: bbox};
 };
 
 MS.addLetterLabelOverrides = function(parts){

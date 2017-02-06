@@ -48,6 +48,8 @@
 
 - MS.addNumberLabelOverrides(), use MS.addLabelOverrides() instead.
 
+- MS.buildingBlock() return an object instead.
+
 ### Removed
 
 ### Fixed
