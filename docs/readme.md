@@ -361,3 +361,48 @@ The following different kinds of draw instructions can be used in milsymbol:
 } 
 ```
 
+## MS.addIconParts
+
+## MS.addLetterLabelOverrides
+
+## MS.addLetterSIDCicons
+
+## MS.addMarkerParts
+
+## MS.addNumberLabelOverrides
+
+## MS.addNumberSIDCicons
+
+## MS.bbox
+
+## MS.colorMode
+
+## MS.getColorMode
+
+## MS.getDashArrays
+
+## MS.getHqStafLength
+
+## MS.getMarkerParts
+
+## MS.getVersion
+
+## MS.outline
+
+## MS.rotate
+
+## MS.scale
+
+## MS.setAutoSVG(Bool)
+
+## MS.setColorMode
+
+## MS.setDashArrays
+
+## MS.setHqStafLength
+
+## MS.setMarkerParts
+
+## MS.setStandard
+
+## MS.translate
