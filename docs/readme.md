@@ -280,3 +280,84 @@ String
 # Developing milsymbol
 
 Describe MS global here, and how to do extensions and other cool things. The API for MS global is under further development.
+
+The symbols in milsymbol is drawn using JSON draw instructions, these are then converted into Canvas draw instructions, or SVG output. Several draw instructions can be grouped together in an Array to for a more complex part of a symbol, if possible it is however recommended to try draw as much as possible of a symbol in one draw instruction.
+
+If you are creating your own JSON geometries for usage in milsymbol, they should have the origo at 100,100, and the hight and width of the icon octagon is 100. There is a sample SVG representing the symbol octagon available in the `dev folder.
+
+The following different kinds of draw instructions can be used in milsymbol:
+
+```JSON
+{
+  type: 'path',
+  d: String, // SVG path data
+  fill: String, // Fill color {Optional}
+  fillopacity: Number, // Fill opacity {Optional}
+  stroke: String, // Stroke color {Optional}
+  strokedasharray: String, // {Optional}
+  strokewidth: Number, // Width of the stroke {Optional}
+} 
+```
+
+```JSON
+{
+  type: 'circle',
+  cx: Number, // Center x
+  cy: Number, // Center y
+  r: Number, // Radius
+  fill: String, // Fill color {Optional}
+  fillopacity: Number, // Fill opacity {Optional}
+  stroke: String, // Stroke color {Optional}
+  strokedasharray: String, // {Optional}
+  strokewidth: Number, // Width of the stroke {Optional}
+} 
+```
+
+```JSON
+{
+  type: 'text',
+  x: Number,
+  y: Number,
+  textanchor: String,
+  fontsize: Number,
+  fontfamily: String,
+  fontweight: String,
+  fill: String, // Fill color {Optional}
+  fillopacity: Number, // Fill opacity {Optional}
+  stroke: String, // Stroke color {Optional}
+  strokedasharray: String, // {Optional}
+  strokewidth: Number, // Width of the stroke {Optional}
+} 
+```
+
+```JSON
+{
+  type: 'translate',
+  x: Number, // Move x
+  y: Number // Move y
+} 
+```
+
+```JSON
+{
+  type: 'rotate',
+  degree: Number, // Rotation angle
+  x: Number, // Rotate center x
+  y: Number, // Rotate center y 
+} 
+```
+
+```JSON
+{
+  type: 'scale',
+  factor: Number // Factor to scale
+} 
+```
+
+```JSON
+{
+  type: 'svg',
+  svg: String // Full SVG XML
+} 
+```
+
