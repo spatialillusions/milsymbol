@@ -281,6 +281,8 @@ String
 
 Describe MS global here, and how to do extensions and other cool things. The API for MS global is under further development.
 
+## Draw instruction
+
 The symbols in milsymbol is drawn using JSON draw instructions, these are then converted into Canvas draw instructions, or SVG output. Several draw instructions can be grouped together in an Array to for a more complex part of a symbol, if possible it is however recommended to try draw as much as possible of a symbol in one draw instruction.
 
 If you are creating your own JSON geometries for usage in milsymbol, they should have the origo at 100,100, and the hight and width of the icon octagon is 100. There is a sample SVG representing the symbol octagon available in the `dev folder.
