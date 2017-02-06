@@ -82,7 +82,7 @@ The following options are modifiers, text or graphical, that are defined in the 
 | altitudeDepth | String | '' | A text modifier for units, equipment, and installations, that displays either altitude flight level, depth for submerged objects; or height of equipment or structures on the ground. **Feild X** *14 Characters* | 
 | combatEffectiveness | String | '' | A text modifier for units and installations that indicates unit effectiveness or installation capability.  **Feild K** *5 Characters* | 
 | commonIdentifier | String | '' | Example: "Hawk" for Hawk SAM system. **Feild AF**| 
-| direction | Number | undefined | At the moment all directions should be in degrees and not in mils. Set to an empty string to remove the direction arrow. **Feild Q** | 
+| direction | Number | undefined | At the moment all directions should be in degrees and not in mils. Set to an undefined to remove the direction arrow. **Feild Q** | 
 | dtg | String | '' | A text modifier for units, equipment, and installations that displays DTG format: DDHHMMSSZMONYYYY or "O/O" for on order. **Feild W** *16 Characters* | 
 | equipmentTeardownTime | String | '' | Equipment teardown time in minutes. **Feild AE** | 
 | evaluationRating | String | '' | A text modifier for units, equipment, and installations that consists of a one-letter reliability rating and a one-number credibility rating. **Feild J** *2 Characters* |
