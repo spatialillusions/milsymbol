@@ -287,7 +287,7 @@ If you are creating your own JSON geometries for usage in milsymbol, they should
 
 The following different kinds of draw instructions can be used in milsymbol:
 
-```JSON
+```javascript
 {
   type: 'path',
   d: String, // SVG path data
@@ -299,7 +299,7 @@ The following different kinds of draw instructions can be used in milsymbol:
 } 
 ```
 
-```JSON
+```javascript
 {
   type: 'circle',
   cx: Number, // Center x
@@ -313,7 +313,7 @@ The following different kinds of draw instructions can be used in milsymbol:
 } 
 ```
 
-```JSON
+```javascript
 {
   type: 'text',
   x: Number,
@@ -330,7 +330,7 @@ The following different kinds of draw instructions can be used in milsymbol:
 } 
 ```
 
-```JSON
+```javascript
 {
   type: 'translate',
   x: Number, // Move x
@@ -338,7 +338,7 @@ The following different kinds of draw instructions can be used in milsymbol:
 } 
 ```
 
-```JSON
+```javascript
 {
   type: 'rotate',
   degree: Number, // Rotation angle
@@ -347,7 +347,7 @@ The following different kinds of draw instructions can be used in milsymbol:
 } 
 ```
 
-```JSON
+```javascript
 {
   type: 'scale',
   factor: Number // Factor to scale
