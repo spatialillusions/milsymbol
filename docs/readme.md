@@ -121,9 +121,9 @@ The following options are style options that changes the look of the symbol in d
 | infoSize | Number | 40 | The size of the text fields surrounding the symbol.
 | monoColor | String | '' | A color that is either a keyword or a numerical RGB specification. If you set this the symbol will be monochrome and unfilled using the color provided. | 
 | outlineColor | String | rgb(239, 239, 239) | A color that is either a keyword or a numerical RGB specification. The color of the outline of the symbol, if any. Defaults to an off-white color. | 
-| outlineWidth | 	Real | 0 | The width of the outline of the symbol, if any. | 
+| outlineWidth | Number | 0 | The width of the outline of the symbol, if any. | 
 | size | Number | 100 | The L value for your symbol, where the L value is the width of the icon octagon. | 
-| strokeWidth | Real | 3 | The stroke width of the symbol. | 
+| strokeWidth | Number | 3 | The stroke width of the symbol. | 
 
 **Returns**
 
