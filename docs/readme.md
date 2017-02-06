@@ -354,7 +354,7 @@ The following different kinds of draw instructions can be used in milsymbol:
 } 
 ```
 
-```JSON
+```javascript
 {
   type: 'svg',
   svg: String // Full SVG XML
