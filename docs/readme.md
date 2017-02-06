@@ -393,7 +393,7 @@ type: String // 'letter' or 'number' depending of the type of the SIDC
 
 ## MS.addMarkerParts
 
-TODO might be name change.
+TODO might be name change (addSymbolParts would make more sense)
 
 ## MS.addSIDCicons(sidcFunction, type)
 
@@ -445,8 +445,8 @@ Gets the diffrent dash arrays used for dashed lines.
 
 ```javascript
 Object {
-  pending: String, // The value for the stroke-dasharray used for markers with a pending status.
-  anticipated: String, // The value for the stroke-dasharray used for markers with a anticipated status.
+  pending: String, // The value for the stroke-dasharray used for symbols with a pending status.
+  anticipated: String, // The value for the stroke-dasharray used for symbols with a anticipated status.
   feintDummy: String // The value for the stroke-dasharray used for the feint/dummy modifier.
 }
 ```
@@ -463,7 +463,7 @@ Number
 
 ## MS.getMarkerParts
 
-TODO might be name change
+TODO might be name change (getSymbolParts would make more sense)
 
 ## MS.getVersion()
 
@@ -514,8 +514,8 @@ TODO
 
 ```javascript
 Object {
-  pending: String, // The value for the stroke-dasharray used for markers with a pending status.
-  anticipated: String, // The value for the stroke-dasharray used for markers with a anticipated status.
+  pending: String, // The value for the stroke-dasharray used for symbols with a pending status.
+  anticipated: String, // The value for the stroke-dasharray used for symbols with a anticipated status.
   feintDummy: String // The value for the stroke-dasharray used for the feint/dummy modifier.
 }
 ```
@@ -549,7 +549,7 @@ Number
 
 ## MS.setMarkerParts
 
-TODO might be name change
+TODO might be name change (setSymbolParts would make more sense)
 
 ## MS.setStandard(standard)
 
