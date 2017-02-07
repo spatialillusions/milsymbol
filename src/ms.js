@@ -44,10 +44,10 @@ var MS = new function(){
   this._labelCache = {}; // A cache of label overrides to speed stuff up...
   this._labelOverrides = {};
   this._letterSIDCicons = [];
-  this._markerParts = [];
   this._numberSIDCicons = [];
   this._STD2525 = true;
   this._svgNS = "http://www.w3.org/2000/svg";
+  this._symbolParts = [];
   
   this.autoSVG = true;
   this.version = '0.6.0';	
@@ -115,7 +115,7 @@ MS.getHqStafLength = function() {
   return this._hqStafLength;
 };
 MS.getSymbolParts = function() {
-  return this._markerParts.slice(0);
+  return this._symbolParts.slice(0);
 };
 MS.getVersion = function() {return this.version};
 MS.outline = function(geom, outline, stroke, color){
@@ -166,7 +166,7 @@ MS.setHqStafLength = function(len) {
   return this._hqStafLength;
 };
 MS.setSymbolParts = function(parts) {
-  this._markerParts = parts;
+  this._symbolParts = parts;
   return MS;
 };
 MS.setStandard = require('./ms/setstandard.js');
