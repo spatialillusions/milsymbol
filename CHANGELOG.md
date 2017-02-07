@@ -30,6 +30,8 @@
 
 - MS.getSymbolParts() should be used instead of MS.getMarkerParts()
 
+- MS.setSymbolParts(parts) should be used instead of MS.setMarkerParts(parts)
+
 ### Changed
 
 ### Deprecated
@@ -55,6 +57,8 @@
 - MS.addMarkerParts(part) use MS.addSymbolPart(part) instead.
 
 - MS.getMarkerParts() use MS.getSymbolParts() instead.
+
+- MS.setMarkerParts(parts) use MS.setSymbolParts(parts) instead.
 
 ### Removed
 

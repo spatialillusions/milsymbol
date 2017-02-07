@@ -578,11 +578,6 @@ Sets the length of the HQ staf used for HQ symbols.
 Number
 ```
 
-
-## MS.setMarkerParts
-
-TODO might be name change (setSymbolParts would make more sense)
-
 ## MS.setStandard(standard)
 
 ```javascript
@@ -597,6 +592,20 @@ Sometimes APP6 and 2525 differ in symbols. Default we are using 2525 symbology, 
 
 ```javascript
 Boolean // true if the standard was set, otherwise false
+```
+
+
+## MS.setSymbolParts(parts)
+
+```javascript
+parts: Array // Array of symbolFunctions
+```
+Replaces the current symbol functions with an Array of symbol functions. This can be used to modify the symbol functions that are built into milsymbol.
+
+**Returns**
+
+```javascript
+Object MS
 ```
 
 ## MS.translate

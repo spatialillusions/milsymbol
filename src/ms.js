@@ -82,7 +82,7 @@ MS.addSIDCicons = function(parts, type){
 };
 MS.addSymbolPart = function(part) {
   if (typeof part === 'function') {
-    MS.setMarkerParts(MS.getSymbolParts().concat(part));
+    MS.setSymbolParts(MS.getSymbolParts().concat(part));
   }
   return MS;
 };
@@ -164,8 +164,9 @@ MS.setHqStafLength = function(len) {
   this._hqStafLength = len;
   return this._hqStafLength;
 };
-MS.setMarkerParts = function(parts) {
+MS.setSymbolParts = function(parts) {
   this._markerParts = parts;
+  return MS;
 };
 MS.setStandard = require('./ms/setstandard.js');
 MS.translate = function(x, y, instruction){
@@ -216,7 +217,13 @@ MS.addNumberSIDCicons = function(parts){
 };
 MS.getMarkerParts = function() {
   console.log('getMarkerParts() is deprecated and should not be used, use MS.getSymbolParts() instead.');
-  return this._markerParts.slice(0);
+  return MS.getSymbolParts();
+};
+
+MS.setMarkerParts = function(parts) {
+  console.log('setMarkerParts() is deprecated and should not be used, use MS.setSymbolParts() instead.');
+  MS.setSymbolParts(parts);
+  return MS;
 };
 
 module.exports = MS;

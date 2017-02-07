@@ -291,7 +291,7 @@ The global class for milsymbol is <b>MS</b>, so if you want to use the setStanda
 </tr>
 
 <tr>
-<td><b>setMarkerParts(</b><br>Array of functions<b>)<br></b></td>
+<td><b>setSymbolParts(</b><br>Array of functions<b>)<br></b></td>
 <td><i>Array</i><br></td>
 <td>
 <small>Sets a new array of function where each function returns a building block for a marker. You can use this if you want to add custom code between existing marker parts when you are <a href="#extendingmilsymbol">extending milsymbol</a>.</small>
@@ -1731,7 +1731,7 @@ A building block object describes a part that should be added to the marker. It 
 <!--
 <h2 id="extendingmilsymbol">Extending milsymbol</h2>
 If you want to you can extend the markers in milsymbol with custom code. It's actually possible to remove built in functionality in milsymbol and replace it with custom code, for example you could replace the code for the direction indicator with code for a speed indicator, but the most common use case is to add extra overlays.<br>
-To get an array of all functions that builds the symbols in milsymbol you can use <b>MS.getSymbolParts()</b>, and in the same way you can set a completely new set of functions using <b>MS.setMarkerParts(</b><i>Array of functions</i><b>)</b>.<br>
+To get an array of all functions that builds the symbols in milsymbol you can use <b>MS.getSymbolParts()</b>, and in the same way you can set a completely new set of functions using <b>MS.setSymbolParts(</b><i>Array of functions</i><b>)</b>.<br>
 If you just want to add a new overlay on top of the current marker parts, you can use <b>MS.addSymbolPart(</b><i>function</i><b>)</b>, where the new part is a function that returns a <b>MS.buildingBlock</b>. Inside the function you will be able to access all information about the current marker using <b>this</b>.<br>
 <code>
 <small>
