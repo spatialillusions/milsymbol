@@ -603,7 +603,3 @@ Replaces the current symbol functions with an Array of symbol functions. This ca
 ```javascript
 Object MS
 ```
-
-## MS.translate
-
-TODO might be removed

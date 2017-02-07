@@ -62,7 +62,9 @@
 
 ### Removed
 
-- MS.rotate() has been removed.
+- MS.rotate() has been removed, use json drawInstruction instead.
+
+- MS.translate() has been removed, use json drawInstruction instead.
 
 ### Fixed
 

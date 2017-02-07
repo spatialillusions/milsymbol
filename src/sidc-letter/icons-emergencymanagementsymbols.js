@@ -70,7 +70,7 @@ module.exports = function emergencymanagementsymbols(sId,bbox,icn,_STD2525){
 	sId["E-N-CE----"] = [icn['AC.IC.RODENT']];
 	sId['E-O-A-----'] = sId['E-O-AA----'] = sId['E-O-AB----'] = sId['E-O-AC----'] = sId['E-O-AD----'] = [icn['GR.IC.EMERGENCY MEDICAL OPERATION']];
 	sId["E-O-AE----"] = [icn['GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE'],icn['GR.M1.MEDEVAC']];
-	sId["E-O-AF----"] = [MS.translate(0,10,MS.scale(0.8,icn['AR.I.FF.CIVILIAN ROTARY WING'])),icn['GR.M1.MEDEVAC']];
+	sId["E-O-AF----"] = [MS._translate(0,10,MS.scale(0.8,icn['AR.I.FF.CIVILIAN ROTARY WING'])),icn['GR.M1.MEDEVAC']];
 	sId["E-O-AG----"] = [icn['AC.IC.HEALTH DEPARTMENT FACILITY']];
 	sId["E-O-AJ----"] = [icn['AC.IC.MEDICAL FACILITIES OUTPATIENT']];
 	sId["E-O-AK----"] = [icn['AC.IC.OPERATION/EMERGENCY MEDICAL OPERATION']];

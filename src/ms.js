@@ -169,7 +169,7 @@ MS.setSymbolParts = function(parts) {
   return MS;
 };
 MS.setStandard = require('./ms/setstandard.js');
-MS.translate = function(x, y, instruction){
+MS._translate = function(x, y, instruction){
   return {type:'translate',x:x,y:y,draw:[instruction]};
 };
 
