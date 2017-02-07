@@ -28,8 +28,6 @@
 
 ### Changed
 
-- Fixed a bug that prevented specialHeadquarters to be drawn on Canvas output.
-
 ### Deprecated
 
 - Avoid setting properties directly, use setOptions(options) instead.
@@ -53,6 +51,8 @@
 ### Removed
 
 ### Fixed
+
+- Fixed a bug that prevented specialHeadquarters to be drawn on Canvas output.
 
 ### Security
 
