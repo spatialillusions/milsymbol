@@ -292,7 +292,7 @@ If you are creating your own JSON geometries for usage in milsymbol, they should
 The following different kinds of draw instructions can be used in milsymbol:
 
 ```javascript
-{
+Object {
   type: 'path',
   d: String, // SVG path data
   fill: String, // Fill color {Optional}
@@ -304,7 +304,7 @@ The following different kinds of draw instructions can be used in milsymbol:
 ```
 
 ```javascript
-{
+Object {
   type: 'circle',
   cx: Number, // Center x
   cy: Number, // Center y
@@ -318,7 +318,7 @@ The following different kinds of draw instructions can be used in milsymbol:
 ```
 
 ```javascript
-{
+Object {
   type: 'text',
   x: Number,
   y: Number,
@@ -335,7 +335,7 @@ The following different kinds of draw instructions can be used in milsymbol:
 ```
 
 ```javascript
-{
+Object {
   type: 'translate',
   x: Number, // Move x
   y: Number, // Move y
@@ -344,7 +344,7 @@ The following different kinds of draw instructions can be used in milsymbol:
 ```
 
 ```javascript
-{
+Object {
   type: 'rotate',
   degree: Number, // Rotation angle
   x: Number, // Rotate center x
@@ -354,7 +354,7 @@ The following different kinds of draw instructions can be used in milsymbol:
 ```
 
 ```javascript
-{
+Object {
   type: 'scale',
   factor: Number, // Factor to scale
   draw: drawInstruction
@@ -362,7 +362,7 @@ The following different kinds of draw instructions can be used in milsymbol:
 ```
 
 ```javascript
-{
+Object {
   type: 'svg',
   svg: String // Full SVG XML
 } 
@@ -371,7 +371,7 @@ The following different kinds of draw instructions can be used in milsymbol:
 Several draw instructions can be grouped together in an Array to for a more complex part of a symbol, this is also a `drawInstruction` and the code will handle both Objects and Arrays.
  
 ```javascript
-[
+Array [
   drawInstruction,
   drawInstruction,
   drawInstruction,
