@@ -482,9 +482,20 @@ Gets the length of the HQ staf used for HQ symbols.
 Number
 ```
 
-## MS.getMarkerParts
+## MS.getSymbolParts()
 
-TODO might be name change (getSymbolParts would make more sense)
+This gets all symbol functions that has been inserted by `MS.addSymbolPart`.
+
+**Returns**
+
+```javascript
+Array [
+  symbolFunction,
+  symbolFunction,
+  symbolFunction,
+  ...
+]
+```
 
 ## MS.getVersion()
 

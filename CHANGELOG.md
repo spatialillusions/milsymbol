@@ -28,6 +28,8 @@
 
 - MS.addSymbolPart(part) should be used instead of MS.addMarkerParts(part)
 
+- MS.getSymbolParts() should be used instead of MS.getMarkerParts()
+
 ### Changed
 
 ### Deprecated
@@ -51,6 +53,8 @@
 - MS.buildingBlock() return an object instead.
 
 - MS.addMarkerParts(part) use MS.addSymbolPart(part) instead.
+
+- MS.getMarkerParts() use MS.getSymbolParts() instead.
 
 ### Removed
 

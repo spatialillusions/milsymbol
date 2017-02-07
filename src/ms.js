@@ -82,7 +82,7 @@ MS.addSIDCicons = function(parts, type){
 };
 MS.addSymbolPart = function(part) {
   if (typeof part === 'function') {
-    MS.setMarkerParts(MS.getMarkerParts().concat(part));
+    MS.setMarkerParts(MS.getSymbolParts().concat(part));
   }
   return MS;
 };
@@ -107,7 +107,7 @@ MS.getDashArrays = function() {
 MS.getHqStafLength = function() {
   return this._hqStafLength;
 };
-MS.getMarkerParts = function() {
+MS.getSymbolParts = function() {
   return this._markerParts.slice(0);
 };
 MS.getVersion = function() {return this.version};
@@ -213,6 +213,10 @@ MS.addNumberSIDCicons = function(parts){
   if (typeof parts === 'function') {
     this._numberSIDCicons = this._numberSIDCicons.concat(parts);
   }
+};
+MS.getMarkerParts = function() {
+  console.log('getMarkerParts() is deprecated and should not be used, use MS.getSymbolParts() instead.');
+  return this._markerParts.slice(0);
 };
 
 module.exports = MS;
