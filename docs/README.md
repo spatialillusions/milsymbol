@@ -452,9 +452,37 @@ Object {
 
 TODO
 
-## MS.getColorMode
+## MS.getColorMode(mode)
 
-TODO
+```javascript
+mode: String // Name of a color mode registred with setColorMode
+```
+
+Gets a color mode that has been registred with `setColorMode`. When milsymbol is initiated the following color modes are registred automatically:
+
+| Color mode name | Description |
+|-----------------|-------------|
+|Light | Light fill colors. | 
+|Medium | Medium fill colors. | 
+|Dark | Dark fill colors. | 
+|FrameColor | Frame colors for unfilled symbols. | 
+|IconColor | Icon colors for unfilled and unframed symbols. | 
+|Black | This is all black. | 
+|White | This is all white. | 
+|OffWhite | This is off white, used for white parts of icons. | 
+|None | This is no color, used to turn colors off. | 
+
+**Returns**
+
+```javascript
+Object {
+  Civilian: String,
+  Friend: String, 
+  Hostile: String, 
+  Neutral: String, 
+  Unknown: String
+}
+```
 
 ## MS.getDashArrays()
 
