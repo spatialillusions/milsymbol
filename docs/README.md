@@ -389,12 +389,16 @@ labelFunction: function,
 type: String // 'letter' or 'number' depending of the type of the SIDC
 ```
 
+TODO
+
 ## MS.addSIDCicons(sidcFunction, type)
 
 ```javascript
 sidcFunction: function,
 type: String // 'letter' or 'number' depending of the type of the SIDC
 ```
+
+TODO
 
 ## MS.addSymbolPart(part)
 
