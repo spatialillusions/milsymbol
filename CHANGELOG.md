@@ -26,6 +26,8 @@
 
 - MS.addLabelOverrides(labelFunction, type) for adding label functions.
 
+- MS.addSymbolPart(part) should be used instead of MS.addMarkerParts(part)
+
 ### Changed
 
 ### Deprecated
@@ -47,6 +49,8 @@
 - MS.addNumberLabelOverrides(), use MS.addLabelOverrides() instead.
 
 - MS.buildingBlock() return an object instead.
+
+- MS.addMarkerParts(part) use MS.addSymbolPart(part) instead.
 
 ### Removed
 

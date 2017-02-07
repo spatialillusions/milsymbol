@@ -391,16 +391,37 @@ labelFunction: function,
 type: String // 'letter' or 'number' depending of the type of the SIDC
 ```
 
-## MS.addMarkerParts
-
-TODO might be name change (addSymbolParts would make more sense)
-
 ## MS.addSIDCicons(sidcFunction, type)
 
 ```javascript
 sidcFunction: function,
 type: String // 'letter' or 'number' depending of the type of the SIDC
 ```
+
+## MS.addSymbolPart(part)
+
+```javascript
+part: function
+```
+
+Adds a new symbol function to milsymbol. A symbol function is a function that returns an Object with two drawInstruction and one bounding box, like this:
+
+```javascript
+Object {
+  pre: drawInstruction, // This is to be drawn before anything else
+  post: drawInstruction, // This is to be drawn after anything else
+  bbox: bbox // The bounding box of the added drawInstructions
+}
+```
+
+By inserting a pre and a post drawInstruction, we are able to to draw parts of the symbol that requires information, such as bounding boxes, previously drawn, but to draw them before the other parts are drawn. It's quite clever, trust me.
+
+**Returns**
+
+```javascript
+Object MS
+```
+
 
 ## MS.bbox({box})
 

@@ -49,7 +49,7 @@
 	  // and we can't really handle non square icons, we have to go around the problem by 
 	  // making the icons square around the anchor point, so we add a custom extension to 
 	  // milsymbol to do that.
-	  MS.addMarkerParts(
+	  MS.addSymbolPart(
 		function squareIcon(){
 		  var gbbox = new MS.bbox();
 		  if(this.square){

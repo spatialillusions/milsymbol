@@ -75,15 +75,16 @@ MS.addLabelOverrides = function(parts, type){
       this._labelOverrides[type] = this._labelOverrides[type].concat(parts);
     }
 };
-MS.addMarkerParts = function(parts) {
-  if (typeof parts === 'function') {
-    MS.setMarkerParts(MS.getMarkerParts().concat(parts));
-  }
-};
 MS.addSIDCicons = function(parts, type){
   if (typeof parts === 'function') {
     this['_' + type + 'SIDCicons'] = this['_' + type + 'SIDCicons'].concat(parts);
   }
+};
+MS.addSymbolPart = function(part) {
+  if (typeof part === 'function') {
+    MS.setMarkerParts(MS.getMarkerParts().concat(part));
+  }
+  return MS;
 };
 MS.bbox = require('./ms/bbox.js');
 MS.colorMode = function(civilian, friend, hostile, neutral, unknown) {
@@ -173,18 +174,20 @@ MS.translate = function(x, y, instruction){
 
 
 // For backward compability
+MS.addMarkerParts = function(part) {
+  console.log('addMarkerParts() is deprecated and should not be used, use addSymbolPart() instead.');
+  MS.addSymbolPart(part);
+};
 MS.bboxMax = function(box1, box2){
   console.log('bboxMax() is deprecated and should not be used, use bbox.merge() instead.');
   return box1.merge(box2);
 };
-
 MS.buildingBlock = function(pre, post, bbox) {
   console.log('buildingBlock() is deprecated and should not be used.');
   if ( pre.length == 1 && Array.isArray(pre[0]) ) pre = pre[0];
   if ( post.length == 1 && Array.isArray(post[0]) ) post = post[0];
   return {pre: pre, post: post, bbox: bbox};
 };
-
 MS.addLetterLabelOverrides = function(parts){
   console.log('addLetterLabelOverrides() is deprecated and should not be used, use MS.addLabelOverrides() instead.');
   if (typeof parts === 'function') {
@@ -192,14 +195,12 @@ MS.addLetterLabelOverrides = function(parts){
       this._labelOverrides['letter'] = this._labelOverrides['letter'].concat(parts);
     }
 };
-
 MS.addLetterSIDCicons = function(parts){
   console.log('addLetterSIDCicons() is deprecated and should not be used, use MS.addSIDCicons() instead.');
   if (typeof parts === 'function') {
     this._letterSIDCicons = this._letterSIDCicons.concat(parts);
   }
 };
-
 MS.addNumberLabelOverrides = function(parts){
   console.log('addNumberLabelOverrides() is deprecated and should not be used, use MS.addLabelOverrides() instead.');
   if (typeof parts === 'function') {
@@ -207,11 +208,11 @@ MS.addNumberLabelOverrides = function(parts){
       this._labelOverrides['number'] = this._labelOverrides['number'].concat(parts);
     }
 };
-
 MS.addNumberSIDCicons = function(parts){
   console.log('addNumberSIDCicons() is deprecated and should not be used, use MS.addSIDCicons() instead.');
   if (typeof parts === 'function') {
     this._numberSIDCicons = this._numberSIDCicons.concat(parts);
   }
 };
+
 module.exports = MS;

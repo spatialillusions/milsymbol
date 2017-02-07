@@ -52,14 +52,14 @@ MS.addSIDCicons(require('../src/sidc-number/icons-signalsintelligence.js'), 'num
 MS.addSIDCicons(require('../src/sidc-number/icons-cyberspace.js'), 'number');
 
 // Functions that builds the symbol
-MS.addMarkerParts(require('../src/markerparts/basegeometry.js'));
-MS.addMarkerParts(require('../src/markerparts/icon.js'));
-MS.addMarkerParts(require('../src/markerparts/modifier.js'));
-MS.addMarkerParts(require('../src/markerparts/statusmodifier.js'));
-MS.addMarkerParts(require('../src/markerparts/affliationdimension.js'));
-MS.addMarkerParts(require('../src/markerparts/textfields.js'));
-MS.addMarkerParts(require('../src/markerparts/directionarrow.js'));
-//MS.addMarkerParts(require('../src/markerparts/debug.js')); // This draws the symbol octagon, can be good for debugging.
+MS.addSymbolPart(require('../src/markerparts/basegeometry.js'));
+MS.addSymbolPart(require('../src/markerparts/icon.js'));
+MS.addSymbolPart(require('../src/markerparts/modifier.js'));
+MS.addSymbolPart(require('../src/markerparts/statusmodifier.js'));
+MS.addSymbolPart(require('../src/markerparts/affliationdimension.js'));
+MS.addSymbolPart(require('../src/markerparts/textfields.js'));
+MS.addSymbolPart(require('../src/markerparts/directionarrow.js'));
+//MS.addSymbolPart(require('../src/markerparts/debug.js')); // This draws the symbol octagon, can be good for debugging.
 
 // This makes it possible to draw canvas paths in IE11
 MS._Path2D = require('../src/ms.path2d.js');
