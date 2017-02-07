@@ -138,9 +138,9 @@ MS.outline = function(geom, outline, stroke, color){
   }
   return clone;
 };
-MS.rotate = function(angle, instruction){
+/*MS.rotate = function(angle, instruction){
   return {type:'rotate',degree:angle,x:100,y:100,draw:[instruction]};
-};
+};*/
 MS.scale = function(factor, instruction){
   return {type:'translate',x:(100-factor*100),y:(100-factor*100),draw:[{type:'scale',factor:factor,draw:[instruction]}]};
 };

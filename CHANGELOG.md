@@ -62,6 +62,8 @@
 
 ### Removed
 
+- MS.rotate() has been removed.
+
 ### Fixed
 
 - Fixed a bug that prevented specialHeadquarters to be drawn on Canvas output.

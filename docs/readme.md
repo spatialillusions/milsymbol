@@ -526,10 +526,6 @@ Outline is the outline width, stroke is the original stroke width, and color is 
 Array or Object
 ```
 
-## MS.rotate
-
-TODO might be removed
-
 ## MS.scale
 
 TODO might be removed
