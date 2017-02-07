@@ -2,7 +2,7 @@
 
 ## Master
 
-- Milsymbol is now split into several modules and built with webpack, this makes the code easier to maintain.
+- Milsymbol is now split into several modules and built with [webpack](https://webpack.github.io/), this makes the code easier to maintain.
 
 - Avoid getting and setting properties directly, use methods for this when they are available, in the future properties might change names.
 
