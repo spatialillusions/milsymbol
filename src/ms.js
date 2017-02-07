@@ -64,6 +64,13 @@ var MS = new function(){
   }
 };
 
+MS._scale = function(factor, instruction){
+  return {type:'translate',x:(100-factor*100),y:(100-factor*100),draw:[{type:'scale',factor:factor,draw:[instruction]}]};
+};
+MS._translate = function(x, y, instruction){
+  return {type:'translate',x:x,y:y,draw:[instruction]};
+};
+
 MS.addIconParts = function(parts) {
   if (typeof parts === 'function') {
     this._iconParts = this._iconParts.concat(parts);
@@ -138,12 +145,6 @@ MS.outline = function(geom, outline, stroke, color){
   }
   return clone;
 };
-/*MS.rotate = function(angle, instruction){
-  return {type:'rotate',degree:angle,x:100,y:100,draw:[instruction]};
-};*/
-MS.scale = function(factor, instruction){
-  return {type:'translate',x:(100-factor*100),y:(100-factor*100),draw:[{type:'scale',factor:factor,draw:[instruction]}]};
-};
 MS.setAutoSVG = function(mode) {this.autoSVG = mode; return this.autoSVG;};
 MS.setColorMode = function(mode, colorMode) {
   this._colorModes[mode] = {};
@@ -169,9 +170,7 @@ MS.setSymbolParts = function(parts) {
   return MS;
 };
 MS.setStandard = require('./ms/setstandard.js');
-MS._translate = function(x, y, instruction){
-  return {type:'translate',x:x,y:y,draw:[instruction]};
-};
+
 
 
 // For backward compability
