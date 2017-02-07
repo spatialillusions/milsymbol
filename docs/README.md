@@ -1,5 +1,3 @@
-This is a start of the new documentation, it's not done yet, for current documentation, have a look in index.html
-
 # Getting milsymbol into your enviroment
 
 ## Downloading milsymbol
