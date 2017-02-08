@@ -14,6 +14,8 @@ Include the JavaScript file and you are ready to go.
 
 The global object `MS` will now contain all milsymbols functionality.
 
+TODO Change `MS` to `ms`??? 
+
 ## Get milsymbol using npm
 
 You can get milsymbol using npm:
@@ -427,6 +429,8 @@ Object MS
 
 ## MS.bbox({box})
 
+TODO Rename to MS.BBox???
+
 ```javascript
 Object {
   x1: Number, // Left coordinate {Optional}
@@ -454,7 +458,7 @@ Object {
 
 ## MS.colorMode
 
-TODO
+TODO Rename to MS.ColorMode???
 
 ## MS.getColorMode(mode)
 
