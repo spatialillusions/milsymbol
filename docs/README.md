@@ -454,7 +454,7 @@ MS.addLabelOverrides(
     we don't have to return anything.
     */
   }
-);
+,'letter');
 ```
 
 **Returns**
