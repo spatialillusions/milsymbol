@@ -453,8 +453,8 @@ MS.addLabelOverrides(
     Since we are modifying directly to the existing object of overrides, 
     we don't have to return anything.
     */
-  }
-,'letter');
+  },'letter' //Setting letter as SIDC type
+);
 ```
 
 **Returns**
