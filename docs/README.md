@@ -382,7 +382,43 @@ Array [
 
 ## MS.addIconParts(iconFunction)
 
-TODO
+```javascript
+iconFunction: function
+```
+
+Adds an icon function to milsymbol. All icons on the symbols in milsymbol is built by different icon parts, it can be one for Infantry and one for Armor, add them together and you will have the icon for Armored Infantry. By reusing icon parts as much as possible the the size of milsymbol is reduced.
+
+If you want to override built in icon parts, or add new to use with custom SIDC, you can do this by adding a icon function. 
+
+Example:
+
+```javascript
+MS.addIconParts(
+  function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
+    /*
+    iconParts: Object - The existing object of icon parts
+    properties: Object - propterties object
+    colors: Object - color object
+    STD2525: Boolean - Is it 2525 then true, otherwise false
+    alternateMedal: Boolean - true/false for sea mine stuff
+    */
+    
+    // Adding a custom part for tactical graphics
+	iconParts['TP.HARBOR'] = {type:'path',fill:false,d:'M 80,140 50,60 150,60 120,140'};	
+
+    /* 
+    Since we are adding directly to the existing object of icon parts, 
+    we don't have to return anything.
+    */
+  }
+);
+```
+
+**Returns**
+
+```javascript
+Object MS
+```
 
 ## MS.addLabelOverrides(labelFunction, type)
 

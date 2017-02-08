@@ -75,6 +75,7 @@ MS.addIconParts = function(parts) {
   if (typeof parts === 'function') {
     this._iconParts = this._iconParts.concat(parts);
   }
+  return MS;
 };
 MS.addLabelOverrides = function(parts, type){
   if (typeof parts === 'function') {
