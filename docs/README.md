@@ -115,6 +115,7 @@ The following options are style options that changes the look of the symbol in d
 | fill | Boolean | true | Should your symbol be filled with color. |
 | fillOpacity | Number | 1 | The opacity of the symbol fill color. |
 | frame | 	Boolean	 | true | Should your symbol have a frame. All symbols support to be unframed, not just the ones specified in 2525B. | 
+| hqStafLength | Number | undefined | Overrides the global Headquarters staf length |
 | icon | Boolean | true | Should your symbol have an icon. | 
 | infoColor | String | Same color as the frame outline | This will be used for texts in the text fields surrounding the symbol. It is a color that is either a keyword or a numerical RGB specification. | 
 | infoFields | Boolean | true | If you have set some text fields and direction but don't want them to be displayed you can set infoFields to false. This makes it possible to initiate the object with all information you got but not display it. | 

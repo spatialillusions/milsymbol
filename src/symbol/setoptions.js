@@ -38,9 +38,10 @@ module.exports = function(options){
     y: (anchor.y-this.bbox.y1+parseFloat(this.strokeWidth) + parseFloat(this.outlineWidth))*this.size/100};
   //If it is a headquarters the anchor should be at the end of the staf
   if(this.properties.headquarters){
+	var hqStafLength = this.hqStafLength || MS._hqStafLength;
     anchor = {
       x:this.properties.baseGeometry.bbox.x1,
-      y:this.properties.baseGeometry.bbox.y2 + MS._hqStafLength};
+      y:this.properties.baseGeometry.bbox.y2 + hqStafLength};
   }
   this.markerAnchor = {
     x: (anchor.x-this.bbox.x1+parseFloat(this.strokeWidth) + parseFloat(this.outlineWidth))*this.size/100,

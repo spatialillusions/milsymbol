@@ -10,15 +10,16 @@ module.exports = function modifier(){
 	if(this.properties.headquarters){
 		//HEADQUARTERS
 		var y = 100;
+		var hqStafLength = this.hqStafLength || MS._hqStafLength;
 		if(['AirFriend','AirNeutral','GroundFriend','GroundNeutral','SeaNeutral','SubsurfaceNeutral'].indexOf(this.properties.dimension + this.properties.affiliation) > -1 )y = bbox.y2;
 		if((this.properties.dimensionType + this.properties.affiliationType) == 'SubsurfaceFriend')y = bbox.y1;
-		geom = {type:'path',d:'M'+(bbox.x1)+','+y+' L'+bbox.x1+','+(bbox.y2+MS._hqStafLength)};
+		geom = {type:'path',d:'M'+(bbox.x1)+','+y+' L'+bbox.x1+','+(bbox.y2 + hqStafLength)};
 		
 		//outline
 		if (this.outlineWidth > 0) drawArray1.push(MS.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
 
 		drawArray2.push(geom);
-		gbbox.y2 = bbox.y2 + MS._hqStafLength;
+		gbbox.y2 = bbox.y2 + hqStafLength;
 	}
 	if(this.properties.taskForce){
 		//TASK FORCE
