@@ -394,12 +394,12 @@ Example:
 
 ```javascript
 MS.addIconParts(
-  function (iconParts, properties, colors, STD2525, monoColor, alternateMedal){
+  function (iconParts, properties, colors, std2525, monoColor, alternateMedal){
     /*
     iconParts: Object - The existing object of icon parts
     properties: Object - propterties object
     colors: Object - color object
-    STD2525: Boolean - Is it 2525 then true, otherwise false
+    std2525: Boolean - Is it 2525 then true, otherwise false
     alternateMedal: Boolean - true/false for sea mine stuff
     */
     
@@ -470,7 +470,40 @@ sidcFunction: function,
 type: String // 'letter' or 'number' depending of the type of the SIDC
 ```
 
-TODO
+Adds a function for creating icons representing different SIDCs. It is possible to add custom SIDC, or to modify existing SIDC by adding a custom SIDC function.
+
+
+Example:
+```javascript
+MS.addSIDCicons(
+  function tacticalPoints(sidc,bbox,icnParts,std2525){
+    /*
+    sidc: Object - The existing object of SIDC 
+    bbox: Object - The existing object of Bounding Boxes for SIDC
+    iconParts: Object - The existing object of icon parts
+    std2525: Boolean - Is it 2525 then true, otherwise false
+    */
+    
+    // Creating a new SIDC
+	sidc['G-T-D-----'] = icn['TP.DESTROY'];
+	bbox['G-T-D-----'] = {x1:0,x2:200,y1:40,y2:160};
+	
+	// If we don't provide a bounding box, it will be set to the bounds of the icon octagon
+	sidc['G-T-I-----'] = icn['TP.INTERDICT'];
+
+    /* 
+    Since we are modifying directly to the existing object of SIDCs, 
+    we don't have to return anything.
+    */
+  },'letter' //Setting letter as SIDC type
+);
+```
+
+**Returns**
+
+```javascript
+Object MS
+```
 
 ## MS.addSymbolPart(part)
 

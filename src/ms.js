@@ -88,6 +88,7 @@ MS.addSIDCicons = function(parts, type){
   if (typeof parts === 'function') {
     this['_' + type + 'SIDCicons'] = this['_' + type + 'SIDCicons'].concat(parts);
   }
+  return MS;
 };
 MS.addSymbolPart = function(part) {
   if (typeof part === 'function') {
