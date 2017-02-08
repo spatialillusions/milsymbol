@@ -526,9 +526,31 @@ Object {
 }
 ```
 
-## MS.colorMode
+## MS.colorMode(civilian, friend, hostile, neutral, unknown)
+
+```javascript
+civilian: String,
+friend: String,
+hostile: String,
+neutral: String,
+unknown: String,
+```
 
 TODO Rename to MS.ColorMode???
+
+Creates a colorMode Object with colors used for different affiliations.
+
+**Returns**
+
+```javascript
+Object {
+  Civilian: String,
+  Friend: String,
+  Hostile: String,
+  Neutral: String,
+  Unknown: String
+}
+```
 
 ## MS.getColorMode(mode)
 
