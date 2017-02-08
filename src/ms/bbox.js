@@ -13,6 +13,12 @@ module.exports = function(box){
     height: function() {
       return this.y2-this.y1;
     },
+    getSize: function() {
+      return {
+        height: this.y2-this.y1,
+        width: this.x2-this.x1
+      }
+    },
     merge: function(box) {
       this.x1 = ( box.x1 <= this.x1 ) ? box.x1 : this.x1;
       this.y1 = ( box.y1 <= this.y1 ) ? box.y1 : this.y1;
