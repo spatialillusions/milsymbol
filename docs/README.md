@@ -295,9 +295,9 @@ The following different kinds of draw instructions can be used in milsymbol:
 Object {
   type: 'path',
   d: String, // SVG path data
-  fill: String, // Fill color {Optional}
+  fill: String, // Fill color  or set to false if none
   fillopacity: Number, // Fill opacity {Optional}
-  stroke: String, // Stroke color {Optional}
+  stroke: String, // Stroke color  or set to false if none
   strokedasharray: String, // {Optional}
   strokewidth: Number, // Width of the stroke {Optional}
 } 
@@ -309,9 +309,9 @@ Object {
   cx: Number, // Center x
   cy: Number, // Center y
   r: Number, // Radius
-  fill: String, // Fill color {Optional}
+  fill: String, // Fill color  or set to false if none
   fillopacity: Number, // Fill opacity {Optional}
-  stroke: String, // Stroke color {Optional}
+  stroke: String, // Stroke color  or set to false if none
   strokedasharray: String, // {Optional}
   strokewidth: Number, // Width of the stroke {Optional}
 } 
@@ -326,9 +326,9 @@ Object {
   fontsize: Number,
   fontfamily: String,
   fontweight: String,
-  fill: String, // Fill color {Optional}
+  fill: String, // Fill color or set to false if none
   fillopacity: Number, // Fill opacity {Optional}
-  stroke: String, // Stroke color {Optional}
+  stroke: String, // Stroke color  or set to false if none
   strokedasharray: String, // {Optional}
   strokewidth: Number, // Width of the stroke {Optional}
 } 
@@ -407,7 +407,7 @@ MS.addIconParts(
 	iconParts['TP.HARBOR'] = {type:'path',fill:false,d:'M 80,140 50,60 150,60 120,140'};	
 
     /* 
-    Since we are adding directly to the existing object of icon parts, 
+    Since we are modifying directly to the existing object of icon parts, 
     we don't have to return anything.
     */
   }
@@ -427,7 +427,41 @@ labelFunction: function,
 type: String // 'letter' or 'number' depending of the type of the SIDC
 ```
 
-TODO
+Adds label overrides to milsymbol. If you have some symbols that you want to have labels that differ from how ordinary symbols are labeled, such as tactical graphics, you can add label override functions that places the labels differently.
+
+Example:
+```javascript
+MS.addLabelOverrides(
+  function tacticalPoints(sidc){
+    /*
+    sidc: Object - The existing object of label overrides
+    */
+    
+    /* 
+    Creates an override for SIDC 'G-G-GPPK--', each option 
+    listed will be applied to the text drawInstruction
+    */
+    sidc['G-G-GPPK--'] = {
+      additionalInformation: {stroke: false, textanchor: 'middle', x: 100, y: -70, fontsize: 40},
+      hostile: {stroke: false, textanchor: 'start', x: 150, y:45, fontsize: 40},
+      uniqueDesignation: {stroke: false, textanchor:'start', x:150, y:0, fontsize: 80},
+      dtg: {stroke: false, textanchor: 'end', x: 50, y: -30, fontsize: 40},
+      dtg1: {stroke: false, textanchor: 'end', x: 50, y: 10, fontsize: 40}
+    };
+    
+    /* 
+    Since we are modifying directly to the existing object of overrides, 
+    we don't have to return anything.
+    */
+  }
+);
+```
+
+**Returns**
+
+```javascript
+Object MS
+```
 
 ## MS.addSIDCicons(sidcFunction, type)
 

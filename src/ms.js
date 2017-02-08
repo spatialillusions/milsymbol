@@ -80,8 +80,9 @@ MS.addIconParts = function(parts) {
 MS.addLabelOverrides = function(parts, type){
   if (typeof parts === 'function') {
     if (!this._labelOverrides.hasOwnProperty(type)) this._labelOverrides[type] = [];
-      this._labelOverrides[type] = this._labelOverrides[type].concat(parts);
-    }
+    this._labelOverrides[type] = this._labelOverrides[type].concat(parts);
+  }
+  return MS;
 };
 MS.addSIDCicons = function(parts, type){
   if (typeof parts === 'function') {
