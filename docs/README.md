@@ -111,7 +111,7 @@ The following options are style options that changes the look of the symbol in d
 |--------|------|---------|-------------|
 | alternateMedal | Boolean | false | MIL-STD-2525D lets you choose between MEDAL and alternate MEDAL icons for mine warefare symbols, the default in milsymbol is using MEDAL icons, but you can change this using setting this property to true. | 
 | civilianColor | Boolean	 | true | 2525C specifics purple as an optional color for civilian symbols. Of corse we like color so we set this as default. | 
-| colorMode | Color object or String| 'Light' | This is the option for setting what Color object to use for the fill of the symbols. It can be set to a Color object, or a string representing the name of a registered Color objext. You can use MS.colorMode to create a new color mode, or MS.getColorMode to get an existing color mode. | 
+| colorMode | Color object or String| 'Light' | This is the option for setting what Color object to use for the fill of the symbols. It can be set to a Color object, or a string representing the name of a registered Color objext. You can use MS.ColorMode to create a new color mode, or MS.getColorMode to get an existing color mode. | 
 | fill | Boolean | true | Should your symbol be filled with color. |
 | fillOpacity | Number | 1 | The opacity of the symbol fill color. |
 | frame | 	Boolean	 | true | Should your symbol have a frame. All symbols support to be unframed, not just the ones specified in 2525B. | 
@@ -542,7 +542,7 @@ Object {
 }
 ```
 
-This is a class for bounding boxes. It is initiated with an optional object. Values that are omitted will default to 100, and if an object isn't provided all values will default to 100.
+Creates a bounding box Object. It is initiated with an optional object. Values that are omitted will default to 100, and if an object isn't provided all values will default to 100.
 
 **Returns**
 
@@ -558,7 +558,7 @@ Object {
 }
 ```
 
-## MS.colorMode(civilian, friend, hostile, neutral, unknown)
+## MS.ColorMode(civilian, friend, hostile, neutral, unknown)
 
 ```javascript
 civilian: String,
@@ -567,8 +567,6 @@ hostile: String,
 neutral: String,
 unknown: String,
 ```
-
-TODO Rename to MS.ColorMode???
 
 Creates a colorMode Object with colors used for different affiliations.
 

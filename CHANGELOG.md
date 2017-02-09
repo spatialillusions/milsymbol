@@ -34,6 +34,8 @@
 
 - MS.BBox() should be used instead of MS.bbox(). (Since it is a class...)
 
+- MS.ColorMode() should be used instead of MS.colorMode(). (Since it is a class...)
+
 ### Changed
 
 ### Deprecated
@@ -63,6 +65,9 @@
 - MS.setMarkerParts(parts) use MS.setSymbolParts(parts) instead.
 
 - MS.bbox() use MS.BBox() instead. (Since it is a class...)
+
+- MS.colorMode() use MS.ColorMode() instead. (Since it is a class...)
+
 
 ### Removed
 

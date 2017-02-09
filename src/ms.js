@@ -97,7 +97,7 @@ MS.addSymbolPart = function(part) {
   return MS;
 };
 MS.BBox = require('./ms/bbox.js');
-MS.colorMode = function(civilian, friend, hostile, neutral, unknown) {
+MS.ColorMode = function(civilian, friend, hostile, neutral, unknown) {
   var o = {};
   o.Civilian = civilian;
   o.Friend 	= friend;
@@ -109,7 +109,7 @@ MS.colorMode = function(civilian, friend, hostile, neutral, unknown) {
 MS.getColorMode = function(mode) {
   var c = this._colorModes[mode];
   // Clone the mode and return the clone
-  return MS.colorMode(c.Civilian, c.Friend, c.Hostile, c.Neutral, c.Unknown); 
+  return new MS.ColorMode(c.Civilian, c.Friend, c.Hostile, c.Neutral, c.Unknown); 
 };
 MS.getDashArrays = function() {
   return this._dashArrays;
@@ -222,6 +222,11 @@ MS.bbox = function(box){
   console.log('bbox() is deprecated and should not be used, use BBox() instead.');
   return MS.BBox(box);
 } 
+
+MS.colorMode = function(civilian, friend, hostile, neutral, unknown) {
+  console.log('colorMode() is deprecated and should not be used, use ColorMode() instead.');
+  return MS.ColorMode(civilian, friend, hostile, neutral, unknown);
+};
 
 MS.getMarkerParts = function() {
   console.log('getMarkerParts() is deprecated and should not be used, use MS.getSymbolParts() instead.');

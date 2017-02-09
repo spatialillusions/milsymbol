@@ -1,5 +1,5 @@
 var MS = require('../ms.js');
-module.exports = new MS.colorMode(
+module.exports = new MS.ColorMode(
   'rgb(128,0,128)',
   'rgb(0,168,220)',
   'rgb(255,48,49)',
