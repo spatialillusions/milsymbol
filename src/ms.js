@@ -96,7 +96,7 @@ MS.addSymbolPart = function(part) {
   }
   return MS;
 };
-MS.bbox = require('./ms/bbox.js');
+MS.BBox = require('./ms/bbox.js');
 MS.colorMode = function(civilian, friend, hostile, neutral, unknown) {
   var o = {};
   o.Civilian = civilian;
@@ -182,7 +182,7 @@ MS.addMarkerParts = function(part) {
   MS.addSymbolPart(part);
 };
 MS.bboxMax = function(box1, box2){
-  console.log('bboxMax() is deprecated and should not be used, use bbox.merge() instead.');
+  console.log('bboxMax() is deprecated and should not be used, use BBox.merge() instead.');
   return box1.merge(box2);
 };
 MS.buildingBlock = function(pre, post, bbox) {
@@ -217,6 +217,12 @@ MS.addNumberSIDCicons = function(parts){
     this._numberSIDCicons = this._numberSIDCicons.concat(parts);
   }
 };
+
+MS.bbox = function(box){
+  console.log('bbox() is deprecated and should not be used, use BBox() instead.');
+  return MS.BBox(box);
+} 
+
 MS.getMarkerParts = function() {
   console.log('getMarkerParts() is deprecated and should not be used, use MS.getSymbolParts() instead.');
   return MS.getSymbolParts();

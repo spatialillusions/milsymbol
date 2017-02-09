@@ -30,7 +30,7 @@ module.exports = function affliationdimension(){
 		}
 		if(this.properties.context == "Simulation"){
 			drawArray2.push({type:'text',text:'S',x:(bbox.x2 + spacing),y:60,fill:frameColor,fontfamily:"Arial",fontsize:35,fontweight:"bold",textanchor:"start"});
-			bbox = new MS.bbox({x2:(bbox.x2 + spacing + 22), y1: (60-25)});
+			bbox = new MS.BBox({x2:(bbox.x2 + spacing + 22), y1: (60-25)});
 		}
 	}
 	//outline

@@ -32,6 +32,8 @@
 
 - MS.setSymbolParts(parts) should be used instead of MS.setMarkerParts(parts)
 
+- MS.BBox() should be used instead of MS.bbox(). (Since it is a class...)
+
 ### Changed
 
 ### Deprecated
@@ -59,6 +61,8 @@
 - MS.getMarkerParts() use MS.getSymbolParts() instead.
 
 - MS.setMarkerParts(parts) use MS.setSymbolParts(parts) instead.
+
+- MS.bbox() use MS.BBox() instead. (Since it is a class...)
 
 ### Removed
 

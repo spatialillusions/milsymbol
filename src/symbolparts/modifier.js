@@ -4,8 +4,8 @@ var MS = require('../ms.js');
 module.exports = function modifier(){
 	var drawArray1 = [];
 	var drawArray2 = [];	
-	var bbox = new MS.bbox(this.properties.baseGeometry.bbox); // clone the bbox
-	var gbbox = new MS.bbox(); // bounding box for the added geometries
+	var bbox = new MS.BBox(this.properties.baseGeometry.bbox); // clone the bbox
+	var gbbox = new MS.BBox(); // bounding box for the added geometries
 	var geom;
 	if(this.properties.headquarters){
 		//HEADQUARTERS

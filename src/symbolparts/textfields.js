@@ -9,7 +9,7 @@ module.exports = function textfields(){
 	var fontFamily = "Arial";
 	var fontSize = this.infoSize;
 
-	var gbbox = new MS.bbox();
+	var gbbox = new MS.BBox();
 	var spaceTextIcon = 20;//The distance between the Icon and the labels
 
 	//Function to calculate the width of a string

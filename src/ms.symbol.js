@@ -51,7 +51,7 @@ function symbol(SIDCParameter,options){
   // FieldID AN Azimuth
   // FieldID AO EngagementBar
 
-  this.bbox = new MS.bbox(); // Contains the bounding box of the current marker
+  this.bbox = new MS.BBox(); // Contains the bounding box of the current marker
   this.colors = {}; // Contains the colors for the current marker
   this.markerAnchor = {x:50,y:50}; // The anchor point for the current marker
   this.octagonAnchor = {x:50,y:50}; // The anchor point for the octagon for the current marker

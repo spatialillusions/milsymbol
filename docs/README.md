@@ -531,9 +531,7 @@ Object MS
 ```
 
 
-## MS.bbox({box})
-
-TODO Rename to MS.BBox???
+## MS.BBox({box})
 
 ```javascript
 Object {
@@ -544,7 +542,7 @@ Object {
 }
 ```
 
-This is a function for creating bounding boxes. It is initiated with an optional object. Values that are omitted will default to 100, and if an object isn't provided all values will default to 100.
+This is a class for bounding boxes. It is initiated with an optional object. Values that are omitted will default to 100, and if an object isn't provided all values will default to 100.
 
 **Returns**
 

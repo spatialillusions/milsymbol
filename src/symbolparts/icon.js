@@ -4,7 +4,7 @@ var MS = require('../ms.js');
 module.exports = function icon(){
 	var drawArray1 = [];
 	var drawArray2 = [];
-	var gbbox = new MS.bbox({x1:50,x2:150,y1:50,y2:150});
+	var gbbox = new MS.BBox({x1:50,x2:150,y1:50,y2:150});
 	var icons;
 	
 	//This is the building blocks we use to create icons
@@ -178,7 +178,7 @@ module.exports = function icon(){
 				drawArray2.push(icons[this.properties.functionid.substr(0,4)+'00']);
 			}
 			if(specialbbox.hasOwnProperty(this.properties.functionid.substr(0,6))){
-				gbbox = new MS.bbox(specialbbox[this.properties.functionid.substr(0,6)]);
+				gbbox = new MS.BBox(specialbbox[this.properties.functionid.substr(0,6)]);
 			}
 			if(this.properties.functionid.substr(4,2) == '95')drawArray2.push(iconParts['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']);
 			if(this.properties.functionid.substr(4,2) == '96')drawArray2.push(iconParts['GR.IC.FF.DIVISION AND BELOW SUPPORT']);
@@ -195,7 +195,7 @@ module.exports = function icon(){
 				drawArray2.push(icons[genericSIDC]);
 			}
 			if(specialbbox[genericSIDC]){
-				gbbox = new MS.bbox(specialbbox[genericSIDC]);
+				gbbox = new MS.BBox(specialbbox[genericSIDC]);
 			}
 		}
 	}

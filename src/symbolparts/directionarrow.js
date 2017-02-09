@@ -8,7 +8,7 @@ module.exports = function directionarrow(){
 	if(this.properties.baseGeometry.g == ''){ // in the case we don't have any frame
 		bbox = this.bbox; //Set bbox to the current symbols bounds
 	}
-	var gbbox = new MS.bbox();
+	var gbbox = new MS.BBox();
 	var color = this.colors.iconColor[this.properties.affiliation] || this.colors.iconColor['Friend'];
 
 	if(this.infoFields){

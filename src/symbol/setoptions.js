@@ -15,7 +15,7 @@ module.exports = function(options){
 
   this.drawInstructions = [];
   
-  this.bbox = MS.bbox();
+  this.bbox = new MS.BBox();
   //Processing all parts of the marker, adding them to the drawinstruction and updating the boundingbox
   for (var i in MS._symbolParts){
     if (!MS._symbolParts.hasOwnProperty(i)) continue;
