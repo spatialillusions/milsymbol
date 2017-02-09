@@ -21,7 +21,7 @@ var textInfo = document.getElementById("TextInfo").checked;
 var start = new Date();
 for (var i=1; i<=1000;i++){
 	var sidc = symbolsSIDC[Math.floor(symbolsSIDC.length*Math.random())];
-	renderedContent += new MS.symbol(sidc, {size:size,uniqueDesignation:"ICON"+i,additionalInformation:sidc,infoFields:textInfo}).getMarker().XML;
+	renderedContent += new MS.Symbol(sidc, {size:size,uniqueDesignation:"ICON"+i,additionalInformation:sidc,infoFields:textInfo}).getMarker().XML;
 
 }
 var end = new Date();

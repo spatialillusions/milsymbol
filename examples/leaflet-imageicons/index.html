@@ -29,7 +29,7 @@ function init(){
 	L.geoJson(situation, {
 		pointToLayer: function (feature, latlng) {
 		
-			var mysymbol = new MS.symbol(
+			var mysymbol = new MS.Symbol(
 				feature.properties.SIDC,{
 					size:iconSize[(feature.properties.SIDC).charAt(11)],
 					uniqueDesignation:feature.properties.name

@@ -28,7 +28,7 @@ function init(){
 	
 	var ratio = window.devicePixelRatio || 1;
 	vectorSource.forEachFeature(function(f){
-		var mysymbol = new MS.symbol(
+		var mysymbol = new MS.Symbol(
 				f.getProperties().SIDC,{
 					size:iconSize[(f.getProperties().SIDC).charAt(11)]*ratio,
 					uniqueDesignation:f.getProperties().name

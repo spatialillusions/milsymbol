@@ -92,7 +92,7 @@
       });
 
       // Create iconSymbol and add to renderer
-      var unknown = new MS.symbol("SPZ---------", {size:15, square:true});
+      var unknown = new MS.Symbol("SPZ---------", {size:15, square:true});
       var unknownUnit = new PointSymbol3D({
         symbolLayers: [new IconSymbol3DLayer({
           resource: {
@@ -108,7 +108,7 @@
       });
       // Add a unique icon for each unit
       arrayUtils.map(situation.features, function(feature, i) {
-        var unit = new MS.symbol(feature.properties.SIDC, {size:20, square:true});
+        var unit = new MS.Symbol(feature.properties.SIDC, {size:20, square:true});
         
         renderer.addUniqueValueInfo(feature.properties.name,
           new PointSymbol3D({

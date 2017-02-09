@@ -135,7 +135,7 @@ function update(source) {
 	node.append("g")
 	    .attr("class", "symbol")
 		.attr("transform", function (d){
-			if (d.properties.SIDC) d.symbol = new MS.symbol(d.properties.SIDC,{size:30, uniqueDesignation:(d.properties.name), colorMode: (d._children && d._children!="" ? MS.getColorMode("Medium") : MS.getColorMode("Light")) }).getMarker();
+			if (d.properties.SIDC) d.symbol = new MS.Symbol(d.properties.SIDC,{size:30, uniqueDesignation:(d.properties.name), colorMode: (d._children && d._children!="" ? MS.getColorMode("Medium") : MS.getColorMode("Light")) }).getMarker();
 			return "translate("+(-d.symbol.octagonAnchor.x)+","+(-d.symbol.octagonAnchor.y)+")"})
 		.each(function (d){this.appendChild(d.symbol.asDOM())	})      
 

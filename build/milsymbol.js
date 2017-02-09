@@ -5,7 +5,10 @@ MS._geticnParts = require('../src/ms/iconparts.js');
 MS._symbolGeometries = require('../src/ms/symbolgeometries.js');
 
 // Initiating the symbol class
-MS.symbol = require('../src/ms.symbol.js');
+MS.Symbol = require('../src/ms.symbol.js');
+
+// Backwards compatibility, will be removed in future version
+  MS.symbol = MS.Symbol;
 
 // Standard colors for symbols
 MS.setColorMode('Light',require('../src/colormodes/light.js'));

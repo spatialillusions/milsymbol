@@ -425,14 +425,14 @@ Where the SIDC is a complete, <i>letter based</i> or <i>number based</i>, or at 
 &lt;script src="../dist/milsymbol.js"&gt;&lt;/script&gt;<br>
 &lt;script&gt;<br>
 //Create a symbol using letter based SIDC and print the marker<br>
-document.write(new MS.symbol("SFG-UCI----D").asSVG());<br>
+document.write(new MS.Symbol("SFG-UCI----D").asSVG());<br>
 &lt;/script&gt;</code>
 
 <center>
 
 <script>
 	//Just a quick display of the symbol above
-	document.write(new MS.symbol("SFG-UCI----D").asSVG());
+	document.write(new MS.Symbol("SFG-UCI----D").asSVG());
 </script>
 
 </center>
@@ -442,14 +442,14 @@ Using number based SIDC is as easy as using letter based.<br>
 &lt;script src="../dist/milsymbol.js"&gt;&lt;/script&gt;<br>
 &lt;script&gt;<br>
 //Create a symbol using number based SIDC and print the marker<br>
-document.write(new MS.symbol(10031000141211000000).asSVG());<br>
+document.write(new MS.Symbol(10031000141211000000).asSVG());<br>
 &lt;/script&gt;</code>
 
 <center>
 
 <script>
 	//Just a quick display of the symbol above
-	document.write(new MS.symbol(10031000141211000000).asSVG());
+	document.write(new MS.Symbol(10031000141211000000).asSVG());
 </script>
 
 </center>
@@ -632,24 +632,24 @@ document.write(new MS.symbol(10031000141211000000).asSVG());<br>
 Symbol options can be included when you initiate the symbol, or modified at any time once you have created your symbol.<br>
 
 <code>
-mySymbol = new MS.symbol("SFG-UCI----D",{size:30,fill:false});<br>
+mySymbol = new MS.Symbol("SFG-UCI----D",{size:30,fill:false});<br>
 document.write(mySymbol.asSVG());<br>
 </code><br>
 <center>
 <script>
-	mySymbol = new MS.symbol("SFG-UCI----D",{size:30,fill:false});
+	mySymbol = new MS.Symbol("SFG-UCI----D",{size:30,fill:false});
 	document.write(mySymbol.asSVG());
 </script>
 </center>
 <br>
 <code>
-mySymbol = new MS.symbol("SFG-UCI----D");<br>
+mySymbol = new MS.Symbol("SFG-UCI----D");<br>
 mySymbol.setOptions({size: 30, fill: false});<br>
 document.write(mySymbol.asSVG());<br>
 </code><br>
 <center>
 <script>
-	mySymbol = new MS.symbol("SFG-UCI----D");
+	mySymbol = new MS.Symbol("SFG-UCI----D");
 	mySymbol.setOptions({size: 30, fill: false});
 	document.write(mySymbol.asSVG());
 </script>
@@ -918,13 +918,13 @@ document.write(mySymbol.asSVG());<br>
 
 <br>
 <code>
-mySymbol = new MS.symbol("SFG-UCI----D");<br>
+mySymbol = new MS.Symbol("SFG-UCI----D");<br>
 mySymbol.setOptions({size: 30, uniqueDesignation: "Hello World"});<br>
 document.write(mySymbol.asSVG());<br>
 </code><br>
 <center>
 <script>
-	mySymbol = new MS.symbol("SFG-UCI----D");
+	mySymbol = new MS.Symbol("SFG-UCI----D");
 	mySymbol.setOptions({size: 30, uniqueDesignation: "Hello World"});
 	document.write(mySymbol.asSVG());
 </script>
@@ -933,14 +933,14 @@ document.write(mySymbol.asSVG());<br>
 
 
 It is possible at any time to update properties for your symbol and request a new rendition.</br>
-<code>var sym = new MS.symbol("SFG-UCA----G",{size:50});<br>
+<code>var sym = new MS.Symbol("SFG-UCA----G",{size:50});<br>
 document.write(sym.asSVG());<br>
 document.write("&lt;br&gt;");<br>
 sym.setOptions({size: 30, uniqueDesignation: "Hello World"});<br>
 document.write(sym.asSVG());<br>
 </code><br>
 <center>
-<script>var sym = new MS.symbol("SFG-UCA----G",{size:50});
+<script>var sym = new MS.Symbol("SFG-UCA----G",{size:50});
 document.write(sym.asSVG());
 document.write("<br>");
 sym.setOptions({size: 30, uniqueDesignation: "Hello World"});

@@ -5,7 +5,7 @@ angular.module('symbolTestApp', [])
 
         function createSymbolCode(scope) {
             var size = scope.size || 20;
-            var symbol = new MS.symbol(scope.sic, {size: size, uniqueDesignation: scope.uniqueDesignation});
+            var symbol = new MS.Symbol(scope.sic, {size: size, uniqueDesignation: scope.uniqueDesignation});
             scope.code = symbol.toDataURL();
             return symbol;
         }

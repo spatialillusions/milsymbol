@@ -22,7 +22,7 @@ function makeSymbols(){
 	var start = new Date();
 	for (var i=1; i<=1000;i++){
 		var sidc = symbolsSIDC[Math.floor(symbolsSIDC.length*Math.random())];
-		renderedContent.push( new MS.symbol(sidc, {size:size,uniqueDesignation:"ICON"+i,additionalInformation:sidc,infoFields:textInfo}).getMarker().asCanvas());
+		renderedContent.push( new MS.Symbol(sidc, {size:size,uniqueDesignation:"ICON"+i,additionalInformation:sidc,infoFields:textInfo}).getMarker().asCanvas());
 	}
 	var end = new Date();
 	var totaltime = (end-start)/1000;

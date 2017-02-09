@@ -36,6 +36,8 @@
 
 - MS.ColorMode() should be used instead of MS.colorMode(). (Since it is a class...)
 
+- MS.Symbol() should be used instead of MS.symbol(). (Since it is a class...)
+
 ### Changed
 
 ### Deprecated
@@ -68,6 +70,7 @@
 
 - MS.colorMode() use MS.ColorMode() instead. (Since it is a class...)
 
+- MS.symbol() use MS.Symbol instead. (Since it is a class...)
 
 ### Removed
 

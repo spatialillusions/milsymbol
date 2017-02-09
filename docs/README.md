@@ -62,14 +62,14 @@ Each symbol created with milsymbol is its own object and the properties of the o
 
 All functionality in milsymbol is normally found under the `MS` namespace, but if you have imported milsymbol to another variable, you will have to use that instead of `MS`.
 
-## MS.symbol(SIDC,*{Options}*)
+## MS.Symbol(SIDC,*{Options}*)
 
 Initiates a new symbol object, you should always provide a SIDC for the symbol, and it is optional to provide other options. 
 
 Even if options can be provided or updated after the symbol object is created, the performance will be better if you provide them directly when you create the symbol, because every time you update some options the symbol will automatically be updated. 
 
 ```javascript
-var symbol = new MS.symbol('SFG-UCI----D',{size:30});
+var symbol = new MS.Symbol('SFG-UCI----D',{size:30});
 ```
 
 **Modifier options**
