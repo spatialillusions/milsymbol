@@ -1,22 +1,22 @@
 //Symbol Modifiers #######################################################################
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function modifier(){
 	var drawArray1 = [];
 	var drawArray2 = [];	
-	var bbox = new MS.BBox(this.properties.baseGeometry.bbox); // clone the bbox
-	var gbbox = new MS.BBox(); // bounding box for the added geometries
+	var bbox = new ms.BBox(this.properties.baseGeometry.bbox); // clone the bbox
+	var gbbox = new ms.BBox(); // bounding box for the added geometries
 	var geom;
 	if(this.properties.headquarters){
 		//HEADQUARTERS
 		var y = 100;
-		var hqStafLength = this.hqStafLength || MS._hqStafLength;
+		var hqStafLength = this.hqStafLength || ms._hqStafLength;
 		if(['AirFriend','AirNeutral','GroundFriend','GroundNeutral','SeaNeutral','SubsurfaceNeutral'].indexOf(this.properties.dimension + this.properties.affiliation) > -1 )y = bbox.y2;
 		if((this.properties.dimensionType + this.properties.affiliationType) == 'SubsurfaceFriend')y = bbox.y1;
 		geom = {type:'path',d:'M'+(bbox.x1)+','+y+' L'+bbox.x1+','+(bbox.y2 + hqStafLength)};
 		
 		//outline
-		if (this.outlineWidth > 0) drawArray1.push(MS.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
+		if (this.outlineWidth > 0) drawArray1.push(ms.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
 
 		drawArray2.push(geom);
 		gbbox.y2 = bbox.y2 + hqStafLength;
@@ -26,7 +26,7 @@ module.exports = function modifier(){
 		geom = {type:'path',d:'M55,' + (bbox.y1) + ' L55,' + (bbox.y1-40) + ' 145,' + (bbox.y1-40) +' 145,'+(bbox.y1)};
 		
 		//outline
-		if (this.outlineWidth > 0) drawArray1.push(MS.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
+		if (this.outlineWidth > 0) drawArray1.push(ms.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
 
 		drawArray2.push(geom);
 		gbbox.y1 = bbox.y1-40;
@@ -39,17 +39,17 @@ module.exports = function modifier(){
 		geom = {type:'path',fill:this.colors.frameColor[this.properties.affiliation],d:'M85,' + (bbox.y1+gapFiller-(this.strokeWidth/2)) + ' 85,' + (bbox.y1-10) + ' 115,' + (bbox.y1-10) +' 115,'+(bbox.y1+gapFiller-(this.strokeWidth/2)) +' 100,'+(bbox.y1-(this.strokeWidth))+' Z'};
 		
 		//outline
-		if (this.outlineWidth > 0) drawArray1.push(MS.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
+		if (this.outlineWidth > 0) drawArray1.push(ms.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
 		
 		drawArray2.push(geom);
 		gbbox.merge({y1:(bbox.y1-10)});
 	}
 	if(this.properties.feintDummy){
 		//FEINT DUMMY
-		geom = {type:'path',strokedasharray:MS._dashArrays.feintDummy,d:'M'+bbox.x1+','+bbox.y1+' L100,-28 '+bbox.x2+','+bbox.y1};
+		geom = {type:'path',strokedasharray:ms._dashArrays.feintDummy,d:'M'+bbox.x1+','+bbox.y1+' L100,-28 '+bbox.x2+','+bbox.y1};
 
 		//outline
-		if (this.outlineWidth > 0) drawArray1.push(MS.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
+		if (this.outlineWidth > 0) drawArray1.push(ms.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
 			
 		drawArray2.push(geom);
 		gbbox.merge({y1:(-28)});
@@ -123,7 +123,7 @@ module.exports = function modifier(){
 			geom = echelons[this.properties.echelon].g;
 			
 			//outline
-			if (this.outlineWidth > 0) drawArray1.push(MS.outline({type:'translate',x:0,y:-installationPadding,draw:geom}, this.outlineWidth, this.strokeWidth, this.outlineColor));
+			if (this.outlineWidth > 0) drawArray1.push(ms.outline({type:'translate',x:0,y:-installationPadding,draw:geom}, this.outlineWidth, this.strokeWidth, this.outlineColor));
 			//geometry
 			drawArray2.push({type:'translate',x:0,y:-installationPadding,draw:geom});
 			gbbox.merge(echelons[this.properties.echelon].bbox);
@@ -174,7 +174,7 @@ module.exports = function modifier(){
 		if(mobilities.hasOwnProperty(this.properties.mobility)){
 			geom = mobilities[this.properties.mobility].g
 			//outline
-			if (this.outlineWidth > 0) drawArray1.push(MS.outline({type:'translate',x:0,y:bbox.y2,draw:geom}, this.outlineWidth, this.strokeWidth, this.outlineColor));
+			if (this.outlineWidth > 0) drawArray1.push(ms.outline({type:'translate',x:0,y:bbox.y2,draw:geom}, this.outlineWidth, this.strokeWidth, this.outlineColor));
 			//geometry
 			drawArray2.push({type:'translate',x:0,y:bbox.y2,draw:geom});
 			gbbox.merge(mobilities[this.properties.mobility].bbox);
@@ -184,7 +184,7 @@ module.exports = function modifier(){
 	//Dismounted Leadership
 	if(this.properties.leadership){
 		var leadership = {'Friend':{type:'path',d:'m 45,60 55,-25 55,25'},'Neutral':{type:'path',d:'m 45,60 55,-25 55,25'},'Hostile':{type:'path',d:'m 42,71 57.8,-43.3 58.2,42.8'},'Unknown':{type:'path',d:'m 50,60 10,-20 80,0 10,20'}}[this.properties.affiliation];
-		if(this.properties.leadership == "Deputy Individual")leadership.strokedasharray = MS._dashArrays.feintDummy;
+		if(this.properties.leadership == "Deputy Individual")leadership.strokedasharray = ms._dashArrays.feintDummy;
 		drawArray1.push(leadership)
 		gbbox.merge({y1:(gbbox.y1 - 20)});
 	}

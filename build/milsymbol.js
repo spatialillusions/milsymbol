@@ -1,71 +1,71 @@
-var MS = require('../src/ms.js');
+var ms = require('../src/ms.js');
 
-// Adding things to MS that can't be done in ms.js since they reference ms.js
-MS._geticnParts = require('../src/ms/iconparts.js');
-MS._symbolGeometries = require('../src/ms/symbolgeometries.js');
+// Adding things to ms that can't be done in ms.js since they reference ms.js
+ms._geticnParts = require('../src/ms/iconparts.js');
+ms._symbolGeometries = require('../src/ms/symbolgeometries.js');
 
 // Initiating the symbol class
-MS.Symbol = require('../src/ms.symbol.js');
+ms.Symbol = require('../src/ms.symbol.js');
 
 // Backwards compatibility, will be removed in future version
-  MS.symbol = MS.Symbol;
+  ms.symbol = ms.Symbol;
 
 // Standard colors for symbols
-MS.setColorMode('Light',require('../src/colormodes/light.js'));
-MS.setColorMode('Medium',require('../src/colormodes/medium.js'));
-MS.setColorMode('Dark',require('../src/colormodes/dark.js'));
-MS.setColorMode('FrameColor',require('../src/colormodes/framecolor.js'));
-MS.setColorMode('IconColor',require('../src/colormodes/iconcolor.js'));
-MS.setColorMode('Black',require('../src/colormodes/black.js'));
-MS.setColorMode('White',require('../src/colormodes/white.js'));
-MS.setColorMode('OffWhite',require('../src/colormodes/offwhite.js'));
-MS.setColorMode('None',require('../src/colormodes/none.js'));
+ms.setColorMode('Light',require('../src/colormodes/light.js'));
+ms.setColorMode('Medium',require('../src/colormodes/medium.js'));
+ms.setColorMode('Dark',require('../src/colormodes/dark.js'));
+ms.setColorMode('FrameColor',require('../src/colormodes/framecolor.js'));
+ms.setColorMode('IconColor',require('../src/colormodes/iconcolor.js'));
+ms.setColorMode('Black',require('../src/colormodes/black.js'));
+ms.setColorMode('White',require('../src/colormodes/white.js'));
+ms.setColorMode('OffWhite',require('../src/colormodes/offwhite.js'));
+ms.setColorMode('None',require('../src/colormodes/none.js'));
 
 // Letter SIDC
-MS._getLetterProperties = require('../src/sidc-letter/properties.js');
-MS._getLetterSIDCicn = require('../src/sidc-letter/geticon.js');
+ms._getLetterProperties = require('../src/sidc-letter/properties.js');
+ms._getLetterSIDCicn = require('../src/sidc-letter/geticon.js');
 
-MS.addSIDCicons(require('../src/sidc-letter/icons-space.js'), 'letter');
-MS.addSIDCicons(require('../src/sidc-letter/icons-air.js'), 'letter');
-MS.addSIDCicons(require('../src/sidc-letter/icons-ground.js'), 'letter');
-MS.addSIDCicons(require('../src/sidc-letter/icons-equipment.js'), 'letter');
-MS.addSIDCicons(require('../src/sidc-letter/icons-installations'), 'letter');
-MS.addSIDCicons(require('../src/sidc-letter/icons-sea'), 'letter');
-MS.addSIDCicons(require('../src/sidc-letter/icons-subsurface'), 'letter');
-MS.addSIDCicons(require('../src/sidc-letter/icons-sof'), 'letter');
-MS.addSIDCicons(require('../src/sidc-letter/icons-signalsIntelligence'), 'letter');
-MS.addSIDCicons(require('../src/sidc-letter/icons-stabilityoperations'), 'letter');
-MS.addSIDCicons(require('../src/sidc-letter/icons-emergencymanagementsymbols'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-space.js'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-air.js'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-ground.js'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-equipment.js'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-installations'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-sea'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-subsurface'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-sof'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-signalsIntelligence'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-stabilityoperations'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-emergencymanagementsymbols'), 'letter');
 
 // Number SIDC
-MS._getNumberProperties = require('../src/sidc-number/properties.js');
-MS._getNumberSIDCicn = require('../src/sidc-number/geticon.js');
+ms._getNumberProperties = require('../src/sidc-number/properties.js');
+ms._getNumberSIDCicn = require('../src/sidc-number/geticon.js');
 
-MS.addSIDCicons(require('../src/sidc-number/icons-air.js'), 'number');
-MS.addSIDCicons(require('../src/sidc-number/icons-airmissile.js'), 'number');
-MS.addSIDCicons(require('../src/sidc-number/icons-space.js'), 'number');
-MS.addSIDCicons(require('../src/sidc-number/icons-landunit.js'), 'number');
-MS.addSIDCicons(require('../src/sidc-number/icons-landequipment.js'), 'number');
-MS.addSIDCicons(require('../src/sidc-number/icons-sea.js'), 'number');
-MS.addSIDCicons(require('../src/sidc-number/icons-subsurface.js'), 'number');
-MS.addSIDCicons(require('../src/sidc-number/icons-minewarfare.js'), 'number');
-MS.addSIDCicons(require('../src/sidc-number/icons-seabedinstallations.js'), 'number');
-MS.addSIDCicons(require('../src/sidc-number/icons-activites.js'), 'number');
-MS.addSIDCicons(require('../src/sidc-number/icons-signalsintelligence.js'), 'number');
-MS.addSIDCicons(require('../src/sidc-number/icons-cyberspace.js'), 'number');
+ms.addSIDCicons(require('../src/sidc-number/icons-air.js'), 'number');
+ms.addSIDCicons(require('../src/sidc-number/icons-airmissile.js'), 'number');
+ms.addSIDCicons(require('../src/sidc-number/icons-space.js'), 'number');
+ms.addSIDCicons(require('../src/sidc-number/icons-landunit.js'), 'number');
+ms.addSIDCicons(require('../src/sidc-number/icons-landequipment.js'), 'number');
+ms.addSIDCicons(require('../src/sidc-number/icons-sea.js'), 'number');
+ms.addSIDCicons(require('../src/sidc-number/icons-subsurface.js'), 'number');
+ms.addSIDCicons(require('../src/sidc-number/icons-minewarfare.js'), 'number');
+ms.addSIDCicons(require('../src/sidc-number/icons-seabedinstallations.js'), 'number');
+ms.addSIDCicons(require('../src/sidc-number/icons-activites.js'), 'number');
+ms.addSIDCicons(require('../src/sidc-number/icons-signalsintelligence.js'), 'number');
+ms.addSIDCicons(require('../src/sidc-number/icons-cyberspace.js'), 'number');
 
 // Functions that builds the symbol
-MS.addSymbolPart(require('../src/symbolparts/basegeometry.js'));
-MS.addSymbolPart(require('../src/symbolparts/icon.js'));
-MS.addSymbolPart(require('../src/symbolparts/modifier.js'));
-MS.addSymbolPart(require('../src/symbolparts/statusmodifier.js'));
-MS.addSymbolPart(require('../src/symbolparts/affliationdimension.js'));
-MS.addSymbolPart(require('../src/symbolparts/textfields.js'));
-MS.addSymbolPart(require('../src/symbolparts/directionarrow.js'));
-//MS.addSymbolPart(require('../src/symbolparts/debug.js')); // This draws the symbol octagon, can be good for debugging.
+ms.addSymbolPart(require('../src/symbolparts/basegeometry.js'));
+ms.addSymbolPart(require('../src/symbolparts/icon.js'));
+ms.addSymbolPart(require('../src/symbolparts/modifier.js'));
+ms.addSymbolPart(require('../src/symbolparts/statusmodifier.js'));
+ms.addSymbolPart(require('../src/symbolparts/affliationdimension.js'));
+ms.addSymbolPart(require('../src/symbolparts/textfields.js'));
+ms.addSymbolPart(require('../src/symbolparts/directionarrow.js'));
+//ms.addSymbolPart(require('../src/symbolparts/debug.js')); // This draws the symbol octagon, can be good for debugging.
 
 // This makes it possible to draw canvas paths in IE11
-MS._Path2D = require('../src/ms.path2d.js');
+ms._Path2D = require('../src/ms.path2d.js');
 
-// And export out MS to to world to use
-module.exports = MS;
+// And export out ms to to world to use
+module.exports = ms;

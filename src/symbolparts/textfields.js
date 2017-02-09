@@ -1,5 +1,5 @@
 //Text Fields ############################################################################
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function textfields(){
 	var drawArray1 = [];
@@ -9,7 +9,7 @@ module.exports = function textfields(){
 	var fontFamily = "Arial";
 	var fontSize = this.infoSize;
 
-	var gbbox = new MS.BBox();
+	var gbbox = new ms.BBox();
 	var spaceTextIcon = 20;//The distance between the Icon and the labels
 
 	//Function to calculate the width of a string
@@ -75,19 +75,19 @@ module.exports = function textfields(){
 		var symbolSet = String(this.SIDC).substr(4,2);
 		//TODO fix add code for Number based labels
 	}else{	//Letter based SIDCs.
-		if(!MS._labelCache.hasOwnProperty('letter')){
-			MS._labelCache['letter'] = {};
-			for (var i in MS._labelOverrides['letter']){
-				if (!MS._labelOverrides['letter'].hasOwnProperty(i)) continue;
-				MS._labelOverrides['letter'][i].call(this,MS._labelCache['letter']);
+		if(!ms._labelCache.hasOwnProperty('letter')){
+			ms._labelCache['letter'] = {};
+			for (var i in ms._labelOverrides['letter']){
+				if (!ms._labelOverrides['letter'].hasOwnProperty(i)) continue;
+				ms._labelOverrides['letter'][i].call(this,ms._labelCache['letter']);
 			}
 		}
 		var genericSIDC = this.SIDC.substr(0,1)+'-'+this.SIDC.substr(2,1)+'-'+this.SIDC.substr(4,6);
-		if(MS._labelCache['letter'].hasOwnProperty(genericSIDC)){
-			drawArray2.push(labelOverride.call(this,MS._labelCache['letter'][genericSIDC]));
+		if(ms._labelCache['letter'].hasOwnProperty(genericSIDC)){
+			drawArray2.push(labelOverride.call(this,ms._labelCache['letter'][genericSIDC]));
 			
 			//outline
-			if (this.outlineWidth > 0) drawArray1.push(MS.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor))
+			if (this.outlineWidth > 0) drawArray1.push(ms.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor))
 			return {pre: drawArray1, post: drawArray2, bbox: gbbox};
 		}			
 	}
@@ -265,7 +265,7 @@ module.exports = function textfields(){
 		if(gStrings.R5)drawArray2.push({type:'text',text:gStrings.R5,x:(bbox.x2 + spaceTextIcon),y:(100 + 2.5*fontSize),textanchor:"start",fontsize:fontSize,fontfamily:fontFamily,fill:fontColor,stroke:false});
 
 		//outline
-		if (this.outlineWidth > 0) drawArray1.push(MS.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor))
+		if (this.outlineWidth > 0) drawArray1.push(ms.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor))
 
 	}
 	return {pre: drawArray1, post: drawArray2, bbox: gbbox};

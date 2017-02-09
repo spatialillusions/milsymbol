@@ -1,4 +1,4 @@
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function(properties,mapping){
 	var version  			= this.SIDC.substr(0,2);
@@ -59,14 +59,14 @@ module.exports = function(properties,mapping){
 	if(symbolSet == '30' && functionid.substr(0,6) == 150000)properties.frame = false;
 
 	//Planned/Anticipated/Suspect symbols should have a dashed outline
-	if(status == '1' )properties.notpresent = MS._dashArrays.anticipated;
-	if(standardIdentity2 == '0' || standardIdentity2 == '2' || standardIdentity2 == '5')properties.notpresent = MS._dashArrays.pending;
+	if(status == '1' )properties.notpresent = ms._dashArrays.anticipated;
+	if(standardIdentity2 == '0' || standardIdentity2 == '2' || standardIdentity2 == '5')properties.notpresent = ms._dashArrays.pending;
 
 	//All ETC/POSCON tracks shall have a pending standard identity frame.
 	//All fused tracks shall have a pending standard identity frame.
-	if(symbolSet == '30' && functionid.substr(0,6) == 160000)properties.notpresent = MS._dashArrays.pending;
-	if(symbolSet == '35' && functionid.substr(0,6) == 140000)properties.notpresent = MS._dashArrays.pending;
-	if(symbolSet == '35' && functionid.substr(0,6) == 150000)properties.notpresent = MS._dashArrays.pending;
+	if(symbolSet == '30' && functionid.substr(0,6) == 160000)properties.notpresent = ms._dashArrays.pending;
+	if(symbolSet == '35' && functionid.substr(0,6) == 140000)properties.notpresent = ms._dashArrays.pending;
+	if(symbolSet == '35' && functionid.substr(0,6) == 150000)properties.notpresent = ms._dashArrays.pending;
 
 
 	//Should it have a Condition Bar

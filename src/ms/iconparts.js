@@ -1,4 +1,4 @@
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function(properties, colors, _STD2525, monoColor, alternateMedal){
 		var icn = {};
@@ -298,7 +298,7 @@ module.exports = function(properties, colors, _STD2525, monoColor, alternateMeda
 		icn['GR.IC.ARMOUR'] = {type:'path',d:'M125,80 C150,80 150,120 125,120 L75,120 C50,120 50,80 75,80 Z',fill:false};
 		icn['GR.IC.AVIATION ROTARY WING'] = icn['AR.I.MILITARY ROTARY WING'];
 		icn['GR.IC.AVIATION FIXED WING'] = icn['AR.I.MILITARY FIXED WING'];
-		icn['GR.IC.AVIATION COMPOSITE'] = [MS._scale(0.5,[icn['GR.IC.AVIATION FIXED WING'],{type:'rotate',degree:90,x:100,y:100,draw:[icn['GR.IC.AVIATION ROTARY WING']]}])];
+		icn['GR.IC.AVIATION COMPOSITE'] = [ms._scale(0.5,[icn['GR.IC.AVIATION FIXED WING'],{type:'rotate',degree:90,x:100,y:100,draw:[icn['GR.IC.AVIATION ROTARY WING']]}])];
 		icn['GR.IC.AVIATION TACTICAL AIR CONTROL PARTY'] =text('TACP');
 		icn['GR.IC.AVIATION FORWARD AIR CONTROLLER'] =text('FAC');
 		icn['GR.IC.BAND'] = text('BAND');
@@ -378,11 +378,11 @@ module.exports = function(properties, colors, _STD2525, monoColor, alternateMeda
 		icn['GR.IC.RADIO'] = [{type:'circle',cx:100,cy:130,r:10,fill:false },{type:'path',fill:false,d:'M100,120 l0,-60 M70,70 l10,-10 10,10 10,-10 10,10 10,-10 10,10'}];
 		icn['GR.IC.RADIO RELAY'] = [{type:'circle',cx:100,cy:130,r:10,fill:false },{type:'path',fill:false,d:'M100,120 l-15,-40 15,0 0,-20 M70,60 l60,0'}];
 		icn['GR.IC.RADIO TELETYPE CENTRE'] = [{type:'text',stroke:false,x:100,y:135,fontsize:30,text:'C'},{type:'path',fill:false,d:'M100,140 l0,-80  M70,60 l60,0 M80,70 l40,0'}];
-		icn['GR.IC.RAILHEAD'] = [{type:'path',fill:false,d:'M100,80 l0,40 M81,90.5 l38,19 M81,109.5 l38,-19'},{type:'circle',cx:100,cy:100,r:20,fill:false},MS._translate(0,-50,[{type:'path',d:'M60,120 l80,0',fill:false},{type:'circle',fill:false,cx:65,cy:125,r:5},{type:'circle',fill:false,cx:75,cy:125,r:5},{type:'circle',fill:false,cx:125,cy:125,r:5},{type:'circle',fill:false,cx:135,cy:125,r:5}])];
+		icn['GR.IC.RAILHEAD'] = [{type:'path',fill:false,d:'M100,80 l0,40 M81,90.5 l38,19 M81,109.5 l38,-19'},{type:'circle',cx:100,cy:100,r:20,fill:false},ms._translate(0,-50,[{type:'path',d:'M60,120 l80,0',fill:false},{type:'circle',fill:false,cx:65,cy:125,r:5},{type:'circle',fill:false,cx:75,cy:125,r:5},{type:'circle',fill:false,cx:125,cy:125,r:5},{type:'circle',fill:false,cx:135,cy:125,r:5}])];
 		icn['GR.IC.RELIGIOUS SUPPORT'] =text('REL');
 		icn['GR.IC.REPLACEMENT HOLDING UNIT'] =text('RHU');
 		icn['GR.IC.SEA-AIR-LAND'] = text('SEAL');
-		icn['GR.IC.SEAPORT OF DEBARKATION'] = [{type:'path',fill:false,d:'M100,80 l0,40 M81,90.5 l38,19 M81,109.5 l38,-19'},{type:'circle',cx:100,cy:100,r:20,fill:false},MS._translate(0,-35,MS._scale(0.6, icn['GR.IC.NAVAL']))];
+		icn['GR.IC.SEAPORT OF DEBARKATION'] = [{type:'path',fill:false,d:'M100,80 l0,40 M81,90.5 l38,19 M81,109.5 l38,-19'},{type:'circle',cx:100,cy:100,r:20,fill:false},ms._translate(0,-35,ms._scale(0.6, icn['GR.IC.NAVAL']))];
 		icn['GR.IC.SECURITY'] =text('SEC');
 		icn['GR.IC.SECURITY POLICE (AIR)'] =[text('SP'),{type:'path',d:'M 78.8 121.5 C 68.1 121.5 68.1 138.5 78.8 138.5 L 100 130 L 78.8 121.5 z M 100 130 L 121.3 138.5 C 131.9 138.5 131.9 121.5 121.3 121.5 L 100 130 z'}];
 		icn['GR.IC.SENSOR'] = {type:'path',d:'m 100,60 c 0,15 25,40 40,40 -15,0 -40,25 -40,40 0,-15 -25,-40 -40,-40 15,0 40,-25 40,-40 z'};//{type:'path',fill:false,d:'m 70,75 10,-15 10,15 10,-15 10,15 10,-15 10,15'};
@@ -534,7 +534,7 @@ module.exports = function(properties, colors, _STD2525, monoColor, alternateMeda
 		icn['GR.M1.NATO MEDICAL ROLE 2'] = {type:'text',stroke:false,x:120,y:77,fontsize:25,text:'2'};
 		icn['GR.M1.NATO MEDICAL ROLE 3'] = {type:'text',stroke:false,x:120,y:77,fontsize:25,text:'3'};
 		icn['GR.M1.NATO MEDICAL ROLE 4'] = {type:'text',stroke:false,x:120,y:77,fontsize:25,text:'4'};
-		icn['GR.M1.NAVAL'] = MS._translate(0,-35,MS._scale(0.6, icn['GR.IC.NAVAL']));
+		icn['GR.M1.NAVAL'] = ms._translate(0,-35,ms._scale(0.6, icn['GR.IC.NAVAL']));
 		icn['GR.M1.NODE CENTRE'] = textm1('NC');
 		icn['GR.M1.NUCLEAR'] = textm1('N');
 		icn['GR.M1.OF-1'] = textm1('OF-1');
@@ -564,7 +564,7 @@ module.exports = function(properties, colors, _STD2525, monoColor, alternateMeda
 		icn['GR.M1.PLATOON'] = [{type:'circle',stroke:false,cx:80,cy:68,r:8},{type:'circle',stroke:false,cx:100,cy:68,r:8},{type:'circle',stroke:false,cx:120,cy:68,r:8}];
 		icn['GR.M1.RADAR'] =  {type:'path',fill:false,d:'m 85,55 c 0.1,21.4 11.7,24.6 25,25 M 116,55 101,67.5 101,55 86.6,66.9'};
 		icn['GR.M1.RADIO FREQUENCY IDENTIFICATION (RFID) INTERROGATOR/ SENSOR'] = textm1('RF');
-		icn['GR.M1.RAILROAD'] = MS._translate(0,-50,[{type:'path',d:'M60,120 l80,0',fill:false},{type:'circle',fill:false,cx:65,cy:125,r:5},{type:'circle',fill:false,cx:75,cy:125,r:5},{type:'circle',fill:false,cx:125,cy:125,r:5},{type:'circle',fill:false,cx:135,cy:125,r:5}]);
+		icn['GR.M1.RAILROAD'] = ms._translate(0,-50,[{type:'path',d:'M60,120 l80,0',fill:false},{type:'circle',fill:false,cx:65,cy:125,r:5},{type:'circle',fill:false,cx:75,cy:125,r:5},{type:'circle',fill:false,cx:125,cy:125,r:5},{type:'circle',fill:false,cx:135,cy:125,r:5}]);
 		icn['GR.M1.RADIOLOGICAL'] = textm1('RAD');
 		icn['GR.M1.RANGER'] = textm1('RGR');
 		icn['GR.M1.RECON'] =textm1('R');
@@ -814,7 +814,7 @@ module.exports = function(properties, colors, _STD2525, monoColor, alternateMeda
 		icn['GR.EQ.IMPROVISED EXPLOSIVE DEVICE'] =text('IED');
 		icn['GR.EQ.LAND MINES'] = [{type:'text',stroke:false,x:100,y:110,fontsize:30,text:'M'},{type:'path',fill:false,d:(_STD2525?'m 135,70 -70,0 35,70 z':'m 65,130 70,0 -35,-70 z')}];
 		icn['GR.EQ.SENSOR'] = {type:'path',d:'m 100,60 c 0,15 25,40 40,40 -15,0 -40,25 -40,40 0,-15 -25,-40 -40,-40 15,0 40,-25 40,-40 z'};
-		icn['GR.EQ.SENSOR EMPLACED'] = [MS._scale(0.9,icn['GR.EQ.SENSOR']),{type:'path',fill:false,d:'m 70,75 10,-15 10,15 10,-15 10,15 10,-15 10,15'}];
+		icn['GR.EQ.SENSOR EMPLACED'] = [ms._scale(0.9,icn['GR.EQ.SENSOR']),{type:'path',fill:false,d:'m 70,75 10,-15 10,15 10,-15 10,15 10,-15 10,15'}];
 		icn['GR.EQ.RADAR'] = {type:'path',d:'M72,95 l30,-25 0,25 30,-25 M70,70 c0,35 15,50 50,50',fill:false};
 		icn['GR.EQ.ANTENNAE'] = [];
 		icn['GR.EQ.PSYCHOLOGICAL OPERATIONS EQUIPMENT'] = {type:'path',fill:(_STD2525 ? iconFillColor : false),stroke:black,d:'m 110,95 10,0 m -10,10 10,0 m -10,10 10,0 m -10,-30 10,0 m -10,-5 -10,10 -30,0 0,20 30,0 10,10 z'};
@@ -1523,9 +1523,9 @@ module.exports = function(properties, colors, _STD2525, monoColor, alternateMeda
 		icn['CY.IC.SERVICE OUTAGE'] = text('SOT');
 		icn['CY.IC.DEVICE OUTAGE'] = text('DOT');
 
-		for (var i in MS._iconParts){
-			if (!MS._iconParts.hasOwnProperty(i)) continue;
-			MS._iconParts[i].call(this,icn,properties, colors, _STD2525, monoColor, alternateMedal);
+		for (var i in ms._iconParts){
+			if (!ms._iconParts.hasOwnProperty(i)) continue;
+			ms._iconParts[i].call(this,icn,properties, colors, _STD2525, monoColor, alternateMedal);
 		}
 		
 		function defaultProperties(instructions){

@@ -1,4 +1,4 @@
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function landunit(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 //Land Unit
@@ -79,8 +79,8 @@ module.exports = function landunit(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 		//sId['130195'] = [icn['GR.IC.FF.AIR DEFENCE'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
 		sId['130200'] = [icn['GR.IC.FIELD ARTILLERY'],icn['GR.IC.FF.RECONNAISSANCE'],icn['GR.IC.AVIATION ROTARY WING'],icn['GR.M1.NAVAL']];
 		sId['130300'] = [icn['GR.IC.FIELD ARTILLERY']];
-		sId['130301'] = [MS._scale(0.8,icn['GR.IC.FIELD ARTILLERY']),icn['GR.IC.ARMOUR']]; //ARTILLERY SELF-PROPELLED
-		sId['130302'] = [MS._scale(0.8,icn['GR.IC.FIELD ARTILLERY']),icn['GR.IC.ARMOUR'],icn['GR.IC.FF.RECONNAISSANCE']]; //ARTILLERY TARGET ACQUISITION
+		sId['130301'] = [ms._scale(0.8,icn['GR.IC.FIELD ARTILLERY']),icn['GR.IC.ARMOUR']]; //ARTILLERY SELF-PROPELLED
+		sId['130302'] = [ms._scale(0.8,icn['GR.IC.FIELD ARTILLERY']),icn['GR.IC.ARMOUR'],icn['GR.IC.FF.RECONNAISSANCE']]; //ARTILLERY TARGET ACQUISITION
 		//sId['130395'] = [icn['GR.IC.FIELD ARTILLERY'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
 		sId['130400'] = [icn['GR.IC.FIELD ARTILLERY OBSERVER']];
 		sId['130500'] = [icn['GR.IC.JOINT FIRE SUPPORT']];
@@ -105,7 +105,7 @@ module.exports = function landunit(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 		sId['140500'] = [icn['GR.IC.DOG']];
 		sId['140600'] = [icn['GR.IC.DRILLING']];
 		sId['140700'] = [icn['GR.IC.ENGINEER']];
-		sId['140701'] = [MS._scale(0.7,icn['GR.IC.ENGINEER']),icn['GR.IC.ARMOUR']];
+		sId['140701'] = [ms._scale(0.7,icn['GR.IC.ENGINEER']),icn['GR.IC.ARMOUR']];
 		sId['140702'] = [icn['GR.IC.ENGINEER'],icn['GR.IC.FF.MOTORIZED']];
 		sId['140703'] = [icn['GR.IC.ENGINEER'],icn['GR.IC.FF.RECONNAISSANCE']];
 		//sId['140795'] = [icn['GR.IC.ENGINEER'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];

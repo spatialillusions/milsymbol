@@ -1,5 +1,5 @@
 //Sets modifiers depending of status #####################################################
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function statusmodifier(){
 	var drawArray1 = [];
@@ -25,7 +25,7 @@ module.exports = function statusmodifier(){
 			//Add the hight of the codition bar to the geometry bounds
 			y2 += 15;
 			//outline
-			if (this.outlineWidth > 0) drawArray1.push(MS.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor));
+			if (this.outlineWidth > 0) drawArray1.push(ms.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor));
 		}else{
 			if(this.properties.condition == "Damaged" || this.properties.condition == "Destroyed"){
 				drawArray2.push({type:'path',d:'M150,20 L50,180',strokewidth:(this.strokeWidth * 2 ),stroke:this.colors.frameColor[this.properties.affiliation]});
@@ -35,7 +35,7 @@ module.exports = function statusmodifier(){
 				}
 			if(this.properties.condition == "Destroyed")drawArray2.push({type:'path',d:"M50,20 L150,180",strokewidth:(this.strokeWidth * 2 ),stroke:this.colors.frameColor[this.properties.affiliation]});
 			//outline
-			if (this.outlineWidth > 0) drawArray1.push(MS.outline(drawArray2,this.outlineWidth, this.strokeWidth, this.outlineColor));
+			if (this.outlineWidth > 0) drawArray1.push(ms.outline(drawArray2,this.outlineWidth, this.strokeWidth, this.outlineColor));
 		}
 	}
 

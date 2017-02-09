@@ -31,7 +31,7 @@ For updates and more information go to http://www.spatialillusions.com
 */
 'use strict';
 
-var MS = new function(){
+var ms = new function(){
   this._colorModes = {};
   this._dashArrays = {
     pending: "4,4",
@@ -64,40 +64,40 @@ var MS = new function(){
   }
 };
 
-MS._scale = function(factor, instruction){
+ms._scale = function(factor, instruction){
   return {type:'translate',x:(100-factor*100),y:(100-factor*100),draw:[{type:'scale',factor:factor,draw:[instruction]}]};
 };
-MS._translate = function(x, y, instruction){
+ms._translate = function(x, y, instruction){
   return {type:'translate',x:x,y:y,draw:[instruction]};
 };
 
-MS.addIconParts = function(parts) {
+ms.addIconParts = function(parts) {
   if (typeof parts === 'function') {
     this._iconParts = this._iconParts.concat(parts);
   }
-  return MS;
+  return ms;
 };
-MS.addLabelOverrides = function(parts, type){
+ms.addLabelOverrides = function(parts, type){
   if (typeof parts === 'function') {
     if (!this._labelOverrides.hasOwnProperty(type)) this._labelOverrides[type] = [];
     this._labelOverrides[type] = this._labelOverrides[type].concat(parts);
   }
-  return MS;
+  return ms;
 };
-MS.addSIDCicons = function(parts, type){
+ms.addSIDCicons = function(parts, type){
   if (typeof parts === 'function') {
     this['_' + type + 'SIDCicons'] = this['_' + type + 'SIDCicons'].concat(parts);
   }
-  return MS;
+  return ms;
 };
-MS.addSymbolPart = function(part) {
+ms.addSymbolPart = function(part) {
   if (typeof part === 'function') {
-    MS.setSymbolParts(MS.getSymbolParts().concat(part));
+    ms.setSymbolParts(ms.getSymbolParts().concat(part));
   }
-  return MS;
+  return ms;
 };
-MS.BBox = require('./ms/bbox.js');
-MS.ColorMode = function(civilian, friend, hostile, neutral, unknown) {
+ms.BBox = require('./ms/bbox.js');
+ms.ColorMode = function(civilian, friend, hostile, neutral, unknown) {
   var o = {};
   o.Civilian = civilian;
   o.Friend 	= friend;
@@ -106,26 +106,26 @@ MS.ColorMode = function(civilian, friend, hostile, neutral, unknown) {
   o.Unknown = unknown;
   return o;
 };
-MS.getColorMode = function(mode) {
+ms.getColorMode = function(mode) {
   var c = this._colorModes[mode];
   // Clone the mode and return the clone
-  return new MS.ColorMode(c.Civilian, c.Friend, c.Hostile, c.Neutral, c.Unknown); 
+  return new ms.ColorMode(c.Civilian, c.Friend, c.Hostile, c.Neutral, c.Unknown); 
 };
-MS.getDashArrays = function() {
+ms.getDashArrays = function() {
   return this._dashArrays;
 };
-MS.getHqStafLength = function() {
+ms.getHqStafLength = function() {
   return this._hqStafLength;
 };
-MS.getSymbolParts = function() {
+ms.getSymbolParts = function() {
   return this._symbolParts.slice(0);
 };
-MS.getVersion = function() {return this.version};
-MS.outline = function(geom, outline, stroke, color){
+ms.getVersion = function() {return this.version};
+ms.outline = function(geom, outline, stroke, color){
   if(Array.isArray(geom)){
     var clone = [];
     for(var i in geom){
-      clone.push(MS.outline(geom[i],outline,stroke,color));
+      clone.push(ms.outline(geom[i],outline,stroke,color));
     }
   }else{
     var clone = {};
@@ -137,7 +137,7 @@ MS.outline = function(geom, outline, stroke, color){
     if(geom.type == 'translate' || geom.type == 'rotate'  || geom.type == 'scale'){
       clone.draw = [];
       for (var draw in geom.draw){
-        clone.draw.push(MS.outline(geom.draw[draw],outline,stroke,color));
+        clone.draw.push(ms.outline(geom.draw[draw],outline,stroke,color));
       }
     }else{
       clone.strokewidth = clone.stroke != false ? (Number(clone.strokewidth||stroke) + 2*outline) : 2*outline;
@@ -148,8 +148,8 @@ MS.outline = function(geom, outline, stroke, color){
   }
   return clone;
 };
-MS.setAutoSVG = function(mode) {this.autoSVG = mode; return this.autoSVG;};
-MS.setColorMode = function(mode, colorMode) {
+ms.setAutoSVG = function(mode) {this.autoSVG = mode; return this.autoSVG;};
+ms.setColorMode = function(mode, colorMode) {
   this._colorModes[mode] = {};
   this._colorModes[mode].Hostile 	= colorMode.Hostile;
   this._colorModes[mode].Friend 	= colorMode.Friend;
@@ -158,85 +158,85 @@ MS.setColorMode = function(mode, colorMode) {
   this._colorModes[mode].Civilian = colorMode.Civilian;
   return this._colorModes[mode];
 };
-MS.setDashArrays = function(pending, anticipated, feintDummy) {
+ms.setDashArrays = function(pending, anticipated, feintDummy) {
   this._dashArrays.pending = pending;
   this._dashArrays.anticipated = anticipated;
   this._dashArrays.feintDummy = feintDummy;
   return this._dashArrays;
 };
-MS.setHqStafLength = function(len) {
+ms.setHqStafLength = function(len) {
   this._hqStafLength = len;
   return this._hqStafLength;
 };
-MS.setSymbolParts = function(parts) {
+ms.setSymbolParts = function(parts) {
   this._symbolParts = parts;
-  return MS;
+  return ms;
 };
-MS.setStandard = require('./ms/setstandard.js');
+ms.setStandard = require('./ms/setstandard.js');
 
 
 
 // For backward compability
-MS.addMarkerParts = function(part) {
+ms.addMarkerParts = function(part) {
   console.log('addMarkerParts() is deprecated and should not be used, use addSymbolPart() instead.');
-  MS.addSymbolPart(part);
+  ms.addSymbolPart(part);
 };
-MS.bboxMax = function(box1, box2){
+ms.bboxMax = function(box1, box2){
   console.log('bboxMax() is deprecated and should not be used, use BBox.merge() instead.');
   return box1.merge(box2);
 };
-MS.buildingBlock = function(pre, post, bbox) {
+ms.buildingBlock = function(pre, post, bbox) {
   console.log('buildingBlock() is deprecated and should not be used.');
   if ( pre.length == 1 && Array.isArray(pre[0]) ) pre = pre[0];
   if ( post.length == 1 && Array.isArray(post[0]) ) post = post[0];
   return {pre: pre, post: post, bbox: bbox};
 };
-MS.addLetterLabelOverrides = function(parts){
-  console.log('addLetterLabelOverrides() is deprecated and should not be used, use MS.addLabelOverrides() instead.');
+ms.addLetterLabelOverrides = function(parts){
+  console.log('addLetterLabelOverrides() is deprecated and should not be used, use addLabelOverrides() instead.');
   if (typeof parts === 'function') {
     if (!this._labelOverrides.hasOwnProperty('letter')) this._labelOverrides['letter'] = [];
       this._labelOverrides['letter'] = this._labelOverrides['letter'].concat(parts);
     }
 };
-MS.addLetterSIDCicons = function(parts){
-  console.log('addLetterSIDCicons() is deprecated and should not be used, use MS.addSIDCicons() instead.');
+ms.addLetterSIDCicons = function(parts){
+  console.log('addLetterSIDCicons() is deprecated and should not be used, use addSIDCicons() instead.');
   if (typeof parts === 'function') {
     this._letterSIDCicons = this._letterSIDCicons.concat(parts);
   }
 };
-MS.addNumberLabelOverrides = function(parts){
-  console.log('addNumberLabelOverrides() is deprecated and should not be used, use MS.addLabelOverrides() instead.');
+ms.addNumberLabelOverrides = function(parts){
+  console.log('addNumberLabelOverrides() is deprecated and should not be used, use addLabelOverrides() instead.');
   if (typeof parts === 'function') {
     if (!this._labelOverrides.hasOwnProperty('number')) this._labelOverrides['number'] = [];
       this._labelOverrides['number'] = this._labelOverrides['number'].concat(parts);
     }
 };
-MS.addNumberSIDCicons = function(parts){
-  console.log('addNumberSIDCicons() is deprecated and should not be used, use MS.addSIDCicons() instead.');
+ms.addNumberSIDCicons = function(parts){
+  console.log('addNumberSIDCicons() is deprecated and should not be used, use addSIDCicons() instead.');
   if (typeof parts === 'function') {
     this._numberSIDCicons = this._numberSIDCicons.concat(parts);
   }
 };
 
-MS.bbox = function(box){
+ms.bbox = function(box){
   console.log('bbox() is deprecated and should not be used, use BBox() instead.');
-  return MS.BBox(box);
+  return ms.BBox(box);
 } 
 
-MS.colorMode = function(civilian, friend, hostile, neutral, unknown) {
+ms.colorMode = function(civilian, friend, hostile, neutral, unknown) {
   console.log('colorMode() is deprecated and should not be used, use ColorMode() instead.');
-  return MS.ColorMode(civilian, friend, hostile, neutral, unknown);
+  return ms.ColorMode(civilian, friend, hostile, neutral, unknown);
 };
 
-MS.getMarkerParts = function() {
-  console.log('getMarkerParts() is deprecated and should not be used, use MS.getSymbolParts() instead.');
-  return MS.getSymbolParts();
+ms.getMarkerParts = function() {
+  console.log('getMarkerParts() is deprecated and should not be used, use getSymbolParts() instead.');
+  return ms.getSymbolParts();
 };
 
-MS.setMarkerParts = function(parts) {
-  console.log('setMarkerParts() is deprecated and should not be used, use MS.setSymbolParts() instead.');
-  MS.setSymbolParts(parts);
-  return MS;
+ms.setMarkerParts = function(parts) {
+  console.log('setMarkerParts() is deprecated and should not be used, use setSymbolParts() instead.');
+  ms.setSymbolParts(parts);
+  return ms;
 };
 
-module.exports = MS;
+module.exports = ms;

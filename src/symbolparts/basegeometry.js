@@ -1,5 +1,5 @@
 //Base Geometry for the Symbol ###########################################################
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function basegeometry(){
 	var modifier;
@@ -36,7 +36,7 @@ module.exports = function basegeometry(){
 		}else{
 			outline = geom;
 		}
-		drawArray1.push(MS.outline(outline,this.outlineWidth, this.strokeWidth, this.outlineColor));
+		drawArray1.push(ms.outline(outline,this.outlineWidth, this.strokeWidth, this.outlineColor));
 	}
 	//Add a dashed outline to the frame if we are using monocolor and the status is not present.
 	if((this.monoColor != '' || !this.fill) && this.properties.notpresent) geom.strokedasharray = this.properties.notpresent;

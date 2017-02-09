@@ -1,4 +1,4 @@
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function(ratio){
   function processCanvasInstructions(instruction, ctx) {
@@ -41,12 +41,12 @@ module.exports = function(ratio){
                 if (typeof instruction[i].fill  === 'undefined' || (typeof instruction[i].fill !== 'undefined' && instruction[i].fill) ) ctx.fill(d);
                 if (typeof instruction[i].stroke === 'undefined' || (typeof instruction[i].stroke !== 'undefined' && instruction[i].stroke) ) ctx.stroke(d);
               }else{
-                if (typeof MS._Path2D === 'function') {
-                  MS._Path2D(ctx, instruction[i].d)
+                if (typeof ms._Path2D === 'function') {
+                  ms._Path2D(ctx, instruction[i].d)
                   if (typeof instruction[i].fill === 'undefined' || (typeof instruction[i].fill !== 'undefined' && instruction[i].fill))ctx.fill();
                   if (typeof instruction[i].stroke === 'undefined' || (typeof instruction[i].stroke !== 'undefined' && instruction[i].stroke))ctx.stroke();
                 }else{
-                  console.warn("MS._Path2D() is not present, you will need to load functionality for using Canvas in older version of Internet Explorer.");
+                  console.warn("ms._Path2D() is not present, you will need to load functionality for using Canvas in older version of Internet Explorer.");
                 }
               }
               break;

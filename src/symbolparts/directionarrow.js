@@ -1,5 +1,5 @@
 //Direction Arrow ########################################################################
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function directionarrow(){
 	var drawArray1 = [];
@@ -8,7 +8,7 @@ module.exports = function directionarrow(){
 	if(this.properties.baseGeometry.g == ''){ // in the case we don't have any frame
 		bbox = this.bbox; //Set bbox to the current symbols bounds
 	}
-	var gbbox = new MS.BBox();
+	var gbbox = new ms.BBox();
 	var color = this.colors.iconColor[this.properties.affiliation] || this.colors.iconColor['Friend'];
 
 	if(this.infoFields){
@@ -28,7 +28,7 @@ module.exports = function directionarrow(){
 				gbbox.y2 += bbox.y2 + parseFloat(this.strokeWidth);
 			}
 			//outline
-			if (this.outlineWidth > 0) drawArray1.push(MS.outline(arrow, this.outlineWidth, this.strokeWidth, this.outlineColor));
+			if (this.outlineWidth > 0) drawArray1.push(ms.outline(arrow, this.outlineWidth, this.strokeWidth, this.outlineColor));
 			//geometry
 			drawArray2.push(arrow);
 		}

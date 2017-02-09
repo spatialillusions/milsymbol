@@ -1,14 +1,14 @@
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function(){
-  var baseFillColor = (typeof this.colorMode === 'object') ? this.colorMode : MS.getColorMode(this.colorMode);
-  var baseFrameColor = MS.getColorMode("FrameColor");
-  var baseIconColor =  MS.getColorMode("IconColor");
+  var baseFillColor = (typeof this.colorMode === 'object') ? this.colorMode : ms.getColorMode(this.colorMode);
+  var baseFrameColor = ms.getColorMode("FrameColor");
+  var baseIconColor =  ms.getColorMode("IconColor");
   var baseIconFillColor = baseFillColor;
-  var baseColorBlack = MS.getColorMode("Black");
-  var baseColorWhite = MS.getColorMode("White");
-  var baseColorOffWhite = MS.getColorMode("OffWhite");
-  var baseColorNone = MS.getColorMode("None");
+  var baseColorBlack = ms.getColorMode("Black");
+  var baseColorWhite = ms.getColorMode("White");
+  var baseColorOffWhite = ms.getColorMode("OffWhite");
+  var baseColorNone = ms.getColorMode("None");
 
   //If it is a Civilian Symbol and civilian colors not are turned off, use civilian colors...
   if(	this.civilianColor && this.properties.civilian){

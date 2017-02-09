@@ -1,4 +1,4 @@
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function(properties, mapping){
 	this.SIDC = this.SIDC.toUpperCase();
@@ -32,9 +32,9 @@ module.exports = function(properties, mapping){
 	//symbolmodifier11 that are Installations
 	if(symbolmodifier11 == "H")				properties.installation = true;
 	//Planned/Anticipated/Suspect symbols should have a dashed outline
-	if(this.frame && status == 'A' )		properties.notpresent = MS._dashArrays.anticipated;
+	if(this.frame && status == 'A' )		properties.notpresent = ms._dashArrays.anticipated;
 	if(this.frame && (['P','A','S','G','M'].indexOf(affiliation) > -1)){
-											properties.notpresent = MS._dashArrays.pending;
+											properties.notpresent = ms._dashArrays.pending;
 	}
 	//Should it have a Condition Bar
 	if(status == 'C')						properties.condition = mapping.status[2];
@@ -148,7 +148,7 @@ module.exports = function(properties, mapping){
 									"WDM---","WDMG--","WDMM--",
 									"ND----","E-----","V-----","X-----",
 									"NBS---","NBR---","NBW---","NM----","NA----"].indexOf(functionid) > -1){
-		if(MS._STD2525){
+		if(ms._STD2525){
 			properties.fill = false;
 			if(properties.functionid=="WD----"){
 				properties.fill = true;

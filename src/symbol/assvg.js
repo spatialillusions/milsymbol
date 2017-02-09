@@ -1,4 +1,4 @@
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function(){
   function processInstructions(instruction){
@@ -81,7 +81,7 @@ module.exports = function(){
     }
     return svgxml;
   }
-  var xml = '<svg xmlns="'+MS._svgNS+'" version="1.2" baseProfile="tiny" width="'+this.width+'" height="'+this.height+'" viewBox="'+(this.bbox.x1-this.strokeWidth-this.outlineWidth) + " " + (this.bbox.y1-this.strokeWidth-this.outlineWidth) + " " + this.baseWidth + " " + this.baseHeight +'">';
+  var xml = '<svg xmlns="'+ms._svgNS+'" version="1.2" baseProfile="tiny" width="'+this.width+'" height="'+this.height+'" viewBox="'+(this.bbox.x1-this.strokeWidth-this.outlineWidth) + " " + (this.bbox.y1-this.strokeWidth-this.outlineWidth) + " " + this.baseWidth + " " + this.baseHeight +'">';
   for (var i = 0; i<this.drawInstructions.length; i++){
     xml += processInstructions.call(this,this.drawInstructions[i]);
   }

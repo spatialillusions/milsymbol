@@ -1,4 +1,4 @@
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function sea(sId,bbox,icn,_STD2525){
 	// SEA ===========================================================================

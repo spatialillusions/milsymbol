@@ -1,5 +1,5 @@
 //Affiliation and dimension addons to base geometries ####################################
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function affliationdimension(){
 	var drawArray1 = [];
@@ -30,10 +30,10 @@ module.exports = function affliationdimension(){
 		}
 		if(this.properties.context == "Simulation"){
 			drawArray2.push({type:'text',text:'S',x:(bbox.x2 + spacing),y:60,fill:frameColor,fontfamily:"Arial",fontsize:35,fontweight:"bold",textanchor:"start"});
-			bbox = new MS.BBox({x2:(bbox.x2 + spacing + 22), y1: (60-25)});
+			bbox = new ms.BBox({x2:(bbox.x2 + spacing + 22), y1: (60-25)});
 		}
 	}
 	//outline
-	if (this.outlineWidth > 0) drawArray1.push(MS.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor));
+	if (this.outlineWidth > 0) drawArray1.push(ms.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor));
 	return {pre: drawArray1, post: drawArray2, bbox: bbox};
 }

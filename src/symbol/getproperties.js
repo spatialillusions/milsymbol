@@ -1,4 +1,4 @@
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function(){
   var properties = {
@@ -75,30 +75,30 @@ module.exports = function(){
   properties.numberSIDC = !isNaN(this.SIDC);
   if(properties.numberSIDC){ //This is for new number based SIDCs
 
-    if (typeof MS._getNumberProperties === 'function') {
-      properties = MS._getNumberProperties.call(this,properties, mapping);
+    if (typeof ms._getNumberProperties === 'function') {
+      properties = ms._getNumberProperties.call(this,properties, mapping);
     }else{
-      console.warn("MS._getNumberProperties() is not present, you will need to load functionality for letter based SIDCs");
+      console.warn("ms._getNumberProperties() is not present, you will need to load functionality for letter based SIDCs");
     }
 
   }else{ //This would be old letter based SIDCs
 
-    if (typeof MS._getLetterProperties === 'function') {
-      properties = MS._getLetterProperties.call(this,properties, mapping);
+    if (typeof ms._getLetterProperties === 'function') {
+      properties = ms._getLetterProperties.call(this,properties, mapping);
     }else{
-      console.warn("MS._getNumberProperties() is not present, you will need to load functionality for letter based SIDCs");
+      console.warn("ms._getNumberProperties() is not present, you will need to load functionality for letter based SIDCs");
     }
 
   }
 
-  if(MS._symbolGeometries.hasOwnProperty(properties.dimension + properties.affiliation)){
-    properties.baseGeometry = MS._symbolGeometries[properties.dimension + properties.affiliation];
+  if(ms._symbolGeometries.hasOwnProperty(properties.dimension + properties.affiliation)){
+    properties.baseGeometry = ms._symbolGeometries[properties.dimension + properties.affiliation];
   }else{
-    properties.baseGeometry.bbox = new MS.BBox();
+    properties.baseGeometry.bbox = new ms.BBox();
   }
   //If both frame and icon is turned off we should just have a position marker
   if(!this.frame && !this.icon){
-    properties.baseGeometry = MS._symbolGeometries.PositionMarker;
+    properties.baseGeometry = ms._symbolGeometries.PositionMarker;
   }
 
   return properties;

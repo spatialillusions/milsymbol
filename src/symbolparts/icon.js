@@ -1,10 +1,10 @@
 //Icon ##################################################################################
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function icon(){
 	var drawArray1 = [];
 	var drawArray2 = [];
-	var gbbox = new MS.BBox({x1:50,x2:150,y1:50,y2:150});
+	var gbbox = new ms.BBox({x1:50,x2:150,y1:50,y2:150});
 	var icons;
 	
 	//This is the building blocks we use to create icons
@@ -28,12 +28,12 @@ module.exports = function icon(){
 		var black = this.colors.black[this.properties.affiliation];
 		var white = this.colors.white[this.properties.affiliation];
 		//Store previous used icons in memory.
-		var icnet = (MS._STD2525?"2525":"APP6")+","+this.properties.dimension+this.properties.affiliation+this.properties.notpresent+',frame:'+this.frame+',alternateMedal:'+this.alternateMedal+',colors:{fillcolor:'+fillColor+',neutralColor'+neutralColor+',iconColor:'+iconColor+',iconFillColor:'+iconFillColor+',none:'+none+',black:'+black+',white:'+white+"}";
-		if(MS._iconCache.hasOwnProperty(icnet)){
-			iconParts = MS._iconCache[icnet].iconParts;
+		var icnet = (ms._STD2525?"2525":"APP6")+","+this.properties.dimension+this.properties.affiliation+this.properties.notpresent+',frame:'+this.frame+',alternateMedal:'+this.alternateMedal+',colors:{fillcolor:'+fillColor+',neutralColor'+neutralColor+',iconColor:'+iconColor+',iconFillColor:'+iconFillColor+',none:'+none+',black:'+black+',white:'+white+"}";
+		if(ms._iconCache.hasOwnProperty(icnet)){
+			iconParts = ms._iconCache[icnet].iconParts;
 		}else{
-			MS._iconCache[icnet] = {};
-			iconParts = MS._iconCache[icnet].iconParts = MS._geticnParts(this.properties, this.colors, MS._STD2525, this.monoColor, this.alternateMedal);
+			ms._iconCache[icnet] = {};
+			iconParts = ms._iconCache[icnet].iconParts = ms._geticnParts(this.properties, this.colors, ms._STD2525, this.monoColor, this.alternateMedal);
 		}
 
 		//Letter based SIDCs.
@@ -46,35 +46,35 @@ module.exports = function icon(){
 			}
 
 			//Try to fetch the icons form the cache
-			if( MS._iconCache[icnet].hasOwnProperty('letterSIDC')){
-				icons = MS._iconCache[icnet].letterSIDC.icons;
-				specialbbox  = MS._iconCache[icnet].letterSIDC.bbox;
+			if( ms._iconCache[icnet].hasOwnProperty('letterSIDC')){
+				icons = ms._iconCache[icnet].letterSIDC.icons;
+				specialbbox  = ms._iconCache[icnet].letterSIDC.bbox;
 			}else{
-				if (typeof MS._getLetterSIDCicn === 'function') {
-					MS._iconCache[icnet].letterSIDC = MS._getLetterSIDCicn(iconParts,MS._STD2525);
-					icons = MS._iconCache[icnet].letterSIDC.icons;
-					specialbbox  = MS._iconCache[icnet].letterSIDC.bbox;
+				if (typeof ms._getLetterSIDCicn === 'function') {
+					ms._iconCache[icnet].letterSIDC = ms._getLetterSIDCicn(iconParts,ms._STD2525);
+					icons = ms._iconCache[icnet].letterSIDC.icons;
+					specialbbox  = ms._iconCache[icnet].letterSIDC.bbox;
 					//THIS IS JUST FOR Printing bottom coords of all equipment ===========================
 		/*			This code dosen't work at the moment..... TODO
 					if(element){
 					listBBoxes = '';
 					for (var property in sId) {
 						if(property.substr(4,1) == 'E'){
-							var BaseGeometry = document.createElementNS(MS._svgNS, "g");
+							var BaseGeometry = document.createElementNS(ms._svgNS, "g");
 							BaseGeometry.setAttribute('id', 'BaseGeometryEquipment');
 								BaseGeometry.appendChild(
 									BaseGeometry.ownerDocument.importNode(
 										parseXML(
-											'<g xmlns="'+MS._svgNS+'">' + sId[property] + '</g>'
+											'<g xmlns="'+ms._svgNS+'">' + sId[property] + '</g>'
 										), true
 									)
 								);
-							var svgSymbol = document.createElementNS(MS._svgNS, "svg");
+							var svgSymbol = document.createElementNS(ms._svgNS, "svg");
 							svgSymbol.setAttribute("width", 200);
 							svgSymbol.setAttribute("height", 200);
 							svgSymbol.setAttribute("version", 1.1);
 							svgSymbol.setAttribute("baseProfile", "tiny");
-							svgSymbol.setAttribute("xmlns", MS._svgNS);
+							svgSymbol.setAttribute("xmlns", ms._svgNS);
 							svgSymbol.appendChild(BaseGeometry);
 
 							var targetElement = document.getElementById(element);
@@ -90,7 +90,7 @@ module.exports = function icon(){
 				}
 		*/
 				}else{
-					console.warn("MS._getLetterSIDCicn() is not present, you will need to load functionality for letter based SIDCs");
+					console.warn("ms._getLetterSIDCicn() is not present, you will need to load functionality for letter based SIDCs");
 				}
 			}
 		}
@@ -98,37 +98,37 @@ module.exports = function icon(){
 		//Number based SIDCs.
 		if(this.properties.numberSIDC){ //Number based SIDCs.
 			var symbolSet = String(this.SIDC).substr(4,2);
-			if( MS._iconCache[icnet].hasOwnProperty('numberSIDC')){
-				if( MS._iconCache[icnet].numberSIDC.symbolSet.hasOwnProperty(symbolSet)){
-					icons = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
-					m1 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
-					m2 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
-					specialbbox = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].bbox;
+			if( ms._iconCache[icnet].hasOwnProperty('numberSIDC')){
+				if( ms._iconCache[icnet].numberSIDC.symbolSet.hasOwnProperty(symbolSet)){
+					icons = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
+					m1 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
+					m2 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
+					specialbbox = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].bbox;
 				}else{
-					if (typeof MS._getNumberSIDCicn === 'function') {
-						MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet] = MS._getNumberSIDCicn(symbolSet,iconParts,MS._STD2525);
-						icons = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
-						m1 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
-						m2 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
-						specialbbox = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].bbox;
+					if (typeof ms._getNumberSIDCicn === 'function') {
+						ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet] = ms._getNumberSIDCicn(symbolSet,iconParts,ms._STD2525);
+						icons = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
+						m1 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
+						m2 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
+						specialbbox = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].bbox;
 					}else{
-						console.warn("MS._getNumberSIDCicn() is not present, you will need to load functionality for number based SIDCs");
+						console.warn("ms._getNumberSIDCicn() is not present, you will need to load functionality for number based SIDCs");
 					}
 				}
 			}else{
-				MS._iconCache[icnet].numberSIDC = {};
-				MS._iconCache[icnet].numberSIDC.symbolSet = {};
-				if (typeof MS._getNumberSIDCicn === 'function') {
-					MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet] = MS._getNumberSIDCicn(symbolSet,iconParts,MS._STD2525);
-					icons = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
-					m1 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
-					m2 = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
-					specialbbox = MS._iconCache[icnet].numberSIDC.symbolSet[symbolSet].bbox;
-					//for printing equipment bottom  set MS._element to the id of an html element and call milsymbol with an equipment sysbol
+				ms._iconCache[icnet].numberSIDC = {};
+				ms._iconCache[icnet].numberSIDC.symbolSet = {};
+				if (typeof ms._getNumberSIDCicn === 'function') {
+					ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet] = ms._getNumberSIDCicn(symbolSet,iconParts,ms._STD2525);
+					icons = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
+					m1 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
+					m2 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
+					specialbbox = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].bbox;
+					//for printing equipment bottom  set ms._element to the id of an html element and call milsymbol with an equipment sysbol
 					/*
-					if(MS._element){
+					if(ms._element){
 					listBBoxes = '';
-					sId = MS._iconCache[icnet].numberSIDC.symbolSet[15].icn;
+					sId = ms._iconCache[icnet].numberSIDC.symbolSet[15].icn;
 					for (var property in sId) {
 					console.log(property)
 							var BaseGeometry = document.createElementNS("http://www.w3.org/2000/svg", "g");
@@ -150,7 +150,7 @@ module.exports = function icon(){
 							svgSymbol.setAttribute("xmlns", "http://www.w3.org/2000/svg");
 							svgSymbol.appendChild(BaseGeometry);
 
-							var targetElement = document.getElementById(MS._element);
+							var targetElement = document.getElementById(ms._element);
 							if(targetElement.hasChildNodes()){
 								targetElement.removeChild(targetElement.childNodes[0])
 							}
@@ -160,10 +160,10 @@ module.exports = function icon(){
 							listBBoxes +=  property + ':' + (BBox.y+ BBox.height)+',';
 
 						}
-					document.getElementById(MS._element).innerHTML=listBBoxes;
+					document.getElementById(ms._element).innerHTML=listBBoxes;
 					}*/
 				}else{
-					console.warn("MS._getNumberSIDCicn() is not present, you will need to load functionality for number based SIDCs");
+					console.warn("ms._getNumberSIDCicn() is not present, you will need to load functionality for number based SIDCs");
 				}
 			}
 		}
@@ -178,7 +178,7 @@ module.exports = function icon(){
 				drawArray2.push(icons[this.properties.functionid.substr(0,4)+'00']);
 			}
 			if(specialbbox.hasOwnProperty(this.properties.functionid.substr(0,6))){
-				gbbox = new MS.BBox(specialbbox[this.properties.functionid.substr(0,6)]);
+				gbbox = new ms.BBox(specialbbox[this.properties.functionid.substr(0,6)]);
 			}
 			if(this.properties.functionid.substr(4,2) == '95')drawArray2.push(iconParts['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']);
 			if(this.properties.functionid.substr(4,2) == '96')drawArray2.push(iconParts['GR.IC.FF.DIVISION AND BELOW SUPPORT']);
@@ -195,13 +195,13 @@ module.exports = function icon(){
 				drawArray2.push(icons[genericSIDC]);
 			}
 			if(specialbbox[genericSIDC]){
-				gbbox = new MS.BBox(specialbbox[genericSIDC]);
+				gbbox = new ms.BBox(specialbbox[genericSIDC]);
 			}
 		}
 	}
 	//outline
 	if(!(this.frame && this.fill) || this.monoColor){
-		if (this.outlineWidth > 0) drawArray1.push(MS.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor));
+		if (this.outlineWidth > 0) drawArray1.push(ms.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor));
 	}
 	return {pre: drawArray1, post: drawArray2, bbox: gbbox};
 }

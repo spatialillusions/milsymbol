@@ -1,12 +1,12 @@
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function(iconParts,STD2525){
 	var iconSIDC = {};
 	var iconBbox = {};
 
-	for (var i in MS._letterSIDCicons){
-		if (!MS._letterSIDCicons.hasOwnProperty(i)) continue;
-		MS._letterSIDCicons[i].call(this,iconSIDC,iconBbox,iconParts,STD2525);
+	for (var i in ms._letterSIDCicons){
+		if (!ms._letterSIDCicons.hasOwnProperty(i)) continue;
+		ms._letterSIDCicons[i].call(this,iconSIDC,iconBbox,iconParts,STD2525);
 	}
 	return {icons:iconSIDC,bbox:iconBbox};
 };

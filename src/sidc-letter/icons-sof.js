@@ -1,4 +1,4 @@
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function sof(sId,bbox,icn,_STD2525){
 	// SOF ===========================================================================
@@ -28,7 +28,7 @@ module.exports = function sof(sId,bbox,icn,_STD2525){
 	sId['S-F-GS----'] = [icn['GR.IC.SPECIAL FORCES']];
 	sId['S-F-GR----'] = sId['S-F-GSR---'] = [icn['GR.IC.FF.INFANTRY'],icn['AIR.M1.RECONNAISSANCE'],icn['GR.M2.AIRBORNE']];
 	sId['S-F-GP----'] = sId['S-F-GSP---'] = [icn['GR.EQ.PSYCHOLOGICAL OPERATIONS EQUIPMENT']];
-	sId['S-F-GPA---'] = sId['S-F-GSPA--'] = [icn['GR.EQ.PSYCHOLOGICAL OPERATIONS EQUIPMENT'], MS._translate(0,-30,MS._scale(0.7,icn['AR.I.MILITARY FIXED WING']))];
+	sId['S-F-GPA---'] = sId['S-F-GSPA--'] = [icn['GR.EQ.PSYCHOLOGICAL OPERATIONS EQUIPMENT'], ms._translate(0,-30,ms._scale(0.7,icn['AR.I.MILITARY FIXED WING']))];
 	sId['S-F-GC----'] = sId['S-F-GCA---'] = [icn['GR.IC.CIVIL AFFAIRS']];
 	sId['S-F-GB----'] = sId['S-F-B-----'] = [icn['AR.I.SPECIAL OPERATIONS FORCES'],icn['GR.M2.SUPPORT']]; 
 }

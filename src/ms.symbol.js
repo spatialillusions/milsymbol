@@ -1,4 +1,4 @@
-var MS = require('./ms.js');
+var ms = require('./ms.js');
 
 function symbol(SIDCParameter,options){
   //=======================================================================================
@@ -16,7 +16,7 @@ function symbol(SIDCParameter,options){
   this.icon                        = true; // Should we display the icon?
   this.monoColor                   = false; // Should the icon be monocromatic and if so what color
   this.civilianColor               = true; // Should we use the Civilian Purple defined in 2525? (We set this to default because I like the color.
-  this.colorMode                   = MS.getColorMode('Light'); // 2525C Allows you to use Dark; Medium or Light colors. The values you can set are "Dark";"Medium" or "Light"
+  this.colorMode                   = ms.getColorMode('Light'); // 2525C Allows you to use Dark; Medium or Light colors. The values you can set are "Dark";"Medium" or "Light"
   this.infoFields                  = true; // If you have set all info fields but don't want the displayed; then just set this to false.
   this.infoSize                    = 40; // Relative size of the info fields
   this.alternateMedal              = false; // 2525D lets you choose between MEDAL icn and alternate MEDAL icn for Mines; default is set to MEDAL.
@@ -51,7 +51,7 @@ function symbol(SIDCParameter,options){
   // FieldID AN Azimuth
   // FieldID AO EngagementBar
 
-  this.bbox = new MS.BBox(); // Contains the bounding box of the current marker
+  this.bbox = new ms.BBox(); // Contains the bounding box of the current marker
   this.colors = {}; // Contains the colors for the current marker
   this.markerAnchor = {x:50,y:50}; // The anchor point for the current marker
   this.octagonAnchor = {x:50,y:50}; // The anchor point for the octagon for the current marker

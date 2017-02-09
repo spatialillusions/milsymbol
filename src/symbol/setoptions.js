@@ -1,4 +1,4 @@
-var MS = require('../ms.js');
+var ms = require('../ms.js');
 
 module.exports = function(options){
   if (typeof options === 'object') {
@@ -15,11 +15,11 @@ module.exports = function(options){
 
   this.drawInstructions = [];
   
-  this.bbox = new MS.BBox();
+  this.bbox = new ms.BBox();
   //Processing all parts of the marker, adding them to the drawinstruction and updating the boundingbox
-  for (var i in MS._symbolParts){
-    if (!MS._symbolParts.hasOwnProperty(i)) continue;
-    var m = MS._symbolParts[i].call(this);
+  for (var i in ms._symbolParts){
+    if (!ms._symbolParts.hasOwnProperty(i)) continue;
+    var m = ms._symbolParts[i].call(this);
     if (!m.pre) continue;
     if(m.pre.length)this.drawInstructions.unshift(m.pre);
     if(m.post.length)this.drawInstructions.push(m.post);
@@ -38,7 +38,7 @@ module.exports = function(options){
     y: (anchor.y-this.bbox.y1+parseFloat(this.strokeWidth) + parseFloat(this.outlineWidth))*this.size/100};
   //If it is a headquarters the anchor should be at the end of the staf
   if(this.properties.headquarters){
-	var hqStafLength = this.hqStafLength || MS._hqStafLength;
+	var hqStafLength = this.hqStafLength || ms._hqStafLength;
     anchor = {
       x:this.properties.baseGeometry.bbox.x1,
       y:this.properties.baseGeometry.bbox.y2 + hqStafLength};
@@ -47,7 +47,7 @@ module.exports = function(options){
     x: (anchor.x-this.bbox.x1+parseFloat(this.strokeWidth) + parseFloat(this.outlineWidth))*this.size/100,
     y: (anchor.y-this.bbox.y1+parseFloat(this.strokeWidth) + parseFloat(this.outlineWidth))*this.size/100};
 
-  if(MS.autoSVG)this.asSVG();
+  if(ms.autoSVG)this.asSVG();
 
   return this;
 };
