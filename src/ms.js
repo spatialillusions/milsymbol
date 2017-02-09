@@ -49,7 +49,7 @@ var MS = new function(){
   this._svgNS = "http://www.w3.org/2000/svg";
   this._symbolParts = [];
   
-  this.autoSVG = true;
+  this.autoSVG = false;
   this.version = '0.6.0';	
 
   if (typeof console === 'object') {

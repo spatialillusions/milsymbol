@@ -44,7 +44,7 @@
 
 - Avoid setting properties directly, use setOptions(options) instead.
 
-- Do not use .XML anymore, use asSVG() instead, in the future autoSVG will be set to false and .XML removed.
+- Do not use .XML anymore, use asSVG() instead, **if needed set `MS.autoSVG = true`**. MS.autoSVG will be removed in a future version.
 
 - getMarker(), it's not needed anymore, symbols are automatically updated when options are updated using setOptions().
 
