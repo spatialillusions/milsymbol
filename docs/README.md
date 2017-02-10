@@ -284,6 +284,22 @@ This describes more advanced development with milsymbol, this includes adding yo
 
 The base concept for milsymbol has been that everything that is used internally to build up the symbols should be possible to modify, this makes it possible to do everything from changing colors to adding completely new parts to the generated symbols.
 
+All the following code can be used to inject functionality into milsymbol externally, but you can also choose to build your own version of milsymbol. 
+
+## Building milsymbol
+
+Milsymbol is built using [webpack](https://webpack.js.org), and if you installed milsymbol npm everything you need to build milsymbol should have been installed as well since they are listed as devDependencies in package.json, if you don't have npm installed, you will have to install it to build milsymbol.
+
+The structure of the code is that the webpack config (*webpack.config.js*) and entry point (*milsymbol.js*) is located under `/build` and all other source code is under `/src`. This way it is easy to edit the entry point, that decides what functionality that is included in milsymbol, without touching the other source code.
+
+Once you have changed the parts of the code that you want to change, you simply run:
+
+```
+npm run build
+```
+
+Webpack will then build milsymbol and minify the output into `/dist`.
+
 ## Draw instruction
 
 The symbols in milsymbol is drawn using JSON draw instructions `drawInstruction`, these are then converted into Canvas draw instructions, or SVG output.
