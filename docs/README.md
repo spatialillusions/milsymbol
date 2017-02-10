@@ -19,9 +19,7 @@ AMD, CommonJS, and vanilla environments are supported. The module is always name
 ```html
 <script src="dist/milsymbol.js"></script>
 <script>
-
-var symbol = new MS.Symbol('SFG-UCI----D',{size:30});
-
+  var symbol = new MS.Symbol('SFG-UCI----D',{size:30});
 </script>
 ```
 
