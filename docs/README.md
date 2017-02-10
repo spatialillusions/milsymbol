@@ -14,7 +14,7 @@ npm install milsymbol --save
 
 AMD, CommonJS, and vanilla environments are supported. The module is always named 'milsymbol' and in vanilla, a 'MS' global is exported:
 
-**TODO Change `MS` to `ms`???**
+[**TODO Change `MS` to `ms`???**](https://github.com/spatialillusions/milsymbol/issues/80)
 
 ```html
 <script src="dist/milsymbol.js"></script>
