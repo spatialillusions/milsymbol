@@ -1,40 +1,31 @@
-# Getting milsymbol into your enviroment
+# Milsymbol Documentation
 
-## Downloading milsymbol
+## Installning
 
 You can download the latest release directly from GitHub if you want to:
 
 https://github.com/spatialillusions/milsymbol/releases/latest
 
-Include the JavaScript file and you are ready to go.
-
-```html
-<script src="dist/milsymbol.js"></script>
-```
-
-The global object `MS` will now contain all milsymbols functionality.
-
-TODO Change `MS` to `ms`??? 
-
-## Get milsymbol using npm
-
-You can get milsymbol using npm:
+You can also get milsymbol using npm:
 
 ```
 npm install milsymbol --save
 ```
 
-Require the milsymbol module and you are ready to go.
+AMD, CommonJS, and vanilla environments are supported. The module is always named 'milsymbol' and in vanilla, a 'MS' global is exported:
 
-```javascript
-var MS = require('milsymbol');
+**TODO Change `MS` to `ms`???**
+
+```html
+<script src="dist/milsymbol.js"></script>
+<script>
+
+var symbol = new MS.Symbol('SFG-UCI----D',{size:30});
+
+</script>
 ```
 
-It is suggested that you require milsymbol to a variable named `MS` but other variable names should work as well.
-
-## As a module in other frameworks
-
-Webpack packages milsymbol as an UMD module when it is built, this will make it work with CommonJS, AMD and as global variable, so it is possible to simply use milsymbol in other frameworks, such as Dojo, as well.
+In a framework like [Dojo](https://dojotoolkit.org) you can load milsymbol like this: 
 
 ```html
 <html>
@@ -45,16 +36,16 @@ Webpack packages milsymbol as an UMD module when it is built, this will make it 
       require([
         "milsymbol"
       ], function(MS){
-        console.log(MS.version);
+        var symbol = new MS.Symbol('SFG-UCI----D',{size:30});
       });
     </script>
   </body>
 </html>
 ```
 
-This way of loading milsymbol makes it possible to use dojo from an external source, like js.arcgis.com. 
+This way of loading milsymbol makes it possible to use Dojo from an external source, like js.arcgis.com. 
 
-If you only are using it with local sources, you can set `umdNamedDefine:false` in *webpack.config.js* and rebuild it by running `npm run build`, and now you can `require(["app/milsymbol"].....`. See more about building under [Building milsymbol](#building-milsymbol).
+If you only are using it with local sources, you can set `umdNamedDefine:false` in *webpack.config.js* and rebuild it by running `npm run build`, and now you can `require(["app/milsymbol"].....` if *milsymbol.js* is placed in your app folder. See more about building under [Building milsymbol](#building-milsymbol).
 
 # Creating military unit symbols
 
@@ -70,6 +61,12 @@ Even if options can be provided or updated after the symbol object is created, t
 
 ```javascript
 var symbol = new MS.Symbol('SFG-UCI----D',{size:30});
+```
+
+Once you have initiated your symbol, you can use different methods to request a rendering of the symbol, or get information about the symbol. It is also possible to chain methods directly to the initiation:
+
+```javascript
+var symbol = new MS.Symbol('SFG-UCI----D',{size:30}).asSVG();
 ```
 
 **Modifier options**
@@ -129,7 +126,7 @@ The following options are style options that changes the look of the symbol in d
 **Returns**
 
 ```javascript
-this
+Object this
 ```
 
 -----
