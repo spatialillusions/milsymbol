@@ -54,7 +54,7 @@ Webpack packages milsymbol as an UMD module when it is built, this will make it 
 
 This way of loading milsymbol makes it possible to use dojo from an external source, like js.arcgis.com. 
 
-If you only are using it with local sources, you can set `umdNamedDefine:false` in webpack.config.js and rebuild it by running `npm run build`, and now you can `require(["app/milsymbol"].....`.
+If you only are using it with local sources, you can set `umdNamedDefine:false` in *webpack.config.js* and rebuild it by running `npm run build`, and now you can `require(["app/milsymbol"].....`. See more about building under [Building milsymbol](#building-milsymbol).
 
 # Creating military unit symbols
 
