@@ -108,7 +108,7 @@ The following options are style options that changes the look of the symbol in d
 |--------|------|---------|-------------|
 | alternateMedal | Boolean | false | MIL-STD-2525D lets you choose between MEDAL and alternate MEDAL icons for mine warefare symbols, the default in milsymbol is using MEDAL icons, but you can change this using setting this property to true. | 
 | civilianColor | Boolean	 | true | 2525C specifics purple as an optional color for civilian symbols. Of corse we like color so we set this as default. | 
-| colorMode | Color object or String| 'Light' | This is the option for setting what Color object to use for the fill of the symbols. It can be set to a Color object, or a string representing the name of a registered Color objext. You can use MS.ColorMode to create a new color mode, or MS.getColorMode to get an existing color mode. | 
+| colorMode | ColorMode or String| 'Light' | This is the option for setting what Color object to use for the fill of the symbols. It can be set to a Color object, or a string representing the name of a registered Color objext. You can use MS.ColorMode to create a new color mode, or MS.getColorMode to get an existing color mode. | 
 | fill | Boolean | true | Should your symbol be filled with color. |
 | fillOpacity | Number | 1 | The opacity of the symbol fill color. |
 | frame | 	Boolean	 | true | Should your symbol have a frame. All symbols support to be unframed, not just the ones specified in 2525B. | 
@@ -394,6 +394,61 @@ Array [
 ] 
 ```
 
+----
+
+## MS.BBox({box})
+
+```javascript
+Object {
+  x1: Number, // Left coordinate {Optional}
+  y1: Number, // Top coordinate {Optional}
+  x2: Number, // Right coordinate {Optional}
+  y2: Number, // Bottom coordinate {Optional}
+}
+```
+
+Creates a bounding box Object. It is initiated with an optional object. Values that are omitted will default to 100, and if an object isn't provided all values will default to 100.
+
+**Returns**
+
+```javascript
+Object {
+  x1: Number, // Left coordinate
+  y1: Number, // Top coordinate
+  x2: Number, // Right coordinate
+  y2: Number, // Bottom coordinate
+  width: function(), // Returns box width
+  height: function(), // Returns box height
+  merge: function(box) // Merges one box with another and returns the original box
+}
+```
+
+## MS.ColorMode(civilian, friend, hostile, neutral, unknown)
+
+```javascript
+civilian: String,
+friend: String,
+hostile: String,
+neutral: String,
+unknown: String,
+```
+
+Creates a ColorMode Object with colors used for different affiliations.
+
+**Returns**
+
+```javascript
+Object {
+  Civilian: String,
+  Friend: String,
+  Hostile: String,
+  Neutral: String,
+  Unknown: String
+}
+```
+
+-----
+
 ## MS.addIconParts(iconFunction)
 
 ```javascript
@@ -543,58 +598,6 @@ By inserting a pre and a post drawInstruction, we are able to to draw parts of t
 Object MS
 ```
 
-
-## MS.BBox({box})
-
-```javascript
-Object {
-  x1: Number, // Left coordinate {Optional}
-  y1: Number, // Top coordinate {Optional}
-  x2: Number, // Right coordinate {Optional}
-  y2: Number, // Bottom coordinate {Optional}
-}
-```
-
-Creates a bounding box Object. It is initiated with an optional object. Values that are omitted will default to 100, and if an object isn't provided all values will default to 100.
-
-**Returns**
-
-```javascript
-Object {
-  x1: Number, // Left coordinate
-  y1: Number, // Top coordinate
-  x2: Number, // Right coordinate
-  y2: Number, // Bottom coordinate
-  width: function(), // Returns box width
-  height: function(), // Returns box height
-  merge: function(box) // Merges one box with another and returns the original box
-}
-```
-
-## MS.ColorMode(civilian, friend, hostile, neutral, unknown)
-
-```javascript
-civilian: String,
-friend: String,
-hostile: String,
-neutral: String,
-unknown: String,
-```
-
-Creates a colorMode Object with colors used for different affiliations.
-
-**Returns**
-
-```javascript
-Object {
-  Civilian: String,
-  Friend: String,
-  Hostile: String,
-  Neutral: String,
-  Unknown: String
-}
-```
-
 ## MS.getColorMode(mode)
 
 ```javascript
@@ -695,13 +698,20 @@ Outline is the outline width, stroke is the original stroke width, and color is 
 Array or Object
 ```
 
-## MS.setAutoSVG(Boolean)
-
-TODO 
-
 ## MS.setColorMode(name, colormode)
 
-TODO
+```javascript
+name: String,
+colormode: ColorMode
+```
+
+Register a ColorMode with a name or override an existing ColorMode.
+
+**Returns**
+
+```javascript
+Object ColorMode
+```
 
 ## MS.setDashArrays(dash_object)
 
