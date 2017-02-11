@@ -50,7 +50,7 @@ var ms = new function(){
   this._symbolParts = [];
   
   this.autoSVG = false;
-  this.version = '0.6.0';	
+  this.version = '1.0.0-master';	
 
   if (typeof console === 'object') {
     console.log('milsymbol.js ' + this.version + ' - Copyright (c) 2017 Måns Beckman  http://www.spatialillusions.com');
