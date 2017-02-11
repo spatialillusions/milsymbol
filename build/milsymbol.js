@@ -1,3 +1,6 @@
+/* ***************************************************************************************
+Creating the base of milsymbol
+*************************************************************************************** */
 var ms = require('../src/ms.js');
 
 // Adding things to ms that can't be done in ms.js since they reference ms.js
@@ -6,9 +9,8 @@ ms._symbolGeometries = require('../src/ms/symbolgeometries.js');
 
 // Initiating the symbol class
 ms.Symbol = require('../src/ms.symbol.js');
-
 // Backwards compatibility, will be removed in future version
-  ms.symbol = ms.Symbol;
+ms.symbol = ms.Symbol;
 
 // Standard colors for symbols
 ms.setColorMode('Light',require('../src/colormodes/light.js'));
@@ -21,7 +23,9 @@ ms.setColorMode('White',require('../src/colormodes/white.js'));
 ms.setColorMode('OffWhite',require('../src/colormodes/offwhite.js'));
 ms.setColorMode('None',require('../src/colormodes/none.js'));
 
-// Letter SIDC
+/* ***************************************************************************************
+Letter based SIDC
+*************************************************************************************** */
 ms._getLetterProperties = require('../src/sidc-letter/properties.js');
 ms._getLetterSIDCicn = require('../src/sidc-letter/geticon.js');
 
@@ -29,15 +33,22 @@ ms.addSIDCicons(require('../src/sidc-letter/icons-space.js'), 'letter');
 ms.addSIDCicons(require('../src/sidc-letter/icons-air.js'), 'letter');
 ms.addSIDCicons(require('../src/sidc-letter/icons-ground.js'), 'letter');
 ms.addSIDCicons(require('../src/sidc-letter/icons-equipment.js'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-installations'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-sea'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-subsurface'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-sof'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-signalsIntelligence'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-stabilityoperations'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-emergencymanagementsymbols'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-installations.js'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-sea.js'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-subsurface.js'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-sof.js'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-signalsIntelligence.js'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-stabilityoperations.js'), 'letter');
+ms.addSIDCicons(require('../src/sidc-letter/icons-emergencymanagementsymbols.js'), 'letter');
 
-// Number SIDC
+// Adding support for tactical points in MIL-STD-2525C
+ms.addIconParts(require('../src/iconparts/tactical-points.js'));
+ms.addSIDCicons(require('../src/sidc-letter/icons-tactical-points.js'), 'letter');
+ms.addLabelOverrides(require('../src/labels-letter/tactical-points.js'), 'letter');
+
+/* ***************************************************************************************
+Number based SIDC
+*************************************************************************************** */
 ms._getNumberProperties = require('../src/sidc-number/properties.js');
 ms._getNumberSIDCicn = require('../src/sidc-number/geticon.js');
 
@@ -54,7 +65,9 @@ ms.addSIDCicons(require('../src/sidc-number/icons-activites.js'), 'number');
 ms.addSIDCicons(require('../src/sidc-number/icons-signalsintelligence.js'), 'number');
 ms.addSIDCicons(require('../src/sidc-number/icons-cyberspace.js'), 'number');
 
-// Functions that builds the symbol
+/* ***************************************************************************************
+Functions that builds the symbol
+*************************************************************************************** */
 ms.addSymbolPart(require('../src/symbolparts/basegeometry.js'));
 ms.addSymbolPart(require('../src/symbolparts/icon.js'));
 ms.addSymbolPart(require('../src/symbolparts/modifier.js'));
@@ -64,8 +77,12 @@ ms.addSymbolPart(require('../src/symbolparts/textfields.js'));
 ms.addSymbolPart(require('../src/symbolparts/directionarrow.js'));
 //ms.addSymbolPart(require('../src/symbolparts/debug.js')); // This draws the symbol octagon, can be good for debugging.
 
-// This makes it possible to draw canvas paths in IE11
+/* ***************************************************************************************
+This makes it possible to draw canvas paths in IE11
+*************************************************************************************** */
 ms._Path2D = require('../src/ms.path2d.js');
 
-// And export out ms to to world to use
+/* ***************************************************************************************
+Export ms to the world
+*************************************************************************************** */
 module.exports = ms;

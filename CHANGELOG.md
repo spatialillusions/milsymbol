@@ -38,6 +38,8 @@
 
 - MS.Symbol() should be used instead of MS.symbol(). (Since it is a class...)
 
+- Tactical points is now part of */dist/milsymbol.js*, no need to include any extra files.
+
 ### Changed
 
 ### Deprecated
