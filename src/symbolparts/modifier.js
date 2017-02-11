@@ -46,13 +46,14 @@ module.exports = function modifier(){
 	}
 	if(this.properties.feintDummy){
 		//FEINT DUMMY
-		geom = {type:'path',strokedasharray:ms._dashArrays.feintDummy,d:'M'+bbox.x1+','+bbox.y1+' L100,-28 '+bbox.x2+','+bbox.y1};
+		var topPoint = (bbox.y1 - 40) - (bbox.width() / 2);
+		geom = {type:'path',strokedasharray:ms._dashArrays.feintDummy,d:'M100,' + topPoint + ' L'+bbox.x1+',' + (bbox.y1-40) + ' M100,' + topPoint + ' L'+bbox.x2+',' + (bbox.y1-40)};
 
 		//outline
 		if (this.outlineWidth > 0) drawArray1.push(ms.outline(geom, this.outlineWidth, this.strokeWidth, this.outlineColor));
 			
 		drawArray2.push(geom);
-		gbbox.merge({y1:(-28)});
+		gbbox.merge({y1: topPoint});
 	}
 	//Unit Size
 	if(this.properties.echelon){

@@ -42,6 +42,8 @@
 
 ### Changed
 
+- Feint/Dummy indicator drawn as specified in MIL-STD-2525D change 1.
+
 ### Deprecated
 
 - Avoid setting properties directly, use setOptions(options) instead.
