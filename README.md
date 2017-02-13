@@ -23,6 +23,11 @@ Compared to reference figure from MIL-STD-2525C:
 
 ![Figure 13](docs/figure13.png?raw=true)
 
+milsymbol 1.0.0
+----
+
+Is planned for release before end of Mars, see the issue tracker for included functionality and changes. https://github.com/spatialillusions/milsymbol/issues/61
+
 milsymbol summary
 ----
 
