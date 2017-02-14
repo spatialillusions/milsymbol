@@ -22,6 +22,8 @@ module.exports = function(properties, mapping){
 	if(['G','Z','F','X'].indexOf(battledimension) > -1)	properties.dimension = mapping.dimension[1];
 	if(['S'].indexOf(battledimension) > -1)			properties.dimension = mapping.dimension[2];
 	if(['U'].indexOf(battledimension) > -1)			properties.dimension = mapping.dimension[3];
+	
+
 
 	//dimension is in Space
 	if(battledimension == 'P'  && codingscheme != "O")	properties.space = true;
@@ -167,8 +169,14 @@ module.exports = function(properties, mapping){
 	}
 
 	//Some symbols in EMS and symbols from tactical graphics
-	if(this.SIDC.substr(0,3) == "WAS" || this.SIDC.substr(0,3) == "WOS" || this.SIDC.substr(0,1) == "G"){
+	if(this.SIDC.substr(0,3) == "WAS" || this.SIDC.substr(0,3) == "WOS" || codingscheme == "G"){
 		properties.frame = false;
+	}
+
+	//This is for APP6 tactical points with frames
+	if(codingscheme == 'G' && battledimension == 'O' && ['V','L','P','I'].indexOf(functionid.charAt(0)) > -1){
+	  properties.frame = true;
+	  properties.dimension = mapping.dimension[1];
 	}
 
 	return properties;
