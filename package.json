@@ -9,6 +9,7 @@
   },
   "scripts": {
   	"build": "webpack -p --config ./build/webpack.config.js ",
+  	"build-dev": "webpack --config ./build/webpack.config.js ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
