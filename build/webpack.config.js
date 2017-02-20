@@ -11,7 +11,7 @@ module.exports = {
   },
   plugins: [
     new CustomVarLibraryNamePlugin({
-      name: 'MS'
+      name: 'ms'
     })
   ]
 }

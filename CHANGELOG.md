@@ -18,63 +18,66 @@
 
 - bbox.merge(another-bbox), use this instead of MS.bboxMax for merging bounding boxes.
 
-- Milsymbol can now be used as a AMD/CommonJS/etc... module, by requiering `milsymbol`, the global `var` is still called MS.
+- Milsymbol can now be used as a AMD/CommonJS/etc... module, by requiering `milsymbol`, the global `var` is called ms.
 
-- MS.getVersion() that returns the version as a string.
+- ms.getVersion() that returns the version as a string.
 
-- MS.addSIDCicons(sidcFunction, type) for adding sidc functions.
+- ms.addSIDCicons(sidcFunction, type) for adding sidc functions.
 
-- MS.addLabelOverrides(labelFunction, type) for adding label functions.
+- ms.addLabelOverrides(labelFunction, type) for adding label functions.
 
-- MS.addSymbolPart(part) should be used instead of MS.addMarkerParts(part)
+- ms.addSymbolPart(part) should be used instead of MS.addMarkerParts(part)
 
-- MS.getSymbolParts() should be used instead of MS.getMarkerParts()
+- ms.getSymbolParts() should be used instead of MS.getMarkerParts()
 
-- MS.setSymbolParts(parts) should be used instead of MS.setMarkerParts(parts)
+- ms.setSymbolParts(parts) should be used instead of MS.setMarkerParts(parts)
 
-- MS.BBox() should be used instead of MS.bbox(). (Since it is a class...)
+- ms.BBox() should be used instead of MS.bbox(). (Since it is a class...)
 
-- MS.ColorMode() should be used instead of MS.colorMode(). (Since it is a class...)
+- ms.ColorMode() should be used instead of MS.colorMode(). (Since it is a class...)
 
-- MS.Symbol() should be used instead of MS.symbol(). (Since it is a class...)
+- ms.Symbol() should be used instead of MS.symbol(). (Since it is a class...)
 
 - Tactical points is now part of */dist/milsymbol.js*, no need to include any extra files.
 
 ### Changed
 
+- **Global variable is now `ms` instead of `MS`.**
+
 - Feint/Dummy indicator drawn as specified in MIL-STD-2525D change 1.
+
 
 ### Deprecated
 
 - Avoid setting properties directly, use setOptions(options) instead.
 
-- Do not use .XML anymore, use asSVG() instead, **if needed set `MS.autoSVG = true`**. MS.autoSVG will be removed in a future version.
+- Do not use .XML anymore, use asSVG() instead, **if needed set `ms.autoSVG = true`**. ms.autoSVG will be removed in a future version.
 
 - getMarker(), it's not needed anymore, symbols are automatically updated when options are updated using setOptions().
 
 - MS.bboxMax(), use bbox.merge() instead.
 
-- MS.addLetterSIDCicons(), use MS.addSIDCicons() instead.
+- MS.addLetterSIDCicons(), use ms.addSIDCicons() instead.
 
-- MS.addNumberSIDCicons(), use MS.addSIDCicons() instead.
+- MS.addNumberSIDCicons(), use ms.addSIDCicons() instead.
 
-- MS.addLetterLabelOverrides(), use MS.addLabelOverrides() instead.
+- MS.addLetterLabelOverrides(), use ms.addLabelOverrides() instead.
 
-- MS.addNumberLabelOverrides(), use MS.addLabelOverrides() instead.
+- MS.addNumberLabelOverrides(), use ms.addLabelOverrides() instead.
 
 - MS.buildingBlock() return an object instead.
 
-- MS.addMarkerParts(part) use MS.addSymbolPart(part) instead.
+- MS.addMarkerParts(part) use ms.addSymbolPart(part) instead.
 
-- MS.getMarkerParts() use MS.getSymbolParts() instead.
+- MS.getMarkerParts() use ms.getSymbolParts() instead.
 
-- MS.setMarkerParts(parts) use MS.setSymbolParts(parts) instead.
+- MS.setMarkerParts(parts) use ms.setSymbolParts(parts) instead.
 
-- MS.bbox() use MS.BBox() instead. (Since it is a class...)
+- MS.bbox() use ms.BBox() instead. (Since it is a class...)
 
-- MS.colorMode() use MS.ColorMode() instead. (Since it is a class...)
+- MS.colorMode() use ms.ColorMode() instead. (Since it is a class...)
 
-- MS.symbol() use MS.Symbol instead. (Since it is a class...)
+- MS.symbol() use ms.Symbol instead. (Since it is a class...)
 
 ### Removed
 

@@ -6,7 +6,7 @@ milsymbol is a small library in pure javascript that creates military unit symbo
 ![Figure 13](docs/images/milsymbol.png?raw=true)
 
 ```javascript
-new MS.Symbol("sfgpewrh--mt", {
+new ms.Symbol("sfgpewrh--mt", {
 	size: 35,
 	quantity: 200,
 	staffComments: "for reinforcements".toUpperCase(),
@@ -64,11 +64,11 @@ You can download [milsymbol from GitHub](https://github.com/spatialillusions/mil
 
 To create your first symbol you use the symbol method to create a symbol object:
 
-`MS.Symbol(SIDC,{options})`
+`ms.Symbol(SIDC,{options})`
 
 To make a symbol for an infantry platoon the syntax would be:
 
-`var sym = new MS.Symbol("SFG-UCI----D");`
+`var sym = new ms.Symbol("SFG-UCI----D");`
 
 And `sym` will now be a symbol object containing information about the size and draw instructions.
 
@@ -78,7 +78,7 @@ But you want something to put on your screen, and since milsymbol provides diffe
 
 And if you don't want to make it step by step, you can chain it all togheter like this:
 
-`var canvasElement = new MS.Symbol("SFG-UCI----D").asCanvas();`
+`var canvasElement = new ms.Symbol("SFG-UCI----D").asCanvas();`
 
 ![Infantry Platoon](docs/images/infantry-platoon.png?raw=true)
 
@@ -86,12 +86,12 @@ Options you provided to your symbol can change the size of the symbol, define if
 
 The options can be set when you create your symbol: 
 
-`var sym = new MS.Symbol("SFG-UCI----D",{size:35}).asCanvas();`
+`var sym = new ms.Symbol("SFG-UCI----D",{size:35}).asCanvas();`
 
 Or they can be updated at any time using `setOptions(options)`:
 
 ```
-var sym = new MS.Symbol("SFG-UCI----D");
+var sym = new ms.Symbol("SFG-UCI----D");
 sym.setOptions({size:35});
 var canvasElement = sym.asCanvas();
 ```

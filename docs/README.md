@@ -12,14 +12,12 @@ You can also get milsymbol using npm:
 npm install milsymbol --save
 ```
 
-AMD, CommonJS, and vanilla environments are supported. The module is always named 'milsymbol' and in vanilla, a 'MS' global is exported:
-
-[**TODO Change `MS` to `ms`???**](https://github.com/spatialillusions/milsymbol/issues/80)
+AMD, CommonJS, and vanilla environments are supported. The module is always named 'milsymbol' and in vanilla, a 'ms' global is exported:
 
 ```html
 <script src="dist/milsymbol.js"></script>
 <script>
-  var symbol = new MS.Symbol('SFG-UCI----D',{size:30});
+  var symbol = new ms.Symbol('SFG-UCI----D',{size:30});
 </script>
 ```
 
@@ -33,8 +31,8 @@ In a framework like [Dojo](https://dojotoolkit.org) you can load milsymbol like 
     <script>
       require([
         "milsymbol"
-      ], function(MS){
-        var symbol = new MS.Symbol('SFG-UCI----D',{size:30});
+      ], function(ms){
+        var symbol = new ms.Symbol('SFG-UCI----D',{size:30});
       });
     </script>
   </body>
@@ -49,22 +47,22 @@ If you only are using it with local sources, you can set `umdNamedDefine:false` 
 
 Each symbol created with milsymbol is its own object and the properties of the object can be updated or added after that the symbol object is created. The symbol object also has methods to provide the symbol in different formats, and to provide information about the created symbol.
 
-All functionality in milsymbol is normally found under the `MS` namespace, but if you have imported milsymbol to another variable, you will have to use that instead of `MS`.
+All functionality in milsymbol is normally found under the `ms` namespace, but if you have imported milsymbol to another variable, you will have to use that instead of `ms`.
 
-## MS.Symbol(SIDC,*{Options}*)
+## ms.Symbol(SIDC,*{Options}*)
 
 Initiates a new symbol object, you should always provide a SIDC for the symbol, and it is optional to provide other options. 
 
 Even if options can be provided or updated after the symbol object is created, the performance will be better if you provide them directly when you create the symbol, because every time you update some options the symbol will automatically be updated. 
 
 ```javascript
-var symbol = new MS.Symbol('SFG-UCI----D',{size:30});
+var symbol = new ms.Symbol('SFG-UCI----D',{size:30});
 ```
 
 Once you have initiated your symbol, you can use different methods to request a rendering of the symbol, or get information about the symbol. It is also possible to chain methods directly to the initiation:
 
 ```javascript
-var symbol = new MS.Symbol('SFG-UCI----D',{size:30}).asSVG();
+var symbol = new ms.Symbol('SFG-UCI----D',{size:30}).asSVG();
 ```
 
 **Modifier options**
@@ -106,7 +104,7 @@ The following options are style options that changes the look of the symbol in d
 |--------|------|---------|-------------|
 | alternateMedal | Boolean | false | MIL-STD-2525D lets you choose between MEDAL and alternate MEDAL icons for mine warefare symbols, the default in milsymbol is using MEDAL icons, but you can change this using setting this property to true. | 
 | civilianColor | Boolean	 | true | 2525C specifics purple as an optional color for civilian symbols. Of corse we like color so we set this as default. | 
-| colorMode | ColorMode or String| 'Light' | This is the option for setting what Color object to use for the fill of the symbols. It can be set to a Color object, or a string representing the name of a registered Color objext. You can use MS.ColorMode to create a new color mode, or MS.getColorMode to get an existing color mode. | 
+| colorMode | ColorMode or String| 'Light' | This is the option for setting what Color object to use for the fill of the symbols. It can be set to a Color object, or a string representing the name of a registered Color objext. You can use ms.ColorMode to create a new color mode, or ms.getColorMode to get an existing color mode. | 
 | fill | Boolean | true | Should your symbol be filled with color. |
 | fillOpacity | Number | 1 | The opacity of the symbol fill color. |
 | frame | 	Boolean	 | true | Should your symbol have a frame. All symbols support to be unframed, not just the ones specified in 2525B. | 
@@ -394,7 +392,7 @@ Array [
 
 ----
 
-## MS.BBox({box})
+## ms.BBox({box})
 
 ```javascript
 Object {
@@ -421,7 +419,7 @@ Object {
 }
 ```
 
-## MS.ColorMode(civilian, friend, hostile, neutral, unknown)
+## ms.ColorMode(civilian, friend, hostile, neutral, unknown)
 
 ```javascript
 civilian: String,
@@ -447,7 +445,7 @@ Object {
 
 -----
 
-## MS.addIconParts(iconFunction)
+## ms.addIconParts(iconFunction)
 
 ```javascript
 iconFunction: function
@@ -460,7 +458,7 @@ If you want to override built in icon parts, or add new to use with custom SIDC,
 Example:
 
 ```javascript
-MS.addIconParts(
+ms.addIconParts(
   function (iconParts, properties, colors, std2525, monoColor, alternateMedal){
     /*
     iconParts: Object - The existing object of icon parts
@@ -484,10 +482,10 @@ MS.addIconParts(
 **Returns**
 
 ```javascript
-Object MS
+Object ms
 ```
 
-## MS.addLabelOverrides(labelFunction, type)
+## ms.addLabelOverrides(labelFunction, type)
 
 ```javascript
 labelFunction: function,
@@ -498,7 +496,7 @@ Adds label overrides to milsymbol. If you have some symbols that you want to hav
 
 Example:
 ```javascript
-MS.addLabelOverrides(
+ms.addLabelOverrides(
   function tacticalPoints(sidc){
     /*
     sidc: Object - The existing object of label overrides
@@ -527,10 +525,10 @@ MS.addLabelOverrides(
 **Returns**
 
 ```javascript
-Object MS
+Object ms
 ```
 
-## MS.addSIDCicons(sidcFunction, type)
+## ms.addSIDCicons(sidcFunction, type)
 
 ```javascript
 sidcFunction: function,
@@ -542,7 +540,7 @@ Adds a function for creating icons representing different SIDCs. It is possible 
 
 Example:
 ```javascript
-MS.addSIDCicons(
+ms.addSIDCicons(
   function tacticalPoints(sidc,bbox,icnParts,std2525){
     /*
     sidc: Object - The existing object of SIDC 
@@ -569,10 +567,10 @@ MS.addSIDCicons(
 **Returns**
 
 ```javascript
-Object MS
+Object ms
 ```
 
-## MS.addSymbolPart(part)
+## ms.addSymbolPart(part)
 
 ```javascript
 part: function
@@ -593,10 +591,10 @@ By inserting a pre and a post drawInstruction, we are able to to draw parts of t
 **Returns**
 
 ```javascript
-Object MS
+Object ms
 ```
 
-## MS.getColorMode(mode)
+## ms.getColorMode(mode)
 
 ```javascript
 mode: String // Name of a color mode registred with setColorMode
@@ -628,7 +626,7 @@ Object {
 }
 ```
 
-## MS.getDashArrays()
+## ms.getDashArrays()
 
 Gets the diffrent dash arrays used for dashed lines.
 
@@ -642,7 +640,7 @@ Object {
 }
 ```
 
-## MS.getHqStafLength()
+## ms.getHqStafLength()
 
 Gets the length of the HQ staf used for HQ symbols.
 
@@ -652,9 +650,9 @@ Gets the length of the HQ staf used for HQ symbols.
 Number
 ```
 
-## MS.getSymbolParts()
+## ms.getSymbolParts()
 
-This gets all symbol functions that has been inserted by `MS.addSymbolPart`.
+This gets all symbol functions that has been inserted by `ms.addSymbolPart`.
 
 **Returns**
 
@@ -667,7 +665,7 @@ Array [
 ]
 ```
 
-## MS.getVersion()
+## ms.getVersion()
 
 Gets the version of milsymbol.
 
@@ -677,7 +675,7 @@ Gets the version of milsymbol.
 String
 ```
 
-## MS.outline(drawInstruction, outline, stroke, color)
+## ms.outline(drawInstruction, outline, stroke, color)
 
 ```javascript
 drawInstruction: drawInstruction,
@@ -696,7 +694,7 @@ Outline is the outline width, stroke is the original stroke width, and color is 
 Array or Object
 ```
 
-## MS.setColorMode(name, colormode)
+## ms.setColorMode(name, colormode)
 
 ```javascript
 name: String,
@@ -711,7 +709,7 @@ Register a ColorMode with a name or override an existing ColorMode.
 Object ColorMode
 ```
 
-## MS.setDashArrays(dash_object)
+## ms.setDashArrays(dash_object)
 
 ```javascript
 Object {
@@ -733,7 +731,7 @@ Object {
 }
 ```
 
-## MS.setHqStafLength(staf_length)
+## ms.setHqStafLength(staf_length)
 
 ```javascript
 staf_length: Number
@@ -747,7 +745,7 @@ Sets the length of the HQ staf used for HQ symbols.
 Number
 ```
 
-## MS.setStandard(standard)
+## ms.setStandard(standard)
 
 ```javascript
 standard: String // '2525' or 'APP6'
@@ -764,7 +762,7 @@ Boolean // true if the standard was set, otherwise false
 ```
 
 
-## MS.setSymbolParts(parts)
+## ms.setSymbolParts(parts)
 
 ```javascript
 parts: Array // Array of symbolFunctions
@@ -774,5 +772,5 @@ Replaces the current symbol functions with an Array of symbol functions. This ca
 **Returns**
 
 ```javascript
-Object MS
+Object ms
 ```
