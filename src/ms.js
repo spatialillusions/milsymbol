@@ -53,7 +53,7 @@ var ms = new function(){
   this.version = '1.0.0-master';	
 
   if (typeof console === 'object') {
-    console.log('milsymbol.js ' + this.version + ' - Copyright (c) 2017 Måns Beckman  http://www.spatialillusions.com');
+    console.info('milsymbol.js ' + this.version + ' - Copyright (c) 2017 Måns Beckman  http://www.spatialillusions.com');
   }
   if (typeof parseXML === 'undefined') {
     window.parseXML = function (s,doc) {
