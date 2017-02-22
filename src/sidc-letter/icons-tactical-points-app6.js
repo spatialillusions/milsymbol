@@ -3,9 +3,12 @@ module.exports = function tacticalPoints(sidc,bbox,icn,std2525){
 // Tactical Point Symbols =========================================================================
 
 
-//sidc['G-T-GD----'] = [];//2.X.1.1.9
-//sidc['G-T-GI----'] = [];//2.X.1.1.13
-//sidc['G-T-GN----'] = [];//2.X.1.1.15
+  sidc['G-T-GD----'] = icn['TP.DESTROY'];//2.X.1.1.9
+  bbox['G-T-GD----'] = {x1:0,x2:200,y1:40,y2:160};
+  sidc['G-T-GI----'] = icn['TP.INTERDICT'];//2.X.1.1.13
+  bbox['G-T-GI----'] = {x1:0,x2:200,y1:40,y2:160};
+  sidc['G-T-GN----'] = icn['TP.NEUTRALIZE'];//2.X.1.1.15
+  bbox['G-T-GN----'] = {x1:0,x2:200,y1:40,y2:160};
   sidc['G-C-MGPFE-'] = icn['TP.FIX ELECTRO-MAGNETIC'];//2.X.2.1.1.1.1.2
   sidc['G-C-MGPFA-'] = icn['TP.FIX ACOUSTIC'];//2.X.2.1.1.1.1.2
   sidc['G-C-MGPFO-'] = icn['TP.FIX ELECTRO-OPTICAL'];//2.X.2.1.1.1.1.3
