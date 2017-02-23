@@ -101,6 +101,33 @@ var size = 40;
 
 <h1>milsymbol APP6-B tactical points Implementation</h1>
 Milsymbol only support point symbols and not other graphics.<br>
+<br>
+By default milsymbol will draw all tactical points black, except hostile that will be drawn in red. You can override this by setting monoColor to the desired color.<br>
+<br>
+
+
+G*C*BO AM A-*****<br>
+<script>
+document.write(new ms.Symbol("G*C*BO AM A-*****", {size:size}).asSVG())
+</script><br>
+
+GFC*BO AM A-*****<br>
+<script>
+document.write(new ms.Symbol("GFC*BO AM A-*****", {size:size}).asSVG())
+</script><br>
+
+GHC*BO AM A-*****<br>
+<script>
+document.write(new ms.Symbol("GHC*BO AM A-*****", {size:size}).asSVG())
+</script><br>
+
+GHC*BO AM A-***** (with monoColor set to pink)<br>
+<script>
+document.write(new ms.Symbol("GHC*BO AM A-*****", {size:size, monoColor:'pink'}).asSVG())
+</script><br>
+<br>
+
+
 
 <table><tr><td>
 <b>2.X</b><br>
@@ -1444,9 +1471,7 @@ document.write(new ms.Symbol("G*C*BO AM U-*****", {size:size}).asSVG())
 MINE CLUSTER<br>
 G*C*BO AM N-*****<br>
 </td><td>
-<script>
-document.write(new ms.Symbol("G*C*BO AM N-*****", {size:size}).asSVG())
-</script>
+N/A
 </td></tr>
 <tr><td>
 <b>2.X.2.2.1.5.7</b><br>

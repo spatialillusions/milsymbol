@@ -101,6 +101,31 @@ var size = 40;
 <h1>milsymbol 2525C tactical points Implementation</h1>
 Milsymbol only support point symbols and not other graphics.<br>
 
+<br>
+By default milsymbol will draw all tactical points black, except hostile that will be drawn in red. You can override this by setting monoColor to the desired color.<br>
+<br>
+
+
+G*M*OMP---****X<br>
+<script>
+document.write(new ms.Symbol("G*M*OMP---****X", {size:size}).asSVG())
+</script><br>
+
+GFM*OMP---****X<br>
+<script>
+document.write(new ms.Symbol("GFM*OMP---****X", {size:size}).asSVG())
+</script><br>
+
+GHM*OMP---****X<br>
+<script>
+document.write(new ms.Symbol("GHM*OMP---****X", {size:size}).asSVG())
+</script><br>
+
+GHM*OMP---****X (with monoColor set to pink)<br>
+<script>
+document.write(new ms.Symbol("GHM*OMP---****X", {size:size, monoColor:'pink'}).asSVG())
+</script><br>
+<br>
 
 <table><tr width="50%"><td>
 <b>TACGRP.TSK.BLK</b><br>

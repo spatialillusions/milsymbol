@@ -47,7 +47,6 @@ module.exports = function tacticalPoints(sidc,bbox,icn,std2525){
   sidc['G-C-BOAMC-'] = icn['TP.(AT) DIRECTIONAL'];//2.X.2.2.1.5.4
   bbox['G-C-BOAMC-'] = {x1:60,x2:140,y1:10,y2:140};
   sidc['G-C-BOAMU-'] = icn['TP.UNSPECIFIED MINE'];//2.X.2.2.1.5.5
-//sidc['G-C-BOAMN-'] = [];//2.X.2.2.1.5.6
   sidc['G-C-BOAMW-'] = icn['TP.WIDE AREA MINES'];//2.X.2.2.2.2.8
   sidc['G-C-BSE---'] = icn['TP.EARTHWORK/FORTIFICATION'];//2.X.2.2.3.1
   sidc['G-C-BSF---'] = icn['TP.FORT'];//2.X.2.2.3.2
