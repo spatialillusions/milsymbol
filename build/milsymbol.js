@@ -26,45 +26,45 @@ ms.setColorMode('None',require('../src/colormodes/none.js'));
 /* ***************************************************************************************
 Letter based SIDC
 *************************************************************************************** */
-ms._getLetterProperties = require('../src/sidc-letter/properties.js');
-ms._getLetterSIDCicn = require('../src/sidc-letter/geticon.js');
+ms._getLetterProperties = require('../src/letter-sidc/properties.js');
+ms._getLetterSIDCicn = require('../src/letter-sidc/geticon.js');
 
-ms.addSIDCicons(require('../src/sidc-letter/icons-space.js'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-air.js'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-ground.js'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-equipment.js'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-installations.js'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-sea.js'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-subsurface.js'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-sof.js'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-signalsIntelligence.js'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-stabilityoperations.js'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-emergencymanagementsymbols.js'), 'letter');
+ms.addSIDCicons(require('../src/letter-sidc/icons-space.js'), 'letter');
+ms.addSIDCicons(require('../src/letter-sidc/icons-air.js'), 'letter');
+ms.addSIDCicons(require('../src/letter-sidc/icons-ground.js'), 'letter');
+ms.addSIDCicons(require('../src/letter-sidc/icons-equipment.js'), 'letter');
+ms.addSIDCicons(require('../src/letter-sidc/icons-installations.js'), 'letter');
+ms.addSIDCicons(require('../src/letter-sidc/icons-sea.js'), 'letter');
+ms.addSIDCicons(require('../src/letter-sidc/icons-subsurface.js'), 'letter');
+ms.addSIDCicons(require('../src/letter-sidc/icons-sof.js'), 'letter');
+ms.addSIDCicons(require('../src/letter-sidc/icons-signalsIntelligence.js'), 'letter');
+ms.addSIDCicons(require('../src/letter-sidc/icons-stabilityoperations.js'), 'letter');
+ms.addSIDCicons(require('../src/letter-sidc/icons-emergencymanagementsymbols.js'), 'letter');
 
 // Adding support for tactical points in MIL-STD-2525C
 ms.addIconParts(require('../src/iconparts/tactical-points.js'));
-ms.addSIDCicons(require('../src/sidc-letter/icons-tactical-points-2525.js'), 'letter');
-ms.addSIDCicons(require('../src/sidc-letter/icons-tactical-points-app6.js'), 'letter');
-ms.addLabelOverrides(require('../src/labels-letter/tactical-points.js'), 'letter');
+ms.addSIDCicons(require('../src/letter-sidc/icons-tactical-points-2525.js'), 'letter');
+ms.addSIDCicons(require('../src/letter-sidc/icons-tactical-points-app6.js'), 'letter');
+ms.addLabelOverrides(require('../src/labels-letter/tactical-points-2525.js'), 'letter');
 
 /* ***************************************************************************************
 Number based SIDC
 *************************************************************************************** */
-ms._getNumberProperties = require('../src/sidc-number/properties.js');
-ms._getNumberSIDCicn = require('../src/sidc-number/geticon.js');
+ms._getNumberProperties = require('../src/number-sidc/properties.js');
+ms._getNumberSIDCicn = require('../src/number-sidc/geticon.js');
 
-ms.addSIDCicons(require('../src/sidc-number/icons-air.js'), 'number');
-ms.addSIDCicons(require('../src/sidc-number/icons-airmissile.js'), 'number');
-ms.addSIDCicons(require('../src/sidc-number/icons-space.js'), 'number');
-ms.addSIDCicons(require('../src/sidc-number/icons-landunit.js'), 'number');
-ms.addSIDCicons(require('../src/sidc-number/icons-landequipment.js'), 'number');
-ms.addSIDCicons(require('../src/sidc-number/icons-sea.js'), 'number');
-ms.addSIDCicons(require('../src/sidc-number/icons-subsurface.js'), 'number');
-ms.addSIDCicons(require('../src/sidc-number/icons-minewarfare.js'), 'number');
-ms.addSIDCicons(require('../src/sidc-number/icons-seabedinstallations.js'), 'number');
-ms.addSIDCicons(require('../src/sidc-number/icons-activites.js'), 'number');
-ms.addSIDCicons(require('../src/sidc-number/icons-signalsintelligence.js'), 'number');
-ms.addSIDCicons(require('../src/sidc-number/icons-cyberspace.js'), 'number');
+ms.addSIDCicons(require('../src/number-sidc/icons-air.js'), 'number');
+ms.addSIDCicons(require('../src/number-sidc/icons-airmissile.js'), 'number');
+ms.addSIDCicons(require('../src/number-sidc/icons-space.js'), 'number');
+ms.addSIDCicons(require('../src/number-sidc/icons-landunit.js'), 'number');
+ms.addSIDCicons(require('../src/number-sidc/icons-landequipment.js'), 'number');
+ms.addSIDCicons(require('../src/number-sidc/icons-sea.js'), 'number');
+ms.addSIDCicons(require('../src/number-sidc/icons-subsurface.js'), 'number');
+ms.addSIDCicons(require('../src/number-sidc/icons-minewarfare.js'), 'number');
+ms.addSIDCicons(require('../src/number-sidc/icons-seabedinstallations.js'), 'number');
+ms.addSIDCicons(require('../src/number-sidc/icons-activites.js'), 'number');
+ms.addSIDCicons(require('../src/number-sidc/icons-signalsintelligence.js'), 'number');
+ms.addSIDCicons(require('../src/number-sidc/icons-cyberspace.js'), 'number');
 
 /* ***************************************************************************************
 Functions that builds the symbol
