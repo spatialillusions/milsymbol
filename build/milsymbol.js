@@ -43,9 +43,12 @@ ms.addSIDCicons(require('../src/letter-sidc/icons-emergencymanagementsymbols.js'
 
 // Adding support for tactical points in MIL-STD-2525C
 ms.addIconParts(require('../src/iconparts/tactical-points.js'));
+
 ms.addSIDCicons(require('../src/letter-sidc/icons-tactical-points-2525.js'), 'letter');
-ms.addSIDCicons(require('../src/letter-sidc/icons-tactical-points-app6.js'), 'letter');
 ms.addLabelOverrides(require('../src/letter-labels/tactical-points-2525.js'), 'letter');
+
+ms.addSIDCicons(require('../src/letter-sidc/icons-tactical-points-app6.js'), 'letter');
+ms.addLabelOverrides(require('../src/letter-labels/tactical-points-app6.js'), 'letter');
 
 /* ***************************************************************************************
 Number based SIDC
