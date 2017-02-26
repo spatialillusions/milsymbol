@@ -42,6 +42,8 @@
 
 - Tactical points now supports APP6-B ANNEX E.
 
+- Symbols with an invalid icon in the SIDC will now be rendered with an upside down ?. (According to MIL-STD-2525D)
+
 ### Changed
 
 - **Global variable is now `ms` instead of `MS`.**
