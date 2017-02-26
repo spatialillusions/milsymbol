@@ -40,6 +40,8 @@
 
 - Tactical points is now part of */dist/milsymbol.js*, no need to include any extra files.
 
+- Tactical points now supports APP6-B ANNEX E.
+
 ### Changed
 
 - **Global variable is now `ms` instead of `MS`.**
