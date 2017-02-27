@@ -21,7 +21,7 @@ new ms.Symbol("sfgpewrh--mt", {
 Compared to reference figure from MIL-STD-2525C:
 
 
-![Figure 13](docs/figure13.png?raw=true)
+![Figure 13](docs/images/figure13.png?raw=true)
 
 milsymbol 1.0.0
 ----
