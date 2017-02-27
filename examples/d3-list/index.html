@@ -45,12 +45,12 @@ function geoJson2tree(data,name,command){
 		data.features[key].name = data.features[key].properties[name].replace('&#228;', 'ä').replace('&#229;', 'å');
 		data.features[key].sidc = data.features[key].properties["SIDC"];
 	}
-	var tree = {"name":"milsymbol ORBAT","sidc":"SUGP","suborgs":[]};
+	var tree = {"name":"milsymbol ORBAT","sidc":"SUGP------","suborgs":[]};
 	for (var key in rawdata){
 		if ( rawdata.hasOwnProperty(rawdata[key].properties[command]) ){
 			rawdata[rawdata[key].properties[command]].suborgs.push(rawdata[key]);
 		}else{
-			var newCommand = {"name":rawdata[key].properties[command],"sidc":"SFGP","suborgs":[rawdata[key]]};
+			var newCommand = {"name":rawdata[key].properties[command],"sidc":"SFGP------","suborgs":[rawdata[key]]};
 			rawdata[rawdata[key].properties[command]] = newCommand;
 			tree.suborgs.push(newCommand);
 		}

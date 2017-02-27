@@ -29,12 +29,12 @@ function geoJson2tree(data,name,command){
 		rawdata[data.features[key].properties[name]].children = [];
 	}
 
-	var tree = {"properties":{"orbatName":"milsymbol Orbat","SIDC":"SUGP"},"children":[]};
+	var tree = {"properties":{"orbatName":"milsymbol Orbat","SIDC":"SUGP------"},"children":[]};
 	for (var key in rawdata){
 		if ( rawdata.hasOwnProperty(rawdata[key].properties[command]) ){
 			rawdata[rawdata[key].properties[command]].children.push(rawdata[key]);
 		}else{
-			var newCommand = {"properties":{"name":rawdata[key].properties[command],"SIDC":"SFGP"},"children":[rawdata[key]]};
+			var newCommand = {"properties":{"name":rawdata[key].properties[command],"SIDC":"SFGP------"},"children":[rawdata[key]]};
 			rawdata[rawdata[key].properties[command]] = newCommand;
 			tree.children.push(newCommand);
 		}
