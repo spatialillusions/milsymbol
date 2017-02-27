@@ -24,7 +24,6 @@ module.exports = function sea(sId,bbox,icn,_STD2525){
 	sId['S-S-CMML--'] = [icn['SE.IC.MINELAYER']];
 	sId['S-S-CMMS--'] = [icn['SE.IC.MINESWEEPER']];
 	sId['S-S-CMMH--'] = [icn['SE.IC.MINEHUNTER']];
-	//1.X.4.1.3.4 wrong sIdc in app6
 	sId['S-S-CMMA--'] = [icn['SE.IC.MINE COUNTER MEASURE SUPPORT SHIP']];
 	sId['S-S-CMMD--'] = [icn['SE.IC.MINESWEEPER, DRONE']];
 	sId['S-S-CP----'] = [icn['SE.IC.PATROL']];

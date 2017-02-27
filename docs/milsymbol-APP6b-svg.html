@@ -4,102 +4,46 @@
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>milsymbol Documentation - Spatial Illusions</title>
-	<link rel="stylesheet" href="../spatial-white.css" />
+	<title>Milsymbol Documentation - Spatial Illusions</title>
+	<style>
+	body {
+		font-family: arial, sans-serif;
+		font-size: 100%;
+		font-weight: normal;
+		font-variant: normal;
+		-webkit-font-smoothing: antialiased;
+	}
+	.main {
+		max-width:700px;
+		margin: auto;
+		padding: 5px;
+
+	}
+	table {
+		border-collapse: collapse;
+		margin: auto;
+	}
+
+	table, td, th {
+		border: solid 1px #000;
+		padding: 5px;
+	}
+	thead{
+		font-weight: bold;
+		background-color: rgb(243, 243, 243);
+	}
+	</style>
 </head>
 <body>
-	<div id="header">
-		<div id="header-content" class="page-width" style="position: relative; top:10px;">
-			<h1><a href="http://spatialillusions.com">SPATIAL ILLUSIONS - STANAG APP-6b</a></h1>
-		
-			<a href="http://spatialillusions.com">
-				<svg xmlns="http://www.w3.org/2000/svg"
-					style="float: right; position: relative; top:-5px;"
-					viewBox="0 0 100 100"
-					width="30"
-					height="30"
-					version="1.1">
-					<path d="M 44.9271,3.62491e-5 21.1298,9.14814 18.7335,24.7768 Z" fill="hsla(195,100%,75.59103753900463%,1)"/>
-					<path d="M 44.9271,3.62491e-5 18.7335,24.7768 41.6868,10.7004 Z" fill="hsla(195,100%,89.90692689064394%,1)"/>
-					<path d="M 44.9271,3.62491e-5 41.6868,10.7004 72.1006,10.5649 Z" fill="hsla(195,100%,68.72901494797502%,1)"/>
-					<path d="M 44.9271,3.62491e-5 72.1006,10.5649 71.2566,5.63664 Z" fill="hsla(195,100%,69.08477327493972%,1)"/>
-					<path d="m 71.2566,5.63664 0.844,4.92826 4.928,-0.84396 z" 		fill="hsla(195,100%,57.50493410011285%,1)"/>
-					<path d="M 3.94869,27.3087 18.7335,24.7768 21.1298,9.14814 Z" 	fill="hsla(195,100%,88.8218395036735%,1)"/>
-					<path d="M 41.6868,10.7004 18.7335,24.7768 54.9196,28.7255 Z" 	fill="hsla(195,100%,67.17744508026871%,1)"/>
-					<path d="M 41.6868,10.7004 54.9196,28.7255 72.1006,10.5649 Z" 	fill="hsla(195,100%,61.034499745632964%,1)"/>
-					<path d="m 72.1006,10.5649 -17.181,18.1606 32.101,9.721 z" 		fill="hsla(195,100%,44.547831090908474%,1)"/>
-					<path d="m 72.1006,10.5649 14.92,27.8816 -9.992,-28.72556 z" 	fill="hsla(195,100%,41.0153881060193%,1)"/>
-					<path d="m 77.0286,9.72094 9.992,28.72556 9.857,-1.688 z" 		fill="hsla(195,100%,38.74416920886859%,1)"/>
-					<path d="M 3.94869,27.3087 -7.39094e-6,63.4945 9.85649,61.8065 Z" fill="hsla(195,100%,78.47348273674724%,1)"/>
-					<path d="M 3.94869,27.3087 9.85649,61.8065 18.7335,24.7768 Z" 	fill="hsla(195,100%,76.40272123737122%,1)"/>
-					<path d="M 18.7335,24.7768 9.85649,61.8065 27.1732,74.0595 Z" 	fill="hsla(195,100%,57.78034982216255%,1)"/>
-					<path d="m 18.7335,24.7768 8.4397,49.2827 8.877,-37.0298 z" 	fill="hsla(195,100%,65.54850852490478%,1)"/>
-					<path d="M 18.7335,24.7768 36.0502,37.0297 54.9196,28.7255 Z" 	fill="hsla(195,100%,71.5658077344167%,1)"/>
-					<path d="m 54.9196,28.7255 -18.8694,8.3042 31.2574,4.7927 z" 	fill="hsla(195,100%,44.92178638069766%,1)"/>
-					<path d="m 54.9196,28.7255 12.388,13.0969 19.713,-3.3759 z"		fill="hsla(195,100%,45.31754712183882%,1)"/>
-					<path d="m 67.3076,41.8224 -40.1344,32.2371 31.2574,4.793 z" 	fill="hsla(195,100%,40.579325222815875%,1)"/>
-					<path d="M 36.0502,37.0297 27.1732,74.0595 67.3076,41.8224 Z" 	fill="hsla(195,100%,36.36687355873937%,1)"/>
-					<path d="m 67.3076,41.8224 15.764,32.8101 3.949,-36.186 z" 		fill="hsla(195,100%,20.05598994751125%,1)"/>
-					<path d="m 67.3076,41.8224 -8.877,37.0301 24.641,-4.22 z" 		fill="hsla(195,100%,21.17407153677761%,1)"/>
-					<path d="m 96.8776,36.7585 -13.806,37.874 9.857,-1.688 z" 		fill="hsla(195,100%,15.761337005571113%,1)"/>
-					<path d="m 87.0206,38.4465 -3.949,36.186 13.806,-37.874 z" 		fill="hsla(195,100%,12.546148232221482%,1)"/>
-					<path d="M 9.85649,61.8065 -7.39094e-6,63.4945 27.1732,74.0595 Z" fill="hsla(195,100%,47.53528676082763%,1)"/>
-					<path d="M -7.39094e-6,63.4945 14.0764,86.4475 27.1732,74.0595 Z" fill="hsla(195,100%,55.21062526308533%,1)"/>
-					<path d="m 27.1732,74.0595 -13.0968,12.388 20.557,1.553 z" 		fill="hsla(195,100%,41.93925526435217%,1)"/>
-					<path d="m 27.1732,74.0595 7.4602,13.941 23.7972,-9.148 z" 		fill="hsla(195,100%,30.0670827227849%,1)"/>
-					<path d="m 14.0764,86.4475 22.2449,11.409 9.8565,-1.688 z" 		fill="hsla(195,100%,37.21455567286587%,1)"/>
-					<path d="m 14.0764,86.4475 32.1014,9.721 -11.5444,-8.168 z" 	fill="hsla(195,100%,29.551144270824192%,1)"/>
-					<path d="m 34.6334,88.0005 11.5444,8.168 12.2528,-17.316 z" 	fill="hsla(195,100%,21.311231630596478%,1)"/>
-					<path d="m 36.3213,97.8565 20.5573,1.553 -10.7008,-3.241 z" 	fill="hsla(195,100%,16.352131957979736%,1)"/>
-					<path d="m 46.1778,96.1685 10.7008,3.241 18.869,-8.305 z" 		fill="hsla(195,100%,12.582020674918843%,1)"/>
-					<path d="m 58.4306,78.8525 -12.2528,17.316 29.5698,-5.064 z" 	fill="hsla(195,100%,11.118764785945896%,1)"/>
-					<path d="m 58.4306,78.8525 17.317,12.252 7.324,-16.472 z" 		fill="hsla(195,100%,9.667509096214227%,1)"/>
-					<path d="m 83.0716,74.6325 -7.324,16.472 17.181,-18.16 z" 		fill="hsla(195,100%,2.8979706930337192%,1)"/>
-				</svg>
-			</a>
-			<a href="mailto:mans.beckman@spatialillusions.com">
-				<svg 
-				style="float: right; position: relative; top:-0px; left:-5px;"
-				version="1.1"
-				viewBox="0 0 30 30"
-				width="20"
-				height="20">
-				<path
-					 d="M 29,6 1,6 1,24 29,24 29,6 Z M 29,6 1,6 14.992,17.014 29,6 Z m -11.0001,9.0002 11,9 m -16.9998,-9 -11.00004,9"
-					 style="fill:none;stroke-width:2px;stroke-linejoin:round;stroke:rgb(170, 170, 170);" />
-
-				</svg>
-			</a>
-			<a href="https://twitter.com/spatialillusion">
-				<svg 
-				style="float: right; position: relative; top:-0px; left:-5px;"
-				version="1.1"
-				width="30"
-				height="22">
-				  <g
-					 transform="matrix(0.12,0,0,0.12,-30,-45)">
-					<path
-					   d="m 453.826,412.806 c -6.31,2.799 -13.092,4.69 -20.209,5.541 7.265,-4.355 12.844,-11.25 15.471,-19.467 -6.799,4.033 -14.329,6.96 -22.345,8.538 -6.417,-6.838 -15.562,-11.111 -25.683,-11.111 -19.431,0 -35.186,15.754 -35.186,35.186 0,2.757 0.311,5.443 0.911,8.018 -29.243,-1.467 -55.17,-15.475 -72.525,-36.764 -3.028,5.197 -4.764,11.241 -4.764,17.689 0,12.208 6.212,22.978 15.653,29.288 -5.767,-0.183 -11.193,-1.766 -15.937,-4.401 0,0.146 0,0.294 0,0.442 0,17.048 12.129,31.268 28.226,34.503 -2.953,0.804 -6.061,1.234 -9.27,1.234 -2.267,0 -4.471,-0.221 -6.62,-0.631 4.478,13.978 17.472,24.151 32.87,24.434 -12.043,9.438 -27.214,15.064 -43.7,15.064 -2.84,0 -5.641,-0.168 -8.393,-0.493 15.571,9.985 34.067,15.81 53.937,15.81 64.72,0 100.113,-53.616 100.113,-100.114 0,-1.526 -0.03,-3.043 -0.102,-4.553 6.874,-4.96 12.839,-11.156 17.556,-18.213 z"
-					   style="fill:rgb(170, 170, 170);" />
-				  </g>
-				</svg>
-			</a>
-		</div>
-	</div>
 <script src="../dist/milsymbol.js"></script>
 <div class="main">
-<style>
-table {
-	margin: auto;
-}
-</style>
 <script>
 var size = 40;
 ms.setStandard("APP6");
 </script>
 
 
-<h1>milsymbol APP6b Implementation</h1>
+<h1>Milsymbol APP6b implementation</h1>
 This page shows all figures and tables from APP6b drawn with milsymbol.<br>
 <a href="#Figure2">Figure 2. Affiliations and battle dimensions.</a><br>
 <a href="#Figure4">Figure 4. Present and planned status.</a><br>
@@ -114,7 +58,8 @@ This page shows all figures and tables from APP6b drawn with milsymbol.<br>
 <h3 id="Figure2">Figure 2. Affiliations and battle dimensions.</h3>
 </div>
 <table>
-<tr class="table-heading">
+<thead>
+<tr>
 <td>
 </td>
 <td>
@@ -142,7 +87,7 @@ Subsurface
 (U)
 </td>
 </tr>
-
+</thead>
 
 <tr>
 <td>
@@ -437,7 +382,8 @@ document.write(new ms.Symbol("SPU---------", {size:size}).asSVG());
 <h3 id="Figure4">Figure 4. Present and planned status.</h3>
 </div>
 <table>
-<tr class="table-heading">
+<thead>
+<tr>
 <td>
 </td>
 <td>
@@ -465,7 +411,7 @@ Subsurface
 (U)
 </td>
 </tr>
-
+</thead>
 
 <tr>
 <td>
@@ -555,13 +501,14 @@ document.write(new ms.Symbol("SFU---------", {size:size}).asSVG());
 <h3 id="TABLEIX">TABLE IX. Tactical symbol display option hierarchy.</h3>
 </div>
 <table>
-<tr class="table-heading">
+<thead>
+<tr>
 <td>
 </td>
 <td>ATTRIBUTES
 </td>
 </tr>
-
+</thead>
 <tr>
 <td>
 <script>
@@ -678,13 +625,14 @@ ms.Symbol: {frame:false,fill:false,icon:false}
 <h3 id="TableII">Table II. Size /mobility.</h3>
 </div>
 <table>
-<tr class="table-heading">
+<thead>
+<tr>
 <td>INDICATOR
 </td>
 <td>DESCRIPTION
 </td>
 </tr>
-
+</thead>
 <tr>
 <td>
 <script>
@@ -839,9 +787,11 @@ document.write(new ms.Symbol("SFG-------F-", {size:size}).asSVG());
 
 <div class="main">
 <h3 id="FigureC-6">Figure C-6. Equipment mobility indicators.</h3>
+Not that milsymbol automatically moves up the mobility indicator to the bottom of the icon when the symbol is unframed. 
 </div>
 <table>
-<tr class="table-heading">
+<thead>
+<tr>
 <td>DESCRIPTION
 </td>
 <td>UNFRAMED
@@ -855,7 +805,7 @@ document.write(new ms.Symbol("SFG-------F-", {size:size}).asSVG());
 <td>HOSTILE
 </td>
 </tr>
-
+</thead>
 <tr>
 <td>WHEELED
 (LIMITED CROSS-COUNTRY)
@@ -1183,13 +1133,18 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 <div class="main">
 <h3 id="TableB-III">Table B-III. Warfighting symbol ID codes.</h3>
 </div>
-<table>
-<tr class="table-heading">
+<table style="table-layout: fixed;width: 900px; ">
+<thead>
+<tr>
+<td>DESCRIPTION</td>
+<td>
+SYMBOL
+</td>
+</tr>
+</thead>
+<tr>
 <td>1.X <br>S--------------<br>WARFIGHTING SYMBOLS<br></td>
-<td><script>document.write(new ms.Symbol("SU-------------", {size:size}).asSVG());</script>
-<script>document.write(new ms.Symbol("SF-------------", {size:size}).asSVG());</script>
-<script>document.write(new ms.Symbol("SN-------------", {size:size}).asSVG());</script>
-<script>document.write(new ms.Symbol("SH-------------", {size:size}).asSVG());</script>
+<td bgcolor="#a0a0a0">
 </td>
 </tr>
 <tr>
@@ -2343,6 +2298,33 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 <script>document.write(new ms.Symbol("SNG*UCVUF-*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SHG*UCVUF-*****", {size:size}).asSVG());</script>
 </td>
+       
+<tr bgcolor="#f0a0a0">
+<td>1.X.3.1.1.4.6.1.1<br>S*G*UCVU--*****<br>AVIATION UAV CONTROL<br>Wrong SIDC in standard</td>
+<td><script>document.write(new ms.Symbol("SUG*UCVU--*****", {size:size}).asSVG());</script>
+<script>document.write(new ms.Symbol("SFG*UCVU--*****", {size:size}).asSVG());</script>
+<script>document.write(new ms.Symbol("SNG*UCVU--*****", {size:size}).asSVG());</script>
+<script>document.write(new ms.Symbol("SHG*UCVU--*****", {size:size}).asSVG());</script>
+</td>
+</tr> 
+ 
+<tr bgcolor="#f0a0a0">
+<td>1.X.3.1.1.4.6.1.2<br>S*G*UCVU--*****<br>AVIATION UAV LAUNCHER<br>Wrong SIDC in standard</td>
+<td><script>document.write(new ms.Symbol("SUG*UCVU--*****", {size:size}).asSVG());</script>
+<script>document.write(new ms.Symbol("SFG*UCVU--*****", {size:size}).asSVG());</script>
+<script>document.write(new ms.Symbol("SNG*UCVU--*****", {size:size}).asSVG());</script>
+<script>document.write(new ms.Symbol("SHG*UCVU--*****", {size:size}).asSVG());</script>
+</td>
+</tr>  
+<tr bgcolor="#f0a0a0">
+<td>1.X.3.1.1.4.6.1.3 <br>S*G*UCVU--*****<br>AVIATION UAV RECOVERY<br>Wrong SIDC in standard</td>
+<td><script>document.write(new ms.Symbol("SUG*UCVU--*****", {size:size}).asSVG());</script>
+<script>document.write(new ms.Symbol("SFG*UCVU--*****", {size:size}).asSVG());</script>
+<script>document.write(new ms.Symbol("SNG*UCVU--*****", {size:size}).asSVG());</script>
+<script>document.write(new ms.Symbol("SHG*UCVU--*****", {size:size}).asSVG());</script>
+</td>
+</tr>
+
 </tr>
 <tr>
 <td>1.X.3.1.1.4.6.2 <br>S*G*UCVUR-*****<br>UNMANNED AERIAL VEHICLE ROTARY WING<br></td>
@@ -2448,6 +2430,14 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 <script>document.write(new ms.Symbol("SHG*UCIC--*****", {size:size}).asSVG());</script>
 </td>
 </tr>
+<tr bgcolor="#f0a0a0">
+<td>1.X.3.1.1.5.10 <br>S*G*UCIC--*****<br>INFANTRY SNIPER<br>Wrong SIDC in standard</td>
+<td><script>document.write(new ms.Symbol("SUG*UCIC--*****", {size:size}).asSVG());</script>
+<script>document.write(new ms.Symbol("SFG*UCIC--*****", {size:size}).asSVG());</script>
+<script>document.write(new ms.Symbol("SNG*UCIC--*****", {size:size}).asSVG());</script>
+<script>document.write(new ms.Symbol("SHG*UCIC--*****", {size:size}).asSVG());</script>
+</td>
+</tr>
 <tr>
 <td>1.X.3.1.1.6 <br>S*G*UCE---*****<br>ENGINEER<br></td>
 <td><script>document.write(new ms.Symbol("SUG*UCE---*****", {size:size}).asSVG());</script>
@@ -2544,32 +2534,32 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 <script>document.write(new ms.Symbol("SHG*UCECR-*****", {size:size}).asSVG());</script>
 </td>
 </tr>
-<tr>
-<td>1.X.3.1.1.6.1.11 <br>S*G*UCEC--*****<br>ENGINEER COMBAT BRIDGING<br></td>
+<tr bgcolor="#f0a0a0">
+<td>1.X.3.1.1.6.1.11 <br>S*G*UCEC--*****<br>ENGINEER COMBAT BRIDGING<br>Wrong SIDC in standard</td>
 <td><script>document.write(new ms.Symbol("SUG*UCEC--*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SFG*UCEC--*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SNG*UCEC--*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SHG*UCEC--*****", {size:size}).asSVG());</script>
 </td>
 </tr>
-<tr>
-<td>1.X.3.1.1.6.1.12 <br>S*G*UCEC--*****<br>ENGINEER COMBAT MINE CLEARING<br></td>
+<tr bgcolor="#f0a0a0">
+<td>1.X.3.1.1.6.1.12 <br>S*G*UCEC--*****<br>ENGINEER COMBAT MINE CLEARING<br>Wrong SIDC in standard</td>
 <td><script>document.write(new ms.Symbol("SUG*UCEC--*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SFG*UCEC--*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SNG*UCEC--*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SHG*UCEC--*****", {size:size}).asSVG());</script>
 </td>
 </tr>
-<tr>
-<td>1.X.3.1.1.6.1.13 <br>S*G*UCEC--*****<br>ENGINEER COMBAT MINE LAYING<br></td>
+<tr bgcolor="#f0a0a0">
+<td>1.X.3.1.1.6.1.13 <br>S*G*UCEC--*****<br>ENGINEER COMBAT MINE LAYING<br>Wrong SIDC in standard</td>
 <td><script>document.write(new ms.Symbol("SUG*UCEC--*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SFG*UCEC--*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SNG*UCEC--*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SHG*UCEC--*****", {size:size}).asSVG());</script>
 </td>
 </tr>
-<tr>
-<td>1.X.3.1.1.6.1.14 <br>S*G*UCEC--*****<br>ENGINEER COMBAT DIVING<br></td>
+<tr bgcolor="#f0a0a0">
+<td>1.X.3.1.1.6.1.14 <br>S*G*UCEC--*****<br>ENGINEER COMBAT DIVING<br>Wrong SIDC in standard</td>
 <td><script>document.write(new ms.Symbol("SUG*UCEC--*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SFG*UCEC--*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SNG*UCEC--*****", {size:size}).asSVG());</script>
@@ -2968,16 +2958,16 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 <script>document.write(new ms.Symbol("SHG*UCFOO-*****", {size:size}).asSVG());</script>
 </td>
 </tr>
-<tr>
-<td>1.X.3.1.1.7.7 <br>S*G*UCF---*****<br>FIRE DIRECTION CENTRE<br></td>
+<tr bgcolor="#f0a0a0">
+<td>1.X.3.1.1.7.7 <br>S*G*UCF---*****<br>FIRE DIRECTION CENTRE<br>Wrong SIDC in standard</td>
 <td><script>document.write(new ms.Symbol("SUG*UCF---*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SFG*UCF---*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SNG*UCF---*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SHG*UCF---*****", {size:size}).asSVG());</script>
 </td>
 </tr>
-<tr>
-<td>1.X.3.1.1.7.8 <br>S*G*UCF---*****<br>OBERSERVER<br></td>
+<tr bgcolor="#f0a0a0">
+<td>1.X.3.1.1.7.8 <br>S*G*UCF---*****<br>OBERSERVER<br>Wrong SIDC in standard</td>
 <td><script>document.write(new ms.Symbol("SUG*UCF---*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SFG*UCF---*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SNG*UCF---*****", {size:size}).asSVG());</script>
@@ -3214,6 +3204,14 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 <script>document.write(new ms.Symbol("SFG*UCSA--*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SNG*UCSA--*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SHG*UCSA--*****", {size:size}).asSVG());</script>
+</td>
+</tr>
+<tr>
+<td>1.X.3.1.1.11 <br>S*G*F-S---*****<br>SURVEILLANCE<br></td>
+<td><script>document.write(new ms.Symbol("SUG*F-S---*****", {size:size}).asSVG());</script>
+<script>document.write(new ms.Symbol("SFG*F-S---*****", {size:size}).asSVG());</script>
+<script>document.write(new ms.Symbol("SNG*F-S---*****", {size:size}).asSVG());</script>
+<script>document.write(new ms.Symbol("SHG*F-S---*****", {size:size}).asSVG());</script>
 </td>
 </tr>
 <tr>
@@ -3728,8 +3726,8 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 <script>document.write(new ms.Symbol("SHG*UUT---*****", {size:size}).asSVG());</script>
 </td>
 </tr>
-<tr>
-<td>1.X.3.1.2.9 <br>S*G*UU----*****<br>DOG<br></td>
+<tr bgcolor="#f0a0a0">
+<td>1.X.3.1.2.9 <br>S*G*UU----*****<br>DOG<br>Wrong SIDC in standard</td>
 <td><script>document.write(new ms.Symbol("SUG*UU----*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SFG*UU----*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SNG*UU----*****", {size:size}).asSVG());</script>
@@ -4896,16 +4894,16 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 <script>document.write(new ms.Symbol("SHG*UH----*****", {size:size}).asSVG());</script>
 </td>
 </tr>
-<tr>
-<td>1.X.3.1.5 <br>S*G*UH----*****<br>UNIT GENERAL HEADQUARTERS<br></td>
+<tr bgcolor="#f0a0a0">
+<td>1.X.3.1.5 <br>S*G*UH----*****<br>UNIT GENERAL HEADQUARTERS<br>Wrong SIDC in standard</td>
 <td><script>document.write(new ms.Symbol("SUG*UH----*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SFG*UH----*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SNG*UH----*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SHG*UH----*****", {size:size}).asSVG());</script>
 </td>
 </tr>
-<tr>
-<td>1.X.3.1.6 <br>S*G*UH----*****<br>GENERAL HEADQUARTERS AND SERVICE<br></td>
+<tr bgcolor="#f0a0a0">
+<td>1.X.3.1.6 <br>S*G*UH----*****<br>GENERAL HEADQUARTERS AND SERVICE<br>Wrong SIDC in standard</td>
 <td><script>document.write(new ms.Symbol("SUG*UH----*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SFG*UH----*****", {size:size}).asSVG());</script>
 <script>document.write(new ms.Symbol("SNG*UH----*****", {size:size}).asSVG());</script>
@@ -4930,7 +4928,7 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 </tr>
 <tr>
 <td>1.X.3.2.1 <br>S*G*EW----*****<br>WEAPONS<br></td>
-<td>N/A
+<td bgcolor="#a0a0a0">
 </td>
 </tr>
 <tr>
@@ -5727,7 +5725,7 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 </tr>
 <tr>
 <td>1.X.3.2.4 <br>S*G*EX----*****<br>SPECIAL EQUIPMENT<br></td>
-<td>N/A
+<td bgcolor="#a0a0a0">
 </td>
 </tr>
 <tr>
@@ -5908,7 +5906,7 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 </tr>
 <tr>
 <td>1.X.3.3.5 <br>S*G*IM----H****<br>MILITARY MATERIEL FACILITY<br></td>
-<td>N/A
+<td bgcolor="#a0a0a0">
 </td>
 </tr>
 <tr>
@@ -6049,7 +6047,7 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 </tr>
 <tr>
 <td>1.X.3.4 <br>S*G*IR----H****<br>SEA SURFACE INSTALLATION<br></td>
-<td>N/A
+<td bgcolor="#a0a0a0">
 </td>
 </tr>
 <tr>
@@ -6238,7 +6236,7 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 </tr>
 <tr>
 <td>1.X.4.1.6 <br>S*S*G-----*****<br>NAVY GROUP<br></td>
-<td>N/A
+<td bgcolor="#a0a0a0">
 </td>
 </tr>
 <tr>
@@ -6371,7 +6369,7 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 </tr>
 <tr>
 <td>1.X.4.3 <br>S*S*X-----*****<br>NON MILITARY<br></td>
-<td>N/A
+<td bgcolor="#a0a0a0">
 </td>
 </tr>
 <tr>
@@ -6512,7 +6510,7 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 </tr>
 <tr>
 <td>1.X.4.5 <br>S*S*E-----*****<br>EMERGENCY<br></td>
-<td>N/A
+<td bgcolor="#a0a0a0">
 </td>
 </tr>
 <tr>
@@ -6541,7 +6539,7 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 </tr>
 <tr>
 <td>1.X.4.6 <br>S*S*Z-----*****<br>HAZARD<br></td>
-<td>N/A
+<td bgcolor="#a0a0a0">
 </td>
 </tr>
 <tr>
@@ -6746,7 +6744,7 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 </tr>
 <tr>
 <td>1.X.5.4.2 <br>S*U*NB----*****<br>BOTTOM RETURN/NOMBO<br></td>
-<td>N/A
+<td bgcolor="#a0a0a0">
 </td>
 </tr>
 <tr>
@@ -6799,7 +6797,7 @@ document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
 </tr>
 <tr>
 <td>1.X.6.1 <br>S*F*A-----*****<br>SOF UNIT AVIATION<br></td>
-<td>N/A
+<td bgcolor="#a0a0a0">
 </td>
 </tr>
 <tr>

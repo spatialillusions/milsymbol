@@ -198,8 +198,7 @@ module.exports = function ground(sId,bbox,icn,_STD2525){
 	sId['S-G-UCSM--'] =	[icn['GR.IC.SECURITY'],icn['GR.IC.ARMOUR'],icn['GR.M2.WHEELED']];
 	sId['S-G-UCSR--'] =	[icn['GR.IC.SECURITY'],icn['GR.M2.RAILROAD']];
 	sId['S-G-UCSA--'] =	[ms._translate(0,-20,icn['GR.IC.SECURITY']),icn['GR.IC.AVIATION ROTARY WING']];
-	//1.X.3.1.1.11 TOTALLY FUCKED UP SIDC IN APP6B
-	//sId['S-G-F-S---'] = [];
+	sId['S-G-F-S---'] = icn['GR.IC.SURVEILLANCE'];
 	sId['S-G-UU----'] =	[icn['GR.IC.COMBAT SUPPORT']];
 	sId['S-G-UUA---'] =	[icn['GR.IC.CBRN']];
 	sId['S-G-UUAC--'] =	[icn['GR.IC.CBRN'],icn['GR.M1.CHEMICAL']];
