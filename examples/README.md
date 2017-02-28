@@ -8,4 +8,4 @@ There are also several other resouces online that demonstrates milsymbol usage, 
  - SAPUI5 https://blogs.sap.com/2016/07/28/adding-military-map-symbols-to-your-sapui5-applications/
  - Scala https://github.com/workingDog/ScalaMS
  
-If you would like to contribute with examples of milsymbol usage, please create them in the same structure as bl.ocks https://bl.ocks.org/-/about use.
+If you would like to contribute with examples of milsymbol usage, please create them in the same structure as bl.ocks use.  https://bl.ocks.org/-/about
