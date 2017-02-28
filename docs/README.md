@@ -251,7 +251,7 @@ Object {width:Number, height:Number}
 
 ### setOptions(*{Options}*)
 
-This sets the options for a symbol and updates the symbol, the options are the same as when you create a new symbol, where an updated SIDC can be included in the options object. If setOptions is called without an options object, the symbol is simply updated.
+This sets the options for a symbol and updates the symbol, the options are the same as when you create a new symbol, where an updated SIDC can be included in the options object (`SIDC: String`). If setOptions is called without an options object, the symbol is simply updated.
 
 **Returns**
 
