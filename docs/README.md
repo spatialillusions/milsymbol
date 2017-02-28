@@ -413,9 +413,9 @@ Object {
   y1: Number, // Top coordinate
   x2: Number, // Right coordinate
   y2: Number, // Bottom coordinate
-  width: function(), // Returns box width
-  height: function(), // Returns box height
-  merge: function(box) // Merges one box with another and returns the original box
+  width: Function, // Returns box width
+  height: Function, // Returns box height
+  merge(box): Function // Merges one box with another and returns the original box
 }
 ```
 
@@ -448,7 +448,7 @@ Object {
 ## ms.addIconParts(iconFunction)
 
 ```javascript
-iconFunction: function
+iconFunction: Function
 ```
 
 Adds an icon function to milsymbol. All icons on the symbols in milsymbol is built by different icon parts, it can be one for Infantry and one for Armor, add them together and you will have the icon for Armored Infantry. By reusing icon parts as much as possible the the size of milsymbol is reduced.
@@ -488,7 +488,7 @@ Object ms
 ## ms.addLabelOverrides(labelFunction, type)
 
 ```javascript
-labelFunction: function,
+labelFunction: Function,
 type: String // 'letter' or 'number' depending of the type of the SIDC
 ```
 
@@ -531,7 +531,7 @@ Object ms
 ## ms.addSIDCicons(sidcFunction, type)
 
 ```javascript
-sidcFunction: function,
+sidcFunction: Function,
 type: String // 'letter' or 'number' depending of the type of the SIDC
 ```
 
