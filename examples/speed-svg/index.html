@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8"/>
+    <meta charset="UTF-8"/>
     <script src="../../dist/milsymbol.js"></script>
 </head>
 <body>
@@ -20,8 +20,8 @@ var renderedContent = "";
 var textInfo = document.getElementById("TextInfo").checked;
 var start = new Date();
 for (var i=1; i<=1000;i++){
-	var sidc = symbolsSIDC[Math.floor(symbolsSIDC.length*Math.random())];
-	renderedContent += new ms.Symbol(sidc, {size:size,uniqueDesignation:"ICON"+i,additionalInformation:sidc,infoFields:textInfo}).asSVG();
+    var sidc = symbolsSIDC[Math.floor(symbolsSIDC.length*Math.random())];
+    renderedContent += new ms.Symbol(sidc, {size:size,uniqueDesignation:"ICON"+i,additionalInformation:sidc,infoFields:textInfo}).asSVG();
 
 }
 var end = new Date();

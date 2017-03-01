@@ -18,7 +18,7 @@
   This is GeoJSON containing our units.
   It will be availabel in a global variable called 'situation'
   -->
-	<script src="../situation.json"></script>
+    <script src="../situation.json"></script>
 
   <link rel="stylesheet" href="https://js.arcgis.com/4.2/esri/css/main.css">
   <script src="https://js.arcgis.com/4.2/"></script>
@@ -45,31 +45,31 @@
       ms, 
       arrayUtils, on, dom
     ) {
-	  // Since we can define a insertion point for a IconSymbol3DLayer in ArcGIS JS API,
-	  // and we can't really handle non square icons, we have to go around the problem by 
-	  // making the icons square around the anchor point, so we add a custom extension to 
-	  // milsymbol to do that.
-	  ms.addSymbolPart(
-		function squareIcon(){
-		  var gbbox = new ms.BBox();
-		  if(this.square){
-		  	var anchor = {x:100, y:100};
-		  	if(this.properties.headquarters){
-    		  anchor = {
-       			x:this.properties.baseGeometry.bbox.x1,
-      			y:this.properties.baseGeometry.bbox.y2 + ms.getHqStafLength() };
-  			}
-		    var maxx = Math.max(anchor.x-this.bbox.x1, this.bbox.x2-anchor.x);
-		    var maxy = Math.max(anchor.y-this.bbox.y1, this.bbox.y2-anchor.y);
-			var max = Math.max(maxx,maxy);
-			gbbox.x1 = anchor.x-max;
-			gbbox.y1 = anchor.y-max;
-			gbbox.x2 = anchor.x+max;
-			gbbox.y2 = anchor.y+max;
-		  }
-		return {pre: [], post: [], bbox: gbbox};
-		}
-	  );
+      // Since we can define a insertion point for a IconSymbol3DLayer in ArcGIS JS API,
+      // and we can't really handle non square icons, we have to go around the problem by 
+      // making the icons square around the anchor point, so we add a custom extension to 
+      // milsymbol to do that.
+      ms.addSymbolPart(
+        function squareIcon(){
+          var gbbox = new ms.BBox();
+          if(this.square){
+              var anchor = {x:100, y:100};
+              if(this.properties.headquarters){
+              anchor = {
+                   x:this.properties.baseGeometry.bbox.x1,
+                  y:this.properties.baseGeometry.bbox.y2 + ms.getHqStafLength() };
+              }
+            var maxx = Math.max(anchor.x-this.bbox.x1, this.bbox.x2-anchor.x);
+            var maxy = Math.max(anchor.y-this.bbox.y1, this.bbox.y2-anchor.y);
+            var max = Math.max(maxx,maxy);
+            gbbox.x1 = anchor.x-max;
+            gbbox.y1 = anchor.y-max;
+            gbbox.x2 = anchor.x+max;
+            gbbox.y2 = anchor.y+max;
+          }
+        return {pre: [], post: [], bbox: gbbox};
+        }
+      );
 
       var map = new Map({
         basemap: "dark-gray",
