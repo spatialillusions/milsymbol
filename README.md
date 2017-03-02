@@ -26,30 +26,30 @@ Compared to reference figure from MIL-STD-2525C:
 milsymbol 1.0.0
 ----
 
-Is planned for release before end of Mars, see the issue tracker for included functionality and changes. https://github.com/spatialillusions/milsymbol/issues/61
+Is planned for release before 10th of Mars, see the issue tracker for included functionality and changes. https://github.com/spatialillusions/milsymbol/issues/61
 
 milsymbol summary
 ----
 
 milsymbol supports a lot of different options:
- - Both letter and number based SIDC
  - NATO or US standards (MIL-STD-2525C, MIL-STD-2525D, STANAG APP6-(B), STANAG APP6-(D) Draft)
  - Filled/Unfilled symbols
  - Framed/Unframed symbols
  - Text fields
  - Movement indicators
  - SVG/Canvas output (using SVG or Canvas draw instructions)
- - and much more... 
+ - Outlines of symbols
+ - and much more...
  
-For detaild descriptions of what is possible with milsymbol, see the API documentation.
+For detaild descriptions of what is possible with milsymbol, see the API documentation under /docs.
 
 
 milsymbol can be integrated with most common javascript libraries, such as:
- - Open Layers 3
- - Cesium
- - LeafLet
- - d3
  - Angular
+ - Cesium
+ - D3
+ - LeafLet
+ - Open Layers 3
  - and many more...
 
 Examples of some of the integrations are included with milsymbol.
