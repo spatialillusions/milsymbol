@@ -1,7 +1,7 @@
 {
   "name": "milsymbol",
-  "version": "0.6.0",
-  "description": "milsymbol.js is a small library in pure javascript that creates SVG symbols according to MIL-STD-2525 and APP6.",
+  "version": "1.0.0",
+  "description": "Milsymbol.js is a small library in pure javascript that creates symbols according to MIL-STD-2525 and APP6.",
   "main": "dist/milsymbol.js",
   "directories": {
     "doc": "docs",

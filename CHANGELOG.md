@@ -1,6 +1,6 @@
 # Change Log
 
-## Master
+## 1.0.0 03 MAR 2017
 
 - Milsymbol is now split into several modules and built with [webpack](https://webpack.github.io/), this makes the code easier to maintain.
 
