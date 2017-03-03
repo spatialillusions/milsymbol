@@ -1,7 +1,6 @@
-milsymbol
-=========
+# Milsymbol
 
-milsymbol is a small library in pure javascript that creates military unit symbols according to to MIL-STD-2525 and STANAG APP6.
+Milsymbol is a small library in pure javascript that creates military unit symbols according to to MIL-STD-2525 and STANAG APP6.
 
 ![Figure 13](docs/images/milsymbol.png?raw=true)
 
@@ -23,15 +22,9 @@ Compared to reference figure from MIL-STD-2525C:
 
 ![Figure 13](docs/images/figure13.png?raw=true)
 
-milsymbol 1.0.0
-----
+## Milsymbol summary
 
-Is planned for release before 10th of Mars, see the issue tracker for included functionality and changes. https://github.com/spatialillusions/milsymbol/issues/61
-
-milsymbol summary
-----
-
-milsymbol supports a lot of different options:
+Milsymbol supports a lot of different options:
  - NATO or US standards (MIL-STD-2525C, MIL-STD-2525D, STANAG APP6-(B), STANAG APP6-(D) Draft)
  - Filled/Unfilled symbols
  - Framed/Unframed symbols
@@ -44,7 +37,7 @@ milsymbol supports a lot of different options:
 For detaild descriptions of what is possible with milsymbol, see the API documentation under /docs.
 
 
-milsymbol can be integrated with most common javascript libraries, such as:
+Milsymbol can be integrated with most common javascript libraries, such as:
  - Angular
  - Cesium
  - D3
@@ -57,8 +50,8 @@ Examples of some of the integrations are included with milsymbol.
 You can find all documentaion and examples at:
 http://spatialillusions.com/milsymbol/
 
-Getting started
------------
+## Getting started
+
 You can download [milsymbol from GitHub](https://github.com/spatialillusions/milsymbol "milsymbol"), or install it using npm:
 `npm install milsymbol`
 
@@ -100,10 +93,9 @@ Your symbol object will also contain information about what offset that should b
 
 The library is built on the idea that everything used inside milsymbol should be accessable outside milsymbol so that it is easy to extend the library with custom functionallity.
 
-Technology
-----------
+## Technology
 
-milsymbol uses pure javascript to create SVG, Scalable Vector Graphics, and also has built in for native Canvas support. 
+Milsymbol uses pure javascript to create SVG, Scalable Vector Graphics, and also has built in for native Canvas support. 
 
  - No external dependencies, just one javascript file required
  - Super fast, can create 1000 symbols in less than 25 milliseconds (SVG output)
@@ -114,13 +106,12 @@ To see what is possible with milsymbol use the unit test documents in the docs f
 
 Milsymbol can easily be extended with new functionality and examples of this can be found at: https://github.com/spatialillusions/milsymbol-extensions
 
-Contact
--------
+## Contact
+
 Milsymbol is created and maintained by Måns Beckman
  - http://www.spatialillusions.com to see more examples of what milsymbol can be used for
  - https://twitter.com/spatialillusion for milsymbol and mapping/military related information 
 
-Licensing
----------
+## Licensing
 
-MIT, See License.txt for details
+MIT, See license.txt for details
