@@ -114,4 +114,4 @@ Milsymbol is created and maintained by Måns Beckman
 
 ## Licensing
 
-MIT, See license.txt for details
+MIT, See [license.txt](license.txt) for details
