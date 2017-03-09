@@ -44,16 +44,16 @@ module.exports = function textfields(){
 					labelbox = {y2:lbl.y, y1:(lbl.y-lbl.fontsize)};
 					if(lbl.textanchor == 'start'){
 						labelbox.x1 = lbl.x;
-						labelbox.x2 = lbl.x + strWidth(this[i]);
+						labelbox.x2 = lbl.x + (strWidth(this[i]) * (lbl.fontsize / fontSize));
 					}
 					if(lbl.textanchor == 'middle'){
-						var w = strWidth(this[i]);
+						var w = (strWidth(this[i])  * (lbl.fontsize / fontSize));
 						labelbox.x1 = lbl.x - (w/2);
 						labelbox.x2 = lbl.x + (w/2);
 					}
 					//if(lbl.textanchor == 'middle'){}
 					if(lbl.textanchor == 'end'){
-						labelbox.x1 = lbl.x - strWidth(this[i]);
+						labelbox.x1 = lbl.x - (strWidth(this[i]) * (lbl.fontsize / fontSize));
 						labelbox.x2 = lbl.x;
 					}
 					gbbox.merge(labelbox);

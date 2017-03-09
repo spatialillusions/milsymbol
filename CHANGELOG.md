@@ -1,4 +1,19 @@
 # Change Log
+## Master
+
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+- Fix for that tactical points with labels with large font sizes might draw too narrow so that part of the label can't be seen.
+
+### Security
 
 ## 1.0.0 03 MAR 2017
 
