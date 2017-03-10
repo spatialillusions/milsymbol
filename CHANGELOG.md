@@ -13,6 +13,8 @@
 
 - Fix for that tactical points with labels with large font sizes might draw too narrow so that part of the label can't be seen.
 
+- Fix for that units with invalid icon part in the SIDC did not get the upside down question mark when canvas output was used.
+
 ### Security
 
 ## 1.0.0 03 MAR 2017
