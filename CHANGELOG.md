@@ -3,6 +3,10 @@
 
 ### Added
 
+- It is now possible to use `sidc` or `SIDC` in an options object.
+
+- It is now possible to initiate a symbol with just an options object `ms.Symbol({options})`.
+
 ### Changed
 
 ### Deprecated

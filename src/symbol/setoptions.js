@@ -4,6 +4,10 @@ module.exports = function(options){
   if (typeof options === 'object') {
     for (var key in options){
       if (!options.hasOwnProperty(key)) continue;
+      if (key === 'sidc'){
+      	this['SIDC'] = options[key]; // TacticalJSON compability
+      	continue;
+      }
       this[key] = options[key];
     }
   }

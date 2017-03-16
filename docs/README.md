@@ -51,7 +51,7 @@ All functionality in milsymbol is normally found under the `ms` namespace, but i
 
 ## ms.Symbol(SIDC,*{Options}*)
 
-Initiates a new symbol object, you should always provide a SIDC for the symbol, and it is optional to provide other options. 
+Initiates a new symbol object, you should always provide a SIDC for the symbol, and it is optional to provide other options. (If the options object contains a property named `sidc` or `SIDC`, you can omit the SIDC parameter.)
 
 Even if options can be provided or updated after the symbol object is created, the performance will be better if you provide them directly when you create the symbol, because every time you update some options the symbol will automatically be updated. 
 

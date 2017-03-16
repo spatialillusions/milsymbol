@@ -1,9 +1,14 @@
 var ms = require('./ms.js');
 
-function symbol(SIDCParameter,options){
+function symbol(option1,options){
   //=======================================================================================
-  // The SIDC for the symbol.
-  this.SIDC = SIDCParameter;
+  if (typeof option1 != 'object') {
+  	// The SIDC for the symbol.
+  	this.SIDC = option1;
+  }else{
+  	// Enable to initiate directly with an options object.
+  	options = option1;
+  }
   // Setting default values for options
   // TODO place all of these in a style object
   this.size                        = 100; // The symbol size is actually the L variable in the symbols so the symbol will be larger than this size.
