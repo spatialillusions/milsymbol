@@ -269,7 +269,7 @@ module.exports =  function tacticalPoints(sidc){
 							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};
 	//sidc['G-F-PTS---'] = [];//TACGRP.FSUPP.PNT.TGT.PTGT
 	sidc['G-F-PTS---'] = {	additionalInformation:{stroke:false,textanchor:"start",x:120,y:145,fontsize:40},
-							additionalInformation1:{stroke:false,textanchor:"end",x:80,y:145,fontsize:40},
+							altitudeDepth:{stroke:false,textanchor:"end",x:80,y:145,fontsize:40},
 							uniqueDesignation:{stroke:false,textanchor:"start",x:120,y:80,fontsize:40}};
 
 	//sidc['G-F-PTN---'] = [];//TACGRP.FSUPP.PNT.TGT.NUCTGT

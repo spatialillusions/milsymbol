@@ -122,7 +122,7 @@ module.exports =  function tacticalPoints(sidc){
 							dtg:{stroke:false,textanchor:"end",x:50,y:-30,fontsize:40},
 							dtg1:{stroke:false,textanchor:"end",x:50,y:10,fontsize:40}};//2.X.2.2.4.11.9 DECON POINT (FORWARD) TROOPS
   sidc['G-C-FSTP--'] = {	additionalInformation:{stroke:false,textanchor:"start",x:120,y:145,fontsize:40},
-							additionalInformation1:{stroke:false,textanchor:"end",x:80,y:145,fontsize:40},
+							altitudeDepth:{stroke:false,textanchor:"end",x:80,y:145,fontsize:40},
 							uniqueDesignation:{stroke:false,textanchor:"start",x:120,y:80,fontsize:40}};//2.X.2.3.1.1.1 POINT /SINGLE TARGET
   sidc['G-C-FSS---'] = {	uniqueDesignation:{stroke:false,textanchor:"start",x:125,y:115,fontsize:40,fontweight:'bold'}};//2.X.2.3.1.2 FIRE SUPPORT STATION
   sidc['G-C-FAU---'] = {	uniqueDesignation:{stroke:false,textanchor:"start",x:120,y:80,fontsize:40,fontweight:'bold'}};//2.X.2.3.3.9 NUCLEAR TARGET
