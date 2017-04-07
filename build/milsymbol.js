@@ -41,7 +41,10 @@ ms.addSIDCicons(require('../src/letter-sidc/icons-signalsIntelligence.js'), 'let
 ms.addSIDCicons(require('../src/letter-sidc/icons-stabilityoperations.js'), 'letter');
 ms.addSIDCicons(require('../src/letter-sidc/icons-emergencymanagementsymbols.js'), 'letter');
 
-// Adding support for tactical points in MIL-STD-2525C
+// Adding support for symbols in MIL-STD-2525B change 2 that are missing in 2525C
+ms.addSIDCicons(require('../src/letter-sidc/icons-2525b-ch2.js'), 'letter');
+
+// Adding support for tactical points
 ms.addIconParts(require('../src/iconparts/tactical-points.js'));
 
 ms.addSIDCicons(require('../src/letter-sidc/icons-tactical-points-2525.js'), 'letter');

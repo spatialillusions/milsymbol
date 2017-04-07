@@ -9,6 +9,8 @@
 
 ### Changed
 
+- Made sure that tactical points that dosen't have labels in the specifications don't get labels even if they are set.
+
 ### Deprecated
 
 ### Removed
