@@ -13,8 +13,6 @@
 
 ### Changed
 
-- Made sure that tactical points that dosen't have labels in the specifications don't get labels even if they are set.
-
 ### Deprecated
 
 ### Removed
@@ -26,6 +24,8 @@
 - Fix for that units with invalid icon part in the SIDC did not get the upside down question mark when canvas output was used.
 
 - G-F-PTS--- TACGRP.FSUPP.PNT.TGT.PTGT and G-C-FSTP-- 2.X.2.3.1.1.1 POINT/SINGLE TARGET now uses altitudeDepth instead of additionalInformation1 to display the target altitude.
+
+- Made sure that tactical points that dosen't have labels in the specifications don't get labels even if they are set.
 
 ### Security
 
