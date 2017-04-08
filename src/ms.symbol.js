@@ -58,6 +58,7 @@ function symbol(option1,options){
 
   this.bbox = new ms.BBox(); // Contains the bounding box of the current marker
   this.colors = {}; // Contains the colors for the current marker
+  this._validIcon = true; // If we were able to find a valid icon or not.
   this.markerAnchor = {x:50,y:50}; // The anchor point for the current marker
   this.octagonAnchor = {x:50,y:50}; // The anchor point for the octagon for the current marker
   this.properties = {}; // Properties of the current marker
@@ -75,6 +76,7 @@ symbol.prototype.getColors = require('./symbol/getcolors.js');
 symbol.prototype.getOctagonAnchor = function() { return this.octagonAnchor; };
 symbol.prototype.getProperties = require('./symbol/getproperties.js');
 symbol.prototype.getSize = require('./symbol/getsize.js');
+symbol.prototype.isValid = function() {return this._validIcon;};
 symbol.prototype.setOptions = require('./symbol/setoptions.js');
 symbol.prototype.toDataURL = function() { return ("data:image/svg+xml;base64," + btoa(this.asSVG())); };
 

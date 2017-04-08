@@ -7,6 +7,8 @@
 
 - It is now possible to initiate a symbol with just an options object `ms.Symbol({options})`.
 
+- ms.Symbol().isValid() now returns a boolean representing if it was possible to find the symbol icon for the provided SIDC.
+
 ### Changed
 
 - Made sure that tactical points that dosen't have labels in the specifications don't get labels even if they are set.

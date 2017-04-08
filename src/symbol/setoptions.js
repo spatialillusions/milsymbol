@@ -11,6 +11,9 @@ module.exports = function(options){
       this[key] = options[key];
     }
   }
+  // Reset if the icon is valid
+  this._validIcon = true;
+  
   //Updating the object with properties of the marker
   this.properties = this.getProperties();
   

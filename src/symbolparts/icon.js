@@ -183,7 +183,8 @@ module.exports = function icon(){
 			if(typeof mainIcon === 'undefined'){
 				if (!(this.properties.functionid.substr(0,6) == '000000' || this.properties.functionid.substr(0,6) == '')) {
 					drawArray2.push(undefinedIcon);
-					console.log('Invalid icon code in SIDC: ' + this.SIDC);
+					this._validIcon = false;
+					//console.log('Invalid icon code in SIDC: ' + this.SIDC);
 				}
 			}else{
 				drawArray2.push(mainIcon);
@@ -206,9 +207,10 @@ module.exports = function icon(){
 			if(icons[genericSIDC]){
 				drawArray2.push(icons[genericSIDC]);
 			}else{
-				if (this.SIDC.substr(4,6) != '------') {
+				if (!(this.SIDC.substr(4,6) == '------' || this.SIDC.substr(4,6) == '')) {
 					drawArray2.push(undefinedIcon);
-					console.log('Invalid icon code in SIDC: ' + this.SIDC);
+					this._validIcon = false;
+					//console.log('Invalid icon code in SIDC: ' + this.SIDC);
 				}
 			}
 			if(specialbbox[genericSIDC]){
