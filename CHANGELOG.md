@@ -9,6 +9,8 @@
 
 - ms.Symbol().isValid() now returns a boolean representing if it was possible to find the symbol icon for the provided SIDC.
 
+- The source code for the unit generator is now provided in the dev folder.
+
 ### Changed
 
 - Made sure that tactical points that dosen't have labels in the specifications don't get labels even if they are set.
