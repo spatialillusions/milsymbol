@@ -11,6 +11,8 @@
 
 - The source code for the unit generator is now provided in the dev folder.
 
+- Added 2525B symbols that are missing in 2525C, so now we have full support for 2525B as well.
+
 ### Changed
 
 ### Deprecated
