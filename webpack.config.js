@@ -1,6 +1,5 @@
 const path = require('path');
 const CustomVarLibraryNamePlugin = require('webpack-custom-var-library-name-plugin');
-const { NODE_ENV } = process.env;
 
 module.exports = {
   entry: './src/index.js',
