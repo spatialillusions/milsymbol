@@ -2,7 +2,11 @@ const { assert, expect } = require('chai');
 const ms = require('../build/milsymbol');
 
 describe('ms', () => {
+  // Most of these don't work yet because of how window/document APIs are used
   const publicApiMethods = {
+    Symbol: {
+      returns: Object
+    },
     BBox: {
         returns: Object,
         works: true
@@ -69,7 +73,6 @@ describe('ms', () => {
       it('should be a function', () => {
         assert.isFunction(apiMethod);
       });
-      // Most of these don't work yet because of how window/document APIs are used
       if (works) {
           it(`should return a ${returns.name}`, () => {
             const result = apiMethod();
