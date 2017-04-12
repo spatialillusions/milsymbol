@@ -378,4 +378,4 @@ module.exports = function tacticalPoints(sidc,bbox,icn,std2525){
 	sidc['G-O-FA----'] = icn['TP.FIX ACOUSTIC'];//TACGRP.OTH.FIX.ACU
 	sidc['G-O-FE----'] = icn['TP.FIX ELECTRO-MAGNETIC'];//TACGRP.OTH.FIX.EM
 	sidc['G-O-FO----'] = icn['TP.FIX ELECTRO-OPTICAL'];//TACGRP.OTH.FIX.EOP
-}
+};

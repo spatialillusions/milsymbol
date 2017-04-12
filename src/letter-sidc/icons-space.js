@@ -7,4 +7,4 @@ module.exports = function space(sId,bbox,icn,_STD2525){
 	sId['S-P-V-----'] = [icn['SP.I.FF.CREWED SPACE VEHICLE']];
 	sId['S-P-T-----'] = [icn['SP.I.FF.SPACE STATION']];
 	sId['S-P-L-----'] = [icn['SP.I.SPACE LAUNCH VEHICLE']];
-}
+};

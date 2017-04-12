@@ -105,4 +105,4 @@ module.exports = function air(sId,bbox,icn,_STD2525){
 	sId['S-A-CF----'] = [icn['AR.I.FF.CIVILIAN FIXED WING']];
 	sId['S-A-CH----'] = [icn['AR.I.FF.CIVILIAN ROTARY WING']];
 	sId['S-A-CL----'] = [icn['AR.I.FF.CIVILIAN BALLOON']];
-}
+};

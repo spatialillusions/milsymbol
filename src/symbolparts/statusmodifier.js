@@ -9,7 +9,7 @@ module.exports = function statusmodifier(){
 	var y2 =  bbox.y2;
 
 	if(this.properties.condition){
-		if(this.properties.fill && this.monoColor == ""){
+		if(this.properties.fill && this.monoColor === ''){
 			var colors = {	"FullyCapable"	:'rgb(0,255,0)',
 							"Damaged"		:'rgb(255,255,0)',
 							"Destroyed"		:'rgb(255,0,0)',
@@ -41,4 +41,4 @@ module.exports = function statusmodifier(){
 
 	//A bounding box only needs the values that might change
 	return {pre: drawArray1, post: drawArray2, bbox: {y1: y1, y2: y2}};
-}
+};

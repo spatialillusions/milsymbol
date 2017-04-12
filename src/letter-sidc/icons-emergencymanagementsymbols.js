@@ -180,4 +180,4 @@ module.exports = function emergencymanagementsymbols(sId,bbox,icn,_STD2525){
 	sId["E-F-MG----"] = [icn['GR.IN.IC.STORAGE TOWER']];
 	sId["E-F-MH----"] = [icn['GR.IN.IC.SURFACE WATER INTAKE']];
 	sId["E-F-MI----"] = [icn['GR.IN.IC.WASTEWATER TREATMENT FACILITY']];	
-}
+};

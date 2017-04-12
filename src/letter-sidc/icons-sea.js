@@ -91,4 +91,4 @@ module.exports = function sea(sId,bbox,icn,_STD2525){
 	sId['S-S-ZM----'] = [icn['SE.IC.SEA MINELIKE']];
 	sId['S-S-ZN----'] = [icn['SE.IC.NAVIGATIONAL']];
 	sId['S-S-ZI----'] = [icn['SE.IC.ICEBERG']];
-}
+};

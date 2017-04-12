@@ -22,4 +22,4 @@ module.exports = function spacemissile(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD25
 		sIdm2['11'] = [icn['SPACE.MISSILE.M2.TERMINAL HIGH-ALTITUDE AREA DEFENSE (THAAD)']];
 		sIdm2['12'] = [icn['SPACE.MISSILE.M2.SPACE']];
 	}
-}
+};

@@ -69,4 +69,4 @@ module.exports = function minewarfare(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD252
 		sId['200000'] = [icn['SU.IC.ENVIRONMENTAL REPORT LOCATION']];
 		sId['210000'] = [icn['SU.IC.DIVE REPORT LOCATION']];
 	}
-}
+};

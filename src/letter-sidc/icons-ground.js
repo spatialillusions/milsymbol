@@ -423,4 +423,4 @@ module.exports = function ground(sId,bbox,icn,_STD2525){
 	//1.X.3.1.6 BROKEN SIDC
 	sId['S-G-UH2---'] = [icn['GR.IC.FF.SUPPLY'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
 	sId['S-G-UHGL--'] = sId['S-G-GL----'] = [icn['GR.IC.LIAISON']];
-}
+};

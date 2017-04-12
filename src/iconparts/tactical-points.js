@@ -45,8 +45,8 @@ module.exports = function (iconParts, properties, colors, STD2525, monoColor, al
   icn['TP.SONOBUOY KINGPIN'] = [icn['TP.SONOBUOY'],{type:'text',stroke:false,textanchor:"middle",x:100,y:115,fontsize:45,text:'K'}];
   icn['TP.SONOBUOY EXPIRED'] = [icn['TP.SONOBUOY'],{type:'path',fill:false,d:'M 40,60 l 120,80 M 40,140 l 120,-80'}];
   icn['TP.SEARCH'] = {type:'path',d:'m 80,80 20,20 -20,20 40,0 -20,-20 20,-20 z M 50,150 150,50 M 50,50 150,150'};
-  icn['TP.SEARCH AREA'] = [icn['TP.SEARCH'],!STD2525 && !numberSIDC ? {type:'text',stroke:false,textanchor:'end',x:75,y:115,fontsize:40,text:'SA'} : [{type:'text',stroke:false,textanchor:"middle",x:60,y:115,fontsize:45,text:'S'},{type:'text',stroke:false,textanchor:"middle",x:140,y:115,fontsize:45,text:'A'}]];;
-  icn['TP.DIP POSITION'] = [icn['TP.SEARCH'],!STD2525 && !numberSIDC ? {type:'text',stroke:false,textanchor:'end',x:75,y:115,fontsize:40,text:'DIP'} : [{type:'text',stroke:false,textanchor:"middle",x:60,y:115,fontsize:45,text:'D'},{type:'text',stroke:false,textanchor:"middle",x:140,y:115,fontsize:45,text:'P'}]];;
+  icn['TP.SEARCH AREA'] = [icn['TP.SEARCH'],!STD2525 && !numberSIDC ? {type:'text',stroke:false,textanchor:'end',x:75,y:115,fontsize:40,text:'SA'} : [{type:'text',stroke:false,textanchor:"middle",x:60,y:115,fontsize:45,text:'S'},{type:'text',stroke:false,textanchor:"middle",x:140,y:115,fontsize:45,text:'A'}]];
+  icn['TP.DIP POSITION'] = [icn['TP.SEARCH'],!STD2525 && !numberSIDC ? {type:'text',stroke:false,textanchor:'end',x:75,y:115,fontsize:40,text:'DIP'} : [{type:'text',stroke:false,textanchor:"middle",x:60,y:115,fontsize:45,text:'D'},{type:'text',stroke:false,textanchor:"middle",x:140,y:115,fontsize:45,text:'P'}]];
   icn['TP.SEARCH CENTER'] = {type:'path',stroke:false,d:'m 100,100 -50,10 0,-20 z m 0,0 10,50 -20,0 z m 0,0 50,-10 0,20 z m 0,0 -10,-50 20,0 z'};
   icn['TP.REFERENCE POINT'] = [{type:'path',fill:false,d:'M 160,160 40,160 40,40 160,40 Z'},{type:'circle',cx:100,cy:100,r:15}];
   icn['TP.NAVIGATIONAL REFERENCE'] = (!numberSIDC && STD2525 ? {type:'path',fill:false,d:'M 160,160 40,160 40,40 160,40 Z M 160,160 40,40 M 40,160 160,40'} : {type:'path',fill:false,d:'M 160,160 40,40 M 40,160 160,40'});
@@ -272,4 +272,4 @@ module.exports = function (iconParts, properties, colors, STD2525, monoColor, al
     defaultProperties.call(this,icn[key]);
     iconParts[key] = icn[key];
   }
-}
+};

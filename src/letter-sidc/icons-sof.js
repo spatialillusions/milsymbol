@@ -31,4 +31,4 @@ module.exports = function sof(sId,bbox,icn,_STD2525){
 	sId['S-F-GPA---'] = sId['S-F-GSPA--'] = [icn['GR.EQ.PSYCHOLOGICAL OPERATIONS EQUIPMENT'], ms._translate(0,-30,ms._scale(0.7,icn['AR.I.MILITARY FIXED WING']))];
 	sId['S-F-GC----'] = sId['S-F-GCA---'] = [icn['GR.IC.CIVIL AFFAIRS']];
 	sId['S-F-GB----'] = sId['S-F-B-----'] = [icn['AR.I.SPECIAL OPERATIONS FORCES'],icn['GR.M2.SUPPORT']]; 
-}
+};

@@ -349,4 +349,4 @@ module.exports = function tacticalPoints(sidc,bbox,icn,std2525){
   sidc['G-O-IK----'] = icn['ST.IC.KNOWN INSURGENT VEHICLE'];//2.X.3.4.5
   sidc['G-O-ID----'] = [icn['ST.IC.KNOWN INSURGENT VEHICLE'],icn['ST.M1.DRUG']];//2.X.3.4.6
   sidc['G-O-IF----'] = icn['ST.IC.INTERNAL SECURITY FORCE'];//2.X.3.4.7
-}
+};

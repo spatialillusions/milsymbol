@@ -178,4 +178,4 @@ module.exports = function equipment(sId,bbox,icn,_STD2525){
 		if (!equipmentBottom.hasOwnProperty(key)) continue;
 		bbox['S-G-'+key] = {x1:50,x2:150,y1:50,y2:equipmentBottom[key]};
 	}
-}
+};

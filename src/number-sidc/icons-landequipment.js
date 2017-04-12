@@ -244,4 +244,4 @@ module.exports = function landequipment(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2
 			bbox[key] = {y2:equipmentBottom[key]};
 		}
 	}
-}
+};

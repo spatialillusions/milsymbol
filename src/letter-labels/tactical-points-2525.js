@@ -505,4 +505,4 @@ module.exports =  function tacticalPoints(sidc){
 	sidc['G-O-FA----'] = {};//TACGRP.OTH.FIX.ACU
 	sidc['G-O-FE----'] = {};//TACGRP.OTH.FIX.EM
 	sidc['G-O-FO----'] = {};//TACGRP.OTH.FIX.EOP
-}
+};

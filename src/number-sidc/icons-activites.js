@@ -175,4 +175,4 @@ module.exports = function activites(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525)
 		sIdm1['17'] = [icn['ST.M1.INCIDENT']];
 		sIdm1['18'] = [icn['ST.M1.THEFT']];
 	}
-}
+};

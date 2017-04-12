@@ -378,4 +378,4 @@ module.exports = function landunit(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 		sIdm2['56'] = [icn['GR.M2.UTILITY']];
 		sIdm2['57'] = [icn['GR.M2.COMBAT SEARCH AND RESCUE']];
 	}
-}
+};

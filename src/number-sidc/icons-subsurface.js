@@ -62,4 +62,4 @@ module.exports = function subsurface(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525
 		sIdm2['15'] = [icn['SU.M2.REMOTELY PILOTED']];
 		sIdm2['16'] = [icn['SU.M2.EXPENDABLE']];
 	}
-}
+};

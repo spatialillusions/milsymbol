@@ -3,4 +3,4 @@ module.exports = function(){
     this.updateSymbol();
   }
   return {width:this.width, height:this.height};
-}
+};

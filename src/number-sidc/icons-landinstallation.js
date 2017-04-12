@@ -157,4 +157,4 @@ module.exports = function landinstallation(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_S
 		sIdm2['07'] = [icn['GR.IN.M2.NUCLEAR MATERIAL STORAGE']];
 		sIdm2['08'] = [icn['GR.IN.M2.WEAPONS GRADE PRODUCTION']];
 	}
-}
+};

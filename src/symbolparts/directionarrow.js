@@ -34,4 +34,4 @@ module.exports = function directionarrow(){
 		}
 	}
 	return {pre: drawArray1, post: drawArray2, bbox: gbbox};
-}
+};

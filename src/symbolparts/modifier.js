@@ -173,7 +173,7 @@ module.exports = function modifier(){
 				bbox : {y2 :bbox.y2+10}}
 		};
 		if(mobilities.hasOwnProperty(this.properties.mobility)){
-			geom = mobilities[this.properties.mobility].g
+			geom = mobilities[this.properties.mobility].g;
 			//outline
 			if (this.outlineWidth > 0) drawArray1.push(ms.outline({type:'translate',x:0,y:bbox.y2,draw:geom}, this.outlineWidth, this.strokeWidth, this.outlineColor));
 			//geometry
@@ -186,7 +186,7 @@ module.exports = function modifier(){
 	if(this.properties.leadership){
 		var leadership = {'Friend':{type:'path',d:'m 45,60 55,-25 55,25'},'Neutral':{type:'path',d:'m 45,60 55,-25 55,25'},'Hostile':{type:'path',d:'m 42,71 57.8,-43.3 58.2,42.8'},'Unknown':{type:'path',d:'m 50,60 10,-20 80,0 10,20'}}[this.properties.affiliation];
 		if(this.properties.leadership == "Deputy Individual")leadership.strokedasharray = ms._dashArrays.feintDummy;
-		drawArray1.push(leadership)
+		drawArray1.push(leadership);
 		gbbox.merge({y1:(gbbox.y1 - 20)});
 	}
 	//Assign fill, stroke and stroke-width
@@ -208,4 +208,4 @@ module.exports = function modifier(){
 	}
 	g += '</g>';*/
 	return {pre: drawArray1, post: drawArray2, bbox: gbbox};
-}
+};

@@ -43,4 +43,4 @@ module.exports = function installations(sId,bbox,icn,_STD2525){
 	sId['S-G-IX----'] = [icn['GR.IC.FF.MEDICAL']];
 	sId['S-G-IXH---'] = [icn['GR.IC.FF.MEDICAL TREATMENT FACILITY']];
 	sId['S-G-IRR---'] = sId['S-G-IRSR--'] = [icn['GR.IN.IC.SEA SURFACE INSTALLATION, OIL RIG/PLATFORM']];
-}
+};

@@ -42,7 +42,7 @@ module.exports = function(ratio){
                 if (typeof instruction[i].stroke === 'undefined' || (typeof instruction[i].stroke !== 'undefined' && instruction[i].stroke) ) ctx.stroke(d);
               }else{
                 if (typeof ms._Path2D === 'function') {
-                  ms._Path2D(ctx, instruction[i].d)
+                  ms._Path2D(ctx, instruction[i].d);
                   if (typeof instruction[i].fill === 'undefined' || (typeof instruction[i].fill !== 'undefined' && instruction[i].fill))ctx.fill();
                   if (typeof instruction[i].stroke === 'undefined' || (typeof instruction[i].stroke !== 'undefined' && instruction[i].stroke))ctx.stroke();
                 }else{
@@ -86,7 +86,7 @@ module.exports = function(ratio){
               ctx.save();
               ctx.scale(instruction[i].factor,instruction[i].factor);
               processCanvasInstructions.call(this,instruction[i].draw, ctx);
-              ctx.restore()
+              ctx.restore();
               //ctx.scale(1/instruction[i].factor,1/instruction[i].factor);
               break;
           }
@@ -98,11 +98,11 @@ module.exports = function(ratio){
         }
       }
     }
-  };
+  }
   
   var canvas = document.createElement("canvas");
   //TODO fix the pixel ratio
-  var ratio = ratio || 1;//window.devicePixelRatio || 1;
+  ratio = ratio || 1;//window.devicePixelRatio || 1;
   canvas.width = this.width*ratio;
   canvas.height = this.height*ratio;
   //canvas.style.width = this.width +'px';

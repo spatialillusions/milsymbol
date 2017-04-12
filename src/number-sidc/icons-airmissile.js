@@ -31,4 +31,4 @@ module.exports = function airmissile(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525
 		sIdm2['15'] = [icn['AIR.MISSILE.M2.LONG RANGE']];
 		sIdm2['16'] = [icn['SPACE.MISSILE.M2.SPACE']];
 	}
-}
+};

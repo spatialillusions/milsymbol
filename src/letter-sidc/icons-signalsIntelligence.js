@@ -87,4 +87,4 @@ module.exports = function signalsIntelligence(sId,bbox,icn,_STD2525){
 	sId['I-U-SRS---'] = [icn['SI.IC.RADAR'],icn['SI.M1.SIERRA'],icn['SI.M2.SIERRA']];
 	sId['I-U-SRT---'] = [icn['SI.IC.RADAR'],icn['SI.M1.TANGO'],icn['SI.M2.ALPHA']];
 	sId['I-U-SRU---'] = [icn['SI.IC.RADAR'],icn['SI.M1.UNIFORM'],icn['SI.M2.NOVEMBER']];
-}
+};

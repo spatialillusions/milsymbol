@@ -54,4 +54,4 @@ module.exports = function cyberspace(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525
 		sId['160800'] = [icn['CY.IC.SERVICE OUTAGE']];
 		sId['160900'] = [icn['CY.IC.DEVICE OUTAGE']];
 	}
-}
+};

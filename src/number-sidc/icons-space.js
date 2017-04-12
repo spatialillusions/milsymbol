@@ -51,4 +51,4 @@ module.exports = function space(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 		sIdm2['03'] = [icn['SP.M2.RADAR']];
 		sIdm2['04'] = [icn['SP.M2.SIGNALS INTELLIGENCE (SIGINT)']];
 	}
-}
+};

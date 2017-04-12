@@ -265,8 +265,8 @@ module.exports = function textfields(){
 		if(gStrings.R5)drawArray2.push({type:'text',text:gStrings.R5,x:(bbox.x2 + spaceTextIcon),y:(100 + 2.5*fontSize),textanchor:"start",fontsize:fontSize,fontfamily:fontFamily,fill:fontColor,stroke:false});
 
 		//outline
-		if (this.outlineWidth > 0) drawArray1.push(ms.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor))
+		if (this.outlineWidth > 0) drawArray1.push(ms.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor));
 
 	}
 	return {pre: drawArray1, post: drawArray2, bbox: gbbox};
-}
+};

@@ -16,7 +16,7 @@ function symbol(option1,options){
   this.fillOpacity                 = 1; // Possibility to change the fill opacity
   this.frame                       = true; // Should the icon be framed
   this.strokeWidth                 = 4; // The stroke width of he icon frame.
-  this.outlineColor                = 'rgb(239, 239, 239)' // Color of the outline
+  this.outlineColor                = 'rgb(239, 239, 239)';// Color of the outline
   this.outlineWidth                = 0; // Width of the outline.
   this.icon                        = true; // Should we display the icon?
   this.monoColor                   = false; // Should the icon be monocromatic and if so what color
@@ -65,7 +65,7 @@ function symbol(option1,options){
 
   // Initiate symbol.
   this.setOptions.call(this, options);
-};
+}
 
 // This is here so that we have it initiated in this.symbol from the beginning
 symbol.prototype.asCanvas = require('./symbol/ascanvas.js');
@@ -82,11 +82,11 @@ symbol.prototype.toDataURL = function() { return ("data:image/svg+xml;base64," +
 
 // For backward compability
 symbol.prototype.asImage = function(){
-  console.log('asImage() is deprecated and should not be used, use toDataURL() instead.');
+  console.warn('asImage() is deprecated and should not be used, use toDataURL() instead.');
   return this.toDataURL.call(this);
 };
 symbol.prototype.getMarker = function(){
-  console.log('getMarker() is deprecated and should not be used, in most cases its not needed and you can use setOptions() instead.');
+  console.warn('getMarker() is deprecated and should not be used, in most cases its not needed and you can use setOptions() instead.');
   return this.setOptions.call(this);
 };
 

@@ -42,4 +42,4 @@ module.exports = function landcivilian(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD25
 
 		sIdm2['01'] = [icn['ST.M2.LEADER OR LEADERSHIP']];
 	}
-}
+};

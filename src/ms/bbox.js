@@ -17,7 +17,7 @@ module.exports = function(box){
       return {
         height: this.y2-this.y1,
         width: this.x2-this.x1
-      }
+      };
     },
     merge: function(box) {
       this.x1 = ( box.x1 <= this.x1 ) ? box.x1 : this.x1;

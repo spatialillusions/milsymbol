@@ -85,4 +85,4 @@ module.exports = function subsurface(sId,bbox,icn,_STD2525){
 	sId['S-U-NBW---'] = [icn['SU.IC.WRECK']];
 	sId['S-U-NM----'] = [icn['SU.IC.MARINE LIFE']];
 	sId['S-U-NA----'] = [icn['SU.IC.SEA ANOMALY']];
-}
+};

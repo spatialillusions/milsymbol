@@ -120,15 +120,16 @@ ms.getHqStafLength = function() {
 ms.getSymbolParts = function() {
   return this._symbolParts.slice(0);
 };
-ms.getVersion = function() {return this.version};
+ms.getVersion = function() {return this.version;};
 ms.outline = function(geom, outline, stroke, color){
+  var clone;
   if(Array.isArray(geom)){
-    var clone = [];
+    clone = [];
     for(var i in geom){
       clone.push(ms.outline(geom[i],outline,stroke,color));
     }
   }else{
-    var clone = {};
+    clone = {};
     for (var key in geom){
       if(['fill','fillopacity'].indexOf(key) == -1){
         clone[key] = geom[key];
@@ -178,63 +179,63 @@ ms.setStandard = require('./ms/setstandard.js');
 
 // For backward compability
 ms.addMarkerParts = function(part) {
-  console.log('addMarkerParts() is deprecated and should not be used, use addSymbolPart() instead.');
+  console.warn('addMarkerParts() is deprecated and should not be used, use addSymbolPart() instead.');
   ms.addSymbolPart(part);
 };
 ms.bboxMax = function(box1, box2){
-  console.log('bboxMax() is deprecated and should not be used, use BBox.merge() instead.');
+  console.warn('bboxMax() is deprecated and should not be used, use BBox.merge() instead.');
   return box1.merge(box2);
 };
 ms.buildingBlock = function(pre, post, bbox) {
-  console.log('buildingBlock() is deprecated and should not be used.');
+  console.warn('buildingBlock() is deprecated and should not be used.');
   if ( pre.length == 1 && Array.isArray(pre[0]) ) pre = pre[0];
   if ( post.length == 1 && Array.isArray(post[0]) ) post = post[0];
   return {pre: pre, post: post, bbox: bbox};
 };
 ms.addLetterLabelOverrides = function(parts){
-  console.log('addLetterLabelOverrides() is deprecated and should not be used, use addLabelOverrides() instead.');
+  console.warn('addLetterLabelOverrides() is deprecated and should not be used, use addLabelOverrides() instead.');
   if (typeof parts === 'function') {
     if (!this._labelOverrides.hasOwnProperty('letter')) this._labelOverrides['letter'] = [];
       this._labelOverrides['letter'] = this._labelOverrides['letter'].concat(parts);
     }
 };
 ms.addLetterSIDCicons = function(parts){
-  console.log('addLetterSIDCicons() is deprecated and should not be used, use addSIDCicons() instead.');
+  console.warn('addLetterSIDCicons() is deprecated and should not be used, use addSIDCicons() instead.');
   if (typeof parts === 'function') {
     this._letterSIDCicons = this._letterSIDCicons.concat(parts);
   }
 };
 ms.addNumberLabelOverrides = function(parts){
-  console.log('addNumberLabelOverrides() is deprecated and should not be used, use addLabelOverrides() instead.');
+  console.warn('addNumberLabelOverrides() is deprecated and should not be used, use addLabelOverrides() instead.');
   if (typeof parts === 'function') {
     if (!this._labelOverrides.hasOwnProperty('number')) this._labelOverrides['number'] = [];
       this._labelOverrides['number'] = this._labelOverrides['number'].concat(parts);
     }
 };
 ms.addNumberSIDCicons = function(parts){
-  console.log('addNumberSIDCicons() is deprecated and should not be used, use addSIDCicons() instead.');
+  console.warn('addNumberSIDCicons() is deprecated and should not be used, use addSIDCicons() instead.');
   if (typeof parts === 'function') {
     this._numberSIDCicons = this._numberSIDCicons.concat(parts);
   }
 };
 
 ms.bbox = function(box){
-  console.log('bbox() is deprecated and should not be used, use BBox() instead.');
+  console.warn('bbox() is deprecated and should not be used, use BBox() instead.');
   return ms.BBox(box);
 } 
 
 ms.colorMode = function(civilian, friend, hostile, neutral, unknown) {
-  console.log('colorMode() is deprecated and should not be used, use ColorMode() instead.');
+  console.warn('colorMode() is deprecated and should not be used, use ColorMode() instead.');
   return ms.ColorMode(civilian, friend, hostile, neutral, unknown);
 };
 
 ms.getMarkerParts = function() {
-  console.log('getMarkerParts() is deprecated and should not be used, use getSymbolParts() instead.');
+  console.warn('getMarkerParts() is deprecated and should not be used, use getSymbolParts() instead.');
   return ms.getSymbolParts();
 };
 
 ms.setMarkerParts = function(parts) {
-  console.log('setMarkerParts() is deprecated and should not be used, use setSymbolParts() instead.');
+  console.warn('setMarkerParts() is deprecated and should not be used, use setSymbolParts() instead.');
   ms.setSymbolParts(parts);
   return ms;
 };

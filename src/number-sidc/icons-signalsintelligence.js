@@ -75,4 +75,4 @@ module.exports = function signalsintelligence(sId,sIdm1,sIdm2,bbox,symbolSet,icn
 		sIdm1['64'] = [icn['SI.M1.EXPERIMENTAL']];
 
 	}
-}
+};

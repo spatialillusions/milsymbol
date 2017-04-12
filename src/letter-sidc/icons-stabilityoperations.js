@@ -62,4 +62,4 @@ module.exports = function stabilityoperations(sId,bbox,icn,_STD2525){
 	sId['O-G-F-----'] = [icn['ST.IC.GROUP'],icn['ST.M1.GANG']];
 	sId['O-R-------'] = [icn['ST.IC.INDIVIDUAL'],icn['ST.M1.RAPE']];
 	sId['O-R-A-----'] = [icn['ST.IC.INDIVIDUAL'],icn['ST.M1.RAPE'],icn['ST.IC.ATTEMPTED CRIMINAL ACTIVITY']];
-}
+};

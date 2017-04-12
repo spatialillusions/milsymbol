@@ -109,4 +109,4 @@ module.exports = function air(sId,sIdm1,sIdm2,bbox,symbolSet,icn,_STD2525){
 		sIdm2['10'] = [icn['AIR.M2.LONG RANGE']];
 		sIdm2['11'] = [icn['AIR.M2.DOWNLINKED']];
 	}
-}
+};

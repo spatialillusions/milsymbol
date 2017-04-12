@@ -13,7 +13,7 @@ module.exports =  function tacticalPoints(sidc){
   sidc['G-C-MAAU--'] = {};//2.X.2.1.2.1.3 POP UP POINT (PUP)
   sidc['G-C-MAAD--'] = {};//2.X.2.1.2.1.4 DOWNED AIRCREW PICK UP POINT
   sidc['G-C-MDN---'] = {};//2.X.2.1.3.6 DUMMY MINEFIELD
-  sidc['G-C-MMPT--'] = {	uniqueDesignation:{stroke:false,textanchor:"start",x:115,y:85,fontsize:45,fontweight:'bold'}};;//2.X.2.1.4.1.1 TARGET REFERENCE POINT (TRP)
+  sidc['G-C-MMPT--'] = {	uniqueDesignation:{stroke:false,textanchor:"start",x:115,y:85,fontsize:45,fontweight:'bold'}};//2.X.2.1.4.1.1 TARGET REFERENCE POINT (TRP)
   sidc['G-C-MMPO--'] = {};//2.X.2.1.4.1.4 OBSERVATION POST/OUTPOST
   sidc['G-C-MMPOC-'] = {};//2.X.2.1.4.1.4.1 COMBAT OUTPOST
   sidc['G-C-MMPOR-'] = {};//2.X.2.1.4.1.4.2 OBSERVATION POST OCCUPIED BY DISMOUNTED SCOUTS OR RECONNAISSANCE
@@ -433,4 +433,4 @@ module.exports =  function tacticalPoints(sidc){
   sidc['G-O-IK----'] = {};//2.X.3.4.5 KNOWN INSURGENT VEHICLE
   sidc['G-O-ID----'] = {};//2.X.3.4.6 DRUG VEHICLE
   sidc['G-O-IF----'] = {};//2.X.3.4.7 INTERNAL SECURITY FORCE
-}
+};

@@ -58,4 +58,4 @@ module.exports = function (iconParts, properties, colors, STD2525, monoColor, al
     defaultProperties.call(this,icn[key]);
     iconParts[key] = icn[key];
   }
-}
+};
