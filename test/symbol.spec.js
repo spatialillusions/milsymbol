@@ -41,7 +41,7 @@ describe('ms.Symbol', () => {
       }
     };
     Object.keys(publicApiMethods).forEach(methodName => {
-      const { returns, works } = publicApiMethods[methodName];
+      const { returns } = publicApiMethods[methodName];
       describe(`API method ${methodName}`, () => {
         it('should be a function', () => {
           assert.isFunction(symbol[methodName]);

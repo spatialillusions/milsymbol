@@ -22,8 +22,8 @@ describe('ms', () => {
       returns: Object
     },
     getColorMode: {
-      returns: Object,
-      parameters: ['Light']
+      parameters: ['Light'],
+      returns: Object
     },
     getDashArrays: {
       returns: Object
@@ -38,19 +38,19 @@ describe('ms', () => {
       returns: String
     },
     outline: {
-      returns: Object,
-      parameters: [{}]
+      parameters: [{}],
+      returns: Object
     },
     setColorMode: {
-      returns: Object,
-      parameters: ['TestMode', {}]
+      parameters: ['TestMode', {}],
+      returns: Object
     },
     setDashArrays: {
       returns: Object
     },
     setHqStafLength: {
-      returns: Number,
-      parameters: [100]
+      parameters: [100],
+      returns: Number
     },
     setStandard: {
       returns: Boolean
@@ -60,7 +60,7 @@ describe('ms', () => {
     }
   };
   Object.keys(publicApiMethods).forEach(methodName => {
-    const { returns, parameters = [], fails } = publicApiMethods[methodName];
+    const { returns, parameters = [] } = publicApiMethods[methodName];
     describe(`API method ${methodName}`, () => {
       it('should be a function', () => {
         assert.isFunction(ms[methodName]);
