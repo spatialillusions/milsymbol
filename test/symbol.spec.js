@@ -8,10 +8,9 @@ describe('ms.Symbol', () => {
     it('should return a symbol object', () => {
       assert.isObject(symbol);
     });
-    // Most of these don't work yet because of how window/document APIs are used
     const publicApiMethods = {
       asCanvas: {
-        returns: String
+        returns: Object
       },
       asDOM: {
         returns: Object
@@ -30,31 +29,27 @@ describe('ms.Symbol', () => {
       },
       getProperties: {
         returns: Object,
-        works: true
       },
       getSize: {
         returns: Object
       },
       setOptions: {
-        returns: Object
+        returns: Object,
       },
       toDataURL: {
         returns: String
       }
     };
     Object.keys(publicApiMethods).forEach(methodName => {
-      const apiMethod = symbol[methodName];
       const { returns, works } = publicApiMethods[methodName];
       describe(`API method ${methodName}`, () => {
         it('should be a function', () => {
-          assert.isFunction(apiMethod);
+          assert.isFunction(symbol[methodName]);
         });
-        if (works) {
-          it(`should return a ${returns.name}`, () => {
-            const result = apiMethod();
-            assert[`is${returns.name}`](result);
-          });
-        }
+        it(`should return a ${returns.name}`, () => {
+          const result = symbol[methodName]();
+          assert[`is${returns.name}`](result);
+        });
       });
     });
   });
