@@ -2,83 +2,73 @@ const { assert, expect } = require('chai');
 const ms = require('../build/milsymbol');
 
 describe('ms', () => {
-  // Most of these don't work yet because of how window/document APIs are used
   const publicApiMethods = {
-    Symbol: {
+    BBox: {
       returns: Object
     },
-    BBox: {
-        returns: Object,
-        works: true
-    },
     ColorMode: {
-        returns: Object,
-        works: true
+      returns: Object
     },
     addIconParts: {
-        returns: Object,
-        works: true
+      returns: Object
     },
     addLabelOverrides: {
-        returns: Object,
-        works: true
+      returns: Object
     },
     addSIDCicons: {
-        returns: Object,
-        works: true
+      returns: Object
     },
     addSymbolPart: {
-        returns: Object,
-        works: true
+      returns: Object
     },
     getColorMode: {
-        returns: Object
+      returns: Object,
+      parameters: ['Light']
     },
     getDashArrays: {
-        returns: Object
+      returns: Object
     },
     getHqStafLength: {
-        returns: Number
+      returns: Number
     },
     getSymbolParts: {
-        returns: Array
+      returns: Array
     },
     getVersion: {
-        returns: String
+      returns: String
     },
     outline: {
-        returns: Object
+      returns: Object,
+      parameters: [{}]
     },
     setColorMode: {
-        returns: Object
+      returns: Object,
+      parameters: ['TestMode', {}]
     },
     setDashArrays: {
-        returns: Object
+      returns: Object
     },
     setHqStafLength: {
-        returns: Number
+      returns: Number,
+      parameters: [100]
     },
     setStandard: {
-        returns: Boolean,
-        works: true
+      returns: Boolean
     },
     setSymbolParts: {
-        returns: Object
+      returns: Object
     }
   };
   Object.keys(publicApiMethods).forEach(methodName => {
-    const apiMethod = ms[methodName];
-    const { returns, works } = publicApiMethods[methodName];
+    const { returns, parameters = [], fails } = publicApiMethods[methodName];
     describe(`API method ${methodName}`, () => {
       it('should be a function', () => {
-        assert.isFunction(apiMethod);
+        assert.isFunction(ms[methodName]);
       });
-      if (works) {
-          it(`should return a ${returns.name}`, () => {
-            const result = apiMethod();
-            assert[`is${returns.name}`](result);
-          });
-        }
+      it(`should return a ${returns.name}`, () => {
+        const result = ms[methodName](...parameters);
+        assert[`is${returns.name}`](result);
+      });
     });
   });
 });
