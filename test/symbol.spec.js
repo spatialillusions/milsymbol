@@ -1,5 +1,5 @@
 const { assert, expect } = require('chai');
-const ms = require('../build/milsymbol');
+const ms = require('../src/index');
 
 describe('ms.Symbol', () => {
   // TODO: pass options
