@@ -8,8 +8,8 @@
     "example": "examples"
   },
   "scripts": {
-    "build": "webpack -p --config ./build/webpack.config.js ",
-    "build-dev": "webpack --config ./build/webpack.config.js ",
+    "build": "webpack -p",
+    "build-dev": "webpack",
     "test": "mocha test/.setup.js --recursive test"
   },
   "repository": {
