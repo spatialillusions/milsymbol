@@ -8,7 +8,7 @@ module.exports = {
   rules: {
     "linebreak-style": ["error", "unix"],
     "no-console": ["error", { allow: ["info","warn", "error"] }],
-    quotes: ["error", "double"],
+    //quotes: ["error", "double"],
     semi: ["error", "always"]
   }
 };
