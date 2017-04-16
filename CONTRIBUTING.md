@@ -5,6 +5,14 @@ I welcome contributions from anyone and everyone. If you want to make any major 
 Before you make an contribution, please read GitHub Terms of Service: (Everything works as you think it works, but just make sure that you have the right to contribute the code you want to hand over.)
 https://help.github.com/articles/github-terms-of-service/#6-contributions-under-repository-license
 
+## Coding standards
+
+Code that you write should be validated with the included .eslintrc file, and formated with the standard settings in prettier. Hopefully I will be able to automate this in the future.
+
+https://github.com/eslint/eslint
+
+https://github.com/prettier/prettier
+
 ## Examples
 
 If you would like to contribute with examples of milsymbol usage, please create them in the same structure as bl.ocks use, and include a preview.png with the size 960*500px. https://bl.ocks.org/-/about 
