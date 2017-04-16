@@ -48,7 +48,7 @@ module.exports = function sof(sId, bbox, icn, _STD2525) {
   ];
   sId["S-F-AH----"] = [
     icn["GR.IC.AVIATION ROTARY WING"],
-    _STD2525 ? '<line x1="100" y1="100" x2="100" y2="140" />' : "",
+    _STD2525 ? "<line x1='100' y1='100' x2='100' y2='140' />" : "",
     icn["AIR.M1.SPECIAL OPERATIONS FORCES"]
   ];
   sId["S-F-AHH---"] = [
