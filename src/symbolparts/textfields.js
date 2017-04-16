@@ -14,6 +14,53 @@ module.exports = function textfields() {
 
   var gbbox = new ms.BBox();
   var spaceTextIcon = 20; //The distance between the Icon and the labels
+  
+  //Text fields overrides
+  function labelOverride(label) {
+    var texts = [];
+    var labelbox;
+    for (var i in label) {
+      if (this.hasOwnProperty(i) && this[i] != "") {
+        if (!label.hasOwnProperty(i)) continue;
+        for (var j = 0; j < (label[i].length || 1); j++) {
+          var lbl;
+          if (Array.isArray(label[i])) {
+            lbl = label[i][j];
+          } else {
+            lbl = label[i];
+          }
+          labelbox = { y2: lbl.y, y1: lbl.y - lbl.fontsize };
+          if (lbl.textanchor == "start") {
+            labelbox.x1 = lbl.x;
+            labelbox.x2 = lbl.x + strWidth(this[i]) * (lbl.fontsize / fontSize);
+          }
+          if (lbl.textanchor == "middle") {
+            var w = strWidth(this[i]) * (lbl.fontsize / fontSize);
+            labelbox.x1 = lbl.x - w / 2;
+            labelbox.x2 = lbl.x + w / 2;
+          }
+          //if(lbl.textanchor == 'middle'){}
+          if (lbl.textanchor == "end") {
+            labelbox.x1 = lbl.x - strWidth(this[i]) * (lbl.fontsize / fontSize);
+            labelbox.x2 = lbl.x;
+          }
+          gbbox.merge(labelbox);
+          var text = { type: "text", fontfamily: fontFamily, fill: fontColor };
+          if (lbl.hasOwnProperty("stroke")) text.stroke = lbl.stroke;
+          if (lbl.hasOwnProperty("textanchor"))
+            text.textanchor = lbl.textanchor;
+          if (lbl.hasOwnProperty("fontsize")) text.fontsize = lbl.fontsize;
+          if (lbl.hasOwnProperty("fontweight"))
+            text.fontweight = lbl.fontweight;
+          text.x = lbl.x;
+          text.y = lbl.y;
+          text.text = this[i];
+          texts.push(text);
+        }
+      }
+    }
+    return texts;
+  }
 
   //Function to calculate the width of a string
   function strWidth(str) {
@@ -22,7 +69,7 @@ module.exports = function textfields() {
     var strWidths = {
       " ": 9,
       "!": 10,
-      "\"": 15,
+      '"': 15,
       "#": 17,
       $: 17,
       "%": 27,
@@ -125,55 +172,40 @@ module.exports = function textfields() {
     return w;
   }
 
-  //Text fields overrides
-  function labelOverride(label) {
-    var texts = [];
-    var labelbox;
-    for (var i in label) {
-      if (this.hasOwnProperty(i) && this[i] != "") {
-        if (!label.hasOwnProperty(i)) continue;
-        for (var j = 0; j < (label[i].length || 1); j++) {
-          var lbl;
-          if (Array.isArray(label[i])) {
-            lbl = label[i][j];
-          } else {
-            lbl = label[i];
-          }
-          labelbox = { y2: lbl.y, y1: lbl.y - lbl.fontsize };
-          if (lbl.textanchor == "start") {
-            labelbox.x1 = lbl.x;
-            labelbox.x2 = lbl.x + strWidth(this[i]) * (lbl.fontsize / fontSize);
-          }
-          if (lbl.textanchor == "middle") {
-            var w = strWidth(this[i]) * (lbl.fontsize / fontSize);
-            labelbox.x1 = lbl.x - w / 2;
-            labelbox.x2 = lbl.x + w / 2;
-          }
-          //if(lbl.textanchor == 'middle'){}
-          if (lbl.textanchor == "end") {
-            labelbox.x1 = lbl.x - strWidth(this[i]) * (lbl.fontsize / fontSize);
-            labelbox.x2 = lbl.x;
-          }
-          gbbox.merge(labelbox);
-          var text = { type: "text", fontfamily: fontFamily, fill: fontColor };
-          if (lbl.hasOwnProperty("stroke")) text.stroke = lbl.stroke;
-          if (lbl.hasOwnProperty("textanchor"))
-            text.textanchor = lbl.textanchor;
-          if (lbl.hasOwnProperty("fontsize")) text.fontsize = lbl.fontsize;
-          if (lbl.hasOwnProperty("fontweight"))
-            text.fontweight = lbl.fontweight;
-          text.x = lbl.x;
-          text.y = lbl.y;
-          text.text = this[i];
-          texts.push(text);
-        }
-      }
+  // Print text in right position
+  function text(str) {
+    var size = 42;
+    var y = 115;
+    if (str.length == 1) {
+      size = 45;
+      y = 115;
     }
-    return texts;
+    if (str.length == 3) {
+      size = 35;
+      y = 110;
+    }
+    if (str.length >= 4) {
+      size = 32;
+      y = 110;
+    }
+    var t = {
+      type: "text",
+      text: str,
+      x: 100,
+      y: y,
+      textanchor: "middle",
+      fontsize: size,
+      fontfamily: fontFamily,
+      fill: fontColor,
+      stroke: false,
+      fontweight: "bold"
+    };
+    return t;
   }
+
   if (this.properties.numberSIDC) {
     //Number based SIDCs.
-    var symbolSet = String(this.SIDC).substr(4, 2);
+    //var symbolSet = String(this.SIDC).substr(4, 2);
     //TODO fix add code for Number based labels
   } else {
     //Letter based SIDCs.
@@ -236,35 +268,6 @@ module.exports = function textfields() {
     this.headquartersElement;
   if (this.infoFields && textFields) {
     if (this.specialHeadquarters) {
-      function text(str) {
-        var size = 42;
-        var y = 115;
-        if (str.length == 1) {
-          size = 45;
-          y = 115;
-        }
-        if (str.length == 3) {
-          size = 35;
-          y = 110;
-        }
-        if (str.length >= 4) {
-          size = 32;
-          y = 110;
-        }
-        var t = {
-          type: "text",
-          text: str,
-          x: 100,
-          y: y,
-          textanchor: "middle",
-          fontsize: size,
-          fontfamily: fontFamily,
-          fill: fontColor,
-          stroke: false,
-          fontweight: "bold"
-        };
-        return t;
-      }
       drawArray2.push(text(this.specialHeadquarters));
     }
     if (this.quantity) {

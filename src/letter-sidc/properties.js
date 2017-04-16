@@ -16,11 +16,12 @@ module.exports = function(properties, mapping) {
   var symbolmodifier12 = this.SIDC.charAt(11) != ""
     ? this.SIDC.charAt(11)
     : "-";
+  /*
   var countrycode = this.SIDC.substr(12, 2) != ""
     ? this.SIDC.substr(12, 2)
     : "--";
   var orderofbattle = this.SIDC.charAt(14) != "" ? this.SIDC.charAt(14) : "-";
-
+  */
   if (["H", "S", "J", "K"].indexOf(affiliation) > -1)
     properties.affiliation = mapping.affiliation[0];
   if (["F", "A", "D", "M"].indexOf(affiliation) > -1)

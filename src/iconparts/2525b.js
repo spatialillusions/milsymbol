@@ -28,7 +28,7 @@ module.exports = function(
   //If hostile and not monoColor, make it red, otherwise use the iconColor.
   var iconColor = colors.iconColor[affiliation];
 
-  var numberSIDC = properties.numberSIDC;
+  //var numberSIDC = properties.numberSIDC;
   var icn = {};
 
   icn["2525B.STN"] = {

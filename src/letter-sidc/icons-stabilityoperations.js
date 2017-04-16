@@ -1,4 +1,4 @@
-var ms = require("../ms.js");
+//var ms = require("../ms.js");
 
 module.exports = function stabilityoperations(sId, bbox, icn, _STD2525) {
   //Adds support for 2525C Stability Operations

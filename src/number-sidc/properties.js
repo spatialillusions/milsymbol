@@ -1,7 +1,7 @@
 var ms = require("../ms.js");
 
 module.exports = function(properties, mapping) {
-  var version = this.SIDC.substr(0, 2);
+  //var version = this.SIDC.substr(0, 2);
   var standardIdentity1 = this.SIDC.substr(2, 1);
   var standardIdentity2 = this.SIDC.substr(3, 1);
   var symbolSet = this.SIDC.substr(4, 2);

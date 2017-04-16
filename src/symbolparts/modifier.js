@@ -571,7 +571,7 @@ module.exports = function modifier() {
     if (!drawArray1[i].hasOwnProperty("strokewidth"))
       drawArray1[i].strokewidth = this.strokeWidth;
   }
-  for (var i = 0; i < drawArray2.length; i++) {
+  for (i = 0; i < drawArray2.length; i++) {
     if (!drawArray2[i].hasOwnProperty("fill")) drawArray2[i].fill = false;
     if (!drawArray2[i].hasOwnProperty("stroke"))
       drawArray2[i].stroke = this.colors.iconColor[this.properties.affiliation];

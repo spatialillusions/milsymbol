@@ -29,6 +29,7 @@ module.exports = function basegeometry() {
   geom.strokewidth = this.size >= 10 ? this.strokeWidth : 10;
   //outline
   if (this.frame && this.outlineWidth > 0) {
+    var outline;
     if (geom.type == "path" && this.fill && !this.monoColor) {
       outline = { type: this.properties.baseGeometry.g.type };
       outline.d = this.properties.baseGeometry.g.d + " Z"; //Making sure the path is closed
