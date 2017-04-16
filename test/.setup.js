@@ -1,5 +1,8 @@
-global.window = {};
+global.window = {
+  btoa: Function.prototype
+};
 global.document = {
+  adoptNode: () => ({}),
   createElement: () => ({
     getContext: () => ({
       arc: Function.prototype,
@@ -18,5 +21,6 @@ global.document = {
   })
 };
 
-global.parseXML = () => ({});
-global.btoa = Function.prototype;
+global.DOMParser = function () {
+  this.parseFromString = () => ({})
+};
