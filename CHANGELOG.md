@@ -1,5 +1,7 @@
 # Change Log
-## Master
+## 1.1.0 16 APR 2017
+
+I would like to thank @okwolf that has contributed with unit tests and some code reorganization. 
 
 ### Added
 
@@ -12,6 +14,8 @@
 - The source code for the unit generator is now provided in the dev folder.
 
 - Added 2525B symbols that are missing in 2525C, so now we have full support for 2525B as well.
+
+- Initial unit tests added to the repository.
 
 ### Changed
 

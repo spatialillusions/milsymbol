@@ -294,7 +294,7 @@ All the following code can be used to inject functionality into milsymbol extern
 
 Milsymbol is built using [webpack](https://webpack.js.org), and if you installed milsymbol npm everything you need to build milsymbol should have been installed as well since they are listed as devDependencies in package.json, if you don't have npm installed, you will have to install it to build milsymbol.
 
-The structure of the code is that the webpack config (*webpack.config.js*) and entry point (*milsymbol.js*) is located under `/build` and all other source code is under `/src`. This way it is easy to edit the entry point, that decides what functionality that is included in milsymbol, without touching the other source code.
+The structure of the code is that the webpack config (*webpack.config.js*) is located in the root directory, and the entry point (*index.js*) and all other source code is under `/src`.
 
 Once you have changed the parts of the code that you want to change, you simply run:
 
@@ -303,6 +303,18 @@ npm run build
 ```
 
 Webpack will then build milsymbol and minify the output into `/dist`.
+
+It is also possible to build an un-minified version of milsymbol by running:
+
+```
+npm run build-dev
+```
+
+And finally tests are located in the `/test` and you can run the tests by running:
+
+```
+npm run test
+```
 
 ## Draw instruction
 
