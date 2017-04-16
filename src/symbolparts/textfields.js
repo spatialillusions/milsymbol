@@ -22,7 +22,7 @@ module.exports = function textfields() {
     var strWidths = {
       " ": 9,
       "!": 10,
-      '"': 15,
+      "\"": 15,
       "#": 17,
       $: 17,
       "%": 27,
@@ -128,6 +128,7 @@ module.exports = function textfields() {
   //Text fields overrides
   function labelOverride(label) {
     var texts = [];
+    var labelbox;
     for (var i in label) {
       if (this.hasOwnProperty(i) && this[i] != "") {
         if (!label.hasOwnProperty(i)) continue;
