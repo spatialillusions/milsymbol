@@ -10,7 +10,7 @@ module.exports = function icon() {
   //This is the building blocks we use to create icons
   var iconParts = [];
   //Main icon
-  var icon = [];
+  //var icon = [];
   //Modifier 1 used in number based SIDCs
   var m1 = [];
   //Modifier 2 used in number based SIDCs
