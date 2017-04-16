@@ -9,6 +9,7 @@ module.exports = {
     "linebreak-style": ["error", "unix"],
     "no-console": ["error", { allow: ["info","warn", "error"] }],
     //quotes: ["error", "double"],
+    "no-unused-vars": ["error", { "vars": "all", "args": "none"}],
     semi: ["error", "always"]
   }
 };
