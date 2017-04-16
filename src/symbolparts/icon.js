@@ -1,61 +1,100 @@
 //Icon ##################################################################################
-var ms = require('../ms.js');
+var ms = require("../ms.js");
 
-module.exports = function icon(){
-	var drawArray1 = [];
-	var drawArray2 = [];
-	var gbbox = new ms.BBox({x1:50,x2:150,y1:50,y2:150});
-	var icons, iconColor;
-	
-	//This is the building blocks we use to create icons
-	var iconParts = [];
-	//Main icon
-	var icon = [];
-	//Modifier 1 used in number based SIDCs
-	var m1 = [];
-	//Modifier 2 used in number based SIDCs
-	var m2 = [];
-	//Boundingboxes other than normal
-	var specialbbox = [];
+module.exports = function icon() {
+  var drawArray1 = [];
+  var drawArray2 = [];
+  var gbbox = new ms.BBox({ x1: 50, x2: 150, y1: 50, y2: 150 });
+  var icons, iconColor;
 
-	if(this.icon){
-		var fillColor = this.colors.fillColor[this.properties.affiliation];
-		//So we don't happend to use civilian colors
-		var neutralColor = this.colors.fillColor.Neutral;
-		iconColor = this.colors.iconColor[this.properties.affiliation];
-		var iconFillColor = this.colors.iconFillColor[this.properties.affiliation];
-		var none = this.colors.none[this.properties.affiliation];
-		var black = this.colors.black[this.properties.affiliation];
-		var white = this.colors.white[this.properties.affiliation];
-		//Store previous used icons in memory.
-		var icnet = (ms._STD2525?"2525":"APP6")+","+this.properties.dimension+this.properties.affiliation+this.properties.notpresent+',frame:'+this.frame+',alternateMedal:'+this.alternateMedal+',colors:{fillcolor:'+fillColor+',neutralColor'+neutralColor+',iconColor:'+iconColor+',iconFillColor:'+iconFillColor+',none:'+none+',black:'+black+',white:'+white+"}";
-		if(ms._iconCache.hasOwnProperty(icnet)){
-			iconParts = ms._iconCache[icnet].iconParts;
-		}else{
-			ms._iconCache[icnet] = {};
-			iconParts = ms._iconCache[icnet].iconParts = ms._geticnParts(this.properties, this.colors, ms._STD2525, this.monoColor, this.alternateMedal);
-		}
+  //This is the building blocks we use to create icons
+  var iconParts = [];
+  //Main icon
+  var icon = [];
+  //Modifier 1 used in number based SIDCs
+  var m1 = [];
+  //Modifier 2 used in number based SIDCs
+  var m2 = [];
+  //Boundingboxes other than normal
+  var specialbbox = [];
 
-		//Letter based SIDCs.
-		if(!this.properties.numberSIDC){
-			//Sea mine exercise has stuff outsIde the boundingbox...
-			//TODO see if we can fix this in another way.
-			if(["WMGX--","WMMX--","WMFX--","WMX---","WMSX--"].indexOf(this.properties.functionid)!=-1){
-				gbbox.y1 = 10;
-				if(this.properties.affiliation != "Unknown"){gbbox.x2 = this.properties.baseGeometry.bbox.x2+20;}
-			}
+  if (this.icon) {
+    var fillColor = this.colors.fillColor[this.properties.affiliation];
+    //So we don't happend to use civilian colors
+    var neutralColor = this.colors.fillColor.Neutral;
+    iconColor = this.colors.iconColor[this.properties.affiliation];
+    var iconFillColor = this.colors.iconFillColor[this.properties.affiliation];
+    var none = this.colors.none[this.properties.affiliation];
+    var black = this.colors.black[this.properties.affiliation];
+    var white = this.colors.white[this.properties.affiliation];
+    //Store previous used icons in memory.
+    var icnet =
+      (ms._STD2525 ? "2525" : "APP6") +
+      "," +
+      this.properties.dimension +
+      this.properties.affiliation +
+      this.properties.notpresent +
+      ",frame:" +
+      this.frame +
+      ",alternateMedal:" +
+      this.alternateMedal +
+      ",colors:{fillcolor:" +
+      fillColor +
+      ",neutralColor" +
+      neutralColor +
+      ",iconColor:" +
+      iconColor +
+      ",iconFillColor:" +
+      iconFillColor +
+      ",none:" +
+      none +
+      ",black:" +
+      black +
+      ",white:" +
+      white +
+      "}";
+    if (ms._iconCache.hasOwnProperty(icnet)) {
+      iconParts = ms._iconCache[icnet].iconParts;
+    } else {
+      ms._iconCache[icnet] = {};
+      iconParts = ms._iconCache[icnet].iconParts = ms._geticnParts(
+        this.properties,
+        this.colors,
+        ms._STD2525,
+        this.monoColor,
+        this.alternateMedal
+      );
+    }
 
-			//Try to fetch the icons form the cache
-			if( ms._iconCache[icnet].hasOwnProperty('letterSIDC')){
-				icons = ms._iconCache[icnet].letterSIDC.icons;
-				specialbbox  = ms._iconCache[icnet].letterSIDC.bbox;
-			}else{
-				if (typeof ms._getLetterSIDCicn === 'function') {
-					ms._iconCache[icnet].letterSIDC = ms._getLetterSIDCicn(iconParts,ms._STD2525);
-					icons = ms._iconCache[icnet].letterSIDC.icons;
-					specialbbox  = ms._iconCache[icnet].letterSIDC.bbox;
-					//THIS IS JUST FOR Printing bottom coords of all equipment ===========================
-		/*			This code dosen't work at the moment..... TODO
+    //Letter based SIDCs.
+    if (!this.properties.numberSIDC) {
+      //Sea mine exercise has stuff outsIde the boundingbox...
+      //TODO see if we can fix this in another way.
+      if (
+        ["WMGX--", "WMMX--", "WMFX--", "WMX---", "WMSX--"].indexOf(
+          this.properties.functionid
+        ) != -1
+      ) {
+        gbbox.y1 = 10;
+        if (this.properties.affiliation != "Unknown") {
+          gbbox.x2 = this.properties.baseGeometry.bbox.x2 + 20;
+        }
+      }
+
+      //Try to fetch the icons form the cache
+      if (ms._iconCache[icnet].hasOwnProperty("letterSIDC")) {
+        icons = ms._iconCache[icnet].letterSIDC.icons;
+        specialbbox = ms._iconCache[icnet].letterSIDC.bbox;
+      } else {
+        if (typeof ms._getLetterSIDCicn === "function") {
+          ms._iconCache[icnet].letterSIDC = ms._getLetterSIDCicn(
+            iconParts,
+            ms._STD2525
+          );
+          icons = ms._iconCache[icnet].letterSIDC.icons;
+          specialbbox = ms._iconCache[icnet].letterSIDC.bbox;
+          //THIS IS JUST FOR Printing bottom coords of all equipment ===========================
+          /*			This code dosen't work at the moment..... TODO
 					if(element){
 					listBBoxes = '';
 					for (var property in sId) {
@@ -89,43 +128,57 @@ module.exports = function icon(){
 					document.getElementById(element).innerHTML=listBBoxes;
 				}
 		*/
-				}else{
-					console.warn("ms._getLetterSIDCicn() is not present, you will need to load functionality for letter based SIDCs");
-				}
-			}
-		}
+        } else {
+          console.warn(
+            "ms._getLetterSIDCicn() is not present, you will need to load functionality for letter based SIDCs"
+          );
+        }
+      }
+    }
 
-		//Number based SIDCs.
-		if(this.properties.numberSIDC){ //Number based SIDCs.
-			var symbolSet = String(this.SIDC).substr(4,2);
-			if( ms._iconCache[icnet].hasOwnProperty('numberSIDC')){
-				if( ms._iconCache[icnet].numberSIDC.symbolSet.hasOwnProperty(symbolSet)){
-					icons = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
-					m1 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
-					m2 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
-					specialbbox = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].bbox;
-				}else{
-					if (typeof ms._getNumberSIDCicn === 'function') {
-						ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet] = ms._getNumberSIDCicn(symbolSet,iconParts,ms._STD2525);
-						icons = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
-						m1 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
-						m2 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
-						specialbbox = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].bbox;
-					}else{
-						console.warn("ms._getNumberSIDCicn() is not present, you will need to load functionality for number based SIDCs");
-					}
-				}
-			}else{
-				ms._iconCache[icnet].numberSIDC = {};
-				ms._iconCache[icnet].numberSIDC.symbolSet = {};
-				if (typeof ms._getNumberSIDCicn === 'function') {
-					ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet] = ms._getNumberSIDCicn(symbolSet,iconParts,ms._STD2525);
-					icons = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
-					m1 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
-					m2 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
-					specialbbox = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].bbox;
-					//for printing equipment bottom  set ms._element to the id of an html element and call milsymbol with an equipment sysbol
-					/*
+    //Number based SIDCs.
+    if (this.properties.numberSIDC) {
+      //Number based SIDCs.
+      var symbolSet = String(this.SIDC).substr(4, 2);
+      if (ms._iconCache[icnet].hasOwnProperty("numberSIDC")) {
+        if (
+          ms._iconCache[icnet].numberSIDC.symbolSet.hasOwnProperty(symbolSet)
+        ) {
+          icons = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
+          m1 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
+          m2 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
+          specialbbox =
+            ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].bbox;
+        } else {
+          if (typeof ms._getNumberSIDCicn === "function") {
+            ms._iconCache[icnet].numberSIDC.symbolSet[
+              symbolSet
+            ] = ms._getNumberSIDCicn(symbolSet, iconParts, ms._STD2525);
+            icons = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
+            m1 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
+            m2 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
+            specialbbox =
+              ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].bbox;
+          } else {
+            console.warn(
+              "ms._getNumberSIDCicn() is not present, you will need to load functionality for number based SIDCs"
+            );
+          }
+        }
+      } else {
+        ms._iconCache[icnet].numberSIDC = {};
+        ms._iconCache[icnet].numberSIDC.symbolSet = {};
+        if (typeof ms._getNumberSIDCicn === "function") {
+          ms._iconCache[icnet].numberSIDC.symbolSet[
+            symbolSet
+          ] = ms._getNumberSIDCicn(symbolSet, iconParts, ms._STD2525);
+          icons = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
+          m1 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
+          m2 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
+          specialbbox =
+            ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].bbox;
+          //for printing equipment bottom  set ms._element to the id of an html element and call milsymbol with an equipment sysbol
+          /*
 					if(ms._element){
 					listBBoxes = '';
 					sId = ms._iconCache[icnet].numberSIDC.symbolSet[15].icn;
@@ -162,65 +215,108 @@ module.exports = function icon(){
 						}
 					document.getElementById(ms._element).innerHTML=listBBoxes;
 					}*/
-				}else{
-					console.warn("ms._getNumberSIDCicn() is not present, you will need to load functionality for number based SIDCs");
-				}
-			}
-		}
+        } else {
+          console.warn(
+            "ms._getNumberSIDCicn() is not present, you will need to load functionality for number based SIDCs"
+          );
+        }
+      }
+    }
 
-	// Put all this togheter and return the Icon. ============================================
-		iconColor = this.colors.iconColor[this.properties.affiliation];
-		var undefinedIcon = [{type:'path', stroke: false, fill: iconColor, d:'m 94.8206,78.1372 c -0.4542,6.8983 0.6532,14.323 5.3424,19.6985 4.509,5.6933 11.309,9.3573 14.98,15.7283 3.164,6.353 -0.09,14.245 -5.903,17.822 -7.268,4.817 -18.6219,2.785 -22.7328,-5.249 -1.5511,-2.796 -2.3828,-5.931 -2.8815,-9.071 -3.5048,0.416 -7.0093,0.835 -10.5142,1.252 0.8239,8.555 5.2263,17.287 13.2544,21.111 7.8232,3.736 17.1891,3.783 25.3291,1.052 8.846,-3.103 15.737,-11.958 15.171,-21.537 0.05,-6.951 -4.272,-12.85 -9.134,-17.403 -4.526,-4.6949 -11.048,-8.3862 -12.401,-15.2748 -1.215,-2.3639 -0.889,-8.129 -0.889,-8.129 z m -0.6253,-20.5177 0,11.6509 11.6527,0 0,-11.6509 z'}];
-		if(this.properties.numberSIDC){
-			//Number based SIDC
-			var mainIcon = icons[this.properties.functionid.substr(0,6)];//Main symbol
-			
-			if(typeof mainIcon === 'undefined'){
-				//We have some sepcial entity subtype and will try to find original symbol.
-				mainIcon = icons[this.properties.functionid.substr(0,4)+'00'];
-			}
-			
-			if(typeof mainIcon === 'undefined'){
-				if (!(this.properties.functionid.substr(0,6) == '000000' || this.properties.functionid.substr(0,6) == '')) {
-					drawArray2.push(undefinedIcon);
-					this._validIcon = false;
-					//console.log('Invalid icon code in SIDC: ' + this.SIDC);
-				}
-			}else{
-				drawArray2.push(mainIcon);
-			}
-			
-			if(specialbbox.hasOwnProperty(this.properties.functionid.substr(0,6))){
-				gbbox = new ms.BBox(specialbbox[this.properties.functionid.substr(0,6)]);
-			}
-			if(this.properties.functionid.substr(4,2) == '95')drawArray2.push(iconParts['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']);
-			if(this.properties.functionid.substr(4,2) == '96')drawArray2.push(iconParts['GR.IC.FF.DIVISION AND BELOW SUPPORT']);
-			if(this.properties.functionid.substr(4,2) == '97')drawArray2.push(iconParts['GR.IC.FF.CORPS SUPPORT']);
-			if(this.properties.functionid.substr(4,2) == '98')drawArray2.push(iconParts['GR.IC.FF.THEATRE SUPPORT']);
-			//Modifier 1
-			drawArray2.push(this.properties.functionid.substr(6,2)!='00'?m1[this.properties.functionid.substr(6,2)]:[]);
-			//Modifier 2
-			drawArray2.push(this.properties.functionid.substr(8,2)!='00'?m2[this.properties.functionid.substr(8,2)]:[]);
-		}else{
-			//Letter based SIDC
-			var genericSIDC = this.SIDC.substr(0,1)+'-'+this.SIDC.substr(2,1)+'-'+this.SIDC.substr(4,6);
-			if(icons[genericSIDC]){
-				drawArray2.push(icons[genericSIDC]);
-			}else{
-				if (!(this.SIDC.substr(4,6) == '------' || this.SIDC.substr(4,6) == '')) {
-					drawArray2.push(undefinedIcon);
-					this._validIcon = false;
-					//console.log('Invalid icon code in SIDC: ' + this.SIDC);
-				}
-			}
-			if(specialbbox[genericSIDC]){
-				gbbox = new ms.BBox(specialbbox[genericSIDC]);
-			}
-		}
-	}
-	//outline
-	if(!(this.frame && this.fill) || this.monoColor){
-		if (this.outlineWidth > 0) drawArray1.push(ms.outline(drawArray2, this.outlineWidth, this.strokeWidth, this.outlineColor));
-	}
-	return {pre: drawArray1, post: drawArray2, bbox: gbbox};
+    // Put all this togheter and return the Icon. ============================================
+    iconColor = this.colors.iconColor[this.properties.affiliation];
+    var undefinedIcon = [
+      {
+        type: "path",
+        stroke: false,
+        fill: iconColor,
+        d: "m 94.8206,78.1372 c -0.4542,6.8983 0.6532,14.323 5.3424,19.6985 4.509,5.6933 11.309,9.3573 14.98,15.7283 3.164,6.353 -0.09,14.245 -5.903,17.822 -7.268,4.817 -18.6219,2.785 -22.7328,-5.249 -1.5511,-2.796 -2.3828,-5.931 -2.8815,-9.071 -3.5048,0.416 -7.0093,0.835 -10.5142,1.252 0.8239,8.555 5.2263,17.287 13.2544,21.111 7.8232,3.736 17.1891,3.783 25.3291,1.052 8.846,-3.103 15.737,-11.958 15.171,-21.537 0.05,-6.951 -4.272,-12.85 -9.134,-17.403 -4.526,-4.6949 -11.048,-8.3862 -12.401,-15.2748 -1.215,-2.3639 -0.889,-8.129 -0.889,-8.129 z m -0.6253,-20.5177 0,11.6509 11.6527,0 0,-11.6509 z"
+      }
+    ];
+    if (this.properties.numberSIDC) {
+      //Number based SIDC
+      var mainIcon = icons[this.properties.functionid.substr(0, 6)]; //Main symbol
+
+      if (typeof mainIcon === "undefined") {
+        //We have some sepcial entity subtype and will try to find original symbol.
+        mainIcon = icons[this.properties.functionid.substr(0, 4) + "00"];
+      }
+
+      if (typeof mainIcon === "undefined") {
+        if (
+          !(this.properties.functionid.substr(0, 6) == "000000" ||
+            this.properties.functionid.substr(0, 6) == "")
+        ) {
+          drawArray2.push(undefinedIcon);
+          this._validIcon = false;
+          //console.log('Invalid icon code in SIDC: ' + this.SIDC);
+        }
+      } else {
+        drawArray2.push(mainIcon);
+      }
+
+      if (specialbbox.hasOwnProperty(this.properties.functionid.substr(0, 6))) {
+        gbbox = new ms.BBox(
+          specialbbox[this.properties.functionid.substr(0, 6)]
+        );
+      }
+      if (this.properties.functionid.substr(4, 2) == "95")
+        drawArray2.push(
+          iconParts["GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT"]
+        );
+      if (this.properties.functionid.substr(4, 2) == "96")
+        drawArray2.push(iconParts["GR.IC.FF.DIVISION AND BELOW SUPPORT"]);
+      if (this.properties.functionid.substr(4, 2) == "97")
+        drawArray2.push(iconParts["GR.IC.FF.CORPS SUPPORT"]);
+      if (this.properties.functionid.substr(4, 2) == "98")
+        drawArray2.push(iconParts["GR.IC.FF.THEATRE SUPPORT"]);
+      //Modifier 1
+      drawArray2.push(
+        this.properties.functionid.substr(6, 2) != "00"
+          ? m1[this.properties.functionid.substr(6, 2)]
+          : []
+      );
+      //Modifier 2
+      drawArray2.push(
+        this.properties.functionid.substr(8, 2) != "00"
+          ? m2[this.properties.functionid.substr(8, 2)]
+          : []
+      );
+    } else {
+      //Letter based SIDC
+      var genericSIDC =
+        this.SIDC.substr(0, 1) +
+        "-" +
+        this.SIDC.substr(2, 1) +
+        "-" +
+        this.SIDC.substr(4, 6);
+      if (icons[genericSIDC]) {
+        drawArray2.push(icons[genericSIDC]);
+      } else {
+        if (
+          !(this.SIDC.substr(4, 6) == "------" || this.SIDC.substr(4, 6) == "")
+        ) {
+          drawArray2.push(undefinedIcon);
+          this._validIcon = false;
+          //console.log('Invalid icon code in SIDC: ' + this.SIDC);
+        }
+      }
+      if (specialbbox[genericSIDC]) {
+        gbbox = new ms.BBox(specialbbox[genericSIDC]);
+      }
+    }
+  }
+  //outline
+  if (!(this.frame && this.fill) || this.monoColor) {
+    if (this.outlineWidth > 0)
+      drawArray1.push(
+        ms.outline(
+          drawArray2,
+          this.outlineWidth,
+          this.strokeWidth,
+          this.outlineColor
+        )
+      );
+  }
+  return { pre: drawArray1, post: drawArray2, bbox: gbbox };
 };

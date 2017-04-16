@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -18,14 +19,14 @@
   This is GeoJSON containing our units.
   It will be availabel in a global variable called 'situation'
   -->
-    <script src="../situation.json"></script>
+  <script src="../situation.json"></script>
 
   <link rel="stylesheet" href="https://js.arcgis.com/4.2/esri/css/main.css">
   <script src="https://js.arcgis.com/4.2/"></script>
   <script src="../../dist/milsymbol.js"></script>
 
   <script>
-  require([
+    require([
       "esri/Map",
       "esri/views/SceneView",
       "esri/layers/FeatureLayer",
@@ -39,106 +40,107 @@
       "dojo/on",
       "dojo/dom",
       "dojo/domReady!"
-    ], function(
+    ], function (
       Map, SceneView, FeatureLayer, Field, UniqueValueRenderer, Point, PointSymbol3D,
       IconSymbol3DLayer,
-      ms, 
+      ms,
       arrayUtils, on, dom
     ) {
-      // Since we can define a insertion point for a IconSymbol3DLayer in ArcGIS JS API,
-      // and we can't really handle non square icons, we have to go around the problem by 
-      // making the icons square around the anchor point, so we add a custom extension to 
-      // milsymbol to do that.
-      ms.addSymbolPart(
-        function squareIcon(){
-          var gbbox = new ms.BBox();
-          if(this.square){
-              var anchor = {x:100, y:100};
-              if(this.properties.headquarters){
-              anchor = {
-                   x:this.properties.baseGeometry.bbox.x1,
-                  y:this.properties.baseGeometry.bbox.y2 + ms.getHqStafLength() };
+        // Since we can define a insertion point for a IconSymbol3DLayer in ArcGIS JS API,
+        // and we can't really handle non square icons, we have to go around the problem by 
+        // making the icons square around the anchor point, so we add a custom extension to 
+        // milsymbol to do that.
+        ms.addSymbolPart(
+          function squareIcon() {
+            var gbbox = new ms.BBox();
+            if (this.square) {
+              var anchor = { x: 100, y: 100 };
+              if (this.properties.headquarters) {
+                anchor = {
+                  x: this.properties.baseGeometry.bbox.x1,
+                  y: this.properties.baseGeometry.bbox.y2 + ms.getHqStafLength()
+                };
               }
-            var maxx = Math.max(anchor.x-this.bbox.x1, this.bbox.x2-anchor.x);
-            var maxy = Math.max(anchor.y-this.bbox.y1, this.bbox.y2-anchor.y);
-            var max = Math.max(maxx,maxy);
-            gbbox.x1 = anchor.x-max;
-            gbbox.y1 = anchor.y-max;
-            gbbox.x2 = anchor.x+max;
-            gbbox.y2 = anchor.y+max;
+              var maxx = Math.max(anchor.x - this.bbox.x1, this.bbox.x2 - anchor.x);
+              var maxy = Math.max(anchor.y - this.bbox.y1, this.bbox.y2 - anchor.y);
+              var max = Math.max(maxx, maxy);
+              gbbox.x1 = anchor.x - max;
+              gbbox.y1 = anchor.y - max;
+              gbbox.x2 = anchor.x + max;
+              gbbox.y2 = anchor.y + max;
+            }
+            return { pre: [], post: [], bbox: gbbox };
           }
-        return {pre: [], post: [], bbox: gbbox};
-        }
-      );
+        );
 
-      var map = new Map({
-        basemap: "dark-gray",
-        ground: "world-elevation"
-      });
+        var map = new Map({
+          basemap: "dark-gray",
+          ground: "world-elevation"
+        });
 
-      var view = new SceneView({
-        container: "viewDiv",
-        map: map,
-        camera: {
-          position: {
-            x: 16, // lon
-            y: 45,   // lat
-            z: 1500000 // elevation in meters
-          },
-          //scale: 15000000,
-          //center: [16, 60],
-          tilt: 45
-        }
-      });
+        var view = new SceneView({
+          container: "viewDiv",
+          map: map,
+          camera: {
+            position: {
+              x: 16, // lon
+              y: 45,   // lat
+              z: 1500000 // elevation in meters
+            },
+            //scale: 15000000,
+            //center: [16, 60],
+            tilt: 45
+          }
+        });
 
-      // Create iconSymbol and add to renderer
-      var unknown = new ms.Symbol("SPZ---------", {size:15, square:true});
-      var unknownUnit = new PointSymbol3D({
-        symbolLayers: [new IconSymbol3DLayer({
-          resource: {
-            href: unknown.toDataURL()
-          }, 
-          size: unknown.getSize().width
-        })]
-      });
-      
-      var renderer = new UniqueValueRenderer({
-        field: "name", // I know the name is the Unique Designation for the unit
-        defaultSymbol: unknownUnit
-      });
-      // Add a unique icon for each unit
-      arrayUtils.map(situation.features, function(feature, i) {
-        var unit = new ms.Symbol(feature.properties.SIDC, {size:20, square:true});
-        
-        renderer.addUniqueValueInfo(feature.properties.name,
-          new PointSymbol3D({
-            symbolLayers: [new IconSymbol3DLayer({
-              resource: {
-                href: unit.asCanvas(3).toDataURL()
-              }, 
-              size: Math.max(unit.getSize().height, unit.getSize().width)
-            })]
-          })
-        )
-      });
-      
-      
-      var fields = [
-      {
-        name: "ObjectID",
-        alias: "ObjectID",
-        type: "oid"
-      }, {
-        name: "name",
-        alias: "name",
-        type: "string"
-      }, {
-        name: "SIDC",
-        alias: "SIDC",
-        type: "string"
-      }];
-      
-      var graphics = arrayUtils.map(situation.features, function(feature, i) {
+        // Create iconSymbol and add to renderer
+        var unknown = new ms.Symbol("SPZ---------", { size: 15, square: true });
+        var unknownUnit = new PointSymbol3D({
+          symbolLayers: [new IconSymbol3DLayer({
+            resource: {
+              href: unknown.toDataURL()
+            },
+            size: unknown.getSize().width
+          })]
+        });
+
+        var renderer = new UniqueValueRenderer({
+          field: "name", // I know the name is the Unique Designation for the unit
+          defaultSymbol: unknownUnit
+        });
+        // Add a unique icon for each unit
+        arrayUtils.map(situation.features, function (feature, i) {
+          var unit = new ms.Symbol(feature.properties.SIDC, { size: 20, square: true });
+
+          renderer.addUniqueValueInfo(feature.properties.name,
+            new PointSymbol3D({
+              symbolLayers: [new IconSymbol3DLayer({
+                resource: {
+                  href: unit.asCanvas(3).toDataURL()
+                },
+                size: Math.max(unit.getSize().height, unit.getSize().width)
+              })]
+            })
+          )
+        });
+
+
+        var fields = [
+          {
+            name: "ObjectID",
+            alias: "ObjectID",
+            type: "oid"
+          }, {
+            name: "name",
+            alias: "name",
+            type: "string"
+          }, {
+            name: "SIDC",
+            alias: "SIDC",
+            type: "string"
+          }];
+
+        var graphics = arrayUtils.map(situation.features, function (feature, i) {
           return {
             geometry: new Point({
               x: feature.geometry.coordinates[0],
@@ -152,21 +154,21 @@
             }
           };
         });
-      
-      var lyr = new FeatureLayer({
+
+        var lyr = new FeatureLayer({
           source: graphics,
-          fields: fields, 
-          objectIdField: "ObjectID", 
-          renderer: renderer, 
+          fields: fields,
+          objectIdField: "ObjectID",
+          renderer: renderer,
           spatialReference: {
             wkid: 4326
           },
-          geometryType: "point" 
+          geometryType: "point"
         });
 
-      map.add(lyr);
+        map.add(lyr);
 
-    });
+      });
   </script>
 </head>
 
