@@ -59,14 +59,13 @@ var ms = new function() {
         " - Copyright (c) 2017 Måns Beckman  http://www.spatialillusions.com"
     );
   }
-  if (typeof parseXML === "undefined") {
-    window.parseXML = function(s, doc) {
-      doc = doc || document;
-      var doc2 = new DOMParser().parseFromString(s, "text/xml");
-      return doc.adoptNode(doc2.documentElement);
-    };
-  }
 }();
+
+ms._parseXML = function(s, doc) {
+  doc = doc || document;
+  var doc2 = new DOMParser().parseFromString(s, "text/xml");
+  return doc.adoptNode(doc2.documentElement);
+};
 
 ms._scale = function(factor, instruction) {
   return {

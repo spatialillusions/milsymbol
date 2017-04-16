@@ -70,7 +70,7 @@ function symbol(option1, options) {
 // This is here so that we have it initiated in this.symbol from the beginning
 symbol.prototype.asCanvas = require("./symbol/ascanvas.js");
 symbol.prototype.asDOM = function() {
-  return parseXML(this.asSVG());
+  return ms._parseXML(this.asSVG());
 };
 symbol.prototype.asSVG = require("./symbol/assvg.js");
 symbol.prototype.getAnchor = function() {
@@ -87,7 +87,7 @@ symbol.prototype.isValid = function() {
 };
 symbol.prototype.setOptions = require("./symbol/setoptions.js");
 symbol.prototype.toDataURL = function() {
-  return "data:image/svg+xml;base64," + btoa(this.asSVG());
+  return "data:image/svg+xml;base64," + window.btoa(this.asSVG());
 };
 
 // For backward compability
