@@ -8,6 +8,8 @@
     "example": "examples"
   },
   "scripts": {
+    "lint": "eslint src test --fix",
+    "prebuild": "npm run lint",
     "build": "webpack -p",
     "build-dev": "webpack",
     "test": "mocha test/.setup.js --recursive test"
@@ -25,7 +27,9 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^3.19.0",
+    "eslint-plugin-prettier": "^2.0.1",
     "mocha": "^3.2.0",
+    "prettier": "^1.1.0",
     "webpack": "^2.2.0",
     "webpack-custom-var-library-name-plugin": "^1.0.2"
   }
