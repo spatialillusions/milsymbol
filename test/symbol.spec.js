@@ -33,6 +33,9 @@ describe("ms.Symbol", () => {
       getSize: {
         returns: Object
       },
+      isValid: {
+        returns: Boolean // TOOD make it possible to pass extended option and return an Object
+      },
       setOptions: {
         returns: Object
       },

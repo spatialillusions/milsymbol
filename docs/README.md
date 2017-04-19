@@ -249,14 +249,14 @@ Object {width:Number, height:Number}
 ```
 ----
 
-### isValid()
+### isValid(*extended*)
 
-Returns a boolean representing if it was possible to find an icon for the provided SIDC or not. In the future this might validate other parameters as well.
+If extended is set to `true` it will return an object with the validity of different parts of the symbol code, if extended is omitted or set to false it will return a boolean representing if it was possible to find an icon for the provided SIDC or not. In the future this might validate other parameters as well.
 
 **Returns**
 
 ```javascript
-Boolean
+Boolean or Object
 ```
 ----
 

@@ -132,8 +132,9 @@ module.exports = function(properties, mapping) {
   }
   //Setting up Echelon/Mobility/Towed Array Amplifier
   if (symbolmodifier12 == "A") properties.echelon = mapping.echelonMobility[11]; //Team/Crew
-  if (symbolmodifier12 == "B" && symbolmodifier11 != "H")
+  if (symbolmodifier12 == "B" && symbolmodifier11 != "H") {
     properties.echelon = mapping.echelonMobility[12]; //Squad
+  }
   if (symbolmodifier12 == "C") properties.echelon = mapping.echelonMobility[13]; //Section
   if (symbolmodifier12 == "D") properties.echelon = mapping.echelonMobility[14]; //Platoon/detachment
   if (symbolmodifier12 == "E") properties.echelon = mapping.echelonMobility[15]; //Company/battery/troop
@@ -143,39 +144,61 @@ module.exports = function(properties, mapping) {
   if (symbolmodifier12 == "I") properties.echelon = mapping.echelonMobility[21]; //Division
   if (symbolmodifier12 == "J") properties.echelon = mapping.echelonMobility[22]; //Corps/MEF
   if (symbolmodifier12 == "K") properties.echelon = mapping.echelonMobility[23]; //Army
-  if (symbolmodifier12 == "L" && symbolmodifier11 != "N")
+  if (symbolmodifier12 == "L" && symbolmodifier11 != "N") {
     properties.echelon = mapping.echelonMobility[24]; //Army Group/front
+  }
   if (symbolmodifier12 == "M") properties.echelon = mapping.echelonMobility[25]; //Region/Theater
   if (symbolmodifier12 == "N") properties.echelon = mapping.echelonMobility[26]; //Command
   if (symbolmodifier11 == "M") {
-    if (symbolmodifier12 == "O")
-      properties.mobility = mapping.echelonMobility[31]; //Wheeled limited cross country
-    if (symbolmodifier12 == "P")
-      properties.mobility = mapping.echelonMobility[32]; //Wheeled cross country
-    if (symbolmodifier12 == "Q")
-      properties.mobility = mapping.echelonMobility[33]; //Tracked
-    if (symbolmodifier12 == "R")
-      properties.mobility = mapping.echelonMobility[34]; //Wheeled and tracked combination
-    if (symbolmodifier12 == "S")
-      properties.mobility = mapping.echelonMobility[35]; //Towed
-    if (symbolmodifier12 == "T")
-      properties.mobility = mapping.echelonMobility[36]; //Rail
-    if (symbolmodifier12 == "U")
-      properties.mobility = mapping.echelonMobility[41]; //Over snow (prime mover)
-    if (symbolmodifier12 == "V")
-      properties.mobility = mapping.echelonMobility[42]; //Sled
-    if (symbolmodifier12 == "W")
-      properties.mobility = mapping.echelonMobility[37]; //Pack animals
-    if (symbolmodifier12 == "Y")
-      properties.mobility = mapping.echelonMobility[51]; //Barge
-    if (symbolmodifier12 == "Z")
-      properties.mobility = mapping.echelonMobility[52]; //Amphibious
+    switch (symbolmodifier12) {
+      case "O":
+        properties.mobility = mapping.echelonMobility[31]; //Wheeled limited cross country
+        break;
+      case "P":
+        properties.mobility = mapping.echelonMobility[32]; //Wheeled cross country
+        break;
+      case "Q":
+        properties.mobility = mapping.echelonMobility[33]; //Tracked
+        break;
+      case "R":
+        properties.mobility = mapping.echelonMobility[34]; //Wheeled and tracked combination
+        break;
+      case "S":
+        properties.mobility = mapping.echelonMobility[35]; //Towed
+        break;
+      case "T":
+        properties.mobility = mapping.echelonMobility[36]; //Rail
+        break;
+      case "U":
+        properties.mobility = mapping.echelonMobility[41]; //Over snow (prime mover)
+        break;
+      case "V":
+        properties.mobility = mapping.echelonMobility[42]; //Sled
+        break;
+      case "W":
+        properties.mobility = mapping.echelonMobility[37]; //Pack animals
+        break;
+      case "Y":
+        properties.mobility = mapping.echelonMobility[51]; //Barge
+        break;
+      case "Z":
+        properties.mobility = mapping.echelonMobility[52]; //Amphibious
+        break;
+      default:
+        properties.mobility = undefined;
+    }
   }
   if (symbolmodifier11 == "N") {
-    if (symbolmodifier12 == "S")
-      properties.mobility = mapping.echelonMobility[61]; //Short towed array
-    if (symbolmodifier12 == "L")
-      properties.mobility = mapping.echelonMobility[62]; //Long towed Array
+    switch (symbolmodifier12) {
+      case "S":
+        properties.mobility = mapping.echelonMobility[61]; //Short towed array
+        break;
+      case "L":
+        properties.mobility = mapping.echelonMobility[62]; //Long towed Array
+        break;
+      default:
+        properties.mobility = undefined;
+    }
   }
   //This is for 2525
   //Civilian stuff

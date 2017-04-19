@@ -82,9 +82,7 @@ symbol.prototype.getOctagonAnchor = function() {
 };
 symbol.prototype.getProperties = require("./symbol/getproperties.js");
 symbol.prototype.getSize = require("./symbol/getsize.js");
-symbol.prototype.isValid = function() {
-  return this._validIcon;
-};
+symbol.prototype.isValid = require("./symbol/isvalid.js");
 symbol.prototype.setOptions = require("./symbol/setoptions.js");
 symbol.prototype.toDataURL = function() {
   return "data:image/svg+xml;base64," + window.btoa(this.asSVG());
