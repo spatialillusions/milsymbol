@@ -17,10 +17,10 @@ global.document = {
       scale: Function.prototype,
       stroke: Function.prototype,
       translate: Function.prototype
-    }),
+    })
   })
 };
 
-global.DOMParser = function () {
-  this.parseFromString = () => ({})
+global.DOMParser = function() {
+  this.parseFromString = () => ({});
 };
