@@ -9,7 +9,7 @@
   },
   "scripts": {
     "lint": "eslint src test --fix",
-    "prebuild": "npm run lint",
+    "prebuild": "npm run lint && npm test",
     "build": "webpack -p",
     "build-dev": "webpack",
     "test": "mocha test/.setup.js --recursive test"
