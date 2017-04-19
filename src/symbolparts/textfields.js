@@ -14,7 +14,7 @@ module.exports = function textfields() {
 
   var gbbox = new ms.BBox();
   var spaceTextIcon = 20; //The distance between the Icon and the labels
-  
+
   //Text fields overrides
   function labelOverride(label) {
     var texts = [];

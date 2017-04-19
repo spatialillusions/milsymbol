@@ -1,7 +1,7 @@
-const { assert, expect } = require('chai');
-const ms = require('../src/index');
+const { assert } = require("chai");
+const ms = require("../src/index");
 
-describe('ms', () => {
+describe("ms", () => {
   const publicApiMethods = {
     BBox: {
       returns: Object
@@ -22,7 +22,7 @@ describe('ms', () => {
       returns: Object
     },
     getColorMode: {
-      parameters: ['Light'],
+      parameters: ["Light"],
       returns: Object
     },
     getDashArrays: {
@@ -42,7 +42,7 @@ describe('ms', () => {
       returns: Object
     },
     setColorMode: {
-      parameters: ['TestMode', {}],
+      parameters: ["TestMode", {}],
       returns: Object
     },
     setDashArrays: {
@@ -62,7 +62,7 @@ describe('ms', () => {
   Object.keys(publicApiMethods).forEach(methodName => {
     const { returns, parameters = [] } = publicApiMethods[methodName];
     describe(`API method ${methodName}`, () => {
-      it('should be a function', () => {
+      it("should be a function", () => {
         assert.isFunction(ms[methodName]);
       });
       it(`should return a ${returns.name}`, () => {

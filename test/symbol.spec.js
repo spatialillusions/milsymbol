@@ -1,11 +1,11 @@
-const { assert, expect } = require('chai');
-const ms = require('../src/index');
+const { assert } = require("chai");
+const ms = require("../src/index");
 
-describe('ms.Symbol', () => {
+describe("ms.Symbol", () => {
   // TODO: pass options
-  describe('when called with SIDC', () => {
-    const symbol = new ms.Symbol('SFG-UCI----D');
-    it('should return a symbol object', () => {
+  describe("when called with SIDC", () => {
+    const symbol = new ms.Symbol("SFG-UCI----D");
+    it("should return a symbol object", () => {
       assert.isObject(symbol);
     });
     const publicApiMethods = {
@@ -28,13 +28,13 @@ describe('ms.Symbol', () => {
         returns: Object
       },
       getProperties: {
-        returns: Object,
+        returns: Object
       },
       getSize: {
         returns: Object
       },
       setOptions: {
-        returns: Object,
+        returns: Object
       },
       toDataURL: {
         returns: String
@@ -43,7 +43,7 @@ describe('ms.Symbol', () => {
     Object.keys(publicApiMethods).forEach(methodName => {
       const { returns } = publicApiMethods[methodName];
       describe(`API method ${methodName}`, () => {
-        it('should be a function', () => {
+        it("should be a function", () => {
           assert.isFunction(symbol[methodName]);
         });
         it(`should return a ${returns.name}`, () => {
