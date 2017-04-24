@@ -1,0 +1,187 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="milsymbol.html">
+
+<!--
+`iron-milsymbol`
+Milsymbol based on Spatialillusions milsymbol
+
+In typical use, just slap some `<awesome-sauce>` at the top of your body:
+
+    <body>
+      <awesome-sauce></awesome-sauce>
+
+@demo demo/index.html 
+-->
+
+<dom-module id="iron-milsymbol">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <div id="symbolbase" class$="[[size]]"></div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'iron-milsymbol',
+
+      properties: {
+
+        /* SIDC */
+        sidc: { type: String, value: null },
+
+        /* Size of the symbol */
+        size: { type: Number, value: 30 },
+
+        /* Object */
+        modifiers: { type: Object, value: {} },
+
+        /* A text modifier for units, equipment, and installations; content is implementation specific. */
+        additionalInformation: {type: String, value: ''},
+
+        /* A text modifier for units, equipment, and installations, that displays either altitude flight level, depth for submerged objects; or height of equipment or structures on the ground. */
+        altitudeDepth: {type: String, value: ''},
+
+        /* A text modifier for units and installations that indicates unit effectiveness or installation capability. */
+        combatEffectiveness: {type: String, value: ''},
+
+        /* Example: "Hawk" for Hawk SAM system. */
+        commonIdentifier: {type: String, value: ''},
+
+        /* At the moment all directions should be in degrees and not in mils. Set to an undefined to remove the direction arrow. */
+        direction: {type: Number, value: ''},
+
+        /* A text modifier for units, equipment, and installations that displays DTG format: DDHHMMSSZMONYYYY or "O/O" for on order. */
+        dtg: {type: String, value: ''},
+
+        /* Equipment teardown time in minutes.  */
+        equipmentTeardownTime: {type: String, value: ''},
+
+        /* A text modifier for units, equipment, and installations that consists of a one-letter reliability rating and a one-number credibility rating. */
+        evaluationRating: {type: String, value: ''},
+
+        /* Example: Tactical Operations Centre put as 'TOC'. */
+        headquartersElement: {type: String, value: ''},
+
+        /* A text modifier for units that indicates number or title of higher echelon command (corps are designated by Roman numerals). */
+        higherFormation: {type: String, value: ''},
+
+        /* A text modifier for equipment; letters "ENY" denote hostile symbols.  */
+				hostile: {type: String, value: ''},
+
+        /* A text modifier displaying IFF/SIF Identification modes and codes.  */
+				iffSif: {type: String, value: ''},
+
+        /* A text modifier for units, equipment, and installations that displays a symbol's location in degrees, minutes, and seconds (or in UTM or other applicable display format). */
+				location: {type: String, value: ''},
+
+        /* "ELNOT" or "CENOT"  */
+				platformType: {type: String, value: ''},
+
+        /* A text modifier in an equipment symbol that identifies the number of items present.  */
+				quantity: {type: String, value: ''},
+
+        /* A text modifier in a unit symbol that displays (+) for reinforced, (-) for reduced, (±) reinforced and reduced.  */
+				reinforcedReduced: {type: String, value: ''},
+
+        /* M = Mobile, S = Static, or U = Uncertain.  */
+				sigint: {type: String, value: ''},
+
+        /* A text modifier for hostile equipment; "!" indicates detectable electronic signatures.  */
+				signatureEquipment: {type: String, value: ''},
+
+        /* A text modifier for units; indicator is contained inside the frame; contains the name of the special C2 Headquarters.  */
+				specialHeadquarters: {type: String, value: ''},
+
+        /* A text modifier for units and equipment that displays velocity as set forth in MIL-STD-6040.  */
+				speed: {type: String, value: ''},
+
+        /* A text modifier for units, equipment and installations; content is implementation specific.  */
+				staffComments: {type: String, value: ''},
+
+        /* A text modifier for equipment that indicates types of equipment.  */
+				type: {type: String, value: ''},
+
+        /* A text modifier for units, equipment, and installations that uniquely identifies a particular symbol or track number. Identifies acquisitions number when used with SIGINT symbology. */
+				uniqueDesignation: {type: String, value: ''},
+
+
+        /* 2525C specifics purple as an optional color for civilian symbols. Of corse we like color so we set this as default. */
+				civilianColor: {type: Boolean, value: ''},
+
+        /* Should your symbol be filled with color. */
+				fill: {type: Boolean, value: ''},
+
+        /* Should your symbol have a frame. All symbols support to be unframed, not just the ones specified in 2525B. */
+				frame: {type: Boolean, value: ''},
+
+        /* Should your symbol have an icon. */
+				icon: {type: Boolean, value: ''},
+
+        /* If you have set some text fields and direction but don't want them to be displayed you can set infoFields to false. This makes it possible to initiate the object with all information you got but not display it. */
+				infoFields: {type: Boolean, value: ''},
+
+        /* A color that is either a keyword or a numerical RGB specification. If you set this the symbol will be monochrome and unfilled using the color provided. */
+				monoColor: {type: String, value: ''},
+
+        /* The width of the outline of the symbol, if any. */
+				outlineWidth: {type: Number, value: ''},
+
+        /* The stroke width of the symbol. */
+				strokeWidth: {type: Number, value: ''}
+
+      },
+
+      observers: [
+        '_buildWithModifier(sidc, modifiers.*)',
+        '_buildWithProperties(sidc,size,additionalInformation,altitudeDepth,combatEffectiveness,commonIdentifier,direction,dtg,equipmentTeardownTime,evaluationRating,headquartersElement,higherFormation,hostile,headquartersElement,iffSif,location,platformType,quantity,reinforcedReduced,sigint,signatureEquipment,specialHeadquarters,speed,staffComments,type,uniqueDesignation,fill,frame,icon,infoFields,monoColor,outlineWidth,strokeWidth)'
+      ],
+
+      _clear: function() {
+        if(Polymer.dom(this.$.symbolbase).firstElementChild) {
+          Polymer.dom(this.$.symbolbase).removeChild(Polymer.dom(this.$.symbolbase).firstElementChild);
+        }
+      },
+
+      _buildWithModifier: function(sidc, obj) {
+        if(sidc) {
+          var modifiers = obj.base;
+          this.build(sidc, modifiers);
+        }
+      },
+
+      _buildWithProperties: function() {
+        if(Object.keys(this.modifiers).length == 0) {
+          var sidc = arguments[0];
+          var modifiers = {};
+          var order = ['sidc','size','additionalInformation','altitudeDepth','combatEffectiveness','commonIdentifier','direction','dtg','equipmentTeardownTime','evaluationRating','headquartersElement','higherFormation','hostile','headquartersElement','iffSif','location','platformType','quantity','reinforcedReduced','sigint','signatureEquipment','specialHeadquarters','speed','staffComments','type','uniqueDesignation','fill','frame','icon','infoFields','monoColor','outlineWidth','strokeWidth'];
+          for(var i = 1; i < order.length; i++) {
+            arguments[i] && (modifiers[order[i]] = arguments[i]);
+          }
+          console.log('_buildWithProperties NEW', modifiers);
+          this.build(sidc, modifiers);
+        }
+      },
+
+      /**
+       *
+       * @param {string} SIDC.
+       * @param {object} Modifiers.
+       * @return {boolean}
+       */
+      build: function(sidc, modifiers) {
+        if(sidc) {
+          this._clear();
+          var symbol = new MS.Symbol(sidc, modifiers || {}).asDOM();
+          Polymer.dom(this.$.symbolbase).appendChild(symbol);
+          return true;
+        }
+        return false;
+      }
+
+    });
+  </script>
+</dom-module>

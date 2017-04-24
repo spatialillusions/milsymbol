@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>iron-milsymbol demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script type="text/javascript" src="orbat.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../iron-milsymbol.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+    demo-snippet {
+      min-width: 700px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic iron-milsymbol demo</h3>
+      <demo-snippet>
+        <template>
+          <iron-milsymbol sidc="SFG-UCI----D" size="120"></iron-milsymbol>
+          <iron-milsymbol sidc="SHG-UCI-*--D" size="46"></iron-milsymbol>
+          <iron-milsymbol sidc="SFG-UCI--*-D" size="120" headquarters-element="TOC"></iron-milsymbol>
+        </template>
+      </demo-snippet>
+
+      <demo-snippet>
+        <template>
+          <template is="dom-bind" id="base">
+            <template is="dom-repeat" items="[[symbols]]">
+              <iron-milsymbol sidc="[[item]]" size="120"></iron-milsymbol>
+            </template>
+          </template>
+
+          <script>
+            var base = document.querySelector('#base');
+            base.set('symbols', ['SFG-UCI----D','SUGPEXI---*****','SFG-UCI----D']);
+          </script>
+        </template>
+      </demo-snippet>
+
+      <demo-snippet>
+        <template>
+          <iron-milsymbol id="symbol"></iron-milsymbol>
+
+          <script>
+            var symbolElement = document.querySelector('#symbol');
+            console.log(symbolElement);
+            symbolElement.set('modifiers', {
+              size: 68,
+              direction: '132',
+              speed: '10 mph'
+            });
+            symbolElement.set('sidc', 'SFG-UCI----D');
+          </script>
+        </template>
+      </demo-snippet>
+
+      <demo-snippet>
+        <template>
+          <div id="container"></div>
+
+          <script>
+            var container = document.querySelector('#container');
+            var symbol = Polymer.Base.create('iron-milsymbol', {sidc: 'SFGPUCR---*****', modifiers: {
+              size: 35,
+              direction: '200',
+              speed: '10 mph',
+              monoColor: 'red'
+            }});
+            container.appendChild(symbol);
+          </script>
+        </template>
+      </demo-snippet>
+
+      <demo-snippet>
+        <template>
+          <div id="orbatContainer"></div>
+          <script>
+            var orbatContainer = document.querySelector('#orbatContainer');
+            for(var i = 0; i < orbat.length; i++) {
+              orbatContainer.appendChild(Polymer.Base.create('iron-milsymbol', {sidc: orbat[i]['properties']['SIDC'], modifiers: {uniqueDesignation: orbat[i]['properties']['name'], size: 40}}));
+            }
+            
+          </script>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>
