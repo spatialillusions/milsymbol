@@ -7,6 +7,6 @@
   "files.insertFinalNewline": true,
   "files.eol": "\n",
 
-  //ESLint
+  // ESLint
   "eslint.autoFixOnSave": true
 }
