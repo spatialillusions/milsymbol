@@ -6,6 +6,8 @@
 
 ### Changed
 
+- isValid(option) can now take an bolean input that makes it return a validaton object with extended information about the vadility.
+
 - isValid now validates the mobility modifier as well as the symbol icon.
 
 ### Deprecated
