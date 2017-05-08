@@ -235,7 +235,7 @@ module.exports = function emergencymanagementsymbols(sId, bbox, icn, _STD2525) {
   sId["E-F-DA----"] = [icn["GR.IN.IC.COLLEGE/UNIVERSITY"]];
   sId["E-F-DB----"] = [icn["GR.IN.IC.SCHOOL"]];
   sId["E-F-EA----"] = [
-    icn["GR.IN.IC.ELECTRIC POWER"],
+    ms._translate(0, 15, ms._scale(0.75, icn["GR.IN.IC.ELECTRIC POWER"])),
     icn["AC.M1.GENERATION STATION"]
   ];
   sId["E-F-EB----"] = [icn["GR.IN.IC.NATURAL GAS FACILITY"]];

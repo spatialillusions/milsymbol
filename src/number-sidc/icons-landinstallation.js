@@ -100,10 +100,10 @@ module.exports = function landinstallation(
     sId["120400"] = [icn["GR.IN.IC.EDUCATIONAL FACILITIES INFRASTRUCTURE"]];
     sId["120401"] = [icn["GR.IN.IC.COLLEGE/UNIVERSITY"]];
     sId["120402"] = [icn["GR.IN.IC.SCHOOL"]];
-    sId["120500"] = [ms._scale(1.5, icn["GR.IN.IC.ELECTRIC POWER"])];
-    sId["120501"] = [icn["GR.IN.IC.ELECTRIC POWER"]];
+    sId["120500"] = [icn["GR.IN.IC.ELECTRIC POWER"]];
+    sId["120501"] = [ms._scale(0.6, icn["GR.IN.IC.ELECTRIC POWER"])];
     sId["120502"] = [
-      icn["GR.IN.IC.ELECTRIC POWER"],
+      ms._translate(0, 15, ms._scale(0.75, icn["GR.IN.IC.ELECTRIC POWER"])),
       icn["AC.M1.GENERATION STATION"]
     ];
     sId["120503"] = [icn["GR.IN.IC.NATURAL GAS FACILITY"]];

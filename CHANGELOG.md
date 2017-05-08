@@ -10,6 +10,8 @@
 
 - isValid now validates the mobility modifier as well as the symbol icon.
 
+- Updated ENERGY FACITILIES INFRASTRUCTURE to better representation of the standard.
+
 ### Deprecated
 
 ### Removed
