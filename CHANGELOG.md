@@ -1,4 +1,21 @@
 # Change Log
+
+## Master branch
+
+### Added
+
+### Changed
+
+- isValid now validates the mobility modifier as well as the symbol icon.
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
 ## 1.1.0 16 APR 2017
 
 I would like to thank @okwolf that has contributed with unit tests and some code reorganization. 
