@@ -7,6 +7,7 @@ module.exports = function(
   monoColor,
   alternateMedal
 ) {
+  // Tactical points icon parts
   /*
   iconParts
   The existing object of icon parts

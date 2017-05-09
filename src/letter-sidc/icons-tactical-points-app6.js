@@ -1,3 +1,10 @@
+var ms = require("../ms.js");
+ms.addIconParts(require("../iconparts/tactical-points.js"));
+ms.addLabelOverrides(
+  require("../letter-labels/tactical-points-app6.js"),
+  "letter"
+);
+
 // SIDC parts for tactical points
 module.exports = function tacticalPoints(sidc, bbox, icn, std2525) {
   // Tactical Point Symbols =========================================================================

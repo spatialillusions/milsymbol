@@ -7,6 +7,7 @@ module.exports = function(
   monoColor,
   alternateMedal
 ) {
+  //  2525B extra icon parts
   /*
   iconParts
   The existing object of icon parts

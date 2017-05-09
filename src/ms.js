@@ -80,15 +80,16 @@ ms._translate = function(x, y, instruction) {
 };
 
 ms.addIconParts = function(parts) {
-  if (typeof parts === "function") {
+  if (typeof parts === "function" && this._iconParts.indexOf(parts) == -1) {
     this._iconParts = this._iconParts.concat(parts);
   }
   return ms;
 };
 ms.addLabelOverrides = function(parts, type) {
   if (typeof parts === "function") {
-    if (!this._labelOverrides.hasOwnProperty(type))
+    if (!this._labelOverrides.hasOwnProperty(type)) {
       this._labelOverrides[type] = [];
+    }
     this._labelOverrides[type] = this._labelOverrides[type].concat(parts);
   }
   return ms;
