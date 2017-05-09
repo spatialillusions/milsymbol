@@ -1,4 +1,5 @@
-//var ms = require("../ms.js");
+var ms = require("../ms.js");
+ms.addIconParts(require("../iconparts/2525b.js"));
 
 module.exports = function air(sId, bbox, icn, _STD2525) {
   // These symbols are in 2525B but not in 2525C and because of this they need to be added

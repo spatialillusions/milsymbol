@@ -51,27 +51,16 @@ ms.addSIDCicons(
 );
 
 // Adding support for symbols in MIL-STD-2525B change 2 that are missing in 2525C
-ms.addIconParts(require("./iconparts/2525b.js"));
 ms.addSIDCicons(require("./letter-sidc/icons-2525b-ch2.js"), "letter");
 
 // Adding support for tactical points
-ms.addIconParts(require("./iconparts/tactical-points.js"));
-
 ms.addSIDCicons(
   require("./letter-sidc/icons-tactical-points-2525.js"),
-  "letter"
-);
-ms.addLabelOverrides(
-  require("./letter-labels/tactical-points-2525.js"),
   "letter"
 );
 
 ms.addSIDCicons(
   require("./letter-sidc/icons-tactical-points-app6.js"),
-  "letter"
-);
-ms.addLabelOverrides(
-  require("./letter-labels/tactical-points-app6.js"),
   "letter"
 );
 
