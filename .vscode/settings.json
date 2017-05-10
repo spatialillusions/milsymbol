@@ -1,0 +1,12 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  // Formatting
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+
+  // ESLint
+  "eslint.autoFixOnSave": true
+}
