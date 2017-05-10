@@ -7,11 +7,13 @@ https://help.github.com/articles/github-terms-of-service/#6-contributions-under-
 
 ## Coding standards
 
-Code that you write should be validated with the included .eslintrc file, and formated with the standard settings in prettier. Hopefully I will be able to automate this in the future.
+Code that you write should be validated with the included .eslintrc file, and formated with the standard settings in prettier. The recommended editor is VS Code and configuration files are included in the project.
 
 https://github.com/eslint/eslint
 
 https://github.com/prettier/prettier
+
+During development the code can be built by running `npm run build-dev`, before committing your code you should run `npm run build`, this will format all code with prettier, run the tests, and build your code.
 
 ## Examples
 
