@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added build-amd, to build an AMD only module you can now run `npm run build-amd`
+
 ### Changed
 
 - isValid(option) can now take an bolean input that makes it return a validaton object with extended information about the vadility.

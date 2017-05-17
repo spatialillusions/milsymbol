@@ -41,7 +41,7 @@ In a framework like [Dojo](https://dojotoolkit.org) you can load milsymbol like 
 
 This way of loading milsymbol makes it possible to use Dojo from an external source, like js.arcgis.com. 
 
-If you only are using it with local sources, you can set `umdNamedDefine:false` in *webpack.config.js* and rebuild it by running `npm run build`, and now you can `require(["app/milsymbol"].....` if *milsymbol.js* is placed in your app folder. See more about building under [Building milsymbol](#building-milsymbol).
+If you only are using it with local sources or if you are uploading it to ArcGIS Web AppBuilder, you can rebuild it by running `npm run build-amd`, and now you can `require(["app/milsymbol"].....` if *milsymbol.js* is placed in your app folder. See more about building under [Building milsymbol](#building-milsymbol).
 
 # Creating military unit symbols
 
