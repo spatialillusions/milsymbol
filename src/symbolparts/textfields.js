@@ -420,6 +420,11 @@ module.exports = function textfields() {
               this.properties.baseGeometry.bbox.width()) /
               2
           : 0,
+        this.quantity
+          ? (strWidth(this.quantity) -
+              this.properties.baseGeometry.bbox.width()) /
+              2
+          : 0,
         strWidth(gStrings.L1),
         strWidth(gStrings.L2),
         strWidth(gStrings.L3),
@@ -433,6 +438,11 @@ module.exports = function textfields() {
       Math.max(
         this.specialHeadquarters
           ? (strWidth(this.specialHeadquarters) -
+              this.properties.baseGeometry.bbox.width()) /
+              2
+          : 0,
+        this.quantity
+          ? (strWidth(this.quantity) -
               this.properties.baseGeometry.bbox.width()) /
               2
           : 0,
