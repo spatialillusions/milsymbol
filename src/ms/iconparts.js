@@ -1934,7 +1934,10 @@ module.exports = function(
   icn["GR.M1.CIVILIAN"] = textm1("CIV");
   icn["GR.M1.CLOSE PROTECTION"] = textm1("CLP");
   icn["GR.M1.COMBAT"] = textm1("CBT");
-  icn["GR.M1.COMMAND AND CONTROL"] = _STD2525 ? textm1("Y") : textm1("C2");
+  icn["GR.M1.COMMAND AND CONTROL"] = textm1("C2");
+  icn["GR.M1.COMMAND AND CONTROL ROTARY WING"] = _STD2525
+    ? textm1("Y")
+    : textm1("C2");
   icn["GR.M1.COMMUNICATIONS CONTINGENCY PACKAGE"] = textm1("CCP");
   icn["GR.M1.CONSTRUCTION"] = {
     type: "text",

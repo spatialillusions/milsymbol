@@ -217,7 +217,7 @@ module.exports = function ground(sId, bbox, icn, _STD2525) {
   ];
   sId["S-G-UCVRUC"] = [
     icn["GR.IC.AVIATION ROTARY WING"],
-    icn["GR.M1.COMMAND AND CONTROL"]
+    icn["GR.M1.COMMAND AND CONTROL ROTARY WING"]
   ];
   sId["S-G-UCVRUE"] = [icn["GR.IC.AVIATION ROTARY WING"], icn["GR.M1.MEDEVAC"]];
   sId["S-G-UCVRM-"] = [
