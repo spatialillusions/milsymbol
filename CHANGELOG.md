@@ -22,6 +22,8 @@
 
 - The quantiy field would be cut if the content was wider than the symbol, this is now fixed so that the symbol size adopts to to width of the quantity field.
 
+- Fixed Land Unit M1 10 command and control that was displayed in as a Y instead of C2.
+
 ### Security
 
 ## 1.1.0 16 APR 2017
