@@ -274,14 +274,14 @@ module.exports = function icon() {
       var modifier1 = this.properties.functionid.substr(6, 2) != "00"
         ? m1[this.properties.functionid.substr(6, 2)] || []
         : [];
-      if (modifier1 != []) {
+      if (modifier1.length) {
         drawArray2.push(modifier1);
       }
       //Modifier 2
       var modifier2 = this.properties.functionid.substr(8, 2) != "00"
         ? m2[this.properties.functionid.substr(8, 2)] || []
         : [];
-      if (modifier2 != []) {
+      if (modifier2.length) {
         drawArray2.push(modifier2);
       }
     } else {
