@@ -271,17 +271,19 @@ module.exports = function icon() {
       if (this.properties.functionid.substr(4, 2) == "98")
         drawArray2.push(iconParts["GR.IC.FF.THEATRE SUPPORT"]);
       //Modifier 1
-      drawArray2.push(
-        this.properties.functionid.substr(6, 2) != "00"
-          ? m1[this.properties.functionid.substr(6, 2)]
-          : []
-      );
+      var modifier1 = this.properties.functionid.substr(6, 2) != "00"
+        ? m1[this.properties.functionid.substr(6, 2)] || []
+        : [];
+      if (modifier1 != []) {
+        drawArray2.push(modifier1);
+      }
       //Modifier 2
-      drawArray2.push(
-        this.properties.functionid.substr(8, 2) != "00"
-          ? m2[this.properties.functionid.substr(8, 2)]
-          : []
-      );
+      var modifier2 = this.properties.functionid.substr(8, 2) != "00"
+        ? m2[this.properties.functionid.substr(8, 2)] || []
+        : [];
+      if (modifier2 != []) {
+        drawArray2.push(modifier2);
+      }
     } else {
       //Letter based SIDC
       var genericSIDC =
