@@ -138,9 +138,7 @@ module.exports = function() {
     " " +
     this.baseHeight +
     '">';
-  for (var i = 0; i < this.drawInstructions.length; i++) {
-    xml += processInstructions.call(this, this.drawInstructions[i]);
-  }
+  xml += processInstructions.call(this, this.drawInstructions);
   xml += "</svg>";
   this.XML = xml;
   return xml;

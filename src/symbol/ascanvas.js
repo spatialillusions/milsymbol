@@ -177,8 +177,6 @@ module.exports = function(ratio) {
     -(this.bbox.x1 - this.strokeWidth - this.outlineWidth),
     -(this.bbox.y1 - this.strokeWidth - this.outlineWidth)
   );
-  for (var i = 0; i < this.drawInstructions.length; i++) {
-    processCanvasInstructions.call(this, this.drawInstructions[i], ctx);
-  }
+  processCanvasInstructions.call(this, this.drawInstructions, ctx);
   return canvas;
 };
