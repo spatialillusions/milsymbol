@@ -33,7 +33,7 @@ module.exports = function(options) {
         m.pre = m.pre[0];
       }
       if (m.pre.length != 0) {
-        this.drawInstructions.unshift(m.pre);
+        this.drawInstructions = [].concat(m.pre, this.drawInstructions);
       }
     }
     if (m.post.length > 0) {
@@ -41,7 +41,7 @@ module.exports = function(options) {
         m.post = m.post[0];
       }
       if (m.post.length != 0) {
-        this.drawInstructions.push(m.post);
+        this.drawInstructions = this.drawInstructions.concat(m.post);
       }
     }
     if (m.bbox) this.bbox.merge(m.bbox);
