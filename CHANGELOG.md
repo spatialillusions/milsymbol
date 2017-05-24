@@ -24,6 +24,8 @@
 
 - Fixed Land Unit M1 10 command and control that was displayed in as a Y instead of C2.
 
+- Some modifiers on Signals Intelligence symbols in 2525C was incorrect
+
 ### Security
 
 ## 1.1.0 16 APR 2017

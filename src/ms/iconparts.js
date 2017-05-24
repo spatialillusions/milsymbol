@@ -4573,6 +4573,14 @@ module.exports = function(
     fontsize: 25,
     text: "A"
   };
+  icn["SI.M1.BRAVO"] = {
+    type: "text",
+    stroke: false,
+    x: 68,
+    y: 110,
+    fontsize: 25,
+    text: "B"
+  };
   icn["SI.M1.CHARLIE"] = {
     type: "text",
     stroke: false,
@@ -4604,6 +4612,14 @@ module.exports = function(
     y: 110,
     fontsize: 25,
     text: "F"
+  };
+  icn["SI.M1.HOTEL"] = {
+    type: "text",
+    stroke: false,
+    x: 68,
+    y: 110,
+    fontsize: 25,
+    text: "H"
   };
   icn["SI.M1.INDY"] = {
     type: "text",
@@ -4781,7 +4797,7 @@ module.exports = function(
     fontsize: 25,
     text: "U"
   };
-  icn["SI.M2.WHISKEY "] = {
+  icn["SI.M2.WHISKEY"] = {
     type: "text",
     stroke: false,
     x: 132,

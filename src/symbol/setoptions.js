@@ -32,7 +32,9 @@ module.exports = function(options) {
     if (m.post.length) this.drawInstructions.push(m.post);
     if (m.bbox) this.bbox.merge(m.bbox);
   }
-
+  /*if (JSON.stringify(this.drawInstructions).indexOf("null") != -1) {
+    console.warn("Error in: " + this.SIDC);
+  }*/
   this.baseWidth =
     this.bbox.width() +
     Number(this.strokeWidth * 2) +
