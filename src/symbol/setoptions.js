@@ -32,13 +32,17 @@ module.exports = function(options) {
       while (m.pre.length == 1) {
         m.pre = m.pre[0];
       }
-      this.drawInstructions.unshift(m.pre);
+      if (m.pre.length != 0) {
+        this.drawInstructions.unshift(m.pre);
+      }
     }
     if (m.post.length > 0) {
       while (m.post.length == 1) {
         m.post = m.post[0];
       }
-      this.drawInstructions.push(m.post);
+      if (m.post.length != 0) {
+        this.drawInstructions.push(m.post);
+      }
     }
     if (m.bbox) this.bbox.merge(m.bbox);
   }
