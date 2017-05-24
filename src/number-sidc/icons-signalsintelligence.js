@@ -1,4 +1,5 @@
-//var ms = require("../ms.js");
+var ms = require("../ms.js");
+ms.addIconParts(require("../iconparts/signals-intelligence.js"));
 
 module.exports = function signalsintelligence(
   sId,

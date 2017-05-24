@@ -42,9 +42,12 @@ module.exports = function(options) {
     }
     if (m.bbox) this.bbox.merge(m.bbox);
   }
-  /*if (JSON.stringify(this.drawInstructions).indexOf("null") != -1) {
-    console.warn("Error in: " + this.SIDC);
-  }*/
+  if (ms._debug) {
+    //This is a debug function we can turn on to see if symbol parts are missing
+    if (JSON.stringify(this.drawInstructions).indexOf("null") != -1) {
+      console.warn("Error in: " + this.SIDC);
+    }
+  }
   this.baseWidth =
     this.bbox.width() +
     Number(this.strokeWidth * 2) +

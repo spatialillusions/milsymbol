@@ -238,7 +238,7 @@ module.exports = function icon() {
       var mainIcon = icons[this.properties.functionid.substr(0, 6)]; //Main symbol
 
       if (typeof mainIcon === "undefined") {
-        //We have some sepcial entity subtype and will try to find original symbol.
+        //We have some special entity subtype and will try to find original symbol.
         mainIcon = icons[this.properties.functionid.substr(0, 4) + "00"];
       }
 
@@ -300,7 +300,7 @@ module.exports = function icon() {
         ) {
           drawArray2.push(undefinedIcon);
           this._validIcon = false;
-          //console.log('Invalid icon code in SIDC: ' + this.SIDC);
+          //console.log("Invalid icon code in SIDC: " + this.SIDC);
         }
       }
       if (specialbbox[genericSIDC]) {
