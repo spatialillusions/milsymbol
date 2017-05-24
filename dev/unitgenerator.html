@@ -1149,10 +1149,10 @@ code{
 		if(isIE){
 			document.getElementById("MapMarker").innerHTML = mySymbol.asSVG();
 		}else{
-			var marker = mySymbol.getMarker();
-			document.getElementById("ImageSymbol").style.width = marker.getSize().width +'px';
-			document.getElementById("ImageSymbol").style.height = marker.getSize().height +'px';
-			document.getElementById("ImageSymbol").src = marker.asCanvas(window.devicePixelRatio).toDataURL();
+			//var marker = mySymbol.getMarker();
+			document.getElementById("ImageSymbol").style.width = mySymbol.getSize().width +'px';
+			document.getElementById("ImageSymbol").style.height = mySymbol.getSize().height +'px';
+			document.getElementById("ImageSymbol").src = mySymbol.asCanvas(window.devicePixelRatio).toDataURL();
 		}
 	}
 	
