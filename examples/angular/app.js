@@ -46,7 +46,7 @@ angular
           uniqueDesignation: "@"
         },
         template: function(element, attrs) {
-          return '<img class="symbol-sm" src="{{code}}"/>';
+          return '<img class="symbol-sm" ng-src="{{code}}"/>';
         },
         link: link
       };
