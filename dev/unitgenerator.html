@@ -592,7 +592,8 @@ code{
 		<table style="width:100%;padding: 10px;">
 			<tr>
 				<td style="width:50%;vertical-align:top;">
-					<h3 id="SIDC"></h3>
+					<input type="text" id="SIDC" onChange="sidcCreatorInit();drawSymbol();" style="border:0;color: rgb(0, 0, 0);font-size: 1.1rem;font-weight: normal;margin-top: 0.5rem;margin-bottom: 0.2rem;">
+					<!--<h3 id="SIDC" contenteditable="true" onChange="console.log('ping')"></h3>-->
 					<div  id="MapMarker">
 					</div>
 				</td>
@@ -824,7 +825,7 @@ code{
 		var i;
 		var sidc = existingSidc;
 		if(window.location.hash){sidc = decodeURIComponent(window.location.hash.substring(1));}
-
+		if(document.getElementById("SIDC").value){sidc = document.getElementById("SIDC").value;}
 		//We have to initiate this if we start with a number sidc and then switch to a letter sidc
 		letterSIDC.modifier12();
 		
@@ -1135,7 +1136,7 @@ code{
 				sidc = sidc.substr(0,14) + document.getElementById('2525DSpecialSubtypes').value + sidc.substr(16,4);
 			}
 		}
-		document.getElementById("SIDC").innerHTML = sidc;
+		document.getElementById("SIDC").value = sidc;
 
 		window.location.hash = sidc;	
 		options.SIDC = sidc;
