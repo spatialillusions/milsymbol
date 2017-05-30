@@ -821,8 +821,10 @@ code{
 	}
 	//This is for initiating the letterbased UI with a SIDC
 	function sidcCreatorInit(existingSidc){
+		var i;
 		var sidc = existingSidc;
-		if(window.location.hash){sidc = window.location.hash.substring(1);}
+		if(window.location.hash){sidc = decodeURIComponent(window.location.hash.substring(1));}
+
 		//We have to initiate this if we start with a number sidc and then switch to a letter sidc
 		letterSIDC.modifier12();
 		
@@ -830,7 +832,8 @@ code{
 			activateTab('2525C');
 			value = sidc.charAt(0).toUpperCase();
 			selection = document.getElementById('SIDCCODINGSCHEME');
-			for (i = 0; i < selection.length; i++) {
+			for (i in selection) {
+				if(isNaN(i))break;
 				if (selection.options[i].value == value) {
 					selection.selectedIndex = i;
 					break;
@@ -839,6 +842,7 @@ code{
 			value = sidc.charAt(1).toUpperCase();
 			selection = document.getElementById('SIDCAFFILIATION');
 			for (i in selection){
+				if(isNaN(i))break;
 				if(selection.options[i].value == value){
 					selection.selectedIndex = i;
 					break;
@@ -848,6 +852,7 @@ code{
 			value = sidc.charAt(2).toUpperCase();
 			selection = document.getElementById('SIDCBATTLEDIMENSION');
 			for (i in selection){
+				if(isNaN(i))break;
 				if(selection.options[i].value == value){
 					selection.selectedIndex = i;
 					break;
@@ -856,6 +861,7 @@ code{
 			value = sidc.charAt(3).toUpperCase();
 			selection = document.getElementById('SIDCSTATUS');
 			for (i in selection){
+				if(isNaN(i))break;
 				if(selection.options[i].value == value){
 					selection.selectedIndex = i;
 					break;
@@ -865,17 +871,17 @@ code{
 			letterSIDC.icons();
 			value = sidc.substring(4,10).toUpperCase();
 			selection = document.getElementById('SIDCFUNCTIONID');
-			for (var i in selection){
-				if(!isNaN(i)){
-					if(selection.options[i].value == value){
-						selection.selectedIndex = i;
-						break;
-					}
+			for (i in selection){
+				if(isNaN(i))break;
+				if(selection.options[i].value == value){
+					selection.selectedIndex = i;
+					break;
 				}
 			}
 			value = sidc.charAt(10).toUpperCase();
 			selection = document.getElementById('SIDCSYMBOLMODIFIER11');
 			for (i in selection){
+				if(isNaN(i))break;
 				if(selection.options[i].value == value){
 					selection.selectedIndex = i;
 					break;
@@ -886,6 +892,7 @@ code{
 			value = sidc.charAt(11).toUpperCase();
 			selection = document.getElementById('SIDCSYMBOLMODIFIER12');
 			for (var i in selection){
+				if(isNaN(i))break;
 				if(selection.options[i].value == value){
 					selection.selectedIndex = i;
 					break;
@@ -897,117 +904,106 @@ code{
 		
 			value = sidc.substring(0,2);
 			selection = document.getElementById('2525DVersion');
-			for (var i in selection){
-				if(!isNaN(i)){
-					if(selection.options[i].value == value){
-						selection.selectedIndex = i;
-						break;
-					}
+			for (i in selection){
+				if(isNaN(i))break;
+				if(selection.options[i].value == value){
+					selection.selectedIndex = i;
+					break;
 				}
 			}
 			value = sidc.substring(2,3);
 			selection = document.getElementById('2525DStandardIdentity1');
-			for (var i in selection){
-				if(!isNaN(i)){
-					if(selection.options[i].value == value){
-						selection.selectedIndex = i;
-						break;
-					}
+			for (i in selection){
+				if(isNaN(i))break;
+				if(selection.options[i].value == value){
+					selection.selectedIndex = i;
+					break;
 				}
 			}
 			value = sidc.substring(3,4);
 			selection = document.getElementById('2525DStandardIdentity2');
-			for (var i in selection){
-				if(!isNaN(i)){
-					if(selection.options[i].value == value){
-						selection.selectedIndex = i;
-						break;
-					}
+			for (i in selection){
+				if(isNaN(i))break;
+				if(selection.options[i].value == value){
+					selection.selectedIndex = i;
+					break;
 				}
 			}
 			value = sidc.substring(4,6);
 			selection = document.getElementById('2525DSymbolset');
-			for (var i in selection){
-				if(!isNaN(i)){
-					if(selection.options[i].value == value){
-						selection.selectedIndex = i;
-						break;
-					}
-				}
+			for (i in selection){
+				if(isNaN(i))break;
+				if(selection.options[i].value == value){
+					selection.selectedIndex = i;
+					break;
+				}	
 			}	
 			value = sidc.substring(6,7);
 			selection = document.getElementById('2525DStatus');
-			for (var i in selection){
-				if(!isNaN(i)){
-					if(selection.options[i].value == value){
-						selection.selectedIndex = i;
-						break;
-					}
+			for (i in selection){
+				if(isNaN(i))break;
+				if(selection.options[i].value == value){
+					selection.selectedIndex = i;
+					break;
 				}
 			}
 			value = sidc.substring(7,8);
 			selection = document.getElementById('2525DHQetc');
-			for (var i in selection){
-				if(!isNaN(i)){
-					if(selection.options[i].value == value){
-						selection.selectedIndex = i;
-						break;
-					}
+			for (i in selection){
+				if(isNaN(i))break;
+				if(selection.options[i].value == value){
+					selection.selectedIndex = i;
+					break;
 				}
 			}
 			value = sidc.substring(8,10);
 			selection = document.getElementById('2525DEchelonetc');
-			for (var i in selection){
-				if(!isNaN(i)){
-					if(selection.options[i].value == value){
-						selection.selectedIndex = i;
-						break;
-					}
+			for (i in selection){
+				if(isNaN(i))break;
+				if(selection.options[i].value == value){
+					selection.selectedIndex = i;
+					break;
 				}
 			}
 			
 			numberSIDC.icons();
 			value = sidc.substring(10,16);
 			selection = document.getElementById('2525DIcon');
-			for (var i in selection){
-				if(!isNaN(i)){
-					if(selection.options[i].value == value){
-						selection.selectedIndex = i;
-						break;
-					}
+			for (i in selection){
+				if(isNaN(i))break;
+				if(selection.options[i].value == value){
+					selection.selectedIndex = i;
+					break;
 				}
 			}
 			
 			numberSIDC.displaySpecialSubtypes();
 			value = sidc.substring(14,16);
 			selection = document.getElementById('2525DSpecialSubtypes');
-			for (var i in selection){
-				if(!isNaN(i)){
-					if(selection.options[i].value == value){
-						selection.selectedIndex = i;
-						break;
-					}
+			for (i in selection){
+				if(isNaN(i))break;
+				if(selection.options[i].value == value){
+					selection.selectedIndex = i;
+					break;
 				}
 			}
 			value = sidc.substring(16,18);
 			selection = document.getElementById('2525Dm1');
-			for (var i in selection){
-				if(!isNaN(i)){
+			for (i in selection){
+				if(isNaN(i))break;
 					if(selection.options[i].value == value){
-						selection.selectedIndex = i;
-						break;
-					}
+					selection.selectedIndex = i;
+					break;
 				}
 			}			
 			value = sidc.substring(18,20);
 			selection = document.getElementById('2525Dm2');
-			for (var i in selection){
-				if(!isNaN(i)){
-					if(selection.options[i].value == value){
-						selection.selectedIndex = i;
-						break;
-					}
-				}
+			for (i in selection){
+				if(isNaN(i))break;
+				if(selection.options[i].value == value){
+					selection.selectedIndex = i;
+					break;
+				}		
 			}			
 		}
 	}
