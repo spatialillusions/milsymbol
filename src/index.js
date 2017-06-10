@@ -10,7 +10,7 @@ ms._symbolGeometries = require("./ms/symbolgeometries.js");
 // Initiating the symbol class
 ms.Symbol = require("./ms.symbol.js");
 // Backwards compatibility, will be removed in future version
-ms.symbol = ms.Symbol;
+//ms.symbol = ms.Symbol;
 
 // Standard colors for symbols
 ms.setColorMode("Light", require("./colormodes/light.js"));

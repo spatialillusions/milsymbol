@@ -18,6 +18,8 @@
 
 ### Removed
 
+- Removed all methods that was deprecated in milsymbol 1.0.0
+
 ### Fixed
 
 - The quantiy field would be cut if the content was wider than the symbol, this is now fixed so that the symbol size adopts to to width of the quantity field.

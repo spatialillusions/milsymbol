@@ -201,7 +201,7 @@ ms.setSymbolParts = function(parts) {
   return ms;
 };
 ms.setStandard = require("./ms/setstandard.js");
-
+/*
 // For backward compability
 ms.addMarkerParts = function(part) {
   console.warn(
@@ -290,5 +290,5 @@ ms.setMarkerParts = function(parts) {
   ms.setSymbolParts(parts);
   return ms;
 };
-
+*/
 module.exports = ms;

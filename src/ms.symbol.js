@@ -87,7 +87,7 @@ symbol.prototype.setOptions = require("./symbol/setoptions.js");
 symbol.prototype.toDataURL = function() {
   return "data:image/svg+xml;base64," + window.btoa(this.asSVG());
 };
-
+/*
 // For backward compability
 symbol.prototype.asImage = function() {
   console.warn(
@@ -101,5 +101,5 @@ symbol.prototype.getMarker = function() {
   );
   return this.setOptions.call(this);
 };
-
+*/
 module.exports = symbol;
