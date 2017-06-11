@@ -1,6 +1,6 @@
 # Change Log
 
-## Master branch
+## 1.1.0 11 JUN 2017
 
 ### Added
 
