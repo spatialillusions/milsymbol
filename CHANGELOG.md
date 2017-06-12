@@ -1,6 +1,24 @@
 # Change Log
 
-## 1.1.0 11 JUN 2017
+## 1.2.1 11 JUN 2017
+
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+- Altitude/Depth was sometimes not labeled on 2525D symbols
+
+- Typo in Changelog
+
+### Security
+
+## 1.2.0 11 JUN 2017
 
 ### Added
 

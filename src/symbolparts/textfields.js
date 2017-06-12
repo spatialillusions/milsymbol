@@ -331,10 +331,10 @@ module.exports = function textfields() {
       if (this.speed || this.altitudeDepth) {
         a = [];
         if (this.speed) a.push(this.speed);
-        if (this.location) a.push(this.altitudeDepth);
+        if (this.altitudeDepth) a.push(this.altitudeDepth);
         gStrings.R4 = a.join(" ");
       }
-      if (this.staffComments || this.location) {
+      if (this.staffComments || this.additionalInformation) {
         a = [];
         if (this.staffComments) a.push(this.staffComments);
         if (this.additionalInformation) a.push(this.additionalInformation);
@@ -389,7 +389,7 @@ module.exports = function textfields() {
       gStrings.R1 = this.uniqueDesignation;
       gStrings.R2 = this.type;
       gStrings.R3 = this.iffSif;
-      if (this.staffComments || this.location) {
+      if (this.staffComments || this.additionalInformation) {
         a = [];
         if (this.staffComments) a.push(this.staffComments);
         if (this.additionalInformation) a.push(this.additionalInformation);
