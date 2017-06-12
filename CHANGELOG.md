@@ -1,6 +1,6 @@
 # Change Log
 
-## 1.2.1 11 JUN 2017
+## 1.2.1 12 JUN 2017
 
 ### Added
 
