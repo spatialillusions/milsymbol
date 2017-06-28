@@ -1,14 +1,21 @@
 var ms = require("../ms.js");
 
-module.exports = function(options) {
-  if (typeof options === "object") {
-    for (var key in options) {
-      if (!options.hasOwnProperty(key)) continue;
-      if (key === "SIDC") {
-        this._options.sidc = options[key];
-        continue;
+module.exports = function() {
+  var i;
+  for (i = 0; i < arguments.length; i++) {
+    var options = arguments[i];
+    if (typeof options === "object") {
+      for (var key in options) {
+        if (!options.hasOwnProperty(key)) continue;
+        if (key === "SIDC") {
+          this._options.sidc = options[key];
+          continue;
+        }
+        this._options[key] = options[key];
       }
-      this._options[key] = options[key];
+    } else {
+      // if there just is something not an object, we asume that it is the SIDC
+      this._options.sidc = options;
     }
   }
   // Reset if the icon is valid
@@ -24,7 +31,7 @@ module.exports = function(options) {
 
   this.bbox = new ms.BBox();
   //Processing all parts of the marker, adding them to the drawinstruction and updating the boundingbox
-  for (var i in ms._symbolParts) {
+  for (i in ms._symbolParts) {
     if (!ms._symbolParts.hasOwnProperty(i)) continue;
     var m = ms._symbolParts[i].call(this);
     if (!m.pre) continue;

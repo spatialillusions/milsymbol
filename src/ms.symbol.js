@@ -1,15 +1,15 @@
 var ms = require("./ms.js");
 
-function symbol(option1, options) {
+function symbol() {
   //=======================================================================================
   this._options = {}; //initiate options object.
-  if (typeof option1 != "object") {
+  /*if (typeof option1 != "object") {
     // The SIDC for the symbol.
     this._options.sidc = option1;
   } else {
     // Enable to initiate directly with an options object.
     options = option1;
-  }
+  }*/
   // Setting default values for options
   // TODO place all of these in a style object
   this._options.size = 100; // The symbol size is actually the L variable in the symbols so the symbol will be larger than this size.
@@ -22,7 +22,7 @@ function symbol(option1, options) {
   this._options.icon = true; // Should we display the icon?
   this._options.monoColor = false; // Should the icon be monocromatic and if so what color
   this._options.civilianColor = true; // Should we use the Civilian Purple defined in 2525? (We set this to default because I like the color.
-  this._options.colorMode = ms.getColorMode("Light"); // 2525C Allows you to use Dark; Medium or Light colors. The values you can set are "Dark";"Medium" or "Light"
+  this._options.colorMode = "Light"; // 2525C Allows you to use Dark; Medium or Light colors. The values you can set are "Dark";"Medium" or "Light"
   this._options.infoFields = true; // If you have set all info fields but don't want the displayed; then just set this to false.
   this._options.infoSize = 40; // Relative size of the info fields
   this._options.alternateMedal = false; // 2525D lets you choose between MEDAL icn and alternate MEDAL icn for Mines; default is set to MEDAL.
@@ -63,9 +63,10 @@ function symbol(option1, options) {
   this.markerAnchor = { x: 50, y: 50 }; // The anchor point for the current marker
   this.octagonAnchor = { x: 50, y: 50 }; // The anchor point for the octagon for the current marker
   this.properties = {}; // Properties of the current marker
-
   // Initiate symbol.
-  this.setOptions.call(this, options);
+  if (arguments.length > 0) {
+    this.setOptions.apply(this, arguments);
+  }
 }
 
 // This is here so that we have it initiated in this.symbol from the beginning

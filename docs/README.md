@@ -49,11 +49,11 @@ Each symbol created with milsymbol is its own object and the properties of the o
 
 All functionality in milsymbol is normally found under the `ms` namespace, but if you have imported milsymbol to another variable, you will have to use that instead of `ms`.
 
-## ms.Symbol(SIDC,*{Options}*)
+## ms.Symbol(*arg1, arg2 ... argN*)
 
-Initiates a new symbol object, you should always provide a SIDC for the symbol, and it is optional to provide other options. (If the options object contains a property named `sidc` or `SIDC`, you can omit the SIDC parameter.)
+Initiates a new symbol object, where arg1-argN are options objects. If you provide an argument that isn't an object we will asume that it is the SIDC for the symbol.
 
-Even if options can be provided or updated after the symbol object is created, the performance will be better if you provide them directly when you create the symbol, because every time you update some options the symbol will automatically be updated. 
+Even if options can be provided or updated after the symbol object is created, the performance will be better if you provide them directly when you create the symbol, or to provide no arguments at all, this is because every time you update some options the symbol will automatically be updated. 
 
 ```javascript
 var symbol = new ms.Symbol('SFG-UCI----D',{size:30});
@@ -64,6 +64,14 @@ Once you have initiated your symbol, you can use different methods to request a 
 ```javascript
 var symbol = new ms.Symbol('SFG-UCI----D',{size:30}).asSVG();
 ```
+
+**General options**
+
+It is possible to add any custom options to your options object as well as the options listed below.
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| sidc | String | '' | The SIDC for the symbol |
 
 **Modifier options**
 

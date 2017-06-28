@@ -1,5 +1,21 @@
 # Change Log
 
+## Master
+
+### Added
+
+### Changed
+
+- ms.Symbol and setOptions can now take any number of arguments from 0 to n.
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
 ## 1.2.1 12 JUN 2017
 
 ### Added
