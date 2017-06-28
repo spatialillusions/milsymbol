@@ -51,7 +51,7 @@ All functionality in milsymbol is normally found under the `ms` namespace, but i
 
 ## ms.Symbol(*arg1, arg2 ... argN*)
 
-Initiates a new symbol object, where arg1-argN are options objects. If you provide an argument that isn't an object we will asume that it is the SIDC for the symbol.
+Initiates a new symbol object, where arg1-argN are options objects. If you provide an argument that isn't an object we will assume that it is the SIDC for the symbol.
 
 Even if options can be provided or updated after the symbol object is created, the performance will be better if you provide them directly when you create the symbol, or to provide no arguments at all, this is because every time you update some options the symbol will automatically be updated. 
 
