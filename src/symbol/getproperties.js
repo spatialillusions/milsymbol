@@ -78,9 +78,9 @@ module.exports = function() {
   if (this.monoColor != "") {
     properties.fill = false;
   }
-  this.SIDC = String(this.SIDC).replace(/\*/g, "-").replace(/ /g, "");
+  this.sidc = String(this.sidc).replace(/\*/g, "-").replace(/ /g, "");
 
-  properties.numberSIDC = !isNaN(this.SIDC);
+  properties.numberSIDC = !isNaN(this.sidc);
   if (properties.numberSIDC) {
     //This is for new number based SIDCs
 

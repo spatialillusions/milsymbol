@@ -4,7 +4,7 @@ function symbol(option1, options) {
   //=======================================================================================
   if (typeof option1 != "object") {
     // The SIDC for the symbol.
-    this.SIDC = option1;
+    this.sidc = option1;
   } else {
     // Enable to initiate directly with an options object.
     options = option1;

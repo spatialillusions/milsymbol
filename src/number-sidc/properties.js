@@ -1,13 +1,13 @@
 var ms = require("../ms.js");
 
 module.exports = function(properties, mapping) {
-  //var version = this.SIDC.substr(0, 2);
-  var standardIdentity1 = this.SIDC.substr(2, 1);
-  var standardIdentity2 = this.SIDC.substr(3, 1);
-  var symbolSet = this.SIDC.substr(4, 2);
-  var status = this.SIDC.substr(6, 1);
-  var headquartersTaskForceDummy = this.SIDC.substr(7, 1);
-  var echelonMobility = this.SIDC.substr(8, 2);
+  //var version = this.sidc.substr(0, 2);
+  var standardIdentity1 = this.sidc.substr(2, 1);
+  var standardIdentity2 = this.sidc.substr(3, 1);
+  var symbolSet = this.sidc.substr(4, 2);
+  var status = this.sidc.substr(6, 1);
+  var headquartersTaskForceDummy = this.sidc.substr(7, 1);
+  var echelonMobility = this.sidc.substr(8, 2);
 
   var affiliationMapping = {
     "0": "Unknown",
@@ -43,9 +43,9 @@ module.exports = function(properties, mapping) {
     "60": "Ground"
   };
 
-  var functionid = (properties.functionid = this.SIDC.substr(10, 10));
+  var functionid = (properties.functionid = this.sidc.substr(10, 10));
 
-  properties.context = mapping.context[parseInt(this.SIDC.substr(2, 1))];
+  properties.context = mapping.context[parseInt(this.sidc.substr(2, 1))];
   properties.affiliation = affiliationMapping[standardIdentity2];
   properties.dimension = dimensionMapping[symbolSet];
 

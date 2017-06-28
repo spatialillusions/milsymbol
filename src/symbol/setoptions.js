@@ -4,8 +4,8 @@ module.exports = function(options) {
   if (typeof options === "object") {
     for (var key in options) {
       if (!options.hasOwnProperty(key)) continue;
-      if (key === "sidc") {
-        this["SIDC"] = options[key]; // TacticalJSON compability
+      if (key === "SIDC") {
+        this.sidc = options[key];
         continue;
       }
       this[key] = options[key];
@@ -49,7 +49,7 @@ module.exports = function(options) {
   if (ms._debug) {
     //This is a debug function we can turn on to see if symbol parts are missing
     if (JSON.stringify(this.drawInstructions).indexOf("null") != -1) {
-      console.warn("Error in: " + this.SIDC);
+      console.warn("Error in: " + this.sidc);
     }
   }
   this.baseWidth =

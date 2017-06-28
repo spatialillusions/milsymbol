@@ -139,7 +139,7 @@ module.exports = function icon() {
     //Number based SIDCs.
     if (this.properties.numberSIDC) {
       //Number based SIDCs.
-      var symbolSet = String(this.SIDC).substr(4, 2);
+      var symbolSet = String(this.sidc).substr(4, 2);
       if (ms._iconCache[icnet].hasOwnProperty("numberSIDC")) {
         if (
           ms._iconCache[icnet].numberSIDC.symbolSet.hasOwnProperty(symbolSet)
@@ -249,7 +249,7 @@ module.exports = function icon() {
         ) {
           drawArray2.push(undefinedIcon);
           this._validIcon = false;
-          //console.log('Invalid icon code in SIDC: ' + this.SIDC);
+          //console.log('Invalid icon code in SIDC: ' + this.sidc);
         }
       } else {
         drawArray2.push(mainIcon);
@@ -287,20 +287,20 @@ module.exports = function icon() {
     } else {
       //Letter based SIDC
       var genericSIDC =
-        this.SIDC.substr(0, 1) +
+        this.sidc.substr(0, 1) +
         "-" +
-        this.SIDC.substr(2, 1) +
+        this.sidc.substr(2, 1) +
         "-" +
-        this.SIDC.substr(4, 6);
+        this.sidc.substr(4, 6);
       if (icons[genericSIDC]) {
         drawArray2.push(icons[genericSIDC]);
       } else {
         if (
-          !(this.SIDC.substr(4, 6) == "------" || this.SIDC.substr(4, 6) == "")
+          !(this.sidc.substr(4, 6) == "------" || this.sidc.substr(4, 6) == "")
         ) {
           drawArray2.push(undefinedIcon);
           this._validIcon = false;
-          //console.log("Invalid icon code in SIDC: " + this.SIDC);
+          //console.log("Invalid icon code in SIDC: " + this.sidc);
         }
       }
       if (specialbbox[genericSIDC]) {

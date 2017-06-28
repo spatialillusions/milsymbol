@@ -205,7 +205,7 @@ module.exports = function textfields() {
 
   if (this.properties.numberSIDC) {
     //Number based SIDCs.
-    //var symbolSet = String(this.SIDC).substr(4, 2);
+    //var symbolSet = String(this.sidc).substr(4, 2);
     //TODO fix add code for Number based labels
   } else {
     //Letter based SIDCs.
@@ -217,11 +217,11 @@ module.exports = function textfields() {
       }
     }
     var genericSIDC =
-      this.SIDC.substr(0, 1) +
+      this.sidc.substr(0, 1) +
       "-" +
-      this.SIDC.substr(2, 1) +
+      this.sidc.substr(2, 1) +
       "-" +
-      this.SIDC.substr(4, 6);
+      this.sidc.substr(4, 6);
     if (ms._labelCache["letter"].hasOwnProperty(genericSIDC)) {
       drawArray2.push(
         labelOverride.call(this, ms._labelCache["letter"][genericSIDC])
@@ -324,7 +324,7 @@ module.exports = function textfields() {
     }; //Text information on left and right sIde.
     var a;
     //Air & Space (They should be different but we skip that at the moment) TODO
-    if (!isNaN(this.SIDC) && this.properties.dimension == "Air") {
+    if (!isNaN(this.sidc) && this.properties.dimension == "Air") {
       gStrings.R1 = this.uniqueDesignation;
       gStrings.R2 = this.iffSif;
       gStrings.R3 = this.type;
@@ -342,7 +342,7 @@ module.exports = function textfields() {
       }
     }
     //Land or letterbased SIDC
-    if (isNaN(this.SIDC) || this.properties.baseDimension == "Ground") {
+    if (isNaN(this.sidc) || this.properties.baseDimension == "Ground") {
       gStrings.L1 = this.dtg;
       if (this.altitudeDepth || this.location) {
         a = [];
@@ -385,7 +385,7 @@ module.exports = function textfields() {
       }
     }
     //Sea numberbased SIDC
-    if (!isNaN(this.SIDC) && this.properties.dimension == "Sea") {
+    if (!isNaN(this.sidc) && this.properties.dimension == "Sea") {
       gStrings.R1 = this.uniqueDesignation;
       gStrings.R2 = this.type;
       gStrings.R3 = this.iffSif;
@@ -403,7 +403,7 @@ module.exports = function textfields() {
       }
     }
     //Sub numberbased SIDC
-    if (!isNaN(this.SIDC) && this.properties.dimension == "Subsurface") {
+    if (!isNaN(this.sidc) && this.properties.dimension == "Subsurface") {
       gStrings.R1 = this.uniqueDesignation;
       gStrings.R2 = this.type;
       gStrings.R3 = this.altitudeDepth;

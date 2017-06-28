@@ -1,26 +1,26 @@
 var ms = require("../ms.js");
 
 module.exports = function(properties, mapping) {
-  this.SIDC = this.SIDC.toUpperCase();
+  this.sidc = this.sidc.toUpperCase();
 
-  var codingscheme = this.SIDC.charAt(0) != "" ? this.SIDC.charAt(0) : "-";
-  var affiliation = this.SIDC.charAt(1) != "" ? this.SIDC.charAt(1) : "-";
-  var battledimension = this.SIDC.charAt(2) != "" ? this.SIDC.charAt(2) : "-";
-  var status = this.SIDC.charAt(3) != "" ? this.SIDC.charAt(3) : "-";
-  var functionid = (properties.functionid = this.SIDC.substr(4, 6) != ""
-    ? this.SIDC.substr(4, 6)
+  var codingscheme = this.sidc.charAt(0) != "" ? this.sidc.charAt(0) : "-";
+  var affiliation = this.sidc.charAt(1) != "" ? this.sidc.charAt(1) : "-";
+  var battledimension = this.sidc.charAt(2) != "" ? this.sidc.charAt(2) : "-";
+  var status = this.sidc.charAt(3) != "" ? this.sidc.charAt(3) : "-";
+  var functionid = (properties.functionid = this.sidc.substr(4, 6) != ""
+    ? this.sidc.substr(4, 6)
     : "------");
-  var symbolmodifier11 = this.SIDC.charAt(10) != ""
-    ? this.SIDC.charAt(10)
+  var symbolmodifier11 = this.sidc.charAt(10) != ""
+    ? this.sidc.charAt(10)
     : "-";
-  var symbolmodifier12 = this.SIDC.charAt(11) != ""
-    ? this.SIDC.charAt(11)
+  var symbolmodifier12 = this.sidc.charAt(11) != ""
+    ? this.sidc.charAt(11)
     : "-";
   /*
-  var countrycode = this.SIDC.substr(12, 2) != ""
-    ? this.SIDC.substr(12, 2)
+  var countrycode = this.sidc.substr(12, 2) != ""
+    ? this.sidc.substr(12, 2)
     : "--";
-  var orderofbattle = this.SIDC.charAt(14) != "" ? this.SIDC.charAt(14) : "-";
+  var orderofbattle = this.sidc.charAt(14) != "" ? this.sidc.charAt(14) : "-";
   */
   if (["H", "S", "J", "K"].indexOf(affiliation) > -1)
     properties.affiliation = mapping.affiliation[0];
@@ -338,8 +338,8 @@ module.exports = function(properties, mapping) {
 
   //Some symbols in EMS and symbols from tactical graphics
   if (
-    this.SIDC.substr(0, 3) == "WAS" ||
-    this.SIDC.substr(0, 3) == "WOS" ||
+    this.sidc.substr(0, 3) == "WAS" ||
+    this.sidc.substr(0, 3) == "WOS" ||
     codingscheme == "G"
   ) {
     properties.frame = false;
