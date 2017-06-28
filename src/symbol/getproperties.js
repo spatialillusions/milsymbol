@@ -15,8 +15,8 @@ module.exports = function() {
     echelon: "", //What echelon (Platoon/Company...)
     faker: false, //Is it a Faker
     fenintDummy: false, //Is it a feint/dummy
-    fill: this.fill, //Standard says it should be filled
-    frame: this.frame, //Standard says it should be framed
+    fill: this._options.fill, //Standard says it should be filled
+    frame: this._options.frame, //Standard says it should be framed
     functionid: "", //Part of SIDC referring to the icon.
     headquarters: false, //Is it a Headquarters
     //"iconBottom"		: 100,		//The bottom of the icon
@@ -75,12 +75,14 @@ module.exports = function() {
 
   properties.context = mapping.context[0];
 
-  if (this.monoColor != "") {
+  if (this._options.monoColor != "") {
     properties.fill = false;
   }
-  this.sidc = String(this.sidc).replace(/\*/g, "-").replace(/ /g, "");
+  this._options.sidc = String(this._options.sidc)
+    .replace(/\*/g, "-")
+    .replace(/ /g, "");
 
-  properties.numberSIDC = !isNaN(this.sidc);
+  properties.numberSIDC = !isNaN(this._options.sidc);
   if (properties.numberSIDC) {
     //This is for new number based SIDCs
 
@@ -114,7 +116,7 @@ module.exports = function() {
     properties.baseGeometry.bbox = new ms.BBox();
   }
   //If both frame and icon is turned off we should just have a position marker
-  if (!this.frame && !this.icon) {
+  if (!this._options.frame && !this._options.icon) {
     properties.baseGeometry = ms._symbolGeometries.PositionMarker;
   }
 

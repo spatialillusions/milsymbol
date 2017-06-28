@@ -1,26 +1,35 @@
 var ms = require("../ms.js");
 
 module.exports = function(properties, mapping) {
-  this.sidc = this.sidc.toUpperCase();
+  this._options.sidc = this._options.sidc.toUpperCase();
 
-  var codingscheme = this.sidc.charAt(0) != "" ? this.sidc.charAt(0) : "-";
-  var affiliation = this.sidc.charAt(1) != "" ? this.sidc.charAt(1) : "-";
-  var battledimension = this.sidc.charAt(2) != "" ? this.sidc.charAt(2) : "-";
-  var status = this.sidc.charAt(3) != "" ? this.sidc.charAt(3) : "-";
-  var functionid = (properties.functionid = this.sidc.substr(4, 6) != ""
-    ? this.sidc.substr(4, 6)
-    : "------");
-  var symbolmodifier11 = this.sidc.charAt(10) != ""
-    ? this.sidc.charAt(10)
+  var codingscheme = this._options.sidc.charAt(0) != ""
+    ? this._options.sidc.charAt(0)
     : "-";
-  var symbolmodifier12 = this.sidc.charAt(11) != ""
-    ? this.sidc.charAt(11)
+  var affiliation = this._options.sidc.charAt(1) != ""
+    ? this._options.sidc.charAt(1)
+    : "-";
+  var battledimension = this._options.sidc.charAt(2) != ""
+    ? this._options.sidc.charAt(2)
+    : "-";
+  var status = this._options.sidc.charAt(3) != ""
+    ? this._options.sidc.charAt(3)
+    : "-";
+  var functionid = (properties.functionid = this._options.sidc.substr(4, 6) !=
+    ""
+    ? this._options.sidc.substr(4, 6)
+    : "------");
+  var symbolmodifier11 = this._options.sidc.charAt(10) != ""
+    ? this._options.sidc.charAt(10)
+    : "-";
+  var symbolmodifier12 = this._options.sidc.charAt(11) != ""
+    ? this._options.sidc.charAt(11)
     : "-";
   /*
-  var countrycode = this.sidc.substr(12, 2) != ""
-    ? this.sidc.substr(12, 2)
+  var countrycode = this._options.sidc.substr(12, 2) != ""
+    ? this._options.sidc.substr(12, 2)
     : "--";
-  var orderofbattle = this.sidc.charAt(14) != "" ? this.sidc.charAt(14) : "-";
+  var orderofbattle = this._options.sidc.charAt(14) != "" ? this._options.sidc.charAt(14) : "-";
   */
   if (["H", "S", "J", "K"].indexOf(affiliation) > -1)
     properties.affiliation = mapping.affiliation[0];
@@ -49,9 +58,11 @@ module.exports = function(properties, mapping) {
   //symbolmodifier11 that are Installations
   if (symbolmodifier11 == "H") properties.installation = true;
   //Planned/Anticipated/Suspect symbols should have a dashed outline
-  if (this.frame && status == "A")
+  if (this._options.frame && status == "A")
     properties.notpresent = ms._dashArrays.anticipated;
-  if (this.frame && ["P", "A", "S", "G", "M"].indexOf(affiliation) > -1) {
+  if (
+    this._options.frame && ["P", "A", "S", "G", "M"].indexOf(affiliation) > -1
+  ) {
     properties.notpresent = ms._dashArrays.pending;
   }
   //Should it have a Condition Bar
@@ -338,8 +349,8 @@ module.exports = function(properties, mapping) {
 
   //Some symbols in EMS and symbols from tactical graphics
   if (
-    this.sidc.substr(0, 3) == "WAS" ||
-    this.sidc.substr(0, 3) == "WOS" ||
+    this._options.sidc.substr(0, 3) == "WAS" ||
+    this._options.sidc.substr(0, 3) == "WOS" ||
     codingscheme == "G"
   ) {
     properties.frame = false;

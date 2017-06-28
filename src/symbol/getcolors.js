@@ -1,9 +1,9 @@
 var ms = require("../ms.js");
 
 module.exports = function() {
-  var baseFillColor = typeof this.colorMode === "object"
-    ? this.colorMode
-    : ms.getColorMode(this.colorMode);
+  var baseFillColor = typeof this._options.colorMode === "object"
+    ? this._options.colorMode
+    : ms.getColorMode(this._options.colorMode);
   var baseFrameColor = ms.getColorMode("FrameColor");
   var baseIconColor = ms.getColorMode("IconColor");
   var baseIconFillColor = baseFillColor;
@@ -13,7 +13,7 @@ module.exports = function() {
   var baseColorNone = ms.getColorMode("None");
 
   //If it is a Civilian Symbol and civilian colors not are turned off, use civilian colors...
-  if (this.civilianColor && this.properties.civilian) {
+  if (this._options.civilianColor && this.properties.civilian) {
     baseFillColor.Friend = baseFillColor.Neutral = baseFillColor.Unknown =
       baseFillColor.Civilian;
     baseFrameColor.Friend = baseFrameColor.Neutral = baseFrameColor.Unknown =
@@ -28,8 +28,8 @@ module.exports = function() {
     baseIconColor.Friend = baseIconColor.Hostile;
   }
   //If the user has specified a mono color to use for all symbols.
-  if (this.monoColor != "") {
-    baseFrameColor.Friend = baseFrameColor.Neutral = baseFrameColor.Hostile = baseFrameColor.Unknown = baseFrameColor.Civilian = this.monoColor;
+  if (this._options.monoColor != "") {
+    baseFrameColor.Friend = baseFrameColor.Neutral = baseFrameColor.Hostile = baseFrameColor.Unknown = baseFrameColor.Civilian = this._options.monoColor;
     baseColorBlack = baseFrameColor;
     baseColorWhite = baseFillColor = baseColorNone;
   }
@@ -44,7 +44,10 @@ module.exports = function() {
     white: baseColorWhite
   };
   //Turn of the frame
-  if (this.properties.frame /* || (!this.properties.frame && !this.icon)*/) {
+  if (
+    this.properties
+      .frame /* || (!this.properties.frame && !this._options.icon)*/
+  ) {
     colors.frameColor = baseColorBlack;
   } else {
     colors.frameColor = baseColorNone;
@@ -53,7 +56,7 @@ module.exports = function() {
   if (this.properties.fill) {
     //I don't think you can have an unframed but filled icon so we turn off the fill as well, unless you have turned off the icon as well.
     colors.fillColor = !this.properties.frame &&
-      !(!this.properties.frame && !this.icon)
+      !(!this.properties.frame && !this._options.icon)
       ? baseColorNone
       : baseFillColor;
     colors.iconColor = baseColorBlack;
@@ -69,7 +72,9 @@ module.exports = function() {
     colors.iconColor = baseFrameColor;
     colors.iconFillColor = baseColorNone;
     //If everything turned off, make everything black.
-    if (!this.properties.frame && !this.properties.fill && !this.icon) {
+    if (
+      !this.properties.frame && !this.properties.fill && !this._options.icon
+    ) {
       colors.frameColor = baseColorBlack;
       colors.fillColor = baseColorBlack;
     }

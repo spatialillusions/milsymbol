@@ -9,7 +9,7 @@ module.exports = function statusmodifier() {
   var y2 = bbox.y2;
 
   if (this.properties.condition) {
-    if (this.properties.fill && this.monoColor === "") {
+    if (this.properties.fill && this._options.monoColor === "") {
       var colors = {
         FullyCapable: "rgb(0,255,0)",
         Damaged: "rgb(255,255,0)",
@@ -25,7 +25,7 @@ module.exports = function statusmodifier() {
       //Add the bar to the geometry
       drawArray2.push({
         type: "path",
-        strokewidth: this.strokeWidth,
+        strokewidth: this._options.strokeWidth,
         fill: colors[this.properties.condition],
         stroke: this.colors.frameColor[this.properties.affiliation],
         d: "M" +
@@ -41,13 +41,13 @@ module.exports = function statusmodifier() {
       //Add the hight of the codition bar to the geometry bounds
       y2 += 15;
       //outline
-      if (this.outlineWidth > 0)
+      if (this._options.outlineWidth > 0)
         drawArray1.push(
           ms.outline(
             drawArray2,
-            this.outlineWidth,
-            this.strokeWidth,
-            this.outlineColor
+            this._options.outlineWidth,
+            this._options.strokeWidth,
+            this._options.outlineColor
           )
         );
     } else {
@@ -58,7 +58,7 @@ module.exports = function statusmodifier() {
         drawArray2.push({
           type: "path",
           d: "M150,20 L50,180",
-          strokewidth: this.strokeWidth * 2,
+          strokewidth: this._options.strokeWidth * 2,
           stroke: this.colors.frameColor[this.properties.affiliation]
         });
         //Add space for the modifier to the geometry bounds
@@ -69,17 +69,17 @@ module.exports = function statusmodifier() {
         drawArray2.push({
           type: "path",
           d: "M50,20 L150,180",
-          strokewidth: this.strokeWidth * 2,
+          strokewidth: this._options.strokeWidth * 2,
           stroke: this.colors.frameColor[this.properties.affiliation]
         });
       //outline
-      if (this.outlineWidth > 0)
+      if (this._options.outlineWidth > 0)
         drawArray1.push(
           ms.outline(
             drawArray2,
-            this.outlineWidth,
-            this.strokeWidth,
-            this.outlineColor
+            this._options.outlineWidth,
+            this._options.strokeWidth,
+            this._options.outlineColor
           )
         );
     }

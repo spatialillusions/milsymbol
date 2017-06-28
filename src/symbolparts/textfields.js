@@ -10,7 +10,7 @@ module.exports = function textfields() {
     this.colors.iconColor[this.properties.affiliation] ||
     this.colors.iconColor["Friend"];
   var fontFamily = "Arial";
-  var fontSize = this.infoSize;
+  var fontSize = this._options.infoSize;
 
   var gbbox = new ms.BBox();
   var spaceTextIcon = 20; //The distance between the Icon and the labels
@@ -205,7 +205,7 @@ module.exports = function textfields() {
 
   if (this.properties.numberSIDC) {
     //Number based SIDCs.
-    //var symbolSet = String(this.sidc).substr(4, 2);
+    //var symbolSet = String(this._options.sidc).substr(4, 2);
     //TODO fix add code for Number based labels
   } else {
     //Letter based SIDCs.
@@ -217,24 +217,24 @@ module.exports = function textfields() {
       }
     }
     var genericSIDC =
-      this.sidc.substr(0, 1) +
+      this._options.sidc.substr(0, 1) +
       "-" +
-      this.sidc.substr(2, 1) +
+      this._options.sidc.substr(2, 1) +
       "-" +
-      this.sidc.substr(4, 6);
+      this._options.sidc.substr(4, 6);
     if (ms._labelCache["letter"].hasOwnProperty(genericSIDC)) {
       drawArray2.push(
         labelOverride.call(this, ms._labelCache["letter"][genericSIDC])
       );
 
       //outline
-      if (this.outlineWidth > 0)
+      if (this._options.outlineWidth > 0)
         drawArray1.push(
           ms.outline(
             drawArray2,
-            this.outlineWidth,
-            this.strokeWidth,
-            this.outlineColor
+            this._options.outlineWidth,
+            this._options.strokeWidth,
+            this._options.outlineColor
           )
         );
       return { pre: drawArray1, post: drawArray2, bbox: gbbox };
@@ -243,38 +243,38 @@ module.exports = function textfields() {
 
   //Check that we have some texts to print
   var textFields =
-    this.quantity ||
-    this.reinforcedReduced ||
-    this.staffComments ||
-    this.additionalInformation ||
-    this.evaluationRating ||
-    this.combatEffectiveness ||
-    this.signatureEquipment ||
-    this.higherFormation ||
-    this.hostile ||
-    this.iffSif ||
-    this.sigint ||
-    this.uniqueDesignation ||
-    this.type ||
-    this.dtg ||
-    this.altitudeDepth ||
-    this.location ||
-    this.speed ||
-    this.specialHeadquarters ||
-    this.platformType ||
-    this.equipmentTeardownTime ||
-    this.commonIdentifier ||
-    this.auxiliaryEquipmentIndicator ||
-    this.headquartersElement;
-  if (this.infoFields && textFields) {
-    if (this.specialHeadquarters) {
-      drawArray2.push(text(this.specialHeadquarters));
+    this._options.quantity ||
+    this._options.reinforcedReduced ||
+    this._options.staffComments ||
+    this._options.additionalInformation ||
+    this._options.evaluationRating ||
+    this._options.combatEffectiveness ||
+    this._options.signatureEquipment ||
+    this._options.higherFormation ||
+    this._options.hostile ||
+    this._options.iffSif ||
+    this._options.sigint ||
+    this._options.uniqueDesignation ||
+    this._options.type ||
+    this._options.dtg ||
+    this._options.altitudeDepth ||
+    this._options.location ||
+    this._options.speed ||
+    this._options.specialHeadquarters ||
+    this._options.platformType ||
+    this._options.equipmentTeardownTime ||
+    this._options.commonIdentifier ||
+    this._options.auxiliaryEquipmentIndicator ||
+    this._options.headquartersElement;
+  if (this._options.infoFields && textFields) {
+    if (this._options.specialHeadquarters) {
+      drawArray2.push(text(this._options.specialHeadquarters));
     }
-    if (this.quantity) {
+    if (this._options.quantity) {
       //geometry
       drawArray2.push({
         type: "text",
-        text: this.quantity,
+        text: this._options.quantity,
         x: 100,
         y: bbox.y1 - 10,
         textanchor: "middle",
@@ -285,11 +285,11 @@ module.exports = function textfields() {
       });
       gbbox.y1 = bbox.y1 - 10 - fontSize;
     }
-    if (this.headquartersElement) {
+    if (this._options.headquartersElement) {
       if (
         this.properties.condition &&
         this.properties.fill &&
-        this.monoColor == ""
+        this._options.monoColor == ""
       ) {
         //Add the hight of the codition bar to the geometry bounds
         bbox.y2 += 15;
@@ -297,7 +297,7 @@ module.exports = function textfields() {
       //geometry
       drawArray2.push({
         type: "text",
-        text: this.headquartersElement,
+        text: this._options.headquartersElement,
         x: 100,
         y: bbox.y2 + 35,
         textanchor: "middle",
@@ -324,104 +324,123 @@ module.exports = function textfields() {
     }; //Text information on left and right sIde.
     var a;
     //Air & Space (They should be different but we skip that at the moment) TODO
-    if (!isNaN(this.sidc) && this.properties.dimension == "Air") {
-      gStrings.R1 = this.uniqueDesignation;
-      gStrings.R2 = this.iffSif;
-      gStrings.R3 = this.type;
-      if (this.speed || this.altitudeDepth) {
+    if (!isNaN(this._options.sidc) && this.properties.dimension == "Air") {
+      gStrings.R1 = this._options.uniqueDesignation;
+      gStrings.R2 = this._options.iffSif;
+      gStrings.R3 = this._options.type;
+      if (this._options.speed || this._options.altitudeDepth) {
         a = [];
-        if (this.speed) a.push(this.speed);
-        if (this.altitudeDepth) a.push(this.altitudeDepth);
+        if (this._options.speed) a.push(this._options.speed);
+        if (this._options.altitudeDepth) a.push(this._options.altitudeDepth);
         gStrings.R4 = a.join(" ");
       }
-      if (this.staffComments || this.additionalInformation) {
+      if (this._options.staffComments || this._options.additionalInformation) {
         a = [];
-        if (this.staffComments) a.push(this.staffComments);
-        if (this.additionalInformation) a.push(this.additionalInformation);
+        if (this._options.staffComments) a.push(this._options.staffComments);
+        if (this._options.additionalInformation)
+          a.push(this._options.additionalInformation);
         gStrings.R5 = a.join(" ");
       }
     }
     //Land or letterbased SIDC
-    if (isNaN(this.sidc) || this.properties.baseDimension == "Ground") {
-      gStrings.L1 = this.dtg;
-      if (this.altitudeDepth || this.location) {
+    if (
+      isNaN(this._options.sidc) || this.properties.baseDimension == "Ground"
+    ) {
+      gStrings.L1 = this._options.dtg;
+      if (this._options.altitudeDepth || this._options.location) {
         a = [];
-        if (this.altitudeDepth) a.push(this.altitudeDepth);
-        if (this.location) a.push(this.location);
+        if (this._options.altitudeDepth) a.push(this._options.altitudeDepth);
+        if (this._options.location) a.push(this._options.location);
         gStrings.L2 = a.join(" ");
       }
-      if (this.type || this.platformType || this.commonIdentifier) {
-        a = [];
-        if (this.type) a.push(this.type);
-        if (this.platformType) a.push(this.platformType);
-        if (this.commonIdentifier) a.push(this.commonIdentifier);
-        gStrings.L3 = a.join(" ");
-      }
-      gStrings.L4 = this.uniqueDesignation;
-      gStrings.L5 = this.speed;
-      gStrings.R1 = this.reinforcedReduced;
-      gStrings.R2 = this.staffComments;
-      if (this.additionalInformation || this.equipmentTeardownTime) {
-        a = [];
-        if (this.additionalInformation) a.push(this.additionalInformation);
-        if (this.equipmentTeardownTime) a.push(this.equipmentTeardownTime);
-        gStrings.R3 = a.join(" ");
-      }
-      gStrings.R4 = this.higherFormation;
       if (
-        this.evaluationRating ||
-        this.combatEffectiveness ||
-        this.signatureEquipment ||
-        this.hostile ||
-        this.iffSif
+        this._options.type ||
+        this._options.platformType ||
+        this._options.commonIdentifier
       ) {
         a = [];
-        if (this.evaluationRating) a.push(this.evaluationRating);
-        if (this.combatEffectiveness) a.push(this.combatEffectiveness);
-        if (this.signatureEquipment) a.push(this.signatureEquipment);
-        if (this.hostile) a.push(this.hostile);
-        if (this.iffSif) a.push(this.iffSif);
+        if (this._options.type) a.push(this._options.type);
+        if (this._options.platformType) a.push(this._options.platformType);
+        if (this._options.commonIdentifier)
+          a.push(this._options.commonIdentifier);
+        gStrings.L3 = a.join(" ");
+      }
+      gStrings.L4 = this._options.uniqueDesignation;
+      gStrings.L5 = this._options.speed;
+      gStrings.R1 = this._options.reinforcedReduced;
+      gStrings.R2 = this._options.staffComments;
+      if (
+        this._options.additionalInformation ||
+        this._options.equipmentTeardownTime
+      ) {
+        a = [];
+        if (this._options.additionalInformation)
+          a.push(this._options.additionalInformation);
+        if (this._options.equipmentTeardownTime)
+          a.push(this._options.equipmentTeardownTime);
+        gStrings.R3 = a.join(" ");
+      }
+      gStrings.R4 = this._options.higherFormation;
+      if (
+        this._options.evaluationRating ||
+        this._options.combatEffectiveness ||
+        this._options.signatureEquipment ||
+        this._options.hostile ||
+        this._options.iffSif
+      ) {
+        a = [];
+        if (this._options.evaluationRating)
+          a.push(this._options.evaluationRating);
+        if (this._options.combatEffectiveness)
+          a.push(this._options.combatEffectiveness);
+        if (this._options.signatureEquipment)
+          a.push(this._options.signatureEquipment);
+        if (this._options.hostile) a.push(this._options.hostile);
+        if (this._options.iffSif) a.push(this._options.iffSif);
         gStrings.R5 = a.join(" ");
       }
     }
     //Sea numberbased SIDC
-    if (!isNaN(this.sidc) && this.properties.dimension == "Sea") {
-      gStrings.R1 = this.uniqueDesignation;
-      gStrings.R2 = this.type;
-      gStrings.R3 = this.iffSif;
-      if (this.staffComments || this.additionalInformation) {
+    if (!isNaN(this._options.sidc) && this.properties.dimension == "Sea") {
+      gStrings.R1 = this._options.uniqueDesignation;
+      gStrings.R2 = this._options.type;
+      gStrings.R3 = this._options.iffSif;
+      if (this._options.staffComments || this._options.additionalInformation) {
         a = [];
-        if (this.staffComments) a.push(this.staffComments);
-        if (this.additionalInformation) a.push(this.additionalInformation);
+        if (this._options.staffComments) a.push(this._options.staffComments);
+        if (this._options.additionalInformation)
+          a.push(this._options.additionalInformation);
         gStrings.R4 = a.join(" ");
       }
-      if (this.location || this.speed) {
+      if (this._options.location || this._options.speed) {
         a = [];
-        if (this.location) a.push(this.location);
-        if (this.speed) a.push(this.speed);
+        if (this._options.location) a.push(this._options.location);
+        if (this._options.speed) a.push(this._options.speed);
         gStrings.R5 = a.join(" ");
       }
     }
     //Sub numberbased SIDC
-    if (!isNaN(this.sidc) && this.properties.dimension == "Subsurface") {
-      gStrings.R1 = this.uniqueDesignation;
-      gStrings.R2 = this.type;
-      gStrings.R3 = this.altitudeDepth;
-      gStrings.R4 = this.staffComments;
-      gStrings.R5 = this.additionalInformation;
+    if (
+      !isNaN(this._options.sidc) && this.properties.dimension == "Subsurface"
+    ) {
+      gStrings.R1 = this._options.uniqueDesignation;
+      gStrings.R2 = this._options.type;
+      gStrings.R3 = this._options.altitudeDepth;
+      gStrings.R4 = this._options.staffComments;
+      gStrings.R5 = this._options.additionalInformation;
     }
 
     //Add space on left sIde
     gbbox.x1 =
       bbox.x1 -
       Math.max(
-        this.specialHeadquarters
-          ? (strWidth(this.specialHeadquarters) -
+        this._options.specialHeadquarters
+          ? (strWidth(this._options.specialHeadquarters) -
               this.properties.baseGeometry.bbox.width()) /
               2
           : 0,
-        this.quantity
-          ? (strWidth(this.quantity) -
+        this._options.quantity
+          ? (strWidth(this._options.quantity) -
               this.properties.baseGeometry.bbox.width()) /
               2
           : 0,
@@ -436,13 +455,13 @@ module.exports = function textfields() {
     gbbox.x2 =
       bbox.x2 +
       Math.max(
-        this.specialHeadquarters
-          ? (strWidth(this.specialHeadquarters) -
+        this._options.specialHeadquarters
+          ? (strWidth(this._options.specialHeadquarters) -
               this.properties.baseGeometry.bbox.width()) /
               2
           : 0,
-        this.quantity
-          ? (strWidth(this.quantity) -
+        this._options.quantity
+          ? (strWidth(this._options.quantity) -
               this.properties.baseGeometry.bbox.width()) /
               2
           : 0,
@@ -595,13 +614,13 @@ module.exports = function textfields() {
       });
 
     //outline
-    if (this.outlineWidth > 0)
+    if (this._options.outlineWidth > 0)
       drawArray1.push(
         ms.outline(
           drawArray2,
-          this.outlineWidth,
-          this.strokeWidth,
-          this.outlineColor
+          this._options.outlineWidth,
+          this._options.strokeWidth,
+          this._options.outlineColor
         )
       );
   }

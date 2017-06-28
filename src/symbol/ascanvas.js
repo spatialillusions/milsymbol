@@ -9,7 +9,8 @@ module.exports = function(ratio) {
         }
       } else {
         if (typeof instruction[i] === "object") {
-          ctx.lineWidth = instruction[i].strokewidth || this.strokeWidth;
+          ctx.lineWidth =
+            instruction[i].strokewidth || this._options.strokeWidth;
           if (typeof instruction[i].stroke !== "undefined") {
             if (instruction[i].stroke) {
               ctx.strokeStyle = instruction[i].stroke;
@@ -172,10 +173,10 @@ module.exports = function(ratio) {
   //canvas.style.width = this.width +'px';
   //canvas.style.height = this.height +'px';
   var ctx = canvas.getContext("2d");
-  ctx.scale(ratio * this.size / 100, ratio * this.size / 100);
+  ctx.scale(ratio * this._options.size / 100, ratio * this._options.size / 100);
   ctx.translate(
-    -(this.bbox.x1 - this.strokeWidth - this.outlineWidth),
-    -(this.bbox.y1 - this.strokeWidth - this.outlineWidth)
+    -(this.bbox.x1 - this._options.strokeWidth - this._options.outlineWidth),
+    -(this.bbox.y1 - this._options.strokeWidth - this._options.outlineWidth)
   );
   processCanvasInstructions.call(this, this.drawInstructions, ctx);
   return canvas;

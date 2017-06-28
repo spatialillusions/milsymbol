@@ -88,13 +88,13 @@ module.exports = function affliationdimension() {
     }
   }
   //outline
-  if (this.outlineWidth > 0)
+  if (this._options.outlineWidth > 0)
     drawArray1.push(
       ms.outline(
         drawArray2,
-        this.outlineWidth,
-        this.strokeWidth,
-        this.outlineColor
+        this._options.outlineWidth,
+        this._options.strokeWidth,
+        this._options.outlineColor
       )
     );
   return { pre: drawArray1, post: drawArray2, bbox: bbox };

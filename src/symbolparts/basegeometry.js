@@ -8,7 +8,7 @@ module.exports = function basegeometry() {
   var frameColor = this.colors.frameColor[this.properties.affiliation];
 
   //If unframed but with icon, then just return.
-  if (!this.properties.frame && this.icon) {
+  if (!this.properties.frame && this._options.icon) {
     return [];
   }
 
@@ -24,30 +24,35 @@ module.exports = function basegeometry() {
       geom.r = this.properties.baseGeometry.g.r;
   }
   geom.fill = this.colors.fillColor[this.properties.affiliation];
-  geom.fillopacity = this.fillOpacity;
+  geom.fillopacity = this._options.fillOpacity;
   geom.stroke = frameColor;
-  geom.strokewidth = this.size >= 10 ? this.strokeWidth : 10;
+  geom.strokewidth = this._options.size >= 10 ? this._options.strokeWidth : 10;
   //outline
-  if (this.frame && this.outlineWidth > 0) {
+  if (this._options.frame && this._options.outlineWidth > 0) {
     var outline;
-    if (geom.type == "path" && this.fill && !this.monoColor) {
+    if (geom.type == "path" && this._options.fill && !this._options.monoColor) {
       outline = { type: this.properties.baseGeometry.g.type };
       outline.d = this.properties.baseGeometry.g.d + " Z"; //Making sure the path is closed
-      outline.strokewidth = this.size >= 10 ? this.strokeWidth : 10;
+      outline.strokewidth = this._options.size >= 10
+        ? this._options.strokeWidth
+        : 10;
     } else {
       outline = geom;
     }
     drawArray1.push(
       ms.outline(
         outline,
-        this.outlineWidth,
-        this.strokeWidth,
-        this.outlineColor
+        this._options.outlineWidth,
+        this._options.strokeWidth,
+        this._options.outlineColor
       )
     );
   }
   //Add a dashed outline to the frame if we are using monocolor and the status is not present.
-  if ((this.monoColor != "" || !this.fill) && this.properties.notpresent)
+  if (
+    (this._options.monoColor != "" || !this._options.fill) &&
+    this.properties.notpresent
+  )
     geom.strokedasharray = this.properties.notpresent;
   drawArray2.push(geom);
 
@@ -132,8 +137,8 @@ module.exports = function basegeometry() {
   }
   //Add a dashed outline to the frame if the status is not present.
   if (
-    this.fill &&
-    this.frame &&
+    this._options.fill &&
+    this._options.frame &&
     this.properties.notpresent &&
     !this.properties.unframed
   ) {
@@ -150,7 +155,7 @@ module.exports = function basegeometry() {
     }
     geom.fill = false;
     geom.stroke = this.colors.white[this.properties.affiliation];
-    geom.strokewidth = parseFloat(this.strokeWidth) + 1;
+    geom.strokewidth = parseFloat(this._options.strokeWidth) + 1;
     geom.strokedasharray = this.properties.notpresent;
     drawArray2.push(geom);
   }
