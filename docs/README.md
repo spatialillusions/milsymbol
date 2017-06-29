@@ -268,9 +268,9 @@ Boolean or Object
 ```
 ----
 
-### setOptions(*{Options}*)
+### setOptions(*arg1, arg2 ... argN*)
 
-This sets the options for a symbol and updates the symbol, the options are the same as when you create a new symbol, where an updated SIDC can be included in the options object (`SIDC: String`). If setOptions is called without an options object, the symbol is simply updated.
+This sets the options for a symbol and updates the symbol, the arguments are options Objects in the same way as when you create a new symbol, where an updated SIDC can be included in the options object (`sidc: String`). If setOptions is called without an options object, the symbol is simply updated.
 
 **Returns**
 
