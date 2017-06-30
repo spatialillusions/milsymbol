@@ -8,14 +8,19 @@ module.exports = function() {
       for (var key in options) {
         if (!options.hasOwnProperty(key)) continue;
         if (key === "SIDC") {
-          this._options.sidc = options[key];
+          // backward compability
+          this.options.sidc = options[key];
           continue;
         }
-        this._options[key] = options[key];
+        if (this.style.hasOwnProperty(key)) {
+          this.style[key] = options[key];
+        } else {
+          this.options[key] = options[key];
+        }
       }
     } else {
       // if there just is something not an object, we asume that it is the SIDC
-      this._options.sidc = options;
+      this.options.sidc = options;
     }
   }
   // Reset if the icon is valid
@@ -56,34 +61,34 @@ module.exports = function() {
   if (ms._debug) {
     //This is a debug function we can turn on to see if symbol parts are missing
     if (JSON.stringify(this.drawInstructions).indexOf("null") != -1) {
-      console.warn("Error in: " + this._options.sidc);
+      console.warn("Error in: " + this.options.sidc);
     }
   }
   this.baseWidth =
     this.bbox.width() +
-    Number(this._options.strokeWidth * 2) +
-    Number(this._options.outlineWidth * 2); //Adding the stoke width as margins and a little bit extra
+    Number(this.style.strokeWidth * 2) +
+    Number(this.style.outlineWidth * 2); //Adding the stoke width as margins and a little bit extra
   this.baseHeight =
     this.bbox.height() +
-    Number(this._options.strokeWidth * 2) +
-    Number(this._options.outlineWidth * 2); //Adding the stoke width as margins and a little bit extra
+    Number(this.style.strokeWidth * 2) +
+    Number(this.style.outlineWidth * 2); //Adding the stoke width as margins and a little bit extra
 
-  this.width = this.baseWidth * this._options.size / 100;
-  this.height = this.baseHeight * this._options.size / 100;
+  this.width = this.baseWidth * this.style.size / 100;
+  this.height = this.baseHeight * this.style.size / 100;
 
   var anchor = { x: 100, y: 100 };
   this.octagonAnchor = {
     x: (anchor.x -
       this.bbox.x1 +
-      parseFloat(this._options.strokeWidth) +
-      parseFloat(this._options.outlineWidth)) *
-      this._options.size /
+      parseFloat(this.style.strokeWidth) +
+      parseFloat(this.style.outlineWidth)) *
+      this.style.size /
       100,
     y: (anchor.y -
       this.bbox.y1 +
-      parseFloat(this._options.strokeWidth) +
-      parseFloat(this._options.outlineWidth)) *
-      this._options.size /
+      parseFloat(this.style.strokeWidth) +
+      parseFloat(this.style.outlineWidth)) *
+      this.style.size /
       100
   };
   //If it is a headquarters the anchor should be at the end of the staf
@@ -97,15 +102,15 @@ module.exports = function() {
   this.markerAnchor = {
     x: (anchor.x -
       this.bbox.x1 +
-      parseFloat(this._options.strokeWidth) +
-      parseFloat(this._options.outlineWidth)) *
-      this._options.size /
+      parseFloat(this.style.strokeWidth) +
+      parseFloat(this.style.outlineWidth)) *
+      this.style.size /
       100,
     y: (anchor.y -
       this.bbox.y1 +
-      parseFloat(this._options.strokeWidth) +
-      parseFloat(this._options.outlineWidth)) *
-      this._options.size /
+      parseFloat(this.style.strokeWidth) +
+      parseFloat(this.style.outlineWidth)) *
+      this.style.size /
       100
   };
 

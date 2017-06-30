@@ -18,7 +18,7 @@ module.exports = function icon() {
   //Boundingboxes other than normal
   var specialbbox = [];
 
-  if (this._options.icon) {
+  if (this.style.icon) {
     var fillColor = this.colors.fillColor[this.properties.affiliation];
     //So we don't happend to use civilian colors
     var neutralColor = this.colors.fillColor.Neutral;
@@ -35,9 +35,9 @@ module.exports = function icon() {
       this.properties.affiliation +
       this.properties.notpresent +
       ",frame:" +
-      this._options.frame +
+      this.style.frame +
       ",alternateMedal:" +
-      this._options.alternateMedal +
+      this.style.alternateMedal +
       ",colors:{fillcolor:" +
       fillColor +
       ",neutralColor" +
@@ -61,8 +61,8 @@ module.exports = function icon() {
         this.properties,
         this.colors,
         ms._STD2525,
-        this._options.monoColor,
-        this._options.alternateMedal
+        this.style.monoColor,
+        this.style.alternateMedal
       );
     }
 
@@ -139,7 +139,7 @@ module.exports = function icon() {
     //Number based SIDCs.
     if (this.properties.numberSIDC) {
       //Number based SIDCs.
-      var symbolSet = String(this._options.sidc).substr(4, 2);
+      var symbolSet = String(this.options.sidc).substr(4, 2);
       if (ms._iconCache[icnet].hasOwnProperty("numberSIDC")) {
         if (
           ms._iconCache[icnet].numberSIDC.symbolSet.hasOwnProperty(symbolSet)
@@ -249,7 +249,7 @@ module.exports = function icon() {
         ) {
           drawArray2.push(undefinedIcon);
           this._validIcon = false;
-          //console.log('Invalid icon code in SIDC: ' + this._options.sidc);
+          //console.log('Invalid icon code in SIDC: ' + this.options.sidc);
         }
       } else {
         drawArray2.push(mainIcon);
@@ -287,21 +287,21 @@ module.exports = function icon() {
     } else {
       //Letter based SIDC
       var genericSIDC =
-        this._options.sidc.substr(0, 1) +
+        this.options.sidc.substr(0, 1) +
         "-" +
-        this._options.sidc.substr(2, 1) +
+        this.options.sidc.substr(2, 1) +
         "-" +
-        this._options.sidc.substr(4, 6);
+        this.options.sidc.substr(4, 6);
       if (icons[genericSIDC]) {
         drawArray2.push(icons[genericSIDC]);
       } else {
         if (
-          !(this._options.sidc.substr(4, 6) == "------" ||
-            this._options.sidc.substr(4, 6) == "")
+          !(this.options.sidc.substr(4, 6) == "------" ||
+            this.options.sidc.substr(4, 6) == "")
         ) {
           drawArray2.push(undefinedIcon);
           this._validIcon = false;
-          //console.log("Invalid icon code in SIDC: " + this._options.sidc);
+          //console.log("Invalid icon code in SIDC: " + this.options.sidc);
         }
       }
       if (specialbbox[genericSIDC]) {
@@ -310,14 +310,14 @@ module.exports = function icon() {
     }
   }
   //outline
-  if (!(this._options.frame && this._options.fill) || this._options.monoColor) {
-    if (this._options.outlineWidth > 0)
+  if (!(this.style.frame && this.style.fill) || this.style.monoColor) {
+    if (this.style.outlineWidth > 0)
       drawArray1.push(
         ms.outline(
           drawArray2,
-          this._options.outlineWidth,
-          this._options.strokeWidth,
-          this._options.outlineColor
+          this.style.outlineWidth,
+          this.style.strokeWidth,
+          this.style.outlineColor
         )
       );
   }

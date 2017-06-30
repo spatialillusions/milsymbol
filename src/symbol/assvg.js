@@ -69,7 +69,7 @@ module.exports = function() {
             if (typeof instruction[i].stroke !== "undefined") {
               svg +=
                 'stroke-width="' +
-                (instruction[i].strokewidth || this._options.strokeWidth) +
+                (instruction[i].strokewidth || this.style.strokeWidth) +
                 '" ';
               if (instruction[i].strokedasharray)
                 svg +=
@@ -130,9 +130,9 @@ module.exports = function() {
     '" height="' +
     this.height +
     '" viewBox="' +
-    (this.bbox.x1 - this._options.strokeWidth - this._options.outlineWidth) +
+    (this.bbox.x1 - this.style.strokeWidth - this.style.outlineWidth) +
     " " +
-    (this.bbox.y1 - this._options.strokeWidth - this._options.outlineWidth) +
+    (this.bbox.y1 - this.style.strokeWidth - this.style.outlineWidth) +
     " " +
     this.baseWidth +
     " " +

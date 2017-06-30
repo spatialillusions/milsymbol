@@ -1,35 +1,35 @@
 var ms = require("../ms.js");
 
 module.exports = function(properties, mapping) {
-  this._options.sidc = this._options.sidc.toUpperCase();
+  this.options.sidc = this.options.sidc.toUpperCase();
 
-  var codingscheme = this._options.sidc.charAt(0) != ""
-    ? this._options.sidc.charAt(0)
+  var codingscheme = this.options.sidc.charAt(0) != ""
+    ? this.options.sidc.charAt(0)
     : "-";
-  var affiliation = this._options.sidc.charAt(1) != ""
-    ? this._options.sidc.charAt(1)
+  var affiliation = this.options.sidc.charAt(1) != ""
+    ? this.options.sidc.charAt(1)
     : "-";
-  var battledimension = this._options.sidc.charAt(2) != ""
-    ? this._options.sidc.charAt(2)
+  var battledimension = this.options.sidc.charAt(2) != ""
+    ? this.options.sidc.charAt(2)
     : "-";
-  var status = this._options.sidc.charAt(3) != ""
-    ? this._options.sidc.charAt(3)
+  var status = this.options.sidc.charAt(3) != ""
+    ? this.options.sidc.charAt(3)
     : "-";
-  var functionid = (properties.functionid = this._options.sidc.substr(4, 6) !=
+  var functionid = (properties.functionid = this.options.sidc.substr(4, 6) !=
     ""
-    ? this._options.sidc.substr(4, 6)
+    ? this.options.sidc.substr(4, 6)
     : "------");
-  var symbolmodifier11 = this._options.sidc.charAt(10) != ""
-    ? this._options.sidc.charAt(10)
+  var symbolmodifier11 = this.options.sidc.charAt(10) != ""
+    ? this.options.sidc.charAt(10)
     : "-";
-  var symbolmodifier12 = this._options.sidc.charAt(11) != ""
-    ? this._options.sidc.charAt(11)
+  var symbolmodifier12 = this.options.sidc.charAt(11) != ""
+    ? this.options.sidc.charAt(11)
     : "-";
   /*
-  var countrycode = this._options.sidc.substr(12, 2) != ""
-    ? this._options.sidc.substr(12, 2)
+  var countrycode = this.options.sidc.substr(12, 2) != ""
+    ? this.options.sidc.substr(12, 2)
     : "--";
-  var orderofbattle = this._options.sidc.charAt(14) != "" ? this._options.sidc.charAt(14) : "-";
+  var orderofbattle = this.options.sidc.charAt(14) != "" ? this.options.sidc.charAt(14) : "-";
   */
   if (["H", "S", "J", "K"].indexOf(affiliation) > -1)
     properties.affiliation = mapping.affiliation[0];
@@ -58,10 +58,10 @@ module.exports = function(properties, mapping) {
   //symbolmodifier11 that are Installations
   if (symbolmodifier11 == "H") properties.installation = true;
   //Planned/Anticipated/Suspect symbols should have a dashed outline
-  if (this._options.frame && status == "A")
+  if (this.style.frame && status == "A")
     properties.notpresent = ms._dashArrays.anticipated;
   if (
-    this._options.frame && ["P", "A", "S", "G", "M"].indexOf(affiliation) > -1
+    this.style.frame && ["P", "A", "S", "G", "M"].indexOf(affiliation) > -1
   ) {
     properties.notpresent = ms._dashArrays.pending;
   }
@@ -349,8 +349,8 @@ module.exports = function(properties, mapping) {
 
   //Some symbols in EMS and symbols from tactical graphics
   if (
-    this._options.sidc.substr(0, 3) == "WAS" ||
-    this._options.sidc.substr(0, 3) == "WOS" ||
+    this.options.sidc.substr(0, 3) == "WAS" ||
+    this.options.sidc.substr(0, 3) == "WOS" ||
     codingscheme == "G"
   ) {
     properties.frame = false;

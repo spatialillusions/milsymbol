@@ -2,56 +2,57 @@ var ms = require("./ms.js");
 
 function symbol() {
   //=======================================================================================
-  this._options = {}; //initiate options object.
+  this.options = {}; //initiate options object.
+  this.style = {}; //initiate style object.
   /*if (typeof option1 != "object") {
     // The SIDC for the symbol.
-    this._options.sidc = option1;
+    this.options.sidc = option1;
   } else {
     // Enable to initiate directly with an options object.
     options = option1;
   }*/
   // Setting default values for options
   // TODO place all of these in a style object
-  this._options.size = 100; // The symbol size is actually the L variable in the symbols so the symbol will be larger than this size.
-  this._options.fill = true; // Should the icon be filled with color
-  this._options.fillOpacity = 1; // Possibility to change the fill opacity
-  this._options.frame = true; // Should the icon be framed
-  this._options.strokeWidth = 4; // The stroke width of he icon frame.
-  this._options.outlineColor = "rgb(239, 239, 239)"; // Color of the outline
-  this._options.outlineWidth = 0; // Width of the outline.
-  this._options.icon = true; // Should we display the icon?
-  this._options.monoColor = false; // Should the icon be monocromatic and if so what color
-  this._options.civilianColor = true; // Should we use the Civilian Purple defined in 2525? (We set this to default because I like the color.
-  this._options.colorMode = "Light"; // 2525C Allows you to use Dark; Medium or Light colors. The values you can set are "Dark";"Medium" or "Light"
-  this._options.infoFields = true; // If you have set all info fields but don't want the displayed; then just set this to false.
-  this._options.infoSize = 40; // Relative size of the info fields
-  this._options.alternateMedal = false; // 2525D lets you choose between MEDAL icn and alternate MEDAL icn for Mines; default is set to MEDAL.
+  this.style.size = 100; // The symbol size is actually the L variable in the symbols so the symbol will be larger than this size.
+  this.style.fill = true; // Should the icon be filled with color
+  this.style.fillOpacity = 1; // Possibility to change the fill opacity
+  this.style.frame = true; // Should the icon be framed
+  this.style.strokeWidth = 4; // The stroke width of he icon frame.
+  this.style.outlineColor = "rgb(239, 239, 239)"; // Color of the outline
+  this.style.outlineWidth = 0; // Width of the outline.
+  this.style.icon = true; // Should we display the icon?
+  this.style.monoColor = false; // Should the icon be monocromatic and if so what color
+  this.style.civilianColor = true; // Should we use the Civilian Purple defined in 2525? (We set this to default because I like the color.
+  this.style.colorMode = "Light"; // 2525C Allows you to use Dark; Medium or Light colors. The values you can set are "Dark";"Medium" or "Light"
+  this.style.infoFields = true; // If you have set all info fields but don't want the displayed; then just set this to false.
+  this.style.infoSize = 40; // Relative size of the info fields
+  this.style.alternateMedal = false; // 2525D lets you choose between MEDAL icn and alternate MEDAL icn for Mines; default is set to MEDAL.
 
   // TODO place all of these in a fields object
-  this._options.quantity = ""; // FieldID C
-  this._options.reinforcedReduced = ""; // FieldID F
-  this._options.staffComments = ""; // FieldID G
-  this._options.additionalInformation = ""; // FieldID H
-  this._options.evaluationRating = ""; // FieldID J
-  this._options.combatEffectiveness = ""; // FieldID K
-  this._options.signatureEquipment = ""; // FieldID L
-  this._options.higherFormation = ""; // FieldID M
-  this._options.hostile = ""; // FieldID N
-  this._options.iffSif = ""; // FieldID P
-  this._options.direction = ""; // FieldID Q
-  this._options.sigint = ""; // FieldID R2
-  this._options.uniqueDesignation = ""; // FieldID T
-  this._options.type = ""; // FieldID V
-  this._options.dtg = ""; // FieldID W
-  this._options.altitudeDepth = ""; // FieldID X
-  this._options.location = ""; // FieldID Y
-  this._options.speed = ""; // FieldID Z
-  this._options.specialHeadquarters = ""; // FieldID AA
-  this._options.platformType = ""; // FieldID AD
-  this._options.equipmentTeardownTime = ""; // FieldID AE
-  this._options.commonIdentifier = ""; // FieldID AF
-  this._options.auxiliaryEquipmentIndicator = ""; // FieldID AG
-  this._options.headquartersElement = ""; // FieldID AH
+  this.options.quantity = ""; // FieldID C
+  this.options.reinforcedReduced = ""; // FieldID F
+  this.options.staffComments = ""; // FieldID G
+  this.options.additionalInformation = ""; // FieldID H
+  this.options.evaluationRating = ""; // FieldID J
+  this.options.combatEffectiveness = ""; // FieldID K
+  this.options.signatureEquipment = ""; // FieldID L
+  this.options.higherFormation = ""; // FieldID M
+  this.options.hostile = ""; // FieldID N
+  this.options.iffSif = ""; // FieldID P
+  this.options.direction = ""; // FieldID Q
+  this.options.sigint = ""; // FieldID R2
+  this.options.uniqueDesignation = ""; // FieldID T
+  this.options.type = ""; // FieldID V
+  this.options.dtg = ""; // FieldID W
+  this.options.altitudeDepth = ""; // FieldID X
+  this.options.location = ""; // FieldID Y
+  this.options.speed = ""; // FieldID Z
+  this.options.specialHeadquarters = ""; // FieldID AA
+  this.options.platformType = ""; // FieldID AD
+  this.options.equipmentTeardownTime = ""; // FieldID AE
+  this.options.commonIdentifier = ""; // FieldID AF
+  this.options.auxiliaryEquipmentIndicator = ""; // FieldID AG
+  this.options.headquartersElement = ""; // FieldID AH
   // Not implemented.
   // FieldID AM Distance
   // FieldID AN Azimuth

@@ -1,13 +1,13 @@
 var ms = require("../ms.js");
 
 module.exports = function(properties, mapping) {
-  //var version = this._options.sidc.substr(0, 2);
-  var standardIdentity1 = this._options.sidc.substr(2, 1);
-  var standardIdentity2 = this._options.sidc.substr(3, 1);
-  var symbolSet = this._options.sidc.substr(4, 2);
-  var status = this._options.sidc.substr(6, 1);
-  var headquartersTaskForceDummy = this._options.sidc.substr(7, 1);
-  var echelonMobility = this._options.sidc.substr(8, 2);
+  //var version = this.options.sidc.substr(0, 2);
+  var standardIdentity1 = this.options.sidc.substr(2, 1);
+  var standardIdentity2 = this.options.sidc.substr(3, 1);
+  var symbolSet = this.options.sidc.substr(4, 2);
+  var status = this.options.sidc.substr(6, 1);
+  var headquartersTaskForceDummy = this.options.sidc.substr(7, 1);
+  var echelonMobility = this.options.sidc.substr(8, 2);
 
   var affiliationMapping = {
     "0": "Unknown",
@@ -43,10 +43,10 @@ module.exports = function(properties, mapping) {
     "60": "Ground"
   };
 
-  var functionid = (properties.functionid = this._options.sidc.substr(10, 10));
+  var functionid = (properties.functionid = this.options.sidc.substr(10, 10));
 
   properties.context =
-    mapping.context[parseInt(this._options.sidc.substr(2, 1))];
+    mapping.context[parseInt(this.options.sidc.substr(2, 1))];
   properties.affiliation = affiliationMapping[standardIdentity2];
   properties.dimension = dimensionMapping[symbolSet];
 
@@ -58,7 +58,7 @@ module.exports = function(properties, mapping) {
   //SymbolSets that are Installations
   if (symbolSet == "20") properties.installation = true;
   //Sea Mines with MEDAL icn
-  if (symbolSet == "36" && this._options.alternateMedal == false)
+  if (symbolSet == "36" && this.style.alternateMedal == false)
     properties.fill = false;
   //Sea own track
   if (symbolSet == "30" && functionid.substr(0, 6) == 150000)

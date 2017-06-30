@@ -40,13 +40,13 @@ module.exports = function modifier() {
     };
 
     //outline
-    if (this._options.outlineWidth > 0)
+    if (this.style.outlineWidth > 0)
       drawArray1.push(
         ms.outline(
           geom,
-          this._options.outlineWidth,
-          this._options.strokeWidth,
-          this._options.outlineColor
+          this.style.outlineWidth,
+          this.style.strokeWidth,
+          this.style.outlineColor
         )
       );
 
@@ -68,13 +68,13 @@ module.exports = function modifier() {
     };
 
     //outline
-    if (this._options.outlineWidth > 0)
+    if (this.style.outlineWidth > 0)
       drawArray1.push(
         ms.outline(
           geom,
-          this._options.outlineWidth,
-          this._options.strokeWidth,
-          this._options.outlineColor
+          this.style.outlineWidth,
+          this.style.strokeWidth,
+          this.style.outlineColor
         )
       );
 
@@ -104,26 +104,26 @@ module.exports = function modifier() {
       type: "path",
       fill: this.colors.frameColor[this.properties.affiliation],
       d: "M85," +
-        (bbox.y1 + gapFiller - this._options.strokeWidth / 2) +
+        (bbox.y1 + gapFiller - this.style.strokeWidth / 2) +
         " 85," +
         (bbox.y1 - 10) +
         " 115," +
         (bbox.y1 - 10) +
         " 115," +
-        (bbox.y1 + gapFiller - this._options.strokeWidth / 2) +
+        (bbox.y1 + gapFiller - this.style.strokeWidth / 2) +
         " 100," +
-        (bbox.y1 - this._options.strokeWidth) +
+        (bbox.y1 - this.style.strokeWidth) +
         " Z"
     };
 
     //outline
-    if (this._options.outlineWidth > 0)
+    if (this.style.outlineWidth > 0)
       drawArray1.push(
         ms.outline(
           geom,
-          this._options.outlineWidth,
-          this._options.strokeWidth,
-          this._options.outlineColor
+          this.style.outlineWidth,
+          this.style.strokeWidth,
+          this.style.outlineColor
         )
       );
 
@@ -151,13 +151,13 @@ module.exports = function modifier() {
     };
 
     //outline
-    if (this._options.outlineWidth > 0)
+    if (this.style.outlineWidth > 0)
       drawArray1.push(
         ms.outline(
           geom,
-          this._options.outlineWidth,
-          this._options.strokeWidth,
-          this._options.outlineColor
+          this.style.outlineWidth,
+          this.style.strokeWidth,
+          this.style.outlineColor
         )
       );
 
@@ -407,13 +407,13 @@ module.exports = function modifier() {
       geom = echelons[this.properties.echelon].g;
 
       //outline
-      if (this._options.outlineWidth > 0)
+      if (this.style.outlineWidth > 0)
         drawArray1.push(
           ms.outline(
             { type: "translate", x: 0, y: -installationPadding, draw: geom },
-            this._options.outlineWidth,
-            this._options.strokeWidth,
-            this._options.outlineColor
+            this.style.outlineWidth,
+            this.style.strokeWidth,
+            this.style.outlineColor
           )
         );
       //geometry
@@ -428,7 +428,7 @@ module.exports = function modifier() {
   }
   //This is for movability indicators.
   if (this.properties.mobility) {
-    if (!this._options.frame) {
+    if (!this.style.frame) {
       bbox.y2 = this.bbox.y2;
     }
     if (this.properties.affiliation == "Neutral") {
@@ -555,13 +555,13 @@ module.exports = function modifier() {
     if (mobilities.hasOwnProperty(this.properties.mobility)) {
       geom = mobilities[this.properties.mobility].g;
       //outline
-      if (this._options.outlineWidth > 0)
+      if (this.style.outlineWidth > 0)
         drawArray1.push(
           ms.outline(
             { type: "translate", x: 0, y: bbox.y2, draw: geom },
-            this._options.outlineWidth,
-            this._options.strokeWidth,
-            this._options.outlineColor
+            this.style.outlineWidth,
+            this.style.strokeWidth,
+            this.style.outlineColor
           )
         );
       //geometry
@@ -589,19 +589,19 @@ module.exports = function modifier() {
     if (!drawArray1[i].hasOwnProperty("stroke"))
       drawArray1[i].stroke = this.colors.iconColor[this.properties.affiliation];
     if (!drawArray1[i].hasOwnProperty("strokewidth"))
-      drawArray1[i].strokewidth = this._options.strokeWidth;
+      drawArray1[i].strokewidth = this.style.strokeWidth;
   }
   for (i = 0; i < drawArray2.length; i++) {
     if (!drawArray2[i].hasOwnProperty("fill")) drawArray2[i].fill = false;
     if (!drawArray2[i].hasOwnProperty("stroke"))
       drawArray2[i].stroke = this.colors.iconColor[this.properties.affiliation];
     if (!drawArray2[i].hasOwnProperty("strokewidth"))
-      drawArray2[i].strokewidth = this._options.strokeWidth;
+      drawArray2[i].strokewidth = this.style.strokeWidth;
   }
 
   /*
-	if(this._options.sigint){
-		g += '<text font-family="Arial" font-weight="bold" stroke="none" text-anchor="middle" x="100" y="'+ (30 + bbox.y2 )+'" font-size="35" >'+this._options.sigint+'</text>';
+	if(this.options.sigint){
+		g += '<text font-family="Arial" font-weight="bold" stroke="none" text-anchor="middle" x="100" y="'+ (30 + bbox.y2 )+'" font-size="35" >'+this.options.sigint+'</text>';
 		gbbox.merge({y2:(bbox.y2-28)});
 	}
 	g += '</g>';*/
