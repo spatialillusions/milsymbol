@@ -199,6 +199,17 @@ Object {
 ```
 ----
 
+### getOptions(*includeStyle*)
+
+Get the options that is set on the symbol. If includeStyle is set to `false` style information will not be included in the returned options, if it is set to `true` or left out style information will be included in the returned options.
+
+**Returns**
+
+```javascript
+Object
+```
+----
+
 ### getOctagonAnchor()
 
 Getting the center of the symbol octagon measured from the top left corner of the symbol.

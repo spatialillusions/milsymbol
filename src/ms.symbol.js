@@ -83,6 +83,7 @@ symbol.prototype.getColors = require("./symbol/getcolors.js");
 symbol.prototype.getOctagonAnchor = function() {
   return this.octagonAnchor;
 };
+symbol.prototype.getOptions = require("./symbol/getoptions.js");
 symbol.prototype.getProperties = require("./symbol/getproperties.js");
 symbol.prototype.getSize = require("./symbol/getsize.js");
 symbol.prototype.isValid = require("./symbol/isvalid.js");
