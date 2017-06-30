@@ -1018,7 +1018,7 @@ code{
 			}
 		}
 		var options = {};
-		options.colorMode = ms.getColorMode(document.getElementById("ColorMode")[document.getElementById("ColorMode").selectedIndex].value);
+		options.colorMode = document.getElementById("ColorMode")[document.getElementById("ColorMode").selectedIndex].value;
 		options.monoColor = document.getElementById("MonoColor")[document.getElementById("MonoColor").selectedIndex].value;
 		options.frame =  document.getElementById("Frame").checked;
 		options.fill = document.getElementById("Fill").checked;
