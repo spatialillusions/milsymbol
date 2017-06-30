@@ -6,6 +6,8 @@
 
 - symbol.getOptions(*includeStyle*) will return the options that are set on the symbol.
 
+- symbol.getStyle() will return the style options that are set on the symbol.
+
 ### Changed
 
 - ms.Symbol and setOptions can now take any number of arguments from 0 to n.

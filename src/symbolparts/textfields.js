@@ -343,9 +343,7 @@ module.exports = function textfields() {
       }
     }
     //Land or letterbased SIDC
-    if (
-      isNaN(this.options.sidc) || this.properties.baseDimension == "Ground"
-    ) {
+    if (isNaN(this.options.sidc) || this.properties.baseDimension == "Ground") {
       gStrings.L1 = this.options.dtg;
       if (this.options.altitudeDepth || this.options.location) {
         a = [];
@@ -370,8 +368,7 @@ module.exports = function textfields() {
       gStrings.R1 = this.options.reinforcedReduced;
       gStrings.R2 = this.options.staffComments;
       if (
-        this.options.additionalInformation ||
-        this.options.equipmentTeardownTime
+        this.options.additionalInformation || this.options.equipmentTeardownTime
       ) {
         a = [];
         if (this.options.additionalInformation)

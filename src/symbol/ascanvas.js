@@ -9,8 +9,7 @@ module.exports = function(ratio) {
         }
       } else {
         if (typeof instruction[i] === "object") {
-          ctx.lineWidth =
-            instruction[i].strokewidth || this.style.strokeWidth;
+          ctx.lineWidth = instruction[i].strokewidth || this.style.strokeWidth;
           if (typeof instruction[i].stroke !== "undefined") {
             if (instruction[i].stroke) {
               ctx.strokeStyle = instruction[i].stroke;

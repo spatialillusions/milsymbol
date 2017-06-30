@@ -45,8 +45,7 @@ module.exports = function() {
   };
   //Turn of the frame
   if (
-    this.properties
-      .frame /* || (!this.properties.frame && !this.style.icon)*/
+    this.properties.frame /* || (!this.properties.frame && !this.style.icon)*/
   ) {
     colors.frameColor = baseColorBlack;
   } else {
@@ -72,9 +71,7 @@ module.exports = function() {
     colors.iconColor = baseFrameColor;
     colors.iconFillColor = baseColorNone;
     //If everything turned off, make everything black.
-    if (
-      !this.properties.frame && !this.properties.fill && !this.style.icon
-    ) {
+    if (!this.properties.frame && !this.properties.fill && !this.style.icon) {
       colors.frameColor = baseColorBlack;
       colors.fillColor = baseColorBlack;
     }

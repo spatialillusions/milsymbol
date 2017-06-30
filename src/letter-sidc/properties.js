@@ -15,8 +15,7 @@ module.exports = function(properties, mapping) {
   var status = this.options.sidc.charAt(3) != ""
     ? this.options.sidc.charAt(3)
     : "-";
-  var functionid = (properties.functionid = this.options.sidc.substr(4, 6) !=
-    ""
+  var functionid = (properties.functionid = this.options.sidc.substr(4, 6) != ""
     ? this.options.sidc.substr(4, 6)
     : "------");
   var symbolmodifier11 = this.options.sidc.charAt(10) != ""
@@ -60,9 +59,7 @@ module.exports = function(properties, mapping) {
   //Planned/Anticipated/Suspect symbols should have a dashed outline
   if (this.style.frame && status == "A")
     properties.notpresent = ms._dashArrays.anticipated;
-  if (
-    this.style.frame && ["P", "A", "S", "G", "M"].indexOf(affiliation) > -1
-  ) {
+  if (this.style.frame && ["P", "A", "S", "G", "M"].indexOf(affiliation) > -1) {
     properties.notpresent = ms._dashArrays.pending;
   }
   //Should it have a Condition Bar
