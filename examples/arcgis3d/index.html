@@ -52,13 +52,16 @@
         // milsymbol to do that.
         ms.addSymbolPart(
           function squareIcon() {
+            var square = this.getOptions().square; // we could use this.options.square, but this is safer
+            var properties = this.getProperties(); // we could use this.properties, but this is safer
+            var hq = properties.headquarters;
             var gbbox = new ms.BBox();
-            if (this.square) {
+            if (square) {
               var anchor = { x: 100, y: 100 };
-              if (this.properties.headquarters) {
+              if (hq) {
                 anchor = {
-                  x: this.properties.baseGeometry.bbox.x1,
-                  y: this.properties.baseGeometry.bbox.y2 + ms.getHqStafLength()
+                  x: properties.baseGeometry.bbox.x1,
+                  y: properties.baseGeometry.bbox.y2 + ms.getHqStafLength()
                 };
               }
               var maxx = Math.max(anchor.x - this.bbox.x1, this.bbox.x2 - anchor.x);

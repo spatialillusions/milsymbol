@@ -10,6 +10,8 @@
 
 ### Changed
 
+- Options and Style are now stored in separate Objects on the symbol for better structure.
+
 - ms.Symbol and setOptions can now take any number of arguments from 0 to n.
 
 ### Deprecated
@@ -17,6 +19,8 @@
 ### Removed
 
 ### Fixed
+
+- ArcGIS example had to be updated because of change of how Options and Style are stored.
 
 ### Security
 
