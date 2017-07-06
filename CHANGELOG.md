@@ -22,6 +22,8 @@
 
 - ArcGIS example had to be updated because of change of how Options and Style are stored.
 
+- monoColor was initialized as `false` instead of an empty string, this is now corrected and makes the correct status modifiers to be used by default.
+
 ### Security
 
 ## 1.2.1 12 JUN 2017
