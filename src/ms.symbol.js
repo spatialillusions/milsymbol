@@ -21,7 +21,7 @@ function symbol() {
   this.style.outlineColor = "rgb(239, 239, 239)"; // Color of the outline
   this.style.outlineWidth = 0; // Width of the outline.
   this.style.icon = true; // Should we display the icon?
-  this.style.monoColor = false; // Should the icon be monocromatic and if so what color
+  this.style.monoColor = ""; // Should the icon be monocromatic and if so what color
   this.style.civilianColor = true; // Should we use the Civilian Purple defined in 2525? (We set this to default because I like the color.
   this.style.colorMode = "Light"; // 2525C Allows you to use Dark; Medium or Light colors. The values you can set are "Dark";"Medium" or "Light"
   this.style.infoFields = true; // If you have set all info fields but don't want the displayed; then just set this to false.
