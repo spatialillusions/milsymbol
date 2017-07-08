@@ -109,9 +109,10 @@ module.exports = function(ratio) {
                 instruction[i].fontsize +
                 "px " +
                 instruction[i].fontfamily;
-              ctx.textAlign = instruction[i].textanchor == "middle"
-                ? "center"
-                : instruction[i].textanchor;
+              ctx.textAlign =
+                instruction[i].textanchor == "middle"
+                  ? "center"
+                  : instruction[i].textanchor;
               ctx.fillText(
                 instruction[i].text,
                 instruction[i].x,

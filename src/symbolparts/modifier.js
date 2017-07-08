@@ -29,7 +29,8 @@ module.exports = function modifier() {
       y = bbox.y1;
     geom = {
       type: "path",
-      d: "M" +
+      d:
+        "M" +
         bbox.x1 +
         "," +
         y +
@@ -57,7 +58,8 @@ module.exports = function modifier() {
     //TASK FORCE
     geom = {
       type: "path",
-      d: "M55," +
+      d:
+        "M55," +
         bbox.y1 +
         " L55," +
         (bbox.y1 - 40) +
@@ -103,7 +105,8 @@ module.exports = function modifier() {
     geom = {
       type: "path",
       fill: this.colors.frameColor[this.properties.affiliation],
-      d: "M85," +
+      d:
+        "M85," +
         (bbox.y1 + gapFiller - this.style.strokeWidth / 2) +
         " 85," +
         (bbox.y1 - 10) +
@@ -136,7 +139,8 @@ module.exports = function modifier() {
     geom = {
       type: "path",
       strokedasharray: ms._dashArrays.feintDummy,
-      d: "M100," +
+      d:
+        "M100," +
         topPoint +
         " L" +
         bbox.x1 +
@@ -284,7 +288,8 @@ module.exports = function modifier() {
         g: [
           {
             type: "path",
-            d: "M70," +
+            d:
+              "M70," +
               (bbox.y1 - 10) +
               " l25,-25 m0,25 l-25,-25   M105," +
               (bbox.y1 - 10) +
@@ -301,7 +306,8 @@ module.exports = function modifier() {
         g: [
           {
             type: "path",
-            d: "M52.5," +
+            d:
+              "M52.5," +
               (bbox.y1 - 10) +
               " l25,-25 m0,25 l-25,-25    M87.5," +
               (bbox.y1 - 10) +
@@ -320,7 +326,8 @@ module.exports = function modifier() {
         g: [
           {
             type: "path",
-            d: "M35," +
+            d:
+              "M35," +
               (bbox.y1 - 10) +
               " l25,-25 m0,25 l-25,-25   M70," +
               (bbox.y1 - 10) +
@@ -341,7 +348,8 @@ module.exports = function modifier() {
         g: [
           {
             type: "path",
-            d: "M17.5," +
+            d:
+              "M17.5," +
               (bbox.y1 - 10) +
               " l25,-25 m0,25 l-25,-25    M52.5," +
               (bbox.y1 - 10) +
@@ -364,7 +372,8 @@ module.exports = function modifier() {
         g: [
           {
             type: "path",
-            d: "M0," +
+            d:
+              "M0," +
               (bbox.y1 - 10) +
               " l25,-25 m0,25 l-25,-25   M35," +
               (bbox.y1 - 10) +
@@ -389,7 +398,8 @@ module.exports = function modifier() {
         g: [
           {
             type: "path",
-            d: "M70," +
+            d:
+              "M70," +
               (bbox.y1 - 22.5) +
               " l25,0 m-12.5,12.5 l0,-25   M105," +
               (bbox.y1 - 22.5) +
@@ -526,7 +536,8 @@ module.exports = function modifier() {
         g: [
           {
             type: "path",
-            d: "M 65,10 c 0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0"
+            d:
+              "M 65,10 c 0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0"
           }
         ],
         bbox: { y2: bbox.y2 + 20 }
@@ -536,7 +547,8 @@ module.exports = function modifier() {
           {
             type: "path",
             fill: this.colors.frameColor[this.properties.affiliation],
-            d: "M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M100,0 l5,5 -5,5 -5,-5 z"
+            d:
+              "M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M100,0 l5,5 -5,5 -5,-5 z"
           }
         ],
         bbox: { y2: bbox.y2 + 10 }
@@ -546,7 +558,8 @@ module.exports = function modifier() {
           {
             type: "path",
             fill: this.colors.frameColor[this.properties.affiliation],
-            d: "M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M105,0 l-10,0 0,10 10,0 z M75,0 l5,5 -5,5 -5,-5 z  M125,0 l5,5 -5,5 -5,-5 z"
+            d:
+              "M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M105,0 l-10,0 0,10 10,0 z M75,0 l5,5 -5,5 -5,-5 z  M125,0 l5,5 -5,5 -5,-5 z"
           }
         ],
         bbox: { y2: bbox.y2 + 10 }

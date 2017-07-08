@@ -28,7 +28,8 @@ module.exports = function statusmodifier() {
         strokewidth: this.style.strokeWidth,
         fill: colors[this.properties.condition],
         stroke: this.colors.frameColor[this.properties.affiliation],
-        d: "M" +
+        d:
+          "M" +
           bbox.x1 +
           "," +
           y2 +
