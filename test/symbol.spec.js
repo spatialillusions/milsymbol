@@ -1,9 +1,10 @@
-const { assert } = require("chai");
+const { assert, expect } = require("chai");
 const ms = require("../src/index");
+const sampleSymbolSvgs = require("./sample-symbol-svgs");
 
 describe("ms.Symbol", () => {
   // TODO: pass options
-  describe("when called with SIDC", () => {
+  describe("when called with a sample SIDC", () => {
     const symbol = new ms.Symbol("SFG-UCI----D");
     it("should return a symbol object", () => {
       assert.isObject(symbol);
@@ -53,6 +54,22 @@ describe("ms.Symbol", () => {
           const result = symbol[methodName]();
           assert[`is${returns.name}`](result);
         });
+      });
+    });
+  });
+  Object.keys(sampleSymbolSvgs).forEach(SIDC => {
+    describe(`with sample SIDC ${SIDC}`, () => {
+      const symbol = new ms.Symbol(SIDC, { size: 40 });
+      it("should create a symbol", () => {
+        assert.isObject(symbol);
+        // TODO: what else should we check to verify that symbol looks good?
+      });
+      // TODO: consider a less brittle XML diff method
+      const trimmedString = value => value.replace(/\s/g, "");
+      it("should produce the correct SVG", () => {
+        expect(trimmedString(symbol.asSVG())).to.equal(
+          trimmedString(sampleSymbolSvgs[SIDC])
+        );
       });
     });
   });
