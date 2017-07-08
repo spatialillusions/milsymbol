@@ -1,9 +1,10 @@
 var ms = require("../ms.js");
 
 module.exports = function() {
-  var baseFillColor = typeof this.style.colorMode === "object"
-    ? this.style.colorMode
-    : ms.getColorMode(this.style.colorMode);
+  var baseFillColor =
+    typeof this.style.colorMode === "object"
+      ? this.style.colorMode
+      : ms.getColorMode(this.style.colorMode);
   var baseFrameColor = ms.getColorMode("FrameColor");
   var baseIconColor = ms.getColorMode("IconColor");
   var baseIconFillColor = baseFillColor;
@@ -54,10 +55,10 @@ module.exports = function() {
   //Filled or not.
   if (this.properties.fill) {
     //I don't think you can have an unframed but filled icon so we turn off the fill as well, unless you have turned off the icon as well.
-    colors.fillColor = !this.properties.frame &&
-      !(!this.properties.frame && !this.style.icon)
-      ? baseColorNone
-      : baseFillColor;
+    colors.fillColor =
+      !this.properties.frame && !(!this.properties.frame && !this.style.icon)
+        ? baseColorNone
+        : baseFillColor;
     colors.iconColor = baseColorBlack;
     //Dirty override, we want colors in the icon if we just turn off the frame. This is a special fix for filled icn in 2525.
     colors.iconFillColor = !this.properties.frame

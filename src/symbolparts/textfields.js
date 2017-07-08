@@ -368,7 +368,8 @@ module.exports = function textfields() {
       gStrings.R1 = this.options.reinforcedReduced;
       gStrings.R2 = this.options.staffComments;
       if (
-        this.options.additionalInformation || this.options.equipmentTeardownTime
+        this.options.additionalInformation ||
+        this.options.equipmentTeardownTime
       ) {
         a = [];
         if (this.options.additionalInformation)
@@ -418,7 +419,8 @@ module.exports = function textfields() {
     }
     //Sub numberbased SIDC
     if (
-      !isNaN(this.options.sidc) && this.properties.dimension == "Subsurface"
+      !isNaN(this.options.sidc) &&
+      this.properties.dimension == "Subsurface"
     ) {
       gStrings.R1 = this.options.uniqueDesignation;
       gStrings.R2 = this.options.type;
@@ -434,12 +436,12 @@ module.exports = function textfields() {
         this.options.specialHeadquarters
           ? (strWidth(this.options.specialHeadquarters) -
               this.properties.baseGeometry.bbox.width()) /
-              2
+            2
           : 0,
         this.options.quantity
           ? (strWidth(this.options.quantity) -
               this.properties.baseGeometry.bbox.width()) /
-              2
+            2
           : 0,
         strWidth(gStrings.L1),
         strWidth(gStrings.L2),
@@ -455,12 +457,12 @@ module.exports = function textfields() {
         this.options.specialHeadquarters
           ? (strWidth(this.options.specialHeadquarters) -
               this.properties.baseGeometry.bbox.width()) /
-              2
+            2
           : 0,
         this.options.quantity
           ? (strWidth(this.options.quantity) -
               this.properties.baseGeometry.bbox.width()) /
-              2
+            2
           : 0,
         strWidth(gStrings.R1),
         strWidth(gStrings.R2),

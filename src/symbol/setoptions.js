@@ -78,16 +78,18 @@ module.exports = function() {
 
   var anchor = { x: 100, y: 100 };
   this.octagonAnchor = {
-    x: (anchor.x -
-      this.bbox.x1 +
-      parseFloat(this.style.strokeWidth) +
-      parseFloat(this.style.outlineWidth)) *
+    x:
+      (anchor.x -
+        this.bbox.x1 +
+        parseFloat(this.style.strokeWidth) +
+        parseFloat(this.style.outlineWidth)) *
       this.style.size /
       100,
-    y: (anchor.y -
-      this.bbox.y1 +
-      parseFloat(this.style.strokeWidth) +
-      parseFloat(this.style.outlineWidth)) *
+    y:
+      (anchor.y -
+        this.bbox.y1 +
+        parseFloat(this.style.strokeWidth) +
+        parseFloat(this.style.outlineWidth)) *
       this.style.size /
       100
   };
@@ -100,16 +102,18 @@ module.exports = function() {
     };
   }
   this.markerAnchor = {
-    x: (anchor.x -
-      this.bbox.x1 +
-      parseFloat(this.style.strokeWidth) +
-      parseFloat(this.style.outlineWidth)) *
+    x:
+      (anchor.x -
+        this.bbox.x1 +
+        parseFloat(this.style.strokeWidth) +
+        parseFloat(this.style.outlineWidth)) *
       this.style.size /
       100,
-    y: (anchor.y -
-      this.bbox.y1 +
-      parseFloat(this.style.strokeWidth) +
-      parseFloat(this.style.outlineWidth)) *
+    y:
+      (anchor.y -
+        this.bbox.y1 +
+        parseFloat(this.style.strokeWidth) +
+        parseFloat(this.style.outlineWidth)) *
       this.style.size /
       100
   };

@@ -10,7 +10,7 @@ module.exports = function(ctx, d) {
   var x, y, i, j;
   var x0, y0;
   var c;
-  var parts = d.match(/([MCLHV][^MCLHV]*)/ig);
+  var parts = d.match(/([MCLHV][^MCLHV]*)/gi);
   for (i = 0; i < parts.length; i++) {
     if (parts[i].charAt(0) == "M") {
       c = parts[i].match(/[-\d].*[\d]/)[0].split(/[\s,]/g);

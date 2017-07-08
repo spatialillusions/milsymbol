@@ -3,27 +3,22 @@ var ms = require("../ms.js");
 module.exports = function(properties, mapping) {
   this.options.sidc = this.options.sidc.toUpperCase();
 
-  var codingscheme = this.options.sidc.charAt(0) != ""
-    ? this.options.sidc.charAt(0)
-    : "-";
-  var affiliation = this.options.sidc.charAt(1) != ""
-    ? this.options.sidc.charAt(1)
-    : "-";
-  var battledimension = this.options.sidc.charAt(2) != ""
-    ? this.options.sidc.charAt(2)
-    : "-";
-  var status = this.options.sidc.charAt(3) != ""
-    ? this.options.sidc.charAt(3)
-    : "-";
-  var functionid = (properties.functionid = this.options.sidc.substr(4, 6) != ""
-    ? this.options.sidc.substr(4, 6)
-    : "------");
-  var symbolmodifier11 = this.options.sidc.charAt(10) != ""
-    ? this.options.sidc.charAt(10)
-    : "-";
-  var symbolmodifier12 = this.options.sidc.charAt(11) != ""
-    ? this.options.sidc.charAt(11)
-    : "-";
+  var codingscheme =
+    this.options.sidc.charAt(0) != "" ? this.options.sidc.charAt(0) : "-";
+  var affiliation =
+    this.options.sidc.charAt(1) != "" ? this.options.sidc.charAt(1) : "-";
+  var battledimension =
+    this.options.sidc.charAt(2) != "" ? this.options.sidc.charAt(2) : "-";
+  var status =
+    this.options.sidc.charAt(3) != "" ? this.options.sidc.charAt(3) : "-";
+  var functionid = (properties.functionid =
+    this.options.sidc.substr(4, 6) != ""
+      ? this.options.sidc.substr(4, 6)
+      : "------");
+  var symbolmodifier11 =
+    this.options.sidc.charAt(10) != "" ? this.options.sidc.charAt(10) : "-";
+  var symbolmodifier12 =
+    this.options.sidc.charAt(11) != "" ? this.options.sidc.charAt(11) : "-";
   /*
   var countrycode = this.options.sidc.substr(12, 2) != ""
     ? this.options.sidc.substr(12, 2)
@@ -86,7 +81,9 @@ module.exports = function(properties, mapping) {
   }
   //Ground Equipment should have the same geometry as sea Friend...
   if (
-    codingscheme == "S" && battledimension == "G" && functionid.charAt(0) == "E"
+    codingscheme == "S" &&
+    battledimension == "G" &&
+    functionid.charAt(0) == "E"
   )
     properties.dimension = mapping.dimension[2];
   //Signal INTELLIGENCE Ground should have the same geometry as sea Friend...

@@ -156,16 +156,19 @@ ms.outline = function(geom, outline, stroke, color) {
       }
     }
     if (
-      geom.type == "translate" || geom.type == "rotate" || geom.type == "scale"
+      geom.type == "translate" ||
+      geom.type == "rotate" ||
+      geom.type == "scale"
     ) {
       clone.draw = [];
       for (var draw in geom.draw) {
         clone.draw.push(ms.outline(geom.draw[draw], outline, stroke, color));
       }
     } else {
-      clone.strokewidth = clone.stroke != false
-        ? Number(clone.strokewidth || stroke) + 2 * outline
-        : 2 * outline;
+      clone.strokewidth =
+        clone.stroke != false
+          ? Number(clone.strokewidth || stroke) + 2 * outline
+          : 2 * outline;
       clone.stroke = color;
       clone.fill = false;
       clone.linecap = "round";
