@@ -58,12 +58,7 @@ module.exports = function() {
     }
     if (m.bbox) this.bbox.merge(m.bbox);
   }
-  if (ms._debug) {
-    //This is a debug function we can turn on to see if symbol parts are missing
-    if (JSON.stringify(this.drawInstructions).indexOf("null") != -1) {
-      console.warn("Error in: " + this.options.sidc);
-    }
-  }
+
   this.baseWidth =
     this.bbox.width() +
     Number(this.style.strokeWidth * 2) +
