@@ -1,6 +1,6 @@
 # Milsymbol Documentation
 
-## Installning
+## Installing
 
 You can download the latest release directly from GitHub if you want to:
 
@@ -42,6 +42,12 @@ In a framework like [Dojo](https://dojotoolkit.org) you can load milsymbol like 
 This way of loading milsymbol makes it possible to use Dojo from an external source, like js.arcgis.com. 
 
 If you only are using it with local sources or if you are uploading it to ArcGIS Web AppBuilder, you can rebuild it by running `npm run build-amd`, and now you can `require(["app/milsymbol"].....` if *milsymbol.js* is placed in your app folder. See more about building under [Building milsymbol](#building-milsymbol).
+
+## Module Options
+
+### Attribution
+
+The module provides attribution in the browser console upon page load. If you have given attribution according to the license in another part of your application or documentation then you may turn this off by setting `ms.attribution = false`.
 
 # Creating military unit symbols
 
