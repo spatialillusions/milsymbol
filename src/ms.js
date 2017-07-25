@@ -32,6 +32,7 @@ For updates and more information go to http://www.spatialillusions.com
 "use strict";
 
 var ms = new function() {
+  this.attribution = true;
   this._colorModes = {};
   this._dashArrays = {
     pending: "4,4",
@@ -52,7 +53,7 @@ var ms = new function() {
   this.autoSVG = false;
   this.version = "1.2.1";
 
-  if (typeof console === "object") {
+  if (typeof console === "object" && this.attribution) {
     console.info(
       "milsymbol.js " +
         this.version +
