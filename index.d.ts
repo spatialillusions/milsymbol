@@ -97,7 +97,7 @@ export class Symbol {
   getAnchor(): {x: number, y:number};
   getColors(): SymbolColors;
   getOctagonAnchor(): {x: number, y:number};
-  getOptions(): SymbolOptions;
+  getOptions(includeStyle?: boolean): SymbolOptions;
   getProperties(): SymbolProperties;
   getSize(): {width:number, height:number};
   getStyle(): SymbolOptions;
