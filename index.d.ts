@@ -86,7 +86,7 @@ type SymbolColors = {
 };
 
 export class Symbol {
-  constructor(code: string, opts: SymbolOptions);
+  constructor(code: string|SymbolOptions, opts?: SymbolOptions, style?: SymbolOptions);
 
   width: number;
   height: number;
@@ -97,8 +97,10 @@ export class Symbol {
   getAnchor(): {x: number, y:number};
   getColors(): SymbolColors;
   getOctagonAnchor(): {x: number, y:number};
+  getOptions(): SymbolOptions;
   getProperties(): SymbolProperties;
   getSize(): {width:number, height:number};
+  getStyle(): SymbolOptions;
   isValid(extended?: boolean): boolean | Object;
   setOptions(opts: SymbolOptions): Symbol;
   toDataURL(): string;
