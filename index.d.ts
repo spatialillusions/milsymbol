@@ -1,9 +1,9 @@
-type ColorMode = {  // TODO: ColorMode isn't spelled out in the docs
-  civilian: any;
-  friend: any;
-  hostile: any;
-  neutral: any;
-  unknown: any;
+type ColorMode = {
+  civilian: string;
+  friend: string;
+  hostile: string;
+  neutral: string;
+  unknown: string;
 };
 
 type SymbolOptions = {
