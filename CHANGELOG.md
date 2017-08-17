@@ -24,6 +24,8 @@
 
 - monoColor was initialized as `false` instead of an empty string, this is now corrected and makes the correct status modifiers to be used by default.
 
+- 10031000001104000000 was drawn with an icon IW instead of IO (Since it is IW in 2525C, but that is now fiexed.)
+
 ### Security
 
 ## 1.2.1 12 JUN 2017

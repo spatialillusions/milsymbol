@@ -1119,7 +1119,9 @@ module.exports = function(
   ];
   icn["GR.IC.GEOSPATIAL SUPPORT"] = text("GEO");
   icn["GR.IC.GOVERNMENT ORGANIZATION"] = text("GO");
-  icn["GR.IC.INFORMATION OPERATIONS"] = text(_STD2525 ? "IW" : "IO");
+  icn["GR.IC.INFORMATION OPERATIONS"] = text(
+    _STD2525 && !numberSIDC ? "IW" : "IO"
+  );
   icn["GR.IC.INTERNATIONAL SECURITY ASSISTANCE FORCE (ISAF)"] = text("ISAF");
   icn["GR.IC.INTERROGATION"] = text("IPW");
   icn["GR.IC.JOINT FIRE SUPPORT"] = text("JFS");
