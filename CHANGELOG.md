@@ -28,6 +28,8 @@
 
 - 10031000001104000000 was drawn with an icon IW instead of IO (Since it is IW in 2525C, but that is now fiexed.)
 
+- Fixed the size of the sensor icon used in 2525D
+
 ### Security
 
 ## 1.2.1 12 JUN 2017
