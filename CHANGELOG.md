@@ -8,6 +8,8 @@
 
 - symbol.getStyle() will return the style options that are set on the symbol.
 
+- Added files for intellisense when used in Visual Studio Code
+
 ### Changed
 
 - Options and Style are now stored in separate Objects on the symbol for better structure.
