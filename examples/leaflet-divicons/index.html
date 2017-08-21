@@ -2,55 +2,70 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <style type="text/css">
-        html,
-        body,
-        .mymap {
-            padding: 0;
-            margin: 0;
-            height: 100%;
-            width: 100%;
-        }
-    </style>
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-    <script src="../../dist//milsymbol.js"></script>
-    <script src="../situation.json"></script>
+  <meta charset="UTF-8" />
+  <style type="text/css">
+    html,
+    body,
+    .mymap {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src="../../dist//milsymbol.js"></script>
+  <script src="../situation.json"></script>
 </head>
 
 <body onload="init()">
-    <script>
-        function init() {
-            var osmAttr = '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>';
-            var OSM = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: osmAttr }),
-                latlng = L.latLng(59, 16);
-            var map = L.map('map', { center: latlng, zoom: 5, layers: [OSM] });
+  <script>
+    function init() {
+      var osmAttr = '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>';
+      var OSM = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: osmAttr }),
+        latlng = L.latLng(59, 16);
+      var map = L.map('map', { center: latlng, zoom: 5, layers: [OSM] });
 
-            var iconSize = { "C": 15, "D": 20, "E": 25, "F": 30, "G": 35, "H": 40, "I": 45 };
+      var iconSize = {
+        "Team/Crew": 5,
+        "Squad": 10,
+        "Section": 15,
+        "Platoon/detachment": 20,
+        "Company/battery/troop": 25,
+        "Battalion/squadron": 30,
+        "Regiment/group": 35,
+        "Brigade": 40,
+        "Division": 45,
+        "Corps/MEF": 50,
+        "Army": 55,
+        "Army Group/front": 60,
+        "Region/Theater": 65,
+        "Command": 70
+      };
 
-            L.geoJson(situation, {
-                pointToLayer: function (feature, latlng) {
+      L.geoJson(situation, {
+        pointToLayer: function (feature, latlng) {
 
-                    var mysymbol = new ms.Symbol(
-                        feature.properties.SIDC, {
-                            size: iconSize[(feature.properties.SIDC).charAt(11)],
-                            uniqueDesignation: feature.properties.name
-                        })
+          var mysymbol = new ms.Symbol(
+            feature.properties.SIDC, {
+              uniqueDesignation: feature.properties.name
+            })
+          // Now that we have a symbol we can ask for the echelon and set the symbol size
+          mysymbol = mysymbol.setOptions({ size: iconSize[mysymbol.getProperties().echelon] });
 
-                    var myicon = L.divIcon({
-                        className: '',
-                        html: mysymbol.asSVG(),
-                        iconAnchor: new L.Point(mysymbol.getAnchor().x, mysymbol.getAnchor().y)
-                    });
+          var myicon = L.divIcon({
+            className: '',
+            html: mysymbol.asSVG(),
+            iconAnchor: new L.Point(mysymbol.getAnchor().x, mysymbol.getAnchor().y)
+          });
 
-                    return L.marker(latlng, { icon: myicon, draggable: true });
-                }
-            }).addTo(map);
+          return L.marker(latlng, { icon: myicon, draggable: true });
         }
-
-    </script>
-    <div id="map" class="mymap"></div>
+      }).addTo(map);
+    }
+  </script>
+  <div id="map" class="mymap"></div>
 </body>
 
 </html>

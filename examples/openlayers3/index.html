@@ -23,7 +23,22 @@
 <body onload="init()">
   <script>
     function init() {
-      var iconSize = { "C": 15, "D": 20, "E": 25, "F": 30, "G": 35, "H": 40, "I": 45 };
+      var iconSize = {
+        "Team/Crew": 5,
+        "Squad": 10,
+        "Section": 15,
+        "Platoon/detachment": 20,
+        "Company/battery/troop": 25,
+        "Battalion/squadron": 30,
+        "Regiment/group": 35,
+        "Brigade": 40,
+        "Division": 45,
+        "Corps/MEF": 50,
+        "Army": 55,
+        "Army Group/front": 60,
+        "Region/Theater": 65,
+        "Command": 70
+      };
       var vectorSource = new ol.source.Vector({
         features: (new ol.format.GeoJSON()).readFeatures(situation, { featureProjection: 'EPSG:3857' })
       });
@@ -32,10 +47,11 @@
       vectorSource.forEachFeature(function (f) {
         var mysymbol = new ms.Symbol(
           f.getProperties().SIDC, {
-            size: iconSize[(f.getProperties().SIDC).charAt(11)] * ratio,
             uniqueDesignation: f.getProperties().name
           });
-        var mycanvas = mysymbol.asCanvas();
+
+        // Now that we have a symbol we can ask for the echelon and set the symbol size
+        var mycanvas = mysymbol.setOptions({ size: iconSize[mysymbol.getProperties().echelon] * ratio }).asCanvas();
 
         f.setStyle(new ol.style.Style({
           image: new ol.style.Icon(({
@@ -67,7 +83,6 @@
       });
 
     }
-
   </script>
   <div id="map" class="mymap"></div>
 </body>
