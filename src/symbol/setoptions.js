@@ -56,7 +56,9 @@ module.exports = function() {
         this.drawInstructions = this.drawInstructions.concat(m.post);
       }
     }
-    if (m.bbox) this.bbox.merge(m.bbox);
+    if (typeof m.bbox === "object") {
+      this.bbox.merge(m.bbox);
+    }
   }
 
   this.baseWidth =
