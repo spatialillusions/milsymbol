@@ -31,7 +31,6 @@
     "eslint-plugin-prettier": "^2.0.1",
     "mocha": "^3.2.0",
     "prettier": "^1.5.2",
-    "webpack": "^3.3.0",
-    "webpack-custom-var-library-name-plugin": "^1.0.2"
+    "webpack": "^3.3.0"
   }
 }
