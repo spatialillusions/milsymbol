@@ -42,7 +42,7 @@ module.exports = function(ratio) {
 
           switch (instruction[i].type) {
             case "path":
-              if (typeof Path2D != "undefined") {
+              try {
                 var d = new Path2D(instruction[i].d);
                 if (
                   typeof instruction[i].fill === "undefined" ||
@@ -56,7 +56,7 @@ module.exports = function(ratio) {
                     instruction[i].stroke)
                 )
                   ctx.stroke(d);
-              } else {
+              } catch (err) {
                 if (typeof ms._Path2D === "function") {
                   ms._Path2D(ctx, instruction[i].d);
                   if (
