@@ -42,7 +42,7 @@ module.exports = function(ratio) {
 
           switch (instruction[i].type) {
             case "path":
-              if (typeof Path2D != "undefined") {
+              if (!ms._brokenPath2D) {
                 var d = new Path2D(instruction[i].d);
                 if (
                   typeof instruction[i].fill === "undefined" ||
@@ -162,6 +162,29 @@ module.exports = function(ratio) {
           }
         }
       }
+    }
+  }
+
+  if (typeof ms._brokenPath2D == "undefined") {
+    /* In EdgeHTML14 Microsoft implemented support for Path2D, but they didn't implement support 
+	for initiating it with a SVG path, and if you initiate it with an SVG path, it will not throw 
+	an error, instead it will return an empty path and log a warning.
+	This will check for that behaviour and make sure we use the workaround if Path2D is broken. */
+    if (typeof Path2D == "undefined") {
+      // If Path2D dosen't exist it is definetly broken
+      console.info("path 2d does not exist");
+      ms._brokenPath2D = true;
+    } else {
+      // If Path2D exists we need to check if it is broken
+      var canv = document.createElement("canvas");
+      canv.widht = 1;
+      canv.height = 1;
+      var _ctx = canv.getContext("2d");
+      var p = new Path2D("M0 0 h 10 v 10 h -10 Z");
+      _ctx.fill(p);
+      // Oh this is dirty, just compare part of the base64 string to see if it is "correct"
+      var url = canv.toDataURL();
+      ms._brokenPath2D = !(url.substr(url.length - 10) == "VORK5CYII=");
     }
   }
 
