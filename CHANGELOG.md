@@ -1,5 +1,21 @@
 # Change Log
 
+## 1.3.1 17 OCT 2017
+
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+- Fixed canvas output in Microsoft Edge 14
+
+### Security
+
 ## 1.3.0 21 AUG 2017
 
 ### Added

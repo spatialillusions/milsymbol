@@ -172,7 +172,6 @@ module.exports = function(ratio) {
 	This will check for that behaviour and make sure we use the workaround if Path2D is broken. */
     if (typeof Path2D == "undefined") {
       // If Path2D dosen't exist it is definetly broken
-      console.info("path 2d does not exist");
       ms._brokenPath2D = true;
     } else {
       // If Path2D exists we need to check if it is broken
@@ -180,11 +179,12 @@ module.exports = function(ratio) {
       canv.widht = 1;
       canv.height = 1;
       var _ctx = canv.getContext("2d");
+      // Draw an SVG path to the canvas...
       var p = new Path2D("M0 0 h 10 v 10 h -10 Z");
       _ctx.fill(p);
-      // Oh this is dirty, just compare part of the base64 string to see if it is "correct"
-      var url = canv.toDataURL();
-      ms._brokenPath2D = !(url.substr(url.length - 10) == "VORK5CYII=");
+      // Pick a pixel and see if it is filled with black... (if not SVG is not working)
+      var data = _ctx.getImageData(0, 0, 1, 1).data.join();
+      ms._brokenPath2D = !(data == "0,0,0,255");
     }
   }
 
