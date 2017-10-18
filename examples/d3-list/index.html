@@ -2,216 +2,216 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <style>
-        .node-text {
-            font: 12px sans-serif;
-        }
-        
-        .link {
-            fill: none;
-            stroke: rgb(200, 200, 200);
-            shape-rendering: crispEdges;
-            stroke-dasharray: 2, 2;
-        }
-        
-        .indicator {
-            stroke: rgb(100, 100, 100);
-        }
-    </style>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="../../dist/milsymbol.js"></script>
-    <script src="../situation.json"></script>
+  <meta charset="UTF-8" />
+  <style>
+    .node-text {
+      font: 12px sans-serif;
+    }
+
+    .link {
+      fill: none;
+      stroke: rgb(200, 200, 200);
+      shape-rendering: crispEdges;
+      stroke-dasharray: 2, 2;
+    }
+
+    .indicator {
+      stroke: rgb(100, 100, 100);
+    }
+  </style>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="../../dist/milsymbol.js"></script>
+  <script src="../situation.json"></script>
 </head>
 
 <body>
 
-    <div id="orbat"></div>
+  <div id="orbat"></div>
 
-    <script>
-        var duration = 300;
-        var margin = { top: 15, right: 20, bottom: 10, left: 30 };
-        var svg = d3.select("#orbat")
-            .append("svg")
-            .attr("width", 500)
-            .attr("height", 500)
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  <script>
+    var duration = 300;
+    var margin = { top: 15, right: 20, bottom: 10, left: 30 };
+    var svg = d3.select("#orbat")
+      .append("svg")
+      .attr("width", 500)
+      .attr("height", 500)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        function geoJson2tree(data, name, command) {
-            var rawdata = {};
-            for (var key in data.features) {
-                rawdata[data.features[key].properties[name]] = data.features[key];
-                rawdata[data.features[key].properties[name]].suborgs = [];
-                data.features[key].name = data.features[key].properties[name].replace('&#228;', 'ä').replace('&#229;', 'å');
-                data.features[key].sidc = data.features[key].properties["SIDC"];
-            }
-            var tree = { "name": "milsymbol ORBAT", "sidc": "SUGP------", "suborgs": [] };
-            for (var key in rawdata) {
-                if (rawdata.hasOwnProperty(rawdata[key].properties[command])) {
-                    rawdata[rawdata[key].properties[command]].suborgs.push(rawdata[key]);
-                } else {
-                    var newCommand = { "name": rawdata[key].properties[command], "sidc": "SFGP------", "suborgs": [rawdata[key]] };
-                    rawdata[rawdata[key].properties[command]] = newCommand;
-                    tree.suborgs.push(newCommand);
-                }
-            }
-            return tree;
+    function geoJson2tree(data, name, command) {
+      var rawdata = {};
+      for (var key in data.features) {
+        rawdata[data.features[key].properties[name]] = data.features[key];
+        rawdata[data.features[key].properties[name]].suborgs = [];
+        data.features[key].name = data.features[key].properties[name].replace('&#228;', 'ä').replace('&#229;', 'å');
+        data.features[key].sidc = data.features[key].properties["SIDC"];
+      }
+      var tree = { "name": "milsymbol ORBAT", "sidc": "SUGP------", "suborgs": [] };
+      for (var key in rawdata) {
+        if (rawdata.hasOwnProperty(rawdata[key].properties[command])) {
+          rawdata[rawdata[key].properties[command]].suborgs.push(rawdata[key]);
+        } else {
+          var newCommand = { "name": rawdata[key].properties[command], "sidc": "SFGP------", "suborgs": [rawdata[key]] };
+          rawdata[rawdata[key].properties[command]] = newCommand;
+          tree.suborgs.push(newCommand);
         }
-        var structure = geoJson2tree(situation, "name", "command");
+      }
+      return tree;
+    }
+    var structure = geoJson2tree(situation, "name", "command");
 
-        var d3cluster = d3.tree().nodeSize([0, 20]);;
-        var d3hirarcy = d3.hierarchy(structure, function (d) { return d.suborgs; });
-        d3hirarcy.x0 = 0;
-        d3hirarcy.y0 = 0;
+    var d3cluster = d3.tree().nodeSize([0, 20]);;
+    var d3hirarcy = d3.hierarchy(structure, function (d) { return d.suborgs; });
+    d3hirarcy.x0 = 0;
+    d3hirarcy.y0 = 0;
 
-        update(svg, d3cluster, d3hirarcy, d3hirarcy);
+    update(svg, d3cluster, d3hirarcy, d3hirarcy);
 
-        function update(svg, d3cluster, d3hirarcy, source) {
-            var barHeight = 25;
-            // Compute the new tree layout.
-            var nodes = d3cluster(d3hirarcy),
-                links = nodes.links();
+    function update(svg, d3cluster, d3hirarcy, source) {
+      var barHeight = 25;
+      // Compute the new tree layout.
+      var nodes = d3cluster(d3hirarcy),
+        links = nodes.links();
 
-            var height = Math.max(500, nodes.descendants().length * barHeight + margin.top + margin.bottom);
+      var height = Math.max(500, nodes.descendants().length * barHeight + margin.top + margin.bottom);
 
-            d3.select("#orbat").select("svg").transition()
-                .duration(duration)
-                .attr("height", height);
+      d3.select("#orbat").select("svg").transition()
+        .duration(duration)
+        .attr("height", height);
 
-            // Compute the "layout".
-            var i = 0;
-            nodes.eachBefore(function (d) {
-                //console.log('d.x0 '+d.x0 +' === d.x ' + ((i++) * barHeight) + '  === d.name ' + d.data.name)
-                d.x = (i++) * barHeight;
+      // Compute the "layout".
+      var i = 0;
+      nodes.eachBefore(function (d) {
+        //console.log('d.x0 '+d.x0 +' === d.x ' + ((i++) * barHeight) + '  === d.name ' + d.data.name)
+        d.x = (i++) * barHeight;
+      });
+
+      //update existing
+      var node = svg.selectAll("g.node")
+        .data(d3hirarcy.descendants(), function (d) { return d.id || (d.id = ++i); });
+
+      node.transition()
+        .duration(duration)
+        .attr("transform", function (d) { return "translate(" + (d.y) + "," + (d.x) + ")"; });
+
+      node.select(".indicator").transition()
+        .duration(duration)
+        .attr("fill", function (d) { if (d._children) { return "rgb(250,250,250)" } else { return "rgb(100,100,100)" } })
+        .attr("transform", function (d) { if (d._children) { return "translate(-21,0) rotate(0)" } else { return "translate(-21,0) rotate(45)" } })
+      //Enter new nodes
+      var newNode = node.enter().append("g")
+        .attr("class", "node")
+        .attr("transform", function (d) { return "translate(" + (source.y0) + "," + (source.x0) + ")"; })
+        .style("opacity", 1e-6);
+
+      newNode.transition()
+        .duration(duration)
+        .attr("transform", function (d) { return "translate(" + (d.y) + "," + (d.x) + ")"; })
+        .style("opacity", 1);
+
+      newNode.each(function (d) {
+        if (d.children || d._children) {
+          d3.select(this)
+            .append("path")
+            .attr("class", "indicator")
+            .attr("d", "M -0,-5 l 5,5 -5,5 z")
+            .attr("fill", function (d) { if (d._children) { return "rgb(250,250,250)" } else { return "rgb(100,100,100)" } })
+            .attr("transform", function (d) { if (d._children) { return "translate(-21,0) rotate(0)" } else { return "translate(-21,0) rotate(45)" } })
+            .on("click", function click(d) {
+              if (d.children) {
+                d._children = d.children;
+                d.children = null;
+              } else {
+                d.children = d._children;
+                d._children = null;
+              }
+              update(svg, d3cluster, d3hirarcy, d);
             });
-
-            //update existing
-            var node = svg.selectAll("g.node")
-                .data(d3hirarcy.descendants(), function (d) { return d.id || (d.id = ++i); });
-
-            node.transition()
-                .duration(duration)
-                .attr("transform", function (d) { return "translate(" + (d.y) + "," + (d.x) + ")"; });
-
-            node.select(".indicator").transition()
-                .duration(duration)
-                .attr("fill", function (d) { if (d._children) { return "rgb(250,250,250)" } else { return "rgb(100,100,100)" } })
-                .attr("transform", function (d) { if (d._children) { return "translate(-21,0) rotate(0)" } else { return "translate(-21,0) rotate(45)" } })
-            //Enter new nodes
-            var newNode = node.enter().append("g")
-                .attr("class", "node")
-                .attr("transform", function (d) { return "translate(" + (source.y0) + "," + (source.x0) + ")"; })
-                .style("opacity", 1e-6);
-
-            newNode.transition()
-                .duration(duration)
-                .attr("transform", function (d) { return "translate(" + (d.y) + "," + (d.x) + ")"; })
-                .style("opacity", 1);
-
-            newNode.each(function (d) {
-                if (d.children || d._children) {
-                    d3.select(this)
-                        .append("path")
-                        .attr("class", "indicator")
-                        .attr("d", "M -0,-5 l 5,5 -5,5 z")
-                        .attr("fill", function (d) { if (d._children) { return "rgb(250,250,250)" } else { return "rgb(100,100,100)" } })
-                        .attr("transform", function (d) { if (d._children) { return "translate(-21,0) rotate(0)" } else { return "translate(-21,0) rotate(45)" } })
-                        .on("click", function click(d) {
-                            if (d.children) {
-                                d._children = d.children;
-                                d.children = null;
-                            } else {
-                                d.children = d._children;
-                                d._children = null;
-                            }
-                            update(svg, d3cluster, d3hirarcy, d);
-                        });
-                }
-            })
-
-            //milsymbol icon    
-            newNode.append("g")
-                .attr("class", "symbol")
-                .attr("transform", function (d) {
-                    if (d.data.sidc) d.data.symbol = new ms.Symbol(d.data.sidc, { size: 15 });
-                    return "translate(" + (-d.data.symbol.getOctagonAnchor().x) + "," + (-d.data.symbol.getOctagonAnchor().y) + ")";
-                })
-                .each(function (d) { this.appendChild(d.data.symbol.asDOM()) })
-
-            newNode.append("text")
-                .attr("class", "node-text")
-                .attr("dy", 3)
-                .attr("x", 20)
-                .style("text-anchor", "start")
-                .text(function (d) { return d.data.name; });
-
-            //Remove old nodes
-            node.exit()
-                .transition()
-                .duration(duration)
-                .attr("transform", function (d) {
-                    return "translate(" + source.y + "," + source.x + ")";
-                })
-                .style("opacity", 1e-6)
-                .remove();
-
-            //Link code
-            var link = svg.selectAll("path.link")
-                .data(d3hirarcy.descendants().slice(1), function (link) { return link.id + ':' + link.parent.id; });
-
-            // Transition links to their new position.
-            link.transition()
-                .duration(duration)
-                .attr("d", function (d) {
-                    return "M" + d.parent.y + "," + d.parent.x
-                        + " l"
-                        + " 0," + (d.x - d.parent.x) + " "
-                        + (d.y - d.parent.y) / 2 + "," + 0 + " "
-                        + "L" + d.y + "," + d.x;
-                });
-
-            var newLink = link.enter()
-                .insert("path", "g")
-                .attr("class", "link")
-                .attr("d", function (d) {
-                    return "M" + source.y0 + "," + source.x0
-                        + " l"
-                        + " 0," + (source.x0 - source.x0) + " "
-                        + (source.y0 - source.y0) / 2 + "," + 0 + " "
-                        + "L" + source.y0 + "," + source.x0;
-                });
-
-            newLink.transition()
-                .duration(duration)
-                .attr("d", function (d) {
-                    return "M" + d.parent.y + "," + d.parent.x
-                        + " l"
-                        + " 0," + (d.x - d.parent.x) + " "
-                        + (d.y - d.parent.y) / 2 + "," + 0 + " "
-                        + "L" + d.y + "," + d.x;
-                });
-
-            // Transition exiting nodes to the parent's new position.
-            link.exit().transition()
-                .duration(duration)
-                .attr("d", function (d) {
-                    return "M" + source.y0 + "," + source.x0
-                        + " l"
-                        + " 0," + (source.x0 - source.x0) + " "
-                        + (source.y0 - source.y0) / 2 + "," + 0 + " "
-                        + "L" + source.y0 + "," + source.x0;
-                })
-                .remove();
-
-            // if click
-            // Old positions for transition.
-            nodes.each(function (d) {
-                d.x0 = d.x;
-                d.y0 = d.y;
-            });
-
         }
+      })
 
-    </script>
+      //milsymbol icon    
+      newNode.append("g")
+        .attr("class", "symbol")
+        .attr("transform", function (d) {
+          if (d.data.sidc) d.data.symbol = new ms.Symbol(d.data.sidc, { size: 15 });
+          return "translate(" + (-d.data.symbol.getOctagonAnchor().x) + "," + (-d.data.symbol.getOctagonAnchor().y) + ")";
+        })
+        .each(function (d) { this.appendChild(d.data.symbol.asDOM()) })
+
+      newNode.append("text")
+        .attr("class", "node-text")
+        .attr("dy", 3)
+        .attr("x", 20)
+        .style("text-anchor", "start")
+        .text(function (d) { return d.data.name; });
+
+      //Remove old nodes
+      node.exit()
+        .transition()
+        .duration(duration)
+        .attr("transform", function (d) {
+          return "translate(" + source.y + "," + source.x + ")";
+        })
+        .style("opacity", 1e-6)
+        .remove();
+
+      //Link code
+      var link = svg.selectAll("path.link")
+        .data(d3hirarcy.descendants().slice(1), function (link) { return link.id + ':' + link.parent.id; });
+
+      // Transition links to their new position.
+      link.transition()
+        .duration(duration)
+        .attr("d", function (d) {
+          return "M" + d.parent.y + "," + d.parent.x
+            + " l"
+            + " 0," + (d.x - d.parent.x) + " "
+            + (d.y - d.parent.y) / 2 + "," + 0 + " "
+            + "L" + d.y + "," + d.x;
+        });
+
+      var newLink = link.enter()
+        .insert("path", "g")
+        .attr("class", "link")
+        .attr("d", function (d) {
+          return "M" + source.y0 + "," + source.x0
+            + " l"
+            + " 0," + (source.x0 - source.x0) + " "
+            + (source.y0 - source.y0) / 2 + "," + 0 + " "
+            + "L" + source.y0 + "," + source.x0;
+        });
+
+      newLink.transition()
+        .duration(duration)
+        .attr("d", function (d) {
+          return "M" + d.parent.y + "," + d.parent.x
+            + " l"
+            + " 0," + (d.x - d.parent.x) + " "
+            + (d.y - d.parent.y) / 2 + "," + 0 + " "
+            + "L" + d.y + "," + d.x;
+        });
+
+      // Transition exiting nodes to the parent's new position.
+      link.exit().transition()
+        .duration(duration)
+        .attr("d", function (d) {
+          return "M" + source.y0 + "," + source.x0
+            + " l"
+            + " 0," + (source.x0 - source.x0) + " "
+            + (source.y0 - source.y0) / 2 + "," + 0 + " "
+            + "L" + source.y0 + "," + source.x0;
+        })
+        .remove();
+
+      // if click
+      // Old positions for transition.
+      nodes.each(function (d) {
+        d.x0 = d.x;
+        d.y0 = d.y;
+      });
+
+    }
+
+  </script>
 </body>
