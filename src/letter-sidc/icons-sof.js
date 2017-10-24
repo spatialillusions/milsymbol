@@ -57,27 +57,27 @@ module.exports = function sof(sId, bbox, icn, _STD2525) {
     icn["SOF.M2.COMBAT SEARCH AND RESCUE"]
   ];
   sId["S-F-AHA---"] = [
-    icn["AR.I.MILITARY FIXED WING"],
+    icn["GR.IC.AVIATION ROTARY WING"],
     icn["AIR.M1.SPECIAL OPERATIONS FORCES"],
     icn["SOF.M2.ATTACK"]
   ];
   sId["S-F-AHU---"] = [
-    icn["AR.I.MILITARY FIXED WING"],
+    icn["GR.IC.AVIATION ROTARY WING"],
     icn["AIR.M1.SPECIAL OPERATIONS FORCES"],
     icn["SOF.M2.UTILITY"]
   ];
   sId["S-F-AHUL--"] = [
-    icn["AR.I.MILITARY FIXED WING"],
+    icn["GR.IC.AVIATION ROTARY WING"],
     icn["AIR.M1.SPECIAL OPERATIONS FORCES"],
     icn["AIR.M2.LIGHT"]
   ];
   sId["S-F-AHUM--"] = [
-    icn["AR.I.MILITARY FIXED WING"],
+    icn["GR.IC.AVIATION ROTARY WING"],
     icn["AIR.M1.SPECIAL OPERATIONS FORCES"],
     icn["AIR.M2.MEDIUM"]
   ];
   sId["S-F-AHUH--"] = [
-    icn["AR.I.MILITARY FIXED WING"],
+    icn["GR.IC.AVIATION ROTARY WING"],
     icn["AIR.M1.SPECIAL OPERATIONS FORCES"],
     icn["AIR.M2.HEAVY"]
   ];
