@@ -1,5 +1,26 @@
 # Change Log
 
+## Master
+
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+- Following symbols were drawn as fixed wing instead of rotary wing
+  - WAR.SOFUNT.AVN.ROT.ATK
+  - WAR.SOFUNT.AVN.ROT.UTY
+  - WAR.SOFUNT.AVN.ROT.UTY.LIT
+  - WAR.SOFUNT.AVN.ROT.UTY.MDM
+  - WAR.SOFUNT.AVN.ROT.UTY.HVY
+
+### Security
+
 ## 1.3.1 17 OCT 2017
 
 ### Added
