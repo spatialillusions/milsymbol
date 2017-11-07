@@ -19,6 +19,8 @@
   - WAR.SOFUNT.AVN.ROT.UTY.MDM
   - WAR.SOFUNT.AVN.ROT.UTY.HVY
 
+- The option infoColor was not set when used, this is now fixed.
+
 ### Security
 
 ## 1.3.1 17 OCT 2017
