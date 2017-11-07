@@ -6,7 +6,7 @@ module.exports = function textfields() {
   var drawArray2 = [];
   var bbox = this.properties.baseGeometry.bbox;
   var fontColor =
-    this.infoColor ||
+    this.properties.infoColor ||
     this.colors.iconColor[this.properties.affiliation] ||
     this.colors.iconColor["Friend"];
   var fontFamily = "Arial";
