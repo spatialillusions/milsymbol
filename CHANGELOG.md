@@ -1,6 +1,6 @@
 # Change Log
 
-## Master
+## 1.3.2 13 NOV 2017
 
 ### Added
 
