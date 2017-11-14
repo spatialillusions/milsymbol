@@ -50,7 +50,7 @@ var ms = new function() {
   this._symbolParts = [];
 
   this.autoSVG = false;
-  this.version = "1.3.2";
+  this.version = "1.3.3";
 
   if (typeof console === "object") {
     console.info(

@@ -10,7 +10,7 @@ module.exports = function modifier() {
   if (this.properties.headquarters) {
     //HEADQUARTERS
     var y = 100;
-    var hqStafLength = this.hqStafLength || ms._hqStafLength;
+    var hqStafLength = Number(this.style.hqStafLength || ms._hqStafLength);
     if (
       [
         "AirFriend",

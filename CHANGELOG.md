@@ -1,5 +1,26 @@
 # Change Log
 
+## 1.3.3 14 NOV 2017
+
+### Added
+
+### Changed
+
+- Updated and moved the unit generator from dev to examples.
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+- The option infoColor was not set when used, this is now fixed, again.
+- The option hqStafLength was not set when used, this is now fixed.
+- Fill opacity affected outline opacity as well in canvas output.
+
+### Security
+
+
 ## 1.3.2 13 NOV 2017
 
 ### Added

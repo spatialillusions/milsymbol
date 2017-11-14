@@ -50,6 +50,7 @@ module.exports = function(ratio) {
                     instruction[i].fill)
                 )
                   ctx.fill(d);
+                if (ctx.globalAlpha != 1) ctx.globalAlpha = 1; //We never have transparent strokes
                 if (
                   typeof instruction[i].stroke === "undefined" ||
                   (typeof instruction[i].stroke !== "undefined" &&
@@ -65,6 +66,7 @@ module.exports = function(ratio) {
                       instruction[i].fill)
                   )
                     ctx.fill();
+                  if (ctx.globalAlpha != 1) ctx.globalAlpha = 1;
                   if (
                     typeof instruction[i].stroke === "undefined" ||
                     (typeof instruction[i].stroke !== "undefined" &&
