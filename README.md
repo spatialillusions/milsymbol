@@ -42,8 +42,9 @@ Milsymbol can be integrated with most common javascript libraries, such as:
  - Cesium
  - D3
  - LeafLet
+ - Node.js
  - Open Layers 3
- - and many more...
+ - and also in ScriptEngine in Java, and QtJSEngine in C++...
 
 Examples of some of the integrations are included with milsymbol.
 
