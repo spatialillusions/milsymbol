@@ -55,6 +55,7 @@ module.exports = function basegeometry() {
   drawArray2.push(geom);
 
   // Dismounted Individual
+  /*
   if (this.properties.dismounted) {
     modifier = {
       Neutral: {
@@ -75,6 +76,7 @@ module.exports = function basegeometry() {
     if (modifier.hasOwnProperty(this.properties.affiliation))
       drawArray2.push(modifier[this.properties.affiliation]);
   }
+  //*/
   // Space Modifiers
   if (this.properties.space) {
     modifier = {

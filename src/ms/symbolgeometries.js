@@ -49,29 +49,29 @@ module.exports = {
     })
   },
   LandDismountedIndividualHostile: {
-    g: {
-      type: "path",
-      d: "M 99.8,37.7 158,80.5 136.1,150.3 64.4,150.7 42,81 Z"
-    },
-    bbox: new ms.BBox({ x1: 42, y1: 38, x2: 42 + 116, y2: 38 + 113 })
+    g: { type: "path", d: "M 100,28 L172,100 100,172 28,100 100,28 Z" },
+    bbox: new ms.BBox({ x1: 28, y1: 28, x2: 28 + 144, y2: 28 + 144 })
   },
   LandDismountedIndividualFriend: {
     g: { type: "path", d: "m 100,45 55,25 0,60 -55,25 -55,-25 0,-60 z" },
     bbox: new ms.BBox({ x1: 45, y1: 45, x2: 45 + 110, y2: 45 + 110 })
   },
   LandDismountedIndividualNeutral: {
-    g: {
-      type: "path",
-      d: "m 100,45 55,25 0,60 -55,25 -55,-25 0,-60 z M 42,156 158,156"
-    },
+    g: { type: "path", d: "M45,45 l110,0 0,110 -110,0 z" },
     bbox: new ms.BBox({ x1: 45, y1: 45, x2: 45 + 110, y2: 45 + 110 })
   },
   LandDismountedIndividualUnknown: {
     g: {
       type: "path",
-      d: "M 99.8,162 158,119.1 136.1,49.3 64.4,49 42.0,118.6 Z M 42,162 158,162"
+      d:
+        "M63,63 C63,20 137,20 137,63 C180,63 180,137 137,137 C137,180 63,180 63,137 C20,137 20,63 63,63 Z"
     },
-    bbox: new ms.BBox({ x1: 42, y1: 49, x2: 42 + 116, y2: 49 + 113 })
+    bbox: new ms.BBox({
+      x1: 30.75,
+      y1: 30.75,
+      x2: 30.75 + 138.5,
+      y2: 30.75 + 138.5
+    })
   },
   SeaHostile: {
     g: { type: "path", d: "M100,28 L172,100 100,172 28,100 100,28 Z" },

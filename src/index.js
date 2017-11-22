@@ -91,6 +91,11 @@ ms.addSIDCicons(
   "number"
 );
 ms.addSIDCicons(require("./number-sidc/icons-cyberspace.js"), "number");
+//APP6-D dismounted individual
+ms.addSIDCicons(
+  require("./number-sidc/icons-dismountedindividual.js"),
+  "number"
+);
 
 /* ***************************************************************************************
 Functions that builds the symbol

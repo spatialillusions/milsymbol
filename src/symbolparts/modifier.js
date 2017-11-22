@@ -586,15 +586,20 @@ module.exports = function modifier() {
   //Dismounted Leadership
   if (this.properties.leadership) {
     var leadership = {
-      Friend: { type: "path", d: "m 45,60 55,-25 55,25" },
+      Friend: {
+        type: "path",
+        d: "m 45,60 55,-25 55,25"
+      } /*,
       Neutral: { type: "path", d: "m 45,60 55,-25 55,25" },
       Hostile: { type: "path", d: "m 42,71 57.8,-43.3 58.2,42.8" },
-      Unknown: { type: "path", d: "m 50,60 10,-20 80,0 10,20" }
+      Unknown: { type: "path", d: "m 50,60 10,-20 80,0 10,20" }//*/
     }[this.properties.affiliation];
-    if (this.properties.leadership == "Deputy Individual")
-      leadership.strokedasharray = ms._dashArrays.feintDummy;
-    drawArray1.push(leadership);
-    gbbox.merge({ y1: gbbox.y1 - 20 });
+    //if (this.properties.leadership == "Deputy Individual")
+    //  leadership.strokedasharray = ms._dashArrays.feintDummy;
+    if (leadership) {
+      drawArray1.push(leadership);
+      gbbox.merge({ y1: bbox.y1 - 20 });
+    }
   }
   //Assign fill, stroke and stroke-width
   for (var i = 0; i < drawArray1.length; i++) {
