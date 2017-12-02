@@ -10,7 +10,7 @@ module.exports = function dismounted(
   _STD2525
 ) {
   //Adds support for Dismounted Individual
-  if (symbolSet == "12") {
+  if (symbolSet == "27") {
     //sId['110000'] = [icn[']];
     //sId['110100'] = [icn['']];
     sId["110101"] = [icn["GR.IC.FF.INFANTRY DISMOUNTED"]];

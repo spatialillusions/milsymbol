@@ -110,7 +110,7 @@ module.exports = function(properties, mapping) {
     properties.affiliation = "";
 
   //Land Dismounted Individual should have special icons
-  if (symbolSet == "12") {
+  if (symbolSet == "27") {
     properties.dimension = "LandDismountedIndividual";
     properties.dismounted = true;
   }
