@@ -1,19 +1,20 @@
 <html>
-<meta charset="UTF-8"/>
+<meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
 <body>
 
-<textarea id="codes">
-Unspecified;;0;
-Air Mobile/Air Assault (US only);;1;
-Area;;2;
-Attack;;3;
-Biological;;4;
-Border;;5;
-Bridging;;6;
-Chemical;;7;
-Close Protection;;8;
-Combat;;9;
+  <textarea id="codes">
+Unspecified;;00;
+Air Mobile/Air Assault (US only);;01;
+Area;;02;
+Attack;;03;
+Biological;;04;
+Border;;05;
+Bridging;;06;
+Chemical;;07;
+Close Protection;;08;
+Combat;;09;
 Command and Control;;10;
 Communications Contingency Package;;11;
 Construction;;12;
@@ -87,33 +88,34 @@ Reserved for Future Use;;79-98;Assigned by SSMC/JSP only
 Version Extension Flag;;99;
 </textarea>
 
-<script>
-var autotest = "&lt;table border=1&gt;<br>"
-var re = /(^.*);(.*);(.*);(.*$)/gm; 
-var str = document.getElementById("codes").value;
-var m;
+  <script>
+    var autotest = "&lt;table border=1&gt;<br>"
+    var re = /(^.*);(.*);(.*);(.*$)/gm;
+    var str = document.getElementById("codes").value;
+    var m;
 
-String.prototype.replaceAt=function(index, character) {
-    return this.substr(0, index) + character + this.substr(index+character.length);
-}
-
-while ((m = re.exec(str)) != null) {
-    if (m.index === re.lastIndex) {
-        re.lastIndex++;
+    String.prototype.replaceAt = function (index, character) {
+      return this.substr(0, index) + character + this.substr(index + character.length);
     }
-   autotest += "&lt;tr&gt;<br>&lt;td&gt;" + m[1] +"&lt;/td&gt; &lt;td&gt;"+ ((m[3]<10)?'0'+m[3]:m[3]) +"&lt;/td&gt; <br> &lt;td&gt;" + 
-   "&lt;script&gt;document.write(new MilSymbol(\"1001100000000000" + ((m[3]<10)?'0'+m[3]:m[3]) + "\", {size:size}).symbolMarker().textXML);&lt;/script&gt;<br>" +
-   "&lt;script&gt;document.write(new MilSymbol(\"1003100000000000" + ((m[3]<10)?'0'+m[3]:m[3]) + "\", {size:size}).symbolMarker().textXML);&lt;/script&gt;<br>" +
-   "&lt;script&gt;document.write(new MilSymbol(\"1004100000000000" + ((m[3]<10)?'0'+m[3]:m[3]) + "\", {size:size}).symbolMarker().textXML);&lt;/script&gt;<br>" +
-   "&lt;script&gt;document.write(new MilSymbol(\"1006100000000000" + ((m[3]<10)?'0'+m[3]:m[3]) + "\", {size:size}).symbolMarker().textXML);&lt;/script&gt;<br>" +
-    "&lt;/td&gt;<br>&lt;/tr&gt;<br>"
-}
-autotest += "&lt;/table&gt;"
+
+    while ((m = re.exec(str)) != null) {
+      if (m.index === re.lastIndex) {
+        re.lastIndex++;
+      }
+      autotest += "&lt;tr&gt;<br>&lt;td&gt;" + m[1] + "&lt;/td&gt; &lt;td&gt;" + ((m[3] < 10) ? '0' + m[3] : m[3]) + "&lt;/td&gt; <br> &lt;td&gt;" +
+        "&lt;script&gt;document.write(new MilSymbol(\"1001100000000000" + ((m[3] < 10) ? '0' + m[3] : m[3]) + "\", {size:size}).symbolMarker().textXML);&lt;/script&gt;<br>" +
+        "&lt;script&gt;document.write(new MilSymbol(\"1003100000000000" + ((m[3] < 10) ? '0' + m[3] : m[3]) + "\", {size:size}).symbolMarker().textXML);&lt;/script&gt;<br>" +
+        "&lt;script&gt;document.write(new MilSymbol(\"1004100000000000" + ((m[3] < 10) ? '0' + m[3] : m[3]) + "\", {size:size}).symbolMarker().textXML);&lt;/script&gt;<br>" +
+        "&lt;script&gt;document.write(new MilSymbol(\"1006100000000000" + ((m[3] < 10) ? '0' + m[3] : m[3]) + "\", {size:size}).symbolMarker().textXML);&lt;/script&gt;<br>" +
+        "&lt;/td&gt;<br>&lt;/tr&gt;<br>"
+    }
+    autotest += "&lt;/table&gt;"
 
 
-document.write("&lt;h3 id=\"TABLEA-I\"&gt;TABLE A-I.  Land unit sector 1 modifier &lt;/h3&gt;<br>" + autotest)
+    document.write("&lt;h3 id=\"TABLEA-I\"&gt;TABLE A-I.  Land unit sector 1 modifier &lt;/h3&gt;<br>" + autotest)
 
-</script>
-</script>
+  </script>
+  </script>
 </body>
+
 </html>
