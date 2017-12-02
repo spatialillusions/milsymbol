@@ -58,7 +58,7 @@ module.exports = function(properties, mapping) {
   //SymbolSets that are Installations
   if (symbolSet == "20") properties.installation = true;
   //Sea Mines with MEDAL icn
-  if (symbolSet == "36" && this.style.alternateMedal == false)
+  if (symbolSet == "36" && this.style.alternateMedal === false)
     properties.fill = false;
   //Sea own track
   if (symbolSet == "30" && functionid.substr(0, 6) == 150000)

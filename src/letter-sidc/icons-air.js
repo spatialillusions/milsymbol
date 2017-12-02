@@ -25,10 +25,8 @@ module.exports = function air(sId, bbox, icn, _STD2525) {
   sId["S-A-MFRW--"] = [icn["AR.I.AIRBORNE EARLY WARNING"]];
   sId["S-A-MFRZ--"] = [icn["AR.I.ELECTRONIC SUPPORT MEASURES"]];
   sId["S-A-MFRX--"] = [
-    (
-      _STD2525 ? icn["AR.I.2525 PHOTOGRAPHIC"] : icn["AR.I.RECONNAISSANCE"],
-      icn["AIR.M2.PHOTOGRAPHIC"]
-    )
+    (_STD2525 ? icn["AR.I.2525 PHOTOGRAPHIC"] : icn["AR.I.RECONNAISSANCE"],
+    icn["AIR.M2.PHOTOGRAPHIC"])
   ];
   sId["S-A-MFP---"] = [icn["AR.I.PATROL"]];
   sId["S-A-MFPN--"] = [icn["AR.I.ANTISURFACE WARFARE"]];

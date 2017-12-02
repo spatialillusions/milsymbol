@@ -10,9 +10,9 @@
   "scripts": {
     "lint": "eslint src test --fix",
     "prebuild": "npm run lint && npm test",
-    "build": "webpack -p",
-    "build-amd": "webpack -p --env.target=amd",
-    "build-dev": "webpack",
+    "build": "npm run bundle && npm run minify",
+    "bundle": "rollup -c",
+    "minify": "uglifyjs dist/milsymbol.development.js -o dist/milsymbol.js --compress --mangle --source-map",
     "test": "mocha test/.setup.js --recursive test"
   },
   "repository": {
@@ -31,6 +31,9 @@
     "eslint-plugin-prettier": "^2.0.1",
     "mocha": "^3.2.0",
     "prettier": "^1.5.2",
-    "webpack": "^3.3.0"
+    "rollup": "^0.52.0",
+    "rollup-plugin-commonjs": "^8.2.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "uglify-js": "^3.2.0"
   }
 }
