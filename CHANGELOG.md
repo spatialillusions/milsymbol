@@ -1,5 +1,21 @@
 # Change Log
 
+## Master
+
+### Added
+
+### Changed
+
+- Thanks to @okwolf we moved from webpack to rollup for development
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
 ## 1.3.3 14 NOV 2017
 
 ### Added
