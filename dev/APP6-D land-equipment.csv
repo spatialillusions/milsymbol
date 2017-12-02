@@ -202,8 +202,7 @@ Other Equipment ; ; ;200000;For training or hierarchical purposes only
  ;Ground-based Midcourse Defence (GMD) Fire Control (GFC) Centre; ;200800;From MIL-STD-2525.
  ;In-Flight Interceptor Communications System (IFICS) Data Terminal (IDT); ;200900;From MIL-STD-2525.
  ;Laser ; ;201000; 
- ;Psychological ; ;201100;MIL-STD-2525 uses the term Military 
-;Operations (PSYOPS) ;;;Information Support Operations (MSIO) 
+ ;Psychological Operations (PSYOPS); ;201100;MIL-STD-2525 uses the term Military Information Support Operations (MSIO) 
  ;Sustainment Shipments ; ;201200;From MIL-STD-2525.
  ;Tent ; ;201300;From MIL-STD-2525.
  ;Unit Deployment Shipments ; ;201400;From MIL-STD-2525.

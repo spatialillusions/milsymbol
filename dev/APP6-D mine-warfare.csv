@@ -6,7 +6,7 @@ Sea Mine, General ; ; ;110000;
  ;Sea Mine, Rising ; ;110400; 
  ;Sea Mine, Other Position ; ;110500; 
  ;Kingfisher ; ;110600;From MIL-STD-2525. 
- ;Small Object, Mine�Like ; ;110700;From MIL-STD-2525. 
+ ;Small Object, Mine-Like ; ;110700;From MIL-STD-2525. 
  ;Exercise Mine, General ; ;110800;From MIL-STD-2525. 
  ; ;Exercise Mine, Bottom ;110801;From MIL-STD-2525. 
  ; ;Exercise Mine, Moored ;110802;From MIL-STD-2525. 
@@ -47,8 +47,7 @@ Mine-Like Contact (MILCO); ; ;140000;From MIL-STD-2525.
  ; ;MILCO - Floating, Confidence  Level 3;140403;From MIL-STD-2525. 
  ; ;MILCO - Floating, Confidence  Level 4;140404;From MIL-STD-2525. 
  ; ;MILCO - Floating, Confidence  Level 5;140405;From MIL-STD-2525. 
-Mine-Like ; ; ;150000;From MIL-STD-2525. 
-Echo (MILEC), General ;;;;
+Mine-Like Echo (MILEC), General; ; ;150000;From MIL-STD-2525. 
  ;Mine-Like Echo, Bottom ; ;150100;From MIL-STD-2525. 
  ;Mine-Like Echo, Moored ; ;150200;From MIL-STD-2525. 
  ;Mine-Like Echo, Floating ; ;150300;From MIL-STD-2525. 
@@ -59,7 +58,7 @@ Negative Reacquisition, General; ; ;160000;From MIL-STD-2525.
 Obstructor ; ; ;170000;From MIL-STD-2525. 
  ;Neutralized Obstructor ; ;170100;From MIL-STD-2525. 
 General Mine Anchor ; ; ;180000;From MIL-STD-2525. 
-Non-Mine Mine-Like Object (NMLO), General;  ; ;190000;From MIL-STD-2525. 
+Non-Mine Mine-Like Object (NMLO), General; ; ;190000;From MIL-STD-2525. 
  ;Non-Mine Mine-Like Object, Bottom ; ;190100;From MIL-STD-2525. 
  ;Non-Mine Mine-Like Object, Moored ; ;190200;From MIL-STD-2525. 
  ;Non-Mine Mine-Like Object, Floating; ;190300;From MIL-STD-2525. 
