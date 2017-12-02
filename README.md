@@ -1,6 +1,6 @@
 # Milsymbol
 
-Milsymbol is a small library in pure javascript that creates military unit symbols according to to MIL-STD-2525 and STANAG APP6.
+Milsymbol is a small library in pure javascript that creates military unit symbols according to to MIL-STD-2525 and STANAG APP-6.
 
 ![Figure 13](https://github.com/spatialillusions/milsymbol/blob/master/docs/images/milsymbol.png?raw=true)
 
@@ -25,7 +25,7 @@ Compared to reference figure from MIL-STD-2525C:
 ## Milsymbol summary
 
 Milsymbol supports a lot of different options:
- - NATO or US standards (MIL-STD-2525C, MIL-STD-2525D, STANAG APP6-(B), STANAG APP6-(D) Draft)
+ - NATO or US standards (MIL-STD-2525C, MIL-STD-2525D, STANAG APP-6 B, STANAG APP-6 D)
  - Filled/Unfilled symbols
  - Framed/Unframed symbols
  - Text fields
