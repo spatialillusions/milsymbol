@@ -29,7 +29,6 @@ For updates and more information go to http://www.spatialillusions.com
 
 ==========================================================================================
 */
-"use strict";
 
 var ms = new function() {
   this._colorModes = {};
@@ -166,7 +165,7 @@ ms.outline = function(geom, outline, stroke, color) {
       }
     } else {
       clone.strokewidth =
-        clone.stroke != false
+        clone.stroke !== false
           ? Number(clone.strokewidth || stroke) + 2 * outline
           : 2 * outline;
       clone.stroke = color;
