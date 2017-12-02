@@ -24,7 +24,12 @@ module.exports = function(ctx, d) {
         y = parseFloat(c[j + 1]);
         ctx.lineTo(x, y);
       }
-      if (parts[i].replace(/\s/g, "").substr(-1, 1).toUpperCase() == "Z") {
+      if (
+        parts[i]
+          .replace(/\s/g, "")
+          .substr(-1, 1)
+          .toUpperCase() == "Z"
+      ) {
         ctx.closePath();
         x = x0;
         y = y0;
@@ -42,7 +47,12 @@ module.exports = function(ctx, d) {
         y += parseFloat(c[j + 1]);
         ctx.lineTo(x, y);
       }
-      if (parts[i].replace(/\s/g, "").substr(-1, 1).toUpperCase() == "Z") {
+      if (
+        parts[i]
+          .replace(/\s/g, "")
+          .substr(-1, 1)
+          .toUpperCase() == "Z"
+      ) {
         ctx.closePath();
         x = x0;
         y = y0;
@@ -55,7 +65,12 @@ module.exports = function(ctx, d) {
         y = parseFloat(c[j + 1]);
         ctx.lineTo(x, y);
       }
-      if (parts[i].replace(/\s/g, "").substr(-1, 1).toUpperCase() == "Z") {
+      if (
+        parts[i]
+          .replace(/\s/g, "")
+          .substr(-1, 1)
+          .toUpperCase() == "Z"
+      ) {
         ctx.closePath();
         x = x0;
         y = y0;
@@ -68,7 +83,12 @@ module.exports = function(ctx, d) {
         y += parseFloat(c[j + 1]);
         ctx.lineTo(x, y);
       }
-      if (parts[i].replace(/\s/g, "").substr(-1, 1).toUpperCase() == "Z") {
+      if (
+        parts[i]
+          .replace(/\s/g, "")
+          .substr(-1, 1)
+          .toUpperCase() == "Z"
+      ) {
         ctx.closePath();
       }
     }
@@ -86,7 +106,12 @@ module.exports = function(ctx, d) {
           c[j + 5]
         );
       }
-      if (parts[i].replace(/\s/g, "").substr(-1, 1).toUpperCase() == "Z") {
+      if (
+        parts[i]
+          .replace(/\s/g, "")
+          .substr(-1, 1)
+          .toUpperCase() == "Z"
+      ) {
         ctx.closePath();
       }
     }
@@ -101,7 +126,12 @@ module.exports = function(ctx, d) {
         y = y + parseFloat(c[j + 5]);
         ctx.bezierCurveTo(x1, y1, x2, y2, x, y);
       }
-      if (parts[i].replace(/\s/g, "").substr(-1, 1).toUpperCase() == "Z") {
+      if (
+        parts[i]
+          .replace(/\s/g, "")
+          .substr(-1, 1)
+          .toUpperCase() == "Z"
+      ) {
         ctx.closePath();
       }
     }
@@ -112,7 +142,12 @@ module.exports = function(ctx, d) {
         //y = parseFloat(c[j+5]);
         ctx.lineTo(x, y);
       }
-      if (parts[i].replace(/\s/g, "").substr(-1, 1).toUpperCase() == "Z") {
+      if (
+        parts[i]
+          .replace(/\s/g, "")
+          .substr(-1, 1)
+          .toUpperCase() == "Z"
+      ) {
         ctx.closePath();
       }
     }
@@ -123,7 +158,12 @@ module.exports = function(ctx, d) {
         //y = parseFloat(c[j+5]);
         ctx.lineTo(x, y);
       }
-      if (parts[i].replace(/\s/g, "").substr(-1, 1).toUpperCase() == "Z") {
+      if (
+        parts[i]
+          .replace(/\s/g, "")
+          .substr(-1, 1)
+          .toUpperCase() == "Z"
+      ) {
         ctx.closePath();
       }
     }
@@ -134,7 +174,12 @@ module.exports = function(ctx, d) {
         y = parseFloat(c[j]);
         ctx.lineTo(x, y);
       }
-      if (parts[i].replace(/\s/g, "").substr(-1, 1).toUpperCase() == "Z") {
+      if (
+        parts[i]
+          .replace(/\s/g, "")
+          .substr(-1, 1)
+          .toUpperCase() == "Z"
+      ) {
         ctx.closePath();
       }
     }
@@ -145,7 +190,12 @@ module.exports = function(ctx, d) {
         y += parseFloat(c[j]);
         ctx.lineTo(x, y);
       }
-      if (parts[i].replace(/\s/g, "").substr(-1, 1).toUpperCase() == "Z") {
+      if (
+        parts[i]
+          .replace(/\s/g, "")
+          .substr(-1, 1)
+          .toUpperCase() == "Z"
+      ) {
         ctx.closePath();
       }
     }
