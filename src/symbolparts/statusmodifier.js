@@ -20,6 +20,10 @@ module.exports = function statusmodifier() {
       if (!this.properties.frame && this.properties.iconBottom) {
         y2 = this.properties.iconBottom;
       }
+      // If we have headquartersElement add space for the text
+      if (this.options.headquartersElement) {
+        y2 += 35;
+      }
       //If we have a mobility indicator we need to make space for it.
       y2 += this.properties.mobility ? 25 : 5;
       //Add the bar to the geometry

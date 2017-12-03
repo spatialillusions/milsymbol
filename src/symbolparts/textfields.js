@@ -286,6 +286,7 @@ module.exports = function textfields() {
       gbbox.y1 = bbox.y1 - 10 - fontSize;
     }
     if (this.options.headquartersElement) {
+      /*
       if (
         this.properties.condition &&
         this.properties.fill &&
@@ -294,6 +295,7 @@ module.exports = function textfields() {
         //Add the hight of the codition bar to the geometry bounds
         bbox.y2 += 15;
       }
+      //*/
       //geometry
       drawArray2.push({
         type: "text",

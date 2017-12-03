@@ -22,6 +22,8 @@
 * Fields commonIdentifier (AF) and equipmentTeardownTime (AE) had swiched
   places, now corrected
 
+* The condition bar is now drawn below the headquartersElement field
+
 ### Security
 
 ## 1.3.3 14 NOV 2017
