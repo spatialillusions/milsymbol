@@ -55,11 +55,11 @@ function symbol() {
   this.options.commonIdentifier = ""; // FieldID AF
   this.options.auxiliaryEquipmentIndicator = ""; // FieldID AG
   this.options.headquartersElement = ""; // FieldID AH
-  // Not implemented.
   // FieldID AM Distance
   // FieldID AN Azimuth
   this.options.engagementBar = ""; // FieldID AO EngagementBar
   this.options.engagementType = ""; // Engagement Bar Type, should be one of "TARGET", "NON-TARGET", or "EXPIRED"
+  // FieldID AR Azimuth
 
   this.bbox = new ms.BBox(); // Contains the bounding box of the current marker
   this.colors = {}; // Contains the colors for the current marker
