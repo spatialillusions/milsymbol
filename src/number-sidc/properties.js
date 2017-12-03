@@ -50,7 +50,7 @@ module.exports = function(properties, mapping) {
   properties.affiliation = affiliationMapping[standardIdentity2];
   properties.dimension = dimensionMapping[symbolSet];
 
-  //SymbolSets in Space
+  // Not equipment symbolsets
   if (
     symbolSet == "10" ||
     symbolSet == "11" ||
@@ -58,7 +58,7 @@ module.exports = function(properties, mapping) {
     symbolSet == "27" ||
     symbolSet == "40"
   )
-    properties.equipment = false;
+    properties.unit = true;
 
   //SymbolSets in Space
   if (symbolSet == "05" || symbolSet == "06" || symbolSet == "50")

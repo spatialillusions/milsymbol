@@ -13,7 +13,6 @@ module.exports = function() {
     dimension: "", //Dimension it is shown as (Air/Ground...)
     dimensionUnknown: false, //Is the dimension unknown
     echelon: "", //What echelon (Platoon/Company...)
-    equipment: true, // Is this equipment or not
     faker: false, //Is it a Faker
     fenintDummy: false, //Is it a feint/dummy
     fill: this.style.fill, //Standard says it should be filled
@@ -27,7 +26,8 @@ module.exports = function() {
     notpresent: "", //Is it Anticipated or Pending
     numberSIDC: false, //Is the SIDC number based
     space: false, //Is it in Space
-    taskForce: false //Is it a task force
+    taskForce: false, //Is it a task force
+    unit: false // Is this equipment or not
   };
   var mapping = {};
   mapping.context = ["Reality", "Exercise", "Simulation"];

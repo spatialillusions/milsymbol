@@ -265,7 +265,8 @@ module.exports = function textfields() {
     this.options.equipmentTeardownTime ||
     this.options.commonIdentifier ||
     this.options.auxiliaryEquipmentIndicator ||
-    this.options.headquartersElement;
+    this.options.headquartersElement ||
+    this.options.installationComposition;
   if (this.style.infoFields && textFields) {
     if (this.options.specialHeadquarters) {
       drawArray2.push(text(this.options.specialHeadquarters));
@@ -375,7 +376,7 @@ module.exports = function textfields() {
         if (this.options.iffSif) a.push(this.options.iffSif);
         gStrings.R5 = a.join("/");
       }
-      if (isNaN(this.options.sidc) || !this.properties.equipment) {
+      if (isNaN(this.options.sidc) || this.properties.unit) {
         if (
           this.options.type ||
           this.options.platformType ||
@@ -404,13 +405,16 @@ module.exports = function textfields() {
         if (
           this.options.type ||
           this.options.platformType ||
-          this.options.commonIdentifier
+          this.options.commonIdentifier ||
+          this.options.installationComposition
         ) {
           a = [];
           if (this.options.type) a.push(this.options.type);
           if (this.options.platformType) a.push(this.options.platformType);
           if (this.options.commonIdentifier)
             a.push(this.options.commonIdentifier);
+          if (this.options.installationComposition)
+            a.push(this.options.installationComposition);
           gStrings.L3 = a.join("/");
         }
         gStrings.R1 = this.options.country;

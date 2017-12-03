@@ -56,6 +56,7 @@ function symbol() {
   this.options.commonIdentifier = ""; // FieldID AF
   this.options.auxiliaryEquipmentIndicator = ""; // FieldID AG
   this.options.headquartersElement = ""; // FieldID AH
+  this.options.installationComposition = ""; // FieldID AI
   // FieldID AM Distance
   // FieldID AN Azimuth
   this.options.engagementBar = ""; // FieldID AO EngagementBar
