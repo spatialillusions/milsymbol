@@ -135,7 +135,7 @@ module.exports = function modifier() {
   }
   if (this.properties.feintDummy) {
     //FEINT DUMMY
-    var topPoint = bbox.y1 - 40 - bbox.width() / 2;
+    var topPoint = bbox.y1 - 0 - bbox.width() / 2;
     geom = {
       type: "path",
       strokedasharray: ms._dashArrays.feintDummy,
@@ -145,13 +145,13 @@ module.exports = function modifier() {
         " L" +
         bbox.x1 +
         "," +
-        (bbox.y1 - 40) +
+        (bbox.y1 - 0) +
         " M100," +
         topPoint +
         " L" +
         bbox.x2 +
         "," +
-        (bbox.y1 - 40)
+        (bbox.y1 - 0)
     };
 
     //outline

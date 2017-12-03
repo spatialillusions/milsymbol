@@ -19,6 +19,9 @@
 * Where there are multiple text fields in the same position, they are now joined
   by a / instead of a space
 
+* Changed location of feint/dummy indicator to be more similar to images in
+  standard documents
+
 ### Deprecated
 
 ### Removed
