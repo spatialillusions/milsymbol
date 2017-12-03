@@ -266,7 +266,9 @@ module.exports = function textfields() {
     this.options.commonIdentifier ||
     this.options.auxiliaryEquipmentIndicator ||
     this.options.headquartersElement ||
-    this.options.installationComposition;
+    this.options.installationComposition ||
+    this.options.guardedUnit ||
+    this.options.specialDesignator;
   if (this.style.infoFields && textFields) {
     if (this.options.specialHeadquarters) {
       drawArray2.push(text(this.options.specialHeadquarters));
@@ -431,6 +433,7 @@ module.exports = function textfields() {
         }
       }
     }
+    // Dismounted individual
     if (this.properties.dismounted) {
       if (this.options.quantity) {
         //geometry
@@ -501,6 +504,13 @@ module.exports = function textfields() {
 
     //Sea numberbased SIDC
     if (!isNaN(this.options.sidc) && this.properties.baseDimension == "Sea") {
+      if (this.options.guardedUnit || this.options.specialDesignator) {
+        a = [];
+        if (this.options.guardedUnit) a.push(this.options.guardedUnit);
+        if (this.options.specialDesignator)
+          a.push(this.options.specialDesignator);
+        gStrings.L1 = a.join("/");
+      }
       gStrings.R1 = this.options.uniqueDesignation;
       gStrings.R2 = this.options.type;
       gStrings.R3 = this.options.iffSif;
