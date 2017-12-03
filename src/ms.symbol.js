@@ -59,6 +59,7 @@ function symbol() {
   // FieldID AM Distance
   // FieldID AN Azimuth
   this.options.engagementBar = ""; // FieldID AO EngagementBar
+  this.options.engagementType = ""; // Engagement Bar Type, should be one of "TARGET", "NON-TARGET", or "EXPIRED"
 
   this.bbox = new ms.BBox(); // Contains the bounding box of the current marker
   this.colors = {}; // Contains the colors for the current marker

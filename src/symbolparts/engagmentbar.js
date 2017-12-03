@@ -30,70 +30,52 @@ module.exports = function debug() {
       stroke: false
     });
 
+    var color = false;
     if (this.properties.fill && this.style.monoColor === "") {
       var colors = {
         TARGET: "rgb(255, 0, 0)",
         "NON-TARGET": "rgb(255, 255, 255)",
         EXPIRED: "rgb(255, 120, 0)"
       };
-      // Bar width
-      var width = Math.max(
-        bbox.width(),
-        this.options.engagementBar.length * 16
-      );
-      x1 = Math.min(x1, 100 - width / 2);
-      x2 = Math.max(x2, 100 + width / 2);
-
-      //Add the bar to the geometry
-      drawArray2.unshift({
-        type: "path",
-        strokewidth: this.style.strokeWidth,
-        fill: this.colors.fillColor[this.properties.affiliation],
-        stroke: this.colors.frameColor[this.properties.affiliation],
-        d:
-          "M" +
-          (100 - width / 2) +
-          "," +
-          y1 +
-          " l" +
-          width +
-          ",0 0,-25 -" +
-          width +
-          ",0 z"
-      });
-
-      //Add the hight of the codition bar to the geometry bounds
-      y1 -= 25;
-      //outline
-      if (this.style.outlineWidth > 0)
-        drawArray1.push(
-          ms.outline(
-            drawArray2,
-            this.style.outlineWidth,
-            this.style.strokeWidth,
-            this.style.outlineColor
-          )
-        );
-    } else {
-      // unfilled
-      drawArray2.unshift({
-        type: "path",
-        d: "M150,20 L50,180",
-        strokewidth: this.style.strokeWidth * 2,
-        stroke: this.colors.frameColor[this.properties.affiliation]
-      });
-
-      //outline
-      if (this.style.outlineWidth > 0)
-        drawArray1.push(
-          ms.outline(
-            drawArray2,
-            this.style.outlineWidth,
-            this.style.strokeWidth,
-            this.style.outlineColor
-          )
-        );
+      color =
+        colors[this.options.engagementType.toUpperCase()] ||
+        this.colors.fillColor[this.properties.affiliation];
     }
+    // Bar width
+    var width = Math.max(bbox.width(), this.options.engagementBar.length * 16);
+    x1 = Math.min(x1, 100 - width / 2);
+    x2 = Math.max(x2, 100 + width / 2);
+
+    //Add the bar to the geometry
+    drawArray2.unshift({
+      type: "path",
+      strokewidth: this.style.strokeWidth,
+      fill: color,
+      stroke: this.colors.frameColor[this.properties.affiliation],
+      d:
+        "M" +
+        (100 - width / 2) +
+        "," +
+        y1 +
+        " l" +
+        width +
+        ",0 0,-25 -" +
+        width +
+        ",0 z"
+    });
+
+    //Add the hight of the codition bar to the geometry bounds
+    y1 -= 25;
+    //outline
+    if (this.style.outlineWidth > 0)
+      drawArray1.push(
+        ms.outline(
+          drawArray2,
+          this.style.outlineWidth,
+          this.style.strokeWidth,
+          this.style.outlineColor
+        )
+      );
   }
 
   //A bounding box only needs the values that might change
