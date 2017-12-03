@@ -392,6 +392,7 @@ module.exports = function textfields() {
           gStrings.L3 = a.join("/");
         }
         gStrings.R1 = this.options.reinforcedReduced;
+        if (this.properties.activity) gStrings.R1 = this.options.country;
         if (
           this.options.additionalInformation ||
           this.options.commonIdentifier
@@ -533,6 +534,7 @@ module.exports = function textfields() {
       !isNaN(this.options.sidc) &&
       this.properties.baseDimension == "Subsurface"
     ) {
+      gStrings.L1 = this.options.specialDesignator;
       gStrings.R1 = this.options.uniqueDesignation;
       gStrings.R2 = this.options.type;
       gStrings.R3 = this.options.altitudeDepth;
