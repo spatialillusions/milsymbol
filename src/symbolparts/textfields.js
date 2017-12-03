@@ -334,14 +334,14 @@ module.exports = function textfields() {
         a = [];
         if (this.options.speed) a.push(this.options.speed);
         if (this.options.altitudeDepth) a.push(this.options.altitudeDepth);
-        gStrings.R4 = a.join(" ");
+        gStrings.R4 = a.join("/");
       }
       if (this.options.staffComments || this.options.additionalInformation) {
         a = [];
         if (this.options.staffComments) a.push(this.options.staffComments);
         if (this.options.additionalInformation)
           a.push(this.options.additionalInformation);
-        gStrings.R5 = a.join(" ");
+        gStrings.R5 = a.join("/");
       }
     }
     //Land or letterbased SIDC
@@ -351,7 +351,7 @@ module.exports = function textfields() {
         a = [];
         if (this.options.altitudeDepth) a.push(this.options.altitudeDepth);
         if (this.options.location) a.push(this.options.location);
-        gStrings.L2 = a.join(" ");
+        gStrings.L2 = a.join("/");
       }
       if (
         this.options.type ||
@@ -363,7 +363,7 @@ module.exports = function textfields() {
         if (this.options.platformType) a.push(this.options.platformType);
         if (this.options.equipmentTeardownTime)
           a.push(this.options.equipmentTeardownTime);
-        gStrings.L3 = a.join(" ");
+        gStrings.L3 = a.join("/");
       }
       gStrings.L4 = this.options.uniqueDesignation;
       gStrings.L5 = this.options.speed;
@@ -375,7 +375,7 @@ module.exports = function textfields() {
           a.push(this.options.additionalInformation);
         if (this.options.commonIdentifier)
           a.push(this.options.commonIdentifier);
-        gStrings.R3 = a.join(" ");
+        gStrings.R3 = a.join("/");
       }
       gStrings.R4 = this.options.higherFormation;
       if (
@@ -394,7 +394,7 @@ module.exports = function textfields() {
           a.push(this.options.signatureEquipment);
         if (this.options.hostile) a.push(this.options.hostile);
         if (this.options.iffSif) a.push(this.options.iffSif);
-        gStrings.R5 = a.join(" ");
+        gStrings.R5 = a.join("/");
       }
     }
     //Sea numberbased SIDC
@@ -407,13 +407,13 @@ module.exports = function textfields() {
         if (this.options.staffComments) a.push(this.options.staffComments);
         if (this.options.additionalInformation)
           a.push(this.options.additionalInformation);
-        gStrings.R4 = a.join(" ");
+        gStrings.R4 = a.join("/");
       }
       if (this.options.location || this.options.speed) {
         a = [];
         if (this.options.location) a.push(this.options.location);
         if (this.options.speed) a.push(this.options.speed);
-        gStrings.R5 = a.join(" ");
+        gStrings.R5 = a.join("/");
       }
     }
     //Sub numberbased SIDC

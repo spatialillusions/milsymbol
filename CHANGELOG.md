@@ -13,6 +13,9 @@
 
 * Thanks to @okwolf we moved from webpack to rollup for development
 
+* Where there are multiple text fields in the same position, they are now joined
+  by a / instead of a space
+
 ### Deprecated
 
 ### Removed
