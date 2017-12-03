@@ -67,15 +67,22 @@ module.exports = function debug() {
     //Add the hight of the codition bar to the geometry bounds
     y1 -= 25;
     //outline
-    if (this.style.outlineWidth > 0)
+    if (this.style.outlineWidth > 0) {
+      var outline;
+      if (this.properties.fill && this.style.monoColor === "") {
+        outline = drawArray2[0];
+      } else {
+        outline = drawArray2;
+      }
       drawArray1.push(
         ms.outline(
-          drawArray2,
+          outline,
           this.style.outlineWidth,
           this.style.strokeWidth,
           this.style.outlineColor
         )
       );
+    }
   }
 
   //A bounding box only needs the values that might change
