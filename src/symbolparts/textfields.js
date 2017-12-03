@@ -354,28 +354,25 @@ module.exports = function textfields() {
       if (
         this.options.type ||
         this.options.platformType ||
-        this.options.commonIdentifier
+        this.options.equipmentTeardownTime
       ) {
         a = [];
         if (this.options.type) a.push(this.options.type);
         if (this.options.platformType) a.push(this.options.platformType);
-        if (this.options.commonIdentifier)
-          a.push(this.options.commonIdentifier);
+        if (this.options.equipmentTeardownTime)
+          a.push(this.options.equipmentTeardownTime);
         gStrings.L3 = a.join(" ");
       }
       gStrings.L4 = this.options.uniqueDesignation;
       gStrings.L5 = this.options.speed;
       gStrings.R1 = this.options.reinforcedReduced;
       gStrings.R2 = this.options.staffComments;
-      if (
-        this.options.additionalInformation ||
-        this.options.equipmentTeardownTime
-      ) {
+      if (this.options.additionalInformation || this.options.commonIdentifier) {
         a = [];
         if (this.options.additionalInformation)
           a.push(this.options.additionalInformation);
-        if (this.options.equipmentTeardownTime)
-          a.push(this.options.equipmentTeardownTime);
+        if (this.options.commonIdentifier)
+          a.push(this.options.commonIdentifier);
         gStrings.R3 = a.join(" ");
       }
       gStrings.R4 = this.options.higherFormation;

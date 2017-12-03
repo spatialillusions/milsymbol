@@ -19,6 +19,9 @@
 
 ### Fixed
 
+* Fields commonIdentifier (AF) and equipmentTeardownTime (AE) had swiched
+  places, now corrected
+
 ### Security
 
 ## 1.3.3 14 NOV 2017
