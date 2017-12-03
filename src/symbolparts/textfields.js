@@ -271,7 +271,7 @@ module.exports = function textfields() {
     if (this.options.specialHeadquarters) {
       drawArray2.push(text(this.options.specialHeadquarters));
     }
-    if (this.options.quantity) {
+    if (this.options.quantity && !this.properties.dismounted) {
       //geometry
       drawArray2.push({
         type: "text",
@@ -431,6 +431,74 @@ module.exports = function textfields() {
         }
       }
     }
+    if (this.properties.dismounted) {
+      if (this.options.quantity) {
+        //geometry
+        drawArray2.push({
+          type: "text",
+          text: this.options.quantity,
+          x: 100,
+          y: bbox.y2 + fontSize,
+          textanchor: "middle",
+          fontsize: fontSize,
+          fontfamily: fontFamily,
+          fill: fontColor,
+          stroke: false
+        });
+        gbbox.y2 = bbox.y2 + fontSize;
+      }
+
+      gStrings.L1 = this.options.dtg;
+      if (this.options.altitudeDepth || this.options.location) {
+        a = [];
+        if (this.options.altitudeDepth) a.push(this.options.altitudeDepth);
+        if (this.options.location) a.push(this.options.location);
+        gStrings.L2 = a.join("/");
+      }
+      if (
+        this.options.type ||
+        this.options.platformType ||
+        this.options.commonIdentifier
+      ) {
+        a = [];
+        if (this.options.type) a.push(this.options.type);
+        if (this.options.platformType) a.push(this.options.platformType);
+        if (this.options.commonIdentifier)
+          a.push(this.options.commonIdentifier);
+        gStrings.L3 = a.join("/");
+      }
+      gStrings.L4 = this.options.uniqueDesignation;
+      gStrings.L5 = this.options.speed;
+      gStrings.R1 = this.options.country;
+      gStrings.R2 = this.options.staffComments;
+      if (this.options.additionalInformation) {
+        a = [];
+        if (this.options.additionalInformation)
+          a.push(this.options.additionalInformation);
+
+        gStrings.R3 = a.join("/");
+      }
+      gStrings.R4 = this.options.higherFormation;
+      if (
+        this.options.evaluationRating ||
+        this.options.combatEffectiveness ||
+        this.options.signatureEquipment ||
+        this.options.hostile ||
+        this.options.iffSif
+      ) {
+        a = [];
+        if (this.options.evaluationRating)
+          a.push(this.options.evaluationRating);
+        if (this.options.combatEffectiveness)
+          a.push(this.options.combatEffectiveness);
+        if (this.options.signatureEquipment)
+          a.push(this.options.signatureEquipment);
+        if (this.options.hostile) a.push(this.options.hostile);
+        if (this.options.iffSif) a.push(this.options.iffSif);
+        gStrings.R5 = a.join("/");
+      }
+    }
+
     //Sea numberbased SIDC
     if (!isNaN(this.options.sidc) && this.properties.baseDimension == "Sea") {
       gStrings.R1 = this.options.uniqueDesignation;
