@@ -326,7 +326,7 @@ module.exports = function textfields() {
     }; //Text information on left and right sIde.
     var a;
     //Air & Space (They should be different but we skip that at the moment) TODO
-    if (!isNaN(this.options.sidc) && this.properties.dimension == "Air") {
+    if (!isNaN(this.options.sidc) && this.properties.baseDimension == "Air") {
       gStrings.R1 = this.options.uniqueDesignation;
       gStrings.R2 = this.options.iffSif;
       gStrings.R3 = this.options.type;
@@ -353,30 +353,9 @@ module.exports = function textfields() {
         if (this.options.location) a.push(this.options.location);
         gStrings.L2 = a.join("/");
       }
-      if (
-        this.options.type ||
-        this.options.platformType ||
-        this.options.equipmentTeardownTime
-      ) {
-        a = [];
-        if (this.options.type) a.push(this.options.type);
-        if (this.options.platformType) a.push(this.options.platformType);
-        if (this.options.equipmentTeardownTime)
-          a.push(this.options.equipmentTeardownTime);
-        gStrings.L3 = a.join("/");
-      }
       gStrings.L4 = this.options.uniqueDesignation;
       gStrings.L5 = this.options.speed;
-      gStrings.R1 = this.options.reinforcedReduced;
       gStrings.R2 = this.options.staffComments;
-      if (this.options.additionalInformation || this.options.commonIdentifier) {
-        a = [];
-        if (this.options.additionalInformation)
-          a.push(this.options.additionalInformation);
-        if (this.options.commonIdentifier)
-          a.push(this.options.commonIdentifier);
-        gStrings.R3 = a.join("/");
-      }
       gStrings.R4 = this.options.higherFormation;
       if (
         this.options.evaluationRating ||
@@ -396,9 +375,60 @@ module.exports = function textfields() {
         if (this.options.iffSif) a.push(this.options.iffSif);
         gStrings.R5 = a.join("/");
       }
+      if (isNaN(this.options.sidc) || !this.properties.equipment) {
+        if (
+          this.options.type ||
+          this.options.platformType ||
+          this.options.equipmentTeardownTime
+        ) {
+          a = [];
+          if (this.options.type) a.push(this.options.type);
+          if (this.options.platformType) a.push(this.options.platformType);
+          if (this.options.equipmentTeardownTime)
+            a.push(this.options.equipmentTeardownTime);
+          gStrings.L3 = a.join("/");
+        }
+        gStrings.R1 = this.options.reinforcedReduced;
+        if (
+          this.options.additionalInformation ||
+          this.options.commonIdentifier
+        ) {
+          a = [];
+          if (this.options.additionalInformation)
+            a.push(this.options.additionalInformation);
+          if (this.options.commonIdentifier)
+            a.push(this.options.commonIdentifier);
+          gStrings.R3 = a.join("/");
+        }
+      } else {
+        if (
+          this.options.type ||
+          this.options.platformType ||
+          this.options.commonIdentifier
+        ) {
+          a = [];
+          if (this.options.type) a.push(this.options.type);
+          if (this.options.platformType) a.push(this.options.platformType);
+          if (this.options.commonIdentifier)
+            a.push(this.options.commonIdentifier);
+          gStrings.L3 = a.join("/");
+        }
+        gStrings.R1 = this.options.country;
+        if (
+          this.options.additionalInformation ||
+          this.options.equipmentTeardownTime
+        ) {
+          a = [];
+          if (this.options.additionalInformation)
+            a.push(this.options.additionalInformation);
+          if (this.options.equipmentTeardownTime)
+            a.push(this.options.equipmentTeardownTime);
+          gStrings.R3 = a.join("/");
+        }
+      }
     }
     //Sea numberbased SIDC
-    if (!isNaN(this.options.sidc) && this.properties.dimension == "Sea") {
+    if (!isNaN(this.options.sidc) && this.properties.baseDimension == "Sea") {
       gStrings.R1 = this.options.uniqueDesignation;
       gStrings.R2 = this.options.type;
       gStrings.R3 = this.options.iffSif;
@@ -419,7 +449,7 @@ module.exports = function textfields() {
     //Sub numberbased SIDC
     if (
       !isNaN(this.options.sidc) &&
-      this.properties.dimension == "Subsurface"
+      this.properties.baseDimension == "Subsurface"
     ) {
       gStrings.R1 = this.options.uniqueDesignation;
       gStrings.R2 = this.options.type;
@@ -428,7 +458,7 @@ module.exports = function textfields() {
       gStrings.R5 = this.options.additionalInformation;
     }
 
-    //Add space on left sIde
+    //Add space on left side
     gbbox.x1 =
       bbox.x1 -
       Math.max(
@@ -449,7 +479,7 @@ module.exports = function textfields() {
         strWidth(gStrings.L5)
       );
 
-    //Space on right sIde
+    //Space on right side
     gbbox.x2 =
       bbox.x2 +
       Math.max(

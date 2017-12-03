@@ -97,32 +97,54 @@ options listed below.
 The following options are modifiers, text or graphical, that are defined in the
 standard documents.
 
-| Option                | Type   | Default   | Description                                                                                                                                                                                                            |
-| --------------------- | ------ | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| additionalInformation | String | ''        | A text modifier for units, equipment, and installations; content is implementation specific. <br/>**Field H** _20 Characters_                                                                                          |
-| altitudeDepth         | String | ''        | A text modifier for units, equipment, and installations, that displays either altitude flight level, depth for submerged objects; or height of equipment or structures on the ground. <br/>**Field X** _14 Characters_ |
-| combatEffectiveness   | String | ''        | A text modifier for units and installations that indicates unit effectiveness or installation capability. <br/>**Field K** _5 Characters_                                                                              |
-| commonIdentifier      | String | ''        | Example: "Hawk" for Hawk SAM system. <br/>**Field AF**                                                                                                                                                                 |
-| direction             | Number | undefined | At the moment all directions should be in degrees and not in mils. Set to an undefined to remove the direction arrow. <br/>**Field Q**                                                                                 |
-| dtg                   | String | ''        | A text modifier for units, equipment, and installations that displays DTG format: DDHHMMSSZMONYYYY or "O/O" for on order. <br/>**Field W** _16 Characters_                                                             |
-| engagementBar         | String | ''        | Engagement bar text, shall be arranged as follows: A:BBB-CC. <br/>**Field AO**                                                                                                                                         |
-| equipmentTeardownTime | String | ''        | Equipment teardown time in minutes. <br/>**Field AE**                                                                                                                                                                  |
-| evaluationRating      | String | ''        | A text modifier for units, equipment, and installations that consists of a one-letter reliability rating and a one-number credibility rating. <br/>**Field J** _2 Characters_                                          |
-| headquartersElement   | String | ''        | Example: Tactical Operations Centre put as 'TOC'. <br/>**Field AH**                                                                                                                                                    |
-| higherFormation       | String | ''        | A text modifier for units that indicates number or title of higher echelon command (corps are designated by Roman numerals). <br/>**Field M** _21 Characters_                                                          |
-| hostile               | String | ''        | A text modifier for equipment; letters "ENY" denote hostile symbols. <br/>**Field N** _3 Characters_                                                                                                                   |
-| iffSif                | String | ''        | A text modifier displaying IFF/SIF Identification modes and codes. <br/>**Field P** _5 Characters_                                                                                                                     |
-| location              | String | ''        | A text modifier for units, equipment, and installations that displays a symbol's location in degrees, minutes, and seconds (or in UTM or other applicable display format). <br/>**Field Y** _19 Characters_            |
-| platformType          | String | ''        | "ELNOT" or "CENOT" <br/>**Field AD**                                                                                                                                                                                   |
-| quantity              | String | ''        | A text modifier in an equipment symbol that identifies the number of items present. <br/>**Field C** _9 Characters_                                                                                                    |
-| reinforcedReduced     | String | ''        | A text modifier in a unit symbol that displays (+) for reinforced, (-) for reduced, (±) reinforced and reduced. <br/>**Field F** _3 Characters_                                                                        |
-| sigint                | String | ''        | M = Mobile, S = Static, or U = Uncertain. <br/>**Field R2**                                                                                                                                                            |
-| signatureEquipment    | String | ''        | A text modifier for hostile equipment; "!" indicates detectable electronic signatures. <br/>**Field L** _1 Character_                                                                                                  |
-| specialHeadquarters   | String | ''        | A text modifier for units; indicator is contained inside the frame; contains the name of the special C2 Headquarters. <br/>**Field AA** _9 Characters_                                                                 |
-| speed                 | String | ''        | A text modifier for units and equipment that displays velocity as set forth in MIL-STD-6040. <br/>**Field Z** _8 Characters_                                                                                           |
-| staffComments         | String | ''        | A text modifier for units, equipment and installations; content is implementation specific. <br/>**Field G** _20 Characters_                                                                                           |
-| type                  | String | ''        | A text modifier for equipment that indicates types of equipment. <br/>**Field V** _24 Characters_                                                                                                                      |
-| uniqueDesignation     | String | ''        | A text modifier for units, equipment, and installations that uniquely identifies a particular symbol or track number. Identifies acquisitions number when used with SIGINT symbology. <br/>**Field T** _21 Characters_ |
+| Option                | Type   | Default | Description                                                                                                                                                                                                            |
+| --------------------- | ------ | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| additionalInformation | String | ''      | A text modifier for units, equipment, and installations; content is implementation specific. <br/>**Field H** _20 Characters_                                                                                          |
+| altitudeDepth         | String | ''      | A text modifier for units, equipment, and installations, that displays either altitude flight level, depth for submerged objects; or height of equipment or structures on the ground. <br/>**Field X** _14 Characters_ |
+| combatEffectiveness   | String | ''      | A text modifier for units and installations that indicates unit effectiveness or installation capability. <br/>**Field K** _5 Characters_                                                                              |
+| commonIdentifier      | String | ''      | Example: "Hawk" for Hawk SAM system. <br/>**Field AF**                                                                                                                                                                 |
+| country               | String | ''      | Three letter representing the country. <br/>**Field AC**                                                                                                                                                               |
+
+| direction | Number | undefined | At the moment all directions should be in
+degrees and not in mils. Set to an undefined to remove the direction arrow.
+<br/>**Field Q** | | dtg | String | '' | A text modifier for units, equipment,
+and installations that displays DTG format: DDHHMMSSZMONYYYY or "O/O" for on
+order. <br/>**Field W** _16 Characters_ | | engagementBar | String | '' |
+Engagement bar text, shall be arranged as follows: A:BBB-CC. <br/>**Field AO** |
+| equipmentTeardownTime | String | '' | Equipment teardown time in minutes.
+<br/>**Field AE** | | evaluationRating | String | '' | A text modifier for
+units, equipment, and installations that consists of a one-letter reliability
+rating and a one-number credibility rating. <br/>**Field J** _2 Characters_ | |
+headquartersElement | String | '' | Example: Tactical Operations Centre put as
+'TOC'. <br/>**Field AH** | | higherFormation | String | '' | A text modifier for
+units that indicates number or title of higher echelon command (corps are
+designated by Roman numerals). <br/>**Field M** _21 Characters_ | | hostile |
+String | '' | A text modifier for equipment; letters "ENY" denote hostile
+symbols. <br/>**Field N** _3 Characters_ | | iffSif | String | '' | A text
+modifier displaying IFF/SIF Identification modes and codes. <br/>**Field P** _5
+Characters_ | | location | String | '' | A text modifier for units, equipment,
+and installations that displays a symbol's location in degrees, minutes, and
+seconds (or in UTM or other applicable display format). <br/>**Field Y** _19
+Characters_ | | platformType | String | '' | "ELNOT" or "CENOT" <br/>**Field
+AD** | | quantity | String | '' | A text modifier in an equipment symbol that
+identifies the number of items present. <br/>**Field C** _9 Characters_ | |
+reinforcedReduced | String | '' | A text modifier in a unit symbol that displays
+(+) for reinforced, (-) for reduced, (±) reinforced and reduced. <br/>**Field
+F** _3 Characters_ | | sigint | String | '' | M = Mobile, S = Static, or U =
+Uncertain. <br/>**Field R2** | | signatureEquipment | String | '' | A text
+modifier for hostile equipment; "!" indicates detectable electronic signatures.
+<br/>**Field L** _1 Character_ | | specialHeadquarters | String | '' | A text
+modifier for units; indicator is contained inside the frame; contains the name
+of the special C2 Headquarters. <br/>**Field AA** _9 Characters_ | | speed |
+String | '' | A text modifier for units and equipment that displays velocity as
+set forth in MIL-STD-6040. <br/>**Field Z** _8 Characters_ | | staffComments |
+String | '' | A text modifier for units, equipment and installations; content is
+implementation specific. <br/>**Field G** _20 Characters_ | | type | String | ''
+| A text modifier for equipment that indicates types of equipment. <br/>**Field
+V** _24 Characters_ | | uniqueDesignation | String | '' | A text modifier for
+units, equipment, and installations that uniquely identifies a particular symbol
+or track number. Identifies acquisitions number when used with SIGINT symbology.
+<br/>**Field T** _21 Characters_ |
 
 **Style options**
 

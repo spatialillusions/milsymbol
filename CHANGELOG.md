@@ -5,9 +5,12 @@
 ### Added
 
 * Added support for Engagement Bars
+
   * Use the option engagementBar to set the bar text
   * Use the option engagementType to define "TARGET", "NON-TARGET", or "EXPIRED"
     as type
+
+* Added support for the field country as specified in APP-6 D
 
 ### Changed
 

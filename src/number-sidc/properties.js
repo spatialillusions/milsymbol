@@ -51,6 +51,16 @@ module.exports = function(properties, mapping) {
   properties.dimension = dimensionMapping[symbolSet];
 
   //SymbolSets in Space
+  if (
+    symbolSet == "10" ||
+    symbolSet == "11" ||
+    symbolSet == "25" ||
+    symbolSet == "27" ||
+    symbolSet == "40"
+  )
+    properties.equipment = false;
+
+  //SymbolSets in Space
   if (symbolSet == "05" || symbolSet == "06" || symbolSet == "50")
     properties.space = true;
   //SymbolSets that are Activities

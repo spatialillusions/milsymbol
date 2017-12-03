@@ -13,6 +13,7 @@ module.exports = function() {
     dimension: "", //Dimension it is shown as (Air/Ground...)
     dimensionUnknown: false, //Is the dimension unknown
     echelon: "", //What echelon (Platoon/Company...)
+    equipment: true, // Is this equipment or not
     faker: false, //Is it a Faker
     fenintDummy: false, //Is it a feint/dummy
     fill: this.style.fill, //Standard says it should be filled

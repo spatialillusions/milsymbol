@@ -50,6 +50,7 @@ function symbol() {
   this.options.location = ""; // FieldID Y
   this.options.speed = ""; // FieldID Z
   this.options.specialHeadquarters = ""; // FieldID AA
+  this.options.country = ""; // AC Country
   this.options.platformType = ""; // FieldID AD
   this.options.equipmentTeardownTime = ""; // FieldID AE
   this.options.commonIdentifier = ""; // FieldID AF
