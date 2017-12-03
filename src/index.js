@@ -104,6 +104,7 @@ ms.addSymbolPart(require("./symbolparts/basegeometry.js"));
 ms.addSymbolPart(require("./symbolparts/icon.js"));
 ms.addSymbolPart(require("./symbolparts/modifier.js"));
 ms.addSymbolPart(require("./symbolparts/statusmodifier.js"));
+ms.addSymbolPart(require("./symbolparts/engagmentbar.js"));
 ms.addSymbolPart(require("./symbolparts/affliationdimension.js"));
 ms.addSymbolPart(require("./symbolparts/textfields.js"));
 ms.addSymbolPart(require("./symbolparts/directionarrow.js"));

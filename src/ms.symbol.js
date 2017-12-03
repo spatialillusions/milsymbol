@@ -58,7 +58,7 @@ function symbol() {
   // Not implemented.
   // FieldID AM Distance
   // FieldID AN Azimuth
-  // FieldID AO EngagementBar
+  this.options.engagementBar = ""; // FieldID AO EngagementBar
 
   this.bbox = new ms.BBox(); // Contains the bounding box of the current marker
   this.colors = {}; // Contains the colors for the current marker
