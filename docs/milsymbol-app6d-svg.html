@@ -27,7 +27,8 @@
       border-collapse: collapse;
       margin: auto;
       width: 100%;
-      table-layout: fixed
+      table-layout: fixed;
+      margin-bottom: 1rem;
     }
 
     table,
@@ -52,6 +53,26 @@
   <script>
     var size = 70;
     ms.setStandard("APP6");
+    /*
+    ms.addSymbolPart(function debug() {
+      //This debug function is a minimal example of how to extend milsymbol.
+      //Create a variable to store your geometries
+      var drawArray1 = [];
+      var drawArray2 = [];
+      //Get a new bounding box and modify it if your geometry extends outside the current bounds.
+      var gbbox = new ms.BBox();
+      //Draws the icon octagon
+      drawArray2.push({
+        type: "path",
+        fill: false,
+        stroke: "rgb(0,0,255)",
+        strokewidth: 0.8,
+        d:
+          "m 120,60 0,80 m -40,-80 0,80 m -20,-20 80,0 m 0,-40 -80,0 M 100,50 135.35534,64.64466 150,100 135.35534,135.35534 100,150.00002 64.644661,135.35534 50,100 64.644661,64.64466 z"
+      });
+      return { pre: drawArray1, post: drawArray2, bbox: gbbox };
+    });
+    //*/
   </script>
 </head>
 
@@ -543,6 +564,436 @@
       </td>
     </tr>
   </table>
+
+  Table 1-2: Present and Planned Status.
+  <table>
+    <thead>
+      <tr class="table-heading">
+        <th>
+        </th>
+        <th>
+          Space
+        </th>
+        <th>
+          Air
+        </th>
+        <th>
+          Land
+          <br>Unit
+        </th>
+        <th>
+          Land
+          <br>Equipment
+          <br>and
+          <br>Sea Surface
+        </th>
+        <th>
+          Land
+          <br>Installaion
+        </th>
+        <th>
+          Subsurface
+        </th>
+        <th>
+          Activity / Event
+        </th>
+        <th>
+          Dismounted
+          <br>Individual
+        </th>
+      </tr>
+    </thead>
+    <tr>
+      <td>
+        PRESENT OR CONFIRMED POSITION
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(100305, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(100301, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(100310, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(100315, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(100320, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(100335, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(100340, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(100327, { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        ANTICIPATED, PLANNED OR SUSPECTED POSITION
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003051, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003011, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003101, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003151, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003201, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003351, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003401, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003271, { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+  </table>
+
+  Milsymbol uses the standard operational condition amplifiers only when the option to have mono color or unfilled option is
+  set, otherwise the alternate operational condition amplifiers are used.
+  <br>
+
+  <h3>Table 1-3: Operational Condition Amplifiers for Icon-based Symbols. </h3>
+  <table>
+    <thead>
+      <tr class="table-heading">
+        <th>
+        </th>
+        <th>
+          Space/Air
+        </th>
+        <th>
+          Land
+          <br>Unit
+        </th>
+        <th>
+          Land
+          <br>Equipment
+        </th>
+        <th>
+          Land
+          <br>Installaion
+        </th>
+        <th>
+          Sea Surface
+        </th>
+        <th>
+          Subsurface
+        </th>
+      </tr>
+    </thead>
+    <tr>
+      <td>
+        FULLY CAPABLE
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003052, { size: 40, monoColor: 'black' }).asSVG());
+        </script>
+      </td>
+      <td>
+        N/A in standard
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003152, { size: 40, monoColor: 'black' }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003202, { size: 40, monoColor: 'black' }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003302, { size: 40, monoColor: 'black' }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003352, { size: 40, monoColor: 'black' }).asSVG());
+        </script>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        DAMAGED/RENDERED INEFFECTIVE
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003053, { size: 40, monoColor: 'black' }).asSVG());
+        </script>
+      </td>
+      <td>
+        N/A in standard
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003153, { size: 40, monoColor: 'black' }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003203, { size: 40, monoColor: 'black' }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003303, { size: 40, monoColor: 'black' }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003353, { size: 40, monoColor: 'black' }).asSVG());
+        </script>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        DESTROYED
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003054, { size: 40, monoColor: 'black' }).asSVG());
+        </script>
+      </td>
+      <td>
+        N/A in standard
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003154, { size: 40, monoColor: 'black' }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003204, { size: 40, monoColor: 'black' }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003304, { size: 40, monoColor: 'black' }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003354, { size: 40, monoColor: 'black' }).asSVG());
+        </script>
+      </td>
+    </tr>
+  </table>
+
+  Table 1-4: Alternate Operational Condition Colour Amplifiers for Icon-based Symbols.
+  <table>
+    <thead>
+      <tr class="table-heading">
+        <th>
+        </th>
+        <th>
+          Space/Air
+        </th>
+        <th>
+          Land
+          <br>Unit
+        </th>
+        <th>
+          Land
+          <br>Equipment
+        </th>
+        <th>
+          Land
+          <br>Installaion
+        </th>
+        <th>
+          Sea Surface
+        </th>
+        <th>
+          Subsurface
+        </th>
+      </tr>
+    </thead>
+    <tr>
+      <td>
+        FULLY CAPABLE
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003052, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        N/A in standard
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003152, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003202, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003302, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003352, { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        DAMAGED/RENDERED INEFFECTIVE
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003053, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        N/A in standard
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003153, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003203, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003303, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003353, { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        DESTROYED
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003054, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        N/A in standard
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003154, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003204, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003304, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003354, { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        FULL TO CAPACITY
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003055, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        N/A in standard
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003155, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003205, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003305, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(1003355, { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+  </table>
+
+
+
 
   <figure>
     <script>
