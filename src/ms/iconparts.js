@@ -2048,6 +2048,11 @@ module.exports = function(
   icn["GR.M1.FORCE"] = textm1("F");
   icn["GR.M1.FORWARD"] = textm1("FWD");
   icn["GR.M1.GROUND STATION MODULE"] = textm1("GSM");
+  icn["GR.M1.INDIVIDUAL"] = {
+    type: "path",
+    fill: false,
+    d: "M85,65 l30,0"
+  };
   icn["GR.M1.INTRUSION"] = textm1("I");
   icn["GR.M1.J1"] = textm1("J1");
   icn["GR.M1.J2"] = textm1("J2");
@@ -2206,7 +2211,7 @@ module.exports = function(
   icn["GR.M1.SMOKE/DECON"] = textm1("SD");
   icn["GR.M1.SNIPER"] = {
     type: "path",
-    d: "M75,60 l20,0 M100,80 l0,-20 M125,60 l-20,0",
+    d: "M75,60 l20,0 M100,76 l0,-18 M125,60 l-20,0",
     fill: false
   };
   icn["GR.M1.SOUND RANGING"] = textm1("SDR");

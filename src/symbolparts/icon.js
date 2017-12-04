@@ -255,6 +255,33 @@ module.exports = function icon() {
           //console.log('Invalid icon code in SIDC: ' + this.options.sidc);
         }
       } else {
+        //Handle special cases of dismounted individual where weapons should be scaled
+        var mainSIDC = Number(this.properties.functionid.substr(0, 6));
+        if (
+          this.properties.dismounted &&
+          mainSIDC >= 110301 &&
+          mainSIDC <= 110403
+        ) {
+          if (
+            this.properties.functionid.substr(6, 2) != "00" &&
+            this.properties.functionid.substr(8, 2) != "00"
+          ) {
+            mainIcon = [ms._scale(0.5, mainIcon)];
+          }
+          if (
+            this.properties.functionid.substr(6, 2) == "00" &&
+            this.properties.functionid.substr(8, 2) != "00"
+          ) {
+            mainIcon = [ms._translate(0, -10, ms._scale(0.7, mainIcon))];
+          }
+          if (
+            this.properties.functionid.substr(6, 2) != "00" &&
+            this.properties.functionid.substr(8, 2) == "00"
+          ) {
+            mainIcon = [ms._translate(0, 10, ms._scale(0.7, mainIcon))];
+          }
+        }
+        // End special case, just add to draw array
         drawArray2.push(mainIcon);
       }
 
