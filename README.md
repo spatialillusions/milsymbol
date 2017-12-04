@@ -1,6 +1,6 @@
 # Milsymbol
 
-Milsymbol is a small library in pure javascript that creates military unit symbols according to to MIL-STD-2525 and STANAG APP-6.
+Milsymbol is a small library in pure javascript that creates military unit symbols according to MIL-STD-2525 and STANAG APP-6.
 
 ![Figure 13](https://github.com/spatialillusions/milsymbol/blob/master/docs/images/milsymbol.png?raw=true)
 
@@ -34,7 +34,7 @@ Milsymbol supports a lot of different options:
  - Outlines of symbols
  - and much more...
  
-For detaild descriptions of what is possible with milsymbol, see the API documentation under /docs.
+For detailed descriptions of what is possible with milsymbol, see the API documentation under /docs.
 
 
 Milsymbol can be integrated with most common javascript libraries, such as:
@@ -70,7 +70,7 @@ But you want something to put on your screen, and since milsymbol provides diffe
 
 `var canvasElement = sym.asCanvas();`
 
-And if you don't want to make it step by step, you can chain it all togheter like this:
+And if you don't want to make it step by step, you can chain it all together like this:
 
 `var canvasElement = new ms.Symbol("SFG-UCI----D").asCanvas();`
 
@@ -103,7 +103,7 @@ Milsymbol uses pure javascript to create SVG, Scalable Vector Graphics, and also
  
 The symbols are created using building blocks defined in the code and no images or fonts are used, this makes it possible to modify almost every aspect of the symbols, such as fill, frame, color, size, stroke width and easily switch between APP6 and 2525 symbology.
 
-To see what is possible with milsymbol use the unit test documents in the docs folder that lists all tabels and figures from the different standards using MilSymbol. (The documents uses milsymbol to render every image that you see, look into the code if you want to see how it is done.)
+To see what is possible with milsymbol use the unit test documents in the docs folder that lists all tabels and figures from the different standards using MilSymbol. (The documents use milsymbol to render every image that you see, look into the code if you want to see how it is done.)
 
 Milsymbol can easily be extended with new functionality and examples of this can be found at: https://github.com/spatialillusions/milsymbol-extensions
 
