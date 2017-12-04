@@ -11,10 +11,10 @@ module.exports = function dismounted(
 ) {
   //Adds support for Dismounted Individual
   if (symbolSet == "27") {
-    //sId['110000'] = [icn[']];
-    //sId['110100'] = [icn['']];
+    sId["110000"] = [];
+    sId["110100"] = [];
     sId["110101"] = [icn["GR.IC.FF.INFANTRY DISMOUNTED"]];
-    sId["110102"] = [icn["GR.IC.FF.MEDICAL DISMOUNTED"]];
+    sId["110102"] = [icn["GR.IC.FF.MEDICAL"]];
     sId["110103"] = [icn["GR.IC.FF.RECONNAISSANCE DISMOUNTED"]];
     sId["110104"] = [icn["GR.IC.FF.SIGNAL DISMOUNTED"]];
     //sId['110200'] = [icn['']];

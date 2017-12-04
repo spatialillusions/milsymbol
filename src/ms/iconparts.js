@@ -1559,13 +1559,10 @@ module.exports = function(
     Hostile: { type: "path", d: "M60,70L140,130M60,130L140,70" }
   }[affiliation];
   icn["GR.IC.FF.INFANTRY DISMOUNTED"] = {
-    Unknown: {
-      type: "path",
-      d: "M 55.7,75.8 148.2,126.3 M 52,126.1 144.4,75.7"
-    },
+    Unknown: { type: "path", d: "M50,65L150,135M50,135L150,65" },
     Friend: { type: "path", d: "m 45,70 110,60 M 45,130 155,70" },
-    Neutral: { type: "path", d: "m 45,70 110,60 M 45,130 155,70" },
-    Hostile: { type: "path", d: "M 51.7,73.6 144.3,124.1 m -88.4,0 92.6,-50.5" }
+    Neutral: { type: "path", d: "M45,45L155,155M45,155L155,45" },
+    Hostile: { type: "path", d: "M60,70L140,130M60,130L140,70" }
   }[affiliation];
   icn["GR.IC.FF.INTERCEPT"] = {
     type: "path",
@@ -1621,12 +1618,12 @@ module.exports = function(
       baseGeometry.bbox.x2 +
       ",100"
   };
-  icn["GR.IC.FF.MEDICAL DISMOUNTED"] = {
+  /*icn["GR.IC.FF.MEDICAL DISMOUNTED"] = {
     Unknown: { type: "path", d: "m 47.9,100 104,0 M 100,49.1 100,162" },
     Friend: { type: "path", d: "m 45,100 110,0 m -55,-55 0,110" },
     Neutral: { type: "path", d: "m 45,100 110,0 m -55,-55 0,110" },
     Hostile: { type: "path", d: "m 48.1,100 103.7,0 M 100,37.8 100,150.5" }
-  }[affiliation];
+  }[affiliation];*/
   icn["GR.IC.FF.MEDICAL THEATER"] = {
     Unknown: {
       type: "path",
@@ -1717,10 +1714,10 @@ module.exports = function(
     Hostile: { type: "path", d: "M60,130L140,70" }
   }[affiliation];
   icn["GR.IC.FF.RECONNAISSANCE DISMOUNTED"] = {
-    Unknown: { type: "path", d: "M 52,126.1 144.4,75.7" },
+    Unknown: { type: "path", d: "M50,135L150,65" },
     Friend: { type: "path", d: "M 45,130 155,70" },
-    Neutral: { type: "path", d: "M 45,130 155,70" },
-    Hostile: { type: "path", d: "M 54,126.1 148.5,73.5" }
+    Neutral: { type: "path", d: "M45,155L155,45" },
+    Hostile: { type: "path", d: "M60,130L140,70" }
   }[affiliation];
   icn["GR.IC.FF.SEARCH"] = {
     type: "path",
@@ -1750,26 +1747,14 @@ module.exports = function(
     Hostile: { type: "path", fill: false, d: "M57,70 100,110 100,90 143,130" }
   }[affiliation];
   icn["GR.IC.FF.SIGNAL DISMOUNTED"] = {
-    Unknown: {
-      type: "path",
-      fill: false,
-      d: "M 57.1,71.4 100,110 l 0,-20 43.8,39.5"
-    },
+    Unknown: { type: "path", fill: false, d: "M50,65 100,110 100,90 150,135" },
     Friend: {
       type: "path",
       fill: false,
       d: "M 52,66.8 100,110 l 0,-20 47.9,43.1"
     },
-    Neutral: {
-      type: "path",
-      fill: false,
-      d: "M 52,66.8 100,110 l 0,-20 47.9,43.1"
-    },
-    Hostile: {
-      type: "path",
-      fill: false,
-      d: "M 56,70.4 100,110 l 0,-20 42.9,38.6"
-    }
+    Neutral: { type: "path", fill: false, d: "M45,45 100,110 100,90 155,155" },
+    Hostile: { type: "path", fill: false, d: "M57,70 100,110 100,90 143,130" }
   }[affiliation];
   icn["GR.IC.FF.SOUND"] = [
     {
