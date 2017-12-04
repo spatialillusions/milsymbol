@@ -77,26 +77,26 @@
       return { pre: drawArray1, post: drawArray2, bbox: gbbox };
     });
     //*/
-    function generatenavigation(){
+    function generatenavigation() {
       var i = 0;
       var indexoftables = "";
-      document.querySelectorAll("h2, h3").forEach(function(d){
+      document.querySelectorAll("h2, h3").forEach(function (d) {
         i++;
         d.id = "heading-" + i;
-        indexoftables += '<a href="#heading-'+i+'">' + d.textContent + '</a><br>\n';
+        indexoftables += '<a href="#heading-' + i + '">' + d.textContent + '</a><br>\n';
       });
       document.getElementById("indexoftables").innerHTML = indexoftables;
 
       i = 0;
       var indexoffigures = "";
-      document.querySelectorAll("figure").forEach(function(d){
+      document.querySelectorAll("figure").forEach(function (d) {
         i++;
         d.id = "figure-" + i;
         d = d.getElementsByTagName("figcaption").item(0);
-        indexoffigures += '<a href="#figure-'+i+'">' + d.textContent + '</a><br>\n';
+        indexoffigures += '<a href="#figure-' + i + '">' + d.textContent + '</a><br>\n';
       });
       document.getElementById("indexoffigures").innerHTML = indexoffigures;
-    
+
     }
   </script>
 </head>
@@ -106,12 +106,15 @@
   <h1>Milsymbol APP-6 D Implementation</h1>
   This page shows figures and tables from APP-6 D drawn with milsymbol.
   <br> All symbols are drawn using milsymbol when the page is loaded, no images or other external resources than milsymbol are
-  used.<br>
+  used.
   <br>
-  <b>INDEX OF TABLES</b><br>
+  <br>
+  <b>INDEX OF TABLES</b>
+  <br>
   <div id="indexoftables"></div>
   <br>
-  <b>INDEX OF FIGURES</b><br>
+  <b>INDEX OF FIGURES</b>
+  <br>
   <div id="indexoffigures"></div>
   <br>
 
@@ -17818,9 +17821,9 @@
     </tr>
   </table>
 
-  
-  <h3>Table 3-19:  Equipment Mobility Indicators</h3>
-  Note that milsymbol automatically moves up the mobility indicator to the bottom of the icon when the symbol is unframed. 
+
+  <h3>Table 3-19: Equipment Mobility Indicators</h3>
+  Note that milsymbol automatically moves up the mobility indicator to the bottom of the icon when the symbol is unframed.
   <table>
     <thead>
       <tr>
@@ -17867,7 +17870,7 @@
         </script>
       </td>
     </tr>
-  
+
     <tr>
       <td>WHEELED (CROSS-COUNTRY)
       </td>
@@ -17897,7 +17900,7 @@
         </script>
       </td>
     </tr>
-  
+
     <tr>
       <td>TRACKED
       </td>
@@ -17927,7 +17930,7 @@
         </script>
       </td>
     </tr>
-  
+
     <tr>
       <td>WHEELED AND TRACKED COMBINATION
       </td>
@@ -17957,7 +17960,7 @@
         </script>
       </td>
     </tr>
-  
+
     <tr>
       <td>TOWED
       </td>
@@ -17987,7 +17990,7 @@
         </script>
       </td>
     </tr>
-  
+
     <tr>
       <td>RAILWAY
       </td>
@@ -18017,7 +18020,7 @@
         </script>
       </td>
     </tr>
-  
+
     <tr>
       <td>OVER-SNOW (PRIME MOVER)
       </td>
@@ -18047,7 +18050,7 @@
         </script>
       </td>
     </tr>
-  
+
     <tr>
       <td>SLED
       </td>
@@ -18077,7 +18080,7 @@
         </script>
       </td>
     </tr>
-  
+
     <tr>
       <td>PACK ANIMALS
       </td>
@@ -18107,7 +18110,7 @@
         </script>
       </td>
     </tr>
-  
+
     <tr>
       <td>BARGE
       </td>
@@ -18137,7 +18140,7 @@
         </script>
       </td>
     </tr>
-  
+
     <tr>
       <td>AMPHIBIOUS
       </td>
@@ -21981,8 +21984,8 @@
       </td>
     </tr>
   </table>
-  
-  
+
+
   <h3>
     Table 4-4: Dismounted Individual Main Sector Icons</h3>
   <table border=1>
@@ -22321,8 +22324,8 @@
     </tr>
   </table>
 
-  
-Milsymbol will automaticly scale the weapons icon based on if there are any modifiers set or not.
+
+  Milsymbol will automaticly scale the weapons icon based on if there are any modifiers set or not.
   <figure>
     <script>
       document.write(new ms.Symbol(
@@ -22345,12 +22348,12 @@ Milsymbol will automaticly scale the weapons icon based on if there are any modi
         { size: 80 }).asSVG());
     </script>
     <figcaption>
-      Figure 4-6:  Alternative Main Icon Symbol Sizes. 
+      Figure 4-6: Alternative Main Icon Symbol Sizes.
     </figcaption>
   </figure>
-  
-  
-  <h3>Table 4-5:  Dismounted Individual Equipment Type Main Sector Icons</h3>
+
+
+  <h3>Table 4-5: Dismounted Individual Equipment Type Main Sector Icons</h3>
   <table border=1>
     <thead>
       <tr>
@@ -24789,7 +24792,7 @@ Milsymbol will automaticly scale the weapons icon based on if there are any modi
   </table>
 
 
-  <h3>Table 4-8:  Leadership Indicator Amplifier</h3>
+  <h3>Table 4-8: Leadership Indicator Amplifier</h3>
   <table border=1>
     <thead>
       <tr>
@@ -24806,9 +24809,10 @@ Milsymbol will automaticly scale the weapons icon based on if there are any modi
     </thead>
     <tr>
       <td>
-        LEADER<br><br>
-        Friend<br>
-        For the Code see Table A-8
+        LEADER
+        <br>
+        <br> Friend
+        <br> For the Code see Table A-8
       </td>
       <td>
         <script>
@@ -24823,7 +24827,7 @@ Milsymbol will automaticly scale the weapons icon based on if there are any modi
 
 
 
-  
+
 
 
 
