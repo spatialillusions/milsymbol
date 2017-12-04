@@ -20,7 +20,11 @@
     }
 
     figure {
-      text-align: center
+      text-align: center;
+    }
+
+    svg {
+      max-width: 100%;
     }
 
     table {
@@ -73,20 +77,44 @@
       return { pre: drawArray1, post: drawArray2, bbox: gbbox };
     });
     //*/
+    function generatenavigation(){
+      var i = 0;
+      var indexoftables = "";
+      document.querySelectorAll("h2, h3").forEach(function(d){
+        i++;
+        d.id = "heading-" + i;
+        indexoftables += '<a href="#heading-'+i+'">' + d.textContent + '</a><br>\n';
+      });
+      document.getElementById("indexoftables").innerHTML = indexoftables;
+
+      i = 0;
+      var indexoffigures = "";
+      document.querySelectorAll("figure").forEach(function(d){
+        i++;
+        d.id = "figure-" + i;
+        d = d.getElementsByTagName("figcaption").item(0);
+        indexoffigures += '<a href="#figure-'+i+'">' + d.textContent + '</a><br>\n';
+      });
+      document.getElementById("indexoffigures").innerHTML = indexoffigures;
+    
+    }
   </script>
 </head>
 
-<body>
+<body onload="generatenavigation();">
 
   <h1>Milsymbol APP-6 D Implementation</h1>
-  This page shows
-  <i>some of the</i> figures and tables from APP-6 D drawn with milsymbol.
-  <br> All symbols are drawn using milsymbol when the page is loaded, no images or other external resources than milsymbol is
-  used.
+  This page shows figures and tables from APP-6 D drawn with milsymbol.
+  <br> All symbols are drawn using milsymbol when the page is loaded, no images or other external resources than milsymbol are
+  used.<br>
   <br>
-  <br> Because of the differences in text fields between 2525 and APP6, the nationality field is not yet implemented.
+  <b>INDEX OF TABLES</b><br>
+  <div id="indexoftables"></div>
   <br>
+  <b>INDEX OF FIGURES</b><br>
+  <div id="indexoffigures"></div>
   <br>
+
 
   <h3>Table 1-1: Standard Identities and Dimensions.</h3>
   <table>
