@@ -17,7 +17,7 @@ module.exports = function dismounted(
     sId["110102"] = [icn["GR.IC.FF.MEDICAL"]];
     sId["110103"] = [icn["GR.IC.FF.RECONNAISSANCE DISMOUNTED"]];
     sId["110104"] = [icn["GR.IC.FF.SIGNAL DISMOUNTED"]];
-    //sId['110200'] = [icn['']];
+    sId["110200"] = [];
     sId["110201"] = [icn["GR.IC.EXPLOSIVE ORDNANCE DISPOSAL"]];
     sId["110202"] = [icn["GR.IC.FIELD ARTILLERY OBSERVER"]];
     sId["110203"] = [icn["GR.IC.JOINT FIRE SUPPORT"]];
@@ -28,66 +28,35 @@ module.exports = function dismounted(
     sId["110208"] = [icn["GR.IC.SECURITY"]];
     sId["110209"] = [icn["GR.IC.SNIPER"]];
     sId["110210"] = [icn["GR.IC.SPECIAL OPERATIONS FORCES"]];
-    //sId['110300'] = [icn['']];
+
+    sId["110300"] = [];
     sId["110301"] = [icn["GR.EQ.RIFLE"]];
-    sId["110302"] = [ms._scale(0.5, icn["GR.EQ.RIFLE"])];
-    sId["110303"] = [ms._translate(0, -10, ms._scale(0.7, icn["GR.EQ.RIFLE"]))];
-    sId["110304"] = [ms._translate(0, 10, ms._scale(0.7, icn["GR.EQ.RIFLE"]))];
-    sId["110305"] = [icn["GR.EQ.RIFLE"], icn["GR.EQ.SHORT RANGE"]];
-    sId["110306"] = [
-      ms._scale(0.5, [icn["GR.EQ.RIFLE"], icn["GR.EQ.SHORT RANGE"]])
-    ];
-    sId["110307"] = [
-      ms._translate(
-        0,
-        -10,
-        ms._scale(0.7, [icn["GR.EQ.RIFLE"], icn["GR.EQ.SHORT RANGE"]])
-      )
-    ];
-    sId["110308"] = [
-      ms._translate(
-        0,
-        10,
-        ms._scale(0.7, [icn["GR.EQ.RIFLE"], icn["GR.EQ.SHORT RANGE"]])
-      )
-    ];
-    sId["110309"] = [icn["GR.EQ.RIFLE"], icn["GR.EQ.INTERMEDIATE RANGE"]];
+    sId["110302"] = [icn["GR.EQ.RIFLE"], icn["GR.EQ.SHORT RANGE"]];
+    sId["110303"] = [icn["GR.EQ.RIFLE"], icn["GR.EQ.INTERMEDIATE RANGE"]];
+    sId["110304"] = [icn["GR.EQ.RIFLE"], icn["GR.EQ.LONG RANGE"]];
+    sId["110305"] = [icn["GR.EQ.MACHINE GUN"]];
+    sId["110306"] = [icn["GR.EQ.MACHINE GUN"], icn["GR.EQ.SHORT RANGE"]];
+    sId["110307"] = [icn["GR.EQ.MACHINE GUN"], icn["GR.EQ.INTERMEDIATE RANGE"]];
+    sId["110308"] = [icn["GR.EQ.MACHINE GUN"], icn["GR.EQ.LONG RANGE"]];
+    sId["110309"] = [icn["GR.EQ.GRENADE LAUNCHER"]];
     sId["110310"] = [
-      ms._scale(0.5, [icn["GR.EQ.RIFLE"], icn["GR.EQ.INTERMEDIATE RANGE"]])
+      icn["GR.EQ.GRENADE LAUNCHER"],
+      ms._translate(0, 20, icn["GR.EQ.SHORT RANGE"])
     ];
     sId["110311"] = [
-      ms._translate(
-        0,
-        -10,
-        ms._scale(0.7, [icn["GR.EQ.RIFLE"], icn["GR.EQ.INTERMEDIATE RANGE"]])
-      )
+      icn["GR.EQ.GRENADE LAUNCHER"],
+      ms._translate(0, 20, icn["GR.EQ.INTERMEDIATE RANGE"])
     ];
     sId["110312"] = [
-      ms._translate(
-        0,
-        10,
-        ms._scale(0.7, [icn["GR.EQ.RIFLE"], icn["GR.EQ.INTERMEDIATE RANGE"]])
-      )
+      icn["GR.EQ.GRENADE LAUNCHER"],
+      ms._translate(0, 20, icn["GR.EQ.LONG RANGE"])
     ];
-    sId["110313"] = [icn["GR.EQ.RIFLE"], icn["GR.EQ.LONG RANGE"]];
-    sId["110314"] = [
-      ms._scale(0.5, [icn["GR.EQ.RIFLE"], icn["GR.EQ.LONG RANGE"]])
-    ];
-    sId["110315"] = [
-      ms._translate(
-        0,
-        -10,
-        ms._scale(0.7, [icn["GR.EQ.RIFLE"], icn["GR.EQ.LONG RANGE"]])
-      )
-    ];
-    sId["110316"] = [
-      ms._translate(
-        0,
-        10,
-        ms._scale(0.7, [icn["GR.EQ.RIFLE"], icn["GR.EQ.LONG RANGE"]])
-      )
-    ];
-    sId["110317"] = [icn["GR.EQ.MACHINE GUN"]];
+    sId["110313"] = [icn["GR.EQ.FLAME THROWER"]];
+    sId["110314"] = [icn["GR.EQ.MORTAR"]];
+    sId["110315"] = [icn["GR.EQ.SINGLE ROCKET LAUNCHER"]];
+    sId["110316"] = [icn["GR.EQ.ANTITANK ROCKET LAUNCHER"]];
+    /*
+    sId["110317"] = [];
     sId["110318"] = [ms._scale(0.5, [icn["GR.EQ.MACHINE GUN"]])];
     sId["110319"] = [
       ms._translate(0, -10, ms._scale(0.7, [icn["GR.EQ.MACHINE GUN"]]))
@@ -304,12 +273,12 @@ module.exports = function dismounted(
         ms._scale(0.7, [icn["GR.EQ.ANTITANK ROCKET LAUNCHER"]])
       )
     ];
-    sId["110400"] = [icn[""]];
+    //*/
+    sId["110400"] = [];
     sId["110401"] = [icn["GR.EQ.NON-LETHAL WEAPON"]];
-    sId["110402"] = [ms._scale(0.5, [icn["GR.EQ.NON-LETHAL WEAPON"]])];
-    sId["110403"] = [
-      ms._translate(0, -10, ms._scale(0.7, [icn["GR.EQ.NON-LETHAL WEAPON"]]))
-    ];
+    sId["110402"] = icn["GR.EQ.NON-LETHAL GRENADE LAUNCHER"];
+    sId["110403"] = [icn["GR.EQ.TASER"]];
+    /*
     sId["110404"] = [
       ms._translate(0, 10, ms._scale(0.7, [icn["GR.EQ.NON-LETHAL WEAPON"]]))
     ];
@@ -339,9 +308,10 @@ module.exports = function dismounted(
     sId["110412"] = [
       ms._translate(0, 10, ms._scale(0.7, [icn["GR.EQ.TASER"]]))
     ];
-    //sId['120000'] = [icn['']];
-    //sId['120100'] = [icn['']];
+    sId["120000"] = [];
+    sId["120100"] = [];
     sId["120101"] = [icn["GR.IC.LAW ENFORCEMENT"]];
+    //*/
 
     //sIdm1['00'] = [icn['']];
     sIdm1["01"] = [icn["GR.M1.BATTALION"]];
