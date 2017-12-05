@@ -85,7 +85,7 @@ Manoeuvre Areas ; ; ;150000;For training or hierarchical purposes only
  ;Drop Zone (DZ) ; ;150600; 
  ;Extraction Zone (EZ) ; ;150700; 
  ;Landing Zone (LZ) ; ;150800; 
- ;Pick�Up Zone (PZ) ; ;150900; 
+ ;Pick-Up Zone (PZ) ; ;150900; 
  ;Fortified Area ; ;151000; 
  ;Limited Access Area ; ;151100; 
  ;Battle Position ; ;151200; 
@@ -133,13 +133,13 @@ Areas ;;;;
  ; ;Air Corridor With Multiple ;170101; 
 ;;Segments ;;
  ;Low Level Transit Route ; ;170200; 
- ;Temporary Minimum� Risk Route ; ;170300; 
+ ;Temporary Minimum- Risk Route ; ;170300; 
  ;Safe Lane ; ;170400; 
  ;Standard Use Army Aircraft Flight Route ; ;170500; 
  ;Transit Corridor ; ;170600; 
  ;Unmanned Aircraft (UA) Route Special Corridor ; ;170700; 
  ;Base Defence Zone ; ;170800; 
- ;High�Density Airspace Control Zone ; ;170900; 
+ ;High-Density Airspace Control Zone ; ;170900; 
  ;Restricted Operations Zone ; ;171000; 
  ;Air-to-Air Restricted Operating Zone ; ;171100; 
  ;Unmanned Aircraft ; ;171200; 
@@ -157,8 +157,8 @@ Areas ;;;;
 Airspace Control Points ; ; ;180000; 
  ;Air Control Point ; ;180100; 
  ;Communications Checkpoint ; ;180200; 
- ;Downed Aircraft Pick�up Point ; ;180300; 
- ;Pop�up Point ; ;180400; 
+ ;Downed Aircraft Pick-up Point ; ;180300; 
+ ;Pop-up Point ; ;180400; 
  ;Air Control Rendezvous ; ;180500; 
  ;Tactical Air Navigation (TACAN) ; ;180600; 
  ;Combat Air Patrol (CAP)Station ; ;180700; 
@@ -169,11 +169,10 @@ Airspace Control Points ; ; ;180000;
  ;Replenishment Station ; ;181100; 
  ;Tanking ; ;181200; 
  ;Antisubmarine Warfare, Rotary Wing ; ;181300; 
- ;Surface Combat Air ; ;181400; 
-;Patrol (SUCAP)� Fixed Wing ;;;
- ;SUCAP � Rotary Wing ; ;181500; 
- ;MW � Fixed Wing ; ;181600;MIL-STD-2525 uses the icon MIW 
- ;MW � Rotary Wing ; ;181700;MIL-STD-2525 uses the icon MIW 
+ ;Surface Combat Air Patrol (SUCAP) - Fixed Wing; ;181400; 
+ ;SUCAP - Rotary Wing ; ;181500; 
+ ;MW - Fixed Wing ; ;181600;MIL-STD-2525 uses the icon MIW 
+ ;MW - Rotary Wing ; ;181700;MIL-STD-2525 uses the icon MIW 
  ;Tomcat ; ;181800; 
  ;Rescue ; ;181900; 
  ;Unmanned Aerial System (UAS/UA) ; ;182000; 
@@ -182,9 +181,9 @@ Airspace Control Points ; ; ;180000;
 ;Unmanned  ;;;
 ;Aircraft (VTUA) ;;;
  ;Orbit ; ;182200; 
- ;Orbit � Figure Eight ; ;182300; 
- ;Orbit � Race Track ; ;182400; 
- ;Orbit � Random Closed ; ;182500; 
+ ;Orbit - Figure Eight ; ;182300; 
+ ;Orbit - Race Track ; ;182400; 
+ ;Orbit - Random Closed ; ;182500; 
 Airspace Control Lines ; ; ;190000;For training or hierarchical purposes
 only 
  ;Identification Friend or Foe Off Line ; ;190100; 
@@ -234,7 +233,7 @@ only
  ;Trial Track ; ;212200; 
  ;Acoustic Fix ; ;212300; 
  ;Electromagnetic Fix ; ;212400; 
- ;Electromagnetic � Magnetic Anomaly ; ;212500; 
+ ;Electromagnetic - Magnetic Anomaly ; ;212500; 
 ;Detection (MAD) ;;;
  ;Optical Fix ; ;212600; 
  ;Formation ; ;212700; 
@@ -347,7 +346,7 @@ only
  ;Iceberg ; ;218300; 
  ;Navigational ; ;218400; 
  ;Oil Rig ; ;218500; 
- ;Sea Mine�Like ; ;218600; 
+ ;Sea Mine-Like ; ;218600; 
  ;Bottom Return/NonMine, Mine-Like Bottom Object (NOMBO) ; ;218700; 
  ;Bottom Return/NonMine, Mine-Like Bottom ; ;218800; 
 ;Object ;;;
@@ -415,7 +414,7 @@ only
  ; ;Area Target ;240801; 
  ; ;Rectangular Target ;240802; 
  ; ;Circular Target ;240803; 
- ; ;Rectangular Target � Single Target ;240804; 
+ ; ;Rectangular Target - Single Target ;240804; 
  ; ;Series or Groups of Targets ;240805; 
  ; ;Smoke  ;240806; 
  ; ; ;240807;Reserved for future use 
@@ -456,7 +455,7 @@ only
  ; ;Irregular ;241601; 
  ; ;Rectangular ;241602; 
  ; ;Circular ;241603; 
- ;Target Build�up Area ; ;241700;For training or hierarchical purposes
+ ;Target Build-up Area ; ;241700;For training or hierarchical purposes
 only 
  ; ;Irregular ;241701; 
  ; ;Rectangular ;241702; 

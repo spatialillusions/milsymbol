@@ -56,8 +56,8 @@ Military Non Combatant; ; ;130000;For training or hierarchical purposes only
  ; ;Submarine Tender ;130112; 
  ; ;Tug, Ocean Going ;130113; 
  ;Service Craft/Yard ; ;130200; 
- ; ;Barge, not Self�Propelled ;130201; 
- ; ;Barge, Self�Propelled ;130202; 
+ ; ;Barge, not Self-Propelled ;130201; 
+ ; ;Barge, Self-Propelled ;130202; 
  ; ;Tug, Harbour ;130203; 
  ; ;Lighter, Torpedo Transport ;130204;MIL-STD-2525 name is LAUNCH 
 Civilian ; ; ;140000; 
@@ -76,7 +76,7 @@ Civilian ; ; ;140000;
  ; ;Tow ;140112; 
  ; ;Transport Ship, Hazardous Material ;140113; 
  ; ;Junk/Dhow - Dhow ;140114;MIL-STD-2525 name is Junk/Dhow 
- ; ;Barge, not Self�Propelled ;140115; 
+ ; ;Barge, not Self-Propelled ;140115; 
  ; ;Hospital Ship ;140116; 
  ;Fishing Vessel, General ; ;140200;MIL-STD-2525 name is Fishing Vessel 
  ; ;Drifter ;140201; 
