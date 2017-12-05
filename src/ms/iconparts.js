@@ -733,7 +733,7 @@ module.exports = function(
     type: "path",
     d: "M90,135 l0,-10 5,-5 0,-55 5,-5 5,5 0,55 5,5 0,10 -10,-10 z"
   };
-  if (_STD2525)
+  if (_STD2525 || numberSIDC)
     icn["AIR.MISSILE.ICON"].fill = frame
       ? colors.fillColor.Unknown
       : colors.iconFillColor.Unknown;
