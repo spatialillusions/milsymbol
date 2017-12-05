@@ -37,6 +37,6 @@ module.exports = function airmissile(
     sIdm2["13"] = [icn["AIR.MISSILE.M2.MEDIUM RANGE"]];
     sIdm2["14"] = [icn["AIR.MISSILE.M2.INTERMEDIATE RANGE"]];
     sIdm2["15"] = [icn["AIR.MISSILE.M2.LONG RANGE"]];
-    sIdm2["16"] = [icn["SPACE.MISSILE.M2.SPACE"]];
+    sIdm2["16"] = [icn["SPACE.MISSILE.M2.INTERCONTINENTAL"]];
   }
 };

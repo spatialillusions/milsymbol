@@ -431,9 +431,8 @@ module.exports = function(
   // AIR ===========================================================================
   icn["AR.I.MILITARY"] = text("MIL");
   icn["AR.I.CIVILIAN"] = text("CIV");
-  icn["AR.I.CIVILIAN"].fill = _STD2525
-    ? iconFillColor
-    : !frame ? iconFillColor : false;
+  icn["AR.I.CIVILIAN"].fill =
+    _STD2525 || numberSIDC ? iconFillColor : !frame ? iconFillColor : false;
   icn["AR.I.CIVILIAN"].stroke = black;
   icn["AR.I.CIVILIAN"].strokewidth = 3;
   icn["AR.I.MILITARY FIXED WING"] = {
@@ -460,7 +459,7 @@ module.exports = function(
   };
   icn["AR.I.CIVILIAN ROTARY WING"] = {
     type: "path",
-    fill: _STD2525 ? iconFillColor : false,
+    fill: _STD2525 || numberSIDC ? iconFillColor : false,
     stroke: black,
     d: "M60,85 l40,15 40,-15 0,30 -40,-15 -40,15 z"
   };
@@ -491,7 +490,7 @@ module.exports = function(
   icn["AR.I.CIVILIAN BALLOON"] = [
     {
       type: "circle",
-      fill: _STD2525 ? iconFillColor : false,
+      fill: _STD2525 || numberSIDC ? iconFillColor : false,
       stroke: black,
       cx: 100,
       cy: 95,
@@ -499,7 +498,7 @@ module.exports = function(
     },
     {
       type: "path",
-      fill: _STD2525 ? iconFillColor : false,
+      fill: _STD2525 || numberSIDC ? iconFillColor : false,
       stroke: black,
       d: "M95,110 l0,10 10,0 0,-10 z"
     }
@@ -507,13 +506,13 @@ module.exports = function(
   icn["AR.I.FF.CIVILIAN BALLOON"] = [
     {
       type: "path",
-      fill: _STD2525 ? iconFillColor : false,
+      fill: _STD2525 || numberSIDC ? iconFillColor : false,
       stroke: black,
       d: "M90,125 l20,0 0,10 -20,0 z"
     },
     {
       type: "circle",
-      fill: _STD2525 ? iconFillColor : false,
+      fill: _STD2525 || numberSIDC ? iconFillColor : false,
       stroke: black,
       cx: 100,
       cy: 90,
@@ -527,7 +526,7 @@ module.exports = function(
   };
   icn["AR.I.CIVILIAN AIRSHIP"] = {
     type: "path",
-    fill: _STD2525 ? iconFillColor : false,
+    fill: _STD2525 || numberSIDC ? iconFillColor : false,
     stroke: black,
     d:
       "m 110,110 10,10 10,0 -5,-15 m 0,-10 5,-15 -10,0 -10,10 m 17.2,10 c 0,6.1 -12.2,11.1 -27.2,11.1 -15,0 -27.2,-5 -27.2,-11.1 0,-6.1 12.2,-11.1 27.2,-11.1 15,0 27.2,5 27.2,11.1 z"
@@ -595,18 +594,20 @@ module.exports = function(
   //2525D
   icn["AR.I.FIXED-WING DSymbol"] = {
     type: "path",
-    d:
-      "M 99.4 80.8 C 97.9 81.1 98.1 83.4 98.1 83.4 L 98 90.7 L 78.6 107.4 L 79.3 109.4 L 98.1 98.3 L 98.3 112.9 L 93.9 116.6 L 93.9 118.7 L 98.8 116.8 C 99.1 117 99.7 117.5 99.7 117.5 C 99.7 117.5 100.4 117 100.7 116.8 L 105.6 118.7 L 105.6 116.6 L 101.1 112.9 L 101.3 98.3 L 120.2 109.4 L 120.9 107.4 L 101.5 90.7 L 101.3 83.4 C 101.3 83.4 101.6 81.1 100 80.8 C 99.8 80.8 99.6 80.8 99.4 80.8 z"
+    d: _STD2525
+      ? "M 99.4 80.8 C 97.9 81.1 98.1 83.4 98.1 83.4 L 98 90.7 L 78.6 107.4 L 79.3 109.4 L 98.1 98.3 L 98.3 112.9 L 93.9 116.6 L 93.9 118.7 L 98.8 116.8 C 99.1 117 99.7 117.5 99.7 117.5 C 99.7 117.5 100.4 117 100.7 116.8 L 105.6 118.7 L 105.6 116.6 L 101.1 112.9 L 101.3 98.3 L 120.2 109.4 L 120.9 107.4 L 101.5 90.7 L 101.3 83.4 C 101.3 83.4 101.6 81.1 100 80.8 C 99.8 80.8 99.6 80.8 99.4 80.8 z"
+      : "M100,100 L130,88 c15,0 15,24 0,24 L100,100 70,112 c-15,0 -15,-24 0,-24 Z"
   };
   icn["AR.I.CIVILIAN FIXED-WING DSymbol"] = {
     type: "path",
-    fill: _STD2525 ? iconFillColor : false,
+    fill: _STD2525 || numberSIDC ? iconFillColor : false,
     stroke: black,
-    d:
-      "m 75.1,90.3 19.6,0 0,-6.5 10.5,0 0,6.5 19.6,0 0,9.7 -19.6,0 0,16.2 6.5,0 0,3.2 -23.6,0 0,-3.2 6.5,0 0,-16.2 -19.6,0 z m 21.6,-6.5 0,-3.2 6.5,0 0,3.2"
+    d: _STD2525
+      ? "m 75.1,90.3 19.6,0 0,-6.5 10.5,0 0,6.5 19.6,0 0,9.7 -19.6,0 0,16.2 6.5,0 0,3.2 -23.6,0 0,-3.2 6.5,0 0,-16.2 -19.6,0 z m 21.6,-6.5 0,-3.2 6.5,0 0,3.2"
+      : "M100,100 L130,88 c15,0 15,24 0,24 L100,100 70,112 c-15,0 -15,-24 0,-24 Z"
   };
   icn["AR.I.FIGHTER/BOMBER"] = text("F/B");
-  icn["AR.I.ELECTRONIC SUPPORT"] = text("ES");
+  icn["AR.I.ELECTRONIC SUPPORT"] = _STD2525 ? text("ES") : text("ESM");
   icn["AR.I.PERSONNEL RECOVERY DSymbol"] = text("PR");
   icn["AR.I.PHOTOGRAPHIC RECONNAISSANCE"] = text("PH");
   icn["AR.I.ELECTRONIC ATTACK (EA)"] = text("EA");
@@ -622,14 +623,14 @@ module.exports = function(
   };
   icn["AR.I.CIVILIAN TETHERED LIGHTER THAN AIR"] = {
     type: "path",
-    fill: _STD2525 ? iconFillColor : false,
+    fill: _STD2525 || numberSIDC ? iconFillColor : false,
     stroke: black,
     d:
       "M 75,110 85,95 m -5,20 c 0,2.8 -2.2,5 -5,5 -2.8,0 -5,-2.2 -5,-5 0,-2.8 2.2,-5 5,-5 2.8,0 5,2.2 5,5 z m 15,-6 0,11 10,0 0,-11 m 10,-14 c 0,8.3 -6.7,15 -15,15 -8.3,0 -15,-6.7 -15,-15 0,-8.3 6.7,-15 15,-15 8.3,0 15,6.7 15,15 z"
   };
   icn["AR.I.CIVILIAN UNMANNED AERIAL VEHICLE"] = {
     type: "path",
-    fill: _STD2525 ? iconFillColor : false,
+    fill: _STD2525 || numberSIDC ? iconFillColor : false,
     stroke: black,
     d: "M60,90 l40,10 40,-10 0,8 -40,15 -40,-15 Z"
   };
@@ -702,7 +703,9 @@ module.exports = function(
   icn["AIR.M1.BOOM-ONLY"] = textm1("B");
   icn["AIR.M1.DROUGE-ONLY"] = textm1("D");
   //2525D
-  icn["AIR.M1.ELECTRONIC SUPPORT (ES)"] = textm1("ES");
+  icn["AIR.M1.ELECTRONIC SUPPORT (ES)"] = _STD2525
+    ? textm1("ES")
+    : textm1("ESM");
   icn["AIR.M1.FIGHTER/BOMBER"] = textm1("F/B");
   icn["AIR.M1.ELECTRONIC ATTACK (EA)"] = textm1("EA");
   icn["AIR.M1.MULTIMISSION"] = textm1("MM");
