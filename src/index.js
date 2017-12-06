@@ -4,7 +4,7 @@ Creating the base of milsymbol
 var ms = require("./ms.js");
 
 // Adding things to ms that can't be done in ms.js since they reference ms.js
-ms._geticnParts = require("./ms/iconparts.js");
+ms._geticnParts = require("./iconparts/iconparts.js");
 ms._symbolGeometries = require("./ms/symbolgeometries.js");
 
 // Initiating the symbol class
