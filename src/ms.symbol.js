@@ -98,19 +98,5 @@ symbol.prototype.setOptions = require("./symbol/setoptions.js");
 symbol.prototype.toDataURL = function() {
   return "data:image/svg+xml;base64," + window.btoa(this.asSVG());
 };
-/*
-// For backward compability
-symbol.prototype.asImage = function() {
-  console.warn(
-    "asImage() is deprecated and should not be used, use toDataURL() instead."
-  );
-  return this.toDataURL.call(this);
-};
-symbol.prototype.getMarker = function() {
-  console.warn(
-    "getMarker() is deprecated and should not be used, in most cases its not needed and you can use setOptions() instead."
-  );
-  return this.setOptions.call(this);
-};
-*/
+
 module.exports = symbol;
