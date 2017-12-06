@@ -260,7 +260,7 @@ Object {x:Number, y:Number}
 
 ### getProperties()
 
-Gets all properties that are computed for the SIDC of this symbol.
+Gets all metadata that are computed for the SIDC of this symbol.
 
 **Returns**
 
@@ -592,7 +592,7 @@ Example:
 ```javascript
 ms.addIconParts(function(
   iconParts,
-  properties,
+  metadata,
   colors,
   std2525,
   monoColor,
@@ -600,7 +600,7 @@ ms.addIconParts(function(
 ) {
   /*
     iconParts: Object - The existing object of icon parts
-    properties: Object - propterties object
+    metadata: Object - propterties object
     colors: Object - color object
     std2525: Boolean - Is it 2525 then true, otherwise false
     alternateMedal: Boolean - true/false for sea mine stuff
