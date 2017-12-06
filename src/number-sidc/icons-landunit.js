@@ -17,6 +17,7 @@ module.exports = function landunit(
     sId["110300"] = [icn["GR.IC.CIVIL-MILITARY-COOPERATION"]];
     sId["110400"] = [icn["GR.IC.INFORMATION OPERATIONS"]];
     sId["110500"] = [icn["GR.IC.LIAISON"]];
+    sId["110501"] = [icn["GR.IC.LIAISON"], icn["GR.IC.FF.RECONNAISSANCE"]];
     sId["110600"] = [
       icn["GR.IC.MILITARY INFORMATION SUPPORT OPERATIONS (MISO)"]
     ];
@@ -83,6 +84,7 @@ module.exports = function landunit(
       icn["GR.IC.ARMOUR"],
       icn["GR.IC.FF.MAIN GUN SYSTEM"]
     ];
+    sId["121106"] = [icn["GR.IC.FF.MAIN GUN SYSTEM"]];
     //sId['121195'] = [icn['GR.IC.FF.INFANTRY'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
     sId["121200"] = [icn["GR.IC.OBSERVER/OBSERVATION"]];
     sId["121300"] = [icn["GR.IC.FF.RECONNAISSANCE"]];
@@ -416,6 +418,16 @@ module.exports = function landunit(
     sIdm1["76"] = [icn["GR.M1.RANGER"]];
     sIdm1["77"] = [icn["GR.M1.SUPPORT"]];
     sIdm1["78"] = [icn["GR.M1.AVIATION"]];
+    sIdm1["79"] = [icn["GR.M1.ROUTE, RECONNAISSANCE, AND CLEARANCE"]];
+    sIdm1["80"] = [icn["GR.M1.COMMAND POST NODE"]];
+    sIdm1["81"] = [icn["GR.M1.JOINT NETWORK NODE"]];
+    sIdm1["82"] = [icn["GR.M1.RETRANSMISSION SITE"]];
+
+    sIdm1["94"] = [icn["GR.M1.THEATRE"]];
+    sIdm1["95"] = [icn["GR.M1.ARMY"]];
+    sIdm1["96"] = [icn["GR.M1.CORPS"]];
+    sIdm1["97"] = [icn["GR.M1.BRIGADE"]];
+    sIdm1["98"] = [icn["GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT"]];
 
     sIdm2["01"] = [icn["GR.M2.AIRBORNE"]];
     sIdm2["02"] = [icn["GR.M2.ARCTIC"]];

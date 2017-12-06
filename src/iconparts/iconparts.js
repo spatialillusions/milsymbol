@@ -1992,6 +1992,7 @@ module.exports = function(
   };
   icn["GR.M1.ANTISUBMARINE WARFARE"] = textm1("P");
   icn["GR.M1.AREA"] = textm1("AREA");
+  icn["GR.M1.ARMY"] = textm1("XXXX");
   icn["GR.M1.ATTACK"] = textm1("A");
   icn["GR.M1.AVIATION"] = { type: "path", d: "m 75,60 0,15 50,-15 0,15 z" };
   icn["GR.M1.BATTALION"] = textm1("II");
@@ -2013,6 +2014,7 @@ module.exports = function(
   icn["GR.M1.COMMAND AND CONTROL ROTARY WING"] = _STD2525
     ? textm1("Y")
     : textm1("C2");
+  icn["GR.M1.COMMAND POST NODE"] = textm1("CPN");
   icn["GR.M1.COMMUNICATIONS CONTINGENCY PACKAGE"] = textm1("CCP");
   icn["GR.M1.CONSTRUCTION"] = {
     type: "text",
@@ -2023,6 +2025,7 @@ module.exports = function(
     text: "CONST"
   };
   icn["GR.M1.COMPANY"] = textm1("I");
+  icn["GR.M1.CORPS"] = textm1("XXX");
   icn["GR.M1.CROSS CULTURAL COMMUNICATION"] = textm1("CCC");
   icn["GR.M1.CROWD AND RIOT CONTROL"] = textm1("CRC");
   icn["GR.M1.DECONTAMINATION"] = textm1("D");
@@ -2066,6 +2069,7 @@ module.exports = function(
   icn["GR.M1.J7"] = textm1("J7");
   icn["GR.M1.J8"] = textm1("J8");
   icn["GR.M1.J9"] = textm1("J9");
+  icn["GR.M1.JOINT NETWORK NODE"] = textm1("JNN");
   icn["GR.M1.LANDING SUPPORT"] = textm1("LS");
   icn["GR.M1.LARGE COMMUNICATIONS CONTINGENCY PACKAGE"] = textm1("LCCP");
   icn["GR.M1.LARGE EXTENSION NODE"] = textm1("LEN");
@@ -2185,6 +2189,8 @@ module.exports = function(
   icn["GR.M1.RANGER"] = textm1("RGR");
   icn["GR.M1.RECON"] = textm1("R");
   icn["GR.M1.REGIMENT"] = textm1("III");
+  icn["GR.M1.RETRANSMISSION SITE"] = textm1("RTNS");
+  icn["GR.M1.ROUTE, RECONNAISSANCE, AND CLEARANCE"] = textm1("RRC");
   icn["GR.M1.SEARCH AND RESCUE"] = textm1("SAR");
   icn["GR.M1.SECTION"] = [
     { type: "circle", stroke: false, cx: 90, cy: 68, r: 8 },
@@ -2239,6 +2245,7 @@ module.exports = function(
     { type: "circle", fill: false, cx: 100, cy: 65, r: 10 },
     { type: "path", d: "m 90,75 l20,-20" }
   ];
+  icn["GR.M1.THEATRE"] = textm1("XXXXX");
   icn["GR.M1.TOPOGRAPHIC"] = {
     type: "path",
     fill: false,
