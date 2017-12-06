@@ -14,7 +14,7 @@ module.exports = function debug() {
     y1 -= 6;
     var fontFamily = "Arial";
     var fontColor =
-      this.colors.iconColor[this.properties.affiliation] ||
+      this.colors.iconColor[this.metadata.affiliation] ||
       this.colors.iconColor["Friend"];
 
     drawArray2.push({
@@ -31,7 +31,7 @@ module.exports = function debug() {
     });
 
     var color = false;
-    if (this.properties.fill && this.style.monoColor === "") {
+    if (this.metadata.fill && this.style.monoColor === "") {
       var colors = {
         TARGET: "rgb(255, 0, 0)",
         "NON-TARGET": "rgb(255, 255, 255)",
@@ -39,7 +39,7 @@ module.exports = function debug() {
       };
       color =
         colors[this.options.engagementType.toUpperCase()] ||
-        this.colors.fillColor[this.properties.affiliation];
+        this.colors.fillColor[this.metadata.affiliation];
     }
     // Bar width
     var width = Math.max(bbox.width(), this.options.engagementBar.length * 16);
@@ -51,7 +51,7 @@ module.exports = function debug() {
       type: "path",
       strokewidth: this.style.strokeWidth,
       fill: color,
-      stroke: this.colors.frameColor[this.properties.affiliation],
+      stroke: this.colors.frameColor[this.metadata.affiliation],
       d:
         "M" +
         (100 - width / 2) +
@@ -69,7 +69,7 @@ module.exports = function debug() {
     //outline
     if (this.style.outlineWidth > 0) {
       var outline;
-      if (this.properties.fill && this.style.monoColor === "") {
+      if (this.metadata.fill && this.style.monoColor === "") {
         outline = drawArray2[0];
       } else {
         outline = drawArray2;

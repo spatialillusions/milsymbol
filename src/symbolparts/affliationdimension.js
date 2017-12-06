@@ -4,10 +4,10 @@ var ms = require("../ms.js");
 module.exports = function affliationdimension() {
   var drawArray1 = [];
   var drawArray2 = [];
-  var bbox = this.properties.baseGeometry.bbox;
-  var frameColor = this.colors.frameColor[this.properties.affiliation];
+  var bbox = this.metadata.baseGeometry.bbox;
+  var frameColor = this.colors.frameColor[this.metadata.affiliation];
   //Draws the a question mark for some unknown or other dimension symbols
-  if (this.properties.dimensionUnknown && frameColor) {
+  if (this.metadata.dimensionUnknown && frameColor) {
     drawArray2.push({
       type: "text",
       text: "?",
@@ -21,17 +21,17 @@ module.exports = function affliationdimension() {
     });
   }
   //If we don't have a geometry we shouldn't add anything.
-  if (this.properties.baseGeometry.g && frameColor) {
+  if (this.metadata.baseGeometry.g && frameColor) {
     var spacing = 10;
     if (
-      this.properties.affiliation == "Unknown" ||
-      (this.properties.affiliation == "Hostile" &&
-        this.properties.dimension != "Subsurface")
+      this.metadata.affiliation == "Unknown" ||
+      (this.metadata.affiliation == "Hostile" &&
+        this.metadata.dimension != "Subsurface")
     ) {
       spacing = -10;
     }
-    if (this.properties.context == "Exercise") {
-      if (!(this.properties.joker || this.properties.faker)) {
+    if (this.metadata.context == "Exercise") {
+      if (!(this.metadata.joker || this.metadata.faker)) {
         drawArray2.push({
           type: "text",
           text: "X",
@@ -44,7 +44,7 @@ module.exports = function affliationdimension() {
           textanchor: "start"
         });
       }
-      if (this.properties.joker) {
+      if (this.metadata.joker) {
         drawArray2.push({
           type: "text",
           text: "J",
@@ -57,7 +57,7 @@ module.exports = function affliationdimension() {
           textanchor: "start"
         });
       }
-      if (this.properties.faker) {
+      if (this.metadata.faker) {
         drawArray2.push({
           type: "text",
           text: "K",
@@ -72,7 +72,7 @@ module.exports = function affliationdimension() {
       }
       bbox = { x2: bbox.x2 + spacing + 22, y1: 60 - 25 };
     }
-    if (this.properties.context == "Simulation") {
+    if (this.metadata.context == "Simulation") {
       drawArray2.push({
         type: "text",
         text: "S",

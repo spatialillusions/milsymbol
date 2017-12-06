@@ -6,13 +6,11 @@ module.exports = function(extended) {
     return {
       drawInstructions: drawInstructions,
       icon: this._validIcon,
-      mobility: this.properties.mobility != undefined
+      mobility: this.metadata.mobility != undefined
     };
   } else {
     return (
-      drawInstructions &&
-      this._validIcon &&
-      this.properties.mobility != undefined
+      drawInstructions && this._validIcon && this.metadata.mobility != undefined
     );
   }
 };

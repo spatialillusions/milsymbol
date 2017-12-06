@@ -4,10 +4,10 @@ var ms = require("../ms.js");
 module.exports = function modifier() {
   var drawArray1 = [];
   var drawArray2 = [];
-  var bbox = new ms.BBox(this.properties.baseGeometry.bbox); // clone the bbox
+  var bbox = new ms.BBox(this.metadata.baseGeometry.bbox); // clone the bbox
   var gbbox = new ms.BBox(); // bounding box for the added geometries
   var geom;
-  if (this.properties.headquarters) {
+  if (this.metadata.headquarters) {
     //HEADQUARTERS
     var y = 100;
     var hqStafLength = Number(this.style.hqStafLength || ms._hqStafLength);
@@ -19,11 +19,11 @@ module.exports = function modifier() {
         "GroundNeutral",
         "SeaNeutral",
         "SubsurfaceNeutral"
-      ].indexOf(this.properties.dimension + this.properties.affiliation) > -1
+      ].indexOf(this.metadata.dimension + this.metadata.affiliation) > -1
     )
       y = bbox.y2;
     if (
-      this.properties.dimensionType + this.properties.affiliationType ==
+      this.metadata.dimensionType + this.metadata.affiliationType ==
       "SubsurfaceFriend"
     )
       y = bbox.y1;
@@ -54,7 +54,7 @@ module.exports = function modifier() {
     drawArray2.push(geom);
     gbbox.y2 = bbox.y2 + hqStafLength;
   }
-  if (this.properties.taskForce) {
+  if (this.metadata.taskForce) {
     //TASK FORCE
     geom = {
       type: "path",
@@ -83,12 +83,12 @@ module.exports = function modifier() {
     drawArray2.push(geom);
     gbbox.y1 = bbox.y1 - 40;
   }
-  if (this.properties.installation) {
+  if (this.metadata.installation) {
     //INSTALLATION
     var gapFiller = 0;
     if (
       ["AirHostile", "GroundHostile", "SeaHostile"].indexOf(
-        this.properties.dimension + this.properties.affiliation
+        this.metadata.dimension + this.metadata.affiliation
       ) > -1
     )
       gapFiller = 14;
@@ -99,12 +99,12 @@ module.exports = function modifier() {
         "SeaUnknown",
         "AirFriend",
         "SeaFriend"
-      ].indexOf(this.properties.dimension + this.properties.affiliation) > -1
+      ].indexOf(this.metadata.dimension + this.metadata.affiliation) > -1
     )
       gapFiller = 2;
     geom = {
       type: "path",
-      fill: this.colors.frameColor[this.properties.affiliation],
+      fill: this.colors.frameColor[this.metadata.affiliation],
       d:
         "M85," +
         (bbox.y1 + gapFiller - this.style.strokeWidth / 2) +
@@ -133,7 +133,7 @@ module.exports = function modifier() {
     drawArray2.push(geom);
     gbbox.merge({ y1: bbox.y1 - 10 });
   }
-  if (this.properties.feintDummy) {
+  if (this.metadata.feintDummy) {
     //FEINT DUMMY
     var topPoint = bbox.y1 - 0 - bbox.width() / 2;
     geom = {
@@ -169,8 +169,8 @@ module.exports = function modifier() {
     gbbox.merge({ y1: topPoint });
   }
   //Unit Size
-  if (this.properties.echelon) {
-    var installationPadding = this.properties.installation ? 15 : 0;
+  if (this.metadata.echelon) {
+    var installationPadding = this.metadata.installation ? 15 : 0;
     var echelons = {
       "Team/Crew": {
         g: [
@@ -186,7 +186,7 @@ module.exports = function modifier() {
         g: [
           {
             type: "circle",
-            fill: this.colors.frameColor[this.properties.affiliation],
+            fill: this.colors.frameColor[this.metadata.affiliation],
             cx: 100,
             cy: bbox.y1 - 20,
             r: 7.5
@@ -198,14 +198,14 @@ module.exports = function modifier() {
         g: [
           {
             type: "circle",
-            fill: this.colors.frameColor[this.properties.affiliation],
+            fill: this.colors.frameColor[this.metadata.affiliation],
             cx: 115,
             cy: bbox.y1 - 20,
             r: 7.5
           },
           {
             type: "circle",
-            fill: this.colors.frameColor[this.properties.affiliation],
+            fill: this.colors.frameColor[this.metadata.affiliation],
             cx: 85,
             cy: bbox.y1 - 20,
             r: 7.5
@@ -217,21 +217,21 @@ module.exports = function modifier() {
         g: [
           {
             type: "circle",
-            fill: this.colors.frameColor[this.properties.affiliation],
+            fill: this.colors.frameColor[this.metadata.affiliation],
             cx: 100,
             cy: bbox.y1 - 20,
             r: 7.5
           },
           {
             type: "circle",
-            fill: this.colors.frameColor[this.properties.affiliation],
+            fill: this.colors.frameColor[this.metadata.affiliation],
             cx: 70,
             cy: bbox.y1 - 20,
             r: 7.5
           },
           {
             type: "circle",
-            fill: this.colors.frameColor[this.properties.affiliation],
+            fill: this.colors.frameColor[this.metadata.affiliation],
             cx: 130,
             cy: bbox.y1 - 20,
             r: 7.5
@@ -413,8 +413,8 @@ module.exports = function modifier() {
         }
       }
     };
-    if (echelons.hasOwnProperty(this.properties.echelon)) {
-      geom = echelons[this.properties.echelon].g;
+    if (echelons.hasOwnProperty(this.metadata.echelon)) {
+      geom = echelons[this.metadata.echelon].g;
 
       //outline
       if (this.style.outlineWidth > 0)
@@ -433,25 +433,25 @@ module.exports = function modifier() {
         y: -installationPadding,
         draw: geom
       });
-      gbbox.merge(echelons[this.properties.echelon].bbox);
+      gbbox.merge(echelons[this.metadata.echelon].bbox);
     }
   }
   //This is for movability indicators.
-  if (this.properties.mobility) {
+  if (this.metadata.mobility) {
     if (!this.style.frame) {
       bbox.y2 = this.bbox.y2;
     }
-    if (this.properties.affiliation == "Neutral") {
+    if (this.metadata.affiliation == "Neutral") {
       if (
-        this.properties.mobility == "Towed" ||
-        this.properties.mobility == "Short towed array" ||
-        this.properties.mobility == "Long towed Array"
+        this.metadata.mobility == "Towed" ||
+        this.metadata.mobility == "Short towed array" ||
+        this.metadata.mobility == "Long towed Array"
       ) {
         bbox.y2 += 8;
       }
       if (
-        this.properties.mobility == "Over snow (prime mover)" ||
-        this.properties.mobility == "Sled"
+        this.metadata.mobility == "Over snow (prime mover)" ||
+        this.metadata.mobility == "Sled"
       ) {
         bbox.y2 += 13;
       }
@@ -546,7 +546,7 @@ module.exports = function modifier() {
         g: [
           {
             type: "path",
-            fill: this.colors.frameColor[this.properties.affiliation],
+            fill: this.colors.frameColor[this.metadata.affiliation],
             d:
               "M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M100,0 l5,5 -5,5 -5,-5 z"
           }
@@ -557,7 +557,7 @@ module.exports = function modifier() {
         g: [
           {
             type: "path",
-            fill: this.colors.frameColor[this.properties.affiliation],
+            fill: this.colors.frameColor[this.metadata.affiliation],
             d:
               "M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M105,0 l-10,0 0,10 10,0 z M75,0 l5,5 -5,5 -5,-5 z  M125,0 l5,5 -5,5 -5,-5 z"
           }
@@ -565,8 +565,8 @@ module.exports = function modifier() {
         bbox: { y2: bbox.y2 + 10 }
       }
     };
-    if (mobilities.hasOwnProperty(this.properties.mobility)) {
-      geom = mobilities[this.properties.mobility].g;
+    if (mobilities.hasOwnProperty(this.metadata.mobility)) {
+      geom = mobilities[this.metadata.mobility].g;
       //outline
       if (this.style.outlineWidth > 0)
         drawArray1.push(
@@ -579,12 +579,12 @@ module.exports = function modifier() {
         );
       //geometry
       drawArray2.push({ type: "translate", x: 0, y: bbox.y2, draw: geom });
-      gbbox.merge(mobilities[this.properties.mobility].bbox);
+      gbbox.merge(mobilities[this.metadata.mobility].bbox);
     }
   }
 
   //Dismounted Leadership
-  if (this.properties.leadership) {
+  if (this.metadata.leadership) {
     var leadership = {
       Friend: {
         type: "path",
@@ -593,8 +593,8 @@ module.exports = function modifier() {
       Neutral: { type: "path", d: "m 45,60 55,-25 55,25" },
       Hostile: { type: "path", d: "m 42,71 57.8,-43.3 58.2,42.8" },
       Unknown: { type: "path", d: "m 50,60 10,-20 80,0 10,20" }//*/
-    }[this.properties.affiliation];
-    //if (this.properties.leadership == "Deputy Individual")
+    }[this.metadata.affiliation];
+    //if (this.metadata.leadership == "Deputy Individual")
     //  leadership.strokedasharray = ms._dashArrays.feintDummy;
     if (leadership) {
       drawArray1.push(leadership);
@@ -605,14 +605,14 @@ module.exports = function modifier() {
   for (var i = 0; i < drawArray1.length; i++) {
     if (!drawArray1[i].hasOwnProperty("fill")) drawArray1[i].fill = false;
     if (!drawArray1[i].hasOwnProperty("stroke"))
-      drawArray1[i].stroke = this.colors.iconColor[this.properties.affiliation];
+      drawArray1[i].stroke = this.colors.iconColor[this.metadata.affiliation];
     if (!drawArray1[i].hasOwnProperty("strokewidth"))
       drawArray1[i].strokewidth = this.style.strokeWidth;
   }
   for (i = 0; i < drawArray2.length; i++) {
     if (!drawArray2[i].hasOwnProperty("fill")) drawArray2[i].fill = false;
     if (!drawArray2[i].hasOwnProperty("stroke"))
-      drawArray2[i].stroke = this.colors.iconColor[this.properties.affiliation];
+      drawArray2[i].stroke = this.colors.iconColor[this.metadata.affiliation];
     if (!drawArray2[i].hasOwnProperty("strokewidth"))
       drawArray2[i].strokewidth = this.style.strokeWidth;
   }

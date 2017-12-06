@@ -4,14 +4,14 @@ var ms = require("../ms.js");
 module.exports = function directionarrow() {
   var drawArray1 = [];
   var drawArray2 = [];
-  var bbox = this.properties.baseGeometry.bbox;
-  if (this.properties.baseGeometry.g == "") {
+  var bbox = this.metadata.baseGeometry.bbox;
+  if (this.metadata.baseGeometry.g == "") {
     // in the case we don't have any frame
     bbox = this.bbox; //Set bbox to the current symbols bounds
   }
   var gbbox = new ms.BBox();
   var color =
-    this.colors.iconColor[this.properties.affiliation] ||
+    this.colors.iconColor[this.metadata.affiliation] ||
     this.colors.iconColor["Friend"];
 
   if (this.style.infoFields) {
@@ -59,8 +59,8 @@ module.exports = function directionarrow() {
       );
 
       if (
-        this.properties.baseDimension == "Ground" ||
-        this.properties.baseDimension == ""
+        this.metadata.baseDimension == "Ground" ||
+        this.metadata.baseDimension == ""
       ) {
         arrow = [
           { type: "translate", x: 0, y: bbox.y2, draw: arrow },

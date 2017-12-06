@@ -27,7 +27,7 @@ module.exports = function() {
   this._validIcon = true;
 
   //Updating the object with properties of the marker
-  this.properties = this.getProperties();
+  this.metadata = this.getProperties();
 
   //Updating the object with colors
   this.colors = this.getColors();
@@ -91,11 +91,11 @@ module.exports = function() {
       100
   };
   //If it is a headquarters the anchor should be at the end of the staf
-  if (this.properties.headquarters) {
+  if (this.metadata.headquarters) {
     var hqStafLength = this.hqStafLength || ms._hqStafLength;
     anchor = {
-      x: this.properties.baseGeometry.bbox.x1,
-      y: this.properties.baseGeometry.bbox.y2 + hqStafLength
+      x: this.metadata.baseGeometry.bbox.x1,
+      y: this.metadata.baseGeometry.bbox.y2 + hqStafLength
     };
   }
   this.markerAnchor = {

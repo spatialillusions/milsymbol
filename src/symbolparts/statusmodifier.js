@@ -4,12 +4,12 @@ var ms = require("../ms.js");
 module.exports = function statusmodifier() {
   var drawArray1 = [];
   var drawArray2 = [];
-  var bbox = this.properties.baseGeometry.bbox;
+  var bbox = this.metadata.baseGeometry.bbox;
   var y1 = bbox.y1;
   var y2 = bbox.y2;
 
-  if (this.properties.condition) {
-    if (this.properties.fill && this.style.monoColor === "") {
+  if (this.metadata.condition) {
+    if (this.metadata.fill && this.style.monoColor === "") {
       var colors = {
         FullyCapable: "rgb(0,255,0)",
         Damaged: "rgb(255,255,0)",
@@ -17,21 +17,21 @@ module.exports = function statusmodifier() {
         FullToCapacity: "rgb(0, 180, 240)"
       };
       //If it is unframed and equipment use the bottom of the icon
-      if (!this.properties.frame && this.properties.iconBottom) {
-        y2 = this.properties.iconBottom;
+      if (!this.metadata.frame && this.metadata.iconBottom) {
+        y2 = this.metadata.iconBottom;
       }
       // If we have headquartersElement add space for the text
       if (this.options.headquartersElement) {
         y2 += 35;
       }
       //If we have a mobility indicator we need to make space for it.
-      y2 += this.properties.mobility ? 25 : 5;
+      y2 += this.metadata.mobility ? 25 : 5;
       //Add the bar to the geometry
       drawArray2.push({
         type: "path",
         strokewidth: this.style.strokeWidth,
-        fill: colors[this.properties.condition],
-        stroke: this.colors.frameColor[this.properties.affiliation],
+        fill: colors[this.metadata.condition],
+        stroke: this.colors.frameColor[this.metadata.affiliation],
         d:
           "M" +
           bbox.x1 +
@@ -57,25 +57,25 @@ module.exports = function statusmodifier() {
         );
     } else {
       if (
-        this.properties.condition == "Damaged" ||
-        this.properties.condition == "Destroyed"
+        this.metadata.condition == "Damaged" ||
+        this.metadata.condition == "Destroyed"
       ) {
         drawArray2.push({
           type: "path",
           d: "M150,20 L50,180",
           strokewidth: this.style.strokeWidth * 2,
-          stroke: this.colors.frameColor[this.properties.affiliation]
+          stroke: this.colors.frameColor[this.metadata.affiliation]
         });
         //Add space for the modifier to the geometry bounds
         y1 = 20;
         y2 = 180;
       }
-      if (this.properties.condition == "Destroyed")
+      if (this.metadata.condition == "Destroyed")
         drawArray2.push({
           type: "path",
           d: "M50,20 L150,180",
           strokewidth: this.style.strokeWidth * 2,
-          stroke: this.colors.frameColor[this.properties.affiliation]
+          stroke: this.colors.frameColor[this.metadata.affiliation]
         });
       //outline
       if (this.style.outlineWidth > 0)

@@ -4,10 +4,10 @@ var ms = require("../ms.js");
 module.exports = function textfields() {
   var drawArray1 = [];
   var drawArray2 = [];
-  var bbox = this.properties.baseGeometry.bbox;
+  var bbox = this.metadata.baseGeometry.bbox;
   var fontColor =
     this.style.infoColor ||
-    this.colors.iconColor[this.properties.affiliation] ||
+    this.colors.iconColor[this.metadata.affiliation] ||
     this.colors.iconColor["Friend"];
   var fontFamily = "Arial";
   var fontSize = this.style.infoSize;
@@ -203,7 +203,7 @@ module.exports = function textfields() {
     return t;
   }
 
-  if (this.properties.numberSIDC) {
+  if (this.metadata.numberSIDC) {
     //Number based SIDCs.
     //var symbolSet = String(this.options.sidc).substr(4, 2);
     //TODO fix add code for Number based labels
@@ -273,7 +273,7 @@ module.exports = function textfields() {
     if (this.options.specialHeadquarters) {
       drawArray2.push(text(this.options.specialHeadquarters));
     }
-    if (this.options.quantity && !this.properties.dismounted) {
+    if (this.options.quantity && !this.metadata.dismounted) {
       //geometry
       drawArray2.push({
         type: "text",
@@ -291,8 +291,8 @@ module.exports = function textfields() {
     if (this.options.headquartersElement) {
       /*
       if (
-        this.properties.condition &&
-        this.properties.fill &&
+        this.metadata.condition &&
+        this.metadata.fill &&
         this.style.monoColor == ""
       ) {
         //Add the hight of the codition bar to the geometry bounds
@@ -329,7 +329,7 @@ module.exports = function textfields() {
     }; //Text information on left and right sIde.
     var a;
     //Air & Space (They should be different but we skip that at the moment) TODO
-    if (!isNaN(this.options.sidc) && this.properties.baseDimension == "Air") {
+    if (!isNaN(this.options.sidc) && this.metadata.baseDimension == "Air") {
       gStrings.R1 = this.options.uniqueDesignation;
       gStrings.R2 = this.options.iffSif;
       gStrings.R3 = this.options.type;
@@ -348,7 +348,7 @@ module.exports = function textfields() {
       }
     }
     //Land or letterbased SIDC
-    if (isNaN(this.options.sidc) || this.properties.baseDimension == "Ground") {
+    if (isNaN(this.options.sidc) || this.metadata.baseDimension == "Ground") {
       gStrings.L1 = this.options.dtg;
       if (this.options.altitudeDepth || this.options.location) {
         a = [];
@@ -378,7 +378,7 @@ module.exports = function textfields() {
         if (this.options.iffSif) a.push(this.options.iffSif);
         gStrings.R5 = a.join("/");
       }
-      if (isNaN(this.options.sidc) || this.properties.unit) {
+      if (isNaN(this.options.sidc) || this.metadata.unit) {
         if (
           this.options.type ||
           this.options.platformType ||
@@ -392,7 +392,7 @@ module.exports = function textfields() {
           gStrings.L3 = a.join("/");
         }
         gStrings.R1 = this.options.reinforcedReduced;
-        if (this.properties.activity) gStrings.R1 = this.options.country;
+        if (this.metadata.activity) gStrings.R1 = this.options.country;
         if (
           this.options.additionalInformation ||
           this.options.commonIdentifier
@@ -435,7 +435,7 @@ module.exports = function textfields() {
       }
     }
     // Dismounted individual
-    if (this.properties.dismounted) {
+    if (this.metadata.dismounted) {
       if (this.options.quantity) {
         //geometry
         drawArray2.push({
@@ -504,7 +504,7 @@ module.exports = function textfields() {
     }
 
     //Sea numberbased SIDC
-    if (!isNaN(this.options.sidc) && this.properties.baseDimension == "Sea") {
+    if (!isNaN(this.options.sidc) && this.metadata.baseDimension == "Sea") {
       if (this.options.guardedUnit || this.options.specialDesignator) {
         a = [];
         if (this.options.guardedUnit) a.push(this.options.guardedUnit);
@@ -532,7 +532,7 @@ module.exports = function textfields() {
     //Sub numberbased SIDC
     if (
       !isNaN(this.options.sidc) &&
-      this.properties.baseDimension == "Subsurface"
+      this.metadata.baseDimension == "Subsurface"
     ) {
       gStrings.L1 = this.options.specialDesignator;
       gStrings.R1 = this.options.uniqueDesignation;
@@ -548,12 +548,12 @@ module.exports = function textfields() {
       Math.max(
         this.options.specialHeadquarters
           ? (strWidth(this.options.specialHeadquarters) -
-              this.properties.baseGeometry.bbox.width()) /
+              this.metadata.baseGeometry.bbox.width()) /
             2
           : 0,
         this.options.quantity
           ? (strWidth(this.options.quantity) -
-              this.properties.baseGeometry.bbox.width()) /
+              this.metadata.baseGeometry.bbox.width()) /
             2
           : 0,
         strWidth(gStrings.L1),
@@ -569,12 +569,12 @@ module.exports = function textfields() {
       Math.max(
         this.options.specialHeadquarters
           ? (strWidth(this.options.specialHeadquarters) -
-              this.properties.baseGeometry.bbox.width()) /
+              this.metadata.baseGeometry.bbox.width()) /
             2
           : 0,
         this.options.quantity
           ? (strWidth(this.options.quantity) -
-              this.properties.baseGeometry.bbox.width()) /
+              this.metadata.baseGeometry.bbox.width()) /
             2
           : 0,
         strWidth(gStrings.R1),

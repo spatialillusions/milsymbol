@@ -19,21 +19,21 @@ module.exports = function icon() {
   var specialbbox = [];
 
   if (this.style.icon) {
-    var fillColor = this.colors.fillColor[this.properties.affiliation];
+    var fillColor = this.colors.fillColor[this.metadata.affiliation];
     //So we don't happend to use civilian colors
     var neutralColor = this.colors.fillColor.Neutral;
-    iconColor = this.colors.iconColor[this.properties.affiliation];
-    var iconFillColor = this.colors.iconFillColor[this.properties.affiliation];
-    var none = this.colors.none[this.properties.affiliation];
-    var black = this.colors.black[this.properties.affiliation];
-    var white = this.colors.white[this.properties.affiliation];
+    iconColor = this.colors.iconColor[this.metadata.affiliation];
+    var iconFillColor = this.colors.iconFillColor[this.metadata.affiliation];
+    var none = this.colors.none[this.metadata.affiliation];
+    var black = this.colors.black[this.metadata.affiliation];
+    var white = this.colors.white[this.metadata.affiliation];
     //Store previous used icons in memory.
     var icnet =
       (ms._STD2525 ? "2525" : "APP6") +
       "," +
-      this.properties.dimension +
-      this.properties.affiliation +
-      this.properties.notpresent +
+      this.metadata.dimension +
+      this.metadata.affiliation +
+      this.metadata.notpresent +
       ",frame:" +
       this.style.frame +
       ",alternateMedal:" +
@@ -58,7 +58,7 @@ module.exports = function icon() {
     } else {
       ms._iconCache[icnet] = {};
       iconParts = ms._iconCache[icnet].iconParts = ms._geticnParts(
-        this.properties,
+        this.metadata,
         this.colors,
         ms._STD2525,
         this.style.monoColor,
@@ -67,17 +67,17 @@ module.exports = function icon() {
     }
 
     //Letter based SIDCs.
-    if (!this.properties.numberSIDC) {
+    if (!this.metadata.numberSIDC) {
       //Sea mine exercise has stuff outsIde the boundingbox...
       //TODO see if we can fix this in another way.
       if (
         ["WMGX--", "WMMX--", "WMFX--", "WMX---", "WMSX--"].indexOf(
-          this.properties.functionid
+          this.metadata.functionid
         ) != -1
       ) {
         gbbox.y1 = 10;
-        if (this.properties.affiliation != "Unknown") {
-          gbbox.x2 = this.properties.baseGeometry.bbox.x2 + 20;
+        if (this.metadata.affiliation != "Unknown") {
+          gbbox.x2 = this.metadata.baseGeometry.bbox.x2 + 20;
         }
       }
 
@@ -137,7 +137,7 @@ module.exports = function icon() {
     }
 
     //Number based SIDCs.
-    if (this.properties.numberSIDC) {
+    if (this.metadata.numberSIDC) {
       //Number based SIDCs.
       var symbolSet = String(this.options.sidc).substr(4, 2);
       if (ms._iconCache[icnet].hasOwnProperty("numberSIDC")) {
@@ -224,7 +224,7 @@ module.exports = function icon() {
     }
 
     // Put all this togheter and return the Icon. ============================================
-    iconColor = this.colors.iconColor[this.properties.affiliation];
+    iconColor = this.colors.iconColor[this.metadata.affiliation];
     var undefinedIcon = [
       {
         type: "path",
@@ -234,20 +234,20 @@ module.exports = function icon() {
           "m 94.8206,78.1372 c -0.4542,6.8983 0.6532,14.323 5.3424,19.6985 4.509,5.6933 11.309,9.3573 14.98,15.7283 3.164,6.353 -0.09,14.245 -5.903,17.822 -7.268,4.817 -18.6219,2.785 -22.7328,-5.249 -1.5511,-2.796 -2.3828,-5.931 -2.8815,-9.071 -3.5048,0.416 -7.0093,0.835 -10.5142,1.252 0.8239,8.555 5.2263,17.287 13.2544,21.111 7.8232,3.736 17.1891,3.783 25.3291,1.052 8.846,-3.103 15.737,-11.958 15.171,-21.537 0.05,-6.951 -4.272,-12.85 -9.134,-17.403 -4.526,-4.6949 -11.048,-8.3862 -12.401,-15.2748 -1.215,-2.3639 -0.889,-8.129 -0.889,-8.129 z m -0.6253,-20.5177 0,11.6509 11.6527,0 0,-11.6509 z"
       }
     ];
-    if (this.properties.numberSIDC) {
+    if (this.metadata.numberSIDC) {
       //Number based SIDC
-      var mainIcon = icons[this.properties.functionid.substr(0, 6)]; //Main symbol
+      var mainIcon = icons[this.metadata.functionid.substr(0, 6)]; //Main symbol
 
       if (typeof mainIcon === "undefined") {
         //We have some special entity subtype and will try to find original symbol.
-        mainIcon = icons[this.properties.functionid.substr(0, 4) + "00"];
+        mainIcon = icons[this.metadata.functionid.substr(0, 4) + "00"];
       }
 
       if (typeof mainIcon === "undefined") {
         if (
           !(
-            this.properties.functionid.substr(0, 6) == "000000" ||
-            this.properties.functionid.substr(0, 6) == ""
+            this.metadata.functionid.substr(0, 6) == "000000" ||
+            this.metadata.functionid.substr(0, 6) == ""
           )
         ) {
           drawArray2.push(undefinedIcon);
@@ -256,27 +256,27 @@ module.exports = function icon() {
         }
       } else {
         //Handle special cases of dismounted individual where weapons should be scaled
-        var mainSIDC = Number(this.properties.functionid.substr(0, 6));
+        var mainSIDC = Number(this.metadata.functionid.substr(0, 6));
         if (
-          this.properties.dismounted &&
+          this.metadata.dismounted &&
           mainSIDC >= 110301 &&
           mainSIDC <= 110403
         ) {
           if (
-            this.properties.functionid.substr(6, 2) != "00" &&
-            this.properties.functionid.substr(8, 2) != "00"
+            this.metadata.functionid.substr(6, 2) != "00" &&
+            this.metadata.functionid.substr(8, 2) != "00"
           ) {
             mainIcon = [ms._scale(0.5, mainIcon)];
           }
           if (
-            this.properties.functionid.substr(6, 2) == "00" &&
-            this.properties.functionid.substr(8, 2) != "00"
+            this.metadata.functionid.substr(6, 2) == "00" &&
+            this.metadata.functionid.substr(8, 2) != "00"
           ) {
             mainIcon = [ms._translate(0, -10, ms._scale(0.7, mainIcon))];
           }
           if (
-            this.properties.functionid.substr(6, 2) != "00" &&
-            this.properties.functionid.substr(8, 2) == "00"
+            this.metadata.functionid.substr(6, 2) != "00" &&
+            this.metadata.functionid.substr(8, 2) == "00"
           ) {
             mainIcon = [ms._translate(0, 10, ms._scale(0.7, mainIcon))];
           }
@@ -285,33 +285,31 @@ module.exports = function icon() {
         drawArray2.push(mainIcon);
       }
 
-      if (specialbbox.hasOwnProperty(this.properties.functionid.substr(0, 6))) {
-        gbbox = new ms.BBox(
-          specialbbox[this.properties.functionid.substr(0, 6)]
-        );
+      if (specialbbox.hasOwnProperty(this.metadata.functionid.substr(0, 6))) {
+        gbbox = new ms.BBox(specialbbox[this.metadata.functionid.substr(0, 6)]);
       }
-      if (this.properties.functionid.substr(4, 2) == "95")
+      if (this.metadata.functionid.substr(4, 2) == "95")
         drawArray2.push(
           iconParts["GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT"]
         );
-      if (this.properties.functionid.substr(4, 2) == "96")
+      if (this.metadata.functionid.substr(4, 2) == "96")
         drawArray2.push(iconParts["GR.IC.FF.DIVISION AND BELOW SUPPORT"]);
-      if (this.properties.functionid.substr(4, 2) == "97")
+      if (this.metadata.functionid.substr(4, 2) == "97")
         drawArray2.push(iconParts["GR.IC.FF.CORPS SUPPORT"]);
-      if (this.properties.functionid.substr(4, 2) == "98")
+      if (this.metadata.functionid.substr(4, 2) == "98")
         drawArray2.push(iconParts["GR.IC.FF.THEATRE SUPPORT"]);
       //Modifier 1
       var modifier1 =
-        this.properties.functionid.substr(6, 2) != "00"
-          ? m1[this.properties.functionid.substr(6, 2)] || []
+        this.metadata.functionid.substr(6, 2) != "00"
+          ? m1[this.metadata.functionid.substr(6, 2)] || []
           : [];
       if (modifier1.length) {
         drawArray2.push(modifier1);
       }
       //Modifier 2
       var modifier2 =
-        this.properties.functionid.substr(8, 2) != "00"
-          ? m2[this.properties.functionid.substr(8, 2)] || []
+        this.metadata.functionid.substr(8, 2) != "00"
+          ? m2[this.metadata.functionid.substr(8, 2)] || []
           : [];
       if (modifier2.length) {
         drawArray2.push(modifier2);

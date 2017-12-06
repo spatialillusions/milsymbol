@@ -53,15 +53,15 @@
         ms.addSymbolPart(
           function squareIcon() {
             var square = this.getOptions().square; // we could use this.options.square, but this is safer
-            var properties = this.getProperties(); // we could use this.properties, but this is safer
-            var hq = properties.headquarters;
+            var metadata = this.getProperties(); // we could use this.metadata, but this is safer
+            var hq = metadata.headquarters;
             var gbbox = new ms.BBox();
             if (square) {
               var anchor = { x: 100, y: 100 };
               if (hq) {
                 anchor = {
-                  x: properties.baseGeometry.bbox.x1,
-                  y: properties.baseGeometry.bbox.y2 + ms.getHqStafLength()
+                  x: metadata.baseGeometry.bbox.x1,
+                  y: metadata.baseGeometry.bbox.y2 + ms.getHqStafLength()
                 };
               }
               var maxx = Math.max(anchor.x - this.bbox.x1, this.bbox.x2 - anchor.x);

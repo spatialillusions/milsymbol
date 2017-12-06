@@ -64,12 +64,12 @@ function symbol() {
   this.options.guardedUnit; // FieldID AQ
   this.options.specialDesignator; // FieldID AR
 
-  this.bbox = new ms.BBox(); // Contains the bounding box of the current marker
-  this.colors = {}; // Contains the colors for the current marker
+  this.bbox = new ms.BBox(); // Contains the bounding box of the current symbol
+  this.colors = {}; // Contains the colors for the current symbol
   this._validIcon = true; // If we were able to find a valid icon or not.
-  this.markerAnchor = { x: 50, y: 50 }; // The anchor point for the current marker
-  this.octagonAnchor = { x: 50, y: 50 }; // The anchor point for the octagon for the current marker
-  this.properties = {}; // Properties of the current marker
+  this.markerAnchor = { x: 50, y: 50 }; // The anchor point for the current symbol
+  this.octagonAnchor = { x: 50, y: 50 }; // The anchor point for the octagon for the current symbol
+  this.metadata = {}; // Metadata of the current symbol
   // Initiate symbol.
   if (arguments.length > 0) {
     this.setOptions.apply(this, arguments);
