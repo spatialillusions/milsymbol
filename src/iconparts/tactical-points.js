@@ -1,5 +1,5 @@
 // Icon parts for tactical points
-module.exports = function(
+export default function(
   iconParts,
   properties,
   colors,
@@ -2562,4 +2562,4 @@ module.exports = function(
     defaultProperties.call(this, icn[key]);
     iconParts[key] = icn[key];
   }
-};
+}

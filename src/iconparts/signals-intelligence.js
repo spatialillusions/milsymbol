@@ -1,5 +1,5 @@
 // Icon parts for SIGNALS INTELLIGENCE
-module.exports = function(
+export default function(
   iconParts,
   properties,
   colors,
@@ -412,4 +412,4 @@ module.exports = function(
     defaultProperties.call(this, icn[key]);
     iconParts[key] = icn[key];
   }
-};
+}

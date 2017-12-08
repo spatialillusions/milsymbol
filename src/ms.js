@@ -60,6 +60,11 @@ var ms = new function() {
   }
 }();
 
+import { bbox } from "./ms/bbox.js";
+import { colormode } from "./ms/colormode.js";
+ms.BBox = bbox;
+ms.ColorMode = colormode;
+
 ms._parseXML = function(s, doc) {
   doc = doc || document;
   var doc2 = new DOMParser().parseFromString(s, "text/xml");
@@ -107,16 +112,7 @@ ms.addSymbolPart = function(part) {
   }
   return ms;
 };
-ms.BBox = require("./ms/bbox.js");
-ms.ColorMode = function(civilian, friend, hostile, neutral, unknown) {
-  var o = {};
-  o.Civilian = civilian;
-  o.Friend = friend;
-  o.Hostile = hostile;
-  o.Neutral = neutral;
-  o.Unknown = unknown;
-  return o;
-};
+
 ms.getColorMode = function(mode) {
   var c = this._colorModes[mode];
   // Clone the mode and return the clone
@@ -202,6 +198,16 @@ ms.setSymbolParts = function(parts) {
   this._symbolParts = parts;
   return ms;
 };
-ms.setStandard = require("./ms/setstandard.js");
+ms.setStandard = function(standard) {
+  if (standard == "2525") {
+    this._STD2525 = true;
+    return true;
+  }
+  if (standard == "APP6") {
+    this._STD2525 = false;
+    return true;
+  }
+  return false;
+};
 
-module.exports = ms;
+export { ms };
