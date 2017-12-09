@@ -5,12 +5,12 @@ export default function isValid(extended) {
   if (extended) {
     return {
       drawInstructions: drawInstructions,
-      icon: this._validIcon,
+      icon: this.validIcon,
       mobility: this.metadata.mobility != undefined
     };
   } else {
     return (
-      drawInstructions && this._validIcon && this.metadata.mobility != undefined
+      drawInstructions && this.validIcon && this.metadata.mobility != undefined
     );
   }
 }

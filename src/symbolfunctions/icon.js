@@ -250,7 +250,7 @@ export default function icon() {
           )
         ) {
           drawArray2.push(undefinedIcon);
-          this._validIcon = false;
+          this.validIcon = false;
           //console.log('Invalid icon code in SIDC: ' + this.options.sidc);
         }
       } else {
@@ -331,7 +331,7 @@ export default function icon() {
           )
         ) {
           drawArray2.push(undefinedIcon);
-          this._validIcon = false;
+          this.validIcon = false;
           //console.log("Invalid icon code in SIDC: " + this.options.sidc);
         }
       }

@@ -23,7 +23,7 @@ export default function setOptions() {
     }
   }
   // Reset if the icon is valid
-  this._validIcon = true;
+  this.validIcon = true;
 
   //Updating the object with properties of the marker
   this.metadata = this.getProperties();
@@ -97,7 +97,7 @@ export default function setOptions() {
       y: this.metadata.baseGeometry.bbox.y2 + hqStafLength
     };
   }
-  this.markerAnchor = {
+  this.symbolAnchor = {
     x:
       (anchor.x -
         this.bbox.x1 +
