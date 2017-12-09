@@ -1,5 +1,5 @@
-const { assert } = require("chai");
-const ms = require("../src/index");
+import { assert } from "chai";
+import ms from "../src/index";
 
 describe("ms", () => {
   const publicApiMethods = {
