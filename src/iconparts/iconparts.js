@@ -3948,8 +3948,11 @@ export default function iconparts(
   ];
   icn["SU.IC.SEA MINE"] = {
     type: "path",
-    fill: _STD2525 && !monoColor ? colors.iconColor.Hostile : iconFillColor,
-    stroke: _STD2525 && !monoColor ? black : iconColor,
+    fill:
+      (_STD2525 || numberSIDC) && !monoColor
+        ? colors.iconColor.Hostile
+        : iconFillColor,
+    stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
     d:
       "M 115.9,73 126.5,62.4 137.1,73 126.5,83.6 m -53,0 L 62.9,73 73.5,62.4 84.1,73 m 8.4,-3 0,-15 15,0 0,15 m 22.5,30 c 0,16.6 -13.4,30 -30,30 -16.6,0 -30,-13.4 -30,-30 0,-16.6 13.4,-30 30,-30 C 116.6,70 130,83.4 130,100 z"
   };
@@ -3957,8 +3960,11 @@ export default function iconparts(
     icn["SU.IC.SEA MINE"],
     {
       type: "path",
-      fill: _STD2525 && !monoColor ? colors.iconColor.Hostile : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor
+          ? colors.iconColor.Hostile
+          : iconFillColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z"
     }
   ];
@@ -3966,8 +3972,11 @@ export default function iconparts(
     icn["SU.IC.SEA MINE"],
     {
       type: "path",
-      fill: _STD2525 && !monoColor ? colors.iconColor.Hostile : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor
+          ? colors.iconColor.Hostile
+          : iconFillColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75.5,136.8 49,0 M 100,124.5 l 0,12.3"
     }
   ];
@@ -3976,7 +3985,7 @@ export default function iconparts(
     {
       type: "path",
       fill: false,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"
     }
   ];
@@ -3987,8 +3996,10 @@ export default function iconparts(
       fill:
         numberSIDC && alternateMedal
           ? ""
-          : _STD2525 && !monoColor ? colors.iconColor.Hostile : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+          : (_STD2525 || numberSIDC) && !monoColor
+            ? colors.iconColor.Hostile
+            : iconFillColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 100,128 -10,15 20,0 z"
     }
   ];
@@ -3997,7 +4008,7 @@ export default function iconparts(
     {
       type: "path",
       fill: false,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 130,100 15,0 M 70,100 l -15,0"
     }
   ];
@@ -4006,7 +4017,10 @@ export default function iconparts(
     {
       type: "text",
       stroke: false,
-      fill: _STD2525 && !monoColor && !alternateMedal ? black : white,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor && !alternateMedal
+          ? black
+          : white,
       x: 100,
       y: 110,
       fontsize: 35,
@@ -4018,7 +4032,10 @@ export default function iconparts(
     {
       type: "text",
       stroke: false,
-      fill: _STD2525 && !monoColor && !alternateMedal ? black : white,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor && !alternateMedal
+          ? black
+          : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -4029,17 +4046,20 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(0, 130, 24)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d:
         "M 115.9,73 126.5,62.4 137.1,73 126.5,83.6 m -53,0 L 62.9,73 73.5,62.4 84.1,73 m 8.4,-3 0,-15 15,0 0,15 m 22.5,30 c 0,16.6 -13.4,30 -30,30 -16.6,0 -30,-13.4 -30,-30 0,-16.6 13.4,-30 30,-30 C 116.6,70 130,83.4 130,100 z"
     },
     {
       type: "text",
       stroke: false,
-      fill: _STD2525 && !monoColor && !alternateMedal ? black : white,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor && !alternateMedal
+          ? black
+          : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -4050,7 +4070,7 @@ export default function iconparts(
       : {
           type: "text",
           stroke: false,
-          fill: _STD2525 && !monoColor ? black : iconColor,
+          fill: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
           x: 150,
           y: 46,
           fontsize: 40,
@@ -4062,10 +4082,10 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(0, 130, 24)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z"
     }
   ];
@@ -4074,10 +4094,10 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(0, 130, 24)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75.5,136.8 49,0 M 100,124.5 l 0,12.3"
     }
   ];
@@ -4086,7 +4106,7 @@ export default function iconparts(
     {
       type: "path",
       fill: false,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"
     }
   ];
@@ -4095,20 +4115,20 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(0, 130, 24)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 100,128 -10,15 20,0 z"
     }
   ];
   icn["SU.IC.SEA MINE DECOY"] = {
     type: "path",
     fill:
-      _STD2525 && !monoColor
+      (_STD2525 || numberSIDC) && !monoColor
         ? alternateMedal ? black : "rgb(0, 130, 24)"
         : iconFillColor,
-    stroke: _STD2525 && !monoColor ? black : iconColor,
+    stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
     d:
       "m 106.6,101.6 0,26.3 -13.1,-13.1 z m -19.7,0 0,26.3 -13.1,-13.1 z m 39.4,0 0,26.3 -13.1,-13.1 13.1,-13.1 M 100,75.3 c -14.5,0 -26.3,11.8 -26.3,26.3 l 52.5,0 C 126.3,87.1 114.5,75.3 100,75.3 z m -6.6,0 0,-13.1 13.1,0 0,13.1 m -29.8,12.3 -9.3,-9.3 9.3,-9.3 9.3,9.3 m 27.9,0 9.3,-9.3 9.3,9.3 -9.3,9.3"
   };
@@ -4117,10 +4137,10 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(0, 130, 24)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z"
     }
   ];
@@ -4129,18 +4149,21 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(0, 130, 24)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75,140 50,0 M 100,100 l 0,40"
     }
   ];
   icn["SU.IC.SEA MINE NEUTRALIZED"] = [
     {
       type: "path",
-      fill: _STD2525 && !monoColor ? colors.iconColor.Neutral : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor
+          ? colors.iconColor.Neutral
+          : iconFillColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d:
         "M 115.9,73 126.5,62.4 137.1,73 126.5,83.6 m -53,0 L 62.9,73 73.5,62.4 84.1,73 m 8.4,-3 0,-15 15,0 0,15 m 22.5,30 c 0,16.6 -13.4,30 -30,30 -16.6,0 -30,-13.4 -30,-30 0,-16.6 13.4,-30 30,-30 C 116.6,70 130,83.4 130,100 z"
     },
@@ -4155,8 +4178,11 @@ export default function iconparts(
     icn["SU.IC.SEA MINE NEUTRALIZED"],
     {
       type: "path",
-      fill: _STD2525 && !monoColor ? colors.iconColor.Neutral : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor
+          ? colors.iconColor.Neutral
+          : iconFillColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z"
     }
   ];
@@ -4164,8 +4190,11 @@ export default function iconparts(
     icn["SU.IC.SEA MINE NEUTRALIZED"],
     {
       type: "path",
-      fill: _STD2525 && !monoColor ? colors.iconColor.Neutral : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor
+          ? colors.iconColor.Neutral
+          : iconFillColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75.5,136.8 49,0 M 100,124.5 l 0,12.3"
     }
   ];
@@ -4174,7 +4203,7 @@ export default function iconparts(
     {
       type: "path",
       fill: false,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"
     }
   ];
@@ -4182,8 +4211,11 @@ export default function iconparts(
     icn["SU.IC.SEA MINE NEUTRALIZED"],
     {
       type: "path",
-      fill: _STD2525 && !monoColor ? colors.iconColor.Neutral : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor
+          ? colors.iconColor.Neutral
+          : iconFillColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 100,128 -10,15 20,0 z"
     }
   ];
@@ -4192,7 +4224,7 @@ export default function iconparts(
     {
       type: "path",
       fill: false,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 130,100 15,0 M 70,100 l -15,0"
     }
   ];
@@ -4200,17 +4232,20 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(255,255,0)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d:
         "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z"
     },
     {
       type: "text",
       stroke: false,
-      fill: _STD2525 && !monoColor && !alternateMedal ? black : white,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor && !alternateMedal
+          ? black
+          : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -4222,10 +4257,10 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(255,255,0)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z"
     }
   ];
@@ -4234,10 +4269,10 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(255,255,0)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75.5,136.8 49,0 M 100,124.5 l 0,12.3"
     }
   ];
@@ -4246,7 +4281,7 @@ export default function iconparts(
     {
       type: "path",
       fill: false,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"
     }
   ];
@@ -4254,17 +4289,20 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(0, 130, 24)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : false,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : false,
       d:
         "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z"
     },
     {
       type: "text",
       stroke: false,
-      fill: _STD2525 && !monoColor && !alternateMedal ? black : white,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor && !alternateMedal
+          ? black
+          : white,
       x: 100,
       y: 105,
       fontsize: 18,
@@ -4275,10 +4313,10 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(255,141,42)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d:
         "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z"
     },
@@ -4287,7 +4325,7 @@ export default function iconparts(
       : {
           type: "text",
           stroke: false,
-          fill: _STD2525 && !monoColor ? black : iconColor,
+          fill: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
           x: 100,
           y: 112,
           fontsize: 30,
@@ -4299,10 +4337,10 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(255,141,42)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z"
     }
   ];
@@ -4311,10 +4349,10 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(0, 130, 24)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75.5,136.8 49,0 M 100,124.5 l 0,12.3"
     }
   ];
@@ -4323,14 +4361,15 @@ export default function iconparts(
     {
       type: "path",
       fill: false,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"
     }
   ];
   icn["SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 1"] = {
     type: "text",
     stroke: false,
-    fill: _STD2525 && !monoColor && !alternateMedal ? black : white,
+    fill:
+      (_STD2525 || numberSIDC) && !monoColor && !alternateMedal ? black : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -4339,7 +4378,8 @@ export default function iconparts(
   icn["SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 2"] = {
     type: "text",
     stroke: false,
-    fill: _STD2525 && !monoColor && !alternateMedal ? black : white,
+    fill:
+      (_STD2525 || numberSIDC) && !monoColor && !alternateMedal ? black : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -4348,7 +4388,8 @@ export default function iconparts(
   icn["SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 3"] = {
     type: "text",
     stroke: false,
-    fill: _STD2525 && !monoColor && !alternateMedal ? black : white,
+    fill:
+      (_STD2525 || numberSIDC) && !monoColor && !alternateMedal ? black : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -4357,7 +4398,8 @@ export default function iconparts(
   icn["SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 4"] = {
     type: "text",
     stroke: false,
-    fill: _STD2525 && !monoColor && !alternateMedal ? black : white,
+    fill:
+      (_STD2525 || numberSIDC) && !monoColor && !alternateMedal ? black : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -4366,7 +4408,8 @@ export default function iconparts(
   icn["SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 5"] = {
     type: "text",
     stroke: false,
-    fill: _STD2525 && !monoColor && !alternateMedal ? black : white,
+    fill:
+      (_STD2525 || numberSIDC) && !monoColor && !alternateMedal ? black : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -4377,17 +4420,20 @@ export default function iconparts(
       type: "path",
       strokedasharray: "8,4",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(255,255,0)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d:
         "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z"
     },
     {
       type: "text",
       stroke: false,
-      fill: _STD2525 && !monoColor && !alternateMedal ? black : white,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor && !alternateMedal
+          ? black
+          : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -4399,10 +4445,10 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(255,255,0)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z"
     }
   ];
@@ -4411,10 +4457,10 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(255,255,0)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75.5,136.8 49,0 M 100,124.5 l 0,12.3"
     }
   ];
@@ -4423,7 +4469,7 @@ export default function iconparts(
     {
       type: "path",
       fill: false,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"
     }
   ];
@@ -4431,17 +4477,20 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(255,255,0)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d:
         "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z"
     },
     {
       type: "text",
       stroke: false,
-      fill: _STD2525 && !monoColor && !alternateMedal ? black : white,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor && !alternateMedal
+          ? black
+          : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -4451,15 +4500,21 @@ export default function iconparts(
   icn["SU.IC.SEA MINE GENERAL OBSTRUCTOR NEUTRALIZED"] = [
     {
       type: "path",
-      fill: _STD2525 && !monoColor ? colors.iconColor.Neutral : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor
+          ? colors.iconColor.Neutral
+          : iconFillColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d:
         "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z"
     },
     {
       type: "text",
       stroke: false,
-      fill: _STD2525 && !monoColor && !alternateMedal ? black : white,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor && !alternateMedal
+          ? black
+          : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -4476,17 +4531,20 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(0, 130, 24)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d:
         "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z"
     },
     {
       type: "text",
       stroke: false,
-      fill: _STD2525 && !monoColor && !alternateMedal ? black : white,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor && !alternateMedal
+          ? black
+          : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -4498,10 +4556,10 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(0, 130, 24)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z"
     }
   ];
@@ -4510,10 +4568,10 @@ export default function iconparts(
     {
       type: "path",
       fill:
-        _STD2525 && !monoColor
+        (_STD2525 || numberSIDC) && !monoColor
           ? alternateMedal ? black : "rgb(0, 130, 24)"
           : iconFillColor,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75.5,136.8 49,0 M 100,124.5 l 0,12.3"
     }
   ];
@@ -4522,7 +4580,7 @@ export default function iconparts(
     {
       type: "path",
       fill: false,
-      stroke: _STD2525 && !monoColor ? black : iconColor,
+      stroke: (_STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"
     }
   ];
@@ -4531,13 +4589,19 @@ export default function iconparts(
       type: "path",
       strokedasharray: "8,4",
       fill: false,
-      stroke: _STD2525 && !monoColor ? colors.iconColor.Hostile : iconColor,
+      stroke:
+        (_STD2525 || numberSIDC) && !monoColor
+          ? colors.iconColor.Hostile
+          : iconColor,
       d: "m 85,65 30,0 20,20 0,30 -20,20 -30,0 -20,-20 0,-30 z"
     },
     {
       type: "text",
       stroke: false,
-      fill: _STD2525 && !monoColor ? colors.iconColor.Hostile : iconColor,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor
+          ? colors.iconColor.Hostile
+          : iconColor,
       x: 100,
       y: 110,
       fontsize: 30,
@@ -4548,13 +4612,19 @@ export default function iconparts(
     {
       type: "path",
       fill: false,
-      stroke: _STD2525 && !monoColor ? colors.iconColor.Neutral : iconColor,
+      stroke:
+        (_STD2525 || numberSIDC) && !monoColor
+          ? colors.iconColor.Neutral
+          : iconColor,
       d: "m 70,70 0,60 60,0 0,-60 z"
     },
     {
       type: "text",
       stroke: false,
-      fill: _STD2525 && !monoColor ? colors.iconColor.Neutral : iconColor,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor
+          ? colors.iconColor.Neutral
+          : iconColor,
       x: 100,
       y: 122,
       fontsize: 60,
@@ -4565,13 +4635,19 @@ export default function iconparts(
     {
       type: "path",
       fill: false,
-      stroke: _STD2525 && !monoColor ? colors.iconColor.Neutral : iconColor,
+      stroke:
+        (_STD2525 || numberSIDC) && !monoColor
+          ? colors.iconColor.Neutral
+          : iconColor,
       d: "m 70,70 0,60 60,0 0,-60 z"
     },
     {
       type: "text",
       stroke: false,
-      fill: _STD2525 && !monoColor ? colors.iconColor.Neutral : iconColor,
+      fill:
+        (_STD2525 || numberSIDC) && !monoColor
+          ? colors.iconColor.Neutral
+          : iconColor,
       x: 100,
       y: 122,
       fontsize: 60,
