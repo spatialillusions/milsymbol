@@ -1,18 +1,9 @@
 import { ms } from "../ms.js";
-
 function Symbol() {
   //=======================================================================================
   this.options = {}; //initiate options object.
   this.style = {}; //initiate style object.
-  /*if (typeof option1 != "object") {
-    // The SIDC for the symbol.
-    this.options.sidc = option1;
-  } else {
-    // Enable to initiate directly with an options object.
-    options = option1;
-  }*/
   // Setting default values for options
-  // TODO place all of these in a style object
   this.style.size = 100; // The symbol size is actually the L variable in the symbols so the symbol will be larger than this size.
   this.style.fill = true; // Should the icon be filled with color
   this.style.fillOpacity = 1; // Possibility to change the fill opacity
@@ -30,7 +21,6 @@ function Symbol() {
   this.style.infoSize = 40; // Relative size of the info fields
   this.style.alternateMedal = false; // 2525D lets you choose between MEDAL icn and alternate MEDAL icn for Mines; default is set to MEDAL.
 
-  // TODO place all of these in a fields object
   this.options.quantity = ""; // FieldID C
   this.options.reinforcedReduced = ""; // FieldID F
   this.options.staffComments = ""; // FieldID G
@@ -75,8 +65,6 @@ function Symbol() {
     this.setOptions.apply(this, arguments);
   }
 }
-
-// This is here so that we have it initiated in this.symbol from the beginning
 
 import asCanvas from "./symbol/ascanvas.js";
 Symbol.prototype.asCanvas = asCanvas;
