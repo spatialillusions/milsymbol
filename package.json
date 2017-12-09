@@ -15,7 +15,7 @@
     "build": "npm run bundle && npm run minify",
     "bundle": "rollup -c",
     "minify":
-      "uglifyjs dist/milsymbol.development.js -o dist/milsymbol.js --compress --mangle --source-map",
+      "uglifyjs dist/milsymbol.development.js -o dist/milsymbol.js --comments --compress --mangle --source-map",
     "test": "mocha -r @std/esm test/.setup.js --recursive test "
   },
   "repository": {
