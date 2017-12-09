@@ -29,7 +29,7 @@ For updates and more information go to http://www.spatialillusions.com
 
 ==========================================================================================
 */
-
+import { version } from "../package.json";
 var ms = new function() {
   this._colorModes = {};
   this._dashArrays = {
@@ -49,7 +49,7 @@ var ms = new function() {
   this._symbolParts = [];
 
   this.autoSVG = false;
-  this.version = "1.3.3";
+  this.version = version;
 
   if (typeof console === "object") {
     console.info(

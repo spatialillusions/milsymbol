@@ -1,3 +1,4 @@
+import json from "rollup-plugin-json";
 export default {
   input: "src/index.js",
   output: {
@@ -7,5 +8,6 @@ export default {
       id: "milsymbol"
     }
   },
-  name: "ms"
+  name: "ms",
+  plugins: [json()]
 };
