@@ -1,6 +1,8 @@
-var ms = require("../ms.js");
+//import * as milsymbol from "../ms.js";
+import { ms } from "../ms.js";
+//var ms = require("../ms.js");
 
-module.exports = function(
+export default function iconparts(
   properties,
   colors,
   _STD2525,
@@ -6453,4 +6455,4 @@ module.exports = function(
     defaultProperties.call(this, icn[key]);
   }
   return icn;
-};
+}

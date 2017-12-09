@@ -1,2 +1,2 @@
-var ms = require("../ms.js");
-module.exports = new ms.ColorMode("white", "white", "white", "white", "white");
+import { ms } from "../ms.js";
+export default new ms.ColorMode("white", "white", "white", "white", "white");

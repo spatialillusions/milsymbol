@@ -1,6 +1,7 @@
-var ms = require("../ms.js");
+//var ms = require("../ms.js");
+import { ms } from "../ms.js";
 
-module.exports = {
+export default {
   AirHostile: {
     g: { type: "path", d: "M 45,150 L45,70 100,20 155,70 155,150" },
     bbox: new ms.BBox({ x1: 45, y1: 20, x2: 45 + 110, y2: 20 + 130 })

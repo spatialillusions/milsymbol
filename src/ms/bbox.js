@@ -1,4 +1,4 @@
-module.exports = function(box) {
+export function bbox(box) {
   if (typeof box === "undefined") {
     box = {};
   }
@@ -27,4 +27,4 @@ module.exports = function(box) {
       return this;
     }
   };
-};
+}

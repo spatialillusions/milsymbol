@@ -6,7 +6,8 @@ module.exports = {
     mocha: true
   },
   parserOptions: {
-    ecmaVersion: 6
+    ecmaVersion: 6,
+    sourceType: "module"
   },
   plugins: ["prettier"],
   rules: {

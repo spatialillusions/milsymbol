@@ -1,6 +1,6 @@
-const { assert, expect } = require("chai");
-const ms = require("../src/index");
-const sampleSymbolSvgs = require("./sample-symbol-svgs");
+import { assert, expect } from "chai";
+import ms from "../src/index";
+import sampleSymbolSvgs from "./sample-symbol-svgs";
 
 describe("ms.Symbol", () => {
   // TODO: pass options
