@@ -131,10 +131,10 @@ import signalsintelligencenumber from "./numbersidc/sidc/signalsintelligence.js"
 ms.addSIDCicons(signalsintelligencenumber, "number");
 
 import cyberspacenumber from "./numbersidc/sidc/cyberspace.js";
-ms.addSIDCicons(cyberspacenumber, "letter");
+ms.addSIDCicons(cyberspacenumber, "number");
 
 import dismountedindividualnumber from "./numbersidc/sidc/dismountedindividual.js";
-ms.addSIDCicons(dismountedindividualnumber, "letter");
+ms.addSIDCicons(dismountedindividualnumber, "number");
 
 //*/
 /* ***************************************************************************************
