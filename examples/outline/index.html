@@ -57,7 +57,7 @@
       var color = document.getElementById("outlineColor")[document.getElementById("outlineColor").selectedIndex].value;
       var outline = document.getElementById("outlineWidth")[document.getElementById("outlineWidth").selectedIndex].value;
 
-      var marker = new ms.Symbol("sfgpewrh--mt", {
+      var symbol = new ms.Symbol("sfgpewrh--mt", {
         size: 35,
         quantity: 200,
         staffComments: "for reinforcements".toUpperCase(),
@@ -70,10 +70,10 @@
         outlineWidth: outline
       });
 
-      document.getElementById("SVG").innerHTML = marker.asSVG();
+      document.getElementById("SVG").innerHTML = symbol.asSVG();
 
       document.getElementById("Canvas").replaceChild(
-        marker.asCanvas(),
+        symbol.asCanvas(),
         document.getElementById("Canvas").firstChild);
     }
 

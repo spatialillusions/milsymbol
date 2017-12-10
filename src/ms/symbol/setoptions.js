@@ -25,7 +25,7 @@ export default function setOptions() {
   // Reset if the icon is valid
   this.validIcon = true;
 
-  //Updating the object with properties of the marker
+  //Updating the object with metadata of the symbol
   this.metadata = this.getProperties();
 
   //Updating the object with colors
@@ -34,7 +34,7 @@ export default function setOptions() {
   this.drawInstructions = [];
 
   this.bbox = new ms.BBox();
-  //Processing all parts of the marker, adding them to the drawinstruction and updating the boundingbox
+  //Processing all parts of the symbol, adding them to the drawinstruction and updating the boundingbox
   for (i in ms._symbolParts) {
     if (!ms._symbolParts.hasOwnProperty(i)) continue;
     var m = ms._symbolParts[i].call(this);
