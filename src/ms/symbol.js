@@ -45,11 +45,13 @@ function Symbol() {
   this.style.fill = true; // Should the icon be filled with color
   this.style.fillOpacity = 1; // Possibility to change the fill opacity
   this.style.frame = true; // Should the icon be framed
+  this.style.frameColor = "";
   this.style.hqStafLength = 0; // The default length of the HQ staf
   this.style.strokeWidth = 4; // The stroke width of he icon frame.
   this.style.outlineColor = "rgb(239, 239, 239)"; // Color of the outline
   this.style.outlineWidth = 0; // Width of the outline.
   this.style.icon = true; // Should we display the icon?
+  this.style.iconColor = "";
   this.style.monoColor = ""; // Should the icon be monocromatic and if so what color
   this.style.civilianColor = true; // Should we use the Civilian Purple defined in 2525? (We set this to default because I like the color.
   this.style.colorMode = "Light"; // 2525C Allows you to use Dark; Medium or Light colors. The values you can set are "Dark";"Medium" or "Light"

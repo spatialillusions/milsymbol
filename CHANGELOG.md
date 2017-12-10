@@ -12,6 +12,7 @@
 
 * Added support for the field country as specified in APP-6 D
 * Added support for the field installationComposition as specified in APP-6 D
+* Added possiblity to control more color on symbol level
 
 ### Changed
 

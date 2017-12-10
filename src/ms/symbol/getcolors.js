@@ -4,8 +4,14 @@ export default function getColors() {
     typeof this.style.colorMode === "object"
       ? this.style.colorMode
       : ms.getColorMode(this.style.colorMode);
-  var baseFrameColor = ms.getColorMode("FrameColor");
-  var baseIconColor = ms.getColorMode("IconColor");
+  var baseFrameColor =
+    typeof this.style.frameColor === "object"
+      ? this.style.frameColor
+      : ms.getColorMode("FrameColor");
+  var baseIconColor =
+    typeof this.style.iconColor === "object"
+      ? this.style.iconColor
+      : ms.getColorMode("IconColor");
   var baseIconFillColor = baseFillColor;
   var baseColorBlack = ms.getColorMode("Black");
   var baseColorWhite = ms.getColorMode("White");
@@ -43,9 +49,13 @@ export default function getColors() {
     black: baseColorBlack,
     white: baseColorWhite
   };
+  //console.info(baseFrameColor);
   //Turn of the frame
   if (this.metadata.frame /* || (!this.metadata.frame && !this.style.icon)*/) {
-    colors.frameColor = baseColorBlack;
+    colors.frameColor =
+      typeof this.style.frameColor === "object"
+        ? this.style.frameColor
+        : baseColorBlack;
   } else {
     colors.frameColor = baseColorNone;
   }
@@ -56,7 +66,10 @@ export default function getColors() {
       !this.metadata.frame && !(!this.metadata.frame && !this.style.icon)
         ? baseColorNone
         : baseFillColor;
-    colors.iconColor = baseColorBlack;
+    colors.iconColor =
+      typeof this.style.iconColor === "object"
+        ? this.style.iconColor
+        : baseColorBlack;
     //Dirty override, we want colors in the icon if we just turn off the frame. This is a special fix for filled icn in 2525.
     colors.iconFillColor = !this.metadata.frame
       ? baseFillColor
