@@ -167,7 +167,8 @@ select {
 }
 
 #selectionstuff {
-	margin-top: 280px;
+  max-width: 910px;
+	margin-top: 300px;
 }
 
 .tabs {
@@ -284,25 +285,25 @@ td {
 
   	<div id="symbolOuter">
         <div style="padding:5px;">
-            <div id="symbolstuff" class="main">
-                <input type="text" id="SIDC" onChange="sidcCreatorInit();drawSymbol();" style="color: rgb(0, 0, 0);font-size: 1.1rem;font-weight: normal;margin-top: 0.5rem;margin-bottom: 0.2rem;">
-                
+            <div id="symbolstuff" class="main" style="text-align:center;">
+
               <table style="width:100%;padding: 10px;">
                 <tr>
-                  <td style="width:50%;vertical-align:top;">
-          Canvas
+                  <td style="width:50%;vertical-align:top;text-align:center;">
+                    <h1>Canvas</h1>
                     <div  id="CanvasSymbol">
                     </div>
-                    
                   </td>
-                  <td style="width:50%;">
-          SVG				
-          <div  id="SvgSymbol">
-          </div>
+                  <td style="width:50%;text-align:center;">
+                    <h1>SVG</h1>
+                    <div  id="SvgSymbol">
+                    </div>
                   </td>
                 </tr>
               </table>
-          
+
+              <input type="text" id="SIDC" onChange="sidcCreatorInit();drawSymbol();" style="color: rgb(0, 0, 0);font-size: 1.1rem;font-weight: normal;margin-top: 0.5rem;margin-bottom: 0.2rem;">
+              
             </div>
         </div>
       </div>
@@ -598,7 +599,7 @@ td {
           <option >Fuchsia</option>
           <option >Purple</option>
         </select>  </td><td> A color that is either a keyword or a numerical RGB specification. The color of the outline of the symbol, if any. Defaults to an off-white color. </td></tr><tr><td>
-      outlineWidth </td><td>           <input id="outlineWidth" type="range" min="1" max="10" step="1" value="0" onchange="drawSymbol();this.nextSibling.innerHTML = this.value;"/><span>0</span>
+      outlineWidth </td><td>           <input id="outlineWidth" type="range" min="0" max="10" step="1" value="0" onchange="drawSymbol();this.nextSibling.innerHTML = this.value;"/><span>0</span>
       </td><td>The width of the outline of the symbol, if any.</td></tr><tr><td> 
       size </td><td>
           <input id="Size" type="range" min="1" max="500" step="1" value="100" onchange="drawSymbol();this.nextSibling.innerHTML = this.value;"/><span>100</span>
@@ -655,7 +656,7 @@ td {
 
 
 	<script>
-	var mySymbol = new ms.Symbol(''), activeStandard, standardVersion;
+	var symbol = new ms.Symbol(''), activeStandard, standardVersion;
 
 	var image = document.createElement("img");
 	image.id = "ImageSymbol";
@@ -1019,14 +1020,14 @@ td {
 		window.location.hash = sidc;	
 		options.SIDC = sidc;
 		
-		mySymbol.setOptions(options);
+		symbol.setOptions(options);
 		
 		
-		document.getElementById("SvgSymbol").innerHTML = mySymbol.asSVG();
+		document.getElementById("SvgSymbol").innerHTML = symbol.asSVG();
 		
-		document.getElementById("ImageSymbol").style.width = mySymbol.getSize().width +'px';
-		document.getElementById("ImageSymbol").style.height = mySymbol.getSize().height +'px';
-		document.getElementById("ImageSymbol").src = mySymbol.asCanvas(window.devicePixelRatio).toDataURL();
+		document.getElementById("ImageSymbol").style.width = symbol.getSize().width +'px';
+		document.getElementById("ImageSymbol").style.height = symbol.getSize().height +'px';
+		document.getElementById("ImageSymbol").src = symbol.asCanvas(window.devicePixelRatio).toDataURL();
 		
 	}
 	
