@@ -46,6 +46,7 @@ type SymbolOptions = {
   monoColor?: string;
   outlineColor?: ColorMode | string;
   outlineWidth?: number;
+  simpleStatusModifier?: boolean;
   strokeWidth?: number;
   size?: number;
 };

@@ -8,7 +8,12 @@ export default function statusmodifier() {
   var y2 = bbox.y2;
 
   if (this.metadata.condition) {
-    if (this.metadata.fill && this.style.monoColor === "") {
+    console.info(this.style.simpleStatusModifier);
+    if (
+      this.metadata.fill &&
+      this.style.monoColor === "" &&
+      !this.style.simpleStatusModifier
+    ) {
       var colors = {
         FullyCapable: "rgb(0,255,0)",
         Damaged: "rgb(255,255,0)",

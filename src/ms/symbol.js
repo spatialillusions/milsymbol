@@ -42,6 +42,7 @@ function Symbol() {
 
   this.style = {}; //initiate style object.
   this.style.size = 100; // The symbol size is actually the L variable in the symbols so the symbol will be larger than this size.
+  this.style.alternateMedal = false; // 2525D lets you choose between MEDAL icn and alternate MEDAL icn for Mines; default is set to MEDAL.
   this.style.fill = true; // Should the icon be filled with color
   this.style.fillOpacity = 1; // Possibility to change the fill opacity
   this.style.frame = true; // Should the icon be framed
@@ -58,7 +59,7 @@ function Symbol() {
   this.style.infoColor = ""; // Changes the color of the info fields
   this.style.infoFields = true; // If you have set all info fields but don't want the displayed; then just set this to false.
   this.style.infoSize = 40; // Relative size of the info fields
-  this.style.alternateMedal = false; // 2525D lets you choose between MEDAL icn and alternate MEDAL icn for Mines; default is set to MEDAL.
+  this.style.simpleStatusModifier = false; // Force use of simple status modifiers
 
   this.symbolAnchor = { x: 50, y: 50 }; // The anchor point for the current symbol
   this.validIcon = true; // If we were able to find a valid icon or not.
