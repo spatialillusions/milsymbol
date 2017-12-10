@@ -55,16 +55,31 @@ export default function modifier() {
   }
   if (this.metadata.taskForce) {
     //TASK FORCE
+    var width = {
+      "Corps/MEF": 110,
+      Army: 145,
+      "Army Group/front": 180,
+      "Region/Theater": 215
+    };
+    width = width[this.metadata.echelon] || 90;
     geom = {
       type: "path",
       d:
-        "M55," +
+        "M" +
+        (100 - width / 2) +
+        "," +
         bbox.y1 +
-        " L55," +
+        " L" +
+        (100 - width / 2) +
+        "," +
         (bbox.y1 - 40) +
-        " 145," +
+        " " +
+        (100 + width / 2) +
+        "," +
         (bbox.y1 - 40) +
-        " 145," +
+        " " +
+        (100 + width / 2) +
+        "," +
         bbox.y1
     };
 
@@ -80,6 +95,8 @@ export default function modifier() {
       );
 
     drawArray2.push(geom);
+    gbbox.x1 = Math.min(bbox.x1, 100 - width / 2);
+    gbbox.x2 = Math.max(bbox.x2, 100 + width / 2);
     gbbox.y1 = bbox.y1 - 40;
   }
   if (this.metadata.installation) {
