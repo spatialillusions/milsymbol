@@ -4,6 +4,9 @@ export default function modifier() {
   var drawArray1 = [];
   var drawArray2 = [];
   var bbox = new ms.BBox(this.metadata.baseGeometry.bbox); // clone the bbox
+  var color = this.style.frameColor
+    ? this.style.frameColor[this.metadata.affiliation]
+    : this.colors.iconColor[this.metadata.affiliation];
   var gbbox = new ms.BBox(); // bounding box for the added geometries
   var geom;
   if (this.metadata.headquarters) {
@@ -124,7 +127,7 @@ export default function modifier() {
       gapFiller = 2;
     geom = {
       type: "path",
-      fill: this.colors.frameColor[this.metadata.affiliation],
+      fill: color,
       d:
         "M85," +
         (bbox.y1 + gapFiller - this.style.strokeWidth / 2) +
@@ -210,7 +213,7 @@ export default function modifier() {
         g: [
           {
             type: "circle",
-            fill: this.colors.frameColor[this.metadata.affiliation],
+            fill: color,
             cx: 100,
             cy: bbox.y1 - 20,
             r: 7.5
@@ -222,14 +225,14 @@ export default function modifier() {
         g: [
           {
             type: "circle",
-            fill: this.colors.frameColor[this.metadata.affiliation],
+            fill: color,
             cx: 115,
             cy: bbox.y1 - 20,
             r: 7.5
           },
           {
             type: "circle",
-            fill: this.colors.frameColor[this.metadata.affiliation],
+            fill: color,
             cx: 85,
             cy: bbox.y1 - 20,
             r: 7.5
@@ -241,21 +244,21 @@ export default function modifier() {
         g: [
           {
             type: "circle",
-            fill: this.colors.frameColor[this.metadata.affiliation],
+            fill: color,
             cx: 100,
             cy: bbox.y1 - 20,
             r: 7.5
           },
           {
             type: "circle",
-            fill: this.colors.frameColor[this.metadata.affiliation],
+            fill: color,
             cx: 70,
             cy: bbox.y1 - 20,
             r: 7.5
           },
           {
             type: "circle",
-            fill: this.colors.frameColor[this.metadata.affiliation],
+            fill: color,
             cx: 130,
             cy: bbox.y1 - 20,
             r: 7.5
@@ -572,7 +575,7 @@ export default function modifier() {
         g: [
           {
             type: "path",
-            fill: this.colors.frameColor[this.metadata.affiliation],
+            fill: color,
             d:
               "M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M100,0 l5,5 -5,5 -5,-5 z"
           }
@@ -583,7 +586,7 @@ export default function modifier() {
         g: [
           {
             type: "path",
-            fill: this.colors.frameColor[this.metadata.affiliation],
+            fill: color,
             d:
               "M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M105,0 l-10,0 0,10 10,0 z M75,0 l5,5 -5,5 -5,-5 z  M125,0 l5,5 -5,5 -5,-5 z"
           }
@@ -632,15 +635,13 @@ export default function modifier() {
   //Assign fill, stroke and stroke-width
   for (var i = 0; i < drawArray1.length; i++) {
     if (!drawArray1[i].hasOwnProperty("fill")) drawArray1[i].fill = false;
-    if (!drawArray1[i].hasOwnProperty("stroke"))
-      drawArray1[i].stroke = this.colors.frameColor[this.metadata.affiliation];
+    if (!drawArray1[i].hasOwnProperty("stroke")) drawArray1[i].stroke = color;
     if (!drawArray1[i].hasOwnProperty("strokewidth"))
       drawArray1[i].strokewidth = this.style.strokeWidth;
   }
   for (i = 0; i < drawArray2.length; i++) {
     if (!drawArray2[i].hasOwnProperty("fill")) drawArray2[i].fill = false;
-    if (!drawArray2[i].hasOwnProperty("stroke"))
-      drawArray2[i].stroke = this.colors.frameColor[this.metadata.affiliation];
+    if (!drawArray2[i].hasOwnProperty("stroke")) drawArray2[i].stroke = color;
     if (!drawArray2[i].hasOwnProperty("strokewidth"))
       drawArray2[i].strokewidth = this.style.strokeWidth;
   }
