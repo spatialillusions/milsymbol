@@ -8,7 +8,6 @@ export default function statusmodifier() {
   var y2 = bbox.y2;
 
   if (this.metadata.condition) {
-    console.info(this.style.simpleStatusModifier);
     if (
       this.metadata.fill &&
       this.style.monoColor === "" &&
