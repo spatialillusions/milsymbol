@@ -44,7 +44,7 @@ type SymbolOptions = {
   infoFields?: boolean;
   infoSize?: number;
   monoColor?: string;
-  outlineColor?: string;
+  outlineColor?: ColorMode | string;
   outlineWidth?: number;
   strokeWidth?: number;
   size?: number;

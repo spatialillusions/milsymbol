@@ -46,7 +46,9 @@ export default function modifier() {
           geom,
           this.style.outlineWidth,
           this.style.strokeWidth,
-          this.style.outlineColor
+          typeof this.style.outlineColor === "object"
+            ? this.style.outlineColor[this.metadata.affiliation]
+            : this.style.outlineColor
         )
       );
 
@@ -90,7 +92,9 @@ export default function modifier() {
           geom,
           this.style.outlineWidth,
           this.style.strokeWidth,
-          this.style.outlineColor
+          typeof this.style.outlineColor === "object"
+            ? this.style.outlineColor[this.metadata.affiliation]
+            : this.style.outlineColor
         )
       );
 
@@ -142,7 +146,9 @@ export default function modifier() {
           geom,
           this.style.outlineWidth,
           this.style.strokeWidth,
-          this.style.outlineColor
+          typeof this.style.outlineColor === "object"
+            ? this.style.outlineColor[this.metadata.affiliation]
+            : this.style.outlineColor
         )
       );
 
@@ -177,7 +183,9 @@ export default function modifier() {
           geom,
           this.style.outlineWidth,
           this.style.strokeWidth,
-          this.style.outlineColor
+          typeof this.style.outlineColor === "object"
+            ? this.style.outlineColor[this.metadata.affiliation]
+            : this.style.outlineColor
         )
       );
 
@@ -439,7 +447,9 @@ export default function modifier() {
             { type: "translate", x: 0, y: -installationPadding, draw: geom },
             this.style.outlineWidth,
             this.style.strokeWidth,
-            this.style.outlineColor
+            typeof this.style.outlineColor === "object"
+              ? this.style.outlineColor[this.metadata.affiliation]
+              : this.style.outlineColor
           )
         );
       //geometry
@@ -590,7 +600,9 @@ export default function modifier() {
             { type: "translate", x: 0, y: bbox.y2, draw: geom },
             this.style.outlineWidth,
             this.style.strokeWidth,
-            this.style.outlineColor
+            typeof this.style.outlineColor === "object"
+              ? this.style.outlineColor[this.metadata.affiliation]
+              : this.style.outlineColor
           )
         );
       //geometry

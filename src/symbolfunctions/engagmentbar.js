@@ -78,7 +78,9 @@ export default function debug() {
           outline,
           this.style.outlineWidth,
           this.style.strokeWidth,
-          this.style.outlineColor
+          typeof this.style.outlineColor === "object"
+            ? this.style.outlineColor[this.metadata.affiliation]
+            : this.style.outlineColor
         )
       );
     }

@@ -93,7 +93,9 @@ export default function affliationdimension() {
         drawArray2,
         this.style.outlineWidth,
         this.style.strokeWidth,
-        this.style.outlineColor
+        typeof this.style.outlineColor === "object"
+          ? this.style.outlineColor[this.metadata.affiliation]
+          : this.style.outlineColor
       )
     );
   return { pre: drawArray1, post: drawArray2, bbox: bbox };
