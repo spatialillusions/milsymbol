@@ -3,17 +3,17 @@ import { ms } from "../ms.js";
 //var ms = require("../ms.js");
 
 export default function iconparts(
-  properties,
+  metadata,
   colors,
   _STD2525,
   monoColor,
   alternateMedal
 ) {
   var icn = {};
-  var frame = properties.frame;
-  var affiliation = properties.affiliation || "Friend";
-  var baseGeometry = properties.baseGeometry;
-  var numberSIDC = properties.numberSIDC;
+  var frame = metadata.frame;
+  var affiliation = metadata.affiliation || "Friend";
+  var baseGeometry = metadata.baseGeometry;
+  var numberSIDC = metadata.numberSIDC;
   //var fillColor = colors.fillColor[affiliation];
   var iconColor = colors.iconColor[affiliation];
   var iconFillColor = colors.iconFillColor[affiliation];
@@ -6494,7 +6494,7 @@ export default function iconparts(
     ms._iconParts[i].call(
       this,
       icn,
-      properties,
+      metadata,
       colors,
       _STD2525,
       monoColor,

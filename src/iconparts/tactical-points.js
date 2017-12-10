@@ -1,7 +1,7 @@
 // Icon parts for tactical points
 export default function(
   iconParts,
-  properties,
+  metadata,
   colors,
   STD2525,
   monoColor,
@@ -12,7 +12,7 @@ export default function(
   iconParts
   The existing object of icon parts
   
-  properties
+  metadata
   propterties object
   
   colors
@@ -25,14 +25,14 @@ export default function(
   true/false for sea mine stuff
   */
 
-  var affiliation = properties.affiliation || "Friend";
+  var affiliation = metadata.affiliation || "Friend";
   //If hostile and not monoColor, make it red, otherwise use the iconColor.
   var iconColor =
     affiliation == "Hostile" && !monoColor
       ? "rgb(255, 0, 0)"
       : colors.iconColor[affiliation];
 
-  var numberSIDC = properties.numberSIDC;
+  var numberSIDC = metadata.numberSIDC;
   var icn = {};
 
   icn["TP.DESTROY"] =
@@ -1688,7 +1688,7 @@ export default function(
       "m 40,65 0,70 120,0 0,-70 z m 70,35 c 0,5.523 -4.477,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.523,0 10,4.4772 10,10 z m 35,0 c 0,5.523 -4.477,10 -10,10 -5.523,0 -10,-4.477 -10,-10 0,-5.5228 4.477,-10 10,-10 5.523,0 10,4.4772 10,10 z m -70,0 c 0,5.523 -4.4772,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.5228,0 10,4.4772 10,10 z"
   };
   //This is to solve anticipated minefields... Don't we just love special cases...
-  if (properties.notpresent)
+  if (metadata.notpresent)
     icn["TP.MINEFIELDS STATIC"] = icn["TP.PLANNED MINEFIELD"];
   icn["TP.ANTITANK (AT) MINEFIELD"] = [
     { type: "path", fill: false, d: "m 40,65 0,70 120,0 0,-70 z" },

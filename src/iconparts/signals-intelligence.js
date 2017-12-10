@@ -1,7 +1,7 @@
 // Icon parts for SIGNALS INTELLIGENCE
 export default function(
   iconParts,
-  properties,
+  metadata,
   colors,
   STD2525,
   monoColor,
@@ -11,7 +11,7 @@ export default function(
   iconParts
   The existing object of icon parts
   
-  properties
+  metadata
   propterties object
   
   colors
@@ -42,11 +42,11 @@ export default function(
     };
   }
 
-  var affiliation = properties.affiliation || "Friend";
+  var affiliation = metadata.affiliation || "Friend";
   //If hostile and not monoColor, make it red, otherwise use the iconColor.
   var iconColor = colors.iconColor[affiliation];
 
-  //var numberSIDC = properties.numberSIDC;
+  //var numberSIDC = metadata.numberSIDC;
   var icn = {};
 
   // SIGNALS INTELLIGENCE ==========================================================

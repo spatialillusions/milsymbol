@@ -1,7 +1,7 @@
 // Icon parts for tactical points
 export default function(
   iconParts,
-  properties,
+  metadata,
   colors,
   STD2525,
   monoColor,
@@ -12,7 +12,7 @@ export default function(
   iconParts
   The existing object of icon parts
   
-  properties
+  metadata
   propterties object
   
   colors
@@ -25,11 +25,11 @@ export default function(
   true/false for sea mine stuff
   */
 
-  var affiliation = properties.affiliation || "Friend";
+  var affiliation = metadata.affiliation || "Friend";
   //If hostile and not monoColor, make it red, otherwise use the iconColor.
   var iconColor = colors.iconColor[affiliation];
 
-  //var numberSIDC = properties.numberSIDC;
+  //var numberSIDC = metadata.numberSIDC;
   var icn = {};
 
   icn["2525B.STN"] = {

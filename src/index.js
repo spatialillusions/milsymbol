@@ -41,8 +41,8 @@ ms.setColorMode("None", none);
 /* ***************************************************************************************
 Letter based SIDC
 *************************************************************************************** */
-import { properties as letterProperties } from "./lettersidc/properties.js";
-ms._getLetterProperties = letterProperties;
+import { metadata as letters_metadata } from "./lettersidc/metadata.js";
+ms._getLetterMetadata = letters_metadata;
 import { geticon as letterGetIcon } from "./lettersidc/geticon.js";
 ms._getLetterSIDCicn = letterGetIcon;
 
@@ -83,8 +83,8 @@ ms.addSIDCicons(tacticalpointsapp6letter, "letter");
 Number based SIDC
 *************************************************************************************** */
 
-import { properties as numberProperties } from "./numbersidc/properties.js";
-ms._getNumberProperties = numberProperties;
+import { metadata as numbers_metadata } from "./numbersidc/metadata.js";
+ms._getNumberMetadata = numbers_metadata;
 import { geticon as numberGetIcon } from "./numbersidc/geticon.js";
 ms._getNumberSIDCicn = numberGetIcon;
 

@@ -1,6 +1,6 @@
 import { ms } from "../../ms.js";
 export default function getProperties() {
-  var properties = {
+  var metadata = {
     activity: false, //Is it an Activity
     affiliation: "", //Affiliation it is shown as (Friend/Hostile...)
     baseAffilation: "", //Affiliation it belongs to (Friend/Hostile...)
@@ -73,52 +73,52 @@ export default function getProperties() {
   mapping.affiliation = ["Hostile", "Friend", "Neutral", "Unknown"];
   mapping.dimension = ["Air", "Ground", "Sea", "Subsurface"];
 
-  properties.context = mapping.context[0];
+  metadata.context = mapping.context[0];
 
   if (this.style.monoColor != "") {
-    properties.fill = false;
+    metadata.fill = false;
   }
   this.options.sidc = String(this.options.sidc)
     .replace(/\*/g, "-")
     .replace(/ /g, "");
 
-  properties.numberSIDC = !isNaN(this.options.sidc);
-  if (properties.numberSIDC) {
+  metadata.numberSIDC = !isNaN(this.options.sidc);
+  if (metadata.numberSIDC) {
     //This is for new number based SIDCs
 
-    if (typeof ms._getNumberProperties === "function") {
-      properties = ms._getNumberProperties.call(this, properties, mapping);
+    if (typeof ms._getNumberMetadata === "function") {
+      metadata = ms._getNumberMetadata.call(this, metadata, mapping);
     } else {
       console.warn(
-        "ms._getNumberProperties() is not present, you will need to load functionality for number based SIDCs"
+        "ms._getNumberMetadata() is not present, you will need to load functionality for number based SIDCs"
       );
     }
   } else {
     //This would be old letter based SIDCs
 
-    if (typeof ms._getLetterProperties === "function") {
-      properties = ms._getLetterProperties.call(this, properties, mapping);
+    if (typeof ms._getLetterMetadata === "function") {
+      metadata = ms._getLetterMetadata.call(this, metadata, mapping);
     } else {
       console.warn(
-        "ms._getLetterProperties() is not present, you will need to load functionality for letter based SIDCs"
+        "ms._getLetterMetadata() is not present, you will need to load functionality for letter based SIDCs"
       );
     }
   }
 
   if (
     ms._symbolGeometries.hasOwnProperty(
-      properties.dimension + properties.affiliation
+      metadata.dimension + metadata.affiliation
     )
   ) {
-    properties.baseGeometry =
-      ms._symbolGeometries[properties.dimension + properties.affiliation];
+    metadata.baseGeometry =
+      ms._symbolGeometries[metadata.dimension + metadata.affiliation];
   } else {
-    properties.baseGeometry.bbox = new ms.BBox();
+    metadata.baseGeometry.bbox = new ms.BBox();
   }
   //If both frame and icon is turned off we should just have a position marker
   if (!this.style.frame && !this.style.icon) {
-    properties.baseGeometry = ms._symbolGeometries.PositionMarker;
+    metadata.baseGeometry = ms._symbolGeometries.PositionMarker;
   }
 
-  return properties;
+  return metadata;
 }
