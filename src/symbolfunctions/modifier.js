@@ -621,14 +621,14 @@ export default function modifier() {
   for (var i = 0; i < drawArray1.length; i++) {
     if (!drawArray1[i].hasOwnProperty("fill")) drawArray1[i].fill = false;
     if (!drawArray1[i].hasOwnProperty("stroke"))
-      drawArray1[i].stroke = this.colors.iconColor[this.metadata.affiliation];
+      drawArray1[i].stroke = this.colors.frameColor[this.metadata.affiliation];
     if (!drawArray1[i].hasOwnProperty("strokewidth"))
       drawArray1[i].strokewidth = this.style.strokeWidth;
   }
   for (i = 0; i < drawArray2.length; i++) {
     if (!drawArray2[i].hasOwnProperty("fill")) drawArray2[i].fill = false;
     if (!drawArray2[i].hasOwnProperty("stroke"))
-      drawArray2[i].stroke = this.colors.iconColor[this.metadata.affiliation];
+      drawArray2[i].stroke = this.colors.frameColor[this.metadata.affiliation];
     if (!drawArray2[i].hasOwnProperty("strokewidth"))
       drawArray2[i].strokewidth = this.style.strokeWidth;
   }

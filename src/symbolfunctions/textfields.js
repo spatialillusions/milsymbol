@@ -5,7 +5,9 @@ export default function textfields() {
   var drawArray2 = [];
   var bbox = this.metadata.baseGeometry.bbox;
   var fontColor =
-    this.style.infoColor ||
+    (typeof this.style.infoColor === "object"
+      ? this.style.infoColor[this.metadata.affiliation]
+      : this.style.infoColor) ||
     this.colors.iconColor[this.metadata.affiliation] ||
     this.colors.iconColor["Friend"];
   var fontFamily = "Arial";

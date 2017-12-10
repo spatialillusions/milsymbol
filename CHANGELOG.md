@@ -24,6 +24,8 @@
 * Changed location of feint/dummy indicator to be more similar to images in
   standard documents
 
+* Make it possible to set infoColor to a Color Mode
+
 ### Deprecated
 
 ### Removed
