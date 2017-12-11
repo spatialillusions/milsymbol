@@ -42,7 +42,7 @@ export default function statusmodifier() {
           y2 +
           " l" +
           bbox.width() +
-          ",0 0,15 -" +
+          ",0 0,25 -" +
           bbox.width() +
           ",0 z"
       });
