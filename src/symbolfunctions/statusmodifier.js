@@ -47,7 +47,7 @@ export default function statusmodifier() {
           ",0 z"
       });
       //Add the hight of the codition bar to the geometry bounds
-      y2 += 15;
+      y2 += 25;
       //outline
       if (this.style.outlineWidth > 0)
         drawArray1.push(
