@@ -14,7 +14,7 @@ export default function directionarrow() {
     this.colors.iconColor["Friend"];
   var arrow;
   if (this.style.infoFields) {
-    if (this.options.direction && this.options.direction != "") {
+    if (this.options.direction !== "") {
       if (this.options.speedLeader == 0) {
         //Movement indicator
         //The length of the lines in a direction of movement indicator is a bit discussed but I use one frame height. (=100px)
