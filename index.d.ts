@@ -50,6 +50,7 @@ type SymbolOptions = {
   simpleStatusModifier?: boolean;
   strokeWidth?: number;
   size?: number;
+  square?: boolean;
 };
 
 type SymbolProperties = {

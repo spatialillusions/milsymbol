@@ -46,36 +46,6 @@
       ms,
       arrayUtils, on, dom
     ) {
-        // Since we can define a insertion point for a IconSymbol3DLayer in ArcGIS JS API,
-        // and we can't really handle non square icons, we have to go around the problem by 
-        // making the icons square around the anchor point, so we add a custom extension to 
-        // milsymbol to do that.
-        ms.addSymbolPart(
-          function squareIcon() {
-            var square = this.getOptions().square; // we could use this.options.square, but this is safer
-            var metadata = this.getProperties(); // we could use this.metadata, but this is safer
-            var hq = metadata.headquarters;
-            var gbbox = new ms.BBox();
-            if (square) {
-              var anchor = { x: 100, y: 100 };
-              if (hq) {
-                anchor = {
-                  x: metadata.baseGeometry.bbox.x1,
-                  y: metadata.baseGeometry.bbox.y2 + ms.getHqStafLength()
-                };
-              }
-              var maxx = Math.max(anchor.x - this.bbox.x1, this.bbox.x2 - anchor.x);
-              var maxy = Math.max(anchor.y - this.bbox.y1, this.bbox.y2 - anchor.y);
-              var max = Math.max(maxx, maxy);
-              gbbox.x1 = anchor.x - max;
-              gbbox.y1 = anchor.y - max;
-              gbbox.x2 = anchor.x + max;
-              gbbox.y2 = anchor.y + max;
-            }
-            return { pre: [], post: [], bbox: gbbox };
-          }
-        );
-
         var map = new Map({
           basemap: "dark-gray",
           ground: "world-elevation"

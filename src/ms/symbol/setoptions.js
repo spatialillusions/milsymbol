@@ -60,18 +60,6 @@ export default function setOptions() {
     }
   }
 
-  this.baseWidth =
-    this.bbox.width() +
-    Number(this.style.strokeWidth * 2) +
-    Number(this.style.outlineWidth * 2); //Adding the stoke width as margins and a little bit extra
-  this.baseHeight =
-    this.bbox.height() +
-    Number(this.style.strokeWidth * 2) +
-    Number(this.style.outlineWidth * 2); //Adding the stoke width as margins and a little bit extra
-
-  this.width = this.baseWidth * this.style.size / 100;
-  this.height = this.baseHeight * this.style.size / 100;
-
   var anchor = { x: 100, y: 100 };
   this.octagonAnchor = {
     x:
@@ -91,12 +79,35 @@ export default function setOptions() {
   };
   //If it is a headquarters the anchor should be at the end of the staf
   if (this.metadata.headquarters) {
-    var hqStafLength = this.hqStafLength || ms._hqStafLength;
+    var hqStafLength = this.style.hqStafLength || ms._hqStafLength;
     anchor = {
       x: this.metadata.baseGeometry.bbox.x1,
       y: this.metadata.baseGeometry.bbox.y2 + hqStafLength
     };
   }
+
+  if (this.style.square) {
+    var maxx = Math.max(anchor.x - this.bbox.x1, this.bbox.x2 - anchor.x);
+    var maxy = Math.max(anchor.y - this.bbox.y1, this.bbox.y2 - anchor.y);
+    var max = Math.max(maxx, maxy);
+    this.bbox.x1 = anchor.x - max;
+    this.bbox.y1 = anchor.y - max;
+    this.bbox.x2 = anchor.x + max;
+    this.bbox.y2 = anchor.y + max;
+  }
+
+  this.baseWidth =
+    this.bbox.width() +
+    Number(this.style.strokeWidth * 2) +
+    Number(this.style.outlineWidth * 2); //Adding the stoke width as margins and a little bit extra
+  this.baseHeight =
+    this.bbox.height() +
+    Number(this.style.strokeWidth * 2) +
+    Number(this.style.outlineWidth * 2); //Adding the stoke width as margins and a little bit extra
+
+  this.width = this.baseWidth * this.style.size / 100;
+  this.height = this.baseHeight * this.style.size / 100;
+
   this.symbolAnchor = {
     x:
       (anchor.x -
