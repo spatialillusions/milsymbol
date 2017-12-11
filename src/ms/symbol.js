@@ -25,6 +25,7 @@ function Symbol() {
   this.options.altitudeDepth = ""; // FieldID X
   this.options.location = ""; // FieldID Y
   this.options.speed = ""; // FieldID Z
+  this.options.speedLeader = 0; // This is the length of the speed leader
   this.options.specialHeadquarters = ""; // FieldID AA
   this.options.country = ""; // AC Country
   this.options.platformType = ""; // FieldID AD

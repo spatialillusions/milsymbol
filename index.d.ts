@@ -27,6 +27,7 @@ type SymbolOptions = {
   signatureEquipment?: string;
   specialHeadquarters?: string;
   speed?: string;
+  speedLeader?: number;
   staffComments?: string;
   type?: string;
   uniqueDesignation?: string;

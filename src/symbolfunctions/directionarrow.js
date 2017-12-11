@@ -12,70 +12,94 @@ export default function directionarrow() {
   var color =
     this.colors.iconColor[this.metadata.affiliation] ||
     this.colors.iconColor["Friend"];
-
+  var arrow;
   if (this.style.infoFields) {
     if (this.options.direction && this.options.direction != "") {
-      //Movement indicator
-      //The length of the lines in a direction of movement indicator is a bit discussed but I use one frame height. (=100px)
-      var arrowLength = 95;
-      var arrow = [
-        {
-          type: "rotate",
-          degree: this.options.direction,
-          x: 100,
-          y: 100,
-          draw: [
+      if (this.options.speedLeader == 0) {
+        //Movement indicator
+        //The length of the lines in a direction of movement indicator is a bit discussed but I use one frame height. (=100px)
+        var arrowLength = 95;
+        arrow = [
+          {
+            type: "rotate",
+            degree: this.options.direction,
+            x: 100,
+            y: 100,
+            draw: [
+              {
+                type: "path",
+                fill: color,
+                stroke: color,
+                strokewidth: this.style.strokeWidth,
+                d:
+                  "M100,100 l0,-" +
+                  (arrowLength - 20) +
+                  " -5,3 5,-15 5,15 -5,-3"
+              }
+            ]
+          }
+        ];
+
+        gbbox.y1 = Math.min(
+          100 -
+            Math.cos(this.options.direction / 360 * Math.PI * 2) * arrowLength,
+          100
+        );
+        gbbox.y2 = Math.max(
+          100 -
+            Math.cos(this.options.direction / 360 * Math.PI * 2) * arrowLength,
+          100
+        );
+        gbbox.x1 = Math.min(
+          100 +
+            Math.sin(this.options.direction / 360 * Math.PI * 2) * arrowLength,
+          100
+        );
+        gbbox.x2 = Math.max(
+          100 +
+            Math.sin(this.options.direction / 360 * Math.PI * 2) * arrowLength,
+          100
+        );
+
+        if (
+          this.metadata.baseDimension == "Ground" ||
+          this.metadata.baseDimension == ""
+        ) {
+          arrow = [
+            { type: "translate", x: 0, y: bbox.y2, draw: arrow },
             {
               type: "path",
               fill: color,
               stroke: color,
               strokewidth: this.style.strokeWidth,
-              d: "M100,100 l0,-" + (arrowLength - 20) + " -5,3 5,-15 5,15 -5,-3"
+              d: "M 100," + bbox.y2 + "l0," + 100
             }
-          ]
+          ];
+          gbbox.y2 += bbox.y2 + parseFloat(this.style.strokeWidth);
         }
-      ];
+        drawArray2.push(arrow);
+      } else {
+        var length = this.options.speedLeader * (100 / this.style.size);
+        var rad = this.options.direction * Math.PI / 180;
+        var y = -length * Math.cos(rad);
+        var x = length * Math.sin(rad);
 
-      gbbox.y1 = Math.min(
-        100 -
-          Math.cos(this.options.direction / 360 * Math.PI * 2) * arrowLength,
-        100
-      );
-      gbbox.y2 = Math.max(
-        100 -
-          Math.cos(this.options.direction / 360 * Math.PI * 2) * arrowLength,
-        100
-      );
-      gbbox.x1 = Math.min(
-        100 +
-          Math.sin(this.options.direction / 360 * Math.PI * 2) * arrowLength,
-        100
-      );
-      gbbox.x2 = Math.max(
-        100 +
-          Math.sin(this.options.direction / 360 * Math.PI * 2) * arrowLength,
-        100
-      );
-
-      if (
-        this.metadata.baseDimension == "Ground" ||
-        this.metadata.baseDimension == ""
-      ) {
-        arrow = [
-          { type: "translate", x: 0, y: bbox.y2, draw: arrow },
-          {
-            type: "path",
-            fill: color,
-            stroke: color,
-            strokewidth: this.style.strokeWidth,
-            d: "M 100," + bbox.y2 + "l0," + 100
-          }
-        ];
-        gbbox.y2 += bbox.y2 + parseFloat(this.style.strokeWidth);
+        gbbox.x1 = Math.min(100, 100 + x);
+        gbbox.x2 = Math.max(100, 100 + x);
+        gbbox.y1 = Math.min(100, 100 + y);
+        gbbox.y2 = Math.max(100, 100 + y);
+        arrow = {
+          type: "path",
+          fill: color,
+          stroke: color,
+          strokewidth: this.style.strokeWidth,
+          d: "M 100,100  l" + x + "," + y
+        };
+        drawArray1.push(arrow);
       }
       //outline
       if (this.style.outlineWidth > 0)
-        drawArray1.push(
+        drawArray1.unshift(
           ms.outline(
             arrow,
             this.style.outlineWidth,
@@ -85,8 +109,6 @@ export default function directionarrow() {
               : this.style.outlineColor
           )
         );
-      //geometry
-      drawArray2.push(arrow);
     }
   }
   return { pre: drawArray1, post: drawArray2, bbox: gbbox };
