@@ -13,7 +13,7 @@ export default function affliationdimension() {
       x: 100,
       y: 127,
       fill: frameColor,
-      fontfamily: "Arial",
+      fontfamily: this.style.fontfamily,
       fontsize: 80,
       fontweight: "bold",
       textanchor: "middle"
@@ -37,7 +37,7 @@ export default function affliationdimension() {
           x: bbox.x2 + spacing,
           y: 60,
           fill: frameColor,
-          fontfamily: "Arial",
+          fontfamily: this.style.fontfamily,
           fontsize: 35,
           fontweight: "bold",
           textanchor: "start"
@@ -50,7 +50,7 @@ export default function affliationdimension() {
           x: bbox.x2 + spacing,
           y: 60,
           fill: frameColor,
-          fontfamily: "Arial",
+          fontfamily: this.style.fontfamily,
           fontsize: 35,
           fontweight: "bold",
           textanchor: "start"
@@ -63,7 +63,7 @@ export default function affliationdimension() {
           x: bbox.x2 + spacing,
           y: 60,
           fill: frameColor,
-          fontfamily: "Arial",
+          fontfamily: this.style.fontfamily,
           fontsize: 35,
           fontweight: "bold",
           textanchor: "start"
@@ -78,7 +78,7 @@ export default function affliationdimension() {
         x: bbox.x2 + spacing,
         y: 60,
         fill: frameColor,
-        fontfamily: "Arial",
+        fontfamily: this.style.fontfamily,
         fontsize: 35,
         fontweight: "bold",
         textanchor: "start"

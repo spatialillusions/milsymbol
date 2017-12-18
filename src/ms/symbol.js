@@ -46,6 +46,7 @@ function Symbol() {
   this.style.alternateMedal = false; // 2525D lets you choose between MEDAL icn and alternate MEDAL icn for Mines; default is set to MEDAL.
   this.style.fill = true; // Should the icon be filled with color
   this.style.fillOpacity = 1; // Possibility to change the fill opacity
+  this.style.fontfamily = "Arial"; // The font family to use
   this.style.frame = true; // Should the icon be framed
   this.style.frameColor = "";
   this.style.hqStafLength = 0; // The default length of the HQ staf

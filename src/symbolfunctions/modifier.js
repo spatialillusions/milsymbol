@@ -646,11 +646,5 @@ export default function modifier() {
       drawArray2[i].strokewidth = this.style.strokeWidth;
   }
 
-  /*
-	if(this.options.sigint){
-		g += '<text font-family="Arial" font-weight="bold" stroke="none" text-anchor="middle" x="100" y="'+ (30 + bbox.y2 )+'" font-size="35" >'+this.options.sigint+'</text>';
-		gbbox.merge({y2:(bbox.y2-28)});
-	}
-	g += '</g>';*/
   return { pre: drawArray1, post: drawArray2, bbox: gbbox };
 }

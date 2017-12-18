@@ -10,7 +10,7 @@ export default function textfields() {
       : this.style.infoColor) ||
     this.colors.iconColor[this.metadata.affiliation] ||
     this.colors.iconColor["Friend"];
-  var fontFamily = "Arial";
+  var fontFamily = this.style.fontfamily;
   var fontSize = this.style.infoSize;
 
   var gbbox = new ms.BBox();

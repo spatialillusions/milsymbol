@@ -11,7 +11,7 @@ export default function debug() {
 
   if (this.options.engagementBar !== "") {
     y1 -= 6;
-    var fontFamily = "Arial";
+    var fontFamily = this.style.fontfamily;
     var fontColor =
       this.colors.iconColor[this.metadata.affiliation] ||
       this.colors.iconColor["Friend"];
