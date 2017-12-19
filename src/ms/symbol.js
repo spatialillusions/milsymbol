@@ -61,6 +61,7 @@ function Symbol() {
   this.style.infoColor = ""; // Changes the color of the info fields
   this.style.infoFields = true; // If you have set all info fields but don't want the displayed; then just set this to false.
   this.style.infoSize = 40; // Relative size of the info fields
+  this.style.padding = 0; // Extra padding around the symbol
   this.style.simpleStatusModifier = false; // Force use of simple status modifiers
   this.style.square = false; // If the symbol should be square
   this.symbolAnchor = { x: 50, y: 50 }; // The anchor point for the current symbol

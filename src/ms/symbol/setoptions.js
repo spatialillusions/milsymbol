@@ -60,6 +60,14 @@ export default function setOptions() {
     }
   }
 
+  if (this.style.padding) {
+    // if set, add extra padding
+    this.bbox.x1 -= this.style.padding;
+    this.bbox.x2 += this.style.padding;
+    this.bbox.y1 -= this.style.padding;
+    this.bbox.y2 += this.style.padding;
+  }
+
   var anchor = { x: 100, y: 100 };
   this.octagonAnchor = {
     x:
