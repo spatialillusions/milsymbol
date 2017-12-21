@@ -21,7 +21,7 @@ export default function textfields() {
     var texts = [];
     var labelbox;
     for (var i in label) {
-      if (this.hasOwnProperty(i) && this[i] != "") {
+      if (this.options.hasOwnProperty(i) && this.options[i] != "") {
         if (!label.hasOwnProperty(i)) continue;
         for (var j = 0; j < (label[i].length || 1); j++) {
           var lbl;
@@ -33,16 +33,18 @@ export default function textfields() {
           labelbox = { y2: lbl.y, y1: lbl.y - lbl.fontsize };
           if (lbl.textanchor == "start") {
             labelbox.x1 = lbl.x;
-            labelbox.x2 = lbl.x + strWidth(this[i]) * (lbl.fontsize / fontSize);
+            labelbox.x2 =
+              lbl.x + strWidth(this.options[i]) * (lbl.fontsize / fontSize);
           }
           if (lbl.textanchor == "middle") {
-            var w = strWidth(this[i]) * (lbl.fontsize / fontSize);
+            var w = strWidth(this.options[i]) * (lbl.fontsize / fontSize);
             labelbox.x1 = lbl.x - w / 2;
             labelbox.x2 = lbl.x + w / 2;
           }
           //if(lbl.textanchor == 'middle'){}
           if (lbl.textanchor == "end") {
-            labelbox.x1 = lbl.x - strWidth(this[i]) * (lbl.fontsize / fontSize);
+            labelbox.x1 =
+              lbl.x - strWidth(this.options[i]) * (lbl.fontsize / fontSize);
             labelbox.x2 = lbl.x;
           }
           gbbox.merge(labelbox);
@@ -55,7 +57,7 @@ export default function textfields() {
             text.fontweight = lbl.fontweight;
           text.x = lbl.x;
           text.y = lbl.y;
-          text.text = this[i];
+          text.text = this.options[i];
           texts.push(text);
         }
       }
