@@ -205,21 +205,47 @@ export default function textfields() {
     };
     return t;
   }
-
+  var i, genericSIDC;
   if (this.metadata.numberSIDC) {
     //Number based SIDCs.
-    //var symbolSet = String(this.options.sidc).substr(4, 2);
-    //TODO fix add code for Number based labels
+    if (!ms._labelCache.hasOwnProperty("number")) {
+      ms._labelCache["number"] = {};
+      for (i in ms._labelOverrides["number"]) {
+        if (!ms._labelOverrides["number"].hasOwnProperty(i)) continue;
+        ms._labelOverrides["number"][i].call(this, ms._labelCache["number"]);
+      }
+    }
+    genericSIDC = this.metadata.functionid.substr(0, 6);
+
+    if (ms._labelCache["number"].hasOwnProperty(genericSIDC)) {
+      drawArray2.push(
+        labelOverride.call(this, ms._labelCache["number"][genericSIDC])
+      );
+
+      //outline
+      if (this.style.outlineWidth > 0)
+        drawArray1.push(
+          ms.outline(
+            drawArray2,
+            this.style.outlineWidth,
+            this.style.strokeWidth,
+            typeof this.style.outlineColor === "object"
+              ? this.style.outlineColor[this.metadata.affiliation]
+              : this.style.outlineColor
+          )
+        );
+      return { pre: drawArray1, post: drawArray2, bbox: gbbox };
+    }
   } else {
     //Letter based SIDCs.
     if (!ms._labelCache.hasOwnProperty("letter")) {
       ms._labelCache["letter"] = {};
-      for (var i in ms._labelOverrides["letter"]) {
+      for (i in ms._labelOverrides["letter"]) {
         if (!ms._labelOverrides["letter"].hasOwnProperty(i)) continue;
         ms._labelOverrides["letter"][i].call(this, ms._labelCache["letter"]);
       }
     }
-    var genericSIDC =
+    genericSIDC =
       this.options.sidc.substr(0, 1) +
       "-" +
       this.options.sidc.substr(2, 1) +
