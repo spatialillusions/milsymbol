@@ -21,6 +21,16 @@ export default [
     plugins: [json()]
   },
   {
+    // Generate documentation for APP6-B
+    input: "src/app6b.js",
+    output: {
+      file: "docs/app6b.js",
+      format: "umd"
+    },
+    name: "app6b",
+    plugins: [json()]
+  },
+  {
     // Generate documentation for APP6-D
     input: "src/app6d.js",
     output: {
