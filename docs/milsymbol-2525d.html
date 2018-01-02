@@ -135,41 +135,52 @@
           (symbolset["main icon"][i]["entity subtype"] ||
             symbolset["main icon"][i]["entity type"] ||
             symbolset["main icon"][i]["entity"]) +
-          "</b><br><br>";
-        output +=
-          "<em>Type:</em> " +
-          (symbolset["main icon"][i].hasOwnProperty("entity subtype")
-            ? "Entity subtype"
-            : symbolset["main icon"][i].hasOwnProperty("entity type")
-              ? "Entity type"
-              : "Entity");
-        if (symbolset["main icon"][i].hasOwnProperty("entity subtype")) {
+          "</b>";
+        
+        if(!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")){
           output +=
-            "<br><em>Entity/Entity Type:</em> " +
-            symbolset["main icon"][i]["entity type"] +
-            "/" +
-            symbolset["main icon"][i]["entity"];
-        } else {
-          if (symbolset["main icon"][i].hasOwnProperty("entity type")) {
-            output += "<br><em>Entity:</em> " + symbolset["main icon"][i]["entity"];
+            "<br><br><em>Type:</em> " +
+            (symbolset["main icon"][i].hasOwnProperty("entity subtype")
+              ? "Entity subtype"
+              : symbolset["main icon"][i].hasOwnProperty("entity type")
+                ? "Entity type"
+                : "Entity");
+          if (symbolset["main icon"][i].hasOwnProperty("entity subtype")) {
+            output +=
+              "<br><em>Entity/Entity Type:</em> " +
+              symbolset["main icon"][i]["entity type"] +
+              "/" +
+              symbolset["main icon"][i]["entity"];
+          } else {
+            if (symbolset["main icon"][i].hasOwnProperty("entity type")) {
+              output += "<br><em>Entity:</em> " + symbolset["main icon"][i]["entity"];
+            }
           }
+        
+          output += "<br><em>Symbol Set Code:</em> " + symbolset.symbolset;
         }
-
-        output += "<br><em>Symbol Set Code:</em> " + symbolset.symbolset;
+        
         output += "<br><em>Code:</em> " + symbolset["main icon"][i].code;
-        output +=
-          "</td><td>" +
-          new ms.Symbol(
-            "1003" +
-            symbolset.symbolset +
-            "0000" +
-            symbolset["main icon"][i].code +
-            "0000",
-            { size: size },
-            remarks(symbolset["main icon"][i].remarks)
-          ).asSVG();
-        output += "</td>"
-
+        
+        if(!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")){
+          output +=
+            "</td><td>" +
+            new ms.Symbol(
+              "1003" +
+              symbolset.symbolset +
+              "0000" +
+              symbolset["main icon"][i].code +
+              "0000",
+              { size: size },
+              remarks(symbolset["main icon"][i].remarks)
+            ).asSVG();
+          output += "</td>"
+        }else{
+          output +=
+            "</td><td>" +
+            symbolset["main icon"][i].geometry;
+          output += "</td>"
+        }
         if (symbolset.symbolset == 36) {
           output += "<td>" +
           new ms.Symbol(
@@ -2707,6 +2718,16 @@
     );
   </script>
 
+  <script>
+    document.write(
+      renderSymbolSet(
+        std2525d["25"],
+        "Control Measures",
+        "TODO",
+        "TODO"
+      )
+    );
+  </script>
 
   <br>
   <br>
