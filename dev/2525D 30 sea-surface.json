@@ -1,6 +1,6 @@
 {
   "symbolset": "30",
-  "name": "ACTIVITY/EVENT",
+  "name": "Sea Surface",
   "main icon": [
     { "entity": "Unspecified", "code": "000000", "remarks": "" },
     { "entity": "Military", "code": "110000", "remarks": "" },

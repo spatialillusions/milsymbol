@@ -1,6 +1,6 @@
 {
   "symbolset": "11",
-  "name": "ACTIVITY/EVENT",
+  "name": "Land Civilian Unit/Organization",
   "main icon": [
     { "entity": "Unspecified", "code": "000000", "remarks": "" },
     { "entity": "Civilian", "code": "110000", "remarks": "" },

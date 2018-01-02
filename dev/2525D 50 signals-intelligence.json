@@ -1,6 +1,6 @@
 {
   "symbolset": "50",
-  "name": "ACTIVITY/EVENT",
+  "name": "Signals Intelligence",
   "main icon": [
     { "entity": "Unspecified", "code": "000000", "remarks": "" },
     { "entity": "Signal Intercept", "code": "110000", "remarks": "" },

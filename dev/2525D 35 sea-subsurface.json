@@ -1,6 +1,6 @@
 {
   "symbolset": "35",
-  "name": "ACTIVITY/EVENT",
+  "name": "Sea Subsurface",
   "main icon": [
     { "entity": "Unspecified", "code": "000000", "remarks": "" },
     { "entity": "Military", "code": "110000", "remarks": "" },

@@ -1,6 +1,6 @@
 {
   "symbolset": "10",
-  "name": "ACTIVITY/EVENT",
+  "name": "Land Unit",
   "main icon": [
     { "entity": "Unspecified", "code": "000000", "remarks": "" },
     { "entity": "Command and Control", "code": "110000", "remarks": "" },

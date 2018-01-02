@@ -1,6 +1,6 @@
 {
   "symbolset": "40",
-  "name": "ACTIVITY/EVENT",
+  "name": "Activities",
   "main icon": [
     { "entity": "Unspecified", "code": "000000", "remarks": "" },
     { "entity": "Incident", "code": "110000", "remarks": "" },

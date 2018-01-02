@@ -1,6 +1,6 @@
 {
   "symbolset": "15",
-  "name": "ACTIVITY/EVENT",
+  "name": "Land Equipment",
   "main icon": [
     { "entity": "Unspecified", "code": "000000", "remarks": "" },
     { "entity": "Weapon/Weapon System", "code": "110000", "remarks": "" },
