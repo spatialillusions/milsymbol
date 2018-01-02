@@ -1,4 +1,4 @@
-module.exports = function space(
+export default function space(
   sidc,
   sIdm1,
   sIdm2,
@@ -404,4 +404,4 @@ module.exports = function space(
     sIdm2["01"] = [icn["SP.M2.OPTICAL"]];
   */
   }
-};
+}

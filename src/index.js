@@ -136,6 +136,9 @@ ms.addSIDCicons(cyberspacenumber, "number");
 import dismountedindividualnumber from "./numbersidc/sidc/dismountedindividual.js";
 ms.addSIDCicons(dismountedindividualnumber, "number");
 
+import tacticalpointsnumber from "./numbersidc/sidc/control-measure.js";
+ms.addSIDCicons(tacticalpointsnumber, "number");
+
 //*/
 /* ***************************************************************************************
 Functions that builds the symbol
