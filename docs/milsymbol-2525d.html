@@ -103,26 +103,28 @@
       document.getElementById("indexoffigures").innerHTML = indexoffigures;
     }
 
-    function renderSymbolSet(symbolset, iconheading, m1heading, m2heading) {
-      function remarks(remark) {
-        /*
-          if (
-            [
-              "From MIL-STD-2525.",
-              "Simplification of MIL-STD-2525 icon TBD."
-            ].indexOf(remark) != -1
-          ) {
-            return { monoColor: "Silver" };
-          } else {
-            return {};
-          }
-        //*/
-        return {};
-      }
+    function remarks(remark) {
+      /*
+        if (
+          [
+            "From MIL-STD-2525.",
+            "Simplification of MIL-STD-2525 icon TBD."
+          ].indexOf(remark) != -1
+        ) {
+          return { monoColor: "Silver" };
+        } else {
+          return {};
+        }
+      //*/
+      return {};
+    }
+
+    function renderSymbolSet(symbolset) {
+
       var output = "";
       var i;
       output += "<h2>" + symbolset.name + "</h2>";
-      output += "<h3>" + iconheading + "</h3>";
+      output += "<h3>" + symbolset.name + " Main Icon</h3>";
       output += "<table border=1><thead><tr><th>Description</th><th>Icon</th>";
 
       if (symbolset.symbolset == 36) output += "<th>Alternate Icon</th>";
@@ -199,7 +201,7 @@
       }
       output += "</table>";
       if (symbolset["modifier 1"].length != 0) {
-        output += "<h3>" + m1heading + "</h3>";
+        output += "<h3>" + symbolset.name + " Modifier 1</h3>";
         output +=
           "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
         for (i = 0; i < symbolset["modifier 1"].length; i++) {
@@ -222,7 +224,7 @@
         output += "</table>";
       }
       if (symbolset["modifier 2"].length != 0) {
-        output += "<h3>" + m2heading + "</h3>";
+        output += "<h3>" + symbolset.name + " Modifier 2</h3>";
         output +=
           "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
         for (i = 0; i < symbolset["modifier 2"].length; i++) {
