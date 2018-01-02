@@ -64,6 +64,13 @@
     var size = 70;
     ms.setStandard("APP6");
 
+    //Populate all symbolsets with coding scheme
+    for(var i in app6b){
+      for(var j in app6b[i]){
+        app6b[i][j]["coding scheme"] = i;
+      }
+    }
+
     /*
         ms.addSymbolPart(function debug() {
           //This debug function is a minimal example of how to extend milsymbol.
@@ -122,59 +129,35 @@
     }
 
     function renderSymbolSet(symbolset) {
-
       var output = "";
       var i;
+
       output += "<h2>" + symbolset.name + "</h2>";
       output += "<h3>" + symbolset.name + " Main Icon</h3>";
       output += "<table border=1><thead><tr><th>Description</th><th>Icon</th>";
-
-      if (symbolset.symbolset == 36) output += "<th>Alternate Icon</th>";
 
       output += "<th>Remarks</th></tr></thead>";
 
       for (i = 0; i < symbolset["main icon"].length; i++) {
         output +=
           "<tr><td><b>" +
-          (symbolset["main icon"][i]["entity subtype"] ||
-            symbolset["main icon"][i]["entity type"] ||
-            symbolset["main icon"][i]["entity"]) +
+          symbolset["main icon"][i].hierarchy +
           "</b>";
-        
-        if(!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")){
-          output +=
-            "<br><br><em>Type:</em> " +
-            (symbolset["main icon"][i].hasOwnProperty("entity subtype")
-              ? "Entity subtype"
-              : symbolset["main icon"][i].hasOwnProperty("entity type")
-                ? "Entity type"
-                : "Entity");
-          if (symbolset["main icon"][i].hasOwnProperty("entity subtype")) {
-            output +=
-              "<br><em>Entity/Entity Type:</em> " +
-              symbolset["main icon"][i]["entity type"] +
-              "/" +
-              symbolset["main icon"][i]["entity"];
-          } else {
-            if (symbolset["main icon"][i].hasOwnProperty("entity type")) {
-              output += "<br><em>Entity:</em> " + symbolset["main icon"][i]["entity"];
+          for(var j = 0; j < symbolset["main icon"][i].name.length; j++){
+            if(symbolset["main icon"][i].name.length-1 == j){
+              output += "<br><b>"+symbolset["main icon"][i].name[j]+"</b>";
+            }else{
+              output += "<br><em>"+symbolset["main icon"][i].name[j]+"</em>";
             }
           }
         
-          output += "<br><em>Symbol Set Code:</em> " + symbolset.symbolset;
-        }
-        
-        output += "<br><em>Code:</em> " + symbolset["main icon"][i].code;
+        output += "<br><em>SIDC:</em> " + symbolset["coding scheme"] + "*" +  symbolset.symbolset + "*"+symbolset["main icon"][i].code;
         
         if(!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")){
           output +=
             "</td><td>" +
             new ms.Symbol(
-              "1003" +
-              symbolset.symbolset +
-              "0000" +
-              symbolset["main icon"][i].code +
-              "0000",
+              symbolset["coding scheme"] + "F" +  symbolset.symbolset + "P"+symbolset["main icon"][i].code,
               { size: size },
               remarks(symbolset["main icon"][i].remarks)
             ).asSVG();
@@ -185,6 +168,7 @@
             symbolset["main icon"][i].geometry;
           output += "</td>"
         }
+        /*
         if (symbolset.symbolset == 36) {
           output += "<td>" +
           new ms.Symbol(
@@ -198,55 +182,12 @@
           ).asSVG();
           output += "</td>"
         }
+        //*/
 
-        output += "<td>" + symbolset["main icon"][i].remarks + "</td></tr>";
+        output += "<td>" + (symbolset["main icon"][i].remarks?symbolset["main icon"][i].remarks:"") + "</td></tr>";
       }
       output += "</table>";
-      if (symbolset["modifier 1"].length != 0) {
-        output += "<h3>" + symbolset.name + " Modifier 1</h3>";
-        output +=
-          "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
-        for (i = 0; i < symbolset["modifier 1"].length; i++) {
-          output += "<tr><td><b>" + symbolset["modifier 1"][i].modifier + "</b>";
-          output += "<br><br><em>Symbol Set Code:</em> " + symbolset.symbolset;
-          output += "<br><em>Code:</em> " + symbolset["modifier 1"][i].code;
-          output += "</td><td>";
-          if (symbolset["modifier 1"][i].code != 99 && !isNaN(symbolset["modifier 1"][i].code))
-            output += new ms.Symbol(
-              "1003" +
-              symbolset.symbolset +
-              "0000000000" +
-              symbolset["modifier 1"][i].code +
-              "00",
-              { size: size },
-              remarks(symbolset["modifier 1"][i].remarks)
-            ).asSVG();
-          output += "</td><td>" + symbolset["modifier 1"][i].remarks + "</td></tr>";
-        }
-        output += "</table>";
-      }
-      if (symbolset["modifier 2"].length != 0) {
-        output += "<h3>" + symbolset.name + " Modifier 2</h3>";
-        output +=
-          "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
-        for (i = 0; i < symbolset["modifier 2"].length; i++) {
-          output += "<tr><td><b>" + symbolset["modifier 2"][i].modifier + "</b>";
-          output += "<br><br><em>Symbol Set Code:</em> " + symbolset.symbolset;
-          output += "<br><em>Code:</em> " + symbolset["modifier 2"][i].code;
-          output += "</td><td>";
-          if (symbolset["modifier 2"][i].code != 99 && !isNaN(symbolset["modifier 2"][i].code))
-            output += new ms.Symbol(
-              "1003" +
-              symbolset.symbolset +
-              "000000000000" +
-              symbolset["modifier 2"][i].code,
-              { size: size },
-              remarks(symbolset["modifier 2"][i].remarks)
-            ).asSVG();
-          output += "</td><td>" + symbolset["modifier 2"][i].remarks + "</td></tr>";
-        }
-        output += "</table>";
-      }
+
       return output;
     }
   </script>
@@ -1348,12 +1289,50 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d.S.P
+        app6b.S.P // Space
       )
     );
   </script>
 
+<script>
+  document.write(
+    renderSymbolSet(
+      app6b.S.A // Air
+    )
+  );
+</script>
 
+<script>
+  document.write(
+    renderSymbolSet(
+      app6b.S.G // Ground
+    )
+  );
+</script>
+
+<script>
+  document.write(
+    renderSymbolSet(
+      app6b.S.S // Sea surface
+    )
+  );
+</script>
+
+<script>
+  document.write(
+    renderSymbolSet(
+      app6b.S.U // Sea subsurface
+    )
+  );
+</script>
+
+<script>
+  document.write(
+    renderSymbolSet(
+      app6b.S.F // SOF
+    )
+  );
+</script>
 
   <h3 id="TableB-III">Table B-III. Warfighting symbol ID codes.</h3>
 
