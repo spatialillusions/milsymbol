@@ -37,7 +37,7 @@ export default [
       file: "docs/2525d.js",
       format: "umd"
     },
-    name: "2525d",
+    name: "std2525d",
     plugins: [json()]
   }
 ];
