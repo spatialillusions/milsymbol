@@ -52,6 +52,10 @@
     tr td:nth-child(1) {
       text-align: left;
     }
+
+    .index-h3{
+      margin-left: 15px;
+    }
   </style>
   <script src="../dist/milsymbol.development.js"></script>
   <script src="app6d.js"></script>
@@ -97,7 +101,7 @@
         i++;
         d.id = "heading-" + i;
         indexoftables +=
-          '<a href="#heading-' + i + '">' + d.textContent + "</a><br>\n";
+        '<a href="#heading-' + i + '" class="index-'+d.tagName.toLowerCase()+'">' + d.textContent + "</a><br>\n";
       });
       document.getElementById("indexoftables").innerHTML = indexoftables;
 

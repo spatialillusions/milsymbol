@@ -52,6 +52,10 @@
     tr td:nth-child(1) {
       text-align: left;
     }
+
+    .index-h3{
+      margin-left: 15px;
+    }
   </style>
   <script src="../dist/milsymbol.development.js"></script>
   <script src="2525d.js"></script>
@@ -87,7 +91,7 @@
         i++;
         d.id = "heading-" + i;
         indexoftables +=
-          '<a href="#heading-' + i + '">' + d.textContent + "</a><br>\n";
+          '<a href="#heading-' + i + '" class="index-'+d.tagName.toLowerCase()+'">' + d.textContent + "</a><br>\n";
       });
       document.getElementById("indexoftables").innerHTML = indexoftables;
 
@@ -1379,10 +1383,10 @@
   <br>
   <br>
 
-
+  <figure>
   <table>
     <tr>
-      <td>
+      <td style="text-align: center;">
         <script>document.write(new ms.Symbol("10061000001211020000", { size: size }).asSVG());</script>
       </td>
       <td>
@@ -1390,7 +1394,7 @@
       </td>
     </tr>
     <tr>
-      <td>
+      <td style="text-align: center;">
         <script>document.write(new ms.Symbol("10061000001211020000", { size: size, fillOpacity: 0.5 }).asSVG());</script>
       </td>
       <td>
@@ -1398,9 +1402,10 @@
       </td>
     </tr>
   </table>
-  <div class="main">
-    <h3 id="FIGURE-8">FIGURE 8. Examples of filled and unfilled symbols. </h3>
-  </div>
+  <figcaption>
+      Examples of filled and unfilled symbols.
+    </figcaption>
+  </figure>
 
 
   <div class="main">
@@ -1631,12 +1636,443 @@
     </tr>
   </table>
 
+  <h3>Table 3-19: Equipment Mobility Indicators</h3>
+  Note that milsymbol automatically moves up the mobility indicator to the bottom of the icon when the symbol is unframed.
+  <br>
+  <br>
+  <table>
+    <thead>
+      <tr>
+        <td>DESCRIPTION
+        </td>
+        <td>UNFRAMED
+        </td>
+        <td>UNKNOWN
+        </td>
+        <td>FRIEND
+        </td>
+        <td>NEUTRAL
+        </td>
+        <td>HOSTILE
+        </td>
+      </tr>
+    </thead>
+    <tr>
+      <td>WHEELED (LIMITED CROSS-COUNTRY)
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500311101010000", { size: 40, frame: false }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10011500311101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500311101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10041500311101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10061500311101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+
+    <tr>
+      <td>WHEELED (CROSS-COUNTRY)
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500321101010000", { size: 40, frame: false }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10011500321101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500321101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10041500321101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10061500321101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+
+    <tr>
+      <td>TRACKED
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500331101010000", { size: 40, frame: false }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10011500331101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500331101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10041500331101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10061500331101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+
+    <tr>
+      <td>WHEELED AND TRACKED COMBINATION
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500341101010000", { size: 40, frame: false }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10011500341101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500341101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10041500341101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10061500341101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+
+    <tr>
+      <td>TOWED
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500351101010000", { size: 40, frame: false }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10011500351101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500351101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10041500351101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10061500351101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+
+    <tr>
+      <td>RAILWAY
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500361101010000", { size: 40, frame: false }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10011500361101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500361101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10041500361101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10061500361101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+
+    <tr>
+      <td>OVER-SNOW (PRIME MOVER)
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500411101010000", { size: 40, frame: false }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10011500411101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500411101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10041500411101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10061500411101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+
+    <tr>
+      <td>SLED
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500421101010000", { size: 40, frame: false }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10011500421101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500421101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10041500421101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10061500421101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+
+    <tr>
+      <td>PACK ANIMALS
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500371101010000", { size: 40, frame: false }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10011500371101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500371101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10041500371101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10061500371101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+
+    <tr>
+      <td>BARGE
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500511101010000", { size: 40, frame: false }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10011500511101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500511101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10041500511101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10061500511101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+
+    <tr>
+      <td>AMPHIBIOUS
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500521101010000", { size: 40, frame: false }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10011500521101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10031500521101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10041500521101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10061500521101010000", { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+  </table>
+
+  <h3 id="TABLEIX">TABLE IX. Auxiliary equipment indicators.</h3>
+  <table>
+  <thead>
+  <tr>
+  <td>DESCRIPTION
+  </td>
+  <td>UNFRAMED
+  </td>
+  <td>UNKNOWN
+  </td>
+  <td>FRIEND
+  </td>
+  <td>NEUTRAL
+  </td>
+  <td>HOSTILE
+  </td>
+  </tr>
+  </thead>
+  <tr>
+  <td>TOWED SONAR
+  ARRAY (SHORT)
+  </td>
+  <td>
+  <script>
+  document.write(new ms.Symbol("10033500611101000000", {size:40,frame:false}).asSVG());
+  </script>
+  </td>
+  <td>
+  <script>
+  document.write(new ms.Symbol("10013500611101000000", {size:40}).asSVG());
+  </script>
+  </td>
+  <td>
+  <script>
+  document.write(new ms.Symbol("10033500611101000000", {size:40}).asSVG());
+  </script>
+  </td>
+  <td>
+  <script>
+  document.write(new ms.Symbol("10043500611101000000", {size:40}).asSVG());
+  </script>
+  </td>
+  <td><script>
+  document.write(new ms.Symbol("10063500611101000000", {size:40}).asSVG());
+  </script>
+  </td>
+  </tr>
+  
+  <tr>
+  <td>TOWED SONAR
+  ARRAY (LONG)
+  </td>
+  <td>
+  <script>
+  document.write(new ms.Symbol("10033500621101000000", {size:40,frame:false}).asSVG());
+  </script>
+  </td>
+  <td>
+  <script>
+  document.write(new ms.Symbol("10013500621101000000", {size:40}).asSVG());
+  </script>
+  </td>
+  <td>
+  <script>
+  document.write(new ms.Symbol("10033500621101000000", {size:40}).asSVG());
+  </script>
+  </td>
+  <td>
+  <script>
+  document.write(new ms.Symbol("10043500621101000000", {size:40}).asSVG());
+  </script>
+  </td>
+  <td><script>
+  document.write(new ms.Symbol("10063500621101000000", {size:40}).asSVG());
+  </script>
+  </td>
+  </tr>
+  </table>
+
+  <h3>Table 1-3: Operational Condition Amplifiers for Icon-based Symbols. </h3>
   Milsymbol uses the standard operational condition amplifiers only when the option to have mono color or unfilled option is
   set, otherwise the alternate operational condition amplifiers are used. However, it is possible to force usage of the standard
   operatioonal condition amplifiers, by setting the option simpleStatusModifier to true.
   <br>
-
-  <h3>Table 1-3: Operational Condition Amplifiers for Icon-based Symbols. </h3>
+  <br>
   <table>
     <thead>
       <tr class="table-heading">
@@ -2117,356 +2553,6 @@
     );
   </script>
 
-
-  <h3>Table 3-19: Equipment Mobility Indicators</h3>
-  Note that milsymbol automatically moves up the mobility indicator to the bottom of the icon when the symbol is unframed.
-  <table>
-    <thead>
-      <tr>
-        <td>DESCRIPTION
-        </td>
-        <td>UNFRAMED
-        </td>
-        <td>UNKNOWN
-        </td>
-        <td>FRIEND
-        </td>
-        <td>NEUTRAL
-        </td>
-        <td>HOSTILE
-        </td>
-      </tr>
-    </thead>
-    <tr>
-      <td>WHEELED (LIMITED CROSS-COUNTRY)
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500311101010000", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10011500311101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500311101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10041500311101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10061500311101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-
-    <tr>
-      <td>WHEELED (CROSS-COUNTRY)
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500321101010000", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10011500321101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500321101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10041500321101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10061500321101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-
-    <tr>
-      <td>TRACKED
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500331101010000", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10011500331101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500331101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10041500331101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10061500331101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-
-    <tr>
-      <td>WHEELED AND TRACKED COMBINATION
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500341101010000", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10011500341101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500341101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10041500341101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10061500341101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-
-    <tr>
-      <td>TOWED
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500351101010000", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10011500351101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500351101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10041500351101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10061500351101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-
-    <tr>
-      <td>RAILWAY
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500361101010000", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10011500361101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500361101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10041500361101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10061500361101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-
-    <tr>
-      <td>OVER-SNOW (PRIME MOVER)
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500411101010000", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10011500411101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500411101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10041500411101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10061500411101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-
-    <tr>
-      <td>SLED
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500421101010000", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10011500421101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500421101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10041500421101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10061500421101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-
-    <tr>
-      <td>PACK ANIMALS
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500371101010000", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10011500371101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500371101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10041500371101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10061500371101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-
-    <tr>
-      <td>BARGE
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500511101010000", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10011500511101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500511101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10041500511101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10061500511101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-
-    <tr>
-      <td>AMPHIBIOUS
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500521101010000", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10011500521101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10031500521101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10041500521101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("10061500521101010000", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-  </table>
 
   <figure>
     <script>
