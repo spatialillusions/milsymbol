@@ -1,0 +1,7293 @@
+{
+  "coding scheme": "S",
+  "P": {
+    "symbolset": "P",
+    "name": "SPACE",
+    "main icon": [
+      { "hierarchy": "1.X.1 ", "code": "------", "name": ["SPACE TRACK"] },
+      {
+        "hierarchy": "1.X.1.1 ",
+        "code": "S-----",
+        "name": ["SPACE TRACK", "SATELLITE"]
+      },
+      {
+        "hierarchy": "1.X.1.2 ",
+        "code": "V-----",
+        "name": ["SPACE TRACK", "CREWED SPACE VEHICLE"]
+      },
+      {
+        "hierarchy": "1.X.1.3 ",
+        "code": "T-----",
+        "name": ["SPACE TRACK", "SPACE STATION"]
+      }
+    ]
+  },
+  "A": {
+    "symbolset": "A",
+    "name": "AIR",
+    "main icon": [
+      { "hierarchy": "1.X.2 ", "code": "------", "name": ["AIR TRACK"] },
+      {
+        "hierarchy": "1.X.2.1 ",
+        "code": "M-----",
+        "name": ["AIR TRACK", "MILITARY"]
+      },
+      {
+        "hierarchy": "1.X.2.1.1 ",
+        "code": "MF----",
+        "name": ["AIR TRACK", "MILITARY", "FIXED WING"]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.1 ",
+        "code": "MFB---",
+        "name": ["AIR TRACK", "MILITARY", "FIXED WING", "BOMBER"]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.2 ",
+        "code": "MFF---",
+        "name": ["AIR TRACK", "MILITARY", "FIXED WING", "FIGHTER"]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.2.1 ",
+        "code": "MFFI--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "FIXED WING",
+          "FIGHTER",
+          "INTERCEPTOR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.3 ",
+        "code": "MFT---",
+        "name": ["AIR TRACK", "MILITARY", "FIXED WING", "TRAINER"]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.4 ",
+        "code": "MFA---",
+        "name": ["AIR TRACK", "MILITARY", "FIXED WING", "ATTACK/STRIKE"]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.5 ",
+        "code": "MFL---",
+        "name": ["AIR TRACK", "MILITARY", "FIXED WING", "VSTOL"]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.6 ",
+        "code": "MFK---",
+        "name": ["AIR TRACK", "MILITARY", "FIXED WING", "TANKER"]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.7 ",
+        "code": "MFC---",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "FIXED WING",
+          "CARGO AIRLIFT (TRANSPORT)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.7.1 ",
+        "code": "MFCL--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "FIXED WING",
+          "CARGO AIRLIFT (TRANSPORT)",
+          "CARGO AIRLIFT (LIGHT)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.7.2 ",
+        "code": "MFCM--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "FIXED WING",
+          "CARGO AIRLIFT (TRANSPORT)",
+          "CARGO AIRLIFT (MEDIUM)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.7.3 ",
+        "code": "MFCH--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "FIXED WING",
+          "CARGO AIRLIFT (TRANSPORT)",
+          "CARGO AIRLIFT (HEAVY)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.8 ",
+        "code": "MFJ---",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "FIXED WING",
+          "ELECTRONIC COUNTERMEASURES(ECM/JAMMER)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.9 ",
+        "code": "MFO---",
+        "name": ["AIR TRACK", "MILITARY", "FIXED WING", "MEDEVAC"]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.10 ",
+        "code": "MFR---",
+        "name": ["AIR TRACK", "MILITARY", "FIXED WING", "RECONNAISSANCE"]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.10.1 ",
+        "code": "MFRW--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "FIXED WING",
+          "RECONNAISSANCE",
+          "AIRBORNE EARLY WARNING (AEW)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.10.2 ",
+        "code": "MFRZ--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "FIXED WING",
+          "RECONNAISSANCE",
+          "ELECTRONIC SURVEILLANCE MEASURES"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.10.3 ",
+        "code": "MFRX--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "FIXED WING",
+          "RECONNAISSANCE",
+          "PHOTOGRAPHIC"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.11 ",
+        "code": "MFP---",
+        "name": ["AIR TRACK", "MILITARY", "FIXED WING", "PATROL"]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.11.1 ",
+        "code": "MFPN--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "FIXED WING",
+          "PATROL",
+          "ANTI SURFACE WARFARE/ASUW"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.11.2 ",
+        "code": "MFPM--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "FIXED WING",
+          "PATROL",
+          "MINE COUNTER MEASURES"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.12 ",
+        "code": "MFU---",
+        "name": ["AIR TRACK", "MILITARY", "FIXED WING", "UTILITY"]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.12.1 ",
+        "code": "MFUL--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "FIXED WING",
+          "UTILITY",
+          "UTILITY (LIGHT)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.12.2 ",
+        "code": "MFUM--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "FIXED WING",
+          "UTILITY",
+          "UTILITY (MEDIUM)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.12.3 ",
+        "code": "MFUH--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "FIXED WING",
+          "UTILITY",
+          "UTILITY (HEAVY)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.13 ",
+        "code": "MFY---",
+        "name": ["AIR TRACK", "MILITARY", "FIXED WING", "COMMUNICATIONS (C3I)"]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.14 ",
+        "code": "MFH---",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "FIXED WING",
+          "SEARCH AND RESCUE (CSAR)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.15 ",
+        "code": "MFD---",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "FIXED WING",
+          "AIRBORNE COMMAND POST (C2)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.16 ",
+        "code": "MFQ---",
+        "name": ["AIR TRACK", "MILITARY", "FIXED WING", "DRONE (RPV/UAV)"]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.17 ",
+        "code": "MFS---",
+        "name": ["AIR TRACK", "MILITARY", "FIXED WING", ""]
+      },
+      {
+        "hierarchy": "1.X.2.1.1.18 ",
+        "code": "MFM---",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "FIXED WING",
+          "SPECIAL OPERATIONS FORCE (SOF)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.2 ",
+        "code": "MH----",
+        "name": ["AIR TRACK", "MILITARY", "ROTARY WING"]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.1 ",
+        "code": "MHA---",
+        "name": ["AIR TRACK", "MILITARY", "ROTARY WING", "ATTACK"]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.2 ",
+        "code": "MHS---",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "ROTARY WING",
+          "ANTISUBMARINE WARFARE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.3 ",
+        "code": "MHU---",
+        "name": ["AIR TRACK", "MILITARY", "ROTARY WING", "UTILITY"]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.3.1 ",
+        "code": "MHUL--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "ROTARY WING",
+          "UTILITY",
+          "UTILITY (LIGHT)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.3.2 ",
+        "code": "MHUM--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "ROTARY WING",
+          "UTILITY",
+          "UTILITY (MEDIUM)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.3.3 ",
+        "code": "MHUH--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "ROTARY WING",
+          "UTILITY",
+          "UTILITY (HEAVY)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.4 ",
+        "code": "MHI---",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "ROTARY WING",
+          "MINE COUNTER MEASURES"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.5 ",
+        "code": "MHH---",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "ROTARY WING",
+          "COMBAT SEARCH AND RESCUE (CSAR)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.6 ",
+        "code": "MHR---",
+        "name": ["AIR TRACK", "MILITARY", "ROTARY WING", "RECONNAISSANCE"]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.7 ",
+        "code": "MHQ---",
+        "name": ["AIR TRACK", "MILITARY", "ROTARY WING", "DRONE (RPV/UAV)"]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.8 ",
+        "code": "MHC---",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "ROTARY WING",
+          "CARGO AIRLIFT (TRANSPORT)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.8.1 ",
+        "code": "MHCL--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "ROTARY WING",
+          "CARGO AIRLIFT (TRANSPORT)",
+          "CARGO AIRLIFT (LIGHT)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.8.2 ",
+        "code": "MHCM--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "ROTARY WING",
+          "CARGO AIRLIFT (TRANSPORT)",
+          "CARGO AIRLIFT (MEDIUM)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.8.3 ",
+        "code": "MHCH--",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "ROTARY WING",
+          "CARGO AIRLIFT (TRANSPORT)",
+          "CARGO AIRLIFT (HEAVY)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.9 ",
+        "code": "MHT---",
+        "name": ["AIR TRACK", "MILITARY", "ROTARY WING", "TRAINER"]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.10 ",
+        "code": "MHO---",
+        "name": ["AIR TRACK", "MILITARY", "ROTARY WING", "MEDEVAC"]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.11 ",
+        "code": "MHM---",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "ROTARY WING",
+          "SPECIAL OPERATIONS FORCE (SOF)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.12 ",
+        "code": "MHD---",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "ROTARY WING",
+          "AIRBORNE COMMAND POST (C2)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.13 ",
+        "code": "MHK---",
+        "name": ["AIR TRACK", "MILITARY", "ROTARY WING", "TANKER"]
+      },
+      {
+        "hierarchy": "1.X.2.1.2.14 ",
+        "code": "MHJ---",
+        "name": [
+          "AIR TRACK",
+          "MILITARY",
+          "ROTARY WING",
+          "ELECTRONIC COUNTER MEASURES (ECM/JAMMER)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.1.3 ",
+        "code": "ML----",
+        "name": ["AIR TRACK", "MILITARY", "LIGHTER THAN AIR"]
+      },
+      {
+        "hierarchy": "1.X.2.2 ",
+        "code": "W-----",
+        "name": ["AIR TRACK", "WEAPON"]
+      },
+      {
+        "hierarchy": "1.X.2.2.1 ",
+        "code": "WM----",
+        "name": ["AIR TRACK", "WEAPON", "MISSILE IN FLIGHT"]
+      },
+      {
+        "hierarchy": "1.X.2.2.1.1 ",
+        "code": "WMS---",
+        "name": [
+          "AIR TRACK",
+          "WEAPON",
+          "MISSILE IN FLIGHT",
+          "SURFACE/LAND LAUNCHED MISSILE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.2.1.1.1 ",
+        "code": "WMSS--",
+        "name": [
+          "AIR TRACK",
+          "WEAPON",
+          "MISSILE IN FLIGHT",
+          "SURFACE/LAND LAUNCHED MISSILE",
+          "SURFACE TO SURFACE MISSILE (SSM)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.2.1.1.2 ",
+        "code": "WMSA--",
+        "name": [
+          "AIR TRACK",
+          "WEAPON",
+          "MISSILE IN FLIGHT",
+          "SURFACE/LAND LAUNCHED MISSILE",
+          "SURFACE TO AIR MISSILE (SAM)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.2.1.2 ",
+        "code": "WMA---",
+        "name": [
+          "AIR TRACK",
+          "WEAPON",
+          "MISSILE IN FLIGHT",
+          "AIR LAUNCHED MISSILE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.2.1.2.1 ",
+        "code": "WMAS--",
+        "name": [
+          "AIR TRACK",
+          "WEAPON",
+          "MISSILE IN FLIGHT",
+          "AIR LAUNCHED MISSILE",
+          "AIR TO SURFACE MISSILE (ASM)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.2.1.2.2 ",
+        "code": "WMAA--",
+        "name": [
+          "AIR TRACK",
+          "WEAPON",
+          "MISSILE IN FLIGHT",
+          "AIR LAUNCHED MISSILE",
+          "AIR TO AIR MISSILE (AAM)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.2.1.3 ",
+        "code": "WMU---",
+        "name": [
+          "AIR TRACK",
+          "WEAPON",
+          "MISSILE IN FLIGHT",
+          "SUBSURFACE TO SURFACE MISSILE (S/SSM)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.2.1.4 ",
+        "code": "WML---",
+        "name": [
+          "AIR TRACK",
+          "WEAPON",
+          "MISSILE IN FLIGHT",
+          "LAND ATTACK MISSILE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.2.2.2 ",
+        "code": "WD----",
+        "name": ["AIR TRACK", "WEAPON", "DECOY"]
+      },
+      {
+        "hierarchy": "1.X.2.3 ",
+        "code": "C-----",
+        "name": ["AIR TRACK", "CIVIL AIRCRAFT"]
+      },
+      {
+        "hierarchy": "1.X.2.3.1 ",
+        "code": "CF----",
+        "name": ["AIR TRACK", "CIVIL AIRCRAFT", "FIXED WING"]
+      },
+      {
+        "hierarchy": "1.X.2.3.2 ",
+        "code": "CH----",
+        "name": ["AIR TRACK", "CIVIL AIRCRAFT", "ROTARY WING"]
+      },
+      {
+        "hierarchy": "1.X.2.3.3 ",
+        "code": "CL----",
+        "name": ["AIR TRACK", "CIVIL AIRCRAFT", "LIGHTER THAN AIR"]
+      }
+    ]
+  },
+  "G": {
+    "symbolset": "G",
+    "name": "GROUND",
+    "main icon": [
+      { "hierarchy": "1.X.3 ", "code": "------", "name": ["GROUND TRACK"] },
+      {
+        "hierarchy": "1.X.3.1 ",
+        "code": "U-----",
+        "name": ["GROUND TRACK", "UNIT"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1 ",
+        "code": "UC----",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.1 ",
+        "code": "UCD---",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "AIR DEFENCE"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.1.1 ",
+        "code": "UCDS--",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "AIR DEFENCE", "SHORT RANGE"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.1.1.1 ",
+        "code": "UCDS--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AIR DEFENCE",
+          "SHORT RANGE",
+          "MISSILE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.1.1.2 ",
+        "code": "UCDS--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AIR DEFENCE",
+          "SHORT RANGE",
+          "GUN"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.1.2 ",
+        "code": "UCDM--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AIR DEFENCE",
+          "AIR DEFENCE MISSILE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.1.2.1 ",
+        "code": "UCDML-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AIR DEFENCE",
+          "AIR DEFENCE MISSILE",
+          "AIR DEFENCE MISSILE LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.1.2.1.1 ",
+        "code": "UCDMLA",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AIR DEFENCE",
+          "AIR DEFENCE MISSILE",
+          "AIR DEFENCE MISSILE LIGHT",
+          "AIR DEFENCE MISSILE MOTORIZED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.1.2.2 ",
+        "code": "UCDMM-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AIR DEFENCE",
+          "AIR DEFENCE MISSILE",
+          "AIR DEFENCE MISSILE MEDIUM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.1.2.3 ",
+        "code": "UCDMH-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AIR DEFENCE",
+          "AIR DEFENCE MISSILE",
+          "AIR DEFENCE MISSILE HEAVY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.1.2.4 ",
+        "code": "UCDH--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AIR DEFENCE",
+          "AIR DEFENCE MISSILE",
+          "H/MAD"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.1.3 ",
+        "code": "UCDG--",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "AIR DEFENCE", "GUN UNIT"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.1.4 ",
+        "code": "UCDC--",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "AIR DEFENCE", "COMPOSITE"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.1.5 ",
+        "code": "UCDT--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AIR DEFENCE",
+          "TARGETING UNIT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.1.6 ",
+        "code": "UCDO--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AIR DEFENCE",
+          "THEATRE MISSILE DEFENCE UNIT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.2 ",
+        "code": "UCA---",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "ARMOUR"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.2.1 ",
+        "code": "UCAT--",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "ARMOUR", "ARMOUR TRACK"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.2.1.1 ",
+        "code": "UCATA-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ARMOUR",
+          "ARMOUR TRACK",
+          "ARMOUR TRACK AIRBORNE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.2.1.2 ",
+        "code": "UCATW-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ARMOUR",
+          "ARMOUR TRACK",
+          "ARMOUR TRACK AMPHIBIOUS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.2.1.2.1 ",
+        "code": "UCATWR",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ARMOUR",
+          "ARMOUR TRACK",
+          "ARMOUR TRACK AMPHIBIOUS",
+          "ARMOUR TRACK AMPHIBIOUS RECOVERY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.2.1.3 ",
+        "code": "UCATL-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ARMOUR",
+          "ARMOUR TRACK",
+          "ARMOUR TRACK, LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.2.1.4 ",
+        "code": "UCATM-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ARMOUR",
+          "ARMOUR TRACK",
+          "ARMOUR TRACK, MEDIUM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.2.1.5 ",
+        "code": "UCATH-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ARMOUR",
+          "ARMOUR TRACK",
+          "ARMOUR TRACK, HEAVY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.2.1.6 ",
+        "code": "UCATR-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ARMOUR",
+          "ARMOUR TRACK",
+          "ARMOUR TRACK, RECOVERY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.2.2 ",
+        "code": "UCAW--",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "ARMOUR", "ARMOUR, WHEELED"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.2.2.1 ",
+        "code": "UCAWS-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ARMOUR",
+          "ARMOUR, WHEELED",
+          "ARMOUR, WHEELED AIR ASSAULT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.2.2.2 ",
+        "code": "UCAWA-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ARMOUR",
+          "ARMOUR, WHEELED",
+          "ARMOUR, WHEELED AIRBORNE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.2.2.3 ",
+        "code": "UCAWA-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ARMOUR",
+          "ARMOUR, WHEELED",
+          "ARMOUR, WHEELED AMPHIBIOUS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.2.2.4 ",
+        "code": "UCAWL-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ARMOUR",
+          "ARMOUR, WHEELED",
+          "ARMOUR, WHEELED LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.2.2.5 ",
+        "code": "UCAWM-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ARMOUR",
+          "ARMOUR, WHEELED",
+          "ARMOUR, WHEELED MEDIUM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.2.2.6 ",
+        "code": "UCAWH-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ARMOUR",
+          "ARMOUR, WHEELED",
+          "ARMOUR, WHEELED HEAVY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.2.2.7 ",
+        "code": "UCAWR-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ARMOUR",
+          "ARMOUR, WHEELED",
+          "ARMOUR, WHEELED RECOVERY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.3 ",
+        "code": "UCAA--",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "ANTI ARMOUR"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.3.1 ",
+        "code": "UCAAD-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ANTI ARMOUR",
+          "ANTI ARMOUR DISMOUNTED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.3.2 ",
+        "code": "UCAAL-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ANTI ARMOUR",
+          "ANTI ARMOUR LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.3.3 ",
+        "code": "UCAAM-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ANTI ARMOUR",
+          "ANTI ARMOUR AIRBORNE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.3.4 ",
+        "code": "UCAAS-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ANTI ARMOUR",
+          "ANTI ARMOUR AIR ASSAULT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.3.5 ",
+        "code": "UCAAU-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ANTI ARMOUR",
+          "ANTI ARMOUR MOUNTAIN"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.3.6 ",
+        "code": "UCAAC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ANTI ARMOUR",
+          "ANTI ARMOUR ARCTIC"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.3.7 ",
+        "code": "UCAAA-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ANTI ARMOUR",
+          "ANTI ARMOUR ARMOURED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.3.7.1 ",
+        "code": "UCAAAT",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ANTI ARMOUR",
+          "ANTI ARMOUR ARMOURED",
+          "ANTI ARMOUR ARMOURED TRACKED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.3.7.2 ",
+        "code": "UCAAAW",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ANTI ARMOUR",
+          "ANTI ARMOUR ARMOURED",
+          "ANTI ARMOUR ARMOURED WHEELED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.3.7.3 ",
+        "code": "UCAAAS",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ANTI ARMOUR",
+          "ANTI ARMOUR ARMOURED",
+          "ANTI ARMOUR ARMOURED AIR ASSAULT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.3.8 ",
+        "code": "UCAAO-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ANTI ARMOUR",
+          "ANTI ARMOUR MOTORIZED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.3.8.1 ",
+        "code": "UCAAOS",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ANTI ARMOUR",
+          "ANTI ARMOUR MOTORIZED",
+          "ANTI ARMOUR MOTORIZED AIR ASSAULT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4 ",
+        "code": "UCV---",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "AVIATION"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.1 ",
+        "code": "UCVF--",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "AVIATION", "FIXED WING"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.1.1 ",
+        "code": "UCVFU-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "FIXED WING",
+          "UTILITY FIXED WING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.1.2 ",
+        "code": "UCVFA-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "FIXED WING",
+          "ATTACK FIXED WING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.1.2.1 ",
+        "code": "UCVUTP",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "FIXED WING",
+          "ATTACK FIXED WING",
+          "TACTICAL AIR CONTROL PARTY (TACP)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.1.2.2 ",
+        "code": "UCVUFC",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "FIXED WING",
+          "ATTACK FIXED WING",
+          "FORWARD AIR CONTROLLER (FAC)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.1.3 ",
+        "code": "UCVFR-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "FIXED WING",
+          "RECON FIXED WING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.2 ",
+        "code": "UCVR--",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "AVIATION", "ROTARY WING"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.2.1 ",
+        "code": "UCVRA-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "ROTARY WING",
+          "ATTACK ROTARY WING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.2.2 ",
+        "code": "UCVRS-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "ROTARY WING",
+          "SCOUT ROTARY WING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.2.3 ",
+        "code": "UCVRW-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "ROTARY WING",
+          "ANTISUBMARINE WARFARE ROTARY WING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.2.4 ",
+        "code": "UCVRU-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "ROTARY WING",
+          "UTILITY ROTARY WING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.2.4.1 ",
+        "code": "UCVRUL",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "ROTARY WING",
+          "UTILITY ROTARY WING",
+          "LIGHT UTILITY ROTARY WING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.2.4.2 ",
+        "code": "UCVRUM",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "ROTARY WING",
+          "UTILITY ROTARY WING",
+          "MEDIUM UTILITY ROTARY WING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.2.4.3 ",
+        "code": "UCVRUH",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "ROTARY WING",
+          "UTILITY ROTARY WING",
+          "HEAVY UTILITY ROTARY WING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.2.5 ",
+        "code": "UCVRUC",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "ROTARY WING",
+          "C2 ROTARY WING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.2.6 ",
+        "code": "UCVRUE",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "ROTARY WING",
+          "MEDEVAC ROTARY WING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.2.7 ",
+        "code": "UCVRM-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "ROTARY WING",
+          "MINE COUNTERMEASURE ROTARY WING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.3 ",
+        "code": "UCVS--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "PERSONNEL RECOVERY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.4 ",
+        "code": "UCVC--",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "AVIATION", "COMPOSITE"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.5 ",
+        "code": "UCVV--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "VERTICAL/SHORT TAKEOFF AND LANDING (V/STOL)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.6 ",
+        "code": "UCVU--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "UNMANNED AERIAL VEHICLE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.6.1 ",
+        "code": "UCVUF-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "UNMANNED AERIAL VEHICLE",
+          "UNMANNED AERIAL VEHICLE FIXED WING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.6.2 ",
+        "code": "UCVUR-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "UNMANNED AERIAL VEHICLE",
+          "UNMANNED AERIAL VEHICLE ROTARY WING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.6.3 ",
+        "code": "UCVUTP",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "UNMANNED AERIAL VEHICLE",
+          "TACTICAL AIR CONTROL PARTY (TACP)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.6.4 ",
+        "code": "UCVUFC",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "UNMANNED AERIAL VEHICLE",
+          "FORWARD AIR CONTROLLER (FAC)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.5 ",
+        "code": "UCI---",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "INFANTRY"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.5.1 ",
+        "code": "UCIL--",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "INFANTRY", "INFANTRY LIGHT"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.5.2 ",
+        "code": "UCIM--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "INFANTRY",
+          "INFANTRY MOTORIZED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.5.3 ",
+        "code": "UCIO--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "INFANTRY",
+          "INFANTRY MOUNTAIN"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.5.4 ",
+        "code": "UCIA--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "INFANTRY",
+          "INFANTRY AIRBORNE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.5.5 ",
+        "code": "UCIS--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "INFANTRY",
+          "INFANTRY AIR ASSAULT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.5.6 ",
+        "code": "UCIZ--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "INFANTRY",
+          "INFANTRY MECHANIZED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.5.7 ",
+        "code": "UCIN--",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "INFANTRY", "INFANTRY NAVAL"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.5.8 ",
+        "code": "UCII--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "INFANTRY",
+          "INFANTRY FIGHTING VEHICLE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.5.9 ",
+        "code": "UCIC--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "INFANTRY",
+          "INFANTRY ARCTIC"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6 ",
+        "code": "UCE---",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "ENGINEER"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6.1 ",
+        "code": "UCEC--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ENGINEER",
+          "ENGINEER COMBAT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6.1.1 ",
+        "code": "UCECS-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ENGINEER",
+          "ENGINEER COMBAT",
+          "ENGINEER COMBAT AIR ASSAULT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6.1.2 ",
+        "code": "UCECA-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ENGINEER",
+          "ENGINEER COMBAT",
+          "ENGINEER COMBAT AIRBORNE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6.1.3 ",
+        "code": "UCECC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ENGINEER",
+          "ENGINEER COMBAT",
+          "ENGINEER COMBAT ARCTIC"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6.1.4 ",
+        "code": "UCECL-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ENGINEER",
+          "ENGINEER COMBAT",
+          "ENGINEER COMBAT LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6.1.5 ",
+        "code": "UCECM-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ENGINEER",
+          "ENGINEER COMBAT",
+          "ENGINEER COMBAT MEDIUM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6.1.6 ",
+        "code": "UCECH-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ENGINEER",
+          "ENGINEER COMBAT",
+          "ENGINEER COMBAT HEAVY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6.1.7 ",
+        "code": "UCECT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ENGINEER",
+          "ENGINEER COMBAT",
+          "ENGINEER COMBAT MECHANIZED (TRACK)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6.1.8 ",
+        "code": "UCECW-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ENGINEER",
+          "ENGINEER COMBAT",
+          "ENGINEER COMBAT MOTORIZED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6.1.9 ",
+        "code": "UCECO-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ENGINEER",
+          "ENGINEER COMBAT",
+          "ENGINEER COMBAT MOUNTAIN"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6.1.10 ",
+        "code": "UCECR-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ENGINEER",
+          "ENGINEER COMBAT",
+          "ENGINEER COMBAT RECON"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6.1.11 ",
+        "code": "UCEC--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ENGINEER",
+          "ENGINEER COMBAT",
+          "ENGINEER COMBAT BRIDGING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6.1.12 ",
+        "code": "UCEC--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ENGINEER",
+          "ENGINEER COMBAT",
+          "ENGINEER COMBAT MINE CLEARING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6.1.13 ",
+        "code": "UCEC--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ENGINEER",
+          "ENGINEER COMBAT",
+          "ENGINEER COMBAT MINE LAYING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6.1.14 ",
+        "code": "UCEC--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ENGINEER",
+          "ENGINEER COMBAT",
+          "ENGINEER COMBAT DIVING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6.2 ",
+        "code": "UCEN--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ENGINEER",
+          "ENGINEER CONSTRUCTION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.6.2.1 ",
+        "code": "UCENN-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "ENGINEER",
+          "ENGINEER CONSTRUCTION",
+          "ENGINEER NAVAL CONSTRUCTION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7 ",
+        "code": "UCF---",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "FIELD ARTILLERY"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.1 ",
+        "code": "UCFH--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "HOWITZER/GUN"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.1.1 ",
+        "code": "UCFHE-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "HOWITZER/GUN",
+          "SELF PROPELLED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.1.2 ",
+        "code": "UCFHS-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "HOWITZER/GUN",
+          "AIR ASSAULT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.1.3 ",
+        "code": "UCFHA-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "HOWITZER/GUN",
+          "AIRBORNE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.1.4 ",
+        "code": "UCFHC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "HOWITZER/GUN",
+          "ARCTIC"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.1.5 ",
+        "code": "UCFHO-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "HOWITZER/GUN",
+          "MOUNTAIN"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.1.6 ",
+        "code": "UCFHL-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "HOWITZER/GUN",
+          "LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.1.7 ",
+        "code": "UCFHM-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "HOWITZER/GUN",
+          "MEDIUM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.1.8 ",
+        "code": "UCFHH-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "HOWITZER/GUN",
+          "HEAVY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.1.9 ",
+        "code": "UCFHX-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "HOWITZER/GUN",
+          "AMPHIBIOUS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.2 ",
+        "code": "UCFR--",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "FIELD ARTILLERY", "ROCKET"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.2.1 ",
+        "code": "UCFRS-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "ROCKET",
+          "SINGLE ROCKET LAUNCHER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.2.1.1 ",
+        "code": "UCFRSS",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "ROCKET",
+          "SINGLE ROCKET LAUNCHER",
+          "SINGLE ROCKET SELF PROPELLED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.2.1.2 ",
+        "code": "UCFRSR",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "ROCKET",
+          "SINGLE ROCKET LAUNCHER",
+          "SINGLE ROCKET TRUCK"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.2.1.3 ",
+        "code": "UCFRST",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "ROCKET",
+          "SINGLE ROCKET LAUNCHER",
+          "SINGLE ROCKET TOWED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.2.2 ",
+        "code": "UCFRM-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "ROCKET",
+          "MULTI ROCKET LAUNCHER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.2.2.1 ",
+        "code": "UCFRMS",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "ROCKET",
+          "MULTI ROCKET LAUNCHER",
+          "MULTI ROCKET SELF PROPELLED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.2.2.2 ",
+        "code": "UCFRMR",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "ROCKET",
+          "MULTI ROCKET LAUNCHER",
+          "MULTI ROCKET TRUCK"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.2.2.3 ",
+        "code": "UCFRMT",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "ROCKET",
+          "MULTI ROCKET LAUNCHER",
+          "MULTI ROCKET TOWED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.3 ",
+        "code": "UCFT--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "TARGET ACQUISITION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.3.1 ",
+        "code": "UCFTR-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "TARGET ACQUISITION",
+          "RADAR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.3.2 ",
+        "code": "UCFTS-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "TARGET ACQUISITION",
+          "SOUND"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.3.3 ",
+        "code": "UCFTF-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "TARGET ACQUISITION",
+          "FLASH (OPTICAL)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.3.4 ",
+        "code": "UCFTC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "TARGET ACQUISITION",
+          "TARGET ACQUISITION MOUNTED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.3.4.1 ",
+        "code": "UCFTCD",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "TARGET ACQUISITION",
+          "TARGET ACQUISITION MOUNTED",
+          "TARGET ACQUISITION DISMOUNTED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.3.4.2 ",
+        "code": "UCFTCM",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "TARGET ACQUISITION",
+          "TARGET ACQUISITION MOUNTED",
+          "TARGET ACQUISITION TRACKED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.3.5 ",
+        "code": "UCFTA-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "TARGET ACQUISITION",
+          "TARGET ACQUISITION NAVAL GUNFIRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.4 ",
+        "code": "UCFM--",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "FIELD ARTILLERY", "MORTAR"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.4.1 ",
+        "code": "UCFMS-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "MORTAR",
+          "SELF PROPELLED (SP) TRACKED MORTAR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.4.2 ",
+        "code": "UCFMSW",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "MORTAR",
+          "SP WHEELED MORTAR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.4.3 ",
+        "code": "UCFMT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "MORTAR",
+          "TOWED MORTAR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.4.3.1 ",
+        "code": "UCFMTA",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "MORTAR",
+          "TOWED MORTAR",
+          "TOWED AIRBORNE MORTAR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.4.3.2 ",
+        "code": "UCFMTS",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "MORTAR",
+          "TOWED MORTAR",
+          "TOWED AIR ASSAULT MORTAR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.4.3.3 ",
+        "code": "UCFMTC",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "MORTAR",
+          "TOWED MORTAR",
+          "TOWED ARCTIC MORTAR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.4.3.4 ",
+        "code": "UCFMTO",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "MORTAR",
+          "TOWED MORTAR",
+          "TOWED MOUNTAIN MORTAR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.4.4 ",
+        "code": "UCFML-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "MORTAR",
+          "AMPHIBIOUS MORTAR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.5 ",
+        "code": "UCFS--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "ARTILLERY SURVEY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.5.1 ",
+        "code": "UCFSS-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "ARTILLERY SURVEY",
+          "AIR ASSAULT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.5.2 ",
+        "code": "UCFSA-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "ARTILLERY SURVEY",
+          "AIRBORNE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.5.3 ",
+        "code": "UCFSL-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "ARTILLERY SURVEY",
+          "LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.5.4 ",
+        "code": "UCFSO-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "ARTILLERY SURVEY",
+          "MOUNTAIN"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.6 ",
+        "code": "UCFO--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "METEOROLOGICAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.6.1 ",
+        "code": "UCFOS-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "METEOROLOGICAL",
+          "AIR ASSAULT METEOROLOGICAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.6.2 ",
+        "code": "UCFOA-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "METEOROLOGICAL",
+          "AIRBORNE METEOROLOGICAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.6.3 ",
+        "code": "UCFOL-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "METEOROLOGICAL",
+          "LIGHT METEOROLOGICAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.6.4 ",
+        "code": "UCFOO-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "METEOROLOGICAL",
+          "MOUNTAIN METEOROLOGICAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.7 ",
+        "code": "UCF---",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "FIRE DIRECTION CENTRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.7.8 ",
+        "code": "UCF---",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "FIELD ARTILLERY",
+          "OBERSERVER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.8 ",
+        "code": "UCR---",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "RECONNAISSANCE"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.8.1 ",
+        "code": "UCRH--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "RECONNAISSANCE",
+          "RECONNAISSANCE HORSE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.8.2 ",
+        "code": "UCRV--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "RECONNAISSANCE",
+          "RECONNAISSANCE CAVALRY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.8.2.1 ",
+        "code": "UCRVA-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "RECONNAISSANCE",
+          "RECONNAISSANCE CAVALRY",
+          "RECONNAISSANCE CAVALRY ARMOURED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.8.2.2 ",
+        "code": "UCRVM-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "RECONNAISSANCE",
+          "RECONNAISSANCE CAVALRY",
+          "RECONNAISSANCE CAVALRY MOTORIZED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.8.2.3 ",
+        "code": "UCRVG-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "RECONNAISSANCE",
+          "RECONNAISSANCE CAVALRY",
+          "RECONNAISSANCE CAVALRY GROUND"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.8.2.4 ",
+        "code": "UCRVO-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "RECONNAISSANCE",
+          "RECONNAISSANCE CAVALRY",
+          "RECONNAISSANCE CAVALRY AIR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.8.3 ",
+        "code": "UCRC--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "RECONNAISSANCE",
+          "RECONNAISSANCE ARCTIC"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.8.4 ",
+        "code": "UCRS--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "RECONNAISSANCE",
+          "RECONNAISSANCE AIR ASSAULT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.8.5 ",
+        "code": "UCRA--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "RECONNAISSANCE",
+          "RECONNAISSANCE AIRBORNE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.8.6 ",
+        "code": "UCRO--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "RECONNAISSANCE",
+          "RECONNAISSANCE MOUNTAIN"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.8.7 ",
+        "code": "UCRLL--",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "RECONNAISSANCE", ""]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.8.8 ",
+        "code": "UCRR--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "RECONNAISSANCE",
+          "RECONNAISSANCE MARINE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.8.8.1 ",
+        "code": "UCRRD-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "RECONNAISSANCE",
+          "RECONNAISSANCE MARINE",
+          "RECONNAISSANCE MARINE DIVISION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.8.8.2 ",
+        "code": "UCRRF-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "RECONNAISSANCE",
+          "RECONNAISSANCE MARINE",
+          "RECONNAISSANCE MARINE FORCE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.8.8.3 ",
+        "code": "UCRRL-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "RECONNAISSANCE",
+          "RECONNAISSANCE MARINE",
+          "RECONNAISSANCE MARINE LIGHT ARMOURED RECONNAISSANCE (LAR)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.8.9 ",
+        "code": "UCRX--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "RECONNAISSANCE",
+          "RECONNAISSANCE LONG RANGE SURVEILLANCE (LRS)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.9 ",
+        "code": "UCM---",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "MISSILE (SURFACE-SURFACE)"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.9.1 ",
+        "code": "UCMT--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "MISSILE (SURFACE-SURFACE)",
+          "MISSILE (SURFACE-SURFACE) TACTICAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.9.2 ",
+        "code": "UCMS--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "MISSILE (SURFACE-SURFACE)",
+          "MISSILE (SURFACE-SURFACE) STRATEGIC"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.10 ",
+        "code": "UCS---",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT", "INTERNAL SECURITY FORCES"]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.10.1 ",
+        "code": "UCSW--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "INTERNAL SECURITY FORCES",
+          "RIVERINE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.10.2 ",
+        "code": "UCSG--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "INTERNAL SECURITY FORCES",
+          "GROUND"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.10.2.1 ",
+        "code": "UCSGD-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "INTERNAL SECURITY FORCES",
+          "GROUND",
+          "DISMOUNTED GROUND"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.10.2.2 ",
+        "code": "UCSGM-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "INTERNAL SECURITY FORCES",
+          "GROUND",
+          "MOTORIZED GROUND"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.10.2.3 ",
+        "code": "UCSGA-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "INTERNAL SECURITY FORCES",
+          "GROUND",
+          "MECHANIZED GROUND"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.10.3 ",
+        "code": "UCSM--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "INTERNAL SECURITY FORCES",
+          "WHEELED MECHANIZED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.10.4 ",
+        "code": "UCSR--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "INTERNAL SECURITY FORCES",
+          "RAILROAD"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.10.5 ",
+        "code": "UCSA--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "INTERNAL SECURITY FORCES",
+          "AVIATION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2 ",
+        "code": "UU----",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT SUPPORT"]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.1 ",
+        "code": "UUA---",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "COMBAT SUPPORT CBRN"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.1.1 ",
+        "code": "UUAC--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "COMBAT SUPPORT CBRN",
+          "CHEMICAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.1.1.1 ",
+        "code": "UUACC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "COMBAT SUPPORT CBRN",
+          "CHEMICAL",
+          "SMOKE/DECON"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.1.1.1.1 ",
+        "code": "UUACCK",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "COMBAT SUPPORT CBRN",
+          "CHEMICAL",
+          "SMOKE/DECON",
+          "MECHANIZED SMOKE/DECON"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.1.1.1.2 ",
+        "code": "UUACCM",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "COMBAT SUPPORT CBRN",
+          "CHEMICAL",
+          "SMOKE/DECON",
+          "MOTORIZED SMOKE/DECON"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.1.1.2 ",
+        "code": "UUACS-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "COMBAT SUPPORT CBRN",
+          "CHEMICAL",
+          "SMOKE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.1.1.2.1 ",
+        "code": "UUACSM",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "COMBAT SUPPORT CBRN",
+          "CHEMICAL",
+          "SMOKE",
+          "MOTORIZED SMOKE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.1.1.2.2 ",
+        "code": "UUACSA",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "COMBAT SUPPORT CBRN",
+          "CHEMICAL",
+          "SMOKE",
+          "ARMOUR SMOKE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.1.1.3 ",
+        "code": "UUACR-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "COMBAT SUPPORT CBRN",
+          "CHEMICAL",
+          "CHEMICAL RECON"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.1.1.3.1 ",
+        "code": "UUACRW",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "COMBAT SUPPORT CBRN",
+          "CHEMICAL",
+          "CHEMICAL RECON",
+          "CHEMICAL WHEELED ARMOURED VEHICLE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.1.1.3.2 ",
+        "code": "UUACRS",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "COMBAT SUPPORT CBRN",
+          "CHEMICAL",
+          "CHEMICAL RECON",
+          "CHEMICAL WHEELED ARMOURED VEHICLE RECONNAISSANCE SURVEILLANCE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.1.2 ",
+        "code": "UUAN--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "COMBAT SUPPORT CBRN",
+          "NUCLEAR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.1.3 ",
+        "code": "UUAB--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "COMBAT SUPPORT CBRN",
+          "BIOLOGICAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.1.3.1 ",
+        "code": "UUABR-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "COMBAT SUPPORT CBRN",
+          "BIOLOGICAL",
+          "RECON EQUIPPED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.1.4 ",
+        "code": "UUAD--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "COMBAT SUPPORT CBRN",
+          "DECONTAMINATION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2 ",
+        "code": "UUM---",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.1 ",
+        "code": "UUMA--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "AERIAL EXPLOITATION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.2 ",
+        "code": "UUMS--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "SIGNAL INTELLIGENCE (SIGINT)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.2.1 ",
+        "code": "UUMSE-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "SIGNAL INTELLIGENCE (SIGINT)",
+          "ELECTRONIC WARFARE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.2.1.1 ",
+        "code": "UUMSEA",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "SIGNAL INTELLIGENCE (SIGINT)",
+          "ELECTRONIC WARFARE",
+          "ARMOURED WHEELED VEHICLE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.2.1.2 ",
+        "code": "UUMSED",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "SIGNAL INTELLIGENCE (SIGINT)",
+          "ELECTRONIC WARFARE",
+          "DIRECTION FINDING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.2.1.3 ",
+        "code": "UUMSEI",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "SIGNAL INTELLIGENCE (SIGINT)",
+          "ELECTRONIC WARFARE",
+          "INTERCEPT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.2.1.4 ",
+        "code": "UUMSEJ",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "SIGNAL INTELLIGENCE (SIGINT)",
+          "ELECTRONIC WARFARE",
+          "JAMMING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.2.1.5 ",
+        "code": "UUMSET",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "SIGNAL INTELLIGENCE (SIGINT)",
+          "ELECTRONIC WARFARE",
+          "THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.2.1.6 ",
+        "code": "UUMSEC",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "SIGNAL INTELLIGENCE (SIGINT)",
+          "ELECTRONIC WARFARE",
+          "CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.3 ",
+        "code": "UUMC--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "COUNTER INTELLIGENCE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.4 ",
+        "code": "UUMR--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "SURVEILLANCE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.4.1 ",
+        "code": "UUMRG-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "SURVEILLANCE",
+          "GROUND SURVEILLANCE RADAR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.4.2 ",
+        "code": "UUMRS-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "SURVEILLANCE",
+          "SENSOR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.4.2.1 ",
+        "code": "UUMRSS",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "SURVEILLANCE",
+          "SENSOR",
+          "SENSOR SCM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.4.3 ",
+        "code": "UUMRX-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "SURVEILLANCE",
+          "GROUND STATION MODULE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.4.4 ",
+        "code": "UUMMO-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "SURVEILLANCE",
+          "METEOROLOGICAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.5 ",
+        "code": "UUMO--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "OPERATIONS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.6 ",
+        "code": "UUMT--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "TACTICAL EXPLOIT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.7 ",
+        "code": "UUMQ--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "INTERROGATION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.2.8 ",
+        "code": "UUMJ--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "MILITARY INTELLIGENCE",
+          "JOINT INTELLIGENCE CENTRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.3 ",
+        "code": "UUL---",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "LAW ENFORCEMENT UNIT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.3.1 ",
+        "code": "UULS--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "LAW ENFORCEMENT UNIT",
+          "SHORE PATROL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.3.2 ",
+        "code": "UULM--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "LAW ENFORCEMENT UNIT",
+          "MILITARY POLICE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.3.3 ",
+        "code": "UULC--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "LAW ENFORCEMENT UNIT",
+          "CIVILIAN LAW ENFORCEMENT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.3.4 ",
+        "code": "UULF--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "LAW ENFORCEMENT UNIT",
+          "SECURITY POLICE (AIR)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.3.5 ",
+        "code": "UULD--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "LAW ENFORCEMENT UNIT",
+          "CENTRAL INTELLIGENCE DIVISION (CID)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.4 ",
+        "code": "UUS---",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT SUPPORT", "SIGNAL UNIT"]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.4.1 ",
+        "code": "UUSA--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "SIGNAL UNIT",
+          "AREA"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.4.2 ",
+        "code": "UUSC--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "SIGNAL UNIT",
+          "COMMUNICATION CONFIGURED PACKAGE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.4.2.1 ",
+        "code": "UUSCL-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "SIGNAL UNIT",
+          "COMMUNICATION CONFIGURED PACKAGE",
+          "LARGE COMMUNICATION CONFIGURED PACKAGE (LCCP)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.4.3 ",
+        "code": "UUSO--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "SIGNAL UNIT",
+          "COMMAND OPERATIONS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.4.4 ",
+        "code": "UUSF--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "SIGNAL UNIT",
+          "FORWARD COMMUNICATIONS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.4.5 ",
+        "code": "UUSM--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "SIGNAL UNIT",
+          "MULTIPLE SUBSCRIBER ELEMENT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.4.5.1 ",
+        "code": "UUSMS-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "SIGNAL UNIT",
+          "MULTIPLE SUBSCRIBER ELEMENT",
+          "SMALL EXTENSION NODE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.4.5.2 ",
+        "code": "UUSML-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "SIGNAL UNIT",
+          "MULTIPLE SUBSCRIBER ELEMENT",
+          "LARGE EXTENSION NODE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.4.5.3 ",
+        "code": "UUSMN-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "SIGNAL UNIT",
+          "MULTIPLE SUBSCRIBER ELEMENT",
+          "NODE CENTRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.4.6 ",
+        "code": "UUSR--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "SIGNAL UNIT",
+          "RADIO UNIT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.4.6.1 ",
+        "code": "UUSRS-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "SIGNAL UNIT",
+          "RADIO UNIT",
+          "TACTICAL SATELLITE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.4.6.2 ",
+        "code": "UUSRT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "SIGNAL UNIT",
+          "RADIO UNIT",
+          "TELETYPE CENTRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.4.6.3 ",
+        "code": "UUSRW-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "SIGNAL UNIT",
+          "RADIO UNIT",
+          "RELAY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.4.7 ",
+        "code": "UUSS--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "SIGNAL UNIT",
+          "SIGNAL SUPPORT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.4.8 ",
+        "code": "UUSW--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "SIGNAL UNIT",
+          "TELEPHONE SWITCH"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.4.9 ",
+        "code": "UUSX--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "SIGNAL UNIT",
+          "ELECTRONIC RANGING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.5 ",
+        "code": "UUI---",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "INFORMATION WARFARE UNIT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.6 ",
+        "code": "UUX---",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT SUPPORT", "LANDING SUPPORT"]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.7 ",
+        "code": "UUE---",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SUPPORT",
+          "EXPLOSIVE ORDINANCE DISPOSAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.8 ",
+        "code": "UUT---",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT SUPPORT", "TOPOGRAPHIC"]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.9 ",
+        "code": "UU----",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT SUPPORT", "DOG"]
+      },
+      {
+        "hierarchy": "1.X.3.1.2.10 ",
+        "code": "UUD---",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT SUPPORT", "DRILLING"]
+      },
+      {
+        "hierarchy": "1.X.3.1.3 ",
+        "code": "US----",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT SERVICE SUPPORT"]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1 ",
+        "code": "USA---",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.1 ",
+        "code": "USAT--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "ADMIN THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.2 ",
+        "code": "USAC--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "ADMIN CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.3 ",
+        "code": "USAJ--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "JUDGE ADVOCATE GENERAL (JAG)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.3.1 ",
+        "code": "USAJT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "JUDGE ADVOCATE GENERAL (JAG)",
+          "JAG THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.3.2 ",
+        "code": "USAJC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "JUDGE ADVOCATE GENERAL (JAG)",
+          "JAG CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.4 ",
+        "code": "USAO--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "POSTAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.4.1 ",
+        "code": "USAOT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "POSTAL",
+          "POSTAL THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.4.2 ",
+        "code": "USAOC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "POSTAL",
+          "POSTAL CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.5 ",
+        "code": "USAF--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "FINANCE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.5.1 ",
+        "code": "USAFT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "FINANCE",
+          "FINANCE THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.5.2 ",
+        "code": "USAFC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "FINANCE",
+          "FINANCE CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.6 ",
+        "code": "USAS--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "PERSONNEL SERVICES"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.6.1 ",
+        "code": "USAST-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "PERSONNEL SERVICES",
+          "PERSONNEL THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.6.2 ",
+        "code": "USASC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "PERSONNEL SERVICES",
+          "PERSONNEL CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.7 ",
+        "code": "USAM--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "MORTUARY/GRAVES REGISTRY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.7.1 ",
+        "code": "USAMT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "MORTUARY/GRAVES REGISTRY",
+          "MORTUARY/GRAVES REGISTRY THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.7.2 ",
+        "code": "USAMC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "MORTUARY/GRAVES REGISTRY",
+          "MORTUARY/GRAVES REGISTRY CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.8 ",
+        "code": "USAR--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "RELIGIOUS/CHAPLAIN"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.8.1 ",
+        "code": "USART-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "RELIGIOUS/CHAPLAIN",
+          "RELIGIOUS/CHAPLAIN THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.8.2 ",
+        "code": "USARC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "RELIGIOUS/CHAPLAIN",
+          "RELIGIOUS/CHAPLAIN CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.9 ",
+        "code": "USAP--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "PUBLIC AFFAIRS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.9.1 ",
+        "code": "USAPT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "PUBLIC AFFAIRS",
+          "PUBLIC AFFAIRS THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.9.2 ",
+        "code": "USAPC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "PUBLIC AFFAIRS",
+          "PUBLIC AFFAIRS CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.9.3 ",
+        "code": "USAPB-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "PUBLIC AFFAIRS",
+          "PUBLIC AFFAIRS BROADCAST"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.9.3.1 ",
+        "code": "USAPBT",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "PUBLIC AFFAIRS",
+          "PUBLIC AFFAIRS BROADCAST",
+          "PUBLIC AFFAIRS BROADCAST THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.9.3.2 ",
+        "code": "USAPBC",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "PUBLIC AFFAIRS",
+          "PUBLIC AFFAIRS BROADCAST",
+          "PUBLIC AFFAIRS BROADCAST CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.9.4 ",
+        "code": "USAPM-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "PUBLIC AFFAIRS",
+          "PUBLIC AFFAIRS JOINT INFORMATION BUREAU (JIB)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.9.4.1 ",
+        "code": "USAPMT",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "PUBLIC AFFAIRS",
+          "PUBLIC AFFAIRS JOINT INFORMATION BUREAU (JIB)",
+          "PUBLIC AFFAIRS JIB THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.9.4.2 ",
+        "code": "USAPMC",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "PUBLIC AFFAIRS",
+          "PUBLIC AFFAIRS JOINT INFORMATION BUREAU (JIB)",
+          "PUBLIC AFFAIRS JIB CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.10 ",
+        "code": "USAX--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "REPLACEMENT HOLDING UNIT (RHU)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.10.1 ",
+        "code": "USAXT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "REPLACEMENT HOLDING UNIT (RHU)",
+          "RHU THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.10.2 ",
+        "code": "USAXC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "REPLACEMENT HOLDING UNIT (RHU)",
+          "RHU CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.11 ",
+        "code": "USAL--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "LABOUR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.11.1 ",
+        "code": "USALT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "LABOUR",
+          "LABOUR THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.11.2 ",
+        "code": "USALC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "LABOUR",
+          "LABOUR CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.12 ",
+        "code": "USAW--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "MORAL, WELFARE, RECREATION (MWR)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.12.1 ",
+        "code": "USAWT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "MORAL, WELFARE, RECREATION (MWR)",
+          "MWR THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.12.2 ",
+        "code": "USAWC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "MORAL, WELFARE, RECREATION (MWR)",
+          "MWR CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.13 ",
+        "code": "USAQ--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "QUARTERMASTER (SUPPLY)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.13.1 ",
+        "code": "USAQT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "QUARTERMASTER (SUPPLY)",
+          "QUARTERMASTER (SUPPLY) THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.1.13.2 ",
+        "code": "USAQC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ADMINISTRATIVE (ADMIN)",
+          "QUARTERMASTER (SUPPLY)",
+          "QUARTERMASTER (SUPPLY) CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.2 ",
+        "code": "USM---",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT SERVICE SUPPORT", "MEDICAL"]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.2.1 ",
+        "code": "USMT--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MEDICAL",
+          "MEDICAL THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.2.2 ",
+        "code": "USMC--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MEDICAL",
+          "MEDICAL CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.2.3 ",
+        "code": "USMM--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MEDICAL",
+          "MEDICAL TREATMENT FACILITY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.2.3.1 ",
+        "code": "USMMT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MEDICAL",
+          "MEDICAL TREATMENT FACILITY",
+          "MEDICAL TREATMENT FACILITY THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.2.3.2 ",
+        "code": "USMMC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MEDICAL",
+          "MEDICAL TREATMENT FACILITY",
+          "MEDICAL TREATMENT FACILITY CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.2.4 ",
+        "code": "USMV--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MEDICAL",
+          "MEDICAL VETERINARY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.2.4.1 ",
+        "code": "USMVT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MEDICAL",
+          "MEDICAL VETERINARY",
+          "MEDICAL VETERINARY THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.2.4.2 ",
+        "code": "USMVC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MEDICAL",
+          "MEDICAL VETERINARY",
+          "MEDICAL VETERINARY CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.2.5 ",
+        "code": "USMD--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MEDICAL",
+          "MEDICAL DENTAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.2.5.1 ",
+        "code": "USMDT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MEDICAL",
+          "MEDICAL DENTAL",
+          "MEDICAL DENTAL THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.2.5.2 ",
+        "code": "USMDC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MEDICAL",
+          "MEDICAL DENTAL",
+          "MEDICAL DENTAL CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.2.6 ",
+        "code": "USMP--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MEDICAL",
+          "MEDICAL PSYCHOLOGICAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.2.6.1 ",
+        "code": "USMPT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MEDICAL",
+          "MEDICAL PSYCHOLOGICAL",
+          "MEDICAL PSYCHOLOGICAL THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.2.6.2 ",
+        "code": "USMPC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MEDICAL",
+          "MEDICAL PSYCHOLOGICAL",
+          "MEDICAL PSYCHOLOGICAL CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3 ",
+        "code": "USS---",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT SERVICE SUPPORT", "SUPPLY"]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.1 ",
+        "code": "USST--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.2 ",
+        "code": "USSC--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.3 ",
+        "code": "USS1--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS I"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.3.1 ",
+        "code": "USS1T-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS I",
+          "SUPPLY CLASS I THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.3.2 ",
+        "code": "USS1C-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS I",
+          "SUPPLY CLASS I CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.4 ",
+        "code": "USS2--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS II"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.4.1 ",
+        "code": "USS2T-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS II",
+          "SUPPLY CLASS II THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.4.2 ",
+        "code": "USS2C-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS II",
+          "SUPPLY CLASS II CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.5 ",
+        "code": "USS3--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS III"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.5.1 ",
+        "code": "USS3T-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS III",
+          "SUPPLY CLASS III THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.5.2 ",
+        "code": "USS3C-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS III",
+          "SUPPLY CLASS III CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.5.3 ",
+        "code": "USS3A-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS III",
+          "SUPPLY CLASS III AVIATION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.5.3.1 ",
+        "code": "USS3AT",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS III",
+          "SUPPLY CLASS III AVIATION",
+          "SUPPLY CLASS III AVIATION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.5.3.2 ",
+        "code": "USS3AC",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS III",
+          "SUPPLY CLASS III AVIATION",
+          "SUPPLY CLASS III AVIATION CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.6 ",
+        "code": "USS4--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS IV"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.6.1 ",
+        "code": "USS4T-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS IV",
+          "SUPPLY CLASS IV THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.6.2 ",
+        "code": "USS4C-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS IV",
+          "SUPPLY CLASS IV CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.7 ",
+        "code": "USS5--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS V"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.7.1 ",
+        "code": "USS5T-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS V",
+          "SUPPLY CLASS V THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.7.2 ",
+        "code": "USS5C-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS V",
+          "SUPPLY CLASS V CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.8 ",
+        "code": "USS6--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS VI"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.8.1 ",
+        "code": "USS6T-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS VI",
+          "SUPPLY CLASS VI THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.8.2 ",
+        "code": "USS6C-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS VI",
+          "SUPPLY CLASS VI CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.9 ",
+        "code": "USS7--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS VII"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.9.1 ",
+        "code": "USS7T-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS VII",
+          "SUPPLY CLASS VII THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.9.2 ",
+        "code": "USS7C-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS VII",
+          "SUPPLY CLASS VII CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.10 ",
+        "code": "USS8--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS VIII"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.10.1 ",
+        "code": "USS8T-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS VIII",
+          "SUPPLY CLASS VIII THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.10.2 ",
+        "code": "USS8C-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS VIII",
+          "SUPPLY CLASS VIII CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.11 ",
+        "code": "USS9--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS IX"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.11.1 ",
+        "code": "USS9T-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS IX",
+          "SUPPLY CLASS IX THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.11.2 ",
+        "code": "USS9C-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS IX",
+          "SUPPLY CLASS IX CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.12 ",
+        "code": "USSX--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS X"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.12.1 ",
+        "code": "USSXT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS X",
+          "SUPPLY CLASS X THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.12.2 ",
+        "code": "USSXC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY CLASS X",
+          "SUPPLY CLASS X CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.13 ",
+        "code": "USSL--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY LAUNDRY/BATH"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.13.1 ",
+        "code": "USSLT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY LAUNDRY/BATH",
+          "SUPPLY LAUNDRY/BATH THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.13.2 ",
+        "code": "USSLC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY LAUNDRY/BATH",
+          "SUPPLY LAUNDRY/BATH CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.14 ",
+        "code": "USSW--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY WATER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.14.1 ",
+        "code": "USSWT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY WATER",
+          "SUPPLY WATER THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.14.2 ",
+        "code": "USSWC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY WATER",
+          "SUPPLY WATER CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.14.3 ",
+        "code": "USSWP-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY WATER",
+          "SUPPLY WATER PURIFICATION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.14.3.1 ",
+        "code": "USSWPT",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY WATER",
+          "SUPPLY WATER PURIFICATION",
+          "SUPPLY WATER PURIFICATION THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.3.14.3.2 ",
+        "code": "USSWPC",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "SUPPLY",
+          "SUPPLY WATER",
+          "SUPPLY WATER PURIFICATION",
+          "SUPPLY WATER PURIFICATION CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4 ",
+        "code": "UST---",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4.1 ",
+        "code": "USTT--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION",
+          "TRANSPORTATION THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4.2 ",
+        "code": "USTC--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION",
+          "TRANSPORTATION CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4.3 ",
+        "code": "USTM--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION",
+          "MOVEMENT CONTROL CENTRE(MCC)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4.3.1 ",
+        "code": "USTMT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION",
+          "MOVEMENT CONTROL CENTRE(MCC)",
+          "MCC THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4.3.2 ",
+        "code": "USTMC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION",
+          "MOVEMENT CONTROL CENTRE(MCC)",
+          "MCC CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4.4 ",
+        "code": "USTR--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION",
+          "RAILHEAD"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4.4.1 ",
+        "code": "USTRT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION",
+          "RAILHEAD",
+          "RAILHEAD THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4.4.2 ",
+        "code": "USTRC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION",
+          "RAILHEAD",
+          "RAILHEAD CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4.5 ",
+        "code": "USTS--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION",
+          "SPOD/SPOE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4.5.1 ",
+        "code": "USTST-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION",
+          "SPOD/SPOE",
+          "SPOD/SPOE THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4.5.2 ",
+        "code": "USTSC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION",
+          "SPOD/SPOE",
+          "SPOD/SPOE CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4.6 ",
+        "code": "USTA--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION",
+          "APOD/APOE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4.6.1 ",
+        "code": "USTAT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION",
+          "APOD/APOE",
+          "APOD/APOE THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4.6.2 ",
+        "code": "USTAC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION",
+          "APOD/APOE",
+          "APOD/APOE CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4.7 ",
+        "code": "USTI--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION",
+          "MISSILE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4.7.1 ",
+        "code": "USTIT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION",
+          "MISSILE",
+          "MISSILE THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.4.7.2 ",
+        "code": "USTIC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "TRANSPORTATION",
+          "MISSILE",
+          "MISSILE CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5 ",
+        "code": "USX---",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.1 ",
+        "code": "USXT--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "MAINTENANCE THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.2 ",
+        "code": "USXC--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "MAINTENANCE CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.3 ",
+        "code": "USXH--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "MAINTENANCE HEAVY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.3.1 ",
+        "code": "USXHT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "MAINTENANCE HEAVY",
+          "MAINTENANCE HEAVY THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.3.2 ",
+        "code": "USXHC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "MAINTENANCE HEAVY",
+          "MAINTENANCE HEAVY CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.4 ",
+        "code": "USXR--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "MAINTENANCE RECOVERY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.4.1 ",
+        "code": "USXRT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "MAINTENANCE RECOVERY",
+          "MAINTENANCE RECOVERY THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.4.2 ",
+        "code": "USXRC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "MAINTENANCE RECOVERY",
+          "MAINTENANCE RECOVERY CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.5 ",
+        "code": "USXO--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "ORDINANCE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.5.1 ",
+        "code": "USXOT-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "ORDINANCE",
+          "ORDINANCE THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.5.2 ",
+        "code": "USXOC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "ORDINANCE",
+          "ORDINANCE CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.5.3 ",
+        "code": "USXOM-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "ORDINANCE",
+          "ORDINANCE MISSILE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.5.3.1 ",
+        "code": "USXOMT",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "ORDINANCE",
+          "ORDINANCE MISSILE",
+          "ORDINANCE MISSILE THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.5.3.2 ",
+        "code": "USXOMC",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "ORDINANCE",
+          "ORDINANCE MISSILE",
+          "ORDINANCE MISSILE CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.6 ",
+        "code": "USXE--",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "ELECTRO-OPTICAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.6.1 ",
+        "code": "USXET-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "ELECTRO-OPTICAL",
+          "ELECTRO-OPTICAL THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.6.2 ",
+        "code": "USXEC-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "ELECTRO-OPTICAL",
+          "ELECTRO-OPTICAL CORPS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.7 ",
+        "code": "USXBDR",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "BATTLE DAMAGE REPAIR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.5.8 ",
+        "code": "USXPM-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "MAINTENANCE",
+          "PREVENTIVE MAINTANANCE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.6 ",
+        "code": "USXP--",
+        "name": ["GROUND TRACK", "UNIT", "COMBAT SERVICE SUPPORT", "PIPELINE"]
+      },
+      {
+        "hierarchy": "1.X.3.1.3.7 ",
+        "code": "USXEP-",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT SERVICE SUPPORT",
+          "ENVIRONMENTAL PROTECTION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.4 ",
+        "code": "UH----",
+        "name": ["GROUND TRACK", "UNIT", "SPECIAL C2 HEADQUARTERS COMPONENT"]
+      },
+      {
+        "hierarchy": "1.X.3.1.5 ",
+        "code": "UH----",
+        "name": ["GROUND TRACK", "UNIT", "UNIT GENERAL HEADQUARTERS"]
+      },
+      {
+        "hierarchy": "1.X.3.1.6 ",
+        "code": "UH----",
+        "name": ["GROUND TRACK", "UNIT", "GENERAL HEADQUARTERS AND SERVICE"]
+      },
+      {
+        "hierarchy": "1.X.3.1.7 ",
+        "code": "UHGL--",
+        "name": ["GROUND TRACK", "UNIT", "UNIT GENERAL LIAISON"]
+      },
+      {
+        "hierarchy": "1.X.3.2 ",
+        "code": "E-----",
+        "name": ["GROUND TRACK", "GROUND TRACK EQUIPMENT"]
+      },
+      {
+        "hierarchy": "1.X.3.2.1 ",
+        "code": "EW----",
+        "name": ["GROUND TRACK", "GROUND TRACK EQUIPMENT", "WEAPONS"]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.1 ",
+        "code": "EWM---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MISSILE LAUNCHERS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.1.1 ",
+        "code": "EWMA--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MISSILE LAUNCHERS",
+          "AIR DEFENCE (AD) MISSILE LAUNCH"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.1.1.1 ",
+        "code": "EWMAS-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MISSILE LAUNCHERS",
+          "AIR DEFENCE (AD) MISSILE LAUNCH",
+          "SHORT RANGE AD MISSILE LAUNCHERS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.1.1.2 ",
+        "code": "EWMAI-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MISSILE LAUNCHERS",
+          "AIR DEFENCE (AD) MISSILE LAUNCH",
+          "INTERMEDIATE RANGE AD MISSILE LAUNCH"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.1.1.3 ",
+        "code": "EWMAL-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MISSILE LAUNCHERS",
+          "AIR DEFENCE (AD) MISSILE LAUNCH",
+          "LONG RANGE AD MISSILE LAUNCH"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.1.1.4 ",
+        "code": "EWMAT-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MISSILE LAUNCHERS",
+          "AIR DEFENCE (AD) MISSILE LAUNCH",
+          "AD MISSILE LAUNCH THEATRE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.1.2 ",
+        "code": "EWMS--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MISSILE LAUNCHERS",
+          "SURFACE-SURFACE (SS) MISSILE LAUNCHER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.1.2.1 ",
+        "code": "EWMSS-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MISSILE LAUNCHERS",
+          "SURFACE-SURFACE (SS) MISSILE LAUNCHER",
+          "SHORT RANGE SS MISSILE LAUNCH"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.1.2.2 ",
+        "code": "EWMSI-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MISSILE LAUNCHERS",
+          "SURFACE-SURFACE (SS) MISSILE LAUNCHER",
+          "INTERMEDIATE RANGE SS MISSILE LAUNCH"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.1.2.3 ",
+        "code": "EWMSL-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MISSILE LAUNCHERS",
+          "SURFACE-SURFACE (SS) MISSILE LAUNCHER",
+          "LONG RANGE SS MISSILE LAUNCH"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.1.3 ",
+        "code": "EWMT--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MISSILE LAUNCHERS",
+          "MISSILE LAUNCHERS ANTI TANK (AT)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.1.3.1 ",
+        "code": "EWMTL-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MISSILE LAUNCHERS",
+          "MISSILE LAUNCHERS ANTI TANK (AT)",
+          "MISSILE LAUNCHERS AT LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.1.3.2 ",
+        "code": "EWMTM-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MISSILE LAUNCHERS",
+          "MISSILE LAUNCHERS ANTI TANK (AT)",
+          "MISSILE LAUNCHER AT MEDIUM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.1.3.3 ",
+        "code": "EWMTH-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MISSILE LAUNCHERS",
+          "MISSILE LAUNCHERS ANTI TANK (AT)",
+          "MISSILE LAUNCHER AT HEAVY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.2 ",
+        "code": "EWS---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "SINGLE ROCKET LAUNCHER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.2.1 ",
+        "code": "EWSL--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "SINGLE ROCKET LAUNCHER",
+          "SINGLE ROCKET LAUNCHER LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.2.2 ",
+        "code": "EWSM--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "SINGLE ROCKET LAUNCHER",
+          "SINGLE ROCKET LAUNCHER MEDIUM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.2.3 ",
+        "code": "EWSH--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "SINGLE ROCKET LAUNCHER",
+          "SINGLE ROCKET LAUNCHER HEAVY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.3 ",
+        "code": "EWX---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MULTIPLE ROCKET LAUNCHER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.3.1 ",
+        "code": "EWXL--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MULTIPLE ROCKET LAUNCHER",
+          "MULTIPLE ROCKET LAUNCHER LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.3.2 ",
+        "code": "EWXM--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MULTIPLE ROCKET LAUNCHER",
+          "MULTIPLE ROCKET LAUNCHER MEDIUM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.3.3 ",
+        "code": "EWXH--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MULTIPLE ROCKET LAUNCHER",
+          "MULTIPLE ROCKET LAUNCHER HEAVY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.4 ",
+        "code": "EWT---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "ANTITANK ROCKET LAUNCHER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.4.1 ",
+        "code": "EWTL--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "ANTITANK ROCKET LAUNCHER",
+          "ANTITANK ROCKET LAUNCHER LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.4.2 ",
+        "code": "EWTM--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "ANTITANK ROCKET LAUNCHER",
+          "ANTITANK ROCKET LAUNCHER MEDIUM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.4.3 ",
+        "code": "EWTH--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "ANTITANK ROCKET LAUNCHER",
+          "ANTITANK ROCKET LAUNCHER HEAVY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.5 ",
+        "code": "EWR---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "RIFLE/AUTOMATIC WEAPON"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.5.1 ",
+        "code": "EWRR--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "RIFLE/AUTOMATIC WEAPON",
+          "RIFLE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.5.2 ",
+        "code": "EWRL--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "RIFLE/AUTOMATIC WEAPON",
+          "LIGHT MACHINE GUN"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.5.3 ",
+        "code": "EWRH--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "RIFLE/AUTOMATIC WEAPON",
+          "HEAVY MACHINE GUN"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.6 ",
+        "code": "EWZ---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "GRENADE LAUNCHER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.6.1 ",
+        "code": "EWZL--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "GRENADE LAUNCHER",
+          "GRENADE LAUNCHER LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.6.2 ",
+        "code": "EWZM--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "GRENADE LAUNCHER",
+          "GRENADE LAUNCHER MEDIUM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.6.3 ",
+        "code": "EWZH--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "GRENADE LAUNCHER",
+          "GRENADE LAUNCHER HEAVY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.7 ",
+        "code": "EWO---",
+        "name": ["GROUND TRACK", "GROUND TRACK EQUIPMENT", "WEAPONS", "MORTAR"]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.7.1 ",
+        "code": "EWOL--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MORTAR",
+          "MORTAR LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.7.2 ",
+        "code": "EWOM--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MORTAR",
+          "MORTAR MEDIUM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.7.3 ",
+        "code": "EWOH--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "MORTAR",
+          "MORTAR HEAVY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.8 ",
+        "code": "EWH---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "HOWITZER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.8.1 ",
+        "code": "EWHL--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "HOWITZER",
+          "HOWITZER LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.8.1.1 ",
+        "code": "EWHLS-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "HOWITZER",
+          "HOWITZER LIGHT",
+          "HOWITZER LIGHT SELF-PROPELLED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.8.2 ",
+        "code": "EWHM--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "HOWITZER",
+          "HOWITZER MEDIUM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.8.2.1 ",
+        "code": "EWHMS-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "HOWITZER",
+          "HOWITZER MEDIUM",
+          "HOWITZER MEDIUM SELF-PROPELLED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.8.3 ",
+        "code": "EWHH--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "HOWITZER",
+          "HOWITZER HEAVY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.8.3.1 ",
+        "code": "EWHHS-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "HOWITZER",
+          "HOWITZER HEAVY",
+          "HOWITZER HEAVY SELF-PROPELLED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.9 ",
+        "code": "EWG---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "ANTITANK GUN"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.9.1 ",
+        "code": "EWGR--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "ANTITANK GUN",
+          "ANTITANK GUN RECOILLESS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.9.2 ",
+        "code": "EWGL--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "ANTITANK GUN",
+          "ANTITANK GUN LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.9.3 ",
+        "code": "EWGM--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "ANTITANK GUN",
+          "ANTITANK GUN MEDIUM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.9.4 ",
+        "code": "EWGH--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "ANTITANK GUN",
+          "ANTITANK GUN HEAVY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.10 ",
+        "code": "EWD---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "DIRECT FIRE GUN"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.10.1 ",
+        "code": "EWDL--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "DIRECT FIRE GUN",
+          "DIRECT FIRE GUN LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.10.1.1 ",
+        "code": "EWDLS-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "DIRECT FIRE GUN",
+          "DIRECT FIRE GUN LIGHT",
+          "DIRECT FIRE GUN LIGHT SELF-PROPELLED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.10.2 ",
+        "code": "EWDM--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "DIRECT FIRE GUN",
+          "DIRECT FIRE GUN MEDIUM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.10.2.1 ",
+        "code": "EWDMS-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "DIRECT FIRE GUN",
+          "DIRECT FIRE GUN MEDIUM",
+          "DIRECT FIRE GUN MEDIUM SELF-PROPELLED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.10.3 ",
+        "code": "EWDH--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "DIRECT FIRE GUN",
+          "DIRECT FIRE GUN HEAVY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.10.3.1 ",
+        "code": "EWDHS-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "DIRECT FIRE GUN",
+          "DIRECT FIRE GUN HEAVY",
+          "DIRECT FIRE GUN HEAVY SELF-PROPELLED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.11 ",
+        "code": "EWA---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "AIR DEFENCE GUN"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.11.1 ",
+        "code": "EWAL--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "AIR DEFENCE GUN",
+          "AIR DEFENCE GUN LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.11.2 ",
+        "code": "EWAM--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "AIR DEFENCE GUN",
+          "AIR DEFENCE GUN MEDIUM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.1.11.3 ",
+        "code": "EWAH--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "WEAPONS",
+          "AIR DEFENCE GUN",
+          "AIR DEFENCE GUN HEAVY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2 ",
+        "code": "EV----",
+        "name": ["GROUND TRACK", "GROUND TRACK EQUIPMENT", "GROUND VEHICLE"]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.1 ",
+        "code": "EVA---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ARMOURED VEHICLE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.1.1 ",
+        "code": "EVAT--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ARMOURED VEHICLE",
+          "TANK"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.1.1.1 ",
+        "code": "EVATL-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ARMOURED VEHICLE",
+          "TANK",
+          "TANK LIGHT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.1.1.1.1 ",
+        "code": "EVATW-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ARMOURED VEHICLE",
+          "TANK",
+          "TANK LIGHT",
+          "TANK LIGHT RECOVERY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.1.1.2 ",
+        "code": "EVATM-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ARMOURED VEHICLE",
+          "TANK",
+          "TANK MEDIUM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.1.1.2.1 ",
+        "code": "EVATX-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ARMOURED VEHICLE",
+          "TANK",
+          "TANK MEDIUM",
+          "TANK MEDIUM RECOVERY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.1.1.3 ",
+        "code": "EVATH-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ARMOURED VEHICLE",
+          "TANK",
+          "TANK HEAVY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.1.1.3.1 ",
+        "code": "EVATY-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ARMOURED VEHICLE",
+          "TANK",
+          "TANK HEAVY",
+          "TANK HEAVY RECOVERY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.1.2 ",
+        "code": "EVAA--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ARMOURED VEHICLE",
+          "ARMOURED PERSONNEL CARRIER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.1.2.1 ",
+        "code": "EVAAR-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ARMOURED VEHICLE",
+          "ARMOURED PERSONNEL CARRIER",
+          "ARMOURED PERSONNEL CARRIER RECOVERY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.1.3 ",
+        "code": "EVAI--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ARMOURED VEHICLE",
+          "ARMOURED INFANTRY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.1.4 ",
+        "code": "EVAC--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ARMOURED VEHICLE",
+          "C2V/ACV"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.1.5 ",
+        "code": "EVAS--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ARMOURED VEHICLE",
+          "COMBAT SERVICE SUPPORT VEHICLE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.1.6 ",
+        "code": "EVAL--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ARMOURED VEHICLE",
+          "LIGHT ARMOURED VEHICLE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.2 ",
+        "code": "EVU---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "UTILITY VEHICLE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.2.1 ",
+        "code": "EVUB--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "UTILITY VEHICLE",
+          "BUS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.2.2 ",
+        "code": "EVUS--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "UTILITY VEHICLE",
+          "SEMI"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.2.3 ",
+        "code": "EVUL--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "UTILITY VEHICLE",
+          "LIMITED CROSS-COUNTRY TRUCK"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.2.4 ",
+        "code": "EVUX--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "UTILITY VEHICLE",
+          "CROSS-COUNTRY TRUCK"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.2.5 ",
+        "code": "EVUR--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "UTILITY VEHICLE",
+          "WATER CRAFT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.3 ",
+        "code": "EVE---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ENGINEER VEHICLE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.3.1 ",
+        "code": "EVEB--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ENGINEER VEHICLE",
+          "BRIDGE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.3.2 ",
+        "code": "EVEE--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ENGINEER VEHICLE",
+          "EARTHMOVER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.3.2.1 ",
+        "code": "EVEE--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ENGINEER VEHICLE",
+          "EARTHMOVER",
+          "MULTIFUNCTIONAL EARTHMOVER/DIGGER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.3.3 ",
+        "code": "EVEC--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ENGINEER VEHICLE",
+          "CONSTRUCTION VEHICLE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.3.4 ",
+        "code": "EVEM--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ENGINEER VEHICLE",
+          "MINE LAYING VEHICLE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.3.4.1 ",
+        "code": "EVEMA-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ENGINEER VEHICLE",
+          "MINE LAYING VEHICLE",
+          "ARMOURED VEHICLE MOUNTED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.3.4.2 ",
+        "code": "EVEMT-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ENGINEER VEHICLE",
+          "MINE LAYING VEHICLE",
+          "TRAILER MOUNTED"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.3.4.3 ",
+        "code": "EVEMV-",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ENGINEER VEHICLE",
+          "MINE LAYING VEHICLE",
+          "ARMOURED CARRIER WITH VOLCANO"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.3.4.5 ",
+        "code": "EVEMSM",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ENGINEER VEHICLE",
+          "MINE LAYING VEHICLE",
+          "ARMOURED CARRIER WITH SCATTERABLE MINES"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.3.5 ",
+        "code": "EVED--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ENGINEER VEHICLE",
+          "DOZER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.3.6 ",
+        "code": "EVD---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "ENGINEER VEHICLE",
+          "DRILLING VEHICLE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.4 ",
+        "code": "EVST--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "TRAIN LOCOMOTIVE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.2.5 ",
+        "code": "EVC---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "GROUND VEHICLE",
+          "CIVILIAN VEHICLE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.3 ",
+        "code": "ES----",
+        "name": ["GROUND TRACK", "GROUND TRACK EQUIPMENT", "SENSOR"]
+      },
+      {
+        "hierarchy": "1.X.3.2.3.1 ",
+        "code": "ESR---",
+        "name": ["GROUND TRACK", "GROUND TRACK EQUIPMENT", "SENSOR", "RADAR"]
+      },
+      {
+        "hierarchy": "1.X.3.2.3.2 ",
+        "code": "ESE---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "SENSOR",
+          "EMPLACED SENSOR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.4 ",
+        "code": "EX----",
+        "name": ["GROUND TRACK", "GROUND TRACK EQUIPMENT", "SPECIAL EQUIPMENT"]
+      },
+      {
+        "hierarchy": "1.X.3.2.4.1 ",
+        "code": "EXL---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "SPECIAL EQUIPMENT",
+          "LASER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.4.2 ",
+        "code": "EXN---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "SPECIAL EQUIPMENT",
+          "CBRN EQUIPMENT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.4.3 ",
+        "code": "EXF---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "SPECIAL EQUIPMENT",
+          "FLAME THROWER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.4.4 ",
+        "code": "EXM---",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "SPECIAL EQUIPMENT",
+          "LAND MINES"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.4.4.1 ",
+        "code": "EXMC--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "SPECIAL EQUIPMENT",
+          "LAND MINES",
+          "LAND MINES, LETHAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.2.4.4.2 ",
+        "code": "EXML--",
+        "name": [
+          "GROUND TRACK",
+          "GROUND TRACK EQUIPMENT",
+          "SPECIAL EQUIPMENT",
+          "LAND MINES",
+          "LESS THAN LETHAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3 ",
+        "code": "I-----",
+        "name": ["GROUND TRACK", "INSTALLATION"]
+      },
+      {
+        "hierarchy": "1.X.3.3.1 ",
+        "code": "IR----",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "RAW MATERIAL PRODUCTION/STORAGE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.1.1 ",
+        "code": "IRM---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "RAW MATERIAL PRODUCTION/STORAGE",
+          "MINE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.1.2 ",
+        "code": "IRP---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "RAW MATERIAL PRODUCTION/STORAGE",
+          "PETROLEUM/GAS/OIL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.1.3 ",
+        "code": "IRN---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "RAW MATERIAL PRODUCTION/STORAGE",
+          "CBRN"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.1.3.1 ",
+        "code": "IRNB--",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "RAW MATERIAL PRODUCTION/STORAGE",
+          "CBRN",
+          "BIOLOGICAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.1.3.2 ",
+        "code": "IRNC--",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "RAW MATERIAL PRODUCTION/STORAGE",
+          "CBRN",
+          "CHEMICAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.1.3.3 ",
+        "code": "IRNN--",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "RAW MATERIAL PRODUCTION/STORAGE",
+          "CBRN",
+          "NUCLEAR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.2 ",
+        "code": "IP----",
+        "name": ["GROUND TRACK", "INSTALLATION", "PROCESSING FACILITY"]
+      },
+      {
+        "hierarchy": "1.X.3.3.2.1 ",
+        "code": "IPD---",
+        "name": ["GROUND TRACK", "INSTALLATION", "PROCESSING FACILITY", "DECON"]
+      },
+      {
+        "hierarchy": "1.X.3.3.3 ",
+        "code": "IE----",
+        "name": ["GROUND TRACK", "INSTALLATION", "EQUIPMENT MANUFACTURE"]
+      },
+      {
+        "hierarchy": "1.X.3.3.4 ",
+        "code": "IU----",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "SERVICE, RESEARCH, UTILITY FACILITY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.4.1 ",
+        "code": "IUR---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "SERVICE, RESEARCH, UTILITY FACILITY",
+          "TECHNOLOGICAL RESEARCH FACILITY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.4.2 ",
+        "code": "IUT---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "SERVICE, RESEARCH, UTILITY FACILITY",
+          "TELECOMMUNICATIONS FACILITY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.4.3 ",
+        "code": "IUE---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "SERVICE, RESEARCH, UTILITY FACILITY",
+          "ELECTRIC POWER FACILITY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.4.4 ",
+        "code": "IUP---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "SERVICE, RESEARCH, UTILITY FACILITY",
+          "PUBLIC WATER SERVICES"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.5 ",
+        "code": "IM----",
+        "name": ["GROUND TRACK", "INSTALLATION", "MILITARY MATERIEL FACILITY"]
+      },
+      {
+        "hierarchy": "1.X.3.3.5.1 ",
+        "code": "IMF---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "MILITARY MATERIEL FACILITY",
+          "ATOMIC ENERGY PRODUCTION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.5.2 ",
+        "code": "IMA---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "MILITARY MATERIEL FACILITY",
+          "AIRCRAFT PRODUCTION & ASSEMBLY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.5.3 ",
+        "code": "IME---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "MILITARY MATERIEL FACILITY",
+          "AMMUNITION AND EXPLOSIVES PRODUCTION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.5.4 ",
+        "code": "IMG---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "MILITARY MATERIEL FACILITY",
+          "ARMAMENT PRODUCTION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.5.5 ",
+        "code": "IMV---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "MILITARY MATERIEL FACILITY",
+          "MILITARY VEHICLE PRODUCTION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.5.6 ",
+        "code": "IMN---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "MILITARY MATERIEL FACILITY",
+          "ENGINEERING EQUIPMENT PRODUCTION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.5.6.1 ",
+        "code": "IMNB--",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "MILITARY MATERIEL FACILITY",
+          "ENGINEERING EQUIPMENT PRODUCTION",
+          "BRIDGE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.5.7 ",
+        "code": "IMC---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "MILITARY MATERIEL FACILITY",
+          "CHEMICAL & BIOLOGICAL WARFARE PRODUCTION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.5.8 ",
+        "code": "IMS---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "MILITARY MATERIEL FACILITY",
+          "SHIP CONSTRUCTION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.5.9 ",
+        "code": "IMM---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "MILITARY MATERIEL FACILITY",
+          "MISSILE & SPACE SYSTEM PRODUCTION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.6 ",
+        "code": "IG----",
+        "name": ["GROUND TRACK", "INSTALLATION", "GOVERNMENT LEADERSHIP"]
+      },
+      {
+        "hierarchy": "1.X.3.3.7 ",
+        "code": "IB----",
+        "name": ["GROUND TRACK", "INSTALLATION", "MILITARY BASE/FACILITY"]
+      },
+      {
+        "hierarchy": "1.X.3.3.7.1 ",
+        "code": "IBA---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "MILITARY BASE/FACILITY",
+          "AIRPORT/AIRBASE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.7.2 ",
+        "code": "IBN---",
+        "name": [
+          "GROUND TRACK",
+          "INSTALLATION",
+          "MILITARY BASE/FACILITY",
+          "SEAPORT/NAVAL BASE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.3.8 ",
+        "code": "IT----",
+        "name": ["GROUND TRACK", "INSTALLATION", "TRANSPORT FACILITY"]
+      },
+      {
+        "hierarchy": "1.X.3.3.9 ",
+        "code": "IX----",
+        "name": ["GROUND TRACK", "INSTALLATION", "MEDICAL FACILITY"]
+      },
+      {
+        "hierarchy": "1.X.3.3.9.1 ",
+        "code": "IXH---",
+        "name": ["GROUND TRACK", "INSTALLATION", "MEDICAL FACILITY", "HOSPITAL"]
+      },
+      {
+        "hierarchy": "1.X.3.4 ",
+        "code": "IR----",
+        "name": ["GROUND TRACK", "SEA SURFACE INSTALLATION"]
+      },
+      {
+        "hierarchy": "1.X.3.4.1 ",
+        "code": "IRR---",
+        "name": [
+          "GROUND TRACK",
+          "SEA SURFACE INSTALLATION",
+          "SEA SURFACE INSTALLATION,"
+        ]
+      }
+    ]
+  },
+  "S": {
+    "symbolset": "S",
+    "name": "SEA SURFACE",
+    "main icon": [
+      {
+        "hierarchy": "1.X.4 ",
+        "code": "------",
+        "name": ["SEA SURFACE TRACK"]
+      },
+      {
+        "hierarchy": "1.X.4.1 ",
+        "code": "C-----",
+        "name": ["SEA SURFACE TRACK", "COMBATANT"]
+      },
+      {
+        "hierarchy": "1.X.4.1.1 ",
+        "code": "CL----",
+        "name": ["SEA SURFACE TRACK", "COMBATANT", "LINE"]
+      },
+      {
+        "hierarchy": "1.X.4.1.1.1 ",
+        "code": "CLCV--",
+        "name": ["SEA SURFACE TRACK", "COMBATANT", "LINE", "CARRIER"]
+      },
+      {
+        "hierarchy": "1.X.4.1.1.2 ",
+        "code": "CLBB--",
+        "name": ["SEA SURFACE TRACK", "COMBATANT", "LINE", "BATTLESHIP"]
+      },
+      {
+        "hierarchy": "1.X.4.1.1.3 ",
+        "code": "CLCC--",
+        "name": ["SEA SURFACE TRACK", "COMBATANT", "LINE", "CRUISER"]
+      },
+      {
+        "hierarchy": "1.X.4.1.1.4 ",
+        "code": "CLDD--",
+        "name": ["SEA SURFACE TRACK", "COMBATANT", "LINE", "DESTROYER"]
+      },
+      {
+        "hierarchy": "1.X.4.1.1.5 ",
+        "code": "CLFF--",
+        "name": ["SEA SURFACE TRACK", "COMBATANT", "LINE", "FRIGATE/CORVETTE"]
+      },
+      {
+        "hierarchy": "1.X.4.1.2 ",
+        "code": "CA----",
+        "name": ["SEA SURFACE TRACK", "COMBATANT", "AMPHIBIOUS WARFARE SHIP"]
+      },
+      {
+        "hierarchy": "1.X.4.1.2.1 ",
+        "code": "CALA--",
+        "name": [
+          "SEA SURFACE TRACK",
+          "COMBATANT",
+          "AMPHIBIOUS WARFARE SHIP",
+          "ASSAULT VESSEL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.1.2.2 ",
+        "code": "CALS--",
+        "name": [
+          "SEA SURFACE TRACK",
+          "COMBATANT",
+          "AMPHIBIOUS WARFARE SHIP",
+          "LANDING SHIP"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.1.2.3 ",
+        "code": "CALC--",
+        "name": [
+          "SEA SURFACE TRACK",
+          "COMBATANT",
+          "AMPHIBIOUS WARFARE SHIP",
+          "LANDING CRAFT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.1.3 ",
+        "code": "CM----",
+        "name": ["SEA SURFACE TRACK", "COMBATANT", "MINE WARFARE VESSEL"]
+      },
+      {
+        "hierarchy": "1.X.4.1.3.1 ",
+        "code": "CMML--",
+        "name": [
+          "SEA SURFACE TRACK",
+          "COMBATANT",
+          "MINE WARFARE VESSEL",
+          "MINELAYER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.1.3.2 ",
+        "code": "CMMS--",
+        "name": [
+          "SEA SURFACE TRACK",
+          "COMBATANT",
+          "MINE WARFARE VESSEL",
+          "MINESWEEPER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.1.3.3 ",
+        "code": "CMMH--",
+        "name": [
+          "SEA SURFACE TRACK",
+          "COMBATANT",
+          "MINE WARFARE VESSEL",
+          "MINEHUNTER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.1.3.4 ",
+        "code": "CMMA--",
+        "name": [
+          "SEA SURFACE TRACK",
+          "COMBATANT",
+          "MINE WARFARE VESSEL",
+          "MCM SUPPORT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.1.3.5 ",
+        "code": "CMMD--",
+        "name": [
+          "SEA SURFACE TRACK",
+          "COMBATANT",
+          "MINE WARFARE VESSEL",
+          "MCM DRONE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.1.4 ",
+        "code": "CP----",
+        "name": ["SEA SURFACE TRACK", "COMBATANT", "PATROL"]
+      },
+      {
+        "hierarchy": "1.X.4.1.4.1 ",
+        "code": "CPSB--",
+        "name": [
+          "SEA SURFACE TRACK",
+          "COMBATANT",
+          "PATROL",
+          "ANTI SUBMARINE WARFARE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.1.4.2 ",
+        "code": "CPSU--",
+        "name": [
+          "SEA SURFACE TRACK",
+          "COMBATANT",
+          "PATROL",
+          "ANTI SURFACE WARFARE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.1.5 ",
+        "code": "CH----",
+        "name": ["SEA SURFACE TRACK", "COMBATANT", "HOVERCRAFT"]
+      },
+      {
+        "hierarchy": "1.X.4.1.6 ",
+        "code": "G-----",
+        "name": ["SEA SURFACE TRACK", "COMBATANT", "NAVY GROUP"]
+      },
+      {
+        "hierarchy": "1.X.4.1.6.1 ",
+        "code": "GT----",
+        "name": [
+          "SEA SURFACE TRACK",
+          "COMBATANT",
+          "NAVY GROUP",
+          "NAVY TASK FORCE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.1.6.2 ",
+        "code": "GG----",
+        "name": [
+          "SEA SURFACE TRACK",
+          "COMBATANT",
+          "NAVY GROUP",
+          "NAVY TASK GROUP"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.1.6.3 ",
+        "code": "GU----",
+        "name": [
+          "SEA SURFACE TRACK",
+          "COMBATANT",
+          "NAVY GROUP",
+          "NAVY TASK UNIT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.1.6.4 ",
+        "code": "GE----",
+        "name": [
+          "SEA SURFACE TRACK",
+          "COMBATANT",
+          "NAVY GROUP",
+          "NAVY TASK ELEMENT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.1.6.5 ",
+        "code": "GC----",
+        "name": ["SEA SURFACE TRACK", "COMBATANT", "NAVY GROUP", "CONVOY"]
+      },
+      {
+        "hierarchy": "1.X.4.2 ",
+        "code": "N-----",
+        "name": ["SEA SURFACE TRACK", "NONCOMBATANT"]
+      },
+      {
+        "hierarchy": "1.X.4.2.1 ",
+        "code": "NR----",
+        "name": ["SEA SURFACE TRACK", "NONCOMBATANT", "UNDERWAY REPLENISHMENT"]
+      },
+      {
+        "hierarchy": "1.X.4.2.1.1 ",
+        "code": "NRA---",
+        "name": [
+          "SEA SURFACE TRACK",
+          "NONCOMBATANT",
+          "UNDERWAY REPLENISHMENT",
+          "UNDERWAY REPLENISHMENT, AMMO"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.2.1.2 ",
+        "code": "NRO---",
+        "name": [
+          "SEA SURFACE TRACK",
+          "NONCOMBATANT",
+          "UNDERWAY REPLENISHMENT",
+          "UNDERWAY REPLENISHMENT, OIL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.2.2 ",
+        "code": "NFT---",
+        "name": [
+          "SEA SURFACE TRACK",
+          "NONCOMBATANT",
+          "FLEET SUPPORT, TUG, OCEAN GOING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.2.3 ",
+        "code": "NI----",
+        "name": ["SEA SURFACE TRACK", "NONCOMBATANT", "INTELLIGENCE"]
+      },
+      {
+        "hierarchy": "1.X.4.2.4 ",
+        "code": "NM----",
+        "name": ["SEA SURFACE TRACK", "NONCOMBATANT", "HOSPITAL SHIP"]
+      },
+      {
+        "hierarchy": "1.X.4.2.5 ",
+        "code": "NR----",
+        "name": ["SEA SURFACE TRACK", "NONCOMBATANT", "REPAIR SHIP"]
+      },
+      {
+        "hierarchy": "1.X.4.2.6 ",
+        "code": "NTS---",
+        "name": ["SEA SURFACE TRACK", "NONCOMBATANT", "SUBMARINE TENDER"]
+      },
+      {
+        "hierarchy": "1.X.4.2.7 ",
+        "code": "NH----",
+        "name": ["SEA SURFACE TRACK", "NONCOMBATANT", "HOVERCRAFT"]
+      },
+      {
+        "hierarchy": "1.X.4.2.8 ",
+        "code": "NS----",
+        "name": [
+          "SEA SURFACE TRACK",
+          "NONCOMBATANT",
+          "SERVICE & SUPPORT HARBOUR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.3 ",
+        "code": "X-----",
+        "name": ["SEA SURFACE TRACK", "NON MILITARY"]
+      },
+      {
+        "hierarchy": "1.X.4.3.1 ",
+        "code": "XM----",
+        "name": ["SEA SURFACE TRACK", "NON MILITARY", "MERCHANT"]
+      },
+      {
+        "hierarchy": "1.X.4.3.1.1 ",
+        "code": "XMC---",
+        "name": ["SEA SURFACE TRACK", "NON MILITARY", "MERCHANT", "CARGO"]
+      },
+      {
+        "hierarchy": "1.X.4.3.1.2 ",
+        "code": "XME---",
+        "name": [
+          "SEA SURFACE TRACK",
+          "NON MILITARY",
+          "MERCHANT",
+          "ROLL ON-ROLL OFF"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.3.1.3 ",
+        "code": "XMO---",
+        "name": [
+          "SEA SURFACE TRACK",
+          "NON MILITARY",
+          "MERCHANT",
+          "OILER/TANKER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.3.1.4 ",
+        "code": "XMT--",
+        "name": ["SEA SURFACE TRACK", "NON MILITARY", "MERCHANT", "UG"]
+      },
+      {
+        "hierarchy": "1.X.4.3.1.5 ",
+        "code": "XMF---",
+        "name": ["SEA SURFACE TRACK", "NON MILITARY", "MERCHANT", "FERRY"]
+      },
+      {
+        "hierarchy": "1.X.4.3.1.6 ",
+        "code": "XMP---",
+        "name": ["SEA SURFACE TRACK", "NON MILITARY", "MERCHANT", "PASSENGER"]
+      },
+      {
+        "hierarchy": "1.X.4.3.1.7 ",
+        "code": "XMH---",
+        "name": [
+          "SEA SURFACE TRACK",
+          "NON MILITARY",
+          "MERCHANT",
+          "HAZARDOUS MATERIALS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.4.3.1.8 ",
+        "code": "XMD--",
+        "name": ["SEA SURFACE TRACK", "NON MILITARY", "MERCHANT", "REDGE"]
+      },
+      {
+        "hierarchy": "1.X.4.3.2 ",
+        "code": "XF----",
+        "name": ["SEA SURFACE TRACK", "NON MILITARY", "FISHING"]
+      },
+      {
+        "hierarchy": "1.X.4.3.2.1 ",
+        "code": "XFDF--",
+        "name": ["SEA SURFACE TRACK", "NON MILITARY", "FISHING", "DRIFTER"]
+      },
+      {
+        "hierarchy": "1.X.4.3.2.2 ",
+        "code": "XFDR--",
+        "name": ["SEA SURFACE TRACK", "NON MILITARY", "FISHING", "DREDGE"]
+      },
+      {
+        "hierarchy": "1.X.4.3.2.3 ",
+        "code": "XFTR--",
+        "name": ["SEA SURFACE TRACK", "NON MILITARY", "FISHING", "TRAWLER"]
+      },
+      {
+        "hierarchy": "1.X.4.3.3 ",
+        "code": "XR----",
+        "name": ["SEA SURFACE TRACK", "NON MILITARY", "LEISURE CRAFT"]
+      },
+      {
+        "hierarchy": "1.X.4.3.4 ",
+        "code": "XL----",
+        "name": ["SEA SURFACE TRACK", "NON MILITARY", "LAW ENFORCEMENT VESSEL"]
+      },
+      {
+        "hierarchy": "1.X.4.3.5 ",
+        "code": "XH----",
+        "name": ["SEA SURFACE TRACK", "NON MILITARY", "HOVERCRAFT"]
+      },
+      {
+        "hierarchy": "1.X.4.4 ",
+        "code": "O-----",
+        "name": ["SEA SURFACE TRACK", "OWN TRACK"]
+      },
+      {
+        "hierarchy": "1.X.4.5 ",
+        "code": "E-----",
+        "name": ["SEA SURFACE TRACK", "EMERGENCY"]
+      },
+      {
+        "hierarchy": "1.X.4.5.1 ",
+        "code": "ED----",
+        "name": ["SEA SURFACE TRACK", "EMERGENCY", "DITCHED AIRCRAFT"]
+      },
+      {
+        "hierarchy": "1.X.4.5.2 ",
+        "code": "EP----",
+        "name": ["SEA SURFACE TRACK", "EMERGENCY", "PERSON IN WATER"]
+      },
+      {
+        "hierarchy": "1.X.4.5.3 ",
+        "code": "EV----",
+        "name": ["SEA SURFACE TRACK", "EMERGENCY", "DISTRESSED VESSEL"]
+      },
+      {
+        "hierarchy": "1.X.4.6 ",
+        "code": "Z-----",
+        "name": ["SEA SURFACE TRACK", "HAZARD"]
+      },
+      {
+        "hierarchy": "1.X.4.6.1 ",
+        "code": "ZM----",
+        "name": ["SEA SURFACE TRACK", "HAZARD", "SEA MINELIKE"]
+      },
+      {
+        "hierarchy": "1.X.4.6.2 ",
+        "code": "ZN----",
+        "name": ["SEA SURFACE TRACK", "HAZARD", "NAVIGATIONAL"]
+      },
+      {
+        "hierarchy": "1.X.4.6.3 ",
+        "code": "ZI----",
+        "name": ["SEA SURFACE TRACK", "HAZARD", "ICEBERG"]
+      }
+    ]
+  },
+  "U": {
+    "symbolset": "U",
+    "name": "SEA SUB-SURFACE",
+    "main icon": [
+      { "hierarchy": "1.X.5 ", "code": "------", "name": ["SUBSURFACE TRACK"] },
+      {
+        "hierarchy": "1.X.5.1 ",
+        "code": "S-----",
+        "name": ["SUBSURFACE TRACK", "SUBMARINE"]
+      },
+      {
+        "hierarchy": "1.X.5.1.1 ",
+        "code": "SN----",
+        "name": ["SUBSURFACE TRACK", "SUBMARINE", "NUCLEAR PROPULSION"]
+      },
+      {
+        "hierarchy": "1.X.5.1.2 ",
+        "code": "SC----",
+        "name": ["SUBSURFACE TRACK", "SUBMARINE", "CONVENTIONAL PROPULSION"]
+      },
+      {
+        "hierarchy": "1.X.5.1.3 ",
+        "code": "SO----",
+        "name": ["SUBSURFACE TRACK", "SUBMARINE", "OTHER SUBMERSIBLE"]
+      },
+      {
+        "hierarchy": "1.X.5.2 ",
+        "code": "W-----",
+        "name": ["SUBSURFACE TRACK", "UNDERWATER WEAPON"]
+      },
+      {
+        "hierarchy": "1.X.5.2.1 ",
+        "code": "WT----",
+        "name": ["SUBSURFACE TRACK", "UNDERWATER WEAPON", "TORPEDO"]
+      },
+      {
+        "hierarchy": "1.X.5.2.2 ",
+        "code": "WM----",
+        "name": ["SUBSURFACE TRACK", "UNDERWATER WEAPON", "SEA MINE"]
+      },
+      {
+        "hierarchy": "1.X.5.2.2.1 ",
+        "code": "WMD---",
+        "name": [
+          "SUBSURFACE TRACK",
+          "UNDERWATER WEAPON",
+          "SEA MINE",
+          "SEA MINE DEALT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.5.2.2.2 ",
+        "code": "WMG---",
+        "name": [
+          "SUBSURFACE TRACK",
+          "UNDERWATER WEAPON",
+          "SEA MINE",
+          "SEA MINE (GROUND)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.5.2.2.2.1 ",
+        "code": "WMGD--",
+        "name": [
+          "SUBSURFACE TRACK",
+          "UNDERWATER WEAPON",
+          "SEA MINE",
+          "SEA MINE (GROUND)",
+          "SEA MINE (GROUND) DEALT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.5.2.2.3 ",
+        "code": "WMM---",
+        "name": [
+          "SUBSURFACE TRACK",
+          "UNDERWATER WEAPON",
+          "SEA MINE",
+          "SEA MINE (MOORED)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.5.2.2.3.1 ",
+        "code": "WMMD--",
+        "name": [
+          "SUBSURFACE TRACK",
+          "UNDERWATER WEAPON",
+          "SEA MINE",
+          "SEA MINE (MOORED)",
+          "SEA MINE (MOORED DEALT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.5.2.2.4 ",
+        "code": "WMF---",
+        "name": [
+          "SUBSURFACE TRACK",
+          "UNDERWATER WEAPON",
+          "SEA MINE",
+          "SEA MINE (FLOATING)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.5.2.2.4.1 ",
+        "code": "WMFD--",
+        "name": [
+          "SUBSURFACE TRACK",
+          "UNDERWATER WEAPON",
+          "SEA MINE",
+          "SEA MINE (FLOATING)",
+          "SEA MINE (FLOATING) DEALT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.5.2.2.5 ",
+        "code": "WMO---",
+        "name": [
+          "SUBSURFACE TRACK",
+          "UNDERWATER WEAPON",
+          "SEA MINE",
+          "SEA MINE (IN OTHER POSITION)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.5.2.2.5.1 ",
+        "code": "WMOD--",
+        "name": [
+          "SUBSURFACE TRACK",
+          "UNDERWATER WEAPON",
+          "SEA MINE",
+          "SEA MINE (IN OTHER POSITION)",
+          "SEA MINE (IN OTHER POSITION) DEALT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.5.2.3 ",
+        "code": "WV----",
+        "name": ["SUBSURFACE TRACK", "UNDERWATER WEAPON", "DRONE (UUV)"]
+      },
+      {
+        "hierarchy": "1.X.5.3 ",
+        "code": "WD----",
+        "name": ["SUBSURFACE TRACK", "UNDERWATER DECOY"]
+      },
+      {
+        "hierarchy": "1.X.5.3.1 ",
+        "code": "WDM---",
+        "name": ["SUBSURFACE TRACK", "UNDERWATER DECOY", "SEA MINE DECOY"]
+      },
+      {
+        "hierarchy": "1.X.5.4 ",
+        "code": "N-----",
+        "name": ["SUBSURFACE TRACK", "NON-SUBMARINE"]
+      },
+      {
+        "hierarchy": "1.X.5.4.1 ",
+        "code": "ND----",
+        "name": ["SUBSURFACE TRACK", "NON-SUBMARINE", "DIVER"]
+      },
+      {
+        "hierarchy": "1.X.5.4.2 ",
+        "code": "NB----",
+        "name": ["SUBSURFACE TRACK", "NON-SUBMARINE", "BOTTOM RETURN/NOMBO"]
+      },
+      {
+        "hierarchy": "1.X.5.4.2.1 ",
+        "code": "NBS---",
+        "name": [
+          "SUBSURFACE TRACK",
+          "NON-SUBMARINE",
+          "BOTTOM RETURN/NOMBO",
+          "SEABED INSTALLATION/MANMADE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.5.4.2.2 ",
+        "code": "NBR---",
+        "name": [
+          "SUBSURFACE TRACK",
+          "NON-SUBMARINE",
+          "BOTTOM RETURN/NOMBO",
+          "SEABED ROCK/STONE, OBSTACLE, OTHER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.5.4.2.3 ",
+        "code": "NBW---",
+        "name": [
+          "SUBSURFACE TRACK",
+          "NON-SUBMARINE",
+          "BOTTOM RETURN/NOMBO",
+          "WRECK"
+        ]
+      },
+      {
+        "hierarchy": "1.X.5.4.3 ",
+        "code": "NM----",
+        "name": ["SUBSURFACE TRACK", "NON-SUBMARINE", "MARINE LIFE"]
+      },
+      {
+        "hierarchy": "1.X.5.4.4 ",
+        "code": "NA----",
+        "name": ["SUBSURFACE TRACK", "NON-SUBMARINE", "SEA ANOMALY"]
+      }
+    ]
+  },
+  "F": {
+    "symbolset": "F",
+    "name": "SOF",
+    "main icon": [
+      {
+        "hierarchy": "1.X.6 ",
+        "code": "------",
+        "name": ["SPECIAL OPERATIONS FORCE (SOF) UNIT"]
+      },
+      {
+        "hierarchy": "1.X.6.1 ",
+        "code": "A-----",
+        "name": ["SPECIAL OPERATIONS FORCE (SOF) UNIT", "SOF UNIT AVIATION"]
+      },
+      {
+        "hierarchy": "1.X.6.1.1 ",
+        "code": "AF----",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT AVIATION",
+          "SOF UNIT FIXED WING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.1.1.1 ",
+        "code": "AFA---",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT AVIATION",
+          "SOF UNIT FIXED WING",
+          "SOF UNIT ATTACK"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.1.1.2 ",
+        "code": "AFK---",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT AVIATION",
+          "SOF UNIT FIXED WING",
+          "SOF UNIT REFUEL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.1.1.3 ",
+        "code": "AFU---",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT AVIATION",
+          "SOF UNIT FIXED WING",
+          "SOF UNIT UTILITY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.1.1.3.1 ",
+        "code": "AFUL--",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT AVIATION",
+          "SOF UNIT FIXED WING",
+          "SOF UNIT UTILITY",
+          "SOF UNIT UTILITY (LIGHT)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.1.1.3.2 ",
+        "code": "AFUM--",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT AVIATION",
+          "SOF UNIT FIXED WING",
+          "SOF UNIT UTILITY",
+          "SOF UNIT UTILITY (MEDIUM)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.1.1.3.3 ",
+        "code": "AFUH--",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT AVIATION",
+          "SOF UNIT FIXED WING",
+          "SOF UNIT UTILITY",
+          "SOF UNIT UTILITY (HEAVY)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.1.2 ",
+        "code": "AV----",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT AVIATION",
+          "SOF UNIT VSTOL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.1.3 ",
+        "code": "AH----",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT AVIATION",
+          "SOF UNIT ROTARY WING"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.1.3.1 ",
+        "code": "AHH---",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT AVIATION",
+          "SOF UNIT ROTARY WING",
+          "SOF UNIT COMBAT SEARCH AND RESCUE"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.1.3.2 ",
+        "code": "AHA---",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT AVIATION",
+          "SOF UNIT ROTARY WING",
+          "SOF UNIT ATTACK"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.1.3.3 ",
+        "code": "AHU---",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT AVIATION",
+          "SOF UNIT ROTARY WING",
+          "SOF UNIT UTILITY"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.1.3.3.1 ",
+        "code": "AHUL--",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT AVIATION",
+          "SOF UNIT ROTARY WING",
+          "SOF UNIT UTILITY",
+          "SOF UNIT UTILITY (LIGHT)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.1.3.3.2 ",
+        "code": "AHUM--",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT AVIATION",
+          "SOF UNIT ROTARY WING",
+          "SOF UNIT UTILITY",
+          "SOF UNIT UTILITY (MEDIUM)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.1.3.3.3 ",
+        "code": "AHUH--",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT AVIATION",
+          "SOF UNIT ROTARY WING",
+          "SOF UNIT UTILITY",
+          "SOF UNIT UTILITY (HEAVY)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.2 ",
+        "code": "SN----",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT SOF UNIT NAVAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.2.1 ",
+        "code": "SNS---",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT SOF UNIT NAVAL",
+          "SOF UNIT SEAL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.2.2 ",
+        "code": "SNU---",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT SOF UNIT NAVAL",
+          "SOF UNIT UNDERWATER DEMOLITION TEAM"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.2.3 ",
+        "code": "SNB---",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT SOF UNIT NAVAL",
+          "SOF UNIT SPECIAL BOAT"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.2.4 ",
+        "code": "SNN---",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT SOF UNIT NAVAL",
+          "SOF UNIT SPECIAL SSNR"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.3 ",
+        "code": "G-----",
+        "name": ["SPECIAL OPERATIONS FORCE (SOF) UNIT", "SOF UNIT GROUND"]
+      },
+      {
+        "hierarchy": "1.X.6.3.1 ",
+        "code": "GS----",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT GROUND",
+          "SOF UNIT SPECIAL FORCES"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.3.2 ",
+        "code": "GSR---",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT GROUND",
+          "SOF UNIT RANGER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.3.3 ",
+        "code": "GSP---",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT GROUND",
+          "SOF UNIT PSYCHOLOGICAL OPERATIONS (PSYOPS)"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.3.3.1 ",
+        "code": "GSPA--",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT GROUND",
+          "SOF UNIT PSYCHOLOGICAL OPERATIONS (PSYOPS)",
+          "SOF UNIT FIXED AVIATION"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.3.4 ",
+        "code": "GCA---",
+        "name": [
+          "SPECIAL OPERATIONS FORCE (SOF) UNIT",
+          "SOF UNIT GROUND",
+          "SOF UNIT CIVIL AFFAIRS"
+        ]
+      },
+      {
+        "hierarchy": "1.X.6.4 ",
+        "code": "GB----",
+        "name": ["SPECIAL OPERATIONS FORCE (SOF) UNIT", "SOF UNIT SUPPORT"]
+      }
+    ]
+  }
+}
