@@ -1,8 +1,0 @@
-Second Modifier ;Code ;Remarks. 
-Unspecified ;00; 
-Optical ;01; 
-Infrared ;02; 
-Radar ;03; 
-Signals Intelligence (SIGINT) ;04; 
-Reserved for Future Use ;05-98 ;Assigned by SSMC/JSP only 
-Version Extension Flag ;99; 
