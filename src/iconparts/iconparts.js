@@ -562,7 +562,7 @@ export default function iconparts(
   icn["AR.I.TANKER"] = text("K");
   icn["AR.I.PATROL"] = text("P");
   icn["AR.I.RECONNAISSANCE"] = text("R");
-  icn["AR.I.2525 PHOTOGRAPHIC"] = text("P");
+  icn["AR.I.2525 PHOTOGRAPHIC"] = text("X");
   icn["AR.I.TRAINER"] = text("T");
   icn["AR.I.UTILITY"] = text("U");
   icn["AR.I.VSTOL"] = text(_STD2525 && !numberSIDC ? "L" : "V");
