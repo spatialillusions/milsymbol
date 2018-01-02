@@ -4017,10 +4017,9 @@ export default function iconparts(
     {
       type: "text",
       stroke: false,
-      fill:
-        (_STD2525 || numberSIDC) && !monoColor && !alternateMedal
-          ? black
-          : white,
+      fill: monoColor
+        ? monoColor
+        : (_STD2525 || numberSIDC) && !alternateMedal ? black : white,
       x: 100,
       y: 110,
       fontsize: 35,
@@ -4032,10 +4031,9 @@ export default function iconparts(
     {
       type: "text",
       stroke: false,
-      fill:
-        (_STD2525 || numberSIDC) && !monoColor && !alternateMedal
-          ? black
-          : white,
+      fill: monoColor
+        ? monoColor
+        : (_STD2525 || numberSIDC) && !alternateMedal ? black : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -4056,10 +4054,9 @@ export default function iconparts(
     {
       type: "text",
       stroke: false,
-      fill:
-        (_STD2525 || numberSIDC) && !monoColor && !alternateMedal
-          ? black
-          : white,
+      fill: monoColor
+        ? monoColor
+        : (_STD2525 || numberSIDC) && !alternateMedal ? black : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -4242,10 +4239,9 @@ export default function iconparts(
     {
       type: "text",
       stroke: false,
-      fill:
-        (_STD2525 || numberSIDC) && !monoColor && !alternateMedal
-          ? black
-          : white,
+      fill: monoColor
+        ? monoColor
+        : (_STD2525 || numberSIDC) && !alternateMedal ? black : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -4299,10 +4295,9 @@ export default function iconparts(
     {
       type: "text",
       stroke: false,
-      fill:
-        (_STD2525 || numberSIDC) && !monoColor && !alternateMedal
-          ? black
-          : white,
+      fill: monoColor
+        ? monoColor
+        : (_STD2525 || numberSIDC) && !alternateMedal ? black : white,
       x: 100,
       y: 105,
       fontsize: 18,
@@ -4368,8 +4363,9 @@ export default function iconparts(
   icn["SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 1"] = {
     type: "text",
     stroke: false,
-    fill:
-      (_STD2525 || numberSIDC) && !monoColor && !alternateMedal ? black : white,
+    fill: monoColor
+      ? monoColor
+      : (_STD2525 || numberSIDC) && !alternateMedal ? black : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -4378,8 +4374,9 @@ export default function iconparts(
   icn["SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 2"] = {
     type: "text",
     stroke: false,
-    fill:
-      (_STD2525 || numberSIDC) && !monoColor && !alternateMedal ? black : white,
+    fill: monoColor
+      ? monoColor
+      : (_STD2525 || numberSIDC) && !alternateMedal ? black : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -4388,8 +4385,9 @@ export default function iconparts(
   icn["SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 3"] = {
     type: "text",
     stroke: false,
-    fill:
-      (_STD2525 || numberSIDC) && !monoColor && !alternateMedal ? black : white,
+    fill: monoColor
+      ? monoColor
+      : (_STD2525 || numberSIDC) && !alternateMedal ? black : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -4398,8 +4396,9 @@ export default function iconparts(
   icn["SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 4"] = {
     type: "text",
     stroke: false,
-    fill:
-      (_STD2525 || numberSIDC) && !monoColor && !alternateMedal ? black : white,
+    fill: monoColor
+      ? monoColor
+      : (_STD2525 || numberSIDC) && !alternateMedal ? black : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -4408,8 +4407,9 @@ export default function iconparts(
   icn["SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 5"] = {
     type: "text",
     stroke: false,
-    fill:
-      (_STD2525 || numberSIDC) && !monoColor && !alternateMedal ? black : white,
+    fill: monoColor
+      ? monoColor
+      : (_STD2525 || numberSIDC) && !alternateMedal ? black : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -4430,10 +4430,9 @@ export default function iconparts(
     {
       type: "text",
       stroke: false,
-      fill:
-        (_STD2525 || numberSIDC) && !monoColor && !alternateMedal
-          ? black
-          : white,
+      fill: monoColor
+        ? monoColor
+        : (_STD2525 || numberSIDC) && !alternateMedal ? black : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -4487,10 +4486,9 @@ export default function iconparts(
     {
       type: "text",
       stroke: false,
-      fill:
-        (_STD2525 || numberSIDC) && !monoColor && !alternateMedal
-          ? black
-          : white,
+      fill: monoColor
+        ? monoColor
+        : (_STD2525 || numberSIDC) && !alternateMedal ? black : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -4541,10 +4539,9 @@ export default function iconparts(
     {
       type: "text",
       stroke: false,
-      fill:
-        (_STD2525 || numberSIDC) && !monoColor && !alternateMedal
-          ? black
-          : white,
+      fill: monoColor
+        ? monoColor
+        : (_STD2525 || numberSIDC) && !alternateMedal ? black : white,
       x: 100,
       y: 112,
       fontsize: 30,
