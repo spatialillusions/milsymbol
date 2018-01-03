@@ -1,6 +1,6 @@
 {
   "SPC": {
-    "name": "",
+    "name": "SPACE",
     "main icon": [
       {
         "hierarchy": "WAR.SPC ",
@@ -44,8 +44,8 @@
       }
     ]
   },
-  "AIRTRK ": {
-    "name": "",
+  "AIRTRK": {
+    "name": "AIR",
     "main icon": [
       {
         "hierarchy": "WAR.AIRTRK ",
@@ -54,12 +54,7 @@
         "battle dimension": "A",
         "code": "------",
         "name": ["AIR TRACK"]
-      }
-    ]
-  },
-  "AIRTRK": {
-    "name": "",
-    "main icon": [
+      },
       {
         "hierarchy": "WAR.AIRTRK.MIL ",
         "code scheme": "S",
@@ -1244,8 +1239,8 @@
       }
     ]
   },
-  "GRDTRK ": {
-    "name": "",
+  "GRDTRK": {
+    "name": "GROUND",
     "main icon": [
       {
         "hierarchy": "WAR.GRDTRK ",
@@ -1254,12 +1249,7 @@
         "battle dimension": "G",
         "code": "------",
         "name": ["GROUND TRACK"]
-      }
-    ]
-  },
-  "GRDTRK": {
-    "name": "",
-    "main icon": [
+      },
       {
         "hierarchy": "WAR.GRDTRK.UNT ",
         "code scheme": "S",
@@ -9381,7 +9371,7 @@
     ]
   },
   "SSUF ": {
-    "name": "",
+    "name": "SEA SURFACE",
     "main icon": [
       {
         "hierarchy": "WAR.SSUF ",
@@ -9390,12 +9380,7 @@
         "battle dimension": "S",
         "code": "------",
         "name": ["SEA SURFACE TRACK"]
-      }
-    ]
-  },
-  "SSUF": {
-    "name": "",
-    "main icon": [
+      },
       {
         "hierarchy": "WAR.SSUF.CBTT ",
         "code scheme": "S",
@@ -10116,8 +10101,8 @@
       }
     ]
   },
-  "SBSUF ": {
-    "name": "",
+  "SBSUF": {
+    "name": "SUBSURFACE",
     "main icon": [
       {
         "hierarchy": "WAR.SBSUF ",
@@ -10126,12 +10111,7 @@
         "battle dimension": "U",
         "code": "------",
         "name": ["SUBSURFACE TRACK"]
-      }
-    ]
-  },
-  "SBSUF": {
-    "name": "",
-    "main icon": [
+      },
       {
         "hierarchy": "WAR.SBSUF.SUB ",
         "code scheme": "S",
@@ -11023,8 +11003,8 @@
       }
     ]
   },
-  "SOFUNT ": {
-    "name": "",
+  "SOFUNT": {
+    "name": "SPECIAL OPERATIONS FORCES (SOF)",
     "main icon": [
       {
         "hierarchy": "WAR.SOFUNT ",
@@ -11033,12 +11013,7 @@
         "battle dimension": "F",
         "code": "------",
         "name": ["SPECIAL OPERATIONS FORCES (SOF) UNIT"]
-      }
-    ]
-  },
-  "SOFUNT": {
-    "name": "",
-    "main icon": [
+      },
       {
         "hierarchy": "WAR.SOFUNT.AVN ",
         "code scheme": "S",
