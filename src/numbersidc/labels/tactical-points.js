@@ -217,8 +217,26 @@ export default function tacticalPoints(sidc) {
   sidc["281901"] = {}; //Protection Points / Tetrahedrons, Dragons Teeth, and Other Similar Obstacles / Fixed and Prefabricated
   sidc["281902"] = {}; //Protection Points / Tetrahedrons, Dragons Teeth, and Other Similar Obstacles / Movable
   sidc["281903"] = {}; //Protection Points / Tetrahedrons, Dragons Teeth, and Other Similar Obstacles / Movable and Prefabricated
-  sidc["282001"] = {}; //Protection Points / Vertical Obstructions / Tower, Low
-  sidc["282002"] = {}; //Protection Points / Vertical Obstructions / Tower, High
+  sidc["282001"] = {
+    altitudeDepth: {
+      stroke: false,
+      textanchor: "start",
+      x: 120,
+      y: 60,
+      fontsize: 40,
+      fontweight: "bold"
+    }
+  }; //Protection Points / Vertical Obstructions / Tower, Low
+  sidc["282002"] = {
+    altitudeDepth: {
+      stroke: false,
+      textanchor: "start",
+      x: 115,
+      y: 60,
+      fontsize: 40,
+      fontweight: "bold"
+    }
+  }; //Protection Points / Vertical Obstructions / Tower, High
   sidc["320100"] = {}; //Sustainment Points / Ambulance Points
   sidc["320101"] = {}; //Sustainment Points / Ambulance Points / Ambulance Exchange Point
   sidc["320102"] = {}; //Sustainment Points / Ambulance Points / Ambulance Control Point

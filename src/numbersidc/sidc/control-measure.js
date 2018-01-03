@@ -1,4 +1,10 @@
-export default function space(
+import { ms } from "../../ms.js";
+import tacticalpoints from "../../iconparts/tactical-points.js";
+ms.addIconParts(tacticalpoints);
+import labels from "../labels/tactical-points.js";
+ms.addLabelOverrides(labels, "number");
+
+export default function controlmeasure(
   sidc,
   sIdm1,
   sIdm2,
