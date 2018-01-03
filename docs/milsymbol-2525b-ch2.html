@@ -123,6 +123,14 @@
       }
     }
 
+    function labels(icon) {
+      if (icon.hierarchy.split(".")[0] == "TACGRP") {
+        return { infoColor: "Silver", additionalInformation: 'H', additionalInformation1: 'H1', hostile: 'N', uniqueDesignation: 'T', dtg: 'W', dtg1: 'W1', altitudeDepth: 'X' }
+      } else {
+        return {};
+      }
+    }
+
     function renderSymbolSet(symbolset) {
       var output = "";
       var i;
@@ -158,7 +166,8 @@
             new ms.Symbol(
               symbolset["main icon"][i]["code scheme"] + "F" + symbolset["main icon"][i]["battle dimension"] + "P" + symbolset["main icon"][i].code,
               { size: size },
-              remarks(symbolset["main icon"][i].remarks)
+              remarks(symbolset["main icon"][i].remarks),
+              labels(symbolset["main icon"][i])
             ).asSVG();
           output += "</td>"
         } else {

@@ -56,6 +56,11 @@
     .index-h3 {
       margin-left: 15px;
     }
+
+    .na {
+      background-color: #eee;
+      color: #999;
+    }
   </style>
   <script src="../dist/milsymbol.development.js"></script>
   <script src="app6d.js"></script>
@@ -130,6 +135,10 @@
       }
     }
 
+    function labels(icon) {
+        return { infoColor: "Silver", additionalInformation: 'H', additionalInformation1: 'H1', hostile: 'N', uniqueDesignation: 'T', dtg: 'W', dtg1: 'W1', altitudeDepth: 'X' }
+    }
+
     function renderSymbolSet(symbolset) {
 
       var output = "";
@@ -144,7 +153,13 @@
 
       for (i = 0; i < symbolset["main icon"].length; i++) {
         output +=
-          "<tr><td><b>" +
+          "<tr"
+        if ([
+          "N/A",
+          "For training or hierarchical purposes only"
+        ].indexOf(symbolset["main icon"][i].remarks) != -1)
+          output += ' class="na"';
+        output += "><td><b>" +
           (symbolset["main icon"][i]["entity subtype"] ||
             symbolset["main icon"][i]["entity type"] ||
             symbolset["main icon"][i]["entity"]) +
@@ -185,7 +200,8 @@
               symbolset["main icon"][i].code +
               "0000",
               { size: size },
-              remarks(symbolset["main icon"][i].remarks)
+              remarks(symbolset["main icon"][i].remarks),
+              (symbolset.symbolset == 25)?labels():{}
             ).asSVG();
           output += "</td>"
         } else {

@@ -123,6 +123,10 @@
       return {};
     }
 
+    function labels(icon) {
+        return { infoColor: "Silver", additionalInformation: 'H', additionalInformation1: 'H1', hostile: 'N', uniqueDesignation: 'T', dtg: 'W', dtg1: 'W1', altitudeDepth: 'X' }
+    }
+    
     function renderSymbolSet(symbolset) {
 
       var output = "";
@@ -178,7 +182,8 @@
               symbolset["main icon"][i].code +
               "0000",
               { size: size },
-              remarks(symbolset["main icon"][i].remarks)
+              remarks(symbolset["main icon"][i].remarks),
+              (symbolset.symbolset == 25)?labels():{}
             ).asSVG();
           output += "</td>"
         } else {
