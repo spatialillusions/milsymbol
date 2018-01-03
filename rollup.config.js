@@ -41,6 +41,26 @@ export default [
     plugins: [json()]
   },
   {
+    // Generate documentation for 2525-B
+    input: "src/2525b.js",
+    output: {
+      file: "docs/2525b.js",
+      format: "umd"
+    },
+    name: "std2525b",
+    plugins: [json()]
+  },
+  {
+    // Generate documentation for 2525-C
+    input: "src/2525c.js",
+    output: {
+      file: "docs/2525c.js",
+      format: "umd"
+    },
+    name: "std2525c",
+    plugins: [json()]
+  },
+  {
     // Generate documentation for 2525-D
     input: "src/2525d.js",
     output: {

@@ -12,6 +12,7 @@ import seasurface from "../dev/APP6-D 30 sea-surface.json";
 import seasubsurface from "../dev/APP6-D 35 sea-subsurface.json";
 import minewarfare from "../dev/APP6-D 36 mine-warfare.json";
 import activities from "../dev/APP6-D 40 activities.json";
+
 export default {
   "01": air,
   "02": airmissile,
