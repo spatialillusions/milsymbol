@@ -53,7 +53,7 @@
       text-align: left;
     }
 
-    .index-h3{
+    .index-h3 {
       margin-left: 15px;
     }
   </style>
@@ -91,7 +91,7 @@
         i++;
         d.id = "heading-" + i;
         indexoftables +=
-          '<a href="#heading-' + i + '" class="index-'+d.tagName.toLowerCase()+'">' + d.textContent + "</a><br>\n";
+          '<a href="#heading-' + i + '" class="index-' + d.tagName.toLowerCase() + '">' + d.textContent + "</a><br>\n";
       });
       document.getElementById("indexoftables").innerHTML = indexoftables;
 
@@ -142,8 +142,8 @@
             symbolset["main icon"][i]["entity type"] ||
             symbolset["main icon"][i]["entity"]) +
           "</b>";
-        
-        if(!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")){
+
+        if (!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")) {
           output +=
             "<br><br><em>Type:</em> " +
             (symbolset["main icon"][i].hasOwnProperty("entity subtype")
@@ -162,13 +162,13 @@
               output += "<br><em>Entity:</em> " + symbolset["main icon"][i]["entity"];
             }
           }
-        
+
           output += "<br><em>Symbol Set Code:</em> " + symbolset.symbolset;
         }
-        
+
         output += "<br><em>Code:</em> " + symbolset["main icon"][i].code;
-        
-        if(!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")){
+
+        if (!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")) {
           output +=
             "</td><td>" +
             new ms.Symbol(
@@ -181,7 +181,7 @@
               remarks(symbolset["main icon"][i].remarks)
             ).asSVG();
           output += "</td>"
-        }else{
+        } else {
           output +=
             "</td><td>" +
             symbolset["main icon"][i].geometry;
@@ -189,15 +189,15 @@
         }
         if (symbolset.symbolset == 36) {
           output += "<td>" +
-          new ms.Symbol(
-            "1003" +
-            symbolset.symbolset +
-            "0000" +
-            symbolset["main icon"][i].code +
-            "0000",
-            { size: size, alternateMedal: true },
-            remarks(symbolset["main icon"][i].remarks)
-          ).asSVG();
+            new ms.Symbol(
+              "1003" +
+              symbolset.symbolset +
+              "0000" +
+              symbolset["main icon"][i].code +
+              "0000",
+              { size: size, alternateMedal: true },
+              remarks(symbolset["main icon"][i].remarks)
+            ).asSVG();
           output += "</td>"
         }
 
@@ -637,9 +637,9 @@
   </table>
 
 
-  <div class="main">
-    <h3 id="TABLEII">TABLE II. Exercise frames.</h3>
-  </div>
+
+  <h3 id="TABLEII">TABLE II. Exercise frames.</h3>
+
   <table border=1 style="table-layout: fixed;width: 906px; ">
     <thead>
       <tr>
@@ -1008,9 +1008,9 @@
   </table>
 
 
-  <div class="main">
-    <h3 id="TABLEIII">TABLE II. Simulation frames.</h3>
-  </div>
+
+  <h3 id="TABLEIII">TABLE II. Simulation frames.</h3>
+
   <table border=1 style="table-layout: fixed;width: 906px; ">
     <thead>
       <tr>
@@ -1384,33 +1384,33 @@
   <br>
 
   <figure>
-  <table>
-    <tr>
-      <td style="text-align: center;">
-        <script>document.write(new ms.Symbol("10061000001211020000", { size: size }).asSVG());</script>
-      </td>
-      <td>
-        <script>document.write(new ms.Symbol("10061000001211020000", { size: size, fill: false }).asSVG());</script>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align: center;">
-        <script>document.write(new ms.Symbol("10061000001211020000", { size: size, fillOpacity: 0.5 }).asSVG());</script>
-      </td>
-      <td>
-        <script>document.write(new ms.Symbol("10061000001211020000", { size: size, monoColor: "black" }).asSVG());</script>
-      </td>
-    </tr>
-  </table>
-  <figcaption>
+    <table>
+      <tr>
+        <td style="text-align: center;">
+          <script>document.write(new ms.Symbol("10061000001211020000", { size: size }).asSVG());</script>
+        </td>
+        <td>
+          <script>document.write(new ms.Symbol("10061000001211020000", { size: size, fill: false }).asSVG());</script>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">
+          <script>document.write(new ms.Symbol("10061000001211020000", { size: size, fillOpacity: 0.5 }).asSVG());</script>
+        </td>
+        <td>
+          <script>document.write(new ms.Symbol("10061000001211020000", { size: size, monoColor: "black" }).asSVG());</script>
+        </td>
+      </tr>
+    </table>
+    <figcaption>
       Examples of filled and unfilled symbols.
     </figcaption>
   </figure>
 
 
-  <div class="main">
-    <h3 id="TABLEIV">TABLE V. Civilian symbols with purple fill option.</h3>
-  </div>
+
+  <h3 id="TABLEIV">TABLE V. Civilian symbols with purple fill option.</h3>
+
   <table>
     <thead>
       <tr>
@@ -1976,81 +1976,81 @@
 
   <h3 id="TABLEIX">TABLE IX. Auxiliary equipment indicators.</h3>
   <table>
-  <thead>
-  <tr>
-  <td>DESCRIPTION
-  </td>
-  <td>UNFRAMED
-  </td>
-  <td>UNKNOWN
-  </td>
-  <td>FRIEND
-  </td>
-  <td>NEUTRAL
-  </td>
-  <td>HOSTILE
-  </td>
-  </tr>
-  </thead>
-  <tr>
-  <td>TOWED SONAR
-  ARRAY (SHORT)
-  </td>
-  <td>
-  <script>
-  document.write(new ms.Symbol("10033500611101000000", {size:40,frame:false}).asSVG());
-  </script>
-  </td>
-  <td>
-  <script>
-  document.write(new ms.Symbol("10013500611101000000", {size:40}).asSVG());
-  </script>
-  </td>
-  <td>
-  <script>
-  document.write(new ms.Symbol("10033500611101000000", {size:40}).asSVG());
-  </script>
-  </td>
-  <td>
-  <script>
-  document.write(new ms.Symbol("10043500611101000000", {size:40}).asSVG());
-  </script>
-  </td>
-  <td><script>
-  document.write(new ms.Symbol("10063500611101000000", {size:40}).asSVG());
-  </script>
-  </td>
-  </tr>
-  
-  <tr>
-  <td>TOWED SONAR
-  ARRAY (LONG)
-  </td>
-  <td>
-  <script>
-  document.write(new ms.Symbol("10033500621101000000", {size:40,frame:false}).asSVG());
-  </script>
-  </td>
-  <td>
-  <script>
-  document.write(new ms.Symbol("10013500621101000000", {size:40}).asSVG());
-  </script>
-  </td>
-  <td>
-  <script>
-  document.write(new ms.Symbol("10033500621101000000", {size:40}).asSVG());
-  </script>
-  </td>
-  <td>
-  <script>
-  document.write(new ms.Symbol("10043500621101000000", {size:40}).asSVG());
-  </script>
-  </td>
-  <td><script>
-  document.write(new ms.Symbol("10063500621101000000", {size:40}).asSVG());
-  </script>
-  </td>
-  </tr>
+    <thead>
+      <tr>
+        <td>DESCRIPTION
+        </td>
+        <td>UNFRAMED
+        </td>
+        <td>UNKNOWN
+        </td>
+        <td>FRIEND
+        </td>
+        <td>NEUTRAL
+        </td>
+        <td>HOSTILE
+        </td>
+      </tr>
+    </thead>
+    <tr>
+      <td>TOWED SONAR ARRAY (SHORT)
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10033500611101000000", { size: 40, frame: false }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10013500611101000000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10033500611101000000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10043500611101000000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10063500611101000000", { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
+
+    <tr>
+      <td>TOWED SONAR ARRAY (LONG)
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10033500621101000000", { size: 40, frame: false }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10013500621101000000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10033500621101000000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10043500621101000000", { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol("10063500621101000000", { size: 40 }).asSVG());
+        </script>
+      </td>
+    </tr>
   </table>
 
   <h3>Table 1-3: Operational Condition Amplifiers for Icon-based Symbols. </h3>

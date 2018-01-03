@@ -53,7 +53,7 @@
       text-align: left;
     }
 
-    .index-h3{
+    .index-h3 {
       margin-left: 15px;
     }
   </style>
@@ -67,10 +67,10 @@
     // Since we don't have any geometry types in APP-6 D controle measures, let us get them from 2525D
     var control = std2525d["25"]["main icon"];
     var std2525lookup = {};
-    for(var i = 0; i< control.length; i++){
+    for (var i = 0; i < control.length; i++) {
       std2525lookup[control[i].code] = control[i].geometry;
     }
-    for(var j = 0; j<app6d["25"]["main icon"].length; j++){
+    for (var j = 0; j < app6d["25"]["main icon"].length; j++) {
       app6d["25"]["main icon"][j].geometry = std2525lookup[app6d["25"]["main icon"][j].code];
     }
     /*
@@ -101,7 +101,7 @@
         i++;
         d.id = "heading-" + i;
         indexoftables +=
-        '<a href="#heading-' + i + '" class="index-'+d.tagName.toLowerCase()+'">' + d.textContent + "</a><br>\n";
+          '<a href="#heading-' + i + '" class="index-' + d.tagName.toLowerCase() + '">' + d.textContent + "</a><br>\n";
       });
       document.getElementById("indexoftables").innerHTML = indexoftables;
 
@@ -149,8 +149,8 @@
             symbolset["main icon"][i]["entity type"] ||
             symbolset["main icon"][i]["entity"]) +
           "</b>";
-        
-        if(!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")){
+
+        if (!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")) {
           output +=
             "<br><br><em>Type:</em> " +
             (symbolset["main icon"][i].hasOwnProperty("entity subtype")
@@ -169,13 +169,13 @@
               output += "<br><em>Entity:</em> " + symbolset["main icon"][i]["entity"];
             }
           }
-        
+
           output += "<br><em>Symbol Set Code:</em> " + symbolset.symbolset;
         }
-        
+
         output += "<br><em>Code:</em> " + symbolset["main icon"][i].code;
-        
-        if(!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")){
+
+        if (!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")) {
           output +=
             "</td><td>" +
             new ms.Symbol(
@@ -188,7 +188,7 @@
               remarks(symbolset["main icon"][i].remarks)
             ).asSVG();
           output += "</td>"
-        }else{
+        } else {
           output +=
             "</td><td>" +
             symbolset["main icon"][i].geometry;
@@ -196,15 +196,15 @@
         }
         if (symbolset.symbolset == 36) {
           output += "<td>" +
-          new ms.Symbol(
-            "1003" +
-            symbolset.symbolset +
-            "0000" +
-            symbolset["main icon"][i].code +
-            "0000",
-            { size: size, alternateMedal: true },
-            remarks(symbolset["main icon"][i].remarks)
-          ).asSVG();
+            new ms.Symbol(
+              "1003" +
+              symbolset.symbolset +
+              "0000" +
+              symbolset["main icon"][i].code +
+              "0000",
+              { size: size, alternateMedal: true },
+              remarks(symbolset["main icon"][i].remarks)
+            ).asSVG();
           output += "</td>"
         }
 
@@ -1685,10 +1685,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["20"],
-        "Table 3-23: Land Installation Icons",
-        "Table 3-24: Land Installation Sector 1 Modifiers",
-        "Table 3-25: Land Installation Sector 2 Modifiers"
+        app6d["20"]
       )
     );
   </script>
@@ -1759,10 +1756,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["27"],
-        "Table 4-3: Dismounted Individual Main Icons",
-        "Table 4-6: Dismounted Individual Sector 1 Modifiers",
-        "Table 4-7: Dismounted Individual Sector 2 Modifiers"
+        app6d["27"]
       )
     );
   </script>
@@ -1844,10 +1838,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["30"],
-        "Table 5-3: Sea Surface Military and Civilian Vessel/Ship Icons",
-        "Table 5-6: Sea Surface Sector 1 Modifiers",
-        "Table 5-7: Sea Surface Sector 2 Modifiers"
+        app6d["30"]
       )
     );
   </script>
@@ -1896,10 +1887,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["35"],
-        "Table 5-10: Sea Subsurface Military and Civilian Main Icons",
-        "Table 5-11: Sea Subsurface Sector 1 Modifiers",
-        "Table 5-12: Sea Subsurface Sector 2 Modifiers"
+        app6d["35"]
       )
     );
   </script>
@@ -1907,10 +1895,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["36"],
-        "Table 5-15: Mine Warfare Main Icons",
-        "",
-        ""
+        app6d["36"]
       )
     );
   </script>
@@ -1952,10 +1937,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["05"],
-        "Table 6-3: Space Equipment and Platform Icons",
-        "Table 6-4: Space Equipment and Platform Sector 1 Modifiers",
-        "Table 6-5: Space Equipment and Platform Sector 2 Modifiers"
+        app6d["05"]
       )
     );
   </script>
@@ -1998,24 +1980,18 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["40"],
-        "Table 7-3: Stability and Civil Support Activities Main Sector Icons",
-        "Table 7-4: Activities Sector 1 Modifiers",
-        ""
+        app6d["40"]
       )
     );
   </script>
 
-<script>
-  document.write(
-    renderSymbolSet(
-      app6d["25"],
-      "Control Measures",
-      "TODO",
-      "TODO"
-    )
-  );
-</script>
+  <script>
+    document.write(
+      renderSymbolSet(
+        app6d["25"]
+      )
+    );
+  </script>
 
   <br>
   <br>
