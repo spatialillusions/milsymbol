@@ -8,6 +8,7 @@
         "standard identity": "-",
         "battle dimension": "I",
         "code": "------",
+        "remarks": "N/A",
         "name": ["INCIDENT"]
       },
       {
@@ -437,6 +438,7 @@
         "standard identity": "-",
         "battle dimension": "N",
         "code": "------",
+        "remarks": "N/A",
         "name": ["NATURAL EVENTS"]
       },
       {
@@ -445,6 +447,7 @@
         "standard identity": "*",
         "battle dimension": "N",
         "code": "A-----",
+        "remarks": "N/A",
         "name": ["NATURAL EVENTS", "GEOLOGIC"]
       },
       {
@@ -509,6 +512,7 @@
         "standard identity": "*",
         "battle dimension": "N",
         "code": "B-----",
+        "remarks": "N/A",
         "name": ["NATURAL EVENTS", "HYDRO-METEOROLOGICAL"]
       },
       {
@@ -621,6 +625,7 @@
         "standard identity": "*",
         "battle dimension": "N",
         "code": "C-----",
+        "remarks": "N/A",
         "name": ["NATURAL EVENTS", "INFESTATION"]
       },
       {
@@ -674,6 +679,7 @@
         "standard identity": "-",
         "battle dimension": "O",
         "code": "------",
+        "remarks": "N/A",
         "name": ["OPERATIONS"]
       },
       {
@@ -1623,6 +1629,7 @@
         "standard identity": "-",
         "battle dimension": "F",
         "code": "------",
+        "remarks": "N/A",
         "name": ["INFRASTRUCTURE"]
       },
       {

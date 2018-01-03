@@ -8,6 +8,7 @@
         "standard identity": "*",
         "battle dimension": "V",
         "code": "------",
+        "remarks": "N/A",
         "name": ["VIOLENT ACTIVITIES (DEATH CAUSING) "]
       },
       {
@@ -133,6 +134,7 @@
         "standard identity": "*",
         "battle dimension": "L",
         "code": "------",
+        "remarks": "N/A",
         "name": ["LOCATIONS"]
       },
       {
@@ -178,6 +180,7 @@
         "standard identity": "*",
         "battle dimension": "O",
         "code": "------",
+        "remarks": "N/A",
         "name": ["OPERATIONS"]
       },
       {
@@ -194,6 +197,7 @@
         "standard identity": "*",
         "battle dimension": "O",
         "code": "R-----",
+        "remarks": "N/A",
         "name": ["OPERATIONS ", "RECRUITMENT "]
       },
       {
@@ -314,6 +318,7 @@
         "standard identity": "*",
         "battle dimension": "O",
         "code": "H-----",
+        "remarks": "N/A",
         "name": ["OPERATIONS ", "HIJACKING "]
       },
       {
@@ -415,6 +420,7 @@
         "standard identity": "*",
         "battle dimension": "I",
         "code": "------",
+        "remarks": "N/A",
         "name": ["ITEMS"]
       },
       {

@@ -6584,6 +6584,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "EW----",
+        "remarks": "N/A",
         "name": ["GROUND TRACK", "GROUND TRACK EQUIPMENT", "WEAPON"]
       },
       {
@@ -8775,6 +8776,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "EX----",
+        "remarks": "N/A",
         "name": ["GROUND TRACK", "GROUND TRACK EQUIPMENT", "SPECIAL EQUIPMENT"]
       },
       {
@@ -9112,6 +9114,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "IM----",
+        "remarks": "N/A",
         "name": ["GROUND TRACK", "INSTALLATION", "MILITARY MATERIEL FACILITY"]
       },
       {
@@ -9895,6 +9898,7 @@
         "standard identity": "*",
         "battle dimension": "S",
         "code": "X-----",
+        "remarks": "N/A",
         "name": ["SEA SURFACE TRACK", "NON-MILITARY"]
       },
       {
@@ -10967,6 +10971,7 @@
         "standard identity": "*",
         "battle dimension": "U",
         "code": "N-----",
+        "remarks": "N/A",
         "name": ["SUBSURFACE TRACK", "NON-SUBMARINE"]
       },
       {
