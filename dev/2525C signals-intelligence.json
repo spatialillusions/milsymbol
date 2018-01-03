@@ -8,6 +8,7 @@
         "standard identity": "*",
         "battle dimension": "P",
         "code": "------",
+        "remarks": "N/A",
         "name": ["SPACE TRACK "]
       },
       {
@@ -16,6 +17,7 @@
         "standard identity": "*",
         "battle dimension": "P",
         "code": "S-----",
+        "remarks": "N/A",
         "name": ["SPACE TRACK ", "SIGNAL INTERCEPT "]
       },
       {
@@ -24,6 +26,7 @@
         "standard identity": "*",
         "battle dimension": "P",
         "code": "SC----",
+        "remarks": "N/A",
         "name": ["SPACE TRACK ", "SIGNAL INTERCEPT ", "COMMUNICATIONS "]
       },
       {
@@ -45,6 +48,7 @@
         "standard identity": "*",
         "battle dimension": "P",
         "code": "SR----",
+        "remarks": "N/A",
         "name": ["SPACE TRACK ", "SIGNAL INTERCEPT ", "RADAR "]
       },
       {
@@ -139,6 +143,7 @@
         "standard identity": "*",
         "battle dimension": "A",
         "code": "------",
+        "remarks": "N/A",
         "name": ["AIR TRACK "]
       },
       {
@@ -147,6 +152,7 @@
         "standard identity": "*",
         "battle dimension": "A",
         "code": "S-----",
+        "remarks": "N/A",
         "name": ["AIR TRACK ", "SIGNAL INTERCEPT "]
       },
       {
@@ -155,6 +161,7 @@
         "standard identity": "*",
         "battle dimension": "A",
         "code": "SC----",
+        "remarks": "N/A",
         "name": ["AIR TRACK ", "SIGNAL INTERCEPT ", "COMMUNICATIONS "]
       },
       {
@@ -215,6 +222,7 @@
         "standard identity": "*",
         "battle dimension": "A",
         "code": "SR----",
+        "remarks": "N/A",
         "name": ["AIR TRACK ", "SIGNAL INTERCEPT ", "RADAR "]
       },
       {
@@ -416,6 +424,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "------",
+        "remarks": "N/A",
         "name": ["GROUND TRACK "]
       },
       {
@@ -424,6 +433,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "S-----",
+        "remarks": "N/A",
         "name": ["GROUND TRACK ", "SIGNAL INTERCEPT "]
       },
       {
@@ -432,6 +442,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "SC----",
+        "remarks": "N/A",
         "name": ["GROUND TRACK ", "SIGNAL INTERCEPT ", "COMMUNICATIONS "]
       },
       {
@@ -505,6 +516,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "SR----",
+        "remarks": "N/A",
         "name": ["GROUND TRACK ", "SIGNAL INTERCEPT ", "RADAR "]
       },
       {
@@ -773,6 +785,7 @@
         "standard identity": "*",
         "battle dimension": "S",
         "code": "------",
+        "remarks": "N/A",
         "name": ["SEA SURFACE TRACK "]
       },
       {
@@ -781,6 +794,7 @@
         "standard identity": "*",
         "battle dimension": "S",
         "code": "S-----",
+        "remarks": "N/A",
         "name": ["SEA SURFACE TRACK ", "SIGNAL INTERCEPT "]
       },
       {
@@ -789,6 +803,7 @@
         "standard identity": "*",
         "battle dimension": "S",
         "code": "SC----",
+        "remarks": "N/A",
         "name": ["SEA SURFACE TRACK ", "SIGNAL INTERCEPT ", "COMMUNICATIONS "]
       },
       {
@@ -849,6 +864,7 @@
         "standard identity": "*",
         "battle dimension": "S",
         "code": "SR----",
+        "remarks": "N/A",
         "name": ["SEA SURFACE TRACK ", "SIGNAL INTERCEPT ", "RADAR "]
       },
       {
@@ -1109,6 +1125,7 @@
         "standard identity": "*",
         "battle dimension": "U",
         "code": "------",
+        "remarks": "N/A",
         "name": ["SUBSURFACE TRACK "]
       },
       {
@@ -1117,6 +1134,7 @@
         "standard identity": "*",
         "battle dimension": "U",
         "code": "S-----",
+        "remarks": "N/A",
         "name": ["SUBSURFACE TRACK ", "SIGNAL INTERCEPT "]
       },
       {
@@ -1125,6 +1143,7 @@
         "standard identity": "*",
         "battle dimension": "U",
         "code": "SC----",
+        "remarks": "N/A",
         "name": ["SUBSURFACE TRACK ", "SIGNAL INTERCEPT ", "COMMUNICATIONS "]
       },
       {
@@ -1172,6 +1191,7 @@
         "standard identity": "*",
         "battle dimension": "U",
         "code": "SR----",
+        "remarks": "N/A",
         "name": ["SUBSURFACE TRACK ", "SIGNAL INTERCEPT ", "RADAR "]
       },
       {
