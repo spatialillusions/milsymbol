@@ -1755,6 +1755,57 @@
         ]
       },
       {
+        "hierarchy": "1.X.3.1.1.4.6.1.1",
+        "code scheme": "S",
+        "standard identity": "*",
+        "battle dimension": "G",
+        "code": "UCVU--",
+        "remarks": "Error in standard",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "UNMANNED AERIAL VEHICLE",
+          "UNMANNED AERIAL VEHICLE FIXED WING",
+          "AVIATION UAV CONTROL"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.6.1.2",
+        "code scheme": "S",
+        "standard identity": "*",
+        "battle dimension": "G",
+        "code": "UCVU--",
+        "remarks": "Error in standard",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "UNMANNED AERIAL VEHICLE",
+          "UNMANNED AERIAL VEHICLE FIXED WING",
+          "AVIATION UAV LAUNCHER"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.4.6.1.3",
+        "code scheme": "S",
+        "standard identity": "*",
+        "battle dimension": "G",
+        "code": "UCVU--",
+        "remarks": "Error in standard",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "AVIATION",
+          "UNMANNED AERIAL VEHICLE",
+          "UNMANNED AERIAL VEHICLE FIXED WING",
+          "AVIATION UAV RECOVERY"
+        ]
+      },
+      {
         "hierarchy": "1.X.3.1.1.4.6.2",
         "code scheme": "S",
         "standard identity": "*",
@@ -1919,6 +1970,21 @@
           "COMBAT",
           "INFANTRY",
           "INFANTRY ARCTIC"
+        ]
+      },
+      {
+        "hierarchy": "1.X.3.1.1.5.10",
+        "code scheme": "S",
+        "standard identity": "*",
+        "battle dimension": "G",
+        "code": "UCIC--",
+        "remarks": "Error in standard",
+        "name": [
+          "GROUND TRACK",
+          "UNIT",
+          "COMBAT",
+          "INFANTRY",
+          "INFANTRY SNIPER"
         ]
       },
       {
@@ -2099,6 +2165,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "UCEC--",
+        "remarks": "Error in standard",
         "name": [
           "GROUND TRACK",
           "UNIT",
@@ -2114,6 +2181,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "UCEC--",
+        "remarks": "Error in standard",
         "name": [
           "GROUND TRACK",
           "UNIT",
@@ -2129,6 +2197,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "UCEC--",
+        "remarks": "Error in standard",
         "name": [
           "GROUND TRACK",
           "UNIT",
@@ -2144,6 +2213,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "UCEC--",
+        "remarks": "Error in standard",
         "name": [
           "GROUND TRACK",
           "UNIT",
@@ -2880,6 +2950,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "UCF---",
+        "remarks": "Error in standard",
         "name": [
           "GROUND TRACK",
           "UNIT",
@@ -2894,6 +2965,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "UCF---",
+        "remarks": "Error in standard",
         "name": [
           "GROUND TRACK",
           "UNIT",
@@ -4209,6 +4281,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "UU----",
+        "remarks": "Error in standard",
         "name": ["GROUND TRACK", "UNIT", "COMBAT SUPPORT", "DOG"]
       },
       {
@@ -6304,6 +6377,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "UH----",
+        "remarks": "Error in standard",
         "name": ["GROUND TRACK", "UNIT", "UNIT GENERAL HEADQUARTERS"]
       },
       {
@@ -6312,6 +6386,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "UH----",
+        "remarks": "Error in standard",
         "name": ["GROUND TRACK", "UNIT", "GENERAL HEADQUARTERS AND SERVICE"]
       },
       {
