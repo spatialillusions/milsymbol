@@ -64,13 +64,6 @@
     var size = 70;
     ms.setStandard("APP6");
 
-    //Populate all symbolsets with coding scheme
-    for (var i in app6b) {
-      for (var j in app6b[i]) {
-        app6b[i][j]["coding scheme"] = i;
-      }
-    }
-
     /*
         ms.addSymbolPart(function debug() {
           //This debug function is a minimal example of how to extend milsymbol.
@@ -116,6 +109,7 @@
     }
 
     function remarks(remark) {
+      if (remark == "Wrong SIDC in standard") return { monoColor: "Red" };
       if (
         [
           "From MIL-STD-2525.",
@@ -152,13 +146,13 @@
           }
         }
 
-        output += "<br><em>SIDC:</em> " + symbolset["coding scheme"] + "*" + symbolset.symbolset + "*" + symbolset["main icon"][i].code;
+        output += "<br><em>SIDC:</em> " + symbolset["main icon"][i]["code scheme"] + "*" + symbolset["main icon"][i]["battle dimension"] + "*" + symbolset["main icon"][i].code;
 
         if (!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "POINT")) {
           output +=
             "</td><td>" +
             new ms.Symbol(
-              symbolset["coding scheme"] + "F" + symbolset.symbolset + "P" + symbolset["main icon"][i].code,
+              symbolset["main icon"][i]["code scheme"]  + "F" + symbolset["main icon"][i]["battle dimension"] + "P" + symbolset["main icon"][i].code,
               { size: size },
               remarks(symbolset["main icon"][i].remarks)
             ).asSVG();
@@ -1290,7 +1284,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6b.S.P // Space
+        app6b.WAR.SPC // Space
       )
     );
   </script>
@@ -1298,7 +1292,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6b.S.A // Air
+        app6b.WAR.AIRTRK // Air
       )
     );
   </script>
@@ -1306,7 +1300,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6b.S.G // Ground
+        app6b.WAR.GRDTRK // Ground
       )
     );
   </script>
@@ -1314,7 +1308,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6b.S.S // Sea surface
+        app6b.WAR.SSUF // Sea surface
       )
     );
   </script>
@@ -1322,7 +1316,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6b.S.U // Sea subsurface
+        app6b.WAR.SBSUF // Sea subsurface
       )
     );
   </script>
@@ -1330,7 +1324,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6b.S.F // SOF
+        app6b.WAR.SOFUNT // SOF
       )
     );
   </script>
@@ -1338,7 +1332,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6b.G.T // TASKS
+        app6b.TACGRP.TSK // TASKS
       )
     );
   </script>
@@ -1346,7 +1340,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6b.G.C // CONTROL MEASURES
+        app6b.TACGRP.C2GM // CONTROL MEASURES
       )
     );
   </script>
@@ -1354,7 +1348,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6b.G.O // OPERATIONS OTHER THAN WAR
+        app6b.TACGRP.STBOPS // OPERATIONS OTHER THAN WAR
       )
     );
   </script>

@@ -1,64 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>Milsymbol Documentation - Spatial Illusions</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      max-width: 80%;
+      margin: auto;
+    }
 
-	<title>Milsymbol Documentation - Spatial Illusions</title>
-	<style>
-	body {
-		font-family: arial, sans-serif;
-		font-size: 100%;
-		font-weight: normal;
-		font-variant: normal;
-		-webkit-font-smoothing: antialiased;
-	}
-	.main {
-		max-width:700px;
-		margin: auto;
-		padding: 5px;
+    em {
+      color: #ccc;
+    }
 
-	}
-	table {
-		border-collapse: collapse;
-		margin: auto;
-	}
+    figure {
+      text-align: center;
+    }
 
-	table, td, th {
-		border: solid 1px #000;
-		padding: 5px;
-	}
-	thead{
-		font-weight: bold;
-		background-color: rgb(243, 243, 243);
-	}
-	</style>
+    svg {
+      max-width: 100%;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: auto;
+      width: 100%;
+      table-layout: fixed;
+      margin-bottom: 1rem;
+    }
+
+    table,
+    td,
+    th {
+      border: solid 1px #ccc;
+      padding: 5px;
+      text-align: center;
+    }
+
+    thead {
+      font-weight: bold;
+      background-color: rgb(243, 243, 243);
+      display: table-header-group;
+    }
+
+    tr td:nth-child(1) {
+      text-align: left;
+    }
+
+    .index-h3 {
+      margin-left: 15px;
+    }
+  </style>
+  <script src="../dist/milsymbol.development.js"></script>
+  <script src="app6b.js"></script>
+
+  <script>
+    var size = 70;
+    ms.setStandard("APP6");
+
+    /*
+        ms.addSymbolPart(function debug() {
+          //This debug function is a minimal example of how to extend milsymbol.
+          //Create a variable to store your geometries
+          var drawArray1 = [];
+          var drawArray2 = [];
+          //Get a new bounding box and modify it if your geometry extends outside the current bounds.
+          var gbbox = new ms.BBox();
+          //Draws the icon octagon
+          drawArray2.push({
+            type: "path",
+            fill: false,
+            stroke: "rgb(0,0,255)",
+            strokewidth: 0.8,
+            d:
+              "m 120,60 0,80 m -40,-80 0,80 m -20,-20 80,0 m 0,-40 -80,0 M 100,50 135.35534,64.64466 150,100 135.35534,135.35534 100,150.00002 64.644661,135.35534 50,100 64.644661,64.64466 z"
+          });
+          return { pre: drawArray1, post: drawArray2, bbox: gbbox };
+        });
+        //*/
+
+    function generatenavigation() {
+      var i = 0;
+      var indexoftables = "";
+      document.querySelectorAll("h2, h3").forEach(function (d) {
+        i++;
+        d.id = "heading-" + i;
+        indexoftables +=
+          '<a href="#heading-' + i + '" class="index-' + d.tagName.toLowerCase() + '">' + d.textContent + "</a><br>\n";
+      });
+      document.getElementById("indexoftables").innerHTML = indexoftables;
+
+      i = 0;
+      var indexoffigures = "";
+      document.querySelectorAll("figure").forEach(function (d) {
+        i++;
+        d.id = "figure-" + i;
+        d = d.getElementsByTagName("figcaption").item(0);
+        indexoffigures +=
+          '<a href="#figure-' + i + '">' + d.textContent + "</a><br>\n";
+      });
+      document.getElementById("indexoffigures").innerHTML = indexoffigures;
+    }
+
+    function remarks(remark) {
+      if (remark == "Wrong SIDC in standard") return { monoColor: "Red" };
+      if (
+        [
+          "From MIL-STD-2525.",
+          "Simplification of MIL-STD-2525 icon TBD."
+        ].indexOf(remark) != -1
+      ) {
+        return { monoColor: "Silver" };
+      } else {
+        return {};
+      }
+    }
+
+    function renderSymbolSet(symbolset) {
+      var output = "";
+      var i;
+
+      output += "<h2>" + symbolset.name + "</h2>";
+      output += "<h3>" + symbolset.name + " Main Icon</h3>";
+      output += "<table border=1><thead><tr><th>Description</th><th>Icon</th>";
+
+      output += "<th>Remarks</th></tr></thead>";
+
+      for (i = 0; i < symbolset["main icon"].length; i++) {
+        output +=
+          "<tr><td><b>" +
+          symbolset["main icon"][i].hierarchy +
+          "</b>";
+        for (var j = 0; j < symbolset["main icon"][i].name.length; j++) {
+          if (symbolset["main icon"][i].name.length - 1 == j) {
+            output += "<br><b>" + symbolset["main icon"][i].name[j] + "</b>";
+          } else {
+            if (!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "POINT"))
+              output += "<br><em>" + symbolset["main icon"][i].name[j] + "</em>";
+          }
+        }
+
+        output += "<br><em>SIDC:</em> " + symbolset["main icon"][i]["code scheme"] + "*" + symbolset["main icon"][i]["battle dimension"] + "*" + symbolset["main icon"][i].code;
+
+        if (!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "POINT")) {
+          output +=
+            "</td><td>" +
+            new ms.Symbol(
+              symbolset["main icon"][i]["code scheme"]  + "F" + symbolset["main icon"][i]["battle dimension"] + "P" + symbolset["main icon"][i].code,
+              { size: size },
+              remarks(symbolset["main icon"][i].remarks)
+            ).asSVG();
+          output += "</td>"
+        } else {
+          output +=
+            "</td><td>" +
+            symbolset["main icon"][i].geometry;
+          output += "</td>"
+        }
+        /*
+        if (symbolset.symbolset == 36) {
+          output += "<td>" +
+          new ms.Symbol(
+            "1003" +
+            symbolset.symbolset +
+            "0000" +
+            symbolset["main icon"][i].code +
+            "0000",
+            { size: size, alternateMedal: true },
+            remarks(symbolset["main icon"][i].remarks)
+          ).asSVG();
+          output += "</td>"
+        }
+        //*/
+
+        output += "<td>" + (symbolset["main icon"][i].remarks ? symbolset["main icon"][i].remarks : "") + "</td></tr>";
+      }
+      output += "</table>";
+
+      return output;
+    }
+  </script>
 </head>
-<body>
-<script src="../dist/milsymbol.js"></script>
-<div class="main">
-<script>
-var size = 40;
-</script>
 
-<h1>Milsymbol 2525C implementation</h1>
-This page shows all figures and tables from MIL-STD-2525C drawn with milsymbol.<br>
-<a href="#TABLEII">TABLE II. Frame shapes depicting exercise amplifying descriptors and battle dimensions.</a><br>
-<a href="#TABLEIII">TABLE III. Present and planned status for tactical symbols.</a><br>
-<a href="#TABLEIII-1">TABLE III-1. Static operational condition modifiers for tactical symbols.</a><br>
-<a href="#TABLEIII-2">TABLE III-2. Alternate symbols for operational condition modifiers for tactical symbols.</a><br>
-<a href="#TABLEIII-3">TABLE III-3. Civilian symbol fill option.</a><br>
-<a href="#TABLEIV">TABLE IV. Modifier field definitions and maximum display lengths for tactical symbols.</a><br>
-<a href="#TABLEV">TABLE V. Echelon indicator.</a><br>
-<a href="#TABLEVI">TABLE VI. Equipment mobility indicators.</a><br>
-<a href="#TABLEVII">TABLE VII. Auxiliary equipment indicators.</a><br>
-<a href="#TABLEIX">TABLE IX. Tactical symbol display option hierarchy.</a><br>
-<a href="#TABLEXIII">TABLE XIII. Color range values for filled symbols.</a><br>
-<a href="#FIGURE13">FIGURE 13. Example of proper tactical symbol representation.</a><br>
-<a href="#TABLEA-III">TABLE A-III. SIDC table</a><br>
-<a href="#TABLED-II">TABLE D-II. SIDC table</a><br>
-<a href="#TABLEE-III">TABLE E-III. SIDC table</a><br>
-<a href="#TABLEG-VI">TABLE G-VI. Emergency management operations</a><br>
+<body onload="generatenavigation();">
+
+  <h1>Milsymbol MIL-STD-2525C Implementation</h1>
+  This page shows figures and tables from MIL-STD-2525C drawn with milsymbol.
+  <br> All symbols are drawn using milsymbol when the page is loaded, no images or other external resources than milsymbol are
+  used.
+  <br>
+  <br>
+  <b>INDEX OF TABLES</b>
+  <br>
+  <div id="indexoftables"></div>
+  <br>
+  <b>INDEX OF FIGURES</b>
+  <br>
+  <div id="indexoffigures"></div>
+  <br>
 
 <h3 id="TABLEII">TABLE II. Frame shapes depicting exercise amplifying descriptors and battle dimensions.</h3>
 </div>
@@ -108,47 +253,47 @@ PENDING (P)
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SPZ---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SPZ---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SPP---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SPP---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SPA---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SPA---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SPG-U-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SPG-U-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SPG-E-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SPG-E-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SPG-I-----H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SPG-I-----H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SPS---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SPS---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SPU---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SPU---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SPF---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SPF---------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -159,47 +304,47 @@ UNKNOWN (U)
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUZ---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SUZ---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUP---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SUP---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUA---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SUA---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG-U-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SUG-U-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG-E-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SUG-E-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG-I-----H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SUG-I-----H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUS---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SUS---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUU---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SUU---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUF---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SUF---------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -210,47 +355,47 @@ FRIEND (F)
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFZ---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SFZ---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFP---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SFP---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFA---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SFA---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-U-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG-U-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-E-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG-E-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-I-----H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG-I-----H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFS---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SFS---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFU---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SFU---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFF---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SFF---------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -261,47 +406,47 @@ NEUTRAL (N)
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNZ---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SNZ---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNP---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SNP---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNA---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SNA---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG-U-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SNG-U-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG-E-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SNG-E-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG-I-----H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SNG-I-----H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNS---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SNS---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNU---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SNU---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNF---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SNF---------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -312,47 +457,47 @@ HOSTILE (H)
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SHZ---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SHZ---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SHP---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SHP---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SHA---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SHA---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SHG-U-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SHG-U-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SHG-E-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SHG-E-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SHG-I-----H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SHG-I-----H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SHS---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SHS---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SHU---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SHU---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SHF---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SHF---------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -363,47 +508,47 @@ ASSUMED FRIEND (A)
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SAZ---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SAZ---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SAP---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SAP---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SAA---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SAA---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SAG-U-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SAG-U-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SAG-E-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SAG-E-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SAG-I-----H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SAG-I-----H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SAS---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SAS---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SAU---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SAU---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SAF---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SAF---------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -414,47 +559,47 @@ SUSPECT (S)
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SSZ---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SSZ---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SSP---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SSP---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SSA---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SSA---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SSG-U-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SSG-U-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SSG-E-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SSG-E-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SSG-I-----H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SSG-I-----H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SSS---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SSS---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SSU---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SSU---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SSF---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SSF---------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -466,47 +611,47 @@ PENDING (G)
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SGZ---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SGZ---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SGP---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SGP---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SGA---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SGA---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SGG-U-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SGG-U-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SGG-E-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SGG-E-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SGG-I-----H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SGG-I-----H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SGS---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SGS---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SGU---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SGU---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SGF---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SGF---------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -518,47 +663,47 @@ UNKNOWN (W)
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SWZ---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SWZ---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SWP---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SWP---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SWA---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SWA---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SWG-U-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SWG-U-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SWG-E-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SWG-E-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SWG-I-----H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SWG-I-----H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SWS---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SWS---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SWU---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SWU---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SWF---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SWF---------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -570,47 +715,47 @@ FRIEND (D)
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SDZ---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SDZ---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SDP---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SDP---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SDA---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SDA---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SDG-U-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SDG-U-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SDG-E-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SDG-E-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SDG-I-----H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SDG-I-----H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SDS---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SDS---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SDU---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SDU---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SDF---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SDF---------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -622,47 +767,47 @@ NEUTRAL (L)
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SLZ---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SLZ---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SLP---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SLP---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SLA---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SLA---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SLG-U-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SLG-U-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SLG-E-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SLG-E-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SLG-I-----H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SLG-I-----H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SLS---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SLS---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SLU---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SLU---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SLF---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SLF---------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -674,47 +819,47 @@ FRIEND (M)
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SMZ---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SMZ---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SMP---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SMP---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SMA---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SMA---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SMG-U-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SMG-U-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SMG-E-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SMG-E-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SMG-I-----H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SMG-I-----H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SMS---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SMS---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SMU---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SMU---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SMF---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SMF---------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -725,47 +870,47 @@ JOKER (J)
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SJZ---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SJZ---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SJP---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SJP---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SJA---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SJA---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SJG-U-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SJG-U-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SJG-E-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SJG-E-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SJG-I-----H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SJG-I-----H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SJS---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SJS---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SJU---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SJU---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SJF---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SJF---------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -776,47 +921,47 @@ FAKER (K)
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SKZ---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SKZ---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SKP---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SKP---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SKA---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SKA---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SKG-U-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SKG-U-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SKG-E-------", {size:size}).asSVG());
+document.write(new ms.Symbol("SKG-E-------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SKG-I-----H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SKG-I-----H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SKS---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SKS---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SKU---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SKU---------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SKF---------", {size:size}).asSVG());
+document.write(new ms.Symbol("SKF---------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -852,7 +997,7 @@ FRAMED ICONS & UNITS ONLY
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGPUCI-----", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFGPUCI-----", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td  bgcolor="#a0a0a0">
@@ -884,27 +1029,27 @@ FOR FRAMED ICONS
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFAAMFR-----", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFAAMFR-----", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGAUCI-----", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFGAUCI-----", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGAEWHLS---", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFGAEWHLS---", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFSACLCV----", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFSACLCV----", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFUASC------", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFUASC------", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 </tr>
@@ -964,7 +1109,7 @@ milsymbol uses this kind of condition modifier for unfilled symbols.
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFACMFR-----", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFACMFR-----", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td bgcolor="#a0a0a0">
@@ -972,22 +1117,22 @@ document.write(new ms.Symbol("SFACMFR-----", {size:size,monoColor:"black"}).asSV
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGCEWHLS---", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFGCEWHLS---", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGCIRP---H-", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFGCIRP---H-", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFSCCLCV----", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFSCCLCV----", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFUCSC------", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFUCSC------", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 </tr>
@@ -997,7 +1142,7 @@ document.write(new ms.Symbol("SFUCSC------", {size:size,monoColor:"black"}).asSV
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFADMFR-----", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFADMFR-----", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td bgcolor="#a0a0a0">
@@ -1005,22 +1150,22 @@ document.write(new ms.Symbol("SFADMFR-----", {size:size,monoColor:"black"}).asSV
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGDEWHLS---", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFGDEWHLS---", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGDIRP---H-", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFGDIRP---H-", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFSDCLCV----", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFSDCLCV----", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFUDSC------", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFUDSC------", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 </tr>
@@ -1030,7 +1175,7 @@ document.write(new ms.Symbol("SFUDSC------", {size:size,monoColor:"black"}).asSV
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFAXMFR-----", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFAXMFR-----", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td bgcolor="#a0a0a0">
@@ -1038,22 +1183,22 @@ document.write(new ms.Symbol("SFAXMFR-----", {size:size,monoColor:"black"}).asSV
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGXEWHLS---", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFGXEWHLS---", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGXIRP---H-", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFGXIRP---H-", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFSXCLCV----", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFSXCLCV----", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFUXSC------", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFUXSC------", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 </tr>
@@ -1063,7 +1208,7 @@ document.write(new ms.Symbol("SFUXSC------", {size:size,monoColor:"black"}).asSV
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFAFMFR-----", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFAFMFR-----", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td bgcolor="#a0a0a0">
@@ -1071,22 +1216,22 @@ document.write(new ms.Symbol("SFAFMFR-----", {size:size,monoColor:"black"}).asSV
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGFEWHLS---", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFGFEWHLS---", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGFIRP---H-", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFGFIRP---H-", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFSFCLCV----", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFSFCLCV----", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFUFSC------", {size:size,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFUFSC------", {size:40,monoColor:"black"}).asSVG());
 </script>
 </td>
 </tr>
@@ -1121,7 +1266,7 @@ milsymbol uses this kind of condition modifier for filled symbols.
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFACMFR-----", {size:size}).asSVG());
+document.write(new ms.Symbol("SFACMFR-----", {size:40}).asSVG());
 </script>
 </td>
 <td bgcolor="#a0a0a0">
@@ -1129,22 +1274,22 @@ document.write(new ms.Symbol("SFACMFR-----", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGCEWHLS---", {size:size}).asSVG());
+document.write(new ms.Symbol("SFGCEWHLS---", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGCIRP---H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SFGCIRP---H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFSCCLCV----", {size:size}).asSVG());
+document.write(new ms.Symbol("SFSCCLCV----", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFUCSC------", {size:size}).asSVG());
+document.write(new ms.Symbol("SFUCSC------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -1154,7 +1299,7 @@ document.write(new ms.Symbol("SFUCSC------", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFADMFR-----", {size:size}).asSVG());
+document.write(new ms.Symbol("SFADMFR-----", {size:40}).asSVG());
 </script>
 </td>
 <td bgcolor="#a0a0a0">
@@ -1162,22 +1307,22 @@ document.write(new ms.Symbol("SFADMFR-----", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGDEWHLS---", {size:size}).asSVG());
+document.write(new ms.Symbol("SFGDEWHLS---", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGDIRP---H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SFGDIRP---H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFSDCLCV----", {size:size}).asSVG());
+document.write(new ms.Symbol("SFSDCLCV----", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFUDSC------", {size:size}).asSVG());
+document.write(new ms.Symbol("SFUDSC------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -1187,7 +1332,7 @@ document.write(new ms.Symbol("SFUDSC------", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFAXMFR-----", {size:size}).asSVG());
+document.write(new ms.Symbol("SFAXMFR-----", {size:40}).asSVG());
 </script>
 </td>
 <td bgcolor="#a0a0a0">
@@ -1195,22 +1340,22 @@ document.write(new ms.Symbol("SFAXMFR-----", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGXEWHLS---", {size:size}).asSVG());
+document.write(new ms.Symbol("SFGXEWHLS---", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGXIRP---H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SFGXIRP---H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFSXCLCV----", {size:size}).asSVG());
+document.write(new ms.Symbol("SFSXCLCV----", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFUXSC------", {size:size}).asSVG());
+document.write(new ms.Symbol("SFUXSC------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -1220,7 +1365,7 @@ document.write(new ms.Symbol("SFUXSC------", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFAFMFR-----", {size:size}).asSVG());
+document.write(new ms.Symbol("SFAFMFR-----", {size:40}).asSVG());
 </script>
 </td>
 <td bgcolor="#a0a0a0">
@@ -1228,22 +1373,22 @@ document.write(new ms.Symbol("SFAFMFR-----", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGFEWHLS---", {size:size}).asSVG());
+document.write(new ms.Symbol("SFGFEWHLS---", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFGFIRP---H-", {size:size}).asSVG());
+document.write(new ms.Symbol("SFGFIRP---H-", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFSFCLCV----", {size:size}).asSVG());
+document.write(new ms.Symbol("SFSFCLCV----", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFUFSC------", {size:size}).asSVG());
+document.write(new ms.Symbol("SFUFSC------", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -1271,17 +1416,17 @@ IDENTITY
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFA-CF------", {size:size}).asSVG());
+document.write(new ms.Symbol("SFA-CF------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFS-XM------", {size:size}).asSVG());
+document.write(new ms.Symbol("SFS-XM------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EVCA----", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG-EVCA----", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -1291,17 +1436,17 @@ document.write(new ms.Symbol("SFG-EVCA----", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNA-CF------", {size:size}).asSVG());
+document.write(new ms.Symbol("SNA-CF------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNS-XM------", {size:size}).asSVG());
+document.write(new ms.Symbol("SNS-XM------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG-EVCA----", {size:size}).asSVG());
+document.write(new ms.Symbol("SNG-EVCA----", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -1311,17 +1456,17 @@ document.write(new ms.Symbol("SNG-EVCA----", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUA-CF------", {size:size}).asSVG());
+document.write(new ms.Symbol("SUA-CF------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUS-XM------", {size:size}).asSVG());
+document.write(new ms.Symbol("SUS-XM------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG-EVCA----", {size:size}).asSVG());
+document.write(new ms.Symbol("SUG-EVCA----", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -1330,16 +1475,16 @@ document.write(new ms.Symbol("SUG-EVCA----", {size:size}).asSVG());
 <td>HOSTILE
 </td>
 <td><script>
-document.write(new ms.Symbol("SHA-CF------", {size:size}).asSVG());
+document.write(new ms.Symbol("SHA-CF------", {size:40}).asSVG());
 </script>
 </td>
 <td><script>
-document.write(new ms.Symbol("SHS-XM------", {size:size}).asSVG());
+document.write(new ms.Symbol("SHS-XM------", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SHG-EVCA----", {size:size}).asSVG());
+document.write(new ms.Symbol("SHG-EVCA----", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -1349,7 +1494,7 @@ document.write(new ms.Symbol("SHG-EVCA----", {size:size}).asSVG());
 </div>
  <div class="main">
 
-
+<!--
 <h3 id="TABLEIV">TABLE IV. Modifier field definitions and maximum display lengths for tactical symbols.</h3>
 </div>
 <table>
@@ -3038,7 +3183,7 @@ Not implemented in milsymbol.
 
 </table><br>
 <br>
-
+-->
  <div class="main">
 
 <h3 id="TABLEV">TABLE V. Echelon indicator.</h3>
@@ -3054,7 +3199,7 @@ Not implemented in milsymbol.
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG--------A", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG--------A", {size:40}).asSVG());
 </script>
 </td>
 <td>TEAM/CREW
@@ -3064,7 +3209,7 @@ document.write(new ms.Symbol("SFG--------A", {size:size}).asSVG());
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG--------B", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG--------B", {size:40}).asSVG());
 </script>
 </td>
 <td>SQUAD
@@ -3074,7 +3219,7 @@ document.write(new ms.Symbol("SFG--------B", {size:size}).asSVG());
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG--------C", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG--------C", {size:40}).asSVG());
 </script>
 </td>
 <td>SECTION
@@ -3084,7 +3229,7 @@ document.write(new ms.Symbol("SFG--------C", {size:size}).asSVG());
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG--------D", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG--------D", {size:40}).asSVG());
 </script>
 </td>
 <td>PLATOON/DETACHMENT
@@ -3094,7 +3239,7 @@ document.write(new ms.Symbol("SFG--------D", {size:size}).asSVG());
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG--------E", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG--------E", {size:40}).asSVG());
 </script>
 </td>
 <td>COMPANY/BATTERY/TROOP
@@ -3104,7 +3249,7 @@ document.write(new ms.Symbol("SFG--------E", {size:size}).asSVG());
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG--------F", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG--------F", {size:40}).asSVG());
 </script>
 </td>
 <td>BATTALION/SQUADRON
@@ -3114,7 +3259,7 @@ document.write(new ms.Symbol("SFG--------F", {size:size}).asSVG());
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG--------G", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG--------G", {size:40}).asSVG());
 </script>
 </td>
 <td>REGIMENT/GROUP
@@ -3124,7 +3269,7 @@ document.write(new ms.Symbol("SFG--------G", {size:size}).asSVG());
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG--------H", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG--------H", {size:40}).asSVG());
 </script>
 </td>
 <td>BRIGADE
@@ -3134,7 +3279,7 @@ document.write(new ms.Symbol("SFG--------H", {size:size}).asSVG());
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG--------I", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG--------I", {size:40}).asSVG());
 </script>
 </td>
 <td>DIVISION
@@ -3144,7 +3289,7 @@ document.write(new ms.Symbol("SFG--------I", {size:size}).asSVG());
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG--------J", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG--------J", {size:40}).asSVG());
 </script>
 </td>
 <td>CORPS
@@ -3154,7 +3299,7 @@ document.write(new ms.Symbol("SFG--------J", {size:size}).asSVG());
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG--------K", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG--------K", {size:40}).asSVG());
 </script>
 </td>
 <td>ARMY
@@ -3164,7 +3309,7 @@ document.write(new ms.Symbol("SFG--------K", {size:size}).asSVG());
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG--------L", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG--------L", {size:40}).asSVG());
 </script>
 </td>
 <td>ARMY GROUP/FRONT
@@ -3174,7 +3319,7 @@ document.write(new ms.Symbol("SFG--------L", {size:size}).asSVG());
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG--------M", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG--------M", {size:40}).asSVG());
 </script>
 </td>
 <td>REGION
@@ -3184,7 +3329,7 @@ document.write(new ms.Symbol("SFG--------M", {size:size}).asSVG());
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG--------N", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG--------N", {size:40}).asSVG());
 </script>
 </td>
 <td>COMMAND
@@ -3223,26 +3368,26 @@ Not that milsymbol automatically moves up the mobility indicator to the bottom o
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MO", {size:size,frame:false}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MO", {size:40,frame:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG-EWRL--MO", {size:size}).asSVG());
+document.write(new ms.Symbol("SUG-EWRL--MO", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MO", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MO", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG-EWRL--MO", {size:size}).asSVG());
+document.write(new ms.Symbol("SNG-EWRL--MO", {size:40}).asSVG());
 </script>
 </td>
 <td><script>
-document.write(new ms.Symbol("SHG-EWRL--MO", {size:size}).asSVG());
+document.write(new ms.Symbol("SHG-EWRL--MO", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -3252,26 +3397,26 @@ document.write(new ms.Symbol("SHG-EWRL--MO", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MP", {size:size,frame:false}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MP", {size:40,frame:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG-EWRL--MP", {size:size}).asSVG());
+document.write(new ms.Symbol("SUG-EWRL--MP", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MP", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MP", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG-EWRL--MP", {size:size}).asSVG());
+document.write(new ms.Symbol("SNG-EWRL--MP", {size:40}).asSVG());
 </script>
 </td>
 <td><script>
-document.write(new ms.Symbol("SHG-EWRL--MP", {size:size}).asSVG());
+document.write(new ms.Symbol("SHG-EWRL--MP", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -3281,26 +3426,26 @@ document.write(new ms.Symbol("SHG-EWRL--MP", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MQ", {size:size,frame:false}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MQ", {size:40,frame:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG-EWRL--MQ", {size:size}).asSVG());
+document.write(new ms.Symbol("SUG-EWRL--MQ", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MQ", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MQ", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG-EWRL--MQ", {size:size}).asSVG());
+document.write(new ms.Symbol("SNG-EWRL--MQ", {size:40}).asSVG());
 </script>
 </td>
 <td><script>
-document.write(new ms.Symbol("SHG-EWRL--MQ", {size:size}).asSVG());
+document.write(new ms.Symbol("SHG-EWRL--MQ", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -3312,26 +3457,26 @@ COMBINATION
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MR", {size:size,frame:false}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MR", {size:40,frame:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG-EWRL--MR", {size:size}).asSVG());
+document.write(new ms.Symbol("SUG-EWRL--MR", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MR", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MR", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG-EWRL--MR", {size:size}).asSVG());
+document.write(new ms.Symbol("SNG-EWRL--MR", {size:40}).asSVG());
 </script>
 </td>
 <td><script>
-document.write(new ms.Symbol("SHG-EWRL--MR", {size:size}).asSVG());
+document.write(new ms.Symbol("SHG-EWRL--MR", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -3341,26 +3486,26 @@ document.write(new ms.Symbol("SHG-EWRL--MR", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MS", {size:size,frame:false}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MS", {size:40,frame:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG-EWRL--MS", {size:size}).asSVG());
+document.write(new ms.Symbol("SUG-EWRL--MS", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MS", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MS", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG-EWRL--MS", {size:size}).asSVG());
+document.write(new ms.Symbol("SNG-EWRL--MS", {size:40}).asSVG());
 </script>
 </td>
 <td><script>
-document.write(new ms.Symbol("SHG-EWRL--MS", {size:size}).asSVG());
+document.write(new ms.Symbol("SHG-EWRL--MS", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -3370,26 +3515,26 @@ document.write(new ms.Symbol("SHG-EWRL--MS", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MT", {size:size,frame:false}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MT", {size:40,frame:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG-EWRL--MT", {size:size}).asSVG());
+document.write(new ms.Symbol("SUG-EWRL--MT", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MT", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MT", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG-EWRL--MT", {size:size}).asSVG());
+document.write(new ms.Symbol("SNG-EWRL--MT", {size:40}).asSVG());
 </script>
 </td>
 <td><script>
-document.write(new ms.Symbol("SHG-EWRL--MT", {size:size}).asSVG());
+document.write(new ms.Symbol("SHG-EWRL--MT", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -3400,26 +3545,26 @@ document.write(new ms.Symbol("SHG-EWRL--MT", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MU", {size:size,frame:false}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MU", {size:40,frame:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG-EWRL--MU", {size:size}).asSVG());
+document.write(new ms.Symbol("SUG-EWRL--MU", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MU", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MU", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG-EWRL--MU", {size:size}).asSVG());
+document.write(new ms.Symbol("SNG-EWRL--MU", {size:40}).asSVG());
 </script>
 </td>
 <td><script>
-document.write(new ms.Symbol("SHG-EWRL--MU", {size:size}).asSVG());
+document.write(new ms.Symbol("SHG-EWRL--MU", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -3429,26 +3574,26 @@ document.write(new ms.Symbol("SHG-EWRL--MU", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MV", {size:size,frame:false}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MV", {size:40,frame:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG-EWRL--MV", {size:size}).asSVG());
+document.write(new ms.Symbol("SUG-EWRL--MV", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MV", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MV", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG-EWRL--MV", {size:size}).asSVG());
+document.write(new ms.Symbol("SNG-EWRL--MV", {size:40}).asSVG());
 </script>
 </td>
 <td><script>
-document.write(new ms.Symbol("SHG-EWRL--MV", {size:size}).asSVG());
+document.write(new ms.Symbol("SHG-EWRL--MV", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -3458,26 +3603,26 @@ document.write(new ms.Symbol("SHG-EWRL--MV", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MW", {size:size,frame:false}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MW", {size:40,frame:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG-EWRL--MW", {size:size}).asSVG());
+document.write(new ms.Symbol("SUG-EWRL--MW", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MW", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MW", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG-EWRL--MW", {size:size}).asSVG());
+document.write(new ms.Symbol("SNG-EWRL--MW", {size:40}).asSVG());
 </script>
 </td>
 <td><script>
-document.write(new ms.Symbol("SHG-EWRL--MW", {size:size}).asSVG());
+document.write(new ms.Symbol("SHG-EWRL--MW", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -3487,26 +3632,26 @@ document.write(new ms.Symbol("SHG-EWRL--MW", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MY", {size:size,frame:false}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MY", {size:40,frame:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG-EWRL--MY", {size:size}).asSVG());
+document.write(new ms.Symbol("SUG-EWRL--MY", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MY", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MY", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG-EWRL--MY", {size:size}).asSVG());
+document.write(new ms.Symbol("SNG-EWRL--MY", {size:40}).asSVG());
 </script>
 </td>
 <td><script>
-document.write(new ms.Symbol("SHG-EWRL--MY", {size:size}).asSVG());
+document.write(new ms.Symbol("SHG-EWRL--MY", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -3516,26 +3661,26 @@ document.write(new ms.Symbol("SHG-EWRL--MY", {size:size}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MZ", {size:size,frame:false}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MZ", {size:40,frame:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG-EWRL--MZ", {size:size}).asSVG());
+document.write(new ms.Symbol("SUG-EWRL--MZ", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWRL--MZ", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG-EWRL--MZ", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG-EWRL--MZ", {size:size}).asSVG());
+document.write(new ms.Symbol("SNG-EWRL--MZ", {size:40}).asSVG());
 </script>
 </td>
 <td><script>
-document.write(new ms.Symbol("SHG-EWRL--MZ", {size:size}).asSVG());
+document.write(new ms.Symbol("SHG-EWRL--MZ", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -3569,26 +3714,26 @@ ARRAY (SHORT)
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFU-S-----NS", {size:size,frame:false}).asSVG());
+document.write(new ms.Symbol("SFU-S-----NS", {size:40,frame:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUU-S-----NS", {size:size}).asSVG());
+document.write(new ms.Symbol("SUU-S-----NS", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFU-S-----NS", {size:size}).asSVG());
+document.write(new ms.Symbol("SFU-S-----NS", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNU-S-----NS", {size:size}).asSVG());
+document.write(new ms.Symbol("SNU-S-----NS", {size:40}).asSVG());
 </script>
 </td>
 <td><script>
-document.write(new ms.Symbol("SHU-S-----NS", {size:size}).asSVG());
+document.write(new ms.Symbol("SHU-S-----NS", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -3599,26 +3744,26 @@ ARRAY (LONG)
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFU-S-----NL", {size:size,frame:false}).asSVG());
+document.write(new ms.Symbol("SFU-S-----NL", {size:40,frame:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUU-S-----NL", {size:size}).asSVG());
+document.write(new ms.Symbol("SUU-S-----NL", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFU-S-----NL", {size:size}).asSVG());
+document.write(new ms.Symbol("SFU-S-----NL", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNU-S-----NL", {size:size}).asSVG());
+document.write(new ms.Symbol("SNU-S-----NL", {size:40}).asSVG());
 </script>
 </td>
 <td><script>
-document.write(new ms.Symbol("SHU-S-----NL", {size:size}).asSVG());
+document.write(new ms.Symbol("SHU-S-----NL", {size:40}).asSVG());
 </script>
 </td>
 </tr>
@@ -3644,12 +3789,12 @@ document.write(new ms.Symbol("SHU-S-----NL", {size:size}).asSVG());
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWHLS---", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG-EWHLS---", {size:40}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-UCIZ----", {size:size}).asSVG());
+document.write(new ms.Symbol("SFG-UCIZ----", {size:40}).asSVG());
 </script>
 </td>
 <td>Frame: ON (black or white depending on background)<br>
@@ -3662,12 +3807,12 @@ ms.Symbol: default
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWHLS---", {size:size,fill:false}).asSVG());
+document.write(new ms.Symbol("SFG-EWHLS---", {size:40,fill:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SKG-EWO-----", {size:size,fill:false}).asSVG());
+document.write(new ms.Symbol("SKG-EWO-----", {size:40,fill:false}).asSVG());
 </script>
 </td>
 <td>Frame: ON (use default color indicating standard identity)<br>
@@ -3680,12 +3825,12 @@ ms.Symbol: {fill:false}
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWHLS---", {size:size,fill:false,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFG-EWHLS---", {size:40,fill:false,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SKG-EWO-----", {size:size,fill:false,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SKG-EWO-----", {size:40,fill:false,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>Frame: ON (black or white depending on background)<br>
@@ -3700,12 +3845,12 @@ ms.Symbol: {fill:false,monoColor:"black"}
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWHLS---", {size:size,fill:false,frame:false}).asSVG());
+document.write(new ms.Symbol("SFG-EWHLS---", {size:40,fill:false,frame:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SKG-EWO-----", {size:size,fill:false,frame:false}).asSVG());
+document.write(new ms.Symbol("SKG-EWO-----", {size:40,fill:false,frame:false}).asSVG());
 </script>
 </td>
 <td>Frame: OFF (none)<br>
@@ -3718,12 +3863,12 @@ ms.Symbol: {fill:false,frame:false}
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWHLS---", {size:size,fill:false,icon:false}).asSVG());
+document.write(new ms.Symbol("SFG-EWHLS---", {size:40,fill:false,icon:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUZ---------", {size:size,fill:false,icon:false}).asSVG());
+document.write(new ms.Symbol("SUZ---------", {size:40,fill:false,icon:false}).asSVG());
 </script>
 </td>
 <td>Frame: ON (use default color indicating standard identity)<br>
@@ -3738,12 +3883,12 @@ ms.Symbol: {fill:false,icon:false}
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWHLS---", {size:size,fill:false,icon:false,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SFG-EWHLS---", {size:40,fill:false,icon:false,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUZ---------", {size:size,fill:false,icon:false,monoColor:"black"}).asSVG());
+document.write(new ms.Symbol("SUZ---------", {size:40,fill:false,icon:false,monoColor:"black"}).asSVG());
 </script>
 </td>
 <td>Frame: ON (monochrome system)<br>
@@ -3758,12 +3903,12 @@ ms.Symbol: {fill:false,icon:false,monoColor:"black"}
 <tr>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EWHLS---", {size:size,frame:false,icon:false}).asSVG());
+document.write(new ms.Symbol("SFG-EWHLS---", {size:40,frame:false,icon:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SHG-EWO-----", {size:size,frame:false,icon:false}).asSVG());
+document.write(new ms.Symbol("SHG-EWO-----", {size:40,frame:false,icon:false}).asSVG());
 </script>
 </td>
 <td>Frame: OFF (none)<br>
@@ -3815,17 +3960,17 @@ Faker
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SHG---------", {size:size, colorMode:ms.getColorMode("Dark")}).asSVG());
+document.write(new ms.Symbol("SHG---------", {size:40, colorMode:ms.getColorMode("Dark")}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SHG---------", {size:size, colorMode:ms.getColorMode("Medium")}).asSVG());
+document.write(new ms.Symbol("SHG---------", {size:40, colorMode:ms.getColorMode("Medium")}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SHG---------", {size:size, colorMode:ms.getColorMode("Light")}).asSVG());
+document.write(new ms.Symbol("SHG---------", {size:40, colorMode:ms.getColorMode("Light")}).asSVG());
 </script>
 </td>
 </tr>
@@ -3835,17 +3980,17 @@ document.write(new ms.Symbol("SHG---------", {size:size, colorMode:ms.getColorMo
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG---------", {size:size, colorMode:ms.getColorMode("Dark")}).asSVG());
+document.write(new ms.Symbol("SFG---------", {size:40, colorMode:ms.getColorMode("Dark")}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG---------", {size:size, colorMode:ms.getColorMode("Medium")}).asSVG());
+document.write(new ms.Symbol("SFG---------", {size:40, colorMode:ms.getColorMode("Medium")}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG---------", {size:size, colorMode:ms.getColorMode("Light")}).asSVG());
+document.write(new ms.Symbol("SFG---------", {size:40, colorMode:ms.getColorMode("Light")}).asSVG());
 </script>
 </td>
 </tr>
@@ -3855,17 +4000,17 @@ document.write(new ms.Symbol("SFG---------", {size:size, colorMode:ms.getColorMo
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG---------", {size:size, colorMode:ms.getColorMode("Dark")}).asSVG());
+document.write(new ms.Symbol("SNG---------", {size:40, colorMode:ms.getColorMode("Dark")}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG---------", {size:size, colorMode:ms.getColorMode("Medium")}).asSVG());
+document.write(new ms.Symbol("SNG---------", {size:40, colorMode:ms.getColorMode("Medium")}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG---------", {size:size, colorMode:ms.getColorMode("Light")}).asSVG());
+document.write(new ms.Symbol("SNG---------", {size:40, colorMode:ms.getColorMode("Light")}).asSVG());
 </script>
 </td>
 </tr>
@@ -3875,17 +4020,17 @@ document.write(new ms.Symbol("SNG---------", {size:size, colorMode:ms.getColorMo
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG---------", {size:size, colorMode:ms.getColorMode("Dark")}).asSVG());
+document.write(new ms.Symbol("SUG---------", {size:40, colorMode:ms.getColorMode("Dark")}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG---------", {size:size, colorMode:ms.getColorMode("Medium")}).asSVG());
+document.write(new ms.Symbol("SUG---------", {size:40, colorMode:ms.getColorMode("Medium")}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG---------", {size:size, colorMode:ms.getColorMode("Light")}).asSVG());
+document.write(new ms.Symbol("SUG---------", {size:40, colorMode:ms.getColorMode("Light")}).asSVG());
 </script>
 </td>
 </tr>
@@ -3895,17 +4040,17 @@ document.write(new ms.Symbol("SUG---------", {size:size, colorMode:ms.getColorMo
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EVC-----", {size:size, colorMode:ms.getColorMode("Dark"), icon:false}).asSVG());
+document.write(new ms.Symbol("SFG-EVC-----", {size:40, colorMode:ms.getColorMode("Dark"), icon:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EVC-----", {size:size, colorMode:ms.getColorMode("Medium"), icon:false}).asSVG());
+document.write(new ms.Symbol("SFG-EVC-----", {size:40, colorMode:ms.getColorMode("Medium"), icon:false}).asSVG());
 </script>
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EVC-----", {size:size, colorMode:ms.getColorMode("Light"), icon:false}).asSVG());
+document.write(new ms.Symbol("SFG-EVC-----", {size:40, colorMode:ms.getColorMode("Light"), icon:false}).asSVG());
 </script>
 </td>
 </tr>
@@ -3931,7 +4076,7 @@ Faker
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SHG---------", {size:size, fill:false}).asSVG());
+document.write(new ms.Symbol("SHG---------", {size:40, fill:false}).asSVG());
 </script>
 </td>
 </tr>
@@ -3941,7 +4086,7 @@ document.write(new ms.Symbol("SHG---------", {size:size, fill:false}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG---------", {size:size, fill:false}).asSVG());
+document.write(new ms.Symbol("SFG---------", {size:40, fill:false}).asSVG());
 </script>
 </td>
 </tr>
@@ -3951,7 +4096,7 @@ document.write(new ms.Symbol("SFG---------", {size:size, fill:false}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SNG---------", {size:size, fill:false}).asSVG());
+document.write(new ms.Symbol("SNG---------", {size:40, fill:false}).asSVG());
 </script>
 </td>
 </tr>
@@ -3961,7 +4106,7 @@ document.write(new ms.Symbol("SNG---------", {size:size, fill:false}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SUG---------", {size:size, fill:false}).asSVG());
+document.write(new ms.Symbol("SUG---------", {size:40, fill:false}).asSVG());
 </script>
 </td>
 </tr>
@@ -3971,7 +4116,7 @@ document.write(new ms.Symbol("SUG---------", {size:size, fill:false}).asSVG());
 </td>
 <td>
 <script>
-document.write(new ms.Symbol("SFG-EVC-----", {size:size, fill:false, icon:false}).asSVG());
+document.write(new ms.Symbol("SFG-EVC-----", {size:40, fill:false, icon:false}).asSVG());
 </script>
 </td>
 </tr>
@@ -3980,10 +4125,7 @@ document.write(new ms.Symbol("SFG-EVC-----", {size:size, fill:false, icon:false}
 </div>
 <br>
 
- <div class="main">
-<table border=1 id="FIGURE13">
-<tr>
-<td>
+<figure>
 <script>
 document.write(new ms.Symbol("sfgpewrh--mt", {	size:size,
 												quantity: 200,
@@ -3995,11 +4137,11 @@ document.write(new ms.Symbol("sfgpewrh--mt", {	size:size,
 												location: "0900000.0E570306.0N"
 												}).asSVG());
 </script>
-</td>
-</tr>
-</table>
-<h3 >FIGURE 13. Example of proper tactical symbol representation.</h3> (The direction arrow in MIL-STD-2525C points in the wrong direction.)<br>
-</div>
+<figcaption>
+    Example of proper tactical symbol representation.
+</figcaption>
+</figure>
+
 
 <br>
  <div class="main">
