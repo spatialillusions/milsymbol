@@ -1,65 +1,93 @@
 {
-  "coding scheme": "G",
-  "T": {
-    "symbolset": "T",
-    "name": "TASKS",
+  "TSK": {
+    "name": "",
     "main icon": [
       {
         "hierarchy": "2.X.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "------",
         "geometry": "",
         "name": ["TASKS"]
       },
       {
         "hierarchy": "2.X.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "G-----",
         "geometry": "",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT"]
       },
       {
         "hierarchy": "2.X.1.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GB----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "BLOCK"]
       },
       {
         "hierarchy": "2.X.1.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GH----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "BREACH"]
       },
       {
         "hierarchy": "2.X.1.1.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GY----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "BYPASS"]
       },
       {
         "hierarchy": "2.X.1.1.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GC----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "CANALIZE"]
       },
       {
         "hierarchy": "2.X.1.1.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GX----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "CLEAR"]
       },
       {
         "hierarchy": "2.X.1.1.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GJ----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "CONTAIN"]
       },
       {
         "hierarchy": "2.X.1.1.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GK----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "COUNTERATTACK (CATK)"]
       },
       {
         "hierarchy": "2.X.1.1.7.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GKF---",
         "geometry": "MULTIPOINT",
         "name": [
@@ -71,12 +99,18 @@
       },
       {
         "hierarchy": "2.X.1.1.8",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GL----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "DELAY"]
       },
       {
         "hierarchy": "2.X.1.1.8.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GLT---",
         "geometry": "MULTIPOINT",
         "name": [
@@ -88,30 +122,45 @@
       },
       {
         "hierarchy": "2.X.1.1.9",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GD----",
         "geometry": "POINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "DESTROY"]
       },
       {
         "hierarchy": "2.X.1.1.10",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GT----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "DISRUPT"]
       },
       {
         "hierarchy": "2.X.1.1.11",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GF----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "FIX"]
       },
       {
         "hierarchy": "2.X.1.1.12",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GA----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "FOLLOW AND ASSUME"]
       },
       {
         "hierarchy": "2.X.1.1.12.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GAS---",
         "geometry": "MULTIPOINT",
         "name": [
@@ -123,60 +172,90 @@
       },
       {
         "hierarchy": "2.X.1.1.13",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GI----",
         "geometry": "POINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "INTERDICT"]
       },
       {
         "hierarchy": "2.X.1.1.14",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GE----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "ISOLATE"]
       },
       {
         "hierarchy": "2.X.1.1.15",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GN----",
         "geometry": "POINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "NEUTRALIZE"]
       },
       {
         "hierarchy": "2.X.1.1.16",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GO----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "OCCUPY"]
       },
       {
         "hierarchy": "2.X.1.1.17",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GP----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "PENETRATE"]
       },
       {
         "hierarchy": "2.X.1.1.18",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GR----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "RELIEF IN PLACE (RIP)"]
       },
       {
         "hierarchy": "2.X.1.1.19",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GQ----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "RETAIN"]
       },
       {
         "hierarchy": "2.X.1.1.20",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GM----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "RETIREMENT"]
       },
       {
         "hierarchy": "2.X.1.1.21",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GS----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "SECURE"]
       },
       {
         "hierarchy": "2.X.1.1.21.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GSS---",
         "geometry": "MULTIPOINT",
         "name": [
@@ -188,6 +267,9 @@
       },
       {
         "hierarchy": "2.X.1.1.21.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GSG---",
         "geometry": "MULTIPOINT",
         "name": [
@@ -199,6 +281,9 @@
       },
       {
         "hierarchy": "2.X.1.1.21.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GSC---",
         "geometry": "MULTIPOINT",
         "name": [
@@ -210,18 +295,27 @@
       },
       {
         "hierarchy": "2.X.1.1.22",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GZ----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "SEIZE"]
       },
       {
         "hierarchy": "2.X.1.1.23",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GW----",
         "geometry": "MULTIPOINT",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT", "WITHDRAW"]
       },
       {
         "hierarchy": "2.X.1.1.23.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "T",
         "code": "GWP---",
         "geometry": "MULTIPOINT",
         "name": [
@@ -233,24 +327,23 @@
       }
     ]
   },
-  "C": {
-    "symbolset": "C",
-    "name": "CONTROL MEASURES",
+  "C2GM": {
+    "name": "",
     "main icon": [
       {
-        "hierarchy": "2.X.2",
-        "code": "------",
-        "geometry": "",
-        "name": ["CONTROL MEASURES"]
-      },
-      {
         "hierarchy": "2.X.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "M-----",
         "geometry": "",
         "name": ["CONTROL MEASURES", "MANOEUVRE GRAPHICS"]
       },
       {
         "hierarchy": "2.X.2.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MG----",
         "geometry": "",
         "name": [
@@ -261,6 +354,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGP---",
         "geometry": "",
         "name": [
@@ -272,6 +368,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGPF--",
         "geometry": "",
         "name": [
@@ -284,6 +383,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.1.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGPFE-",
         "geometry": "POINT",
         "name": [
@@ -297,6 +399,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.1.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGPFA-",
         "geometry": "POINT",
         "name": [
@@ -310,6 +415,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.1.1.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGPFO-",
         "geometry": "POINT",
         "name": [
@@ -323,6 +431,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGPI--",
         "geometry": "POINT",
         "name": [
@@ -335,6 +446,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGL---",
         "geometry": "",
         "name": [
@@ -346,6 +460,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGLB--",
         "geometry": "",
         "name": [
@@ -358,6 +475,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGLBG-",
         "geometry": "",
         "name": [
@@ -371,6 +491,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2.1.1.1",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MGLBGF",
         "geometry": "LINE",
         "name": [
@@ -385,6 +508,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2.1.1.2",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MGLBGO",
         "geometry": "LINE",
         "name": [
@@ -399,6 +525,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2.1.1.3",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "C",
         "code": "MGLBGK",
         "geometry": "LINE",
         "name": [
@@ -413,6 +542,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2.1.1.4",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "C",
         "code": "MGLBGS",
         "geometry": "LINE",
         "name": [
@@ -427,6 +559,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGLBL-",
         "geometry": "LINE",
         "name": [
@@ -440,6 +575,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2.1.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGLBF-",
         "geometry": "LINE",
         "name": [
@@ -453,6 +591,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2.1.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGLBR-",
         "geometry": "LINE",
         "name": [
@@ -466,6 +607,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGLF--",
         "geometry": "LINE",
         "name": [
@@ -478,6 +622,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGLL--",
         "geometry": "LINE",
         "name": [
@@ -490,6 +637,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGLP--",
         "geometry": "LINE",
         "name": [
@@ -502,6 +652,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGLE--",
         "geometry": "LINE",
         "name": [
@@ -514,6 +667,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2.5.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGLEE-",
         "geometry": "LINE",
         "name": [
@@ -527,6 +683,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2.5.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGLEA-",
         "geometry": "LINE",
         "name": [
@@ -540,6 +699,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2.5.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGLET-",
         "geometry": "LINE",
         "name": [
@@ -553,6 +715,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.2.5.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGLEO-",
         "geometry": "LINE",
         "name": [
@@ -566,6 +731,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGA---",
         "geometry": "",
         "name": [
@@ -577,6 +745,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGAU--",
         "geometry": "",
         "name": [
@@ -589,6 +760,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGAUA-",
         "geometry": "",
         "name": [
@@ -602,6 +776,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.1.1.1",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MGAUAF",
         "geometry": "POLYGON",
         "name": [
@@ -616,6 +793,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.1.1.2",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MGAUAP",
         "geometry": "POLYGON",
         "name": [
@@ -630,6 +810,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.1.1.3",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "C",
         "code": "MGAUAE",
         "geometry": "POLYGON",
         "name": [
@@ -644,6 +827,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.1.1.4",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "C",
         "code": "MGAUAS",
         "geometry": "POLYGON",
         "name": [
@@ -658,6 +844,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGAUB-",
         "geometry": "POLYGON",
         "name": [
@@ -671,6 +860,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.1.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGAUBO",
         "geometry": "POLYGON",
         "name": [
@@ -685,6 +877,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.1.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGAUBM",
         "geometry": "POLYGON",
         "name": [
@@ -699,6 +894,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.1.2.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGAUBR",
         "geometry": "POLYGON",
         "name": [
@@ -713,6 +911,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGAS--",
         "geometry": "",
         "name": [
@@ -725,6 +926,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGASD-",
         "geometry": "POLYGON",
         "name": [
@@ -738,6 +942,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGASE-",
         "geometry": "POLYGON",
         "name": [
@@ -751,6 +958,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.2.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGASL-",
         "geometry": "POLYGON",
         "name": [
@@ -764,6 +974,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.2.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGASP-",
         "geometry": "POLYGON",
         "name": [
@@ -777,6 +990,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.2.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGASS-",
         "geometry": "POLYGON",
         "name": [
@@ -790,6 +1006,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.2.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGASM-",
         "geometry": "POLYGON",
         "name": [
@@ -803,6 +1022,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.2.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGASG-",
         "geometry": "POLYGON",
         "name": [
@@ -816,6 +1038,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.2.8",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGASF-",
         "geometry": "POLYGON",
         "name": [
@@ -829,6 +1054,9 @@
       },
       {
         "hierarchy": "2.X.2.1.1.3.2.9",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MGAST-",
         "geometry": "POLYGON",
         "name": [
@@ -842,6 +1070,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MA----",
         "geometry": "",
         "name": [
@@ -852,6 +1083,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MAA---",
         "geometry": "",
         "name": [
@@ -863,6 +1097,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MAAP--",
         "geometry": "POINT",
         "name": [
@@ -875,6 +1112,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MAAC--",
         "geometry": "POINT",
         "name": [
@@ -887,6 +1127,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.1.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MAAU--",
         "geometry": "POINT",
         "name": [
@@ -899,6 +1142,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.1.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MAAD--",
         "geometry": "POINT",
         "name": [
@@ -911,6 +1157,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MAL---",
         "geometry": "",
         "name": [
@@ -922,6 +1171,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MALC--",
         "geometry": "LINE",
         "name": [
@@ -934,6 +1186,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MALM--",
         "geometry": "LINE",
         "name": [
@@ -946,6 +1201,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.2.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MALS--",
         "geometry": "LINE",
         "name": [
@@ -958,6 +1216,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.2.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MALU--",
         "geometry": "LINE",
         "name": [
@@ -970,6 +1231,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.2.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MALL--",
         "geometry": "LINE",
         "name": [
@@ -982,6 +1246,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.2.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MALIN-",
         "geometry": "LINE",
         "name": [
@@ -994,6 +1261,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.2.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MALIF-",
         "geometry": "LINE",
         "name": [
@@ -1006,6 +1276,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MAV---",
         "geometry": "",
         "name": [
@@ -1017,6 +1290,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.3.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MAVR--",
         "geometry": "POLYGON",
         "name": [
@@ -1029,6 +1305,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.3.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MAVF--",
         "geometry": "POLYGON",
         "name": [
@@ -1041,6 +1320,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.3.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MAVH--",
         "geometry": "POLYGON",
         "name": [
@@ -1053,6 +1335,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.3.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MAVM--",
         "geometry": "POLYGON",
         "name": [
@@ -1065,6 +1350,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.3.4.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MAVML-",
         "geometry": "POLYGON",
         "name": [
@@ -1078,6 +1366,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.3.4.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MAVMH-",
         "geometry": "POLYGON",
         "name": [
@@ -1091,6 +1382,9 @@
       },
       {
         "hierarchy": "2.X.2.1.2.3.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MAVW--",
         "geometry": "POLYGON",
         "name": [
@@ -1103,12 +1397,18 @@
       },
       {
         "hierarchy": "2.X.2.1.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MD----",
         "geometry": "",
         "name": ["CONTROL MEASURES", "MANOEUVRE GRAPHICS", "DECEPTION GRAPHICS"]
       },
       {
         "hierarchy": "2.X.2.1.3.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MDD---",
         "geometry": "",
         "name": [
@@ -1120,6 +1420,9 @@
       },
       {
         "hierarchy": "2.X.2.1.3.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MDA---",
         "geometry": "",
         "name": [
@@ -1131,6 +1434,9 @@
       },
       {
         "hierarchy": "2.X.2.1.3.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MDF---",
         "geometry": "",
         "name": [
@@ -1142,6 +1448,9 @@
       },
       {
         "hierarchy": "2.X.2.1.3.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MDM---",
         "geometry": "",
         "name": [
@@ -1153,6 +1462,9 @@
       },
       {
         "hierarchy": "2.X.2.1.3.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MDY---",
         "geometry": "",
         "name": [
@@ -1164,6 +1476,9 @@
       },
       {
         "hierarchy": "2.X.2.1.3.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MDN---",
         "geometry": "POINT",
         "name": [
@@ -1175,6 +1490,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MM----",
         "geometry": "",
         "name": [
@@ -1185,6 +1503,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMP---",
         "geometry": "",
         "name": [
@@ -1196,6 +1517,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMPT--",
         "geometry": "POINT",
         "name": [
@@ -1208,6 +1532,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMPB--",
         "geometry": "",
         "name": [
@@ -1220,6 +1547,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.1.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMPBO-",
         "geometry": "POLYGON",
         "name": [
@@ -1233,6 +1563,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.1.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMPBP-",
         "geometry": "POLYGON",
         "name": [
@@ -1246,6 +1579,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.1.2.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMPBL-",
         "geometry": "POLYGON",
         "name": [
@@ -1259,6 +1595,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.1.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMPS--",
         "geometry": "",
         "name": [
@@ -1271,6 +1610,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.1.3.1",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MMPSF-",
         "geometry": "POLYGON",
         "name": [
@@ -1284,6 +1626,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.1.3.2",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "C",
         "code": "MMPSE-",
         "geometry": "POLYGON",
         "name": [
@@ -1297,6 +1642,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.1.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMPO--",
         "geometry": "POINT",
         "name": [
@@ -1309,6 +1657,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.1.4.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMPOC-",
         "geometry": "POINT",
         "name": [
@@ -1322,6 +1673,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.1.4.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMPOR-",
         "geometry": "POINT",
         "name": [
@@ -1335,6 +1689,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.1.4.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMPOF-",
         "geometry": "POINT",
         "name": [
@@ -1348,6 +1705,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.1.4.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMPOS-",
         "geometry": "POINT",
         "name": [
@@ -1361,6 +1721,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.1.4.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMPON-",
         "geometry": "POINT",
         "name": [
@@ -1374,6 +1737,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.1.4.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMPON-",
         "geometry": "POINT",
         "name": [
@@ -1387,6 +1753,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.1.4.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMPON-",
         "geometry": "POINT",
         "name": [
@@ -1400,6 +1769,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMD---",
         "geometry": "",
         "name": [
@@ -1411,6 +1783,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMDF--",
         "geometry": "LINE",
         "name": [
@@ -1423,6 +1798,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.2.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMDFA-",
         "geometry": "LINE",
         "name": [
@@ -1436,6 +1814,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.2.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMDFP-",
         "geometry": "LINE",
         "name": [
@@ -1449,6 +1830,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMDP--",
         "geometry": "LINE",
         "name": [
@@ -1461,6 +1845,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMA---",
         "geometry": "",
         "name": [
@@ -1472,6 +1859,9 @@
       },
       {
         "hierarchy": "2.X.2.1.4.3.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MMAE--",
         "geometry": "POLYGON",
         "name": [
@@ -1484,6 +1874,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MO----",
         "geometry": "",
         "name": [
@@ -1494,6 +1887,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOP---",
         "geometry": "",
         "name": [
@@ -1505,6 +1901,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOPD--",
         "geometry": "POINT",
         "name": [
@@ -1517,6 +1916,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOL---",
         "geometry": "",
         "name": [
@@ -1528,6 +1930,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOLA--",
         "geometry": "",
         "name": [
@@ -1540,6 +1945,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.1.1",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MOLAF-",
         "geometry": "LINE",
         "name": [
@@ -1553,6 +1961,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.1.2",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MOLAA-",
         "geometry": "LINE",
         "name": [
@@ -1566,6 +1977,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.1.3",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MOLAH-",
         "geometry": "LINE",
         "name": [
@@ -1579,6 +1993,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.1.4",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MOLAS-",
         "geometry": "LINE",
         "name": [
@@ -1592,6 +2009,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.1.5",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MOLAM-",
         "geometry": "LINE",
         "name": [
@@ -1605,6 +2025,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.1.6",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MOLAO-",
         "geometry": "LINE",
         "name": [
@@ -1618,6 +2041,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.1.7",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "C",
         "code": "MOLAE-",
         "geometry": "LINE",
         "name": [
@@ -1631,6 +2057,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.1.8",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "C",
         "code": "MOLAT-",
         "geometry": "LINE",
         "name": [
@@ -1644,6 +2073,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOLD--",
         "geometry": "",
         "name": [
@@ -1656,6 +2088,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.2.1",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MOLDF-",
         "geometry": "LINE",
         "name": [
@@ -1669,6 +2104,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.2.2",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MOLDY-",
         "geometry": "LINE",
         "name": [
@@ -1682,6 +2120,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.2.3",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "C",
         "code": "MOLDE-",
         "geometry": "LINE",
         "name": [
@@ -1695,6 +2136,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.2.4",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "C",
         "code": "MOLDT-",
         "geometry": "LINE",
         "name": [
@@ -1708,6 +2152,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.2.5",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "C",
         "code": "MOLDG-",
         "geometry": "LINE",
         "name": [
@@ -1721,6 +2168,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.2.6",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "C",
         "code": "MOLDR-",
         "geometry": "LINE",
         "name": [
@@ -1734,6 +2184,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.2.7",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MOLDS-",
         "geometry": "LINE",
         "name": [
@@ -1747,6 +2200,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.2.8",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MOLDM-",
         "geometry": "LINE",
         "name": [
@@ -1760,6 +2216,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.2.9",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MOLDO-",
         "geometry": "LINE",
         "name": [
@@ -1773,6 +2232,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOLF--",
         "geometry": "LINE",
         "name": [
@@ -1785,6 +2247,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOLI--",
         "geometry": "LINE",
         "name": [
@@ -1797,6 +2262,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOLL--",
         "geometry": "LINE",
         "name": [
@@ -1809,6 +2277,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOLT--",
         "geometry": "LINE",
         "name": [
@@ -1821,6 +2292,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOLC--",
         "geometry": "LINE",
         "name": [
@@ -1833,6 +2307,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.8",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOLP--",
         "geometry": "LINE",
         "name": [
@@ -1845,6 +2322,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.2.9",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOLR--",
         "geometry": "LINE",
         "name": [
@@ -1857,6 +2337,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOO---",
         "geometry": "",
         "name": [
@@ -1868,6 +2351,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.3.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOOA--",
         "geometry": "POLYGON",
         "name": [
@@ -1880,6 +2366,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.3.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOOT--",
         "geometry": "",
         "name": [
@@ -1892,6 +2381,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.3.2.1",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MOOTF-",
         "geometry": "",
         "name": [
@@ -1905,6 +2397,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.3.2.2",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MOOTC-",
         "geometry": "",
         "name": [
@@ -1918,6 +2413,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.3.2.3",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MOOTP-",
         "geometry": "",
         "name": [
@@ -1931,6 +2429,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.3.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOOP--",
         "geometry": "",
         "name": [
@@ -1943,6 +2444,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.3.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOOS--",
         "geometry": "",
         "name": [
@@ -1955,6 +2459,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.3.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOOJ--",
         "geometry": "",
         "name": [
@@ -1967,6 +2474,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.3.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOOX--",
         "geometry": "",
         "name": [
@@ -1979,6 +2489,9 @@
       },
       {
         "hierarchy": "2.X.2.1.5.3.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MOOR--",
         "geometry": "",
         "name": [
@@ -1991,6 +2504,9 @@
       },
       {
         "hierarchy": "2.X.2.1.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MS----",
         "geometry": "",
         "name": [
@@ -2001,6 +2517,9 @@
       },
       {
         "hierarchy": "2.X.2.1.6.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MSG---",
         "geometry": "",
         "name": [
@@ -2012,6 +2531,9 @@
       },
       {
         "hierarchy": "2.X.2.1.6.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MSGE--",
         "geometry": "",
         "name": [
@@ -2024,6 +2546,9 @@
       },
       {
         "hierarchy": "2.X.2.1.6.1.1.1",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "MSGEF-",
         "geometry": "",
         "name": [
@@ -2037,6 +2562,9 @@
       },
       {
         "hierarchy": "2.X.2.1.6.1.1.2",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "C",
         "code": "MSGEY-",
         "geometry": "",
         "name": [
@@ -2050,6 +2578,9 @@
       },
       {
         "hierarchy": "2.X.2.1.6.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MSGA--",
         "geometry": "",
         "name": [
@@ -2062,6 +2593,9 @@
       },
       {
         "hierarchy": "2.X.2.1.6.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MSL---",
         "geometry": "",
         "name": [
@@ -2073,6 +2607,9 @@
       },
       {
         "hierarchy": "2.X.2.1.6.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MSLA--",
         "geometry": "LINE",
         "name": [
@@ -2085,6 +2622,9 @@
       },
       {
         "hierarchy": "2.X.2.1.6.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MSLB--",
         "geometry": "LINE",
         "name": [
@@ -2097,6 +2637,9 @@
       },
       {
         "hierarchy": "2.X.2.1.6.2.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MSLH--",
         "geometry": "LINE",
         "name": [
@@ -2109,6 +2652,9 @@
       },
       {
         "hierarchy": "2.X.2.1.6.2.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MSLR--",
         "geometry": "LINE",
         "name": [
@@ -2121,6 +2667,9 @@
       },
       {
         "hierarchy": "2.X.2.1.6.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MSA---",
         "geometry": "",
         "name": [
@@ -2132,6 +2681,9 @@
       },
       {
         "hierarchy": "2.X.2.1.6.3.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MSAO--",
         "geometry": "POLYGON",
         "name": [
@@ -2144,6 +2696,9 @@
       },
       {
         "hierarchy": "2.X.2.1.6.3.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MSAN--",
         "geometry": "POLYGON",
         "name": [
@@ -2156,6 +2711,9 @@
       },
       {
         "hierarchy": "2.X.2.1.6.3.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "MSAT--",
         "geometry": "POLYGON",
         "name": [
@@ -2168,18 +2726,27 @@
       },
       {
         "hierarchy": "2.X.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "B-----",
         "geometry": "",
         "name": ["CONTROL MEASURES", "MOBILITY/ SURVIVABILITY"]
       },
       {
         "hierarchy": "2.X.2.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BO----",
         "geometry": "",
         "name": ["CONTROL MEASURES", "MOBILITY/ SURVIVABILITY", "OBSTACLES"]
       },
       {
         "hierarchy": "2.X.2.2.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOG---",
         "geometry": "",
         "name": [
@@ -2191,6 +2758,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOGB--",
         "geometry": "",
         "name": [
@@ -2203,6 +2773,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOGL--",
         "geometry": "",
         "name": [
@@ -2215,6 +2788,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.1.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOGZ--",
         "geometry": "",
         "name": [
@@ -2227,6 +2803,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOA---",
         "geometry": "",
         "name": [
@@ -2238,6 +2817,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAT--",
         "geometry": "",
         "name": [
@@ -2249,6 +2831,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.3.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOATO-",
         "geometry": "",
         "name": [
@@ -2261,6 +2846,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.3.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOATM-",
         "geometry": "",
         "name": [
@@ -2273,6 +2861,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.3.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOATD-",
         "geometry": "POINT",
         "name": [
@@ -2285,6 +2876,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.3.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOATW-",
         "geometry": "",
         "name": [
@@ -2297,6 +2891,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAB--",
         "geometry": "POINT",
         "name": [
@@ -2308,6 +2905,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAM--",
         "geometry": "",
         "name": [
@@ -2319,6 +2919,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.5.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAMA-",
         "geometry": "POINT",
         "name": [
@@ -2331,6 +2934,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.5.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAMT-",
         "geometry": "POINT",
         "name": [
@@ -2343,6 +2949,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.5.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAMD-",
         "geometry": "POINT",
         "name": [
@@ -2355,6 +2964,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.5.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAMC-",
         "geometry": "POINT",
         "name": [
@@ -2367,6 +2979,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.5.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAMU-",
         "geometry": "POINT",
         "name": [
@@ -2379,6 +2994,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.5.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAMN-",
         "geometry": "POINT",
         "name": [
@@ -2391,6 +3009,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.5.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAMW-",
         "geometry": "",
         "name": [
@@ -2403,6 +3024,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAI--",
         "geometry": "",
         "name": [
@@ -2414,6 +3038,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.6.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAIP-",
         "geometry": "POINT",
         "name": [
@@ -2426,6 +3053,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.6.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAIC-",
         "geometry": "POINT",
         "name": [
@@ -2438,6 +3068,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.6.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAIL-",
         "geometry": "",
         "name": [
@@ -2450,6 +3083,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.6.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAIG-",
         "geometry": "",
         "name": [
@@ -2462,6 +3098,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.6.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAIN-",
         "geometry": "POINT",
         "name": [
@@ -2474,6 +3113,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.6.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAIS-",
         "geometry": "POINT",
         "name": [
@@ -2486,6 +3128,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.6.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAIH-",
         "geometry": "POINT",
         "name": [
@@ -2498,6 +3143,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.6.8",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAID-",
         "geometry": "POINT",
         "name": [
@@ -2510,6 +3158,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.6.9",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAIM-",
         "geometry": "",
         "name": [
@@ -2522,6 +3173,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAV--",
         "geometry": "",
         "name": [
@@ -2533,6 +3187,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.8",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAE--",
         "geometry": "",
         "name": [
@@ -2544,6 +3201,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.8.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAEB-",
         "geometry": "",
         "name": [
@@ -2556,6 +3216,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.8.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAEF-",
         "geometry": "",
         "name": [
@@ -2568,6 +3231,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.8.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAET-",
         "geometry": "",
         "name": [
@@ -2580,6 +3246,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.8.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAED-",
         "geometry": "",
         "name": [
@@ -2592,6 +3261,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.9",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAF--",
         "geometry": "",
         "name": [
@@ -2603,6 +3275,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.9.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAFR-",
         "geometry": "",
         "name": [
@@ -2615,6 +3290,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.10",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAU--",
         "geometry": "",
         "name": [
@@ -2626,6 +3304,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.11",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAR--",
         "geometry": "",
         "name": [
@@ -2637,6 +3318,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.11.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOARP-",
         "geometry": "",
         "name": [
@@ -2649,6 +3333,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.11.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOARE-",
         "geometry": "",
         "name": [
@@ -2661,6 +3348,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.11.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOARS-",
         "geometry": "",
         "name": [
@@ -2673,6 +3363,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.11.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOARC-",
         "geometry": "",
         "name": [
@@ -2685,6 +3378,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.12",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAP--",
         "geometry": "",
         "name": [
@@ -2696,6 +3392,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.13",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAW--",
         "geometry": "",
         "name": [
@@ -2707,6 +3406,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.13.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAWU-",
         "geometry": "",
         "name": [
@@ -2719,6 +3421,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.13.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAWS-",
         "geometry": "",
         "name": [
@@ -2731,6 +3436,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.13.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAWD-",
         "geometry": "",
         "name": [
@@ -2743,6 +3451,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.13.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAWA-",
         "geometry": "",
         "name": [
@@ -2755,6 +3466,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.13.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAWL-",
         "geometry": "",
         "name": [
@@ -2767,6 +3481,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.13.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAWH-",
         "geometry": "",
         "name": [
@@ -2779,6 +3496,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.13.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAWC-",
         "geometry": "",
         "name": [
@@ -2791,6 +3511,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.13.8",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAWB-",
         "geometry": "",
         "name": [
@@ -2803,6 +3526,9 @@
       },
       {
         "hierarchy": "2.X.2.2.1.13.9",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BOAWR-",
         "geometry": "",
         "name": [
@@ -2815,6 +3541,9 @@
       },
       {
         "hierarchy": "2.X.2.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BY----",
         "geometry": "",
         "name": [
@@ -2825,6 +3554,9 @@
       },
       {
         "hierarchy": "2.X.2.2.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BYO---",
         "geometry": "",
         "name": [
@@ -2836,6 +3568,9 @@
       },
       {
         "hierarchy": "2.X.2.2.2.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BYOE--",
         "geometry": "",
         "name": [
@@ -2848,6 +3583,9 @@
       },
       {
         "hierarchy": "2.X.2.2.2.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BYOD--",
         "geometry": "",
         "name": [
@@ -2860,6 +3598,9 @@
       },
       {
         "hierarchy": "2.X.2.2.2.1.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BYOI--",
         "geometry": "",
         "name": [
@@ -2872,6 +3613,9 @@
       },
       {
         "hierarchy": "2.X.2.2.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BYC---",
         "geometry": "",
         "name": [
@@ -2883,6 +3627,9 @@
       },
       {
         "hierarchy": "2.X.2.2.2.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BYCA--",
         "geometry": "",
         "name": [
@@ -2895,6 +3642,9 @@
       },
       {
         "hierarchy": "2.X.2.2.2.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BYCB--",
         "geometry": "",
         "name": [
@@ -2907,6 +3657,9 @@
       },
       {
         "hierarchy": "2.X.2.2.2.2.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BYCF--",
         "geometry": "",
         "name": [
@@ -2919,6 +3672,9 @@
       },
       {
         "hierarchy": "2.X.2.2.2.2.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BYCE--",
         "geometry": "",
         "name": [
@@ -2931,6 +3687,9 @@
       },
       {
         "hierarchy": "2.X.2.2.2.2.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BYCD--",
         "geometry": "",
         "name": [
@@ -2943,6 +3702,9 @@
       },
       {
         "hierarchy": "2.X.2.2.2.2.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BYCL--",
         "geometry": "",
         "name": [
@@ -2955,6 +3717,9 @@
       },
       {
         "hierarchy": "2.X.2.2.2.2.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BYCR--",
         "geometry": "",
         "name": [
@@ -2967,6 +3732,9 @@
       },
       {
         "hierarchy": "2.X.2.2.2.2.8",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BYCG--",
         "geometry": "POINT",
         "name": [
@@ -2979,12 +3747,18 @@
       },
       {
         "hierarchy": "2.X.2.2.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BS----",
         "geometry": "",
         "name": ["CONTROL MEASURES", "MOBILITY/ SURVIVABILITY", "SURVIVABILITY"]
       },
       {
         "hierarchy": "2.X.2.2.3.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BSE---",
         "geometry": "POINT",
         "name": [
@@ -2996,6 +3770,9 @@
       },
       {
         "hierarchy": "2.X.2.2.3.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BSF---",
         "geometry": "POINT",
         "name": [
@@ -3007,6 +3784,9 @@
       },
       {
         "hierarchy": "2.X.2.2.3.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BSL---",
         "geometry": "",
         "name": [
@@ -3018,6 +3798,9 @@
       },
       {
         "hierarchy": "2.X.2.2.3.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BSW---",
         "geometry": "",
         "name": [
@@ -3029,6 +3812,9 @@
       },
       {
         "hierarchy": "2.X.2.2.3.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BSP---",
         "geometry": "",
         "name": [
@@ -3040,6 +3826,9 @@
       },
       {
         "hierarchy": "2.X.2.2.3.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BSH---",
         "geometry": "POINT",
         "name": [
@@ -3051,6 +3840,9 @@
       },
       {
         "hierarchy": "2.X.2.2.3.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BSU---",
         "geometry": "POINT",
         "name": [
@@ -3062,6 +3854,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BW----",
         "geometry": "",
         "name": [
@@ -3072,6 +3867,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWM---",
         "geometry": "",
         "name": [
@@ -3083,6 +3881,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWN---",
         "geometry": "POINT",
         "name": [
@@ -3094,6 +3895,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.3",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "C",
         "code": "BWE---",
         "geometry": "POINT",
         "name": [
@@ -3105,6 +3909,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.4",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "C",
         "code": "BWI---",
         "geometry": "POINT",
         "name": [
@@ -3116,6 +3923,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.5",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "C",
         "code": "BWF---",
         "geometry": "POINT",
         "name": [
@@ -3127,6 +3937,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWP---",
         "geometry": "POINT",
         "name": [
@@ -3138,6 +3951,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWA---",
         "geometry": "",
         "name": [
@@ -3149,6 +3965,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.8",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWC---",
         "geometry": "",
         "name": [
@@ -3160,6 +3979,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.9",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWH---",
         "geometry": "",
         "name": [
@@ -3171,6 +3993,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.10",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWK---",
         "geometry": "",
         "name": [
@@ -3182,6 +4007,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.11",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWD---",
         "geometry": "",
         "name": [
@@ -3193,6 +4021,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.11.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWDP--",
         "geometry": "POINT",
         "name": [
@@ -3205,6 +4036,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.11.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWDA--",
         "geometry": "POINT",
         "name": [
@@ -3217,6 +4051,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.11.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWDT--",
         "geometry": "POINT",
         "name": [
@@ -3229,6 +4066,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.11.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWDE--",
         "geometry": "POINT",
         "name": [
@@ -3241,6 +4081,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.11.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWDS--",
         "geometry": "POINT",
         "name": [
@@ -3253,6 +4096,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.11.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWDO--",
         "geometry": "POINT",
         "name": [
@@ -3265,6 +4111,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.11.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWDG--",
         "geometry": "POINT",
         "name": [
@@ -3277,6 +4126,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.11.8",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWDEM-",
         "geometry": "POINT",
         "name": [
@@ -3289,6 +4141,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.11.9",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWDTF-",
         "geometry": "POINT",
         "name": [
@@ -3301,6 +4156,9 @@
       },
       {
         "hierarchy": "2.X.2.2.4.12",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "BWR---",
         "geometry": "",
         "name": [
@@ -3312,12 +4170,18 @@
       },
       {
         "hierarchy": "2.X.2.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "F-----",
         "geometry": "",
         "name": ["CONTROL MEASURES", "FIRE SUPPORT GRAPHICS"]
       },
       {
         "hierarchy": "2.X.2.3.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FS----",
         "geometry": "",
         "name": [
@@ -3328,6 +4192,9 @@
       },
       {
         "hierarchy": "2.X.2.3.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FST---",
         "geometry": "",
         "name": [
@@ -3339,6 +4206,9 @@
       },
       {
         "hierarchy": "2.X.2.3.1.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FSTP--",
         "geometry": "POINT",
         "name": [
@@ -3351,6 +4221,9 @@
       },
       {
         "hierarchy": "2.X.2.3.1.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FSTC--",
         "geometry": "",
         "name": [
@@ -3363,6 +4236,9 @@
       },
       {
         "hierarchy": "2.X.2.3.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FSS---",
         "geometry": "POINT",
         "name": [
@@ -3374,6 +4250,9 @@
       },
       {
         "hierarchy": "2.X.2.3.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FL----",
         "geometry": "",
         "name": [
@@ -3384,6 +4263,9 @@
       },
       {
         "hierarchy": "2.X.2.3.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FLC---",
         "geometry": "",
         "name": [
@@ -3395,6 +4277,9 @@
       },
       {
         "hierarchy": "2.X.2.3.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FLF---",
         "geometry": "",
         "name": [
@@ -3406,6 +4291,9 @@
       },
       {
         "hierarchy": "2.X.2.3.2.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FLT---",
         "geometry": "",
         "name": [
@@ -3417,6 +4305,9 @@
       },
       {
         "hierarchy": "2.X.2.3.2.3.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FLTP--",
         "geometry": "",
         "name": [
@@ -3429,6 +4320,9 @@
       },
       {
         "hierarchy": "2.X.2.3.2.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FLK---",
         "geometry": "",
         "name": [
@@ -3440,6 +4334,9 @@
       },
       {
         "hierarchy": "2.X.2.3.2.4.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FLKP--",
         "geometry": "",
         "name": [
@@ -3452,6 +4349,9 @@
       },
       {
         "hierarchy": "2.X.2.3.2.4.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FLKS--",
         "geometry": "",
         "name": [
@@ -3464,6 +4364,9 @@
       },
       {
         "hierarchy": "2.X.2.3.2.4.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FLKT--",
         "geometry": "",
         "name": [
@@ -3476,6 +4379,9 @@
       },
       {
         "hierarchy": "2.X.2.3.2.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FLN---",
         "geometry": "",
         "name": [
@@ -3487,6 +4393,9 @@
       },
       {
         "hierarchy": "2.X.2.3.2.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FLR---",
         "geometry": "",
         "name": [
@@ -3498,12 +4407,18 @@
       },
       {
         "hierarchy": "2.X.2.3.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FA----",
         "geometry": "",
         "name": ["CONTROL MEASURES", "FIRE SUPPORT GRAPHICS", "AREAS"]
       },
       {
         "hierarchy": "2.X.2.3.3.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FAS---",
         "geometry": "",
         "name": [
@@ -3515,6 +4430,9 @@
       },
       {
         "hierarchy": "2.X.2.3.3.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FAC---",
         "geometry": "",
         "name": [
@@ -3526,6 +4444,9 @@
       },
       {
         "hierarchy": "2.X.2.3.3.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FAT---",
         "geometry": "",
         "name": [
@@ -3537,6 +4458,9 @@
       },
       {
         "hierarchy": "2.X.2.3.3.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FAR---",
         "geometry": "",
         "name": [
@@ -3548,6 +4472,9 @@
       },
       {
         "hierarchy": "2.X.2.3.3.4.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FARS--",
         "geometry": "",
         "name": [
@@ -3560,6 +4487,9 @@
       },
       {
         "hierarchy": "2.X.2.3.3.4.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FARU--",
         "geometry": "",
         "name": [
@@ -3572,6 +4502,9 @@
       },
       {
         "hierarchy": "2.X.2.3.3.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FAB---",
         "geometry": "",
         "name": [
@@ -3583,6 +4516,9 @@
       },
       {
         "hierarchy": "2.X.2.3.3.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FAI---",
         "geometry": "",
         "name": [
@@ -3594,6 +4530,9 @@
       },
       {
         "hierarchy": "2.X.2.3.3.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FAZ---",
         "geometry": "",
         "name": [
@@ -3605,6 +4544,9 @@
       },
       {
         "hierarchy": "2.X.2.3.3.7.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FAZT--",
         "geometry": "",
         "name": [
@@ -3617,6 +4559,9 @@
       },
       {
         "hierarchy": "2.X.2.3.3.7.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FAZU--",
         "geometry": "",
         "name": [
@@ -3629,6 +4574,9 @@
       },
       {
         "hierarchy": "2.X.2.3.3.8",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FAN---",
         "geometry": "",
         "name": [
@@ -3640,6 +4588,9 @@
       },
       {
         "hierarchy": "2.X.2.3.3.9",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FAU---",
         "geometry": "POINT",
         "name": [
@@ -3651,6 +4602,9 @@
       },
       {
         "hierarchy": "2.X.2.3.3.10",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FAD---",
         "geometry": "",
         "name": [
@@ -3662,6 +4616,9 @@
       },
       {
         "hierarchy": "2.X.2.3.3.11",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FAP---",
         "geometry": "",
         "name": [
@@ -3673,6 +4630,9 @@
       },
       {
         "hierarchy": "2.X.2.3.3.12",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "FATA--",
         "geometry": "",
         "name": [
@@ -3684,18 +4644,27 @@
       },
       {
         "hierarchy": "2.X.2.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "S-----",
         "geometry": "",
         "name": ["CONTROL MEASURES", "COMBAT SERVICE SUPPORT"]
       },
       {
         "hierarchy": "2.X.2.4.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SP----",
         "geometry": "",
         "name": ["CONTROL MEASURES", "COMBAT SERVICE SUPPORT", "POINTS"]
       },
       {
         "hierarchy": "2.X.2.4.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPA---",
         "geometry": "POINT",
         "name": [
@@ -3707,6 +4676,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPC---",
         "geometry": "POINT",
         "name": [
@@ -3718,6 +4690,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPY---",
         "geometry": "POINT",
         "name": [
@@ -3729,6 +4704,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPT---",
         "geometry": "POINT",
         "name": [
@@ -3740,6 +4718,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPD---",
         "geometry": "POINT",
         "name": [
@@ -3751,6 +4732,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPE---",
         "geometry": "POINT",
         "name": [
@@ -3762,6 +4746,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPL---",
         "geometry": "POINT",
         "name": [
@@ -3773,6 +4760,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.8",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPM---",
         "geometry": "POINT",
         "name": [
@@ -3784,6 +4774,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.9",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPR---",
         "geometry": "POINT",
         "name": [
@@ -3795,6 +4788,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.10",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPU---",
         "geometry": "POINT",
         "name": [
@@ -3806,6 +4802,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.11",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPO---",
         "geometry": "POINT",
         "name": [
@@ -3817,6 +4816,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.12",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPI---",
         "geometry": "POINT",
         "name": [
@@ -3828,6 +4830,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.13",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPN---",
         "geometry": "POINT",
         "name": [
@@ -3839,6 +4844,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.14",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPQ---",
         "geometry": "",
         "name": [
@@ -3850,6 +4858,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.14.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPQT--",
         "geometry": "POINT",
         "name": [
@@ -3862,6 +4873,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.14.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPQA--",
         "geometry": "POINT",
         "name": [
@@ -3874,6 +4888,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.14.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPQB--",
         "geometry": "POINT",
         "name": [
@@ -3886,6 +4903,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.14.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPQC--",
         "geometry": "POINT",
         "name": [
@@ -3898,6 +4918,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.14.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPQD--",
         "geometry": "POINT",
         "name": [
@@ -3910,6 +4933,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.14.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPQE--",
         "geometry": "POINT",
         "name": [
@@ -3922,6 +4948,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.14.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPQF--",
         "geometry": "POINT",
         "name": [
@@ -3934,6 +4963,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.14.8",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPQG--",
         "geometry": "POINT",
         "name": [
@@ -3946,6 +4978,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.14.9",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPQH--",
         "geometry": "POINT",
         "name": [
@@ -3958,6 +4993,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.14.10",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPQI--",
         "geometry": "POINT",
         "name": [
@@ -3970,6 +5008,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.14.11",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPQJ--",
         "geometry": "POINT",
         "name": [
@@ -3982,6 +5023,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.15",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPM---",
         "geometry": "",
         "name": [
@@ -3993,6 +5037,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.15.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPMA--",
         "geometry": "POINT",
         "name": [
@@ -4005,6 +5052,9 @@
       },
       {
         "hierarchy": "2.X.2.4.1.15.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SPMT--",
         "geometry": "POINT",
         "name": [
@@ -4017,12 +5067,18 @@
       },
       {
         "hierarchy": "2.X.2.4.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SL----",
         "geometry": "",
         "name": ["CONTROL MEASURES", "COMBAT SERVICE SUPPORT", "LINES"]
       },
       {
         "hierarchy": "2.X.2.4.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SLC---",
         "geometry": "",
         "name": [
@@ -4034,6 +5090,9 @@
       },
       {
         "hierarchy": "2.X.2.4.2.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SLCM--",
         "geometry": "",
         "name": [
@@ -4046,6 +5105,9 @@
       },
       {
         "hierarchy": "2.X.2.4.2.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SLCH--",
         "geometry": "",
         "name": [
@@ -4058,6 +5120,9 @@
       },
       {
         "hierarchy": "2.X.2.4.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SLR---",
         "geometry": "",
         "name": [
@@ -4069,6 +5134,9 @@
       },
       {
         "hierarchy": "2.X.2.4.2.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SLRM--",
         "geometry": "",
         "name": [
@@ -4081,6 +5149,9 @@
       },
       {
         "hierarchy": "2.X.2.4.2.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SLRA--",
         "geometry": "",
         "name": [
@@ -4093,6 +5164,9 @@
       },
       {
         "hierarchy": "2.X.2.4.2.2.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SLRO--",
         "geometry": "",
         "name": [
@@ -4105,6 +5179,9 @@
       },
       {
         "hierarchy": "2.X.2.4.2.2.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SLRT--",
         "geometry": "",
         "name": [
@@ -4117,6 +5194,9 @@
       },
       {
         "hierarchy": "2.X.2.4.2.2.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SLRW--",
         "geometry": "",
         "name": [
@@ -4129,12 +5209,18 @@
       },
       {
         "hierarchy": "2.X.2.4.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SA----",
         "geometry": "",
         "name": ["CONTROL MEASURES", "COMBAT SERVICE SUPPORT", "AREA"]
       },
       {
         "hierarchy": "2.X.2.4.3.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SAD---",
         "geometry": "",
         "name": [
@@ -4146,6 +5232,9 @@
       },
       {
         "hierarchy": "2.X.2.4.3.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SAP---",
         "geometry": "",
         "name": [
@@ -4157,6 +5246,9 @@
       },
       {
         "hierarchy": "2.X.2.4.3.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SAR---",
         "geometry": "",
         "name": [
@@ -4168,6 +5260,9 @@
       },
       {
         "hierarchy": "2.X.2.4.3.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SAH---",
         "geometry": "",
         "name": [
@@ -4179,6 +5274,9 @@
       },
       {
         "hierarchy": "2.X.2.4.3.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SAT---",
         "geometry": "",
         "name": [
@@ -4190,6 +5288,9 @@
       },
       {
         "hierarchy": "2.X.2.4.3.5.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SATB--",
         "geometry": "",
         "name": [
@@ -4202,6 +5303,9 @@
       },
       {
         "hierarchy": "2.X.2.4.3.5.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SATD--",
         "geometry": "",
         "name": [
@@ -4214,6 +5318,9 @@
       },
       {
         "hierarchy": "2.X.2.4.3.5.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SATR--",
         "geometry": "",
         "name": [
@@ -4226,6 +5333,9 @@
       },
       {
         "hierarchy": "2.X.2.4.3.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "SARR--",
         "geometry": "",
         "name": [
@@ -4237,18 +5347,27 @@
       },
       {
         "hierarchy": "2.X.2.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "O-----",
         "geometry": "",
         "name": ["CONTROL MEASURES", "COMMAND AND CONTROL"]
       },
       {
         "hierarchy": "2.X.2.5.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OX----",
         "geometry": "POINT",
         "name": ["CONTROL MEASURES", "COMMAND AND CONTROL", "SPECIAL POINT"]
       },
       {
         "hierarchy": "2.X.2.5.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXE---",
         "geometry": "",
         "name": [
@@ -4260,6 +5379,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXRN--",
         "geometry": "POINT",
         "name": [
@@ -4272,6 +5394,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXRD--",
         "geometry": "POINT",
         "name": [
@@ -4284,6 +5409,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXU---",
         "geometry": "",
         "name": [
@@ -4295,6 +5423,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXUD--",
         "geometry": "POINT",
         "name": [
@@ -4307,6 +5438,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXUB--",
         "geometry": "POINT",
         "name": [
@@ -4319,6 +5453,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.2.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXUL--",
         "geometry": "POINT",
         "name": [
@@ -4331,6 +5468,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.2.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXUS--",
         "geometry": "POINT",
         "name": [
@@ -4343,6 +5483,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXW---",
         "geometry": "",
         "name": [
@@ -4354,6 +5497,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.3.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXWA--",
         "geometry": "POINT",
         "name": [
@@ -4366,6 +5512,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.3.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXWD--",
         "geometry": "POINT",
         "name": [
@@ -4378,6 +5527,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.3.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXWE--",
         "geometry": "POINT",
         "name": [
@@ -4390,6 +5542,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.3.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXWG--",
         "geometry": "POINT",
         "name": [
@@ -4402,6 +5557,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.3.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXWM--",
         "geometry": "POINT",
         "name": [
@@ -4414,6 +5572,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.3.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXWI--",
         "geometry": "POINT",
         "name": [
@@ -4426,6 +5587,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.3.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXWP--",
         "geometry": "POINT",
         "name": [
@@ -4438,6 +5602,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXY---",
         "geometry": "POINT",
         "name": [
@@ -4449,6 +5616,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.4.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXYP--",
         "geometry": "POINT",
         "name": [
@@ -4461,6 +5631,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.4.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXYD--",
         "geometry": "POINT",
         "name": [
@@ -4473,6 +5646,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.4.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXYL--",
         "geometry": "POINT",
         "name": [
@@ -4485,6 +5661,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.4.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXYC--",
         "geometry": "POINT",
         "name": [
@@ -4497,6 +5676,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.4.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXYS--",
         "geometry": "POINT",
         "name": [
@@ -4509,6 +5691,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.4.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXYB--",
         "geometry": "POINT",
         "name": [
@@ -4521,6 +5706,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.4.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXYA--",
         "geometry": "POINT",
         "name": [
@@ -4533,6 +5721,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.4.8",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXYV--",
         "geometry": "POINT",
         "name": [
@@ -4545,6 +5736,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.4.9",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXYT--",
         "geometry": "POINT",
         "name": [
@@ -4557,6 +5751,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.4.10",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXYR--",
         "geometry": "POINT",
         "name": [
@@ -4569,6 +5766,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.4.11",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXYK--",
         "geometry": "POINT",
         "name": [
@@ -4581,6 +5781,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXN---",
         "geometry": "POINT",
         "name": [
@@ -4592,6 +5795,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXH---",
         "geometry": "POINT",
         "name": [
@@ -4603,6 +5809,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.6.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXHQ--",
         "geometry": "POINT",
         "name": [
@@ -4615,6 +5824,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.6.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXHA--",
         "geometry": "POINT",
         "name": [
@@ -4627,6 +5839,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.6.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXHY--",
         "geometry": "POINT",
         "name": [
@@ -4639,6 +5854,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.6.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXHX--",
         "geometry": "POINT",
         "name": [
@@ -4651,6 +5869,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXR---",
         "geometry": "POINT",
         "name": [
@@ -4662,6 +5883,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.7.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXRR--",
         "geometry": "POINT",
         "name": [
@@ -4674,6 +5898,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.7.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXRD--",
         "geometry": "POINT",
         "name": [
@@ -4686,6 +5913,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.7.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXRW--",
         "geometry": "POINT",
         "name": [
@@ -4698,6 +5928,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.7.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXRP--",
         "geometry": "POINT",
         "name": [
@@ -4710,6 +5943,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.7.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXRT--",
         "geometry": "POINT",
         "name": [
@@ -4722,6 +5958,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.8",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXST--",
         "geometry": "",
         "name": [
@@ -4733,6 +5972,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.8.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXSTC-",
         "geometry": "POINT",
         "name": [
@@ -4745,6 +5987,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.8.1.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXSTCP",
         "geometry": "POINT",
         "name": [
@@ -4758,6 +6003,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.8.1.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXSTCA",
         "geometry": "POINT",
         "name": [
@@ -4771,6 +6019,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.8.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXSTR-",
         "geometry": "POINT",
         "name": [
@@ -4783,6 +6034,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.8.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXSTH",
         "geometry": "POINT",
         "name": [
@@ -4795,6 +6049,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.8.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXSTS-",
         "geometry": "POINT",
         "name": [
@@ -4807,6 +6064,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.8.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXSTSA",
         "geometry": "POINT",
         "name": [
@@ -4819,6 +6079,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.9",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXS---",
         "geometry": "POINT",
         "name": [
@@ -4830,6 +6093,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.9.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXSA--",
         "geometry": "POINT",
         "name": [
@@ -4842,6 +6108,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.9.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXSD--",
         "geometry": "POINT",
         "name": [
@@ -4854,6 +6123,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.9.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXSC--",
         "geometry": "POINT",
         "name": [
@@ -4866,6 +6138,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.10",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXA---",
         "geometry": "",
         "name": [
@@ -4877,6 +6152,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.10.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXAC--",
         "geometry": "POINT",
         "name": [
@@ -4889,6 +6167,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.10.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXAA--",
         "geometry": "POINT",
         "name": [
@@ -4901,6 +6182,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.10.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXAT--",
         "geometry": "POINT",
         "name": [
@@ -4913,6 +6197,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.10.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXAK--",
         "geometry": "POINT",
         "name": [
@@ -4925,6 +6212,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.10.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXAF--",
         "geometry": "POINT",
         "name": [
@@ -4937,6 +6227,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.10.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXAH--",
         "geometry": "POINT",
         "name": [
@@ -4949,6 +6242,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.10.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXAO--",
         "geometry": "POINT",
         "name": [
@@ -4961,6 +6257,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.10.8",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXAR--",
         "geometry": "POINT",
         "name": [
@@ -4973,6 +6272,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.10.9",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXAP--",
         "geometry": "POINT",
         "name": [
@@ -4985,6 +6287,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.10.10",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXAM--",
         "geometry": "POINT",
         "name": [
@@ -4997,6 +6302,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.10.11",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXAS--",
         "geometry": "POINT",
         "name": [
@@ -5009,6 +6317,9 @@
       },
       {
         "hierarchy": "2.X.2.5.1.10.12",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OXAD--",
         "geometry": "POINT",
         "name": [
@@ -5021,6 +6332,9 @@
       },
       {
         "hierarchy": "2.X.2.5.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OG----",
         "geometry": "POINT",
         "name": [
@@ -5031,6 +6345,9 @@
       },
       {
         "hierarchy": "2.X.2.5.2.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OGC---",
         "geometry": "POINT",
         "name": [
@@ -5042,6 +6359,9 @@
       },
       {
         "hierarchy": "2.X.2.5.2.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OGP---",
         "geometry": "POINT",
         "name": [
@@ -5053,6 +6373,9 @@
       },
       {
         "hierarchy": "2.X.2.5.2.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OGT---",
         "geometry": "POINT",
         "name": [
@@ -5064,6 +6387,9 @@
       },
       {
         "hierarchy": "2.X.2.5.2.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OGD---",
         "geometry": "POINT",
         "name": [
@@ -5075,6 +6401,9 @@
       },
       {
         "hierarchy": "2.X.2.5.2.5",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OGL---",
         "geometry": "POINT",
         "name": [
@@ -5086,6 +6415,9 @@
       },
       {
         "hierarchy": "2.X.2.5.2.6",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OGN---",
         "geometry": "POINT",
         "name": [
@@ -5097,6 +6429,9 @@
       },
       {
         "hierarchy": "2.X.2.5.2.7",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OGR---",
         "geometry": "POINT",
         "name": [
@@ -5108,6 +6443,9 @@
       },
       {
         "hierarchy": "2.X.2.5.2.8",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OGS---",
         "geometry": "POINT",
         "name": [
@@ -5119,6 +6457,9 @@
       },
       {
         "hierarchy": "2.X.2.5.2.9",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OGI---",
         "geometry": "POINT",
         "name": [
@@ -5130,6 +6471,9 @@
       },
       {
         "hierarchy": "2.X.2.5.2.10",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OGW---",
         "geometry": "POINT",
         "name": [
@@ -5141,12 +6485,18 @@
       },
       {
         "hierarchy": "2.X.2.5.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OL----",
         "geometry": "",
         "name": ["CONTROL MEASURES", "COMMAND AND CONTROL", "LINE"]
       },
       {
         "hierarchy": "2.X.2.5.3.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OLN---",
         "geometry": "",
         "name": [
@@ -5158,6 +6508,9 @@
       },
       {
         "hierarchy": "2.X.2.5.3.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OLP---",
         "geometry": "",
         "name": [
@@ -5169,12 +6522,18 @@
       },
       {
         "hierarchy": "2.X.2.5.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OA----",
         "geometry": "",
         "name": ["CONTROL MEASURES", "COMMAND AND CONTROL", "AREA"]
       },
       {
         "hierarchy": "2.X.2.5.4.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "C",
         "code": "OAZ---",
         "geometry": "",
         "name": [
@@ -5183,21 +6542,21 @@
           "AREA",
           "AIRFIELD ZONE"
         ]
-      }
-    ]
-  },
-  "O": {
-    "symbolset": "O",
-    "name": "OPERATIONS OTHER THAN WAR",
-    "main icon": [
+      },
       {
         "hierarchy": "2.X.3",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "O",
         "code": "------",
         "geometry": "",
         "name": ["NON ARTICLE 5 CRISIS RESPONSE OPERATIONS (NA5CRO)"]
       },
       {
         "hierarchy": "2.X.3.1",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "V-----",
         "geometry": "",
         "name": [
@@ -5207,6 +6566,9 @@
       },
       {
         "hierarchy": "2.X.3.1.1",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VA----",
         "geometry": "POINT",
         "name": [
@@ -5217,6 +6579,9 @@
       },
       {
         "hierarchy": "2.X.3.1.2",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VR----",
         "geometry": "POINT",
         "name": [
@@ -5227,6 +6592,9 @@
       },
       {
         "hierarchy": "2.X.3.1.3",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VE----",
         "geometry": "POINT",
         "name": [
@@ -5237,6 +6605,9 @@
       },
       {
         "hierarchy": "2.X.3.1.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "O",
         "code": "VB----",
         "geometry": "POINT",
         "name": [
@@ -5247,6 +6618,9 @@
       },
       {
         "hierarchy": "2.X.3.1.5",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VY----",
         "geometry": "POINT",
         "name": [
@@ -5257,6 +6631,9 @@
       },
       {
         "hierarchy": "2.X.3.1.6",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VD----",
         "geometry": "POINT",
         "name": [
@@ -5267,6 +6644,9 @@
       },
       {
         "hierarchy": "2.X.3.1.7",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VI----",
         "geometry": "POINT",
         "name": [
@@ -5277,6 +6657,9 @@
       },
       {
         "hierarchy": "2.X.3.1.8",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VM----",
         "geometry": "POINT",
         "name": [
@@ -5287,6 +6670,9 @@
       },
       {
         "hierarchy": "2.X.3.1.9",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VK----",
         "geometry": "POINT",
         "name": [
@@ -5297,6 +6683,9 @@
       },
       {
         "hierarchy": "2.X.3.1.10",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VS----",
         "geometry": "POINT",
         "name": [
@@ -5307,6 +6696,9 @@
       },
       {
         "hierarchy": "2.X.3.1.11",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VP----",
         "geometry": "POINT",
         "name": [
@@ -5317,6 +6709,9 @@
       },
       {
         "hierarchy": "2.X.3.1.12",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VU----",
         "geometry": "POINT",
         "name": [
@@ -5327,6 +6722,9 @@
       },
       {
         "hierarchy": "2.X.3.1.13",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VC----",
         "geometry": "POINT",
         "name": [
@@ -5337,6 +6735,9 @@
       },
       {
         "hierarchy": "2.X.3.1.14",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VH----",
         "geometry": "POINT",
         "name": [
@@ -5347,6 +6748,9 @@
       },
       {
         "hierarchy": "2.X.3.1.15",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VF----",
         "geometry": "POINT",
         "name": [
@@ -5357,6 +6761,9 @@
       },
       {
         "hierarchy": "2.X.3.1.16",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VO----",
         "geometry": "POINT",
         "name": [
@@ -5367,6 +6774,9 @@
       },
       {
         "hierarchy": "2.X.3.1.17",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VL----",
         "geometry": "POINT",
         "name": [
@@ -5377,6 +6787,9 @@
       },
       {
         "hierarchy": "2.X.3.1.18",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VX----",
         "geometry": "POINT",
         "name": [
@@ -5387,6 +6800,9 @@
       },
       {
         "hierarchy": "2.X.3.1.19",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "VZ----",
         "geometry": "POINT",
         "name": [
@@ -5397,6 +6813,9 @@
       },
       {
         "hierarchy": "2.X.3.2",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "L-----",
         "geometry": "",
         "name": [
@@ -5406,6 +6825,9 @@
       },
       {
         "hierarchy": "2.X.3.2.1",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "LB----",
         "geometry": "POINT",
         "name": [
@@ -5416,6 +6838,9 @@
       },
       {
         "hierarchy": "2.X.3.2.2",
+        "code scheme": "G",
+        "standard identity": "U",
+        "battle dimension": "O",
         "code": "LG----",
         "geometry": "POINT",
         "name": [
@@ -5426,6 +6851,9 @@
       },
       {
         "hierarchy": "2.X.3.2.3",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "O",
         "code": "LW----",
         "geometry": "POINT",
         "name": [
@@ -5436,6 +6864,9 @@
       },
       {
         "hierarchy": "2.X.3.3",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "P-----",
         "geometry": "",
         "name": [
@@ -5445,6 +6876,9 @@
       },
       {
         "hierarchy": "2.X.3.3.1",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PR----",
         "geometry": "POINT",
         "name": [
@@ -5455,6 +6889,9 @@
       },
       {
         "hierarchy": "2.X.3.3.1.1",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PRB---",
         "geometry": "POINT",
         "name": [
@@ -5466,6 +6903,9 @@
       },
       {
         "hierarchy": "2.X.3.3.2",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PT----",
         "geometry": "POINT",
         "name": [
@@ -5476,6 +6916,9 @@
       },
       {
         "hierarchy": "2.X.3.3.3",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PC----",
         "geometry": "POINT",
         "name": [
@@ -5486,6 +6929,9 @@
       },
       {
         "hierarchy": "2.X.3.3.3.1",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PCU---",
         "geometry": "POINT",
         "name": [
@@ -5497,6 +6943,9 @@
       },
       {
         "hierarchy": "2.X.3.3.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "O",
         "code": "PD----",
         "geometry": "POINT",
         "name": [
@@ -5507,6 +6956,9 @@
       },
       {
         "hierarchy": "2.X.3.3.5",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PM----",
         "geometry": "POINT",
         "name": [
@@ -5517,6 +6969,9 @@
       },
       {
         "hierarchy": "2.X.3.3.6",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PH----",
         "geometry": "POINT",
         "name": [
@@ -5527,6 +6982,9 @@
       },
       {
         "hierarchy": "2.X.3.3.6.1",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PHY---",
         "geometry": "POINT",
         "name": [
@@ -5538,6 +6996,9 @@
       },
       {
         "hierarchy": "2.X.3.3.6.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "O",
         "code": "PHW---",
         "geometry": "POINT",
         "name": [
@@ -5549,6 +7010,9 @@
       },
       {
         "hierarchy": "2.X.3.3.6.3",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "O",
         "code": "PHG---",
         "geometry": "POINT",
         "name": [
@@ -5560,6 +7024,9 @@
       },
       {
         "hierarchy": "2.X.3.3.6.4",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "O",
         "code": "PHT---",
         "geometry": "POINT",
         "name": [
@@ -5571,6 +7038,9 @@
       },
       {
         "hierarchy": "2.X.3.3.7",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PG----",
         "geometry": "POINT",
         "name": [
@@ -5581,6 +7051,9 @@
       },
       {
         "hierarchy": "2.X.3.3.8",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PS----",
         "geometry": "POINT",
         "name": [
@@ -5591,6 +7064,9 @@
       },
       {
         "hierarchy": "2.X.3.3.9",
+        "code scheme": "G",
+        "standard identity": "N",
+        "battle dimension": "O",
         "code": "PF----",
         "geometry": "POINT",
         "name": [
@@ -5601,6 +7077,9 @@
       },
       {
         "hierarchy": "2.X.3.3.10",
+        "code scheme": "G",
+        "standard identity": "N",
+        "battle dimension": "O",
         "code": "PI----",
         "geometry": "POINT",
         "name": [
@@ -5611,6 +7090,9 @@
       },
       {
         "hierarchy": "2.X.3.3.11",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PE----",
         "geometry": "POINT",
         "name": [
@@ -5621,6 +7103,9 @@
       },
       {
         "hierarchy": "2.X.3.3.12",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PX----",
         "geometry": "POINT",
         "name": [
@@ -5631,6 +7116,9 @@
       },
       {
         "hierarchy": "2.X.3.3.13",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PJ----",
         "geometry": "",
         "name": [
@@ -5641,6 +7129,9 @@
       },
       {
         "hierarchy": "2.X.3.3.13.1",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PJV---",
         "geometry": "POINT",
         "name": [
@@ -5652,6 +7143,9 @@
       },
       {
         "hierarchy": "2.X.3.3.13.2",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PJA---",
         "geometry": "POINT",
         "name": [
@@ -5663,6 +7157,9 @@
       },
       {
         "hierarchy": "2.X.3.3.13.3",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PJB---",
         "geometry": "POINT",
         "name": [
@@ -5674,6 +7171,9 @@
       },
       {
         "hierarchy": "2.X.3.3.14",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PK----",
         "geometry": "POINT",
         "name": [
@@ -5684,6 +7184,9 @@
       },
       {
         "hierarchy": "2.X.3.3.15",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "O",
         "code": "PA----",
         "geometry": "POINT",
         "name": [
@@ -5694,6 +7197,9 @@
       },
       {
         "hierarchy": "2.X.3.3.16",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "PO----",
         "geometry": "POINT",
         "name": [
@@ -5704,12 +7210,18 @@
       },
       {
         "hierarchy": "2.X.3.4",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "O",
         "code": "I-----",
         "geometry": "",
         "name": ["NON ARTICLE 5 CRISIS RESPONSE OPERATIONS (NA5CRO)", "ITEMS"]
       },
       {
         "hierarchy": "2.X.3.4.1",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "O",
         "code": "IR----",
         "geometry": "POINT",
         "name": [
@@ -5720,6 +7232,9 @@
       },
       {
         "hierarchy": "2.X.3.4.2",
+        "code scheme": "G",
+        "standard identity": "*",
+        "battle dimension": "O",
         "code": "IS----",
         "geometry": "POINT",
         "name": [
@@ -5730,6 +7245,9 @@
       },
       {
         "hierarchy": "2.X.3.4.3",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "IG----",
         "geometry": "POINT",
         "name": [
@@ -5740,6 +7258,9 @@
       },
       {
         "hierarchy": "2.X.3.4.4",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "IV----",
         "geometry": "POINT",
         "name": [
@@ -5750,6 +7271,9 @@
       },
       {
         "hierarchy": "2.X.3.4.5",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "IK----",
         "geometry": "POINT",
         "name": [
@@ -5760,6 +7284,9 @@
       },
       {
         "hierarchy": "2.X.3.4.6",
+        "code scheme": "G",
+        "standard identity": "H",
+        "battle dimension": "O",
         "code": "ID----",
         "geometry": "POINT",
         "name": [
@@ -5770,6 +7297,9 @@
       },
       {
         "hierarchy": "2.X.3.4.7",
+        "code scheme": "G",
+        "standard identity": "F",
+        "battle dimension": "O",
         "code": "IF----",
         "geometry": "POINT",
         "name": [
