@@ -8,6 +8,7 @@
         "standard identity": "*",
         "battle dimension": "T",
         "code": "------",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["TASKS"]
       },
@@ -224,6 +225,7 @@
         "standard identity": "-",
         "battle dimension": "T",
         "code": "U-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["TASKS", "SECURITY"]
       },
@@ -292,6 +294,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "------",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMMAND AND CONTROL AND GENERAL MANEUVER"]
       },
@@ -301,6 +304,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "G-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMMAND AND CONTROL AND GENERAL MANEUVER", "GENERAL"]
       },
@@ -310,6 +314,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "GP----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "COMMAND AND CONTROL AND GENERAL MANEUVER",
@@ -323,6 +328,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "GPU---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "COMMAND AND CONTROL AND GENERAL MANEUVER",
@@ -337,6 +343,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "GPUU--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "COMMAND AND CONTROL AND GENERAL MANEUVER",
@@ -744,6 +751,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "GPW---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "COMMAND AND CONTROL AND GENERAL MANEUVER",
@@ -1040,6 +1048,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "GPA---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "COMMAND AND CONTROL AND GENERAL MANEUVER",
@@ -1413,6 +1422,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "GL----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMMAND AND CONTROL AND GENERAL MANEUVER", "GENERAL", "LINES"]
       },
@@ -1492,6 +1502,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "GA----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMMAND AND CONTROL AND GENERAL MANEUVER", "GENERAL", "AREAS"]
       },
@@ -1655,6 +1666,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "A-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMMAND AND CONTROL AND GENERAL MANEUVER", "AVIATION"]
       },
@@ -1664,6 +1676,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "AP----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "COMMAND AND CONTROL AND GENERAL MANEUVER",
@@ -1733,6 +1746,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "AL----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "COMMAND AND CONTROL AND GENERAL MANEUVER",
@@ -1816,6 +1830,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "AA----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "COMMAND AND CONTROL AND GENERAL MANEUVER",
@@ -1929,6 +1944,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "P-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMMAND AND CONTROL AND GENERAL MANEUVER", "DECEPTION"]
       },
@@ -2029,6 +2045,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "D-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMMAND AND CONTROL AND GENERAL MANEUVER", "DEFENSE"]
       },
@@ -2038,6 +2055,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "DP----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "COMMAND AND CONTROL AND GENERAL MANEUVER",
@@ -2154,6 +2172,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "DL----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMMAND AND CONTROL AND GENERAL MANEUVER", "DEFENSE", "LINES"]
       },
@@ -2191,6 +2210,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "DA----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMMAND AND CONTROL AND GENERAL MANEUVER", "DEFENSE", "AREAS"]
       },
@@ -2243,6 +2263,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "O-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMMAND AND CONTROL AND GENERAL MANEUVER", "OFFENSE"]
       },
@@ -2252,6 +2273,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "OP----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "COMMAND AND CONTROL AND GENERAL MANEUVER",
@@ -2279,6 +2301,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "OL----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMMAND AND CONTROL AND GENERAL MANEUVER", "OFFENSE", "LINES"]
       },
@@ -2288,6 +2311,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "OLA---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "COMMAND AND CONTROL AND GENERAL MANEUVER",
@@ -2347,6 +2371,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "OLAG--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "COMMAND AND CONTROL AND GENERAL MANEUVER",
@@ -2394,6 +2419,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "OLK---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "COMMAND AND CONTROL AND GENERAL MANEUVER",
@@ -2423,6 +2449,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "OLKG--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "COMMAND AND CONTROL AND GENERAL MANEUVER",
@@ -2554,6 +2581,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "OA----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMMAND AND CONTROL AND GENERAL MANEUVER", "OFFENSE", "AREAS"]
       },
@@ -2647,6 +2675,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "S-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMMAND AND CONTROL AND GENERAL MANEUVER", "SPECIAL"]
       },
@@ -2656,6 +2685,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "SL----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMMAND AND CONTROL AND GENERAL MANEUVER", "SPECIAL", "LINE"]
       },
@@ -2721,6 +2751,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "SA----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMMAND AND CONTROL AND GENERAL MANEUVER", "SPECIAL", "AREA"]
       },
@@ -2805,6 +2836,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "------",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["MOBILITY/SURVIVABILITY"]
       },
@@ -2814,6 +2846,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "O-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["MOBILITY/SURVIVABILITY", "OBSTACLES"]
       },
@@ -2823,6 +2856,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "OG----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["MOBILITY/SURVIVABILITY", "OBSTACLES", "GENERAL"]
       },
@@ -2896,6 +2930,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "OA----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["MOBILITY/SURVIVABILITY", "OBSTACLES", "ANTITANK OBSTACLES"]
       },
@@ -2905,6 +2940,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "OAD---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "MOBILITY/SURVIVABILITY",
@@ -2963,6 +2999,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "OAO---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "MOBILITY/SURVIVABILITY",
@@ -3045,6 +3082,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "OM----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["MOBILITY/SURVIVABILITY", "OBSTACLES", "MINES"]
       },
@@ -3147,6 +3185,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "OF----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["MOBILITY/SURVIVABILITY", "OBSTACLES", "MINEFIELDS"]
       },
@@ -3207,6 +3246,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "OE----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["MOBILITY/SURVIVABILITY", "OBSTACLES", "OBSTACLE EFFECT"]
       },
@@ -3285,6 +3325,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "OR----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "MOBILITY/SURVIVABILITY",
@@ -3363,6 +3404,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "OW----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["MOBILITY/SURVIVABILITY", "OBSTACLES", "WIRE OBSTACLE"]
       },
@@ -3456,6 +3498,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "OWC---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "MOBILITY/SURVIVABILITY",
@@ -3515,6 +3558,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "B-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["MOBILITY/SURVIVABILITY", "OBSTACLE BYPASS"]
       },
@@ -3524,6 +3568,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "BD----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "MOBILITY/SURVIVABILITY",
@@ -3579,6 +3624,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "BC----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "MOBILITY/SURVIVABILITY",
@@ -3704,6 +3750,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "S-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["MOBILITY/SURVIVABILITY", "SURVIVABILITY"]
       },
@@ -3788,6 +3835,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "N-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["MOBILITY/SURVIVABILITY", "NUCLEAR, BIOLOGICAL AND CHEMICAL"]
       },
@@ -3875,6 +3923,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "NE----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "MOBILITY/SURVIVABILITY",
@@ -3916,6 +3965,7 @@
         "standard identity": "*",
         "battle dimension": "M",
         "code": "ND----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "MOBILITY/SURVIVABILITY",
@@ -4045,6 +4095,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "------",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["FIRE SUPPORT"]
       },
@@ -4054,6 +4105,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "P-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["FIRE SUPPORT", "POINT"]
       },
@@ -4063,6 +4115,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "PT----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["FIRE SUPPORT", "POINT", "TARGET"]
       },
@@ -4090,6 +4143,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "PC----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["FIRE SUPPORT", "POINT", "COMMAND & CONTROL POINTS"]
       },
@@ -4183,6 +4237,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "L-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["FIRE SUPPORT", "LINES"]
       },
@@ -4229,6 +4284,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "LC----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["FIRE SUPPORT", "LINES", "COMMAND & CONTROL LINES"]
       },
@@ -4294,6 +4350,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "A-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["FIRE SUPPORT", "AREAS"]
       },
@@ -4362,6 +4419,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "AC----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["FIRE SUPPORT", "AREAS", "COMMAND & CONTROL AREAS"]
       },
@@ -4371,6 +4429,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "ACS---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "FIRE SUPPORT",
@@ -4430,6 +4489,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "ACA---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "FIRE SUPPORT",
@@ -4489,6 +4549,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "ACF---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "FIRE SUPPORT",
@@ -4548,6 +4609,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "ACN---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "FIRE SUPPORT",
@@ -4607,6 +4669,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "ACR---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "FIRE SUPPORT",
@@ -4666,6 +4729,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "ACP---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "FIRE SUPPORT",
@@ -4710,6 +4774,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "AZ----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["FIRE SUPPORT", "AREAS", "TARGET ACQUISTION ZONES"]
       },
@@ -4719,6 +4784,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "AZI---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "FIRE SUPPORT",
@@ -4778,6 +4844,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "AZX---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "FIRE SUPPORT",
@@ -4837,6 +4904,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "AZS---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "FIRE SUPPORT",
@@ -4896,6 +4964,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "AZC---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "FIRE SUPPORT",
@@ -4955,6 +5024,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "AZD---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "FIRE SUPPORT",
@@ -5014,6 +5084,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "AZF---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "FIRE SUPPORT",
@@ -5073,6 +5144,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "AZZ---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "FIRE SUPPORT",
@@ -5132,6 +5204,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "AZB---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "FIRE SUPPORT",
@@ -5191,6 +5264,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "AZV---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "FIRE SUPPORT",
@@ -5250,6 +5324,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "AX----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["FIRE SUPPORT", "AREAS", "WEAPONS/RADAR RANGE FANS"]
       },
@@ -5292,6 +5367,7 @@
         "standard identity": "*",
         "battle dimension": "S",
         "code": "------",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMBAT SERVICE SUPPORT"]
       },
@@ -5301,6 +5377,7 @@
         "standard identity": "*",
         "battle dimension": "S",
         "code": "P-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMBAT SERVICE SUPPORT", "POINTS"]
       },
@@ -5467,6 +5544,7 @@
         "standard identity": "*",
         "battle dimension": "S",
         "code": "PS----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMBAT SERVICE SUPPORT", "POINTS", "SUPPLY POINTS"]
       },
@@ -5610,6 +5688,7 @@
         "standard identity": "*",
         "battle dimension": "S",
         "code": "PA----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMBAT SERVICE SUPPORT", "POINTS", "AMMUNITION POINTS"]
       },
@@ -5647,6 +5726,7 @@
         "standard identity": "*",
         "battle dimension": "S",
         "code": "L-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMBAT SERVICE SUPPORT", "LINES"]
       },
@@ -5656,6 +5736,7 @@
         "standard identity": "*",
         "battle dimension": "S",
         "code": "LC----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMBAT SERVICE SUPPORT", "LINES", "CONVOYS"]
       },
@@ -5683,6 +5764,7 @@
         "standard identity": "*",
         "battle dimension": "S",
         "code": "LR----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMBAT SERVICE SUPPORT", "LINES", "SUPPLY ROUTES"]
       },
@@ -5815,6 +5897,7 @@
         "standard identity": "*",
         "battle dimension": "S",
         "code": "AS----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["COMBAT SERVICE SUPPORT", "AREA", "SUPPORT AREAS"]
       },
@@ -5871,6 +5954,7 @@
         "standard identity": "*",
         "battle dimension": "O",
         "code": "------",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["OTHER"]
       },
@@ -5880,6 +5964,7 @@
         "standard identity": "*",
         "battle dimension": "O",
         "code": "E-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["OTHER", "EMERGENCY"]
       },
@@ -5916,6 +6001,7 @@
         "standard identity": "*",
         "battle dimension": "O",
         "code": "H-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["OTHER", "HAZARD"]
       },
@@ -5961,6 +6047,7 @@
         "standard identity": "*",
         "battle dimension": "O",
         "code": "S-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["OTHER", "SEA SUBSURFACE RETURNS"]
       },
@@ -6103,6 +6190,7 @@
         "standard identity": "*",
         "battle dimension": "O",
         "code": "F-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["OTHER", "FIX"]
       },
