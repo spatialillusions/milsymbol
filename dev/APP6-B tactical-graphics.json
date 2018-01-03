@@ -6542,7 +6542,12 @@
           "AREA",
           "AIRFIELD ZONE"
         ]
-      },
+      }
+    ]
+  },
+  "STBOPS": {
+    "name": "",
+    "main icon": [
       {
         "hierarchy": "2.X.3",
         "code scheme": "G",
