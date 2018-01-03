@@ -3,7 +3,7 @@
     "name": "INCIDENT",
     "main icon": [
       {
-        "hierarchy": "EMS.INCDNT ",
+        "hierarchy": "EMS.INCDNT",
         "code scheme": "E",
         "standard identity": "-",
         "battle dimension": "I",
@@ -12,7 +12,7 @@
         "name": ["INCIDENT"]
       },
       {
-        "hierarchy": "EMS.INCDNT.CVDIS ",
+        "hierarchy": "EMS.INCDNT.CVDIS",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -20,7 +20,7 @@
         "name": ["INCIDENT", "CIVIL DISTURBANCE INCIDENT"]
       },
       {
-        "hierarchy": "EMS.INCDNT.CVDIS.DEMO ",
+        "hierarchy": "EMS.INCDNT.CVDIS.DEMO",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
@@ -32,7 +32,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INCDNT.CVDIS.DISPOP ",
+        "hierarchy": "EMS.INCDNT.CVDIS.DISPOP",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "I",
@@ -44,7 +44,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INCDNT.CVDIS.CVRIOT ",
+        "hierarchy": "EMS.INCDNT.CVDIS.CVRIOT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -52,7 +52,7 @@
         "name": ["INCIDENT", "CIVIL DISTURBANCE INCIDENT", "CIVIL RIOTING"]
       },
       {
-        "hierarchy": "EMS.INCDNT.CRMACT ",
+        "hierarchy": "EMS.INCDNT.CRMACT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -60,7 +60,7 @@
         "name": ["INCIDENT", "CRIMINAL ACTIVITY INCIDENT"]
       },
       {
-        "hierarchy": "EMS.INCDNT.CRMACT.BMTHT ",
+        "hierarchy": "EMS.INCDNT.CRMACT.BMTHT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -68,7 +68,7 @@
         "name": ["INCIDENT", "CRIMINAL ACTIVITY INCIDENT", "BOMB THREAT"]
       },
       {
-        "hierarchy": "EMS.INCDNT.CRMACT.BM ",
+        "hierarchy": "EMS.INCDNT.CRMACT.BM",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "V",
@@ -76,7 +76,7 @@
         "name": ["INCIDENT", "CRIMINAL ACTIVITY INCIDENT", "BOMB"]
       },
       {
-        "hierarchy": "EMS.INCDNT.CRMACT.EXPLN ",
+        "hierarchy": "EMS.INCDNT.CRMACT.EXPLN",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -84,7 +84,7 @@
         "name": ["INCIDENT", "CRIMINAL ACTIVITY INCIDENT", "EXPLOSION"]
       },
       {
-        "hierarchy": "EMS.INCDNT.CRMACT.LOOT ",
+        "hierarchy": "EMS.INCDNT.CRMACT.LOOT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -92,7 +92,7 @@
         "name": ["INCIDENT", "CRIMINAL ACTIVITY INCIDENT", "LOOTING"]
       },
       {
-        "hierarchy": "EMS.INCDNT.CRMACT.PSNG ",
+        "hierarchy": "EMS.INCDNT.CRMACT.PSNG",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "V",
@@ -100,7 +100,7 @@
         "name": ["INCIDENT", "CRIMINAL ACTIVITY INCIDENT", "POISONING"]
       },
       {
-        "hierarchy": "EMS.INCDNT.CRMACT.SHTG ",
+        "hierarchy": "EMS.INCDNT.CRMACT.SHTG",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -108,7 +108,7 @@
         "name": ["INCIDENT", "CRIMINAL ACTIVITY INCIDENT", "SHOOTING"]
       },
       {
-        "hierarchy": "EMS.INCDNT.FIRE ",
+        "hierarchy": "EMS.INCDNT.FIRE",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -116,7 +116,7 @@
         "name": ["INCIDENT", "FIRE INCIDENT"]
       },
       {
-        "hierarchy": "EMS.INCDNT.FIRE.HTSPT ",
+        "hierarchy": "EMS.INCDNT.FIRE.HTSPT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -124,7 +124,7 @@
         "name": ["INCIDENT", "FIRE INCIDENT", "HOT SPOT"]
       },
       {
-        "hierarchy": "EMS.INCDNT.FIRE.NRES ",
+        "hierarchy": "EMS.INCDNT.FIRE.NRES",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -132,7 +132,7 @@
         "name": ["INCIDENT", "FIRE INCIDENT", "NON-RESIDENTIAL FIRE"]
       },
       {
-        "hierarchy": "EMS.INCDNT.FIRE.ORGN ",
+        "hierarchy": "EMS.INCDNT.FIRE.ORGN",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -140,7 +140,7 @@
         "name": ["INCIDENT", "FIRE INCIDENT", "ORIGIN (OF FIRE)"]
       },
       {
-        "hierarchy": "EMS.INCDNT.FIRE.RES ",
+        "hierarchy": "EMS.INCDNT.FIRE.RES",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -148,7 +148,7 @@
         "name": ["INCIDENT", "FIRE INCIDENT", "RESIDENTIAL FIRE"]
       },
       {
-        "hierarchy": "EMS.INCDNT.FIRE.SCH ",
+        "hierarchy": "EMS.INCDNT.FIRE.SCH",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -156,7 +156,7 @@
         "name": ["INCIDENT", "FIRE INCIDENT", "SCHOOL FIRE"]
       },
       {
-        "hierarchy": "EMS.INCDNT.FIRE.SMK ",
+        "hierarchy": "EMS.INCDNT.FIRE.SMK",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -164,7 +164,7 @@
         "name": ["INCIDENT", "FIRE INCIDENT", "SMOKE"]
       },
       {
-        "hierarchy": "EMS.INCDNT.FIRE.SN ",
+        "hierarchy": "EMS.INCDNT.FIRE.SN",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -172,7 +172,7 @@
         "name": ["INCIDENT", "FIRE INCIDENT", "SPECIAL NEEDS FIRE"]
       },
       {
-        "hierarchy": "EMS.INCDNT.FIRE.WLD ",
+        "hierarchy": "EMS.INCDNT.FIRE.WLD",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -180,7 +180,7 @@
         "name": ["INCIDENT", "FIRE INCIDENT", "WILD FIRE"]
       },
       {
-        "hierarchy": "EMS.INCDNT.HAZMAT ",
+        "hierarchy": "EMS.INCDNT.HAZMAT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -188,7 +188,7 @@
         "name": ["INCIDENT", "HAZARDOUS MATERIAL INCIDENT"]
       },
       {
-        "hierarchy": "EMS.INCDNT.HAZMAT.CHMAGT ",
+        "hierarchy": "EMS.INCDNT.HAZMAT.CHMAGT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -196,7 +196,7 @@
         "name": ["INCIDENT", "HAZARDOUS MATERIAL INCIDENT", "CHEMICAL AGENT"]
       },
       {
-        "hierarchy": "EMS.INCDNT.HAZMAT.CORMTL ",
+        "hierarchy": "EMS.INCDNT.HAZMAT.CORMTL",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -208,7 +208,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INCDNT.HAZMAT.WHWET ",
+        "hierarchy": "EMS.INCDNT.HAZMAT.WHWET",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -220,7 +220,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INCDNT.HAZMAT.EXPLV ",
+        "hierarchy": "EMS.INCDNT.HAZMAT.EXPLV",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -228,7 +228,7 @@
         "name": ["INCIDENT", "HAZARDOUS MATERIAL INCIDENT", "EXPLOSIVE"]
       },
       {
-        "hierarchy": "EMS.INCDNT.HAZMAT.FLGAS ",
+        "hierarchy": "EMS.INCDNT.HAZMAT.FLGAS",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -236,7 +236,7 @@
         "name": ["INCIDENT", "HAZARDOUS MATERIAL INCIDENT", "FLAMMABLE GAS"]
       },
       {
-        "hierarchy": "EMS.INCDNT.HAZMAT.FLLIQ ",
+        "hierarchy": "EMS.INCDNT.HAZMAT.FLLIQ",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -244,7 +244,7 @@
         "name": ["INCIDENT", "HAZARDOUS MATERIAL INCIDENT", "FLAMMABLE LIQUID"]
       },
       {
-        "hierarchy": "EMS.INCDNT.HAZMAT.FLSLD ",
+        "hierarchy": "EMS.INCDNT.HAZMAT.FLSLD",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -252,7 +252,7 @@
         "name": ["INCIDENT", "HAZARDOUS MATERIAL INCIDENT", "FLAMMABLE SOLID"]
       },
       {
-        "hierarchy": "EMS.INCDNT.HAZMAT.NFLGAS ",
+        "hierarchy": "EMS.INCDNT.HAZMAT.NFLGAS",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -260,7 +260,7 @@
         "name": ["INCIDENT", "HAZARDOUS MATERIAL INCIDENT", "NON-FLAMMABLE GAS"]
       },
       {
-        "hierarchy": "EMS.INCDNT.HAZMAT.ORGPER ",
+        "hierarchy": "EMS.INCDNT.HAZMAT.ORGPER",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -268,7 +268,7 @@
         "name": ["INCIDENT", "HAZARDOUS MATERIAL INCIDENT", "ORGANIC PEROXIDE"]
       },
       {
-        "hierarchy": "EMS.INCDNT.HAZMAT.OXDZR ",
+        "hierarchy": "EMS.INCDNT.HAZMAT.OXDZR",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -276,7 +276,7 @@
         "name": ["INCIDENT", "HAZARDOUS MATERIAL INCIDENT", "OXIDIZER"]
       },
       {
-        "hierarchy": "EMS.INCDNT.HAZMAT.RADMTL ",
+        "hierarchy": "EMS.INCDNT.HAZMAT.RADMTL",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -288,7 +288,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INCDNT.HAZMAT.SPCMB ",
+        "hierarchy": "EMS.INCDNT.HAZMAT.SPCMB",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -300,7 +300,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INCDNT.HAZMAT.TXGAS ",
+        "hierarchy": "EMS.INCDNT.HAZMAT.TXGAS",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -308,7 +308,7 @@
         "name": ["INCIDENT", "HAZARDOUS MATERIAL INCIDENT", "TOXIC GAS"]
       },
       {
-        "hierarchy": "EMS.INCDNT.HAZMAT.TXINF ",
+        "hierarchy": "EMS.INCDNT.HAZMAT.TXINF",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -320,7 +320,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INCDNT.HAZMAT.UNXORD ",
+        "hierarchy": "EMS.INCDNT.HAZMAT.UNXORD",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -332,7 +332,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INCDNT.AIR ",
+        "hierarchy": "EMS.INCDNT.AIR",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -340,7 +340,7 @@
         "name": ["INCIDENT", "AIR INCIDENT"]
       },
       {
-        "hierarchy": "EMS.INCDNT.AIR.ACDNT ",
+        "hierarchy": "EMS.INCDNT.AIR.ACDNT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -348,7 +348,7 @@
         "name": ["INCIDENT", "AIR INCIDENT", "AIR ACCIDENT"]
       },
       {
-        "hierarchy": "EMS.INCDNT.AIR.HJKG ",
+        "hierarchy": "EMS.INCDNT.AIR.HJKG",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
@@ -356,7 +356,7 @@
         "name": ["INCIDENT", "AIR INCIDENT", "AIR HIJACKING"]
       },
       {
-        "hierarchy": "EMS.INCDNT.MRN ",
+        "hierarchy": "EMS.INCDNT.MRN",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -364,7 +364,7 @@
         "name": ["INCIDENT", "MARINE INCIDENT"]
       },
       {
-        "hierarchy": "EMS.INCDNT.MRN.ACDNT ",
+        "hierarchy": "EMS.INCDNT.MRN.ACDNT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -372,7 +372,7 @@
         "name": ["INCIDENT", "MARINE INCIDENT", "MARINE ACCIDENT"]
       },
       {
-        "hierarchy": "EMS.INCDNT.MRN.HJKG ",
+        "hierarchy": "EMS.INCDNT.MRN.HJKG",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
@@ -380,7 +380,7 @@
         "name": ["INCIDENT", "MARINE INCIDENT", "MARINE HIJACKING"]
       },
       {
-        "hierarchy": "EMS.INCDNT.RAIL ",
+        "hierarchy": "EMS.INCDNT.RAIL",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -388,7 +388,7 @@
         "name": ["INCIDENT", "RAIL INCIDENT"]
       },
       {
-        "hierarchy": "EMS.INCDNT.RAIL.ACDNT ",
+        "hierarchy": "EMS.INCDNT.RAIL.ACDNT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -396,7 +396,7 @@
         "name": ["INCIDENT", "RAIL INCIDENT", "RAIL ACCIDENT"]
       },
       {
-        "hierarchy": "EMS.INCDNT.RAIL.HJCK ",
+        "hierarchy": "EMS.INCDNT.RAIL.HJCK",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -404,7 +404,7 @@
         "name": ["INCIDENT", "RAIL INCIDENT", "RAIL HIJACKING"]
       },
       {
-        "hierarchy": "EMS.INCDNT.VEH ",
+        "hierarchy": "EMS.INCDNT.VEH",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -412,7 +412,7 @@
         "name": ["INCIDENT", "VEHICLE INCIDENT"]
       },
       {
-        "hierarchy": "EMS.INCDNT.VEH.ACDNT ",
+        "hierarchy": "EMS.INCDNT.VEH.ACDNT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "I",
@@ -420,7 +420,7 @@
         "name": ["INCIDENT", "VEHICLE INCIDENT", "VEHICLE ACCIDENT"]
       },
       {
-        "hierarchy": "EMS.INCDNT.VEH.HJKG ",
+        "hierarchy": "EMS.INCDNT.VEH.HJKG",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
@@ -433,7 +433,7 @@
     "name": "NATURAL EVENTS",
     "main icon": [
       {
-        "hierarchy": "EMS.NATEVT ",
+        "hierarchy": "EMS.NATEVT",
         "code scheme": "E",
         "standard identity": "-",
         "battle dimension": "N",
@@ -442,7 +442,7 @@
         "name": ["NATURAL EVENTS"]
       },
       {
-        "hierarchy": "EMS.NATEVT.GEO ",
+        "hierarchy": "EMS.NATEVT.GEO",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -451,7 +451,7 @@
         "name": ["NATURAL EVENTS", "GEOLOGIC"]
       },
       {
-        "hierarchy": "EMS.NATEVT.GEO.AFTSHK ",
+        "hierarchy": "EMS.NATEVT.GEO.AFTSHK",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -459,7 +459,7 @@
         "name": ["NATURAL EVENTS", "GEOLOGIC", "AFTERSHOCK"]
       },
       {
-        "hierarchy": "EMS.NATEVT.GEO.AVL ",
+        "hierarchy": "EMS.NATEVT.GEO.AVL",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -467,7 +467,7 @@
         "name": ["NATURAL EVENTS", "GEOLOGIC", "AVALANCHE"]
       },
       {
-        "hierarchy": "EMS.NATEVT.GEO.EQKEPI ",
+        "hierarchy": "EMS.NATEVT.GEO.EQKEPI",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -475,7 +475,7 @@
         "name": ["NATURAL EVENTS", "GEOLOGIC", "EARTHQUAKE EPICENTER"]
       },
       {
-        "hierarchy": "EMS.NATEVT.GEO.LNDSLD ",
+        "hierarchy": "EMS.NATEVT.GEO.LNDSLD",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -483,7 +483,7 @@
         "name": ["NATURAL EVENTS", "GEOLOGIC", "LANDSLIDE"]
       },
       {
-        "hierarchy": "EMS.NATEVT.GEO.SBSDNC ",
+        "hierarchy": "EMS.NATEVT.GEO.SBSDNC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -491,7 +491,7 @@
         "name": ["NATURAL EVENTS", "GEOLOGIC", "SUBSIDENCE"]
       },
       {
-        "hierarchy": "EMS.NATEVT.GEO.VOLERN ",
+        "hierarchy": "EMS.NATEVT.GEO.VOLERN",
         "code scheme": "W",
         "standard identity": "A",
         "battle dimension": "S",
@@ -499,7 +499,7 @@
         "name": ["NATURAL EVENTS", "GEOLOGIC", "VOLCANIC ERUPTION"]
       },
       {
-        "hierarchy": "EMS.NATEVT.GEO.VLCTHT ",
+        "hierarchy": "EMS.NATEVT.GEO.VLCTHT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -507,7 +507,7 @@
         "name": ["NATURAL EVENTS", "GEOLOGIC", "VOLCANIC THREAT"]
       },
       {
-        "hierarchy": "EMS.NATEVT.HYDMET ",
+        "hierarchy": "EMS.NATEVT.HYDMET",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -516,7 +516,7 @@
         "name": ["NATURAL EVENTS", "HYDRO-METEOROLOGICAL"]
       },
       {
-        "hierarchy": "EMS.NATEVT.HYDMET.DZ ",
+        "hierarchy": "EMS.NATEVT.HYDMET.DZ",
         "code scheme": "W",
         "standard identity": "A",
         "battle dimension": "S",
@@ -524,7 +524,7 @@
         "name": ["NATURAL EVENTS", "HYDRO-METEOROLOGICAL", "DRIZZLE"]
       },
       {
-        "hierarchy": "EMS.NATEVT.HYDMET.DRGHT ",
+        "hierarchy": "EMS.NATEVT.HYDMET.DRGHT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -532,7 +532,7 @@
         "name": ["NATURAL EVENTS", "HYDRO-METEOROLOGICAL", "DROUGHT"]
       },
       {
-        "hierarchy": "EMS.NATEVT.HYDMET.FLD ",
+        "hierarchy": "EMS.NATEVT.HYDMET.FLD",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -540,7 +540,7 @@
         "name": ["NATURAL EVENTS", "HYDRO-METEOROLOGICAL", "FLOOD"]
       },
       {
-        "hierarchy": "EMS.NATEVT.HYDMET.FG ",
+        "hierarchy": "EMS.NATEVT.HYDMET.FG",
         "code scheme": "W",
         "standard identity": "A",
         "battle dimension": "S",
@@ -548,7 +548,7 @@
         "name": ["NATURAL EVENTS", "HYDRO-METEOROLOGICAL", "FOG"]
       },
       {
-        "hierarchy": "EMS.NATEVT.HYDMET.HL ",
+        "hierarchy": "EMS.NATEVT.HYDMET.HL",
         "code scheme": "W",
         "standard identity": "A",
         "battle dimension": "S",
@@ -556,7 +556,7 @@
         "name": ["NATURAL EVENTS", "HYDRO-METEOROLOGICAL", "HAIL"]
       },
       {
-        "hierarchy": "EMS.NATEVT.HYDMET.INV ",
+        "hierarchy": "EMS.NATEVT.HYDMET.INV",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -564,7 +564,7 @@
         "name": ["NATURAL EVENTS", "HYDRO-METEOROLOGICAL", "INVERSION"]
       },
       {
-        "hierarchy": "EMS.NATEVT.HYDMET.RA ",
+        "hierarchy": "EMS.NATEVT.HYDMET.RA",
         "code scheme": "W",
         "standard identity": "A",
         "battle dimension": "S",
@@ -572,7 +572,7 @@
         "name": ["NATURAL EVENTS", "HYDRO-METEOROLOGICAL", "RAIN"]
       },
       {
-        "hierarchy": "EMS.NATEVT.HYDMET.DT/SD ",
+        "hierarchy": "EMS.NATEVT.HYDMET.DT/SD",
         "code scheme": "W",
         "standard identity": "A",
         "battle dimension": "S",
@@ -580,7 +580,7 @@
         "name": ["NATURAL EVENTS", "HYDRO-METEOROLOGICAL", "SAND DUST STORM"]
       },
       {
-        "hierarchy": "EMS.NATEVT.HYDMET.SN ",
+        "hierarchy": "EMS.NATEVT.HYDMET.SN",
         "code scheme": "W",
         "standard identity": "A",
         "battle dimension": "S",
@@ -588,7 +588,7 @@
         "name": ["NATURAL EVENTS", "HYDRO-METEOROLOGICAL", "SNOW"]
       },
       {
-        "hierarchy": "EMS.NATEVT.HYDMET.TSTRM ",
+        "hierarchy": "EMS.NATEVT.HYDMET.TSTRM",
         "code scheme": "W",
         "standard identity": "A",
         "battle dimension": "S",
@@ -596,7 +596,7 @@
         "name": ["NATURAL EVENTS", "HYDRO-METEOROLOGICAL", "THUNDER STORM"]
       },
       {
-        "hierarchy": "EMS.NATEVT.HYDMET.TNDO ",
+        "hierarchy": "EMS.NATEVT.HYDMET.TNDO",
         "code scheme": "W",
         "standard identity": "A",
         "battle dimension": "S",
@@ -604,7 +604,7 @@
         "name": ["NATURAL EVENTS", "HYDRO-METEOROLOGICAL", "TORNADO"]
       },
       {
-        "hierarchy": "EMS.NATEVT.HYDMET.TRPCYC ",
+        "hierarchy": "EMS.NATEVT.HYDMET.TRPCYC",
         "code scheme": "W",
         "standard identity": "A",
         "battle dimension": "S",
@@ -612,7 +612,7 @@
         "name": ["NATURAL EVENTS", "HYDRO-METEOROLOGICAL", "TROPICAL CYCLONE"]
       },
       {
-        "hierarchy": "EMS.NATEVT.HYDMET.TSNMI ",
+        "hierarchy": "EMS.NATEVT.HYDMET.TSNMI",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -620,7 +620,7 @@
         "name": ["NATURAL EVENTS", "HYDRO-METEOROLOGICAL", "TSUNAMI"]
       },
       {
-        "hierarchy": "EMS.NATEVT.INFST ",
+        "hierarchy": "EMS.NATEVT.INFST",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -629,7 +629,7 @@
         "name": ["NATURAL EVENTS", "INFESTATION"]
       },
       {
-        "hierarchy": "EMS.NATEVT.INFST.BIRD ",
+        "hierarchy": "EMS.NATEVT.INFST.BIRD",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -637,7 +637,7 @@
         "name": ["NATURAL EVENTS", "INFESTATION", "BIRD INFESTATION"]
       },
       {
-        "hierarchy": "EMS.NATEVT.INFST.INSCT ",
+        "hierarchy": "EMS.NATEVT.INFST.INSCT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -645,7 +645,7 @@
         "name": ["NATURAL EVENTS", "INFESTATION", "INSECT INFESTATION"]
       },
       {
-        "hierarchy": "EMS.NATEVT.INFST.MICROB ",
+        "hierarchy": "EMS.NATEVT.INFST.MICROB",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -653,7 +653,7 @@
         "name": ["NATURAL EVENTS", "INFESTATION", "MICROBIAL INFESTATION"]
       },
       {
-        "hierarchy": "EMS.NATEVT.INFST.REPT ",
+        "hierarchy": "EMS.NATEVT.INFST.REPT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -661,7 +661,7 @@
         "name": ["NATURAL EVENTS", "INFESTATION", "REPTILE INFESTATION"]
       },
       {
-        "hierarchy": "EMS.NATEVT.INFST.RDNT ",
+        "hierarchy": "EMS.NATEVT.INFST.RDNT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "N",
@@ -674,7 +674,7 @@
     "name": "OPERATIONS",
     "main icon": [
       {
-        "hierarchy": "EMS.OPN ",
+        "hierarchy": "EMS.OPN",
         "code scheme": "E",
         "standard identity": "-",
         "battle dimension": "O",
@@ -683,7 +683,7 @@
         "name": ["OPERATIONS"]
       },
       {
-        "hierarchy": "EMS.OPN.EMMED ",
+        "hierarchy": "EMS.OPN.EMMED",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -691,7 +691,7 @@
         "name": ["OPERATIONS", "EMERGENCY MEDICAL OPERATION"]
       },
       {
-        "hierarchy": "EMS.OPN.EMMED.UNT ",
+        "hierarchy": "EMS.OPN.EMMED.UNT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -703,7 +703,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.EMMED.EQPT ",
+        "hierarchy": "EMS.OPN.EMMED.EQPT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -715,7 +715,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.EMMED.INS ",
+        "hierarchy": "EMS.OPN.EMMED.INS",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -727,7 +727,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.EMMED.EMTLOC ",
+        "hierarchy": "EMS.OPN.EMMED.EMTLOC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -739,7 +739,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.EMMED.AMBLNC ",
+        "hierarchy": "EMS.OPN.EMMED.AMBLNC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -747,7 +747,7 @@
         "name": ["OPERATIONS", "EMERGENCY MEDICAL OPERATION", "AMBULANCE"]
       },
       {
-        "hierarchy": "EMS.OPN.EMMED.MEH ",
+        "hierarchy": "EMS.OPN.EMMED.MEH",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -759,7 +759,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.EMMED.HDF ",
+        "hierarchy": "EMS.OPN.EMMED.HDF",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -771,7 +771,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.EMMED.HSP ",
+        "hierarchy": "EMS.OPN.EMMED.HSP",
         "code scheme": "S",
         "standard identity": "*",
         "battle dimension": "G",
@@ -779,7 +779,7 @@
         "name": ["OPERATIONS", "EMERGENCY MEDICAL OPERATION", "HOSPITAL"]
       },
       {
-        "hierarchy": "EMS.OPN.EMMED.HSPSHP ",
+        "hierarchy": "EMS.OPN.EMMED.HSPSHP",
         "code scheme": "S",
         "standard identity": "*",
         "battle dimension": "S",
@@ -787,7 +787,7 @@
         "name": ["OPERATIONS", "EMERGENCY MEDICAL OPERATION", "HOSPITAL SHIP"]
       },
       {
-        "hierarchy": "EMS.OPN.EMMED.MFOP ",
+        "hierarchy": "EMS.OPN.EMMED.MFOP",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -799,7 +799,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.EMMED.MRG ",
+        "hierarchy": "EMS.OPN.EMMED.MRG",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -807,7 +807,7 @@
         "name": ["OPERATIONS", "EMERGENCY MEDICAL OPERATION", "MORGUE"]
       },
       {
-        "hierarchy": "EMS.OPN.EMMED.RX ",
+        "hierarchy": "EMS.OPN.EMMED.RX",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -815,7 +815,7 @@
         "name": ["OPERATIONS", "EMERGENCY MEDICAL OPERATION", "PHARMACY"]
       },
       {
-        "hierarchy": "EMS.OPN.EMMED.TRIAGE ",
+        "hierarchy": "EMS.OPN.EMMED.TRIAGE",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -823,7 +823,7 @@
         "name": ["OPERATIONS", "EMERGENCY MEDICAL OPERATION", "TRIAGE"]
       },
       {
-        "hierarchy": "EMS.OPN.EMOPN ",
+        "hierarchy": "EMS.OPN.EMOPN",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -831,7 +831,7 @@
         "name": ["OPERATIONS", "EMERGENCY OPERATION"]
       },
       {
-        "hierarchy": "EMS.OPN.EMOPN.UNT ",
+        "hierarchy": "EMS.OPN.EMOPN.UNT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -843,7 +843,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.EMOPN.EQPT ",
+        "hierarchy": "EMS.OPN.EMOPN.EQPT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -855,7 +855,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.EMOPN.INS ",
+        "hierarchy": "EMS.OPN.EMOPN.INS",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -867,7 +867,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.EMOPN.ECEP ",
+        "hierarchy": "EMS.OPN.EMOPN.ECEP",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -879,7 +879,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.EMOPN.EICC ",
+        "hierarchy": "EMS.OPN.EMOPN.EICC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -891,7 +891,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.EMOPN.EOC ",
+        "hierarchy": "EMS.OPN.EMOPN.EOC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -903,7 +903,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.EMOPN.EPIC ",
+        "hierarchy": "EMS.OPN.EMOPN.EPIC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -915,7 +915,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.EMOPN.EMSHLT ",
+        "hierarchy": "EMS.OPN.EMOPN.EMSHLT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -923,7 +923,7 @@
         "name": ["OPERATIONS", "EMERGENCY OPERATION", "EMERGENCY SHELTER"]
       },
       {
-        "hierarchy": "EMS.OPN.EMOPN.ESA ",
+        "hierarchy": "EMS.OPN.EMOPN.ESA",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -931,7 +931,7 @@
         "name": ["OPERATIONS", "EMERGENCY OPERATION", "EMERGENCY STAGING AREA"]
       },
       {
-        "hierarchy": "EMS.OPN.EMOPN.EMTM ",
+        "hierarchy": "EMS.OPN.EMOPN.EMTM",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -939,7 +939,7 @@
         "name": ["OPERATIONS", "EMERGENCY OPERATION", "EMERGENCY TEAM"]
       },
       {
-        "hierarchy": "EMS.OPN.EMOPN.EWDC ",
+        "hierarchy": "EMS.OPN.EMOPN.EWDC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -951,7 +951,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.EMOPN.FDDIST ",
+        "hierarchy": "EMS.OPN.EMOPN.FDDIST",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -963,7 +963,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.FIRFT ",
+        "hierarchy": "EMS.OPN.FIRFT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -971,7 +971,7 @@
         "name": ["OPERATIONS", "FIRE FIGHTING OPERATION"]
       },
       {
-        "hierarchy": "EMS.OPN.FIRFT.FIRFTU ",
+        "hierarchy": "EMS.OPN.FIRFT.FIRFTU",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -983,7 +983,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.FIRFT.FIRFTE ",
+        "hierarchy": "EMS.OPN.FIRFT.FIRFTE",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -995,7 +995,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.FIRFT.FIRHYD ",
+        "hierarchy": "EMS.OPN.FIRFT.FIRHYD",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1003,7 +1003,7 @@
         "name": ["OPERATIONS", "FIRE FIGHTING OPERATION", "FIRE HYDRANT"]
       },
       {
-        "hierarchy": "EMS.OPN.FIRFT.OTHH2O ",
+        "hierarchy": "EMS.OPN.FIRFT.OTHH2O",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1015,7 +1015,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.FIRFT.FIRSTN ",
+        "hierarchy": "EMS.OPN.FIRFT.FIRSTN",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1023,7 +1023,7 @@
         "name": ["OPERATIONS", "FIRE FIGHTING OPERATION", "FIRE STATION"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF ",
+        "hierarchy": "EMS.OPN.LAWENF",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1031,7 +1031,7 @@
         "name": ["OPERATIONS", "LAW ENFORCEMENT OPERATION"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.LAWENU ",
+        "hierarchy": "EMS.OPN.LAWENF.LAWENU",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1043,7 +1043,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.LAWENE ",
+        "hierarchy": "EMS.OPN.LAWENF.LAWENE",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1055,7 +1055,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.LAWENI ",
+        "hierarchy": "EMS.OPN.LAWENF.LAWENI",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1067,7 +1067,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.ATF ",
+        "hierarchy": "EMS.OPN.LAWENF.ATF",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1075,7 +1075,7 @@
         "name": ["OPERATIONS", "LAW ENFORCEMENT OPERATION", "ATF"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.ATF.ATFUNT ",
+        "hierarchy": "EMS.OPN.LAWENF.ATF.ATFUNT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1083,7 +1083,7 @@
         "name": ["OPERATIONS", "LAW ENFORCEMENT OPERATION", "ATF", "ATF UNIT"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.ATF.ATFEQP ",
+        "hierarchy": "EMS.OPN.LAWENF.ATF.ATFEQP",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1096,7 +1096,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.ATF.ATFINS ",
+        "hierarchy": "EMS.OPN.LAWENF.ATF.ATFINS",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1109,7 +1109,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.BDRPT ",
+        "hierarchy": "EMS.OPN.LAWENF.BDRPT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1117,7 +1117,7 @@
         "name": ["OPERATIONS", "LAW ENFORCEMENT OPERATION", "BORDER PATROL"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.BDRPT.BDRPTU ",
+        "hierarchy": "EMS.OPN.LAWENF.BDRPT.BDRPTU",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1130,7 +1130,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.BDRPT.BDRPTE ",
+        "hierarchy": "EMS.OPN.LAWENF.BDRPT.BDRPTE",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1143,7 +1143,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.BDRPT.BDRPTI ",
+        "hierarchy": "EMS.OPN.LAWENF.BDRPT.BDRPTI",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1156,7 +1156,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.CSTM ",
+        "hierarchy": "EMS.OPN.LAWENF.CSTM",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1164,7 +1164,7 @@
         "name": ["OPERATIONS", "LAW ENFORCEMENT OPERATION", "CUSTOMS SERVICE"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.CSTM.CSTMUN ",
+        "hierarchy": "EMS.OPN.LAWENF.CSTM.CSTMUN",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1177,7 +1177,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.CSTM.CSTMEQ ",
+        "hierarchy": "EMS.OPN.LAWENF.CSTM.CSTMEQ",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1190,7 +1190,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.CSTM.CSTMIN ",
+        "hierarchy": "EMS.OPN.LAWENF.CSTM.CSTMIN",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1203,7 +1203,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.DEA ",
+        "hierarchy": "EMS.OPN.LAWENF.DEA",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1211,7 +1211,7 @@
         "name": ["OPERATIONS", "LAW ENFORCEMENT OPERATION", "DEA"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.DEA.DEAUNT ",
+        "hierarchy": "EMS.OPN.LAWENF.DEA.DEAUNT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1219,7 +1219,7 @@
         "name": ["OPERATIONS", "LAW ENFORCEMENT OPERATION", "DEA", "DEA UNIT"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.DEA.DEAEQP ",
+        "hierarchy": "EMS.OPN.LAWENF.DEA.DEAEQP",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1232,7 +1232,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.DEA.DEAINS ",
+        "hierarchy": "EMS.OPN.LAWENF.DEA.DEAINS",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1245,7 +1245,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.DOJ ",
+        "hierarchy": "EMS.OPN.LAWENF.DOJ",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1253,7 +1253,7 @@
         "name": ["OPERATIONS", "LAW ENFORCEMENT OPERATION", "DOJ"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.DOJ.DOJ ",
+        "hierarchy": "EMS.OPN.LAWENF.DOJ.DOJ",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1261,7 +1261,7 @@
         "name": ["OPERATIONS", "LAW ENFORCEMENT OPERATION", "DOJ", "DOJ UNIT"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.DOJ.DOJEQP ",
+        "hierarchy": "EMS.OPN.LAWENF.DOJ.DOJEQP",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1274,7 +1274,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.DOJ.DOJINS ",
+        "hierarchy": "EMS.OPN.LAWENF.DOJ.DOJINS",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1287,7 +1287,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.FBI ",
+        "hierarchy": "EMS.OPN.LAWENF.FBI",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1295,7 +1295,7 @@
         "name": ["OPERATIONS", "LAW ENFORCEMENT OPERATION", "FBI"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.FBI.FBIUNT ",
+        "hierarchy": "EMS.OPN.LAWENF.FBI.FBIUNT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1303,7 +1303,7 @@
         "name": ["OPERATIONS", "LAW ENFORCEMENT OPERATION", "FBI", "FBI UNIT"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.FBI.FBIEQP ",
+        "hierarchy": "EMS.OPN.LAWENF.FBI.FBIEQP",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1316,7 +1316,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.FBI.FBIINS ",
+        "hierarchy": "EMS.OPN.LAWENF.FBI.FBIINS",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1329,7 +1329,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.POL ",
+        "hierarchy": "EMS.OPN.LAWENF.POL",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1337,7 +1337,7 @@
         "name": ["OPERATIONS", "LAW ENFORCEMENT OPERATION", "POLICE"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.POL.POLUNT ",
+        "hierarchy": "EMS.OPN.LAWENF.POL.POLUNT",
         "code scheme": "S",
         "standard identity": "*",
         "battle dimension": "G",
@@ -1350,7 +1350,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.POL.POLEQP ",
+        "hierarchy": "EMS.OPN.LAWENF.POL.POLEQP",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1363,7 +1363,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.POL.POLINS ",
+        "hierarchy": "EMS.OPN.LAWENF.POL.POLINS",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1376,7 +1376,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.PRSN ",
+        "hierarchy": "EMS.OPN.LAWENF.PRSN",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1384,7 +1384,7 @@
         "name": ["OPERATIONS", "LAW ENFORCEMENT OPERATION", "PRISON"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.SECSR ",
+        "hierarchy": "EMS.OPN.LAWENF.SECSR",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1392,7 +1392,7 @@
         "name": ["OPERATIONS", "LAW ENFORCEMENT OPERATION", "SECRET SERVICE"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.SECSR.SECSRU ",
+        "hierarchy": "EMS.OPN.LAWENF.SECSR.SECSRU",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1405,7 +1405,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.SECSR.SECSRE ",
+        "hierarchy": "EMS.OPN.LAWENF.SECSR.SECSRE",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1418,7 +1418,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.SECSR.SECSRI ",
+        "hierarchy": "EMS.OPN.LAWENF.SECSR.SECSRI",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1431,7 +1431,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.TSA ",
+        "hierarchy": "EMS.OPN.LAWENF.TSA",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1439,7 +1439,7 @@
         "name": ["OPERATIONS", "LAW ENFORCEMENT OPERATION", "TSA"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.TSA.TSAUNT ",
+        "hierarchy": "EMS.OPN.LAWENF.TSA.TSAUNT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1447,7 +1447,7 @@
         "name": ["OPERATIONS", "LAW ENFORCEMENT OPERATION", "TSA", "TSA UNIT"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.TSA.TSAEQP ",
+        "hierarchy": "EMS.OPN.LAWENF.TSA.TSAEQP",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1460,7 +1460,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.TSA.TSAINS ",
+        "hierarchy": "EMS.OPN.LAWENF.TSA.TSAINS",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1473,7 +1473,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.CSTGD ",
+        "hierarchy": "EMS.OPN.LAWENF.CSTGD",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1481,7 +1481,7 @@
         "name": ["OPERATIONS", "LAW ENFORCEMENT OPERATION", "COAST GUARD"]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.CSTGD.CSTGDU ",
+        "hierarchy": "EMS.OPN.LAWENF.CSTGD.CSTGDU",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1494,7 +1494,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.CSTGD.CSTGDE ",
+        "hierarchy": "EMS.OPN.LAWENF.CSTGD.CSTGDE",
         "code scheme": "S",
         "standard identity": "*",
         "battle dimension": "S",
@@ -1507,7 +1507,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.CSTGD.CSTGDI ",
+        "hierarchy": "EMS.OPN.LAWENF.CSTGD.CSTGDI",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1520,7 +1520,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.USMAR ",
+        "hierarchy": "EMS.OPN.LAWENF.USMAR",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1532,7 +1532,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.USMAR.USMARU ",
+        "hierarchy": "EMS.OPN.LAWENF.USMAR.USMARU",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1545,7 +1545,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.USMAR.USMARE ",
+        "hierarchy": "EMS.OPN.LAWENF.USMAR.USMARE",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1558,7 +1558,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.LAWENF.USMAR.USMARI ",
+        "hierarchy": "EMS.OPN.LAWENF.USMAR.USMARI",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1571,7 +1571,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.OPN.SNS ",
+        "hierarchy": "EMS.OPN.SNS",
         "code scheme": "S",
         "standard identity": "*",
         "battle dimension": "G",
@@ -1579,7 +1579,7 @@
         "name": ["OPERATIONS", "SENSOR"]
       },
       {
-        "hierarchy": "EMS.OPN.SNS.BIO ",
+        "hierarchy": "EMS.OPN.SNS.BIO",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1587,7 +1587,7 @@
         "name": ["OPERATIONS", "SENSOR", "BIOLOGICAL SENSOR"]
       },
       {
-        "hierarchy": "EMS.OPN.SNS.CML ",
+        "hierarchy": "EMS.OPN.SNS.CML",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1595,7 +1595,7 @@
         "name": ["OPERATIONS", "SENSOR", "CHEMICAL SENSOR"]
       },
       {
-        "hierarchy": "EMS.OPN.SNS.INT ",
+        "hierarchy": "EMS.OPN.SNS.INT",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1603,7 +1603,7 @@
         "name": ["OPERATIONS", "SENSOR", "INTRUSION SENSOR"]
       },
       {
-        "hierarchy": "EMS.OPN.SNS.NUC ",
+        "hierarchy": "EMS.OPN.SNS.NUC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1611,7 +1611,7 @@
         "name": ["OPERATIONS", "SENSOR", "NUCLEAR SENSOR"]
       },
       {
-        "hierarchy": "EMS.OPN.SNS.RAD ",
+        "hierarchy": "EMS.OPN.SNS.RAD",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "O",
@@ -1624,7 +1624,7 @@
     "name": "INFRASTRUCTURE",
     "main icon": [
       {
-        "hierarchy": "EMS.INFSTR ",
+        "hierarchy": "EMS.INFSTR",
         "code scheme": "E",
         "standard identity": "-",
         "battle dimension": "F",
@@ -1633,7 +1633,7 @@
         "name": ["INFRASTRUCTURE"]
       },
       {
-        "hierarchy": "EMS.INFSTR.AGFD ",
+        "hierarchy": "EMS.INFSTR.AGFD",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1641,7 +1641,7 @@
         "name": ["INFRASTRUCTURE", "AGRICULTURE AND FOOD INFRASTRUCTURE"]
       },
       {
-        "hierarchy": "EMS.INFSTR.AGFD.AGLAB ",
+        "hierarchy": "EMS.INFSTR.AGFD.AGLAB",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1653,7 +1653,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.AGFD.AFL ",
+        "hierarchy": "EMS.INFSTR.AGFD.AFL",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1665,7 +1665,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.AGFD.CFDC ",
+        "hierarchy": "EMS.INFSTR.AGFD.CFDC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1677,7 +1677,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.AGFD.FRMRNC ",
+        "hierarchy": "EMS.INFSTR.AGFD.FRMRNC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1689,7 +1689,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.AGFD.FPC ",
+        "hierarchy": "EMS.INFSTR.AGFD.FPC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1701,7 +1701,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.AGFD.FDRTL ",
+        "hierarchy": "EMS.INFSTR.AGFD.FDRTL",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1713,7 +1713,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.AGFD.GRSTR ",
+        "hierarchy": "EMS.INFSTR.AGFD.GRSTR",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1725,7 +1725,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.BFI ",
+        "hierarchy": "EMS.INFSTR.BFI",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1736,7 +1736,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.BFI.ATM ",
+        "hierarchy": "EMS.INFSTR.BFI.ATM",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1748,7 +1748,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.BFI.BANK ",
+        "hierarchy": "EMS.INFSTR.BFI.BANK",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1760,7 +1760,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.BFI.BLSTR ",
+        "hierarchy": "EMS.INFSTR.BFI.BLSTR",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1772,7 +1772,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.BFI.FRB ",
+        "hierarchy": "EMS.INFSTR.BFI.FRB",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1784,7 +1784,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.BFI.FINEX ",
+        "hierarchy": "EMS.INFSTR.BFI.FINEX",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1796,7 +1796,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.BFI.FSO ",
+        "hierarchy": "EMS.INFSTR.BFI.FSO",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1808,7 +1808,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.CMCL ",
+        "hierarchy": "EMS.INFSTR.CMCL",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1816,7 +1816,7 @@
         "name": ["INFRASTRUCTURE", "COMMERCIAL INFRASTRUCTURE"]
       },
       {
-        "hierarchy": "EMS.INFSTR.CMCL.CMLPLN ",
+        "hierarchy": "EMS.INFSTR.CMCL.CMLPLN",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1828,7 +1828,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.CMCL.FIRMAN ",
+        "hierarchy": "EMS.INFSTR.CMCL.FIRMAN",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1840,7 +1840,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.CMCL.FIRRET ",
+        "hierarchy": "EMS.INFSTR.CMCL.FIRRET",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1852,7 +1852,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.CMCL.HZMTPR ",
+        "hierarchy": "EMS.INFSTR.CMCL.HZMTPR",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1864,7 +1864,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.CMCL.HZMTST ",
+        "hierarchy": "EMS.INFSTR.CMCL.HZMTST",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1876,7 +1876,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.CMCL.INDSTE ",
+        "hierarchy": "EMS.INFSTR.CMCL.INDSTE",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1888,7 +1888,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.CMCL.LNDFL ",
+        "hierarchy": "EMS.INFSTR.CMCL.LNDFL",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1896,7 +1896,7 @@
         "name": ["INFRASTRUCTURE", "COMMERCIAL INFRASTRUCTURE", "LANDFILL"]
       },
       {
-        "hierarchy": "EMS.INFSTR.CMCL.RXMFG ",
+        "hierarchy": "EMS.INFSTR.CMCL.RXMFG",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1908,7 +1908,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.CMCL.CHWS ",
+        "hierarchy": "EMS.INFSTR.CMCL.CHWS",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1920,7 +1920,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.CMCL.TXRLIN ",
+        "hierarchy": "EMS.INFSTR.CMCL.TXRLIN",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1932,7 +1932,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.EDFAC ",
+        "hierarchy": "EMS.INFSTR.EDFAC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1940,7 +1940,7 @@
         "name": ["INFRASTRUCTURE", "EDUCATIONAL FACILITIES INFRASTRUCTURE"]
       },
       {
-        "hierarchy": "EMS.INFSTR.EDFAC.COLUNI ",
+        "hierarchy": "EMS.INFSTR.EDFAC.COLUNI",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1952,7 +1952,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.EDFAC.SCHOOL ",
+        "hierarchy": "EMS.INFSTR.EDFAC.SCHOOL",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1964,7 +1964,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.ENGFAC ",
+        "hierarchy": "EMS.INFSTR.ENGFAC",
         "code scheme": "S",
         "standard identity": "*",
         "battle dimension": "G",
@@ -1972,7 +1972,7 @@
         "name": ["INFRASTRUCTURE", "ENERGY FACILITIES INFRASTRUCTURE"]
       },
       {
-        "hierarchy": "EMS.INFSTR.ENGFAC.GENSTA ",
+        "hierarchy": "EMS.INFSTR.ENGFAC.GENSTA",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1984,7 +1984,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.ENGFAC.NTLGAS ",
+        "hierarchy": "EMS.INFSTR.ENGFAC.NTLGAS",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -1996,7 +1996,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.ENGFAC.NUCFAC ",
+        "hierarchy": "EMS.INFSTR.ENGFAC.NUCFAC",
         "code scheme": "S",
         "standard identity": "*",
         "battle dimension": "G",
@@ -2008,7 +2008,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.ENGFAC.PETFAC ",
+        "hierarchy": "EMS.INFSTR.ENGFAC.PETFAC",
         "code scheme": "S",
         "standard identity": "*",
         "battle dimension": "G",
@@ -2020,7 +2020,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.ENGFAC.PROPNE ",
+        "hierarchy": "EMS.INFSTR.ENGFAC.PROPNE",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2032,7 +2032,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.GVTSTE ",
+        "hierarchy": "EMS.INFSTR.GVTSTE",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2040,7 +2040,7 @@
         "name": ["INFRASTRUCTURE", "GOVERNMENT SITE INFRASTRUCTURE"]
       },
       {
-        "hierarchy": "EMS.INFSTR.MIL ",
+        "hierarchy": "EMS.INFSTR.MIL",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2048,7 +2048,7 @@
         "name": ["INFRASTRUCTURE", "MILITARY INFRASTRUCTURE"]
       },
       {
-        "hierarchy": "EMS.INFSTR.MIL.ARMORY ",
+        "hierarchy": "EMS.INFSTR.MIL.ARMORY",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2056,7 +2056,7 @@
         "name": ["INFRASTRUCTURE", "MILITARY INFRASTRUCTURE", "MILITARY ARMORY"]
       },
       {
-        "hierarchy": "EMS.INFSTR.MIL.MILBF ",
+        "hierarchy": "EMS.INFSTR.MIL.MILBF",
         "code scheme": "S",
         "standard identity": "*",
         "battle dimension": "G",
@@ -2064,7 +2064,7 @@
         "name": ["INFRASTRUCTURE", "MILITARY INFRASTRUCTURE", "MILITARY BASE"]
       },
       {
-        "hierarchy": "EMS.INFSTR.PSTSRV ",
+        "hierarchy": "EMS.INFSTR.PSTSRV",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2072,7 +2072,7 @@
         "name": ["INFRASTRUCTURE", "POSTAL SERVICE INFRASTRUCTURE"]
       },
       {
-        "hierarchy": "EMS.INFSTR.PSTSRV.PDC ",
+        "hierarchy": "EMS.INFSTR.PSTSRV.PDC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2084,7 +2084,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.PSTSRV.PO ",
+        "hierarchy": "EMS.INFSTR.PSTSRV.PO",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2096,7 +2096,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.PUBVEN ",
+        "hierarchy": "EMS.INFSTR.PUBVEN",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2104,7 +2104,7 @@
         "name": ["INFRASTRUCTURE", "PUBLIC VENUES INFRASTRUCTURE"]
       },
       {
-        "hierarchy": "EMS.INFSTR.PUBVEN.ENCFAC ",
+        "hierarchy": "EMS.INFSTR.PUBVEN.ENCFAC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2116,7 +2116,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.PUBVEN.OPNFAC ",
+        "hierarchy": "EMS.INFSTR.PUBVEN.OPNFAC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2128,7 +2128,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.PUBVEN.RECARE ",
+        "hierarchy": "EMS.INFSTR.PUBVEN.RECARE",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2140,7 +2140,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.PUBVEN.RELIG ",
+        "hierarchy": "EMS.INFSTR.PUBVEN.RELIG",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2152,7 +2152,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.SPCNDS ",
+        "hierarchy": "EMS.INFSTR.SPCNDS",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2160,7 +2160,7 @@
         "name": ["INFRASTRUCTURE", "SPECIAL NEEDS INFRASTRUCTURE"]
       },
       {
-        "hierarchy": "EMS.INFSTR.SPCNDS.ADLTDC ",
+        "hierarchy": "EMS.INFSTR.SPCNDS.ADLTDC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2172,7 +2172,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.SPCNDS.CHLDDC ",
+        "hierarchy": "EMS.INFSTR.SPCNDS.CHLDDC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2184,7 +2184,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.SPCNDS.ELDERC ",
+        "hierarchy": "EMS.INFSTR.SPCNDS.ELDERC",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2192,7 +2192,7 @@
         "name": ["INFRASTRUCTURE", "SPECIAL NEEDS INFRASTRUCTURE", "ELDER CARE"]
       },
       {
-        "hierarchy": "EMS.INFSTR.TELCOM ",
+        "hierarchy": "EMS.INFSTR.TELCOM",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2200,7 +2200,7 @@
         "name": ["INFRASTRUCTURE", "TELECOMMUNICATIONS INFRASTRUCTURE"]
       },
       {
-        "hierarchy": "EMS.INFSTR.TELCOM.TCF ",
+        "hierarchy": "EMS.INFSTR.TELCOM.TCF",
         "code scheme": "S",
         "standard identity": "*",
         "battle dimension": "G",
@@ -2212,7 +2212,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.TELCOM.TCTWR ",
+        "hierarchy": "EMS.INFSTR.TELCOM.TCTWR",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2224,7 +2224,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.TSP ",
+        "hierarchy": "EMS.INFSTR.TSP",
         "code scheme": "S",
         "standard identity": "*",
         "battle dimension": "G",
@@ -2232,7 +2232,7 @@
         "name": ["INFRASTRUCTURE", "TRANSPORTATION INFRASTRUCTURE"]
       },
       {
-        "hierarchy": "EMS.INFSTR.TSP.ATCF ",
+        "hierarchy": "EMS.INFSTR.TSP.ATCF",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2244,7 +2244,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.TSP.AIRPT ",
+        "hierarchy": "EMS.INFSTR.TSP.AIRPT",
         "code scheme": "S",
         "standard identity": "*",
         "battle dimension": "G",
@@ -2252,7 +2252,7 @@
         "name": ["INFRASTRUCTURE", "TRANSPORTATION INFRASTRUCTURE", "AIRPORT"]
       },
       {
-        "hierarchy": "EMS.INFSTR.TSP.BRG ",
+        "hierarchy": "EMS.INFSTR.TSP.BRG",
         "code scheme": "G",
         "standard identity": "*",
         "battle dimension": "M",
@@ -2260,7 +2260,7 @@
         "name": ["INFRASTRUCTURE", "TRANSPORTATION INFRASTRUCTURE", "BRIDGE"]
       },
       {
-        "hierarchy": "EMS.INFSTR.TSP.BSTN ",
+        "hierarchy": "EMS.INFSTR.TSP.BSTN",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2272,7 +2272,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.TSP.FRYTRM ",
+        "hierarchy": "EMS.INFSTR.TSP.FRYTRM",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2284,7 +2284,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.TSP.HLS ",
+        "hierarchy": "EMS.INFSTR.TSP.HLS",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2296,7 +2296,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.TSP.LCK ",
+        "hierarchy": "EMS.INFSTR.TSP.LCK",
         "code scheme": "W",
         "standard identity": "O",
         "battle dimension": "S",
@@ -2304,7 +2304,7 @@
         "name": ["INFRASTRUCTURE", "TRANSPORTATION INFRASTRUCTURE", "LOCK"]
       },
       {
-        "hierarchy": "EMS.INFSTR.TSP.MAINTF ",
+        "hierarchy": "EMS.INFSTR.TSP.MAINTF",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2316,7 +2316,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.TSP.SP ",
+        "hierarchy": "EMS.INFSTR.TSP.SP",
         "code scheme": "S",
         "standard identity": "*",
         "battle dimension": "G",
@@ -2324,7 +2324,7 @@
         "name": ["INFRASTRUCTURE", "TRANSPORTATION INFRASTRUCTURE", "PORT"]
       },
       {
-        "hierarchy": "EMS.INFSTR.TSP.RLSTN ",
+        "hierarchy": "EMS.INFSTR.TSP.RLSTN",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2336,7 +2336,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.TSP.RSTSTP ",
+        "hierarchy": "EMS.INFSTR.TSP.RSTSTP",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2344,7 +2344,7 @@
         "name": ["INFRASTRUCTURE", "TRANSPORTATION INFRASTRUCTURE", "REST STOP"]
       },
       {
-        "hierarchy": "EMS.INFSTR.TSP.ANCRG ",
+        "hierarchy": "EMS.INFSTR.TSP.ANCRG",
         "code scheme": "W",
         "standard identity": "O",
         "battle dimension": "S",
@@ -2356,7 +2356,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.TSP.TOLLF ",
+        "hierarchy": "EMS.INFSTR.TSP.TOLLF",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2368,7 +2368,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.TSP.TCP ",
+        "hierarchy": "EMS.INFSTR.TSP.TCP",
         "code scheme": "G",
         "standard identity": "*",
         "battle dimension": "S",
@@ -2380,7 +2380,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.TSP.TIF ",
+        "hierarchy": "EMS.INFSTR.TSP.TIF",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2392,7 +2392,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.TSP.TNL ",
+        "hierarchy": "EMS.INFSTR.TSP.TNL",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2400,7 +2400,7 @@
         "name": ["INFRASTRUCTURE", "TRANSPORTATION INFRASTRUCTURE", "TUNNEL"]
       },
       {
-        "hierarchy": "EMS.INFSTR.WS ",
+        "hierarchy": "EMS.INFSTR.WS",
         "code scheme": "S",
         "standard identity": "*",
         "battle dimension": "G",
@@ -2408,7 +2408,7 @@
         "name": ["INFRASTRUCTURE", "WATER SUPPLY INFRASTRUCTURE"]
       },
       {
-        "hierarchy": "EMS.INFSTR.WS.CV ",
+        "hierarchy": "EMS.INFSTR.WS.CV",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2420,7 +2420,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.WS.DAM ",
+        "hierarchy": "EMS.INFSTR.WS.DAM",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2428,7 +2428,7 @@
         "name": ["INFRASTRUCTURE", "WATER SUPPLY INFRASTRUCTURE", "DAM"]
       },
       {
-        "hierarchy": "EMS.INFSTR.WS.DO ",
+        "hierarchy": "EMS.INFSTR.WS.DO",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2440,7 +2440,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.WS.GWWELL ",
+        "hierarchy": "EMS.INFSTR.WS.GWWELL",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2452,7 +2452,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.WS.PMPSTN ",
+        "hierarchy": "EMS.INFSTR.WS.PMPSTN",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2464,7 +2464,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.WS.RSVR ",
+        "hierarchy": "EMS.INFSTR.WS.RSVR",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2472,7 +2472,7 @@
         "name": ["INFRASTRUCTURE", "WATER SUPPLY INFRASTRUCTURE", "RESERVOIR"]
       },
       {
-        "hierarchy": "EMS.INFSTR.WS.STRTWR ",
+        "hierarchy": "EMS.INFSTR.WS.STRTWR",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2484,7 +2484,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.WS.SWI ",
+        "hierarchy": "EMS.INFSTR.WS.SWI",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",
@@ -2496,7 +2496,7 @@
         ]
       },
       {
-        "hierarchy": "EMS.INFSTR.WS.WH20TF ",
+        "hierarchy": "EMS.INFSTR.WS.WH20TF",
         "code scheme": "E",
         "standard identity": "*",
         "battle dimension": "F",

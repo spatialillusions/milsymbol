@@ -127,12 +127,12 @@
     { "modifier": "Surface Warfare", "code": "07", "remarks": "" },
     { "modifier": "Attack", "code": "08", "remarks": "" },
     {
-      "modifier": "Ballistic Missile ",
+      "modifier": "Ballistic Missile",
       "code": "09",
       "remarks": "Used with SUBMARINE entity type only."
     },
     {
-      "modifier": "Guided Missile ",
+      "modifier": "Guided Missile",
       "code": "10",
       "remarks": "Used with SUBMARINE entity type only."
     },
@@ -147,7 +147,7 @@
       "remarks": "Used with SUBMARINE entity type only."
     },
     {
-      "modifier": "Possible Submarine Low 1 ",
+      "modifier": "Possible Submarine Low 1",
       "code": "13",
       "remarks": "Used with SUBMARINE entity type only."
     },
@@ -201,7 +201,7 @@
     { "modifier": "Vehicle", "code": "08", "remarks": "" },
     { "modifier": "Fast", "code": "09", "remarks": "" },
     { "modifier": "Air-Cushioned (US)", "code": "10", "remarks": "" },
-    { "modifier": "Air-Cushioned (NATO) ", "code": "11", "remarks": "" },
+    { "modifier": "Air-Cushioned (NATO)", "code": "11", "remarks": "" },
     { "modifier": "Hydrofoil", "code": "12", "remarks": "" },
     { "modifier": "Autonomous Control", "code": "13", "remarks": "" },
     { "modifier": "Remotely Piloted", "code": "14", "remarks": "" },

@@ -621,7 +621,7 @@
     { "modifier": "Medical", "code": "09", "remarks": "" },
     { "modifier": "Mine Warfare", "code": "10", "remarks": "" },
     {
-      "modifier": "Remote Multi-Mission Vehicle ",
+      "modifier": "Remote Multi-Mission Vehicle",
       "code": "11",
       "remarks": ""
     },
@@ -631,9 +631,9 @@
       "remarks": ""
     },
     { "modifier": "Surface Warfare", "code": "13", "remarks": "" },
-    { "modifier": "Ballistic Missile ", "code": "14", "remarks": "" },
-    { "modifier": "Guided Missile ", "code": "15", "remarks": "" },
-    { "modifier": "Other Guided Missile ", "code": "16", "remarks": "" },
+    { "modifier": "Ballistic Missile", "code": "14", "remarks": "" },
+    { "modifier": "Guided Missile", "code": "15", "remarks": "" },
+    { "modifier": "Other Guided Missile", "code": "16", "remarks": "" },
     { "modifier": "Torpedo", "code": "17", "remarks": "" },
     { "modifier": "Drone-Equipped", "code": "18", "remarks": "" },
     {
@@ -642,7 +642,7 @@
       "remarks": "From MIL-STD-2525."
     },
     {
-      "modifier": "Ballistic Missile Defence, Shooter ",
+      "modifier": "Ballistic Missile Defence, Shooter",
       "code": "20",
       "remarks": "From MIL-STD-2525."
     },
@@ -681,7 +681,7 @@
     { "modifier": "Vehicle", "code": "08", "remarks": "" },
     { "modifier": "Fast", "code": "09", "remarks": "" },
     { "modifier": "Air-Cushioned (US)", "code": "10", "remarks": "" },
-    { "modifier": "Air-Cushioned (NATO) ", "code": "11", "remarks": "" },
+    { "modifier": "Air-Cushioned (NATO)", "code": "11", "remarks": "" },
     { "modifier": "Hydrofoil", "code": "12", "remarks": "" },
     { "modifier": "Autonomous Control", "code": "13", "remarks": "" },
     { "modifier": "Remotely Piloted", "code": "14", "remarks": "" },

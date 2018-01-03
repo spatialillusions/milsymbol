@@ -20,13 +20,13 @@
     },
     {
       "entity": "Command and Control",
-      "entity type": "Civil Affairs ",
+      "entity type": "Civil Affairs",
       "code": "110200",
       "remarks": ""
     },
     {
       "entity": "Command and Control",
-      "entity type": "Civil-Military Cooperation ",
+      "entity type": "Civil-Military Cooperation",
       "code": "110300",
       "remarks": ""
     },
@@ -111,7 +111,7 @@
     {
       "entity": "Command and Control",
       "entity type": "Signal",
-      "entity subtype": "Tactical Satellite  ",
+      "entity subtype": "Tactical Satellite",
       "code": "111004",
       "remarks": ""
     },
@@ -264,14 +264,14 @@
     {
       "entity": "Movement and Manoeuvre",
       "entity type": "Infantry",
-      "entity subtype": "Main Gun System ",
+      "entity subtype": "Main Gun System",
       "code": "121103",
       "remarks": "From MIL-STD-2525."
     },
     {
       "entity": "Movement and Manoeuvre",
       "entity type": "Infantry",
-      "entity subtype": "Motorized ",
+      "entity subtype": "Motorized",
       "code": "121104",
       "remarks": "From MIL-STD-2525."
     },
@@ -551,7 +551,7 @@
     {
       "entity": "Protection",
       "entity type": "Chemical Biological Radiological Nuclear Defence",
-      "entity subtype": "Reconnaissance Equipped ",
+      "entity subtype": "Reconnaissance Equipped",
       "code": "140105",
       "remarks": "From MIL-STD-2525."
     },
@@ -1125,12 +1125,12 @@
       "remarks": "From MIL-STD-2525."
     },
     {
-      "entity": "Naval ",
+      "entity": "Naval",
       "code": "170000",
       "remarks": "For training or hierarchical purposes only"
     },
     {
-      "entity": "Naval ",
+      "entity": "Naval",
       "entity type": "Naval",
       "code": "170100",
       "remarks": ""
@@ -1260,7 +1260,7 @@
       "code": "00",
       "remarks": "From MIL-STD-2525."
     },
-    { "modifier": "Air Mobile/Air Assault ", "code": "01", "remarks": " " },
+    { "modifier": "Air Mobile/Air Assault", "code": "01", "remarks": " " },
     { "modifier": "Area", "code": "02", "remarks": "" },
     { "modifier": "Attack", "code": "03", "remarks": "" },
     { "modifier": "Biological", "code": "04", "remarks": "" },
@@ -1321,7 +1321,7 @@
       "remarks": ""
     },
     { "modifier": "Multiple Rocket Launcher", "code": "41", "remarks": "" },
-    { "modifier": "NATO Medical Role 1 ", "code": "42", "remarks": "" },
+    { "modifier": "NATO Medical Role 1", "code": "42", "remarks": "" },
     { "modifier": "NATO Medical Role 2", "code": "43", "remarks": "" },
     { "modifier": "NATO Medical Role 3", "code": "44", "remarks": "" },
     { "modifier": "NATO Medical Role 4", "code": "45", "remarks": "" },

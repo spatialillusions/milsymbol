@@ -12,13 +12,13 @@
     },
     {
       "entity": "Command and Control",
-      "entity type": "Civil Affairs ",
+      "entity type": "Civil Affairs",
       "code": "110200",
       "remarks": ""
     },
     {
       "entity": "Command and Control",
-      "entity type": "Civil–Military Cooperation ",
+      "entity type": "Civil–Military Cooperation",
       "code": "110300",
       "remarks": ""
     },
@@ -256,14 +256,14 @@
     {
       "entity": "Movement and Maneuver",
       "entity type": "Infantry",
-      "entity subtype": "Main Gun System ",
+      "entity subtype": "Main Gun System",
       "code": "121103",
       "remarks": ""
     },
     {
       "entity": "Movement and Maneuver",
       "entity type": "Infantry",
-      "entity subtype": "Motorized ",
+      "entity subtype": "Motorized",
       "code": "121104",
       "remarks": ""
     },
@@ -835,7 +835,7 @@
     },
     {
       "entity": "Sustainment",
-      "entity type": "Airport of Debarkation/Airport of Embarkation ",
+      "entity type": "Airport of Debarkation/Airport of Embarkation",
       "code": "160300",
       "remarks": ""
     },
@@ -1022,7 +1022,7 @@
     },
     {
       "entity": "Sustainment",
-      "entity type": "Sea Port of Debarkation/Sea Port of Embarkation ",
+      "entity type": "Sea Port of Debarkation/Sea Port of Embarkation",
       "code": "163300",
       "remarks": ""
     },
@@ -1165,9 +1165,9 @@
       "code": "165500",
       "remarks": ""
     },
-    { "entity": "Naval ", "code": "170000", "remarks": "" },
+    { "entity": "Naval", "code": "170000", "remarks": "" },
     {
-      "entity": "Naval ",
+      "entity": "Naval",
       "entity type": "Naval",
       "code": "170100",
       "remarks": ""
@@ -1528,7 +1528,7 @@
       "remarks": ""
     },
     {
-      "modifier": "NATO Medical Role 1 ",
+      "modifier": "NATO Medical Role 1",
       "category": "Capability",
       "code": "42",
       "remarks": ""

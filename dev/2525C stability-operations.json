@@ -3,7 +3,7 @@
     "name": "VIOLENT ACTIVITIES",
     "main icon": [
       {
-        "hierarchy": "STBOPS.VIOATY ",
+        "hierarchy": "STBOPS.VIOATY",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "V",
@@ -12,114 +12,114 @@
         "name": ["VIOLENT ACTIVITIES (DEATH CAUSING) "]
       },
       {
-        "hierarchy": "STBOPS.VIOATY.ASN ",
+        "hierarchy": "STBOPS.VIOATY.ASN",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "V",
         "code": "A-----",
-        "name": ["VIOLENT ACTIVITIES (DEATH CAUSING) ", "ARSON/FIRE "]
+        "name": ["VIOLENT ACTIVITIES (DEATH CAUSING)", "ARSON/FIRE "]
       },
       {
-        "hierarchy": "STBOPS.VIOATY.KILL ",
+        "hierarchy": "STBOPS.VIOATY.KILL",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "V",
         "code": "M-----",
-        "name": ["VIOLENT ACTIVITIES (DEATH CAUSING) ", "KILLING (GENERAL) "]
+        "name": ["VIOLENT ACTIVITIES (DEATH CAUSING)", "KILLING (GENERAL) "]
       },
       {
-        "hierarchy": "STBOPS.VIOATY.KILL.MDR ",
+        "hierarchy": "STBOPS.VIOATY.KILL.MDR",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "V",
         "code": "MA----",
         "name": [
-          "VIOLENT ACTIVITIES (DEATH CAUSING) ",
-          "KILLING (GENERAL) ",
+          "VIOLENT ACTIVITIES (DEATH CAUSING)",
+          "KILLING (GENERAL)",
           "MURDER "
         ]
       },
       {
-        "hierarchy": "STBOPS.VIOATY.KILL.EX ",
+        "hierarchy": "STBOPS.VIOATY.KILL.EX",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "V",
         "code": "MB----",
         "name": [
-          "VIOLENT ACTIVITIES (DEATH CAUSING) ",
-          "KILLING (GENERAL) ",
+          "VIOLENT ACTIVITIES (DEATH CAUSING)",
+          "KILLING (GENERAL)",
           "EXECUTION "
         ]
       },
       {
-        "hierarchy": "STBOPS.VIOATY.KILL.ASS ",
+        "hierarchy": "STBOPS.VIOATY.KILL.ASS",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "V",
         "code": "MC----",
         "name": [
-          "VIOLENT ACTIVITIES (DEATH CAUSING) ",
-          "KILLING (GENERAL) ",
+          "VIOLENT ACTIVITIES (DEATH CAUSING)",
+          "KILLING (GENERAL)",
           "ASSASSINATION "
         ]
       },
       {
-        "hierarchy": "STBOPS.VIOATY.BM ",
+        "hierarchy": "STBOPS.VIOATY.BM",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "V",
         "code": "B-----",
-        "name": ["VIOLENT ACTIVITIES (DEATH CAUSING) ", "BOMB/BOMBING "]
+        "name": ["VIOLENT ACTIVITIES (DEATH CAUSING)", "BOMB/BOMBING "]
       },
       {
-        "hierarchy": "STBOPS.VIOATY.BBY ",
+        "hierarchy": "STBOPS.VIOATY.BBY",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "V",
         "code": "Y-----",
-        "name": ["VIOLENT ACTIVITIES (DEATH CAUSING) ", "BOOBY TRAP "]
+        "name": ["VIOLENT ACTIVITIES (DEATH CAUSING)", "BOOBY TRAP "]
       },
       {
-        "hierarchy": "STBOPS.VIOATY.DBS ",
+        "hierarchy": "STBOPS.VIOATY.DBS",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "V",
         "code": "D-----",
-        "name": ["VIOLENT ACTIVITIES (DEATH CAUSING) ", "DRIVE-BY SHOOTING "]
+        "name": ["VIOLENT ACTIVITIES (DEATH CAUSING)", "DRIVE-BY SHOOTING "]
       },
       {
-        "hierarchy": "STBOPS.VIOATY.SPG ",
+        "hierarchy": "STBOPS.VIOATY.SPG",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "V",
         "code": "S-----",
-        "name": ["VIOLENT ACTIVITIES (DEATH CAUSING) ", "SNIPING "]
+        "name": ["VIOLENT ACTIVITIES (DEATH CAUSING)", "SNIPING "]
       },
       {
-        "hierarchy": "STBOPS.VIOATY.PSNG ",
+        "hierarchy": "STBOPS.VIOATY.PSNG",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "V",
         "code": "P-----",
-        "name": ["VIOLENT ACTIVITIES (DEATH CAUSING) ", "POISONING "]
+        "name": ["VIOLENT ACTIVITIES (DEATH CAUSING)", "POISONING "]
       },
       {
-        "hierarchy": "STBOPS.VIOATY.EXPLSN ",
+        "hierarchy": "STBOPS.VIOATY.EXPLSN",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "V",
         "code": "E-----",
-        "name": ["VIOLENT ACTIVITIES (DEATH CAUSING) ", "EXPLOSION "]
+        "name": ["VIOLENT ACTIVITIES (DEATH CAUSING)", "EXPLOSION "]
       },
       {
-        "hierarchy": "STBOPS.VIOATY.EXPLSN.EXPLSN ",
+        "hierarchy": "STBOPS.VIOATY.EXPLSN.EXPLSN",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "V",
         "code": "EI----",
         "name": [
-          "VIOLENT ACTIVITIES (DEATH CAUSING) ",
-          "EXPLOSION ",
+          "VIOLENT ACTIVITIES (DEATH CAUSING)",
+          "EXPLOSION",
           "IED EXPLOSION "
         ]
       }
@@ -129,7 +129,7 @@
     "name": "LOCATIONS",
     "main icon": [
       {
-        "hierarchy": "STBOPS.LOCAT ",
+        "hierarchy": "STBOPS.LOCAT",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "L",
@@ -138,36 +138,36 @@
         "name": ["LOCATIONS"]
       },
       {
-        "hierarchy": "STBOPS.LOCAT.BLST ",
+        "hierarchy": "STBOPS.LOCAT.BLST",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "L",
         "code": "B-----",
-        "name": ["LOCATIONS ", "BLACK LIST LOCATION "]
+        "name": ["LOCATIONS", "BLACK LIST LOCATION "]
       },
       {
-        "hierarchy": "STBOPS.LOCAT.GLST ",
+        "hierarchy": "STBOPS.LOCAT.GLST",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "L",
         "code": "G-----",
-        "name": ["LOCATIONS ", "GRAY LIST LOCATION "]
+        "name": ["LOCATIONS", "GRAY LIST LOCATION "]
       },
       {
-        "hierarchy": "STBOPS.LOCAT.WLST ",
+        "hierarchy": "STBOPS.LOCAT.WLST",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "L",
         "code": "W-----",
-        "name": ["LOCATIONS ", "WHITE LIST LOCATION "]
+        "name": ["LOCATIONS", "WHITE LIST LOCATION "]
       },
       {
-        "hierarchy": "STBOPS.LOCAT.MASS ",
+        "hierarchy": "STBOPS.LOCAT.MASS",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "L",
         "code": "M-----",
-        "name": ["LOCATIONS ", "MASS GRAVE LOCATION "]
+        "name": ["LOCATIONS", "MASS GRAVE LOCATION "]
       }
     ]
   },
@@ -175,7 +175,7 @@
     "name": "OPERATIONS",
     "main icon": [
       {
-        "hierarchy": "STBOPS.OPN ",
+        "hierarchy": "STBOPS.OPN",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
@@ -184,230 +184,230 @@
         "name": ["OPERATIONS"]
       },
       {
-        "hierarchy": "STBOPS.OPN.PATG ",
+        "hierarchy": "STBOPS.OPN.PATG",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "P-----",
-        "name": ["OPERATIONS ", "PATROLLING "]
+        "name": ["OPERATIONS", "PATROLLING "]
       },
       {
-        "hierarchy": "STBOPS.OPN.RCMT ",
+        "hierarchy": "STBOPS.OPN.RCMT",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "R-----",
         "remarks": "N/A",
-        "name": ["OPERATIONS ", "RECRUITMENT "]
+        "name": ["OPERATIONS", "RECRUITMENT "]
       },
       {
-        "hierarchy": "STBOPS.OPN.RCMT.WLG ",
+        "hierarchy": "STBOPS.OPN.RCMT.WLG",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "RW----",
-        "name": ["OPERATIONS ", "RECRUITMENT ", "RECRUITMENT (WILLING) "]
+        "name": ["OPERATIONS", "RECRUITMENT", "RECRUITMENT (WILLING) "]
       },
       {
-        "hierarchy": "STBOPS.OPN.RCMT.CRCD ",
+        "hierarchy": "STBOPS.OPN.RCMT.CRCD",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "RC----",
         "name": [
-          "OPERATIONS ",
-          "RECRUITMENT ",
+          "OPERATIONS",
+          "RECRUITMENT",
           "RECRUITMENT (COERCED/IMPRESSED) "
         ]
       },
       {
-        "hierarchy": "STBOPS.OPN.DEMO ",
+        "hierarchy": "STBOPS.OPN.DEMO",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "D-----",
-        "name": ["OPERATIONS ", "DEMONSTRATION "]
+        "name": ["OPERATIONS", "DEMONSTRATION "]
       },
       {
-        "hierarchy": "STBOPS.OPN.ML ",
+        "hierarchy": "STBOPS.OPN.ML",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "M-----",
-        "name": ["OPERATIONS ", "MINE LAYING "]
+        "name": ["OPERATIONS", "MINE LAYING "]
       },
       {
-        "hierarchy": "STBOPS.OPN.PSYOP ",
+        "hierarchy": "STBOPS.OPN.PSYOP",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "Y-----",
-        "name": ["OPERATIONS ", "PSYCHOLOGICAL OPERATIONS (PSYOP) "]
+        "name": ["OPERATIONS", "PSYCHOLOGICAL OPERATIONS (PSYOP) "]
       },
       {
-        "hierarchy": "STBOPS.OPN.PSYOP.TARP ",
+        "hierarchy": "STBOPS.OPN.PSYOP.TARP",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "YT----",
         "name": [
-          "OPERATIONS ",
-          "PSYCHOLOGICAL OPERATIONS (PSYOP) ",
+          "OPERATIONS",
+          "PSYCHOLOGICAL OPERATIONS (PSYOP)",
           "PSYOP (TV AND RADIO PROPAGANDA) "
         ]
       },
       {
-        "hierarchy": "STBOPS.OPN.PSYOP.WP ",
+        "hierarchy": "STBOPS.OPN.PSYOP.WP",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "YW----",
         "name": [
-          "OPERATIONS ",
-          "PSYCHOLOGICAL OPERATIONS (PSYOP) ",
+          "OPERATIONS",
+          "PSYCHOLOGICAL OPERATIONS (PSYOP)",
           "PSYOP (WRITTEN PROPAGANDA) "
         ]
       },
       {
-        "hierarchy": "STBOPS.OPN.PSYOP.HTHP ",
+        "hierarchy": "STBOPS.OPN.PSYOP.HTHP",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "YH----",
         "name": [
-          "OPERATIONS ",
-          "PSYCHOLOGICAL OPERATIONS (PSYOP) ",
+          "OPERATIONS",
+          "PSYCHOLOGICAL OPERATIONS (PSYOP)",
           "HOUSE-TO-HOUSE PROPAGANDA "
         ]
       },
       {
-        "hierarchy": "STBOPS.OPN.FRGSRH ",
+        "hierarchy": "STBOPS.OPN.FRGSRH",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "F-----",
-        "name": ["OPERATIONS ", "FORAGING/SEARCHING "]
+        "name": ["OPERATIONS", "FORAGING/SEARCHING "]
       },
       {
-        "hierarchy": "STBOPS.OPN.SPY ",
+        "hierarchy": "STBOPS.OPN.SPY",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "S-----",
-        "name": ["OPERATIONS ", "SPY "]
+        "name": ["OPERATIONS", "SPY "]
       },
       {
-        "hierarchy": "STBOPS.OPN.FDDIST ",
+        "hierarchy": "STBOPS.OPN.FDDIST",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "O-----",
-        "name": ["OPERATIONS ", "FOOD DISTRIBUTION "]
+        "name": ["OPERATIONS", "FOOD DISTRIBUTION "]
       },
       {
-        "hierarchy": "STBOPS.OPN.EXTN ",
+        "hierarchy": "STBOPS.OPN.EXTN",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "E-----",
-        "name": ["OPERATIONS ", "EXTORTION "]
+        "name": ["OPERATIONS", "EXTORTION "]
       },
       {
-        "hierarchy": "STBOPS.OPN.HJKG ",
+        "hierarchy": "STBOPS.OPN.HJKG",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "H-----",
         "remarks": "N/A",
-        "name": ["OPERATIONS ", "HIJACKING "]
+        "name": ["OPERATIONS", "HIJACKING "]
       },
       {
-        "hierarchy": "STBOPS.OPN.HJKG.VEH ",
+        "hierarchy": "STBOPS.OPN.HJKG.VEH",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "HT----",
-        "name": ["OPERATIONS ", "HIJACKING ", "HIJACKING (VEHICLE) "]
+        "name": ["OPERATIONS", "HIJACKING", "HIJACKING (VEHICLE) "]
       },
       {
-        "hierarchy": "STBOPS.OPN.HJKG.APL ",
+        "hierarchy": "STBOPS.OPN.HJKG.APL",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "HA----",
-        "name": ["OPERATIONS ", "HIJACKING ", "HIJACKING (AIRPLANE) "]
+        "name": ["OPERATIONS", "HIJACKING", "HIJACKING (AIRPLANE) "]
       },
       {
-        "hierarchy": "STBOPS.OPN.HJKG.BOAT ",
+        "hierarchy": "STBOPS.OPN.HJKG.BOAT",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "HV----",
-        "name": ["OPERATIONS ", "HIJACKING ", "HIJACKING (BOAT) "]
+        "name": ["OPERATIONS", "HIJACKING", "HIJACKING (BOAT) "]
       },
       {
-        "hierarchy": "STBOPS.OPN.KDNG ",
+        "hierarchy": "STBOPS.OPN.KDNG",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "K-----",
-        "name": ["OPERATIONS ", "KIDNAPPING "]
+        "name": ["OPERATIONS", "KIDNAPPING "]
       },
       {
-        "hierarchy": "STBOPS.OPN.KDNG.ATEMPT ",
+        "hierarchy": "STBOPS.OPN.KDNG.ATEMPT",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "KA----",
-        "name": ["OPERATIONS ", "KIDNAPPING ", "ATTEMPTED "]
+        "name": ["OPERATIONS", "KIDNAPPING", "ATTEMPTED "]
       },
       {
-        "hierarchy": "STBOPS.OPN.ARR ",
+        "hierarchy": "STBOPS.OPN.ARR",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "A-----",
-        "name": ["OPERATIONS ", "ARREST "]
+        "name": ["OPERATIONS", "ARREST "]
       },
       {
-        "hierarchy": "STBOPS.OPN.DGOPN ",
+        "hierarchy": "STBOPS.OPN.DGOPN",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "U-----",
-        "name": ["OPERATIONS ", "DRUG OPERATION "]
+        "name": ["OPERATIONS", "DRUG OPERATION "]
       },
       {
-        "hierarchy": "STBOPS.OPN.CMPLSS ",
+        "hierarchy": "STBOPS.OPN.CMPLSS",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "C-----",
-        "name": ["OPERATIONS ", "COMPOSITE LOSS "]
+        "name": ["OPERATIONS", "COMPOSITE LOSS "]
       },
       {
-        "hierarchy": "STBOPS.OPN.CMPLSS.CBT ",
+        "hierarchy": "STBOPS.OPN.CMPLSS.CBT",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "CA----",
-        "name": ["OPERATIONS ", "COMPOSITE LOSS ", "COMBAT "]
+        "name": ["OPERATIONS", "COMPOSITE LOSS", "COMBAT "]
       },
       {
-        "hierarchy": "STBOPS.OPN.CMPLSS.ACCDNT ",
+        "hierarchy": "STBOPS.OPN.CMPLSS.ACCDNT",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "CB----",
-        "name": ["OPERATIONS ", "COMPOSITE LOSS ", "ACCIDENT "]
+        "name": ["OPERATIONS", "COMPOSITE LOSS", "ACCIDENT "]
       },
       {
-        "hierarchy": "STBOPS.OPN.CMPLSS.OTHER ",
+        "hierarchy": "STBOPS.OPN.CMPLSS.OTHER",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "O",
         "code": "CC----",
-        "name": ["OPERATIONS ", "COMPOSITE LOSS ", "OTHER "]
+        "name": ["OPERATIONS", "COMPOSITE LOSS", "OTHER "]
       }
     ]
   },
@@ -415,7 +415,7 @@
     "name": "ITEMS",
     "main icon": [
       {
-        "hierarchy": "STBOPS.ITM ",
+        "hierarchy": "STBOPS.ITM",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "I",
@@ -424,60 +424,60 @@
         "name": ["ITEMS"]
       },
       {
-        "hierarchy": "STBOPS.ITM.RFG ",
+        "hierarchy": "STBOPS.ITM.RFG",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "I",
         "code": "R-----",
-        "name": ["ITEMS ", "REFUGEES "]
+        "name": ["ITEMS", "REFUGEES "]
       },
       {
-        "hierarchy": "STBOPS.ITM.SAFHSE ",
+        "hierarchy": "STBOPS.ITM.SAFHSE",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "I",
         "code": "S-----",
-        "name": ["ITEMS ", "SAFE HOUSE "]
+        "name": ["ITEMS", "SAFE HOUSE "]
       },
       {
-        "hierarchy": "STBOPS.ITM.GRF ",
+        "hierarchy": "STBOPS.ITM.GRF",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "I",
         "code": "G-----",
-        "name": ["ITEMS ", "GRAFFITI "]
+        "name": ["ITEMS", "GRAFFITI "]
       },
       {
-        "hierarchy": "STBOPS.ITM.VRLRPS ",
+        "hierarchy": "STBOPS.ITM.VRLRPS",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "I",
         "code": "V-----",
-        "name": ["ITEMS ", "VANDALISM/LOOT/RANSACK/PLUNDER/SACK "]
+        "name": ["ITEMS", "VANDALISM/LOOT/RANSACK/PLUNDER/SACK "]
       },
       {
-        "hierarchy": "STBOPS.ITM.KNIVEH ",
+        "hierarchy": "STBOPS.ITM.KNIVEH",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "I",
         "code": "I-----",
-        "name": ["ITEMS ", "KNOWN INSURGENT VEHICLE "]
+        "name": ["ITEMS", "KNOWN INSURGENT VEHICLE "]
       },
       {
-        "hierarchy": "STBOPS.ITM.DGVEH ",
+        "hierarchy": "STBOPS.ITM.DGVEH",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "I",
         "code": "D-----",
-        "name": ["ITEMS ", "DRUG VEHICLE "]
+        "name": ["ITEMS", "DRUG VEHICLE "]
       },
       {
-        "hierarchy": "STBOPS.ITM.ISF ",
+        "hierarchy": "STBOPS.ITM.ISF",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "I",
         "code": "F-----",
-        "name": ["ITEMS ", "INTERNAL SECURITY FORCE "]
+        "name": ["ITEMS", "INTERNAL SECURITY FORCE "]
       }
     ]
   },
@@ -485,7 +485,7 @@
     "name": "INDIVIDUAL",
     "main icon": [
       {
-        "hierarchy": "STBOPS.INDIV ",
+        "hierarchy": "STBOPS.INDIV",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "P",
@@ -493,28 +493,28 @@
         "name": ["INDIVIDUAL"]
       },
       {
-        "hierarchy": "STBOPS.INDIV.LEADER ",
+        "hierarchy": "STBOPS.INDIV.LEADER",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "P",
         "code": "A-----",
-        "name": ["INDIVIDUAL ", "LEADER "]
+        "name": ["INDIVIDUAL", "LEADER "]
       },
       {
-        "hierarchy": "STBOPS.INDIV.TRGTD ",
+        "hierarchy": "STBOPS.INDIV.TRGTD",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "P",
         "code": "B-----",
-        "name": ["INDIVIDUAL ", "TARGETED "]
+        "name": ["INDIVIDUAL", "TARGETED "]
       },
       {
-        "hierarchy": "STBOPS.INDIV.TERRST ",
+        "hierarchy": "STBOPS.INDIV.TERRST",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "P",
         "code": "C-----",
-        "name": ["INDIVIDUAL ", "TERRORIST "]
+        "name": ["INDIVIDUAL", "TERRORIST "]
       }
     ]
   },
@@ -522,7 +522,7 @@
     "name": "NONMILITARY GROUP OR ORGANIZATION",
     "main icon": [
       {
-        "hierarchy": "STBOPS.GRPORG ",
+        "hierarchy": "STBOPS.GRPORG",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "G",
@@ -530,58 +530,58 @@
         "name": ["NONMILITARY GROUP OR ORGANIZATION "]
       },
       {
-        "hierarchy": "STBOPS.GRPORG.DPRE ",
+        "hierarchy": "STBOPS.GRPORG.DPRE",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "G",
         "code": "A-----",
         "name": [
-          "NONMILITARY GROUP OR ORGANIZATION ",
+          "NONMILITARY GROUP OR ORGANIZATION",
           "DISPLACED PERSONS, REFUGEES, AND EVACUEES "
         ]
       },
       {
-        "hierarchy": "STBOPS.GRPORG.NGO ",
+        "hierarchy": "STBOPS.GRPORG.NGO",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "G",
         "code": "B-----",
         "name": [
-          "NONMILITARY GROUP OR ORGANIZATION ",
+          "NONMILITARY GROUP OR ORGANIZATION",
           "NONGOVERNMENTAL ORGANIZATION (NGO) "
         ]
       },
       {
-        "hierarchy": "STBOPS.GRPORG.TERRST ",
+        "hierarchy": "STBOPS.GRPORG.TERRST",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "G",
         "code": "C-----",
-        "name": ["NONMILITARY GROUP OR ORGANIZATION ", "TERRORIST "]
+        "name": ["NONMILITARY GROUP OR ORGANIZATION", "TERRORIST "]
       },
       {
-        "hierarchy": "STBOPS.GRPORG.RELIGS ",
+        "hierarchy": "STBOPS.GRPORG.RELIGS",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "G",
         "code": "D-----",
-        "name": ["NONMILITARY GROUP OR ORGANIZATION ", "RELIGIOUS "]
+        "name": ["NONMILITARY GROUP OR ORGANIZATION", "RELIGIOUS "]
       },
       {
-        "hierarchy": "STBOPS.GRPORG.FNFGHT ",
+        "hierarchy": "STBOPS.GRPORG.FNFGHT",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "G",
         "code": "E-----",
-        "name": ["NONMILITARY GROUP OR ORGANIZATION ", "FOREIGN FIGHTERS "]
+        "name": ["NONMILITARY GROUP OR ORGANIZATION", "FOREIGN FIGHTERS "]
       },
       {
-        "hierarchy": "STBOPS.GRPORG.GANG ",
+        "hierarchy": "STBOPS.GRPORG.GANG",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "G",
         "code": "F-----",
-        "name": ["NONMILITARY GROUP OR ORGANIZATION ", "GANG "]
+        "name": ["NONMILITARY GROUP OR ORGANIZATION", "GANG "]
       }
     ]
   },
@@ -589,7 +589,7 @@
     "name": "RAPE",
     "main icon": [
       {
-        "hierarchy": "STBOPS.RAPE ",
+        "hierarchy": "STBOPS.RAPE",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "R",
@@ -597,12 +597,12 @@
         "name": ["RAPE"]
       },
       {
-        "hierarchy": "STBOPS.RAPE.ATEMPT ",
+        "hierarchy": "STBOPS.RAPE.ATEMPT",
         "code scheme": "O",
         "standard identity": "*",
         "battle dimension": "R",
         "code": "A-----",
-        "name": ["RAPE ", "ATTEMPTED "]
+        "name": ["RAPE", "ATTEMPTED "]
       }
     ]
   }

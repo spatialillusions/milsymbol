@@ -154,13 +154,13 @@
       "remarks": ""
     },
     {
-      "modifier": "Ballistic Missile ",
+      "modifier": "Ballistic Missile",
       "category": "Weapons Capability",
       "code": "09",
       "remarks": ""
     },
     {
-      "modifier": "Guided Missile ",
+      "modifier": "Guided Missile",
       "category": "Weapons Capability",
       "code": "10",
       "remarks": ""
@@ -178,7 +178,7 @@
       "remarks": ""
     },
     {
-      "modifier": "Possible Submarine Low 1 ",
+      "modifier": "Possible Submarine Low 1",
       "category": "Submarine Confidence",
       "code": "13",
       "remarks": ""

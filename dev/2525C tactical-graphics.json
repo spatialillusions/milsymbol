@@ -2542,7 +2542,7 @@
         "hierarchy": "TACGRP.MOBSU.OBST",
         "code scheme": "G",
         "standard identity": "*",
-        "battle dimension": "M ",
+        "battle dimension": "M",
         "code": "O-----",
         "geometry": "",
         "name": ["OBSTACLES"]
@@ -2596,7 +2596,7 @@
         "hierarchy": "TACGRP.MOBSU.OBST.GNL.ORA",
         "code scheme": "G",
         "standard identity": "*",
-        "battle dimension": "M ",
+        "battle dimension": "M",
         "code": "OGR---",
         "geometry": "POLYGON",
         "name": ["OBSTACLES", "GENERAL", "OBSTACLE RESTRICTED AREA"]

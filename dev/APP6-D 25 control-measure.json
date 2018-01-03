@@ -624,7 +624,7 @@
     {
       "entity": "Manoeuvre Areas",
       "entity type": "Axis of Advance",
-      "entity subtype": "Supporting Attack ",
+      "entity subtype": "Supporting Attack",
       "code": "151404",
       "remarks": ""
     },
@@ -1489,7 +1489,7 @@
     {
       "entity": "Maritime Control Points",
       "entity type": "Sonobuoy",
-      "entity subtype": "Low Frequency Analysis and Recording (LOFAR) ",
+      "entity subtype": "Low Frequency Analysis and Recording (LOFAR)",
       "code": "213512",
       "remarks": ""
     },
@@ -2186,7 +2186,7 @@
     {
       "entity": "Fires Areas",
       "entity type": "Area Targets",
-      "entity subtype": "Smoke ",
+      "entity subtype": "Smoke",
       "code": "240806",
       "remarks": ""
     },
@@ -3051,7 +3051,7 @@
     {
       "entity": "Protection Points",
       "entity type": "General Decontamination Point/Site",
-      "entity subtype": "Equipment/Troop  ",
+      "entity subtype": "Equipment/Troop ",
       "code": "281804",
       "remarks": ""
     },

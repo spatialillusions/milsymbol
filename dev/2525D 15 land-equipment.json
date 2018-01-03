@@ -40,14 +40,14 @@
     {
       "entity": "Weapon/Weapon System",
       "entity type": "Machine Gun",
-      "entity subtype": "Light ",
+      "entity subtype": "Light",
       "code": "110201",
       "remarks": ""
     },
     {
       "entity": "Weapon/Weapon System",
       "entity type": "Machine Gun",
-      "entity subtype": "Medium ",
+      "entity subtype": "Medium",
       "code": "110202",
       "remarks": ""
     },
@@ -738,7 +738,7 @@
     {
       "entity": "Engineer Vehicles and Equipment",
       "entity type": "Mine Clearing Equipment",
-      "entity subtype": "Medium Capability Equipment ",
+      "entity subtype": "Medium Capability Equipment",
       "code": "130904",
       "remarks": ""
     },

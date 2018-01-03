@@ -864,7 +864,7 @@
   "modifier 1": [
     { "modifier": "Unspecified", "code": "00", "remarks": "" },
     { "modifier": "Biological", "code": "01", "remarks": "" },
-    { "modifier": "Chemical ", "code": "02", "remarks": "" },
+    { "modifier": "Chemical", "code": "02", "remarks": "" },
     { "modifier": "Nuclear", "code": "03", "remarks": "From MIL-STD-2525." },
     {
       "modifier": "Radiological",
@@ -902,7 +902,7 @@
       "remarks": "Used with Electric Power"
     },
     {
-      "modifier": "Civilian ",
+      "modifier": "Civilian",
       "code": "11",
       "remarks": "From MIL-STD-2525."
     },
@@ -941,7 +941,7 @@
   "modifier 2": [
     { "modifier": "Unspecified", "code": "00", "remarks": "" },
     { "modifier": "Biological", "code": "01", "remarks": "Used with CRBN" },
-    { "modifier": "Chemical ", "code": "02", "remarks": "Used with CRBN" },
+    { "modifier": "Chemical", "code": "02", "remarks": "Used with CRBN" },
     { "modifier": "Nuclear", "code": "03", "remarks": "Used with CRBN" },
     { "modifier": "Radiological", "code": "04", "remarks": "Used with CRBN" },
     {

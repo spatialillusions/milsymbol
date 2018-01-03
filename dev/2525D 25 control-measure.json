@@ -606,7 +606,7 @@
     {
       "entity": "Maneuver Areas",
       "entity type": "Axis of Advance",
-      "entity subtype": "Supporting Attack ",
+      "entity subtype": "Supporting Attack",
       "geometry": "Line",
       "code": "151404",
       "remarks": ""
@@ -2352,7 +2352,7 @@
     {
       "entity": "Fires Areas",
       "entity type": "Area Targets",
-      "entity subtype": "Smoke ",
+      "entity subtype": "Smoke",
       "geometry": "Area",
       "code": "240806",
       "remarks": ""
@@ -4238,25 +4238,25 @@
     },
     { "modifier": "Unspecified", "category": "", "code": "00", "remarks": "" },
     {
-      "modifier": "Wheeled limited cross country ",
+      "modifier": "Wheeled limited cross country",
       "category": "Mobility",
       "code": "01",
       "remarks": ""
     },
     {
-      "modifier": "Wheeled cross country ",
+      "modifier": "Wheeled cross country",
       "category": "Mobility",
       "code": "02",
       "remarks": ""
     },
     {
-      "modifier": "Tracked ",
+      "modifier": "Tracked",
       "category": "Mobility",
       "code": "03",
       "remarks": ""
     },
     {
-      "modifier": "Wheeled and tracked combination ",
+      "modifier": "Wheeled and tracked combination",
       "category": "Mobility",
       "code": "04",
       "remarks": ""

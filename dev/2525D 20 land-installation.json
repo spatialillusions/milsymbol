@@ -862,7 +862,7 @@
       "remarks": ""
     },
     {
-      "modifier": "Chemical ",
+      "modifier": "Chemical",
       "category": "CBRN Type",
       "code": "02",
       "remarks": ""
@@ -916,7 +916,7 @@
       "remarks": ""
     },
     {
-      "modifier": "Civilian ",
+      "modifier": "Civilian",
       "category": "Operation",
       "code": "11",
       "remarks": ""

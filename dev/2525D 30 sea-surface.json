@@ -679,19 +679,19 @@
       "remarks": ""
     },
     {
-      "modifier": "Ballistic Missile ",
+      "modifier": "Ballistic Missile",
       "category": "Weapons Capability",
       "code": "14",
       "remarks": ""
     },
     {
-      "modifier": "Guided Missile ",
+      "modifier": "Guided Missile",
       "category": "Weapons Capability",
       "code": "15",
       "remarks": ""
     },
     {
-      "modifier": "Other Guided Missile ",
+      "modifier": "Other Guided Missile",
       "category": "Weapons Capability",
       "code": "16",
       "remarks": ""
@@ -715,7 +715,7 @@
       "remarks": ""
     },
     {
-      "modifier": "Ballistic Missile Defense, Shooter ",
+      "modifier": "Ballistic Missile Defense, Shooter",
       "category": "Mission Area",
       "code": "20",
       "remarks": ""

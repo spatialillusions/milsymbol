@@ -48,14 +48,14 @@
     {
       "entity": "Weapons/Weapons System",
       "entity type": "Machine Gun",
-      "entity subtype": "Light ",
+      "entity subtype": "Light",
       "code": "110201",
       "remarks": ""
     },
     {
       "entity": "Weapons/Weapons System",
       "entity type": "Machine Gun",
-      "entity subtype": "Medium ",
+      "entity subtype": "Medium",
       "code": "110202",
       "remarks": ""
     },

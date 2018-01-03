@@ -8,6 +8,7 @@
         "standard identity": "*",
         "battle dimension": "T",
         "code": "------",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["TASKS"]
       },
@@ -17,6 +18,7 @@
         "standard identity": "*",
         "battle dimension": "T",
         "code": "G-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["TASKS", "TASK GRAPHICSMULTIPOINT"]
       },
@@ -336,6 +338,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "M-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["CONTROL MEASURES", "MANOEUVRE GRAPHICS"]
       },
@@ -345,6 +348,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MG----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -358,6 +362,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MGP---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -372,6 +377,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MGPF--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -450,6 +456,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MGL---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -464,6 +471,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MGLB--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -479,6 +487,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MGLBG-",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -735,6 +744,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MGA---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -749,6 +759,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MGAU--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -764,6 +775,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MGAUA-",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -915,6 +927,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MGAS--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -1074,6 +1087,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MA----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -1087,6 +1101,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MAA---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -1161,6 +1176,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MAL---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -1175,6 +1191,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MALC--",
+        "remarks": "N/A",
         "geometry": "LINE",
         "name": [
           "CONTROL MEASURES",
@@ -1280,6 +1297,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MAV---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -1401,6 +1419,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MD----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["CONTROL MEASURES", "MANOEUVRE GRAPHICS", "DECEPTION GRAPHICS"]
       },
@@ -1494,6 +1513,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MM----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -1507,6 +1527,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MMP---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -1536,6 +1557,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MMPB--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -1599,6 +1621,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MMPS--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -1773,6 +1796,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MMD---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -1849,6 +1873,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MMA---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -1878,6 +1903,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MO----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -1891,6 +1917,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MOP---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -1920,6 +1947,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MOL---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -1934,6 +1962,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MOLA--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -2077,6 +2106,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MOLD--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -2341,6 +2371,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MOO---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -2370,6 +2401,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MOOT--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -2508,6 +2540,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MS----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -2521,6 +2554,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MSG---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -2535,6 +2569,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MSGE--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -2597,6 +2632,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MSL---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -2671,6 +2707,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "MSA---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -2730,6 +2767,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "B-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["CONTROL MEASURES", "MOBILITY/ SURVIVABILITY"]
       },
@@ -2739,6 +2777,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "BO----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["CONTROL MEASURES", "MOBILITY/ SURVIVABILITY", "OBSTACLES"]
       },
@@ -2748,6 +2787,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "BOG---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -2821,6 +2861,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "BOAT--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -2909,6 +2950,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "BOAM--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -3028,6 +3070,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "BOAI--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -3191,6 +3234,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "BOAE--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -3308,6 +3352,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "BOAR--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -3396,6 +3441,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "BOAW--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -3545,6 +3591,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "BY----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -3558,6 +3605,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "BYO---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -3617,6 +3665,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "BYC---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -3751,6 +3800,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "BS----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["CONTROL MEASURES", "MOBILITY/ SURVIVABILITY", "SURVIVABILITY"]
       },
@@ -3858,6 +3908,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "BW----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -4011,6 +4062,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "BWD---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -4174,6 +4226,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "F-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["CONTROL MEASURES", "FIRE SUPPORT GRAPHICS"]
       },
@@ -4183,6 +4236,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "FS----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -4196,6 +4250,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "FST---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -4254,6 +4309,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "FL----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -4324,6 +4380,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "FLK---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -4411,6 +4468,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "FA----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["CONTROL MEASURES", "FIRE SUPPORT GRAPHICS", "AREAS"]
       },
@@ -4462,6 +4520,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "FAR---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -4534,6 +4593,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "FAZ---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -4648,6 +4708,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "S-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["CONTROL MEASURES", "COMBAT SERVICE SUPPORT"]
       },
@@ -4657,6 +4718,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "SP----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["CONTROL MEASURES", "COMBAT SERVICE SUPPORT", "POINTS"]
       },
@@ -4848,6 +4910,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "SPQ---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -5027,6 +5090,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "SPM---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -5071,6 +5135,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "SL----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["CONTROL MEASURES", "COMBAT SERVICE SUPPORT", "LINES"]
       },
@@ -5080,6 +5145,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "SLC---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -5124,6 +5190,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "SLR---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -5213,6 +5280,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "SA----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["CONTROL MEASURES", "COMBAT SERVICE SUPPORT", "AREA"]
       },
@@ -5278,6 +5346,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "SAT---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -5351,6 +5420,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "O-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["CONTROL MEASURES", "COMMAND AND CONTROL"]
       },
@@ -5369,6 +5439,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "OXE---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -5413,6 +5484,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "OXU---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -5487,6 +5559,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "OXW---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -5962,6 +6035,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "OXST--",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -6142,6 +6216,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "OXA---",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "CONTROL MEASURES",
@@ -6489,6 +6564,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "OL----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["CONTROL MEASURES", "COMMAND AND CONTROL", "LINE"]
       },
@@ -6526,6 +6602,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "OA----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["CONTROL MEASURES", "COMMAND AND CONTROL", "AREA"]
       },
@@ -6554,6 +6631,7 @@
         "standard identity": "*",
         "battle dimension": "O",
         "code": "------",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["NON ARTICLE 5 CRISIS RESPONSE OPERATIONS (NA5CRO)"]
       },
@@ -6563,6 +6641,7 @@
         "standard identity": "H",
         "battle dimension": "O",
         "code": "V-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "NON ARTICLE 5 CRISIS RESPONSE OPERATIONS (NA5CRO)",
@@ -6822,6 +6901,7 @@
         "standard identity": "H",
         "battle dimension": "O",
         "code": "L-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "NON ARTICLE 5 CRISIS RESPONSE OPERATIONS (NA5CRO)",
@@ -6873,6 +6953,7 @@
         "standard identity": "H",
         "battle dimension": "O",
         "code": "P-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "NON ARTICLE 5 CRISIS RESPONSE OPERATIONS (NA5CRO)",
@@ -7125,6 +7206,7 @@
         "standard identity": "H",
         "battle dimension": "O",
         "code": "PJ----",
+        "remarks": "N/A",
         "geometry": "",
         "name": [
           "NON ARTICLE 5 CRISIS RESPONSE OPERATIONS (NA5CRO)",
@@ -7219,6 +7301,7 @@
         "standard identity": "*",
         "battle dimension": "O",
         "code": "I-----",
+        "remarks": "N/A",
         "geometry": "",
         "name": ["NON ARTICLE 5 CRISIS RESPONSE OPERATIONS (NA5CRO)", "ITEMS"]
       },
