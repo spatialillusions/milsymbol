@@ -1,6 +1,6 @@
 {
   "TSK": {
-    "name": "",
+    "name": "TASKS",
     "main icon": [
       {
         "hierarchy": "TACGRP.TSK.BLK",
@@ -275,7 +275,7 @@
     ]
   },
   "C2GM": {
-    "name": "",
+    "name": "COMMAND AND CONTROL AND GENERAL MANEUVER",
     "main icon": [
       {
         "hierarchy": "TACGRP.C2GM",
@@ -2527,7 +2527,7 @@
     ]
   },
   "MOBSU": {
-    "name": "",
+    "name": "MOBILITY/SURVIVABILITY",
     "main icon": [
       {
         "hierarchy": "TACGRP.MOBSU",
@@ -3601,7 +3601,7 @@
     ]
   },
   "FSUPP": {
-    "name": "",
+    "name": "FIRE SUPPORT",
     "main icon": [
       {
         "hierarchy": "TACGRP.FSUPP",
@@ -4787,7 +4787,7 @@
     ]
   },
   "CSS": {
-    "name": "",
+    "name": "COMBAT SERVICE SUPPORT",
     "main icon": [
       {
         "hierarchy": "TACGRP.CSS",
@@ -5237,7 +5237,7 @@
     ]
   },
   "OTH": {
-    "name": "",
+    "name": "OTHER",
     "main icon": [
       {
         "hierarchy": "TACGRP.OTH",

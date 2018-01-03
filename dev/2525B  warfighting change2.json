@@ -1,6 +1,6 @@
 {
   "SPC": {
-    "name": "",
+    "name": "SPACE",
     "main icon": [
       {
         "hierarchy": "WAR.SPC",
@@ -45,7 +45,7 @@
     ]
   },
   "AIRTRK": {
-    "name": "",
+    "name": "AIR",
     "main icon": [
       {
         "hierarchy": "WAR.AIRTRK",
@@ -1219,7 +1219,7 @@
     ]
   },
   "GRDTRK": {
-    "name": "",
+    "name": "GROUND",
     "main icon": [
       {
         "hierarchy": "WAR.GRDTRK",
@@ -9332,7 +9332,7 @@
     ]
   },
   "SSUF": {
-    "name": "",
+    "name": "SEA SURFACE",
     "main icon": [
       {
         "hierarchy": "WAR.SSUF",
@@ -10044,7 +10044,7 @@
     ]
   },
   "SBSUF": {
-    "name": "",
+    "name": "SUBSURFACE",
     "main icon": [
       {
         "hierarchy": "WAR.SBSUF",
@@ -10484,7 +10484,7 @@
     ]
   },
   "SOFUNT": {
-    "name": "",
+    "name": "SPECIAL OPERATIONS FORCES (SOF)",
     "main icon": [
       {
         "hierarchy": "WAR.SOFUNT",

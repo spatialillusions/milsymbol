@@ -1,6 +1,6 @@
 {
-  "INCDNT ": {
-    "name": "",
+  "INCDNT": {
+    "name": "INCIDENT",
     "main icon": [
       {
         "hierarchy": "EMS.INCDNT ",
@@ -9,12 +9,7 @@
         "battle dimension": "I",
         "code": "------",
         "name": ["INCIDENT"]
-      }
-    ]
-  },
-  "INCDNT": {
-    "name": "",
-    "main icon": [
+      },
       {
         "hierarchy": "EMS.INCDNT.CVDIS ",
         "code scheme": "E",
@@ -433,8 +428,8 @@
       }
     ]
   },
-  "NATEVT ": {
-    "name": "",
+  "NATEVT": {
+    "name": "NATURAL EVENTS",
     "main icon": [
       {
         "hierarchy": "EMS.NATEVT ",
@@ -443,12 +438,7 @@
         "battle dimension": "N",
         "code": "------",
         "name": ["NATURAL EVENTS"]
-      }
-    ]
-  },
-  "NATEVT": {
-    "name": "",
-    "main icon": [
+      },
       {
         "hierarchy": "EMS.NATEVT.GEO ",
         "code scheme": "E",
@@ -675,8 +665,8 @@
       }
     ]
   },
-  "OPN ": {
-    "name": "",
+  "OPN": {
+    "name": "OPERATIONS",
     "main icon": [
       {
         "hierarchy": "EMS.OPN ",
@@ -685,12 +675,7 @@
         "battle dimension": "O",
         "code": "------",
         "name": ["OPERATIONS"]
-      }
-    ]
-  },
-  "OPN": {
-    "name": "",
-    "main icon": [
+      },
       {
         "hierarchy": "EMS.OPN.EMMED ",
         "code scheme": "E",
@@ -1629,8 +1614,8 @@
       }
     ]
   },
-  "INFSTR ": {
-    "name": "",
+  "INFSTR": {
+    "name": "INFRASTRUCTURE",
     "main icon": [
       {
         "hierarchy": "EMS.INFSTR ",
@@ -1639,12 +1624,7 @@
         "battle dimension": "F",
         "code": "------",
         "name": ["INFRASTRUCTURE"]
-      }
-    ]
-  },
-  "INFSTR": {
-    "name": "",
-    "main icon": [
+      },
       {
         "hierarchy": "EMS.INFSTR.AGFD ",
         "code scheme": "E",

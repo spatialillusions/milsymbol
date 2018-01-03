@@ -1,6 +1,6 @@
 {
   "VIOATY": {
-    "name": "",
+    "name": "VIOLENT ACTIVITIES",
     "main icon": [
       {
         "hierarchy": "MOOTW.VIOATY",
@@ -105,7 +105,7 @@
     ]
   },
   "LOCAT": {
-    "name": "",
+    "name": "LOCATIONS",
     "main icon": [
       {
         "hierarchy": "MOOTW.LOCAT",
@@ -150,7 +150,7 @@
     ]
   },
   "OPN": {
-    "name": "",
+    "name": "OPERATIONS",
     "main icon": [
       {
         "hierarchy": "MOOTW.OPN",
@@ -343,7 +343,7 @@
     ]
   },
   "ITM": {
-    "name": "",
+    "name": "ITEMS",
     "main icon": [
       {
         "hierarchy": "MOOTW.ITM",

@@ -1,6 +1,6 @@
 {
   "VIOATY": {
-    "name": "",
+    "name": "VIOLENT ACTIVITIES",
     "main icon": [
       {
         "hierarchy": "STBOPS.VIOATY ",
@@ -125,7 +125,7 @@
     ]
   },
   "LOCAT ": {
-    "name": "",
+    "name": "LOCATIONS",
     "main icon": [
       {
         "hierarchy": "STBOPS.LOCAT ",
@@ -133,13 +133,8 @@
         "standard identity": "*",
         "battle dimension": "L",
         "code": "------",
-        "name": ["LOCATIONS "]
-      }
-    ]
-  },
-  "LOCAT": {
-    "name": "",
-    "main icon": [
+        "name": ["LOCATIONS"]
+      },
       {
         "hierarchy": "STBOPS.LOCAT.BLST ",
         "code scheme": "O",
@@ -174,8 +169,8 @@
       }
     ]
   },
-  "OPN ": {
-    "name": "",
+  "OPN": {
+    "name": "OPERATIONS",
     "main icon": [
       {
         "hierarchy": "STBOPS.OPN ",
@@ -183,13 +178,8 @@
         "standard identity": "*",
         "battle dimension": "O",
         "code": "------",
-        "name": ["OPERATIONS "]
-      }
-    ]
-  },
-  "OPN": {
-    "name": "",
-    "main icon": [
+        "name": ["OPERATIONS"]
+      },
       {
         "hierarchy": "STBOPS.OPN.PATG ",
         "code scheme": "O",
@@ -416,8 +406,8 @@
       }
     ]
   },
-  "ITM ": {
-    "name": "",
+  "ITM": {
+    "name": "ITEMS",
     "main icon": [
       {
         "hierarchy": "STBOPS.ITM ",
@@ -425,13 +415,8 @@
         "standard identity": "*",
         "battle dimension": "I",
         "code": "------",
-        "name": ["ITEMS "]
-      }
-    ]
-  },
-  "ITM": {
-    "name": "",
-    "main icon": [
+        "name": ["ITEMS"]
+      },
       {
         "hierarchy": "STBOPS.ITM.RFG ",
         "code scheme": "O",
@@ -490,8 +475,8 @@
       }
     ]
   },
-  "INDIV ": {
-    "name": "",
+  "INDIV": {
+    "name": "INDIVIDUAL",
     "main icon": [
       {
         "hierarchy": "STBOPS.INDIV ",
@@ -499,13 +484,8 @@
         "standard identity": "*",
         "battle dimension": "P",
         "code": "------",
-        "name": ["INDIVIDUAL "]
-      }
-    ]
-  },
-  "INDIV": {
-    "name": "",
-    "main icon": [
+        "name": ["INDIVIDUAL"]
+      },
       {
         "hierarchy": "STBOPS.INDIV.LEADER ",
         "code scheme": "O",
@@ -532,8 +512,8 @@
       }
     ]
   },
-  "GRPORG ": {
-    "name": "",
+  "GRPORG": {
+    "name": "NONMILITARY GROUP OR ORGANIZATION",
     "main icon": [
       {
         "hierarchy": "STBOPS.GRPORG ",
@@ -542,12 +522,7 @@
         "battle dimension": "G",
         "code": "------",
         "name": ["NONMILITARY GROUP OR ORGANIZATION "]
-      }
-    ]
-  },
-  "GRPORG": {
-    "name": "",
-    "main icon": [
+      },
       {
         "hierarchy": "STBOPS.GRPORG.DPRE ",
         "code scheme": "O",
@@ -604,8 +579,8 @@
       }
     ]
   },
-  "RAPE ": {
-    "name": "",
+  "RAPE": {
+    "name": "RAPE",
     "main icon": [
       {
         "hierarchy": "STBOPS.RAPE ",
@@ -613,13 +588,8 @@
         "standard identity": "*",
         "battle dimension": "R",
         "code": "------",
-        "name": ["RAPE "]
-      }
-    ]
-  },
-  "RAPE": {
-    "name": "",
-    "main icon": [
+        "name": ["RAPE"]
+      },
       {
         "hierarchy": "STBOPS.RAPE.ATEMPT ",
         "code scheme": "O",

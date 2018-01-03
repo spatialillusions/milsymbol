@@ -1,6 +1,6 @@
 {
   "TSK": {
-    "name": "",
+    "name": "TASKS",
     "main icon": [
       {
         "hierarchy": "2.X.1",
@@ -328,7 +328,7 @@
     ]
   },
   "C2GM": {
-    "name": "",
+    "name": "CONTROL MEASURES",
     "main icon": [
       {
         "hierarchy": "2.X.2.1",
@@ -6545,8 +6545,8 @@
       }
     ]
   },
-  "STBOPS": {
-    "name": "",
+  "NA5CRO": {
+    "name": "NON ARTICLE 5 CRISIS RESPONSE OPERATIONS",
     "main icon": [
       {
         "hierarchy": "2.X.3",

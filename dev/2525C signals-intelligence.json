@@ -1,6 +1,6 @@
 {
   "SPC": {
-    "name": "",
+    "name": "SPACE",
     "main icon": [
       {
         "hierarchy": "SIGINT.SPC ",
@@ -130,8 +130,8 @@
       }
     ]
   },
-  "AIRTRK ": {
-    "name": "",
+  "AIRTRK": {
+    "name": "AIR",
     "main icon": [
       {
         "hierarchy": "SIGINT.AIRTRK ",
@@ -140,12 +140,7 @@
         "battle dimension": "A",
         "code": "------",
         "name": ["AIR TRACK "]
-      }
-    ]
-  },
-  "AIRTRK": {
-    "name": "",
-    "main icon": [
+      },
       {
         "hierarchy": "SIGINT.AIRTRK.SIGINC ",
         "code scheme": "I",
@@ -412,8 +407,8 @@
       }
     ]
   },
-  "GRDTRK ": {
-    "name": "",
+  "GRDTRK": {
+    "name": "GROUND",
     "main icon": [
       {
         "hierarchy": "SIGINT.GRDTRK ",
@@ -422,12 +417,7 @@
         "battle dimension": "G",
         "code": "------",
         "name": ["GROUND TRACK "]
-      }
-    ]
-  },
-  "GRDTRK": {
-    "name": "",
-    "main icon": [
+      },
       {
         "hierarchy": "SIGINT.GRDTRK.SIGINC ",
         "code scheme": "I",
@@ -774,8 +764,8 @@
       }
     ]
   },
-  "SSUF ": {
-    "name": "",
+  "SSUF": {
+    "name": "SEA SURFACE",
     "main icon": [
       {
         "hierarchy": "SIGINT.SSUF ",
@@ -784,12 +774,7 @@
         "battle dimension": "S",
         "code": "------",
         "name": ["SEA SURFACE TRACK "]
-      }
-    ]
-  },
-  "SSUF": {
-    "name": "",
-    "main icon": [
+      },
       {
         "hierarchy": "SIGINT.SSUF.SIGINC ",
         "code scheme": "I",
@@ -1115,8 +1100,8 @@
       }
     ]
   },
-  "SBSUF ": {
-    "name": "",
+  "SBSUF": {
+    "name": "SUBSURFACE",
     "main icon": [
       {
         "hierarchy": "SIGINT.SBSUF ",
@@ -1125,12 +1110,7 @@
         "battle dimension": "U",
         "code": "------",
         "name": ["SUBSURFACE TRACK "]
-      }
-    ]
-  },
-  "SBSUF": {
-    "name": "",
-    "main icon": [
+      },
       {
         "hierarchy": "SIGINT.SBSUF.SIGINC ",
         "code scheme": "I",

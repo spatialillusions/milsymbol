@@ -1,6 +1,6 @@
 {
   "SPC": {
-    "name": "",
+    "name": "SPACE",
     "main icon": [
       {
         "hierarchy": "1.X.1 ",
@@ -37,7 +37,7 @@
     ]
   },
   "AIRTRK": {
-    "name": "",
+    "name": "AIR",
     "main icon": [
       {
         "hierarchy": "1.X.2 ",
@@ -814,7 +814,7 @@
     ]
   },
   "GRDTRK": {
-    "name": "",
+    "name": "GROUND",
     "main icon": [
       {
         "hierarchy": "1.X.3 ",
@@ -8220,7 +8220,7 @@
     ]
   },
   "SSUF": {
-    "name": "",
+    "name": "SEA SURFACE",
     "main icon": [
       {
         "hierarchy": "1.X.4 ",
@@ -8848,7 +8848,7 @@
     ]
   },
   "SBSUF": {
-    "name": "",
+    "name": "SUBSURFACE",
     "main icon": [
       {
         "hierarchy": "1.X.5 ",
@@ -9141,7 +9141,7 @@
     ]
   },
   "SOFUNT": {
-    "name": "",
+    "name": "SPECIAL OPERATIONS FORCE (SOF)",
     "main icon": [
       {
         "hierarchy": "1.X.6 ",
