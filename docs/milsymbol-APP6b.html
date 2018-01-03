@@ -56,13 +56,15 @@
     .index-h3 {
       margin-left: 15px;
     }
+
+    .na {
+      color: #999;
+    }
   </style>
   <script src="../dist/milsymbol.development.js"></script>
-  <script src="app6b.js"></script>
 
   <script>
     var size = 70;
-    ms.setStandard("APP6");
 
     /*
         ms.addSymbolPart(function debug() {
@@ -111,9 +113,7 @@
     function remarks(remark) {
       if (remark == "Wrong SIDC in standard") return { monoColor: "Red" };
       if (
-        [
-          "From MIL-STD-2525.",
-          "Simplification of MIL-STD-2525 icon TBD."
+        ["N/A"
         ].indexOf(remark) != -1
       ) {
         return { monoColor: "Silver" };
@@ -134,7 +134,10 @@
 
       for (i = 0; i < symbolset["main icon"].length; i++) {
         output +=
-          "<tr><td><b>" +
+          "<tr"
+        if (symbolset["main icon"][i].remarks == "N/A" || (symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "POINT"))
+          output += ' class="na"';
+        output += "><td><b>" +
           symbolset["main icon"][i].hierarchy +
           "</b>";
         for (var j = 0; j < symbolset["main icon"][i].name.length; j++) {
@@ -152,7 +155,7 @@
           output +=
             "</td><td>" +
             new ms.Symbol(
-              symbolset["main icon"][i]["code scheme"]  + "F" + symbolset["main icon"][i]["battle dimension"] + "P" + symbolset["main icon"][i].code,
+              symbolset["main icon"][i]["code scheme"] + "F" + symbolset["main icon"][i]["battle dimension"] + "P" + symbolset["main icon"][i].code,
               { size: size },
               remarks(symbolset["main icon"][i].remarks)
             ).asSVG();
@@ -186,6 +189,12 @@
       return output;
     }
   </script>
+
+  <script src="app6b.js"></script>
+  <script>
+    ms.setStandard("APP6");
+  </script>
+
 </head>
 
 <body onload="generatenavigation();">

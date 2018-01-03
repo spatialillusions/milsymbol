@@ -56,9 +56,12 @@
     .index-h3 {
       margin-left: 15px;
     }
+
+    .na {
+      color: #999;
+    }
   </style>
   <script src="../dist/milsymbol.development.js"></script>
-  <script src="2525b.js"></script>
 
   <script>
     var size = 70;
@@ -131,7 +134,10 @@
 
       for (i = 0; i < symbolset["main icon"].length; i++) {
         output +=
-          "<tr><td><b>" +
+          "<tr"
+        if (symbolset["main icon"][i].remarks == "N/A" || (symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "POINT"))
+          output += ' class="na"';
+        output += "><td><b>" +
           symbolset["main icon"][i].hierarchy +
           "</b>";
         for (var j = 0; j < symbolset["main icon"][i].name.length; j++) {
@@ -183,6 +189,9 @@
       return output;
     }
   </script>
+
+  <script src="2525b.js"></script>
+
 </head>
 
 <body onload="generatenavigation();">
