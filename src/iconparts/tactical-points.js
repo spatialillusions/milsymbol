@@ -1067,11 +1067,17 @@ export default function(
       text: "CKP"
     }
   ];
-  icn["TP.CONTACT POINT"] = {
-    type: "path",
-    fill: false,
-    d: "m 100,100 0,-35 -45,0 0,-75 90,0 0,75 -45,0"
-  };
+  icn["TP.CONTACT POINT"] = numberSIDC
+    ? {
+        type: "path",
+        fill: false,
+        d: "M 50,50 150,50 150,150 50,150z"
+      }
+    : {
+        type: "path",
+        fill: false,
+        d: "m 100,100 0,-35 -45,0 0,-75 90,0 0,75 -45,0"
+      };
   icn["TP.COORDINATION POINT"] = [
     { type: "path", fill: false, d: "m 65,135 70,-70 m -70,0 70,70" },
     { type: "circle", fill: false, cx: 100, cy: 100, r: 50 }
@@ -1082,6 +1088,94 @@ export default function(
     d:
       "M 99.9998,25.5886 117.061,76.5192 170.77,77.0054 127.604,108.968 143.738,160.2 100,129.024 56.2624,160.2 72.3967,108.968 29.2306,77.0059 82.9403,76.5192 Z"
   };
+  icn["TP.DISTRESS CALL"] = [
+    icn["TP.ACTION POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 35,
+      text: "SOS"
+    }
+  ];
+  icn["TP.ENTRY CONTROL POINT"] = [
+    icn["TP.ACTION POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 35,
+      text: "EC"
+    }
+  ];
+
+  icn["TP.FLY-TO-POINT (SONOBUOY)"] = [
+    icn["TP.ACTION POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 35,
+      text: "FTP"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 20,
+      fontsize: 35,
+      text: "SBY"
+    }
+  ];
+  icn["TP.FLY-TO-POINT (WEAPON)"] = [
+    icn["TP.ACTION POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 35,
+      text: "FTP"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 20,
+      fontsize: 35,
+      text: "WPN"
+    }
+  ];
+  icn["TP.FLY-TO-POINT (NORMAL)"] = [
+    icn["TP.ACTION POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 35,
+      text: "FTP"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 20,
+      fontsize: 35,
+      text: "NRM"
+    }
+  ];
   icn["TP.ACTION LINKUP POINT"] = [
     icn["TP.ACTION POINT"],
     {

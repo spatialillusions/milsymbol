@@ -7,9 +7,27 @@ export default function tacticalPoints(sidc) {
   sidc["130200"] = {}; //Command and Control Points / Amnesty Point
   sidc["130300"] = {}; //Command and Control Points / Checkpoint
   sidc["130400"] = {}; //Command and Control Points / Center of Main Effort
-  sidc["130500"] = {}; //Command and Control Points / Contact Point
+  sidc["130500"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 115,
+      fontsize: 45,
+      fontweight: "bold"
+    }
+  }; //Command and Control Points / Contact Point
   sidc["130600"] = {}; //Command and Control Points / Coordinating Point
-  sidc["130700"] = {}; //Command and Control Points / Decision Point
+  sidc["130700"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 115,
+      fontsize: 45,
+      fontweight: "bold"
+    }
+  }; //Command and Control Points / Decision Point
   sidc["130800"] = {}; //Command and Control Points / Distress Call
   sidc["130900"] = {}; //Command and Control Points / Entry Control Point
   sidc["131001"] = {}; //Command and Control Points / Fly-To-Point / Sonobuoy
