@@ -7,8 +7,15 @@ export default function basegeometry() {
   var frameColor = this.colors.frameColor[this.metadata.affiliation];
 
   //If unframed but with icon, then just return.
-  if (!this.metadata.frame && this.style.icon) {
-    return [];
+  if (
+    (!this.metadata.frame && this.style.icon) ||
+    typeof this.metadata.baseGeometry.g.type == "undefined"
+  ) {
+    return {
+      pre: drawArray1,
+      post: drawArray2,
+      bbox: this.metadata.baseGeometry.bbox
+    };
   }
 
   //Clone the base geometry
