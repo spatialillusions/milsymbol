@@ -62,21 +62,22 @@
       color: #999;
     }
   </style>
+  
   <script src="../dist/milsymbol.development.js"></script>
-  <script src="app6d.js"></script>
-  <script src="2525d.js"></script>
+  <script src="../dist/milstd.js"></script>
+
   <script>
     var size = 70;
     ms.setStandard("APP6");
 
     // Since we don't have any geometry types in APP-6 D controle measures, let us get them from 2525D
-    var control = std2525d["25"]["main icon"];
+    var control = milstd["2525d"]["25"]["main icon"];
     var std2525lookup = {};
     for (var i = 0; i < control.length; i++) {
       std2525lookup[control[i].code] = control[i].geometry;
     }
-    for (var j = 0; j < app6d["25"]["main icon"].length; j++) {
-      app6d["25"]["main icon"][j].geometry = std2525lookup[app6d["25"]["main icon"][j].code];
+    for (var j = 0; j < milstd["app6d"]["25"]["main icon"].length; j++) {
+      milstd["app6d"]["25"]["main icon"][j].geometry = std2525lookup[milstd["app6d"]["25"]["main icon"][j].code];
     }
     /*
         ms.addSymbolPart(function debug() {
@@ -1191,7 +1192,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["01"],
+        milstd["app6d"]["01"],
         "Table 2-3: Air Equipment and Platform Icons",
         "Table 2-5: Air Equipment and Platform Sector 1 Modifiers",
         "Table 2-6: Air Equipment and Platform Sector 2 Modifiers"
@@ -1202,7 +1203,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["02"],
+        milstd["app6d"]["02"],
         "Table 2-4: Air Missile Entity/Entity Type/Entity Subtype",
         "Table 2-7: Air Missile Sector 1 Modifiers",
         "Table 2-8: Air Missile Sector 2 Modifiers Description"
@@ -1245,7 +1246,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["10"],
+        milstd["app6d"]["10"],
         "Table 3-3: Land Unit Main Sector Icons",
         "Table 3-4: Land Unit Sector 1 Modifiers",
         "Table 3-5: Land Unit Sector 2 Modifiers"
@@ -1256,7 +1257,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["11"],
+        milstd["app6d"]["11"],
         "Table 3-12: Land Civilian Organization Icons",
         "Table 3-13: Land Civilian Organization Sector 1 Modifiers",
         "Table 3-14: Land Civilian Organization Sector 2 Modifiers"
@@ -1303,7 +1304,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["15"],
+        milstd["app6d"]["15"],
         "Table 3-17: Land Equipment Icons",
         "Table 3-18: Land Equipment Sector 1 Modifiers",
         ""
@@ -1701,7 +1702,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["20"]
+        milstd["app6d"]["20"]
       )
     );
   </script>
@@ -1772,7 +1773,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["27"]
+        milstd["app6d"]["27"]
       )
     );
   </script>
@@ -1854,7 +1855,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["30"]
+        milstd["app6d"]["30"]
       )
     );
   </script>
@@ -1903,7 +1904,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["35"]
+        milstd["app6d"]["35"]
       )
     );
   </script>
@@ -1911,7 +1912,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["36"]
+        milstd["app6d"]["36"]
       )
     );
   </script>
@@ -1953,7 +1954,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["05"]
+        milstd["app6d"]["05"]
       )
     );
   </script>
@@ -1996,7 +1997,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["40"]
+        milstd["app6d"]["40"]
       )
     );
   </script>
@@ -2004,7 +2005,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        app6d["25"]
+        milstd["app6d"]["25"]
       )
     );
   </script>

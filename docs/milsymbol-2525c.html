@@ -62,7 +62,9 @@
       color: #999;
     }
   </style>
+
   <script src="../dist/milsymbol.development.js"></script>
+  <script src="../dist/milstd.js"></script>
 
   <script>
     var size = 70;
@@ -200,7 +202,6 @@
     }
   </script>
 
-  <script src="2525c.js"></script>
 </head>
 
 <body onload="generatenavigation();">
@@ -2480,7 +2481,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.WAR.SPC // Space
+        milstd["2525c"].WAR.SPC // Space
       )
     );
   </script>
@@ -2488,7 +2489,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.WAR.AIRTRK // Air
+        milstd["2525c"].WAR.AIRTRK // Air
       )
     );
   </script>
@@ -2496,7 +2497,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.WAR.GRDTRK // Ground
+        milstd["2525c"].WAR.GRDTRK // Ground
       )
     );
   </script>
@@ -2504,7 +2505,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.WAR.SSUF // Sea surface
+        milstd["2525c"].WAR.SSUF // Sea surface
       )
     );
   </script>
@@ -2512,7 +2513,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.WAR.SBSUF // Sea subsurface
+        milstd["2525c"].WAR.SBSUF // Sea subsurface
       )
     );
   </script>
@@ -2520,7 +2521,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.WAR.SOFUNT // SOF
+        milstd["2525c"].WAR.SOFUNT // SOF
       )
     );
   </script>
@@ -2528,7 +2529,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.TACGRP.TSK // TASKS
+        milstd["2525c"].TACGRP.TSK // TASKS
       )
     );
   </script>
@@ -2536,7 +2537,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.TACGRP.C2GM // CONTROL MEASURES
+        milstd["2525c"].TACGRP.C2GM // CONTROL MEASURES
       )
     );
   </script>
@@ -2544,7 +2545,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.TACGRP.MOBSU // OPERATIONS OTHER THAN WAR
+        milstd["2525c"].TACGRP.MOBSU // OPERATIONS OTHER THAN WAR
       )
     );
   </script>
@@ -2552,7 +2553,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.TACGRP.FSUPP // Fire support
+        milstd["2525c"].TACGRP.FSUPP // Fire support
       )
     );
   </script>
@@ -2560,7 +2561,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.TACGRP.CSS // COMBAT SERVICE SUPPORT
+        milstd["2525c"].TACGRP.CSS // COMBAT SERVICE SUPPORT
       )
     );
   </script>
@@ -2568,7 +2569,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.TACGRP.OTH // OTHER
+        milstd["2525c"].TACGRP.OTH // OTHER
       )
     );
   </script>
@@ -2576,7 +2577,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.SIGINT.SPC // OTHER
+        milstd["2525c"].SIGINT.SPC // OTHER
       )
     );
   </script>
@@ -2584,36 +2585,28 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.SIGINT.AIRTRK // OTHER
+        milstd["2525c"].SIGINT.AIRTRK // OTHER
       )
     );
   </script>
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.SIGINT.GRDTRK // OTHER
+        milstd["2525c"].SIGINT.GRDTRK // OTHER
       )
     );
   </script>
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.SIGINT.SSUF // OTHER
+        milstd["2525c"].SIGINT.SSUF // OTHER
       )
     );
   </script>
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.SIGINT.SBSUF // OTHER
-      )
-    );
-  </script>
-
-  <script>
-    document.write(
-      renderSymbolSet(
-        std2525c.STBOPS.ITM // OTHER
+        milstd["2525c"].SIGINT.SBSUF // OTHER
       )
     );
   </script>
@@ -2621,7 +2614,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.STBOPS.INDIV // OTHER
+        milstd["2525c"].STBOPS.ITM // OTHER
       )
     );
   </script>
@@ -2629,7 +2622,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.STBOPS.GRPORG // OTHER
+        milstd["2525c"].STBOPS.INDIV // OTHER
       )
     );
   </script>
@@ -2637,7 +2630,15 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.STBOPS.RAPE // OTHER
+        milstd["2525c"].STBOPS.GRPORG // OTHER
+      )
+    );
+  </script>
+
+  <script>
+    document.write(
+      renderSymbolSet(
+        milstd["2525c"].STBOPS.RAPE // OTHER
       )
     );
   </script>
@@ -2647,22 +2648,14 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.EMS.INCDNT // OTHER
+        milstd["2525c"].EMS.INCDNT // OTHER
       )
     );
   </script>
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.EMS.NATEVT // OTHER
-      )
-    );
-  </script>
-
-  <script>
-    document.write(
-      renderSymbolSet(
-        std2525c.EMS.OPN // OTHER
+        milstd["2525c"].EMS.NATEVT // OTHER
       )
     );
   </script>
@@ -2670,7 +2663,15 @@
   <script>
     document.write(
       renderSymbolSet(
-        std2525c.EMS.INFSTR // OTHER
+        milstd["2525c"].EMS.OPN // OTHER
+      )
+    );
+  </script>
+
+  <script>
+    document.write(
+      renderSymbolSet(
+        milstd["2525c"].EMS.INFSTR // OTHER
       )
     );
   </script>
