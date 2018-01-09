@@ -62,7 +62,7 @@
       color: #999;
     }
   </style>
-  
+
   <script src="../dist/milsymbol.development.js"></script>
   <script src="../dist/milstd.js"></script>
 
@@ -194,6 +194,13 @@
         if (!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")) {
           output +=
             "</td><td>" +
+              "<!--" + 
+              "1003" +
+              symbolset.symbolset +
+              "0000" +
+              symbolset["main icon"][i].code +
+              "0000" +
+              "-->" +
             new ms.Symbol(
               "1003" +
               symbolset.symbolset +
