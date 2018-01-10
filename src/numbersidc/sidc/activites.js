@@ -10,7 +10,7 @@ export default function activites(
 ) {
   //Adds support for Activities
   if (symbolSet == "40") {
-    //sId['110000'] = 'Incident';
+    sId["110000"] = [];
     sId["110100"] = [icn["AC.IC.CRIMINAL.ACTIVITY.INCIDENT"]];
     sId["110101"] = [ms._scale(1.5, icn["ST.IC.ARREST"])];
     sId["110102"] = [icn["ST.IC.ARSON/FIRE"]];
@@ -85,14 +85,14 @@ export default function activites(
     sId["110606"] = [ms._scale(0.7, icn["ST.IC.BOMB"]), icn["ST.IC.EXPLOSION"]];
     sId["120000"] = [icn["AC.IC.CRIMINAL.CIVIL DISTURBANCE"]];
     sId["120100"] = [icn["ST.IC.DEMONSTRATION"]];
-    //sId['130000'] = 'Operation';
+    sId["130000"] = [];
     sId["130100"] = [icn["ST.IC.PATROLLING"]];
     sId["130200"] = [icn["ST.IC.PSYCHOLOGICAL OPERATIONS"]];
     sId["130201"] = [
       icn["ST.IC.RADIO AND TELEVISION PSYCHOLOGICAL OPERATIONS"]
     ];
     sId["130300"] = [icn["ST.IC.SEARCHING"]];
-    //sId['130400'] = 'Operation.Recruitment';
+    sId["130400"] = [];
     sId["130401"] = [icn["ST.IC.INDIVIDUAL"], icn["ST.M1.WILLING"]];
     sId["130402"] = [icn["ST.IC.INDIVIDUAL"], icn["ST.M1.COERCED/IMPRESSED"]];
     sId["130500"] = [icn["ST.IC.MINE LAYING"]];
@@ -165,7 +165,7 @@ export default function activites(
     sId["140600"] = [icn["AC.IC.SCHOOL FIRE"]];
     sId["140700"] = [icn["AC.IC.SPECIAL NEEDS FIRE"]];
     sId["140800"] = [icn["AC.IC.WILD FIRE"]];
-    //sId['150000'] = 'Hazardous Materials';
+    sId["150000"] = [];
     sId["150100"] = [icn["AC.IC.HAZARDOUS MATERIALS INCIDENT"]];
     sId["150101"] = [icn["AC.IC.CHEMICAL AGENT"]];
     sId["150102"] = [icn["AC.IC.CORROSIVE MATERIAL"]];
@@ -211,7 +211,7 @@ export default function activites(
     sId["170303"] = [icn["AC.IC.MICROBIAL"]];
     sId["170304"] = [icn["AC.IC.REPTILE"]];
     sId["170305"] = [icn["AC.IC.RODENT"]];
-    //sId['180000'] = 'Individual';
+    sId["180000"] = [];
     sId["180100"] = [
       icn["ST.IC.INDIVIDUAL"],
       icn["ST.M1.LEADER"],

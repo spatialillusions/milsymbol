@@ -236,12 +236,15 @@ export default function icon() {
     if (this.metadata.numberSIDC) {
       //Number based SIDC
       var mainIcon = icons[this.metadata.functionid.substr(0, 6)]; //Main symbol
-
-      if (typeof mainIcon === "undefined") {
+      //*
+      if (
+        typeof mainIcon === "undefined" &&
+        this.metadata.functionid.substr(4, 2) >= 95
+      ) {
         //We have some special entity subtype and will try to find original symbol.
         mainIcon = icons[this.metadata.functionid.substr(0, 4) + "00"];
       }
-
+      //*/
       if (typeof mainIcon === "undefined") {
         if (
           !(

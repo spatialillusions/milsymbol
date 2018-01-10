@@ -315,7 +315,7 @@ export default function landequipment(
       icn["GR.EQ.CROSS-COUNTRY"],
       icn["GR.EQ.UTILITY VEHICLE FERRY TRANSPORTER"]
     ];
-    //sId['140000'] = 'Utility Vehicles';
+    sId["140000"] = [];
     sId["140100"] = [icn["GR.EQ.UTILITY VEHICLE"]];
     sId["140200"] = [
       icn["GR.EQ.UTILITY VEHICLE"],
@@ -374,10 +374,10 @@ export default function landequipment(
       icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK"],
       icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK.HEAVY"]
     ];
-    //sId['150000'] = 'Train';
+    sId["150000"] = [];
     sId["150100"] = [icn["GR.EQ.TRAIN LOCOMOTIVE"]];
     sId["150200"] = [icn["GR.EQ.RAILCAR"]];
-    //sId['160000'] = 'Civilian Vehicle';
+    sId["160000"] = [];
     sId["160100"] = [icn["GR.EQ.CIVILIAN VEHICLE.AUTOMOBILE"]];
     sId["160101"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.AUTOMOBILE"],
@@ -536,7 +536,7 @@ export default function landequipment(
       ],
       icn["GR.EQ.MISSILE WARHEAD TRANSPORTER"]
     ];
-    //sId['200000'] = 'Other Equipment';
+    sId["200000"] = [];
     sId["200100"] = [icn["GR.IC.FF.BROADCAST TRANSMITTER ANTENNA"]];
     sId["200200"] = [icn["ST.IC.BOMB"]];
     sId["200300"] = [icn["ST.IC.BOOBY TRAP"]];
@@ -561,13 +561,13 @@ export default function landequipment(
     sId["201400"] = [icn["GR.EQ.UNIT DEPLOYMENT SHIPMENTS"]];
     sId["201500"] = [icn["GR.IC.EMERGENCY MEDICAL OPERATION"]];
     sId["201501"] = [icn["AR.I.MILITARY ROTARY WING"], icn["AIR.M1.MEDEVAC"]];
-    //sId['210000'] = 'Land Mines';
+    sId["210000"] = [];
     sId["210100"] = [icn["GR.EQ.LAND MINE"]];
     sId["210200"] = [icn["GR.EQ.ANTIPERSONNEL LAND MINE"]];
     sId["210300"] = [icn["GR.EQ.ANTITANK MINE"]];
     sId["210400"] = [icn["GR.EQ.IMPROVISED EXPLOSIVE DEVICE"]];
     sId["210500"] = [icn["GR.EQ.ANTIPERSONNEL LAND MINE LESS THAN LETHAL"]];
-    //sId['220000'] = 'Sensors';
+    sId["220000"] = [];
     sId["220100"] = [icn["GR.EQ.SENSOR"]];
     sId["220200"] = [icn["GR.EQ.SENSOR EMPLACED"]];
     sId["220300"] = [icn["GR.EQ.RADAR"]];

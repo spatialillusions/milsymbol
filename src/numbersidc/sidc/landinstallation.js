@@ -63,7 +63,7 @@ export default function landinstallation(
     sId["112200"] = [icn["GR.IC.FF.EMERGENCY OPERATION"]];
     sId["112201"] = [icn["GR.IC.FIRE PROTECTION"]];
     sId["112202"] = [icn["GR.IC.EMERGENCY MEDICAL OPERATION"]];
-    //sId['120000'] = 'Infrastructure';
+    sId["120000"] = [];
     sId["120100"] = [icn["GR.IN.IC.AGRICULTURE AND FOOD INFRASTRUCTURE"]];
     sId["120101"] = [icn["GR.IN.IC.AGRICULTURAL LABORATORY"]];
     sId["120102"] = [icn["GR.IN.IC.ANIMAL FEEDLOT"]];

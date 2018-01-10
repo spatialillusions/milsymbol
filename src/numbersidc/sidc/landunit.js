@@ -41,6 +41,7 @@ export default function landunit(
     //sId['111098'] = [icn['GR.IC.FF.SIGNAL'],icn['GR.IC.FF.THEATRE SUPPORT']];
     sId["111100"] = [icn["SP.I.FF.SATELLITE"]];
     sId["111200"] = [icn["GR.IC.VIDEO IMAGERY"]];
+    sId["120000"] = [];
     sId["120100"] = [icn["GR.IC.FF.AIR ASSAULT WITH ORGANIC LIFT"]];
     sId["120200"] = [icn["GR.IC.AIR TRAFFIC SERVICES"]];
     sId["120300"] = [icn["GR.IC.FF.AMPHIBIOUS"]];
@@ -115,6 +116,7 @@ export default function landunit(
     ]; //SPECIAL SSNR)
     sId["121805"] = [icn["SOF.IC.UNDERWATER DEMOLITION TEAM"]];
     sId["121900"] = [icn["GR.IC.UNMANNED SYSTEMS"]];
+    sId["130000"] = [];
     sId["130100"] = [icn["GR.IC.FF.AIR DEFENCE"]];
     sId["130101"] = [
       icn["GR.IC.FF.AIR DEFENCE"],
@@ -151,6 +153,7 @@ export default function landunit(
     sId["130802"] = [icn["GR.IC.MORTAR"], icn["GR.M2.TRUCK"]];
     sId["130803"] = [icn["GR.IC.MORTAR"], icn["GR.M2.TOWED"]];
     sId["130900"] = [icn["GR.IC.SURVEY"]];
+    sId["140000"] = [];
     sId["140100"] = [icn["GR.IC.CBRN"]];
     sId["140101"] = [icn["GR.IC.CBRN"], icn["GR.IC.ARMOUR"]];
     sId["140102"] = [icn["GR.IC.CBRN"], icn["GR.IC.FF.MOTORIZED"]];
@@ -197,6 +200,7 @@ export default function landunit(
     sId["141900"] = [icn["GR.IC.SECURITY POLICE (AIR)"]];
     sId["142000"] = [icn["GR.IC.SHORE PATROL"]];
     sId["142100"] = [icn["GR.IC.TOPOGRAPHIC"]];
+    sId["150000"] = [];
     sId["150100"] = [icn["GR.IC.FF.ANALYSIS"]];
     sId["150200"] = [icn["GR.IC.COUNTER-INTELLIGENCE"]];
     sId["150300"] = [icn["GR.IC.FF.DIRECTION FINDING"]];
@@ -308,7 +312,9 @@ export default function landunit(
     sId["164700"] = [icn["GR.IC.WATER"]];
     sId["164800"] = [icn["GR.IC.WATER PURIFICATION"]];
     sId["164900"] = [icn["GR.IC.PUBLIC AFFAIRS BROADCAST"]];
+    sId["170000"] = [];
     sId["170100"] = [icn["GR.IC.NAVAL"]];
+    sId["180000"] = [];
     sId["180100"] = [
       icn["GR.IC.ALLIED COMMAND EUROPE RAPID REACTION CORPS (ARRC)"]
     ];
