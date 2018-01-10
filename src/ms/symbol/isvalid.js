@@ -1,6 +1,6 @@
 export default function isValid(extended) {
   var drawInstructions =
-    JSON.stringify(this.drawInstructions).indexOf("null") != -1;
+    JSON.stringify(this.drawInstructions).indexOf("null") == -1;
 
   if (extended) {
     return {

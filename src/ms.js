@@ -17,7 +17,8 @@ var ms = new function() {
   this._svgNS = "http://www.w3.org/2000/svg";
   this._symbolParts = [];
 
-  this.autoSVG = false;
+  this._autoSVG = false;
+  this._autoValidation = false;
   this.version = version;
 
   if (typeof console === "object") {
@@ -141,8 +142,8 @@ ms.outline = function(geom, outline, stroke, color) {
   return clone;
 };
 ms.setAutoSVG = function(mode) {
-  this.autoSVG = mode;
-  return this.autoSVG;
+  this._autoSVG = mode;
+  return this._autoSVG;
 };
 ms.setColorMode = function(mode, colorMode) {
   this._colorModes[mode] = {};

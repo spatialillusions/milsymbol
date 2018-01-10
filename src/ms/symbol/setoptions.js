@@ -133,7 +133,12 @@ export default function setOptions() {
       100
   };
 
-  if (ms.autoSVG) this.asSVG();
+  if (ms._autoSVG) this.asSVG();
+  if (ms._autoValidation)
+    if (!this.isValid()) {
+      console.warn("Error in symbol: " + this.options.sidc);
+      console.warn(this.isValid(true));
+    }
 
   return this;
 }
