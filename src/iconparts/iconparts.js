@@ -1027,6 +1027,12 @@ export default function iconparts(
   icn["GR.IC.AVIATION TACTICAL AIR CONTROL PARTY"] = text("TACP");
   icn["GR.IC.AVIATION FORWARD AIR CONTROLLER"] = text("FAC");
   icn["GR.IC.BAND"] = text("BAND");
+  icn["GR.IC.ARMY MUSIC"] = {
+    type: "path",
+    d:
+      "m 99.6,110.5 c -4.8,-1.4 -10.9,2.2 -10.4,7.7 1,2.5 6.2,2.4 9.6,-0.2 1.9,-1.5 2.7,-3.8 2.3,-6.9 l -0.1,-21.3 c 12.7,5.8 7.6,14.8 5.6,20.7 4.7,-4.9 5.8,-13.2 1.5,-17.9 -4.4,-4.6 -5,-7 -8.4,-13 z",
+    stroke: false
+  };
   icn[
     "GR.IC.BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF) (DEPARTMENT OF JUSTICE)"
   ] = text("ATF");
