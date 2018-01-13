@@ -135,7 +135,11 @@
       "code": "130200",
       "remarks": ""
     },
-    { "entity": "Mine–Like Contact (MILCO)", "code": "140000", "remarks": "" },
+    {
+      "entity": "Mine–Like Contact (MILCO)",
+      "code": "140000",
+      "remarks": "N/A"
+    },
     {
       "entity": "Mine–Like Contact (MILCO)",
       "entity type": "MILCO - General",

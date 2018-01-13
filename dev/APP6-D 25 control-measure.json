@@ -733,7 +733,7 @@
       "entity": "Manoeuvre Points",
       "entity type": "Observation Post/Outpost (specified)",
       "code": "160200",
-      "remarks": ""
+      "remarks": "For training or hierarchical purposes only"
     },
     {
       "entity": "Manoeuvre Points",
@@ -914,7 +914,11 @@
       "code": "172000",
       "remarks": ""
     },
-    { "entity": "Airspace Control Points", "code": "180000", "remarks": "" },
+    {
+      "entity": "Airspace Control Points",
+      "code": "180000",
+      "remarks": "For training or hierarchical purposes only"
+    },
     {
       "entity": "Airspace Control Points",
       "entity type": "Air Control Point",
