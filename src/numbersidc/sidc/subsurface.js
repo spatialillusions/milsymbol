@@ -40,6 +40,9 @@ export default function subsurface(
     sId["150000"] = [icn["SU.IC.FUSED TRACK"]];
     sId["160000"] = [icn["SP.I.MANUAL TRACK"]];
 
+    sId["200000"] = [icn["SU.IC.SEABED INSTALLATION, MAN-MADE, MILITARY"]];
+    sId["210000"] = [icn["SU.IC.SEABED INSTALLATION, MAN-MADE, NON-MILITARY"]];
+
     sIdm1["01"] = [icn["SU.M1.ANTISUBMARINE WARFARE"]];
     sIdm1["02"] = [icn["SU.M1.AUXILIARY"]];
     sIdm1["03"] = [icn["SU.M1.COMMAND AND CONTROL"]];
