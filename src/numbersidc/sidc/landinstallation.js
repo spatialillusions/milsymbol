@@ -110,7 +110,7 @@ export default function landinstallation(
     sId["120505"] = [icn["GR.IC.FF.CLASS III"]];
     sId["120506"] = [icn["GR.IN.IC.PROPANE FACILITY"]];
     sId["120600"] = [icn["GR.IN.IC.GOVERNMENT SITE INFRASTRUCTURE"]];
-    //sId['120700'] = 'Infrastructure.Medical Infrastructure';
+    sId["120700"] = []; //'Infrastructure.Medical Infrastructure';
     sId["120701"] = [icn["GR.IC.FF.MEDICAL"]];
     sId["120702"] = [
       icn["GR.IC.FF.MEDICAL"],
