@@ -177,6 +177,27 @@ export default function(
     },
     { type: "path", d: "M 100,100 55,80 145,80 Z" }
   ];
+  icn["TP.TRIAL TRACK"] = [
+    { type: "path", d: "m 65,0 70,0 m -35,80 0,-80 m 0,100 -45,-20 90,0 z" },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 75,
+      y: 55,
+      fontsize: 45,
+      text: "T"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 125,
+      y: 55,
+      fontsize: 45,
+      text: "T"
+    }
+  ];
   icn["TP.SONOBUOY"] = [
     { type: "path", fill: false, d: "M 100,60 l 0,-35 10,10 0,-45" },
     { type: "circle", fill: false, cx: 100, cy: 100, r: 40 }
@@ -287,6 +308,54 @@ export default function(
       y: 115,
       fontsize: 45,
       text: "T"
+    }
+  ];
+  icn["TP.SONOBUOY BARRA"] = [
+    icn["TP.SONOBUOY"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 115,
+      fontsize: 45,
+      text: "BR"
+    }
+  ];
+  icn["TP.SONOBUOY BATHYTHERMOGRAPH TRANSMITTING SONOBUOY (BT)"] = [
+    icn["TP.SONOBUOY"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 115,
+      fontsize: 45,
+      text: "B"
+    }
+  ];
+  icn["TP.SONOBUOY COMMAND ACTIVE MULTIBEAM SONOBUOY (CAMBS)"] = [
+    icn["TP.SONOBUOY"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 115,
+      fontsize: 45,
+      text: "CM"
+    }
+  ];
+  icn["TP.SONOBUOY EXPENDABLE RELIABLE ACOUSTIC PATH SONOBUOY (ERAPS)"] = [
+    icn["TP.SONOBUOY"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 115,
+      fontsize: 45,
+      text: "E"
     }
   ];
   icn["TP.SONOBUOY RO"] = [
@@ -410,6 +479,9 @@ export default function(
     icn["TP.NAVIGATIONAL REFERENCE"],
     { type: "circle", cx: 100, cy: 100, r: 15 }
   ];
+  icn["TP.AIRFIELD"] = [
+    { type: "path", fill: false, d: "M 35,125 165,60 m -135,40 140,0" }
+  ];
   icn["TP.DLRP"] = [
     icn["TP.SPECIAL POINT"],
     {
@@ -432,6 +504,18 @@ export default function(
       y: 150,
       fontsize: 40,
       text: "P"
+    }
+  ];
+  icn["TP.PRE-LANDFALL WAYPOINT"] = [
+    icn["TP.REFERENCE POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 150,
+      fontsize: 40,
+      text: "PL"
     }
   ];
   icn["TP.MARSHALL POINT"] = [
@@ -470,6 +554,18 @@ export default function(
       text: "C"
     }
   ];
+  icn["TP.ENEMY POINT"] = [
+    icn["TP.REFERENCE POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 150,
+      fontsize: 40,
+      text: "ENY"
+    }
+  ];
   icn["TP.POINT OF INTEREST"] = [
     {
       type: "path",
@@ -478,11 +574,21 @@ export default function(
     },
     { type: "circle", fill: false, cx: 100, cy: 15, r: 40 }
   ];
+  icn["TP.PLAN SHIP"] = [
+    { type: "circle", fill: iconColor, cx: 100, cy: 100, r: 15 },
+    { type: "circle", stroke: iconColor, cx: 100, cy: 100, r: 45, fill: false }
+  ];
   icn["TP.AIM POINT"] = [
     { type: "circle", cx: 100, cy: 100, r: 15 },
     { type: "circle", cx: 100, cy: 100, r: 35, fill: false },
     { type: "circle", cx: 100, cy: 100, r: 45, fill: false }
   ];
+  icn["TP.DEFENDED ASSET"] = {
+    type: "path",
+    fill: false,
+    d:
+      "m 90,135 0,-30 20,0 0,30 m -50,0 0,-50 -10,0 0,-20 20,0 0,10 20,0 0,-10 20,0 0,10 20,0 0,-10 20,0 0,20 -10,0 0,50 z"
+  };
   icn["TP.DROP POINT"] = {
     type: "path",
     fill: false,
@@ -494,11 +600,22 @@ export default function(
     fill: false,
     d: "m 100,100 0,-50 m -35,15 35,35 35,-35 m -85,35 100,0"
   };
+  icn["TP.AIR DETONATION"] = {
+    type: "path",
+    d:
+      "m 55,150 90,0 m -35,-95 5,20 15,-10 0,15 15,5 -15,10 15,10 -15,5 5,15 -20,-5 -5,20 -10,-15 -10,20 -5,-25 -20,10 5,-15 L 55,105 70,95 60,85 70,80 70,65 85,75 90,55 100,70 Z",
+    fill: false
+  };
   icn["TP.GROUND ZERO"] = {
     type: "path",
     stroke: false,
     d:
       "M 100 28 C 100 28 65.4398 29.8261 61.6543 55 C 60.2826 64.1213 75.0115 70.4884 82.2363 71.6543 C 89.4611 72.8201 91.7277 55.3462 98.5098 56.0371 L 93 90 C 93 90 70 90 67 97 C 65.0304 101.596 100 100 100 100 C 100 100 134.97 101.596 133 97 C 130 90 107 90 107 90 L 101.49 56.0371 C 108.272 55.3462 110.539 72.8201 117.764 71.6543 C 124.988 70.4884 139.718 64.1213 138.346 55 C 134.56 29.8261 100 28 100 28 z"
+  };
+  icn["TP.LAUNCHED TORPEDO (AEGIS ONLY)"] = {
+    type: "path",
+    d:
+      "m 150,90 0,20 m -10,-10 10,0 m -97,-10 84,0 c 1.662,0 3,1.338 3,3 l 0,14 c 0,1.662 -1.338,3 -3,3 l -84,0 c -1.662,0 -3,-1.338 -3,-3 l 0,-14 c 0,-1.662 1.338,-3 3,-3 z"
   };
   icn["TP.MSL DETECT POINT"] = {
     type: "path",
@@ -845,6 +962,42 @@ export default function(
     },
     { type: "circle", cx: 100, cy: 100, r: 15 }
   ];
+  icn["TP.AIR CONTROL RENDEZVOUS"] = [
+    icn["TP.AIR CONTROL"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: !numberSIDC && !STD2525 ? 155 : 115,
+      fontsize: 45,
+      text: "RZ"
+    }
+  ];
+  icn["TP.CAP STATION"] = [
+    icn["TP.AIR CONTROL"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: !numberSIDC && !STD2525 ? 155 : 115,
+      fontsize: 45,
+      text: "C"
+    }
+  ];
+  icn["TP.AEW STATION"] = [
+    icn["TP.AIR CONTROL"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: !numberSIDC && !STD2525 ? 155 : 115,
+      fontsize: 45,
+      text: "W"
+    }
+  ];
   icn["TP.TACAN"] = [
     icn["TP.AIR CONTROL"],
     {
@@ -857,6 +1010,30 @@ export default function(
       text: "T"
     },
     !numberSIDC && !STD2525 ? { type: "circle", cx: 100, cy: 100, r: 15 } : []
+  ];
+  icn["TP.REPLENISHMENT STATION"] = [
+    icn["TP.AIR CONTROL"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: !numberSIDC && !STD2525 ? 155 : 115,
+      fontsize: 45,
+      text: "RP"
+    }
+  ];
+  icn["TP.TANKING"] = [
+    icn["TP.AIR CONTROL"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: !numberSIDC && !STD2525 ? 155 : 115,
+      fontsize: 45,
+      text: "K"
+    }
   ];
   icn["TP.TOMCAT"] = [
     icn["TP.AIR CONTROL"],
@@ -885,28 +1062,38 @@ export default function(
   ];
   icn["TP.RESCUE"] = [
     icn["TP.AIR CONTROL"],
-    !numberSIDC && !STD2525
-      ? [
-          {
-            type: "text",
-            stroke: false,
-            textanchor: "middle",
-            x: 100,
-            y: 155,
-            fontsize: 45,
-            text: "R"
-          },
-          { type: "circle", cx: 100, cy: 100, r: 15 }
-        ]
-      : {
+    numberSIDC
+      ? {
           type: "text",
           stroke: false,
           textanchor: "middle",
           x: 100,
           y: 115,
           fontsize: 45,
-          text: "RC"
+          text: "RS"
         }
+      : !STD2525
+        ? [
+            {
+              type: "text",
+              stroke: false,
+              textanchor: "middle",
+              x: 100,
+              y: 155,
+              fontsize: 45,
+              text: "R"
+            },
+            { type: "circle", cx: 100, cy: 100, r: 15 }
+          ]
+        : {
+            type: "text",
+            stroke: false,
+            textanchor: "middle",
+            x: 100,
+            y: 115,
+            fontsize: 45,
+            text: "RC"
+          }
   ];
   icn["TP.REPLENISH"] = [
     icn["TP.AIR CONTROL"],
@@ -1078,6 +1265,15 @@ export default function(
         fill: false,
         d: "m 100,100 0,-35 -45,0 0,-75 90,0 0,75 -45,0"
       };
+
+  icn["TP.CENTRE OF MAIN EFFORT"] = [
+    {
+      type: "path",
+      fill: false,
+      d:
+        "m 155,100 0,-35 M 45,100 45,65 m 88,0 0,35 m -22,-35 0,35 m -22,-35 0,35 m -22,0 0,-35 m -37,70 0,-35 140,0 0,40"
+    }
+  ];
   icn["TP.COORDINATION POINT"] = [
     { type: "path", fill: false, d: "m 65,135 70,-70 m -70,0 70,70" },
     { type: "circle", fill: false, cx: 100, cy: 100, r: 50 }
@@ -1678,12 +1874,26 @@ export default function(
         "m 115,100 c 0,8.284 -6.716,15 -15,15 -8.2843,0 -15,-6.716 -15,-15 0,-8.2843 6.7157,-15 15,-15 8.284,0 15,6.7157 15,15 z"
     }
   ];
-  icn["TP.SENSOR OUTPOST"] = {
-    type: "path",
-    fill: false,
-    d:
-      "m 61.1738,112.25 23.6601,0 m 30.3321,0 23.66,0 M 80,105 l 10,15 20,0 10,-15 z m 19.9998,-60 47.6312,82.5 -95.2623,0 z"
-  };
+  icn["TP.SENSOR OUTPOST"] = numberSIDC
+    ? [
+        {
+          type: "path",
+          fill: false,
+          d: "M 99.9998,45 l 47.6312,82.5 -95.2623,0 z"
+        },
+        {
+          type: "path",
+          stroke: false,
+          d:
+            "m 100,80 c 0,7.5 12.5,20 20,20 -7.5,0 -20,12.5 -20,20 0,-7.5 -12.5,-20 -20,-20 7.5,0 20,-12.5 20,-20 z"
+        }
+      ]
+    : {
+        type: "path",
+        fill: false,
+        d:
+          "m 61.1738,112.25 23.6601,0 m 30.3321,0 23.66,0 M 80,105 l 10,15 20,0 10,-15 z m 19.9998,-60 47.6312,82.5 -95.2623,0 z"
+      };
   icn["TP.CBRN OBSERVATION POST"] = [
     {
       type: "path",
@@ -2584,6 +2794,18 @@ export default function(
     d:
       "m 50,90 15,20 5,-20 15,20 5,-20 20,20 5,-20 15,20 5,-20 15,20 M 50,150 150,50 M 50,50 150,150 m -50,-100 0,100"
   };
+  icn["TP.ELECTRO MAGNETIC - MAGNETIC ANOMALY DETECTION (MAD)"] = [
+    icn["TP.FIX ELECTRO-MAGNETIC"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 180,
+      fontsize: 35,
+      text: "MAD"
+    }
+  ];
   icn["TP.FIX ELECTRO-OPTICAL"] = {
     type: "path",
     fill: false,
