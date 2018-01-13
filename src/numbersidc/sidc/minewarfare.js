@@ -33,7 +33,7 @@ export default function minewarfare(
     sId["130000"] = [icn["SU.IC.SEA MINE DECOY"]];
     sId["130100"] = [icn["SU.IC.SEA MINE DECOY, BOTTOM/GROUND"]];
     sId["130200"] = [icn["SU.IC.SEA MINE DECOY, MOORED"]];
-    //sId['140000'] = 'Mine-Like Contact (MILCO)';
+    sId["140000"] = []; //'Mine-Like Contact (MILCO)';
     sId["140100"] = [ms._scale(1.3, icn["SU.IC.SEA MINE MILCO"])];
     sId["140101"] = [
       ms._scale(1.3, [
