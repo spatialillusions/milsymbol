@@ -239,6 +239,7 @@ export default function landunit(
     ];
     sId["160400"] = [icn["GR.IC.AMMUNITION"]];
     sId["160500"] = [icn["GR.IC.BAND"]];
+    sId["160501"] = [icn["GR.IC.ARMY MUSIC"]];
     sId["160600"] = [icn["GR.IC.COMBAT SERVICE SUPPORT"]];
     sId["160700"] = [icn["GR.IC.FINANCE"]];
     //sId['160797'] = [icn['GR.IC.FINANCE'],icn['GR.IC.FF.CORPS SUPPORT']];
