@@ -1,9 +1,0 @@
-{
-  "name": "milsymbol",
-  "version": "1.3.3",
-  "homepage": "https://github.com/spatialillusions/milsymbol",
-  "authors": ["Måns Beckman (http://www.spatialillusions.com)"],
-  "description": "Milsymbol is a small library in pure javascript that creates symbols according to MIL-STD-2525 and APP6.",
-  "main": "dist/milsymbol.js",
-  "license": "MIT"
-}
