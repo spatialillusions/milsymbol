@@ -1,3 +1,7 @@
+import { ms } from "../../ms.js";
+import icons from "../../iconparts/space.js";
+ms.addIconParts(icons);
+
 export default function space(
   sId,
   sIdm1,

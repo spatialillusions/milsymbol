@@ -1,4 +1,5 @@
-// Icon parts for tactical points
+import { defaultProperties } from "./shared-functions.js";
+
 export default function(
   iconParts,
   metadata,
@@ -65,33 +66,10 @@ export default function(
       "m 80,85 40,0 0,-20 -40,0 z m 20,-30 0,40 m -40,15 15,15 50,0 15,-15 -15,-15 -50,0 z"
   }; //WAR.SBSUF.SUB.STN.ASWSUB
 
-  function defaultProperties(instructions) {
-    if (typeof instructions === "object") {
-      if (Array.isArray(instructions)) {
-        for (var i = 0; i < instructions.length; i++) {
-          defaultProperties.call(this, instructions[i]);
-        }
-        return;
-      }
-      instructions.icon = true;
-      if (instructions.type == "text") {
-        if (!instructions.hasOwnProperty("fontfamily"))
-          instructions.fontfamily = "Arial";
-        if (!instructions.hasOwnProperty("fontweight"))
-          instructions.fontweight = "bold";
-        if (!instructions.hasOwnProperty("textanchor"))
-          instructions.textanchor = "middle";
-        if (!instructions.hasOwnProperty("stroke")) instructions.stroke = false;
-      }
-      if (!instructions.hasOwnProperty("fill")) instructions.fill = iconColor;
-      if (!instructions.hasOwnProperty("stroke"))
-        instructions.stroke = iconColor;
-      return;
-    }
-  }
   for (var key in icn) {
     if (!icn.hasOwnProperty(key)) continue;
-    defaultProperties.call(this, icn[key]);
+    if (iconParts.hasOwnProperty(key)) console.warn("Override of: " + key);
+    defaultProperties.call(this, icn[key], iconColor);
     iconParts[key] = icn[key];
   }
 }

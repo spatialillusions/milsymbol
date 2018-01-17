@@ -1,3 +1,7 @@
+import { ms } from "../../ms.js";
+import icons from "../../iconparts/sea.js";
+ms.addIconParts(icons);
+
 export default function sea(sId, bbox, icn, _STD2525) {
   // SEA ===========================================================================
   sId["S-S-------"] = [];

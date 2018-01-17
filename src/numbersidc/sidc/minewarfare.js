@@ -1,4 +1,7 @@
 import { ms } from "../../ms.js";
+import icons from "../../iconparts/subsurface.js";
+ms.addIconParts(icons);
+
 export default function minewarfare(
   sId,
   sIdm1,

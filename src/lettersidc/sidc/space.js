@@ -1,3 +1,7 @@
+import { ms } from "../../ms.js";
+import icons from "../../iconparts/space.js";
+ms.addIconParts(icons);
+
 export default function space(sId, bbox, icn, _STD2525) {
   // SPACE =========================================================================
   sId["S-P-------"] = [];

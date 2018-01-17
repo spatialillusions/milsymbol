@@ -1,4 +1,5 @@
-// Icon parts for tactical points
+import { defaultProperties } from "./shared-functions.js";
+
 export default function(
   iconParts,
   metadata,
@@ -2857,7 +2858,7 @@ export default function(
       d: "M 73,133 133,73 M 67,127 127,67"
     }
   ];
-
+  /*
   function defaultProperties(instructions) {
     if (typeof instructions === "object") {
       if (Array.isArray(instructions)) {
@@ -2873,9 +2874,11 @@ export default function(
       return;
     }
   }
+//*/
   for (var key in icn) {
     if (!icn.hasOwnProperty(key)) continue;
-    defaultProperties.call(this, icn[key]);
+    if (iconParts.hasOwnProperty(key)) console.warn("Override of: " + key);
+    defaultProperties.call(this, icn[key], iconColor);
     iconParts[key] = icn[key];
   }
 }

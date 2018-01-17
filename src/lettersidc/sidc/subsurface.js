@@ -1,3 +1,7 @@
+import { ms } from "../../ms.js";
+import icons from "../../iconparts/subsurface.js";
+ms.addIconParts(icons);
+
 export default function subsurface(sId, bbox, icn, _STD2525) {
   // SUBSURFACE ====================================================================
   sId["S-U-------"] = [];

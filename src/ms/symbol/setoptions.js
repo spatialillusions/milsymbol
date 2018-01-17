@@ -50,8 +50,13 @@ export default function setOptions() {
     if (m.post.length > 0) {
       while (m.post.length == 1) {
         m.post = m.post[0];
+        if (typeof m.post == "undefined") break;
       }
-      if (m.post.length != 0) {
+      if (typeof m.post == "undefined" || m.post.length != 0) {
+        /*
+        You might think it is strange to add it if it is undefined, and you are correct. 
+        But this makes it possible to find invalid symbols using the isValid function.
+        //*/
         this.drawInstructions = this.drawInstructions.concat(m.post);
       }
     }

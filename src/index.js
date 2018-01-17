@@ -121,8 +121,8 @@ ms.addSIDCicons(subsurfacenumber, "number");
 import minewarfarenumber from "./numbersidc/sidc/minewarfare.js";
 ms.addSIDCicons(minewarfarenumber, "number");
 
-import seabedinstallationsnumber from "./numbersidc/sidc/seabedinstallations.js";
-ms.addSIDCicons(seabedinstallationsnumber, "number");
+//import seabedinstallationsnumber from "./numbersidc/sidc/seabedinstallations.js";
+//ms.addSIDCicons(seabedinstallationsnumber, "number");
 
 import activitesnumber from "./numbersidc/sidc/activites.js";
 ms.addSIDCicons(activitesnumber, "number");

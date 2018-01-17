@@ -1,4 +1,5 @@
-// Icon parts for SIGNALS INTELLIGENCE
+import { defaultProperties, textm1 } from "./shared-functions.js";
+
 export default function(
   iconParts,
   metadata,
@@ -23,24 +24,6 @@ export default function(
   alternateMedal
   true/false for sea mine stuff
   */
-  function textm1(str) {
-    var size = 30;
-    if (str.length == 3) {
-      size = 25;
-    }
-    if (str.length >= 4) {
-      size = 22;
-    }
-    return {
-      type: "text",
-      stroke: false,
-      textanchor: "middle",
-      x: 100,
-      y: 77,
-      fontsize: size,
-      text: str
-    };
-  }
 
   var affiliation = metadata.affiliation || "Friend";
   //If hostile and not monoColor, make it red, otherwise use the iconColor.
@@ -383,33 +366,10 @@ export default function(
     text: "G"
   };
 
-  function defaultProperties(instructions) {
-    if (typeof instructions === "object") {
-      if (Array.isArray(instructions)) {
-        for (var i = 0; i < instructions.length; i++) {
-          defaultProperties.call(this, instructions[i]);
-        }
-        return;
-      }
-      instructions.icon = true;
-      if (instructions.type == "text") {
-        if (!instructions.hasOwnProperty("fontfamily"))
-          instructions.fontfamily = "Arial";
-        if (!instructions.hasOwnProperty("fontweight"))
-          instructions.fontweight = "bold";
-        if (!instructions.hasOwnProperty("textanchor"))
-          instructions.textanchor = "middle";
-        if (!instructions.hasOwnProperty("stroke")) instructions.stroke = false;
-      }
-      if (!instructions.hasOwnProperty("fill")) instructions.fill = iconColor;
-      if (!instructions.hasOwnProperty("stroke"))
-        instructions.stroke = iconColor;
-      return;
-    }
-  }
   for (var key in icn) {
     if (!icn.hasOwnProperty(key)) continue;
-    defaultProperties.call(this, icn[key]);
+    if (iconParts.hasOwnProperty(key)) console.warn("Override of: " + key);
+    defaultProperties.call(this, icn[key], iconColor);
     iconParts[key] = icn[key];
   }
 }

@@ -453,12 +453,12 @@ export default function controlmeasure(
     sidc["341600"] = icn["TP.NEUTRALIZE"]; //Mission Tasks / Neutralize
     bbox["341600"] = { x1: 0, x2: 200, y1: 40, y2: 160 };
 
-    sidc["350000"] = [];
-    sidc["350100"] = [];
+    //sidc["350000"] = [];
+    //sidc["350100"] = [];
     sidc["350101"] = [];
     sidc["350102"] = [];
     sidc["350103"] = [];
-    sidc["350200"] = [];
+    //sidc["350200"] = [];
     sidc["350201"] = [];
     sidc["350202"] = [];
     sidc["350203"] = [];

@@ -1,3 +1,7 @@
+import { ms } from "../../ms.js";
+import icons from "../../iconparts/sea.js";
+ms.addIconParts(icons);
+
 export default function sea(sId, sIdm1, sIdm2, bbox, symbolSet, icn, _STD2525) {
   //Sea
   if (symbolSet == "30") {

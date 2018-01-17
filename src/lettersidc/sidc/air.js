@@ -1,3 +1,7 @@
+import { ms } from "../../ms.js";
+import icons from "../../iconparts/air.js";
+ms.addIconParts(icons);
+
 export default function air(sId, bbox, icn, _STD2525) {
   // AIR ===========================================================================
   sId["S-A-------"] = [];

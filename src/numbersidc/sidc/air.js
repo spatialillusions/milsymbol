@@ -1,3 +1,7 @@
+import { ms } from "../../ms.js";
+import icons from "../../iconparts/air.js";
+ms.addIconParts(icons);
+
 export default function air(sId, sIdm1, sIdm2, bbox, symbolSet, icn, _STD2525) {
   //Air
   if (symbolSet == "01") {
@@ -8,7 +12,7 @@ export default function air(sId, sIdm1, sIdm2, bbox, symbolSet, icn, _STD2525) {
     sId["110103"] = [icn["AR.I.BOMBER"]];
     sId["110104"] = [icn["AR.I.FIGHTER"]];
     sId["110105"] = [icn["AR.I.FIGHTER/BOMBER"]];
-    //sId['110106'] = '';//{Reserved for Future Use}
+    sId["110106"] = []; //{Reserved for Future Use}
     sId["110107"] = [icn["AR.I.CARGO"]];
     sId["110108"] = [icn["AR.I.JAMMER / ELECTRONIC COUNTER-MEASURES"]];
     sId["110109"] = [icn["AR.I.TANKER"]];
