@@ -27,13 +27,13 @@
 
 * Make it possible to set infoColor to a Color Mode
 
-* ´symbol.getProperties()´ is removed and ´symbol.getMetadata()´ should be used instead.
+* `symbol.getProperties()` is removed and `symbol.getMetadata()` should be used instead.
 
 ### Deprecated
 
 ### Removed
 
-* ´symbol.getProperties()´ is removed (use ´symbol.getMetadata()´ instead)
+* `symbol.getProperties()` is removed (use `symbol.getMetadata()` instead)
 
 ### Fixed
 
