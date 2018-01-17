@@ -1,5 +1,5 @@
 import { ms } from "../../ms.js";
-export default function getProperties() {
+export default function getMetadata() {
   var metadata = {
     activity: false, //Is it an Activity
     affiliation: "", //Affiliation it is shown as (Friend/Hostile...)

@@ -52,7 +52,7 @@
               uniqueDesignation: feature.properties.name
             })
           // Now that we have a symbol we can ask for the echelon and set the symbol size
-          mysymbol = mysymbol.setOptions({ size: iconSize[mysymbol.getProperties().echelon] });
+          mysymbol = mysymbol.setOptions({ size: iconSize[mysymbol.getMetadata().echelon] });
 
           var myicon = L.divIcon({
             className: '',

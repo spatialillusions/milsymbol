@@ -53,7 +53,7 @@ type SymbolOptions = {
   square?: boolean;
 };
 
-type SymbolProperties = {
+type SymbolMetadata = {
   activity: boolean; // Is it an Activity
   affiliation: string; // Affiliation it is shown as (Friend/Hostile...)
   baseAffilation: string; // Affiliation it belongs to (Friend/Hostile...)
@@ -107,7 +107,7 @@ export class Symbol {
   getColors(): SymbolColors;
   getOctagonAnchor(): { x: number; y: number };
   getOptions(includeStyle?: boolean): SymbolOptions;
-  getProperties(): SymbolProperties;
+  getMetadata(): SymbolMetadata;
   getSize(): { width: number; height: number };
   getStyle(): SymbolOptions;
   isValid(extended?: boolean): boolean | Object;

@@ -27,9 +27,13 @@
 
 * Make it possible to set infoColor to a Color Mode
 
+* ´symbol.getProperties()´ is removed and ´symbol.getMetadata()´ should be used instead.
+
 ### Deprecated
 
 ### Removed
+
+* ´symbol.getProperties()´ is removed (use ´symbol.getMetadata()´ instead)
 
 ### Fixed
 
@@ -159,8 +163,7 @@
 
 ### Added
 
-* Added build-amd, to build an AMD only module you can now run `npm run
-  build-amd`
+* Added build-amd, to build an AMD only module you can now run `npm run build-amd`
 
 ### Changed
 
@@ -298,8 +301,7 @@ reorganization.
 
 * Avoid setting properties directly, use setOptions(options) instead.
 
-* Do not use .XML anymore, use asSVG() instead, **if needed set `ms.autoSVG =
-  true`**. ms.autoSVG will be removed in a future version.
+* Do not use .XML anymore, use asSVG() instead, **if needed set `ms.autoSVG = true`**. ms.autoSVG will be removed in a future version.
 
 * getMarker(), it's not needed anymore, symbols are automatically updated when
   options are updated using setOptions().

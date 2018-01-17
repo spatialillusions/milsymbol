@@ -141,7 +141,7 @@ different ways.
 | colorMode            | ColorMode or String | 'Light'                         | This is the option for setting what Color object to use for the fill of the symbols. It can be set to a Color object, or a string representing the name of a registered Color object. You can use ms.ColorMode to create a new color mode, or ms.getColorMode to get an existing color mode. **Note that the string is not a single color, it is a name of a registred color mode**, by default "Light", "Medium", and "Dark" are registred color modes. |
 | fill                 | Boolean             | true                            | Should your symbol be filled with color.                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | fillOpacity          | Number              | 1                               | The opacity of the symbol fill color.                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| fontfamily           | String           | 'Arial'                           | Changes the font familiy for all texts surrounding the icon.                                                                                                                                                                                                                                                                                                                                                                                                             |
+| fontfamily           | String              | 'Arial'                         | Changes the font familiy for all texts surrounding the icon.                                                                                                                                                                                                                                                                                                                                                                                             |
 | frame                | Boolean             | true                            | Should your symbol have a frame. All symbols support to be unframed, not just the ones specified in 2525B.                                                                                                                                                                                                                                                                                                                                               |
 | frameColor           | ColorMode           | false                           | Changes the color of the frame of the symbol                                                                                                                                                                                                                                                                                                                                                                                                             |
 | hqStafLength         | Number              | undefined                       | Overrides the global Headquarters staf length                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -153,7 +153,7 @@ different ways.
 | monoColor            | String              | ''                              | A color that is either a keyword or a numerical RGB specification. If you set this the symbol will be monochrome and unfilled using the color provided.                                                                                                                                                                                                                                                                                                  |
 | outlineColor         | ColorMode or String | rgb(239, 239, 239)              | A color that is either a keyword or a numerical RGB specification. The color of the outline of the symbol, if any. Defaults to an off-white color.                                                                                                                                                                                                                                                                                                       |
 | outlineWidth         | Number              | 0                               | The width of the outline of the symbol, if any.                                                                                                                                                                                                                                                                                                                                                                                                          |
-| padding                 | Number             | 0                            | Milsymbol usually tries to fit the bounds for the symbol as snugg as possible, but in some cases you want to add some extra padding around your symbol, then simply set this option to any number.                                                                                                                                            |
+| padding              | Number              | 0                               | Milsymbol usually tries to fit the bounds for the symbol as snugg as possible, but in some cases you want to add some extra padding around your symbol, then simply set this option to any number.                                                                                                                                                                                                                                                       |
 | size                 | Number              | 100                             | The L value for your symbol, where the L value is the width of the icon octagon.                                                                                                                                                                                                                                                                                                                                                                         |
 | simpleStatusModifier | Boolean             | false                           | Should the symbol use simplified status modifiers, this is default for unfilled symbols and can be forced for filled symbols using this option.                                                                                                                                                                                                                                                                                                          |
 | square               | Boolean             | false                           | Should the symbol be square with the insertion point in the center.                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -238,34 +238,7 @@ Object {
 
 ---
 
-### getOptions(_includeStyle_)
-
-Get the options that is set on the symbol. If includeStyle is set to `false`
-style information will not be included in the returned options, if it is set to
-`true` or left out style information will be included in the returned options.
-
-**Returns**
-
-```javascript
-Object;
-```
-
----
-
-### getOctagonAnchor()
-
-Getting the center of the symbol octagon measured from the top left corner of
-the symbol.
-
-**Returns**
-
-```javascript
-Object {x:Number, y:Number}
-```
-
----
-
-### getProperties()
+### getMetadata()
 
 Gets all metadata that are computed for the SIDC of this symbol.
 
@@ -298,6 +271,33 @@ Object {
   space: Boolean, // Is it in Space
   taskForce: Boolean // Is it a task force
 }
+```
+
+---
+
+### getOptions(_includeStyle_)
+
+Get the options that is set on the symbol. If includeStyle is set to `false`
+style information will not be included in the returned options, if it is set to
+`true` or left out style information will be included in the returned options.
+
+**Returns**
+
+```javascript
+Object;
+```
+
+---
+
+### getOctagonAnchor()
+
+Getting the center of the symbol octagon measured from the top left corner of
+the symbol.
+
+**Returns**
+
+```javascript
+Object {x:Number, y:Number}
 ```
 
 ---

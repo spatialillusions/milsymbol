@@ -51,7 +51,7 @@
           });
 
         // Now that we have a symbol we can ask for the echelon and set the symbol size
-        var mycanvas = mysymbol.setOptions({ size: iconSize[mysymbol.getProperties().echelon] * ratio }).asCanvas();
+        var mycanvas = mysymbol.setOptions({ size: iconSize[mysymbol.getMetadata().echelon] * ratio }).asCanvas();
 
         f.setStyle(new ol.style.Style({
           image: new ol.style.Icon(({

@@ -26,7 +26,7 @@ export default function setOptions() {
   this.validIcon = true;
 
   //Updating the object with metadata of the symbol
-  this.metadata = this.getProperties();
+  this.metadata = this.getMetadata();
 
   //Updating the object with colors
   this.colors = this.getColors();

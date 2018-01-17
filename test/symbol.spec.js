@@ -28,7 +28,7 @@ describe("ms.Symbol", () => {
       getOctagonAnchor: {
         returns: Object
       },
-      getProperties: {
+      getMetadata: {
         returns: Object
       },
       getSize: {

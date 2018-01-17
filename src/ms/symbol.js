@@ -94,11 +94,11 @@ Symbol.prototype.getOctagonAnchor = function() {
   return this.octagonAnchor;
 };
 
+import getMetadata from "./symbol/getmetadata.js";
+Symbol.prototype.getMetadata = getMetadata;
+
 import getOptions from "./symbol/getoptions.js";
 Symbol.prototype.getOptions = getOptions;
-
-import getProperties from "./symbol/getproperties.js";
-Symbol.prototype.getProperties = getProperties;
 
 import getSize from "./symbol/getsize.js";
 Symbol.prototype.getSize = getSize;
