@@ -1,3 +1,7 @@
+import { ms } from "../../ms.js";
+import icons from "../../iconparts/ground.js";
+ms.addIconParts(icons);
+
 export default function installations(sId, bbox, icn, _STD2525) {
   //Adds support for installations
   sId["S-G-I-----"] = [];

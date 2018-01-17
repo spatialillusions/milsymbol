@@ -1,3 +1,7 @@
+import { ms } from "../../ms.js";
+import icons from "../../iconparts/ground.js";
+ms.addIconParts(icons);
+
 export default function stabilityoperations(sId, bbox, icn, _STD2525) {
   //Adds support for 2525C Stability Operations
   sId["O-V-A-----"] = [icn["ST.IC.ARSON/FIRE"]];

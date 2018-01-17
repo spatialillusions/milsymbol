@@ -56,7 +56,7 @@ export default function icon() {
       iconParts = ms._iconCache[icnet].iconParts;
     } else {
       ms._iconCache[icnet] = {};
-      iconParts = ms._iconCache[icnet].iconParts = ms._geticnParts(
+      iconParts = ms._iconCache[icnet].iconParts = ms._getIconParts(
         this.metadata,
         this.colors,
         ms._STD2525,

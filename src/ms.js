@@ -35,6 +35,31 @@ import { colormode } from "./ms/colormode.js";
 ms.BBox = bbox;
 ms.ColorMode = colormode;
 
+ms._getIconParts = function iconparts(
+  metadata,
+  colors,
+  _STD2525,
+  monoColor,
+  alternateMedal
+) {
+  var icn = {};
+
+  for (var i in this._iconParts) {
+    if (!this._iconParts.hasOwnProperty(i)) continue;
+    this._iconParts[i].call(
+      this,
+      icn,
+      metadata,
+      colors,
+      _STD2525,
+      monoColor,
+      alternateMedal
+    );
+  }
+
+  return icn;
+};
+
 ms._parseXML = function(s, doc) {
   doc = doc || document;
   var doc2 = new DOMParser().parseFromString(s, "text/xml");
@@ -100,6 +125,7 @@ ms.getDashArrays = function() {
 ms.getHqStafLength = function() {
   return this._hqStafLength;
 };
+
 ms.getSymbolParts = function() {
   return this._symbolParts.slice(0);
 };

@@ -1,4 +1,7 @@
 import { ms } from "../../ms.js";
+import icons from "../../iconparts/ground.js";
+ms.addIconParts(icons);
+
 export default function landequipment(
   sId,
   sIdm1,

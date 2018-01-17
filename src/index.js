@@ -1,20 +1,12 @@
 /* ***************************************************************************************
 Creating the base of milsymbol
 *************************************************************************************** */
-//var ms = require("./ms.js");
 import { ms } from "./ms.js";
-//var ms = milsymbol;
-
-// Adding things to ms that can't be done in ms.js since they reference ms.js
-import iconparts from "./iconparts/iconparts.js";
-ms._geticnParts = iconparts;
-//ms._symbolGeometries = require("./ms/symbolgeometries.js");
 
 import geometries from "./ms/symbolgeometries.js";
 ms._symbolGeometries = geometries;
 
 // Initiating the symbol class
-//ms.Symbol = require("./ms.symbol.js");
 import Symbol from "./ms/symbol.js";
 ms.Symbol = Symbol;
 
@@ -121,9 +113,6 @@ ms.addSIDCicons(subsurfacenumber, "number");
 import minewarfarenumber from "./numbersidc/sidc/minewarfare.js";
 ms.addSIDCicons(minewarfarenumber, "number");
 
-//import seabedinstallationsnumber from "./numbersidc/sidc/seabedinstallations.js";
-//ms.addSIDCicons(seabedinstallationsnumber, "number");
-
 import activitesnumber from "./numbersidc/sidc/activites.js";
 ms.addSIDCicons(activitesnumber, "number");
 
@@ -139,7 +128,6 @@ ms.addSIDCicons(dismountedindividualnumber, "number");
 import tacticalpointsnumber from "./numbersidc/sidc/control-measure.js";
 ms.addSIDCicons(tacticalpointsnumber, "number");
 
-//*/
 /* ***************************************************************************************
 Functions that builds the symbol
 *************************************************************************************** */

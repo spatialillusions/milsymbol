@@ -1,4 +1,7 @@
 import { ms } from "../../ms.js";
+import icons from "../../iconparts/ground.js";
+ms.addIconParts(icons);
+
 export default function emergencymanagementsymbols(sId, bbox, icn, _STD2525) {
   //Adds support for 2525C Emergency Management Symbols
   sId["E-I-A-----"] = [icn["AC.IC.CRIMINAL.CIVIL DISTURBANCE"]];

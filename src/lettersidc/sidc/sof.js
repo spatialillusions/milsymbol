@@ -1,4 +1,7 @@
 import { ms } from "../../ms.js";
+import icons from "../../iconparts/ground.js";
+ms.addIconParts(icons);
+
 export default function sof(sId, bbox, icn, _STD2525) {
   // SOF ===========================================================================
   sId["S-F-------"] = [icn["AR.I.SPECIAL OPERATIONS FORCES"]];
