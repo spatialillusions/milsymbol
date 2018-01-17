@@ -69,7 +69,6 @@
   <script>
     var size = 70;
     ms.setStandard("APP6");
-    ms._autoValidation = true;
 
     // Since we don't have any geometry types in APP-6 D controle measures, let us get them from 2525D
     var control = milstd["2525d"]["25"]["main icon"];
@@ -154,13 +153,35 @@
       output += "<th>Remarks</th></tr></thead>";
 
       for (i = 0; i < symbolset["main icon"].length; i++) {
-        output +=
-          "<tr"
+        var symbol = new ms.Symbol(
+              "1003" +
+              symbolset.symbolset +
+              "0000" +
+              symbolset["main icon"][i].code +
+              "0000",
+              { size: size },
+              remarks(symbolset["main icon"][i].remarks),
+              (symbolset.symbolset == 25)?labels():{}
+            );
+
+        output += "<tr";
+
         if ([
           "N/A",
           "For training or hierarchical purposes only"
-        ].indexOf(symbolset["main icon"][i].remarks) != -1)
+        ].indexOf(symbolset["main icon"][i].remarks) != -1){
           output += ' class="na"';
+        }
+          
+        if(!symbol.isValid() && !(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")){
+          output += ' style="background-color:red"';
+          console.warn(symbolset["main icon"][i]["entity subtype"] ||
+            symbolset["main icon"][i]["entity type"] ||
+            symbolset["main icon"][i]["entity"])
+          console.warn(symbol.getOptions().sidc);
+          console.warn(symbol.isValid(true));
+        }
+
         output += "><td><b>" +
           (symbolset["main icon"][i]["entity subtype"] ||
             symbolset["main icon"][i]["entity type"] ||
@@ -202,16 +223,7 @@
               symbolset["main icon"][i].code +
               "0000" +
               "-->" +
-            new ms.Symbol(
-              "1003" +
-              symbolset.symbolset +
-              "0000" +
-              symbolset["main icon"][i].code +
-              "0000",
-              { size: size },
-              remarks(symbolset["main icon"][i].remarks),
-              (symbolset.symbolset == 25)?labels():{}
-            ).asSVG();
+            symbol.asSVG();
           output += "</td>"
         } else {
           output +=
@@ -241,12 +253,7 @@
         output +=
           "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
         for (i = 0; i < symbolset["modifier 1"].length; i++) {
-          output += "<tr><td><b>" + symbolset["modifier 1"][i].modifier + "</b>";
-          output += "<br><br><em>Symbol Set Code:</em> " + symbolset.symbolset;
-          output += "<br><em>Code:</em> " + symbolset["modifier 1"][i].code;
-          output += "</td><td>";
-          if (symbolset["modifier 1"][i].code != 99 && !isNaN(symbolset["modifier 1"][i].code))
-            output += new ms.Symbol(
+          var symbol = new ms.Symbol(
               "1003" +
               symbolset.symbolset +
               "0000000000" +
@@ -254,7 +261,22 @@
               "00",
               { size: size },
               remarks(symbolset["modifier 1"][i].remarks)
-            ).asSVG();
+            );
+          output += "<tr";
+          
+          if(!symbol.isValid()){
+            output += ' style="background-color:red"';
+            console.warn(symbolset["modifier 1"][i].modifier)
+            console.warn(symbol.getOptions().sidc);
+            console.warn(symbol.isValid(true));
+          }
+
+          output += "><td><b>" + symbolset["modifier 1"][i].modifier + "</b>";
+          output += "<br><br><em>Symbol Set Code:</em> " + symbolset.symbolset;
+          output += "<br><em>Code:</em> " + symbolset["modifier 1"][i].code;
+          output += "</td><td>";
+          if (symbolset["modifier 1"][i].code != 99 && !isNaN(symbolset["modifier 1"][i].code))
+            output += symbol.asSVG();
           output += "</td><td>" + symbolset["modifier 1"][i].remarks + "</td></tr>";
         }
         output += "</table>";
@@ -264,19 +286,29 @@
         output +=
           "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
         for (i = 0; i < symbolset["modifier 2"].length; i++) {
-          output += "<tr><td><b>" + symbolset["modifier 2"][i].modifier + "</b>";
-          output += "<br><br><em>Symbol Set Code:</em> " + symbolset.symbolset;
-          output += "<br><em>Code:</em> " + symbolset["modifier 2"][i].code;
-          output += "</td><td>";
-          if (symbolset["modifier 2"][i].code != 99 && !isNaN(symbolset["modifier 2"][i].code))
-            output += new ms.Symbol(
+          var symbol = new ms.Symbol(
               "1003" +
               symbolset.symbolset +
               "000000000000" +
               symbolset["modifier 2"][i].code,
               { size: size },
               remarks(symbolset["modifier 2"][i].remarks)
-            ).asSVG();
+            );
+          output += "<tr";
+          
+          if(!symbol.isValid()){
+            output += ' style="background-color:red"';
+            console.warn(symbolset["modifier 2"][i].modifier)
+            console.warn(symbol.getOptions().sidc);
+            console.warn(symbol.isValid(true));
+          }
+          
+          output += "><td><b>" + symbolset["modifier 2"][i].modifier + "</b>";
+          output += "<br><br><em>Symbol Set Code:</em> " + symbolset.symbolset;
+          output += "<br><em>Code:</em> " + symbolset["modifier 2"][i].code;
+          output += "</td><td>";
+          if (symbolset["modifier 2"][i].code != 99 && !isNaN(symbolset["modifier 2"][i].code))
+            output += symbol.asSVG();
           output += "</td><td>" + symbolset["modifier 2"][i].remarks + "</td></tr>";
         }
         output += "</table>";
