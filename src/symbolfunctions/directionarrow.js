@@ -1,6 +1,5 @@
-//Direction Arrow ########################################################################
-import { ms } from "../ms.js";
-export default function directionarrow() {
+//Direction Arrow #######################################################################
+export default function directionarrow(ms) {
   var drawArray1 = [];
   var drawArray2 = [];
   var bbox = this.metadata.baseGeometry.bbox;

@@ -1,4 +1,4 @@
-export function bbox(box) {
+export function BBox(box) {
   if (typeof box === "undefined") {
     box = {};
   }

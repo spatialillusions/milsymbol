@@ -1,5 +1,5 @@
-import { ms } from "../ms.js";
-export function metadata(metadata, mapping) {
+//import { ms } from "../ms.js";
+export function metadata(ms, metadata, mapping) {
   //var version = this.options.sidc.substr(0, 2);
   var standardIdentity1 = this.options.sidc.substr(2, 1);
   var standardIdentity2 = this.options.sidc.substr(3, 1);

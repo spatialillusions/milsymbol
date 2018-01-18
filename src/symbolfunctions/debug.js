@@ -1,6 +1,5 @@
 //Debug ##################################################################################
-import { ms } from "../ms.js";
-export default function debug() {
+export default function debug(ms) {
   //This debug function is a minimal example of how to extend milsymbol.
   //Create a variable to store your geometries
   var drawArray1 = [];

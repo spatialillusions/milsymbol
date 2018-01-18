@@ -37,7 +37,7 @@ export default function setOptions() {
   //Processing all parts of the symbol, adding them to the drawinstruction and updating the boundingbox
   for (i in ms._symbolParts) {
     if (!ms._symbolParts.hasOwnProperty(i)) continue;
-    var m = ms._symbolParts[i].call(this);
+    var m = ms._symbolParts[i].call(this, ms);
     if (!m.pre) continue;
     if (m.pre.length > 0) {
       while (m.pre.length == 1) {

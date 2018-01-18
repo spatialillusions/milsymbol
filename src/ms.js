@@ -30,9 +30,9 @@ var ms = new function() {
   }
 }();
 
-import { bbox } from "./ms/bbox.js";
+import { BBox } from "./ms/bbox.js";
 import { colormode } from "./ms/colormode.js";
-ms.BBox = bbox;
+ms.BBox = BBox;
 ms.ColorMode = colormode;
 
 ms._getIconParts = function iconparts(
@@ -132,41 +132,10 @@ ms.getSymbolParts = function() {
 ms.getVersion = function() {
   return this.version;
 };
-ms.outline = function(geom, outline, stroke, color) {
-  var clone;
-  if (Array.isArray(geom)) {
-    clone = [];
-    for (var i in geom) {
-      clone.push(ms.outline(geom[i], outline, stroke, color));
-    }
-  } else {
-    clone = {};
-    for (var key in geom) {
-      if (["fill", "fillopacity"].indexOf(key) == -1) {
-        clone[key] = geom[key];
-      }
-    }
-    if (
-      geom.type == "translate" ||
-      geom.type == "rotate" ||
-      geom.type == "scale"
-    ) {
-      clone.draw = [];
-      for (var draw in geom.draw) {
-        clone.draw.push(ms.outline(geom.draw[draw], outline, stroke, color));
-      }
-    } else {
-      clone.strokewidth =
-        clone.stroke !== false
-          ? Number(clone.strokewidth || stroke) + 2 * outline
-          : 2 * outline;
-      clone.stroke = color;
-      clone.fill = false;
-      clone.linecap = "round";
-    }
-  }
-  return clone;
-};
+
+import outline from "./ms/outline.js";
+ms.outline = outline;
+
 ms.setAutoSVG = function(mode) {
   this._autoSVG = mode;
   return this._autoSVG;
@@ -206,7 +175,24 @@ ms.setStandard = function(standard) {
   return false;
 };
 
-// Add default colors
+/* ***************************************************************************************
+Add support for getting metadata and icons
+*************************************************************************************** */
+import { metadata as metadata_letter } from "./lettersidc/metadata.js";
+import { metadata as metadata_number } from "./numbersidc/metadata.js";
+ms._getMetadata = {};
+ms._getMetadata.letter = metadata_letter;
+ms._getMetadata.number = metadata_number;
+
+import { geticons as getIcons_letter } from "./lettersidc/geticons.js";
+import { geticons as getIcons_number } from "./numbersidc/geticons.js";
+ms._getIcons = {};
+ms._getIcons.letter = getIcons_letter;
+ms._getIcons.number = getIcons_number;
+
+/* ***************************************************************************************
+Add default colors
+*************************************************************************************** */
 import black from "./colormodes/black.js";
 import dark from "./colormodes/dark.js";
 import framecolor from "./colormodes/framecolor.js";
@@ -225,5 +211,38 @@ ms.setColorMode("Medium", medium);
 ms.setColorMode("None", none);
 ms.setColorMode("OffWhite", offwhite);
 ms.setColorMode("White", white);
+
+/* ***************************************************************************************
+Add base geometries
+*************************************************************************************** */
+import geometries from "./ms/symbolgeometries.js";
+ms._symbolGeometries = geometries;
+
+/* ***************************************************************************************
+Functions that builds the symbol
+*************************************************************************************** */
+import basegeometry from "./symbolfunctions/basegeometry.js";
+ms.addSymbolPart(basegeometry);
+
+import icon from "./symbolfunctions/icon.js";
+ms.addSymbolPart(icon);
+
+import modifier from "./symbolfunctions/modifier.js";
+ms.addSymbolPart(modifier);
+
+import statusmodifier from "./symbolfunctions/statusmodifier.js";
+ms.addSymbolPart(statusmodifier);
+
+import engagmentbar from "./symbolfunctions/engagmentbar.js";
+ms.addSymbolPart(engagmentbar);
+
+import affliationdimension from "./symbolfunctions/affliationdimension.js";
+ms.addSymbolPart(affliationdimension);
+
+import textfields from "./symbolfunctions/textfields.js";
+ms.addSymbolPart(textfields);
+
+import directionarrow from "./symbolfunctions/directionarrow.js";
+ms.addSymbolPart(directionarrow);
 
 export { ms };

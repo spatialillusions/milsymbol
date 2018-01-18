@@ -86,21 +86,21 @@ export default function getMetadata() {
   if (metadata.numberSIDC) {
     //This is for new number based SIDCs
 
-    if (typeof ms._getNumberMetadata === "function") {
-      metadata = ms._getNumberMetadata.call(this, metadata, mapping);
+    if (typeof ms._getMetadata.number === "function") {
+      metadata = ms._getMetadata.number.call(this, ms, metadata, mapping);
     } else {
       console.warn(
-        "ms._getNumberMetadata() is not present, you will need to load functionality for number based SIDCs"
+        "ms._getMetadata.number() is not present, you will need to load functionality for number based SIDCs"
       );
     }
   } else {
     //This would be old letter based SIDCs
 
-    if (typeof ms._getLetterMetadata === "function") {
-      metadata = ms._getLetterMetadata.call(this, metadata, mapping);
+    if (typeof ms._getMetadata.letter === "function") {
+      metadata = ms._getMetadata.letter.call(this, ms, metadata, mapping);
     } else {
       console.warn(
-        "ms._getLetterMetadata() is not present, you will need to load functionality for letter based SIDCs"
+        "ms._getMetadata.letter() is not present, you will need to load functionality for letter based SIDCs"
       );
     }
   }

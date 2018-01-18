@@ -1,6 +1,5 @@
-//Icon ##################################################################################
-import { ms } from "../ms.js";
-export default function icon() {
+//Icon #################################################################################
+export default function icon(ms) {
   var drawArray1 = [];
   var drawArray2 = [];
   var gbbox = new ms.BBox({ x1: 50, x2: 150, y1: 50, y2: 150 });
@@ -85,8 +84,9 @@ export default function icon() {
         icons = ms._iconCache[icnet].letterSIDC.icons;
         specialbbox = ms._iconCache[icnet].letterSIDC.bbox;
       } else {
-        if (typeof ms._getLetterSIDCicn === "function") {
-          ms._iconCache[icnet].letterSIDC = ms._getLetterSIDCicn(
+        if (typeof ms._getIcons.letter === "function") {
+          ms._iconCache[icnet].letterSIDC = ms._getIcons.letter(
+            ms,
             iconParts,
             ms._STD2525
           );
@@ -129,7 +129,7 @@ export default function icon() {
 		*/
         } else {
           console.warn(
-            "ms._getLetterSIDCicn() is not present, you will need to load functionality for letter based SIDCs"
+            "ms._getIcons.letter() is not present, you will need to load functionality for letter based SIDCs"
           );
         }
       }
@@ -149,10 +149,10 @@ export default function icon() {
           specialbbox =
             ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].bbox;
         } else {
-          if (typeof ms._getNumberSIDCicn === "function") {
+          if (typeof ms._getIcons.number === "function") {
             ms._iconCache[icnet].numberSIDC.symbolSet[
               symbolSet
-            ] = ms._getNumberSIDCicn(symbolSet, iconParts, ms._STD2525);
+            ] = ms._getIcons.number(ms, symbolSet, iconParts, ms._STD2525);
             icons = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
             m1 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
             m2 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
@@ -160,17 +160,17 @@ export default function icon() {
               ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].bbox;
           } else {
             console.warn(
-              "ms._getNumberSIDCicn() is not present, you will need to load functionality for number based SIDCs"
+              "ms._getIcons.number() is not present, you will need to load functionality for number based SIDCs"
             );
           }
         }
       } else {
         ms._iconCache[icnet].numberSIDC = {};
         ms._iconCache[icnet].numberSIDC.symbolSet = {};
-        if (typeof ms._getNumberSIDCicn === "function") {
+        if (typeof ms._getIcons.number === "function") {
           ms._iconCache[icnet].numberSIDC.symbolSet[
             symbolSet
-          ] = ms._getNumberSIDCicn(symbolSet, iconParts, ms._STD2525);
+          ] = ms._getIcons.number(ms, symbolSet, iconParts, ms._STD2525);
           icons = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
           m1 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
           m2 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
@@ -216,7 +216,7 @@ export default function icon() {
 					}*/
         } else {
           console.warn(
-            "ms._getNumberSIDCicn() is not present, you will need to load functionality for number based SIDCs"
+            "ms._getIcons.number() is not present, you will need to load functionality for number based SIDCs"
           );
         }
       }

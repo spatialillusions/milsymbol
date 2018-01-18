@@ -3,9 +3,6 @@ Creating the base of milsymbol
 *************************************************************************************** */
 import { ms } from "./ms.js";
 
-import geometries from "./ms/symbolgeometries.js";
-ms._symbolGeometries = geometries;
-
 // Initiating the symbol class
 import Symbol from "./ms/symbol.js";
 ms.Symbol = Symbol;
@@ -13,10 +10,6 @@ ms.Symbol = Symbol;
 /* ***************************************************************************************
 Letter based SIDC
 *************************************************************************************** */
-import { metadata as letters_metadata } from "./lettersidc/metadata.js";
-ms._getLetterMetadata = letters_metadata;
-import { geticon as letterGetIcon } from "./lettersidc/geticon.js";
-ms._getLetterSIDCicn = letterGetIcon;
 
 import spaceletter from "./lettersidc/sidc/space.js";
 ms.addSIDCicons(spaceletter, "letter");
@@ -54,11 +47,6 @@ ms.addSIDCicons(tacticalpointsapp6letter, "letter");
 /* ***************************************************************************************
 Number based SIDC
 *************************************************************************************** */
-
-import { metadata as numbers_metadata } from "./numbersidc/metadata.js";
-ms._getNumberMetadata = numbers_metadata;
-import { geticon as numberGetIcon } from "./numbersidc/geticon.js";
-ms._getNumberSIDCicn = numberGetIcon;
 
 import airnumber from "./numbersidc/sidc/air.js";
 ms.addSIDCicons(airnumber, "number");
@@ -109,34 +97,8 @@ import tacticalpointsnumber from "./numbersidc/sidc/control-measure.js";
 ms.addSIDCicons(tacticalpointsnumber, "number");
 
 /* ***************************************************************************************
-Functions that builds the symbol
+This draws the symbol octagon, can be good for debugging.
 *************************************************************************************** */
-
-import basegeometry from "./symbolfunctions/basegeometry.js";
-ms.addSymbolPart(basegeometry);
-
-import icon from "./symbolfunctions/icon.js";
-ms.addSymbolPart(icon);
-
-import modifier from "./symbolfunctions/modifier.js";
-ms.addSymbolPart(modifier);
-
-import statusmodifier from "./symbolfunctions/statusmodifier.js";
-ms.addSymbolPart(statusmodifier);
-
-import engagmentbar from "./symbolfunctions/engagmentbar.js";
-ms.addSymbolPart(engagmentbar);
-
-import affliationdimension from "./symbolfunctions/affliationdimension.js";
-ms.addSymbolPart(affliationdimension);
-
-import textfields from "./symbolfunctions/textfields.js";
-ms.addSymbolPart(textfields);
-
-import directionarrow from "./symbolfunctions/directionarrow.js";
-ms.addSymbolPart(directionarrow);
-
-// This draws the symbol octagon, can be good for debugging.
 //import debug from "./symbolfunctions/debug.js";
 //ms.addSymbolPart(debug);
 

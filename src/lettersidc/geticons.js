@@ -1,5 +1,5 @@
-import { ms } from "../ms.js";
-export function geticon(iconParts, STD2525) {
+//import { ms } from "../ms.js";
+export function geticons(ms, iconParts, STD2525) {
   var iconSIDC = {};
   var iconBbox = {};
 

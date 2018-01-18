@@ -1,6 +1,5 @@
 //Text Fields ############################################################################
-import { ms } from "../ms.js";
-export default function textfields() {
+export default function textfields(ms) {
   var drawArray1 = [];
   var drawArray2 = [];
   var bbox = this.metadata.baseGeometry.bbox;

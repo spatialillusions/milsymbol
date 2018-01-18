@@ -1,6 +1,5 @@
 //Sets modifiers depending of status #####################################################
-import { ms } from "../ms.js";
-export default function statusmodifier() {
+export default function statusmodifier(ms) {
   var drawArray1 = [];
   var drawArray2 = [];
   var bbox = this.metadata.baseGeometry.bbox;

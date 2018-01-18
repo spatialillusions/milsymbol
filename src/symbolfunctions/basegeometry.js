@@ -1,6 +1,5 @@
 //Base Geometry for the Symbol ###########################################################
-import { ms } from "../ms.js";
-export default function basegeometry() {
+export default function basegeometry(ms) {
   var modifier;
   var drawArray1 = [];
   var drawArray2 = [];

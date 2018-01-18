@@ -1,6 +1,5 @@
 //Symbol Modifiers #######################################################################
-import { ms } from "../ms.js";
-export default function modifier() {
+export default function modifier(ms) {
   var drawArray1 = [];
   var drawArray2 = [];
   var bbox = new ms.BBox(this.metadata.baseGeometry.bbox); // clone the bbox

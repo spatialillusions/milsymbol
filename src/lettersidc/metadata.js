@@ -1,5 +1,5 @@
-import { ms } from "../ms.js";
-export function metadata(metadata, mapping) {
+//import { ms } from "../ms.js";
+export function metadata(ms, metadata, mapping) {
   this.options.sidc = this.options.sidc.toUpperCase();
 
   var codingscheme =

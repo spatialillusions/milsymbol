@@ -1,6 +1,5 @@
 //Affiliation and dimension addons to base geometries ####################################
-import { ms } from "../ms.js";
-export default function affliationdimension() {
+export default function affliationdimension(ms) {
   var drawArray1 = [];
   var drawArray2 = [];
   var bbox = this.metadata.baseGeometry.bbox;
