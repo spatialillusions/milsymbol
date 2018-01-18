@@ -2,11 +2,11 @@ import { ms } from "../src/ms";
 import milstd from "../src/milstd";
 ms.setStandard("APP6");
 
-import icons from "../src/numbersidc/sidc/air";
+import icons from "../src/numbersidc/sidc/landcivilian";
 ms.addNumberIcons(icons);
 
-describe("APP-6 D Air Equipment and Platform", () => {
-  const sidc = milstd["app6d"]["01"];
+describe("APP-6 D Land Civilian Organization", () => {
+  const sidc = milstd["app6d"]["11"];
 
   describe("Main Icon", () => {
     for (let i = 0; i < sidc["main icon"].length; i++) {
