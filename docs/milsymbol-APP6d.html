@@ -248,7 +248,7 @@
         output += "<td>" + symbolset["main icon"][i].remarks + "</td></tr>";
       }
       output += "</table>";
-      if (symbolset["modifier 1"].length != 0) {
+      if (symbolset["modifier 1"].length) {
         output += "<h3>" + symbolset.name + " Modifier 1</h3>";
         output +=
           "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
@@ -264,7 +264,7 @@
             );
           output += "<tr";
           
-          if(!symbol.isValid()){
+          if(symbolset["modifier 1"][i].code.length == 2 && !symbol.isValid()){
             output += ' style="background-color:red"';
             console.warn(symbolset["modifier 1"][i].modifier)
             console.warn(symbol.getOptions().sidc);
@@ -296,7 +296,7 @@
             );
           output += "<tr";
           
-          if(!symbol.isValid()){
+          if(symbolset["modifier 2"][i].code.length == 2 && !symbol.isValid()){
             output += ' style="background-color:red"';
             console.warn(symbolset["modifier 2"][i].modifier)
             console.warn(symbol.getOptions().sidc);
