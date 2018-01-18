@@ -1,4 +1,4 @@
-import { defaultProperties } from "./shared-functions.js";
+import { defaultProperties } from "./iconparts-functions.js";
 
 export default function(
   iconParts,

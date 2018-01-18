@@ -1,7 +1,12 @@
 // TODO remove this import
 import { ms } from "../ms.js";
 
-import { defaultProperties, text, textm1, textm2 } from "./shared-functions.js";
+import {
+  defaultProperties,
+  text,
+  textm1,
+  textm2
+} from "./iconparts-functions.js";
 
 export default function(
   iconParts,
