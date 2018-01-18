@@ -30,11 +30,9 @@ import stabilityoperationsletter from "./lettersidc/sidc/stabilityoperations.js"
 ms.addLetterIcons(stabilityoperationsletter);
 import emergencymanagementsymbolsletter from "./lettersidc/sidc/emergencymanagementsymbols.js";
 ms.addLetterIcons(emergencymanagementsymbolsletter);
-
 // Adding support for symbols in MIL-STD-2525B change 2 that are missing in 2525C
 import std2525bletter from "./lettersidc/sidc/2525b-ch2.js";
 ms.addLetterIcons(std2525bletter);
-
 // Adding support for tactical points
 import tacticalpoints2525letter from "./lettersidc/sidc/tactical-points-2525.js";
 ms.addLetterIcons(tacticalpoints2525letter);
