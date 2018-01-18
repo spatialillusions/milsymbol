@@ -206,4 +206,24 @@ ms.setStandard = function(standard) {
   return false;
 };
 
+// Add default colors
+import black from "./colormodes/black.js";
+import dark from "./colormodes/dark.js";
+import framecolor from "./colormodes/framecolor.js";
+import iconcolor from "./colormodes/iconcolor.js";
+import light from "./colormodes/light.js";
+import medium from "./colormodes/medium.js";
+import none from "./colormodes/none.js";
+import offwhite from "./colormodes/offwhite.js";
+import white from "./colormodes/white.js";
+ms.setColorMode("Black", black);
+ms.setColorMode("Dark", dark);
+ms.setColorMode("FrameColor", framecolor);
+ms.setColorMode("IconColor", iconcolor);
+ms.setColorMode("Light", light);
+ms.setColorMode("Medium", medium);
+ms.setColorMode("None", none);
+ms.setColorMode("OffWhite", offwhite);
+ms.setColorMode("White", white);
+
 export { ms };

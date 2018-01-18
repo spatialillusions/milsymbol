@@ -1,2 +1,7 @@
-import { ms } from "../ms.js";
-export default new ms.ColorMode(false, false, false, false, false);
+export default {
+  Civilian: false,
+  Friend: false,
+  Hostile: false,
+  Neutral: false,
+  Unknown: false
+};

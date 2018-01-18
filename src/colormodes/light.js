@@ -1,8 +1,7 @@
-import { ms } from "../ms.js";
-export default new ms.ColorMode(
-  "rgb(255,161,255)",
-  "rgb(128,224,255)",
-  "rgb(255,128,128)",
-  "rgb(170,255,170)",
-  "rgb(255,255,128)"
-);
+export default {
+  Civilian: "rgb(255,161,255)",
+  Friend: "rgb(128,224,255)",
+  Hostile: "rgb(255,128,128)",
+  Neutral: "rgb(170,255,170)",
+  Unknown: "rgb(255,255,128)"
+};

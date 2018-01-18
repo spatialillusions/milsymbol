@@ -1,2 +1,7 @@
-import { ms } from "../ms.js";
-export default new ms.ColorMode("white", "white", "white", "white", "white");
+export default {
+  Civilian: "white",
+  Friend: "white",
+  Hostile: "white",
+  Neutral: "white",
+  Unknown: "white"
+};

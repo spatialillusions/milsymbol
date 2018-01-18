@@ -10,26 +10,6 @@ ms._symbolGeometries = geometries;
 import Symbol from "./ms/symbol.js";
 ms.Symbol = Symbol;
 
-// Standard colors for symbols
-import light from "./colormodes/light.js";
-ms.setColorMode("Light", light);
-import medium from "./colormodes/medium.js";
-ms.setColorMode("Medium", medium);
-import dark from "./colormodes/dark.js";
-ms.setColorMode("Dark", dark);
-import framecolor from "./colormodes/framecolor.js";
-ms.setColorMode("FrameColor", framecolor);
-import iconcolor from "./colormodes/iconcolor.js";
-ms.setColorMode("IconColor", iconcolor);
-import black from "./colormodes/black.js";
-ms.setColorMode("Black", black);
-import white from "./colormodes/white.js";
-ms.setColorMode("White", white);
-import offwhite from "./colormodes/offwhite.js";
-ms.setColorMode("OffWhite", offwhite);
-import none from "./colormodes/none.js";
-ms.setColorMode("None", none);
-
 /* ***************************************************************************************
 Letter based SIDC
 *************************************************************************************** */
