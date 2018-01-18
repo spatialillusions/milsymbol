@@ -6,6 +6,8 @@ var ms = new function() {
     anticipated: "8,12",
     feintDummy: "8,8"
   };
+  this._getIcons = {};
+  this._getMetadata = {};
   this._hqStafLength = 100;
   this._iconCache = {}; // A cache of icn to speed stuff up...
   this._iconParts = [];
@@ -178,21 +180,6 @@ ms.setStandard = function(standard) {
   }
   return false;
 };
-
-/* ***************************************************************************************
-Add support for getting metadata and icons
-*************************************************************************************** */
-import { metadata as metadata_letter } from "./lettersidc/metadata.js";
-import { metadata as metadata_number } from "./numbersidc/metadata.js";
-ms._getMetadata = {};
-ms._getMetadata.letter = metadata_letter;
-ms._getMetadata.number = metadata_number;
-
-import { geticons as getIcons_letter } from "./lettersidc/geticons.js";
-import { geticons as getIcons_number } from "./numbersidc/geticons.js";
-ms._getIcons = {};
-ms._getIcons.letter = getIcons_letter;
-ms._getIcons.number = getIcons_number;
 
 /* ***************************************************************************************
 Add default colors

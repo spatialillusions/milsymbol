@@ -1,4 +1,9 @@
 import { ms } from "../../ms.js";
+import { metadata as metadata_letter } from "../metadata.js";
+ms._getMetadata.letter = metadata_letter;
+import { geticons as getIcons_letter } from "../geticons.js";
+ms._getIcons.letter = getIcons_letter;
+
 import icons from "../../iconparts/subsurface.js";
 ms.addIconParts(icons);
 
