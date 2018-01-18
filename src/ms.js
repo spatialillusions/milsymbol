@@ -1,4 +1,4 @@
-import { version } from "../package.json";
+//import { version } from "../package.json";
 var ms = new function() {
   this._colorModes = {};
   this._dashArrays = {
@@ -11,15 +11,16 @@ var ms = new function() {
   this._iconParts = [];
   this._labelCache = {}; // A cache of label overrides to speed stuff up...
   this._labelOverrides = {};
-  this._letterSIDCicons = [];
-  this._numberSIDCicons = [];
+  this._iconSIDC = {};
+  this._iconSIDC.letter = [];
+  this._iconSIDC.number = [];
   this._STD2525 = true;
   this._svgNS = "http://www.w3.org/2000/svg";
   this._symbolParts = [];
 
   this._autoSVG = false;
   this._autoValidation = false;
-  this.version = version;
+  this.version = "2.0.0-master";
 
   if (typeof console === "object") {
     console.info(
@@ -30,10 +31,12 @@ var ms = new function() {
   }
 }();
 
+import Symbol from "./ms/symbol.js";
 import { BBox } from "./ms/bbox.js";
-import { colormode } from "./ms/colormode.js";
+import { Colormode } from "./ms/colormode.js";
 ms.BBox = BBox;
-ms.ColorMode = colormode;
+ms.ColorMode = Colormode;
+ms.Symbol = Symbol;
 
 ms._getIconParts = function iconparts(
   metadata,
@@ -58,12 +61,6 @@ ms._getIconParts = function iconparts(
   }
 
   return icn;
-};
-
-ms._parseXML = function(s, doc) {
-  doc = doc || document;
-  var doc2 = new DOMParser().parseFromString(s, "text/xml");
-  return doc.adoptNode(doc2.documentElement);
 };
 
 ms._scale = function(factor, instruction) {
@@ -93,11 +90,18 @@ ms.addLabelOverrides = function(parts, type) {
   }
   return ms;
 };
+
+ms.addLetterIcons = function(parts) {
+  ms.addSIDCicons(parts, "letter");
+};
+
+ms.addNumberIcons = function(parts) {
+  ms.addSIDCicons(parts, "number");
+};
+
 ms.addSIDCicons = function(parts, type) {
   if (typeof parts === "function") {
-    this["_" + type + "SIDCicons"] = this["_" + type + "SIDCicons"].concat(
-      parts
-    );
+    this._iconSIDC[type] = this._iconSIDC[type].concat(parts);
   }
   return ms;
 };

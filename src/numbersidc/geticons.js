@@ -5,9 +5,9 @@ export function geticons(ms, symbolSet, iconParts, STD2525) {
   var iconModifier2 = {};
   var iconBbox = {};
 
-  for (var i in ms._numberSIDCicons) {
-    if (!ms._numberSIDCicons.hasOwnProperty(i)) continue;
-    ms._numberSIDCicons[i].call(
+  for (var i in ms._iconSIDC.number) {
+    if (!ms._iconSIDC.number.hasOwnProperty(i)) continue;
+    ms._iconSIDC.number[i].call(
       this,
       iconSIDC,
       iconModifier1,

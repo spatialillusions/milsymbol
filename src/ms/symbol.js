@@ -1,7 +1,8 @@
-import { ms } from "../ms.js";
+import { BBox } from "./bbox.js";
+
 function Symbol() {
   //=======================================================================================
-  this.bbox = new ms.BBox(); // Contains the bounding box of the current symbol
+  this.bbox = new BBox(); // Contains the bounding box of the current symbol
   this.colors = {}; // Contains the colors for the current symbol
   this.metadata = {}; // Metadata of the current symbol
   this.octagonAnchor = { x: 50, y: 50 }; // The anchor point for the octagon for the current symbol
@@ -77,7 +78,9 @@ import asCanvas from "./symbol/ascanvas.js";
 Symbol.prototype.asCanvas = asCanvas;
 
 Symbol.prototype.asDOM = function() {
-  return ms._parseXML(this.asSVG());
+  var doc = document;
+  var doc2 = new DOMParser().parseFromString(this.asSVG(), "text/xml");
+  return doc.adoptNode(doc2.documentElement);
 };
 
 import asSVG from "./symbol/assvg.js";

@@ -2,99 +2,80 @@
 Creating the base of milsymbol
 *************************************************************************************** */
 import { ms } from "./ms.js";
-
-// Initiating the symbol class
-import Symbol from "./ms/symbol.js";
-ms.Symbol = Symbol;
+//import { version } from "../package.json";
+//ms.version = version;
 
 /* ***************************************************************************************
 Letter based SIDC
 *************************************************************************************** */
-
 import spaceletter from "./lettersidc/sidc/space.js";
-ms.addSIDCicons(spaceletter, "letter");
+ms.addLetterIcons(spaceletter);
 import airletter from "./lettersidc/sidc/air.js";
-ms.addSIDCicons(airletter, "letter");
+ms.addLetterIcons(airletter);
 import groundletter from "./lettersidc/sidc/ground.js";
-ms.addSIDCicons(groundletter, "letter");
+ms.addLetterIcons(groundletter);
 import equipmentletter from "./lettersidc/sidc/equipment.js";
-ms.addSIDCicons(equipmentletter, "letter");
+ms.addLetterIcons(equipmentletter);
 import installationsletter from "./lettersidc/sidc/installations.js";
-ms.addSIDCicons(installationsletter, "letter");
+ms.addLetterIcons(installationsletter);
 import sealetter from "./lettersidc/sidc/sea.js";
-ms.addSIDCicons(sealetter, "letter");
+ms.addLetterIcons(sealetter);
 import subsurfaceletter from "./lettersidc/sidc/subsurface.js";
-ms.addSIDCicons(subsurfaceletter, "letter");
+ms.addLetterIcons(subsurfaceletter);
 import sofletter from "./lettersidc/sidc/sof.js";
-ms.addSIDCicons(sofletter, "letter");
+ms.addLetterIcons(sofletter);
 import signalsIntelligenceletter from "./lettersidc/sidc/signalsIntelligence.js";
-ms.addSIDCicons(signalsIntelligenceletter, "letter");
+ms.addLetterIcons(signalsIntelligenceletter);
 import stabilityoperationsletter from "./lettersidc/sidc/stabilityoperations.js";
-ms.addSIDCicons(stabilityoperationsletter, "letter");
+ms.addLetterIcons(stabilityoperationsletter);
 import emergencymanagementsymbolsletter from "./lettersidc/sidc/emergencymanagementsymbols.js";
-ms.addSIDCicons(emergencymanagementsymbolsletter, "letter");
+ms.addLetterIcons(emergencymanagementsymbolsletter);
 
 // Adding support for symbols in MIL-STD-2525B change 2 that are missing in 2525C
 import std2525bletter from "./lettersidc/sidc/2525b-ch2.js";
-ms.addSIDCicons(std2525bletter, "letter");
+ms.addLetterIcons(std2525bletter);
 
 // Adding support for tactical points
 import tacticalpoints2525letter from "./lettersidc/sidc/tactical-points-2525.js";
-ms.addSIDCicons(tacticalpoints2525letter, "letter");
+ms.addLetterIcons(tacticalpoints2525letter);
 import tacticalpointsapp6letter from "./lettersidc/sidc/tactical-points-app6.js";
-ms.addSIDCicons(tacticalpointsapp6letter, "letter");
+ms.addLetterIcons(tacticalpointsapp6letter);
 
 /* ***************************************************************************************
 Number based SIDC
 *************************************************************************************** */
-
 import airnumber from "./numbersidc/sidc/air.js";
-ms.addSIDCicons(airnumber, "number");
-
+ms.addNumberIcons(airnumber);
 import airmissilenumber from "./numbersidc/sidc/airmissile.js";
-ms.addSIDCicons(airmissilenumber, "number");
-
+ms.addNumberIcons(airmissilenumber);
 import spacenumber from "./numbersidc/sidc/space.js";
-ms.addSIDCicons(spacenumber, "number");
-
+ms.addNumberIcons(spacenumber);
 import spacemissilenumber from "./numbersidc/sidc/spacemissile.js";
-ms.addSIDCicons(spacemissilenumber, "number");
-
+ms.addNumberIcons(spacemissilenumber);
 import landunitnumber from "./numbersidc/sidc/landunit.js";
-ms.addSIDCicons(landunitnumber, "number");
-
+ms.addNumberIcons(landunitnumber);
 import landciviliannumber from "./numbersidc/sidc/landcivilian.js";
-ms.addSIDCicons(landciviliannumber, "number");
-
+ms.addNumberIcons(landciviliannumber);
 import landequipmentnumber from "./numbersidc/sidc/landequipment.js";
-ms.addSIDCicons(landequipmentnumber, "number");
-
+ms.addNumberIcons(landequipmentnumber);
 import landinstallationnumber from "./numbersidc/sidc/landinstallation.js";
-ms.addSIDCicons(landinstallationnumber, "number");
-
+ms.addNumberIcons(landinstallationnumber);
 import seanumber from "./numbersidc/sidc/sea.js";
-ms.addSIDCicons(seanumber, "number");
-
+ms.addNumberIcons(seanumber);
 import subsurfacenumber from "./numbersidc/sidc/subsurface.js";
-ms.addSIDCicons(subsurfacenumber, "number");
-
+ms.addNumberIcons(subsurfacenumber);
 import minewarfarenumber from "./numbersidc/sidc/minewarfare.js";
-ms.addSIDCicons(minewarfarenumber, "number");
-
+ms.addNumberIcons(minewarfarenumber);
 import activitesnumber from "./numbersidc/sidc/activites.js";
-ms.addSIDCicons(activitesnumber, "number");
-
+ms.addNumberIcons(activitesnumber);
 import signalsintelligencenumber from "./numbersidc/sidc/signalsintelligence.js";
-ms.addSIDCicons(signalsintelligencenumber, "number");
-
+ms.addNumberIcons(signalsintelligencenumber);
 import cyberspacenumber from "./numbersidc/sidc/cyberspace.js";
-ms.addSIDCicons(cyberspacenumber, "number");
-
+ms.addNumberIcons(cyberspacenumber);
 import dismountedindividualnumber from "./numbersidc/sidc/dismountedindividual.js";
-ms.addSIDCicons(dismountedindividualnumber, "number");
-
+ms.addNumberIcons(dismountedindividualnumber);
 import tacticalpointsnumber from "./numbersidc/sidc/control-measure.js";
-ms.addSIDCicons(tacticalpointsnumber, "number");
+ms.addNumberIcons(tacticalpointsnumber);
 
 /* ***************************************************************************************
 This draws the symbol octagon, can be good for debugging.

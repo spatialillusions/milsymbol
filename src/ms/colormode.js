@@ -1,4 +1,4 @@
-export function colormode(civilian, friend, hostile, neutral, unknown) {
+export function Colormode(civilian, friend, hostile, neutral, unknown) {
   var o = {};
   o.Civilian = civilian;
   o.Friend = friend;

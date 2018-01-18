@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    .node-text {
+      font: 12px sans-serif;
+    }
+
+    .link {
+      fill: none;
+      stroke: rgb(200, 200, 200);
+      shape-rendering: crispEdges;
+      stroke-dasharray: 2, 2;
+    }
+
+    .indicator {
+      stroke: rgb(100, 100, 100);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>ES6 imports</h1>
+  This sample shows how milsymbol can be imported as ES6 modules. You will have to allow CORS in your browser if you run it
+  locally, or place the sample on a server.
+  <br>
+  <br>
+  <table border="1">
+    <tr>
+      <td>
+        We have imported land equipment, so here you should see a SVG and a Canvas symbol.
+      </td>
+      <td>
+        We have not imported icons for land units, so this should display a symbol with missing main icon, and an indcator that something
+        has gone wrong.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <br> SVG Example:
+        <br>
+        <div id="SVG-imported"></div>
+      </td>
+      <td>
+        <br> SVG Example:
+        <br>
+        <div id="SVG-notimported"></div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Canvas Example:
+        <br>
+        <div id="Canvas-imported">
+          <p></p>
+        </div>
+      </td>
+      <td>
+        Canvas Example:
+        <br>
+        <div id="Canvas-notimported">
+          <p></p>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+
+  <script type="module">
+    import { ms } from '../../src/ms.js';
+    import equipmentletter from "../../src/lettersidc/sidc/equipment.js";
+    ms.addLetterIcons(equipmentletter);
+
+    var color = "yellow";
+    var outline = 3;
+
+    var symbol = new ms.Symbol("sfgpewrh--mt", {
+      size: 35,
+      quantity: 200,
+      staffComments: "for reinforcements".toUpperCase(),
+      additionalInformation: "added support for JJ".toUpperCase(),
+      direction: (750 * 360 / 6400),
+      type: "machine gun".toUpperCase(),
+      dtg: "30140000ZSEP97",
+      location: "0900000.0E570306.0N",
+      outlineColor: color,
+      outlineWidth: outline
+    });
+
+    document.getElementById("SVG-imported").innerHTML = symbol.asSVG();
+
+    document.getElementById("Canvas-imported").replaceChild(
+      symbol.asCanvas(),
+      document.getElementById("Canvas-imported").firstChild);
+
+    symbol = new ms.Symbol("SFG-UCI----D", {
+      size: 35,
+      outlineColor: color,
+      outlineWidth: outline
+    });
+
+    document.getElementById("SVG-notimported").innerHTML = symbol.asSVG();
+
+    document.getElementById("Canvas-notimported").replaceChild(
+      symbol.asCanvas(),
+      document.getElementById("Canvas-notimported").firstChild);
+
+  </script>
+</body>
