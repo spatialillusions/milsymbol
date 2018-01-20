@@ -3,7 +3,7 @@ module.exports = {
   env: {
     browser: true,
     commonjs: true,
-    mocha: true
+    jest: true
   },
   parserOptions: {
     ecmaVersion: 6,
