@@ -1,38 +1,16 @@
-export default function(ms, milstd, name, symbolset) {
-  /*describe(name, () => {
-    const sidc = milstd["app6d"][symbolset];
+import { ms } from "../src/ms";
+import milstd from "../src/milstd";
+import verify from "./app6d";
+ms.setStandard("APP6");
+ms._iconCache = {};
 
-    describe("Main Icon", () => {
-      for (let i = 0; i < sidc["main icon"].length; i++) {
-        let icon =
-          sidc["main icon"][i].code +
-          " " +
-          (sidc["main icon"][i]["entity subtype"] ||
-            sidc["main icon"][i]["entity type"] ||
-            sidc["main icon"][i]["entity"]);
-        let valid = new ms.Symbol(
-          "1003" + sidc.symbolset + "0000" + sidc["main icon"][i].code + "0000"
-        ).isValid();
+import icons from "../src/numbersidc/sidc/space";
+ms.addNumberIcons(icons);
 
-        if (
-          valid &&
-          [
-            "From MIL-STD-2525.",
-            "Simplification of MIL-STD-2525 icon TBD."
-          ].indexOf(sidc["main icon"][i].remark) == -1
-        ) {
-          test(icon, () => {
-            expect(true).toBe(true);
-          });
-        } else {
-          it.skip(icon, () => {});
-        }
-      }
-    });
-    //expect(sum(1, 2)).toBe(3);
-  });
-//*/
+verify(ms, milstd, "APP-6 D Space Symbol", "05");
 
+/*
+function verify(ms, milstd, name, symbolset) {
   describe(name, () => {
     const sidc = milstd["app6d"][symbolset];
 
@@ -48,6 +26,9 @@ export default function(ms, milstd, name, symbolset) {
           "1003" + sidc.symbolset + "0000" + sidc["main icon"][i].code + "0000"
         ).isValid();
 
+        let valid2 = new ms.Symbol(
+          "1003" + sidc.symbolset + "0000" + sidc["main icon"][i].code + "0000"
+        ).drawinstructions;
         if (
           valid &&
           [
@@ -57,10 +38,9 @@ export default function(ms, milstd, name, symbolset) {
         ) {
           it(icon, () => {});
         } else {
-          // For now, we will skip symbols that fails, and simply warn that something went wrong
-          // This should be changed before release
-          it.skip(icon, () => {});
-          console.warn(icon);
+          it(icon + " " + valid2, () => {
+            assert.isOk(valid);
+          });
         }
       }
     });
@@ -85,10 +65,7 @@ export default function(ms, milstd, name, symbolset) {
         if (valid) {
           it(icon, () => {});
         } else {
-          // For now, we will skip symbols that fails, and simply warn that something went wrong
-          // This should be changed before release
           it.skip(icon, () => {});
-          console.warn(icon);
         }
       }
     });
@@ -113,12 +90,10 @@ export default function(ms, milstd, name, symbolset) {
         if (valid) {
           it(icon, () => {});
         } else {
-          // For now, we will skip symbols that fails, and simply warn that something went wrong
-          // This should be changed before release
           it.skip(icon, () => {});
-          console.warn(icon);
         }
       }
     });
   });
 }
+//*/
