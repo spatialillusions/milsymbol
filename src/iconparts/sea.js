@@ -1,4 +1,9 @@
-import { defaultProperties } from "./iconparts-functions.js";
+import {
+  defaultProperties,
+  text,
+  textm1,
+  textm2
+} from "./iconparts-functions.js";
 
 export default function(
   iconParts,
@@ -35,73 +40,6 @@ export default function(
   //  var none = colors.none[affiliation];
   //var black = colors.black[affiliation];
   var white = colors.white[affiliation];
-
-  function text(str) {
-    var size = 42;
-    var y = 115;
-    if (str.length == 1) {
-      size = 45;
-      y = 115;
-    }
-    if (str.length == 3) {
-      size = 35;
-      y = 110;
-    }
-    if (str.length >= 4) {
-      size = 32;
-      y = 110;
-    }
-    var t = {
-      type: "text",
-      stroke: false,
-      textanchor: "middle",
-      x: 100,
-      y: y,
-      fontsize: size,
-      text: str
-    };
-    return t;
-  }
-  function textm1(str) {
-    var size = 30;
-    if (str.length == 3) {
-      size = 25;
-    }
-    if (str.length >= 4) {
-      size = 22;
-    }
-    return {
-      type: "text",
-      stroke: false,
-      textanchor: "middle",
-      x: 100,
-      y: 77,
-      fontsize: size,
-      text: str
-    };
-  }
-  function textm2(str) {
-    var size = 30;
-    var y = 145;
-
-    if (str.length == 3) {
-      size = 25;
-      y = 140;
-    }
-    if (str.length >= 4) {
-      size = 20;
-      y = 135;
-    }
-    return {
-      type: "text",
-      stroke: false,
-      textanchor: "middle",
-      x: 100,
-      y: y,
-      fontsize: size,
-      text: str
-    };
-  }
 
   //var numberSIDC = metadata.numberSIDC;
   var icn = {};
