@@ -1,4 +1,3 @@
-import { assert } from "chai";
 import ms from "../src/index";
 
 describe("ms", () => {
@@ -32,7 +31,7 @@ describe("ms", () => {
       returns: Number
     },
     getSymbolParts: {
-      returns: Array
+      returns: Object
     },
     getVersion: {
       returns: String
@@ -63,11 +62,11 @@ describe("ms", () => {
     const { returns, parameters = [] } = publicApiMethods[methodName];
     describe(`API method ${methodName}`, () => {
       it("should be a function", () => {
-        assert.isFunction(ms[methodName]);
+        expect(ms[methodName]).toBeInstanceOf(Function);
       });
       it(`should return a ${returns.name}`, () => {
         const result = ms[methodName](...parameters);
-        assert[`is${returns.name}`](result);
+        expect(typeof result).toBe(returns.name.toLowerCase());
       });
     });
   });

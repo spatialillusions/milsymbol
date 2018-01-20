@@ -5,24 +5,19 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Debug Jest Tests",
       "type": "node",
       "request": "launch",
-      "protocol": "inspector",
-      "name": "Debug Tests",
-      "cwd": "${workspaceRoot}",
-      "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
       "args": [
-        "--watch",
-        "--reporter",
-        "min",
-        "--recursive",
-        "--no-timeouts",
-        "test/.setup.js",
-        "test"
+        "--runInBand",
+        "--watch"
       ],
-      "env": { "NODE_ENV": "test" },
+      "runtimeArgs": [
+        "--nolazy"
+      ],
       "console": "integratedTerminal",
-      "internalConsoleOptions": "openOnSessionStart"
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }
