@@ -20,7 +20,7 @@ var ms = new function() {
   this._svgNS = "http://www.w3.org/2000/svg";
   this._symbolParts = [];
 
-  this._autoSVG = false;
+  //this._autoSVG = false;
   this._autoValidation = false;
   this.version = "2.0.0-master";
 
@@ -142,10 +142,13 @@ ms.getVersion = function() {
 import outline from "./ms/outline.js";
 ms.outline = outline;
 
+/*
 ms.setAutoSVG = function(mode) {
   this._autoSVG = mode;
   return this._autoSVG;
 };
+*/
+
 ms.setColorMode = function(mode, colorMode) {
   this._colorModes[mode] = {};
   this._colorModes[mode].Hostile = colorMode.Hostile;

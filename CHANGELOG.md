@@ -35,6 +35,8 @@
 
 * `symbol.getProperties()` is removed (use `symbol.getMetadata()` instead)
 
+* `ms.setAutoSVG` has now been removed.
+
 ### Fixed
 
 * Fields commonIdentifier (AF) and equipmentTeardownTime (AE) had swiched
