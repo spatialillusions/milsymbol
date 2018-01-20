@@ -516,14 +516,10 @@ export default function(
     { type: "text", stroke: false, x: 132, y: 95, fontsize: 30, text: "L" },
     { type: "text", stroke: false, x: 132, y: 125, fontsize: 30, text: "R" }
   ];
-  icn["AIR.MISSILE.M2.INTERCONTINENTAL"] = {
-    type: "text",
-    stroke: false,
-    x: 132,
-    y: 110,
-    fontsize: 30,
-    text: "I"
-  };
+  icn["AIR.MISSILE.M2.INTERCONTINENTAL"] = [
+    { type: "text", stroke: false, x: 132, y: 95, fontsize: 30, text: "I" },
+    { type: "text", stroke: false, x: 132, y: 125, fontsize: 30, text: "C" }
+  ];
 
   for (var key in icn) {
     if (!icn.hasOwnProperty(key)) continue;
