@@ -7,7 +7,7 @@ ms._getIcons.number = getIcons_number;
 import icons from "../../iconparts/space.js";
 ms.addIconParts(icons);
 
-export default function space(
+export default function spaceunit(
   sId,
   sIdm1,
   sIdm2,
@@ -39,7 +39,7 @@ export default function space(
     sId["111800"] = [icn["SP.I.WEATHER SATELLITE"]];
     sId["111900"] = [icn["SP.I.SPACE LAUNCH VEHICLE"]];
 
-    sId["120000"] = [icn["AR.I.CIVILIAN"]];
+    sId["120000"] = [icn["SP.I.CIVILIAN"]];
     sId["120100"] = [icn["SP.I.CIVILIAN ORBITER SHUTTLE"]];
     sId["120200"] = [icn["SP.I.CIVILIAN CAPSULE"]];
     sId["120300"] = [icn["SP.I.CIVILIAN SATELLITE"]];

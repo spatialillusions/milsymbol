@@ -32,11 +32,13 @@ export default function(
 
   var affiliation = metadata.affiliation || "Friend";
   var frame = metadata.frame;
+  var numberSIDC = metadata.numberSIDC;
 
   //If hostile and not monoColor, make it red, otherwise use the iconColor.
   var iconColor = colors.iconColor[affiliation];
   var iconFillColor = colors.iconFillColor[affiliation];
   var none = colors.none[affiliation];
+  var black = colors.black[affiliation];
 
   //var numberSIDC = metadata.numberSIDC;
   var icn = {};
@@ -82,6 +84,12 @@ export default function(
         "M 75.2,93.1 C 88.9,87 102.6,80.8 116.3,74.7 c 2.3,1.3 4.7,2.6 7,3.9 -13.7,6 -27.3,12 -41,18 -2.4,-1.2 -4.8,-2.3 -7.2,-3.5 z"
     }
   ];
+  icn["SP.I.CIVILIAN"] = text("CIV");
+  icn["SP.I.CIVILIAN"].fill =
+    STD2525 || numberSIDC ? iconFillColor : !frame ? iconFillColor : false;
+  icn["SP.I.CIVILIAN"].stroke = black;
+  icn["SP.I.CIVILIAN"].strokewidth = 3;
+
   icn["SP.I.SPACE LAUNCH VEHICLE"] = text("SLV");
   icn["SP.I.MILITARY"] = text("MIL");
   icn["SP.I.SPACE VEHICLE"] = text("SV");
@@ -382,7 +390,7 @@ export default function(
     { type: "text", stroke: false, x: 132, y: 95, fontsize: 30, text: "S" },
     { type: "text", stroke: false, x: 132, y: 125, fontsize: 30, text: "P" }
   ];
-
+  //*/
   for (var key in icn) {
     if (!icn.hasOwnProperty(key)) continue;
     if (iconParts.hasOwnProperty(key)) console.warn("Override of: " + key);
