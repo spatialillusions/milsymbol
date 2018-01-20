@@ -29,6 +29,7 @@ export default function stabilityoperations(sId, bbox, icn, _STD2525) {
   sId["O-L-W-----"] = [icn["ST.IC.WHITE LIST LOCATION"]];
   sId["O-L-M-----"] = [icn["ST.IC.MASS GRAVE LOCATION"]];
   sId["O-O-P-----"] = [icn["ST.IC.PATROLLING"]];
+  sId["O-O-R-----"] = []; // N/A
   sId["O-O-RW----"] = [icn["ST.IC.INDIVIDUAL"], icn["ST.M1.WILLING"]];
   sId["O-O-RC----"] = [icn["ST.IC.INDIVIDUAL"], icn["ST.M1.COERCED/IMPRESSED"]];
   sId["O-O-D-----"] = [icn["ST.IC.DEMONSTRATION"]];
@@ -49,6 +50,7 @@ export default function stabilityoperations(sId, bbox, icn, _STD2525) {
   sId["O-O-S-----"] = [icn["ST.IC.SPY"]];
   sId["O-O-O-----"] = [icn["ST.IC.FOOD DISTRIBUTION"]];
   sId["O-O-E-----"] = [icn["ST.IC.EXTORTION"]];
+  sId["O-O-H-----"] = []; // N/A
   sId["O-O-HT----"] = [
     icn["ST.IC.KNOWN INSURGENT VEHICLE"],
     icn["ST.M1.HIJACKING/HIJACKED"]

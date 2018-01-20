@@ -4863,7 +4863,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "ATR---",
-        "geometry": "POINT",
+        "geometry": "",
         "name": ["FIRE SUPPORT", "AREAS", "AREA TARGET", "RECTANGULAR TARGET"]
       },
       {
@@ -4872,7 +4872,7 @@
         "standard identity": "*",
         "battle dimension": "F",
         "code": "ATC---",
-        "geometry": "POINT",
+        "geometry": "",
         "name": ["FIRE SUPPORT", "AREAS", "AREA TARGET", "CIRCULAR TARGET"]
       },
       {
@@ -6060,7 +6060,8 @@
         "standard identity": "*",
         "battle dimension": "S",
         "code": "PS----",
-        "geometry": "POINT",
+        "geometry": "",
+        "remarks": "N/A",
         "name": ["COMBAT SERVICE SUPPORT", "POINTS", "SUPPLY POINTS"]
       },
       {
@@ -6204,7 +6205,7 @@
         "battle dimension": "S",
         "code": "PA----",
         "remarks": "N/A",
-        "geometry": "POINT",
+        "geometry": "",
         "name": ["COMBAT SERVICE SUPPORT", "POINTS", "AMMUNITION POINTS"]
       },
       {

@@ -9,12 +9,15 @@ ms.addIconParts(signalsintelligence);
 
 export default function signalsIntelligence(sId, bbox, icn, _STD2525) {
   //Adds support for 2525C Signals Intelligence
+  sId["I-P-S-----"] = []; // N/A
+  sId["I-P-SC----"] = []; // N/A
   sId["I-P-SCD---"] = [
     icn["SI.IC.COMMUNICATIONS"],
     icn["SI.M1.SIERRA"],
     icn["SI.M2.DELTA"],
     icn["SI.M3.SPACE"]
   ];
+  sId["I-P-SR----"] = []; // N/A
   sId["I-P-SRD---"] = [
     icn["SI.IC.RADAR"],
     icn["SI.M1.DELTA"],
@@ -57,6 +60,8 @@ export default function signalsIntelligence(sId, bbox, icn, _STD2525) {
     icn["SI.M2.NOVEMBER"],
     icn["SI.M3.SPACE"]
   ];
+  sId["I-A-S-----"] = []; // N/A
+  sId["I-A-SC----"] = []; // N/A
   sId["I-A-SCC---"] = [
     icn["SI.IC.COMMUNICATIONS"],
     icn["SI.M1.CHARLIE"],
@@ -77,6 +82,7 @@ export default function signalsIntelligence(sId, bbox, icn, _STD2525) {
     icn["SI.M1.SIERRA"],
     icn["SI.M2.UNIFORM"]
   ];
+  sId["I-A-SR----"] = []; // N/A
   sId["I-A-SRAI--"] = [
     icn["SI.IC.RADAR"],
     icn["SI.M1.ALPHA"],
@@ -157,6 +163,8 @@ export default function signalsIntelligence(sId, bbox, icn, _STD2525) {
     icn["SI.M1.UNIFORM"],
     icn["SI.M2.NOVEMBER"]
   ];
+  sId["I-G-S-----"] = []; // N/A
+  sId["I-G-SC----"] = []; // N/A
   sId["I-G-SCC---"] = [
     icn["SI.IC.COMMUNICATIONS"],
     icn["SI.M1.CHARLIE"],
@@ -187,6 +195,7 @@ export default function signalsIntelligence(sId, bbox, icn, _STD2525) {
     icn["SI.M2.SIERRA"],
     icn["SI.M3.GROUND"]
   ];
+  sId["I-G-SR----"] = []; // N/A
   sId["I-G-SRAT--"] = [
     icn["SI.IC.RADAR"],
     icn["SI.M1.ALPHA"],
@@ -307,6 +316,8 @@ export default function signalsIntelligence(sId, bbox, icn, _STD2525) {
     icn["SI.M2.NOVEMBER"],
     icn["SI.M3.GROUND"]
   ];
+  sId["I-S-S-----"] = []; // N/A
+  sId["I-S-SC----"] = []; // N/A
   sId["I-S-SCC---"] = [
     icn["SI.IC.COMMUNICATIONS"],
     icn["SI.M1.CHARLIE"],
@@ -327,6 +338,7 @@ export default function signalsIntelligence(sId, bbox, icn, _STD2525) {
     icn["SI.M1.SIERRA"],
     icn["SI.M2.UNIFORM"]
   ];
+  sId["I-S-SR----"] = []; // N/A
   sId["I-S-SRAT--"] = [
     icn["SI.IC.RADAR"],
     icn["SI.M1.ALPHA"],
@@ -422,6 +434,8 @@ export default function signalsIntelligence(sId, bbox, icn, _STD2525) {
     icn["SI.M1.UNIFORM"],
     icn["SI.M2.NOVEMBER"]
   ];
+  sId["I-U-S-----"] = []; // N/A
+  sId["I-U-SC----"] = []; // N/A
   sId["I-U-SCO---"] = [
     icn["SI.IC.COMMUNICATIONS"],
     icn["SI.M1.OSCAR"],
@@ -437,6 +451,7 @@ export default function signalsIntelligence(sId, bbox, icn, _STD2525) {
     icn["SI.M1.SIERRA"],
     icn["SI.M2.UNIFORM"]
   ];
+  sId["I-U-SR----"] = []; // N/A
   sId["I-U-SRD---"] = [
     icn["SI.IC.RADAR"],
     icn["SI.M1.DELTA"],

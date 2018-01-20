@@ -68,6 +68,7 @@ export default function emergencymanagementsymbols(sId, bbox, icn, _STD2525) {
     icn["ST.M1.ACCIDENT"],
     icn["ST.IC.KNOWN INSURGENT VEHICLE"]
   ];
+  sId["E-N-A-----"] = []; // N/A
   sId["E-N-AA----"] = [icn["AC.IC.AFTERSHOCK"]];
   sId["E-N-AB----"] = [icn["AC.IC.AVALANCHE"]];
   sId["E-N-AC----"] = [icn["AC.IC.EARTHQUAKE EPICENTER"]];
@@ -76,6 +77,7 @@ export default function emergencymanagementsymbols(sId, bbox, icn, _STD2525) {
   sId["W-S-WSVE--"] = [icn["AC.IC.VOLCANIC ERUPTION"]];
   sId["E-N-AG----"] = [icn["AC.IC.VOLCANIC THREAT"]];
   sId["W-S-WSD-LI"] = [icn["ATMOSPHERIC.IC.DRIZZLE.INTERMITTENT LIGHT"]];
+  sId["E-N-B-----"] = []; // N/A
   sId["E-N-BB----"] = [icn["AC.IC.DROUGHT"]];
   sId["E-N-BC----"] = [icn["AC.IC.FLOOD"]];
   sId["W-S-WSFGSO"] = [icn["ATMOSPHERIC.IC.FOG.SKY OBSCURED"]];
@@ -96,6 +98,7 @@ export default function emergencymanagementsymbols(sId, bbox, icn, _STD2525) {
     icn["ATMOSPHERIC.IC.TROPICAL STORM SYSTEMS.TROPICAL STORM"]
   ];
   sId["E-N-BM----"] = [icn["AC.IC.TSUNAMI"]];
+  sId["E-N-C-----"] = []; // N/A
   sId["E-N-CA----"] = [icn["AC.IC.BIRD"]];
   sId["E-N-CB----"] = [icn["AC.IC.INSECT"]];
   sId["E-N-CC----"] = [icn["AC.IC.MICROBIAL"]];
