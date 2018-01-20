@@ -6411,6 +6411,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "EW----",
+        "remarks": "N/A",
         "name": ["GROUND TRACK", "GROUND TRACK EQUIPMENT", "WEAPONS"]
       },
       {
@@ -7796,6 +7797,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "EX----",
+        "remarks": "N/A",
         "name": ["GROUND TRACK", "GROUND TRACK EQUIPMENT", "SPECIAL EQUIPMENT"]
       },
       {
@@ -8073,6 +8075,7 @@
         "standard identity": "*",
         "battle dimension": "G",
         "code": "IM----",
+        "remarks": "N/A",
         "name": ["GROUND TRACK", "INSTALLATION", "MILITARY MATERIEL FACILITY"]
       },
       {
@@ -8703,6 +8706,7 @@
         "standard identity": "*",
         "battle dimension": "S",
         "code": "X-----",
+        "remarks": "N/A",
         "name": ["SEA SURFACE TRACK", "NON MILITARY"]
       },
       {
@@ -8752,7 +8756,7 @@
         "code scheme": "S",
         "standard identity": "*",
         "battle dimension": "S",
-        "code": "XMT--",
+        "code": "XMT---",
         "name": ["SEA SURFACE TRACK", "NON MILITARY", "MERCHANT", "UG"]
       },
       {
@@ -8789,8 +8793,8 @@
         "code scheme": "S",
         "standard identity": "*",
         "battle dimension": "S",
-        "code": "XMD--",
-        "name": ["SEA SURFACE TRACK", "NON MILITARY", "MERCHANT", "REDGE"]
+        "code": "XMD---",
+        "name": ["SEA SURFACE TRACK", "NON MILITARY", "MERCHANT", "DREDGE"]
       },
       {
         "hierarchy": "1.X.4.3.2",

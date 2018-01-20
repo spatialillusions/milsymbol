@@ -33,18 +33,19 @@ export default function(
   var frame = metadata.frame;
   var affiliation = metadata.affiliation || "Friend";
   //var baseGeometry = metadata.baseGeometry;
-  //var numberSIDC = metadata.numberSIDC;
+  var numberSIDC = metadata.numberSIDC;
   //var fillColor = colors.fillColor[affiliation];
   var iconColor = colors.iconColor[affiliation];
   var iconFillColor = colors.iconFillColor[affiliation];
   //  var none = colors.none[affiliation];
-  //var black = colors.black[affiliation];
+  var black = colors.black[affiliation];
   var white = colors.white[affiliation];
 
   //var numberSIDC = metadata.numberSIDC;
   var icn = {};
 
   icn["SE.IC.MILITARY"] = text("MIL");
+  icn["SE.IC.MANUAL TRACK"] = text("MAN");
   icn["SE.IC.COMBATANT"] = [
     {
       type: "path",
@@ -70,6 +71,11 @@ export default function(
     d: "m 80,100 20,20 20,-20 -20,0 0,-20 -20,0 z"
   };
   icn["SE.IC.BATTLESHIP"] = text("BB");
+  icn["SE.IC.CIVILIAN"] = text("CIV");
+  icn["SE.IC.CIVILIAN"].fill =
+    STD2525 || numberSIDC ? iconFillColor : !frame ? iconFillColor : false;
+  icn["SE.IC.CIVILIAN"].stroke = black;
+  icn["SE.IC.CIVILIAN"].strokewidth = 3;
   icn["SE.IC.CRUISER"] = text("CC");
   icn["SE.IC.CRUISER, GUIDED MISSILE"] = text("CG");
   icn["SE.IC.DESTROYER"] = text("DD");
@@ -144,8 +150,11 @@ export default function(
     stroke: false,
     d: "m 135,105 0,15 -60,0 -10,-15 20,-25 10,0 0,10 -5,0 -5,15 z"
   };
-  icn["SE.IC.UNMANNED SURFACE WATER VEHICLE"] =
-    icn["AR.I.UNMANNED AERIAL VEHICLE"];
+  icn["SE.IC.UNMANNED SURFACE WATER VEHICLE"] = {
+    type: "path",
+    d: "M60,90 l40,10 40,-10 0,8 -40,15 -40,-15 Z",
+    stroke: false
+  };
   icn["SE.IC.NAVY TASK ORGANIZATION UNIT"] = [
     { type: "path", d: "m 110,80 15,15 0,25 M 90,80 75,95 l 0,25", fill: false }
   ];
@@ -249,6 +258,11 @@ export default function(
     icn["SE.IC.MERCHANT SHIP, GENERAL"],
     { type: "text", stroke: false, x: 100, y: 115, fontsize: 30, text: "D" }
   ];
+  icn["SE.IC.RADAR"] = {
+    type: "path",
+    d: "M72,95 l30,-25 0,25 30,-25 M70,70 c0,35 15,50 50,50",
+    fill: false
+  };
   icn["SE.IC.ROLL ON-ROLL OFF"] = [
     icn["SE.IC.MERCHANT SHIP, GENERAL"],
     {
@@ -417,8 +431,12 @@ export default function(
     fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
     d: "m 85,60 -30,45 10,15 75,0 0,-20 -60,0 10,-30 5,0 0,-10 z"
   };
-  icn["SE.IC.UNMANNED SURFACE WATER VEHICLE (USV)"] =
-    icn["AR.I.CIVILIAN UNMANNED AERIAL VEHICLE"];
+  icn["SE.IC.UNMANNED SURFACE WATER VEHICLE (USV)"] = {
+    type: "path",
+    fill: STD2525 || numberSIDC ? iconFillColor : false,
+    stroke: black,
+    d: "M60,90 l40,10 40,-10 0,8 -40,15 -40,-15 Z"
+  };
   icn["SE.IC.OWN SHIP"] = {
     type: "path",
     fill: false,
@@ -492,7 +510,11 @@ export default function(
   icn["SE.M1.GUIDED MISSILE"] = textm1("G");
   icn["SE.M1.OTHER GUIDED MISSILE"] = textm1("M");
   icn["SE.M1.TORPEDO"] = textm1("T");
-  icn["SE.M1.DRONE-EQUIPPED"] = icn["AIR.M1.UNMANNED AERIAL VEHICLE"];
+  icn["SE.M1.DRONE-EQUIPPED"] = {
+    type: "path",
+    stroke: false,
+    d: "m 80,65 20,13 20,-13 0,-5 -20,10 -20,-10 z"
+  };
   icn["SE.M1.HELICOPTER-EQUIPPED"] = textm1("H");
   icn["SE.M1.BALLISTIC MISSILE DEFENSE, SHOOTER"] = textm1("BM");
   icn[

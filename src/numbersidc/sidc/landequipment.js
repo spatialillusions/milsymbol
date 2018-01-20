@@ -505,7 +505,7 @@ export default function landequipment(
     sId["170700"] = [icn["GR.IC.MILITARY POLICE"]];
     sId["170800"] = [icn["GR.IC.UNITED STATES SECRET SERVICE(TREAS) (USSS)"]];
     sId["170900"] = [icn["GR.IC.TRANSPORTATION SECURITY AGENCY (TSA)"]];
-    sId["171000"] = [icn["SE.IC.LAW ENFORCEMENT VESSEL"]];
+    sId["171000"] = [icn["GR.IC.LAW ENFORCEMENT VESSEL"]];
     sId["171100"] = [icn["GR.IC.FF.US MARSHALS SERVICE"]];
     sId["180000"] = [icn["GR.EQ.PACK ANIMAL"]];
     sId["190000"] = [
@@ -568,7 +568,7 @@ export default function landequipment(
     sId["201300"] = [icn["GR.EQ.TENT"]];
     sId["201400"] = [icn["GR.EQ.UNIT DEPLOYMENT SHIPMENTS"]];
     sId["201500"] = [icn["GR.IC.EMERGENCY MEDICAL OPERATION"]];
-    sId["201501"] = [icn["AR.I.MILITARY ROTARY WING"], icn["AIR.M1.MEDEVAC"]];
+    sId["201501"] = [icn["GR.IC.MEDICAL EVACUATION HELICOPTER"]];
     sId["210000"] = [];
     sId["210100"] = [icn["GR.EQ.LAND MINE"]];
     sId["210200"] = [icn["GR.EQ.ANTIPERSONNEL LAND MINE"]];
@@ -585,7 +585,7 @@ export default function landequipment(
       icn["GR.M1.MEDEVAC"]
     ];
     sId["230200"] = [icn["GR.IC.FIRE PROTECTION"]];
-    sId["240000"] = [icn["SP.I.MANUAL TRACK"]];
+    sId["240000"] = [icn["GR.IC.MANUAL TRACK"]];
 
     //sIdm1['00'] = 'Unspecified';
     sIdm1["01"] = [icn["GR.M1.BIOLOGICAL"]];
@@ -595,7 +595,7 @@ export default function landequipment(
     sIdm1["05"] = [icn["GR.M1.NUCLEAR"]];
     sIdm1["06"] = [icn["GR.M1.RADIOLOGICAL"]];
     sIdm1["07"] = [icn["GR.M1.UPGRADED EARLY WARNING RADAR"]];
-    sIdm1["08"] = [icn["AIR.M1.HIJACKING"]];
+    sIdm1["08"] = [icn["GR.M1.HIJACKING"]];
     sIdm1["09"] = [icn["GR.M1.CIVILIAN"]];
 
     //This sets up the bounding boxes for equipment to have the bottom at the right place. (this will be used for mobility when unframed)

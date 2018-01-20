@@ -42,12 +42,12 @@ export default function landunit(
       icn["GR.IC.FF.SIGNAL"],
       icn["GR.IC.RADIO TELETYPE CENTRE"]
     ];
-    sId["111004"] = [icn["GR.IC.FF.SIGNAL"], icn["SP.I.FF.SATELLITE"]];
+    sId["111004"] = [icn["GR.IC.FF.SIGNAL"], icn["GR.I.FF.SATELLITE"]];
     sId["111005"] = [icn["GR.IC.FF.SIGNAL"], icn["GR.IC.VIDEO IMAGERY"]];
     //sId['111095'] = [icn['GR.IC.FF.SIGNAL'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
     //sId['111097'] = [icn['GR.IC.FF.SIGNAL'],icn['GR.IC.FF.CORPS SUPPORT']];
     //sId['111098'] = [icn['GR.IC.FF.SIGNAL'],icn['GR.IC.FF.THEATRE SUPPORT']];
-    sId["111100"] = [icn["SP.I.FF.SATELLITE"]];
+    sId["111100"] = [icn["GR.I.FF.SATELLITE"]];
     sId["111200"] = [icn["GR.IC.VIDEO IMAGERY"]];
     sId["120000"] = [];
     sId["120100"] = [icn["GR.IC.FF.AIR ASSAULT WITH ORGANIC LIFT"]];
@@ -115,11 +115,11 @@ export default function landunit(
       icn["GR.IC.FF.INFANTRY"]
     ];
     sId["121803"] = [
-      icn["SE.IC.COMBATANT"],
+      icn["GR.IC.COMBATANT"],
       icn["GR.M1.SPECIAL OPERATIONS FORCES (SOF)"]
     ]; //SPECIAL BOAT
     sId["121804"] = [
-      icn["SU.IC.SUBMARINE NUCLEAR PROPULSION"],
+      icn["GR.IC.SUBMARINE NUCLEAR PROPULSION"],
       icn["GR.M1.SPECIAL OPERATIONS FORCES (SOF)"]
     ]; //SPECIAL SSNR)
     sId["121805"] = [icn["SOF.IC.UNDERWATER DEMOLITION TEAM"]];
@@ -151,6 +151,10 @@ export default function landunit(
       icn["GR.IC.ARMOUR"],
       icn["GR.IC.FF.RECONNAISSANCE"]
     ]; //ARTILLERY TARGET ACQUISITION
+    sId["130303"] = [
+      ms._scale(0.8, icn["GR.IC.FIELD ARTILLERY"]),
+      icn["GR.IC.FF.RECONNAISSANCE"]
+    ]; //RECONNAISSANCE
     //sId['130395'] = [icn['GR.IC.FIELD ARTILLERY'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
     sId["130400"] = [icn["GR.IC.FIELD ARTILLERY OBSERVER"]];
     sId["130500"] = [icn["GR.IC.JOINT FIRE SUPPORT"]];
@@ -180,7 +184,7 @@ export default function landunit(
     sId["140200"] = [icn["GR.IC.COMBAT SUPPORT (MANOEUVRE ENHANCEMENT)"]];
     //sId['140295'] = [icn['GR.IC.COMBAT SUPPORT (MANOEUVRE ENHANCEMENT)'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
     sId["140300"] = [icn["GR.IC.CRIMINAL INVESTIGATION DIVISION"]];
-    sId["140400"] = [icn["SU.IC.DIVER, CIVILIAN"]];
+    sId["140400"] = [icn["GR.IC.DIVER, CIVILIAN"]];
     sId["140500"] = [icn["GR.IC.DOG"]];
     sId["140600"] = [icn["GR.IC.DRILLING"]];
     sId["140700"] = [icn["GR.IC.ENGINEER"]];
@@ -204,7 +208,7 @@ export default function landunit(
     sId["141700"] = [icn["GR.IC.SECURITY"]];
     sId["141701"] = [icn["GR.IC.SECURITY"], icn["GR.IC.ARMOUR"]];
     sId["141702"] = [icn["GR.IC.SECURITY"], icn["GR.IC.FF.MOTORIZED"]];
-    sId["141800"] = [icn["AR.I.SEARCH AND RESCUE"]];
+    sId["141800"] = [icn["GR.IC.SEARCH AND RESCUE"]];
     sId["141900"] = [icn["GR.IC.SECURITY POLICE (AIR)"]];
     sId["142000"] = [icn["GR.IC.SHORE PATROL"]];
     sId["142100"] = [icn["GR.IC.TOPOGRAPHIC"]];
@@ -348,7 +352,7 @@ export default function landunit(
     sId["200800"] = [icn["GR.IC.FF.PRISON"]];
     sId["200900"] = [icn["GR.IC.UNITED STATES SECRET SERVICE(TREAS) (USSS)"]];
     sId["201000"] = [icn["GR.IC.TRANSPORTATION SECURITY AGENCY (TSA)"]];
-    sId["201100"] = [icn["SE.IC.LAW ENFORCEMENT VESSEL"]];
+    sId["201100"] = [icn["GR.IC.LAW ENFORCEMENT VESSEL"]];
     sId["201200"] = [icn["GR.IC.FF.US MARSHALS SERVICE"]];
     sId["201300"] = [icn["ST.IC.INTERNAL SECURITY FORCE"]];
 

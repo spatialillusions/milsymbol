@@ -3040,7 +3040,7 @@
         "standard identity": "*",
         "battle dimension": "C",
         "code": "BOAMN-",
-        "geometry": "POINT",
+        "geometry": "",
         "name": [
           "CONTROL MEASURES",
           "MOBILITY/ SURVIVABILITY",
@@ -6111,7 +6111,7 @@
         "code scheme": "G",
         "standard identity": "*",
         "battle dimension": "C",
-        "code": "OXSTH",
+        "code": "OXSTH-",
         "geometry": "POINT",
         "name": [
           "CONTROL MEASURES",

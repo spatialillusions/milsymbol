@@ -6,10 +6,13 @@ ms._getIcons.letter = getIcons_letter;
 
 import icons from "../../iconparts/ground.js";
 ms.addIconParts(icons);
+// TODO, think about if we should copy all icons to ground...
+import icons_air from "../../iconparts/air.js";
+ms.addIconParts(icons_air);
 
 export default function sof(sId, bbox, icn, _STD2525) {
   // SOF ===========================================================================
-  sId["S-F-------"] = [icn["AR.I.SPECIAL OPERATIONS FORCES"]];
+  sId["S-F-------"] = [icn["GR.IC.SPECIAL OPERATIONS FORCES"]];
   sId["S-F-A-----"] = [
     icn["AR.I.MILITARY ROTARY WING"],
     icn["AIR.M1.SPECIAL OPERATIONS FORCES"]
@@ -97,16 +100,16 @@ export default function sof(sId, bbox, icn, _STD2525) {
     icn["SOF.IC.UNDERWATER DEMOLITION TEAM"]
   ];
   sId["S-F-SNB---"] = sId["S-F-NB----"] = [
-    icn["SE.IC.COMBATANT"],
+    icn["GR.IC.COMBATANT"],
     icn["AIR.M1.SPECIAL OPERATIONS FORCES"]
   ];
   sId["S-F-SNN---"] = sId["S-F-NN----"] = [
-    icn["SU.IC.SUBMARINE NUCLEAR PROPULSION"],
+    icn["GR.IC.SUBMARINE NUCLEAR PROPULSION"],
     icn["AIR.M1.SPECIAL OPERATIONS FORCES"]
   ];
   sId["S-F-G-----"] = [
     icn["GR.IC.FF.INFANTRY"],
-    icn["AR.I.SPECIAL OPERATIONS FORCES"]
+    icn["GR.IC.SPECIAL OPERATIONS FORCES"]
   ];
   sId["S-F-GS----"] = [icn["GR.IC.SPECIAL FORCES"]];
   sId["S-F-GR----"] = sId["S-F-GSR---"] = [
@@ -123,7 +126,7 @@ export default function sof(sId, bbox, icn, _STD2525) {
   ];
   sId["S-F-GC----"] = sId["S-F-GCA---"] = [icn["GR.IC.CIVIL AFFAIRS"]];
   sId["S-F-GB----"] = sId["S-F-B-----"] = [
-    icn["AR.I.SPECIAL OPERATIONS FORCES"],
+    icn["GR.IC.SPECIAL OPERATIONS FORCES"],
     icn["GR.M2.SUPPORT"]
   ];
 }

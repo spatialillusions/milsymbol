@@ -18,7 +18,7 @@ export default function landinstallation(
 ) {
   //Land Installation
   if (symbolSet == "20") {
-    sId["110000"] = [icn["AR.I.MILITARY"]];
+    sId["110000"] = [icn["GR.IC.MILITARY"]];
     sId["110100"] = [icn["GR.IN.IC.AIRCRAFT PRODUCTION & ASSEMBLY"]];
     sId["110200"] = [ms._scale(1.4, icn["GR.IC.FF.CLASS V"])];
     sId["110300"] = [icn["GR.IC.FF.CLASS V"], icn["GR.IC.FF.SUPPLY"]];
@@ -28,7 +28,7 @@ export default function landinstallation(
     sId["110700"] = [icn["GR.EQ.DOZER"]];
     sId["110701"] = [icn["GR.IN.IC.BRIDGE"]];
     sId["110800"] = [ms._scale(1.4, icn["GR.IC.FF.CLASS IX"])];
-    sId["110900"] = [icn["AR.I.GOVERNMENT"]];
+    sId["110900"] = [icn["GR.I.GOVERNMENT"]];
     sId["111000"] = [icn["ST.IC.GRAY LIST LOCATION"]];
     sId["111100"] = [icn["ST.IC.MASS GRAVE LOCATION"]];
     sId["111200"] = [
@@ -66,7 +66,7 @@ export default function landinstallation(
     sId["112108"] = [icn["GR.IC.FF.PRISON"]];
     sId["112109"] = [icn["GR.IC.UNITED STATES SECRET SERVICE(TREAS) (USSS)"]];
     sId["112110"] = [icn["GR.IC.TRANSPORTATION SECURITY AGENCY (TSA)"]];
-    sId["112111"] = [icn["SE.IC.LAW ENFORCEMENT VESSEL"]];
+    sId["112111"] = [icn["GR.IC.LAW ENFORCEMENT VESSEL"]];
     sId["112112"] = [icn["GR.IC.FF.US MARSHALS SERVICE"]];
     sId["112200"] = [icn["GR.IC.FF.EMERGENCY OPERATION"]];
     sId["112201"] = [icn["GR.IC.FIRE PROTECTION"]];
@@ -154,7 +154,7 @@ export default function landinstallation(
     ];
     sId["121302"] = [icn["GR.IN.IC.AIR TRAFFIC CONTROL FACILITY"]];
     sId["121303"] = [icn["GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE"]];
-    sId["121304"] = [icn["SE.IC.FERRY"]];
+    sId["121304"] = [icn["GR.IC.FERRY"]];
     sId["121305"] = [icn["GR.IN.IC.HELICOPTER LANDING SITE"]];
     sId["121306"] = [icn["GR.IC.MAINTENANCE"]];
     sId["121307"] = [icn["GR.IC.RAILHEAD"]];

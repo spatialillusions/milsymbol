@@ -37,6 +37,7 @@ export default function installations(sId, bbox, icn, _STD2525) {
     icn["GR.IN.IC.ELECTRIC POWER FOSSIL"]
   ];
   sId["S-G-IUP---"] = [icn["GR.IC.WATER"]];
+  sId["S-G-IM----"] = []; // N/A
   sId["S-G-IMF---"] = [icn["GR.IN.IC.ATOMIC ENERGY"]];
   sId["S-G-IMFA--"] = [
     icn["GR.IN.IC.ATOMIC ENERGY"],
@@ -66,7 +67,7 @@ export default function installations(sId, bbox, icn, _STD2525) {
   ];
   sId["S-G-IMS---"] = [icn["GR.IC.NAVAL"], icn["GR.IN.M2.SHIP CONSTRUCTION"]];
   sId["S-G-IMM---"] = [icn["GR.IC.MISSILE"]];
-  sId["S-G-IG----"] = [icn["AR.I.GOVERNMENT"]];
+  sId["S-G-IG----"] = [icn["GR.I.GOVERNMENT"]];
   sId["S-G-IB----"] = [icn["GR.IN.IC.BASE"]];
   sId["S-G-IBA---"] = [
     icn["GR.IC.TRANSPORTATION"],

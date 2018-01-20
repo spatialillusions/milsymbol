@@ -708,7 +708,7 @@ export default function ground(sId, bbox, icn, _STD2525) {
   ];
   sId["S-G-UUSMN-"] = [icn["GR.IC.FF.SIGNAL"], icn["GR.M1.NODE CENTRE"]];
   sId["S-G-UUSR--"] = [icn["GR.IC.FF.SIGNAL"], icn["GR.IC.RADIO"]];
-  sId["S-G-UUSRS-"] = [icn["GR.IC.FF.SIGNAL"], icn["SP.I.FF.SATELLITE"]];
+  sId["S-G-UUSRS-"] = [icn["GR.IC.FF.SIGNAL"], icn["GR.I.FF.SATELLITE"]];
   sId["S-G-UUSRT-"] = [
     icn["GR.IC.FF.SIGNAL"],
     icn["GR.IC.RADIO TELETYPE CENTRE"]

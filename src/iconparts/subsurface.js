@@ -44,6 +44,12 @@ export default function(
   var icn = {};
 
   icn["SU.IC.MILITARY"] = text("MIL");
+  icn["SU.IC.CIVILIAN"] = text("CIV");
+  icn["SU.IC.CIVILIAN"].fill =
+    STD2525 || numberSIDC ? iconFillColor : !frame ? iconFillColor : false;
+  icn["SU.IC.CIVILIAN"].stroke = black;
+  icn["SU.IC.CIVILIAN"].strokewidth = 3;
+  icn["SU.IC.MANUAL TRACK"] = text("MAN");
   icn["SU.IC.SUBMARINE"] = {
     type: "path",
     d: "m 75,85 50,0 15,15 -15,15 -50,0 -15,-15 z"

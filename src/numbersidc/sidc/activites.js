@@ -161,7 +161,7 @@ export default function activites(
     sId["131508"] = [icn["GR.IC.FF.PRISON"]];
     sId["131509"] = [icn["GR.IC.UNITED STATES SECRET SERVICE(TREAS) (USSS)"]];
     sId["131510"] = [icn["GR.IC.TRANSPORTATION SECURITY AGENCY (TSA)"]];
-    sId["131511"] = [icn["SE.IC.LAW ENFORCEMENT VESSEL"]];
+    sId["131511"] = [icn["GR.IC.LAW ENFORCEMENT VESSEL"]];
     sId["131512"] = [icn["GR.IC.FF.US MARSHALS SERVICE"]];
     sId["131513"] = [icn["ST.IC.INTERNAL SECURITY FORCE"]];
     sId["140000"] = [icn["AC.IC.FIRE EVENT"]];

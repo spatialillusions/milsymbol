@@ -52,7 +52,7 @@ export default function sea(sId, sIdm1, sIdm2, bbox, symbolSet, icn, _STD2525) {
     sId["121003"] = [icn["SE.IC.NAVY TASK GROUP"]];
     sId["121004"] = [icn["SE.IC.NAVY TASK UNIT"]];
     sId["121005"] = [icn["SE.IC.CONVOY"]];
-    sId["121100"] = [icn["GR.IC.RADAR"]];
+    sId["121100"] = [icn["SE.IC.RADAR"]];
     sId["130000"] = [icn["SE.IC.NONCOMBATANT"]];
     sId["130100"] = [icn["SE.IC.AUXILIARY SHIP"]];
     sId["130101"] = [icn["SE.IC.AMMUNITION SHIP"]];
@@ -73,7 +73,7 @@ export default function sea(sId, sIdm1, sIdm2, bbox, symbolSet, icn, _STD2525) {
     sId["130202"] = [icn["SE.IC.BARGE, SELF-PROPELLED"]];
     sId["130203"] = [icn["SE.IC.TUG, HARBOUR"]];
     sId["130204"] = [icn["SE.IC.LAUNCH"]];
-    sId["140000"] = [icn["AR.I.CIVILIAN"]];
+    sId["140000"] = [icn["SE.IC.CIVILIAN"]];
     sId["140100"] = [icn["SE.IC.MERCHANT SHIP, GENERAL"]];
     sId["140101"] = [icn["SE.IC.CARGO, GENERAL"]];
     sId["140102"] = [icn["SE.IC.CONTAINER SHIP"]];
@@ -106,7 +106,7 @@ export default function sea(sId, sIdm1, sIdm2, bbox, symbolSet, icn, _STD2525) {
     sId["140700"] = [icn["SE.IC.UNMANNED SURFACE WATER VEHICLE (USV)"]];
     sId["150000"] = [icn["SE.IC.OWN SHIP"]];
     sId["160000"] = [icn["SE.IC.FUSED TRACK"]];
-    sId["170000"] = [icn["SP.I.MANUAL TRACK"]];
+    sId["170000"] = [icn["SE.IC.MANUAL TRACK"]];
 
     sIdm1["01"] = [icn["SE.M1.OWN SHIP"]];
     sIdm1["02"] = [icn["SE.M1.ANTIAIR WARFARE"]];

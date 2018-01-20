@@ -10,6 +10,7 @@ ms.addIconParts(icons);
 export default function equipment(sId, bbox, icn, _STD2525) {
   //Adds support for equipment
   sId["S-G-E-----"] = [];
+  sId["S-G-EW----"] = []; // N/A
   sId["S-G-EWM---"] = [icn["GR.EQ.MISSILE LAUNCHER"]];
   sId["S-G-EWMA--"] = [
     icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"]
@@ -402,7 +403,7 @@ export default function equipment(sId, bbox, icn, _STD2525) {
     ms._scale(0.7, icn["GR.IC.DRILLING"])
   ];
   sId["S-G-EVT---"] = [icn["GR.EQ.TRAIN LOCOMOTIVE"]];
-  sId["S-G-EVC---"] = [icn["AR.I.CIVILIAN"]];
+  sId["S-G-EVC---"] = [icn["GR.I.CIVILIAN"]];
   sId["S-G-EVCA--"] = [icn["GR.EQ.CIVILIAN VEHICLE.AUTOMOBILE"]];
   sId["S-G-EVCAL-"] = [
     icn["GR.EQ.CIVILIAN VEHICLE.AUTOMOBILE"],
@@ -537,6 +538,7 @@ export default function equipment(sId, bbox, icn, _STD2525) {
   sId["S-G-ESR---"] = [icn["GR.EQ.RADAR"]];
   sId["S-G-ESE---"] = [icn["GR.EQ.SENSOR EMPLACED"]];
   sId["S-G-EXI---"] = [icn["GR.EQ.IMPROVISED EXPLOSIVE DEVICE"]];
+  sId["S-G-EX----"] = []; // N/A
   sId["S-G-EXL---"] = [icn["GR.EQ.LASER"]];
   sId["S-G-EXN---"] = [icn["GR.EQ.CBRN EQUIPMENT"]];
   sId["S-G-EXF---"] = [icn["GR.EQ.FLAME THROWER"]];

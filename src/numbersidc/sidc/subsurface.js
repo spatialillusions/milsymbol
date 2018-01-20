@@ -31,7 +31,7 @@ export default function subsurface(
       ]
     ];
     sId["110500"] = [icn["SU.IC.DIVER, MILITARY"]];
-    sId["120000"] = [icn["AR.I.CIVILIAN"]];
+    sId["120000"] = [icn["SU.IC.CIVILIAN"]];
     sId["120100"] = [icn["SU.IC.SUBMERSIBLE, CIVILIAN"]];
     sId["120200"] = [
       icn[
@@ -47,7 +47,7 @@ export default function subsurface(
       icn["SU.IC.ECHO TRACKER CLASSIFIER (ETC)/POSSIBLE CONTACT (POSCON)"]
     ];
     sId["150000"] = [icn["SU.IC.FUSED TRACK"]];
-    sId["160000"] = [icn["SP.I.MANUAL TRACK"]];
+    sId["160000"] = [icn["SU.IC.MANUAL TRACK"]];
 
     sId["200000"] = [icn["SU.IC.SEABED INSTALLATION, MAN-MADE, MILITARY"]];
     sId["210000"] = [icn["SU.IC.SEABED INSTALLATION, MAN-MADE, NON-MILITARY"]];

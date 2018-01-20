@@ -18,7 +18,7 @@ export default function landcivilian(
 ) {
   //Land civilian individuals/organization
   if (symbolSet == "11") {
-    sId["110000"] = [icn["AR.I.CIVILIAN"]];
+    sId["110000"] = [icn["GR.I.CIVILIAN"]];
     sId["110100"] = [icn["GR.IC.ENVIRONMENTAL PROTECTION"]];
     sId["110200"] = [icn["GR.IC.GOVERNMENT ORGANIZATION"]];
     sId["110300"] = [icn["ST.IC.INDIVIDUAL"]];

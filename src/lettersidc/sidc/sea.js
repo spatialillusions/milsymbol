@@ -95,6 +95,7 @@ export default function sea(sId, bbox, icn, _STD2525) {
   sId["S-S-NTS---"] = [icn["SE.IC.SUBMARINE TENDER"]];
   sId["S-S-NH----"] = [icn["SE.IC.HOVERCRAFT NONCOMBATANT"]];
   sId["S-S-NS----"] = [icn["SE.IC.TUG, HARBOUR"]];
+  sId["S-S-X-----"] = []; // N/A
   sId["S-S-XM----"] = [icn["SE.IC.MERCHANT SHIP, GENERAL"]];
   sId["S-S-XMC---"] = [icn["SE.IC.CARGO, GENERAL"]];
   sId["S-S-XME---"] = sId["S-S-XMR---"] = [icn["SE.IC.ROLL ON-ROLL OFF"]];
@@ -121,9 +122,11 @@ export default function sea(sId, bbox, icn, _STD2525) {
   sId["S-S-XAS---"] = [icn["SE.IC.LEISURE CRAFT, MOTORIZED, SPEEDBOAT"]];
   sId["S-S-XP----"] = [icn["SE.IC.LEISURE CRAFT, JETSKI"]];
   sId["S-S-O-----"] = [icn["SE.IC.OWN SHIP"]];
+  sId["S-S-E-----"] = []; // N/A
   sId["S-S-ED----"] = [icn["SE.IC.DITCHED AIRCRAFT"]];
   sId["S-S-EP----"] = [icn["SE.IC.PERSON IN WATER"]];
   sId["S-S-EV----"] = [icn["SE.IC.DISTRESSED VESSEL"]];
+  sId["S-S-Z-----"] = []; // N/A
   sId["S-S-ZM----"] = [icn["SE.IC.SEA MINELIKE"]];
   sId["S-S-ZN----"] = [icn["SE.IC.NAVIGATIONAL"]];
   sId["S-S-ZI----"] = [icn["SE.IC.ICEBERG"]];

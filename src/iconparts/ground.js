@@ -42,12 +42,34 @@ export default function(
   var iconFillColor = colors.iconFillColor[affiliation];
   //  var none = colors.none[affiliation];
   var black = colors.black[affiliation];
-  //var white = colors.white[affiliation];
+  var white = colors.white[affiliation];
 
   //var numberSIDC = metadata.numberSIDC;
   var icn = {};
 
+  icn["GR.IC.MILITARY"] = text("MIL");
+  icn["GR.I.GOVERNMENT"] = text("GOV");
+  icn["GR.IC.SUBMARINE NUCLEAR PROPULSION"] = {
+    type: "path",
+    d: "m 75,110 -10,-10 10,-10 0,-10 50,0 0,10 10,10 -10,10 z"
+  };
+  icn["GR.IC.FERRY"] = [
+    {
+      type: "path",
+      fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
+      d: "m 75,100 0,-35 50,0 0,35 20,0 -15,35 -60,0 -15,-35 z"
+    },
+    {
+      type: "text",
+      stroke: false,
+      x: 100,
+      y: 115,
+      fontsize: 30,
+      text: STD2525 ? "FE" : "F"
+    }
+  ];
   icn["GR.IC.ADMINISTRATIVE"] = text("ADM");
+  icn["GR.IC.MANUAL TRACK"] = text("MAN");
   icn["GR.IC.AIR DEFENSE CHAPARRAL"] = [
     {
       type: "path",
@@ -144,20 +166,35 @@ export default function(
     d: "M125,80 C150,80 150,120 125,120 L75,120 C50,120 50,80 75,80 Z",
     fill: false
   };
-  icn["GR.IC.AVIATION ROTARY WING"] = icn["AR.I.MILITARY ROTARY WING"];
-  icn["GR.IC.AVIATION FIXED WING"] = icn["AR.I.MILITARY FIXED WING"];
-  icn["GR.IC.AVIATION COMPOSITE"] = [
-    ms._scale(0.5, [
-      icn["GR.IC.AVIATION FIXED WING"],
-      {
-        type: "rotate",
-        degree: 90,
-        x: 100,
-        y: 100,
-        draw: [icn["GR.IC.AVIATION ROTARY WING"]]
-      }
-    ])
+  icn["GR.IC.AVIATION ROTARY WING"] = {
+    type: "path",
+    d: "M60,85 l40,15 40,-15 0,30 -40,-15 -40,15 z"
+  };
+  icn["GR.IC.AVIATION FIXED WING"] = {
+    type: "path",
+    d:
+      "M100,100 L130,88 c15,0 15,24 0,24 L100,100 70,112 c-15,0 -15,-24 0,-24 Z"
+  };
+  icn["GR.IC.COMBATANT"] = [
+    {
+      type: "path",
+      d:
+        "m 86.9,110 c -3.6,2 -7.2,3.9 -10.8,5.9 2.1,2.9 6.7,3.9 10,2.1 2.6,-0.9 4.7,-3.8 3.1,-6.1 -0.8,-0.6 -1.5,-1.3 -2.3,-1.9 z m 26.3,0.1 c 3.6,2 7.2,3.9 10.8,5.9 -2.1,2.9 -6.7,3.9 -10,2.1 -2.6,-0.9 -4.7,-3.8 -3.1,-6.1 0.8,-0.6 1.5,-1.3 2.3,-1.9 z",
+      fill: false
+    },
+    {
+      type: "path",
+      d:
+        "m 112.9,110 c -5.6,-4 -11.3,-7.9 -16.1,-12.5 -4.2,-4.5 -7,-9.8 -9.2,-15.1 -0.8,4.4 -0.9,9.3 2.4,13.2 3.6,4.5 8.6,8.1 13.5,11.8 2.3,1.7 4.7,3.3 7.1,4.8 0.8,-0.7 1.5,-1.5 2.3,-2.2 m -25.7,0 c 5.6,-4 11.3,-7.9 16.1,-12.5 4.2,-4.5 7,-9.8 9.2,-15.1 0.8,4.4 0.9,9.3 -2.4,13.2 -3.6,4.5 -8.6,8.1 -13.5,11.8 -2.3,1.7 -4.7,3.3 -7.1,4.8 -0.8,-0.7 -1.5,-1.5 -2.3,-2.2",
+      fill: white,
+      strokewidth: 2
+    }
   ];
+  icn["GR.IC.AVIATION COMPOSITE"] = {
+    type: "path",
+    d:
+      "m 100,100 15.7,7.9 c 11.8,0 11.8,-15.7 0,-15.7 z m 0,0 -15.7,-7.9 c -11.8,0 -11.8,15.7 0,15.7 z m -10,-20 10,20 -10,20 20,0 -10,-20 10,-20 z"
+  };
   icn["GR.IC.AVIATION TACTICAL AIR CONTROL PARTY"] = text("TACP");
   icn["GR.IC.AVIATION FORWARD AIR CONTROLLER"] = text("FAC");
   icn["GR.IC.BAND"] = text("BAND");
@@ -185,6 +222,11 @@ export default function(
     d: "m 60,80 80,0 0,20 c 0,25 -80,25 -80,0 z",
     fill: false
   };
+  icn["GR.I.CIVILIAN"] = text("CIV");
+  icn["GR.I.CIVILIAN"].fill =
+    STD2525 || numberSIDC ? iconFillColor : !frame ? iconFillColor : false;
+  icn["GR.I.CIVILIAN"].stroke = black;
+  icn["GR.I.CIVILIAN"].strokewidth = 3;
   icn["GR.IC.COMMAND AND CONTROL"] = text("C2");
   icn["GR.IC.COMBAT"] = text("CBT");
   icn["GR.IC.COMBAT SERVICE SUPPORT"] = text("CSS");
@@ -289,6 +331,14 @@ export default function(
       "M 100,118 C 76,109 85,95 82,82 c 6,7 12,7 18,0 6,7 12,7 18,0 -3,13 6,27 -18,36 z",
     fill: false
   };
+  icn["GR.IC.LAW ENFORCEMENT VESSEL"] = [
+    {
+      type: "path",
+      fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
+      d: "m 75,100 0,-35 50,0 0,35 20,0 -15,35 -60,0 -15,-35 z"
+    },
+    { type: "path", d: "m 135,100 -15,35 -10,0 15,-35 z" }
+  ];
   icn["GR.IC.LIAISON"] = text("LO");
   icn["GR.IC.MAINTENANCE"] = {
     type: "path",
@@ -296,6 +346,11 @@ export default function(
     fill: false
   };
   icn["GR.IC.MATERIEL"] = text("MAT");
+  icn["GR.IC.MEDICAL EVACUATION HELICOPTER"] = {
+    type: "path",
+    d:
+      "M60,85 l40,15 40,-15 0,30 -40,-15 -40,15 z M95.5,80 l9,0 0,-9 9,0 0,-9 -9,0 0,-9 -9,0 0,9 -9,0 0,9 9,0 Z"
+  };
   icn["GR.IC.MESSENGER"] = text("M");
   icn["GR.IC.METEOROLOGICAL"] = text("MET");
   icn["GR.IC.MILITARY INFORMATION SUPPORT OPERATIONS (MISO)"] = {
@@ -489,8 +544,7 @@ export default function(
       "M 60 85 L 90 85 L 60 85 z M 110 85 L 140 85 L 110 85 z M 100 90 L 100 115 L 100 90 z"
   };
   icn["GR.IC.SPECIAL FORCES"] = text("SF");
-  icn["GR.IC.SPECIAL OPERATIONS FORCES"] =
-    icn["AR.I.SPECIAL OPERATIONS FORCES"];
+  icn["GR.IC.SPECIAL OPERATIONS FORCES"] = text("SOF");
   icn["GR.IC.SURVEILLANCE"] = { type: "path", d: "m 100,80 -25,40 50,0 z" };
   icn["GR.IC.SURVEY"] = [
     { type: "path", d: "M85,120 l15,-15 15,15 ", fill: false },
@@ -519,7 +573,18 @@ export default function(
     { type: "circle", cx: 100, cy: 100, r: 20, fill: false }
   ];
   icn["GR.IC.TRANSPORTATION SECURITY AGENCY (TSA)"] = text("TSA");
-  icn["GR.IC.UNMANNED SYSTEMS"] = icn["AR.I.UNMANNED AERIAL VEHICLE"];
+  icn["GR.IC.UNMANNED SYSTEMS"] = {
+    type: "path",
+    d: "M60,90 l40,10 40,-10 0,8 -40,15 -40,-15 Z",
+    stroke: false
+  };
+  icn["GR.IC.SEARCH AND RESCUE"] = text("SAR");
+  icn["GR.IC.DIVER, CIVILIAN"] = {
+    type: "path",
+    fill: iconFillColor,
+    d:
+      "M 114.3,94 C 114.3,102.3 107.9,109 100,109 c -7.9,0 -14.2,-6.7 -14.2,-15 0,-8.3 6.4,-15 14.2,-15 7.9,0 14.3,6.7 14.3,15 z m 0,27 14.3,15 -57,0 14.3,-15 M 125.7,79 l 14.3,0 0,30 -14.3,0 m -51.3,0 -14.3,0 0,-30 14.3,0 m 54.2,15 c 0,16.6 -12.8,30 -28.5,30 -15.7,0 -28.5,-13.4 -28.5,-30 C 71.5,77.4 84.3,64 100,64 115.7,64 128.5,77.4 128.5,94 z"
+  };
   icn["GR.IC.VIDEO IMAGERY"] = {
     type: "path",
     fill: false,
@@ -1196,6 +1261,7 @@ export default function(
   icn["GR.M1.FORCE"] = textm1("F");
   icn["GR.M1.FORWARD"] = textm1("FWD");
   icn["GR.M1.GROUND STATION MODULE"] = textm1("GSM");
+  icn["GR.M1.HIJACKING"] = textm1("H");
   icn["GR.M1.INDIVIDUAL"] = {
     type: "path",
     fill: false,
@@ -1220,7 +1286,11 @@ export default function(
     fill: false,
     d: "m 84,70 32,0 m 4,-5 c -5,0 -5,10 0,10 M 80,65 c 5,0 5,10 0,10"
   };
-  icn["GR.M1.MEDEVAC"] = icn["AIR.M1.MEDEVAC"];
+  icn["GR.M1.MEDEVAC"] = {
+    type: "path",
+    stroke: false,
+    d: "M95.5,80 l9,0 0,-9 9,0 0,-9 -9,0 0,-9 -9,0 0,9 -9,0 0,9 9,0 Z"
+  };
   icn["GR.M1.METEOROLOGICAL"] = textm1("MET");
   icn["GR.M1.MINE COUNTERMEASURE"] = textm1("MCM");
   icn["GR.M1.MISSILE"] = {
@@ -1394,7 +1464,11 @@ export default function(
     d: "m 92,65 c 6,3 10,3 16,0 m -18,13 10,-23 10,23"
   };
   icn["GR.M1.TRAINING CAMP"] = textm1("TNG");
-  icn["GR.M1.UNMANNED AERIAL VEHICLE"] = icn["AIR.M1.UNMANNED AERIAL VEHICLE"];
+  icn["GR.M1.UNMANNED AERIAL VEHICLE"] = {
+    type: "path",
+    stroke: false,
+    d: "m 80,65 20,13 20,-13 0,-5 -20,10 -20,-10 z"
+  };
   icn["GR.M1.UPGRADED EARLY WARNING RADAR"] = textm1("UEW");
   icn["GR.M1.UTILITY"] = textm1("U");
   icn["GR.M1.VIDEO IMAGERY"] = {
@@ -3471,6 +3545,19 @@ export default function(
         "m 121.2,104.9 c 0.4,0.4 0.4,1.5 0.4,2.3 l 1,8.2 v 0.6 h 13 l 1.7,-13.2 h -16.3 l 0.2,2.1 z"
     }
   ];
+  icn["GR.I.FF.SATELLITE"] = [
+    {
+      type: "path",
+      stroke: false,
+      d:
+        "m 115,70 20,0 0,55 -20,0 z m -25,5 20,0 0,45 -20,0 z m -25,-5 20,0 0,55 -20,0 z"
+    },
+    {
+      type: "path",
+      fill: false,
+      d: "M80,135 c10,-10 30,-10 40,0 M100,127 L100,100 M70,100 L130,100"
+    }
+  ];
   icn["GR.IN.IC.FARM/RANCH"] = [
     {
       type: "path",
@@ -3958,7 +4045,20 @@ export default function(
     }
   ];
   icn["GR.IN.IC.HELICOPTER LANDING SITE"] = [
-    icn["AR.I.FF.CIVILIAN ROTARY WING"],
+    {
+      type: "path",
+      stroke: black,
+      d:
+        "M80,70 l10,10 M120,110 l-10,-10 M80,110 l10,-10 M120,70 l-10,10 M100,115 l0,20 M95,135 l10,0",
+      fill: false
+    },
+    {
+      type: "path",
+      stroke: black,
+      fill: STD2525 ? iconFillColor : false,
+      d:
+        "m 113,90 c -0.3,8.8 -1.9,20.3 -10.8,24.6 -7.7,2 -12.3,-7.1 -13.8,-13.3 -2.6,-11.5 -2.3,-26 6.9,-34.6 6.0,-4.9 13.1,1.9 14.9,7.8 2,4.9 2.8,10.2 2.8,15.5 z"
+    },
     { type: "circle", fill: false, cx: 100, cy: 100, r: 40 }
   ];
   icn["GR.IN.IC.TRANSPORTATION INFRASTRUCTURE LOCK"] = [

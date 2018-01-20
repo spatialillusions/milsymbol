@@ -303,16 +303,9 @@ export default function(
     STD2525 && !numberSIDC ? textm1("H") : textm1("CSAR");
   icn["AIR.M1.SUPRESSION OF ENEMY AIR DEFENCE"] = textm1("SEAD");
   icn["AIR.M1.UNMANNED AERIAL VEHICLE"] = {
-    type: "translate",
-    x: 20,
-    y: -10,
-    draw: [
-      {
-        type: "scale",
-        factor: 0.8,
-        draw: [icn["AR.I.UNMANNED AERIAL VEHICLE"]]
-      }
-    ]
+    type: "path",
+    stroke: false,
+    d: "m 80,65 20,13 20,-13 0,-5 -20,10 -20,-10 z"
   };
   icn["AIR.M1.BOOM-ONLY"] = textm1("B");
   icn["AIR.M1.DROUGE-ONLY"] = textm1("D");

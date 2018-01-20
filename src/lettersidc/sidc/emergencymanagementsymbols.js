@@ -185,7 +185,7 @@ export default function emergencymanagementsymbols(sId, bbox, icn, _STD2525) {
     "E-O-DMC---"
   ] = [icn["GR.IC.TRANSPORTATION SECURITY AGENCY (TSA)"]];
   sId["E-O-DN----"] = sId["E-O-DNA---"] = sId["E-O-DNC---"] = [
-    icn["SE.IC.LAW ENFORCEMENT VESSEL"]
+    icn["GR.IC.LAW ENFORCEMENT VESSEL"]
   ];
   sId["E-O-DO----"] = sId["E-O-DOA---"] = sId["E-O-DOB---"] = sId[
     "E-O-DOC---"
@@ -270,7 +270,7 @@ export default function emergencymanagementsymbols(sId, bbox, icn, _STD2525) {
   sId["E-F-LD----"] = [
     icn["GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE"]
   ];
-  sId["E-F-LE----"] = [icn["SE.IC.FERRY"]];
+  sId["E-F-LE----"] = [icn["GR.IC.FERRY"]];
   sId["E-F-LF----"] = [icn["GR.IN.IC.HELICOPTER LANDING SITE"]];
   sId["W-S-ML----"] = [icn["GR.IN.IC.TRANSPORTATION INFRASTRUCTURE LOCK"]];
   sId["E-F-LH----"] = [icn["GR.IC.MAINTENANCE"]];
