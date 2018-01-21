@@ -3858,12 +3858,16 @@
       "code": "342500",
       "remarks": ""
     },
-    { "entity": "Space Debris", "code": "350000", "remarks": "" },
+    {
+      "entity": "Space Debris",
+      "code": "350000",
+      "remarks": "For training or hierarchical purposes only"
+    },
     {
       "entity": "Space Debris",
       "entity type": "Man Made Space Debris",
       "code": "350100",
-      "remarks": ""
+      "remarks": "For training or hierarchical purposes only"
     },
     {
       "entity": "Space Debris",
@@ -3890,7 +3894,7 @@
       "entity": "Space Debris",
       "entity type": "Natural Space Debris",
       "code": "350200",
-      "remarks": ""
+      "remarks": "For training or hierarchical purposes only"
     },
     {
       "entity": "Space Debris",
