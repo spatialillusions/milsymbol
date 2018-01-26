@@ -539,12 +539,14 @@ export default {
       ],
       icn["GR.EQ.MISSILE SUPPORT"]
     ];
-    sId["S-G-EVST--"] = [
-      icn[
-        "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
-      ],
-      icn["GR.EQ.MISSILE TRANSLOADER"]
-    ];
+    sId["S-G-EVST--"] = _STD2525 // For some strange reason app6 uses this code for other things...
+      ? [
+          icn[
+            "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
+          ],
+          icn["GR.EQ.MISSILE TRANSLOADER"]
+        ]
+      : [icn["GR.EQ.TRAIN LOCOMOTIVE"]];
     sId["S-G-EVSR--"] = [
       icn[
         "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
