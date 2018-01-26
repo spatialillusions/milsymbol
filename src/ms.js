@@ -93,12 +93,8 @@ ms.addLabelOverrides = function(parts, type) {
   return ms;
 };
 
-ms.addLetterIcons = function(parts) {
-  ms.addSIDCicons(parts, "letter");
-};
-
-ms.addNumberIcons = function(parts) {
-  ms.addSIDCicons(parts, "number");
+ms.addIcons = function(obj) {
+  ms.addSIDCicons(obj.icons, obj.type);
 };
 
 ms.addSIDCicons = function(parts, type) {

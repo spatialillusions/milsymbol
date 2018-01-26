@@ -4,6 +4,6 @@ import verify from "./app6d";
 ms.setStandard("APP6");
 
 import icons from "../src/numbersidc/sidc/landunit";
-ms.addNumberIcons(icons);
+ms.addIcons(icons);
 
 verify(ms, milstd, "APP-6 D Land Unit", "10");

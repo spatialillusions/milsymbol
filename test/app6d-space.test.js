@@ -5,7 +5,7 @@ ms.setStandard("APP6");
 ms._iconCache = {};
 
 import icons from "../src/numbersidc/sidc/space";
-ms.addNumberIcons(icons);
+ms.addIcons(icons);
 
 verify(ms, milstd, "APP-6 D Space Symbol", "05");
 

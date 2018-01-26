@@ -4,6 +4,6 @@ import verify from "./app6b";
 ms.setStandard("APP6");
 
 import icons from "../src/lettersidc/sidc/sea";
-ms.addLetterIcons(icons);
+ms.addIcons(icons);
 
 verify(ms, "APP-6 B Sea", milstd["app6b"].WAR.SSUF);
