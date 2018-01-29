@@ -799,6 +799,42 @@ export default function(
       text: "P"
     }
   ];
+  icn["TP.PICKET ROUTE"] = [
+    icn["TP.ROUTE"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 170,
+      fontsize: 45,
+      text: "PK"
+    }
+  ];
+  icn["TP.POINT R ROUTE"] = [
+    icn["TP.ROUTE"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 170,
+      fontsize: 45,
+      text: "R"
+    }
+  ];
+  icn["TP.RENDEZVOUS ROUTE"] = [
+    icn["TP.ROUTE"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 170,
+      fontsize: 45,
+      text: "RZ"
+    }
+  ];
   icn["TP.AIR CONTROL"] = {
     type: "path",
     fill: false,
@@ -1630,6 +1666,18 @@ export default function(
       text: "ASW"
     }
   ];
+  icn["TP.MINE WARFARE UNMANNED UNDERWATER VEHICLE SURFACE STATION"] = [
+    icn["TP.(USV)"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 95,
+      fontsize: 40,
+      text: "MW"
+    }
+  ];
   icn["TP.USV - SUW CONTROL STATION"] = [
     icn["TP.(USV)"],
     {
@@ -1664,6 +1712,30 @@ export default function(
       y: 115,
       fontsize: 45,
       text: "ASW"
+    }
+  ];
+  icn["TP.MINE WARFARE SURFACE STATION"] = [
+    icn["TP.SEA SURFACE CONTROL"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 115,
+      fontsize: 45,
+      text: "MW"
+    }
+  ];
+  icn["TP.NON-COMBATANT SURFACE STATION"] = [
+    icn["TP.SEA SURFACE CONTROL"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 115,
+      fontsize: 45,
+      text: "NC"
     }
   ];
   icn["TP.SUW CONTROL STATION"] = [
@@ -1712,6 +1784,18 @@ export default function(
       y: 115,
       fontsize: 45,
       text: "RZ"
+    }
+  ];
+  icn["TP.REPLENISHMENT AT SEA SURFACE STATION"] = [
+    icn["TP.SEA SURFACE CONTROL"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 115,
+      fontsize: 45,
+      text: "RAS"
     }
   ];
   icn["TP.RESCUE CONTROL POINT"] = [
@@ -1784,6 +1868,18 @@ export default function(
       y: 95,
       fontsize: 40,
       text: "ASW"
+    }
+  ];
+  icn["TP.MINE WARFARE UNMANNED UNDERWATER VEHICLE SUBSURFACE STATION"] = [
+    icn["TP.(UUV)"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 95,
+      fontsize: 40,
+      text: "MW"
     }
   ];
   icn["TP.UUV - SUW CONTROL STATION"] = [
@@ -2902,6 +2998,36 @@ export default function(
       stroke: colors.iconColor[affiliation],
       fill: false,
       d: "M 73,133 133,73 M 67,127 127,67"
+    }
+  ];
+  icn["TP.VITAL AREA CENTRE"] = [
+    {
+      type: "path",
+      fill: false,
+      d: "m 45,100 110,0 m 0,-40 0,85 M 45,60 l 0,80 m 55,-80 0,80"
+    }
+  ];
+  icn["TP.ESTIMATED POSITION (EP)"] = [
+    {
+      type: "path",
+      fill: false,
+      strokedasharray: "12,5",
+      d: "M 160,160 40,160 40,40 160,40 Z"
+    },
+    {
+      type: "path",
+      fill: false,
+      d:
+        "m 140,100 a 40,40 0 0 1 -40,40 40,40 0 0 1 -40,-40 40,40 0 0 1 40,-40 40,40 0 0 1 40,40 z"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 115,
+      fontsize: 35,
+      text: "EP"
     }
   ];
   /*
