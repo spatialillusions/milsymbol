@@ -849,7 +849,7 @@ Gets the version of milsymbol.
 **Returns**
 
 ```javascript
-String;
+Array;
 ```
 
 ## ms.outline(drawInstruction, outline, stroke, color)

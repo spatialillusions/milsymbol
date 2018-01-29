@@ -29,6 +29,8 @@
 
 * `symbol.getProperties()` is removed and `symbol.getMetadata()` should be used instead.
 
+* ms.getVersion() now returns the version as an array.
+
 ### Deprecated
 
 ### Removed

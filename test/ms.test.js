@@ -34,7 +34,7 @@ describe("ms", () => {
       returns: Object
     },
     getVersion: {
-      returns: String
+      returns: Object
     },
     outline: {
       parameters: [{}],
