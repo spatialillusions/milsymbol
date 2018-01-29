@@ -2760,6 +2760,62 @@ export default function(
     fill: false,
     d: "m 60,30 80,0 m -80,15 80,0 m -40,55 -40,-55 0,-105 80,0 0,105 z"
   };
+  icn["TP.NATO CLASS I"] = [
+    icn["TP.SUPPLY POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 45,
+      text: "I"
+    }
+  ];
+  icn["TP.NATO CLASS II"] = [
+    icn["TP.SUPPLY POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 45,
+      text: "II"
+    }
+  ];
+  icn["TP.NATO CLASS III"] = [
+    icn["TP.SUPPLY POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 45,
+      text: "III"
+    }
+  ];
+  icn["TP.NATO CLASS IV"] = [
+    icn["TP.SUPPLY POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 45,
+      text: "IV"
+    }
+  ];
+  icn["TP.NATO CLASS V"] = [
+    icn["TP.SUPPLY POINT"],
+    {
+      type: "path",
+      fill: false,
+      d: "m 80,-10 40,0 m -32,0 0,-26.7 c 0,-17.8 24,-17.8 24,0 L 112,-10"
+    }
+  ];
   icn["TP.SP CLASS I"] = [
     icn["TP.SUPPLY POINT"],
     {
