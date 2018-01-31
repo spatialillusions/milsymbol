@@ -104,6 +104,8 @@ export default {
       sIdm1["37"] = [icn["AIR.M1.HIJACKING"]];
       sIdm1["38"] = [icn["AIR.M1.ASW HELO-LAMPS"]];
       sIdm1["39"] = [icn["AIR.M1.ASW HELO - SH-60R"]];
+      sIdm1["40"] = [icn["AIR.M1.HIJACKER"]];
+      sIdm1["41"] = [icn["AIR.M1.CYBERSPACE"]];
 
       sIdm2["01"] = [icn["AIR.M2.HEAVY"]];
       sIdm2["02"] = [icn["AIR.M2.MEDIUM"]];
@@ -116,6 +118,7 @@ export default {
       sIdm2["09"] = [icn["AIR.M2.MEDIUM RANGE"]];
       sIdm2["10"] = [icn["AIR.M2.LONG RANGE"]];
       sIdm2["11"] = [icn["AIR.M2.DOWNLINKED"]];
+      sIdm2["12"] = [icn["AIR.M2.CYBERSPACE"]];
     }
   }
 };

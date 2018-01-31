@@ -66,8 +66,9 @@ export default {
       bbox["131800"] = { x1: 60, x2: 140, y1: 60, y2: 140 };
       sidc["131900"] = icn["TP.AIRFIELD"]; //Command and Control Points / Airfield
       bbox["131900"] = { x1: 35, x2: 165, y1: 60, y2: 125 };
-      //sidc["132000"] = []; //Command and Control Points / Target Handover
-      //sidc["132100"] = []; //Command and Control Points / Key Terrain
+      sidc["132000"] = icn["TP.TARGET HANDOVER"]; //Command and Control Points / Target Handover
+      bbox["132000"] = { x1: 40, x2: 160, y1: 40, y2: 160 };
+      sidc["132100"] = icn["TP.KEY TERRAIN"]; //Command and Control Points / Key Terrain
       sidc["160100"] = icn["TP.OBSERVATION POST/OUTPOST"]; //Maneuver Points / Observation Post/Outpost (unspecified)
       bbox["160100"] = { x1: 50, x2: 150, y1: 40, y2: 150 };
       sidc["160200"] = []; // N/A //Maneuver Points / Observation Post/Outpost (specified)
@@ -135,10 +136,11 @@ export default {
       bbox["182400"] = { x1: 60, x2: 140, y1: 30, y2: 170 };
       sidc["182500"] = icn["TP.ORBIT - RANDOM, CLOSED"]; //Aircraft (VTUA) / Orbit – Random Closed
       bbox["182500"] = { x1: 60, x2: 140, y1: 30, y2: 170 };
-      sidc["200400"] = []; //Maritime Control Areas / Ship Area of Interest
-      sidc["200500"] = []; //Maritime Control Areas / Active Maneuver Area
-      sidc["200600"] = []; //Maritime Control Areas / Cued Acquisition Doctrine
-      sidc["200700"] = []; //Maritime Control Areas / Radar Search Doctrine
+      sidc["200400"] = icn["TP.SHIP AREA OF INTEREST (AEGIS ONLY)"]; //Maritime Control Areas / Ship Area of Interest
+      sidc["200500"] = icn["TP.ACTIVE MANOEUVRE AREA (AEGIS ONLY)"]; //Maritime Control Areas / Active Maneuver Area
+      bbox["200500"] = { x1: 40, x2: 160, y1: 40, y2: 160 };
+      sidc["200600"] = icn["TODO"]; //Maritime Control Areas / Cued Acquisition Doctrine
+      sidc["200700"] = icn["TODO"]; //Maritime Control Areas / Radar Search Doctrine
       sidc["210100"] = icn["TP.PLAN SHIP"]; //Maritime Control Points / Plan Ship
       bbox["210100"] = { x1: 50, x2: 150, y1: 50, y2: 150 };
       sidc["210200"] = icn["TP.AIM POINT"]; //Maritime Control Points / Aim Point
@@ -167,10 +169,12 @@ export default {
       bbox["211400"] = { x1: 50, x2: 150, y1: 0, y2: 100 };
       sidc["211500"] = icn["TP.DATUM"]; //Maritime Control Points / Datum Lost Contact
       bbox["211500"] = { x1: 50, x2: 150, y1: 50, y2: 150 };
-      sidc["211600"] = icn["TODO"]; //Maritime Control Points / BT Buoy Drop
-      sidc["211700"] = icn["TODO"]; //Maritime Control Points / Reported Bottomed Sub
-      sidc["211800"] = icn["TODO"]; //Maritime Control Points / Moving Haven
-      sidc["211900"] = icn["TODO"]; //Maritime Control Points / Screen Center
+      sidc["211600"] = icn["TP.BT BOUY DROP"]; //Maritime Control Points / BT Buoy Drop
+      bbox["211600"] = { x1: 50, x2: 150, y1: 40, y2: 160 };
+      sidc["211700"] = icn["TP.REPORTED BOTTOMED SUB"]; //Maritime Control Points / Reported Bottomed Sub
+      sidc["211800"] = icn["TP.MOVING HAVEN"]; //Maritime Control Points / Moving Haven
+      bbox["211800"] = { x1: 40, x2: 160, y1: 50, y2: 150 };
+      sidc["211900"] = icn["TP.SCREEN CENTRE"]; //Maritime Control Points / Screen Center
       sidc["212000"] = icn["TP.LOST CONTACT"]; //Maritime Control Points / Lost Contact
       bbox["212000"] = { x1: 50, x2: 150, y1: 0, y2: 100 };
       sidc["212100"] = icn["TP.SINKER"]; //Maritime Control Points / Sinker
@@ -308,7 +312,8 @@ export default {
       bbox["216800"] = { x1: 30, x2: 170, y1: 60, y2: 140 };
       sidc["216900"] = icn["TP.USV - SUW CONTROL STATION"]; //Maritime Control Points / Surface Warfare Mine Warfare Unmanned Underwater Vehicle Sea Surface Station
       bbox["216900"] = { x1: 30, x2: 170, y1: 60, y2: 140 };
-      sidc["217000"] = icn["TODO"]; //Maritime Control Points / Shore Control Station
+      sidc["217000"] = icn["TP.SHORE CONTROL STATION"]; //Maritime Control Points / Shore Control Station
+      bbox["217000"] = { x1: 40, x2: 160, y1: 40, y2: 160 };
       sidc["217100"] = icn["TP.ROUTE"]; //Maritime Control Points / General Route
       bbox["217100"] = { x1: 30, x2: 170, y1: 60, y2: 140 };
       sidc["217200"] = icn["TP.ROUTE DIVERSIONS"]; //Maritime Control Points / Diversion Route
@@ -323,8 +328,8 @@ export default {
       bbox["217600"] = { x1: 30, x2: 170, y1: 60, y2: 170 };
       sidc["217700"] = icn["TP.ROUTE WAYPOINT"]; //Maritime Control Points / Waypoint Route
       bbox["217700"] = { x1: 30, x2: 170, y1: 60, y2: 170 };
-      sidc["217800"] = icn["TODO"]; //Maritime Control Points / Clutter, Stationary or Cease Reporting
-      sidc["217900"] = icn["TODO"]; //Maritime Control Points / Tentative or Provisional Track
+      sidc["217800"] = icn["TP.CLUTTER, STATIONARY OR CEASE REPORTING"]; //Maritime Control Points / Clutter, Stationary or Cease Reporting
+      sidc["217900"] = icn["TP.TENTATIVE OR PROVISIONAL TRACK"]; //Maritime Control Points / Tentative or Provisional Track
       sidc["218000"] = icn["TP.DISTRESSED VESSEL"]; //Maritime Control Points / Distressed Vessel
       sidc["218100"] = icn["TP.DITCHED AIRCRAFT"]; //Maritime Control Points / Ditched Aircraft/Downed Aircraft
       sidc["218200"] = icn["TP.PERSON IN WATER"]; //Maritime Control Points / Person in Water/Bailout
@@ -348,8 +353,10 @@ export default {
       bbox["219200"] = { x1: 40, x2: 160, y1: 70, y2: 130 };
       sidc["240601"] = icn["TP.POINT/SINGLE TARGET"]; //Fires Areas / Point Targets / Point or Single Target
       sidc["240602"] = icn["TP.NUCLEAR TARGET"]; //Fires Areas / Point Targets / Nuclear Target
-      sidc["240603"] = icn["TODO"]; //Fires Areas / Point Targets / Target-Recorded
-      sidc["240900"] = icn["TODO"]; //Fires Areas / Fire Support Station
+      sidc["240603"] = icn["TP.TARGETRECORDED (AEGIS ONLY)"]; //Fires Areas / Point Targets / Target-Recorded
+      bbox["240603"] = { x1: 0, x2: 200, y1: 50, y2: 150 };
+      sidc["240900"] = icn["TP.FIRE SUPPORT STATION"]; //Fires Areas / Fire Support Station
+      bbox["240900"] = { x1: 50, x2: 200, y1: 50, y2: 150 };
       sidc["250100"] = icn["TP.FIRING POINT"]; //Fires Points / Firing Point
       bbox["250100"] = { x1: 60, x2: 140, y1: -60 };
       sidc["250200"] = icn["TP.HIDE POINT"]; //Fires Points / Hide Point
@@ -363,7 +370,8 @@ export default {
       sidc["270701"] = icn["TODO"]; //Protection Areas / Minefields / Minefield, Static Depiction
       sidc["280100"] = icn["TODO"]; //Protection Points / Abatis
       sidc["280200"] = icn["TP.ANTIPERSONNEL (AP) MINES"]; //Protection Points / Antipersonnel Mine
-      sidc["280201"] = icn["TODO"]; //Protection Points / Antipersonnel Mine / Antipersonnel Mine with Directional Effects
+      sidc["280201"] = icn["TP.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS"]; //Protection Points / Antipersonnel Mine / Antipersonnel Mine with Directional Effects
+      bbox["280201"] = { x1: 40, x2: 180, y1: 40, y2: 150 };
       sidc["280300"] = icn["TP.ANTITANK MINE (AT)"]; //Protection Points / Antitank Mine
       sidc["280400"] = icn["TP.(AT) ANTIHANDLING DEVICE"]; //Protection Points / Antitank Mine with Anti-handling Device
       bbox["280400"] = { x1: 60, x2: 140, y1: 40, y2: 195 };
@@ -395,9 +403,12 @@ export default {
       bbox["281805"] = { x1: 60, x2: 140, y1: -60 };
       sidc["281806"] = icn["TP.DECON SITE/POINT (THOROUGH DECONTAMINATION)"]; //Protection Points / General Decontamination Point/Site / Thorough
       bbox["281806"] = { x1: 60, x2: 140, y1: -60 };
-      sidc["281807"] = icn["TODO"]; //Protection Points / General Decontamination Point/Site / Main Equipment
-      sidc["281808"] = icn["TODO"]; //Protection Points / General Decontamination Point/Site / Forward Troop
-      sidc["281809"] = icn["TODO"]; //Protection Points / General Decontamination Point/Site / Wounded Personnel
+      sidc["281807"] = icn["TP.MAIN EQUIPMENT DECONTAMINATION POINT/SITE"]; //Protection Points / General Decontamination Point/Site / Main Equipment
+      bbox["281807"] = { x1: 60, x2: 140, y1: -60 };
+      sidc["281808"] = icn["TP.FORWARD TROOP DECONTAMINATION POINT/SITE"]; //Protection Points / General Decontamination Point/Site / Forward Troop
+      bbox["281808"] = { x1: 60, x2: 140, y1: -60 };
+      sidc["281809"] = icn["TP.WOUNDED PERSONNEL DECONTAMINATION SITE"]; //Protection Points / General Decontamination Point/Site / Wounded Personnel
+      bbox["281809"] = { x1: 60, x2: 140, y1: -60 };
       sidc["281901"] = icn["TP.FIXED AND PREFABRICATED"]; //Protection Points / Tetrahedrons, Dragons Teeth, and Other Similar Obstacles / Fixed and Prefabricated
       bbox["281901"] = { x1: 60, x2: 140, y1: 30 };
       sidc["281902"] = icn["TP.TETRAHEDRONS"]; //Protection Points / Tetrahedrons, Dragons Teeth, and Other Similar Obstacles / Movable
@@ -411,9 +422,12 @@ export default {
       sidc["320100"] = []; // N/A //Sustainment Points / Ambulance Points
       sidc["320101"] = icn["TP.AMBULANCE EXCHANGE POINT"]; //Sustainment Points / Ambulance Points / Ambulance Exchange Point
       bbox["320101"] = { x1: 60, x2: 140, y1: -60 };
-      sidc["320102"] = icn["TODO"]; //Sustainment Points / Ambulance Points / Ambulance Control Point
-      sidc["320103"] = icn["TODO"]; //Sustainment Points / Ambulance Points / Ambulance Load Point
-      sidc["320104"] = icn["TODO"]; //Sustainment Points / Ambulance Points / Ambulance Relay Point
+      sidc["320102"] = icn["TP.AMBULANCE CONTROL POINT"]; //Sustainment Points / Ambulance Points / Ambulance Control Point
+      bbox["320102"] = { x1: 60, x2: 140, y1: -60 };
+      sidc["320103"] = icn["TP.AMBULANCE LOAD POINT"]; //Sustainment Points / Ambulance Points / Ambulance Load Point
+      bbox["320103"] = { x1: 60, x2: 140, y1: -60 };
+      sidc["320104"] = icn["TP.AMBULANCE RELAY POINT"]; //Sustainment Points / Ambulance Points / Ambulance Relay Point
+      bbox["320104"] = { x1: 60, x2: 140, y1: -60 };
       sidc["320200"] = icn["TP.AMMUNITION SUPPLY POINT (ASP)"]; //Sustainment Points / Ammunition Supply Point
       bbox["320200"] = { x1: 60, x2: 140, y1: -60 };
       sidc["320300"] = icn["TP.AMMUNITION TRANSFER POINT (ATP)"]; //Sustainment Points / Ammunition Transfer and Holding Point
@@ -432,7 +446,8 @@ export default {
       bbox["320900"] = { x1: 60, x2: 140, y1: -60 };
       sidc["321000"] = icn["TP.MAINTENANCE COLLECTION POINT"]; //Sustainment Points / Maintenance Collection Point (MCP)
       bbox["321000"] = { x1: 60, x2: 140, y1: -60 };
-      sidc["321100"] = icn["TODO"]; //Sustainment Points / Medical Evacuation Point (MEDEVAC) Pick-Up Point
+      sidc["321100"] = icn["TP.MEDICAL EVACUATION (MEDEVAC) PICKUP POINT"]; //Sustainment Points / Medical Evacuation Point (MEDEVAC) Pick-Up Point
+      bbox["321100"] = { x1: 60, x2: 140, y1: -60 };
       sidc["321200"] = icn["TP.REARM, REFUEL AND RESUPPLY POINT"]; //Sustainment Points / Rearm, Refuel and Resupply Point (R3P)
       bbox["321200"] = { x1: 60, x2: 140, y1: -60 };
       sidc["321300"] = icn["TP.REFUEL ON THE MOVE POINT"]; //Sustainment Points / Refuel on the Move (ROM) Point
@@ -477,7 +492,8 @@ export default {
       bbox["321715"] = { x1: 60, x2: 140, y1: -60 };
       sidc["321716"] = icn["TP.SP CLASS X"]; //Sustainment Points / General Supply Point / US Class X Supply Point
       bbox["321716"] = { x1: 60, x2: 140, y1: -60 };
-      sidc["321800"] = icn["TODO"]; //Sustainment Points / Medical Supply Point
+      sidc["321800"] = icn["TP.MEDICAL SUPPLY POINT"]; //Sustainment Points / Medical Supply Point
+      bbox["321800"] = { x1: 60, x2: 140, y1: -60 };
       sidc["340900"] = icn["TP.DESTROY"]; //Mission Tasks / Destroy
       bbox["340900"] = { x1: 0, x2: 200, y1: 40, y2: 160 };
       sidc["341400"] = icn["TP.INTERDICT"]; //Mission Tasks / Interdict
@@ -495,11 +511,47 @@ export default {
       sidc["350202"] = icn["TODO"];
       sidc["350203"] = icn["TODO"];
 
+      sIdm1["13"] = [icn["TODO"]];
+      sIdm1["14"] = [icn["TODO"]];
+      sIdm1["15"] = [icn["TODO"]];
+      sIdm1["16"] = [icn["TODO"]];
+      sIdm1["17"] = [icn["TODO"]];
+      sIdm1["18"] = [icn["TODO"]];
+      sIdm1["19"] = [icn["TODO"]];
+      sIdm1["20"] = [icn["TODO"]];
+      sIdm1["21"] = [icn["TODO"]];
+      sIdm1["22"] = [icn["TODO"]];
+      sIdm1["23"] = [icn["TODO"]];
+      sIdm1["24"] = [icn["TODO"]];
+      sIdm1["25"] = [icn["TODO"]];
+      sIdm1["26"] = [icn["TODO"]];
+      sIdm1["27"] = [icn["TODO"]];
+      sIdm1["28"] = [icn["TODO"]];
+      sIdm1["29"] = [icn["TODO"]];
+      sIdm1["30"] = [icn["TODO"]];
+      sIdm1["31"] = [icn["TODO"]];
+      sIdm1["32"] = [icn["TODO"]];
+      sIdm1["33"] = [icn["TODO"]];
+      sIdm1["34"] = [icn["TODO"]];
+      sIdm1["35"] = [icn["TODO"]];
+      sIdm1["36"] = [icn["TODO"]];
+      sIdm1["37"] = [icn["TODO"]];
+      sIdm1["38"] = [icn["TODO"]];
+      sIdm1["39"] = [icn["TODO"]];
+      sIdm1["40"] = [icn["TODO"]];
+      sIdm1["41"] = [icn["TODO"]];
+      sIdm1["42"] = [icn["TODO"]];
+      sIdm1["43"] = [icn["TODO"]];
+      sIdm1["44"] = [icn["TODO"]];
+      sIdm1["45"] = [icn["TODO"]];
+      sIdm1["46"] = [icn["TODO"]];
+      sIdm1["47"] = [icn["TODO"]];
+      sIdm1["48"] = [icn["TODO"]];
+      sIdm1["49"] = [icn["TODO"]];
+      sIdm1["50"] = [icn["TODO"]];
       /*
-    sIdm1["01"] = [icn["SP.M1.LOW EARTH ORBIT (LEO)"]];
-
     sIdm2["01"] = [icn["SP.M2.OPTICAL"]];
-  */
+//*/
     }
   }
 };

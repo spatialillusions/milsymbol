@@ -194,7 +194,16 @@ export default function tacticalPoints(sidc) {
   sidc["240601"] = {}; //Fires Areas / Point Targets / Point or Single Target
   sidc["240602"] = {}; //Fires Areas / Point Targets / Nuclear Target
   sidc["240603"] = {}; //Fires Areas / Point Targets / Target-Recorded
-  sidc["240900"] = {}; //Fires Areas / Fire Support Station
+  sidc["240900"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 195,
+      y: 110,
+      fontsize: 35,
+      fontweight: "bold"
+    }
+  }; //Fires Areas / Fire Support Station
   sidc["250100"] = {}; //Fires Points / Firing Point
   sidc["250200"] = {}; //Fires Points / Hide Point
   sidc["250300"] = {}; //Fires Points / Launch Point

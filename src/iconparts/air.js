@@ -313,6 +313,8 @@ export default function(
   icn["AIR.M1.ELECTRONIC SUPPORT (ES)"] = STD2525
     ? textm1("ES")
     : textm1("ESM");
+  icn["AIR.M1.HIJACKER"] = textm1("HJ");
+  icn["AIR.M1.CYBERSPACE"] = textm1("CYB");
   icn["AIR.M1.FIGHTER/BOMBER"] = textm1("F/B");
   icn["AIR.M1.ELECTRONIC ATTACK (EA)"] = textm1("EA");
   icn["AIR.M1.MULTIMISSION"] = textm1("MM");
@@ -330,6 +332,7 @@ export default function(
   icn["AIR.M2.MEDIUM RANGE"] = textm2("MR");
   icn["AIR.M2.LONG RANGE"] = textm2("LR");
   icn["AIR.M2.PHOTOGRAPHIC"] = textm2("P");
+  icn["AIR.M2.CYBERSPACE"] = textm2("CYB");
   //2525D
   icn["AIR.M2.DOWNLINKED"] = {
     type: "text",

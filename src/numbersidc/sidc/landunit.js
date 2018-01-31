@@ -43,6 +43,8 @@ export default {
       //sId['111098'] = [icn['GR.IC.FF.SIGNAL'],icn['GR.IC.FF.THEATRE SUPPORT']];
       sId["111100"] = [icn["GR.I.FF.SATELLITE"]];
       sId["111200"] = [icn["GR.IC.VIDEO IMAGERY"]];
+      sId["111300"] = [icn["GR.IC.SPACE"]];
+      sId["111400"] = [icn["GR.IC.SPECIAL TROOPS"]];
       sId["120000"] = [];
       sId["120100"] = [icn["GR.IC.FF.AIR ASSAULT WITH ORGANIC LIFT"]];
       sId["120200"] = [icn["GR.IC.AIR TRAFFIC SERVICES"]];
@@ -130,6 +132,7 @@ export default {
       ]; //SPECIAL SSNR)
       sId["121805"] = [icn["SOF.IC.UNDERWATER DEMOLITION TEAM"]];
       sId["121900"] = [icn["GR.IC.UNMANNED SYSTEMS"]];
+      sId["122000"] = [icn["GR.IC.RANGER"]];
       sId["130000"] = [];
       sId["130100"] = [icn["GR.IC.FF.AIR DEFENCE"]];
       sId["130101"] = [
@@ -139,6 +142,10 @@ export default {
       sId["130102"] = [
         icn["GR.IC.FF.AIR DEFENCE"],
         icn["GR.IC.AIR DEFENSE MISSILE"]
+      ];
+      sId["130103"] = [
+        icn["GR.IC.FF.AIR DEFENCE"],
+        icn["GR.IC.AIR AND MISSILE DEFENSE"]
       ];
       //sId['130195'] = [icn['GR.IC.FF.AIR DEFENCE'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
       sId["130200"] = [
@@ -186,6 +193,12 @@ export default {
         icn["GR.IC.FF.RECONNAISSANCE"],
         icn["GR.IC.FF.MOTORIZED"]
       ];
+      sId["140106"] = [
+        icn["GR.IC.CBRN"],
+        icn[
+          "GR.CHEMICAL, BIOLOGICAL, RADIOLOGICAL, NUCLEAR, AND HIGH-YIELD EXPLOSIVES"
+        ]
+      ];
       //sId['140195'] = [icn['GR.IC.CBRN'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
       sId["140200"] = [icn["GR.IC.COMBAT SUPPORT (MANOEUVRE ENHANCEMENT)"]];
       //sId['140295'] = [icn['GR.IC.COMBAT SUPPORT (MANOEUVRE ENHANCEMENT)'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
@@ -218,6 +231,7 @@ export default {
       sId["141900"] = [icn["GR.IC.SECURITY POLICE (AIR)"]];
       sId["142000"] = [icn["GR.IC.SHORE PATROL"]];
       sId["142100"] = [icn["GR.IC.TOPOGRAPHIC"]];
+      sId["142200"] = [icn["GR.IC.AIR AND MISSILE DEFENSE"]];
       sId["150000"] = [];
       sId["150100"] = [icn["GR.IC.FF.ANALYSIS"]];
       sId["150200"] = [icn["GR.IC.COUNTER-INTELLIGENCE"]];
@@ -249,6 +263,7 @@ export default {
       //sId['151095'] = [icn['GR.IC.MILITARY INTELLIGENCE'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
       sId["151100"] = [icn["GR.IC.FF.SEARCH"]];
       sId["151200"] = [icn["GR.IC.SENSOR"]];
+      sId["151300"] = [icn["GR.IC.MILITARY HISTORY"]];
       sId["160000"] = [icn["GR.IC.SUSTAINMENT"]];
       //sId['160095'] = [icn['GR.IC.SUSTAINMENT'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
       //sId['160097'] = [icn['GR.IC.SUSTAINMENT'],icn['GR.IC.FF.CORPS SUPPORT']];
@@ -321,6 +336,10 @@ export default {
       //sId['163597'] = [icn['GR.IC.JOINT INFORMATION BUREAU'],icn['GR.IC.FF.CORPS SUPPORT']];
       //sId['163598'] = [icn['GR.IC.JOINT INFORMATION BUREAU'],icn['GR.IC.FF.THEATRE SUPPORT']];
       sId["163600"] = [icn["GR.IC.TRANSPORTATION"]];
+      sId["163601"] = [
+        icn["GR.IC.TRANSPORTATION"],
+        icn["GR.IC.FLOATING CRAFT"]
+      ];
       //sId['163695'] = [icn['GR.IC.TRANSPORTATION'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
       //sId['163697'] = [icn['GR.IC.TRANSPORTATION'],icn['GR.IC.FF.CORPS SUPPORT']];
       //sId['163698'] = [icn['GR.IC.TRANSPORTATION'],icn['GR.IC.FF.THEATRE SUPPORT']];
@@ -337,6 +356,15 @@ export default {
       sId["164700"] = [icn["GR.IC.WATER"]];
       sId["164800"] = [icn["GR.IC.WATER PURIFICATION"]];
       sId["164900"] = [icn["GR.IC.PUBLIC AFFAIRS BROADCAST"]];
+      sId["165000"] = [
+        icn["GR.IC.FF.SUPPLY"],
+        icn["GR.IC.FF.NATO SUPPLY CLASS ALL"]
+      ];
+      sId["165100"] = [icn["GR.IC.INTERPRETER/TRANSLATOR"]];
+      sId["165200"] = [icn["GR.IC.SUPPORT"]];
+      sId["165300"] = [icn["GR.IC.ARMY FIELD SUPPORT"]];
+      sId["165400"] = [icn["GR.IC.CONTRACTING SERVICES"]];
+      sId["165500"] = [icn["GR.IC.PARACHUTE RIGGER"]];
       sId["170000"] = [];
       sId["170100"] = [icn["GR.IC.NAVAL"]];
       sId["180000"] = [];
@@ -449,9 +477,25 @@ export default {
       sIdm1["77"] = [icn["GR.M1.SUPPORT"]];
       sIdm1["78"] = [icn["GR.M1.AVIATION"]];
       sIdm1["79"] = [icn["GR.M1.ROUTE, RECONNAISSANCE, AND CLEARANCE"]];
-      sIdm1["80"] = [icn["GR.M1.COMMAND POST NODE"]];
-      sIdm1["81"] = [icn["GR.M1.JOINT NETWORK NODE"]];
-      sIdm1["82"] = [icn["GR.M1.RETRANSMISSION SITE"]];
+      sIdm1["80"] = [icn["GR.M1.TILT-ROTOR"]];
+      sIdm1["81"] = [icn["GR.M1.COMMAND POST NODE"]];
+      sIdm1["82"] = [icn["GR.M1.JOINT NETWORK NODE"]];
+      sIdm1["83"] = [icn["GR.M1.RETRANSMISSION SITE"]];
+      sIdm1["84"] = [icn["GR.M1.ASSAULT"]];
+
+      sIdm1["85"] = [icn["GR.M1.WEAPONS"]];
+      sIdm1["86"] = [icn["GR.M1.CRIMINAL INVESTIGATION DIVISION"]];
+      sIdm1["87"] = [icn["GR.M1.DIGITAL"]];
+      sIdm1["88"] = [icn["GR.M1.NETWORK OR NETWORK OPERATIONS"]];
+      sIdm1["89"] = [
+        icn[
+          "GR.M1.AIRFIELD, AERIAL PORT OF DEBARKATION, OR AERIAL PORT OF EMBARKATION"
+        ]
+      ];
+      sIdm1["90"] = [icn["GR.M1.PIPELINE"]];
+      sIdm1["91"] = [icn["GR.M1.POSTAL"]];
+      sIdm1["92"] = [icn["GR.M1.WATER"]];
+      sIdm1["93"] = [icn["GR.M1.INDEPENDENT COMMAND"]];
 
       sIdm1["94"] = [icn["GR.M1.THEATRE"]];
       sIdm1["95"] = [icn["GR.M1.ARMY"]];

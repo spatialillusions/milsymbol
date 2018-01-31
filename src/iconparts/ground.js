@@ -107,6 +107,13 @@ export default function(
     d: "M90,120 L90,90 C90,80 110,80 110,90 L110,120",
     fill: false
   };
+  icn["GR.IC.FLOATING CRAFT"] = {
+    type: "path",
+    d: "m 90,75 20,0 0,-10 -5,0 0,-10 -10,0 0,10 -5,0 z",
+    stroke: false
+  };
+  icn["GR.IC.AIR AND MISSILE DEFENSE"] = text("MD");
+  icn["GR.IC.MILITARY HISTORY"] = text("MH");
   icn["GR.IC.AIR DEFENSE TARGETING UNIT"] = [
     {
       type: "path",
@@ -197,6 +204,8 @@ export default function(
   };
   icn["GR.IC.AVIATION TACTICAL AIR CONTROL PARTY"] = text("TACP");
   icn["GR.IC.AVIATION FORWARD AIR CONTROLLER"] = text("FAC");
+  icn["GR.IC.SPECIAL TROOPS"] = text("ST");
+  icn["GR.IC.RANGER"] = text("RGR");
   icn["GR.IC.BAND"] = text("BAND");
   icn["GR.IC.ARMY MUSIC"] = {
     type: "path",
@@ -215,6 +224,24 @@ export default function(
     },
     { type: "circle", cx: 70, cy: 85, r: 8 },
     { type: "circle", cx: 130, cy: 85, r: 8 }
+  ];
+  icn[
+    "GR.CHEMICAL, BIOLOGICAL, RADIOLOGICAL, NUCLEAR, AND HIGH-YIELD EXPLOSIVES"
+  ] = [
+    {
+      type: "path",
+      d: "m 90,80 20,0 10,20 -10,20 -20,0 -10,-20 z",
+      fill: iconFillColor
+    },
+    text("E")
+  ];
+  icn["GR.IC.SPACE"] = [
+    {
+      type: "path",
+      d:
+        "m 100,80 -1.25,16.5 -4.2,-3.3 2.5,4.9 -5.5,1.7 -0.4,-0 0.2,0 -0.2,0 0.4,-0 5.4,2.3 -1.8,4.6 3.6,-3.5 1.3,16.5 1.3,-16.5 4.2,3.3 -2.5,-4.9 5.5,-1.7 0.4,0 -0.2,-0 0.2,0 -0.4,0 -5.3,-1.7 2.5,-4.6 -4,3.2 z",
+      stroke: false
+    }
   ];
   icn["GR.IC.CIVIL AFFAIRS"] = text("CA");
   icn["GR.IC.CIVIL-MILITARY-COOPERATION"] = {
@@ -513,6 +540,9 @@ export default function(
   icn["GR.IC.RELIGIOUS SUPPORT"] = text("REL");
   icn["GR.IC.REPLACEMENT HOLDING UNIT"] = text("RHU");
   icn["GR.IC.SEA-AIR-LAND"] = text("SEAL");
+  icn["GR.IC.SUPPORT"] = text("SPT");
+  icn["GR.IC.ARMY FIELD SUPPORT"] = text("AFS");
+  icn["GR.IC.CONTRACTING SERVICES"] = text("KS");
   icn["GR.IC.SEAPORT OF DEBARKATION"] = [
     {
       type: "path",
@@ -542,6 +572,11 @@ export default function(
     fill: false,
     d:
       "M 60 85 L 90 85 L 60 85 z M 110 85 L 140 85 L 110 85 z M 100 90 L 100 115 L 100 90 z"
+  };
+  icn["GR.IC.PARACHUTE RIGGER"] = {
+    type: "path",
+    fill: false,
+    d: "m 120,100 -20,20 -20,-20 m 0,0 c 0,-25 40,-25 40,0 l -40,0"
   };
   icn["GR.IC.SPECIAL FORCES"] = text("SF");
   icn["GR.IC.SPECIAL OPERATIONS FORCES"] = text("SOF");
@@ -1091,6 +1126,18 @@ export default function(
     d: "m 90,115 0,-25 c 0,-10 20,-10 20,0 l 0,25 m -25,0 30,0",
     fill: false
   };
+  icn["GR.IC.INTERPRETER/TRANSLATOR"] = [
+    {
+      type: "path",
+      d: "m 65,90 15,0 0,-10 20,20 -20,20 0,-10 -15,0 z",
+      fill: iconFillColor
+    },
+    {
+      type: "path",
+      d: "m 135,90 -15,0 0,-10 -20,20 20,20 0,-10 15,0 z"
+    }
+  ];
+  icn["GR.IC.FF.NATO SUPPLY CLASS ALL"] = text("ALL");
   icn["GR.IC.FF.CLASS VI"] = [
     { type: "circle", cx: 100, cy: 85, r: 5, fill: false },
     {
@@ -1221,6 +1268,7 @@ export default function(
   icn["GR.M1.COMMAND AND CONTROL ROTARY WING"] = STD2525
     ? textm1("Y")
     : textm1("C2");
+  icn["GR.M1.TILT-ROTOR"] = textm1("TR");
   icn["GR.M1.COMMAND POST NODE"] = textm1("CPN");
   icn["GR.M1.COMMUNICATIONS CONTINGENCY PACKAGE"] = textm1("CCP");
   icn["GR.M1.CONSTRUCTION"] = {
@@ -1402,6 +1450,42 @@ export default function(
   icn["GR.M1.RECON"] = textm1("R");
   icn["GR.M1.REGIMENT"] = textm1("III");
   icn["GR.M1.RETRANSMISSION SITE"] = textm1("RTNS");
+  icn["GR.M1.ASSAULT"] = textm1("ASLT");
+
+  icn["GR.M1.WEAPONS"] = textm1("W");
+  icn["GR.M1.CRIMINAL INVESTIGATION DIVISION"] = textm1("CID");
+  icn["GR.M1.DIGITAL"] = textm1("DIG");
+  icn["GR.M1.NETWORK OR NETWORK OPERATIONS"] = textm1("NET");
+  icn[
+    "GR.M1.AIRFIELD, AERIAL PORT OF DEBARKATION, OR AERIAL PORT OF EMBARKATION"
+  ] = {
+    type: "path",
+    d: "m 80,70 40,0 M 80,80 111,55",
+    fill: false
+  };
+  icn["GR.M1.PIPELINE"] = {
+    type: "path",
+    d:
+      "m 92,66 -12,0 m 12,8 -12,0 m 28,0 12,0 m -12,-8 12,0 m -20,-11 0,7 m -5,-7 10,0 m -13,7 0,16 16,0 0,-16 -16,0",
+    fill: false
+  };
+  icn["GR.M1.POSTAL"] = {
+    type: "path",
+    d: "m 90,60 15,0 c 0,5 0,10 10,15 -15,0 -20,0 -25,-15",
+    fill: false
+  };
+  icn["GR.M1.WATER"] = {
+    type: "path",
+    d: "m 90,55 20,0 m -10,10 0,-10 m -25,10 40,0 c 10,0 15,5 15,10",
+    fill: false
+  };
+  icn["GR.M1.INDEPENDENT COMMAND"] = {
+    type: "path",
+    d:
+      "m 111.8,59.2 0,15.8 m -7.9,-7.9 15.8,0 m -31.6,-7.9 0,15.8 m 7.9,-7.9 -15.8,0",
+    fill: false
+  };
+
   icn["GR.M1.ROUTE, RECONNAISSANCE, AND CLEARANCE"] = textm1("RRC");
   icn["GR.M1.SEARCH AND RESCUE"] = textm1("SAR");
   icn["GR.M1.SECTION"] = [
@@ -2157,6 +2241,15 @@ export default function(
     type: "path",
     fill: false,
     d: "m 65,124.4 10,-37 25,-10 25,10 10,37 z"
+  };
+  icn["GR.EQ.TENT CIVILIAN"] = {
+    type: "path",
+    fill: false,
+    d: "m 75,120 10,-30 15,-10 15,10 10,30 z"
+  };
+  icn["GR.EQ.TENT MILITARY"] = {
+    type: "path",
+    d: "m 75,120 10,-30 15,-10 15,10 10,30 z"
   };
   icn["GR.EQ.UNIT DEPLOYMENT SHIPMENTS"] = text("DPLY");
   icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"] = {

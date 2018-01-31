@@ -197,6 +197,9 @@ export default {
       sIdm1["11"] = [icn["GR.IN.M1.CIVILIAN"]];
       sIdm1["12"] = [icn["GR.IN.M1.CIVILIAN TELEPHONE"]];
       sIdm1["13"] = [icn["GR.IN.M1.CIVILIAN TELEVISION"]];
+      sIdm1["14"] = [icn["GR.M1.RETRANSMISSION SITE"]];
+      sIdm1["15"] = [icn["GR.M1.JOINT NETWORK NODE"]];
+      sIdm1["16"] = [icn["GR.M1.COMMAND POST NODE"]];
 
       //sIdm2['00'] = 'Unspecified';
       sIdm2["01"] = [icn["GR.IN.M2.CHEMICAL & BIOLOGICAL WARFARE"]];

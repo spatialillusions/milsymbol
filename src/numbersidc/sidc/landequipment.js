@@ -578,6 +578,8 @@ export default {
       sId["201100"] = [icn["GR.EQ.PSYCHOLOGICAL OPERATIONS EQUIPMENT"]];
       sId["201200"] = [icn["GR.IC.SUSTAINMENT"]];
       sId["201300"] = [icn["GR.EQ.TENT"]];
+      sId["201301"] = [icn["GR.EQ.TENT CIVILIAN"]];
+      sId["201302"] = [icn["GR.EQ.TENT MILITARY"]];
       sId["201400"] = [icn["GR.EQ.UNIT DEPLOYMENT SHIPMENTS"]];
       sId["201500"] = [icn["GR.IC.EMERGENCY MEDICAL OPERATION"]];
       sId["201501"] = [icn["GR.IC.MEDICAL EVACUATION HELICOPTER"]];
@@ -598,6 +600,7 @@ export default {
       ];
       sId["230200"] = [icn["GR.IC.FIRE PROTECTION"]];
       sId["240000"] = [icn["GR.IC.MANUAL TRACK"]];
+      sId["250000"] = [icn["GR.IC.AVIATION ROTARY WING"]];
 
       //sIdm1['00'] = 'Unspecified';
       sIdm1["01"] = [icn["GR.M1.BIOLOGICAL"]];
@@ -812,6 +815,8 @@ export default {
         201100: 120,
         201200: 118,
         201300: 124.36222076416016,
+        201301: 120,
+        201302: 120,
         201400: 118.75,
         201500: 140,
         201501: 115,

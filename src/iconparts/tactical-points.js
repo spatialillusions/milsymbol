@@ -37,6 +37,7 @@ export default function(
       ? "rgb(255, 0, 0)"
       : colors.fillColor[affiliation];
   var numberSIDC = metadata.numberSIDC;
+  var white = colors.white[affiliation];
   var icn = {};
 
   icn["TP.DESTROY"] =
@@ -578,6 +579,21 @@ export default function(
     },
     { type: "circle", fill: false, cx: 100, cy: 15, r: 40 }
   ];
+  icn["TP.SHIP AREA OF INTEREST (AEGIS ONLY)"] = {
+    type: "circle",
+    fill: false,
+    cx: 100,
+    cy: 100,
+    r: 50
+  };
+  icn["TP.ACTIVE MANOEUVRE AREA (AEGIS ONLY)"] = {
+    type: "circle",
+    fill: false,
+    stroke: "rgb(254,203,47)",
+    cx: 100,
+    cy: 100,
+    r: 60
+  };
   icn["TP.PLAN SHIP"] = [
     {
       type: "circle",
@@ -2106,6 +2122,15 @@ export default function(
     icn["TP.ANTITANK MINE (AT)"],
     { type: "path", fill: false, d: "m 50,50 29.5,29.5 m 41,0 L 150,50" }
   ];
+  icn["TP.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS"] = [
+    icn["TP.ANTITANK MINE (AT)"],
+    {
+      type: "path",
+      fill: false,
+      d:
+        "m 131,100 10,0 M 50,50 79.5,79.5 m 41,0 L 150,50 m -4,50 10,0 m 5,0 10,0 m -10,-10 10,10 -10,10"
+    }
+  ];
   icn["TP.WIDE AREA MINES"] = [
     icn["TP.ANTITANK MINE (AT)"],
     {
@@ -2481,6 +2506,123 @@ export default function(
       text: "TH"
     }
   ];
+  icn["TP.MAIN EQUIPMENT DECONTAMINATION POINT/SITE"] = [
+    icn["TP.ACTION POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -30,
+      fontsize: 30,
+      text: "DCN"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -10,
+      fontsize: 25,
+      text: "(M)"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 13,
+      fontsize: 25,
+      text: "E"
+    }
+  ];
+  icn["TP.FORWARD TROOP DECONTAMINATION POINT/SITE"] = [
+    icn["TP.ACTION POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -30,
+      fontsize: 30,
+      text: "DCN"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -10,
+      fontsize: 25,
+      text: "(F)"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 13,
+      fontsize: 25,
+      text: "T"
+    }
+  ];
+  icn["TP.WOUNDED PERSONNEL DECONTAMINATION SITE"] = [
+    icn["TP.ACTION POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 35,
+      text: "DCN"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 10,
+      fontsize: 35,
+      text: "W"
+    }
+  ];
+  icn["TP.AMBULANCE CONTROL POINT"] = [
+    icn["TP.ACTION POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 35,
+      text: "ACP"
+    }
+  ];
+  icn["TP.AMBULANCE LOAD POINT"] = [
+    icn["TP.ACTION POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 35,
+      text: "ALP"
+    }
+  ];
+  icn["TP.AMBULANCE RELAY POINT"] = [
+    icn["TP.ACTION POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 35,
+      text: "ARP"
+    }
+  ];
   icn["TP.DECON POINT (MAIN) EQUIPMENT"] = [
     icn["TP.ACTION POINT"],
     {
@@ -2534,11 +2676,36 @@ export default function(
     d:
       "m 90,100 -40,0 m 50,10 0,40 m 10,-50 40,0 m -50,-10 0,-40 m 2.5,50 c 0,1.381 -1.119,2.5 -2.5,2.5 -1.3807,0 -2.5,-1.119 -2.5,-2.5 0,-1.3807 1.1193,-2.5 2.5,-2.5 1.381,0 2.5,1.1193 2.5,2.5 z"
   };
-  icn["TP.FIRE SUPPORT STATION"] = {
-    type: "path",
-    fill: false,
-    d: "M 50,50 150,150 M 50,150 150,50"
-  };
+  icn["TP.TARGETRECORDED (AEGIS ONLY)"] = [
+    {
+      type: "path",
+      fill: false,
+      d: "m 0,50 0,100 200,0 0,-100 z"
+    },
+    {
+      type: "path",
+      stroke: false,
+      d: "m 100,90 -10,10 10,10 10,-10 z"
+    }
+  ];
+  icn["TP.FIRE SUPPORT STATION"] = [
+    {
+      type: "path",
+      fill: false,
+      d: "M 50,50 150,150 M 50,150 150,50"
+    },
+    numberSIDC
+      ? {
+          type: "text",
+          stroke: false,
+          textanchor: "left",
+          x: 120,
+          y: 110,
+          fontsize: 35,
+          text: "FSS"
+        }
+      : []
+  ];
   icn["TP.SURVEY CONTROL POINT"] = [
     icn["TP.ACTION POINT"],
     {
@@ -2693,6 +2860,24 @@ export default function(
       y: -20,
       fontsize: 35,
       text: "MCP"
+    }
+  ];
+  icn["TP.MEDICAL EVACUATION (MEDEVAC) PICKUP POINT"] = [
+    icn["TP.ACTION POINT"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -30,
+      fontsize: 30,
+      text: "MEP"
+    },
+    {
+      type: "path",
+      stroke: false,
+      d:
+        "m 95,-25 0,10 -10,0 0,10 10,0 0,10 10,0 0,-10 10,0 0,-10 -10,0 0,-10 z"
     }
   ];
   icn["TP.REARM, REFUEL AND RESUPPLY POINT"] = [
@@ -2892,6 +3077,14 @@ export default function(
       text: "CA"
     }
   ];
+  icn["TP.MEDICAL SUPPLY POINT"] = [
+    icn["TP.SUPPLY POINT"],
+    {
+      type: "path",
+      fill: false,
+      d: "m 100,-20 0,-40 m -40,25 80,0"
+    }
+  ];
   icn["TP.AMMUNITION SUPPLY POINT (ASP)"] = [
     icn["TP.ACTION POINT"],
     {
@@ -2916,6 +3109,92 @@ export default function(
       text: "ATP"
     }
   ];
+  icn["TP.TARGET HANDOVER"] = [
+    {
+      type: "path",
+      strokedasharray: "10,5",
+      fill: false,
+      d: "m 100,45 -15,40 -40,15 40,15 15,40 15,-40 40,-15 -40,-15 z"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 110,
+      fontsize: 30,
+      text: "TH"
+    }
+  ];
+  icn["TP.KEY TERRAIN"] = [
+    {
+      type: "path",
+      d:
+        "m 145,100 a 45,45 0 0 1 -45,45 45,45 0 0 1 -45,-45 45,45 0 0 1 45,-45 45,45 0 0 1 45,45 z"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 80,
+      y: 110,
+      fontsize: 35,
+      text: "K",
+      fill: white
+    }
+  ];
+  icn["TP.BT BOUY DROP"] = [
+    {
+      type: "path",
+      fill: false,
+      d: "m 65,45 0,110 70,0 0,-110 m -35,95 0,-95 m -35,0 70,0"
+    },
+    {
+      type: "path",
+      d:
+        "M 103.902,100 A 3.9025,1.95125 0 0 1 100,101.951 3.9025,1.95125 0 0 1 96.0975,100 3.9025,1.95125 0 0 1 100,98.0488 3.9025,1.95125 0 0 1 103.902,100 Z m 0,40.419 A 3.9025,1.95125 0 0 1 100,142.37 3.9025,1.95125 0 0 1 96.0975,140.419 3.9025,1.95125 0 0 1 100,138.468 a 3.9025,1.95125 0 0 1 3.902,1.951 z"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 80,
+      y: 110,
+      fontsize: 35,
+      text: "B"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 120,
+      y: 110,
+      fontsize: 35,
+      text: "T"
+    }
+  ];
+  icn["TP.REPORTED BOTTOMED SUB"] = {
+    type: "path",
+    fill: false,
+    d:
+      "M 129,122.4 70.9,78.8 m 0,43.6 58.1,-43.6 m -80,-14.5 0,43.6 29,0 0,29 43.6,0 0,-29 29,0 0,-43.6"
+  };
+  icn["TP.MOVING HAVEN"] = {
+    type: "path",
+    d:
+      "M 108.142,100 A 8.14167,8.14167 0 0 1 100,108.142 8.14167,8.14167 0 0 1 91.8583,100 8.14167,8.14167 0 0 1 100,91.8583 8.14167,8.14167 0 0 1 108.142,100 Z M 45,55 l 0,90 m 110,-90 0,90 m -110,-45 110,0"
+  };
+  icn["TP.SCREEN CENTRE"] = {
+    type: "path",
+    d:
+      "m 100,55 0,90 m 8.142,-45 A 8.14167,8.14167 0 0 1 100,108.142 8.14167,8.14167 0 0 1 91.8583,100 8.14167,8.14167 0 0 1 100,91.8583 8.14167,8.14167 0 0 1 108.142,100 Z"
+  };
+  icn["TP.SHORE CONTROL STATION"] = {
+    type: "path",
+    fill: false,
+    d:
+      "m 30,155 140,0 m -27,-20 2,-10 -10,5 m -78,5 -2,-10 10,5 m 35,-55 0,68 m 7.5,-76 A 7.5,7.5 0 0 1 100,74.5 7.5,7.5 0 0 1 92.5,67 7.5,7.5 0 0 1 100,59.5 7.5,7.5 0 0 1 107.5,67 Z m -52.5,8 90,0 m -90,50 c 15,25 75,25 90,0 M 40,45 50,55 60,45 70,55 80,45 l 10,10 10,-10 10,10 10,-10 10,10 10,-10 10,10 10,-10"
+  };
   icn["TP.DITCHED AIRCRAFT"] = {
     type: "path",
     d:
@@ -2925,6 +3204,18 @@ export default function(
     type: "path",
     d:
       "m 105,110 10,-10 0,-15 5,0 0,20 -10,10 z m -10,0 -10,-10 0,-15 -5,0 0,20 10,10 z m 5,-5 0,-10 -5,0 -5,-5 0,-10 5,-5 10,0 5,5 0,10 -5,5 -5,0 m -15,25 15,-15 m 45,15 -15,-15 m -15,15 15,-15 m -75,15 15,-15 m 15,15 -15,-15 m 45,15 -15,-15"
+  };
+  icn["TP.CLUTTER, STATIONARY OR CEASE REPORTING"] = {
+    type: "path",
+    fill: false,
+    d:
+      "m 65,135 70,-70 m -70,0 70,70 m -35,-4.098 A 50,30.9017 0 0 1 50,100 50,30.9017 0 0 1 100,69.0983 50,30.9017 0 0 1 150,100 50,30.9017 0 0 1 100,130.902 Z M 130.902,100 A 30.9017,50 0 0 1 100,150 30.9017,50 0 0 1 69.0983,100 30.9017,50 0 0 1 100,50 a 30.9017,50 0 0 1 30.902,50 z"
+  };
+  icn["TP.TENTATIVE OR PROVISIONAL TRACK"] = {
+    type: "path",
+    fill: false,
+    d:
+      "M 130.902,100 A 30.9017,50 0 0 1 100,150 30.9017,50 0 0 1 69.0983,100 30.9017,50 0 0 1 100,50 30.9017,50 0 0 1 130.902,100 Z M 100,130.902 A 50,30.9017 0 0 1 50,100 50,30.9017 0 0 1 100,69.0983 50,30.9017 0 0 1 150,100 50,30.9017 0 0 1 100,130.902 Z"
   };
   icn["TP.DISTRESSED VESSEL"] = {
     type: "path",
