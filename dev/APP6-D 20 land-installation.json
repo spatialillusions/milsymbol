@@ -2,7 +2,7 @@
   "symbolset": "20",
   "name": "LAND INSTALLATIONS",
   "main icon": [
-    { "entity": "Unspecified", "code": "00", "remarks": "" },
+    { "entity": "Unspecified", "code": "000000", "remarks": "" },
     {
       "entity": "Installation",
       "code": "110000",

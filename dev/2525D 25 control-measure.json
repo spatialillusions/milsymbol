@@ -2926,7 +2926,7 @@
       "entity": "Protection Areas",
       "entity type": "Obstacle Bypass",
       "entity subtype": "Easy",
-      "geometry": "Point",
+      "geometry": "MultiPoint",
       "code": "270601",
       "remarks": ""
     },
@@ -2934,7 +2934,7 @@
       "entity": "Protection Areas",
       "entity type": "Obstacle Bypass",
       "entity subtype": "Difficult",
-      "geometry": "Point",
+      "geometry": "MultiPoint",
       "code": "270602",
       "remarks": ""
     },
@@ -2942,7 +2942,7 @@
       "entity": "Protection Areas",
       "entity type": "Obstacle Bypass",
       "entity subtype": "Impossible",
-      "geometry": "Point",
+      "geometry": "MultiPoint",
       "code": "270603",
       "remarks": ""
     },
@@ -3122,7 +3122,7 @@
     {
       "entity": "Protection Points",
       "entity type": "Abatis",
-      "geometry": "Point",
+      "geometry": "Line",
       "code": "280100",
       "remarks": ""
     },
@@ -4040,14 +4040,14 @@
     {
       "entity": "Mission Tasks",
       "entity type": "Bypass",
-      "geometry": "Point",
+      "geometry": "MultiPoint",
       "code": "340300",
       "remarks": ""
     },
     {
       "entity": "Mission Tasks",
       "entity type": "Canalize",
-      "geometry": "Point",
+      "geometry": "MultiPoint",
       "code": "340400",
       "remarks": ""
     },
@@ -4230,12 +4230,6 @@
     }
   ],
   "modifier 1": [
-    {
-      "modifier": "First Modifier",
-      "category": "Capability",
-      "code": "Code",
-      "remarks": "Remarks"
-    },
     { "modifier": "Unspecified", "category": "", "code": "00", "remarks": "" },
     {
       "modifier": "Wheeled limited cross country",
