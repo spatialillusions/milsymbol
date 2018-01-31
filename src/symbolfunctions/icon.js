@@ -1,3 +1,5 @@
+import modifier from "./modifier";
+
 //Icon #################################################################################
 export default function icon(ms) {
   var drawArray1 = [];
@@ -301,21 +303,32 @@ export default function icon(ms) {
       if (this.metadata.functionid.substr(4, 2) == "98")
         drawArray2.push(iconParts["GR.IC.FF.THEATRE SUPPORT"]);
       //Modifier 1
-      var modifier1 =
-        this.metadata.functionid.substr(6, 2) != "00"
-          ? m1[this.metadata.functionid.substr(6, 2)] || []
-          : [];
-      if (modifier1.length) {
-        drawArray2.push(modifier1);
+      if (this.metadata.functionid.substr(6, 2) != "00") {
+        var modifier1 = m1[this.metadata.functionid.substr(6, 2)];
+        if (typeof modifier1 === "undefined") {
+          this.validIcon = false;
+        } else {
+          drawArray2.push(modifier1);
+        }
       }
+
       //Modifier 2
+      if (this.metadata.functionid.substr(8, 2) != "00") {
+        var modifier2 = m2[this.metadata.functionid.substr(8, 2)];
+        if (typeof modifier2 === "undefined") {
+          this.validIcon = false;
+        } else {
+          drawArray2.push(modifier2);
+        }
+      }
+      /*
       var modifier2 =
         this.metadata.functionid.substr(8, 2) != "00"
           ? m2[this.metadata.functionid.substr(8, 2)] || []
           : [];
       if (modifier2.length) {
         drawArray2.push(modifier2);
-      }
+      }*/
     } else {
       //Letter based SIDC
       var genericSIDC =
