@@ -177,9 +177,9 @@
           output += ' style="background-color:red"';
           console.warn(symbolset["main icon"][i]["entity subtype"] ||
             symbolset["main icon"][i]["entity type"] ||
-            symbolset["main icon"][i]["entity"])
-          console.warn(symbol.getOptions().sidc);
-          console.warn(symbol.isValid(true));
+            symbolset["main icon"][i]["entity"] + "\n" +
+          symbol.getOptions().sidc + "\n" +
+          symbol.isValid(true));
         }
 
         output += "><td><b>" +
@@ -264,11 +264,11 @@
             );
           output += "<tr";
           
-          if(symbolset["modifier 1"][i].code.length == 2 && !symbol.isValid()){
+          if(symbolset["modifier 1"][i].code.length == 2 && symbolset["modifier 1"][i].code != 99 &&!symbol.isValid()){
             output += ' style="background-color:red"';
-            console.warn(symbolset["modifier 1"][i].modifier)
-            console.warn(symbol.getOptions().sidc);
-            console.warn(symbol.isValid(true));
+            console.warn(symbolset["modifier 1"][i].modifier + "\n" +
+            symbol.getOptions().sidc + "\n" +
+            symbol.isValid(true));
           }
 
           output += "><td><b>" + symbolset["modifier 1"][i].modifier + "</b>";
@@ -296,11 +296,11 @@
             );
           output += "<tr";
           
-          if(symbolset["modifier 2"][i].code.length == 2 && !symbol.isValid()){
+          if(symbolset["modifier 2"][i].code.length == 2 && symbolset["modifier 2"][i].code != 99 &&!symbol.isValid()){
             output += ' style="background-color:red"';
-            console.warn(symbolset["modifier 2"][i].modifier)
-            console.warn(symbol.getOptions().sidc);
-            console.warn(symbol.isValid(true));
+            console.warn(symbolset["modifier 2"][i].modifier + "\n" +
+            symbol.getOptions().sidc + "\n" +
+            csymbol.isValid(true));
           }
           
           output += "><td><b>" + symbolset["modifier 2"][i].modifier + "</b>";

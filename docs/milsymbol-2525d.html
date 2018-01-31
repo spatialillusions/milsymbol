@@ -166,9 +166,9 @@
           output += ' style="background-color:red"';
           console.warn(symbolset["main icon"][i]["entity subtype"] ||
             symbolset["main icon"][i]["entity type"] ||
-            symbolset["main icon"][i]["entity"])
-          console.warn(symbol.getOptions().sidc);
-          console.warn(symbol.isValid(true));
+            symbolset["main icon"][i]["entity"] + "\n" +
+          symbol.getOptions().sidc + "\n" +
+          csymbol.isValid(true));
         }
 
         output += "><td><b>" +
@@ -237,7 +237,7 @@
         output += "<td>" + symbolset["main icon"][i].remarks + "</td></tr>";
       }
       output += "</table>";
-      if (symbolset["modifier 1"].length == 2) {
+      if (symbolset["modifier 1"].length) {
         output += "<h3>" + symbolset.name + " Modifier 1</h3>";
         output +=
           "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
@@ -255,9 +255,9 @@
           
           if(symbolset["modifier 1"][i].code.length == 2 && !symbol.isValid()){
             output += ' style="background-color:red"';
-            console.warn(symbolset["modifier 1"][i].modifier)
-            console.warn(symbol.getOptions().sidc);
-            console.warn(symbol.isValid(true));
+            console.warn(symbolset["modifier 1"][i].modifier + "\n" +
+            symbol.getOptions().sidc + "\n"+
+            symbol.isValid(true));
           }
 
           output += "><td><b>" + symbolset["modifier 1"][i].modifier + "</b>";
@@ -270,7 +270,7 @@
         }
         output += "</table>";
       }
-      if (symbolset["modifier 2"].length == 2) {
+      if (symbolset["modifier 2"].length) {
         output += "<h3>" + symbolset.name + " Modifier 2</h3>";
         output +=
           "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
@@ -287,9 +287,9 @@
           
           if(symbolset["modifier 2"][i].code.length == 2 && !symbol.isValid()){
             output += ' style="background-color:red"';
-            console.warn(symbolset["modifier 2"][i].modifier)
-            console.warn(symbol.getOptions().sidc);
-            console.warn(symbol.isValid(true));
+            console.warn(symbolset["modifier 2"][i].modifier + "\n" +
+            symbol.getOptions().sidc + "\n" +
+            symbol.isValid(true));
           }
           
           output += "><td><b>" + symbolset["modifier 2"][i].modifier + "</b>";
