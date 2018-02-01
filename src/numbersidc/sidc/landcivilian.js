@@ -59,8 +59,11 @@ export default {
       sIdm1["22"] = [icn["ST.M1.COMBAT"]];
       sIdm1["23"] = [icn["ST.M1.OTHER"]];
       sIdm1["24"] = [icn["ST.M1.LOOT"]];
+      sIdm1["25"] = [icn["GR.M1.HIJACKER"]];
+      sIdm1["26"] = [icn["GR.M1.CYBERSPACE"]];
 
       sIdm2["01"] = [icn["ST.M2.LEADER OR LEADERSHIP"]];
+      sIdm2["02"] = [icn["GR.M2.CYBERSPACE"]];
     }
   }
 };

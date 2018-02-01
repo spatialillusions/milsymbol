@@ -54,11 +54,13 @@ export default {
       sIdm1["04"] = [icn["SP.M1.GEOSYNCHRONOUS ORBIT (GSO)"]];
       sIdm1["05"] = [icn["SP.M1.GEOSTATIONARY ORBIT (GO)"]];
       sIdm1["06"] = [icn["SP.M1.MOLNIYA ORBIT (MO)"]];
+      sIdm1["07"] = [icn["SP.M1.CYBERSPACE"]];
 
       sIdm2["01"] = [icn["SP.M2.OPTICAL"]];
       sIdm2["02"] = [icn["SP.M2.INFRARED"]];
       sIdm2["03"] = [icn["SP.M2.RADAR"]];
       sIdm2["04"] = [icn["SP.M2.SIGNALS INTELLIGENCE (SIGINT)"]];
+      sIdm2["05"] = [icn["SP.M2.CYBERSPACE"]];
     }
   }
 };

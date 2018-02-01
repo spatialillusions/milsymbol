@@ -1,5 +1,3 @@
-import modifier from "./modifier";
-
 //Icon #################################################################################
 export default function icon(ms) {
   var drawArray1 = [];

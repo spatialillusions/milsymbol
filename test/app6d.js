@@ -70,7 +70,10 @@ export default function(ms, milstd, name, symbolset) {
         let icon =
           sidc["modifier 1"][i].code + " " + sidc["modifier 1"][i].modifier;
         let valid;
-        if (sidc["modifier 1"][i].code.length == 2) {
+        if (
+          sidc["modifier 1"][i].code.length == 2 &&
+          sidc["modifier 1"][i].code != 99
+        ) {
           valid = new ms.Symbol(
             "1003" +
               sidc.symbolset +
@@ -98,7 +101,10 @@ export default function(ms, milstd, name, symbolset) {
         let icon =
           sidc["modifier 2"][i].code + " " + sidc["modifier 2"][i].modifier;
         let valid;
-        if (sidc["modifier 2"][i].code.length == 2) {
+        if (
+          sidc["modifier 2"][i].code.length == 2 &&
+          sidc["modifier 2"][i].code != 99
+        ) {
           valid = new ms.Symbol(
             "1003" +
               sidc.symbolset +

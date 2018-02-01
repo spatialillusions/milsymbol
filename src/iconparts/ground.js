@@ -1451,7 +1451,6 @@ export default function(
   icn["GR.M1.REGIMENT"] = textm1("III");
   icn["GR.M1.RETRANSMISSION SITE"] = textm1("RTNS");
   icn["GR.M1.ASSAULT"] = textm1("ASLT");
-
   icn["GR.M1.WEAPONS"] = textm1("W");
   icn["GR.M1.CRIMINAL INVESTIGATION DIVISION"] = textm1("CID");
   icn["GR.M1.DIGITAL"] = textm1("DIG");
@@ -1548,6 +1547,7 @@ export default function(
     d: "m 92,65 c 6,3 10,3 16,0 m -18,13 10,-23 10,23"
   };
   icn["GR.M1.TRAINING CAMP"] = textm1("TNG");
+  icn["GR.M1.HIJACKER"] = textm1("HJ");
   icn["GR.M1.UNMANNED AERIAL VEHICLE"] = {
     type: "path",
     stroke: false,
@@ -1577,6 +1577,14 @@ export default function(
     fill: false
   };
   icn["GR.M2.ATTACK"] = textm2("A");
+  icn["GR.M2.LANDING CRAFT"] = textm2("LC");
+  icn["GR.M2.LANDING SHIP"] = textm2("LS");
+  icn["GR.M2.SERVICE CRAFT/YARD"] = textm2("YY");
+  icn["GR.M2.TUG HARBOR"] = textm2("YT");
+  icn["GR.M2.OCEAN GOING TUG BOAT"] = textm2("AT");
+  icn["GR.M2.SURFACE DEPLOYMENT AND DISTRIBUTION COMMAND"] = textm2("SDDC");
+  icn["GR.M2.COMPOSITE"] = textm2("COMP");
+  icn["GR.M2.LIGHT AND MEDIUM"] = textm2("L/M");
   icn["GR.M2.BATTLE DAMAGE REPAIR"] = textm2("BDR");
   icn["GR.M2.BICYCLE EQUIPPED"] = {
     type: "circle",
@@ -1593,6 +1601,21 @@ export default function(
     type: "path",
     d:
       "m 98,130 2,-4 2,4 m -8,8 -4,-2 4,-2 m 8,8 -2,4 -2,-4 m 8,-8 4,2 -4,2 m -14,-2 16,0 m -8,-8 0,16",
+    fill: false
+  };
+  icn["GR.M2.NONCOMBATANT GENERIC VESSEL"] = {
+    type: "path",
+    d: "m 95,135 0,-10 10,0 0,10 5,0 0,10 -20,0 0,-10 z",
+    stroke: false
+  };
+  icn["GR.M2.SHELTER"] = {
+    type: "path",
+    d: "m 85,140 30,0 -5,-15 -10,-5 -10,5 z",
+    stroke: false
+  };
+  icn["GR.M2.SELF-PROPELLED"] = {
+    type: "path",
+    d: "m 85,125 30,0 c 10,0 10,15 0,15 l -30,0 c -10,0 -10,-15 0,-15",
     fill: false
   };
   icn["GR.M2.CROSS-COUNTRY TRUCK"] = [
@@ -1631,6 +1654,17 @@ export default function(
   icn["GR.M2.HIGH ALTITUDE"] = textm2("HA");
   icn["GR.M2.HIGH TO MEDIUM ALTITUDE"] = textm2("HMA");
   icn["GR.M2.HIGH TO LOW ALTITUDE"] = textm2("HLA");
+  icn["GR.M1.CYBERSPACE"] = textm1("CYB");
+  icn["GR.M2.AIR ASSAULT"] = {
+    type: "path",
+    fill: false,
+    d: "m 85,125 15,20 15,-20"
+  };
+  icn["GR.M2.VERY HEAVY"] = textm2("VH");
+  icn["GR.M2.CYBERSPACE"] = textm2("CYB");
+  icn["GR.M2.NAVY BARGE, SELF-PROPELLED"] = textm2("YS");
+  icn["GR.M2.NAVY BARGE, NOT SELF-PROPELLED"] = textm2("YB");
+  icn["GR.M2.LAUNCH"] = textm2("YFT");
   icn["GR.M2.INTERMODAL"] = {
     type: "path",
     d: "m 80,125 40,0 0,-4 8,9 -8,9 0,-4 -40,0 0,4 -8,-9 8,-9 z",
@@ -1695,6 +1729,33 @@ export default function(
   icn["GR.M2.OR-7"] = textm2("OR-7");
   icn["GR.M2.OR-8"] = textm2("OR-8");
   icn["GR.M2.OR-9"] = textm2("OR-9");
+  icn["GR.M2.GUERILLA"] = textm2("G");
+  icn["GR.M2.AMPHIBIOUS"] = {
+    Unknown: {
+      type: "path",
+      d:
+        "M 64 144.9 C 80.4 143.9 63.1 125 81.4 125 C 100.2 125 81.4 145 100.2 145 C 119 145 100.2 125 119 125 C 137.1 125 120.2 143.6 135.9 144.9",
+      fill: false
+    },
+    Friend: {
+      type: "path",
+      d:
+        "m 25,145 c 18.8,0 0,-20 18.8,-20 18.8,0 0,20 18.8,20 18.8,0 0,-20 18.8,-20 18.8,0 0,20 18.8,20 18.8,0 0,-20 18.8,-20 18.8,0 0,20 18.8,20 18.8,0 0,-20 18.8,-20 18.8,0 0,20 20,20",
+      fill: false
+    },
+    Neutral: {
+      type: "path",
+      d:
+        "M 45 125 C 61.7 125.9 44.2 145 62.6 145 C 81.4 145 62.6 125 81.4 125 C 100.2 125 81.4 145 100.2 145 C 119 145 100.2 125 119 125 C 137.8 125 119 145 137.8 145 C 155.9 145 138.9 126.2 154.8 125 ",
+      fill: false
+    },
+    Hostile: {
+      type: "path",
+      d:
+        "M 70.4 142.4 C 74.8 137 66.8 125 81.4 125 C 100.2 125 81.4 145 100.2 145 C 119 145 100.2 125 119 125 C 133.3 125 125.7 136.6 129.7 142.1 ",
+      fill: false
+    }
+  }[affiliation];
   icn["GR.M2.PACK ANIMAL"] = {
     type: "path",
     d: "m 84,140 9,-15 7,15 7,-15 9,15",

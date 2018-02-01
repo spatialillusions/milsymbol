@@ -612,6 +612,29 @@ export default {
       sIdm1["07"] = [icn["GR.M1.UPGRADED EARLY WARNING RADAR"]];
       sIdm1["08"] = [icn["GR.M1.HIJACKING"]];
       sIdm1["09"] = [icn["GR.M1.CIVILIAN"]];
+      sIdm1["10"] = [icn["GR.M1.TILT-ROTOR"]];
+      sIdm1["11"] = [icn[""]];
+      sIdm1["12"] = [icn[""]];
+      sIdm1["13"] = [icn[""]];
+      sIdm1["14"] = [icn["GR.M1.BRIDGING"]];
+      sIdm1["15"] = [icn["GR.M1.CYBERSPACE"]];
+      sIdm1["16"] = [icn[""]];
+      sIdm1["17"] = [icn["GR.M1.ATTACK"]];
+      sIdm1["18"] = [icn[""]];
+      sIdm1["19"] = [icn["GR.M1.MAINTENANCE"]];
+      sIdm1["20"] = [icn["GR.M1.MEDEVAC"]];
+      sIdm1["21"] = [icn["GR.IN.M1.PETROLEUM"]];
+      sIdm1["22"] = [icn["GR.M1.UTILITY"]];
+      sIdm1["23"] = [icn["GR.M1.WATER"]];
+
+      sIdm2["01"] = [icn["GR.M2.CYBERSPACE"]];
+      sIdm2["02"] = [icn["GR.M2.LIGHT"]];
+      sIdm2["03"] = [icn["GR.M2.MEDIUM"]];
+      sIdm2["04"] = [icn["GR.M2.RAILROAD"]];
+      sIdm2["05"] = [icn["GR.M2.TRACKED"]];
+      sIdm2["06"] = [icn["TODO"]];
+      sIdm2["07"] = [icn["GR.M2.WHEELED LIMITED"]];
+      sIdm2["08"] = [icn["GR.M2.WHEELED"]];
 
       //This sets up the bounding boxes for equipment to have the bottom at the right place. (this will be used for mobility when unframed)
       var equipmentBottom = {

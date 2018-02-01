@@ -473,7 +473,7 @@ export default {
       sIdm1["73"] = [icn["GR.M1.CIVILIAN"]];
       sIdm1["74"] = [icn["GR.M1.ANTISUBMARINE WARFARE"]];
       sIdm1["75"] = [icn["GR.M1.MEDEVAC"]];
-      sIdm1["76"] = [icn["GR.M1.RANGER"]];
+      sIdm1["76"] = [icn["GR.M1.CYBERSPACE"]];
       sIdm1["77"] = [icn["GR.M1.SUPPORT"]];
       sIdm1["78"] = [icn["GR.M1.AVIATION"]];
       sIdm1["79"] = [icn["GR.M1.ROUTE, RECONNAISSANCE, AND CLEARANCE"]];
@@ -560,6 +560,28 @@ export default {
       sIdm2["55"] = [icn["GR.M2.REFUEL"]];
       sIdm2["56"] = [icn["GR.M2.UTILITY"]];
       sIdm2["57"] = [icn["GR.M2.COMBAT SEARCH AND RESCUE"]];
+
+      sIdm2["58"] = [icn["GR.M2.GUERILLA"]];
+      sIdm2["59"] = [icn["GR.M2.AIR ASSAULT"]];
+      sIdm2["60"] = [icn["GR.M2.AMPHIBIOUS"]];
+      sIdm2["61"] = [icn["GR.M2.VERY HEAVY"]];
+      sIdm2["62"] = [icn["GR.IC.FF.SUPPLY"]];
+      sIdm2["63"] = [icn["GR.M2.CYBERSPACE"]];
+      sIdm2["64"] = [icn["GR.M2.NAVY BARGE, SELF-PROPELLED"]];
+      sIdm2["65"] = [icn["GR.M2.NAVY BARGE, NOT SELF-PROPELLED"]];
+      sIdm2["66"] = [icn["GR.M2.LAUNCH"]];
+      sIdm2["67"] = [icn["GR.M2.LANDING CRAFT"]];
+      sIdm2["68"] = [icn["GR.M2.LANDING SHIP"]];
+      sIdm2["69"] = [icn["GR.M2.SERVICE CRAFT/YARD"]];
+      sIdm2["70"] = [icn["GR.M2.TUG HARBOR"]];
+      sIdm2["71"] = [icn["GR.M2.OCEAN GOING TUG BOAT"]];
+      sIdm2["72"] = [icn["GR.M2.SURFACE DEPLOYMENT AND DISTRIBUTION COMMAND"]];
+      sIdm2["73"] = [icn["GR.M2.NONCOMBATANT GENERIC VESSEL"]];
+      sIdm2["74"] = [icn["GR.M2.COMPOSITE"]];
+      sIdm2["75"] = [icn["GR.M2.SHELTER"]];
+      sIdm2["76"] = [icn["GR.M2.LIGHT AND MEDIUM"]];
+      sIdm2["77"] = [icn["GR.M2.SELF-PROPELLED"]];
+      sIdm2["78"] = [icn["TODO"]];
     }
   }
 };

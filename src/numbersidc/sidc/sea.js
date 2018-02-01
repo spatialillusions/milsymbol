@@ -137,6 +137,8 @@ export default {
       ];
       sIdm1["22"] = [icn["SE.M1.SEA-BASE X-BAND"]];
       sIdm1["23"] = [icn["SE.M1.HIJACKING/HIJACKED"]];
+      sIdm1["24"] = [icn["SE.M1.HIJACKER"]];
+      sIdm1["25"] = [icn["SE.M1.CYBERSPACE"]];
 
       sIdm2["01"] = [icn["SE.M2.NUCLEAR POWERED"]];
       sIdm2["02"] = [icn["SE.M2.HEAVY"]];
@@ -153,6 +155,7 @@ export default {
       sIdm2["13"] = [icn["SE.M2.AUTONOMOUS CONTROL"]];
       sIdm2["14"] = [icn["SE.M2.REMOTELY PILOTED"]];
       sIdm2["15"] = [icn["SE.M2.EXPENDABLE"]];
+      sIdm2["16"] = [icn["SE.M2.CYBERSPACE"]];
     }
   }
 };

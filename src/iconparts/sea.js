@@ -510,6 +510,9 @@ export default function(
   icn["SE.M1.GUIDED MISSILE"] = textm1("G");
   icn["SE.M1.OTHER GUIDED MISSILE"] = textm1("M");
   icn["SE.M1.TORPEDO"] = textm1("T");
+  icn["SE.M1.CYBERSPACE"] = textm1("CYB");
+  icn["SE.M1.HIJACKER"] = textm1("HJ");
+  icn["SE.M2.CYBERSPACE"] = textm2("CYB");
   icn["SE.M1.DRONE-EQUIPPED"] = {
     type: "path",
     stroke: false,

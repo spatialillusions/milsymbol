@@ -210,6 +210,9 @@ export default function(
     fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
     d: "M60,90 l40,10 40,-10 0,8 -40,15 -40,-15 Z"
   };
+  icn["SU.M1.CYBERSPACE"] = textm1("CYB");
+  icn["SU.M1.HIJACKER"] = textm1("HJ");
+  icn["SU.M2.CYBERSPACE"] = textm2("CYB");
   icn["SU.IC.DIVER, CIVILIAN"] = {
     type: "path",
     fill: iconFillColor,

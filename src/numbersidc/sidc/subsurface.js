@@ -76,6 +76,8 @@ export default {
       sIdm1["18"] = [icn["SU.M1.CERTAIN SUBMARINE"]];
       sIdm1["19"] = [icn["SU.M1.ANTI-TORPEDO TORPEDO"]];
       sIdm1["20"] = [icn["SU.M1.HIJACKING/HIJACKED"]];
+      sIdm1["21"] = [icn["SU.M1.HIJACKER"]];
+      sIdm1["22"] = [icn["SU.M1.CYBERSPACE"]];
 
       sIdm2["01"] = [icn["SU.M2.AIR INDEPENDENT PROPULSION"]];
       sIdm2["02"] = [icn["SU.M2.DIESEL PROPULSION"]];
@@ -93,6 +95,7 @@ export default {
       sIdm2["14"] = [icn["SU.M2.AUTONOMOUS CONTROL"]];
       sIdm2["15"] = [icn["SU.M2.REMOTELY PILOTED"]];
       sIdm2["16"] = [icn["SU.M2.EXPENDABLE"]];
+      sIdm2["17"] = [icn["SU.M2.CYBERSPACE"]];
     }
   }
 };

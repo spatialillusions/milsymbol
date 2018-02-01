@@ -177,6 +177,8 @@ export default function(
     },
     { type: "path", fill: false, d: "m 100,90 0,9 M 75,81 c 16,12 34,12 50,0" }
   ];
+  icn["SP.M1.CYBERSPACE"] = textm1("CYB");
+  icn["SP.M2.CYBERSPACE"] = textm2("CYB");
   icn["SP.I.EARTH OBSERVATION SATELLITE"] = [
     {
       type: "path",

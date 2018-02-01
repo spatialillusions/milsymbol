@@ -197,7 +197,7 @@ export default {
       sIdm1["11"] = [icn["GR.IN.M1.CIVILIAN"]];
       sIdm1["12"] = [icn["GR.IN.M1.CIVILIAN TELEPHONE"]];
       sIdm1["13"] = [icn["GR.IN.M1.CIVILIAN TELEVISION"]];
-      sIdm1["14"] = [icn["GR.M1.RETRANSMISSION SITE"]];
+      sIdm1["14"] = [icn["GR.M1.CYBERSPACE"]];
       sIdm1["15"] = [icn["GR.M1.JOINT NETWORK NODE"]];
       sIdm1["16"] = [icn["GR.M1.COMMAND POST NODE"]];
 
@@ -210,6 +210,7 @@ export default {
       sIdm2["06"] = [icn["GR.IN.M2.NUCLEAR MATERIAL PRODUCTION"]];
       sIdm2["07"] = [icn["GR.IN.M2.NUCLEAR MATERIAL STORAGE"]];
       sIdm2["08"] = [icn["GR.IN.M2.WEAPONS GRADE PRODUCTION"]];
+      sIdm2["09"] = [icn["GR.M2.CYBERSPACE"]];
     }
   }
 };
