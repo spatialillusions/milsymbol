@@ -290,6 +290,18 @@ export default function(
     fill: false,
     d: "M60,120 L60,80 140,80 140,120 M100,80 L100,110"
   };
+  icn["GR.IC.ENGINEER MECHANIZED"] = {
+    type: "path",
+    fill: false,
+    d:
+      "m 100,90 0,15 m -25,5 0,-20 50,0 0,20 m 0,-30 c 25,0 25,40 0,40 l -50,0 C 50,120 50,80 75,80 Z"
+  };
+  icn["GR.IC.ENGINEER UTILITY VEHICLE"] = {
+    type: "path",
+    fill: false,
+    d:
+      "m 100,100 0,10 m -15,5 0,-15 30,0 0,15 M 70,80 c 0,15 60,15 60,0 l 0,40 -60,0 z"
+  };
   icn["GR.IC.ENVIRONMENTAL PROTECTION"] = {
     type: "path",
     d:
@@ -964,6 +976,12 @@ export default function(
     Neutral: { type: "path", d: "M45,155L155,45" },
     Hostile: { type: "path", d: "M60,130L140,70" }
   }[affiliation];
+  icn["GR.IC.FF.RECONNAISSANCE EQUPIMENT"] = {
+    Unknown: { type: "path", d: "M50,135L150,65" },
+    Friend: { type: "path", d: "M 50.6 132.9 L 149.3 67" },
+    Neutral: { type: "path", d: "M45,155L155,45" },
+    Hostile: { type: "path", d: "M60,130L140,70" }
+  }[affiliation];
   icn["GR.IC.FF.SEARCH"] = {
     type: "path",
     d: "m 100,145 0,-90 m 30,65 -30,25 -30,-25",
@@ -1239,6 +1257,16 @@ export default function(
     fill: false,
     d: "M85,55 L100,75 115,55"
   };
+  icn["GR.M1.ARMORED"] = {
+    type: "path",
+    fill: false,
+    d: "m 90,60 20,0 c 10,0 10,15 0,15 L 90,75 C 80,75 80,60 90,60"
+  };
+  icn["GR.M1.CARGO"] = {
+    type: "path",
+    fill: false,
+    d: "m 100,60 0,15 -15,0 0,-15 30,0 0,15 -15,0"
+  };
   icn["GR.M1.AMMUNITION"] = {
     type: "path",
     d: "M95,75 L95,60 C95,55 105,55 105,60 L105,75 M90,75 L110,75",
@@ -1484,7 +1512,17 @@ export default function(
       "m 111.8,59.2 0,15.8 m -7.9,-7.9 15.8,0 m -31.6,-7.9 0,15.8 m 7.9,-7.9 -15.8,0",
     fill: false
   };
-
+  icn["GR.M1.MULTI-PURPOSE BLADE"] = {
+    type: "path",
+    d: "m 80,65 20,-10 20,10 m -20,15 0,-25",
+    fill: false
+  };
+  icn["GR.M1.TANK-WIDTH MINE PLOW"] = {
+    type: "path",
+    d:
+      "m 80,65 5,-2.5 m 5,-2.5 5,-2.5 m 10,0 5,2.5 m 5,2.5 5,2.5 m -20,15 0,-20",
+    fill: false
+  };
   icn["GR.M1.ROUTE, RECONNAISSANCE, AND CLEARANCE"] = textm1("RRC");
   icn["GR.M1.SEARCH AND RESCUE"] = textm1("SAR");
   icn["GR.M1.SECTION"] = [
@@ -1784,6 +1822,12 @@ export default function(
     { type: "circle", fill: false, cx: 65, cy: 125, r: 5 },
     { type: "circle", fill: false, cx: 75, cy: 125, r: 5 },
     { type: "circle", fill: false, cx: 125, cy: 125, r: 5 },
+    { type: "circle", fill: false, cx: 135, cy: 125, r: 5 }
+  ];
+  icn["GR.M2.TRACTOR TRAILER"] = [
+    { type: "path", d: "M60,120 l80,0", fill: false },
+    { type: "circle", fill: false, cx: 65, cy: 125, r: 5 },
+    { type: "circle", fill: false, cx: 75, cy: 125, r: 5 },
     { type: "circle", fill: false, cx: 135, cy: 125, r: 5 }
   ];
   icn["GR.M2.RECOVERY (UNMANNED SYSTEMS)"] = {
@@ -2097,6 +2141,12 @@ export default function(
     type: "path",
     fill: false,
     d: "m 70,80 60,0 m -60,40 60,0 m -60,-50 0,60 0,0 m 60,-60 0,60"
+  };
+  icn["GR.EQ.ASSAULT BREACHER VEHICLE (ABV) WITH COMBAT DOZER BLADE"] = {
+    type: "path",
+    fill: false,
+    d:
+      "m 100,95 30,25 m -30,-60 0,35 -30,25 m 10,-60 40,0 m -50,20 60,0 m -60,40 60,0 m -60,-50 0,60 0,0 m 60,-60 0,60"
   };
   icn["GR.EQ.LIGHT TANK"] = { type: "path", fill: false, d: "m 100,80 0,40" };
   icn["GR.EQ.MEDIUM TANK"] = {

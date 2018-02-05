@@ -3220,6 +3220,13 @@
     },
     {
       "entity": "Protection Points",
+      "entity type": "CHEMICAL – TOXIC INDUSTRIAL MATERIAL",
+      "geometry": "Point",
+      "code": "281301",
+      "remarks": ""
+    },
+    {
+      "entity": "Protection Points",
       "entity type": "Biological Event",
       "geometry": "Point",
       "code": "281400",
@@ -4231,68 +4238,7 @@
   ],
   "modifier 1": [
     { "modifier": "Unspecified", "category": "", "code": "00", "remarks": "" },
-    {
-      "modifier": "Wheeled limited cross country",
-      "category": "Mobility",
-      "code": "01",
-      "remarks": ""
-    },
-    {
-      "modifier": "Wheeled cross country",
-      "category": "Mobility",
-      "code": "02",
-      "remarks": ""
-    },
-    {
-      "modifier": "Tracked",
-      "category": "Mobility",
-      "code": "03",
-      "remarks": ""
-    },
-    {
-      "modifier": "Wheeled and tracked combination",
-      "category": "Mobility",
-      "code": "04",
-      "remarks": ""
-    },
-    {
-      "modifier": "Towed",
-      "category": "Mobility",
-      "code": "05",
-      "remarks": ""
-    },
-    { "modifier": "Rail", "category": "Mobility", "code": "06", "remarks": "" },
-    {
-      "modifier": "Pack Animals",
-      "category": "Mobility",
-      "code": "07",
-      "remarks": ""
-    },
-    {
-      "modifier": "No Vehicles",
-      "category": "Mobility",
-      "code": "08",
-      "remarks": ""
-    },
-    {
-      "modifier": "Over snow (prime mover)",
-      "category": "Mobility",
-      "code": "09",
-      "remarks": ""
-    },
-    { "modifier": "Sled", "category": "Mobility", "code": "10", "remarks": "" },
-    {
-      "modifier": "Barge",
-      "category": "Mobility",
-      "code": "11",
-      "remarks": ""
-    },
-    {
-      "modifier": "Amphibious",
-      "category": "Mobility",
-      "code": "12",
-      "remarks": ""
-    },
+
     {
       "modifier": "Unspecified Mine",
       "category": "Obstacles",

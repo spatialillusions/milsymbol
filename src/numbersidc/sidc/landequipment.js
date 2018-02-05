@@ -239,6 +239,11 @@ export default {
         icn["GR.EQ.ARMOURED FIGHTING VEHICLE"],
         icn["GR.EQ.CROSS-COUNTRY"]
       ];
+      sId["120111"] = [
+        icn["GR.EQ.ARMOURED FIGHTING VEHICLE"],
+        icn["GR.EQ.CROSS-COUNTRY"],
+        icn["GR.IC.FF.RECONNAISSANCE EQUPIMENT"]
+      ];
       sId["120200"] = [icn["GR.EQ.TANK"]];
       sId["120201"] = [icn["GR.EQ.TANK"], icn["GR.EQ.LIGHT TANK"]];
       sId["120202"] = [icn["GR.EQ.TANK"], icn["GR.EQ.MEDIUM TANK"]];
@@ -290,6 +295,19 @@ export default {
         ms._translate(0, -10, icn["GR.EQ.LIMITED CROSS-COUNTRY"])
       ];
       sId["130902"] = [icn["GR.EQ.MINE CLEARING EQUIPMENT"], icn["GR.EQ.TANK"]];
+      sId["130903"] = [
+        icn["GR.EQ.ASSAULT BREACHER VEHICLE (ABV) WITH COMBAT DOZER BLADE"]
+      ];
+      sId["130904"] = [
+        icn["GR.M1.ROUTE, RECONNAISSANCE, AND CLEARANCE"],
+        icn["GR.IC.ENGINEER UTILITY VEHICLE"],
+        icn["GR.M2.MEDIUM"]
+      ];
+      sId["130905"] = [
+        icn["GR.M1.ROUTE, RECONNAISSANCE, AND CLEARANCE"],
+        icn["GR.IC.ENGINEER UTILITY VEHICLE"],
+        icn["GR.M2.HEAVY"]
+      ];
       sId["131000"] = [icn["GR.IC.MINE LAYING"]];
       sId["131001"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
@@ -613,14 +631,14 @@ export default {
       sIdm1["08"] = [icn["GR.M1.HIJACKING"]];
       sIdm1["09"] = [icn["GR.M1.CIVILIAN"]];
       sIdm1["10"] = [icn["GR.M1.TILT-ROTOR"]];
-      sIdm1["11"] = [icn[""]];
-      sIdm1["12"] = [icn[""]];
-      sIdm1["13"] = [icn[""]];
+      sIdm1["11"] = [];
+      sIdm1["12"] = [icn["GR.M1.MULTI-PURPOSE BLADE"]];
+      sIdm1["13"] = [icn["GR.M1.TANK-WIDTH MINE PLOW"]];
       sIdm1["14"] = [icn["GR.M1.BRIDGING"]];
       sIdm1["15"] = [icn["GR.M1.CYBERSPACE"]];
-      sIdm1["16"] = [icn[""]];
+      sIdm1["16"] = [icn["GR.M1.ARMORED"]];
       sIdm1["17"] = [icn["GR.M1.ATTACK"]];
-      sIdm1["18"] = [icn[""]];
+      sIdm1["18"] = [icn["GR.M1.CARGO"]];
       sIdm1["19"] = [icn["GR.M1.MAINTENANCE"]];
       sIdm1["20"] = [icn["GR.M1.MEDEVAC"]];
       sIdm1["21"] = [icn["GR.IN.M1.PETROLEUM"]];
@@ -632,7 +650,7 @@ export default {
       sIdm2["03"] = [icn["GR.M2.MEDIUM"]];
       sIdm2["04"] = [icn["GR.M2.RAILROAD"]];
       sIdm2["05"] = [icn["GR.M2.TRACKED"]];
-      sIdm2["06"] = [icn["TODO"]];
+      sIdm2["06"] = [icn["GR.M2.TRACTOR TRAILER"]];
       sIdm2["07"] = [icn["GR.M2.WHEELED LIMITED"]];
       sIdm2["08"] = [icn["GR.M2.WHEELED"]];
 

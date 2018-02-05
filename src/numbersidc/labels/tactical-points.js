@@ -41,7 +41,15 @@ export default function tacticalPoints(sidc) {
   sidc["131500"] = {}; //Command and Control Points / Release Point
   sidc["131600"] = {}; //Command and Control Points / Start Point
   sidc["131700"] = {}; //Command and Control Points / Special Point
-  sidc["131800"] = {}; //Command and Control Points / Waypoint
+  sidc["131800"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 140,
+      y: 125,
+      fontsize: 70
+    }
+  }; //Command and Control Points / Waypoint
   sidc["131900"] = {}; //Command and Control Points / Airfield
   sidc["132000"] = {}; //Command and Control Points / Target Handover
   sidc["132100"] = {}; //Command and Control Points / Key Terrain

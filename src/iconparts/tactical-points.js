@@ -623,6 +623,189 @@ export default function(
     d:
       "m 90,135 0,-30 20,0 0,30 m -50,0 0,-50 -10,0 0,-20 20,0 0,10 20,0 0,-10 20,0 0,10 20,0 0,-10 20,0 0,20 -10,0 0,50 z"
   };
+  icn["TP.CHEMICAL EVENT"] = [
+    {
+      type: "path",
+      fill: false,
+      d:
+        "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z"
+    },
+    {
+      type: "path",
+      d:
+        "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 20,
+      fontsize: 30,
+      text: "C"
+    }
+  ];
+  icn["TP.CHEMICAL – TOXIC INDUSTRIAL MATERIAL"] = [
+    {
+      type: "path",
+      fill: false,
+      d:
+        "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z"
+    },
+    {
+      type: "path",
+      d:
+        "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 20,
+      fontsize: 30,
+      text: "C"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 85,
+      fontsize: 30,
+      text: "T"
+    }
+  ];
+
+  icn["TP.BIOLOGICAL EVENT"] = [
+    {
+      type: "path",
+      fill: false,
+      d:
+        "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z"
+    },
+    {
+      type: "path",
+      d:
+        "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 20,
+      fontsize: 30,
+      text: "B"
+    }
+  ];
+  icn["TP.BIOLOGICAL – TOXIC INDUSTRIAL MATERIAL"] = [
+    {
+      type: "path",
+      fill: false,
+      d:
+        "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z"
+    },
+    {
+      type: "path",
+      d:
+        "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 20,
+      fontsize: 30,
+      text: "B"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 85,
+      fontsize: 30,
+      text: "T"
+    }
+  ];
+
+  icn["TP.NUCLEAR EVENT"] = [
+    {
+      type: "path",
+      fill: false,
+      d:
+        "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z"
+    },
+    {
+      type: "path",
+      d:
+        "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 20,
+      fontsize: 30,
+      text: "N"
+    }
+  ];
+  icn["TP.RADIOLOGICAL EVENT"] = [
+    {
+      type: "path",
+      fill: false,
+      d:
+        "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z"
+    },
+    {
+      type: "path",
+      d:
+        "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 20,
+      fontsize: 30,
+      text: "R"
+    }
+  ];
+  icn["TP.RADIOLOGICAL – TOXIC INDUSTRIAL MATERIAL"] = [
+    {
+      type: "path",
+      fill: false,
+      d:
+        "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z"
+    },
+    {
+      type: "path",
+      d:
+        "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 20,
+      fontsize: 30,
+      text: "R"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 85,
+      fontsize: 30,
+      text: "T"
+    }
+  ];
   icn["TP.DROP POINT"] = {
     type: "path",
     fill: false,

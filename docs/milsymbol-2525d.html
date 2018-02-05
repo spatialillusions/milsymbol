@@ -162,13 +162,14 @@
           output += ' class="na"';
         }
           
-        if(!symbol.isValid() && !(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")){
+        if(!symbol.isValid() && !(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point" )){
           output += ' style="background-color:red"';
-          console.warn(symbolset["main icon"][i]["entity subtype"] ||
+          var name = symbolset["main icon"][i]["entity subtype"] ||
             symbolset["main icon"][i]["entity type"] ||
-            symbolset["main icon"][i]["entity"] + "\n" +
+            symbolset["main icon"][i]["entity"];
+          console.warn( name + "\n" +
           symbol.getOptions().sidc + "\n" +
-          csymbol.isValid(true));
+          symbol.isValid(true));
         }
 
         output += "><td><b>" +

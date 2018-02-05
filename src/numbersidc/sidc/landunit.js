@@ -207,10 +207,7 @@ export default {
       sId["140500"] = [icn["GR.IC.DOG"]];
       sId["140600"] = [icn["GR.IC.DRILLING"]];
       sId["140700"] = [icn["GR.IC.ENGINEER"]];
-      sId["140701"] = [
-        ms._scale(0.7, icn["GR.IC.ENGINEER"]),
-        icn["GR.IC.ARMOUR"]
-      ];
+      sId["140701"] = [icn["GR.IC.ENGINEER MECHANIZED"]];
       sId["140702"] = [icn["GR.IC.ENGINEER"], icn["GR.IC.FF.MOTORIZED"]];
       sId["140703"] = [icn["GR.IC.ENGINEER"], icn["GR.IC.FF.RECONNAISSANCE"]];
       //sId['140795'] = [icn['GR.IC.ENGINEER'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
