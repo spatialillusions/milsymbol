@@ -1258,9 +1258,13 @@
     {
       "modifier": "Unspecified",
       "code": "00",
+      "remarks": ""
+    },
+    {
+      "modifier": "Air Mobile/Air Assault",
+      "code": "01",
       "remarks": "From MIL-STD-2525."
     },
-    { "modifier": "Air Mobile/Air Assault", "code": "01", "remarks": " " },
     { "modifier": "Area", "code": "02", "remarks": "" },
     { "modifier": "Attack", "code": "03", "remarks": "" },
     { "modifier": "Biological", "code": "04", "remarks": "" },
