@@ -1,3 +1,4 @@
+import { ms } from "../../ms.js";
 export default function canvasDraw(ctx, instruction) {
   for (var i = 0; i < instruction.length; i++) {
     if (Array.isArray(instruction[i])) {
