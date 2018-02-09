@@ -77,6 +77,9 @@ function Symbol() {
 import asCanvas from "./symbol/ascanvas.js";
 Symbol.prototype.asCanvas = asCanvas;
 
+import canvasDraw from "./symbol/canvasdraw.js";
+Symbol.prototype.canvasDraw = canvasDraw;
+
 Symbol.prototype.asDOM = function() {
   var doc = document;
   var doc2 = new DOMParser().parseFromString(this.asSVG(), "text/xml");
