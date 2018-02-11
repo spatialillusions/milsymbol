@@ -1,7 +1,7 @@
 {
   "name": "Tactical Graphics",
   "TSK": {
-    "name": "TASKS",
+    "name": "Tasks",
     "main icon": [
       {
         "hierarchy": "2.X.1",
@@ -331,7 +331,7 @@
     ]
   },
   "C2GM": {
-    "name": "CONTROL MEASURES",
+    "name": "Control measures",
     "main icon": [
       {
         "hierarchy": "2.X.2.1",
@@ -6624,7 +6624,7 @@
     ]
   },
   "NA5CRO": {
-    "name": "NON ARTICLE 5 CRISIS RESPONSE OPERATIONS",
+    "name": "Non article 5 crisis response operations",
     "main icon": [
       {
         "hierarchy": "2.X.3",

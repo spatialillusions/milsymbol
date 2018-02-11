@@ -1,7 +1,7 @@
 {
   "name": "Warfighting",
   "SPC": {
-    "name": "SPACE",
+    "name": "Space",
     "main icon": [
       {
         "hierarchy": "1.X.1",
@@ -38,7 +38,7 @@
     ]
   },
   "AIRTRK": {
-    "name": "AIR",
+    "name": "Air",
     "main icon": [
       {
         "hierarchy": "1.X.2",
@@ -815,7 +815,7 @@
     ]
   },
   "GRDTRK_UNT": {
-    "name": "GROUND",
+    "name": "Ground Unit",
     "main icon": [
       {
         "hierarchy": "1.X.3",
@@ -6401,7 +6401,7 @@
     ]
   },
   "GRDTRK_EQT": {
-    "name": "GROUND",
+    "name": "Ground Equipment",
     "main icon": [
       {
         "hierarchy": "1.X.3.2",
@@ -7889,7 +7889,7 @@
     ]
   },
   "GRDTRK_INS": {
-    "name": "GROUND",
+    "name": "Ground Installation",
     "main icon": [
       {
         "hierarchy": "1.X.3.3",
@@ -8309,7 +8309,7 @@
     ]
   },
   "SSUF": {
-    "name": "SEA SURFACE",
+    "name": "Sea Surface",
     "main icon": [
       {
         "hierarchy": "1.X.4",
@@ -8939,7 +8939,7 @@
     ]
   },
   "SBSUF": {
-    "name": "SUBSURFACE",
+    "name": "Subsurface",
     "main icon": [
       {
         "hierarchy": "1.X.5",
@@ -9233,7 +9233,7 @@
     ]
   },
   "SOFUNT": {
-    "name": "SPECIAL OPERATIONS FORCE (SOF)",
+    "name": "Special Operations Force (SOF)",
     "main icon": [
       {
         "hierarchy": "1.X.6",
