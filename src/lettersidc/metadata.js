@@ -318,7 +318,7 @@ export function metadata(ms, metadata, mapping) {
       "NA----"
     ].indexOf(functionid) > -1
   ) {
-    if (ms._STD2525) {
+    if (this.metadata.STD2525) {
       metadata.fill = false;
       if (metadata.functionid == "WD----") {
         metadata.fill = true;

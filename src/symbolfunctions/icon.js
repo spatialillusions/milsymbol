@@ -27,7 +27,7 @@ export default function icon(ms) {
     var white = this.colors.white[this.metadata.affiliation];
     //Store previous used icons in memory.
     var icnet =
-      (ms._STD2525 ? "2525" : "APP6") +
+      (this.metadata.STD2525 ? "2525" : "APP6") +
       "," +
       this.metadata.dimension +
       this.metadata.affiliation +
@@ -58,7 +58,7 @@ export default function icon(ms) {
       iconParts = ms._iconCache[icnet].iconParts = ms._getIconParts(
         this.metadata,
         this.colors,
-        ms._STD2525,
+        this.metadata.STD2525,
         this.style.monoColor,
         this.style.alternateMedal
       );
@@ -88,7 +88,7 @@ export default function icon(ms) {
           ms._iconCache[icnet].letterSIDC = ms._getIcons.letter(
             ms,
             iconParts,
-            ms._STD2525
+            this.metadata.STD2525
           );
           icons = ms._iconCache[icnet].letterSIDC.icons;
           specialbbox = ms._iconCache[icnet].letterSIDC.bbox;
@@ -152,7 +152,12 @@ export default function icon(ms) {
           if (typeof ms._getIcons.number === "function") {
             ms._iconCache[icnet].numberSIDC.symbolSet[
               symbolSet
-            ] = ms._getIcons.number(ms, symbolSet, iconParts, ms._STD2525);
+            ] = ms._getIcons.number(
+              ms,
+              symbolSet,
+              iconParts,
+              this.metadata.STD2525
+            );
             icons = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
             m1 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
             m2 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;
@@ -170,7 +175,12 @@ export default function icon(ms) {
         if (typeof ms._getIcons.number === "function") {
           ms._iconCache[icnet].numberSIDC.symbolSet[
             symbolSet
-          ] = ms._getIcons.number(ms, symbolSet, iconParts, ms._STD2525);
+          ] = ms._getIcons.number(
+            ms,
+            symbolSet,
+            iconParts,
+            this.metadata.STD2525
+          );
           icons = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
           m1 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;
           m2 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m2;

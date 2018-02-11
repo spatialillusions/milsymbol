@@ -25,6 +25,7 @@ export default function getMetadata() {
     notpresent: "", //Is it Anticipated or Pending
     numberSIDC: false, //Is the SIDC number based
     space: false, //Is it in Space
+    STD2525: ms._STD2525,
     taskForce: false, //Is it a task force
     unit: false // Is this equipment or not
   };
@@ -74,6 +75,10 @@ export default function getMetadata() {
   mapping.dimension = ["Air", "Ground", "Sea", "Subsurface"];
 
   metadata.context = mapping.context[0];
+
+  if (this.style.standard) {
+    metadata.STD2525 = this.style.standard == "APP6" ? false : true;
+  }
 
   if (this.style.monoColor != "") {
     metadata.fill = false;
