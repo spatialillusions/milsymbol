@@ -1,6 +1,7 @@
 {
+  "name": "Signals Intelligence",
   "SPC": {
-    "name": "SIGNALS INTELLIGENCE SPACE",
+    "name": "Signals intelligence space",
     "main icon": [
       {
         "hierarchy": "SIGINT.SPC",
@@ -130,7 +131,7 @@
     ]
   },
   "AIRTRK": {
-    "name": "SIGNALS INTELLIGENCE AIR",
+    "name": "Signals intelligence air",
     "main icon": [
       {
         "hierarchy": "SIGINT.AIRTRK",
@@ -381,7 +382,7 @@
     ]
   },
   "GRDTRK": {
-    "name": "SIGNALS INTELLIGENCE GROUND",
+    "name": "Signals intelligence ground",
     "main icon": [
       {
         "hierarchy": "SIGINT.GRDTRK",
@@ -712,7 +713,7 @@
     ]
   },
   "SSUF": {
-    "name": "SIGNALS INTELLIGENCE SEA SURFACE",
+    "name": "Signals intelligence sea surface",
     "main icon": [
       {
         "hierarchy": "SIGINT.SSUF",
@@ -1047,7 +1048,7 @@
     ]
   },
   "SBSUF": {
-    "name": "SIGNALS INTELLIGENCE SUBSURFACE",
+    "name": "Signals intelligence subsurface",
     "main icon": [
       {
         "hierarchy": "SIGINT.SBSUF",

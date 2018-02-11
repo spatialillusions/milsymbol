@@ -1,6 +1,7 @@
 {
+  "name": "Warfighting",
   "SPC": {
-    "name": "SPACE",
+    "name": "Space",
     "main icon": [
       {
         "hierarchy": "WAR.SPC",
@@ -45,7 +46,7 @@
     ]
   },
   "AIRTRK": {
-    "name": "AIR",
+    "name": "Air",
     "main icon": [
       {
         "hierarchy": "WAR.AIRTRK",
@@ -1239,17 +1240,9 @@
       }
     ]
   },
-  "GRDTRK": {
-    "name": "GROUND",
+  "GRDTRK.UNT": {
+    "name": "Ground Unit",
     "main icon": [
-      {
-        "hierarchy": "WAR.GRDTRK",
-        "code scheme": "S",
-        "standard identity": "*",
-        "battle dimension": "G",
-        "code": "------",
-        "name": ["GROUND TRACK"]
-      },
       {
         "hierarchy": "WAR.GRDTRK.UNT",
         "code scheme": "S",
@@ -6569,7 +6562,39 @@
         "battle dimension": "G",
         "code": "UH----",
         "name": ["GROUND TRACK", "UNIT", "SPECIAL C2 HEADQUARTERS COMPONENT"]
-      },
+      }
+    ],
+    "modifier 1":{
+      "-":{"name":"-"},
+      "A":{"name":"Headquarters"},
+      "B":{"name":"Task Force HQ"},
+      "C":{"name":"Feint Dummy HQ"},
+      "D":{"name":"Feint Dummy/Task Force HQ"},
+      "E":{"name":"Task Force"},
+      "F":{"name":"Feint Dummy"},
+      "G":{"name":"Feint Dummy/Task Force"}
+    },
+    "modifier 2":{
+      "-":{"name":"-"},
+      "A":{"name":"Team/Crew"},
+      "B":{"name":"Squad"},
+      "C":{"name":"Section"},
+      "D":{"name": "Platoon/Detachment"},
+      "E":{"name": "Company/Battery/Troop"},
+      "F":{"name": "Battalion/Squadron"},
+      "G":{"name": "Regiment/Group"},
+      "H":{"name": "Brigade"},
+      "I":{"name": "Division"},
+      "J":{"name": "Corps/Mef"},
+      "K":{"name": "Army"},
+      "L":{"name": "Army Group/Front"},
+      "M":{"name": "Region"},
+      "N":{"name": "Command"}
+    }
+  },
+  "GRDTRK.EQT": {
+    "name": "Ground Equipment",
+    "main icon": [
       {
         "hierarchy": "WAR.GRDTRK.EQT",
         "code scheme": "S",
@@ -8871,7 +8896,12 @@
           "LAND MINES",
           "LESS THAN LETHAL"
         ]
-      },
+      }
+    ]
+  },
+  "GRDTRK.INS": {
+    "name": "Ground Installation",
+    "main icon": [
       {
         "hierarchy": "WAR.GRDTRK.INS",
         "code scheme": "S",
@@ -9371,10 +9401,13 @@
         "code": "IXH---",
         "name": ["GROUND TRACK", "INSTALLATION", "MEDICAL FACILITY", "HOSPITAL"]
       }
-    ]
+    ],
+    "modifier 1":{
+      "H":{"name":"Installation"}
+    }
   },
   "SSUF": {
-    "name": "SEA SURFACE",
+    "name": "Sea Surface",
     "main icon": [
       {
         "hierarchy": "WAR.SSUF",
@@ -10106,7 +10139,7 @@
     ]
   },
   "SBSUF": {
-    "name": "SUBSURFACE",
+    "name": "Subsurface",
     "main icon": [
       {
         "hierarchy": "WAR.SBSUF",
@@ -11009,7 +11042,7 @@
     ]
   },
   "SOFUNT": {
-    "name": "SPECIAL OPERATIONS FORCES (SOF)",
+    "name": "Special Operations Forces (SOF)",
     "main icon": [
       {
         "hierarchy": "WAR.SOFUNT",

@@ -1,6 +1,7 @@
 {
+  "name": "Emergency Management Symbols",
   "INCDNT": {
-    "name": "INCIDENT",
+    "name": "Incident",
     "main icon": [
       {
         "hierarchy": "EMS.INCDNT",
@@ -430,7 +431,7 @@
     ]
   },
   "NATEVT": {
-    "name": "NATURAL EVENTS",
+    "name": "Natural events",
     "main icon": [
       {
         "hierarchy": "EMS.NATEVT",
@@ -671,7 +672,7 @@
     ]
   },
   "OPN": {
-    "name": "OPERATIONS",
+    "name": "Operations",
     "main icon": [
       {
         "hierarchy": "EMS.OPN",
@@ -1621,7 +1622,7 @@
     ]
   },
   "INFSTR": {
-    "name": "INFRASTRUCTURE",
+    "name": "Infrastructure",
     "main icon": [
       {
         "hierarchy": "EMS.INFSTR",
