@@ -10,4 +10,6 @@ ms.addIcons(icons2);
 import icons3 from "../src/lettersidc/sidc/installations";
 ms.addIcons(icons3);
 
-verify(ms, "APP-6 B Ground", milstd["app6b"].WAR.GRDTRK);
+verify(ms, "APP-6 B Ground", milstd["app6b"].WAR.GRDTRK_UNT);
+verify(ms, "APP-6 B Ground", milstd["app6b"].WAR.GRDTRK_EQT);
+verify(ms, "APP-6 B Ground", milstd["app6b"].WAR.GRDTRK_INS);

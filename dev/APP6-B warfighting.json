@@ -1,4 +1,5 @@
 {
+  "name": "Warfighting",
   "SPC": {
     "name": "SPACE",
     "main icon": [
@@ -813,7 +814,7 @@
       }
     ]
   },
-  "GRDTRK": {
+  "GRDTRK_UNT": {
     "name": "GROUND",
     "main icon": [
       {
@@ -6396,7 +6397,12 @@
         "battle dimension": "G",
         "code": "UHGL--",
         "name": ["GROUND TRACK", "UNIT", "UNIT GENERAL LIAISON"]
-      },
+      }
+    ]
+  },
+  "GRDTRK_EQT": {
+    "name": "GROUND",
+    "main icon": [
       {
         "hierarchy": "1.X.3.2",
         "code scheme": "S",
@@ -7879,7 +7885,12 @@
           "LAND MINES",
           "LESS THAN LETHAL"
         ]
-      },
+      }
+    ]
+  },
+  "GRDTRK_INS": {
+    "name": "GROUND",
+    "main icon": [
       {
         "hierarchy": "1.X.3.3",
         "code scheme": "S",

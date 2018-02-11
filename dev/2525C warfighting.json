@@ -1240,7 +1240,7 @@
       }
     ]
   },
-  "GRDTRK.UNT": {
+  "GRDTRK_UNT": {
     "name": "Ground Unit",
     "main icon": [
       {
@@ -6592,7 +6592,7 @@
       "N":{"name": "Command"}
     }
   },
-  "GRDTRK.EQT": {
+  "GRDTRK_EQT": {
     "name": "Ground Equipment",
     "main icon": [
       {
@@ -8899,7 +8899,7 @@
       }
     ]
   },
-  "GRDTRK.INS": {
+  "GRDTRK_INS": {
     "name": "Ground Installation",
     "main icon": [
       {
