@@ -23,10 +23,16 @@ export default [
   {
     // Generate JSON for all standards
     input: "src/milstd.js",
-    output: {
-      file: "dist/milstd.js",
-      format: "umd"
-    },
+    output: [
+      {
+        file: "dist/milstd.js",
+        format: "es"
+      },
+      {
+        file: "dist/milstd-umd.js",
+        format: "umd"
+      }
+    ],
     name: "milstd",
     plugins: [json()]
   }
