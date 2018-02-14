@@ -38,6 +38,7 @@ export default function setOptions() {
   for (i in ms._symbolParts) {
     if (!ms._symbolParts.hasOwnProperty(i)) continue;
     var m = ms._symbolParts[i].call(this, ms);
+    var notEmpty = m.pre.length > 0 || m.post.length > 0;
     if (!m.pre) continue;
     if (m.pre.length > 0) {
       while (m.pre.length == 1) {
@@ -60,7 +61,7 @@ export default function setOptions() {
         this.drawInstructions = this.drawInstructions.concat(m.post);
       }
     }
-    if (typeof m.bbox === "object") {
+    if (typeof m.bbox === "object" && notEmpty) {
       this.bbox.merge(m.bbox);
     }
   }

@@ -487,17 +487,17 @@ export default function modifier(ms) {
     var mobilities = {
       "Wheeled limited cross country": {
         g: [
-          { type: "path", d: "M 50,1 l 100,0" },
-          { type: "circle", cx: 55, cy: 8, r: 8 },
-          { type: "circle", cx: 145, cy: 8, r: 8 }
+          { type: "path", d: "M 53,1 l 94,0" },
+          { type: "circle", cx: 58, cy: 8, r: 8 },
+          { type: "circle", cx: 142, cy: 8, r: 8 }
         ],
         bbox: { y2: bbox.y2 + 8 * 2 }
       },
       "Wheeled cross country": {
         g: [
-          { type: "path", d: "M 50,1 l 100,0" },
-          { type: "circle", cx: 55, cy: 8, r: 8 },
-          { type: "circle", cx: 145, cy: 8, r: 8 },
+          { type: "path", d: "M 53,1 l 94,0" },
+          { type: "circle", cx: 58, cy: 8, r: 8 },
+          { type: "circle", cx: 142, cy: 8, r: 8 },
           { type: "circle", cx: 100, cy: 8, r: 8 }
         ],
         bbox: { y2: bbox.y2 + 8 * 2 }
@@ -506,36 +506,36 @@ export default function modifier(ms) {
         g: [
           {
             type: "path",
-            d: "M 50,1 l 100,0 c15,0 15,15 0,15 l -100,0 c-15,0 -15,-15 0,-15"
+            d: "M 53,1 l 100,0 c15,0 15,15 0,15 l -100,0 c-15,0 -15,-15 0,-15"
           }
         ],
         bbox: { y2: bbox.y2 + 18, x1: 42, x2: 168 }
       },
       "Wheeled and tracked combination": {
         g: [
-          { type: "circle", cx: 55, cy: 8, r: 8 },
+          { type: "circle", cx: 58, cy: 8, r: 8 },
           {
             type: "path",
-            d: "M 80,1 l 70,0 c15,0 15,15 0,15 l -70,0 c-15,0 -15,-15 0,-15"
+            d: "M 83,1 l 70,0 c15,0 15,15 0,15 l -70,0 c-15,0 -15,-15 0,-15"
           }
         ],
         bbox: { y2: bbox.y2 + 8 * 2, x2: 168 }
       },
       Towed: {
         g: [
-          { type: "path", d: "M 60,1 l 80,0" },
-          { type: "circle", cx: 55, cy: 3, r: 8 },
-          { type: "circle", cx: 145, cy: 3, r: 8 }
+          { type: "path", d: "M 63,1 l 74,0" },
+          { type: "circle", cx: 58, cy: 3, r: 8 },
+          { type: "circle", cx: 142, cy: 3, r: 8 }
         ],
         bbox: { y2: bbox.y2 + 10 }
       },
       Rail: {
         g: [
-          { type: "path", d: "M 50,1 l 100,0" },
-          { type: "circle", cx: 55, cy: 8, r: 8 },
-          { type: "circle", cx: 70, cy: 8, r: 8 },
-          { type: "circle", cx: 130, cy: 8, r: 8 },
-          { type: "circle", cx: 145, cy: 8, r: 8 }
+          { type: "path", d: "M 53,1 l 96,0" },
+          { type: "circle", cx: 58, cy: 8, r: 8 },
+          { type: "circle", cx: 73, cy: 8, r: 8 },
+          { type: "circle", cx: 127, cy: 8, r: 8 },
+          { type: "circle", cx: 142, cy: 8, r: 8 }
         ],
         bbox: { y2: bbox.y2 + 8 * 2 }
       },

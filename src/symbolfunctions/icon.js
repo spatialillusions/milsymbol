@@ -296,7 +296,6 @@ export default function icon(ms) {
         // End special case, just add to draw array
         drawArray2.push(mainIcon);
       }
-
       if (specialbbox.hasOwnProperty(this.metadata.functionid.substr(0, 6))) {
         gbbox = new ms.BBox(specialbbox[this.metadata.functionid.substr(0, 6)]);
       }

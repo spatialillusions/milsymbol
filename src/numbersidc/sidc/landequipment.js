@@ -876,7 +876,12 @@ export default {
       };
       for (var key in equipmentBottom) {
         if (!equipmentBottom.hasOwnProperty(key)) continue;
-        bbox[key] = { y2: equipmentBottom[key] };
+        bbox[key] = {
+          x1: 50,
+          x2: 150,
+          y1: 50,
+          y2: equipmentBottom[key]
+        };
       }
     }
   }
