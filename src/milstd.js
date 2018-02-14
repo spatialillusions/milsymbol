@@ -43,54 +43,58 @@ import seasubsurface_app6d from "../dev/APP6-D 35 sea-subsurface.json";
 import minewarfare_app6d from "../dev/APP6-D 36 mine-warfare.json";
 import activities_app6d from "../dev/APP6-D 40 activities.json";
 
-export default {
-  "2525b": {
-    WAR: warfighting_2525b,
-    TACGRP: tacticalgraphics_2525b,
-    SIGINT: signalsintelligence_2525b,
-    MOOTW: otherthanwar_2525b
-  },
-  "2525c": {
-    WAR: warfighting_2525c,
-    TACGRP: tacticalgraphics_2525c,
-    SIGINT: signalsintelligence_2525c,
-    STBOPS: stabilityoperations_2525c,
-    EMS: emergencymanagment_2525c
-  },
-  "2525d": {
-    "01": air_2525d,
-    "02": airmissile_2525d,
-    "05": space_2525d,
-    "06": spacemissile_2525d,
-    "10": landunit_2525d,
-    "11": landcivilian_2525d,
-    "15": landequipment_2525d,
-    "20": landinstallation_2525d,
-    "25": controlmeasure_2525d,
-    "30": seasurface_2525d,
-    "35": seasubsurface_2525d,
-    "36": minewarfare_2525d,
-    "40": activities_2525d,
-    "50": signalsintelligence_2525d,
-    "60": cyberspace_2525d
-  },
-  app6b: {
-    WAR: warfighting_app6b,
-    TACGRP: tacticalgraphics_app6b
-  },
-  app6d: {
-    "01": air_app6d,
-    "02": airmissile_app6d,
-    "05": space_app6d,
-    "10": landunit_app6d,
-    "11": landcivilian_app6d,
-    "15": landequipment_app6d,
-    "20": landinstallation_app6d,
-    "25": controlmeasure_app6d,
-    "27": dismountedindividual_app6d,
-    "30": seasurface_app6d,
-    "35": seasubsurface_app6d,
-    "36": minewarfare_app6d,
-    "40": activities_app6d
-  }
+var milstd2525b = {
+  WAR: warfighting_2525b,
+  TACGRP: tacticalgraphics_2525b,
+  SIGINT: signalsintelligence_2525b,
+  MOOTW: otherthanwar_2525b
 };
+
+var milstd2525c = {
+  WAR: warfighting_2525c,
+  TACGRP: tacticalgraphics_2525c,
+  SIGINT: signalsintelligence_2525c,
+  STBOPS: stabilityoperations_2525c,
+  EMS: emergencymanagment_2525c
+};
+
+var milstd2525d = {
+  "01": air_2525d,
+  "02": airmissile_2525d,
+  "05": space_2525d,
+  "06": spacemissile_2525d,
+  "10": landunit_2525d,
+  "11": landcivilian_2525d,
+  "15": landequipment_2525d,
+  "20": landinstallation_2525d,
+  "25": controlmeasure_2525d,
+  "30": seasurface_2525d,
+  "35": seasubsurface_2525d,
+  "36": minewarfare_2525d,
+  "40": activities_2525d,
+  "50": signalsintelligence_2525d,
+  "60": cyberspace_2525d
+};
+
+var app6b = {
+  WAR: warfighting_app6b,
+  TACGRP: tacticalgraphics_app6b
+};
+
+var app6d = {
+  "01": air_app6d,
+  "02": airmissile_app6d,
+  "05": space_app6d,
+  "10": landunit_app6d,
+  "11": landcivilian_app6d,
+  "15": landequipment_app6d,
+  "20": landinstallation_app6d,
+  "25": controlmeasure_app6d,
+  "27": dismountedindividual_app6d,
+  "30": seasurface_app6d,
+  "35": seasubsurface_app6d,
+  "36": minewarfare_app6d,
+  "40": activities_app6d
+};
+
+export { milstd2525b, milstd2525c, milstd2525d, app6b, app6d };

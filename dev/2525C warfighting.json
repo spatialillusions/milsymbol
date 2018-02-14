@@ -6563,34 +6563,7 @@
         "code": "UH----",
         "name": ["GROUND TRACK", "UNIT", "SPECIAL C2 HEADQUARTERS COMPONENT"]
       }
-    ],
-    "modifier 1":{
-      "-":{"name":"-"},
-      "A":{"name":"Headquarters"},
-      "B":{"name":"Task Force HQ"},
-      "C":{"name":"Feint Dummy HQ"},
-      "D":{"name":"Feint Dummy/Task Force HQ"},
-      "E":{"name":"Task Force"},
-      "F":{"name":"Feint Dummy"},
-      "G":{"name":"Feint Dummy/Task Force"}
-    },
-    "modifier 2":{
-      "-":{"name":"-"},
-      "A":{"name":"Team/Crew"},
-      "B":{"name":"Squad"},
-      "C":{"name":"Section"},
-      "D":{"name": "Platoon/Detachment"},
-      "E":{"name": "Company/Battery/Troop"},
-      "F":{"name": "Battalion/Squadron"},
-      "G":{"name": "Regiment/Group"},
-      "H":{"name": "Brigade"},
-      "I":{"name": "Division"},
-      "J":{"name": "Corps/Mef"},
-      "K":{"name": "Army"},
-      "L":{"name": "Army Group/Front"},
-      "M":{"name": "Region"},
-      "N":{"name": "Command"}
-    }
+    ]
   },
   "GRDTRK_EQT": {
     "name": "Ground Equipment",
@@ -9401,10 +9374,7 @@
         "code": "IXH---",
         "name": ["GROUND TRACK", "INSTALLATION", "MEDICAL FACILITY", "HOSPITAL"]
       }
-    ],
-    "modifier 1":{
-      "H":{"name":"Installation"}
-    }
+    ]
   },
   "SSUF": {
     "name": "Sea Surface",

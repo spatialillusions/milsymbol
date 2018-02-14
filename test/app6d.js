@@ -1,4 +1,4 @@
-export default function(ms, milstd, name, symbolset) {
+export default function(ms, app6d, name, symbolset) {
   /*describe(name, () => {
     const sidc = milstd["app6d"][symbolset];
 
@@ -34,7 +34,7 @@ export default function(ms, milstd, name, symbolset) {
 //*/
 
   describe(name, () => {
-    const sidc = milstd["app6d"][symbolset];
+    const sidc = app6d[symbolset];
 
     describe("Main Icon", () => {
       for (let i = 0; i < sidc["main icon"].length; i++) {
