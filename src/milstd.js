@@ -73,6 +73,10 @@ var milstd2525d = {
   "36": minewarfare_2525d,
   "40": activities_2525d,
   "50": signalsintelligence_2525d,
+  "51": signalsintelligence_2525d,
+  "52": signalsintelligence_2525d,
+  "53": signalsintelligence_2525d,
+  "54": signalsintelligence_2525d,
   "60": cyberspace_2525d
 };
 
