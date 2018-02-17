@@ -1,6 +1,6 @@
 {
   "symbolset": "36",
-  "name": "MINE WARFARE",
+  "name": "Mine warfare",
   "main icon": [
     { "entity": "Sea Mine, General", "code": "110000", "remarks": "" },
     {

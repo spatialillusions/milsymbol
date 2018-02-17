@@ -1,6 +1,6 @@
 {
   "symbolset": "35",
-  "name": "SEA SUBSURFACE",
+  "name": "Sea subsurface",
   "main icon": [
     { "entity": "Military", "code": "110000", "remarks": "" },
     {

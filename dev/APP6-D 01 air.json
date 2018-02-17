@@ -1,6 +1,6 @@
 {
   "symbolset": "01",
-  "name": "AIR",
+  "name": "Air",
   "main icon": [
     { "entity": "Unspecified Air", "code": "000000", "remarks": "" },
     {

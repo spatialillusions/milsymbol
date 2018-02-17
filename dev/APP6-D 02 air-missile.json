@@ -1,6 +1,6 @@
 {
   "symbolset": "02",
-  "name": "AIR MISSILE",
+  "name": "Air missile",
   "main icon": [
     { "entity": "Unspecified Missile", "code": "000000", "remarks": "" },
     { "entity": "Missile", "code": "110000", "remarks": "" }

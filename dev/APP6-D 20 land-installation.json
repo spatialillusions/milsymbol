@@ -1,6 +1,6 @@
 {
   "symbolset": "20",
-  "name": "LAND INSTALLATIONS",
+  "name": "Land installations",
   "main icon": [
     { "entity": "Unspecified", "code": "000000", "remarks": "" },
     {

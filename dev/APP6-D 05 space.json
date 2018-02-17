@@ -1,6 +1,6 @@
 {
   "symbolset": "05",
-  "name": "SPACE",
+  "name": "Space",
   "main icon": [
     { "entity": "Unspecified Military", "code": "000000", "remarks": "" },
     {

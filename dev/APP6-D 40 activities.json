@@ -1,6 +1,6 @@
 {
   "symbolset": "40",
-  "name": "ACTIVITY/EVENT",
+  "name": "Activity/Event",
   "main icon": [
     {
       "entity": "Incident",
