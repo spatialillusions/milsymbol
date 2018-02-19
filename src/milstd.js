@@ -43,14 +43,14 @@ import seasubsurface_app6d from "../dev/APP6-D 35 sea-subsurface.json";
 import minewarfare_app6d from "../dev/APP6-D 36 mine-warfare.json";
 import activities_app6d from "../dev/APP6-D 40 activities.json";
 
-var milstd2525b = {
+var ms2525b = {
   WAR: warfighting_2525b,
   TACGRP: tacticalgraphics_2525b,
   SIGINT: signalsintelligence_2525b,
   MOOTW: otherthanwar_2525b
 };
 
-var milstd2525c = {
+var ms2525c = {
   WAR: warfighting_2525c,
   TACGRP: tacticalgraphics_2525c,
   SIGINT: signalsintelligence_2525c,
@@ -58,7 +58,7 @@ var milstd2525c = {
   EMS: emergencymanagment_2525c
 };
 
-var milstd2525d = {
+var ms2525d = {
   "01": air_2525d,
   "02": airmissile_2525d,
   "05": space_2525d,
@@ -101,4 +101,4 @@ var app6d = {
   "40": activities_app6d
 };
 
-export { milstd2525b, milstd2525c, milstd2525d, app6b, app6d };
+export { ms2525b, ms2525c, ms2525d, app6b, app6d };
