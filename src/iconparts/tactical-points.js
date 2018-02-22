@@ -2570,7 +2570,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "DCN"
     },
@@ -2579,7 +2579,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 10,
+      y: 0,
       fontsize: 35,
       text: "ALT"
     }
@@ -2591,7 +2591,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "DCN"
     },
@@ -2600,7 +2600,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 10,
+      y: 0,
       fontsize: 35,
       text: "T"
     }
@@ -2612,7 +2612,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "DCN"
     },
@@ -2621,7 +2621,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 10,
+      y: 0,
       fontsize: 35,
       text: "E"
     }
@@ -2633,7 +2633,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "DCN"
     },
@@ -2642,7 +2642,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 10,
+      y: 0,
       fontsize: 35,
       text: "E/T"
     }
@@ -2654,7 +2654,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "DCN"
     },
@@ -2663,7 +2663,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 10,
+      y: 0,
       fontsize: 35,
       text: "O"
     }
@@ -2675,7 +2675,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "DCN"
     },
@@ -2684,7 +2684,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 10,
+      y: 0,
       fontsize: 35,
       text: "TH"
     }
@@ -2756,7 +2756,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "DCN"
     },
@@ -2765,7 +2765,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 10,
+      y: 0,
       fontsize: 35,
       text: "W"
     }

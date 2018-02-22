@@ -2,10 +2,97 @@
 export default function tacticalPoints(sidc) {
   // Tactical Point Symbols =========================================================================
   // TODO Maybe add some way to define additions for different symbol sets
-
-  sidc["130100"] = {}; //Command and Control Points / Unspecified Control Point
-  sidc["130200"] = {}; //Command and Control Points / Amnesty Point
-  sidc["130300"] = {}; //Command and Control Points / Checkpoint
+  var actionPoint = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -70,
+      fontsize: 40
+    },
+    hostile: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 45,
+      fontsize: 40
+    },
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 0,
+      fontsize: 80
+    },
+    uniqueDesignation1: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 30,
+      fontsize: 30
+    },
+    dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+  };
+  var actionPoint1 = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -70,
+      fontsize: 40
+    },
+    hostile: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 45,
+      fontsize: 40
+    },
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 0,
+      fontsize: 80
+    },
+    dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+  };
+  sidc["130100"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -70,
+      fontsize: 40
+    },
+    additionalInformation1: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -25,
+      fontsize: 30
+    },
+    hostile: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 45,
+      fontsize: 40
+    },
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 0,
+      fontsize: 80
+    },
+    dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+  }; //Command and Control Points / Unspecified Control Point
+  sidc["130200"] = actionPoint; //Command and Control Points / Amnesty Point
+  sidc["130300"] = actionPoint; //Command and Control Points / Checkpoint
   sidc["130400"] = {}; //Command and Control Points / Center of Main Effort
   sidc["130500"] = {
     uniqueDesignation: {
@@ -28,18 +115,18 @@ export default function tacticalPoints(sidc) {
       fontweight: "bold"
     }
   }; //Command and Control Points / Decision Point
-  sidc["130800"] = {}; //Command and Control Points / Distress Call
-  sidc["130900"] = {}; //Command and Control Points / Entry Control Point
-  sidc["131001"] = {}; //Command and Control Points / Fly-To-Point / Sonobuoy
-  sidc["131002"] = {}; //Command and Control Points / Fly-To-Point / Weapon
-  sidc["131003"] = {}; //Command and Control Points / Fly-To-Point / Normal
-  sidc["131100"] = {}; //Command and Control Points / Linkup Point
-  sidc["131200"] = {}; //Command and Control Points / Passage Point
+  sidc["130800"] = actionPoint; //Command and Control Points / Distress Call
+  sidc["130900"] = actionPoint; //Command and Control Points / Entry Control Point
+  sidc["131001"] = actionPoint1; //Command and Control Points / Fly-To-Point / Sonobuoy
+  sidc["131002"] = actionPoint1; //Command and Control Points / Fly-To-Point / Weapon
+  sidc["131003"] = actionPoint1; //Command and Control Points / Fly-To-Point / Normal
+  sidc["131100"] = actionPoint; //Command and Control Points / Linkup Point
+  sidc["131200"] = actionPoint; //Command and Control Points / Passage Point
   sidc["131300"] = {}; //Command and Control Points / Point of Interest
   sidc["131301"] = {}; //Command and Control Points / Point of Interest / Launch Event
-  sidc["131400"] = {}; //Command and Control Points / Rally Point
-  sidc["131500"] = {}; //Command and Control Points / Release Point
-  sidc["131600"] = {}; //Command and Control Points / Start Point
+  sidc["131400"] = actionPoint; //Command and Control Points / Rally Point
+  sidc["131500"] = actionPoint; //Command and Control Points / Release Point
+  sidc["131600"] = actionPoint; //Command and Control Points / Start Point
   sidc["131700"] = {}; //Command and Control Points / Special Point
   sidc["131800"] = {
     uniqueDesignation: {
@@ -61,7 +148,7 @@ export default function tacticalPoints(sidc) {
   sidc["160204"] = {}; //Maneuver Points / Observation Post/Outpost (specified) / Sensor Outpost /Listening Post
   sidc["160205"] = {}; //Maneuver Points / Observation Post/Outpost (specified) / Combat Outpost
   sidc["160300"] = {}; //Maneuver Points / Target Reference Point
-  sidc["160400"] = {}; //Maneuver Points / Point of Departure
+  sidc["160400"] = actionPoint1; //Maneuver Points / Point of Departure
   sidc["180100"] = {}; //Airspace Control Points / Air Control Point
   sidc["180200"] = {}; //Airspace Control Points / Communications Checkpoint
   sidc["180300"] = {}; //Airspace Control Points / Downed Aircraft Pick–up Point
@@ -212,11 +299,11 @@ export default function tacticalPoints(sidc) {
       fontweight: "bold"
     }
   }; //Fires Areas / Fire Support Station
-  sidc["250100"] = {}; //Fires Points / Firing Point
-  sidc["250200"] = {}; //Fires Points / Hide Point
-  sidc["250300"] = {}; //Fires Points / Launch Point
-  sidc["250400"] = {}; //Fires Points / Reload Point
-  sidc["250500"] = {}; //Fires Points / Survey Control Point
+  sidc["250100"] = actionPoint1; //Fires Points / Firing Point
+  sidc["250200"] = actionPoint1; //Fires Points / Hide Point
+  sidc["250300"] = actionPoint1; //Fires Points / Launch Point
+  sidc["250400"] = actionPoint1; //Fires Points / Reload Point
+  sidc["250500"] = actionPoint1; //Fires Points / Survey Control Point
   sidc["270601"] = {}; //Protection Areas / Obstacle Bypass / Easy
   sidc["270602"] = {}; //Protection Areas / Obstacle Bypass / Difficult
   sidc["270603"] = {}; //Protection Areas / Obstacle Bypass / Impossible
@@ -229,7 +316,7 @@ export default function tacticalPoints(sidc) {
   sidc["280500"] = {}; //Protection Points / Wide Area Antitank Mine
   sidc["280600"] = {}; //Protection Points / Unspecified Mine
   sidc["280700"] = {}; //Protection Points / Booby Trap
-  sidc["280800"] = {}; //Protection Points / Engineer Regulating Point
+  sidc["280800"] = actionPoint; //Protection Points / Engineer Regulating Point
   sidc["280900"] = {}; //Protection Points / Shelter
   sidc["281000"] = {}; //Protection Points / Shelter Above Ground
   sidc["281100"] = {}; //Protection Points / Below Ground Shelter
@@ -239,16 +326,16 @@ export default function tacticalPoints(sidc) {
   sidc["281500"] = {}; //Protection Points / Nuclear Event
   sidc["281600"] = {}; //Protection Points / Nuclear Fallout Producing Event
   sidc["281700"] = {}; //Protection Points / Radiological
-  sidc["281800"] = {}; //Protection Points / General Decontamination Point/Site
-  sidc["281801"] = {}; //Protection Points / General Decontamination Point/Site / Alternate
-  sidc["281802"] = {}; //Protection Points / General Decontamination Point/Site / Equipment
-  sidc["281803"] = {}; //Protection Points / General Decontamination Point/Site / Troop
-  sidc["281804"] = {}; //Protection Points / General Decontamination Point/Site / Equipment/Troop
-  sidc["281805"] = {}; //Protection Points / General Decontamination Point/Site / Operational
-  sidc["281806"] = {}; //Protection Points / General Decontamination Point/Site / Thorough
-  sidc["281807"] = {}; //Protection Points / General Decontamination Point/Site / Main Equipment
-  sidc["281808"] = {}; //Protection Points / General Decontamination Point/Site / Forward Troop
-  sidc["281809"] = {}; //Protection Points / General Decontamination Point/Site / Wounded Personnel
+  sidc["281800"] = actionPoint; //Protection Points / General Decontamination Point/Site
+  sidc["281801"] = actionPoint; //Protection Points / General Decontamination Point/Site / Alternate
+  sidc["281802"] = actionPoint; //Protection Points / General Decontamination Point/Site / Equipment
+  sidc["281803"] = actionPoint; //Protection Points / General Decontamination Point/Site / Troop
+  sidc["281804"] = actionPoint; //Protection Points / General Decontamination Point/Site / Equipment/Troop
+  sidc["281805"] = actionPoint; //Protection Points / General Decontamination Point/Site / Operational
+  sidc["281806"] = actionPoint; //Protection Points / General Decontamination Point/Site / Thorough
+  sidc["281807"] = actionPoint; //Protection Points / General Decontamination Point/Site / Main Equipment
+  sidc["281808"] = actionPoint; //Protection Points / General Decontamination Point/Site / Forward Troop
+  sidc["281809"] = actionPoint; //Protection Points / General Decontamination Point/Site / Wounded Personnel
   sidc["281901"] = {}; //Protection Points / Tetrahedrons, Dragons Teeth, and Other Similar Obstacles / Fixed and Prefabricated
   sidc["281902"] = {}; //Protection Points / Tetrahedrons, Dragons Teeth, and Other Similar Obstacles / Movable
   sidc["281903"] = {}; //Protection Points / Tetrahedrons, Dragons Teeth, and Other Similar Obstacles / Movable and Prefabricated
@@ -273,43 +360,43 @@ export default function tacticalPoints(sidc) {
     }
   }; //Protection Points / Vertical Obstructions / Tower, High
   sidc["320100"] = {}; //Sustainment Points / Ambulance Points
-  sidc["320101"] = {}; //Sustainment Points / Ambulance Points / Ambulance Exchange Point
-  sidc["320102"] = {}; //Sustainment Points / Ambulance Points / Ambulance Control Point
-  sidc["320103"] = {}; //Sustainment Points / Ambulance Points / Ambulance Load Point
-  sidc["320104"] = {}; //Sustainment Points / Ambulance Points / Ambulance Relay Point
-  sidc["320200"] = {}; //Sustainment Points / Ammunition Supply Point
-  sidc["320300"] = {}; //Sustainment Points / Ammunition Transfer and Holding Point
-  sidc["320400"] = {}; //Sustainment Points / Cannibalization Point
-  sidc["320500"] = {}; //Sustainment Points / Casualty Collection Point
-  sidc["320600"] = {}; //Sustainment Points / Civilian Collection Point
-  sidc["320700"] = {}; //Sustainment Points / Detainee Collection Point
-  sidc["320800"] = {}; //Sustainment Points / Enemy Prisoner of War Collection Point
-  sidc["320900"] = {}; //Sustainment Points / Logistics Release Point
-  sidc["321000"] = {}; //Sustainment Points / Maintenance Collection Point (MCP)
-  sidc["321100"] = {}; //Sustainment Points / Medical Evacuation Point (MEDEVAC) Pick-Up Point
-  sidc["321200"] = {}; //Sustainment Points / Rearm, Refuel and Resupply Point (R3P)
-  sidc["321300"] = {}; //Sustainment Points / Refuel on the Move (ROM) Point
-  sidc["321400"] = {}; //Sustainment Points / Traffic Control Post (TCP)
-  sidc["321500"] = {}; //Sustainment Points / Trailer Transfer Point (TTP)
-  sidc["321600"] = {}; //Sustainment Points / Unit Maintenance Collection Point (UNCP)
-  sidc["321700"] = {}; //Sustainment Points / General Supply Point
-  sidc["321701"] = {}; //Sustainment Points / General Supply Point / NATO Class I Supply Point
-  sidc["321702"] = {}; //Sustainment Points / General Supply Point / NATO Class II Supply Point
-  sidc["321703"] = {}; //Sustainment Points / General Supply Point / NATO Class III Supply Point
-  sidc["321704"] = {}; //Sustainment Points / General Supply Point / NATO Class IV Supply Point
-  sidc["321705"] = {}; //Sustainment Points / General Supply Point / NATO Class V Supply Point
+  sidc["320101"] = actionPoint; //Sustainment Points / Ambulance Points / Ambulance Exchange Point
+  sidc["320102"] = actionPoint; //Sustainment Points / Ambulance Points / Ambulance Control Point
+  sidc["320103"] = actionPoint; //Sustainment Points / Ambulance Points / Ambulance Load Point
+  sidc["320104"] = actionPoint; //Sustainment Points / Ambulance Points / Ambulance Relay Point
+  sidc["320200"] = actionPoint; //Sustainment Points / Ammunition Supply Point
+  sidc["320300"] = actionPoint; //Sustainment Points / Ammunition Transfer and Holding Point
+  sidc["320400"] = actionPoint; //Sustainment Points / Cannibalization Point
+  sidc["320500"] = actionPoint; //Sustainment Points / Casualty Collection Point
+  sidc["320600"] = actionPoint; //Sustainment Points / Civilian Collection Point
+  sidc["320700"] = actionPoint; //Sustainment Points / Detainee Collection Point
+  sidc["320800"] = actionPoint; //Sustainment Points / Enemy Prisoner of War Collection Point
+  sidc["320900"] = actionPoint; //Sustainment Points / Logistics Release Point
+  sidc["321000"] = actionPoint; //Sustainment Points / Maintenance Collection Point (MCP)
+  sidc["321100"] = actionPoint; //Sustainment Points / Medical Evacuation Point (MEDEVAC) Pick-Up Point
+  sidc["321200"] = actionPoint; //Sustainment Points / Rearm, Refuel and Resupply Point (R3P)
+  sidc["321300"] = actionPoint; //Sustainment Points / Refuel on the Move (ROM) Point
+  sidc["321400"] = actionPoint; //Sustainment Points / Traffic Control Post (TCP)
+  sidc["321500"] = actionPoint; //Sustainment Points / Trailer Transfer Point (TTP)
+  sidc["321600"] = actionPoint; //Sustainment Points / Unit Maintenance Collection Point (UNCP)
+  sidc["321700"] = actionPoint; //Sustainment Points / General Supply Point
+  sidc["321701"] = actionPoint; //Sustainment Points / General Supply Point / NATO Class I Supply Point
+  sidc["321702"] = actionPoint; //Sustainment Points / General Supply Point / NATO Class II Supply Point
+  sidc["321703"] = actionPoint; //Sustainment Points / General Supply Point / NATO Class III Supply Point
+  sidc["321704"] = actionPoint; //Sustainment Points / General Supply Point / NATO Class IV Supply Point
+  sidc["321705"] = actionPoint; //Sustainment Points / General Supply Point / NATO Class V Supply Point
   sidc["321706"] = {}; //Sustainment Points / General Supply Point / NATO Multiple Class Supply Point
-  sidc["321707"] = {}; //Sustainment Points / General Supply Point / US Class I Supply Point
-  sidc["321708"] = {}; //Sustainment Points / General Supply Point / US Class II Supply Point
-  sidc["321709"] = {}; //Sustainment Points / General Supply Point / US Class III Supply Point
-  sidc["321710"] = {}; //Sustainment Points / General Supply Point / US Class IV Supply Point
-  sidc["321711"] = {}; //Sustainment Points / General Supply Point / US Class V Supply Point
-  sidc["321712"] = {}; //Sustainment Points / General Supply Point / US Class VI Supply Point
-  sidc["321713"] = {}; //Sustainment Points / General Supply Point / US Class VII Supply Point
-  sidc["321714"] = {}; //Sustainment Points / General Supply Point / US Class VIII Supply Point
-  sidc["321715"] = {}; //Sustainment Points / General Supply Point / US Class IX Supply Point
-  sidc["321716"] = {}; //Sustainment Points / General Supply Point / US Class X Supply Point
-  sidc["321800"] = {}; //Sustainment Points / Medical Supply Point
+  sidc["321707"] = actionPoint1; //Sustainment Points / General Supply Point / US Class I Supply Point
+  sidc["321708"] = actionPoint1; //Sustainment Points / General Supply Point / US Class II Supply Point
+  sidc["321709"] = actionPoint1; //Sustainment Points / General Supply Point / US Class III Supply Point
+  sidc["321710"] = actionPoint1; //Sustainment Points / General Supply Point / US Class IV Supply Point
+  sidc["321711"] = actionPoint1; //Sustainment Points / General Supply Point / US Class V Supply Point
+  sidc["321712"] = actionPoint1; //Sustainment Points / General Supply Point / US Class VI Supply Point
+  sidc["321713"] = actionPoint1; //Sustainment Points / General Supply Point / US Class VII Supply Point
+  sidc["321714"] = actionPoint1; //Sustainment Points / General Supply Point / US Class VIII Supply Point
+  sidc["321715"] = actionPoint1; //Sustainment Points / General Supply Point / US Class IX Supply Point
+  sidc["321716"] = actionPoint1; //Sustainment Points / General Supply Point / US Class X Supply Point
+  sidc["321800"] = actionPoint; //Sustainment Points / Medical Supply Point
   sidc["340300"] = {}; //Mission Tasks / Bypass
   sidc["340400"] = {}; //Mission Tasks / Canalize
   sidc["340900"] = {}; //Mission Tasks / Destroy
