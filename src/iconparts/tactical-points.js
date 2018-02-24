@@ -579,6 +579,19 @@ export default function(
     },
     { type: "circle", fill: false, cx: 100, cy: 15, r: 40 }
   ];
+  icn["POINT OF INTEREST – LAUNCH EVENT"] = [
+    icn["TP.POINT OF INTEREST"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 30,
+      fontsize: 40,
+      fontweight: "bold",
+      text: "LE"
+    }
+  ];
   icn["TP.SHIP AREA OF INTEREST (AEGIS ONLY)"] = {
     type: "circle",
     fill: false,

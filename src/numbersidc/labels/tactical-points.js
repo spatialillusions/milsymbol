@@ -122,7 +122,16 @@ export default function tacticalPoints(sidc) {
   sidc["131003"] = actionPoint1; //Command and Control Points / Fly-To-Point / Normal
   sidc["131100"] = actionPoint; //Command and Control Points / Linkup Point
   sidc["131200"] = actionPoint; //Command and Control Points / Passage Point
-  sidc["131300"] = {}; //Command and Control Points / Point of Interest
+  sidc["131300"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 30,
+      fontsize: 40,
+      fontweight: "bold"
+    }
+  }; //Command and Control Points / Point of Interest
   sidc["131301"] = {}; //Command and Control Points / Point of Interest / Launch Event
   sidc["131400"] = actionPoint; //Command and Control Points / Rally Point
   sidc["131500"] = actionPoint; //Command and Control Points / Release Point
@@ -137,7 +146,15 @@ export default function tacticalPoints(sidc) {
       fontsize: 70
     }
   }; //Command and Control Points / Waypoint
-  sidc["131900"] = {}; //Command and Control Points / Airfield
+  sidc["131900"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 180,
+      y: 115,
+      fontsize: 40
+    }
+  }; //Command and Control Points / Airfield
   sidc["132000"] = {}; //Command and Control Points / Target Handover
   sidc["132100"] = {}; //Command and Control Points / Key Terrain
   sidc["160100"] = {}; //Maneuver Points / Observation Post/Outpost (unspecified)
@@ -147,14 +164,46 @@ export default function tacticalPoints(sidc) {
   sidc["160203"] = {}; //Maneuver Points / Observation Post/Outpost (specified) / CBRN Observation Outpost
   sidc["160204"] = {}; //Maneuver Points / Observation Post/Outpost (specified) / Sensor Outpost /Listening Post
   sidc["160205"] = {}; //Maneuver Points / Observation Post/Outpost (specified) / Combat Outpost
-  sidc["160300"] = {}; //Maneuver Points / Target Reference Point
+  sidc["160300"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 110,
+      y: 90,
+      fontsize: 40
+    }
+  }; //Maneuver Points / Target Reference Point
   sidc["160400"] = actionPoint1; //Maneuver Points / Point of Departure
-  sidc["180100"] = {}; //Airspace Control Points / Air Control Point
-  sidc["180200"] = {}; //Airspace Control Points / Communications Checkpoint
+  sidc["180100"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 130,
+      fontsize: 35
+    }
+  }; //Airspace Control Points / Air Control Point
+  sidc["180200"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 130,
+      fontsize: 35
+    }
+  }; //Airspace Control Points / Communications Checkpoint
   sidc["180300"] = {}; //Airspace Control Points / Downed Aircraft Pick–up Point
   sidc["180400"] = {}; //Airspace Control Points / Pop–up Point
   sidc["180500"] = {}; //Airspace Control Points / Air Control Rendezvous
-  sidc["180600"] = {}; //Airspace Control Points / Tactical Air Navigation (TACAN)
+  sidc["180600"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 70,
+      fontsize: 35
+    }
+  }; //Airspace Control Points / Tactical Air Navigation (TACAN)
   sidc["180700"] = {}; //Airspace Control Points / Combat Air Patrol (CAP)Station
   sidc["180800"] = {}; //Airspace Control Points / Airborne Early Warning (AEW) Station
   sidc["180900"] = {}; //Airspace Control Points / ASW (Helo and F/W) Station
@@ -182,11 +231,35 @@ export default function tacticalPoints(sidc) {
   sidc["210300"] = {}; //Maritime Control Points / Defended Asset
   sidc["210400"] = {}; //Maritime Control Points / Drop Point
   sidc["210500"] = {}; //Maritime Control Points / Entry Point
-  sidc["210600"] = {}; //Maritime Control Points / Air Detonation
+  sidc["210600"] = {
+    altitudeDepth: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 70,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Air Detonation
   sidc["210700"] = {}; //Maritime Control Points / Ground Zero
-  sidc["210800"] = {}; //Maritime Control Points / Impact Point
+  sidc["210800"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 120,
+      y: 80,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Impact Point
   sidc["210900"] = {}; //Maritime Control Points / Predicted Impact Point
-  sidc["211000"] = {}; //Maritime Control Points / Launched Torpedo
+  sidc["211000"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 80,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Launched Torpedo
   sidc["211100"] = {}; //Maritime Control Points / Missile Detection Point
   sidc["211200"] = {}; //Maritime Control Points / Acoustic Countermeasure (Decoy)
   sidc["211300"] = {}; //Maritime Control Points / Electronic Countermeasures (ECM) Decoy
@@ -204,7 +277,15 @@ export default function tacticalPoints(sidc) {
   sidc["212500"] = {}; //Maritime Control Points / Electromagnetic – Magnetic Anomaly Detection (MAD)
   sidc["212600"] = {}; //Maritime Control Points / Optical Fix
   sidc["212700"] = {}; //Maritime Control Points / Formation
-  sidc["212800"] = {}; //Maritime Control Points / Harbor
+  sidc["212800"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 115,
+      fontsize: 45
+    }
+  }; //Maritime Control Points / Harbor
   sidc["212900"] = {}; //Maritime Control Points / Harbor Entrance Point
   sidc["212901"] = {}; //Maritime Control Points / Harbor Entrance Point / A
   sidc["212902"] = {}; //Maritime Control Points / Harbor Entrance Point / Q
@@ -215,22 +296,184 @@ export default function tacticalPoints(sidc) {
   sidc["213200"] = {}; //Maritime Control Points / Search Area
   sidc["213300"] = {}; //Maritime Control Points / Search Center
   sidc["213400"] = {}; //Maritime Control Points / Navigational Reference Point
-  sidc["213500"] = {}; //Maritime Control Points / Sonobuoy
-  sidc["213501"] = {}; //Maritime Control Points / Sonobuoy / Ambient Noise
-  sidc["213502"] = {}; //Maritime Control Points / Sonobuoy / Air Transportable Communication
-  sidc["213503"] = {}; //Maritime Control Points / Sonobuoy / Barra
-  sidc["213504"] = {}; //Maritime Control Points / Sonobuoy / Bathythermograph Transmitting
-  sidc["213505"] = {}; //Maritime Control Points / Sonobuoy / Command Active Multi-Beam (CAMBS)
-  sidc["213506"] = {}; //Maritime Control Points / Sonobuoy / Command Active Sonobuoy Directional Command Active Sonobuoy System (CASS)
-  sidc["213507"] = {}; //Maritime Control Points / Sonobuoy / Directional Frequency Analysis and Recording (DIFAR)
-  sidc["213508"] = {}; //Maritime Control Points / Sonobuoy / Directional Command Active Sonobuoy System (DICASS)
-  sidc["213509"] = {}; //Maritime Control Points / Sonobuoy / Expendable Reliable Acoustic Path Sonobuoy (ERAPS)
+  sidc["213500"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 140,
+      y: 70,
+      fontsize: 35
+    },
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 105,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Sonobuoy
+  sidc["213501"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 140,
+      y: 70,
+      fontsize: 35
+    },
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 105,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Sonobuoy / Ambient Noise
+  sidc["213502"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 105,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Sonobuoy / Air Transportable Communication
+  sidc["213503"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 105,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Sonobuoy / Barra
+  sidc["213504"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 140,
+      y: 70,
+      fontsize: 35
+    },
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 105,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Sonobuoy / Bathythermograph Transmitting
+  sidc["213505"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 105,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Sonobuoy / Command Active Multi-Beam (CAMBS)
+  sidc["213506"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 105,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Sonobuoy / Command Active Sonobuoy Directional Command Active Sonobuoy System (CASS)
+  sidc["213507"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 140,
+      y: 70,
+      fontsize: 35
+    },
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 105,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Sonobuoy / Directional Frequency Analysis and Recording (DIFAR)
+  sidc["213508"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 140,
+      y: 70,
+      fontsize: 35
+    },
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 105,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Sonobuoy / Directional Command Active Sonobuoy System (DICASS)
+  sidc["213509"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 105,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Sonobuoy / Expendable Reliable Acoustic Path Sonobuoy (ERAPS)
   sidc["213510"] = {}; //Maritime Control Points / Sonobuoy / Expired
-  sidc["213511"] = {}; //Maritime Control Points / Sonobuoy / Kingpin
-  sidc["213512"] = {}; //Maritime Control Points / Sonobuoy / Low Frequency Analysis and Recording (LOFAR)
-  sidc["213513"] = {}; //Maritime Control Points / Sonobuoy / Pattern Center
-  sidc["213514"] = {}; //Maritime Control Points / Sonobuoy / Range Only
-  sidc["213515"] = {}; //Maritime Control Points / Sonobuoy / Vertical Line Array Directional Frequency Analysis and Recording (DIFAR)
+  sidc["213511"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 105,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Sonobuoy / Kingpin
+  sidc["213512"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 105,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Sonobuoy / Low Frequency Analysis and Recording (LOFAR)
+  sidc["213513"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 105,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Sonobuoy / Pattern Center
+  sidc["213514"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 105,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Sonobuoy / Range Only
+  sidc["213515"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 140,
+      y: 70,
+      fontsize: 35
+    },
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 105,
+      fontsize: 35
+    }
+  }; //Maritime Control Points / Sonobuoy / Vertical Line Array Directional Frequency Analysis and Recording (DIFAR)
   sidc["213600"] = {}; //Maritime Control Points / Reference Point
   sidc["213700"] = {}; //Maritime Control Points / Special Point
   sidc["213800"] = {}; //Maritime Control Points / Navigational Reference Point(Points)
@@ -243,14 +486,58 @@ export default function tacticalPoints(sidc) {
   sidc["214600"] = {}; //Maritime Control Points / Pre-Landfall Waypoint
   sidc["214700"] = {}; //Maritime Control Points / Estimated Position (EP)
   sidc["214800"] = {}; //Maritime Control Points / Waypoint
-  sidc["214900"] = {}; //Maritime Control Points / General Sea Subsurface Station
+  sidc["214900"] = {
+    dtg: {
+      stroke: false,
+      textanchor: "start",
+      x: 180,
+      y: 75,
+      fontsize: 30
+    },
+    dtg1: {
+      stroke: false,
+      textanchor: "start",
+      x: 180,
+      y: 100,
+      fontsize: 30
+    },
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 180,
+      y: 125,
+      fontsize: 30
+    }
+  }; //Maritime Control Points / General Sea Subsurface Station
   sidc["215000"] = {}; //Maritime Control Points / Submarine Sea Subsurface Station
   sidc["215100"] = {}; //Maritime Control Points / Submarine Antisubmarine Warfare Sea Subsurface Station
   sidc["215200"] = {}; //Maritime Control Points / Unmanned Underwater Vehicle Sea Subsurface Station
   sidc["215300"] = {}; //Maritime Control Points / Antisubmarine Warfare (ASW) Unmanned Underwater Vehicle Sea Subsurface Station
   sidc["215400"] = {}; //Maritime Control Points / Mine Warfare Unmanned Underwater Vehicle Sea Subsurface Station
   sidc["215500"] = {}; //Maritime Control Points / Sea Surface Warfare Unmanned Underwater Vehicle Subsurface Station
-  sidc["215600"] = {}; //Maritime Control Points / General Sea Surface Station
+  sidc["215600"] = {
+    dtg: {
+      stroke: false,
+      textanchor: "start",
+      x: 180,
+      y: 75,
+      fontsize: 30
+    },
+    dtg1: {
+      stroke: false,
+      textanchor: "start",
+      x: 180,
+      y: 100,
+      fontsize: 30
+    },
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 180,
+      y: 125,
+      fontsize: 30
+    }
+  }; //Maritime Control Points / General Sea Surface Station
   sidc["215700"] = {}; //Maritime Control Points / Antisubmarine Warfare (ASW) Sea Surface Station
   sidc["215800"] = {}; //Maritime Control Points / Mine Warfare Sea Surface Station
   sidc["215900"] = {}; //Maritime Control Points / Non-Combatant Sea Surface Station
@@ -286,8 +573,38 @@ export default function tacticalPoints(sidc) {
   sidc["219000"] = {}; //Maritime Control Points / Bottom Return/Non-Mine, Mine-Like Bottom Object (NOMBO)/Installation Manmade / "Sea Anomaly-(Wake, Current, Knuckle)"
   sidc["219100"] = {}; //Maritime Control Points / Bottom Return/Non-Mine, Mine-Like Bottom Object (NOMBO)/Installation Manmade / Bottom Return/Non-MILCO, Wreck, Dangerous
   sidc["219200"] = {}; //Maritime Control Points / Bottom Return/Non-Mine, Mine-Like Bottom Object (NOMBO)/Installation Manmade / Bottom Return/Non-MILCO, Wreck, Non Dangerous
-  sidc["240601"] = {}; //Fires Areas / Point Targets / Point or Single Target
-  sidc["240602"] = {}; //Fires Areas / Point Targets / Nuclear Target
+  sidc["240601"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 120,
+      y: 145,
+      fontsize: 40
+    },
+    altitudeDepth: {
+      stroke: false,
+      textanchor: "end",
+      x: 80,
+      y: 145,
+      fontsize: 40
+    },
+    targetNumber: {
+      stroke: false,
+      textanchor: "start",
+      x: 120,
+      y: 80,
+      fontsize: 40
+    }
+  }; //Fires Areas / Point Targets / Point or Single Target
+  sidc["240602"] = {
+    targetNumber: {
+      stroke: false,
+      textanchor: "start",
+      x: 120,
+      y: 80,
+      fontsize: 40
+    }
+  }; //Fires Areas / Point Targets / Nuclear Target
   sidc["240603"] = {}; //Fires Areas / Point Targets / Target-Recorded
   sidc["240900"] = {
     uniqueDesignation: {

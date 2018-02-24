@@ -52,7 +52,7 @@ export default {
       bbox["131200"] = { x1: 60, x2: 140, y1: -60 };
       sidc["131300"] = icn["TP.POINT OF INTEREST"]; //Command and Control Points / Point of Interest
       bbox["131300"] = { x1: 50, x2: 150, y1: -25 };
-      sidc["131301"] = icn["TP.POINT OF INTEREST"]; //Command and Control Points / Point of Interest / Launch Event
+      sidc["131301"] = icn["POINT OF INTEREST – LAUNCH EVENT"]; //Command and Control Points / Point of Interest / Launch Event
       bbox["131301"] = { x1: 50, x2: 150, y1: -25 };
       sidc["131400"] = icn["TP.ACTION RALLY POINT"]; //Command and Control Points / Rally Point
       bbox["131400"] = { x1: 60, x2: 140, y1: -60 };
