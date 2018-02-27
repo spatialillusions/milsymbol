@@ -46,7 +46,7 @@ export function metadata(ms, metadata, mapping) {
 
   metadata.context = mapping.context[parseInt(this.options.sidc.substr(2, 1))];
   metadata.affiliation = affiliationMapping[standardIdentity2];
-  metadata.dimension = dimensionMapping[symbolSet];
+  metadata.dimension = dimensionMapping[symbolSet] || "";
 
   // Not equipment symbolsets
   if (
