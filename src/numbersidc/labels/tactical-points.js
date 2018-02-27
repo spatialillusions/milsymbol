@@ -155,8 +155,26 @@ export default function tacticalPoints(sidc) {
       fontsize: 40
     }
   }; //Command and Control Points / Airfield
-  sidc["132000"] = {}; //Command and Control Points / Target Handover
-  sidc["132100"] = {}; //Command and Control Points / Key Terrain
+  sidc["132000"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 120,
+      y: 80,
+      fontsize: 40
+    }
+  }; //Command and Control Points / Target Handover
+  sidc["132100"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 100,
+      y: 110,
+      fontsize: 35,
+      fill: "rgb(255,255,255)",
+      fontweight: "bold"
+    }
+  }; //Command and Control Points / Key Terrain
   sidc["160100"] = {}; //Maneuver Points / Observation Post/Outpost (unspecified)
   sidc["160200"] = {}; //Maneuver Points / Observation Post/Outpost (specified)
   sidc["160201"] = {}; //Maneuver Points / Observation Post/Outpost (specified) / Reconnaissance Outpost
@@ -638,11 +656,234 @@ export default function tacticalPoints(sidc) {
   sidc["281000"] = {}; //Protection Points / Shelter Above Ground
   sidc["281100"] = {}; //Protection Points / Below Ground Shelter
   sidc["281200"] = {}; //Protection Points / Fort
-  sidc["281300"] = {}; //Protection Points / Chemical Event
-  sidc["281400"] = {}; //Protection Points / Biological Event
-  sidc["281500"] = {}; //Protection Points / Nuclear Event
-  sidc["281600"] = {}; //Protection Points / Nuclear Fallout Producing Event
-  sidc["281700"] = {}; //Protection Points / Radiological
+  sidc["281300"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 160,
+      y: 30,
+      fontsize: 35
+    },
+    dtg: { stroke: false, textanchor: "end", x: 40, y: 30, fontsize: 35 },
+    hostile: {
+      stroke: false,
+      textanchor: "start",
+      x: 160,
+      y: 90,
+      fontsize: 35
+    },
+    location: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 135,
+      fontsize: 35
+    },
+    quantity: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 35
+    },
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "end",
+      x: 40,
+      y: 90,
+      fontsize: 35
+    }
+  }; //Protection Points / Chemical Event
+  sidc["281301"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 160,
+      y: 30,
+      fontsize: 35
+    },
+    dtg: { stroke: false, textanchor: "end", x: 40, y: 30, fontsize: 35 },
+    hostile: {
+      stroke: false,
+      textanchor: "start",
+      x: 160,
+      y: 90,
+      fontsize: 35
+    },
+    location: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 135,
+      fontsize: 35
+    },
+    quantity: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 35
+    },
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "end",
+      x: 40,
+      y: 90,
+      fontsize: 35
+    }
+  };
+  sidc["281400"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 160,
+      y: 30,
+      fontsize: 35
+    },
+    dtg: { stroke: false, textanchor: "end", x: 40, y: 30, fontsize: 35 },
+    hostile: {
+      stroke: false,
+      textanchor: "start",
+      x: 160,
+      y: 90,
+      fontsize: 35
+    },
+    location: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 135,
+      fontsize: 35
+    },
+    quantity: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 35
+    },
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "end",
+      x: 40,
+      y: 90,
+      fontsize: 35
+    }
+  }; //Protection Points / Biological Event
+  sidc["281500"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 160,
+      y: 30,
+      fontsize: 35
+    },
+    dtg: { stroke: false, textanchor: "end", x: 40, y: 30, fontsize: 35 },
+    hostile: {
+      stroke: false,
+      textanchor: "start",
+      x: 160,
+      y: 90,
+      fontsize: 35
+    },
+    location: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 135,
+      fontsize: 35
+    },
+    quantity: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 35
+    },
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "end",
+      x: 40,
+      y: 90,
+      fontsize: 35
+    }
+  }; //Protection Points / Nuclear Event
+  sidc["281600"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 160,
+      y: 30,
+      fontsize: 35
+    },
+    dtg: { stroke: false, textanchor: "end", x: 40, y: 30, fontsize: 35 },
+    hostile: {
+      stroke: false,
+      textanchor: "start",
+      x: 160,
+      y: 90,
+      fontsize: 35
+    },
+    location: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 135,
+      fontsize: 35
+    },
+    quantity: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 35
+    },
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "end",
+      x: 40,
+      y: 90,
+      fontsize: 35
+    }
+  }; //Protection Points / Nuclear Fallout Producing Event
+  sidc["281700"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 160,
+      y: 30,
+      fontsize: 35
+    },
+    dtg: { stroke: false, textanchor: "end", x: 40, y: 30, fontsize: 35 },
+    hostile: {
+      stroke: false,
+      textanchor: "start",
+      x: 160,
+      y: 90,
+      fontsize: 35
+    },
+    location: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 135,
+      fontsize: 35
+    },
+    quantity: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 35
+    },
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "end",
+      x: 40,
+      y: 90,
+      fontsize: 35
+    }
+  }; //Protection Points / Radiological
   sidc["281800"] = actionPoint; //Protection Points / General Decontamination Point/Site
   sidc["281801"] = actionPoint; //Protection Points / General Decontamination Point/Site / Alternate
   sidc["281802"] = actionPoint; //Protection Points / General Decontamination Point/Site / Equipment

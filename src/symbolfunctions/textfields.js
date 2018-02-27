@@ -48,6 +48,7 @@ export default function textfields(ms) {
           }
           gbbox.merge(labelbox);
           var text = { type: "text", fontfamily: fontFamily, fill: fontColor };
+          if (lbl.hasOwnProperty("fill")) text.fill = lbl.fill;
           if (lbl.hasOwnProperty("stroke")) text.stroke = lbl.stroke;
           if (lbl.hasOwnProperty("textanchor"))
             text.textanchor = lbl.textanchor;
