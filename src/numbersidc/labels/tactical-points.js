@@ -59,6 +59,38 @@ export default function tacticalPoints(sidc) {
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
   };
+  var actionPoint2 = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -70,
+      fontsize: 40
+    },
+    hostile: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 45,
+      fontsize: 40
+    },
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 0,
+      fontsize: 80
+    },
+    uniqueDesignation1: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 20,
+      fontsize: 30
+    },
+    dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+  };
   sidc["130100"] = {
     additionalInformation: {
       stroke: false,
@@ -937,12 +969,12 @@ export default function tacticalPoints(sidc) {
   sidc["321400"] = actionPoint; //Sustainment Points / Traffic Control Post (TCP)
   sidc["321500"] = actionPoint; //Sustainment Points / Trailer Transfer Point (TTP)
   sidc["321600"] = actionPoint; //Sustainment Points / Unit Maintenance Collection Point (UNCP)
-  sidc["321700"] = actionPoint; //Sustainment Points / General Supply Point
-  sidc["321701"] = actionPoint; //Sustainment Points / General Supply Point / NATO Class I Supply Point
-  sidc["321702"] = actionPoint; //Sustainment Points / General Supply Point / NATO Class II Supply Point
-  sidc["321703"] = actionPoint; //Sustainment Points / General Supply Point / NATO Class III Supply Point
-  sidc["321704"] = actionPoint; //Sustainment Points / General Supply Point / NATO Class IV Supply Point
-  sidc["321705"] = actionPoint; //Sustainment Points / General Supply Point / NATO Class V Supply Point
+  sidc["321700"] = actionPoint2; //Sustainment Points / General Supply Point
+  sidc["321701"] = actionPoint2; //Sustainment Points / General Supply Point / NATO Class I Supply Point
+  sidc["321702"] = actionPoint2; //Sustainment Points / General Supply Point / NATO Class II Supply Point
+  sidc["321703"] = actionPoint2; //Sustainment Points / General Supply Point / NATO Class III Supply Point
+  sidc["321704"] = actionPoint2; //Sustainment Points / General Supply Point / NATO Class IV Supply Point
+  sidc["321705"] = actionPoint2; //Sustainment Points / General Supply Point / NATO Class V Supply Point
   sidc["321706"] = {}; //Sustainment Points / General Supply Point / NATO Multiple Class Supply Point
   sidc["321707"] = actionPoint1; //Sustainment Points / General Supply Point / US Class I Supply Point
   sidc["321708"] = actionPoint1; //Sustainment Points / General Supply Point / US Class II Supply Point
@@ -954,7 +986,7 @@ export default function tacticalPoints(sidc) {
   sidc["321714"] = actionPoint1; //Sustainment Points / General Supply Point / US Class VIII Supply Point
   sidc["321715"] = actionPoint1; //Sustainment Points / General Supply Point / US Class IX Supply Point
   sidc["321716"] = actionPoint1; //Sustainment Points / General Supply Point / US Class X Supply Point
-  sidc["321800"] = actionPoint; //Sustainment Points / Medical Supply Point
+  sidc["321800"] = actionPoint2; //Sustainment Points / Medical Supply Point
   sidc["340300"] = {}; //Mission Tasks / Bypass
   sidc["340400"] = {}; //Mission Tasks / Canalize
   sidc["340900"] = {}; //Mission Tasks / Destroy
