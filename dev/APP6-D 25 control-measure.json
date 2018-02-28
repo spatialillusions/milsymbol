@@ -2107,7 +2107,7 @@
       "entity": "Maritime Control Points",
       "entity type": "Navigational",
       "code": "218400",
-      "geometry": "Point",
+      "geometry": "Line",
       "remarks": ""
     },
     {
