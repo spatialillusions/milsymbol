@@ -514,13 +514,13 @@ export default {
 
       sidc["350000"] = []; // N/A
       sidc["350100"] = []; // N/A
-      sidc["350101"] = icn["TODO"];
-      sidc["350102"] = icn["TODO"];
-      sidc["350103"] = icn["TODO"];
+      sidc["350101"] = icn["MAN MADE SPACE DEBRIS SMALL"];
+      sidc["350102"] = icn["MAN MADE SPACE DEBRIS MEDIUM"];
+      sidc["350103"] = icn["MAN MADE SPACE DEBRIS BIG"];
       sidc["350200"] = []; // N/A
-      sidc["350201"] = icn["TODO"];
-      sidc["350202"] = icn["TODO"];
-      sidc["350203"] = icn["TODO"];
+      sidc["350201"] = icn["NATURAL SPACE DEBRIS SMALL"];
+      sidc["350202"] = icn["NATURAL SPACE DEBRIS MEDIUM"];
+      sidc["350203"] = icn["NATURAL SPACE DEBRIS BIG"];
 
       sIdm1["13"] = [icn["TODO"]];
       sIdm1["14"] = [icn["TODO"]];

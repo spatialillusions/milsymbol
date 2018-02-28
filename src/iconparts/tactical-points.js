@@ -3573,6 +3573,57 @@ export default function(
       text: "EP"
     }
   ];
+
+  icn["MAN MADE SPACE DEBRIS SMALL"] = [
+    { type: "circle", cx: 100, cy: 100, r: 17 },
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 50 },
+    {
+      type: "path",
+      fill: false,
+      d:
+        "M 60,110 75,100 60,90 m 50,50 -10,-15 -10,15 m 50,-50 -15,10 15,10 M 90,60 100,75 110,60"
+    }
+  ];
+  icn["MAN MADE SPACE DEBRIS MEDIUM"] = [
+    { type: "circle", cx: 100, cy: 100, r: 17 },
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 50 }
+  ];
+  icn["MAN MADE SPACE DEBRIS BIG"] = [
+    { type: "circle", cx: 100, cy: 100, r: 17 },
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 50 },
+    {
+      type: "path",
+      fill: false,
+      d:
+        "m 90,75 10,-15 10,15 M 75,110 60,100 75,90 m 35,35 -10,15 -10,-15 m 35,-35 15,10 -15,10"
+    }
+  ];
+
+  icn["NATURAL SPACE DEBRIS SMALL"] = [
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 17 },
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 50 },
+    {
+      type: "path",
+      fill: false,
+      d:
+        "M 60,110 75,100 60,90 m 50,50 -10,-15 -10,15 m 50,-50 -15,10 15,10 M 90,60 100,75 110,60"
+    }
+  ];
+  icn["NATURAL SPACE DEBRIS MEDIUM"] = [
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 17 },
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 50 }
+  ];
+  icn["NATURAL SPACE DEBRIS BIG"] = [
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 17 },
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 50 },
+    {
+      type: "path",
+      fill: false,
+      d:
+        "m 90,75 10,-15 10,15 M 75,110 60,100 75,90 m 35,35 -10,15 -10,-15 m 35,-35 15,10 -15,10"
+    }
+  ];
+
   /*
   function defaultProperties(instructions) {
     if (typeof instructions === "object") {
