@@ -568,7 +568,7 @@
       "geometry": "Area",
       "remarks": ""
     },
-    { "code": "150400", "remarks": "Reserved for future use" },
+    { "code": "150400", "geometry": "", "remarks": "Reserved for future use" },
     {
       "entity": "Manoeuvre Areas",
       "entity type": "Action Area",
@@ -848,7 +848,7 @@
       "entity": "Manoeuvre Points",
       "entity type": "Observation Post/Outpost (specified)",
       "code": "160200",
-      "geometry": "Point",
+      "geometry": "",
       "remarks": "For training or hierarchical purposes only"
     },
     {

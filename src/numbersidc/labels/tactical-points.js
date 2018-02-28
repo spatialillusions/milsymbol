@@ -224,6 +224,7 @@ export default function tacticalPoints(sidc) {
     }
   }; //Maneuver Points / Target Reference Point
   sidc["160400"] = actionPoint1; //Maneuver Points / Point of Departure
+  sidc["180000"] = {};
   sidc["180100"] = {
     uniqueDesignation: {
       stroke: false,
@@ -268,6 +269,7 @@ export default function tacticalPoints(sidc) {
   sidc["181800"] = {}; //Airspace Control Points / Tomcat
   sidc["181900"] = {}; //Airspace Control Points / Rescue
   sidc["182000"] = {}; //Airspace Control Points / Unmanned Aerial System (UAS/UA)
+  sidc["182100"] = {};
   sidc["182200"] = {}; //Aircraft (VTUA)" / Orbit
   sidc["182300"] = {}; //Aircraft (VTUA)" / Orbit – Figure Eight
   sidc["182400"] = {}; //Aircraft (VTUA)" / Orbit – Race Track

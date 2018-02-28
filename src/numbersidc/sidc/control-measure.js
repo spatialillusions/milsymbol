@@ -71,7 +71,7 @@ export default {
       sidc["132100"] = icn["TP.KEY TERRAIN"]; //Command and Control Points / Key Terrain
       sidc["160100"] = icn["TP.OBSERVATION POST/OUTPOST"]; //Maneuver Points / Observation Post/Outpost (unspecified)
       bbox["160100"] = { x1: 50, x2: 150, y1: 40, y2: 150 };
-      sidc["160200"] = []; // N/A //Maneuver Points / Observation Post/Outpost (specified)
+      //sidc["160200"] = []; // N/A //Maneuver Points / Observation Post/Outpost (specified)
       sidc["160201"] = icn["TP.OBSERVATION POST/RECONNAISSANCE"]; //Maneuver Points / Observation Post/Outpost (specified) / Reconnaissance Outpost
       bbox["160201"] = { x1: 50, x2: 150, y1: 40, y2: 150 };
       sidc["160202"] = icn["TP.FORWARD OBSERVER POSITION"]; //Maneuver Points / Observation Post/Outpost (specified) / Forward Observer/Spotter Outpost/Position
@@ -430,7 +430,7 @@ export default {
       bbox["282001"] = { x1: 50, x2: 150, y1: 30, y2: 120 };
       sidc["282002"] = icn["TP.TOWER HIGH"]; //Protection Points / Vertical Obstructions / Tower, High
       bbox["282002"] = { x1: 50, x2: 150, y1: 30, y2: 120 };
-      sidc["320100"] = []; // N/A //Sustainment Points / Ambulance Points
+      //sidc["320100"] = []; // N/A //Sustainment Points / Ambulance Points
       sidc["320101"] = icn["TP.AMBULANCE EXCHANGE POINT"]; //Sustainment Points / Ambulance Points / Ambulance Exchange Point
       bbox["320101"] = { x1: 60, x2: 140, y1: -60 };
       sidc["320102"] = icn["TP.AMBULANCE CONTROL POINT"]; //Sustainment Points / Ambulance Points / Ambulance Control Point
@@ -512,12 +512,12 @@ export default {
       sidc["341600"] = icn["TP.NEUTRALIZE"]; //Mission Tasks / Neutralize
       bbox["341600"] = { x1: 0, x2: 200, y1: 40, y2: 160 };
 
-      sidc["350000"] = []; // N/A
-      sidc["350100"] = []; // N/A
+      //sidc["350000"] = []; // N/A
+      //sidc["350100"] = []; // N/A
       sidc["350101"] = icn["MAN MADE SPACE DEBRIS SMALL"];
       sidc["350102"] = icn["MAN MADE SPACE DEBRIS MEDIUM"];
       sidc["350103"] = icn["MAN MADE SPACE DEBRIS BIG"];
-      sidc["350200"] = []; // N/A
+      //sidc["350200"] = []; // N/A
       sidc["350201"] = icn["NATURAL SPACE DEBRIS SMALL"];
       sidc["350202"] = icn["NATURAL SPACE DEBRIS MEDIUM"];
       sidc["350203"] = icn["NATURAL SPACE DEBRIS BIG"];
