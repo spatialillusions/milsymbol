@@ -538,7 +538,7 @@ td {
       fillOpacity </td><td>           <input id="FillOpacity" type="range" min="0" max="1" step="0.1" value="1" onchange="drawSymbol();this.nextSibling.innerHTML = this.value;"/><span>1</span>
       </td><td> The opacity of the symbol fill color. </td></tr><tr><td>
       frame </td><td> 	<input type="checkbox" id="Frame" checked onchange="drawSymbol();"> </td><td> Should your symbol have a frame. All symbols support to be unframed, not just the ones specified in 2525B. </td></tr><tr><td>
-      hqStafLength </td><td> <input id="hqStafLength" type="range" min="0" max="100" step="1" value="100" onchange="drawSymbol();this.nextSibling.innerHTML = this.value;"/><span>100</span> </td><td> Overrides the global Headquarters staf length </td></tr><tr><td>
+      hqStaffLength </td><td> <input id="hqStaffLength" type="range" min="0" max="100" step="1" value="100" onchange="drawSymbol();this.nextSibling.innerHTML = this.value;"/><span>100</span> </td><td> Overrides the global Headquarters staf length </td></tr><tr><td>
       icon </td><td> <input type="checkbox" id="DisplayIcon" checked onchange="drawSymbol();"></td><td> Should your symbol have an icon. </td></tr><tr><td>
       infoColor </td><td> <select id="InfoColor" onchange="drawSymbol()" class="baseproperty">
           <option value="" SELECTED>-</option>
@@ -893,7 +893,7 @@ td {
     options.alternateMedal =  document.getElementById("alternateMedal").checked;
 		options.colorMode = document.getElementById("ColorMode")[document.getElementById("ColorMode").selectedIndex].value;
 		options.monoColor = document.getElementById("MonoColor")[document.getElementById("MonoColor").selectedIndex].value;
-    options.hqStafLength = document.getElementById("hqStafLength").value;
+    options.hqStaffLength = document.getElementById("hqStaffLength").value;
     options.infoColor = document.getElementById("InfoColor")[document.getElementById("InfoColor").selectedIndex].value;
     options.infoSize = document.getElementById("infoSize").value;
     options.frame =  document.getElementById("Frame").checked;

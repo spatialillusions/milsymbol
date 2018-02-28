@@ -38,7 +38,7 @@ type SymbolOptions = {
   fillOpacity?: number;
   frame?: boolean;
   frameColor?: ColorMode | string;
-  hqStafLength?: number;
+  hqStaffLength?: number;
   icon?: boolean;
   iconColor?: ColorMode | string;
   infoColor?: ColorMode | string;

@@ -8,7 +8,7 @@ var ms = new function() {
   };
   this._getIcons = {};
   this._getMetadata = {};
-  this._hqStafLength = 100;
+  this._hqStaffLength = 100;
   this._iconCache = {}; // A cache of icn to speed stuff up...
   this._iconParts = [];
   this._labelCache = {}; // A cache of label overrides to speed stuff up...
@@ -126,8 +126,8 @@ ms.getColorMode = function(mode) {
 ms.getDashArrays = function() {
   return this._dashArrays;
 };
-ms.getHqStafLength = function() {
-  return this._hqStafLength;
+ms.getHqStaffLength = function() {
+  return this._hqStaffLength;
 };
 
 ms.getSymbolParts = function() {
@@ -162,9 +162,9 @@ ms.setDashArrays = function(pending, anticipated, feintDummy) {
   this._dashArrays.feintDummy = feintDummy;
   return this._dashArrays;
 };
-ms.setHqStafLength = function(len) {
-  this._hqStafLength = len;
-  return this._hqStafLength;
+ms.setHqStaffLength = function(len) {
+  this._hqStaffLength = len;
+  return this._hqStaffLength;
 };
 ms.setSymbolParts = function(parts) {
   this._symbolParts = parts;

@@ -93,10 +93,10 @@ export default function setOptions() {
   };
   //If it is a headquarters the anchor should be at the end of the staf
   if (this.metadata.headquarters) {
-    var hqStafLength = this.style.hqStafLength || ms._hqStafLength;
+    var hqStaffLength = this.style.hqStaffLength || ms._hqStaffLength;
     anchor = {
       x: this.metadata.baseGeometry.bbox.x1,
-      y: this.metadata.baseGeometry.bbox.y2 + hqStafLength
+      y: this.metadata.baseGeometry.bbox.y2 + hqStaffLength
     };
   }
 

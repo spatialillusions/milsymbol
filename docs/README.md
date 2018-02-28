@@ -145,7 +145,7 @@ different ways.
 | fontfamily           | String              | 'Arial'                         | Changes the font familiy for all texts surrounding the icon.                                                                                                                                                                                                                                                                                                                                                                                             |
 | frame                | Boolean             | true                            | Should your symbol have a frame. All symbols support to be unframed, not just the ones specified in 2525B.                                                                                                                                                                                                                                                                                                                                               |
 | frameColor           | ColorMode           | false                           | Changes the color of the frame of the symbol                                                                                                                                                                                                                                                                                                                                                                                                             |
-| hqStafLength         | Number              | undefined                       | Overrides the global Headquarters staf length                                                                                                                                                                                                                                                                                                                                                                                                            |
+| hqStaffLength        | Number              | undefined                       | Overrides the global Headquarters staf length                                                                                                                                                                                                                                                                                                                                                                                                            |
 | icon                 | Boolean             | true                            | Should your symbol have an icon.                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | iconColor            | ColorMode           | false                           | Changes the color of the icon of the symbol                                                                                                                                                                                                                                                                                                                                                                                                              |
 | infoColor            | ColorMode or String | Same color as the frame outline | This will be used for texts in the text fields surrounding the symbol. It is a ColorMode, or a string color that is either a keyword or a numerical RGB specification.                                                                                                                                                                                                                                                                                   |
@@ -819,7 +819,7 @@ Object {
 }
 ```
 
-## ms.getHqStafLength()
+## ms.getHqStaffLength()
 
 Gets the length of the HQ staf used for HQ symbols.
 
@@ -913,7 +913,7 @@ Object {
 }
 ```
 
-## ms.setHqStafLength(staf_length)
+## ms.setHqStaffLength(staff_length)
 
 ```javascript
 staf_length: Number;

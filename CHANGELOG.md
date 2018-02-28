@@ -61,7 +61,7 @@
 ### Fixed
 
 * The option infoColor was not set when used, this is now fixed, again.
-* The option hqStafLength was not set when used, this is now fixed.
+* The option hqStaffLength was not set when used, this is now fixed.
 * Fill opacity affected outline opacity as well in canvas output.
 
 ### Security

@@ -50,7 +50,7 @@ function Symbol() {
   this.style.fontfamily = "Arial"; // The font family to use
   this.style.frame = true; // Should the icon be framed
   this.style.frameColor = "";
-  this.style.hqStafLength = 0; // The default length of the HQ staf
+  this.style.hqStaffLength = 0; // The default length of the HQ staf
   this.style.strokeWidth = 4; // The stroke width of he icon frame.
   this.style.outlineColor = "rgb(239, 239, 239)"; // Color of the outline
   this.style.outlineWidth = 0; // Width of the outline.

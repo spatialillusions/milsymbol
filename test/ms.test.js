@@ -27,7 +27,7 @@ describe("ms", () => {
     getDashArrays: {
       returns: Object
     },
-    getHqStafLength: {
+    getHqStaffLength: {
       returns: Number
     },
     getSymbolParts: {
@@ -47,7 +47,7 @@ describe("ms", () => {
     setDashArrays: {
       returns: Object
     },
-    setHqStafLength: {
+    setHqStaffLength: {
       parameters: [100],
       returns: Number
     },
