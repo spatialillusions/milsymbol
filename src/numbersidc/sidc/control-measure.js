@@ -71,7 +71,8 @@ export default {
       sidc["132100"] = icn["TP.KEY TERRAIN"]; //Command and Control Points / Key Terrain
       sidc["160100"] = icn["TP.OBSERVATION POST/OUTPOST"]; //Maneuver Points / Observation Post/Outpost (unspecified)
       bbox["160100"] = { x1: 50, x2: 150, y1: 40, y2: 150 };
-      //sidc["160200"] = []; // N/A //Maneuver Points / Observation Post/Outpost (specified)
+      sidc["160200"] = icn["TP.OBSERVATION POST/OUTPOST"]; // N/A //Maneuver Points / Observation Post/Outpost (specified)
+      bbox["160200"] = { x1: 50, x2: 150, y1: 40, y2: 150 };
       sidc["160201"] = icn["TP.OBSERVATION POST/RECONNAISSANCE"]; //Maneuver Points / Observation Post/Outpost (specified) / Reconnaissance Outpost
       bbox["160201"] = { x1: 50, x2: 150, y1: 40, y2: 150 };
       sidc["160202"] = icn["TP.FORWARD OBSERVER POSITION"]; //Maneuver Points / Observation Post/Outpost (specified) / Forward Observer/Spotter Outpost/Position
@@ -252,6 +253,8 @@ export default {
       bbox["213800"] = { x1: 40, x2: 160, y1: 40, y2: 160 };
       sidc["213900"] = icn["TP.DLRP"]; //Maritime Control Points / Data Link Reference Point
       bbox["213900"] = { x1: 40, x2: 160, y1: 40, y2: 160 };
+      sidc["214000"] = icn["FORWARD OBSERVER / SPOTTER POSITION"];
+      bbox["214000"] = { x1: 40, x2: 160, y1: 60, y2: 140 };
       sidc["214100"] = icn["TP.VITAL AREA CENTRE"]; //Maritime Control Points / Vital Area Center
       bbox["214100"] = { x1: 40, x2: 160, y1: 60, y2: 140 };
       sidc["214200"] = icn["TP.CORRIDOR TAB"]; //Maritime Control Points / Corridor Tab Point
@@ -430,7 +433,8 @@ export default {
       bbox["282001"] = { x1: 50, x2: 150, y1: 30, y2: 120 };
       sidc["282002"] = icn["TP.TOWER HIGH"]; //Protection Points / Vertical Obstructions / Tower, High
       bbox["282002"] = { x1: 50, x2: 150, y1: 30, y2: 120 };
-      //sidc["320100"] = []; // N/A //Sustainment Points / Ambulance Points
+      sidc["320100"] = icn["TP.AMBULANCE EXCHANGE POINT"]; //Sustainment Points / Ambulance Points / Ambulance Exchange Point
+      bbox["320100"] = { x1: 60, x2: 140, y1: -60 };
       sidc["320101"] = icn["TP.AMBULANCE EXCHANGE POINT"]; //Sustainment Points / Ambulance Points / Ambulance Exchange Point
       bbox["320101"] = { x1: 60, x2: 140, y1: -60 };
       sidc["320102"] = icn["TP.AMBULANCE CONTROL POINT"]; //Sustainment Points / Ambulance Points / Ambulance Control Point

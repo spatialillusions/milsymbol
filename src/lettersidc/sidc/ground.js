@@ -104,46 +104,26 @@ export default {
       icn["GR.IC.ARMOUR"],
       icn["GR.M2.RECOVERY (MAINTENANCE)"]
     ];
-    sId["S-G-UCAW--"] = [icn["GR.IC.ARMOUR"], icn["GR.M2.WHEELED"]];
+    sId["S-G-UCAW--"] = [icn["GR.IC.ARMOR, WHEELED"]];
     sId["S-G-UCAWS-"] = [
-      icn["GR.IC.ARMOUR"],
-      icn["GR.M2.WHEELED"],
+      icn["GR.IC.ARMOR, WHEELED"],
       icn["GR.M1.AIRMOBILE/AIR ASSAULT"]
     ];
-    sId["S-G-UCAWA-"] = [
-      icn["GR.IC.ARMOUR"],
-      icn["GR.M2.WHEELED"],
-      icn["GR.M2.AIRBORNE"]
-    ];
+    sId["S-G-UCAWA-"] = [icn["GR.IC.ARMOR, WHEELED"], icn["GR.M2.AIRBORNE"]];
     sId["S-G-UCAWW-"] = [
-      icn["GR.IC.ARMOUR"],
-      icn["GR.M2.WHEELED"],
+      icn["GR.IC.ARMOR, WHEELED"],
       icn["GR.IC.FF.AMPHIBIOUS"]
     ];
     sId["S-G-UCAWWR"] = [
-      icn["GR.IC.ARMOUR"],
-      icn["GR.M2.WHEELED"],
+      icn["GR.IC.ARMOR, WHEELED"],
       icn["GR.IC.FF.AMPHIBIOUS"],
       icn["GR.M2.RECOVERY (MAINTENANCE)"]
     ];
-    sId["S-G-UCAWL-"] = [
-      icn["GR.IC.ARMOUR"],
-      icn["GR.M2.WHEELED"],
-      icn["GR.M2.LIGHT"]
-    ];
-    sId["S-G-UCAWM-"] = [
-      icn["GR.IC.ARMOUR"],
-      icn["GR.M2.WHEELED"],
-      icn["GR.M2.MEDIUM"]
-    ];
-    sId["S-G-UCAWH-"] = [
-      icn["GR.IC.ARMOUR"],
-      icn["GR.M2.WHEELED"],
-      icn["GR.M2.HEAVY"]
-    ];
+    sId["S-G-UCAWL-"] = [icn["GR.IC.ARMOR, WHEELED"], icn["GR.M2.LIGHT"]];
+    sId["S-G-UCAWM-"] = [icn["GR.IC.ARMOR, WHEELED"], icn["GR.M2.MEDIUM"]];
+    sId["S-G-UCAWH-"] = [icn["GR.IC.ARMOR, WHEELED"], icn["GR.M2.HEAVY"]];
     sId["S-G-UCAWR-"] = [
-      icn["GR.IC.ARMOUR"],
-      icn["GR.M2.WHEELED"],
+      icn["GR.IC.ARMOR, WHEELED"],
       icn["GR.M2.RECOVERY (MAINTENANCE)"]
     ];
     sId["S-G-UCAA--"] = [icn["GR.IC.FF.ANTITANK/ANTIARMOUR"]];
@@ -205,9 +185,12 @@ export default {
     sId["S-G-UCVUTP"] = [icn["GR.IC.AVIATION TACTICAL AIR CONTROL PARTY"]];
     sId["S-G-UCVUFC"] = [icn["GR.IC.AVIATION FORWARD AIR CONTROLLER"]];
     sId["S-G-UCVFR-"] = [icn["GR.IC.AVIATION FIXED WING"], icn["GR.M1.RECON"]];
-    sId["S-G-UCVR--"] = [icn["GR.IC.AVIATION ROTARY WING"]];
-    if (_STD2525)
-      sId["S-G-UCVR--"].push({ type: "path", d: "M100,100 L100,140" });
+    sId["S-G-UCVR--"] = _STD2525
+      ? [
+          icn["GR.IC.AVIATION ROTARY WING"],
+          icn["GR.IC.AVIATION ROTARY WING 2525C"]
+        ]
+      : [icn["GR.IC.AVIATION ROTARY WING"]];
     sId["S-G-UCVRA-"] = [
       icn["GR.IC.AVIATION ROTARY WING"],
       icn["GR.M1.ATTACK"]
@@ -514,7 +497,7 @@ export default {
     sId["S-G-UCRRD-"] = [
       icn["GR.IC.FF.RECONNAISSANCE"],
       icn["GR.IC.FF.AMPHIBIOUS"],
-      _STD2525 ? icn["GR.M1.DIVISION"] : []
+      _STD2525 ? icn["GR.M1.MARINE DIVISION"] : []
     ];
     sId["S-G-UCRRF-"] = [
       icn["GR.IC.FF.RECONNAISSANCE"],
@@ -703,7 +686,7 @@ export default {
     sId["S-G-UULM--"] = [icn["GR.IC.MILITARY POLICE"]];
     sId["S-G-UULC--"] = [icn["GR.IC.LAW ENFORCEMENT"]];
     sId["S-G-UULF--"] = [
-      ms._translate(0, -20, icn["GR.IC.SHORE PATROL"]),
+      ms._translate(0, -25, ms._scale(0.8, icn["GR.IC.SHORE PATROL"])),
       icn["GR.IC.AVIATION FIXED WING"]
     ];
     sId["S-G-UULD--"] = [icn["GR.IC.CRIMINAL INVESTIGATION DIVISION"]];

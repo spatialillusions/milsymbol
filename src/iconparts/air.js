@@ -148,7 +148,7 @@ export default function(
   };
   icn["AR.I.UNMANNED AERIAL VEHICLE"] = {
     type: "path",
-    d: "M60,90 l40,10 40,-10 0,8 -40,15 -40,-15 Z",
+    d: "m 60,84 40,20 40,-20 0,8 -40,25 -40,-25 z",
     stroke: false
   };
   icn["AR.I.AIR DECOY"] = {
@@ -246,7 +246,7 @@ export default function(
     type: "path",
     fill: STD2525 || numberSIDC ? iconFillColor : false,
     stroke: black,
-    d: "M60,90 l40,10 40,-10 0,8 -40,15 -40,-15 Z"
+    d: "m 60,84 40,20 40,-20 0,8 -40,25 -40,-25 z"
   };
   icn["AR.I.WEAPON"] = text("WPN");
   icn["AR.I.UNDERWATER DECOY DSymbol"] = {

@@ -82,23 +82,23 @@ export default {
     ];
     sId["S-U-S1----"] = [
       icn["SU.IC.SUBMARINE"],
-      icn["SU.M1.POSSIBLE SUBMARINE - LOW 1"]
+      icn["SU.M2.POSSIBLE SUBMARINE - LOW 1"]
     ];
     sId["S-U-S2----"] = [
       icn["SU.IC.SUBMARINE"],
-      icn["SU.M1.POSSIBLE SUBMARINE - LOW 2"]
+      icn["SU.M2.POSSIBLE SUBMARINE - LOW 2"]
     ];
     sId["S-U-S3----"] = [
       icn["SU.IC.SUBMARINE"],
-      icn["SU.M1.POSSIBLE SUBMARINE - HIGH 3"]
+      icn["SU.M2.POSSIBLE SUBMARINE - HIGH 3"]
     ];
     sId["S-U-S4----"] = [
       icn["SU.IC.SUBMARINE"],
-      icn["SU.M1.POSSIBLE SUBMARINE - HIGH 4"]
+      icn["SU.M2.POSSIBLE SUBMARINE - HIGH 4"]
     ];
     sId["S-U-SL----"] = [
       icn["SU.IC.SUBMARINE"],
-      icn["SU.M1.PROBABLE SUBMARINE"]
+      icn["SU.M2.PROBABLE SUBMARINE"]
     ];
     sId["S-U-SK----"] = [icn["SU.IC.SUBMARINE, SNORKELING"]];
     sId["S-U-W-----"] = [icn["SU.IC.UNDERWATER WEAPON"]];

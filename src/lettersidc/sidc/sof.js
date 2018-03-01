@@ -58,11 +58,16 @@ export default {
       icn["AIR.M1.SPECIAL OPERATIONS FORCES"],
       icn["SOF.M2.VSTOL"]
     ];
-    sId["S-F-AH----"] = [
-      icn["GR.IC.AVIATION ROTARY WING"],
-      _STD2525 ? "<line x1='100' y1='100' x2='100' y2='140' />" : "",
-      icn["AIR.M1.SPECIAL OPERATIONS FORCES"]
-    ];
+    sId["S-F-AH----"] = _STD2525
+      ? [
+          icn["GR.IC.AVIATION ROTARY WING"],
+          icn["AIR.M1.SPECIAL OPERATIONS FORCES"],
+          icn["GR.IC.AVIATION ROTARY WING 2525C"]
+        ]
+      : [
+          icn["GR.IC.AVIATION ROTARY WING"],
+          icn["AIR.M1.SPECIAL OPERATIONS FORCES"]
+        ];
     sId["S-F-AHH---"] = [
       icn["GR.IC.AVIATION ROTARY WING"],
       icn["AIR.M1.SPECIAL OPERATIONS FORCES"],

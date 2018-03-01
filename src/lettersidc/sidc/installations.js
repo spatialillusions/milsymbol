@@ -21,7 +21,7 @@ export default {
     sId["S-G-IRNN--"] = [icn["GR.IC.CBRN"], icn["GR.M1.NUCLEAR"]];
     sId["S-G-IP----"] = [icn["GR.IN.IC.PROCESSING FACILITY"]];
     sId["S-G-IPD---"] = [icn["GR.IC.CBRN"], icn["GR.M1.DECONTAMINATION"]];
-    sId["S-G-IE----"] = [icn["GR.IC.FF.CLASS IX"]];
+    sId["S-G-IE----"] = [icn["GR.IC.EQUIPMENT MANUFACTURE"]];
     sId["S-G-IU----"] = [icn["GR.IN.IC.UTILITY FACILITY"]];
     sId["S-G-IUR---"] = [icn["GR.IN.IC.RESEARCH"]];
     sId["S-G-IUT---"] = [icn["GR.IN.IC.TELECOMMUNICATIONS"]];

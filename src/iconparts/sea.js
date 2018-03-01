@@ -63,8 +63,9 @@ export default function(
   ];
   icn["SE.IC.SURFACE COMBATANT, LINE"] = {
     type: "path",
+    stroke: false,
     d:
-      "m 100,120 -25,-15 15,0 0,-10 5,0 0,-5 -15,0 0,-5 15,0 0,-5 10,0 0,5 15,0 0,5 -15,0 c 0,0 0,5 0,5 l 5,0 0,10 15,0 z"
+      "m 100,120 -25,-17 15,2 0,-10 5,0 0,-5 -15,0 0,-5 15,0 0,-5 10,0 0,5 15,0 0,5 -15,0 0,5 5,0 0,10 15,-2 z"
   };
   icn["SE.IC.CARRIER"] = {
     type: "path",
@@ -97,7 +98,7 @@ export default function(
   icn["SE.IC.MINE WARFARE VESSEL"] = {
     type: "path",
     d:
-      "M 98.3 81 L 98.3 85.1 C 95.9 85.4 93.7 86.5 91.9 88 L 88.4 84.5 L 86 86.9 L 89.6 90.5 C 89.6 90.5 89.6 90.5 89.6 90.5 C 88.3 92.5 87.5 94.9 87.5 97.5 C 87.5 98.4 87.6 99.2 87.8 100 L 80 100 L 100 120 L 120 100 L 112.3 100 C 112.4 99.2 112.5 98.4 112.5 97.5 C 112.5 94.8 111.6 92.3 110.2 90.3 L 113.8 86.6 L 111.5 84.2 L 107.9 87.8 C 106.1 86.4 104 85.4 101.7 85.1 L 101.7 81 L 98.3 81 z"
+      "m 98.3,81 0,4.1 c -2.4,0.3 -4.6,1.4 -6.4,2.9 l -3.5,-3.5 -2.4,2.4 3.6,3.6 c -0.9,1.3 -1.5,4.9 -1.8,6.5 l -10.8,0 0,3 3,0 20,20 20,-20 3,0 0,-3 -10,0 c -1,-1.7 -2,-5.3 -3,-6.7 l 4,-3.7 -2,-2.4 -4,3.6 c -2,-1.4 -4,-2.4 -6,-2.7 l 0,-4.1 z"
   };
   icn["SE.IC.MINELAYER"] = text("ML");
   icn["SE.IC.MINESWEEPER"] = text("MS");
@@ -112,7 +113,7 @@ export default function(
   };
   icn["SE.IC.PATROL"] = {
     type: "path",
-    d: "m 80,100 20,20 20,-20 -10,0 -10,-20 -10,20 z"
+    d: "m 80,100 20,20 20,-20 -10,0 0,-20 -20,0 0,20 z"
   };
   icn["SE.IC.PATROL CRAFT"] = text("PC");
   icn["SE.IC.PATROL ANTI SUBMARINE WARFARE"] = {
@@ -229,10 +230,10 @@ export default function(
   icn["SE.IC.REPAIR SHIP"] = text("AR");
   icn["SE.IC.SUBMARINE TENDER"] = text("AS");
   icn["SE.IC.TUG, OCEAN GOING"] = text(STD2525 ? "AS" : "AT");
-  icn["SE.IC.SERVICE CRAFT, YARD, GENERAL"] = text("YY");
+  icn["SE.IC.SERVICE CRAFT, YARD, GENERAL"] = STD2525 ? text("YY") : text("YT");
   icn["SE.IC.BARGE, NOT SELF-PROPELLED"] = text("YB");
   icn["SE.IC.BARGE, SELF-PROPELLED"] = text("YS");
-  icn["SE.IC.TUG, HARBOUR"] = text("YT");
+  //icn["SE.IC.TUG, HARBOUR"] = text("YT");
   icn["SE.IC.LAUNCH"] = text("YFT");
   icn["SE.IC.MERCHANT SHIP, GENERAL"] = {
     type: "path",
@@ -525,6 +526,9 @@ export default function(
   ] = textm1("ST");
   icn["SE.M1.SEA-BASE X-BAND"] = textm1("SBX");
   icn["SE.M1.HIJACKING/HIJACKED"] = textm1("H");
+  icn["SE.M2.ANTISUBMARINE WARFARE"] = textm2("ASW");
+  icn["SE.M2.MINE WARFARE"] = textm2("MIW");
+  icn["SE.M2.SURFACE WARFARE"] = textm2("SUW");
   icn["SE.M2.NUCLEAR POWERED"] = textm2("N");
   icn["SE.M2.HEAVY"] = textm2("H");
   icn["SE.M2.LIGHT"] = textm2("L");

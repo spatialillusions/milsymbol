@@ -3574,6 +3574,15 @@ export default function(
     }
   ];
 
+  icn["FORWARD OBSERVER / SPOTTER POSITION"] = [
+    { type: "circle", cx: 100, cy: 100, r: 3 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 40,135 60,-75 60,75 z"
+    }
+  ];
+
   icn["MAN MADE SPACE DEBRIS SMALL"] = [
     { type: "circle", cx: 100, cy: 100, r: 17 },
     { type: "circle", fill: false, cx: 100, cy: 100, r: 50 },

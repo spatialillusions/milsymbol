@@ -530,6 +530,7 @@ export default function tacticalPoints(sidc) {
   sidc["213700"] = {}; //Maritime Control Points / Special Point
   sidc["213800"] = {}; //Maritime Control Points / Navigational Reference Point(Points)
   sidc["213900"] = {}; //Maritime Control Points / Data Link Reference Point
+  sidc["214000"] = {};
   sidc["214100"] = {}; //Maritime Control Points / Vital Area Center
   sidc["214200"] = {}; //Maritime Control Points / Corridor Tab Point
   sidc["214300"] = {}; //Maritime Control Points / Enemy Point

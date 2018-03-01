@@ -131,6 +131,9 @@ export function metadata(ms, metadata, mapping) {
   if (["A", "B", "C", "D"].indexOf(symbolmodifier11) > -1) {
     metadata.headquarters = true;
   }
+  if (battledimension == "G" && functionid == "UH----") {
+    metadata.headquarters = true;
+  }
   if (["E", "B", "G", "D"].indexOf(symbolmodifier11) > -1) {
     metadata.taskForce = true;
   }

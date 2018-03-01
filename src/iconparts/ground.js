@@ -173,9 +173,23 @@ export default function(
     d: "M125,80 C150,80 150,120 125,120 L75,120 C50,120 50,80 75,80 Z",
     fill: false
   };
+  icn["GR.IC.ARMOR, WHEELED"] = [
+    {
+      type: "path",
+      d: "m 120,80 c 25,0 25,30 0,30 l -40,0 C 55,110 55,80 80,80 Z",
+      fill: false
+    },
+    { type: "circle", cx: 70, cy: 115, r: 5, fill: false },
+    { type: "circle", cx: 100, cy: 115, r: 5, fill: false },
+    { type: "circle", cx: 130, cy: 115, r: 5, fill: false }
+  ];
   icn["GR.IC.AVIATION ROTARY WING"] = {
     type: "path",
     d: "M60,85 l40,15 40,-15 0,30 -40,-15 -40,15 z"
+  };
+  icn["GR.IC.AVIATION ROTARY WING 2525C"] = {
+    type: "path",
+    d: "M100,100 L100,140"
   };
   icn["GR.IC.AVIATION FIXED WING"] = {
     type: "path",
@@ -219,11 +233,11 @@ export default function(
   icn["GR.IC.CBRN"] = [
     {
       type: "path",
-      d: "M80,120 c0,-20 10,-40 50,-43 m-10,43 c0,-20 -10,-40 -50,-43",
+      d: "m 80,120 c 0,-20 10,-32 50,-35 m -10,35 C 120,100 110,88 70,85",
       fill: false
     },
-    { type: "circle", cx: 70, cy: 85, r: 8 },
-    { type: "circle", cx: 130, cy: 85, r: 8 }
+    { type: "circle", cx: 75, cy: 90, r: 6 },
+    { type: "circle", cx: 125, cy: 90, r: 6 }
   ];
   icn[
     "GR.CHEMICAL, BIOLOGICAL, RADIOLOGICAL, NUCLEAR, AND HIGH-YIELD EXPLOSIVES"
@@ -672,7 +686,7 @@ export default function(
   icn["GR.IC.FF.AIR DEFENCE"] = {
     Unknown: {
       type: "path",
-      d: "M65,140 C65,115 135,115 135,140",
+      d: "m 55,135 c 10,-20 80,-20 90,0",
       fill: false
     },
     Friend: { type: "path", d: "M25,150 C25,110 175,110 175,150", fill: false },
@@ -1216,6 +1230,15 @@ export default function(
       fill: false
     }
   ];
+  icn["GR.IC.EQUIPMENT MANUFACTURE"] = [
+    { type: "circle", cx: 100, cy: 100, r: 20, fill: false },
+    {
+      type: "path",
+      d:
+        "m 100,120 0,20 m 0,-60 0,-20 m 18.1,28.4 16,-9.6 m -16,31.2 16,12 M 82.5,110 66.1,122 M 82.5,88.8 66.5,78",
+      fill: false
+    }
+  ];
   icn["GR.IC.FF.CLASS X"] = {
     type: "text",
     stroke: false,
@@ -1327,6 +1350,7 @@ export default function(
       "m 104.6,64.8 c 0,2.7 -2.1,4.8 -4.6,4.8 -2.5,0 -4.6,-2.2 -4.6,-4.8 0,-2.7 2.1,-4.8 4.6,-4.8 2.5,0 4.6,2.2 4.6,4.8 z m 0,8.7 4.6,4.8 -18.3,0 4.6,-4.8 M 108.3,60 l 4.6,0 0,9.6 -4.6,0 m -16.5,0 -4.6,0 0,-9.6 4.6,0 m 17.4,4.8 c 0,5.3 -4.1,9.6 -9.2,9.6 -5.1,0 -9.2,-4.3 -9.2,-9.6 0,-5.3 4.1,-9.6 9.2,-9.6 5.1,0 9.2,4.3 9.2,9.6 z"
   };
   icn["GR.M1.DIVISION"] = textm1("XX");
+  icn["GR.M1.MARINE DIVISION"] = textm1("D");
   icn["GR.M1.DOG"] = textm1("DOG");
   icn["GR.M1.DRILLING"] = { type: "path", d: "m 90,60 5,15 10,0 5,-15 z" };
   icn["GR.M1.ELECTRO-OPTICAL"] = textm1("EO");
@@ -2028,7 +2052,7 @@ export default function(
   icn["GR.EQ.ANTITANK MISSILE LAUNCHER"] = {
     type: "path",
     d:
-      "m 85,140 15,-15 15,15 M 85,130 85,75 c 0,-20 30,-20 30,0 l 0,55 m -15,-5 0,-65",
+      "m 85,140 15,-15 15,15 M 85,120 85,75 c 0,-20 30,-20 30,0 l 0,45 m -15,5 0,-65",
     fill: false
   };
   icn["GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER"] = [
@@ -2134,7 +2158,15 @@ export default function(
   };
   icn[
     "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
-  ] = [icn["GR.IC.ARMOUR"], icn["GR.M2.WHEELED LIMITED"]];
+  ] = [
+    {
+      type: "path",
+      d:
+        "m 60,120 80,0 M 120,80 c 25,0.2 25,40 0,40 l -40,0 C 55,120 55,80 80,80 Z",
+      fill: false
+    },
+    icn["GR.M2.WHEELED LIMITED"]
+  ];
   icn["GR.EQ.ARMOURED VEHICLE"] = text("A");
   icn["GR.EQ.ARMORED CARRIER WITH VOLCANO"] = text("V");
   icn["GR.EQ.TANK"] = {
@@ -2301,7 +2333,9 @@ export default function(
       fill: false,
       d:
         "m 70,95 c 10,0 0,10 10,10 10,0 0,-10 10,-10 10,0 0,10 10,10 10,0 0,-10 10,-10 10,0 0,10 10,10 10,0 0,-10 10,-10"
-    }
+    },
+    { type: "circle", cx: 75, cy: 135, r: 5, fill: false },
+    { type: "circle", cx: 125, cy: 135, r: 5, fill: false }
   ];
   icn["GR.EQ.TRAIN LOCOMOTIVE"] = {
     type: "path",
@@ -2525,7 +2559,7 @@ export default function(
       "m 100,60 c 0,15 25,40 40,40 -15,0 -40,25 -40,40 0,-15 -25,-40 -40,-40 15,0 40,-25 40,-40 z"
   };
   icn["GR.EQ.SENSOR EMPLACED"] = [
-    ms._scale(0.9, icn["GR.EQ.SENSOR"]),
+    ms._scale(0.75, icn["GR.EQ.SENSOR"]),
     {
       type: "path",
       fill: false,
@@ -2619,14 +2653,14 @@ export default function(
   icn["GR.IN.IC.ATOMIC ENERGY"] = {
     type: "path",
     d: STD2525
-      ? "M 90.4,82.4 C 84.2,85.8 80,92.4 80,100 l 20,0 -9.6,-17.6 z m 19.3,0.1 L 100,100 l 20,0 c 0,-7.5 -4.2,-14.1 -10.3,-17.5 z M 100,100 89.7,117.1 C 92.7,118.9 96.2,120 100,120 c 3.8,0 7.3,-1.1 10.3,-2.9 L 100,100 z"
+      ? "M 90.4,119 C 84.2,115 80,109 80,101 l 20,0 -9.6,18 z m 19.6,0 -10,-18 20,0 c 0,8 -4,14 -10,18 z M 100,101 89.7,83.8 c 3,-2 6.5,-3 10.3,-3 4,0 7,1 10,3 L 100,101 Z"
       : "M 89.9,82.5 110,82.7 89.7,117.1 80,99.9 120.1,100 110,117.3 z",
     fill: false
   };
   icn["GR.IN.IC.ATOMIC ENERGY WEAPONS GRADE"] = {
     type: "path",
     d: STD2525
-      ? "M 90.4,82.4 C 84.2,85.8 80,92.4 80,100 l 20,0 -9.6,-17.6 z m 19.3,0.1 L 100,100 l 20,0 c 0,-7.5 -4.2,-14.1 -10.3,-17.5 z M 100,100 89.7,117.1 C 92.7,118.9 96.2,120 100,120 c 3.8,0 7.3,-1.1 10.3,-2.9 L 100,100 z"
+      ? "M 90.4,119 C 84.2,115 80,109 80,101 l 20,0 -9.6,18 z m 19.6,0 -10,-18 20,0 c 0,8 -4,14 -10,18 z M 100,101 89.7,83.8 c 3,-2 6.5,-3 10.3,-3 4,0 7,1 10,3 L 100,101 Z"
       : "M 89.9,82.5 110,82.7 89.7,117.1 80,99.9 120.1,100 110,117.3 z"
   };
   icn["GR.IN.IC.AIRCRAFT PRODUCTION & ASSEMBLY"] = {
@@ -3752,14 +3786,15 @@ export default function(
   icn["GR.I.FF.SATELLITE"] = [
     {
       type: "path",
-      stroke: false,
+      stroke: !numberSIDC ? iconColor : false,
+      fill: numberSIDC ? iconColor : false,
       d:
         "m 115,70 20,0 0,55 -20,0 z m -25,5 20,0 0,45 -20,0 z m -25,-5 20,0 0,55 -20,0 z"
     },
     {
       type: "path",
       fill: false,
-      d: "M80,135 c10,-10 30,-10 40,0 M100,127 L100,100 M70,100 L130,100"
+      d: "m 110,100 5,0 m -30,0 5,0 m 10,27 0,-7 m -20,15 c 10,-10 30,-10 40,0"
     }
   ];
   icn["GR.IN.IC.FARM/RANCH"] = [

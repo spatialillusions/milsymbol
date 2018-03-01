@@ -1008,6 +1008,11 @@ export default function(
   icn["SU.M1.CERTAIN SUBMARINE"] = textm1("CT");
   icn["SU.M1.ANTI-TORPEDO TORPEDO"] = textm1("ATT");
   icn["SU.M1.HIJACKING/HIJACKED"] = textm1("H");
+  icn["SU.M2.POSSIBLE SUBMARINE - LOW 1"] = textm2("P1");
+  icn["SU.M2.POSSIBLE SUBMARINE - LOW 2"] = textm2("P2");
+  icn["SU.M2.POSSIBLE SUBMARINE - HIGH 3"] = textm2("P3");
+  icn["SU.M2.POSSIBLE SUBMARINE - HIGH 4"] = textm2("P4");
+  icn["SU.M2.PROBABLE SUBMARINE"] = textm2("PB");
   icn["SU.M2.AIR INDEPENDENT PROPULSION"] = textm2("AI");
   icn["SU.M2.CERTSUB"] = textm2("CT");
   icn["SU.M2.DIESEL PROPULSION"] = textm2("D");
