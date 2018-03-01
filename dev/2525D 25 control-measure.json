@@ -1173,16 +1173,16 @@
     {
       "entity": "Maritime Control Areas",
       "entity type": "Cued Acquisition Doctrine",
-      "geometry": "Point",
+      "geometry": "",
       "code": "200600",
-      "remarks": ""
+      "remarks": "AEGIS ONLY"
     },
     {
       "entity": "Maritime Control Areas",
       "entity type": "Radar Search Doctrine",
-      "geometry": "Point",
+      "geometry": "",
       "code": "200700",
-      "remarks": ""
+      "remarks": "AEGIS ONLY"
     },
     {
       "entity": "Maritime Control Points",
@@ -3659,7 +3659,7 @@
     {
       "entity": "Sustainment Points",
       "entity type": "Ambulance Points",
-      "geometry": "Point",
+      "geometry": "",
       "code": "320100",
       "remarks": ""
     },
@@ -4231,7 +4231,7 @@
     },
     {
       "entity": "Space Debris",
-      "geometry": "Point",
+      "geometry": "",
       "code": "350000",
       "remarks": ""
     }

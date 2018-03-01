@@ -848,7 +848,7 @@
       "entity": "Manoeuvre Points",
       "entity type": "Observation Post/Outpost (specified)",
       "code": "160200",
-      "geometry": "",
+      "geometry": "Point",
       "remarks": "For training or hierarchical purposes only"
     },
     {
@@ -1346,15 +1346,15 @@
       "entity": "Maritime Control Areas",
       "entity type": "Cued Acquisition Doctrine",
       "code": "200600",
-      "geometry": "Point",
-      "remarks": ""
+      "geometry": "",
+      "remarks": "AEGIS ONLY"
     },
     {
       "entity": "Maritime Control Areas",
       "entity type": "Radar Search Doctrine",
       "code": "200700",
-      "geometry": "Point",
-      "remarks": ""
+      "geometry": "",
+      "remarks": "AEGIS ONLY"
     },
     {
       "entity": "Maritime Control Points",
