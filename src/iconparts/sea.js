@@ -233,7 +233,7 @@ export default function(
   icn["SE.IC.SERVICE CRAFT, YARD, GENERAL"] = STD2525 ? text("YY") : text("YT");
   icn["SE.IC.BARGE, NOT SELF-PROPELLED"] = text("YB");
   icn["SE.IC.BARGE, SELF-PROPELLED"] = text("YS");
-  //icn["SE.IC.TUG, HARBOUR"] = text("YT");
+  icn["SE.IC.TUG, HARBOUR"] = text("YT");
   icn["SE.IC.LAUNCH"] = text("YFT");
   icn["SE.IC.MERCHANT SHIP, GENERAL"] = {
     type: "path",
