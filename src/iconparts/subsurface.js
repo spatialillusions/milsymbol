@@ -160,7 +160,7 @@ export default function(
     "SU.IC.AUTONOMOUS UNDERWATER VEHICLE/ UNMANNED UNDERWATER VEHICLE (AUV/UUV)"
   ] = {
     type: "path",
-    d: "M60,90 l40,10 40,-10 0,8 -40,15 -40,-15 Z",
+    d: "m 60,84 40,20 40,-20 0,8 -40,25 -40,-25 z",
     stroke: false
   };
   icn["SU.IC.NON-SUBMARINE"] =
@@ -208,7 +208,7 @@ export default function(
   ] = {
     type: "path",
     fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
-    d: "M60,90 l40,10 40,-10 0,8 -40,15 -40,-15 Z"
+    d: "m 60,84 40,20 40,-20 0,8 -40,25 -40,-25 z"
   };
   icn["SU.M1.CYBERSPACE"] = textm1("CYB");
   icn["SU.M1.HIJACKER"] = textm1("HJ");

@@ -636,7 +636,7 @@ export default function(
   icn["GR.IC.TRANSPORTATION SECURITY AGENCY (TSA)"] = text("TSA");
   icn["GR.IC.UNMANNED SYSTEMS"] = {
     type: "path",
-    d: "M60,90 l40,10 40,-10 0,8 -40,15 -40,-15 Z",
+    d: "m 60,84 40,20 40,-20 0,8 -40,25 -40,-25 z",
     stroke: false
   };
   icn["GR.IC.SEARCH AND RESCUE"] = text("SAR");
