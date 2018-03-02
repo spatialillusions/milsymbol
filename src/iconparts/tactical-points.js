@@ -2355,6 +2355,11 @@ export default function(
     d:
       "m 40,65 0,70 120,0 0,-70 z m 70,35 c 0,5.523 -4.477,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.523,0 10,4.4772 10,10 z m 35,0 c 0,5.523 -4.477,10 -10,10 -5.523,0 -10,-4.477 -10,-10 0,-5.5228 4.477,-10 10,-10 5.523,0 10,4.4772 10,10 z m -70,0 c 0,5.523 -4.4772,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.5228,0 10,4.4772 10,10 z"
   };
+  icn["TP.MINEFIELD, STATIC"] = {
+    type: "path",
+    fill: false,
+    d: "m 25,65 0,70 150,0 0,-70 z"
+  };
   //This is to solve anticipated minefields... Don't we just love special cases...
   if (metadata.notpresent)
     icn["TP.MINEFIELDS STATIC"] = icn["TP.PLANNED MINEFIELD"];
@@ -3630,6 +3635,137 @@ export default function(
       fill: false,
       d:
         "m 90,75 10,-15 10,15 M 75,110 60,100 75,90 m 35,35 -10,15 -10,-15 m 35,-35 15,10 -15,10"
+    }
+  ];
+
+  icn["TP.M1.UNSPECIFIED"] = [
+    { type: "circle", fill: false, cx: 55, cy: 100, r: 15 },
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 15 },
+    { type: "circle", fill: false, cx: 145, cy: 100, r: 15 }
+  ];
+  icn["TP.M1.ANTIPERSONNEL MINE 1"] = [
+    { type: "circle", cx: 55, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 35,75 10.6,13.3 m 18.8,0 10.6,-13.3"
+    }
+  ];
+  icn["TP.M1.ANTIPERSONNEL MINE 2"] = [
+    { type: "circle", cx: 100, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 80,75 10.6,13.3 m 18.8,0 10.6,-13.3"
+    }
+  ];
+  icn["TP.M1.ANTIPERSONNEL MINE 3"] = [
+    { type: "circle", cx: 145, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 125,75 10.6,13.3 m 18.8,0 10.6,-13.3"
+    }
+  ];
+  icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"] = [
+    { type: "circle", cx: 55, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d:
+        "M 64.4,88.3 75,75 m -40,0 10.6,13.3 m 32.4,10 2,1.7 -2,2 z m -8,1.7 3.3,0"
+    }
+  ];
+  icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 2"] = [
+    { type: "circle", cx: 100, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d:
+        "M 109,88.3 120,75 m -40,0 10.6,13.3 m 32.4,10 2,1.7 -2,2 z m -8,1.7 3,0"
+    }
+  ];
+  icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"] = [
+    { type: "circle", cx: 145, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "M 154,88.3 165,75 m -40,0 11,13.3 m 32,10 2,1.7 -2,2 z m -8,1.7 3,0"
+    }
+  ];
+  icn["TP.M1.ANTITANK MINE 1"] = [{ type: "circle", cx: 55, cy: 100, r: 15 }];
+  icn["TP.M1.ANTITANK MINE 2"] = [{ type: "circle", cx: 100, cy: 100, r: 15 }];
+  icn["TP.M1.ANTITANK MINE 3"] = [{ type: "circle", cx: 145, cy: 100, r: 15 }];
+  icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 1"] = [
+    { type: "circle", cx: 55, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 55,115 0,13 6,-6"
+    }
+  ];
+  icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"] = [
+    { type: "circle", cx: 100, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 100,115 0,13 6,-6"
+    }
+  ];
+  icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"] = [
+    { type: "circle", cx: 145, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 145,115 0,13 6,-6"
+    }
+  ];
+  icn["TP.M1.WIDE AREA ANTITANK MINE 1"] = [
+    { type: "circle", cx: 55, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 35,115 8,10 5.5,-11 m 13,0 5.5,11 8,-10"
+    }
+  ];
+  icn["TP.M1.WIDE AREA ANTITANK MINE 2"] = [
+    { type: "circle", cx: 100, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 80,115 8,10 5.5,-11 m 13,0 5.5,11 8,-10"
+    }
+  ];
+  icn["TP.M1.WIDE AREA ANTITANK MINE 3"] = [
+    { type: "circle", cx: 145, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 125,115 8,10 5.5,-11 m 13,0 5.5,11 8,-10"
+    }
+  ];
+  icn["TP.M1.MINE CLUSTER 1"] = [
+    {
+      type: "path",
+      fill: false,
+      strokedasharray: "7.5,5",
+      d: "m 73,110 -36,0 c 0,-10 3,-20 18,-20 15,0 18,10 18,20 z"
+    }
+  ];
+  icn["TP.M1.MINE CLUSTER 2"] = [
+    {
+      type: "path",
+      fill: false,
+      strokedasharray: "7.5,5",
+      d: "m 118,110 -36,0 c 0,-10 3,-20 18,-20 15,0 18,10 18,20 z"
+    }
+  ];
+  icn["TP.M1.MINE CLUSTER 3"] = [
+    {
+      type: "path",
+      fill: false,
+      strokedasharray: "7.5,5",
+      d: "m 163,110 -36,0 c 0,-10 3,-20 18,-20 15,0 18,10 18,20 z"
     }
   ];
 

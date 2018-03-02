@@ -370,7 +370,8 @@ export default {
       bbox["250400"] = { x1: 60, x2: 140, y1: -60 };
       sidc["250500"] = icn["TP.SURVEY CONTROL POINT"]; //Fires Points / Survey Control Point
       bbox["250500"] = { x1: 60, x2: 140, y1: -60 };
-      sidc["270701"] = icn["TODO"]; //Protection Areas / Minefields / Minefield, Static Depiction
+      sidc["270701"] = icn["TP.MINEFIELD, STATIC"]; //Protection Areas / Minefields / Minefield, Static Depiction
+      bbox["270701"] = { x1: 25, x2: 175, y1: 65, y2: 145 };
       sidc["280100"] = icn["TODO"]; //Protection Points / Abatis
       sidc["280200"] = icn["TP.ANTIPERSONNEL (AP) MINES"]; //Protection Points / Antipersonnel Mine
       sidc["280201"] = icn["TP.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS"]; //Protection Points / Antipersonnel Mine / Antipersonnel Mine with Directional Effects
@@ -526,44 +527,192 @@ export default {
       sidc["350202"] = icn["NATURAL SPACE DEBRIS MEDIUM"];
       sidc["350203"] = icn["NATURAL SPACE DEBRIS BIG"];
 
-      sIdm1["13"] = [icn["TODO"]];
-      sIdm1["14"] = [icn["TODO"]];
-      sIdm1["15"] = [icn["TODO"]];
-      sIdm1["16"] = [icn["TODO"]];
-      sIdm1["17"] = [icn["TODO"]];
-      sIdm1["18"] = [icn["TODO"]];
-      sIdm1["19"] = [icn["TODO"]];
-      sIdm1["20"] = [icn["TODO"]];
-      sIdm1["21"] = [icn["TODO"]];
-      sIdm1["22"] = [icn["TODO"]];
-      sIdm1["23"] = [icn["TODO"]];
-      sIdm1["24"] = [icn["TODO"]];
-      sIdm1["25"] = [icn["TODO"]];
-      sIdm1["26"] = [icn["TODO"]];
-      sIdm1["27"] = [icn["TODO"]];
-      sIdm1["28"] = [icn["TODO"]];
-      sIdm1["29"] = [icn["TODO"]];
-      sIdm1["30"] = [icn["TODO"]];
-      sIdm1["31"] = [icn["TODO"]];
-      sIdm1["32"] = [icn["TODO"]];
-      sIdm1["33"] = [icn["TODO"]];
-      sIdm1["34"] = [icn["TODO"]];
-      sIdm1["35"] = [icn["TODO"]];
-      sIdm1["36"] = [icn["TODO"]];
-      sIdm1["37"] = [icn["TODO"]];
-      sIdm1["38"] = [icn["TODO"]];
-      sIdm1["39"] = [icn["TODO"]];
-      sIdm1["40"] = [icn["TODO"]];
-      sIdm1["41"] = [icn["TODO"]];
-      sIdm1["42"] = [icn["TODO"]];
-      sIdm1["43"] = [icn["TODO"]];
-      sIdm1["44"] = [icn["TODO"]];
-      sIdm1["45"] = [icn["TODO"]];
-      sIdm1["46"] = [icn["TODO"]];
-      sIdm1["47"] = [icn["TODO"]];
-      sIdm1["48"] = [icn["TODO"]];
-      sIdm1["49"] = [icn["TODO"]];
-      sIdm1["50"] = [icn["TODO"]];
+      sIdm1["13"] = [icn["TP.M1.UNSPECIFIED"]];
+      sIdm1["14"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE 1"],
+        icn["TP.M1.ANTIPERSONNEL MINE 2"],
+        icn["TP.M1.ANTIPERSONNEL MINE 3"]
+      ];
+      sIdm1["15"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 2"],
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"]
+      ];
+      sIdm1["16"] = [
+        icn["TP.M1.ANTITANK MINE 1"],
+        icn["TP.M1.ANTITANK MINE 2"],
+        icn["TP.M1.ANTITANK MINE 3"]
+      ];
+      sIdm1["17"] = [
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 1"],
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"],
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"]
+      ];
+      sIdm1["18"] = [
+        icn["TP.M1.WIDE AREA ANTITANK MINE 1"],
+        icn["TP.M1.WIDE AREA ANTITANK MINE 2"],
+        icn["TP.M1.WIDE AREA ANTITANK MINE 3"]
+      ];
+      sIdm1["19"] = [
+        icn["TP.M1.MINE CLUSTER 1"],
+        icn["TP.M1.MINE CLUSTER 2"],
+        icn["TP.M1.MINE CLUSTER 3"]
+      ];
+      sIdm1["20"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE 1"],
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 2"],
+        icn["TP.M1.ANTIPERSONNEL MINE 3"]
+      ];
+      sIdm1["21"] = [
+        icn["TP.M1.ANTITANK MINE 1"],
+        icn["TP.M1.ANTIPERSONNEL MINE 2"],
+        icn["TP.M1.ANTITANK MINE 3"]
+      ];
+      sIdm1["22"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE 1"],
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"],
+        icn["TP.M1.ANTIPERSONNEL MINE 3"]
+      ];
+      sIdm1["23"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE 1"],
+        icn["TP.M1.WIDE AREA ANTITANK MINE 2"],
+        icn["TP.M1.ANTIPERSONNEL MINE 3"]
+      ];
+      sIdm1["24"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE 1"],
+        icn["TP.M1.MINE CLUSTER 2"],
+        icn["TP.M1.ANTIPERSONNEL MINE 3"]
+      ];
+      sIdm1["25"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
+        icn["TP.M1.ANTITANK MINE 2"],
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"]
+      ];
+      sIdm1["26"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"],
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"]
+      ];
+      sIdm1["27"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
+        icn["TP.M1.WIDE AREA ANTITANK MINE 2"],
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"]
+      ];
+      sIdm1["28"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
+        icn["TP.M1.MINE CLUSTER 2"],
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"]
+      ];
+      sIdm1["29"] = [
+        icn["TP.M1.ANTITANK MINE 1"],
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"],
+        icn["TP.M1.ANTITANK MINE 3"]
+      ];
+      sIdm1["30"] = [
+        icn["TP.M1.ANTITANK MINE 1"],
+        icn["TP.M1.WIDE AREA ANTITANK MINE 2"],
+        icn["TP.M1.ANTITANK MINE 3"]
+      ];
+      sIdm1["31"] = [
+        icn["TP.M1.ANTITANK MINE 1"],
+        icn["TP.M1.MINE CLUSTER 2"],
+        icn["TP.M1.ANTITANK MINE 3"]
+      ];
+      sIdm1["32"] = [
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 1"],
+        icn["TP.M1.WIDE AREA ANTITANK MINE 2"],
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"]
+      ];
+      sIdm1["33"] = [
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 1"],
+        icn["TP.M1.MINE CLUSTER 2"],
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"]
+      ];
+      sIdm1["34"] = [
+        icn["TP.M1.WIDE AREA ANTITANK MINE 1"],
+        icn["TP.M1.MINE CLUSTER 2"],
+        icn["TP.M1.WIDE AREA ANTITANK MINE 3"]
+      ];
+      sIdm1["35"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE 1"],
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 2"],
+        icn["TP.M1.ANTITANK MINE 3"]
+      ];
+      sIdm1["36"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE 1"],
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 2"],
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"]
+      ];
+      sIdm1["37"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE 1"],
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 2"],
+        icn["TP.M1.WIDE AREA ANTITANK MINE 3"]
+      ];
+      sIdm1["38"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE 1"],
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 2"],
+        icn["TP.M1.MINE CLUSTER 3"]
+      ];
+      sIdm1["39"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE 1"],
+        icn["TP.M1.ANTITANK MINE 2"],
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"]
+      ];
+      sIdm1["40"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE 1"],
+        icn["TP.M1.ANTITANK MINE 2"],
+        icn["TP.M1.WIDE AREA ANTITANK MINE 3"]
+      ];
+      sIdm1["41"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE 1"],
+        icn["TP.M1.ANTITANK MINE 2"],
+        icn["TP.M1.MINE CLUSTER 3"]
+      ];
+      sIdm1["42"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE 1"],
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"],
+        icn["TP.M1.WIDE AREA ANTITANK MINE 3"]
+      ];
+      sIdm1["43"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE 1"],
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"],
+        icn["TP.M1.MINE CLUSTER 3"]
+      ];
+      sIdm1["44"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
+        icn["TP.M1.WIDE AREA ANTITANK MINE 2"],
+        icn["TP.M1.MINE CLUSTER 3"]
+      ];
+      sIdm1["45"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
+        icn["TP.M1.ANTITANK MINE 2"],
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"]
+      ];
+      sIdm1["46"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
+        icn["TP.M1.ANTITANK MINE 2"],
+        icn["TP.M1.WIDE AREA ANTITANK MINE 3"]
+      ];
+      sIdm1["47"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
+        icn["TP.M1.ANTITANK MINE 2"],
+        icn["TP.M1.MINE CLUSTER 3"]
+      ];
+      sIdm1["48"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"],
+        icn["TP.M1.WIDE AREA ANTITANK MINE 3"]
+      ];
+      sIdm1["49"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"],
+        icn["TP.M1.MINE CLUSTER 3"]
+      ];
+      sIdm1["50"] = [
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
+        icn["TP.M1.WIDE AREA ANTITANK MINE 2"],
+        icn["TP.M1.MINE CLUSTER 3"]
+      ];
       /*
     sIdm2["01"] = [icn["SP.M2.OPTICAL"]];
 //*/
