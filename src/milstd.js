@@ -72,11 +72,41 @@ var ms2525d = {
   "35": seasubsurface_2525d,
   "36": minewarfare_2525d,
   "40": activities_2525d,
-  "50": signalsintelligence_2525d,
-  "51": signalsintelligence_2525d,
-  "52": signalsintelligence_2525d,
-  "53": signalsintelligence_2525d,
-  "54": signalsintelligence_2525d,
+  "50": {
+    symbolset: "50",
+    name: "Signals Intelligence – Space",
+    "main icon": signalsintelligence_2525d["main icon"],
+    "modifier 1": signalsintelligence_2525d["modifier 1"],
+    "modifier 2": signalsintelligence_2525d["modifier 2"]
+  },
+  "51": {
+    symbolset: "51",
+    name: "Signals Intelligence – Air",
+    "main icon": signalsintelligence_2525d["main icon"],
+    "modifier 1": signalsintelligence_2525d["modifier 1"],
+    "modifier 2": signalsintelligence_2525d["modifier 2"]
+  },
+  "52": {
+    symbolset: "52",
+    name: "Signals Intelligence – Land",
+    "main icon": signalsintelligence_2525d["main icon"],
+    "modifier 1": signalsintelligence_2525d["modifier 1"],
+    "modifier 2": signalsintelligence_2525d["modifier 2"]
+  },
+  "53": {
+    symbolset: "53",
+    name: "Signals Intelligence – Surface",
+    "main icon": signalsintelligence_2525d["main icon"],
+    "modifier 1": signalsintelligence_2525d["modifier 1"],
+    "modifier 2": signalsintelligence_2525d["modifier 2"]
+  },
+  "54": {
+    symbolset: "54",
+    name: "Signals Intelligence – Subsurface",
+    "main icon": signalsintelligence_2525d["main icon"],
+    "modifier 1": signalsintelligence_2525d["modifier 1"],
+    "modifier 2": signalsintelligence_2525d["modifier 2"]
+  },
   "60": cyberspace_2525d
 };
 
