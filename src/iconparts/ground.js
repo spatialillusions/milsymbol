@@ -4472,6 +4472,7 @@ export default function(
   icn["AC.M1.RETAIL"] = textm1("RTL");
   icn["AC.M1.MILITARY ARMORY"] = textm1("RES");
   icn["AC.M1.GENERATION STATION"] = textm1("GEN");
+  /*
   icn["CY.IC.COMMAND AND CONTROL (C2)"] = text("BC2");
   icn["CY.IC.HERDER"] = text("HDR");
   icn["CY.IC.CALLBACK DOMAIN"] = text("CBD");
@@ -4521,6 +4522,16 @@ export default function(
   icn["CY.IC.NETWORK OUTAGE"] = text("NOT");
   icn["CY.IC.SERVICE OUTAGE"] = text("SOT");
   icn["CY.IC.DEVICE OUTAGE"] = text("DOT");
+  */
+  icn["CY.IC.COMBAT MISSION TEAM"] = text("CMT");
+  icn["CY.IC.NATIONAL MISSION TEAM"] = text("NMT");
+  icn["CY.IC.CYBER PROTECTION TEAM"] = text("CPT");
+  icn["CY.IC.NATION STATE CYBER THREAT ACTOR"] = text("CTA");
+  icn["CY.IC.NON NATION STATE CYBER THREAT ACTOR"] = text("CTA");
+  icn["CY.IC.NON NATION STATE CYBER THREAT ACTOR"].fill =
+    STD2525 || numberSIDC ? iconFillColor : !frame ? iconFillColor : false;
+  icn["CY.IC.NON NATION STATE CYBER THREAT ACTOR"].stroke = black;
+  icn["CY.IC.NON NATION STATE CYBER THREAT ACTOR"].strokewidth = 3;
 
   for (var key in icn) {
     if (!icn.hasOwnProperty(key)) continue;

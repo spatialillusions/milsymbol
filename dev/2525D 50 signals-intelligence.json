@@ -3,7 +3,11 @@
   "name": "Signals Intelligence",
   "main icon": [
     { "entity": "Unspecified", "code": "000000", "remarks": "" },
-    { "entity": "Signal Intercept", "code": "110000", "remarks": "" },
+    {
+      "entity": "Signal Intercept",
+      "code": "110000",
+      "remarks": "Reserved for hierarchical purposes."
+    },
     {
       "entity": "Signal Intercept",
       "entity type": "Communications",

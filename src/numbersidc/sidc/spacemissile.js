@@ -20,7 +20,7 @@ export default {
   ) {
     //Space Missile
     if (symbolSet == "06") {
-      sId["110000"] = [icn["AIR.MISSILE.ICON"]];
+      sId["110000"] = [icn["SPACE.MISSILE.ICON"]];
 
       sIdm1["01"] = [icn["SPACE.MISSILE.M1.BALLISTIC"]];
       sIdm1["02"] = [icn["SPACE.MISSILE.M1.SPACE"]];
@@ -42,6 +42,9 @@ export default {
         icn["SPACE.MISSILE.M2.TERMINAL HIGH-ALTITUDE AREA DEFENSE (THAAD)"]
       ];
       sIdm2["12"] = [icn["SPACE.MISSILE.M2.SPACE"]];
+      sIdm2["13"] = [icn["SPACE.MISSILE.M2.CLOSE RANGE"]];
+      sIdm2["14"] = [icn["SPACE.MISSILE.M2.DEBRIS"]];
+      sIdm2["15"] = [icn["SPACE.MISSILE.M2.UNKNOWN"]];
     }
   }
 };

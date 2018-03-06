@@ -3,7 +3,11 @@
   "name": "Cyberspace",
   "main icon": [
     { "entity": "Unspecified", "code": "000000", "remarks": "" },
-    { "entity": "Mission Force", "code": "110000", "remarks": "" },
+    {
+      "entity": "Mission Force",
+      "code": "110000",
+      "remarks": "Reserved for hierarchical purposes."
+    },
     {
       "entity": "Mission Force",
       "entity type": "Combat Mission Team",

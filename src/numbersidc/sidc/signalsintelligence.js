@@ -26,9 +26,9 @@ export default {
       symbolSet == "53" ||
       symbolSet == "54"
     ) {
-      //sId['110000'] = 'Signal Intercept';
+      sId["110000"] = [];
       sId["110100"] = [icn["SI.IC.COMMUNICATIONS"]];
-      sId["110200"] = [icn["AR.I.JAMMER / ELECTRONIC COUNTER-MEASURES"]];
+      sId["110200"] = [icn["SI.I.JAMMER / ELECTRONIC COUNTER-MEASURES"]];
       sId["110300"] = [icn["SI.IC.RADAR"]];
 
       //sIdm1['00'] = 'Unspecified';
@@ -96,6 +96,9 @@ export default {
       sIdm1["62"] = [icn["SI.M1.UNKNOWN"]];
       sIdm1["63"] = [icn["SI.M1.VIDEO REMOTING"]];
       sIdm1["64"] = [icn["SI.M1.EXPERIMENTAL"]];
+      sIdm1["65"] = [icn["SI.M1.CYBER"]];
+
+      sIdm2["01"] = [icn["SI.M2.CYBER"]];
     }
   }
 };
