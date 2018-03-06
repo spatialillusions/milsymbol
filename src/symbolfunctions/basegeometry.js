@@ -150,6 +150,36 @@ export default function basegeometry(ms) {
     };
     drawArray2.push(modifier[this.metadata.affiliation]);
   }
+  // Space Modifiers
+  if (this.metadata.cyberspace) {
+    modifier = {
+      Friend: {
+        type: "path",
+        stroke: false,
+        fill: frameColor,
+        d: "m 135,150 40,-40 0,40 z"
+      },
+      Hostile: {
+        type: "path",
+        stroke: false,
+        fill: frameColor,
+        d: "m 150,78 0,44 22,-22 z"
+      },
+      Neutral: {
+        type: "path",
+        stroke: false,
+        fill: frameColor,
+        d: "m 115,155 40,-40 0,40 z"
+      },
+      Unknown: {
+        type: "path",
+        stroke: false,
+        fill: frameColor,
+        d: "M 150 65.7 L 150 134 C 176 123 176 77.2 150 65.7 z"
+      }
+    };
+    drawArray2.push(modifier[this.metadata.affiliation]);
+  }
   //Add a dashed outline to the frame if the status is not present.
   if (
     this.style.fill &&
