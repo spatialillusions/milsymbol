@@ -2753,7 +2753,6 @@ export default function(
     : textm2("H");
 
   // STABILITY OPERATIONS ==========================================================
-  //if(symbol.codingscheme == "O"){
   icn["ST.IC.ARREST"] = {
     type: "path",
     d:
@@ -4472,6 +4471,33 @@ export default function(
   icn["AC.M1.RETAIL"] = textm1("RTL");
   icn["AC.M1.MILITARY ARMORY"] = textm1("RES");
   icn["AC.M1.GENERATION STATION"] = textm1("GEN");
+
+  // Emergency management import
+  icn["GR.I.FF.CIVILIAN ROTARY WING"] = [
+    {
+      type: "path",
+      stroke: black,
+      d:
+        "M80,70 l10,10 M120,110 l-10,-10 M80,110 l10,-10 M120,70 l-10,10 M100,115 l0,20 M95,135 l10,0",
+      fill: false
+    },
+    {
+      type: "path",
+      stroke: black,
+      fill: STD2525 ? iconFillColor : false,
+      d:
+        "m 113,90 c -0.3,8.8 -1.9,20.3 -10.8,24.6 -7.7,2 -12.3,-7.1 -13.8,-13.3 -2.6,-11.5 -2.3,-26 6.9,-34.6 6.0,-4.9 13.1,1.9 14.9,7.8 2,4.9 2.8,10.2 2.8,15.5 z"
+    }
+  ];
+  icn["GR.IC.HOSPITAL SHIP"] = text("AH");
+  icn["GR.IC.LAW ENFORCEMENT VESSEL"] = [
+    {
+      type: "path",
+      fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
+      d: "m 75,100 0,-35 50,0 0,35 20,0 -15,35 -60,0 -15,-35 z"
+    },
+    { type: "path", d: "m 135,100 -15,35 -10,0 15,-35 z" }
+  ];
   /*
   icn["CY.IC.COMMAND AND CONTROL (C2)"] = text("BC2");
   icn["CY.IC.HERDER"] = text("HDR");
