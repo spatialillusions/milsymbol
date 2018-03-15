@@ -1,5 +1,5 @@
 //import { version } from "../package.json";
-var ms = new function () {
+var ms = new function() {
   this._colorModes = {};
   this._dashArrays = {
     pending: "4,4",
@@ -27,27 +27,29 @@ var ms = new function () {
   if (typeof console === "object") {
     console.info(
       "milsymbol.js " +
-      this.version +
-      " - Copyright (c) 2017 M" +
-      String.fromCharCode(229) +
-      "ns Beckman  http://www.spatialillusions.com"
+        this.version +
+        " - Copyright (c) 2017 M" +
+        String.fromCharCode(229) +
+        "ns Beckman  http://www.spatialillusions.com"
     );
   }
 }();
 
 import Symbol from "./ms/symbol.js";
-import {BBox} from "./ms/bbox.js";
-import {Colormode} from "./ms/colormode.js";
+import { BBox } from "./ms/bbox.js";
+import { Colormode } from "./ms/colormode.js";
 
 ms.BBox = BBox;
 ms.ColorMode = Colormode;
 ms.Symbol = Symbol;
 
-ms._getIconParts = function iconparts(metadata,
-                                      colors,
-                                      _STD2525,
-                                      monoColor,
-                                      alternateMedal) {
+ms._getIconParts = function iconparts(
+  metadata,
+  colors,
+  _STD2525,
+  monoColor,
+  alternateMedal
+) {
   var icn = {};
 
   for (var i in this._iconParts) {
@@ -66,25 +68,25 @@ ms._getIconParts = function iconparts(metadata,
   return icn;
 };
 
-ms._scale = function (factor, instruction) {
+ms._scale = function(factor, instruction) {
   return {
     type: "translate",
     x: 100 - factor * 100,
     y: 100 - factor * 100,
-    draw: [{type: "scale", factor: factor, draw: [instruction]}]
+    draw: [{ type: "scale", factor: factor, draw: [instruction] }]
   };
 };
-ms._translate = function (x, y, instruction) {
-  return {type: "translate", x: x, y: y, draw: [instruction]};
+ms._translate = function(x, y, instruction) {
+  return { type: "translate", x: x, y: y, draw: [instruction] };
 };
 
-ms.addIconParts = function (parts) {
+ms.addIconParts = function(parts) {
   if (typeof parts === "function" && this._iconParts.indexOf(parts) == -1) {
     this._iconParts = this._iconParts.concat(parts);
   }
   return ms;
 };
-ms.addLabelOverrides = function (parts, type) {
+ms.addLabelOverrides = function(parts, type) {
   if (typeof parts === "function") {
     if (!this._labelOverrides.hasOwnProperty(type)) {
       this._labelOverrides[type] = [];
@@ -94,24 +96,24 @@ ms.addLabelOverrides = function (parts, type) {
   return ms;
 };
 
-ms.addIcons = function (obj) {
+ms.addIcons = function(obj) {
   ms.addSIDCicons(obj.icons, obj.type);
 };
 
-ms.addSIDCicons = function (parts, type) {
+ms.addSIDCicons = function(parts, type) {
   if (typeof parts === "function") {
     this._iconSIDC[type] = this._iconSIDC[type].concat(parts);
   }
   return ms;
 };
-ms.addSymbolPart = function (part) {
+ms.addSymbolPart = function(part) {
   if (typeof part === "function") {
     ms.setSymbolParts(ms.getSymbolParts().concat(part));
   }
   return ms;
 };
 
-ms.getColorMode = function (mode) {
+ms.getColorMode = function(mode) {
   var c = this._colorModes[mode];
   // Clone the mode and return the clone
   return new ms.ColorMode(
@@ -122,17 +124,17 @@ ms.getColorMode = function (mode) {
     c.Unknown
   );
 };
-ms.getDashArrays = function () {
+ms.getDashArrays = function() {
   return this._dashArrays;
 };
-ms.getHqStaffLength = function () {
+ms.getHqStaffLength = function() {
   return this._hqStaffLength;
 };
 
-ms.getSymbolParts = function () {
+ms.getSymbolParts = function() {
   return this._symbolParts.slice(0);
 };
-ms.getVersion = function () {
+ms.getVersion = function() {
   return this.version;
 };
 
@@ -147,7 +149,7 @@ ms.setAutoSVG = function(mode) {
 };
 */
 
-ms.setColorMode = function (mode, colorMode) {
+ms.setColorMode = function(mode, colorMode) {
   this._colorModes[mode] = {};
   this._colorModes[mode].Hostile = colorMode.Hostile;
   this._colorModes[mode].Friend = colorMode.Friend;
@@ -156,21 +158,21 @@ ms.setColorMode = function (mode, colorMode) {
   this._colorModes[mode].Civilian = colorMode.Civilian;
   return this._colorModes[mode];
 };
-ms.setDashArrays = function (pending, anticipated, feintDummy) {
+ms.setDashArrays = function(pending, anticipated, feintDummy) {
   this._dashArrays.pending = pending;
   this._dashArrays.anticipated = anticipated;
   this._dashArrays.feintDummy = feintDummy;
   return this._dashArrays;
 };
-ms.setHqStaffLength = function (len) {
+ms.setHqStaffLength = function(len) {
   this._hqStaffLength = len;
   return this._hqStaffLength;
 };
-ms.setSymbolParts = function (parts) {
+ms.setSymbolParts = function(parts) {
   this._symbolParts = parts;
   return ms;
 };
-ms.setStandard = function (standard) {
+ms.setStandard = function(standard) {
   if (standard == "2525") {
     this._STD2525 = true;
     return true;
@@ -232,4 +234,4 @@ import directionarrow from "./symbolfunctions/directionarrow.js";
 
 ms.addSymbolPart(directionarrow);
 
-export {ms};
+export { ms };
