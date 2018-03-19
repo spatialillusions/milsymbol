@@ -17,6 +17,10 @@
 
 ### Changed
 
+* ms.getHqStafLength changed to ms.getHqStaffLength, fixed spelling
+
+* ms.setHqStafLength changed to ms.setHqStaffLength, fixed spelling
+
 * Thanks to @okwolf we moved from webpack to rollup for development
 
 * Where there are multiple text fields in the same position, they are now joined
