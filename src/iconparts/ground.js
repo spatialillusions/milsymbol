@@ -1295,6 +1295,10 @@ export default function(
     d: "M95,75 L95,60 C95,55 105,55 105,60 L105,75 M90,75 L110,75",
     fill: false
   };
+  icn["GR.M1.AMPHIBIOUS WARFARE SHIP "] = {
+    type: "path",
+    d: "M 113,75 100,75 90,64.3 95,65 l 0,-8 10,0 0,8 5.5,-0.6 L 100,75"
+  };
   icn["GR.M1.ANTISUBMARINE WARFARE"] = textm1("P");
   icn["GR.M1.AREA"] = textm1("AREA");
   icn["GR.M1.ARMY"] = textm1("XXXX");
@@ -1381,6 +1385,7 @@ export default function(
   icn["GR.M1.LANDING SUPPORT"] = textm1("LS");
   icn["GR.M1.LARGE COMMUNICATIONS CONTINGENCY PACKAGE"] = textm1("LCCP");
   icn["GR.M1.LARGE EXTENSION NODE"] = textm1("LEN");
+  icn["GR.M1.LOAD HANDLING SYSTEM"] = textm1("LHS");
   icn["GR.M1.MAINTENANCE"] = {
     type: "path",
     fill: false,
@@ -1405,6 +1410,7 @@ export default function(
     fill: false
   };
   icn["GR.M1.MOBILE SUBSCRIBER EQUIPMENT"] = textm1("MSE");
+  icn["GR.M1.MOBILITY ASSAULT"] = textm1("MA");
   icn["GR.M1.MOBILITY SUPPORT"] = textm1("MS");
   icn["GR.M1.MOVEMENT CONTROL CENTRE"] = textm1("MCC");
   icn["GR.M1.MULTINATIONAL"] = textm1("MN");
@@ -1476,6 +1482,7 @@ export default function(
   icn["GR.M1.OR-8"] = textm1("OR-8");
   icn["GR.M1.OR-9"] = textm1("OR-9");
   icn["GR.M1.OTHER"] = textm1("OTH");
+  icn["GR.M1.PALLETIZED LOAD SYSTEM"] = textm1("PLS");
   icn["GR.M1.PERSONNEL RECOVERY"] = textm1("H");
   icn["GR.M1.PLATOON"] = [
     { type: "circle", stroke: false, cx: 80, cy: 68, r: 8 },
@@ -1503,6 +1510,7 @@ export default function(
   icn["GR.M1.REGIMENT"] = textm1("III");
   icn["GR.M1.RETRANSMISSION SITE"] = textm1("RTNS");
   icn["GR.M1.ASSAULT"] = textm1("ASLT");
+  icn["GR.M1.WEAPON"] = textm1("WPN");
   icn["GR.M1.WEAPONS"] = textm1("W");
   icn["GR.M1.CRIMINAL INVESTIGATION DIVISION"] = textm1("CID");
   icn["GR.M1.DIGITAL"] = textm1("DIG");
@@ -1727,6 +1735,19 @@ export default function(
   icn["GR.M2.NAVY BARGE, SELF-PROPELLED"] = textm2("YS");
   icn["GR.M2.NAVY BARGE, NOT SELF-PROPELLED"] = textm2("YB");
   icn["GR.M2.LAUNCH"] = textm2("YFT");
+  icn["GR.M1.TACTICAL SATELLITE COMMUNICATIONS"] = [
+    {
+      type: "path",
+      d: "m 105,65 10,0 m -30,0 10,0 M 85,77 c 10,-7 20,-7 30,0",
+      fill: false
+    },
+    {
+      type: "path",
+      d:
+        "m 75.4,60.9 0,9.1 13.1,0 0,-9.1 z m 36,0 0,9.1 13.1,0 0,-9.1 z m -18,0 0,9.1 13.1,0 0,-9.1 z",
+      stroke: false
+    }
+  ];
   icn["GR.M2.INTERMODAL"] = {
     type: "path",
     d: "m 80,125 40,0 0,-4 8,9 -8,9 0,-4 -40,0 0,4 -8,-9 8,-9 z",

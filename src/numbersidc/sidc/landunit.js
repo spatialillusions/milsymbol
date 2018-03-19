@@ -393,7 +393,11 @@ export default {
       sId["201200"] = [icn["GR.IC.FF.US MARSHALS SERVICE"]];
       sId["201300"] = [icn["ST.IC.INTERNAL SECURITY FORCE"]];
 
-      sIdm1["01"] = [icn["GR.M1.AIRMOBILE/AIR ASSAULT"]];
+      sIdm1["01"] = [
+        _STD2525
+          ? icn["GR.M1.TACTICAL SATELLITE COMMUNICATIONS"]
+          : icn["GR.M1.AIRMOBILE/AIR ASSAULT"]
+      ];
       sIdm1["02"] = [icn["GR.M1.AREA"]];
       sIdm1["03"] = [icn["GR.M1.ATTACK"]];
       sIdm1["04"] = [icn["GR.M1.BIOLOGICAL"]];
@@ -439,7 +443,11 @@ export default {
       sIdm1["44"] = [icn["GR.M1.NATO MEDICAL ROLE 3"]];
       sIdm1["45"] = [icn["GR.M1.NATO MEDICAL ROLE 4"]];
       sIdm1["46"] = [icn["GR.M1.NAVAL"]];
-      sIdm1["47"] = [icn["GR.M1.NODE CENTRE"]];
+      sIdm1["47"] = [
+        _STD2525
+          ? icn["GR.M1.UNMANNED AERIAL VEHICLE"]
+          : icn["GR.M1.NODE CENTRE"]
+      ];
       sIdm1["48"] = [icn["GR.M1.NUCLEAR"]];
       sIdm1["49"] = [icn["GR.M1.OPERATIONS"]];
       sIdm1["50"] = [icn["GR.M1.RADAR"]];
@@ -450,9 +458,13 @@ export default {
       sIdm1["53"] = [icn["GR.M1.SEARCH AND RESCUE"]];
       sIdm1["54"] = [icn["GR.M1.SECURITY"]];
       sIdm1["55"] = [icn["GR.M1.SENSOR"]];
-      sIdm1["56"] = [icn["GR.M1.SENSOR CONTROL MODULE"]];
+      sIdm1["56"] = [
+        _STD2525 ? icn["GR.M1.WEAPON"] : icn["GR.M1.SENSOR CONTROL MODULE"]
+      ];
       sIdm1["57"] = [icn["GR.M1.SIGNALS INTELLIGENCE"]];
-      sIdm1["58"] = [icn["GR.M1.SINGLE SHELTER SWITCH"]];
+      sIdm1["58"] = [
+        _STD2525 ? icn["GR.M1.ARMORED"] : icn["GR.M1.SINGLE SHELTER SWITCH"]
+      ];
       sIdm1["59"] = [icn["GR.M1.SINGLE ROCKET LAUNCHER"]];
       sIdm1["60"] = [icn["GR.M1.SMOKE"]];
       sIdm1["61"] = [icn["GR.M1.SNIPER"]];
@@ -465,10 +477,20 @@ export default {
       sIdm1["68"] = [icn["GR.M1.TOPOGRAPHIC"]];
       sIdm1["69"] = [icn["GR.M1.UTILITY"]];
       sIdm1["70"] = [icn["GR.M1.VIDEO IMAGERY"]];
-      sIdm1["71"] = [icn["GR.M1.ACCIDENT"]];
-      sIdm1["72"] = [icn["GR.M1.OTHER"]];
-      sIdm1["73"] = [icn["GR.M1.CIVILIAN"]];
-      sIdm1["74"] = [icn["GR.M1.ANTISUBMARINE WARFARE"]];
+      sIdm1["71"] = [
+        _STD2525 ? icn["GR.M1.MOBILITY ASSAULT"] : icn["GR.M1.ACCIDENT"]
+      ];
+      sIdm1["72"] = [
+        _STD2525 ? icn["GR.M1.AMPHIBIOUS WARFARE SHIP "] : icn["GR.M1.OTHER"]
+      ];
+      sIdm1["73"] = [
+        _STD2525 ? icn["GR.M1.LOAD HANDLING SYSTEM"] : icn["GR.M1.CIVILIAN"]
+      ];
+      sIdm1["74"] = [
+        _STD2525
+          ? icn["GR.M1.PALLETIZED LOAD SYSTEM"]
+          : icn["GR.M1.ANTISUBMARINE WARFARE"]
+      ];
       sIdm1["75"] = [icn["GR.M1.MEDEVAC"]];
       sIdm1["76"] = [icn["GR.M1.CYBERSPACE"]];
       sIdm1["77"] = [icn["GR.M1.SUPPORT"]];
