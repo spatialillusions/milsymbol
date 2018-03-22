@@ -47,7 +47,8 @@ export default function(ms, app6d, name, symbolset) {
         let valid = new ms.Symbol(
           "1003" + sidc.symbolset + "0000" + sidc["main icon"][i].code + "0000"
         ).isValid();
-
+        // eslint-disable-next-line no-console
+        console.log(`testing ${icon}`);
         if (
           valid &&
           [
