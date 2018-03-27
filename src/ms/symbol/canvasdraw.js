@@ -42,12 +42,19 @@ export default function canvasDraw(ctx, instruction) {
           case "path":
             if (!ms._brokenPath2D) {
               var d = new Path2D(instruction[i].d);
+              if (instruction[i].hasOwnProperty("clipPath")) {
+                ctx.save();
+                ctx.clip(new Path2D(instruction[i].clipPath), "nonzero");
+              }
               if (
                 typeof instruction[i].fill === "undefined" ||
                 (typeof instruction[i].fill !== "undefined" &&
                   instruction[i].fill)
               )
                 ctx.fill(d);
+              if (instruction[i].hasOwnProperty("clipPath")) {
+                ctx.restore();
+              }
               if (ctx.globalAlpha != 1) ctx.globalAlpha = 1; //We never have transparent strokes
               if (
                 typeof instruction[i].stroke === "undefined" ||
