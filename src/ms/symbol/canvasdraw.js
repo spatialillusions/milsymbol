@@ -86,6 +86,10 @@ export default function canvasDraw(ctx, instruction) {
             }
             break;
           case "circle":
+            if (instruction[i].hasOwnProperty("clipPath")) {
+              ctx.save();
+              ctx.clip(new Path2D(instruction[i].clipPath), "nonzero");
+            }
             ctx.beginPath();
             ctx.arc(
               instruction[i].cx,
@@ -101,6 +105,9 @@ export default function canvasDraw(ctx, instruction) {
                 instruction[i].fill)
             )
               ctx.fill();
+            if (instruction[i].hasOwnProperty("clipPath")) {
+              ctx.restore();
+            }
             if (
               typeof instruction[i].stroke === "undefined" ||
               (typeof instruction[i].stroke !== "undefined" &&
