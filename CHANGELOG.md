@@ -14,8 +14,11 @@
 * Added support for the field installationComposition as specified in APP-6 D
 * Added possiblity to control more color on symbol level
 * Support for speed leaders
+* Support for text background color using infoBackground and infoBackgroundFrame options
 
 ### Changed
+
+* `symbol.getProperties()` is removed and `symbol.getMetadata()` should be used instead.
 
 * ms.getHqStafLength changed to ms.getHqStaffLength, fixed spelling
 
@@ -30,8 +33,6 @@
   standard documents
 
 * Make it possible to set infoColor to a Color Mode
-
-* `symbol.getProperties()` is removed and `symbol.getMetadata()` should be used instead.
 
 ### Deprecated
 
