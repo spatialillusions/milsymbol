@@ -644,7 +644,7 @@ export default function textfields(ms) {
     // Background boxes behind text
     if (this.style.infoBackground) {
       var leftBox = { x1: 100, y1: 1000, y2: 0 };
-      var rightBox = { x1: 100, y1: 1000, y2: 0 };
+      var rightBox = { x2: 100, y1: 1000, y2: 0 };
       if (gStrings.L1)
         leftBox = {
           x1: Math.min(leftBox.x1, bbox.x1 - strWidth(gStrings.L1)),
@@ -713,39 +713,39 @@ export default function textfields(ms) {
       if (gStrings.R1)
         rightBox = {
           x1: bbox.x2 + spaceTextIcon / 2,
-          x2: Math.max(rightBox.x1, bbox.x2 + strWidth(gStrings.R1)),
+          x2: Math.max(rightBox.x2, bbox.x2 + strWidth(gStrings.R1)),
           y1: Math.min(rightBox.y1, 100 - 2.5 * fontSize),
           y2: Math.max(rightBox.y2, 100 - 1.5 * fontSize + spaceTextIcon / 2)
         };
       if (gStrings.R2)
         rightBox = {
           x1: bbox.x2 + spaceTextIcon / 2,
-          x2: Math.max(rightBox.x1, bbox.x2 + strWidth(gStrings.R2)),
+          x2: Math.max(rightBox.x2, bbox.x2 + strWidth(gStrings.R2)),
           y1: Math.min(rightBox.y1, 100 - 1.5 * fontSize),
           y2: Math.max(rightBox.y2, 100 - 0.5 * fontSize + spaceTextIcon / 2)
         };
       if (gStrings.R3)
         rightBox = {
           x1: bbox.x2 + spaceTextIcon / 2,
-          x2: Math.max(rightBox.x1, bbox.x2 + strWidth(gStrings.R3)),
+          x2: Math.max(rightBox.x2, bbox.x2 + strWidth(gStrings.R3)),
           y1: Math.min(rightBox.y1, 100 - 0.5 * fontSize),
           y2: Math.max(rightBox.y2, 100 + 0.5 * fontSize + spaceTextIcon / 2)
         };
       if (gStrings.R4)
         rightBox = {
           x1: bbox.x2 + spaceTextIcon / 2,
-          x2: Math.max(rightBox.x1, bbox.x2 + strWidth(gStrings.R4)),
+          x2: Math.max(rightBox.x2, bbox.x2 + strWidth(gStrings.R4)),
           y1: Math.min(rightBox.y1, 100 + 0.5 * fontSize),
           y2: Math.max(rightBox.y2, 100 + 1.5 * fontSize + spaceTextIcon / 2)
         };
       if (gStrings.R5)
         rightBox = {
           x1: bbox.x2 + spaceTextIcon / 2,
-          x2: Math.max(rightBox.x1, bbox.x2 + strWidth(gStrings.R5)),
+          x2: Math.max(rightBox.x2, bbox.x2 + strWidth(gStrings.R5)),
           y1: Math.min(rightBox.y1, 100 + 1.5 * fontSize),
           y2: Math.max(rightBox.y2, 100 + 2.5 * fontSize + spaceTextIcon / 2)
         };
-      if (rightBox.hasOwnProperty("x2")) {
+      if (rightBox.hasOwnProperty("x1")) {
         gbbox.x2 += fontSize / 2;
         drawArray2.push({
           type: "path",
