@@ -22,7 +22,7 @@ var ms = new function() {
 
   //this._autoSVG = false;
   this._autoValidation = false;
-  this.version = "2.0.0-master";
+  this.version = "2.0.0";
 
   if (typeof console === "object") {
     console.info(
