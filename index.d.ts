@@ -8,49 +8,61 @@ type ColorMode = {
 
 type SymbolOptions = {
   additionalInformation?: string;
+  alternateMedal?: boolean;
   altitudeDepth?: string;
+  auxiliaryEquipmentIndicator?: string;
+  civilianColor?: boolean;
+  colorMode?: ColorMode | string;
   combatEffectiveness?: string;
   commonIdentifier?: string;
-  direction?: number;
+  country?: string;
+  direction?: string;
   dtg?: string;
+  engagementBar?: string;
+  engagementType?: string;
   equipmentTeardownTime?: string;
   evaluationRating?: string;
+  fill?: boolean;
+  fillOpacity?: number;
+  fontfamily?: string;
+  frame?: boolean;
+  frameColor?: ColorMode;
+  guardedUnit?: string;
   headquartersElement?: string;
   higherFormation?: string;
   hostile?: string;
+  hqStaffLength?: number;
+  icon?: boolean;
+  iconColor?: ColorMode | string;
   iffSif?: string;
+  infoBackground?: ColorMode | string;
+  infoBackgroundFrame?: ColorMode | string;
+  infoColor?: ColorMode | string;
+  infoFields?: boolean;
+  infoSize?: number;
+  installationComposition?: string;
   location?: string;
+  monoColor?: string;
+  outlineColor?: ColorMode | string;
+  outlineWidth?: number;
+  padding?: number;
   platformType?: string;
   quantity?: string;
   reinforcedReduced?: string;
   sigint?: string;
   signatureEquipment?: string;
+  simpleStatusModifier?: boolean;
+  size?: number;
+  specialDesignator?: string;
   specialHeadquarters?: string;
   speed?: string;
   speedLeader?: number;
+  square?: boolean;
   staffComments?: string;
+  standard?: string;
+  strokeWidth?: number;
   type?: string;
   uniqueDesignation?: string;
-  alternateMedal?: boolean;
-  civilianColor?: boolean;
-  colorMode?: ColorMode | string;
-  fill?: boolean;
-  fillOpacity?: number;
-  frame?: boolean;
-  frameColor?: ColorMode | string;
-  hqStaffLength?: number;
-  icon?: boolean;
-  iconColor?: ColorMode | string;
-  infoColor?: ColorMode | string;
-  infoFields?: boolean;
-  infoSize?: number;
-  monoColor?: string;
-  outlineColor?: ColorMode | string;
-  outlineWidth?: number;
-  simpleStatusModifier?: boolean;
-  strokeWidth?: number;
-  size?: number;
-  square?: boolean;
 };
 
 type SymbolMetadata = {
@@ -96,9 +108,6 @@ export class Symbol {
     opts?: SymbolOptions,
     style?: SymbolOptions
   );
-
-  width: number;
-  height: number;
 
   asCanvas(factor?: number): HTMLCanvasElement;
   asDOM(): Element;
