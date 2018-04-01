@@ -43,34 +43,34 @@ function Symbol() {
   this.options.specialDesignator; // FieldID AR
 
   this.style = {}; //initiate style object.
-  this.style.size = 100; // The symbol size is actually the L variable in the symbols so the symbol will be larger than this size.
+
   this.style.alternateMedal = false; // 2525D lets you choose between MEDAL icn and alternate MEDAL icn for Mines; default is set to MEDAL.
+  this.style.civilianColor = true; // Should we use the Civilian Purple defined in 2525? (We set this to default because I like the color.
+  this.style.colorMode = "Light"; // 2525C Allows you to use Dark; Medium or Light colors. The values you can set are "Dark";"Medium" or "Light"
   this.style.fill = true; // Should the icon be filled with color
   this.style.fillOpacity = 1; // Possibility to change the fill opacity
   this.style.fontfamily = "Arial"; // The font family to use
   this.style.frame = true; // Should the icon be framed
   this.style.frameColor = "";
   this.style.hqStaffLength = 0; // The default length of the HQ staf
-  this.style.strokeWidth = 4; // The stroke width of he icon frame.
-  this.style.outlineColor = "rgb(239, 239, 239)"; // Color of the outline
-  this.style.outlineWidth = 0; // Width of the outline.
   this.style.icon = true; // Should we display the icon?
   this.style.iconColor = "";
   this.style.infoBackground = ""; // Color of square behind texts
   this.style.infoBackgroundFrame = ""; // Color of the squares frame
-  this.style.monoColor = ""; // Should the icon be monocromatic and if so what color
-  this.style.civilianColor = true; // Should we use the Civilian Purple defined in 2525? (We set this to default because I like the color.
-  this.style.colorMode = "Light"; // 2525C Allows you to use Dark; Medium or Light colors. The values you can set are "Dark";"Medium" or "Light"
   this.style.infoColor = ""; // Changes the color of the info fields
   this.style.infoFields = true; // If you have set all info fields but don't want the displayed; then just set this to false.
   this.style.infoSize = 40; // Relative size of the info fields
+  this.style.monoColor = ""; // Should the icon be monocromatic and if so what color
+  this.style.outlineColor = "rgb(239, 239, 239)"; // Color of the outline
+  this.style.outlineWidth = 0; // Width of the outline.
   this.style.padding = 0; // Extra padding around the symbol
   this.style.simpleStatusModifier = false; // Force use of simple status modifiers
-  this.style.standard = ""; // Force use of simple status modifiers
+  this.style.size = 100; // The symbol size is actually the L variable in the symbols so the symbol will be larger than this size.
   this.style.square = false; // If the symbol should be square
+  this.style.standard = ""; // Force use of simple status modifiers
+  this.style.strokeWidth = 4; // The stroke width of he icon frame.
   this.symbolAnchor = { x: 50, y: 50 }; // The anchor point for the current symbol
   this.validIcon = true; // If we were able to find a valid icon or not.
-
   // Initiate symbol.
   if (arguments.length > 0) {
     this.setOptions.apply(this, arguments);
