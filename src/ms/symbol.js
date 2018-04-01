@@ -66,7 +66,7 @@ function Symbol() {
   this.style.simpleStatusModifier = false; // Force use of simple status modifiers
   this.style.size = 100; // The symbol size is actually the L variable in the symbols so the symbol will be larger than this size.
   this.style.square = false; // If the symbol should be square
-  this.style.standard = ""; // Force use of simple status modifiers
+  this.style.standard = ""; // Set standard override
   this.style.strokeWidth = 4; // The stroke width of he icon frame.
 
   this.symbolAnchor = { x: 50, y: 50 }; // The anchor point for the current symbol
