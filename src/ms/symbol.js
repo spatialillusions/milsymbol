@@ -39,11 +39,10 @@ function Symbol() {
   // FieldID AN Azimuth
   this.options.engagementBar = ""; // FieldID AO EngagementBar
   this.options.engagementType = ""; // Engagement Bar Type, should be one of "TARGET", "NON-TARGET", or "EXPIRED"
-  this.options.guardedUnit; // FieldID AQ
-  this.options.specialDesignator; // FieldID AR
+  this.options.guardedUnit = ""; // FieldID AQ
+  this.options.specialDesignator = ""; // FieldID AR
 
   this.style = {}; //initiate style object.
-
   this.style.alternateMedal = false; // 2525D lets you choose between MEDAL icn and alternate MEDAL icn for Mines; default is set to MEDAL.
   this.style.civilianColor = true; // Should we use the Civilian Purple defined in 2525? (We set this to default because I like the color.
   this.style.colorMode = "Light"; // 2525C Allows you to use Dark; Medium or Light colors. The values you can set are "Dark";"Medium" or "Light"
@@ -69,6 +68,7 @@ function Symbol() {
   this.style.square = false; // If the symbol should be square
   this.style.standard = ""; // Force use of simple status modifiers
   this.style.strokeWidth = 4; // The stroke width of he icon frame.
+
   this.symbolAnchor = { x: 50, y: 50 }; // The anchor point for the current symbol
   this.validIcon = true; // If we were able to find a valid icon or not.
   // Initiate symbol.
