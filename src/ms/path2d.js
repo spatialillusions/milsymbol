@@ -7,7 +7,7 @@ export default function(ctx, d) {
   // This function converts a svg path to canvas instructions, it does not support everything
   // but most of the commands in paths.
   ctx.beginPath();
-  var x, y, i, j;
+  var x, y, x1, y1, x2, y2, i, j;
   var x0, y0;
   var c;
   var parts = d.match(/([MCLHV][^MCLHV]*)/gi);
@@ -95,16 +95,13 @@ export default function(ctx, d) {
     if (parts[i].charAt(0) == "C") {
       c = parts[i].match(/[-\d].*[\d]/)[0].split(/[\s,]/g);
       for (j = 0; j < c.length; j += 6) {
+        x1 = parseFloat(c[j]);
+        y1 = parseFloat(c[j + 1]);
+        x2 = parseFloat(c[j + 2]);
+        y2 = parseFloat(c[j + 3]);
         x = parseFloat(c[j + 4]);
         y = parseFloat(c[j + 5]);
-        ctx.bezierCurveTo(
-          c[j],
-          c[j + 1],
-          c[j + 2],
-          c[j + 3],
-          c[j + 4],
-          c[j + 5]
-        );
+        ctx.bezierCurveTo(x1, y1, x2, y2, x, y);
       }
       if (
         parts[i]
@@ -118,10 +115,10 @@ export default function(ctx, d) {
     if (parts[i].charAt(0) == "c") {
       c = parts[i].match(/[-\d].*[\d]/)[0].split(/[\s,]/g);
       for (j = 0; j < c.length; j += 6) {
-        var x1 = x + parseFloat(c[j]);
-        var y1 = y + parseFloat(c[j + 1]);
-        var x2 = x + parseFloat(c[j + 2]);
-        var y2 = y + parseFloat(c[j + 3]);
+        x1 = x + parseFloat(c[j]);
+        y1 = y + parseFloat(c[j + 1]);
+        x2 = x + parseFloat(c[j + 2]);
+        y2 = y + parseFloat(c[j + 3]);
         x = x + parseFloat(c[j + 4]);
         y = y + parseFloat(c[j + 5]);
         ctx.bezierCurveTo(x1, y1, x2, y2, x, y);
