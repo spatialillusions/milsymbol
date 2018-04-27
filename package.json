@@ -1,8 +1,7 @@
 {
   "name": "milsymbol",
   "version": "2.0.0-rc2",
-  "description":
-    "Milsymbol.js is a small library in pure javascript that creates symbols according to MIL-STD-2525 and APP6.",
+  "description": "Milsymbol.js is a small library in pure javascript that creates symbols according to MIL-STD-2525 and APP6.",
   "main": "dist/milsymbol.js",
   "directories": {
     "doc": "docs",
@@ -13,8 +12,7 @@
     "prebuild": "npm run lint && npm test",
     "build": "npm run bundle && npm run minify",
     "bundle": "rollup -c",
-    "minify":
-      "uglifyjs dist/milsymbol.development.js -o dist/milsymbol.js --comments --compress --mangle --source-map",
+    "minify": "uglifyjs dist/milsymbol.development.js -o dist/milsymbol.js --comments --compress --mangle --source-map",
     "test": "jest --coverage"
   },
   "repository": {
@@ -30,13 +28,13 @@
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
     "canvas-prebuilt": "^1.6.5-prerelease.1",
-    "eslint": "^4.2.0",
-    "eslint-plugin-prettier": "^2.0.1",
-    "jest": "^22.1.4",
-    "prettier": "^1.9.2",
-    "rollup": "^0.52.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "jest": "^22.4.3",
+    "prettier": "^1.12.1",
+    "rollup": "^0.52.3",
     "rollup-plugin-json": "^2.3.0",
-    "uglify-js": "^3.2.0"
+    "uglify-js": "^3.3.22"
   },
   "babel": {
     "presets": "env"
