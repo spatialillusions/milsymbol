@@ -25,7 +25,7 @@ This draws the symbol octagon, can be good for debugging.
 //ms.addSymbolPart(debug);
 
 /* ***************************************************************************************
-This makes it possible to draw canvas paths in IE11
+Polyfill for Path2D
 *************************************************************************************** */
 import path2d from "./src/ms/path2d.js";
 ms.Path2D = path2d;
