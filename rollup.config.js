@@ -1,4 +1,4 @@
-//import json from "rollup-plugin-json";
+import copy from "rollup-plugin-copy";
 
 export default [
   {
@@ -37,8 +37,13 @@ export default [
         "* More information can be found at www.spatialillusions.com \n" +
         "*/",
       name: "ms"
-    }
-    //plugins: [json()]
+    },
+    plugins: [
+      copy({
+        "node_modules/milstd/milstd.js": "docs/milstd.js",
+        verbose: true
+      })
+    ]
   } /*,
   {
     // Generate JSON for all standards
