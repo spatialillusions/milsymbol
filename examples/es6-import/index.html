@@ -16,7 +16,7 @@
         We have imported land equipment, so here you should see a SVG and a Canvas symbol.
       </td>
       <td>
-        We have not imported icons for land units, so this should display a symbol with missing main icon, and an indcator that something
+        We have not imported icons for 2525D, so this should display a symbol with missing main icon, and an indcator that something
         has gone wrong.
       </td>
     </tr>
@@ -52,9 +52,8 @@
 
 
   <script type="module">
-    import { ms } from '../../src/milsymbol.js';
-    import equipmentletter from "../../src/lettersidc/sidc/equipment.js";
-    ms.addIcons(equipmentletter);
+    import { ms, std2525c } from '../../index.esm.js';
+    ms.addIcons(std2525c);
 
     var color = "yellow";
     var outline = 3;
@@ -78,8 +77,15 @@
       symbol.asCanvas(),
       document.getElementById("Canvas-imported").firstChild);
 
-    symbol = new ms.Symbol("SFG-UCI----D", {
+    var symbol = new ms.Symbol("10031500001101030000", {
       size: 35,
+      quantity: 200,
+      staffComments: "for reinforcements".toUpperCase(),
+      additionalInformation: "added support for JJ".toUpperCase(),
+      direction: (750 * 360 / 6400),
+      type: "machine gun".toUpperCase(),
+      dtg: "30140000ZSEP97",
+      location: "0900000.0E570306.0N",
       outlineColor: color,
       outlineWidth: outline
     });
