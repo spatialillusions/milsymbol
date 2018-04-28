@@ -1,22 +1,26 @@
 /* ***************************************************************************************
 Creating the base of milsymbol
-*************************************************************************************** */
-import { ms } from "./src/milsymbol.js";
+******************************************************************************************
+To import all and have the same functionality as ordinary milsymbol, do the following:
+(Or just import the things that you need)
+*/
 
-/* ***************************************************************************************
-Letter based SIDC
-*************************************************************************************** */
-import { app6b, std2525b, std2525c } from "./src/lettersidc.js";
+import {
+  ms, // Base for milsymbol
+  app6b, // APP6-B
+  std2525b, // 2525B
+  std2525c, // 2525C
+  app6d, // APP6-D
+  std2525d, // 2525D
+  path2d // Pollyfill for Path2D in IE or node-canvas
+} from "./index.esm.js";
+
 ms.addIcons(app6b);
 ms.addIcons(std2525b);
 ms.addIcons(std2525c);
-
-/* ***************************************************************************************
-Number based SIDC
-*************************************************************************************** */
-import { app6d, std2525d } from "./src/numbersidc.js";
 ms.addIcons(app6d);
 ms.addIcons(std2525d);
+ms.Path2D = path2d;
 
 /* ***************************************************************************************
 This draws the symbol octagon, can be good for debugging.
@@ -24,13 +28,4 @@ This draws the symbol octagon, can be good for debugging.
 //import debug from "./symbolfunctions/debug.js";
 //ms.addSymbolPart(debug);
 
-/* ***************************************************************************************
-Polyfill for Path2D
-*************************************************************************************** */
-import path2d from "./src/ms/path2d.js";
-ms.Path2D = path2d;
-
-/* ***************************************************************************************
-Export ms to the world
-*************************************************************************************** */
 export default ms;
