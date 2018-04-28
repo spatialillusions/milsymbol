@@ -1,5 +1,6 @@
 //import { version } from "../package.json";
 var ms = new function() {
+  this._brokenPath2D = undefined;
   this._colorModes = {};
   this._dashArrays = {
     pending: "4,4",
@@ -40,6 +41,10 @@ import { Colormode } from "./ms/colormode.js";
 
 ms.BBox = BBox;
 ms.ColorMode = Colormode;
+
+ms.setBrokenPath2D = function(broken) {
+  ms._brokenPath2D = broken;
+};
 
 ms._getIconParts = function iconparts(
   metadata,
