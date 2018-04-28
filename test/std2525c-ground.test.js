@@ -1,5 +1,5 @@
-import { ms } from "../src/ms";
-import { ms2525c } from "../src/milstd";
+import { ms } from "../src/milsymbol";
+import { ms2525c } from "milstd";
 import verify from "./std2525c";
 
 import icons1 from "../src/lettersidc/sidc/ground";

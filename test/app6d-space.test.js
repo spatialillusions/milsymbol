@@ -1,5 +1,5 @@
-import { ms } from "../src/ms";
-import { app6d } from "../src/milstd";
+import { ms } from "../src/milsymbol";
+import { app6d } from "milstd";
 import verify from "./app6d";
 ms.setStandard("APP6");
 ms._iconCache = {};

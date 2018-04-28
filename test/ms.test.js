@@ -1,4 +1,4 @@
-import ms from "../src/index";
+import ms from "../index";
 
 describe("ms", () => {
   const publicApiMethods = {

@@ -1,4 +1,4 @@
-import ms from "../src/index";
+import ms from "../index";
 import sampleSymbolSvgs from "./sample-symbol-svgs";
 
 describe("ms.Symbol", () => {
