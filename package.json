@@ -34,7 +34,6 @@
     "milstd": "^0.1.2",
     "prettier": "^1.12.1",
     "rollup": "^0.58.2",
-    "rollup-plugin-json": "^2.3.0",
     "uglify-js": "^3.3.22"
   },
   "babel": {
