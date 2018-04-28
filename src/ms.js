@@ -187,7 +187,7 @@ ms.setStandard = function(standard) {
 /* ***************************************************************************************
 Add default colors
 *************************************************************************************** */
-import ColorModes from "./colormodes";
+import ColorModes from "./colormodes.js";
 for (var name in ColorModes) {
   ms.setColorMode(name, ColorModes[name]);
 }
