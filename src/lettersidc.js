@@ -38,6 +38,7 @@ var std2525b = [
   sea,
   subsurface,
   sof,
+  signalsIntelligence,
   stabilityoperations,
   std2525bextra,
   tacticalpoints2525
@@ -51,6 +52,7 @@ var std2525c = [
   sea,
   subsurface,
   sof,
+  signalsIntelligence,
   stabilityoperations,
   emergencymanagementsymbols,
   tacticalpoints2525
