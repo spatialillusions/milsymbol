@@ -35,13 +35,11 @@ var ms = new function() {
   }
 }();
 
-import Symbol from "./ms/symbol.js";
 import { BBox } from "./ms/bbox.js";
 import { Colormode } from "./ms/colormode.js";
 
 ms.BBox = BBox;
 ms.ColorMode = Colormode;
-ms.Symbol = Symbol;
 
 ms._getIconParts = function iconparts(
   metadata,
