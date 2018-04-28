@@ -95,18 +95,27 @@ ms.addLabelOverrides = function(parts, type) {
 };
 
 ms.addIcons = function(obj) {
-  ms.addSIDCicons(obj.icons, obj.type);
+  if (Array.isArray(obj)) {
+    for (var i = 0; i < obj.length; i++) {
+      ms.addSIDCicons(obj[i].icons, obj[i].type);
+    }
+  } else {
+    ms.addSIDCicons(obj.icons, obj.type);
+  }
 };
 
 ms.addSIDCicons = function(parts, type) {
   if (typeof parts === "function") {
-    this._iconSIDC[type] = this._iconSIDC[type].concat(parts);
+    if (this._iconSIDC[type].indexOf(parts) == -1)
+      this._iconSIDC[type] = this._iconSIDC[type].concat(parts);
   }
   return ms;
 };
 ms.addSymbolPart = function(part) {
   if (typeof part === "function") {
-    ms.setSymbolParts(ms.getSymbolParts().concat(part));
+    var symbolParts = ms.getSymbolParts();
+    if (symbolParts.indexOf(part) == -1)
+      ms.setSymbolParts(symbolParts.concat(part));
   }
   return ms;
 };
@@ -139,13 +148,6 @@ ms.getVersion = function() {
 import outline from "./ms/outline.js";
 
 ms.outline = outline;
-
-/*
-ms.setAutoSVG = function(mode) {
-  this._autoSVG = mode;
-  return this._autoSVG;
-};
-*/
 
 ms.setColorMode = function(mode, colorMode) {
   this._colorModes[mode] = {};

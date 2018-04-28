@@ -2,7 +2,7 @@ import { ms } from "../src/milsymbol";
 import { ms2525c } from "milstd";
 import verify from "./std2525c";
 
-import icons from "../src/lettersidc/sidc/signalsIntelligence";
+import { signalsIntelligence as icons } from "../src/lettersidc";
 ms.addIcons(icons);
 
 verify(ms, "MIL-STD-2525C Signals Intelligence Space", ms2525c.SIGINT.SPC);

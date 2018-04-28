@@ -3,7 +3,7 @@ import { app6d } from "milstd";
 import verify from "./app6d";
 ms.setStandard("APP6");
 
-import icons from "../src/numbersidc/sidc/landunit";
+import { landunit as icons } from "../src/numbersidc";
 ms.addIcons(icons);
 
 verify(ms, app6d, "APP-6 D Land Unit", "10");

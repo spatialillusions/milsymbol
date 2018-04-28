@@ -2,12 +2,8 @@ import { ms } from "../src/milsymbol";
 import { ms2525c } from "milstd";
 import verify from "./std2525c";
 
-import icons1 from "../src/lettersidc/sidc/ground";
-ms.addIcons(icons1);
-import icons2 from "../src/lettersidc/sidc/equipment";
-ms.addIcons(icons2);
-import icons3 from "../src/lettersidc/sidc/installations";
-ms.addIcons(icons3);
+import { ground, equipment, installations } from "../src/lettersidc";
+ms.addIcons([ground, equipment, installations]);
 
 verify(ms, "MIL-STD-2525C Ground", ms2525c.WAR.GRDTRK_UNT);
 verify(ms, "MIL-STD-2525C Ground", ms2525c.WAR.GRDTRK_EQT);

@@ -63,8 +63,8 @@ export default function canvasDraw(ctx, instruction) {
               )
                 ctx.stroke(d);
             } else {
-              if (typeof ms._Path2D === "function") {
-                ms._Path2D(ctx, instruction[i].d);
+              if (typeof ms.Path2D === "function") {
+                ms.Path2D(ctx, instruction[i].d);
                 if (
                   typeof instruction[i].fill === "undefined" ||
                   (typeof instruction[i].fill !== "undefined" &&
@@ -80,7 +80,7 @@ export default function canvasDraw(ctx, instruction) {
                   ctx.stroke();
               } else {
                 console.warn(
-                  "ms._Path2D() is not present, you will need to load functionality for using Canvas in older version of Internet Explorer."
+                  "ms.Path2D() is not present, you will need to load functionality for using Canvas in older version of Internet Explorer."
                 );
               }
             }

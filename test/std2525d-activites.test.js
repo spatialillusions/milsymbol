@@ -2,7 +2,7 @@ import { ms } from "../src/milsymbol";
 import { ms2525d } from "milstd";
 import verify from "./std2525d";
 
-import icons from "../src/numbersidc/sidc/activites";
+import { activites as icons } from "../src/numbersidc";
 ms.addIcons(icons);
 
 verify(
