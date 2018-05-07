@@ -32,6 +32,7 @@ export default function icon(ms) {
       this.metadata.dimension +
       this.metadata.affiliation +
       this.metadata.notpresent +
+      this.metadata.numberSIDC +
       ",frame:" +
       this.style.frame +
       ",alternateMedal:" +
