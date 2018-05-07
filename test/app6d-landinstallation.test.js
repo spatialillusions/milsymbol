@@ -1,5 +1,5 @@
 import { ms } from "../src/milsymbol";
-import { app6d } from "../../milstd/milstd";
+import { app6d } from "milstd";
 import verify from "./app6d";
 ms.setStandard("APP6");
 
