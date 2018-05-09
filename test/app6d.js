@@ -48,7 +48,7 @@ export default function(ms, app6d, name, symbolset) {
           "1003" + sidc.symbolset + "0000" + sidc["main icon"][i].code + "0000"
         ).isValid();
         // eslint-disable-next-line no-console
-        console.log(`testing ${icon}`);
+        //console.log(`testing ${icon}`);
         if (
           valid &&
           [

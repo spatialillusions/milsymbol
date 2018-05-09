@@ -18,7 +18,7 @@ export default function(ms, name, sidc) {
             sidc["main icon"][i].code
         ).isValid();
         // eslint-disable-next-line no-console
-        console.log(`testing ${icon}`);
+        //console.log(`testing ${icon}`);
         if (valid) {
           it(icon, () => {});
         } else {
