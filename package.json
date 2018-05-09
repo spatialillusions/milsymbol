@@ -31,7 +31,7 @@
     "eslint": "^4.19.1",
     "eslint-plugin-prettier": "^2.6.0",
     "jest": "^22.4.3",
-    "milstd": "^0.1.2",
+    "milstd": "^0.1.6",
     "prettier": "^1.12.1",
     "rollup": "^0.58.2",
     "rollup-plugin-copy": "^0.2.3",
