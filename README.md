@@ -1,5 +1,7 @@
 # Milsymbol
 
+[![Build Status](https://travis-ci.org/spatialillusions/milsymbol.svg?branch=master)](https://travis-ci.org/spatialillusions/milsymbol)
+
 Milsymbol is a small library in pure javascript that creates military unit symbols according to MIL-STD-2525 and STANAG APP-6.
 
 ![Figure 13](https://github.com/spatialillusions/milsymbol/blob/master/docs/images/milsymbol.png?raw=true)
