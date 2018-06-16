@@ -15,8 +15,9 @@ export default function directionarrow(ms) {
   if (this.style.infoFields) {
     if (this.options.direction !== "") {
       if (this.options.speedLeader == 0) {
-        //Movement indicator
-        //The length of the lines in a direction of movement indicator is a bit discussed but I use one frame height. (=100px)
+        // Movement indicator
+        // The length of the lines in a direction of movement indicator are
+        // a bit discussed but I use one frame height. (=100px)
         var arrowLength = 95;
         arrow = [
           {
@@ -64,20 +65,38 @@ export default function directionarrow(ms) {
           this.metadata.baseDimension == "Ground" ||
           this.metadata.baseDimension == ""
         ) {
-          arrow = [
-            { type: "translate", x: 0, y: bbox.y2, draw: arrow },
-            {
-              type: "path",
-              fill: color,
-              stroke: color,
-              strokewidth: this.style.strokeWidth,
-              d: "M 100," + bbox.y2 + "l0," + 100
-            }
-          ];
-          gbbox.y2 += bbox.y2 + parseFloat(this.style.strokeWidth);
+          if (!this.metadata.headquarters) {
+            // For all symbols not headquarters
+            arrow = [
+              { type: "translate", x: 0, y: bbox.y2, draw: arrow },
+              {
+                type: "path",
+                fill: color,
+                stroke: color,
+                strokewidth: this.style.strokeWidth,
+                d: "M 100," + bbox.y2 + "l0," + 100
+              }
+            ];
+          } else {
+            // For headquarters
+            arrow = [
+              {
+                type: "translate",
+                x: bbox.x1 - 100,
+                y:
+                  bbox.y2 -
+                  (100 - (this.style.hqStaffLength || ms._hqStaffLength)),
+                draw: arrow
+              }
+            ];
+            gbbox.x1 += bbox.x1 - 100;
+            gbbox.x2 += bbox.x1 - 100;
+          }
         }
+        gbbox.y2 += bbox.y2 + parseFloat(this.style.strokeWidth);
         drawArray2.push(arrow);
       } else {
+        // This is speed leader
         var length = this.options.speedLeader * (100 / this.style.size);
         var rad = this.options.direction * Math.PI / 180;
         var y = -length * Math.cos(rad);
