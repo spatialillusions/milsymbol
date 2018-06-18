@@ -48,6 +48,8 @@ export function metadata(ms, metadata, mapping) {
   if (codingscheme == "O" && ["V", "O", "R"].indexOf(battledimension) > -1) {
     metadata.activity = true;
   }
+  //SymbolSets that are control-measure
+  if (codingscheme == "G") metadata.controlMeasure = true;
   //symbolmodifier11 that are Installations
   if (symbolmodifier11 == "H") metadata.installation = true;
   //Planned/Anticipated/Suspect symbols should have a dashed outline

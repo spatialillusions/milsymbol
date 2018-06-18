@@ -65,6 +65,8 @@ export function metadata(ms, metadata, mapping) {
   if (symbolSet == "40") metadata.activity = true;
   //SymbolSets that are Installations
   if (symbolSet == "20") metadata.installation = true;
+  //SymbolSets that are control-measure
+  if (symbolSet == "25") metadata.controlMeasure = true;
   //SymbolSets in Cyberpace
   if (symbolSet == "60") metadata.cyberspace = true;
   //Sea Mines with MEDAL icn

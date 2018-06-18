@@ -35,7 +35,7 @@ export default function basegeometry(ms) {
   //outline
   if (this.style.frame && this.style.outlineWidth > 0) {
     var outline;
-    if (geom.type == "path" && this.style.fill && !this.style.monoColor) {
+    if (geom.type == "path" && this.metadata.fill && !this.style.monoColor) {
       outline = { type: this.metadata.baseGeometry.g.type };
       outline.d = this.metadata.baseGeometry.g.d + " Z"; //Making sure the path is closed
       outline.strokewidth = this.style.size >= 10 ? this.style.strokeWidth : 10;

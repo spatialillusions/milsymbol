@@ -365,7 +365,11 @@ export default function icon(ms) {
     }
   }
   //outline
-  if (!(this.style.frame && this.style.fill) || this.style.monoColor) {
+  if (
+    !(this.style.frame && this.metadata.fill) ||
+    this.style.monoColor ||
+    this.metadata.controlMeasure
+  ) {
     if (this.style.outlineWidth > 0)
       drawArray1.push(
         ms.outline(
