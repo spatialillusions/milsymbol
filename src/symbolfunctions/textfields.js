@@ -226,7 +226,10 @@ export default function textfields(ms) {
     }
     genericSIDC = this.metadata.functionid.substr(0, 6);
 
-    if (ms._labelCache["number"].hasOwnProperty(genericSIDC)) {
+    if (
+      this.metadata.controlMeasure &&
+      ms._labelCache["number"].hasOwnProperty(genericSIDC)
+    ) {
       drawArray2.push(
         labelOverride.call(this, ms._labelCache["number"][genericSIDC])
       );
