@@ -117,4 +117,6 @@ Milsymbol is created and maintained by Måns Beckman
 
 ## Licensing
 
-MIT, See [license.txt](license.txt) for details
+MIT, See [license.txt](license.txt) for details.
+
+Even if I'm giving it away for free, I don't mind if you would like to send me some cool company giveaways or unit badges. Just send me an email and and I will provide you with my address. 
