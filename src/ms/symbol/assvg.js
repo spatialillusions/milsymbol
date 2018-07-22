@@ -114,7 +114,10 @@ export default function asSVG() {
                 break;
               case "text":
                 svg +=
-                  String(instruction[i].text).replace("&", "&amp;") + "</text>";
+                  String(instruction[i].text)
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;") + "</text>";
                 break;
               case "translate":
                 svg += processInstructions.call(this, instruction[i].draw);

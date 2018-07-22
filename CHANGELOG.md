@@ -51,6 +51,8 @@
 
 ### Security
 
+* Prevented XSS issue where malicious code could be inserted into text fields of SVG symbols, all < and > are now encoded to prevent this.
+
 ## 1.3.3 14 NOV 2017
 
 ### Added
