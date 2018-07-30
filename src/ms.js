@@ -29,7 +29,7 @@ var ms = new function() {
     console.info(
       "milsymbol.js " +
         this.version +
-        " - Copyright (c) 2017 M" +
+        " - Copyright (c) 2018 M" +
         String.fromCharCode(229) +
         "ns Beckman  http://www.spatialillusions.com"
     );
