@@ -25,7 +25,7 @@ var ms = new function() {
   this._autoValidation = false;
   this.version = "2.0.0";
 
-  if (typeof console === "object") {
+  if (typeof console === "object" && typeof process !== "object") {
     console.info(
       "milsymbol.js " +
         this.version +
