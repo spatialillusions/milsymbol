@@ -294,9 +294,11 @@ export default {
       icn["GR.IN.IC.TRANSPORTATION INFRASTRUCTURE SHIP ANCHORAGE"]
     ];
     sId["E-F-LM----"] = [icn["GR.IN.IC.TOLL FACILITY"]];
-    sId["G-S-PO----"] = [
+    /*sId["G-S-PO----"] = [
       icn["GR.IN.IC.TRANSPORTATION INFRASTRUCTURE.TRAFFIC CONTROL POINT"]
-    ];
+    ];*/
+    sId["G-S-PO----"] = icn["TP.TRAFFIC CONTROL POST"]; //TACGRP.CSS.PNT.TCP
+    bbox["G-S-PO----"] = { x1: 60, x2: 140, y1: -60 };
     sId["E-F-LO----"] = [icn["GR.IN.IC.TRAFFIC INSPECTION FACILITY"]];
     sId["E-F-LP----"] = [icn["GR.IN.IC.TUNNEL"]];
     sId["E-F-MA----"] = [icn["GR.IN.IC.CONTROL VALVE"]];
