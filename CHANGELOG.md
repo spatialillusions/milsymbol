@@ -49,6 +49,8 @@
 
 * The condition bar is now drawn below the headquartersElement field
 
+* Some natural events in 2525C was framed even if they shouldn't be
+
 ### Security
 
 * Prevented XSS issue where malicious code could be inserted into text fields of SVG symbols, all < and > are now encoded to prevent this.

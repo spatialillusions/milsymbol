@@ -267,7 +267,24 @@ export function metadata(ms, metadata, mapping) {
   ) {
     metadata.frame = false;
   }
-
+  if (
+    codingscheme == "W" &&
+    battledimension == "S" &&
+    [
+      "WSVE--",
+      "WSD-LI",
+      "WSFGSO",
+      "WSGRL-",
+      "WSR-LI",
+      "WSDSLM",
+      "WSS-LI",
+      "WSTMH-",
+      "WST-FC",
+      "WSTSS-"
+    ].indexOf(functionid) > -1
+  ) {
+    metadata.frame = false;
+  }
   //We have some special symbols that should be unframed but filled, like mines, let us fix them.
   if (
     battledimension == "U" &&
