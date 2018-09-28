@@ -49,6 +49,7 @@ type SymbolOptions = {
   platformType?: string;
   quantity?: string;
   reinforcedReduced?: string;
+  sidc?:string;
   sigint?: string;
   signatureEquipment?: string;
   simpleStatusModifier?: boolean;
