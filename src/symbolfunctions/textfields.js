@@ -177,7 +177,7 @@ export default function textfields(ms) {
     var w = 0;
     for (var i = 0; i < str.length; i++) {
       //If we dont know how wide the char is, set it to 28.5 that is the width of W and no char is wider than that.
-      w += fontSize / 30 * (strWidths[str[i]] ? strWidths[str[i]] : 28.5);
+      w += (fontSize / 30) * (strWidths[str[i]] ? strWidths[str[i]] : 28.5);
     }
     //This is for the space between the text and the symbol.
     w += spaceTextIcon;

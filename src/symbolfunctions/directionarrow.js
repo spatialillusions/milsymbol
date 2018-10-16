@@ -42,22 +42,26 @@ export default function directionarrow(ms) {
 
         gbbox.y1 = Math.min(
           100 -
-            Math.cos(this.options.direction / 360 * Math.PI * 2) * arrowLength,
+            Math.cos((this.options.direction / 360) * Math.PI * 2) *
+              arrowLength,
           100
         );
         gbbox.y2 = Math.max(
           100 -
-            Math.cos(this.options.direction / 360 * Math.PI * 2) * arrowLength,
+            Math.cos((this.options.direction / 360) * Math.PI * 2) *
+              arrowLength,
           100
         );
         gbbox.x1 = Math.min(
           100 +
-            Math.sin(this.options.direction / 360 * Math.PI * 2) * arrowLength,
+            Math.sin((this.options.direction / 360) * Math.PI * 2) *
+              arrowLength,
           100
         );
         gbbox.x2 = Math.max(
           100 +
-            Math.sin(this.options.direction / 360 * Math.PI * 2) * arrowLength,
+            Math.sin((this.options.direction / 360) * Math.PI * 2) *
+              arrowLength,
           100
         );
 
@@ -98,7 +102,7 @@ export default function directionarrow(ms) {
       } else {
         // This is speed leader
         var length = this.options.speedLeader * (100 / this.style.size);
-        var rad = this.options.direction * Math.PI / 180;
+        var rad = (this.options.direction * Math.PI) / 180;
         var y = -length * Math.cos(rad);
         var x = length * Math.sin(rad);
 
