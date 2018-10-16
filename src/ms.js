@@ -90,6 +90,7 @@ ms.addIconParts = function(parts) {
   return ms;
 };
 ms.addLabelOverrides = function(parts, type) {
+  this._labelCache = {}; // Clear the cache
   if (typeof parts === "function") {
     if (!this._labelOverrides.hasOwnProperty(type)) {
       this._labelOverrides[type] = [];
@@ -100,6 +101,7 @@ ms.addLabelOverrides = function(parts, type) {
 };
 
 ms.addIcons = function(obj) {
+  this._iconCache = {}; // Clear the cache
   if (Array.isArray(obj)) {
     for (var i = 0; i < obj.length; i++) {
       ms.addSIDCicons(obj[i].icons, obj[i].type);
