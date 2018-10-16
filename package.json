@@ -31,8 +31,8 @@
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
     "canvas-prebuilt": "^1.6.11",
-    "eslint": "^4.19.1",
-    "eslint-plugin-prettier": "^2.7.0",
+    "eslint": "^5.7.0",
+    "eslint-plugin-prettier": "^3.0.0",
     "jest": "^23.6.0",
     "milstd": "^0.1.6",
     "prettier": "^1.14.3",
