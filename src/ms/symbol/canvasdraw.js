@@ -151,7 +151,7 @@ export default function canvasDraw(ctx, instruction) {
             var y = instruction[i].y;
             ctx.save();
             ctx.translate(x, y);
-            ctx.rotate(instruction[i].degree * Math.PI / 180);
+            ctx.rotate((instruction[i].degree * Math.PI) / 180);
             ctx.translate(-x, -y);
             canvasDraw.call(this, ctx, instruction[i].draw);
             ctx.restore();
