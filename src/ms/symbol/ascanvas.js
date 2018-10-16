@@ -33,7 +33,7 @@ export default function asCanvas(ratio) {
   //canvas.style.width = this.width +'px';
   //canvas.style.height = this.height +'px';
   var ctx = canvas.getContext("2d");
-  ctx.scale(ratio * this.style.size / 100, ratio * this.style.size / 100);
+  ctx.scale((ratio * this.style.size) / 100, (ratio * this.style.size) / 100);
   ctx.translate(
     -(this.bbox.x1 - this.style.strokeWidth - this.style.outlineWidth),
     -(this.bbox.y1 - this.style.strokeWidth - this.style.outlineWidth)
