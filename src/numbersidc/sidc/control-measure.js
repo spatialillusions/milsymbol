@@ -1,16 +1,14 @@
-import { ms } from "../../ms.js";
 import { metadata as metadata_number } from "../metadata.js";
-ms._getMetadata.number = metadata_number;
 import { geticons as getIcons_number } from "../geticons.js";
-ms._getIcons.number = getIcons_number;
-
-import tacticalpoints from "../../iconparts/tactical-points.js";
-ms.addIconParts(tacticalpoints);
+import icons from "../../iconparts/tactical-points.js";
 import labels from "../labels/tactical-points.js";
-ms.addLabelOverrides(labels, "number");
 
 export default {
   type: "number",
+  getMetadata: metadata_number,
+  getIcons: getIcons_number,
+  iconParts: icons,
+  labels: labels,
   icons: function controlmeasure(
     sidc,
     sIdm1,

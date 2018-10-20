@@ -1,14 +1,13 @@
 import { ms } from "../../ms.js";
 import { metadata as metadata_number } from "../metadata.js";
-ms._getMetadata.number = metadata_number;
 import { geticons as getIcons_number } from "../geticons.js";
-ms._getIcons.number = getIcons_number;
-
 import icons from "../../iconparts/ground.js";
-ms.addIconParts(icons);
 
 export default {
   type: "number",
+  getMetadata: metadata_number,
+  getIcons: getIcons_number,
+  iconParts: icons,
   icons: function activites(sId, sIdm1, sIdm2, bbox, symbolSet, icn, _STD2525) {
     //Adds support for Activities
     if (symbolSet == "40") {
@@ -247,6 +246,7 @@ export default {
       sIdm1["20"] = [icn["GR.M1.CYBERSPACE"]];
 
       sIdm2["01"] = [icn["GR.M2.CYBERSPACE"]];
+      sIdm2["02"] = [icn["GR.M2.SECURITY FORCE ASSISTANCE"]];
     }
   }
 };

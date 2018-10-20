@@ -1,14 +1,13 @@
 import { ms } from "../../ms.js";
 import { metadata as metadata_number } from "../metadata.js";
-ms._getMetadata.number = metadata_number;
 import { geticons as getIcons_number } from "../geticons.js";
-ms._getIcons.number = getIcons_number;
-
 import icons from "../../iconparts/ground.js";
-ms.addIconParts(icons);
 
 export default {
   type: "number",
+  getMetadata: metadata_number,
+  getIcons: getIcons_number,
+  iconParts: icons,
   icons: function landequipment(
     sId,
     sIdm1,
@@ -644,6 +643,7 @@ export default {
       sIdm1["21"] = [icn["GR.IN.M1.PETROLEUM"]];
       sIdm1["22"] = [icn["GR.M1.UTILITY"]];
       sIdm1["23"] = [icn["GR.M1.WATER"]];
+      sIdm1["24"] = [icn["GR.M1.ROBOTIC"]];
 
       sIdm2["01"] = [icn["GR.M2.CYBERSPACE"]];
       sIdm2["02"] = [icn["GR.M2.LIGHT"]];
@@ -653,6 +653,7 @@ export default {
       sIdm2["06"] = [icn["GR.M2.TRACTOR TRAILER"]];
       sIdm2["07"] = [icn["GR.M2.WHEELED LIMITED"]];
       sIdm2["08"] = [icn["GR.M2.WHEELED"]];
+      sIdm2["09"] = [icn["GR.M2.ROBOTIC"]];
 
       //This sets up the bounding boxes for equipment to have the bottom at the right place. (this will be used for mobility when unframed)
       var equipmentBottom = {

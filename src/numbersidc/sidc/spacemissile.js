@@ -1,14 +1,12 @@
-import { ms } from "../../ms.js";
 import { metadata as metadata_number } from "../metadata.js";
-ms._getMetadata.number = metadata_number;
 import { geticons as getIcons_number } from "../geticons.js";
-ms._getIcons.number = getIcons_number;
-
 import icons from "../../iconparts/space.js";
-ms.addIconParts(icons);
 
 export default {
   type: "number",
+  getMetadata: metadata_number,
+  getIcons: getIcons_number,
+  iconParts: icons,
   icons: function spacemissile(
     sId,
     sIdm1,

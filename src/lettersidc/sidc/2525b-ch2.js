@@ -1,14 +1,12 @@
-import { ms } from "../../ms.js";
 import { metadata as metadata_letter } from "../metadata.js";
-ms._getMetadata.letter = metadata_letter;
 import { geticons as getIcons_letter } from "../geticons.js";
-ms._getIcons.letter = getIcons_letter;
-
 import std2525bicons from "../../iconparts/2525b.js";
-ms.addIconParts(std2525bicons);
 
 export default {
   type: "letter",
+  getMetadata: metadata_letter,
+  getIcons: getIcons_letter,
+  iconParts: [std2525bicons],
   icons: function std2525b(sId, bbox, icn, _STD2525) {
     // These symbols are in 2525B but not in 2525C and because of this they need to be added
     // The icons are in iconparts/2525b.js

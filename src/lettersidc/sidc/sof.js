@@ -1,17 +1,14 @@
 import { ms } from "../../ms.js";
 import { metadata as metadata_letter } from "../metadata.js";
-ms._getMetadata.letter = metadata_letter;
 import { geticons as getIcons_letter } from "../geticons.js";
-ms._getIcons.letter = getIcons_letter;
-
 import icons from "../../iconparts/ground.js";
-ms.addIconParts(icons);
-// TODO, think about if we should copy all icons to ground...
 import icons_air from "../../iconparts/air.js";
-ms.addIconParts(icons_air);
 
 export default {
   type: "letter",
+  getMetadata: metadata_letter,
+  getIcons: getIcons_letter,
+  iconParts: [icons, icons_air],
   icons: function sof(sId, bbox, icn, _STD2525) {
     // SOF ===========================================================================
     sId["S-F-------"] = [icn["GR.IC.SPECIAL OPERATIONS FORCES"]];
