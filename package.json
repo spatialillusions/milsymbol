@@ -16,7 +16,7 @@
     "bundle-amd": "rollup -c rollup.config.amd.js",
     "minify": "uglifyjs dist/milsymbol.development.js -o dist/milsymbol.js --comments --compress --mangle --source-map",
     "minify-amd": "uglifyjs dist/amd/milsymbol.development.js -o dist/amd/milsymbol.js --comments --compress --mangle --source-map",
-    "test": "jest --coverage --maxWorkers=4"
+    "test": "tead"
   },
   "repository": {
     "type": "git",
@@ -29,15 +29,15 @@
   },
   "homepage": "https://github.com/spatialillusions/milsymbol",
   "devDependencies": {
-    "babel-preset-env": "^1.7.0",
-    "canvas-prebuilt": "^1.6.11",
     "eslint": "^5.7.0",
     "eslint-plugin-prettier": "^3.0.0",
-    "jest": "^23.6.0",
     "milstd": "^0.1.6",
+    "milstd2525": "github:spatialillusions/mil-std-2525",
     "prettier": "^1.14.3",
     "rollup": "^0.58.2",
     "rollup-plugin-copy": "^0.2.3",
+    "stanagapp6": "github:spatialillusions/stanag-app6",
+    "tead": "^0.5.1",
     "uglify-js": "^3.4.9"
   },
   "babel": {
