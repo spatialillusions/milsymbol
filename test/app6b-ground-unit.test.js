@@ -5,7 +5,7 @@ import { app6b } from "stanagapp6";
 import verify from "./app6b";
 ms.setStandard("APP6");
 
-import { sof } from "../src/lettersidc";
-ms.addIcons(sof);
+import { ground } from "../src/lettersidc";
+ms.addIcons(ground);
 
-export default verify(ms, "APP-6 B SOF", app6b.WAR.SOFUNT);
+export default verify(ms, "APP-6 B Ground", app6b.WAR.GRDTRK_UNT);

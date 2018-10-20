@@ -1,8 +1,9 @@
 import { ms } from "../src/milsymbol";
-import { ms2525d } from "milstd";
+ms.reset();
+import { ms2525d } from "milstd2525";
 import verify from "./std2525d";
 
 import { subsurface as icons } from "../src/numbersidc";
 ms.addIcons(icons);
 
-verify(ms, ms2525d, "MIL-STD-2525 D Sea Subsurface", "35");
+export default verify(ms, ms2525d["35"]);

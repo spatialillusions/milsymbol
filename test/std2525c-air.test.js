@@ -1,8 +1,9 @@
 import { ms } from "../src/milsymbol";
-import { ms2525c } from "milstd";
+ms.reset();
+import { ms2525c } from "milstd2525";
 import verify from "./std2525c";
 
 import { air as icons } from "../src/lettersidc";
 ms.addIcons(icons);
 
-verify(ms, "MIL-STD-2525C Air", ms2525c.WAR.AIRTRK);
+export default verify(ms, "MIL-STD-2525C Air", ms2525c.WAR.AIRTRK);

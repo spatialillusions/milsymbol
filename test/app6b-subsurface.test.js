@@ -1,9 +1,11 @@
 import { ms } from "../src/milsymbol";
-import { app6b } from "milstd";
+ms.reset();
+
+import { app6b } from "stanagapp6";
 import verify from "./app6b";
 ms.setStandard("APP6");
 
-import { subsurface as icons } from "../src/lettersidc";
-ms.addIcons(icons);
+import { subsurface } from "../src/lettersidc";
+ms.addIcons(subsurface);
 
-verify(ms, "APP-6 B Sub Surface", app6b.WAR.SBSUF);
+export default verify(ms, "APP-6 B Sub Surface", app6b.WAR.SBSUF);

@@ -1,11 +1,12 @@
 import { ms } from "../src/milsymbol";
-import { ms2525c } from "milstd";
+ms.reset();
+import { ms2525c } from "milstd2525";
 import verify from "./std2525c";
 
 import { stabilityoperations as icons } from "../src/lettersidc";
 ms.addIcons(icons);
 
-verify(ms, "MIL-STD-2525C Stability Operations", ms2525c.STBOPS.ITM);
-verify(ms, "MIL-STD-2525C Stability Operations", ms2525c.STBOPS.INDIV);
-verify(ms, "MIL-STD-2525C Stability Operations", ms2525c.STBOPS.GRPORG);
-verify(ms, "MIL-STD-2525C Stability Operations", ms2525c.STBOPS.RAPE);
+export default verify(ms, "MIL-STD-2525C Stability Operations", ms2525c.STBOPS);
+//verify(ms, "MIL-STD-2525C Stability Operations", ms2525c.STBOPS.INDIV);
+//verify(ms, "MIL-STD-2525C Stability Operations", ms2525c.STBOPS.GRPORG);
+//verify(ms, "MIL-STD-2525C Stability Operations", ms2525c.STBOPS.RAPE);

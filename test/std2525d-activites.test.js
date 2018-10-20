@@ -1,13 +1,9 @@
 import { ms } from "../src/milsymbol";
-import { ms2525d } from "milstd";
+ms.reset();
+import { ms2525d } from "milstd2525";
 import verify from "./std2525d";
 
 import { activites as icons } from "../src/numbersidc";
 ms.addIcons(icons);
 
-verify(
-  ms,
-  ms2525d,
-  "MIL-STD-2525 D Stability and Civil Support Activities",
-  "40"
-);
+export default verify(ms, ms2525d["40"]);

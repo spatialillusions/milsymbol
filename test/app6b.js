@@ -1,33 +1,27 @@
 export default function(ms, name, sidc) {
-  describe(name, () => {
-    describe("Main Icon", () => {
-      for (let i = 0; i < sidc["main icon"].length; i++) {
-        let icon =
-          sidc["main icon"][i]["code scheme"] +
-          "F" +
-          sidc["main icon"][i]["battle dimension"] +
-          "P" +
-          sidc["main icon"][i].code +
-          " " +
-          sidc["main icon"][i].name[sidc["main icon"][i].name.length - 1];
-        let valid = new ms.Symbol(
-          sidc["main icon"][i]["code scheme"] +
-            "F" +
-            sidc["main icon"][i]["battle dimension"] +
-            "P" +
-            sidc["main icon"][i].code
-        ).isValid();
-        // eslint-disable-next-line no-console
-        //console.log(`testing ${icon}`);
-        if (valid) {
-          it(icon, () => {});
-        } else {
-          // For now, we will skip symbols that fails, and simply warn that something went wrong
-          // This should be changed before release
-          it.skip(icon, () => {});
-          console.warn(icon);
-        }
-      }
-    });
-  });
+  let result = {};
+  for (let i = 0; i < sidc.mainIcon.length; i++) {
+    let icon =
+      sidc.mainIcon[i].codingscheme +
+      "F" +
+      sidc.mainIcon[i].battledimension +
+      "P" +
+      sidc.mainIcon[i].functionid +
+      " " +
+      sidc.mainIcon[i].name;
+    let symbol = new ms.Symbol(
+      sidc.mainIcon[i].codingscheme +
+        "F" +
+        sidc.mainIcon[i].battledimension +
+        "P" +
+        sidc.mainIcon[i].functionid
+    );
+    let valid = symbol.isValid();
+    if (!valid) valid = symbol.drawInstructions; //isValid(true);
+    result[icon] = [valid, true];
+  }
+  //result[ms._iconSIDC["letter"]] = [true, true];
+  //result[ms._iconParts.length] = [true, true];
+
+  return { "Main Icon": result };
 }
