@@ -124,3 +124,6 @@ export class Symbol {
   setOptions(opts: SymbolOptions): Symbol;
   toDataURL(): string;
 }
+
+// Gets the version of milsymbol.
+export function getVersion(): string;
