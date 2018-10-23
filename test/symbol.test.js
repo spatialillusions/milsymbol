@@ -37,8 +37,10 @@ export default {
     getAnchor: [typeof symbol.getAnchor(), "object"],
     getColors: [typeof symbol.getColors(), "object"],
     getOctagonAnchor: [typeof symbol.getOctagonAnchor(), "object"],
+    getOptions: [typeof symbol.getOptions(), "object"],
     getMetadata: [typeof symbol.getMetadata(), "object"],
     getSize: [typeof symbol.getSize(), "object"],
+    getStyle: [typeof symbol.getStyle(), "object"],
     isValid: [typeof symbol.isValid(), "boolean"], // TOOD make it possible to pass extended option and return an Object
     setOptions: [typeof symbol.setOptions(), "object"]
     //toDataURL: [typeof symbol.toDataURL(), "string"] // TODO
