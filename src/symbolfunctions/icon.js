@@ -32,6 +32,7 @@ export default function icon(ms) {
       this.metadata.dimension +
       this.metadata.affiliation +
       this.metadata.notpresent +
+      this.metadata.numberSIDC +
       ",frame:" +
       this.style.frame +
       ",alternateMedal:" +
@@ -344,7 +345,7 @@ export default function icon(ms) {
         this.options.sidc.substr(2, 1) +
         "-" +
         this.options.sidc.substr(4, 6);
-      if (icons[genericSIDC]) {
+      if (icons.hasOwnProperty(genericSIDC)) {
         drawArray2.push(icons[genericSIDC]);
       } else {
         if (
@@ -355,7 +356,7 @@ export default function icon(ms) {
         ) {
           drawArray2.push(undefinedIcon);
           this.validIcon = false;
-          //console.log("Invalid icon code in SIDC: " + this.options.sidc);
+          //console.info("Invalid icon code in SIDC: " + this.options.sidc);
         }
       }
       if (specialbbox[genericSIDC]) {
@@ -364,7 +365,11 @@ export default function icon(ms) {
     }
   }
   //outline
-  if (!(this.style.frame && this.style.fill) || this.style.monoColor) {
+  if (
+    !(this.style.frame && this.metadata.fill) ||
+    this.style.monoColor ||
+    this.metadata.controlMeasure
+  ) {
     if (this.style.outlineWidth > 0)
       drawArray1.push(
         ms.outline(

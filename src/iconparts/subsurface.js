@@ -160,7 +160,7 @@ export default function(
     "SU.IC.AUTONOMOUS UNDERWATER VEHICLE/ UNMANNED UNDERWATER VEHICLE (AUV/UUV)"
   ] = {
     type: "path",
-    d: "M60,90 l40,10 40,-10 0,8 -40,15 -40,-15 Z",
+    d: "m 60,84 40,20 40,-20 0,8 -40,25 -40,-25 z",
     stroke: false
   };
   icn["SU.IC.NON-SUBMARINE"] =
@@ -208,7 +208,7 @@ export default function(
   ] = {
     type: "path",
     fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
-    d: "M60,90 l40,10 40,-10 0,8 -40,15 -40,-15 Z"
+    d: "m 60,84 40,20 40,-20 0,8 -40,25 -40,-25 z"
   };
   icn["SU.M1.CYBERSPACE"] = textm1("CYB");
   icn["SU.M1.HIJACKER"] = textm1("HJ");
@@ -324,7 +324,9 @@ export default function(
       stroke: false,
       fill: monoColor
         ? monoColor
-        : (STD2525 || numberSIDC) && !alternateMedal ? black : white,
+        : (STD2525 || numberSIDC) && !alternateMedal
+          ? black
+          : white,
       x: 100,
       y: 110,
       fontsize: 35,
@@ -338,7 +340,9 @@ export default function(
       stroke: false,
       fill: monoColor
         ? monoColor
-        : (STD2525 || numberSIDC) && !alternateMedal ? black : white,
+        : (STD2525 || numberSIDC) && !alternateMedal
+          ? black
+          : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -350,7 +354,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(0, 130, 24)"
+          ? alternateMedal
+            ? black
+            : "rgb(0, 130, 24)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d:
@@ -361,7 +367,9 @@ export default function(
       stroke: false,
       fill: monoColor
         ? monoColor
-        : (STD2525 || numberSIDC) && !alternateMedal ? black : white,
+        : (STD2525 || numberSIDC) && !alternateMedal
+          ? black
+          : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -385,7 +393,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(0, 130, 24)"
+          ? alternateMedal
+            ? black
+            : "rgb(0, 130, 24)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z"
@@ -397,7 +407,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(0, 130, 24)"
+          ? alternateMedal
+            ? black
+            : "rgb(0, 130, 24)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75.5,136.8 49,0 M 100,124.5 l 0,12.3"
@@ -418,7 +430,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(0, 130, 24)"
+          ? alternateMedal
+            ? black
+            : "rgb(0, 130, 24)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 100,128 -10,15 20,0 z"
@@ -428,7 +442,9 @@ export default function(
     type: "path",
     fill:
       (STD2525 || numberSIDC) && !monoColor
-        ? alternateMedal ? black : "rgb(0, 130, 24)"
+        ? alternateMedal
+          ? black
+          : "rgb(0, 130, 24)"
         : iconFillColor,
     stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
     d:
@@ -440,7 +456,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(0, 130, 24)"
+          ? alternateMedal
+            ? black
+            : "rgb(0, 130, 24)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z"
@@ -452,7 +470,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(0, 130, 24)"
+          ? alternateMedal
+            ? black
+            : "rgb(0, 130, 24)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75,140 50,0 M 100,100 l 0,40"
@@ -535,7 +555,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(255,255,0)"
+          ? alternateMedal
+            ? black
+            : "rgb(255,255,0)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d:
@@ -546,7 +568,9 @@ export default function(
       stroke: false,
       fill: monoColor
         ? monoColor
-        : (STD2525 || numberSIDC) && !alternateMedal ? black : white,
+        : (STD2525 || numberSIDC) && !alternateMedal
+          ? black
+          : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -559,7 +583,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(255,255,0)"
+          ? alternateMedal
+            ? black
+            : "rgb(255,255,0)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z"
@@ -571,7 +597,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(255,255,0)"
+          ? alternateMedal
+            ? black
+            : "rgb(255,255,0)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75.5,136.8 49,0 M 100,124.5 l 0,12.3"
@@ -591,7 +619,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(0, 130, 24)"
+          ? alternateMedal
+            ? black
+            : "rgb(0, 130, 24)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : false,
       d:
@@ -602,7 +632,9 @@ export default function(
       stroke: false,
       fill: monoColor
         ? monoColor
-        : (STD2525 || numberSIDC) && !alternateMedal ? black : white,
+        : (STD2525 || numberSIDC) && !alternateMedal
+          ? black
+          : white,
       x: 100,
       y: 105,
       fontsize: 18,
@@ -614,7 +646,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(255,141,42)"
+          ? alternateMedal
+            ? black
+            : "rgb(255,141,42)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d:
@@ -638,7 +672,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(255,141,42)"
+          ? alternateMedal
+            ? black
+            : "rgb(255,141,42)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z"
@@ -650,7 +686,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(0, 130, 24)"
+          ? alternateMedal
+            ? black
+            : "rgb(0, 130, 24)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75.5,136.8 49,0 M 100,124.5 l 0,12.3"
@@ -670,7 +708,9 @@ export default function(
     stroke: false,
     fill: monoColor
       ? monoColor
-      : (STD2525 || numberSIDC) && !alternateMedal ? black : white,
+      : (STD2525 || numberSIDC) && !alternateMedal
+        ? black
+        : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -681,7 +721,9 @@ export default function(
     stroke: false,
     fill: monoColor
       ? monoColor
-      : (STD2525 || numberSIDC) && !alternateMedal ? black : white,
+      : (STD2525 || numberSIDC) && !alternateMedal
+        ? black
+        : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -692,7 +734,9 @@ export default function(
     stroke: false,
     fill: monoColor
       ? monoColor
-      : (STD2525 || numberSIDC) && !alternateMedal ? black : white,
+      : (STD2525 || numberSIDC) && !alternateMedal
+        ? black
+        : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -703,7 +747,9 @@ export default function(
     stroke: false,
     fill: monoColor
       ? monoColor
-      : (STD2525 || numberSIDC) && !alternateMedal ? black : white,
+      : (STD2525 || numberSIDC) && !alternateMedal
+        ? black
+        : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -714,7 +760,9 @@ export default function(
     stroke: false,
     fill: monoColor
       ? monoColor
-      : (STD2525 || numberSIDC) && !alternateMedal ? black : white,
+      : (STD2525 || numberSIDC) && !alternateMedal
+        ? black
+        : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -726,7 +774,9 @@ export default function(
       strokedasharray: "8,4",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(255,255,0)"
+          ? alternateMedal
+            ? black
+            : "rgb(255,255,0)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d:
@@ -737,7 +787,9 @@ export default function(
       stroke: false,
       fill: monoColor
         ? monoColor
-        : (STD2525 || numberSIDC) && !alternateMedal ? black : white,
+        : (STD2525 || numberSIDC) && !alternateMedal
+          ? black
+          : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -750,7 +802,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(255,255,0)"
+          ? alternateMedal
+            ? black
+            : "rgb(255,255,0)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z"
@@ -762,7 +816,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(255,255,0)"
+          ? alternateMedal
+            ? black
+            : "rgb(255,255,0)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75.5,136.8 49,0 M 100,124.5 l 0,12.3"
@@ -782,7 +838,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(255,255,0)"
+          ? alternateMedal
+            ? black
+            : "rgb(255,255,0)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d:
@@ -793,7 +851,9 @@ export default function(
       stroke: false,
       fill: monoColor
         ? monoColor
-        : (STD2525 || numberSIDC) && !alternateMedal ? black : white,
+        : (STD2525 || numberSIDC) && !alternateMedal
+          ? black
+          : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -835,7 +895,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(0, 130, 24)"
+          ? alternateMedal
+            ? black
+            : "rgb(0, 130, 24)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d:
@@ -846,7 +908,9 @@ export default function(
       stroke: false,
       fill: monoColor
         ? monoColor
-        : (STD2525 || numberSIDC) && !alternateMedal ? black : white,
+        : (STD2525 || numberSIDC) && !alternateMedal
+          ? black
+          : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -859,7 +923,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(0, 130, 24)"
+          ? alternateMedal
+            ? black
+            : "rgb(0, 130, 24)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 74.8,125.2 50.4,0 0,12.6 -50.4,0 z"
@@ -871,7 +937,9 @@ export default function(
       type: "path",
       fill:
         (STD2525 || numberSIDC) && !monoColor
-          ? alternateMedal ? black : "rgb(0, 130, 24)"
+          ? alternateMedal
+            ? black
+            : "rgb(0, 130, 24)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75.5,136.8 49,0 M 100,124.5 l 0,12.3"
@@ -1008,6 +1076,11 @@ export default function(
   icn["SU.M1.CERTAIN SUBMARINE"] = textm1("CT");
   icn["SU.M1.ANTI-TORPEDO TORPEDO"] = textm1("ATT");
   icn["SU.M1.HIJACKING/HIJACKED"] = textm1("H");
+  icn["SU.M2.POSSIBLE SUBMARINE - LOW 1"] = textm2("P1");
+  icn["SU.M2.POSSIBLE SUBMARINE - LOW 2"] = textm2("P2");
+  icn["SU.M2.POSSIBLE SUBMARINE - HIGH 3"] = textm2("P3");
+  icn["SU.M2.POSSIBLE SUBMARINE - HIGH 4"] = textm2("P4");
+  icn["SU.M2.PROBABLE SUBMARINE"] = textm2("PB");
   icn["SU.M2.AIR INDEPENDENT PROPULSION"] = textm2("AI");
   icn["SU.M2.CERTSUB"] = textm2("CT");
   icn["SU.M2.DIESEL PROPULSION"] = textm2("D");

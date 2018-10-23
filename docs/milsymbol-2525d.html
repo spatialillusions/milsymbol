@@ -4,313 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <title>Milsymbol 2525D</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-      max-width: 80%;
-      margin: auto;
-    }
-
-    em {
-      color: #ccc;
-    }
-
-    figure {
-      text-align: center;
-    }
-
-    svg {
-      max-width: 100%;
-    }
-
-    table {
-      border-collapse: collapse;
-      margin: auto;
-      width: 100%;
-      table-layout: fixed;
-      margin-bottom: 1rem;
-    }
-
-    table,
-    td,
-    th {
-      border: solid 1px #ccc;
-      padding: 5px;
-      text-align: center;
-    }
-
-    thead {
-      font-weight: bold;
-      background-color: rgb(243, 243, 243);
-      display: table-header-group;
-    }
-
-    tr td:nth-child(1) {
-      text-align: left;
-    }
-
-    .index-h3 {
-      margin-left: 15px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
   
   <script src="../dist/milsymbol.development.js"></script>
-  <script src="../dist/milstd-umd.js"></script>
+  <!--<script src="milstd.js"></script>-->
+  <script src="milstd-2525.js"></script>
 
-  <script>
-    var size = 70;
-
-    /*
-        ms.addSymbolPart(function debug() {
-          //This debug function is a minimal example of how to extend milsymbol.
-          //Create a variable to store your geometries
-          var drawArray1 = [];
-          var drawArray2 = [];
-          //Get a new bounding box and modify it if your geometry extends outside the current bounds.
-          var gbbox = new ms.BBox();
-          //Draws the icon octagon
-          drawArray2.push({
-            type: "path",
-            fill: false,
-            stroke: "rgb(0,0,255)",
-            strokewidth: 0.8,
-            d:
-              "m 120,60 0,80 m -40,-80 0,80 m -20,-20 80,0 m 0,-40 -80,0 M 100,50 135.35534,64.64466 150,100 135.35534,135.35534 100,150.00002 64.644661,135.35534 50,100 64.644661,64.64466 z"
-          });
-          return { pre: drawArray1, post: drawArray2, bbox: gbbox };
-        });
-        //*/
-
-
-    function generatenavigation() {
-      var i = 0;
-      var indexoftables = "";
-      document.querySelectorAll("h2, h3").forEach(function (d) {
-        i++;
-        d.id = "heading-" + i;
-        indexoftables +=
-          '<a href="#heading-' + i + '" class="index-' + d.tagName.toLowerCase() + '">' + d.textContent + "</a><br>\n";
-      });
-      document.getElementById("indexoftables").innerHTML = indexoftables;
-
-      i = 0;
-      var indexoffigures = "";
-      document.querySelectorAll("figure").forEach(function (d) {
-        i++;
-        d.id = "figure-" + i;
-        d = d.getElementsByTagName("figcaption").item(0);
-        indexoffigures +=
-          '<a href="#figure-' + i + '">' + d.textContent + "</a><br>\n";
-      });
-      document.getElementById("indexoffigures").innerHTML = indexoffigures;
-    }
-
-    function remarks(remark) {
-      /*
-        if (
-          [
-            "From MIL-STD-2525.",
-            "Simplification of MIL-STD-2525 icon TBD."
-          ].indexOf(remark) != -1
-        ) {
-          return { monoColor: "Silver" };
-        } else {
-          return {};
-        }
-      //*/
-      return {};
-    }
-
-    function labels(icon) {
-        return { infoColor: "Silver", additionalInformation: 'H', additionalInformation1: 'H1', hostile: 'N', uniqueDesignation: 'T', dtg: 'W', dtg1: 'W1', altitudeDepth: 'X' }
-    }
-    
-    function renderSymbolSet(symbolset) {
-
-      var output = "";
-      var i;
-      output += "<h2>" + symbolset.name + "</h2>";
-      output += "<h3>" + symbolset.name + " Main Icon</h3>";
-      output += "<table border=1><thead><tr><th>Description</th><th>Icon</th>";
-
-      if (symbolset.symbolset == 36) output += "<th>Alternate Icon</th>";
-
-      output += "<th>Remarks</th></tr></thead>";
-
-      for (i = 0; i < symbolset["main icon"].length; i++) {
-        var symbol = new ms.Symbol(
-              "1003" +
-              symbolset.symbolset +
-              "0000" +
-              symbolset["main icon"][i].code +
-              "0000",
-              { size: size },
-              remarks(symbolset["main icon"][i].remarks),
-              (symbolset.symbolset == 25)?labels():{}
-            );
-
-        output += "<tr";
-
-        if ([
-          "N/A",
-          "For training or hierarchical purposes only"
-        ].indexOf(symbolset["main icon"][i].remarks) != -1){
-          output += ' class="na"';
-        }
-          
-        if(!symbol.isValid() && !(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point" )){
-          output += ' style="background-color:red"';
-          var name = symbolset["main icon"][i]["entity subtype"] ||
-            symbolset["main icon"][i]["entity type"] ||
-            symbolset["main icon"][i]["entity"];
-          console.warn( name + "\n" +
-          symbol.getOptions().sidc + "\n" +
-          symbol.isValid(true));
-        }
-
-        output += "><td><b>" +
-          (symbolset["main icon"][i]["entity subtype"] ||
-            symbolset["main icon"][i]["entity type"] ||
-            symbolset["main icon"][i]["entity"]) +
-          "</b>";
-
-        if (!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")) {
-          output +=
-            "<br><br><em>Type:</em> " +
-            (symbolset["main icon"][i].hasOwnProperty("entity subtype")
-              ? "Entity subtype"
-              : symbolset["main icon"][i].hasOwnProperty("entity type")
-                ? "Entity type"
-                : "Entity");
-          if (symbolset["main icon"][i].hasOwnProperty("entity subtype")) {
-            output +=
-              "<br><em>Entity/Entity Type:</em> " +
-              symbolset["main icon"][i]["entity type"] +
-              "/" +
-              symbolset["main icon"][i]["entity"];
-          } else {
-            if (symbolset["main icon"][i].hasOwnProperty("entity type")) {
-              output += "<br><em>Entity:</em> " + symbolset["main icon"][i]["entity"];
-            }
-          }
-
-          output += "<br><em>Symbol Set Code:</em> " + symbolset.symbolset;
-        }
-
-        output += "<br><em>Code:</em> " + symbolset["main icon"][i].code;
-
-        if (!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")) {
-          output +=
-            "</td><td>" +
-              "<!--" + 
-              "1003" +
-              symbolset.symbolset +
-              "0000" +
-              symbolset["main icon"][i].code +
-              "0000" +
-              "-->" +
-            symbol.asSVG();
-          output += "</td>"
-        } else {
-          output +=
-            "</td><td>" +
-            symbolset["main icon"][i].geometry;
-          output += "</td>"
-        }
-        if (symbolset.symbolset == 36) {
-          output += "<td>" +
-            new ms.Symbol(
-              "1003" +
-              symbolset.symbolset +
-              "0000" +
-              symbolset["main icon"][i].code +
-              "0000",
-              { size: size, alternateMedal: true },
-              remarks(symbolset["main icon"][i].remarks)
-            ).asSVG();
-          output += "</td>"
-        }
-
-        output += "<td>" + symbolset["main icon"][i].remarks + "</td></tr>";
-      }
-      output += "</table>";
-      if (symbolset["modifier 1"].length) {
-        output += "<h3>" + symbolset.name + " Modifier 1</h3>";
-        output +=
-          "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
-        for (i = 0; i < symbolset["modifier 1"].length; i++) {
-          var symbol = new ms.Symbol(
-              "1003" +
-              symbolset.symbolset +
-              "0000000000" +
-              symbolset["modifier 1"][i].code +
-              "00",
-              { size: size },
-              remarks(symbolset["modifier 1"][i].remarks)
-            );
-          output += "<tr";
-          
-          if(symbolset["modifier 1"][i].code.length == 2 && !symbol.isValid()){
-            output += ' style="background-color:red"';
-            console.warn(symbolset["modifier 1"][i].modifier + "\n" +
-            symbol.getOptions().sidc + "\n"+
-            symbol.isValid(true));
-          }
-
-          output += "><td><b>" + symbolset["modifier 1"][i].modifier + "</b>";
-          output += "<br><br><em>Symbol Set Code:</em> " + symbolset.symbolset;
-          output += "<br><em>Code:</em> " + symbolset["modifier 1"][i].code;
-          output += "</td><td>";
-          if (symbolset["modifier 1"][i].code != 99 && !isNaN(symbolset["modifier 1"][i].code))
-            output += symbol.asSVG();
-          output += "</td><td>" + symbolset["modifier 1"][i].remarks + "</td></tr>";
-        }
-        output += "</table>";
-      }
-      if (symbolset["modifier 2"].length) {
-        output += "<h3>" + symbolset.name + " Modifier 2</h3>";
-        output +=
-          "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
-        for (i = 0; i < symbolset["modifier 2"].length; i++) {
-          var symbol = new ms.Symbol(
-              "1003" +
-              symbolset.symbolset +
-              "000000000000" +
-              symbolset["modifier 2"][i].code,
-              { size: size },
-              remarks(symbolset["modifier 2"][i].remarks)
-            );
-          output += "<tr";
-          
-          if(symbolset["modifier 2"][i].code.length == 2 && !symbol.isValid()){
-            output += ' style="background-color:red"';
-            console.warn(symbolset["modifier 2"][i].modifier + "\n" +
-            symbol.getOptions().sidc + "\n" +
-            symbol.isValid(true));
-          }
-          
-          output += "><td><b>" + symbolset["modifier 2"][i].modifier + "</b>";
-          output += "<br><br><em>Symbol Set Code:</em> " + symbolset.symbolset;
-          output += "<br><em>Code:</em> " + symbolset["modifier 2"][i].code;
-          output += "</td><td>";
-          if (symbolset["modifier 2"][i].code != 99 && !isNaN(symbolset["modifier 2"][i].code))
-            output += symbol.asSVG();
-          output += "</td><td>" + symbolset["modifier 2"][i].remarks + "</td></tr>";
-        }
-        output += "</table>";
-      }
-      return output;
-    }
-  </script>
+  <script src="number-sidc.js"></script>
 </head>
 
 <body onload="generatenavigation();">
 
-  <h1>Milsymbol MIL-STD-2525D Implementation</h1>
+  <h1>Milsymbol MIL-STD-2525D change 1 Implementation</h1>
   This page shows figures and tables from MIL-STD-2525D drawn with milsymbol.
   <br> All symbols are drawn using milsymbol when the page is loaded, no images or other external resources than milsymbol are
   used.
@@ -365,6 +70,9 @@
         <td>
           Activity/Event
         </td>
+        <td>
+          Cyberspace
+        </td>
       </tr>
     </thead>
     <tr>
@@ -409,6 +117,11 @@
       <td>
         <script>
           document.write(new ms.Symbol(100040, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(100060, { size: 40 }).asSVG());
         </script>
       </td>
     </tr>
@@ -457,6 +170,11 @@
           document.write(new ms.Symbol(100140, { size: 40 }).asSVG());
         </script>
       </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(100160, { size: 40 }).asSVG());
+        </script>
+      </td>
     </tr>
 
     <tr>
@@ -501,6 +219,11 @@
       <td>
         <script>
           document.write(new ms.Symbol(100340, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(100360, { size: 40 }).asSVG());
         </script>
       </td>
     </tr>
@@ -549,6 +272,11 @@
           document.write(new ms.Symbol(100440, { size: 40 }).asSVG());
         </script>
       </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(100460, { size: 40 }).asSVG());
+        </script>
+      </td>
     </tr>
 
     <tr>
@@ -593,6 +321,11 @@
       <td>
         <script>
           document.write(new ms.Symbol(100640, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(100660, { size: 40 }).asSVG());
         </script>
       </td>
     </tr>
@@ -641,6 +374,11 @@
           document.write(new ms.Symbol(100240, { size: 40 }).asSVG());
         </script>
       </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(100260, { size: 40 }).asSVG());
+        </script>
+      </td>
     </tr>
 
     <tr>
@@ -687,6 +425,11 @@
           document.write(new ms.Symbol(100540, { size: 40 }).asSVG());
         </script>
       </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(100560, { size: 40 }).asSVG());
+        </script>
+      </td>
     </tr>
   </table>
 
@@ -730,6 +473,9 @@
         </td>
         <td>
           Activity/Event
+        </td>
+        <td>
+          Cyberspace
         </td>
       </tr>
     </thead>
@@ -776,6 +522,11 @@
       <td>
         <script>
           document.write(new ms.Symbol(101040, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(101060, { size: 40 }).asSVG());
         </script>
       </td>
     </tr>
@@ -825,6 +576,11 @@
           document.write(new ms.Symbol(101140, { size: 40 }).asSVG());
         </script>
       </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(101160, { size: 40 }).asSVG());
+        </script>
+      </td>
     </tr>
 
     <tr>
@@ -870,6 +626,11 @@
       <td>
         <script>
           document.write(new ms.Symbol(101340, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(101360, { size: 40 }).asSVG());
         </script>
       </td>
     </tr>
@@ -919,6 +680,11 @@
           document.write(new ms.Symbol(101440, { size: 40 }).asSVG());
         </script>
       </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(101460, { size: 40 }).asSVG());
+        </script>
+      </td>
     </tr>
 
     <tr>
@@ -964,6 +730,11 @@
       <td>
         <script>
           document.write(new ms.Symbol(101240, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(101260, { size: 40 }).asSVG());
         </script>
       </td>
     </tr>
@@ -1012,6 +783,11 @@
           document.write(new ms.Symbol(101540, { size: 40 }).asSVG());
         </script>
       </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(101560, { size: 40 }).asSVG());
+        </script>
+      </td>
     </tr>
 
     <tr>
@@ -1058,6 +834,11 @@
           document.write(new ms.Symbol(101640, { size: 40 }).asSVG());
         </script>
       </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(101660, { size: 40 }).asSVG());
+        </script>
+      </td>
     </tr>
   </table>
 
@@ -1101,6 +882,9 @@
         </td>
         <td>
           Activity/Event
+        </td>
+        <td>
+          Cyberspace
         </td>
       </tr>
     </thead>
@@ -1147,6 +931,11 @@
       <td>
         <script>
           document.write(new ms.Symbol(102040, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(102060, { size: 40 }).asSVG());
         </script>
       </td>
     </tr>
@@ -1196,6 +985,11 @@
           document.write(new ms.Symbol(102140, { size: 40 }).asSVG());
         </script>
       </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(102160, { size: 40 }).asSVG());
+        </script>
+      </td>
     </tr>
 
     <tr>
@@ -1241,6 +1035,11 @@
       <td>
         <script>
           document.write(new ms.Symbol(102340, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(102360, { size: 40 }).asSVG());
         </script>
       </td>
     </tr>
@@ -1290,6 +1089,11 @@
           document.write(new ms.Symbol(102440, { size: 40 }).asSVG());
         </script>
       </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(102460, { size: 40 }).asSVG());
+        </script>
+      </td>
     </tr>
 
     <tr>
@@ -1335,6 +1139,11 @@
       <td>
         <script>
           document.write(new ms.Symbol(102640, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(102660, { size: 40 }).asSVG());
         </script>
       </td>
     </tr>
@@ -1384,6 +1193,11 @@
           document.write(new ms.Symbol(102240, { size: 40 }).asSVG());
         </script>
       </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(102260, { size: 40 }).asSVG());
+        </script>
+      </td>
     </tr>
 
     <tr>
@@ -1429,6 +1243,11 @@
       <td>
         <script>
           document.write(new ms.Symbol(102540, { size: 40 }).asSVG());
+        </script>
+      </td>
+      <td>
+        <script>
+          document.write(new ms.Symbol(102560, { size: 40 }).asSVG());
         </script>
       </td>
     </tr>
@@ -2451,6 +2270,62 @@
   <figure>
     <script>
       document.write(new ms.Symbol(
+        "10030550000000000000",
+        {
+          //quantity: 'C',
+          //reinforcedReduced: 'F',
+          staffComments: 'G',
+          //additionalInformation: 'H',
+          //evaluationRating: 'J',
+          //combatEffectiveness: 'K',
+          //higherFormation: 'M',
+          //iffSif: 'P',
+          //direction: 45,
+          uniqueDesignation: 'T',
+          type: 'V',
+          //dtg: 'W',
+          altitudeDepth: 'X',
+          //speed: 'Z',
+          //specialHeadquarters: 'AA',
+          //platformType: 'AD',
+          //equipmentTeardownTime: 'AE',
+          //commonIdentifier: 'AF',
+          //headquartersElement: 'AH',
+          engagementBar: 'AO',
+          direction: 290,
+          speedLeader: 150
+        }, { size: 100 }).asSVG())
+    </script>
+    <figcaption>
+      Figure 6-2: Space Symbol Amplifier Fields.
+    </figcaption>
+  </figure>
+
+  <script>
+    document.write(
+      renderSymbolSet(
+        milstd2525["ms2525d"]["05"],
+        "Table 6-3: Space Equipment and Platform Icons",
+        "Table 6-4: Space Equipment and Platform Sector 1 Modifiers",
+        "Table 6-5: Space Equipment and Platform Sector 2 Modifiers"
+      )
+    );
+  </script>
+
+  <script>
+    document.write(
+      renderSymbolSet(
+        milstd2525["ms2525d"]["06"],
+        "Table 6-3: Space Missile Icons",
+        "Table 6-4: Space Missile Sector 1 Modifiers",
+        "Table 6-5: Space Missile Sector 2 Modifiers"
+      )
+    );
+  </script>
+
+  <figure>
+    <script>
+      document.write(new ms.Symbol(
         "10030150000000000000",
         {
           staffComments: 'G',
@@ -2473,7 +2348,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525d"]["01"],
+        milstd2525["ms2525d"]["01"],
         "Table 2-3: Air Equipment and Platform Icons",
         "Table 2-5: Air Equipment and Platform Sector 1 Modifiers",
         "Table 2-6: Air Equipment and Platform Sector 2 Modifiers"
@@ -2484,7 +2359,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525d"]["02"],
+        milstd2525["ms2525d"]["02"],
         "Table 2-4: Air Missile Entity/Entity Type/Entity Subtype",
         "Table 2-7: Air Missile Sector 1 Modifiers",
         "Table 2-8: Air Missile Sector 2 Modifiers Description"
@@ -2527,7 +2402,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525d"]["10"],
+        milstd2525["ms2525d"]["10"],
         "Table 3-3: Land Unit Main Sector Icons",
         "Table 3-4: Land Unit Sector 1 Modifiers",
         "Table 3-5: Land Unit Sector 2 Modifiers"
@@ -2538,7 +2413,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525d"]["11"],
+        milstd2525["ms2525d"]["11"],
         "Table 3-12: Land Civilian Organization Icons",
         "Table 3-13: Land Civilian Organization Sector 1 Modifiers",
         "Table 3-14: Land Civilian Organization Sector 2 Modifiers"
@@ -2585,7 +2460,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525d"]["15"],
+        milstd2525["ms2525d"]["15"],
         "Table 3-17: Land Equipment Icons",
         "Table 3-18: Land Equipment Sector 1 Modifiers",
         ""
@@ -2633,7 +2508,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525d"]["20"],
+        milstd2525["ms2525d"]["20"],
         "Table 3-23: Land Installation Icons",
         "Table 3-24: Land Installation Sector 1 Modifiers",
         "Table 3-25: Land Installation Sector 2 Modifiers"
@@ -2684,7 +2559,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525d"]["30"],
+        milstd2525["ms2525d"]["30"],
         "Table 5-3: Sea Surface Military and Civilian Vessel/Ship Icons",
         "Table 5-6: Sea Surface Sector 1 Modifiers",
         "Table 5-7: Sea Surface Sector 2 Modifiers"
@@ -2736,7 +2611,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525d"]["35"],
+        milstd2525["ms2525d"]["35"],
         "Table 5-10: Sea Subsurface Military and Civilian Main Icons",
         "Table 5-11: Sea Subsurface Sector 1 Modifiers",
         "Table 5-12: Sea Subsurface Sector 2 Modifiers"
@@ -2747,55 +2622,10 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525d"]["36"],
+        milstd2525["ms2525d"]["36"],
         "Table 5-15: Mine Warfare Main Icons",
         "",
         ""
-      )
-    );
-  </script>
-
-  <figure>
-    <script>
-      document.write(new ms.Symbol(
-        "10030550000000000000",
-        {
-          //quantity: 'C',
-          //reinforcedReduced: 'F',
-          staffComments: 'G',
-          //additionalInformation: 'H',
-          //evaluationRating: 'J',
-          //combatEffectiveness: 'K',
-          //higherFormation: 'M',
-          //iffSif: 'P',
-          //direction: 45,
-          uniqueDesignation: 'T',
-          type: 'V',
-          //dtg: 'W',
-          altitudeDepth: 'X',
-          //speed: 'Z',
-          //specialHeadquarters: 'AA',
-          //platformType: 'AD',
-          //equipmentTeardownTime: 'AE',
-          //commonIdentifier: 'AF',
-          //headquartersElement: 'AH',
-          engagementBar: 'AO',
-          direction: 290,
-          speedLeader: 150
-        }, { size: 100 }).asSVG())
-    </script>
-    <figcaption>
-      Figure 6-2: Space Symbol Amplifier Fields.
-    </figcaption>
-  </figure>
-
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd["ms2525d"]["05"],
-        "Table 6-3: Space Equipment and Platform Icons",
-        "Table 6-4: Space Equipment and Platform Sector 1 Modifiers",
-        "Table 6-5: Space Equipment and Platform Sector 2 Modifiers"
       )
     );
   </script>
@@ -2838,7 +2668,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525d"]["40"],
+        milstd2525["ms2525d"]["40"],
         "Table 7-3: Stability and Civil Support Activities Main Sector Icons",
         "Table 7-4: Activities Sector 1 Modifiers",
         ""
@@ -2849,10 +2679,32 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525d"]["25"],
+        milstd2525["ms2525d"]["25"],
         "Control Measures",
         "TODO",
         "TODO"
+      )
+    );
+  </script>
+
+  <script>
+    document.write(
+      renderSymbolSet(
+        milstd2525["ms2525d"]["50"],
+        "Table 6-3: Signals Intelligence Icons",
+        "Table 6-4: Signals Intelligence Sector 1 Modifiers",
+        "Table 6-5: Signals Intelligence Sector 2 Modifiers"
+      )
+    );
+  </script>
+
+  <script>
+    document.write(
+      renderSymbolSet(
+        milstd2525["ms2525d"]["60"],
+        "Table 6-3: Cyberspace Icons",
+        "Table 6-4: Cyberspace Sector 1 Modifiers",
+        "Table 6-5: Cyberspace Sector 2 Modifiers"
       )
     );
   </script>

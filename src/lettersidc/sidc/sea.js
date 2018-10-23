@@ -1,14 +1,12 @@
-import { ms } from "../../ms.js";
 import { metadata as metadata_letter } from "../metadata.js";
-ms._getMetadata.letter = metadata_letter;
 import { geticons as getIcons_letter } from "../geticons.js";
-ms._getIcons.letter = getIcons_letter;
-
 import icons from "../../iconparts/sea.js";
-ms.addIconParts(icons);
 
 export default {
   type: "letter",
+  getMetadata: metadata_letter,
+  getIcons: getIcons_letter,
+  iconParts: [icons],
   icons: function sea(sId, bbox, icn, _STD2525) {
     // SEA ===========================================================================
     sId["S-S-------"] = [];
@@ -22,15 +20,15 @@ export default {
     sId["S-S-CLLL--"] = [icn["SE.IC.LITTORAL COMBATANT SHIP"]];
     sId["S-S-CLLLAS"] = [
       icn["SE.IC.LITTORAL COMBATANT SHIP"],
-      icn["SE.M1.ANTISUBMARINE WARFARE"]
+      icn["SE.M2.ANTISUBMARINE WARFARE"]
     ];
     sId["S-S-CLLLMI"] = [
       icn["SE.IC.LITTORAL COMBATANT SHIP"],
-      icn["SE.M1.MINE WARFARE"]
+      icn["SE.M2.MINE WARFARE"]
     ];
     sId["S-S-CLLLSU"] = [
       icn["SE.IC.LITTORAL COMBATANT SHIP"],
-      icn["SE.M1.SURFACE WARFARE"]
+      icn["SE.M2.SURFACE WARFARE"]
     ];
     sId["S-S-CA----"] = [icn["SE.IC.AMPHIBIOUS WARFARE SHIP"]];
     sId["S-S-CALA--"] = [
@@ -96,7 +94,7 @@ export default {
     sId["S-S-NR----"] = [icn["SE.IC.REPAIR SHIP"]];
     sId["S-S-NTS---"] = [icn["SE.IC.SUBMARINE TENDER"]];
     sId["S-S-NH----"] = [icn["SE.IC.HOVERCRAFT NONCOMBATANT"]];
-    sId["S-S-NS----"] = [icn["SE.IC.TUG, HARBOUR"]];
+    //sId["S-S-NS----"] = [icn["SE.IC.TUG, HARBOUR"]];
     sId["S-S-X-----"] = []; // N/A
     sId["S-S-XM----"] = [icn["SE.IC.MERCHANT SHIP, GENERAL"]];
     sId["S-S-XMC---"] = [icn["SE.IC.CARGO, GENERAL"]];

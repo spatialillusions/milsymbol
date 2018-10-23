@@ -9,7 +9,7 @@ export default function asCanvas(ratio) {
       //*/
     if (typeof Path2D == "undefined") {
       // If Path2D dosen't exist it is definetly broken
-      ms._brokenPath2D = true;
+      ms.setBrokenPath2D(true);
     } else {
       // If Path2D exists we need to check if it is broken
       var canv = document.createElement("canvas");
@@ -21,7 +21,7 @@ export default function asCanvas(ratio) {
       _ctx.fill(p);
       // Pick a pixel and see if it is filled with black... (if not SVG is not working)
       var data = _ctx.getImageData(0, 0, 1, 1).data.join();
-      ms._brokenPath2D = !(data == "0,0,0,255");
+      ms.setBrokenPath2D(!(data == "0,0,0,255"));
     }
   }
 
@@ -33,7 +33,7 @@ export default function asCanvas(ratio) {
   //canvas.style.width = this.width +'px';
   //canvas.style.height = this.height +'px';
   var ctx = canvas.getContext("2d");
-  ctx.scale(ratio * this.style.size / 100, ratio * this.style.size / 100);
+  ctx.scale((ratio * this.style.size) / 100, (ratio * this.style.size) / 100);
   ctx.translate(
     -(this.bbox.x1 - this.style.strokeWidth - this.style.outlineWidth),
     -(this.bbox.y1 - this.style.strokeWidth - this.style.outlineWidth)

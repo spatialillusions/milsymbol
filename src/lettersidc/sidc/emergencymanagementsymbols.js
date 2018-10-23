@@ -1,14 +1,14 @@
 import { ms } from "../../ms.js";
 import { metadata as metadata_letter } from "../metadata.js";
-ms._getMetadata.letter = metadata_letter;
 import { geticons as getIcons_letter } from "../geticons.js";
-ms._getIcons.letter = getIcons_letter;
-
 import icons from "../../iconparts/ground.js";
-ms.addIconParts(icons);
+import tacticalpoints from "../../iconparts/tactical-points.js";
 
 export default {
   type: "letter",
+  getMetadata: metadata_letter,
+  getIcons: getIcons_letter,
+  iconParts: [icons, tacticalpoints],
   icons: function emergencymanagementsymbols(sId, bbox, icn, _STD2525) {
     //Adds support for 2525C Emergency Management Symbols
     sId["E-I-A-----"] = [icn["AC.IC.CRIMINAL.CIVIL DISTURBANCE"]];
@@ -114,7 +114,7 @@ export default {
       icn["GR.M1.MEDEVAC"]
     ];
     sId["E-O-AF----"] = [
-      ms._translate(0, 10, ms._scale(0.8, icn["AR.I.FF.CIVILIAN ROTARY WING"])),
+      ms._translate(0, 10, ms._scale(0.8, icn["GR.I.FF.CIVILIAN ROTARY WING"])),
       icn["GR.M1.MEDEVAC"]
     ];
     sId["E-O-AG----"] = [icn["AC.IC.HEALTH DEPARTMENT FACILITY"]];
@@ -294,9 +294,11 @@ export default {
       icn["GR.IN.IC.TRANSPORTATION INFRASTRUCTURE SHIP ANCHORAGE"]
     ];
     sId["E-F-LM----"] = [icn["GR.IN.IC.TOLL FACILITY"]];
-    sId["G-S-PO----"] = [
+    /*sId["G-S-PO----"] = [
       icn["GR.IN.IC.TRANSPORTATION INFRASTRUCTURE.TRAFFIC CONTROL POINT"]
-    ];
+    ];*/
+    sId["G-S-PO----"] = icn["TP.TRAFFIC CONTROL POST"]; //TACGRP.CSS.PNT.TCP
+    bbox["G-S-PO----"] = { x1: 60, x2: 140, y1: -60 };
     sId["E-F-LO----"] = [icn["GR.IN.IC.TRAFFIC INSPECTION FACILITY"]];
     sId["E-F-LP----"] = [icn["GR.IN.IC.TUNNEL"]];
     sId["E-F-MA----"] = [icn["GR.IN.IC.CONTROL VALVE"]];
@@ -308,5 +310,45 @@ export default {
     sId["E-F-MG----"] = [icn["GR.IN.IC.STORAGE TOWER"]];
     sId["E-F-MH----"] = [icn["GR.IN.IC.SURFACE WATER INTAKE"]];
     sId["E-F-MI----"] = [icn["GR.IN.IC.WASTEWATER TREATMENT FACILITY"]];
+
+    // In other apendixes as well...
+    sId["O-O-D-----"] = [icn["ST.IC.DEMONSTRATION"]];
+    sId["O-I-R-----"] = [icn["ST.IC.GROUP"]];
+    sId["O-V-B-----"] = [icn["ST.IC.BOMB"]];
+    sId["O-V-P-----"] = [icn["ST.IC.POISONING"]];
+    sId["O-O-HA----"] = [
+      icn["ST.IC.HIJACKING (AIRPLANE)"],
+      icn["ST.M1.HIJACKING/HIJACKED"]
+    ];
+    sId["O-O-HV----"] = [
+      icn["ST.IC.HIJACKING (BOAT)"],
+      icn["ST.M1.HIJACKING/HIJACKED"]
+    ];
+    sId["O-O-HT----"] = [
+      icn["ST.IC.KNOWN INSURGENT VEHICLE"],
+      icn["ST.M1.HIJACKING/HIJACKED"]
+    ];
+
+    sId["S-G-IXH---"] = [icn["GR.IC.FF.MEDICAL TREATMENT FACILITY"]];
+    sId["S-S-NM----"] = [icn["GR.IC.HOSPITAL SHIP"]];
+    sId["E-O-BK----"] = [icn["GR.IC.FF.SUPPLY"], icn["GR.IC.WATER"]];
+    sId["S-G-UULC--"] = [icn["GR.IC.LAW ENFORCEMENT"]];
+    sId["S-S-XL----"] = [icn["GR.IC.LAW ENFORCEMENT VESSEL"]];
+    sId["S-G-ES----"] = [icn["GR.EQ.SENSOR"]];
+    sId["S-G-IUE---"] = [icn["GR.IN.IC.ELECTRIC POWER"]];
+    sId["S-G-IUEN--"] = [
+      icn["GR.IN.IC.ELECTRIC POWER"],
+      icn["GR.IN.IC.ELECTRIC POWER NUCLEAR"]
+    ];
+    sId["S-G-IRP---"] = [icn["GR.IC.FF.CLASS III"]];
+    sId["S-G-IB----"] = [icn["GR.IN.IC.BASE"]];
+    sId["S-G-IUT---"] = [icn["GR.IN.IC.TELECOMMUNICATIONS"]];
+    sId["S-G-IT----"] = [icn["GR.IC.TRANSPORTATION"]];
+    sId["S-G-IBA---"] = [
+      icn["GR.IC.TRANSPORTATION"],
+      icn["GR.IC.AIRPORT OF DEBARKATION"]
+    ];
+    sId["S-G-IBN---"] = [icn["GR.IC.NAVAL"]];
+    sId["S-G-IUP---"] = [icn["GR.IC.WATER"]];
   }
 };

@@ -579,6 +579,19 @@ export default function(
     },
     { type: "circle", fill: false, cx: 100, cy: 15, r: 40 }
   ];
+  icn["POINT OF INTEREST – LAUNCH EVENT"] = [
+    icn["TP.POINT OF INTEREST"],
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 30,
+      fontsize: 40,
+      fontweight: "bold",
+      text: "LE"
+    }
+  ];
   icn["TP.SHIP AREA OF INTEREST (AEGIS ONLY)"] = {
     type: "circle",
     fill: false,
@@ -847,7 +860,7 @@ export default function(
     {
       type: "path",
       d:
-        "m 115,100 a 15,15 0 0 1 -15,15 15,15 0 0 1 -15,-15 15,15 0 0 1 15,-15 15,15 0 0 1 15,15 z m 25,20 -20,10 20,10 z m -30,0 -20,10 20,10 0,-20 z m -30,0 -20,10 20,10 z"
+        "m 80,120 -20,10 20,10 z m 30,0 -20,10 20,10 0,-20 z m 30,0 -20,10 20,10 z m -25,-20 c 0,10 -10,18 -19.4,14 -9.4,-2 -13.8,-14.7 -8,-22.5 5.2,-8.2 18.4,-8.7 24.4,-0.8 2,2.6 3,5.9 3,9.3 z"
     },
     {
       type: "path",
@@ -2342,6 +2355,11 @@ export default function(
     d:
       "m 40,65 0,70 120,0 0,-70 z m 70,35 c 0,5.523 -4.477,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.523,0 10,4.4772 10,10 z m 35,0 c 0,5.523 -4.477,10 -10,10 -5.523,0 -10,-4.477 -10,-10 0,-5.5228 4.477,-10 10,-10 5.523,0 10,4.4772 10,10 z m -70,0 c 0,5.523 -4.4772,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.5228,0 10,4.4772 10,10 z"
   };
+  icn["TP.MINEFIELD, STATIC"] = {
+    type: "path",
+    fill: false,
+    d: "m 25,65 0,70 150,0 0,-70 z"
+  };
   //This is to solve anticipated minefields... Don't we just love special cases...
   if (metadata.notpresent)
     icn["TP.MINEFIELDS STATIC"] = icn["TP.PLANNED MINEFIELD"];
@@ -2570,7 +2588,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "DCN"
     },
@@ -2579,7 +2597,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 10,
+      y: 0,
       fontsize: 35,
       text: "ALT"
     }
@@ -2591,7 +2609,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "DCN"
     },
@@ -2600,7 +2618,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 10,
+      y: 0,
       fontsize: 35,
       text: "T"
     }
@@ -2612,7 +2630,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "DCN"
     },
@@ -2621,7 +2639,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 10,
+      y: 0,
       fontsize: 35,
       text: "E"
     }
@@ -2633,7 +2651,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "DCN"
     },
@@ -2642,7 +2660,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 10,
+      y: 0,
       fontsize: 35,
       text: "E/T"
     }
@@ -2654,7 +2672,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "DCN"
     },
@@ -2663,7 +2681,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 10,
+      y: 0,
       fontsize: 35,
       text: "O"
     }
@@ -2675,7 +2693,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "DCN"
     },
@@ -2684,7 +2702,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 10,
+      y: 0,
       fontsize: 35,
       text: "TH"
     }
@@ -2756,7 +2774,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "DCN"
     },
@@ -2765,7 +2783,7 @@ export default function(
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 10,
+      y: 0,
       fontsize: 35,
       text: "W"
     }
@@ -3335,7 +3353,7 @@ export default function(
     {
       type: "path",
       d:
-        "M 103.902,100 A 3.9025,1.95125 0 0 1 100,101.951 3.9025,1.95125 0 0 1 96.0975,100 3.9025,1.95125 0 0 1 100,98.0488 3.9025,1.95125 0 0 1 103.902,100 Z m 0,40.419 A 3.9025,1.95125 0 0 1 100,142.37 3.9025,1.95125 0 0 1 96.0975,140.419 3.9025,1.95125 0 0 1 100,138.468 a 3.9025,1.95125 0 0 1 3.902,1.951 z"
+        "m 104,100 c 0,2 -3,2 -4.8,2 -1.4,0 -4.1,-1 -2.7,-2.9 1.9,-1.4 4.5,-1.4 6.5,-0.4 1,0.3 1,0.7 1,1.3 z m 0,40 c 0,2 -3,2 -4.8,2 -1.4,0 -4.1,-1 -2.7,-3 1.9,-1 4.5,-1 6.5,0 1,0 1,0 1,1 z"
     },
     {
       type: "text",
@@ -3392,7 +3410,7 @@ export default function(
     type: "path",
     fill: false,
     d:
-      "m 65,135 70,-70 m -70,0 70,70 m -35,-4.098 A 50,30.9017 0 0 1 50,100 50,30.9017 0 0 1 100,69.0983 50,30.9017 0 0 1 150,100 50,30.9017 0 0 1 100,130.902 Z M 130.902,100 A 30.9017,50 0 0 1 100,150 30.9017,50 0 0 1 69.0983,100 30.9017,50 0 0 1 100,50 a 30.9017,50 0 0 1 30.902,50 z"
+      "m 65,135 c 23.3,-23 47,-46.7 70,-70 m -70,0 c 23.3,23.3 47,47 70,70 m -35,-4 c -19.7,0 -47.8,-8 -50,-31 3,-24.9 33.9,-32 55,-30.7 19,0.8 46,10.9 45,33.7 -5,21 -31,28 -50,28 z m 31,-31 c 0,20 -8,48 -31,50 C 75.1,147 68,116 69.3,95 70.1,76.2 80.2,48.6 103,50.2 c 21,4.9 28,31.1 28,49.8 z"
   };
   icn["TP.TENTATIVE OR PROVISIONAL TRACK"] = {
     type: "path",
@@ -3548,7 +3566,7 @@ export default function(
       type: "path",
       fill: false,
       d:
-        "m 140,100 a 40,40 0 0 1 -40,40 40,40 0 0 1 -40,-40 40,40 0 0 1 40,-40 40,40 0 0 1 40,40 z"
+        "m 140,100 c 1,26 -27,47 -51.8,38 C 63.1,131 51.5,98.3 67,77.4 c 13.8,-21.9 49,-23.2 64,-2.3 6,7 9,15.9 9,24.9 z"
     },
     {
       type: "text",
@@ -3560,6 +3578,197 @@ export default function(
       text: "EP"
     }
   ];
+
+  icn["FORWARD OBSERVER / SPOTTER POSITION"] = [
+    { type: "circle", cx: 100, cy: 100, r: 3 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 40,135 60,-75 60,75 z"
+    }
+  ];
+
+  icn["MAN MADE SPACE DEBRIS SMALL"] = [
+    { type: "circle", cx: 100, cy: 100, r: 17 },
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 50 },
+    {
+      type: "path",
+      fill: false,
+      d:
+        "M 60,110 75,100 60,90 m 50,50 -10,-15 -10,15 m 50,-50 -15,10 15,10 M 90,60 100,75 110,60"
+    }
+  ];
+  icn["MAN MADE SPACE DEBRIS MEDIUM"] = [
+    { type: "circle", cx: 100, cy: 100, r: 17 },
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 50 }
+  ];
+  icn["MAN MADE SPACE DEBRIS BIG"] = [
+    { type: "circle", cx: 100, cy: 100, r: 17 },
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 50 },
+    {
+      type: "path",
+      fill: false,
+      d:
+        "m 90,75 10,-15 10,15 M 75,110 60,100 75,90 m 35,35 -10,15 -10,-15 m 35,-35 15,10 -15,10"
+    }
+  ];
+
+  icn["NATURAL SPACE DEBRIS SMALL"] = [
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 17 },
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 50 },
+    {
+      type: "path",
+      fill: false,
+      d:
+        "M 60,110 75,100 60,90 m 50,50 -10,-15 -10,15 m 50,-50 -15,10 15,10 M 90,60 100,75 110,60"
+    }
+  ];
+  icn["NATURAL SPACE DEBRIS MEDIUM"] = [
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 17 },
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 50 }
+  ];
+  icn["NATURAL SPACE DEBRIS BIG"] = [
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 17 },
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 50 },
+    {
+      type: "path",
+      fill: false,
+      d:
+        "m 90,75 10,-15 10,15 M 75,110 60,100 75,90 m 35,35 -10,15 -10,-15 m 35,-35 15,10 -15,10"
+    }
+  ];
+
+  icn["TP.M1.UNSPECIFIED"] = [
+    { type: "circle", fill: false, cx: 55, cy: 100, r: 15 },
+    { type: "circle", fill: false, cx: 100, cy: 100, r: 15 },
+    { type: "circle", fill: false, cx: 145, cy: 100, r: 15 }
+  ];
+  icn["TP.M1.ANTIPERSONNEL MINE 1"] = [
+    { type: "circle", cx: 55, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 35,75 10.6,13.3 m 18.8,0 10.6,-13.3"
+    }
+  ];
+  icn["TP.M1.ANTIPERSONNEL MINE 2"] = [
+    { type: "circle", cx: 100, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 80,75 10.6,13.3 m 18.8,0 10.6,-13.3"
+    }
+  ];
+  icn["TP.M1.ANTIPERSONNEL MINE 3"] = [
+    { type: "circle", cx: 145, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 125,75 10.6,13.3 m 18.8,0 10.6,-13.3"
+    }
+  ];
+  icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"] = [
+    { type: "circle", cx: 55, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d:
+        "M 64.4,88.3 75,75 m -40,0 10.6,13.3 m 32.4,10 2,1.7 -2,2 z m -8,1.7 3.3,0"
+    }
+  ];
+  icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 2"] = [
+    { type: "circle", cx: 100, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d:
+        "M 109,88.3 120,75 m -40,0 10.6,13.3 m 32.4,10 2,1.7 -2,2 z m -8,1.7 3,0"
+    }
+  ];
+  icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"] = [
+    { type: "circle", cx: 145, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "M 154,88.3 165,75 m -40,0 11,13.3 m 32,10 2,1.7 -2,2 z m -8,1.7 3,0"
+    }
+  ];
+  icn["TP.M1.ANTITANK MINE 1"] = [{ type: "circle", cx: 55, cy: 100, r: 15 }];
+  icn["TP.M1.ANTITANK MINE 2"] = [{ type: "circle", cx: 100, cy: 100, r: 15 }];
+  icn["TP.M1.ANTITANK MINE 3"] = [{ type: "circle", cx: 145, cy: 100, r: 15 }];
+  icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 1"] = [
+    { type: "circle", cx: 55, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 55,115 0,13 6,-6"
+    }
+  ];
+  icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"] = [
+    { type: "circle", cx: 100, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 100,115 0,13 6,-6"
+    }
+  ];
+  icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"] = [
+    { type: "circle", cx: 145, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 145,115 0,13 6,-6"
+    }
+  ];
+  icn["TP.M1.WIDE AREA ANTITANK MINE 1"] = [
+    { type: "circle", cx: 55, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 35,115 8,10 5.5,-11 m 13,0 5.5,11 8,-10"
+    }
+  ];
+  icn["TP.M1.WIDE AREA ANTITANK MINE 2"] = [
+    { type: "circle", cx: 100, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 80,115 8,10 5.5,-11 m 13,0 5.5,11 8,-10"
+    }
+  ];
+  icn["TP.M1.WIDE AREA ANTITANK MINE 3"] = [
+    { type: "circle", cx: 145, cy: 100, r: 15 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 125,115 8,10 5.5,-11 m 13,0 5.5,11 8,-10"
+    }
+  ];
+  icn["TP.M1.MINE CLUSTER 1"] = [
+    {
+      type: "path",
+      fill: false,
+      strokedasharray: "7.5,5",
+      d: "m 73,110 -36,0 c 0,-10 3,-20 18,-20 15,0 18,10 18,20 z"
+    }
+  ];
+  icn["TP.M1.MINE CLUSTER 2"] = [
+    {
+      type: "path",
+      fill: false,
+      strokedasharray: "7.5,5",
+      d: "m 118,110 -36,0 c 0,-10 3,-20 18,-20 15,0 18,10 18,20 z"
+    }
+  ];
+  icn["TP.M1.MINE CLUSTER 3"] = [
+    {
+      type: "path",
+      fill: false,
+      strokedasharray: "7.5,5",
+      d: "m 163,110 -36,0 c 0,-10 3,-20 18,-20 15,0 18,10 18,20 z"
+    }
+  ];
+
   /*
   function defaultProperties(instructions) {
     if (typeof instructions === "object") {

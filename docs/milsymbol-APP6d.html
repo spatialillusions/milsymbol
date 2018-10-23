@@ -4,317 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <title>Milsymbol APP6-D</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-      max-width: 80%;
-      margin: auto;
-    }
-
-    em {
-      color: #ccc;
-    }
-
-    figure {
-      text-align: center;
-    }
-
-    svg {
-      max-width: 100%;
-    }
-
-    table {
-      border-collapse: collapse;
-      margin: auto;
-      width: 100%;
-      table-layout: fixed;
-      margin-bottom: 1rem;
-    }
-
-    table,
-    td,
-    th {
-      border: solid 1px #ccc;
-      padding: 5px;
-      text-align: center;
-    }
-
-    thead {
-      font-weight: bold;
-      background-color: rgb(243, 243, 243);
-      display: table-header-group;
-    }
-
-    tr td:nth-child(1) {
-      text-align: left;
-    }
-
-    .index-h3 {
-      margin-left: 15px;
-    }
-
-    .na {
-      background-color: #eee;
-      color: #999;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 
   <script src="../dist/milsymbol.development.js"></script>
-  <script src="../dist/milstd-umd.js"></script>
+  <!--<script src="milstd.js"></script>-->
+  <script src="stanag-app6.js"></script>
 
+  <script src="number-sidc.js"></script>
   <script>
-    var size = 70;
-    ms.setStandard("APP6");
-
-    // Since we don't have any geometry types in APP-6 D controle measures, let us get them from 2525D
-    var control = milstd["ms2525d"]["25"]["main icon"];
-    var std2525lookup = {};
-    for (var i = 0; i < control.length; i++) {
-      std2525lookup[control[i].code] = control[i].geometry;
-    }
-    for (var j = 0; j < milstd["app6d"]["25"]["main icon"].length; j++) {
-      milstd["app6d"]["25"]["main icon"][j].geometry = std2525lookup[milstd["app6d"]["25"]["main icon"][j].code];
-    }
-    /*
-        ms.addSymbolPart(function debug() {
-          //This debug function is a minimal example of how to extend milsymbol.
-          //Create a variable to store your geometries
-          var drawArray1 = [];
-          var drawArray2 = [];
-          //Get a new bounding box and modify it if your geometry extends outside the current bounds.
-          var gbbox = new ms.BBox();
-          //Draws the icon octagon
-          drawArray2.push({
-            type: "path",
-            fill: false,
-            stroke: "rgb(0,0,255)",
-            strokewidth: 0.8,
-            d:
-              "m 120,60 0,80 m -40,-80 0,80 m -20,-20 80,0 m 0,-40 -80,0 M 100,50 135.35534,64.64466 150,100 135.35534,135.35534 100,150.00002 64.644661,135.35534 50,100 64.644661,64.64466 z"
-          });
-          return { pre: drawArray1, post: drawArray2, bbox: gbbox };
-        });
-        //*/
-
-    function generatenavigation() {
-      var i = 0;
-      var indexoftables = "";
-      document.querySelectorAll("h2, h3").forEach(function (d) {
-        i++;
-        d.id = "heading-" + i;
-        indexoftables +=
-          '<a href="#heading-' + i + '" class="index-' + d.tagName.toLowerCase() + '">' + d.textContent + "</a><br>\n";
-      });
-      document.getElementById("indexoftables").innerHTML = indexoftables;
-
-      i = 0;
-      var indexoffigures = "";
-      document.querySelectorAll("figure").forEach(function (d) {
-        i++;
-        d.id = "figure-" + i;
-        d = d.getElementsByTagName("figcaption").item(0);
-        indexoffigures +=
-          '<a href="#figure-' + i + '">' + d.textContent + "</a><br>\n";
-      });
-      document.getElementById("indexoffigures").innerHTML = indexoffigures;
-    }
-
-    function remarks(remark) {
-      if (
-        [
-          "From MIL-STD-2525.",
-          "Simplification of MIL-STD-2525 icon TBD."
-        ].indexOf(remark) != -1
-      ) {
-        return { monoColor: "Silver" };
-      } else {
-        return {};
-      }
-    }
-
-    function labels(icon) {
-        return { infoColor: "Silver", additionalInformation: 'H', additionalInformation1: 'H1', hostile: 'N', uniqueDesignation: 'T', dtg: 'W', dtg1: 'W1', altitudeDepth: 'X' }
-    }
-
-    function renderSymbolSet(symbolset) {
-
-      var output = "";
-      var i;
-      output += "<h2>" + symbolset.name + "</h2>";
-      output += "<h3>" + symbolset.name + " Main Icon</h3>";
-      output += "<table border=1><thead><tr><th>Description</th><th>Icon</th>";
-
-      if (symbolset.symbolset == 36) output += "<th>Alternate Icon</th>";
-
-      output += "<th>Remarks</th></tr></thead>";
-
-      for (i = 0; i < symbolset["main icon"].length; i++) {
-        var symbol = new ms.Symbol(
-              "1003" +
-              symbolset.symbolset +
-              "0000" +
-              symbolset["main icon"][i].code +
-              "0000",
-              { size: size },
-              remarks(symbolset["main icon"][i].remarks),
-              (symbolset.symbolset == 25)?labels():{}
-            );
-
-        output += "<tr";
-
-        if ([
-          "N/A",
-          "For training or hierarchical purposes only"
-        ].indexOf(symbolset["main icon"][i].remarks) != -1){
-          output += ' class="na"';
-        }
-          
-        if(!symbol.isValid() && !(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")){
-          output += ' style="background-color:red"';
-          console.warn(symbolset["main icon"][i]["entity subtype"] ||
-            symbolset["main icon"][i]["entity type"] ||
-            symbolset["main icon"][i]["entity"] + "\n" +
-          symbol.getOptions().sidc + "\n" +
-          symbol.isValid(true));
-        }
-
-        output += "><td><b>" +
-          (symbolset["main icon"][i]["entity subtype"] ||
-            symbolset["main icon"][i]["entity type"] ||
-            symbolset["main icon"][i]["entity"]) +
-          "</b>";
-
-        if (!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")) {
-          output +=
-            "<br><br><em>Type:</em> " +
-            (symbolset["main icon"][i].hasOwnProperty("entity subtype")
-              ? "Entity subtype"
-              : symbolset["main icon"][i].hasOwnProperty("entity type")
-                ? "Entity type"
-                : "Entity");
-          if (symbolset["main icon"][i].hasOwnProperty("entity subtype")) {
-            output +=
-              "<br><em>Entity/Entity Type:</em> " +
-              symbolset["main icon"][i]["entity type"] +
-              "/" +
-              symbolset["main icon"][i]["entity"];
-          } else {
-            if (symbolset["main icon"][i].hasOwnProperty("entity type")) {
-              output += "<br><em>Entity:</em> " + symbolset["main icon"][i]["entity"];
-            }
-          }
-
-          output += "<br><em>Symbol Set Code:</em> " + symbolset.symbolset;
-        }
-
-        output += "<br><em>Code:</em> " + symbolset["main icon"][i].code;
-
-        if (!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "Point")) {
-          output +=
-            "</td><td>" +
-              "<!--" + 
-              "1003" +
-              symbolset.symbolset +
-              "0000" +
-              symbolset["main icon"][i].code +
-              "0000" +
-              "-->" +
-            symbol.asSVG();
-          output += "</td>"
-        } else {
-          output +=
-            "</td><td>" +
-            symbolset["main icon"][i].geometry;
-          output += "</td>"
-        }
-        if (symbolset.symbolset == 36) {
-          output += "<td>" +
-            new ms.Symbol(
-              "1003" +
-              symbolset.symbolset +
-              "0000" +
-              symbolset["main icon"][i].code +
-              "0000",
-              { size: size, alternateMedal: true },
-              remarks(symbolset["main icon"][i].remarks)
-            ).asSVG();
-          output += "</td>"
-        }
-
-        output += "<td>" + symbolset["main icon"][i].remarks + "</td></tr>";
-      }
-      output += "</table>";
-      if (symbolset["modifier 1"].length) {
-        output += "<h3>" + symbolset.name + " Modifier 1</h3>";
-        output +=
-          "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
-        for (i = 0; i < symbolset["modifier 1"].length; i++) {
-          var symbol = new ms.Symbol(
-              "1003" +
-              symbolset.symbolset +
-              "0000000000" +
-              symbolset["modifier 1"][i].code +
-              "00",
-              { size: size },
-              remarks(symbolset["modifier 1"][i].remarks)
-            );
-          output += "<tr";
-          
-          if(symbolset["modifier 1"][i].code.length == 2 && symbolset["modifier 1"][i].code != 99 &&!symbol.isValid()){
-            output += ' style="background-color:red"';
-            console.warn(symbolset["modifier 1"][i].modifier + "\n" +
-            symbol.getOptions().sidc + "\n" +
-            symbol.isValid(true));
-          }
-
-          output += "><td><b>" + symbolset["modifier 1"][i].modifier + "</b>";
-          output += "<br><br><em>Symbol Set Code:</em> " + symbolset.symbolset;
-          output += "<br><em>Code:</em> " + symbolset["modifier 1"][i].code;
-          output += "</td><td>";
-          if (symbolset["modifier 1"][i].code != 99 && !isNaN(symbolset["modifier 1"][i].code))
-            output += symbol.asSVG();
-          output += "</td><td>" + symbolset["modifier 1"][i].remarks + "</td></tr>";
-        }
-        output += "</table>";
-      }
-      if (symbolset["modifier 2"].length != 0) {
-        output += "<h3>" + symbolset.name + " Modifier 2</h3>";
-        output +=
-          "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
-        for (i = 0; i < symbolset["modifier 2"].length; i++) {
-          var symbol = new ms.Symbol(
-              "1003" +
-              symbolset.symbolset +
-              "000000000000" +
-              symbolset["modifier 2"][i].code,
-              { size: size },
-              remarks(symbolset["modifier 2"][i].remarks)
-            );
-          output += "<tr";
-          
-          if(symbolset["modifier 2"][i].code.length == 2 && symbolset["modifier 2"][i].code != 99 &&!symbol.isValid()){
-            output += ' style="background-color:red"';
-            console.warn(symbolset["modifier 2"][i].modifier + "\n" +
-            symbol.getOptions().sidc + "\n" +
-            csymbol.isValid(true));
-          }
-          
-          output += "><td><b>" + symbolset["modifier 2"][i].modifier + "</b>";
-          output += "<br><br><em>Symbol Set Code:</em> " + symbolset.symbolset;
-          output += "<br><em>Code:</em> " + symbolset["modifier 2"][i].code;
-          output += "</td><td>";
-          if (symbolset["modifier 2"][i].code != 99 && !isNaN(symbolset["modifier 2"][i].code))
-            output += symbol.asSVG();
-          output += "</td><td>" + symbolset["modifier 2"][i].remarks + "</td></tr>";
-        }
-        output += "</table>";
-      }
-      return output;
-    }
+  ms.setStandard("APP6");
   </script>
 </head>
 
@@ -322,7 +20,8 @@
 
   <h1>Milsymbol APP-6 D Implementation</h1>
   This page shows figures and tables from APP-6 D drawn with milsymbol.
-  <br> All symbols are drawn using milsymbol when the page is loaded, no images or other external resources than milsymbol are
+  <br> All symbols are drawn using milsymbol when the page is loaded, no images or other external resources than
+  milsymbol are
   used.
   <br>
   <br>
@@ -866,8 +565,10 @@
     </tr>
   </table>
 
-  Milsymbol uses the standard operational condition amplifiers only when the option to have mono color or unfilled option is
-  set, otherwise the alternate operational condition amplifiers are used. However, it is possible to force usage of the standard
+  Milsymbol uses the standard operational condition amplifiers only when the option to have mono color or unfilled
+  option is
+  set, otherwise the alternate operational condition amplifiers are used. However, it is possible to force usage of the
+  standard
   operatioonal condition amplifiers, by setting the option simpleStatusModifier to true.
   <br>
 
@@ -1232,7 +933,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["app6d"]["01"],
+        stanagapp6["app6d"]["01"],
         "Table 2-3: Air Equipment and Platform Icons",
         "Table 2-5: Air Equipment and Platform Sector 1 Modifiers",
         "Table 2-6: Air Equipment and Platform Sector 2 Modifiers"
@@ -1243,7 +944,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["app6d"]["02"],
+        stanagapp6["app6d"]["02"],
         "Table 2-4: Air Missile Entity/Entity Type/Entity Subtype",
         "Table 2-7: Air Missile Sector 1 Modifiers",
         "Table 2-8: Air Missile Sector 2 Modifiers Description"
@@ -1286,7 +987,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["app6d"]["10"],
+        stanagapp6["app6d"]["10"],
         "Table 3-3: Land Unit Main Sector Icons",
         "Table 3-4: Land Unit Sector 1 Modifiers",
         "Table 3-5: Land Unit Sector 2 Modifiers"
@@ -1297,7 +998,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["app6d"]["11"],
+        stanagapp6["app6d"]["11"],
         "Table 3-12: Land Civilian Organization Icons",
         "Table 3-13: Land Civilian Organization Sector 1 Modifiers",
         "Table 3-14: Land Civilian Organization Sector 2 Modifiers"
@@ -1344,7 +1045,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["app6d"]["15"],
+        stanagapp6["app6d"]["15"],
         "Table 3-17: Land Equipment Icons",
         "Table 3-18: Land Equipment Sector 1 Modifiers",
         ""
@@ -1742,7 +1443,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["app6d"]["20"]
+        stanagapp6["app6d"]["20"]
       )
     );
   </script>
@@ -1813,7 +1514,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["app6d"]["27"]
+        stanagapp6["app6d"]["27"]
       )
     );
   </script>
@@ -1895,7 +1596,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["app6d"]["30"]
+        stanagapp6["app6d"]["30"]
       )
     );
   </script>
@@ -1944,7 +1645,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["app6d"]["35"]
+        stanagapp6["app6d"]["35"]
       )
     );
   </script>
@@ -1952,7 +1653,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["app6d"]["36"]
+        stanagapp6["app6d"]["36"]
       )
     );
   </script>
@@ -1994,7 +1695,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["app6d"]["05"]
+        stanagapp6["app6d"]["05"]
       )
     );
   </script>
@@ -2037,7 +1738,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["app6d"]["40"]
+        stanagapp6["app6d"]["40"]
       )
     );
   </script>
@@ -2045,13 +1746,14 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["app6d"]["25"]
+        stanagapp6["app6d"]["25"]
       )
     );
   </script>
 
   <br>
   <br>
+
 </body>
 
 </html>

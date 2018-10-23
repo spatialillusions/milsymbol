@@ -1,9 +1,11 @@
-import { ms } from "../src/ms";
-import { app6b } from "../src/milstd";
-import verify from "./app6b";
+import { ms } from "../src/milsymbol";
+ms.reset();
+
+import { app6b } from "stanagapp6";
+import verify from "./letter-sidc";
 ms.setStandard("APP6");
 
-import icons from "../src/lettersidc/sidc/sof";
-ms.addIcons(icons);
+import { sof } from "../src/lettersidc";
+ms.addIcons(sof);
 
-verify(ms, "APP-6 B SOF", app6b.WAR.SOFUNT);
+export default verify(ms, "APP-6 B SOF", app6b.WAR.SOFUNT);

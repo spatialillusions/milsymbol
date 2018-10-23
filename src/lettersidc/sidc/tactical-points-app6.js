@@ -1,17 +1,14 @@
-import { ms } from "../../ms.js";
 import { metadata as metadata_letter } from "../metadata.js";
-ms._getMetadata.letter = metadata_letter;
 import { geticons as getIcons_letter } from "../geticons.js";
-ms._getIcons.letter = getIcons_letter;
-
 import tacticalpoints from "../../iconparts/tactical-points.js";
-ms.addIconParts(tacticalpoints);
 import labels from "../labels/tactical-points-app6.js";
-ms.addLabelOverrides(labels, "letter");
 
-// SIDC parts for tactical points
 export default {
   type: "letter",
+  getMetadata: metadata_letter,
+  getIcons: getIcons_letter,
+  iconParts: [tacticalpoints],
+  labels: labels,
   icons: function tacticalPoints(sidc, bbox, icn, std2525) {
     // Tactical Point Symbols =========================================================================
     sidc["G-T-GD----"] = icn["TP.DESTROY"]; //2.X.1.1.9

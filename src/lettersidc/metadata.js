@@ -48,6 +48,8 @@ export function metadata(ms, metadata, mapping) {
   if (codingscheme == "O" && ["V", "O", "R"].indexOf(battledimension) > -1) {
     metadata.activity = true;
   }
+  //SymbolSets that are control-measure
+  if (codingscheme == "G") metadata.controlMeasure = true;
   //symbolmodifier11 that are Installations
   if (symbolmodifier11 == "H") metadata.installation = true;
   //Planned/Anticipated/Suspect symbols should have a dashed outline
@@ -129,6 +131,9 @@ export function metadata(ms, metadata, mapping) {
     metadata.feintDummy = true;
   }
   if (["A", "B", "C", "D"].indexOf(symbolmodifier11) > -1) {
+    metadata.headquarters = true;
+  }
+  if (battledimension == "G" && functionid == "UH----") {
     metadata.headquarters = true;
   }
   if (["E", "B", "G", "D"].indexOf(symbolmodifier11) > -1) {
@@ -262,7 +267,24 @@ export function metadata(ms, metadata, mapping) {
   ) {
     metadata.frame = false;
   }
-
+  if (
+    codingscheme == "W" &&
+    battledimension == "S" &&
+    [
+      "WSVE--",
+      "WSD-LI",
+      "WSFGSO",
+      "WSGRL-",
+      "WSR-LI",
+      "WSDSLM",
+      "WSS-LI",
+      "WSTMH-",
+      "WST-FC",
+      "WSTSS-"
+    ].indexOf(functionid) > -1
+  ) {
+    metadata.frame = false;
+  }
   //We have some special symbols that should be unframed but filled, like mines, let us fix them.
   if (
     battledimension == "U" &&
@@ -318,9 +340,9 @@ export function metadata(ms, metadata, mapping) {
       "NA----"
     ].indexOf(functionid) > -1
   ) {
-    if (this.metadata.STD2525) {
+    if (metadata.STD2525) {
       metadata.fill = false;
-      if (metadata.functionid == "WD----") {
+      if (functionid == "WD----") {
         metadata.fill = true;
       }
       if (

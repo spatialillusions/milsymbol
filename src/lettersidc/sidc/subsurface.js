@@ -1,14 +1,12 @@
-import { ms } from "../../ms.js";
 import { metadata as metadata_letter } from "../metadata.js";
-ms._getMetadata.letter = metadata_letter;
 import { geticons as getIcons_letter } from "../geticons.js";
-ms._getIcons.letter = getIcons_letter;
-
 import icons from "../../iconparts/subsurface.js";
-ms.addIconParts(icons);
 
 export default {
   type: "letter",
+  getMetadata: metadata_letter,
+  getIcons: getIcons_letter,
+  iconParts: [icons],
   icons: function subsurface(sId, bbox, icn, _STD2525) {
     // SUBSURFACE ====================================================================
     sId["S-U-------"] = [];
@@ -82,23 +80,23 @@ export default {
     ];
     sId["S-U-S1----"] = [
       icn["SU.IC.SUBMARINE"],
-      icn["SU.M1.POSSIBLE SUBMARINE - LOW 1"]
+      icn["SU.M2.POSSIBLE SUBMARINE - LOW 1"]
     ];
     sId["S-U-S2----"] = [
       icn["SU.IC.SUBMARINE"],
-      icn["SU.M1.POSSIBLE SUBMARINE - LOW 2"]
+      icn["SU.M2.POSSIBLE SUBMARINE - LOW 2"]
     ];
     sId["S-U-S3----"] = [
       icn["SU.IC.SUBMARINE"],
-      icn["SU.M1.POSSIBLE SUBMARINE - HIGH 3"]
+      icn["SU.M2.POSSIBLE SUBMARINE - HIGH 3"]
     ];
     sId["S-U-S4----"] = [
       icn["SU.IC.SUBMARINE"],
-      icn["SU.M1.POSSIBLE SUBMARINE - HIGH 4"]
+      icn["SU.M2.POSSIBLE SUBMARINE - HIGH 4"]
     ];
     sId["S-U-SL----"] = [
       icn["SU.IC.SUBMARINE"],
-      icn["SU.M1.PROBABLE SUBMARINE"]
+      icn["SU.M2.PROBABLE SUBMARINE"]
     ];
     sId["S-U-SK----"] = [icn["SU.IC.SUBMARINE, SNORKELING"]];
     sId["S-U-W-----"] = [icn["SU.IC.UNDERWATER WEAPON"]];

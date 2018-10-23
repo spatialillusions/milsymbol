@@ -1,2 +1,8 @@
+.idea
+.nyc_output/
 node_modules/
 coverage/
+docs/milstd.js
+docs/milstd-2525.js
+docs/stanag-app6.js
+*.tgz

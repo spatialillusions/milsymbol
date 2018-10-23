@@ -14,8 +14,15 @@
 * Added support for the field installationComposition as specified in APP-6 D
 * Added possiblity to control more color on symbol level
 * Support for speed leaders
+* Support for text background color using infoBackground and infoBackgroundFrame options
 
 ### Changed
+
+* `symbol.getProperties()` is removed and `symbol.getMetadata()` should be used instead.
+
+* ms.getHqStafLength changed to ms.getHqStaffLength, fixed spelling
+
+* ms.setHqStafLength changed to ms.setHqStaffLength, fixed spelling
 
 * Thanks to @okwolf we moved from webpack to rollup for development
 
@@ -26,8 +33,6 @@
   standard documents
 
 * Make it possible to set infoColor to a Color Mode
-
-* `symbol.getProperties()` is removed and `symbol.getMetadata()` should be used instead.
 
 ### Deprecated
 
@@ -44,7 +49,11 @@
 
 * The condition bar is now drawn below the headquartersElement field
 
+* Some natural events in 2525C was framed even if they shouldn't be
+
 ### Security
+
+* Prevented XSS issue where malicious code could be inserted into text fields of SVG symbols, all < and > are now encoded to prevent this.
 
 ## 1.3.3 14 NOV 2017
 
@@ -61,7 +70,7 @@
 ### Fixed
 
 * The option infoColor was not set when used, this is now fixed, again.
-* The option hqStafLength was not set when used, this is now fixed.
+* The option hqStaffLength was not set when used, this is now fixed.
 * Fill opacity affected outline opacity as well in canvas output.
 
 ### Security

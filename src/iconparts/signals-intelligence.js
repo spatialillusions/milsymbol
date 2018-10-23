@@ -1,4 +1,9 @@
-import { defaultProperties, textm1 } from "./iconparts-functions.js";
+import {
+  defaultProperties,
+  text,
+  textm1,
+  textm2
+} from "./iconparts-functions.js";
 
 export default function(
   iconParts,
@@ -45,6 +50,8 @@ export default function(
     d: "m 115,90 -15,15 0,-15 -15,15 M 80,85 c 0,25 15,35 35,35",
     fill: false
   };
+  icn["SI.I.JAMMER / ELECTRONIC COUNTER-MEASURES"] = text("J");
+
   icn["SI.M1.ANTI-AIRCRAFT FIRE CONTROL"] = textm1("AA");
   icn["SI.M1.AIRBORNE SEARCH AND BOMBING"] = textm1("AB");
   icn["SI.M1.AIRBORNE INTERCEPT"] = textm1("AI");
@@ -57,6 +64,7 @@ export default function(
   icn["SI.M1.CONTROLLED INTERCEPT"] = textm1("CI");
   icn["SI.M1.CELLULAR/MOBILE"] = textm1("CM");
   icn["SI.M1.COASTAL SURVEILLANCE"] = textm1("CS");
+  icn["SI.M1.CYBER"] = textm1("CYB");
   icn["SI.M1.DECOY/MIMIC"] = textm1("DC");
   icn["SI.M1.DATA TRANSMISSION"] = textm1("DT");
   icn["SI.M1.EARTH SURVEILLANCE"] = textm1("ES");
@@ -245,6 +253,7 @@ export default function(
     fontsize: 25,
     text: "C"
   };
+  icn["SI.M2.CYBER"] = textm2("CYB");
   icn["SI.M2.DELTA"] = {
     type: "text",
     stroke: false,

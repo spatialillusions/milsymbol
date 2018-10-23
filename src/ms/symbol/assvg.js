@@ -9,16 +9,27 @@ export default function asSVG() {
         }
       } else {
         if (typeof instruction[i] === "object") {
-          var svg;
+          var svg = "";
           if (instruction[i].type == "svg") {
-            svg = instruction[i].svg;
+            svg += instruction[i].svg;
           } else {
+            if (instruction[i].hasOwnProperty("clipPath")) {
+              svg += '<clipPath id="clip">';
+              svg +=
+                '<path d="' +
+                instruction[i].clipPath +
+                '" clip-rule="nonzero" />';
+              svg += "</clipPath>";
+            }
             switch (instruction[i].type) {
               case "path":
-                svg = '<path d="' + instruction[i].d + '" ';
+                svg += '<path d="' + instruction[i].d + '" ';
+                if (instruction[i].hasOwnProperty("clipPath")) {
+                  svg += 'clip-path="url(#clip)" ';
+                }
                 break;
               case "circle":
-                svg =
+                svg +=
                   '<circle cx="' +
                   instruction[i].cx +
                   '" cy="' +
@@ -26,9 +37,12 @@ export default function asSVG() {
                   '" r="' +
                   instruction[i].r +
                   '" ';
+                if (instruction[i].hasOwnProperty("clipPath")) {
+                  svg += 'clip-path="url(#clip)" ';
+                }
                 break;
               case "text":
-                svg =
+                svg +=
                   '<text x="' +
                   instruction[i].x +
                   '" y="' +
@@ -44,7 +58,7 @@ export default function asSVG() {
                   svg += 'font-weight="' + instruction[i].fontweight + '" ';
                 break;
               case "translate":
-                svg =
+                svg +=
                   '<g transform="translate(' +
                   instruction[i].x +
                   "," +
@@ -52,7 +66,7 @@ export default function asSVG() {
                   ')" ';
                 break;
               case "rotate":
-                svg =
+                svg +=
                   '<g transform="rotate(' +
                   instruction[i].degree +
                   "," +
@@ -62,7 +76,7 @@ export default function asSVG() {
                   ')" ';
                 break;
               case "scale":
-                svg = '<g transform="scale(' + instruction[i].factor + ')" ';
+                svg += '<g transform="scale(' + instruction[i].factor + ')" ';
                 break;
             }
             if (typeof instruction[i].stroke !== "undefined") {
@@ -99,7 +113,11 @@ export default function asSVG() {
                 svg += "</circle>";
                 break;
               case "text":
-                svg += instruction[i].text + "</text>";
+                svg +=
+                  String(instruction[i].text)
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;") + "</text>";
                 break;
               case "translate":
                 svg += processInstructions.call(this, instruction[i].draw);

@@ -4,204 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <title>Milsymbol 2525C</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-      max-width: 80%;
-      margin: auto;
-    }
-
-    em {
-      color: #ccc;
-    }
-
-    figure {
-      text-align: center;
-    }
-
-    svg {
-      max-width: 100%;
-    }
-
-    table {
-      border-collapse: collapse;
-      margin: auto;
-      width: 100%;
-      table-layout: fixed;
-      margin-bottom: 1rem;
-    }
-
-    table,
-    td,
-    th {
-      border: solid 1px #ccc;
-      padding: 5px;
-      text-align: center;
-    }
-
-    thead {
-      font-weight: bold;
-      background-color: rgb(243, 243, 243);
-      display: table-header-group;
-    }
-
-    tr td:nth-child(1) {
-      text-align: left;
-    }
-
-    .index-h3 {
-      margin-left: 15px;
-    }
-
-    .na {
-      background-color: #eee;
-      color: #999;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 
   <script src="../dist/milsymbol.development.js"></script>
-  <script src="../dist/milstd-umd.js"></script>
-
-  <script>
-    var size = 70;
-    ms._autoValidation = true;
-
-    /*
-        ms.addSymbolPart(function debug() {
-          //This debug function is a minimal example of how to extend milsymbol.
-          //Create a variable to store your geometries
-          var drawArray1 = [];
-          var drawArray2 = [];
-          //Get a new bounding box and modify it if your geometry extends outside the current bounds.
-          var gbbox = new ms.BBox();
-          //Draws the icon octagon
-          drawArray2.push({
-            type: "path",
-            fill: false,
-            stroke: "rgb(0,0,255)",
-            strokewidth: 0.8,
-            d:
-              "m 120,60 0,80 m -40,-80 0,80 m -20,-20 80,0 m 0,-40 -80,0 M 100,50 135.35534,64.64466 150,100 135.35534,135.35534 100,150.00002 64.644661,135.35534 50,100 64.644661,64.64466 z"
-          });
-          return { pre: drawArray1, post: drawArray2, bbox: gbbox };
-        });
-        //*/
-
-    function generatenavigation() {
-      var i = 0;
-      var indexoftables = "";
-      document.querySelectorAll("h2, h3").forEach(function (d) {
-        i++;
-        d.id = "heading-" + i;
-        indexoftables +=
-          '<a href="#heading-' + i + '" class="index-' + d.tagName.toLowerCase() + '">' + d.textContent + "</a><br>\n";
-      });
-      document.getElementById("indexoftables").innerHTML = indexoftables;
-
-      i = 0;
-      var indexoffigures = "";
-      document.querySelectorAll("figure").forEach(function (d) {
-        i++;
-        d.id = "figure-" + i;
-        d = d.getElementsByTagName("figcaption").item(0);
-        indexoffigures +=
-          '<a href="#figure-' + i + '">' + d.textContent + "</a><br>\n";
-      });
-      document.getElementById("indexoffigures").innerHTML = indexoffigures;
-    }
-
-    function remarks(remark) {
-      if (remark == "Wrong SIDC in standard") return { monoColor: "Red" };
-      if (
-        ["N/A"
-        ].indexOf(remark) != -1
-      ) {
-        return { monoColor: "Silver" };
-      } else {
-        return {};
-      }
-    }
-
-    function labels(icon) {
-      if (icon.hierarchy.split(".")[0] == "TACGRP") {
-        return { infoColor: "Silver", additionalInformation: 'H', additionalInformation1: 'H1', hostile: 'N', uniqueDesignation: 'T', dtg: 'W', dtg1: 'W1',altitudeDepth: 'X' }
-      } else {
-        return {};
-      }
-    }
-
-    function renderSymbolSet(symbolset) {
-      var output = "";
-      var i;
-
-      output += "<h2>" + symbolset.name + "</h2>";
-      output += "<h3>" + symbolset.name + " Main Icon</h3>";
-      output += "<table border=1><thead><tr><th>Description</th><th>Icon</th>";
-
-      output += "<th>Remarks</th></tr></thead>";
-
-      for (i = 0; i < symbolset["main icon"].length; i++) {
-        output +=
-          "<tr"
-        if (symbolset["main icon"][i].remarks == "N/A")
-          output += ' class="na"';
-        output += "><td><b>" +
-          symbolset["main icon"][i].hierarchy +
-          "</b>";
-        for (var j = 0; j < symbolset["main icon"][i].name.length; j++) {
-          if (symbolset["main icon"][i].name.length - 1 == j) {
-            output += "<br><b>" + symbolset["main icon"][i].name[j] + "</b>";
-          } else {
-            if (!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "POINT"))
-              output += "<br><em>" + symbolset["main icon"][i].name[j] + "</em>";
-          }
-        }
-
-        output += "<br><em>SIDC:</em> " + symbolset["main icon"][i]["code scheme"] + "*" + symbolset["main icon"][i]["battle dimension"] + "*" + symbolset["main icon"][i].code;
-
-        if (!(symbolset["main icon"][i].hasOwnProperty("geometry") && symbolset["main icon"][i].geometry != "POINT")) {
-          output +=
-            "</td><td>" +
-            new ms.Symbol(
-              symbolset["main icon"][i]["code scheme"] + "F" + symbolset["main icon"][i]["battle dimension"] + "P" + symbolset["main icon"][i].code,
-              { size: size },
-              remarks(symbolset["main icon"][i].remarks),
-              labels(symbolset["main icon"][i])
-            ).asSVG();
-          output += "</td>"
-        } else {
-          output +=
-            "</td><td>" +
-            symbolset["main icon"][i].geometry;
-          output += "</td>"
-        }
-        /*
-        if (symbolset.symbolset == 36) {
-          output += "<td>" +
-          new ms.Symbol(
-            "1003" +
-            symbolset.symbolset +
-            "0000" +
-            symbolset["main icon"][i].code +
-            "0000",
-            { size: size, alternateMedal: true },
-            remarks(symbolset["main icon"][i].remarks)
-          ).asSVG();
-          output += "</td>"
-        }
-        //*/
-
-        output += "<td>" + (symbolset["main icon"][i].remarks ? symbolset["main icon"][i].remarks : "") + "</td></tr>";
-      }
-      output += "</table>";
-
-      return output;
-    }
-  </script>
+  <!--<script src="milstd.js"></script>-->
+  <script src="milstd-2525.js"></script>
+  <script src="letter-sidc.js"></script>
 
 </head>
 
@@ -1532,7 +1340,7 @@
       </tr>
     </thead>
     <tr>
-      <td>
+      <td style="text-align:center;">
         <script>
           document.write(new ms.Symbol("SFG--------A", { size: 40 }).asSVG());
         </script>
@@ -1542,7 +1350,7 @@
     </tr>
 
     <tr>
-      <td>
+      <td style="text-align:center;">
         <script>
           document.write(new ms.Symbol("SFG--------B", { size: 40 }).asSVG());
         </script>
@@ -1552,7 +1360,7 @@
     </tr>
 
     <tr>
-      <td>
+      <td style="text-align:center;">
         <script>
           document.write(new ms.Symbol("SFG--------C", { size: 40 }).asSVG());
         </script>
@@ -1562,7 +1370,7 @@
     </tr>
 
     <tr>
-      <td>
+      <td style="text-align:center;">
         <script>
           document.write(new ms.Symbol("SFG--------D", { size: 40 }).asSVG());
         </script>
@@ -1572,7 +1380,7 @@
     </tr>
 
     <tr>
-      <td>
+      <td style="text-align:center;">
         <script>
           document.write(new ms.Symbol("SFG--------E", { size: 40 }).asSVG());
         </script>
@@ -1582,7 +1390,7 @@
     </tr>
 
     <tr>
-      <td>
+      <td style="text-align:center;">
         <script>
           document.write(new ms.Symbol("SFG--------F", { size: 40 }).asSVG());
         </script>
@@ -1592,7 +1400,7 @@
     </tr>
 
     <tr>
-      <td>
+      <td style="text-align:center;">
         <script>
           document.write(new ms.Symbol("SFG--------G", { size: 40 }).asSVG());
         </script>
@@ -1602,7 +1410,7 @@
     </tr>
 
     <tr>
-      <td>
+      <td style="text-align:center;">
         <script>
           document.write(new ms.Symbol("SFG--------H", { size: 40 }).asSVG());
         </script>
@@ -1612,7 +1420,7 @@
     </tr>
 
     <tr>
-      <td>
+      <td style="text-align:center;">
         <script>
           document.write(new ms.Symbol("SFG--------I", { size: 40 }).asSVG());
         </script>
@@ -1622,7 +1430,7 @@
     </tr>
 
     <tr>
-      <td>
+      <td style="text-align:center;">
         <script>
           document.write(new ms.Symbol("SFG--------J", { size: 40 }).asSVG());
         </script>
@@ -1632,7 +1440,7 @@
     </tr>
 
     <tr>
-      <td>
+      <td style="text-align:center;">
         <script>
           document.write(new ms.Symbol("SFG--------K", { size: 40 }).asSVG());
         </script>
@@ -1642,7 +1450,7 @@
     </tr>
 
     <tr>
-      <td>
+      <td style="text-align:center;">
         <script>
           document.write(new ms.Symbol("SFG--------L", { size: 40 }).asSVG());
         </script>
@@ -1652,7 +1460,7 @@
     </tr>
 
     <tr>
-      <td>
+      <td style="text-align:center;">
         <script>
           document.write(new ms.Symbol("SFG--------M", { size: 40 }).asSVG());
         </script>
@@ -1662,7 +1470,7 @@
     </tr>
 
     <tr>
-      <td>
+      <td style="text-align:center;">
         <script>
           document.write(new ms.Symbol("SFG--------N", { size: 40 }).asSVG());
         </script>
@@ -2482,7 +2290,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525c"].WAR.SPC // Space
+        milstd2525["ms2525c"].WAR.SPC // Space
       )
     );
   </script>
@@ -2490,7 +2298,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525c"].WAR.AIRTRK // Air
+        milstd2525["ms2525c"].WAR.AIRTRK // Air
       )
     );
   </script>
@@ -2498,7 +2306,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525c"].WAR.GRDTRK_UNT // Ground
+        milstd2525["ms2525c"].WAR.GRDTRK_UNT // Ground
       )
     );
   </script>
@@ -2506,7 +2314,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525c"].WAR.GRDTRK_EQT // Ground
+        milstd2525["ms2525c"].WAR.GRDTRK_EQT // Ground
       )
     );
   </script>
@@ -2514,7 +2322,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525c"].WAR.GRDTRK_INS // Ground
+        milstd2525["ms2525c"].WAR.GRDTRK_INS // Ground
       )
     );
   </script>
@@ -2522,7 +2330,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525c"].WAR.SSUF // Sea surface
+        milstd2525["ms2525c"].WAR.SSUF // Sea surface
       )
     );
   </script>
@@ -2530,7 +2338,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525c"].WAR.SBSUF // Sea subsurface
+        milstd2525["ms2525c"].WAR.SBSUF // Sea subsurface
       )
     );
   </script>
@@ -2538,7 +2346,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525c"].WAR.SOFUNT // SOF
+        milstd2525["ms2525c"].WAR.SOFUNT // SOF
       )
     );
   </script>
@@ -2546,7 +2354,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525c"].TACGRP.TSK // TASKS
+        milstd2525["ms2525c"].TACGRP // CONTROL MEASURES
       )
     );
   </script>
@@ -2554,7 +2362,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525c"].TACGRP.C2GM // CONTROL MEASURES
+        milstd2525["ms2525c"].SIGINT // OTHER
       )
     );
   </script>
@@ -2562,7 +2370,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525c"].TACGRP.MOBSU // OPERATIONS OTHER THAN WAR
+        milstd2525["ms2525c"].STBOPS // OTHER
       )
     );
   </script>
@@ -2570,125 +2378,7 @@
   <script>
     document.write(
       renderSymbolSet(
-        milstd["ms2525c"].TACGRP.FSUPP // Fire support
-      )
-    );
-  </script>
-
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd["ms2525c"].TACGRP.CSS // COMBAT SERVICE SUPPORT
-      )
-    );
-  </script>
-
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd["ms2525c"].TACGRP.OTH // OTHER
-      )
-    );
-  </script>
-
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd["ms2525c"].SIGINT.SPC // OTHER
-      )
-    );
-  </script>
-
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd["ms2525c"].SIGINT.AIRTRK // OTHER
-      )
-    );
-  </script>
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd["ms2525c"].SIGINT.GRDTRK // OTHER
-      )
-    );
-  </script>
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd["ms2525c"].SIGINT.SSUF // OTHER
-      )
-    );
-  </script>
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd["ms2525c"].SIGINT.SBSUF // OTHER
-      )
-    );
-  </script>
-
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd["ms2525c"].STBOPS.ITM // OTHER
-      )
-    );
-  </script>
-
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd["ms2525c"].STBOPS.INDIV // OTHER
-      )
-    );
-  </script>
-
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd["ms2525c"].STBOPS.GRPORG // OTHER
-      )
-    );
-  </script>
-
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd["ms2525c"].STBOPS.RAPE // OTHER
-      )
-    );
-  </script>
-
-
-
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd["ms2525c"].EMS.INCDNT // OTHER
-      )
-    );
-  </script>
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd["ms2525c"].EMS.NATEVT // OTHER
-      )
-    );
-  </script>
-
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd["ms2525c"].EMS.OPN // OTHER
-      )
-    );
-  </script>
-
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd["ms2525c"].EMS.INFSTR // OTHER
+        milstd2525["ms2525c"].EMS // OTHER
       )
     );
   </script>

@@ -1,17 +1,14 @@
 import { ms } from "../../ms.js";
 import { metadata as metadata_letter } from "../metadata.js";
-ms._getMetadata.letter = metadata_letter;
 import { geticons as getIcons_letter } from "../geticons.js";
-ms._getIcons.letter = getIcons_letter;
-
 import icons from "../../iconparts/ground.js";
-ms.addIconParts(icons);
-// TODO, think about if we should copy all icons to ground...
 import icons_air from "../../iconparts/air.js";
-ms.addIconParts(icons_air);
 
 export default {
   type: "letter",
+  getMetadata: metadata_letter,
+  getIcons: getIcons_letter,
+  iconParts: [icons, icons_air],
   icons: function sof(sId, bbox, icn, _STD2525) {
     // SOF ===========================================================================
     sId["S-F-------"] = [icn["GR.IC.SPECIAL OPERATIONS FORCES"]];
@@ -58,11 +55,16 @@ export default {
       icn["AIR.M1.SPECIAL OPERATIONS FORCES"],
       icn["SOF.M2.VSTOL"]
     ];
-    sId["S-F-AH----"] = [
-      icn["GR.IC.AVIATION ROTARY WING"],
-      _STD2525 ? "<line x1='100' y1='100' x2='100' y2='140' />" : "",
-      icn["AIR.M1.SPECIAL OPERATIONS FORCES"]
-    ];
+    sId["S-F-AH----"] = _STD2525
+      ? [
+          icn["GR.IC.AVIATION ROTARY WING"],
+          icn["AIR.M1.SPECIAL OPERATIONS FORCES"],
+          icn["GR.IC.AVIATION ROTARY WING 2525C"]
+        ]
+      : [
+          icn["GR.IC.AVIATION ROTARY WING"],
+          icn["AIR.M1.SPECIAL OPERATIONS FORCES"]
+        ];
     sId["S-F-AHH---"] = [
       icn["GR.IC.AVIATION ROTARY WING"],
       icn["AIR.M1.SPECIAL OPERATIONS FORCES"],

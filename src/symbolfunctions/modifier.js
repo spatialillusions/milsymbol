@@ -11,7 +11,7 @@ export default function modifier(ms) {
   if (this.metadata.headquarters) {
     //HEADQUARTERS
     var y = 100;
-    var hqStafLength = Number(this.style.hqStafLength || ms._hqStafLength);
+    var hqStaffLength = Number(this.style.hqStaffLength || ms._hqStaffLength);
     if (
       [
         "AirFriend",
@@ -38,7 +38,7 @@ export default function modifier(ms) {
         " L" +
         bbox.x1 +
         "," +
-        (bbox.y2 + hqStafLength)
+        (bbox.y2 + hqStaffLength)
     };
 
     //outline
@@ -55,7 +55,7 @@ export default function modifier(ms) {
       );
 
     drawArray2.push(geom);
-    gbbox.y2 = bbox.y2 + hqStafLength;
+    gbbox.y2 = bbox.y2 + hqStaffLength;
   }
   if (this.metadata.taskForce) {
     //TASK FORCE

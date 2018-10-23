@@ -1,14 +1,12 @@
-import { ms } from "../../ms.js";
 import { metadata as metadata_number } from "../metadata.js";
-ms._getMetadata.number = metadata_number;
 import { geticons as getIcons_number } from "../geticons.js";
-ms._getIcons.number = getIcons_number;
-
 import icons from "../../iconparts/ground.js";
-ms.addIconParts(icons);
 
 export default {
   type: "number",
+  getMetadata: metadata_number,
+  getIcons: getIcons_number,
+  iconParts: icons,
   icons: function cyberspace(
     sId,
     sIdm1,
@@ -20,11 +18,13 @@ export default {
   ) {
     //Adds support for Cyberspace
     if (symbolSet == "60") {
-      //sId['110000'] = 'Botnet';
-      sId["110100"] = [icn["CY.IC.COMMAND AND CONTROL (C2)"]];
-      sId["110200"] = [icn["CY.IC.HERDER"]];
-      sId["110300"] = [icn["CY.IC.CALLBACK DOMAIN"]];
-      sId["110400"] = [icn["CY.IC.ZOMBIE"]];
+      sId["110000"] = [];
+      sId["110100"] = [icn["CY.IC.COMBAT MISSION TEAM"]];
+      sId["110200"] = [icn["CY.IC.NATIONAL MISSION TEAM"]];
+      sId["110300"] = [icn["CY.IC.CYBER PROTECTION TEAM"]];
+      sId["110400"] = [icn["CY.IC.NATION STATE CYBER THREAT ACTOR"]];
+      sId["110500"] = [icn["CY.IC.NON NATION STATE CYBER THREAT ACTOR"]];
+      /*
       //sId['120000'] = 'Infection';
       sId["120100"] = [icn["CY.IC.ADVANCED PERSISTENT THREAT (APT)"]];
       sId["120101"] = [icn["CY.IC.APT WITH C2"]];
@@ -72,6 +72,7 @@ export default {
       sId["160700"] = [icn["CY.IC.NETWORK OUTAGE"]];
       sId["160800"] = [icn["CY.IC.SERVICE OUTAGE"]];
       sId["160900"] = [icn["CY.IC.DEVICE OUTAGE"]];
+      */
     }
   }
 };

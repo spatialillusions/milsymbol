@@ -42,12 +42,19 @@ export default function canvasDraw(ctx, instruction) {
           case "path":
             if (!ms._brokenPath2D) {
               var d = new Path2D(instruction[i].d);
+              if (instruction[i].hasOwnProperty("clipPath")) {
+                ctx.save();
+                ctx.clip(new Path2D(instruction[i].clipPath), "nonzero");
+              }
               if (
                 typeof instruction[i].fill === "undefined" ||
                 (typeof instruction[i].fill !== "undefined" &&
                   instruction[i].fill)
               )
                 ctx.fill(d);
+              if (instruction[i].hasOwnProperty("clipPath")) {
+                ctx.restore();
+              }
               if (ctx.globalAlpha != 1) ctx.globalAlpha = 1; //We never have transparent strokes
               if (
                 typeof instruction[i].stroke === "undefined" ||
@@ -56,8 +63,8 @@ export default function canvasDraw(ctx, instruction) {
               )
                 ctx.stroke(d);
             } else {
-              if (typeof ms._Path2D === "function") {
-                ms._Path2D(ctx, instruction[i].d);
+              if (typeof ms.Path2D === "function") {
+                ms.Path2D(ctx, instruction[i].d);
                 if (
                   typeof instruction[i].fill === "undefined" ||
                   (typeof instruction[i].fill !== "undefined" &&
@@ -73,12 +80,16 @@ export default function canvasDraw(ctx, instruction) {
                   ctx.stroke();
               } else {
                 console.warn(
-                  "ms._Path2D() is not present, you will need to load functionality for using Canvas in older version of Internet Explorer."
+                  "ms.Path2D() is not present, you will need to load functionality for using Canvas in older version of Internet Explorer."
                 );
               }
             }
             break;
           case "circle":
+            if (instruction[i].hasOwnProperty("clipPath")) {
+              ctx.save();
+              ctx.clip(new Path2D(instruction[i].clipPath), "nonzero");
+            }
             ctx.beginPath();
             ctx.arc(
               instruction[i].cx,
@@ -94,6 +105,9 @@ export default function canvasDraw(ctx, instruction) {
                 instruction[i].fill)
             )
               ctx.fill();
+            if (instruction[i].hasOwnProperty("clipPath")) {
+              ctx.restore();
+            }
             if (
               typeof instruction[i].stroke === "undefined" ||
               (typeof instruction[i].stroke !== "undefined" &&
@@ -137,7 +151,7 @@ export default function canvasDraw(ctx, instruction) {
             var y = instruction[i].y;
             ctx.save();
             ctx.translate(x, y);
-            ctx.rotate(instruction[i].degree * Math.PI / 180);
+            ctx.rotate((instruction[i].degree * Math.PI) / 180);
             ctx.translate(-x, -y);
             canvasDraw.call(this, ctx, instruction[i].draw);
             ctx.restore();

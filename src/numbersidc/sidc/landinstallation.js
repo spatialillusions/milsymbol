@@ -1,14 +1,13 @@
 import { ms } from "../../ms.js";
 import { metadata as metadata_number } from "../metadata.js";
-ms._getMetadata.number = metadata_number;
 import { geticons as getIcons_number } from "../geticons.js";
-ms._getIcons.number = getIcons_number;
-
 import icons from "../../iconparts/ground.js";
-ms.addIconParts(icons);
 
 export default {
   type: "number",
+  getMetadata: metadata_number,
+  getIcons: getIcons_number,
+  iconParts: icons,
   icons: function landinstallation(
     sId,
     sIdm1,
@@ -29,7 +28,7 @@ export default {
       sId["110600"] = [icn["GR.IC.CBRN"]];
       sId["110700"] = [icn["GR.EQ.DOZER"]];
       sId["110701"] = [icn["GR.IN.IC.BRIDGE"]];
-      sId["110800"] = [ms._scale(1.4, icn["GR.IC.FF.CLASS IX"])];
+      sId["110800"] = [icn["GR.IC.EQUIPMENT MANUFACTURE"]];
       sId["110900"] = [icn["GR.I.GOVERNMENT"]];
       sId["111000"] = [icn["ST.IC.GRAY LIST LOCATION"]];
       sId["111100"] = [icn["ST.IC.MASS GRAVE LOCATION"]];

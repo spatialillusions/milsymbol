@@ -1,9 +1,10 @@
-import { ms } from "../src/ms";
-import { app6d } from "../src/milstd";
-import verify from "./app6d";
+import { ms } from "../src/milsymbol";
+ms.reset();
+import { app6d } from "stanagapp6";
+import verify from "./number-sidc";
 ms.setStandard("APP6");
 
-import icons from "../src/numbersidc/sidc/airmissile";
+import { airmissile as icons } from "../src/numbersidc";
 ms.addIcons(icons);
 
-verify(ms, app6d, "APP-6 D Air Missile", "02");
+export default verify(ms, app6d["02"]);

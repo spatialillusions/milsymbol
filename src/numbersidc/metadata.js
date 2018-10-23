@@ -46,7 +46,7 @@ export function metadata(ms, metadata, mapping) {
 
   metadata.context = mapping.context[parseInt(this.options.sidc.substr(2, 1))];
   metadata.affiliation = affiliationMapping[standardIdentity2];
-  metadata.dimension = dimensionMapping[symbolSet];
+  metadata.dimension = dimensionMapping[symbolSet] || "";
 
   // Not equipment symbolsets
   if (
@@ -65,6 +65,10 @@ export function metadata(ms, metadata, mapping) {
   if (symbolSet == "40") metadata.activity = true;
   //SymbolSets that are Installations
   if (symbolSet == "20") metadata.installation = true;
+  //SymbolSets that are control-measure
+  if (symbolSet == "25") metadata.controlMeasure = true;
+  //SymbolSets in Cyberpace
+  if (symbolSet == "60") metadata.cyberspace = true;
   //Sea Mines with MEDAL icn
   if (symbolSet == "36" && this.style.alternateMedal === false)
     metadata.fill = false;

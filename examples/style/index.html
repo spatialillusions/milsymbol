@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <script src="../../dist/milsymbol.js"></script>
+</head>
+
+<body>
+  <center>
+    Base symbol without any special style settings
+    <br>
+    <script>
+      document.write(new ms.Symbol("sfgpewrh--mt", {
+        size: 35,
+        quantity: 200,
+        staffComments: "for reinforcements".toUpperCase(),
+        additionalInformation: "added support for JJ".toUpperCase(),
+        type: "machine gun".toUpperCase(),
+        dtg: "30140000ZSEP97",
+        location: "0900000.0E570306.0N"
+      }).asSVG());
+    </script>
+    <br>
+    <br> Unframed symobl (notice the moved mobility indicator)
+    <br>
+    <script>
+      document.write(new ms.Symbol("sfgpewrh--mt", {
+        size: 35,
+        quantity: 200,
+        staffComments: "for reinforcements".toUpperCase(),
+        additionalInformation: "added support for JJ".toUpperCase(),
+        type: "machine gun".toUpperCase(),
+        dtg: "30140000ZSEP97",
+        location: "0900000.0E570306.0N"
+      }, { frame: false }).asSVG());
+    </script>
+    <br>
+    <br> Unfilled symbol (color changes automatically when unfilled)
+    <br>
+    <script>
+      document.write(new ms.Symbol("sfgpewrh--mt", {
+        size: 35,
+        quantity: 200,
+        staffComments: "for reinforcements".toUpperCase(),
+        additionalInformation: "added support for JJ".toUpperCase(),
+        type: "machine gun".toUpperCase(),
+        dtg: "30140000ZSEP97",
+        location: "0900000.0E570306.0N"
+      }, { fill: false }).asSVG());
+    </script>
+    <br>
+    <br>No info around symbol (information is set but not displayed)
+    <br>
+    <script>
+      document.write(new ms.Symbol("sfgpewrh--mt", {
+        size: 35,
+        quantity: 200,
+        staffComments: "for reinforcements".toUpperCase(),
+        additionalInformation: "added support for JJ".toUpperCase(),
+        type: "machine gun".toUpperCase(),
+        dtg: "30140000ZSEP97",
+        location: "0900000.0E570306.0N"
+      }, { infoFields: false }).asSVG());
+    </script>
+    <br>
+    <br>Set built in color mode
+    <br>
+    <script>
+      document.write(new ms.Symbol("sfgpewrh--mt", {
+        size: 35,
+        quantity: 200,
+        staffComments: "for reinforcements".toUpperCase(),
+        additionalInformation: "added support for JJ".toUpperCase(),
+        type: "machine gun".toUpperCase(),
+        dtg: "30140000ZSEP97",
+        location: "0900000.0E570306.0N"
+      }, { colorMode: "Dark" }).asSVG());
+    </script>
+    <br>
+    <br>Set custom color mode
+    <br>
+    <script>
+      document.write(new ms.Symbol("sfgpewrh--mt", {
+        size: 35,
+        quantity: 200,
+        staffComments: "for reinforcements".toUpperCase(),
+        additionalInformation: "added support for JJ".toUpperCase(),
+        type: "machine gun".toUpperCase(),
+        dtg: "30140000ZSEP97",
+        location: "0900000.0E570306.0N"
+      }, { colorMode: ms.ColorMode("purple", "blue", "red", "green", "yellow") }).asSVG());
+    </script>
+    <br>
+    <br>Fill opacity
+    <br>
+    <script>
+      document.write(new ms.Symbol("sfgpewrh--mt", {
+        size: 35,
+        quantity: 200,
+        staffComments: "for reinforcements".toUpperCase(),
+        additionalInformation: "added support for JJ".toUpperCase(),
+        type: "machine gun".toUpperCase(),
+        dtg: "30140000ZSEP97",
+        location: "0900000.0E570306.0N"
+      }, { fillOpacity: 0.5 }).asSVG());
+    </script>
+    <br>
+    <br>Change info color
+    <br>
+    <script>
+      document.write(new ms.Symbol("sfgpewrh--mt", {
+        size: 35,
+        quantity: 200,
+        staffComments: "for reinforcements".toUpperCase(),
+        additionalInformation: "added support for JJ".toUpperCase(),
+        type: "machine gun".toUpperCase(),
+        dtg: "30140000ZSEP97",
+        location: "0900000.0E570306.0N"
+      }, { infoColor: "lightgray" }).asSVG());
+    </script>
+    <br>
+    <br>Change info font
+    <br>
+    <script>
+      document.write(new ms.Symbol("sfgpewrh--mt", {
+        size: 35,
+        quantity: 200,
+        staffComments: "for reinforcements".toUpperCase(),
+        additionalInformation: "added support for JJ".toUpperCase(),
+        type: "machine gun".toUpperCase(),
+        dtg: "30140000ZSEP97",
+        location: "0900000.0E570306.0N"
+      }, { fontfamily: "times" }).asSVG());
+    </script>
+    <br>
+    <br>Change info size
+    <br>
+    <script>
+      document.write(new ms.Symbol("sfgpewrh--mt", {
+        size: 35,
+        quantity: 200,
+        staffComments: "for reinforcements".toUpperCase(),
+        additionalInformation: "added support for JJ".toUpperCase(),
+        type: "machine gun".toUpperCase(),
+        dtg: "30140000ZSEP97",
+        location: "0900000.0E570306.0N"
+      }, { infoSize: 60 }).asSVG());
+    </script>
+    <br>
+    <br> Set symbol outline
+    <br>
+    <script>
+      document.write(new ms.Symbol("sfgpewrh--mt", {
+        size: 35,
+        quantity: 200,
+        staffComments: "for reinforcements".toUpperCase(),
+        additionalInformation: "added support for JJ".toUpperCase(),
+        type: "machine gun".toUpperCase(),
+        dtg: "30140000ZSEP97",
+        location: "0900000.0E570306.0N"
+      }, { outlineColor: "yellow", outlineWidth: 5 }).asSVG());
+    </script>
+    <br>
+    <br>Set info background
+    <br>
+    <script>
+      document.write(new ms.Symbol("sfgpewrh--mt", {
+        size: 35,
+        quantity: 200,
+        staffComments: "for reinforcements".toUpperCase(),
+        additionalInformation: "added support for JJ".toUpperCase(),
+        type: "machine gun".toUpperCase(),
+        dtg: "30140000ZSEP97",
+        location: "0900000.0E570306.0N"
+      }, { infoBackground: "black", infoColor: "white" }).asSVG());
+    </script>
+    <br>
+    <br>
+
+  </center>
+
+</body>

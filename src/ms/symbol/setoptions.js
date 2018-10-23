@@ -77,26 +77,26 @@ export default function setOptions() {
   var anchor = { x: 100, y: 100 };
   this.octagonAnchor = {
     x:
-      (anchor.x -
+      ((anchor.x -
         this.bbox.x1 +
         parseFloat(this.style.strokeWidth) +
         parseFloat(this.style.outlineWidth)) *
-      this.style.size /
+        this.style.size) /
       100,
     y:
-      (anchor.y -
+      ((anchor.y -
         this.bbox.y1 +
         parseFloat(this.style.strokeWidth) +
         parseFloat(this.style.outlineWidth)) *
-      this.style.size /
+        this.style.size) /
       100
   };
   //If it is a headquarters the anchor should be at the end of the staf
   if (this.metadata.headquarters) {
-    var hqStafLength = this.style.hqStafLength || ms._hqStafLength;
+    var hqStaffLength = this.style.hqStaffLength || ms._hqStaffLength;
     anchor = {
       x: this.metadata.baseGeometry.bbox.x1,
-      y: this.metadata.baseGeometry.bbox.y2 + hqStafLength
+      y: this.metadata.baseGeometry.bbox.y2 + hqStaffLength
     };
   }
 
@@ -119,23 +119,23 @@ export default function setOptions() {
     Number(this.style.strokeWidth * 2) +
     Number(this.style.outlineWidth * 2); //Adding the stoke width as margins and a little bit extra
 
-  this.width = this.baseWidth * this.style.size / 100;
-  this.height = this.baseHeight * this.style.size / 100;
+  this.width = (this.baseWidth * this.style.size) / 100;
+  this.height = (this.baseHeight * this.style.size) / 100;
 
   this.symbolAnchor = {
     x:
-      (anchor.x -
+      ((anchor.x -
         this.bbox.x1 +
         parseFloat(this.style.strokeWidth) +
         parseFloat(this.style.outlineWidth)) *
-      this.style.size /
+        this.style.size) /
       100,
     y:
-      (anchor.y -
+      ((anchor.y -
         this.bbox.y1 +
         parseFloat(this.style.strokeWidth) +
         parseFloat(this.style.outlineWidth)) *
-      this.style.size /
+        this.style.size) /
       100
   };
 

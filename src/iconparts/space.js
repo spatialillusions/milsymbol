@@ -309,6 +309,14 @@ export default function(
   icn["SP.M2.OPTICAL"] = textm2("O");
   icn["SP.M2.RADAR"] = textm2("R");
   icn["SP.M2.SIGNALS INTELLIGENCE (SIGINT)"] = textm2("SI"); //Space Missile
+  icn["SPACE.MISSILE.ICON"] = {
+    type: "path",
+    d: "M90,135 l0,-10 5,-5 0,-55 5,-5 5,5 0,55 5,5 0,10 -10,-10 z"
+  };
+  if (STD2525 || numberSIDC)
+    icn["SPACE.MISSILE.ICON"].fill = frame
+      ? colors.fillColor.Unknown
+      : colors.iconFillColor.Unknown;
   icn["SPACE.MISSILE.M1.BALLISTIC"] = {
     type: "text",
     stroke: false,
@@ -388,6 +396,22 @@ export default function(
     y: 110,
     fontsize: 30,
     text: "T"
+  };
+  icn["SPACE.MISSILE.M2.CLOSE RANGE"] = [
+    { type: "text", stroke: false, x: 132, y: 95, fontsize: 30, text: "C" },
+    { type: "text", stroke: false, x: 132, y: 125, fontsize: 30, text: "R" }
+  ];
+  icn["SPACE.MISSILE.M2.DEBRIS"] = [
+    { type: "text", stroke: false, x: 132, y: 95, fontsize: 30, text: "D" },
+    { type: "text", stroke: false, x: 132, y: 125, fontsize: 30, text: "B" }
+  ];
+  icn["SPACE.MISSILE.M2.UNKNOWN"] = {
+    type: "text",
+    stroke: false,
+    x: 132,
+    y: 110,
+    fontsize: 30,
+    text: "U"
   };
   icn["SPACE.PLANET LANDER"] = text("PL");
   //*/
