@@ -1,9 +1,9 @@
 .idea
+.nyc_output/
 node_modules/
 dist/
 coverage/
 docs/milstd.js
-
-*.tgz
 docs/milstd-2525.js
 docs/stanag-app6.js
+*.tgz

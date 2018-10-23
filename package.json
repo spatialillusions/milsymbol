@@ -16,7 +16,7 @@
     "bundle-amd": "rollup -c rollup.config.amd.js",
     "minify": "uglifyjs dist/milsymbol.development.js -o dist/milsymbol.js --comments --compress --mangle --source-map",
     "minify-amd": "uglifyjs dist/amd/milsymbol.development.js -o dist/amd/milsymbol.js --comments --compress --mangle --source-map",
-    "test": "tead"
+    "test": "tead --coverage"
   },
   "repository": {
     "type": "git",
