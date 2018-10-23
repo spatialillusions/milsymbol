@@ -1,6 +1,12 @@
 export default function(ms, sidc) {
   let mainIcon = {};
   for (let i = 0; i < sidc.mainIcon.length; i++) {
+    if (
+      sidc.mainIcon[i].hasOwnProperty("Geometric Rendering") &&
+      sidc.mainIcon[i]["Geometric Rendering"] != "Point"
+    ) {
+      continue;
+    }
     let icon =
       sidc.mainIcon[i]["Code"] +
       " " +
