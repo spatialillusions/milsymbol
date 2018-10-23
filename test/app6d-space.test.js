@@ -1,7 +1,7 @@
 import { ms } from "../src/milsymbol";
 ms.reset();
 import { app6d } from "stanagapp6";
-import verify from "./app6d";
+import verify from "./number-sidc";
 ms.setStandard("APP6");
 ms._iconCache = {};
 

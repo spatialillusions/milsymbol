@@ -2,7 +2,7 @@ import { ms } from "../src/milsymbol";
 ms.reset();
 
 import { app6b } from "stanagapp6";
-import verify from "./app6b";
+import verify from "./letter-sidc";
 ms.setStandard("APP6");
 
 import { ground } from "../src/lettersidc";

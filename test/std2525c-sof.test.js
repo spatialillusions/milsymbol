@@ -1,7 +1,7 @@
 import { ms } from "../src/milsymbol";
 ms.reset();
 import { ms2525c } from "milstd2525";
-import verify from "./std2525c";
+import verify from "./letter-sidc";
 
 import { sof as icons } from "../src/lettersidc";
 ms.addIcons(icons);
