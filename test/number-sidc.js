@@ -16,14 +16,14 @@ export default function(ms, sidc) {
     let valid = new ms.Symbol(
       "1003" + sidc.symbolset + "0000" + sidc.mainIcon[i]["Code"] + "0000"
     ).isValid();
-    //if (!valid) valid = symbol.drawInstructions; //isValid(true);
     mainIcon[icon] = [valid, true];
   }
-  //result[ms._iconSIDC["letter"]] = [true, true];
-  //result[ms._iconParts.length] = [true, true];
 
   let modifier1 = {};
   for (let i = 0; i < sidc.modifier1.length; i++) {
+    if (sidc.symbolset == "25" && sidc.modifier1[i]["Code"] <= 12) {
+      continue; // mobility modifiers for tactical points that we don't support
+    }
     let icon =
       sidc.modifier1[i]["Code"] + " " + sidc.modifier1[i]["First Modifier"];
     let valid;

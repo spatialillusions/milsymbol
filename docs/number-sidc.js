@@ -242,7 +242,8 @@ function renderSymbolSet(symbolset) {
       if (
         symbolset.modifier1[i]["Code"].length == 2 &&
         symbolset.modifier1[i]["Code"] != 99 &&
-        !symbol.isValid()
+        !symbol.isValid() &&
+        !(symbolset.symbolset == "25" && symbolset.modifier1[i]["Code"] <= 12) // mobility modifiers we don't support
       ) {
         output += ' style="background-color:red"';
         console.warn(
