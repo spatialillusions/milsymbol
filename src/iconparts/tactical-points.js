@@ -123,6 +123,40 @@ export default function(
             text: "N"
           }
         ];
+  icn["TP.SUPPRESS"] =
+    !STD2525 && !numberSIDC
+      ? [
+          { type: "path", fill: false, d: "M 0,45 200,155" },
+          {
+            type: "path",
+            fill: false,
+            strokedasharray: "12,5",
+            d: "M 0,155 200,45"
+          }
+        ]
+      : [
+          {
+            type: "path",
+            fill: false,
+            strokedasharray: "12,5",
+            d: "M 115,108.25 200,155 M 0,45 85,91.75"
+          },
+          {
+            type: "path",
+            fill: false,
+            strokedasharray: "12,5",
+            d: "M 115,91.75 200,45 M 0,155 85,108.25"
+          },
+          {
+            type: "text",
+            stroke: false,
+            textanchor: "middle",
+            x: 100,
+            y: 115,
+            fontsize: 45,
+            text: "S"
+          }
+        ];
   icn["TP.DATUM"] = [
     {
       type: "path",
@@ -2871,6 +2905,22 @@ export default function(
     fill: false,
     d: "m 50,100 100,0 m -50,-50 0,100"
   };
+  icn["TP.KNOWN POINT"] = [
+    {
+      type: "path",
+      fill: false,
+      d: "m 50,100 100,0 m -50,-50 0,100"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "start",
+      x: 110,
+      y: 80,
+      fontsize: 30,
+      text: "KNP"
+    }
+  ];
   icn["TP.NUCLEAR TARGET"] = {
     type: "path",
     fill: false,

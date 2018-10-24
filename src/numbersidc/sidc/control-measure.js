@@ -368,6 +368,7 @@ export default {
       bbox["250400"] = { x1: 60, x2: 140, y1: -60 };
       sidc["250500"] = icn["TP.SURVEY CONTROL POINT"]; //Fires Points / Survey Control Point
       bbox["250500"] = { x1: 60, x2: 140, y1: -60 };
+      sidc["250600"] = icn["TP.KNOWN POINT"];
       sidc["270701"] = icn["TP.MINEFIELD, STATIC"]; //Protection Areas / Minefields / Minefield, Static Depiction
       bbox["270701"] = { x1: 25, x2: 175, y1: 65, y2: 145 };
       sidc["280100"] = icn["TODO"]; //Protection Points / Abatis
@@ -514,7 +515,8 @@ export default {
       bbox["341400"] = { x1: 0, x2: 200, y1: 40, y2: 160 };
       sidc["341600"] = icn["TP.NEUTRALIZE"]; //Mission Tasks / Neutralize
       bbox["341600"] = { x1: 0, x2: 200, y1: 40, y2: 160 };
-
+      sidc["342800"] = icn["TP.SUPPRESS"];
+      bbox["342800"] = { x1: 0, x2: 200, y1: 40, y2: 160 };
       //sidc["350000"] = []; // N/A
       //sidc["350100"] = []; // N/A
       sidc["350101"] = icn["MAN MADE SPACE DEBRIS SMALL"];

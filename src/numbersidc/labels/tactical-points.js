@@ -674,6 +674,15 @@ export default function tacticalPoints(sidc) {
   sidc["250300"] = actionPoint1; //Fires Points / Launch Point
   sidc["250400"] = actionPoint1; //Fires Points / Reload Point
   sidc["250500"] = actionPoint1; //Fires Points / Survey Control Point
+  sidc["250600"] = {
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "start",
+      x: 180,
+      y: 80,
+      fontsize: 35
+    }
+  };
   sidc["270601"] = {}; //Protection Areas / Obstacle Bypass / Easy
   sidc["270602"] = {}; //Protection Areas / Obstacle Bypass / Difficult
   sidc["270603"] = {}; //Protection Areas / Obstacle Bypass / Impossible
@@ -995,6 +1004,7 @@ export default function tacticalPoints(sidc) {
   sidc["340900"] = {}; //Mission Tasks / Destroy
   sidc["341400"] = {}; //Mission Tasks / Interdict
   sidc["341600"] = {}; //Mission Tasks / Neutralize
+  sidc["342800"] = {};
   sidc["350101"] = {};
   sidc["350102"] = {};
   sidc["350103"] = {};
