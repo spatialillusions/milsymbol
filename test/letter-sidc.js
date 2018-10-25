@@ -1,6 +1,7 @@
 export default function(ms, name, sidc) {
   let result = {};
   for (let i = 0; i < sidc.mainIcon.length; i++) {
+    if (sidc.mainIcon[i].remarks == "N/A") continue;
     let icon =
       sidc.mainIcon[i].codingscheme +
       "F" +
