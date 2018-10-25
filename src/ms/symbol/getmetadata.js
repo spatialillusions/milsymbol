@@ -2,14 +2,14 @@ import { ms } from "../../ms.js";
 export default function getMetadata() {
   var metadata = {
     activity: false, //Is it an Activity
-    affiliation: "", //Affiliation it is shown as (Friend/Hostile...)
+    affiliation: "undefined", //Affiliation it is shown as (Friend/Hostile...)
     baseAffilation: "", //Affiliation it belongs to (Friend/Hostile...)
     baseDimension: "", //Dimension it belongs to (Air/Ground...)
     baseGeometry: { g: "", bbox: {} }, //Geometry is a combination of dimension and affiliation (AirFriend/GroundHostile...)
     civilian: false, //Is it Civilian
     condition: "", //What condition is it in
     context: "", //Context of the symbol (Reality/Exercise...)
-    dimension: "", //Dimension it is shown as (Air/Ground...)
+    dimension: "undefined", //Dimension it is shown as (Air/Ground...)
     dimensionUnknown: false, //Is the dimension unknown
     echelon: "", //What echelon (Platoon/Company...)
     faker: false, //Is it a Faker
