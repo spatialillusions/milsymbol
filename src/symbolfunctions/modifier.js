@@ -8,10 +8,11 @@ export default function modifier(ms) {
     : this.colors.iconColor[this.metadata.affiliation];
   var gbbox = new ms.BBox(); // bounding box for the added geometries
   var geom;
-  if (this.metadata.headquarters) {
+
+  var hqStaffLength = Number(this.style.hqStaffLength || ms._hqStaffLength);
+  if (this.metadata.headquarters && hqStaffLength > 0) {
     //HEADQUARTERS
     var y = 100;
-    var hqStaffLength = Number(this.style.hqStaffLength || ms._hqStaffLength);
     if (
       [
         "AirFriend",
