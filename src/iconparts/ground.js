@@ -2010,7 +2010,7 @@ export default function(
       fill: false
     }
   ];
-  if (!STD2525) {
+  if (!STD2525 && !numberSIDC) {
     icn["GR.EQ.AIR DEFENCE GUN"].push({
       type: "path",
       d: "M 85,75 100,60 115,75",
