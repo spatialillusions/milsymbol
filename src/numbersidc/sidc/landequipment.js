@@ -216,9 +216,7 @@ export default {
       sId["120102"] = [
         icn["GR.EQ.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL"]
       ];
-      sId["120103"] = [
-        icn["GR.EQ.ARMOURED PERSONNEL CARRIER COMBAT SERVICE SUPPORT VEHICLE"]
-      ];
+      sId["120103"] = [icn["GR.EQ.ARMOURED PERSONNEL CARRIER"]];
       sId["120104"] = [
         icn["GR.EQ.ARMOURED PERSONNEL CARRIER"],
         icn["GR.EQ.MEDICAL EVACUATION"]
