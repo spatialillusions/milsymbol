@@ -2169,7 +2169,7 @@ export default function(
   icn["GR.EQ.ARMOURED PERSONNEL CARRIER"] = {
     type: "path",
     fill: false,
-    d: "m 70,80 30,-10 30,10 0,0 m -60,50 60,0 m 0,-60 0,60 m -60,-60 0,60 0,0"
+    d: "m 70,80 30,-10 30,10 m -60,-10 0,60 60,0 0,-60"
   };
   icn["GR.EQ.ARMOURED PERSONNEL CARRIER COMBAT SERVICE SUPPORT VEHICLE"] = [
     icn["GR.EQ.ARMOURED PERSONNEL CARRIER"],
