@@ -892,18 +892,21 @@ Register a ColorMode with a name or override an existing ColorMode.
 Object ColorMode
 ```
 
-## ms.setDashArrays(dash_object)
+## ms.setDashArrays(pending, anticipated, feintDummy)
 
 ```javascript
-Object {
-  pending: String, // The value for the stroke-dasharray used for symbols with a pending status.
-  anticipated: String, // The value for the stroke-dasharray used for symbols with a anticipated status.
-  feintDummy: String // The value for the stroke-dasharray used for the feint/dummy modifier.
-}
+pending: String, // The value for the stroke-dasharray used for symbols with a pending status.
+anticipated: String, // The value for the stroke-dasharray used for symbols with a anticipated status.
+feintDummy: String // The value for the stroke-dasharray used for the feint/dummy modifier.
 ```
 
-Sets the dash arrays used for dashed lines, the dash object should be structured
-in the same way as the return object, and all options should be present.
+Sets the dash arrays used for dashed lines.
+
+Example:
+
+```javascript
+var dashObj = ms.setDashArrays("4,4", "8,12", "8,8");
+```
 
 **Returns**
 
