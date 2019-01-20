@@ -1,9 +1,9 @@
 type ColorMode = {
-  civilian: string;
-  friend: string;
-  hostile: string;
-  neutral: string;
-  unknown: string;
+  Civilian: string;
+  Friend: string;
+  Hostile: string;
+  Neutral: string;
+  Unknown: string;
 };
 
 type SymbolOptions = {
@@ -49,7 +49,7 @@ type SymbolOptions = {
   platformType?: string;
   quantity?: string;
   reinforcedReduced?: string;
-  sidc?:string;
+  sidc?: string;
   sigint?: string;
   signatureEquipment?: string;
   simpleStatusModifier?: boolean;
@@ -125,5 +125,47 @@ export class Symbol {
   toDataURL(): string;
 }
 
+interface Box {
+  x1: number,
+  y1: number,
+  x2: number,
+  y2: number,
+}
+
+interface BBoxObject extends Box {
+  width(): number,
+  height(): number,
+  /** Merges one box with another returns the original box */
+  merge(box: Box): this
+}
+/** Creates a bounding box object */
+export function BBox(box?: Partial<Box>): BBoxObject;
+
+/** Creates a ColorMode Object with colors used for different affiliations. */
+export function ColorMode(civilian: string, friend: string, hostile: string, neutral: string, unknown: string): ColorMode;
+/** Gets a color mode that has been registred with setColorMode */
+export function getColorMode(mode: string): ColorMode;
+/** Register a ColorMode with a name or override an existing ColorMode. */
+export function setColorMode(name: string, colormode: ColorMode): ColorMode;
+
+/** Gets the length of the HQ staf used for HQ symbols. */
+export function getHqStaffLength(): number;
+/** Sets the length of the HQ staf used for HQ symbols. */
+export function setHqStaffLength(staff_length: number): number;
+
+
+interface DashObject {
+  pending: string,
+  anticipated: string,
+  feintDummy: string
+}
+/** Gets the diffrent dash arrays used for dashed lines. */
+export function getDashArrays(): DashObject;
+/** Sets the dash arrays used for dashed lines */
+export function setDashArrays(pending: string, anticipated: string, feintDummy: string): DashObject;
+
 // Gets the version of milsymbol.
 export function getVersion(): string;
+
+/** Sets the preferred standard. */
+export function setStandard(standard: "2525" | "APP6"): boolean;
