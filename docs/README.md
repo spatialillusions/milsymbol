@@ -1,6 +1,6 @@
 # Milsymbol Documentation
 
-## Installning
+## Installing
 
 You can download the latest release directly from GitHub if you want to:
 
@@ -53,7 +53,7 @@ folder. See more about building under [Building milsymbol](#building-milsymbol).
 
 Each symbol created with milsymbol is its own object and the properties of the
 object can be updated or added after that the symbol object is created. The
-symbol object also has methods to provide the symbol in different formats, and
+symbol object also has methods to provide the symbol in different formats and
 to provide information about the created symbol.
 
 All functionality in milsymbol is normally found under the `ms` namespace, but
@@ -75,8 +75,8 @@ some options the symbol will automatically be updated.
 var symbol = new ms.Symbol("SFG-UCI----D", { size: 30 });
 ```
 
-Once you have initiated your symbol, you can use different methods to request a
-rendering of the symbol, or get information about the symbol. It is also
+Once you have initiated your symbol, you can use different methods to request 
+rendering of the symbol or get information about the symbol. It is also
 possible to chain methods directly to the initiation:
 
 ```javascript
@@ -137,15 +137,15 @@ different ways.
 
 | Option               | Type                | Default                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | -------------------- | ------------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| alternateMedal       | Boolean             | false                           | MIL-STD-2525D lets you choose between MEDAL and alternate MEDAL icons for mine warefare symbols, the default in milsymbol is using MEDAL icons, but you can change this using setting this property to true.                                                                                                                                                                                                                                             |
-| civilianColor        | Boolean             | true                            | 2525C specifics purple as an optional color for civilian symbols. Of corse we like color so we set this as default.                                                                                                                                                                                                                                                                                                                                      |
-| colorMode            | ColorMode or String | 'Light'                         | This is the option for setting what Color object to use for the fill of the symbols. It can be set to a Color object, or a string representing the name of a registered Color object. You can use ms.ColorMode to create a new color mode, or ms.getColorMode to get an existing color mode. **Note that the string is not a single color, it is a name of a registred color mode**, by default "Light", "Medium", and "Dark" are registred color modes. |
+| alternateMedal       | Boolean             | false                           | MIL-STD-2525D lets you choose between MEDAL and alternate MEDAL icons for mine warfare symbols, the default in milsymbol is using MEDAL icons, but you can change this using setting this property to true.                                                                                                                                                                                                                                             |
+| civilianColor        | Boolean             | true                            | 2525C specifics purple as an optional color for civilian symbols. Of course we like color so we set this as default.                                                                                                                                                                                                                                                                                                                                      |
+| colorMode            | ColorMode or String | 'Light'                         | This is the option for setting what Color object to use for the fill of the symbols. It can be set to a Color object, or a string representing the name of a registered Color object. You can use ms.ColorMode to create a new color mode, or ms.getColorMode to get an existing color mode. **Note that the string is not a single color, it is a name of a registered color mode**, by default "Light", "Medium", and "Dark" are registered color modes. |
 | fill                 | Boolean             | true                            | Should your symbol be filled with color.                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | fillOpacity          | Number              | 1                               | The opacity of the symbol fill color.                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| fontfamily           | String              | 'Arial'                         | Changes the font familiy for all texts surrounding the icon.                                                                                                                                                                                                                                                                                                                                                                                             |
+| fontfamily           | String              | 'Arial'                         | Changes the font family for all texts surrounding the icon.                                                                                                                                                                                                                                                                                                                                                                                             |
 | frame                | Boolean             | true                            | Should your symbol have a frame. All symbols support to be unframed, not just the ones specified in 2525B.                                                                                                                                                                                                                                                                                                                                               |
 | frameColor           | ColorMode           | false                           | Changes the color of the frame of the symbol                                                                                                                                                                                                                                                                                                                                                                                                             |
-| hqStaffLength        | Number              | undefined                       | Overrides the global Headquarters staf length                                                                                                                                                                                                                                                                                                                                                                                                            |
+| hqStaffLength        | Number              | undefined                       | Overrides the global Headquarters staff length                                                                                                                                                                                                                                                                                                                                                                                                            |
 | icon                 | Boolean             | true                            | Should your symbol have an icon.                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | infoBackground       | ColorMode or String | ""                              | Changes the color of the information background                                                                                                                                                                                                                                                                                                                                                                                                          |
 | infoBackgroundFrame  | ColorMode or String | ""                              | Changes the color of the frame of the information background                                                                                                                                                                                                                                                                                                                                                                                             |
@@ -156,10 +156,10 @@ different ways.
 | monoColor            | String              | ''                              | A color that is either a keyword or a numerical RGB specification. If you set this the symbol will be monochrome and unfilled using the color provided.                                                                                                                                                                                                                                                                                                  |
 | outlineColor         | ColorMode or String | rgb(239, 239, 239)              | A color that is either a keyword or a numerical RGB specification. The color of the outline of the symbol, if any. Defaults to an off-white color.                                                                                                                                                                                                                                                                                                       |
 | outlineWidth         | Number              | 0                               | The width of the outline of the symbol, if any.                                                                                                                                                                                                                                                                                                                                                                                                          |
-| padding              | Number              | 0                               | Milsymbol usually tries to fit the bounds for the symbol as snugg as possible, but in some cases you want to add some extra padding around your symbol, then simply set this option to any number.                                                                                                                                                                                                                                                       |
+| padding              | Number              | 0                               | Milsymbol usually tries to fit the bounds for the symbol as snug as possible, but in some cases you want to add some extra padding around your symbol, then simply set this option to any number.                                                                                                                                                                                                                                                       |
 | size                 | Number              | 100                             | The L value for your symbol, where the L value is the width of the icon octagon.                                                                                                                                                                                                                                                                                                                                                                         |
-| simpleStatusModifier | Boolean             | false                           | Should the symbol use simplified status modifiers, this is default for unfilled symbols and can be forced for filled symbols using this option.                                                                                                                                                                                                                                                                                                          |
-| standard             | String              | ''                              | This is a way to override the default standard set for milsymbol. You can set this variable to "2525" or "APP6" dependeing on what standard you prefer.                                                                                                                                                                                                                                                                                                  |
+| simpleStatusModifier | Boolean             | false                           | Should the symbol use simplified status modifiers, this is the default for unfilled symbols and can be forced for filled symbols using this option.                                                                                                                                                                                                                                                                                                          |
+| standard             | String              | ''                              | This is a way to override the default standard set for milsymbol. You can set this variable to "2525" or "APP6" depending on what standard you prefer.                                                                                                                                                                                                                                                                                                  |
 | square               | Boolean             | false                           | Should the symbol be square with the insertion point in the center.                                                                                                                                                                                                                                                                                                                                                                                      |
 | strokeWidth          | Number              | 3                               | The stroke width of the symbol.                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
@@ -174,7 +174,7 @@ Object this
 ### asCanvas(_factor_)
 
 Returns the symbol as a Canvas Element. It is possible to provide a resolution
-factor if a symbol symbol with a higher resolution is wanted, this won't effect
+factor if a symbol with a higher resolution is wanted, this won't affect
 numbers reported by `getSize()`, `getAnchor()` or `getOctagonAnchor()`.
 
 **Returns**
@@ -211,7 +211,7 @@ String;
 
 ### getAnchor()
 
-Getting the anchor point where symbol should be inserted measured from the top
+Getting the anchor point where the symbol should be inserted measured from the top
 left corner of the symbol.
 
 **Returns**
@@ -244,7 +244,7 @@ Object {
 
 ### getMetadata()
 
-Gets all metadata that are computed for the SIDC of this symbol.
+Gets all metadata that is computed for the SIDC of this symbol.
 
 **Returns**
 
@@ -281,8 +281,8 @@ Object {
 
 ### getOptions(_includeStyle_)
 
-Get the options that is set on the symbol. If includeStyle is set to `false`
-style information will not be included in the returned options, if it is set to
+Get the options that are set on the symbol. If includeStyle is set to `false`
+style information will not be included in the returned options if it is set to
 `true` or left out style information will be included in the returned options.
 
 **Returns**
@@ -335,7 +335,7 @@ Object;
 If extended is set to `true` it will return an object with the validity of
 different parts of the symbol code, if extended is omitted or set to false it
 will return a boolean representing if it was possible to find an icon for the
-provided SIDC or not. In the future this might validate other parameters as
+provided SIDC or not. In the future, this might validate other parameters as
 well.
 
 **Returns**
@@ -425,7 +425,7 @@ npm run test
 
 ## Draw instruction
 
-The symbols in milsymbol is drawn using JSON draw instructions
+The symbols in milsymbol are drawn using JSON draw instructions
 `drawInstruction`, these are then converted into Canvas draw instructions, or
 SVG output.
 
@@ -590,13 +590,13 @@ Object {
 iconFunction: Function;
 ```
 
-Adds an icon function to milsymbol. All icons on the symbols in milsymbol is
+Adds an icon function to milsymbol. All icons on the symbols in milsymbol are
 built by different icon parts, it can be one for Infantry and one for Armor, add
 them together and you will have the icon for Armored Infantry. By reusing icon
-parts as much as possible the the size of milsymbol is reduced.
+parts as much as possible the size of milsymbol is reduced.
 
-If you want to override built in icon parts, or add new to use with custom SIDC,
-you can do this by adding a icon function.
+If you want to override built-in icon parts or add new to use with custom SIDC,
+you can do this by adding an icon function.
 
 Example:
 
@@ -641,12 +641,12 @@ Object ms
 
 ```javascript
 labelFunction: Function,
-type: String // 'letter' or 'number' depending of the type of the SIDC
+type: String // 'letter' or 'number' depending on the type of the SIDC
 ```
 
 Adds label overrides to milsymbol. If you have some symbols that you want to
 have labels that differ from how ordinary symbols are labeled, such as tactical
-graphics, you can add label override functions that places the labels
+graphics, you can add label override functions that place the labels
 differently.
 
 Example:
@@ -707,7 +707,7 @@ Object ms
 
 ```javascript
 sidcFunction: Function,
-type: String // 'letter' or 'number' depending of the type of the SIDC
+type: String // 'letter' or 'number' depending on the type on the SIDC
 ```
 
 Adds a function for creating icons representing different SIDCs. It is possible
@@ -764,7 +764,7 @@ Object {
 }
 ```
 
-By inserting a pre and a post drawInstruction, we are able to to draw parts of
+By inserting a pre and a post drawInstruction, we are able to draw parts of
 the symbol that requires information, such as bounding boxes, previously drawn,
 but to draw them before the other parts are drawn. It's quite clever, trust me.
 
@@ -777,11 +777,11 @@ Object ms
 ## ms.getColorMode(mode)
 
 ```javascript
-mode: String; // Name of a color mode registred with setColorMode
+mode: String; // Name of a color mode registered with setColorMode
 ```
 
-Gets a color mode that has been registred with `setColorMode`. When milsymbol is
-initiated the following color modes are registred automatically:
+Gets a color mode that has been registered with `setColorMode`. When milsymbol is
+initiated the following color modes are registered automatically:
 
 | Color mode name | Description                                       |
 | --------------- | ------------------------------------------------- |
@@ -809,21 +809,21 @@ Object {
 
 ## ms.getDashArrays()
 
-Gets the diffrent dash arrays used for dashed lines.
+Gets the different dash arrays used for dashed lines.
 
 **Returns**
 
 ```javascript
 Object {
   pending: String, // The value for the stroke-dasharray used for symbols with a pending status.
-  anticipated: String, // The value for the stroke-dasharray used for symbols with a anticipated status.
+  anticipated: String, // The value for the stroke-dasharray used for symbols with an anticipated status.
   feintDummy: String // The value for the stroke-dasharray used for the feint/dummy modifier.
 }
 ```
 
 ## ms.getHqStaffLength()
 
-Gets the length of the HQ staf used for HQ symbols.
+Gets the length of the HQ staff used for HQ symbols.
 
 **Returns**
 
@@ -833,7 +833,7 @@ Number;
 
 ## ms.getSymbolParts()
 
-This gets all symbol functions that has been inserted by `ms.addSymbolPart`.
+This gets all symbol functions that have been inserted by `ms.addSymbolPart`.
 
 **Returns**
 
@@ -896,7 +896,7 @@ Object ColorMode
 
 ```javascript
 pending: String, // The value for the stroke-dasharray used for symbols with a pending status.
-anticipated: String, // The value for the stroke-dasharray used for symbols with a anticipated status.
+anticipated: String, // The value for the stroke-dasharray used for symbols with an anticipated status.
 feintDummy: String // The value for the stroke-dasharray used for the feint/dummy modifier.
 ```
 
@@ -924,7 +924,7 @@ Object {
 staf_length: Number;
 ```
 
-Sets the length of the HQ staf used for HQ symbols.
+Sets the length of the HQ staff used for HQ symbols.
 
 **Returns**
 
