@@ -904,11 +904,13 @@ export default function textfields(ms) {
       });
 
     //outline
-    if (this.style.outlineWidth > 0)
+    if (this.style.textOutlineWidth > 0 || (this.style.textOutlineWidth === false && this.style.outlineWidth > 0))
       drawArray1.push(
         ms.outline(
           drawArray2,
-          this.style.outlineWidth,
+          this.style.textOutlineWidth === false
+            ? this.style.outlineWidth
+            : this.style.textOutlineWidth,
           this.style.strokeWidth,
           typeof this.style.outlineColor === "object"
             ? this.style.outlineColor[this.metadata.affiliation]

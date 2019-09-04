@@ -62,6 +62,7 @@ type SymbolOptions = {
   staffComments?: string;
   standard?: string;
   strokeWidth?: number;
+  textOutlineWidth?: number;
   type?: string;
   uniqueDesignation?: string;
 };

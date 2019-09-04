@@ -68,6 +68,7 @@ function Symbol() {
   this.style.square = false; // If the symbol should be square
   this.style.standard = ""; // Set standard override
   this.style.strokeWidth = 4; // The stroke width of he icon frame.
+  this.style.textOutlineWidth = false; // Width of the text-field outline.
 
   this.symbolAnchor = { x: 50, y: 50 }; // The anchor point for the current symbol
   this.validIcon = true; // If we were able to find a valid icon or not.
