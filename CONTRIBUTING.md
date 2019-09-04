@@ -13,7 +13,7 @@ https://github.com/eslint/eslint
 
 https://github.com/prettier/prettier
 
-During development the code can be built by running `npm run build`, before committing your code you should run `npm run build`, this will format all code with prettier, run the tests, and build your code.
+During development the code can be built by running `npm run build`. This will format all code with prettier, run the tests, and build your code.
 
 ## Examples
 
