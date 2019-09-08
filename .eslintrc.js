@@ -2,8 +2,7 @@ module.exports = {
   extends: "eslint:recommended",
   env: {
     browser: true,
-    commonjs: true,
-    jest: true
+    commonjs: true
   },
   parserOptions: {
     ecmaVersion: 6,
