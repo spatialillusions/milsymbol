@@ -302,8 +302,8 @@ export default function(
         numberSIDC && alternateMedal
           ? ""
           : (STD2525 || numberSIDC) && !monoColor
-            ? colors.iconColor.Hostile
-            : iconFillColor,
+          ? colors.iconColor.Hostile
+          : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 100,128 -10,15 20,0 z"
     }
@@ -325,8 +325,8 @@ export default function(
       fill: monoColor
         ? monoColor
         : (STD2525 || numberSIDC) && !alternateMedal
-          ? black
-          : white,
+        ? black
+        : white,
       x: 100,
       y: 110,
       fontsize: 35,
@@ -341,8 +341,8 @@ export default function(
       fill: monoColor
         ? monoColor
         : (STD2525 || numberSIDC) && !alternateMedal
-          ? black
-          : white,
+        ? black
+        : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -368,8 +368,8 @@ export default function(
       fill: monoColor
         ? monoColor
         : (STD2525 || numberSIDC) && !alternateMedal
-          ? black
-          : white,
+        ? black
+        : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -569,8 +569,8 @@ export default function(
       fill: monoColor
         ? monoColor
         : (STD2525 || numberSIDC) && !alternateMedal
-          ? black
-          : white,
+        ? black
+        : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -633,8 +633,8 @@ export default function(
       fill: monoColor
         ? monoColor
         : (STD2525 || numberSIDC) && !alternateMedal
-          ? black
-          : white,
+        ? black
+        : white,
       x: 100,
       y: 105,
       fontsize: 18,
@@ -709,8 +709,8 @@ export default function(
     fill: monoColor
       ? monoColor
       : (STD2525 || numberSIDC) && !alternateMedal
-        ? black
-        : white,
+      ? black
+      : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -722,8 +722,8 @@ export default function(
     fill: monoColor
       ? monoColor
       : (STD2525 || numberSIDC) && !alternateMedal
-        ? black
-        : white,
+      ? black
+      : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -735,8 +735,8 @@ export default function(
     fill: monoColor
       ? monoColor
       : (STD2525 || numberSIDC) && !alternateMedal
-        ? black
-        : white,
+      ? black
+      : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -748,8 +748,8 @@ export default function(
     fill: monoColor
       ? monoColor
       : (STD2525 || numberSIDC) && !alternateMedal
-        ? black
-        : white,
+      ? black
+      : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -761,8 +761,8 @@ export default function(
     fill: monoColor
       ? monoColor
       : (STD2525 || numberSIDC) && !alternateMedal
-        ? black
-        : white,
+      ? black
+      : white,
     x: 100,
     y: 110,
     fontsize: 35,
@@ -788,8 +788,8 @@ export default function(
       fill: monoColor
         ? monoColor
         : (STD2525 || numberSIDC) && !alternateMedal
-          ? black
-          : white,
+        ? black
+        : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -852,8 +852,8 @@ export default function(
       fill: monoColor
         ? monoColor
         : (STD2525 || numberSIDC) && !alternateMedal
-          ? black
-          : white,
+        ? black
+        : white,
       x: 100,
       y: 112,
       fontsize: 30,
@@ -909,8 +909,8 @@ export default function(
       fill: monoColor
         ? monoColor
         : (STD2525 || numberSIDC) && !alternateMedal
-          ? black
-          : white,
+        ? black
+        : white,
       x: 100,
       y: 112,
       fontsize: 30,

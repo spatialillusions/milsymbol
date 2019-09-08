@@ -1402,27 +1402,27 @@ export default function(
           text: "RS"
         }
       : !STD2525
-        ? [
-            {
-              type: "text",
-              stroke: false,
-              textanchor: "middle",
-              x: 100,
-              y: 155,
-              fontsize: 45,
-              text: "R"
-            },
-            { type: "circle", cx: 100, cy: 100, r: 15 }
-          ]
-        : {
+      ? [
+          {
             type: "text",
             stroke: false,
             textanchor: "middle",
             x: 100,
-            y: 115,
+            y: 155,
             fontsize: 45,
-            text: "RC"
-          }
+            text: "R"
+          },
+          { type: "circle", cx: 100, cy: 100, r: 15 }
+        ]
+      : {
+          type: "text",
+          stroke: false,
+          textanchor: "middle",
+          x: 100,
+          y: 115,
+          fontsize: 45,
+          text: "RC"
+        }
   ];
   icn["TP.REPLENISH"] = [
     icn["TP.AIR CONTROL"],

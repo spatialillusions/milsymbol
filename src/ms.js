@@ -1,4 +1,4 @@
-var ms = new function() {
+var ms = new (function() {
   this._autoValidation = false;
   this.version = "2.0.0";
   if (typeof console === "object" && typeof process !== "object") {
@@ -10,7 +10,7 @@ var ms = new function() {
         "ns Beckman  http://www.spatialillusions.com"
     );
   }
-}();
+})();
 
 import ColorModes from "./colormodes.js";
 import basegeometry from "./symbolfunctions/basegeometry.js";

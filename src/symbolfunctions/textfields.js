@@ -592,12 +592,12 @@ export default function textfields(ms) {
         this.options.specialHeadquarters
           ? (strWidth(this.options.specialHeadquarters) -
               this.metadata.baseGeometry.bbox.width()) /
-            2
+              2
           : 0,
         this.options.quantity
           ? (strWidth(this.options.quantity) -
               this.metadata.baseGeometry.bbox.width()) /
-            2
+              2
           : 0,
         strWidth(gStrings.L1),
         strWidth(gStrings.L2),
@@ -613,12 +613,12 @@ export default function textfields(ms) {
         this.options.specialHeadquarters
           ? (strWidth(this.options.specialHeadquarters) -
               this.metadata.baseGeometry.bbox.width()) /
-            2
+              2
           : 0,
         this.options.quantity
           ? (strWidth(this.options.quantity) -
               this.metadata.baseGeometry.bbox.width()) /
-            2
+              2
           : 0,
         strWidth(gStrings.R1),
         strWidth(gStrings.R2),
