@@ -21,7 +21,7 @@ export default function(
   The existing object of icon parts
   
   metadata
-  propterties object
+  properties object
   
   colors
   color object
