@@ -58,6 +58,8 @@ function Symbol() {
   this.style.infoBackgroundFrame = ""; // Color of the squares frame
   this.style.infoColor = ""; // Changes the color of the info fields
   this.style.infoFields = true; // If you have set all info fields but don't want the displayed; then just set this to false.
+  this.style.infoOutlineColor = "rgb(239, 239, 239)"; // Color of the text outline.
+  this.style.infoOutlineWidth = false; // Width of the text-field outline.
   this.style.infoSize = 40; // Relative size of the info fields
   this.style.monoColor = ""; // Should the icon be monocromatic and if so what color
   this.style.outlineColor = "rgb(239, 239, 239)"; // Color of the outline
@@ -68,7 +70,6 @@ function Symbol() {
   this.style.square = false; // If the symbol should be square
   this.style.standard = ""; // Set standard override
   this.style.strokeWidth = 4; // The stroke width of he icon frame.
-  this.style.textOutlineWidth = false; // Width of the text-field outline.
 
   this.symbolAnchor = { x: 50, y: 50 }; // The anchor point for the current symbol
   this.validIcon = true; // If we were able to find a valid icon or not.

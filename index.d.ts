@@ -39,6 +39,8 @@ type SymbolOptions = {
   infoBackgroundFrame?: ColorMode | string;
   infoColor?: ColorMode | string;
   infoFields?: boolean;
+  infoOutlineColor?: string;
+  infoOutlineWidth?: number;
   infoSize?: number;
   installationComposition?: string;
   location?: string;
@@ -62,7 +64,6 @@ type SymbolOptions = {
   staffComments?: string;
   standard?: string;
   strokeWidth?: number;
-  textOutlineWidth?: number;
   type?: string;
   uniqueDesignation?: string;
 };
