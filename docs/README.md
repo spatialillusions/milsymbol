@@ -613,7 +613,7 @@ ms.addIconParts(function(
 ) {
   /*
     iconParts: Object - The existing object of icon parts
-    metadata: Object - propterties object
+    metadata: Object - properties object
     colors: Object - color object
     std2525: Boolean - Is it 2525 then true, otherwise false
     alternateMedal: Boolean - true/false for sea mine stuff

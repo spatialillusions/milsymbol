@@ -21,7 +21,7 @@ export default function(
   The existing object of icon parts
   
   metadata
-  propterties object
+  properties object
   
   colors
   color object
@@ -2040,13 +2040,6 @@ export default function(
       fill: false
     }
   ];
-  if (!STD2525) {
-    icn["GR.EQ.HOWITZER"].push({
-      type: "path",
-      d: "M 85,75 100,60 115,75",
-      fill: false
-    });
-  }
   icn["GR.EQ.HOWITZER TRACKED"] = {
     type: "path",
     d: "M 70,120 l 60,0 c10,0 10,10 0,10 l -60,0 c-10,0 -10,-10 0,-10",
@@ -2092,13 +2085,11 @@ export default function(
   icn["GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER"] = [
     icn["GR.EQ.MISSILE LAUNCHER"]
   ];
-  if (STD2525) {
-    icn["GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER"].push({
-      type: "path",
-      d: "m 85,140 30,0",
-      fill: false
-    });
-  }
+  icn["GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER"].push({
+    type: "path",
+    d: "m 85,140 30,0",
+    fill: false
+  });
   icn["GR.EQ.MORTAR"] = [
     { type: "path", d: "m 100,60 0,60 M 85,75 100,60 115,75", fill: false },
     { type: "circle", cx: 100, cy: 130, r: 10, fill: false }
