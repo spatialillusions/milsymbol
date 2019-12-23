@@ -79,6 +79,7 @@ type SymbolMetadata = {
   context: string; // Context of the symbol (Reality/Exercise...)
   dimension: string; // Dimension it is shown as (Air/Ground...) for example Ground Equipment is shown with the same shape as Sea.
   dimensionUnknown: boolean; // Is the dimension unknown
+  dismounted?: boolean; // Land Dismounted Individual should have special icons
   echelon: string; //What echelon (Platoon/Company...)
   faker: boolean; // Is it a Faker
   fenintDummy: boolean; // Is it a feint/dummy
@@ -93,6 +94,7 @@ type SymbolMetadata = {
   numberSIDC: boolean; // Is the SIDC number based
   space: boolean; // Is it in Space
   taskForce: boolean; // Is it a task force
+  unit: boolean; // Is this equipment or not
 };
 
 type SymbolColors = {
