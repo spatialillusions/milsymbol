@@ -68,18 +68,67 @@ type SymbolOptions = {
   uniqueDesignation?: string;
 };
 
+type BaseAffiliation = "" | "Hostile" | "Friend" | "Neutral" | "Unknown";
+type Affiliation = "undefined" | BaseAffiliation;
+
+type Context = "Reality" | "Exercise" | "Simulation";
+
+// Dimension it belongs to (Air/Ground...)
+type BaseDimension = "" | "Air" | "Ground" | "Sea" | "Subsurface";
+// Dimension it is shown as (Air/Ground...) for example Ground Equipment is shown with the same shape as Sea.
+type Dimension = "undefined" | "LandDismountedIndividual" | BaseDimension;
+
+// What condition is it in
+type Condition = "" | "Present" | "Planned" | "FullyCapable" | "Damaged" | "Destroyed" | "FullToCapacity";
+
+type Echelon =
+  ""
+  | "Team/Crew"
+  | "Squad"
+  | "Section"
+  | "Platoon/detachment"
+  | "Company/battery/troop"
+  | "Battalion/squadron"
+  | "Regiment/group"
+  | "Brigade"
+  | "Division"
+  | "Corps/MEF"
+  | "Army"
+  | "Army Group/front"
+  | "Region/Theater"
+  | "Command";
+
+type Mobility =
+  ""
+  | "Wheeled limited cross country"
+  | "Wheeled cross country"
+  | "Tracked"
+  | "Wheeled and tracked combination"
+  | "Towed"
+  | "Rail"
+  | "Pack animals"
+  | "Over snow (prime mover)"
+  | "Sled"
+  | "Barge"
+  | "Amphibious"
+  | "Short towed array"
+  | "Long towed Array";
+
+type Leadership = "Leader Individual" | "Deputy Individual";
+
 type SymbolMetadata = {
   activity: boolean; // Is it an Activity
-  affiliation: string; // Affiliation it is shown as (Friend/Hostile...)
-  baseAffilation: string; // Affiliation it belongs to (Friend/Hostile...)
-  baseDimension: string; // Dimension it belongs to (Air/Ground...)
+  affiliation: Affiliation; // Affiliation it is shown as (Friend/Hostile...)
+  baseAffilation: BaseAffiliation; // Affiliation it belongs to (Friend/Hostile...)
+  baseDimension: BaseDimension; // Dimension it belongs to (Air/Ground...)
   baseGeometry: Object; // Geometry is a combination of dimension and affiliation (AirFriend/GroundHostile...)
   civilian: boolean; // Is it Civilian
-  condition: string; // What condition is it in
-  context: string; // Context of the symbol (Reality/Exercise...)
-  dimension: string; // Dimension it is shown as (Air/Ground...) for example Ground Equipment is shown with the same shape as Sea.
+  condition: Condition; // What condition is it in
+  context: Context; // Context of the symbol (Reality/Exercise...)
+  dimension: Dimension; // Dimension it is shown as (Air/Ground...) for example Ground Equipment is shown with the same shape as Sea.
   dimensionUnknown: boolean; // Is the dimension unknown
-  echelon: string; //What echelon (Platoon/Company...)
+  dismounted?: boolean; // Land Dismounted Individual should have special icons
+  echelon: Echelon; //What echelon (Platoon/Company...)
   faker: boolean; // Is it a Faker
   fenintDummy: boolean; // Is it a feint/dummy
   fill: boolean; // Standard says it should be filled
@@ -88,11 +137,13 @@ type SymbolMetadata = {
   headquarters: boolean; // Is it a Headquarters
   installation: boolean; // Is it an Instalation
   joker: boolean; // Is it a Joker
-  mobility: string; // What mobility (Tracked/Sled...)
+  leadership?: Leadership;
+  mobility?: Mobility; // What mobility (Tracked/Sled...)
   notpresent: string; // Is it Anticipated or Pending
   numberSIDC: boolean; // Is the SIDC number based
   space: boolean; // Is it in Space
   taskForce: boolean; // Is it a task force
+  unit: boolean; // Is this equipment or not
 };
 
 type SymbolColors = {
