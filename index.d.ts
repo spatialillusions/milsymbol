@@ -96,13 +96,13 @@ type SymbolMetadata = {
 };
 
 type SymbolColors = {
-  black: string; // Black parts of the symbol.
-  fillColor: string; // Symbol fill color.
-  frameColor: string; // Symbol frame color.
-  iconColor: string; // Icon color.
-  iconFillColor: string; // Icon fill color.
-  none: string; // Transparent parts of the symbol.
-  white: string; // White parts of the symbol.
+  black: ColorMode; // Black parts of the symbol.
+  fillColor: ColorMode; // Symbol fill color.
+  frameColor: ColorMode; // Symbol frame color.
+  iconColor: ColorMode; // Icon color.
+  iconFillColor: ColorMode; // Icon fill color.
+  none: ColorMode; // Transparent parts of the symbol.
+  white: ColorMode; // White parts of the symbol.
 };
 
 export class Symbol {
