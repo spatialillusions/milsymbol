@@ -232,13 +232,13 @@ Gets the colors used for this symbol.
 
 ```javascript
 Object {
-  black: String, // Black parts of the symbol.
-  fillColor: String, // Symbol fill color.
-  frameColor: String, // Symbol frame color.
-  iconColor: String, // Icon color.
-  iconFillColor: String, // Icon fill color.
-  none: String, // Transparent parts of the symbol.
-  white: String // White parts of the symbol.
+  black: ColorMode, // Black parts of the symbol.
+  fillColor: ColorMode, // Symbol fill color.
+  frameColor: ColorMode, // Symbol frame color.
+  iconColor: ColorMode, // Icon color.
+  iconFillColor: ColorMode, // Icon fill color.
+  none: ColorMode, // Transparent parts of the symbol.
+  white: ColorMode // White parts of the symbol.
 }
 ```
 
