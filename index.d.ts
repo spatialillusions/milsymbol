@@ -159,8 +159,7 @@ type SymbolColors = {
 export class Symbol {
   constructor(
     code: string | SymbolOptions,
-    opts?: SymbolOptions,
-    style?: SymbolOptions
+    ...options: SymbolOptions[]
   );
 
   asCanvas(factor?: number): HTMLCanvasElement;
