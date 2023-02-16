@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "Milsymbol.js is a small library in pure javascript that creates symbols according to MIL-STD-2525 and APP6.",
   "main": "dist/milsymbol.js",
+  "exports": "./index.js",
   "types": "index.d.ts",
   "directories": {
     "doc": "docs",
