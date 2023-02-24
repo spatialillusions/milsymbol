@@ -187,10 +187,10 @@ export function metadata(ms, metadata, mapping) {
       case "W":
         metadata.mobility = mapping.echelonMobility[37]; //Pack animals
         break;
-      case "Y":
+      case "X":
         metadata.mobility = mapping.echelonMobility[51]; //Barge
         break;
-      case "Z":
+      case "Y":
         metadata.mobility = mapping.echelonMobility[52]; //Amphibious
         break;
       default:

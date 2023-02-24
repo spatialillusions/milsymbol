@@ -1,1194 +1,1212 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Milsymbol APP6-B</title>
+    <link rel="stylesheet" href="style.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Milsymbol APP6-B</title>
-  <link rel="stylesheet" href="style.css" />
+    <script src="../dist/milsymbol.development.js"></script>
+    <!--<script src="milstd.js"></script>-->
+    <script src="stanag-app6.js"></script>
 
-  <script src="../dist/milsymbol.development.js"></script>
-  <!--<script src="milstd.js"></script>-->
-  <script src="stanag-app6.js"></script>
+    <script src="letter-sidc.js"></script>
 
-  <script src="letter-sidc.js"></script>
+    <script>
+      ms.setStandard("APP6");
+    </script>
+  </head>
 
-  <script>
-    ms.setStandard("APP6");
-  </script>
+  <body onload="generatenavigation();">
+    <h1>Milsymbol APP-6 B Implementation</h1>
+    This page shows figures and tables from APP-6 D drawn with milsymbol.
+    <br />
+    All symbols are drawn using milsymbol when the page is loaded, no images or
+    other external resources than milsymbol are used.
+    <br />
+    <br />
+    <b>INDEX OF TABLES</b>
+    <br />
+    <div id="indexoftables"></div>
+    <br />
+    <b>INDEX OF FIGURES</b>
+    <br />
+    <div id="indexoffigures"></div>
+    <br />
 
-</head>
+    <h3>Affiliations and battle dimensions.</h3>
 
-<body onload="generatenavigation();">
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <td>
+            Space (P)
+          </td>
+          <td>
+            Air (A)
+          </td>
+          <td>
+            Ground (G)
+            <br />Units
+          </td>
+          <td>
+            Ground (G)
+            <br />Equipment
+          </td>
+          <td>
+            Ground (G)
+            <br />Installaions
+          </td>
+          <td>
+            Sea Surface (S)
+          </td>
+          <td>
+            Subsurface (U)
+          </td>
+        </tr>
+      </thead>
 
-  <h1>Milsymbol APP-6 B Implementation</h1>
-  This page shows figures and tables from APP-6 D drawn with milsymbol.
-  <br> All symbols are drawn using milsymbol when the page is loaded, no images or other external resources than
-  milsymbol are
-  used.
-  <br>
-  <br>
-  <b>INDEX OF TABLES</b>
-  <br>
-  <div id="indexoftables"></div>
-  <br>
-  <b>INDEX OF FIGURES</b>
-  <br>
-  <div id="indexoffigures"></div>
-  <br>
-
-  <h3>Affiliations and battle dimensions.</h3>
-
-  <table>
-    <thead>
       <tr>
         <td>
+          FRIEND (F)
         </td>
         <td>
-          Space (P)
+          <script>
+            document.write(new ms.Symbol("SFP---------", { size: 40 }).asSVG());
+          </script>
         </td>
         <td>
-          Air (A)
+          <script>
+            document.write(new ms.Symbol("SFA---------", { size: 40 }).asSVG());
+          </script>
         </td>
         <td>
-          Ground (G)
-          <br>Units
+          <script>
+            document.write(new ms.Symbol("SFG-U-------", { size: 40 }).asSVG());
+          </script>
         </td>
         <td>
-          Ground (G)
-          <br>Equipment
+          <script>
+            document.write(new ms.Symbol("SFG-E-------", { size: 40 }).asSVG());
+          </script>
         </td>
         <td>
-          Ground (G)
-          <br>Installaions
+          <script>
+            document.write(new ms.Symbol("SFG-I-----H-", { size: 40 }).asSVG());
+          </script>
         </td>
         <td>
-          Sea Surface (S)
+          <script>
+            document.write(new ms.Symbol("SFS---------", { size: 40 }).asSVG());
+          </script>
         </td>
         <td>
-          Subsurface (U)
+          <script>
+            document.write(new ms.Symbol("SFU---------", { size: 40 }).asSVG());
+          </script>
         </td>
       </tr>
-    </thead>
 
-    <tr>
-      <td>
-        FRIEND (F)
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFP---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFA---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-U-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-E-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-I-----H-", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFS---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFU---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-
-
-    <tr>
-      <td>
-        ASSUMED FRIEND (A)
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SAP---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SAA---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SAG-U-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SAG-E-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SAG-I-----H-", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SAS---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SAU---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        HOSTILE (H)
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHP---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHA---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHG-U-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHG-E-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHG-I-----H-", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHS---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHU---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        SUSPECT (S)
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SSP---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SSA---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SSG-U-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SSG-E-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SSG-I-----H-", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SSS---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SSU---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        NEUTRAL (N)
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNP---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNA---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNG-U-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNG-E-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNG-I-----H-", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNS---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNU---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        UNKNOWN (U)
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUP---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUA---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUG-U-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUG-E-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUG-I-----H-", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUS---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUU---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        PENDING (P)
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SPP---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SPA---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SPG-U-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SPG-E-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SPG-I-----H-", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SPS---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SPU---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-  </table>
-
-  <h3>Present and planned status.</h3>
-  <table>
-    <thead>
       <tr>
         <td>
+          ASSUMED FRIEND (A)
         </td>
         <td>
-          Space (P)
+          <script>
+            document.write(new ms.Symbol("SAP---------", { size: 40 }).asSVG());
+          </script>
         </td>
         <td>
-          Air (A)
+          <script>
+            document.write(new ms.Symbol("SAA---------", { size: 40 }).asSVG());
+          </script>
         </td>
         <td>
-          Ground (G)
-          <br>Units
+          <script>
+            document.write(new ms.Symbol("SAG-U-------", { size: 40 }).asSVG());
+          </script>
         </td>
         <td>
-          Ground (G)
-          <br>Equipment
+          <script>
+            document.write(new ms.Symbol("SAG-E-------", { size: 40 }).asSVG());
+          </script>
         </td>
         <td>
-          Ground (G)
-          <br>Installaions
+          <script>
+            document.write(new ms.Symbol("SAG-I-----H-", { size: 40 }).asSVG());
+          </script>
         </td>
         <td>
-          Sea Surface (S)
+          <script>
+            document.write(new ms.Symbol("SAS---------", { size: 40 }).asSVG());
+          </script>
         </td>
         <td>
-          Subsurface (U)
+          <script>
+            document.write(new ms.Symbol("SAU---------", { size: 40 }).asSVG());
+          </script>
         </td>
       </tr>
-    </thead>
 
-    <tr>
-      <td>
-        Present or Confirmed Position (P)
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFPP--------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFAP--------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFGPU-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFGPE-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFGPI-----H-", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFSP--------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFUP--------", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-
-
-    <tr>
-      <td>
-        Anticipated or Planned Position (A)
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFPA--------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFAA--------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFGAU-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFGAE-------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFGAI-----H-", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFSA--------", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFU---------", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-  </table>
-
-  <h3>Tactical symbol display option hierarchy.</h3>
-
-  <table>
-    <thead>
       <tr>
         <td>
+          HOSTILE (H)
         </td>
-        <td>ATTRIBUTES
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHP---------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHA---------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHG-U-------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHG-E-------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHG-I-----H-", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHS---------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHU---------", { size: 40 }).asSVG());
+          </script>
         </td>
       </tr>
-    </thead>
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFGPEWHLS---", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td style="text-align:left;">Frame: ON (black or white depending on background)
-        <br> Fill: ON (use default color indicating standard identity)
-        <br> Icon: ON (black or white)
-        <br> ms.Symbol: default
-      </td>
-    </tr>
 
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFGPEWHLS---", { size: 40, fill: false }).asSVG());
-        </script>
-      </td>
-      <td style="text-align:left;">Frame: ON (use default color indicating standard identity)
-        <br> Fill: OFF
-        <br> Icon: ON (use default color indicating standard identity)
-        <br> ms.Symbol: {fill:false}
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFGPEWHLS---", { size: 40, fill: false, monoColor: "black" }).asSVG());
-        </script>
-      </td>
-      <td style="text-align:left;">Frame: ON (black or white depending on background)
-        <br> Fill: OFF
-        <br> Icon: ON (black or white)
-        <br> Comments: Default option for monochrome implementation; replace black/white with the colors available in
-        this implementation.
-        <br> ms.Symbol: {fill:false,monoColor:"black"}
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFGPEWHLS---", { size: 40, fill: false, frame: false }).asSVG());
-        </script>
-      </td>
-      <td style="text-align:left;">Frame: OFF (none)
-        <br> Fill: OFF
-        <br> Icon: ON (use default color indicating standard identity)
-        <br> ms.Symbol: {fill:false,frame:false}
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFGPEWHLS---", { size: 40, fill: false, icon: false }).asSVG());
-        </script>
-      </td>
-      <td style="text-align:left;">Frame: ON (use default color indicating standard identity)
-        <br> Fill: OFF
-        <br> Icon: OFF (none)
-        <br> Comments: "?" is part of the frame and is displayed in this frame-only presentation.
-        <br> ms.Symbol: {fill:false,icon:false}
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFGPEWHLS---", { size: 40, fill: false, icon: false, monoColor: "black" }).asSVG());
-        </script>
-      </td>
-      <td style="text-align:left;">Frame: ON (monochrome system)
-        <br> Fill: OFF
-        <br> Icon: OFF (none)
-        <br> Comments: "?" is part of the frame and is displayed in this frame-only presentation.
-        <br> ms.Symbol: {fill:false,icon:false,monoColor:"black"}
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFGPEWHLS---", { size: 40, frame: false, icon: false }).asSVG());
-        </script>
-      </td>
-      <td style="text-align:left;">Frame: OFF (none)
-        <br> Fill: ON (use default color indicating standard identity)
-        <br> Icon: OFF (none)
-        <br> ms.Symbol: {frame:false,icon:false}
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFGPEWHLS---", { size: 40, fill: false, icon: false, frame: false }).asSVG());
-        </script>
-      </td>
-      <td style="text-align:left;">Frame: OFF (none)
-        <br> Fill: OFF (use default color indicating standard identity)
-        <br> Icon: OFF (none)
-        <br> Comments: Use only to indicate location of symbol.
-        <br> ms.Symbol: {frame:false,fill:false,icon:false}
-      </td>
-    </tr>
-  </table>
-
-  <h3>Size /mobility.</h3>
-
-  <table>
-    <thead>
       <tr>
-        <td>INDICATOR
+        <td>
+          SUSPECT (S)
         </td>
-        <td>DESCRIPTION
+        <td>
+          <script>
+            document.write(new ms.Symbol("SSP---------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SSA---------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SSG-U-------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SSG-E-------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SSG-I-----H-", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SSS---------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SSU---------", { size: 40 }).asSVG());
+          </script>
         </td>
       </tr>
-    </thead>
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFG--------A", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>TEAM/CREW
-      </td>
-    </tr>
 
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFG--------B", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>SQUAD
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFG--------C", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>SECTION
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFG--------D", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>PLATOON/DETACHMENT
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFG--------E", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>COMPANY/BATTERY/TROOP
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFG--------F", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>BATTALION/SQUADRON
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFG--------G", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>REGIMENT/GROUP
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFG--------H", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>BRIGADE
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFG--------I", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>DIVISION
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFG--------J", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>CORPS
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFG--------K", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>ARMY
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFG--------L", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>ARMY GROUP/FRONT
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFG--------M", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>REGION
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFG-------E-", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>Task Force
-      </td>
-    </tr>
-
-    <tr>
-      <td style="text-align:center;">
-        <script>
-          document.write(new ms.Symbol("SFG-------F-", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>Feint/Dummy
-      </td>
-    </tr>
-
-  </table>
-
-  <h3>Equipment mobility indicators.</h3>
-  Note that milsymbol automatically moves up the mobility indicator to the bottom of the icon when the symbol is
-  unframed.
-  <br>
-  <br>
-  <table>
-    <thead>
       <tr>
-        <td>DESCRIPTION
+        <td>
+          NEUTRAL (N)
         </td>
-        <td>UNFRAMED
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNP---------", { size: 40 }).asSVG());
+          </script>
         </td>
-        <td>UNKNOWN
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNA---------", { size: 40 }).asSVG());
+          </script>
         </td>
-        <td>FRIEND
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNG-U-------", { size: 40 }).asSVG());
+          </script>
         </td>
-        <td>NEUTRAL
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNG-E-------", { size: 40 }).asSVG());
+          </script>
         </td>
-        <td>HOSTILE
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNG-I-----H-", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNS---------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNU---------", { size: 40 }).asSVG());
+          </script>
         </td>
       </tr>
-    </thead>
-    <tr>
-      <td>WHEELED (LIMITED CROSS-COUNTRY)
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MO", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUG-EWRL--MO", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MO", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNG-EWRL--MO", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHG-EWRL--MO", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
 
-    <tr>
-      <td>WHEELED (CROSS-COUNTRY)
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MP", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUG-EWRL--MP", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MP", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNG-EWRL--MP", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHG-EWRL--MP", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
+      <tr>
+        <td>
+          UNKNOWN (U)
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUP---------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUA---------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUG-U-------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUG-E-------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUG-I-----H-", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUS---------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUU---------", { size: 40 }).asSVG());
+          </script>
+        </td>
+      </tr>
 
-    <tr>
-      <td>TRACKED
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MQ", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUG-EWRL--MQ", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MQ", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNG-EWRL--MQ", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHG-EWRL--MQ", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
+      <tr>
+        <td>
+          PENDING (P)
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SPP---------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SPA---------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SPG-U-------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SPG-E-------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SPG-I-----H-", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SPS---------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SPU---------", { size: 40 }).asSVG());
+          </script>
+        </td>
+      </tr>
+    </table>
 
-    <tr>
-      <td>WHEELED AND TRACKED COMBINATION
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MR", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUG-EWRL--MR", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MR", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNG-EWRL--MR", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHG-EWRL--MR", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
+    <h3>Present and planned status.</h3>
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <td>
+            Space (P)
+          </td>
+          <td>
+            Air (A)
+          </td>
+          <td>
+            Ground (G)
+            <br />Units
+          </td>
+          <td>
+            Ground (G)
+            <br />Equipment
+          </td>
+          <td>
+            Ground (G)
+            <br />Installaions
+          </td>
+          <td>
+            Sea Surface (S)
+          </td>
+          <td>
+            Subsurface (U)
+          </td>
+        </tr>
+      </thead>
 
-    <tr>
-      <td>TOWED
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MS", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUG-EWRL--MS", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MS", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNG-EWRL--MS", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHG-EWRL--MS", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
+      <tr>
+        <td>
+          Present or Confirmed Position (P)
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFPP--------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFAP--------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFGPU-------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFGPE-------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFGPI-----H-", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFSP--------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFUP--------", { size: 40 }).asSVG());
+          </script>
+        </td>
+      </tr>
 
-    <tr>
-      <td>RAILWAY
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MT", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUG-EWRL--MT", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MT", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNG-EWRL--MT", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHG-EWRL--MT", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
+      <tr>
+        <td>
+          Anticipated or Planned Position (A)
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFPA--------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFAA--------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFGAU-------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFGAE-------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFGAI-----H-", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFSA--------", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFU---------", { size: 40 }).asSVG());
+          </script>
+        </td>
+      </tr>
+    </table>
 
-    <tr>
-      <td>OVER-SNOW (PRIME MOVER)
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MU", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUG-EWRL--MU", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MU", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNG-EWRL--MU", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHG-EWRL--MU", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
+    <h3>Tactical symbol display option hierarchy.</h3>
 
-    <tr>
-      <td>SLED
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MV", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUG-EWRL--MV", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MV", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNG-EWRL--MV", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHG-EWRL--MV", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <td>ATTRIBUTES</td>
+        </tr>
+      </thead>
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(new ms.Symbol("SFGPEWHLS---", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td style="text-align:left;">
+          Frame: ON (black or white depending on background) <br />
+          Fill: ON (use default color indicating standard identity) <br />
+          Icon: ON (black or white) <br />
+          ms.Symbol: default
+        </td>
+      </tr>
 
-    <tr>
-      <td>PACK ANIMALS
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MW", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUG-EWRL--MW", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MW", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNG-EWRL--MW", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHG-EWRL--MW", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(
+              new ms.Symbol("SFGPEWHLS---", { size: 40, fill: false }).asSVG()
+            );
+          </script>
+        </td>
+        <td style="text-align:left;">
+          Frame: ON (use default color indicating standard identity) <br />
+          Fill: OFF <br />
+          Icon: ON (use default color indicating standard identity) <br />
+          ms.Symbol: {fill:false}
+        </td>
+      </tr>
 
-    <tr>
-      <td>BARGE
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MY", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUG-EWRL--MY", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MY", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNG-EWRL--MY", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHG-EWRL--MY", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(
+              new ms.Symbol("SFGPEWHLS---", {
+                size: 40,
+                fill: false,
+                monoColor: "black"
+              }).asSVG()
+            );
+          </script>
+        </td>
+        <td style="text-align:left;">
+          Frame: ON (black or white depending on background) <br />
+          Fill: OFF <br />
+          Icon: ON (black or white) <br />
+          Comments: Default option for monochrome implementation; replace
+          black/white with the colors available in this implementation. <br />
+          ms.Symbol: {fill:false,monoColor:"black"}
+        </td>
+      </tr>
 
-    <tr>
-      <td>AMPHIBIOUS
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MZ", { size: 40, frame: false }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SUG-EWRL--MZ", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SFG-EWRL--MZ", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SNG-EWRL--MZ", { size: 40 }).asSVG());
-        </script>
-      </td>
-      <td>
-        <script>
-          document.write(new ms.Symbol("SHG-EWRL--MZ", { size: 40 }).asSVG());
-        </script>
-      </td>
-    </tr>
-  </table>
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(
+              new ms.Symbol("SFGPEWHLS---", {
+                size: 40,
+                fill: false,
+                frame: false
+              }).asSVG()
+            );
+          </script>
+        </td>
+        <td style="text-align:left;">
+          Frame: OFF (none) <br />
+          Fill: OFF <br />
+          Icon: ON (use default color indicating standard identity) <br />
+          ms.Symbol: {fill:false,frame:false}
+        </td>
+      </tr>
 
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(
+              new ms.Symbol("SFGPEWHLS---", {
+                size: 40,
+                fill: false,
+                icon: false
+              }).asSVG()
+            );
+          </script>
+        </td>
+        <td style="text-align:left;">
+          Frame: ON (use default color indicating standard identity) <br />
+          Fill: OFF <br />
+          Icon: OFF (none) <br />
+          Comments: "?" is part of the frame and is displayed in this frame-only
+          presentation. <br />
+          ms.Symbol: {fill:false,icon:false}
+        </td>
+      </tr>
 
-  <script>
-    document.write(
-      renderSymbolSet(
-        stanagapp6["app6b"].WAR.SPC // Space
-      )
-    );
-  </script>
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(
+              new ms.Symbol("SFGPEWHLS---", {
+                size: 40,
+                fill: false,
+                icon: false,
+                monoColor: "black"
+              }).asSVG()
+            );
+          </script>
+        </td>
+        <td style="text-align:left;">
+          Frame: ON (monochrome system) <br />
+          Fill: OFF <br />
+          Icon: OFF (none) <br />
+          Comments: "?" is part of the frame and is displayed in this frame-only
+          presentation. <br />
+          ms.Symbol: {fill:false,icon:false,monoColor:"black"}
+        </td>
+      </tr>
 
-  <script>
-    document.write(
-      renderSymbolSet(
-        stanagapp6["app6b"].WAR.AIRTRK // Air
-      )
-    );
-  </script>
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(
+              new ms.Symbol("SFGPEWHLS---", {
+                size: 40,
+                frame: false,
+                icon: false
+              }).asSVG()
+            );
+          </script>
+        </td>
+        <td style="text-align:left;">
+          Frame: OFF (none) <br />
+          Fill: ON (use default color indicating standard identity) <br />
+          Icon: OFF (none) <br />
+          ms.Symbol: {frame:false,icon:false}
+        </td>
+      </tr>
 
-  <script>
-    document.write(
-      renderSymbolSet(
-        stanagapp6["app6b"].WAR.GRDTRK_UNT // Ground
-      )
-    );
-  </script>
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(
+              new ms.Symbol("SFGPEWHLS---", {
+                size: 40,
+                fill: false,
+                icon: false,
+                frame: false
+              }).asSVG()
+            );
+          </script>
+        </td>
+        <td style="text-align:left;">
+          Frame: OFF (none) <br />
+          Fill: OFF (use default color indicating standard identity) <br />
+          Icon: OFF (none) <br />
+          Comments: Use only to indicate location of symbol. <br />
+          ms.Symbol: {frame:false,fill:false,icon:false}
+        </td>
+      </tr>
+    </table>
 
-  <script>
-    document.write(
-      renderSymbolSet(
-        stanagapp6["app6b"].WAR.GRDTRK_EQT // Ground
-      )
-    );
-  </script>
+    <h3>Size /mobility.</h3>
 
-  <script>
-    document.write(
-      renderSymbolSet(
-        stanagapp6["app6b"].WAR.GRDTRK_INS // Ground
-      )
-    );
-  </script>
+    <table>
+      <thead>
+        <tr>
+          <td>INDICATOR</td>
+          <td>DESCRIPTION</td>
+        </tr>
+      </thead>
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(new ms.Symbol("SFG--------A", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>TEAM/CREW</td>
+      </tr>
 
-  <script>
-    document.write(
-      renderSymbolSet(
-        stanagapp6["app6b"].WAR.SSUF // Sea surface
-      )
-    );
-  </script>
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(new ms.Symbol("SFG--------B", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>SQUAD</td>
+      </tr>
 
-  <script>
-    document.write(
-      renderSymbolSet(
-        stanagapp6["app6b"].WAR.SBSUF // Sea subsurface
-      )
-    );
-  </script>
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(new ms.Symbol("SFG--------C", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>SECTION</td>
+      </tr>
 
-  <script>
-    document.write(
-      renderSymbolSet(
-        stanagapp6["app6b"].WAR.SOFUNT // SOF
-      )
-    );
-  </script>
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(new ms.Symbol("SFG--------D", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>PLATOON/DETACHMENT</td>
+      </tr>
 
-  <script>
-    document.write(
-      renderSymbolSet(
-        stanagapp6["app6b"].TACGRP
-      )
-    );
-  </script>
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(new ms.Symbol("SFG--------E", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>COMPANY/BATTERY/TROOP</td>
+      </tr>
 
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(new ms.Symbol("SFG--------F", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>BATTALION/SQUADRON</td>
+      </tr>
 
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(new ms.Symbol("SFG--------G", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>REGIMENT/GROUP</td>
+      </tr>
 
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(new ms.Symbol("SFG--------H", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>BRIGADE</td>
+      </tr>
 
-</body>
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(new ms.Symbol("SFG--------I", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>DIVISION</td>
+      </tr>
 
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(new ms.Symbol("SFG--------J", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>CORPS</td>
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(new ms.Symbol("SFG--------K", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>ARMY</td>
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(new ms.Symbol("SFG--------L", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>ARMY GROUP/FRONT</td>
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(new ms.Symbol("SFG--------M", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>REGION</td>
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(new ms.Symbol("SFG-------E-", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>Task Force</td>
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">
+          <script>
+            document.write(new ms.Symbol("SFG-------F-", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>Feint/Dummy</td>
+      </tr>
+    </table>
+
+    <h3>Equipment mobility indicators.</h3>
+    Note that milsymbol automatically moves up the mobility indicator to the
+    bottom of the icon when the symbol is unframed.
+    <br />
+    <br />
+    <table>
+      <thead>
+        <tr>
+          <td>DESCRIPTION</td>
+          <td>UNFRAMED</td>
+          <td>UNKNOWN</td>
+          <td>FRIEND</td>
+          <td>NEUTRAL</td>
+          <td>HOSTILE</td>
+        </tr>
+      </thead>
+      <tr>
+        <td>WHEELED (LIMITED CROSS-COUNTRY)</td>
+        <td>
+          <script>
+            document.write(
+              new ms.Symbol("SFG-EWRL--MO", { size: 40, frame: false }).asSVG()
+            );
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUG-EWRL--MO", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFG-EWRL--MO", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNG-EWRL--MO", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHG-EWRL--MO", { size: 40 }).asSVG());
+          </script>
+        </td>
+      </tr>
+
+      <tr>
+        <td>WHEELED (CROSS-COUNTRY)</td>
+        <td>
+          <script>
+            document.write(
+              new ms.Symbol("SFG-EWRL--MP", { size: 40, frame: false }).asSVG()
+            );
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUG-EWRL--MP", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFG-EWRL--MP", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNG-EWRL--MP", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHG-EWRL--MP", { size: 40 }).asSVG());
+          </script>
+        </td>
+      </tr>
+
+      <tr>
+        <td>TRACKED</td>
+        <td>
+          <script>
+            document.write(
+              new ms.Symbol("SFG-EWRL--MQ", { size: 40, frame: false }).asSVG()
+            );
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUG-EWRL--MQ", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFG-EWRL--MQ", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNG-EWRL--MQ", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHG-EWRL--MQ", { size: 40 }).asSVG());
+          </script>
+        </td>
+      </tr>
+
+      <tr>
+        <td>WHEELED AND TRACKED COMBINATION</td>
+        <td>
+          <script>
+            document.write(
+              new ms.Symbol("SFG-EWRL--MR", { size: 40, frame: false }).asSVG()
+            );
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUG-EWRL--MR", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFG-EWRL--MR", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNG-EWRL--MR", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHG-EWRL--MR", { size: 40 }).asSVG());
+          </script>
+        </td>
+      </tr>
+
+      <tr>
+        <td>TOWED</td>
+        <td>
+          <script>
+            document.write(
+              new ms.Symbol("SFG-EWRL--MS", { size: 40, frame: false }).asSVG()
+            );
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUG-EWRL--MS", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFG-EWRL--MS", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNG-EWRL--MS", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHG-EWRL--MS", { size: 40 }).asSVG());
+          </script>
+        </td>
+      </tr>
+
+      <tr>
+        <td>RAILWAY</td>
+        <td>
+          <script>
+            document.write(
+              new ms.Symbol("SFG-EWRL--MT", { size: 40, frame: false }).asSVG()
+            );
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUG-EWRL--MT", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFG-EWRL--MT", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNG-EWRL--MT", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHG-EWRL--MT", { size: 40 }).asSVG());
+          </script>
+        </td>
+      </tr>
+
+      <tr>
+        <td>OVER-SNOW (PRIME MOVER)</td>
+        <td>
+          <script>
+            document.write(
+              new ms.Symbol("SFG-EWRL--MU", { size: 40, frame: false }).asSVG()
+            );
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUG-EWRL--MU", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFG-EWRL--MU", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNG-EWRL--MU", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHG-EWRL--MU", { size: 40 }).asSVG());
+          </script>
+        </td>
+      </tr>
+
+      <tr>
+        <td>SLED</td>
+        <td>
+          <script>
+            document.write(
+              new ms.Symbol("SFG-EWRL--MV", { size: 40, frame: false }).asSVG()
+            );
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUG-EWRL--MV", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFG-EWRL--MV", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNG-EWRL--MV", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHG-EWRL--MV", { size: 40 }).asSVG());
+          </script>
+        </td>
+      </tr>
+
+      <tr>
+        <td>PACK ANIMALS</td>
+        <td>
+          <script>
+            document.write(
+              new ms.Symbol("SFG-EWRL--MW", { size: 40, frame: false }).asSVG()
+            );
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUG-EWRL--MW", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFG-EWRL--MW", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNG-EWRL--MW", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHG-EWRL--MW", { size: 40 }).asSVG());
+          </script>
+        </td>
+      </tr>
+
+      <tr>
+        <td>BARGE</td>
+        <td>
+          <script>
+            document.write(
+              new ms.Symbol("SFG-EWRL--MX", { size: 40, frame: false }).asSVG()
+            );
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUG-EWRL--MX", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFG-EWRL--MX", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNG-EWRL--MX", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHG-EWRL--MX", { size: 40 }).asSVG());
+          </script>
+        </td>
+      </tr>
+
+      <tr>
+        <td>AMPHIBIOUS</td>
+        <td>
+          <script>
+            document.write(
+              new ms.Symbol("SFG-EWRL--MY", { size: 40, frame: false }).asSVG()
+            );
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SUG-EWRL--MY", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SFG-EWRL--MY", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SNG-EWRL--MY", { size: 40 }).asSVG());
+          </script>
+        </td>
+        <td>
+          <script>
+            document.write(new ms.Symbol("SHG-EWRL--MY", { size: 40 }).asSVG());
+          </script>
+        </td>
+      </tr>
+    </table>
+
+    <script>
+      document.write(
+        renderSymbolSet(
+          stanagapp6["app6b"].WAR.SPC // Space
+        )
+      );
+    </script>
+
+    <script>
+      document.write(
+        renderSymbolSet(
+          stanagapp6["app6b"].WAR.AIRTRK // Air
+        )
+      );
+    </script>
+
+    <script>
+      document.write(
+        renderSymbolSet(
+          stanagapp6["app6b"].WAR.GRDTRK_UNT // Ground
+        )
+      );
+    </script>
+
+    <script>
+      document.write(
+        renderSymbolSet(
+          stanagapp6["app6b"].WAR.GRDTRK_EQT // Ground
+        )
+      );
+    </script>
+
+    <script>
+      document.write(
+        renderSymbolSet(
+          stanagapp6["app6b"].WAR.GRDTRK_INS // Ground
+        )
+      );
+    </script>
+
+    <script>
+      document.write(
+        renderSymbolSet(
+          stanagapp6["app6b"].WAR.SSUF // Sea surface
+        )
+      );
+    </script>
+
+    <script>
+      document.write(
+        renderSymbolSet(
+          stanagapp6["app6b"].WAR.SBSUF // Sea subsurface
+        )
+      );
+    </script>
+
+    <script>
+      document.write(
+        renderSymbolSet(
+          stanagapp6["app6b"].WAR.SOFUNT // SOF
+        )
+      );
+    </script>
+
+    <script>
+      document.write(renderSymbolSet(stanagapp6["app6b"].TACGRP));
+    </script>
+  </body>
 </html>
