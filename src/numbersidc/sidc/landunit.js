@@ -491,7 +491,7 @@ export default {
           : icn["GR.M1.ANTISUBMARINE WARFARE"]
       ];
       sIdm1["75"] = [icn["GR.M1.MEDEVAC"]];
-      sIdm1["76"] = [icn["GR.M1.CYBERSPACE"]];
+      sIdm1["76"] = [icn["GR.M1.RANGER"]];
       sIdm1["77"] = [icn["GR.M1.SUPPORT"]];
       sIdm1["78"] = [icn["GR.M1.AVIATION"]];
       sIdm1["79"] = [icn["GR.M1.ROUTE, RECONNAISSANCE, AND CLEARANCE"]];
