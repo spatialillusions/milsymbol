@@ -150,7 +150,8 @@ export default function basegeometry(ms) {
     };
     drawArray2.push(modifier[this.metadata.affiliation]);
   }
-  // Space Modifiers
+  // Cyberspace Modifiers
+  /*
   if (this.metadata.cyberspace) {
     modifier = {
       Friend: {
@@ -180,6 +181,7 @@ export default function basegeometry(ms) {
     };
     drawArray2.push(modifier[this.metadata.affiliation]);
   }
+  */
   //Add a dashed outline to the frame if the status is not present.
   if (
     this.style.fill &&

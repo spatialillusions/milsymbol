@@ -39,7 +39,7 @@ export function metadata(ms, metadata, mapping) {
     "52": "Ground",
     "53": "Sea",
     "54": "Subsurface",
-    "60": "Ground"
+    "60": "Air"
   };
 
   var functionid = (metadata.functionid = this.options.sidc.substr(10, 10));

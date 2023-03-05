@@ -4523,7 +4523,7 @@ export default function(
     },
     { type: "path", d: "m 135,100 -15,35 -10,0 15,-35 z" }
   ];
-  /*
+
   icn["CY.IC.COMMAND AND CONTROL (C2)"] = text("BC2");
   icn["CY.IC.HERDER"] = text("HDR");
   icn["CY.IC.CALLBACK DOMAIN"] = text("CBD");
@@ -4573,7 +4573,7 @@ export default function(
   icn["CY.IC.NETWORK OUTAGE"] = text("NOT");
   icn["CY.IC.SERVICE OUTAGE"] = text("SOT");
   icn["CY.IC.DEVICE OUTAGE"] = text("DOT");
-  */
+
   icn["CY.IC.COMBAT MISSION TEAM"] = text("CMT");
   icn["CY.IC.NATIONAL MISSION TEAM"] = text("NMT");
   icn["CY.IC.CYBER PROTECTION TEAM"] = text("CPT");
