@@ -1,6 +1,6 @@
 import { ms } from "../src/milsymbol";
 ms.reset();
-import { ms2525c } from "milstd2525";
+import { ms2525c } from "mil-std-2525";
 import verify from "./letter-sidc";
 
 import { stabilityoperations as icons } from "../src/lettersidc";

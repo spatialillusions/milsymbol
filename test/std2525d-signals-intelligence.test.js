@@ -1,6 +1,6 @@
 import { ms } from "../src/milsymbol";
 ms.reset();
-import { ms2525d } from "milstd2525";
+import { ms2525d } from "mil-std-2525";
 import verify from "./number-sidc";
 
 import { signalsintelligence as icons } from "../src/numbersidc";
