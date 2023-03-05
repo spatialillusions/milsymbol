@@ -607,7 +607,7 @@ export default {
       sId["220000"] = [];
       sId["220100"] = [icn["GR.EQ.SENSOR"]];
       sId["220200"] = [icn["GR.EQ.SENSOR EMPLACED"]];
-      sId["220300"] = [icn["GR.EQ.RADAR"]];
+      sId["220300"] = [icn["SI.IC.RADAR"]];
       sId["230000"] = [icn["GR.IC.FF.EMERGENCY OPERATION"]];
       sId["230100"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
