@@ -28,7 +28,8 @@ export default function basegeometry(ms) {
       geom.cy = this.metadata.baseGeometry.g.cy;
       geom.r = this.metadata.baseGeometry.g.r;
   }
-  geom.fill = this.colors.fillColor[this.metadata.affiliation];
+  geom.fill =
+    this.style.fillColor || this.colors.fillColor[this.metadata.affiliation];
   geom.fillopacity = this.style.fillOpacity;
   geom.stroke = frameColor;
   geom.strokewidth = this.style.size >= 10 ? this.style.strokeWidth : 10;

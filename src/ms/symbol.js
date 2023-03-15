@@ -47,6 +47,7 @@ function Symbol() {
   this.style.civilianColor = true; // Should we use the Civilian Purple defined in 2525? (We set this to default because I like the color.
   this.style.colorMode = "Light"; // 2525C Allows you to use Dark; Medium or Light colors. The values you can set are "Dark";"Medium" or "Light"
   this.style.fill = true; // Should the icon be filled with color
+  this.style.fillColor = ""; // Override the frame fill with any color
   this.style.fillOpacity = 1; // Possibility to change the fill opacity
   this.style.fontfamily = "Arial"; // The font family to use
   this.style.frame = true; // Should the icon be framed
