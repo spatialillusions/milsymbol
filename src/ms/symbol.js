@@ -124,9 +124,7 @@ import setOptions from "./symbol/setoptions.js";
 Symbol.prototype.setOptions = setOptions;
 
 Symbol.prototype.toDataURL = function() {
-  return (
-    "data:image/svg+xml;base64," + window.btoa(encodeURIComponent(this.asSVG()))
-  );
+  return "data:image/svg+xml;utf8," + encodeURIComponent(this.asSVG());
 };
 
 export default Symbol;
