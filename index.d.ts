@@ -23,6 +23,7 @@ type SymbolOptions = {
   equipmentTeardownTime?: string;
   evaluationRating?: string;
   fill?: boolean;
+  fillColor?: string;
   fillOpacity?: number;
   fontfamily?: string;
   frame?: boolean;
