@@ -537,7 +537,7 @@ export default function(
     {
       type: "path",
       fill: false,
-      d: "M100,120 l-15,-40 15,0 0,-20 M70,60 l60,0"
+      d: "M100,120 l0,-60 M70,60 l60,0"
     }
   ];
   icn["GR.IC.RADIO TELETYPE CENTRE"] = [
