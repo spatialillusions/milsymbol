@@ -495,25 +495,9 @@ export default {
       sIdm1["77"] = [icn["GR.M1.SUPPORT"]];
       sIdm1["78"] = [icn["GR.M1.AVIATION"]];
       sIdm1["79"] = [icn["GR.M1.ROUTE, RECONNAISSANCE, AND CLEARANCE"]];
-      sIdm1["80"] = [icn["GR.M1.TILT-ROTOR"]];
-      sIdm1["81"] = [icn["GR.M1.COMMAND POST NODE"]];
-      sIdm1["82"] = [icn["GR.M1.JOINT NETWORK NODE"]];
-      sIdm1["83"] = [icn["GR.M1.RETRANSMISSION SITE"]];
-      sIdm1["84"] = [icn["GR.M1.ASSAULT"]];
-
-      sIdm1["85"] = [icn["GR.M1.WEAPONS"]];
-      sIdm1["86"] = [icn["GR.M1.CRIMINAL INVESTIGATION DIVISION"]];
-      sIdm1["87"] = [icn["GR.M1.DIGITAL"]];
-      sIdm1["88"] = [icn["GR.M1.NETWORK OR NETWORK OPERATIONS"]];
-      sIdm1["89"] = [
-        icn[
-          "GR.M1.AIRFIELD, AERIAL PORT OF DEBARKATION, OR AERIAL PORT OF EMBARKATION"
-        ]
-      ];
-      sIdm1["90"] = [icn["GR.M1.PIPELINE"]];
-      sIdm1["91"] = [icn["GR.M1.POSTAL"]];
-      sIdm1["92"] = [icn["GR.M1.WATER"]];
-      sIdm1["93"] = [icn["GR.M1.INDEPENDENT COMMAND"]];
+      sIdm1["80"] = [icn["GR.M1.COMMAND POST NODE"]];
+      sIdm1["81"] = [icn["GR.M1.JOINT NETWORK NODE"]];
+      sIdm1["82"] = [icn["GR.M1.RETRANSMISSION SITE"]];
 
       sIdm1["94"] = [icn["GR.M1.THEATRE"]];
       sIdm1["95"] = [icn["GR.M1.ARMY"]];
