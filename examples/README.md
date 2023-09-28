@@ -4,7 +4,7 @@ These examples shows different functionality and ways to use milsymbol with exte
 
 There are also several other resouces online that demonstrates milsymbol usage, for example:
 
- - Cesium http://cesiumjs.org/2016/07/20/Cesium-and-milsymbol/
+ - Cesium https://cesium.com/blog/2016/07/20/cesium-and-milsymbol/
  - SAPUI5 https://blogs.sap.com/2016/07/28/adding-military-map-symbols-to-your-sapui5-applications/
  - Scala https://github.com/workingDog/ScalaMS
  
