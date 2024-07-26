@@ -2949,7 +2949,7 @@ export default function(
       ? {
           type: "text",
           stroke: false,
-          textanchor: "left",
+          textanchor: "start",
           x: 120,
           y: 110,
           fontsize: 35,
