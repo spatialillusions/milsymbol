@@ -102,6 +102,13 @@ function renderSymbolSet(symbolset) {
   output += "<th>Remarks</th></tr></thead>";
 
   for (i = 0; i < symbolset.mainIcon.length; i++) {
+    if (
+      symbolset.mainIcon[i]["Entity"] == "{Disused}" ||
+      symbolset.mainIcon[i]["Entity Type"] == "{Disused}" ||
+      symbolset.mainIcon[i]["Entity Subtype"] == "{Disused}" ||
+      symbolset.mainIcon[i]["Entity Subtype"] == "{Disused} "
+    )
+      continue;
     var symbol = new ms.Symbol(
       "1003" +
         symbolset.symbolset +
@@ -160,8 +167,8 @@ function renderSymbolSet(symbolset) {
         (symbolset.mainIcon[i]["Entity Subtype"]
           ? "Entity Subtype"
           : symbolset.mainIcon[i]["Entity Type"]
-            ? "Entity Type"
-            : "Entity");
+          ? "Entity Type"
+          : "Entity");
       if (symbolset.mainIcon[i]["Entity Subtype"]) {
         output +=
           "<br><em>Entity/Entity Type:</em> " +
@@ -228,6 +235,7 @@ function renderSymbolSet(symbolset) {
     output +=
       "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
     for (i = 0; i < symbolset.modifier1.length; i++) {
+      if (symbolset.modifier1[i]["First Modifier"] == "{Disused}") continue;
       var symbol = new ms.Symbol(
         "1003" +
           symbolset.symbolset +
@@ -264,7 +272,8 @@ function renderSymbolSet(symbolset) {
         !isNaN(symbolset.modifier1[i]["Code"])
       )
         output += symbol.asSVG();
-      output += "</td><td>" + symbolset.modifier1[i]["Remarks"] + "</td></tr>";
+      output +=
+        "</td><td>" + (symbolset.modifier1[i]["Remarks"] || "") + "</td></tr>";
     }
     output += "</table>";
   }
@@ -273,6 +282,7 @@ function renderSymbolSet(symbolset) {
     output +=
       "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
     for (i = 0; i < symbolset.modifier2.length; i++) {
+      if (symbolset.modifier2[i]["Second Modifier"] == "{Disused}") continue;
       var symbol = new ms.Symbol(
         "1003" +
           symbolset.symbolset +
@@ -307,7 +317,8 @@ function renderSymbolSet(symbolset) {
         !isNaN(symbolset.modifier2[i]["Code"])
       )
         output += symbol.asSVG();
-      output += "</td><td>" + symbolset.modifier2[i]["Remarks"] + "</td></tr>";
+      output +=
+        "</td><td>" + (symbolset.modifier2[i]["Remarks"] || "") + "</td></tr>";
     }
     output += "</table>";
   }

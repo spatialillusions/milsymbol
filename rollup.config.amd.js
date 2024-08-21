@@ -37,6 +37,7 @@ export default [
       copy({
         "node_modules/milstd2525/milstd2525.js": "docs/milstd-2525.js",
         "node_modules/stanagapp6/stanagapp6.js": "docs/stanag-app6.js",
+        "node_modules/milstandard-e/milstandard.js": "docs/milstandard-e.js",
         verbose: true
       })
     ]
