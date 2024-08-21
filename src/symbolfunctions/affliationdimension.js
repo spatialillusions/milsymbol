@@ -34,7 +34,7 @@ export default function affliationdimension(ms) {
           type: "text",
           text: "X",
           x: bbox.x2 + spacing,
-          y: 60,
+          y: 50,
           fill: frameColor,
           fontfamily: this.style.fontfamily,
           fontsize: 35,
@@ -47,7 +47,7 @@ export default function affliationdimension(ms) {
           type: "text",
           text: "J",
           x: bbox.x2 + spacing,
-          y: 60,
+          y: 50,
           fill: frameColor,
           fontfamily: this.style.fontfamily,
           fontsize: 35,
@@ -60,7 +60,7 @@ export default function affliationdimension(ms) {
           type: "text",
           text: "K",
           x: bbox.x2 + spacing,
-          y: 60,
+          y: 50,
           fill: frameColor,
           fontfamily: this.style.fontfamily,
           fontsize: 35,
@@ -68,21 +68,21 @@ export default function affliationdimension(ms) {
           textanchor: "start"
         });
       }
-      bbox = { x2: bbox.x2 + spacing + 22, y1: 60 - 25 };
+      bbox = { x2: bbox.x2 + spacing + 22, y1: 50 - 25 };
     }
     if (this.metadata.context == "Simulation") {
       drawArray2.push({
         type: "text",
         text: "S",
         x: bbox.x2 + spacing,
-        y: 60,
+        y: 50,
         fill: frameColor,
         fontfamily: this.style.fontfamily,
         fontsize: 35,
         fontweight: "bold",
         textanchor: "start"
       });
-      bbox = new ms.BBox({ x2: bbox.x2 + spacing + 22, y1: 60 - 25 });
+      bbox = new ms.BBox({ x2: bbox.x2 + spacing + 22, y1: 50 - 25 });
     }
   }
   //outline
