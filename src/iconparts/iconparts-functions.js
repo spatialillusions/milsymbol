@@ -50,7 +50,7 @@ export function text(str) {
   return t;
 }
 export function textm1(str) {
-  var size = 30;
+  var size = 28;
   if (str.length == 3) {
     size = 25;
   }
@@ -68,8 +68,8 @@ export function textm1(str) {
   };
 }
 export function textm2(str) {
-  var size = 30;
-  var y = 145;
+  var size = 28;
+  var y = 143;
 
   if (str.length == 3) {
     size = 25;
