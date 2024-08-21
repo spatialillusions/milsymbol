@@ -83,6 +83,9 @@ function Symbol() {
 import asCanvas from "./symbol/ascanvas.js";
 Symbol.prototype.asCanvas = asCanvas;
 
+import asOffscreenCanvas from "./symbol/asoffscreencanvas.js";
+Symbol.prototype.asOffscreenCanvas = asOffscreenCanvas;
+
 import canvasDraw from "./symbol/canvasdraw.js";
 Symbol.prototype.canvasDraw = canvasDraw;
 
