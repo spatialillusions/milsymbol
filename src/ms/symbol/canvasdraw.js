@@ -127,17 +127,22 @@ export default function canvasDraw(ctx, instruction) {
               instruction[i].textanchor == "middle"
                 ? "center"
                 : instruction[i].textanchor;
+            ctx.textBaseline = instruction[i].alignmentBaseline
+              ? instruction[i].alignmentBaseline
+              : "bottom";
             ctx.fillText(
               instruction[i].text,
               instruction[i].x,
               instruction[i].y
             );
+
             if (instruction[i].stroke)
               ctx.strokeText(
                 instruction[i].text,
                 instruction[i].x,
                 instruction[i].y
               );
+
             break;
           case "translate":
             ctx.save();

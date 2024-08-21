@@ -23,26 +23,27 @@ export function defaultProperties(instructions, iconColor) {
 }
 
 export function text(str) {
-  var size = 42;
-  var y = 115;
+  var size = 44;
+  //var y = 115;
   if (str.length == 1) {
     size = 45;
-    y = 115;
+    //y = 115;
   }
   if (str.length == 3) {
-    size = 35;
-    y = 110;
+    size = 37;
+    //y = 110;
   }
   if (str.length >= 4) {
-    size = 32;
-    y = 110;
+    size = 33;
+    //y = 110;
   }
   var t = {
     type: "text",
     stroke: false,
     textanchor: "middle",
+    alignmentBaseline: "middle",
     x: 100,
-    y: y,
+    y: 102,
     fontsize: size,
     text: str
   };

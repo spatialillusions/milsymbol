@@ -56,6 +56,11 @@ export default function asSVG() {
                   '" ';
                 if (instruction[i].fontweight)
                   svg += 'font-weight="' + instruction[i].fontweight + '" ';
+                if (instruction[i].alignmentBaseline)
+                  svg +=
+                    'alignment-baseline="' +
+                    instruction[i].alignmentBaseline +
+                    '" ';
                 break;
               case "translate":
                 svg +=
