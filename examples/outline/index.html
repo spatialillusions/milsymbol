@@ -1,65 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="../../dist/milsymbol.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <script src="../../dist/milsymbol.js"></script>
-</head>
+  <body onload="example()">
+    Outline Color:
+    <select id="outlineColor" onchange="example()">
+      <option>Silver</option>
+      <option>Red</option>
+      <option selected>Yellow</option>
+      <option>Lime</option>
+      <option>Aqua</option>
+      <option>Fuchsia</option>
+    </select>
+    Outline Width:
+    <select id="outlineWidth" onchange="example()">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4" selected>4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+    <br />
+    SVG Example:
+    <br />
+    <div id="SVG"></div>
+    Canvas Example:
+    <br />
+    <div id="Canvas">
+      <p></p>
+    </div>
+    <script>
+      function example() {
+        var color = document.getElementById("outlineColor")[
+          document.getElementById("outlineColor").selectedIndex
+        ].value;
+        var outline = document.getElementById("outlineWidth")[
+          document.getElementById("outlineWidth").selectedIndex
+        ].value;
 
-<body onload="example()">
-  Outline Color:
-  <select id="outlineColor" onchange="example()">
-    <option>Silver</option>
-    <option>Red</option>
-    <option SELECTED>Yellow</option>
-    <option>Lime</option>
-    <option>Aqua</option>
-    <option>Fuchsia</option>
-  </select> Outline Width:
-  <select id="outlineWidth" onchange="example()">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4" SELECTED>4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-    <option value="8">8</option>
-    <option value="9">9</option>
-    <option value="10">10</option>
-  </select>
-  <br> SVG Example:
-  <br>
-  <div id="SVG"></div>
-  Canvas Example:
-  <br>
-  <div id="Canvas">
-    <p></p>
-  </div>
-  <script>
-    function example() {
-      var color = document.getElementById("outlineColor")[document.getElementById("outlineColor").selectedIndex].value;
-      var outline = document.getElementById("outlineWidth")[document.getElementById("outlineWidth").selectedIndex].value;
+        var symbol = new ms.Symbol("sfgpewrh--mt", {
+          size: 35,
+          quantity: 200,
+          staffComments: "for reinforcements".toUpperCase(),
+          additionalInformation: "added support for JJ".toUpperCase(),
+          direction: (750 * 360) / 6400,
+          type: "machine gun".toUpperCase(),
+          dtg: "30140000ZSEP97",
+          location: "0900000.0E570306.0N",
+          outlineColor: color,
+          infoOutlineColor: color,
+          outlineWidth: outline
+        });
 
-      var symbol = new ms.Symbol("sfgpewrh--mt", {
-        size: 35,
-        quantity: 200,
-        staffComments: "for reinforcements".toUpperCase(),
-        additionalInformation: "added support for JJ".toUpperCase(),
-        direction: (750 * 360 / 6400),
-        type: "machine gun".toUpperCase(),
-        dtg: "30140000ZSEP97",
-        location: "0900000.0E570306.0N",
-        outlineColor: color,
-        outlineWidth: outline
-      });
+        document.getElementById("SVG").innerHTML = symbol.asSVG();
 
-      document.getElementById("SVG").innerHTML = symbol.asSVG();
-
-      document.getElementById("Canvas").replaceChild(
-        symbol.asCanvas(),
-        document.getElementById("Canvas").firstChild);
-    }
-
-  </script>
-</body>
+        document
+          .getElementById("Canvas")
+          .replaceChild(
+            symbol.asCanvas(),
+            document.getElementById("Canvas").firstChild
+          );
+      }
+    </script>
+  </body>
+</html>
