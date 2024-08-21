@@ -21,6 +21,7 @@ import engagmentbar from "./symbolfunctions/engagmentbar.js";
 import affliationdimension from "./symbolfunctions/affliationdimension.js";
 import textfields from "./symbolfunctions/textfields.js";
 import directionarrow from "./symbolfunctions/directionarrow.js";
+//import debug from "./symbolfunctions/debug.js";
 
 ms.setColorMode = function(mode, colorMode) {
   this._colorModes[mode] = {};
@@ -29,6 +30,7 @@ ms.setColorMode = function(mode, colorMode) {
   this._colorModes[mode].Neutral = colorMode.Neutral;
   this._colorModes[mode].Unknown = colorMode.Unknown;
   this._colorModes[mode].Civilian = colorMode.Civilian;
+  this._colorModes[mode].Suspect = colorMode.Suspect;
   return this._colorModes[mode];
 };
 
@@ -82,6 +84,7 @@ ms.reset = function() {
   ms.addSymbolPart(affliationdimension);
   ms.addSymbolPart(textfields);
   ms.addSymbolPart(directionarrow);
+  //ms.addSymbolPart(debug);
 };
 
 ms.reset();
@@ -188,7 +191,8 @@ ms.getColorMode = function(mode) {
     c.Friend,
     c.Hostile,
     c.Neutral,
-    c.Unknown
+    c.Unknown,
+    c.Suspect
   );
 };
 ms.getDashArrays = function() {

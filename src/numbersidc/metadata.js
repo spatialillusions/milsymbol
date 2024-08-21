@@ -1,6 +1,7 @@
 //import { ms } from "../ms.js";
 export function metadata(ms, metadata, mapping) {
-  //var version = this.options.sidc.substr(0, 2);
+  var version = this.options.sidc.substr(0, 2);
+  //metadata.v13 = version > 13;
   var standardIdentity1 = this.options.sidc.substr(2, 1);
   var standardIdentity2 = this.options.sidc.substr(3, 1);
   var symbolSet = this.options.sidc.substr(4, 2);
@@ -17,6 +18,10 @@ export function metadata(ms, metadata, mapping) {
     "5": "Hostile",
     "6": "Hostile"
   };
+
+  if (version >= 13 && standardIdentity2 == 5) {
+    metadata.suspect = true;
+  }
 
   var dimensionMapping = {
     "00": "Sea",

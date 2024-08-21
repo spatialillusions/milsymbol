@@ -4,6 +4,7 @@ type ColorMode = {
   Hostile: string;
   Neutral: string;
   Unknown: string;
+  Suspect: string;
 };
 
 type SymbolOptions = {
@@ -143,6 +144,7 @@ type SymbolMetadata = {
   notpresent: string; // Is it Anticipated or Pending
   numberSIDC: boolean; // Is the SIDC number based
   space: boolean; // Is it in Space
+  suspect: boolean; // Is it a suspect symbol in 2525E
   taskForce: boolean; // Is it a task force
   unit: boolean; // Is this equipment or not
 };
@@ -196,7 +198,7 @@ interface BBoxObject extends Box {
 export function BBox(box?: Partial<Box>): BBoxObject;
 
 /** Creates a ColorMode Object with colors used for different affiliations. */
-export function ColorMode(civilian: string, friend: string, hostile: string, neutral: string, unknown: string): ColorMode;
+export function ColorMode(civilian: string, friend: string, hostile: string, neutral: string, unknown: string, suspect: string): ColorMode;
 /** Gets a color mode that has been registred with setColorMode */
 export function getColorMode(mode: string): ColorMode;
 /** Register a ColorMode with a name or override an existing ColorMode. */

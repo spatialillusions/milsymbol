@@ -274,6 +274,7 @@ Object {
   notpresent: String, // Is it Anticipated or Pending
   numberSIDC: Boolean, // Is the SIDC number based
   space: Boolean, // Is it in Space
+  suspect: Boolean, // Is it a suspect symbol in 2525E
   taskForce: Boolean // Is it a task force
 }
 ```
@@ -559,7 +560,7 @@ Object {
 }
 ```
 
-## ms.ColorMode(civilian, friend, hostile, neutral, unknown)
+## ms.ColorMode(civilian, friend, hostile, neutral, unknown, suspect)
 
 ```javascript
 civilian: String,
@@ -567,6 +568,7 @@ friend: String,
 hostile: String,
 neutral: String,
 unknown: String,
+suspect: String,
 ```
 
 Creates a ColorMode Object with colors used for different affiliations.
@@ -579,7 +581,8 @@ Object {
   Friend: String,
   Hostile: String,
   Neutral: String,
-  Unknown: String
+  Unknown: String,
+  Suspect: String
 }
 ```
 
@@ -804,7 +807,8 @@ Object {
   Friend: String,
   Hostile: String,
   Neutral: String,
-  Unknown: String
+  Unknown: String,
+  Suspect: String
 }
 ```
 

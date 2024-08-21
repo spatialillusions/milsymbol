@@ -33,6 +33,14 @@ export default function getColors() {
     baseFrameColor.Friend = baseFrameColor.Hostile;
     baseIconColor.Friend = baseIconColor.Hostile;
   }
+
+  //Joker and Faker
+  if (this.metadata.suspect) {
+    baseFillColor.Friend = baseFillColor.Hostile = baseFillColor.Suspect;
+    baseFrameColor.Friend = baseFrameColor.Hostile = baseFrameColor.Suspect;
+    baseIconColor.Friend = baseIconColor.Hostile = baseIconColor.Suspect;
+  }
+
   //If the user has specified a mono color to use for all symbols.
   if (this.style.monoColor != "") {
     baseFrameColor.Friend = baseFrameColor.Neutral = baseFrameColor.Hostile = baseFrameColor.Unknown = baseFrameColor.Civilian = this.style.monoColor;
