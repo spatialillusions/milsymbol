@@ -249,7 +249,7 @@ function renderSymbolSet(symbolset) {
 
       if (
         symbolset.modifier1[i]["Code"].length == 2 &&
-        symbolset.modifier1[i]["Code"] != 99 &&
+        //symbolset.modifier1[i]["Code"] != 99 &&
         !symbol.isValid() &&
         !(symbolset.symbolset == "25" && symbolset.modifier1[i]["Code"] <= 12) // mobility modifiers we don't support
       ) {
@@ -268,7 +268,7 @@ function renderSymbolSet(symbolset) {
       output += "<br><em>Code:</em> " + symbolset.modifier1[i]["Code"];
       output += "</td><td>";
       if (
-        symbolset.modifier1[i]["Code"] != 99 &&
+        //symbolset.modifier1[i]["Code"] != 99 &&
         !isNaN(symbolset.modifier1[i]["Code"])
       )
         output += symbol.asSVG();
@@ -295,7 +295,7 @@ function renderSymbolSet(symbolset) {
 
       if (
         symbolset.modifier2[i]["Code"].length == 2 &&
-        symbolset.modifier2[i]["Code"] != 99 &&
+        //symbolset.modifier2[i]["Code"] != 99 &&
         !symbol.isValid()
       ) {
         output += ' style="background-color:red"';
@@ -313,7 +313,7 @@ function renderSymbolSet(symbolset) {
       output += "<br><em>Code:</em> " + symbolset.modifier2[i]["Code"];
       output += "</td><td>";
       if (
-        symbolset.modifier2[i]["Code"] != 99 &&
+        //symbolset.modifier2[i]["Code"] != 99 &&
         !isNaN(symbolset.modifier2[i]["Code"])
       )
         output += symbol.asSVG();
