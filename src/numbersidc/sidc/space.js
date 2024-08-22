@@ -45,7 +45,7 @@ export default {
       sId["121100"] = [icn["SP.I.CIVILIAN TETHERED SATELLITE"]];
       sId["121200"] = [icn["SP.I.CIVILIAN WEATHER SATELLITE"]];
       sId["121300"] = [icn["SP.I.PLANETARY LANDER"]];
-      sId["121400"] = [icn["SP.I.SPACE VEHICLE"]];
+      sId["121400"] = [icn["SP.I.CIVILIAN SPACE VEHICLE"]];
       sId["130000"] = [icn["SP.I.MANUAL TRACK"]];
 
       sIdm1["01"] = [icn["SP.M1.LOW EARTH ORBIT (LEO)"]];

@@ -141,6 +141,11 @@ export default function(
     d:
       "m 97.5,112.5 0,7.5 5,0 0,-7.5 z m 0,-32.5 5,0 0,26.4 -5,0 z m -0.3,7.6 C 83.3,88.2 72.5,93.5 72.5,100 c 0,6.9 12.3,12.5 27.5,12.5 15.2,0 27.5,-5.6 27.5,-12.5 0,-6.5 -11,-11.9 -25,-12.4 l 0,5.6 c 9.9,0.4 17.5,3.2 17.5,6.6 0,3.7 -8.9,6.7 -19.8,6.7 -10.9,0 -19.8,-3 -19.8,-6.7 0,-3.4 7.4,-6.1 17.1,-6.6 l 0,-5.6 c -0.1,0 -0.2,-0 -0.3,0 z"
   };
+  icn["SP.I.CIVILIAN SPACE VEHICLE"] = text("SV");
+  icn["SP.I.CIVILIAN SPACE VEHICLE"].fill =
+    STD2525 || numberSIDC ? iconFillColor : !frame ? iconFillColor : false;
+  icn["SP.I.CIVILIAN SPACE VEHICLE"].stroke = black;
+  icn["SP.I.CIVILIAN SPACE VEHICLE"].strokewidth = 3;
   icn["SP.I.CIVILIAN TETHERED SATELLITE"] = {
     type: "path",
     fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
@@ -283,10 +288,6 @@ export default function(
       "m 97.5,112.5 0,7.5 5,0 0,-7.5 z m 0,-32.5 5,0 0,26.4 -5,0 z m -0.3,7.6 C 83.3,88.2 72.5,93.5 72.5,100 c 0,6.9 12.3,12.5 27.5,12.5 15.2,0 27.5,-5.6 27.5,-12.5 0,-6.5 -11,-11.9 -25,-12.4 l 0,5.6 c 9.9,0.4 17.5,3.2 17.5,6.6 0,3.7 -8.9,6.7 -19.8,6.7 -10.9,0 -19.8,-3 -19.8,-6.7 0,-3.4 7.4,-6.1 17.1,-6.6 l 0,-5.6 c -0.1,0 -0.2,-0 -0.3,0 z"
   };
   icn["SP.I.SPACE VEHICLE"] = text("SV");
-  icn["SP.I.SPACE VEHICLE"].fill =
-    STD2525 || numberSIDC ? iconFillColor : !frame ? iconFillColor : false;
-  icn["SP.I.SPACE VEHICLE"].stroke = black;
-  icn["SP.I.SPACE VEHICLE"].strokewidth = 3;
   icn["SP.I.TETHERED SATELLITE"] = {
     type: "path",
     d:
