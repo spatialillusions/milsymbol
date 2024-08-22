@@ -23,6 +23,7 @@ export default {
       sIdm1["01"] = [icn["SPACE.MISSILE.M1.BALLISTIC"]];
       sIdm1["02"] = [icn["SPACE.MISSILE.M1.SPACE"]];
       sIdm1["03"] = [icn["SPACE.MISSILE.M1.INTERCEPTOR"]];
+      sIdm1["04"] = [icn["SPACE.MISSILE.M1.HYPERSONIC"]];
 
       sIdm2["01"] = [icn["SPACE.MISSILE.M2.SHORT RANGE"]];
       sIdm2["02"] = [icn["SPACE.MISSILE.M2.MEDIUM RANGE"]];
