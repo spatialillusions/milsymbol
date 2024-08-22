@@ -44,6 +44,7 @@ export default {
       sId["111200"] = [icn["GR.IC.VIDEO IMAGERY"]];
       sId["111300"] = [icn["GR.IC.SPACE"]];
       sId["111400"] = [icn["GR.IC.SPECIAL TROOPS"]];
+      sId["111500"] = [icn["GR.IC.MULTI-DOMAIN"]];
       sId["120000"] = [];
       sId["120100"] = [icn["GR.IC.FF.AIR ASSAULT WITH ORGANIC LIFT"]];
       sId["120200"] = [icn["GR.IC.AIR TRAFFIC SERVICES"]];
@@ -361,6 +362,7 @@ export default {
       sId["165300"] = [icn["GR.IC.ARMY FIELD SUPPORT"]];
       sId["165400"] = [icn["GR.IC.CONTRACTING SERVICES"]];
       sId["165500"] = [icn["GR.IC.PARACHUTE RIGGER"]];
+      sId["165600"] = [icn["GR.IC.HUMAN RESOURCES"]];
       sId["170000"] = [];
       sId["170100"] = [icn["GR.IC.NAVAL"]];
       sId["180000"] = [];
@@ -391,6 +393,7 @@ export default {
       sId["201100"] = [icn["GR.IC.LAW ENFORCEMENT VESSEL"]];
       sId["201200"] = [icn["GR.IC.FF.US MARSHALS SERVICE"]];
       sId["201300"] = [icn["ST.IC.INTERNAL SECURITY FORCE"]];
+      sId["210000"] = [icn["GR.IC.CYBER"]];
 
       sIdm1["01"] = [
         _STD2525
@@ -520,6 +523,7 @@ export default {
       sIdm1["96"] = [icn["GR.M1.CORPS"]];
       sIdm1["97"] = [icn["GR.M1.BRIGADE"]];
       sIdm1["98"] = [icn["GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT"]];
+      sIdm1["99"] = [icn["GR.M1.MULTI-DOMAIN"]];
 
       sIdm2["01"] = [icn["GR.M2.AIRBORNE"]];
       sIdm2["02"] = [icn["GR.M2.ARCTIC"]];
@@ -600,6 +604,8 @@ export default {
       sIdm2["76"] = [icn["GR.M2.LIGHT AND MEDIUM"]];
       sIdm2["77"] = [icn["GR.M2.SELF-PROPELLED"]];
       sIdm2["78"] = [icn["GR.M2.SECURITY FORCE ASSISTANCE"]];
+      sIdm2["81"] = [icn["GR.M2.SURGICAL"]];
+      sIdm2["82"] = [icn["GR.M2.BLOOD"]];
     }
   }
 };
