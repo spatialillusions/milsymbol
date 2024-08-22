@@ -28,6 +28,7 @@ export default {
       sIdm1["06"] = [icn["AIR.MISSILE.M1.BALLISTIC"]];
       sIdm1["07"] = [icn["AIR.MISSILE.M1.CRUISE"]];
       sIdm1["08"] = [icn["AIR.MISSILE.M1.INTERCEPTOR"]];
+      sIdm1["09"] = [icn["AIR.M1.HYPERSONIC"]];
 
       sIdm2["01"] = [icn["AIR.MISSILE.M2.AIR"]];
       sIdm2["02"] = [icn["AIR.MISSILE.M2.SURFACE"]];

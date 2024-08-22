@@ -58,6 +58,7 @@ export default {
       sId["120400"] = [icn["AR.I.CIVILIAN BALLOON"]];
       sId["120500"] = [icn["AR.I.CIVILIAN AIRSHIP"]];
       sId["120600"] = [icn["AR.I.CIVILIAN TETHERED LIGHTER THAN AIR"]];
+      sId["120700"] = [icn["AR.I.CIVILIAN MEDICAL EVACUATION"]];
       sId["130000"] = [icn["AR.I.WEAPON"]];
       sId["130100"] = [icn["AR.I.BOMB"]];
       sId["130200"] = [icn["AR.I.UNDERWATER DECOY DSymbol"]];
