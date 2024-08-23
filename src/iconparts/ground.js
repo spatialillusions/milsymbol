@@ -303,6 +303,7 @@ export default function(
   icn["GR.IC.DRUG ENFORCEMENT AGENCY (DEA)"] = text("DEA");
   icn["GR.IC.ELECTRONIC RANGING"] = {
     type: "path",
+    strokewidth: 3,
     d: "M120,130 c-40,20 -80,-45 -40,-70 z M100,95 L140,75",
     fill: STD2525 ? iconFillColor : false
   };
@@ -378,6 +379,21 @@ export default function(
   );
   icn["GR.IC.INTERNATIONAL SECURITY ASSISTANCE FORCE (ISAF)"] = text("ISAF");
   icn["GR.IC.INTERROGATION"] = text("IPW");
+  icn["GR.IC.ISOLATED PERSONNEL"] = [
+    {
+      type: "path",
+      strokewidth: 3,
+      d:
+        "M 100,97.8 88.2,86  M 100,97.8 112,86  m -12,32 V 97.8  M 90.5,118 H 110",
+      fill: false
+    },
+    {
+      type: "path",
+      d:
+        "m 106,87.2 a 5.92,5.92 0 0 1 -6,5.9 5.92,5.92 0 0 1 -5.9,-5.9 5.92,5.92 0 0 1 5.9,-6 5.92,5.92 0 0 1 6,6 z",
+      stroke: false
+    }
+  ];
   icn["GR.IC.JOINT FIRE SUPPORT"] = text("JFS");
   icn["GR.IC.JOINT INFORMATION BUREAU"] = text("JIB");
   icn["GR.IC.JOINT INTELLIGENCE CENTRE"] = text("JIC");
@@ -636,6 +652,7 @@ export default function(
   ];
   icn["GR.IC.TOPOGRAPHIC"] = {
     type: "path",
+    strokewidth: 3,
     fill: false,
     d: "m 85,105 c 10,5 20,5 30,0 m -15,-15 15,30 m -30,0 15,-30 0,-10"
   };
@@ -1175,11 +1192,13 @@ export default function(
   icn["GR.IC.INTERPRETER/TRANSLATOR"] = [
     {
       type: "path",
+      strokewidth: 3,
       d: "m 65,90 15,0 0,-10 20,20 -20,20 0,-10 -15,0 z",
       fill: iconFillColor
     },
     {
       type: "path",
+      strokewidth: 3,
       d: "m 135,90 -15,0 0,-10 -20,20 20,20 0,-10 15,0 z"
     }
   ];
@@ -1311,6 +1330,7 @@ export default function(
   };
   icn["GR.M1.AMPHIBIOUS WARFARE SHIP "] = {
     type: "path",
+    strokewidth: 3,
     d: "M 113,75 100,75 90,64.3 95,65 l 0,-8 10,0 0,8 5.5,-0.6 L 100,75"
   };
   icn["GR.M1.ANTISUBMARINE WARFARE"] = textm1("P");
@@ -1414,11 +1434,13 @@ export default function(
   icn["GR.M1.MINE COUNTERMEASURE"] = textm1("MCM");
   icn["GR.M1.MISSILE"] = {
     type: "path",
+    strokewidth: 3,
     d: "M95,80 L95,60 C95,55 105,55 105,60 L105,80 M100,80 L100,55",
     fill: false
   };
   icn["GR.M1.(MOBILE) ADVISOR AND SUPPORT"] = {
     type: "path",
+    strokewidth: 3,
     d:
       "m 105,65 5,5 -5,5 M 90,70 c 20,0 20,0 20,0 m 15,0 c 0,2.8 -2.2,5 -5,5 -2.8,0 -5,-2.2 -5,-5 0,-2.8 2.2,-5 5,-5 2.8,0 5,2.2 5,5 z m -40,0 c 0,2.8 -2.2,5 -5,5 -2.8,0 -5,-2.2 -5,-5 0,-2.8 2.2,-5 5,-5 2.8,0 5,2.2 5,5 z",
     fill: false
@@ -1438,6 +1460,7 @@ export default function(
   icn["GR.M1.MULTINATIONAL SPECIALIZED UNIT"] = textm1("MSU");
   icn["GR.M1.MULTIPLE ROCKET LAUNCHER"] = {
     type: "path",
+    strokewidth: 3,
     d: "M85,75 l15,-15 15,15 M85,67 l15,-15 15,15",
     fill: false
   };
@@ -1512,6 +1535,7 @@ export default function(
   ];
   icn["GR.M1.RADAR"] = {
     type: "path",
+    strokewidth: 3,
     fill: false,
     d: "m 85,55 c 0.1,21.4 11.7,24.6 25,25 M 116,55 101,67.5 101,55 86.6,66.9"
   };
@@ -1546,17 +1570,20 @@ export default function(
     "GR.M1.AIRFIELD, AERIAL PORT OF DEBARKATION, OR AERIAL PORT OF EMBARKATION"
   ] = {
     type: "path",
+    strokewidth: 3,
     d: "m 80,70 40,0 M 80,80 111,55",
     fill: false
   };
   icn["GR.M1.PIPELINE"] = {
     type: "path",
+    strokewidth: 3,
     d:
       "m 92,66 -12,0 m 12,8 -12,0 m 28,0 12,0 m -12,-8 12,0 m -20,-11 0,7 m -5,-7 10,0 m -13,7 0,16 16,0 0,-16 -16,0",
     fill: false
   };
   icn["GR.M1.POSTAL"] = {
     type: "path",
+    strokewidth: 3,
     d: "m 90,60 15,0 c 0,5 0,10 10,15 -15,0 -20,0 -25,-15",
     fill: false
   };
@@ -1567,8 +1594,7 @@ export default function(
   };
   icn["GR.M1.INDEPENDENT COMMAND"] = {
     type: "path",
-    d:
-      "m 111.8,59.2 0,15.8 m -7.9,-7.9 15.8,0 m -31.6,-7.9 0,15.8 m 7.9,-7.9 -15.8,0",
+    d: "m 110,59 v 16  m -8,-8 h 16  M 90,59 v 16  m 8,-8 H 82",
     fill: false
   };
   icn["GR.M1.MULTI-PURPOSE BLADE"] = {
@@ -1597,6 +1623,7 @@ export default function(
   icn["GR.M1.SENSOR CONTROL MODULE"] = textm1("SCM");
   icn["GR.M1.SIGNALS INTELLIGENCE"] = {
     type: "path",
+    strokewidth: 3,
     fill: false,
     d: "m 100,55 0,23 m -15,-18 5,-5 5,5 5,-5 5,5 5,-5 5,5"
   };
@@ -1604,6 +1631,7 @@ export default function(
   icn["GR.M1.SINGLE SHELTER SWITCH"] = textm1("SSS");
   icn["GR.M1.SINGLE ROCKET LAUNCHER"] = {
     type: "path",
+    strokewidth: 3,
     d: "M85,75 l15,-15 15,15",
     fill: false
   };
@@ -1629,6 +1657,7 @@ export default function(
   icn["GR.M1.SUPPORT"] = textm1("SPT");
   icn["GR.M1.SURVEY"] = {
     type: "path",
+    strokewidth: 3,
     d: "m 108,78 -8,-8 m 0,0 -8,8 m 8,-8 0,-15 15,8 z"
   };
   icn["GR.M1.TACTICAL EXPLOITATION"] = textm1("TE");
@@ -1640,6 +1669,7 @@ export default function(
   icn["GR.M1.THEATRE"] = textm1("XXXXX");
   icn["GR.M1.TOPOGRAPHIC"] = {
     type: "path",
+    strokewidth: 3,
     fill: false,
     d: "m 92,65 c 6,3 10,3 16,0 m -18,13 10,-23 10,23"
   };
@@ -1654,6 +1684,7 @@ export default function(
   icn["GR.M1.UTILITY"] = textm1("U");
   icn["GR.M1.VIDEO IMAGERY"] = {
     type: "path",
+    strokewidth: 3,
     fill: false,
     d: "m 120,65 -11,0 m 11,10 -14,0 m 4,-14 -30,0 0,18 25,0 z m 10,2 0,14"
   };
@@ -1670,6 +1701,7 @@ export default function(
   };
   icn["GR.M2.ARCTIC"] = {
     type: "path",
+    strokewidth: 3,
     d: "M115,125 C125,125 125,135 115,135 L85,135 C75,135 75,125 85,125",
     fill: false
   };
@@ -1702,6 +1734,7 @@ export default function(
   icn["GR.M2.COMBAT SEARCH AND RESCUE"] = textm2("CSAR");
   icn["GR.M2.CONTROL"] = {
     type: "path",
+    strokewidth: 3,
     d:
       "m 98,130 2,-4 2,4 m -8,8 -4,-2 4,-2 m 8,8 -2,4 -2,-4 m 8,-8 4,2 -4,2 m -14,-2 16,0 m -8,-8 0,16",
     fill: false
@@ -1753,6 +1786,7 @@ export default function(
   icn["GR.M2.DIGITAL"] = textm2("DIG");
   icn["GR.M2.ENHANCED POSITION LOCATION REPORTING SYSTEM"] = {
     type: "path",
+    strokewidth: 3,
     d: "m 87,142 13,-12 13,12 m -13,-20 0,20 0,0",
     fill: false
   };
@@ -1765,6 +1799,7 @@ export default function(
   icn["GR.M1.CYBERSPACE"] = textm1("CYB");
   icn["GR.M2.AIR ASSAULT"] = {
     type: "path",
+    strokewidth: 3,
     fill: false,
     d: "m 85,125 15,20 15,-20"
   };
@@ -1788,6 +1823,7 @@ export default function(
   ];
   icn["GR.M2.INTERMODAL"] = {
     type: "path",
+    strokewidth: 3,
     d: "m 80,125 40,0 0,-4 8,9 -8,9 0,-4 -40,0 0,4 -8,-9 8,-9 z",
     fill: false
   };
@@ -1805,6 +1841,7 @@ export default function(
   icn["GR.M2.LABORATORY"] = textm2("LAB");
   icn["GR.M2.LAUNCHER"] = {
     type: "path",
+    strokewidth: 3,
     fill: false,
     d: "M80,140 L115,120 120,140"
   };
@@ -1854,24 +1891,28 @@ export default function(
   icn["GR.M2.AMPHIBIOUS"] = {
     Unknown: {
       type: "path",
+      strokewidth: 3,
       d:
         "M 64 144.9 C 80.4 143.9 63.1 125 81.4 125 C 100.2 125 81.4 145 100.2 145 C 119 145 100.2 125 119 125 C 137.1 125 120.2 143.6 135.9 144.9",
       fill: false
     },
     Friend: {
       type: "path",
+      strokewidth: 3,
       d:
         "m 25,145 c 18.8,0 0,-20 18.8,-20 18.8,0 0,20 18.8,20 18.8,0 0,-20 18.8,-20 18.8,0 0,20 18.8,20 18.8,0 0,-20 18.8,-20 18.8,0 0,20 18.8,20 18.8,0 0,-20 18.8,-20 18.8,0 0,20 20,20",
       fill: false
     },
     Neutral: {
       type: "path",
+      strokewidth: 3,
       d:
         "M 45 125 C 61.7 125.9 44.2 145 62.6 145 C 81.4 145 62.6 125 81.4 125 C 100.2 125 81.4 145 100.2 145 C 119 145 100.2 125 119 125 C 137.8 125 119 145 137.8 145 C 155.9 145 138.9 126.2 154.8 125 ",
       fill: false
     },
     Hostile: {
       type: "path",
+      strokewidth: 3,
       d:
         "M 70.4 142.4 C 74.8 137 66.8 125 81.4 125 C 100.2 125 81.4 145 100.2 145 C 119 145 100.2 125 119 125 C 133.3 125 125.7 136.6 129.7 142.1 ",
       fill: false
@@ -1879,6 +1920,7 @@ export default function(
   }[affiliation];
   icn["GR.M2.PACK ANIMAL"] = {
     type: "path",
+    strokewidth: 3,
     d: "m 84,140 9,-15 7,15 7,-15 9,15",
     fill: false
   };
@@ -1888,14 +1930,15 @@ export default function(
     type: "text",
     stroke: false,
     x: 115,
-    y: 133,
-    fontsize: 25,
+    y: 142,
+    fontsize: 28,
     text: "P"
   };
   icn["GR.M2.RADIO RELAY LINE OF SIGHT"] = [
-    { type: "circle", cx: 100, cy: 132, r: 11, fill: false },
+    { type: "circle", cx: 100, cy: 132, r: 11, fill: false, strokewidth: 3 },
     {
       type: "path",
+      strokewidth: 3,
       d:
         "M 90.8 128.2 C 90.3 129.3 90 130.6 90 132 C 90 133.4 90.3 134.7 90.8 135.8 L 100 132 L 90.8 128.2 z M 100 132 L 109.3 135.8 C 109.7 134.7 110 133.4 110 132 C 110 130.6 109.7 129.3 109.3 128.2 L 100 132 z"
     }
@@ -1915,11 +1958,13 @@ export default function(
   ];
   icn["GR.M2.RECOVERY (UNMANNED SYSTEMS)"] = {
     type: "path",
+    strokewidth: 3,
     d: "m 70,125 c0,20 60,20 60,0",
     fill: false
   };
   icn["GR.M2.RECOVERY (MAINTENANCE)"] = {
     type: "path",
+    strokewidth: 3,
     fill: false,
     d: "M75,125 c8,0 8,16 0,16 m8,-8 l35,0 m8,-8 c-8,0 -8,16 0,16"
   };
@@ -1927,6 +1972,7 @@ export default function(
   icn["GR.M2.RESCUE COORDINATION CENTRE"] = textm2("RCC");
   icn["GR.M2.RIVERINE"] = {
     type: "path",
+    strokewidth: 3,
     d: "m 80,125 c 0,10 40,10 40,0 z",
     fill: false
   };
@@ -1951,9 +1997,9 @@ export default function(
   icn["GR.M2.TACTICAL MISSILE"] = textm2("T");
   icn["GR.M2.TARGET ACQUISITION"] = textm2("TA");
   icn["GR.M2.TOWED"] = [
-    { type: "path", d: "M70,120 l60,0", fill: false },
-    { type: "circle", fill: false, cx: 65, cy: 120, r: 5 },
-    { type: "circle", fill: false, cx: 135, cy: 120, r: 5 }
+    { type: "path", strokewidth: 3, d: "M70,120 l60,0", fill: false },
+    { type: "circle", strokewidth: 3, fill: false, cx: 65, cy: 120, r: 5 },
+    { type: "circle", strokewidth: 3, fill: false, cx: 135, cy: 120, r: 5 }
   ];
   icn["GR.M2.TROOP"] = textm2("T");
   icn["GR.M2.TRACKED"] = {
@@ -1979,8 +2025,8 @@ export default function(
     type: "text",
     stroke: false,
     x: 115,
-    y: 133,
-    fontsize: 25,
+    y: 142,
+    fontsize: 28,
     text: "V"
   };
   icn["GR.M2.WHEELED"] = [

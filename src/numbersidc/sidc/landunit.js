@@ -225,6 +225,7 @@ export default {
       sId["141701"] = [icn["GR.IC.SECURITY"], icn["GR.IC.ARMOUR"]];
       sId["141702"] = [icn["GR.IC.SECURITY"], icn["GR.IC.FF.MOTORIZED"]];
       sId["141800"] = [icn["GR.IC.SEARCH AND RESCUE"]];
+      sId["141801"] = [icn["GR.IC.ISOLATED PERSONNEL"]];
       sId["141900"] = [icn["GR.IC.SECURITY POLICE (AIR)"]];
       sId["142000"] = [icn["GR.IC.SHORE PATROL"]];
       sId["142100"] = [icn["GR.IC.TOPOGRAPHIC"]];
