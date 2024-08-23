@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.0.0
+
+### Changed
+
+- ColorModes now includes a property "Suspect" for the new colors introduced in 2525E
+
+- When calling ms.ColorMode you should now include a suspect color if you use 2525E `ms.ColorMode(civilian, friend, hostile, neutral, unknown, suspect)`
+
 ## 2.0.0
 
 ### Added
