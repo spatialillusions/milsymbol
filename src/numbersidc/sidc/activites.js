@@ -246,6 +246,8 @@ export default {
       sIdm1["18"] = [icn["ST.M1.THEFT"]];
       sIdm1["19"] = [icn["GR.M1.HIJACKER"]];
       sIdm1["20"] = [icn["GR.M1.CYBERSPACE"]];
+      sIdm1["21"] = [icn["AC.M1.EVICTION"]];
+      sIdm1["22"] = [icn["AC.M1.RAID"]];
 
       sIdm2["01"] = [icn["GR.M2.CYBERSPACE"]];
       sIdm2["02"] = [icn["GR.M2.SECURITY FORCE ASSISTANCE"]];
