@@ -1,11 +1,11 @@
 var ms = new (function() {
   this._autoValidation = false;
-  this.version = "2.0.0";
+  this.version = "3.0.0";
   if (typeof console === "object" && typeof process !== "object") {
     console.info(
       "milsymbol.js " +
         this.version +
-        " - Copyright (c) 2018 M" +
+        " - Copyright (c) 2024 M" +
         String.fromCharCode(229) +
         "ns Beckman  http://www.spatialillusions.com"
     );
@@ -123,7 +123,12 @@ ms._getIconParts = function iconparts(
   return icn;
 };
 
-ms._scale = function(factor, instruction) {
+ms._scale = function(factor, instruction, non_scaling_stroke) {
+  if (non_scaling_stroke && Array.isArray(instruction)) {
+    instruction.forEach(d => {
+      d.non_scaling_stroke = 1 / factor;
+    });
+  }
   return {
     type: "translate",
     x: 100 - factor * 100,

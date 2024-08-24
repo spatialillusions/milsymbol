@@ -87,7 +87,8 @@ export default function asSVG() {
             if (typeof instruction[i].stroke !== "undefined") {
               svg +=
                 'stroke-width="' +
-                (instruction[i].strokewidth || this.style.strokeWidth) +
+                (instruction[i].non_scaling_stroke || 1) *
+                  (instruction[i].strokewidth || this.style.strokeWidth) +
                 '" ';
               if (instruction[i].strokedasharray)
                 svg +=
