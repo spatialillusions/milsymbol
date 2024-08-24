@@ -51,7 +51,8 @@ export default {
       sId["112000"] = [
         icn["GR.IN.IC.INDUSTRIAL SITE"],
         icn["GR.IN.IC.WAREHOUSE/STORAGE FACILITY"]
-      ]; //'Military/Civilian.Warehouse/Storage Facility';
+      ];
+      sId["112001"] = [icn["GR.IC.GRENADE"]];
       sId["112100"] = [icn["GR.IC.FF.LAW ENFORCEMENT"]];
       sId["112101"] = [
         icn[
