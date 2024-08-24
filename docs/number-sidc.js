@@ -194,13 +194,13 @@ function renderSymbolSet(symbolset) {
     ) {
       output +=
         "</td><td>" +
-        "<!--" +
+        "<!-- " +
         "1003" +
         symbolset.symbolset +
         "0000" +
         symbolset.mainIcon[i]["Code"] +
         "0000" +
-        "-->" +
+        " -->" +
         symbol.asSVG();
       output += "</td>";
     } else {
@@ -312,6 +312,13 @@ function renderSymbolSet(symbolset) {
       output += "<br><br><em>Symbol Set Code:</em> " + symbolset.symbolset;
       output += "<br><em>Code:</em> " + symbolset.modifier2[i]["Code"];
       output += "</td><td>";
+      output +=
+        "<!-- " +
+        "1003" +
+        symbolset.symbolset +
+        "000000000000" +
+        symbolset.modifier2[i]["Code"] +
+        " -->";
       if (
         //symbolset.modifier2[i]["Code"] != 99 &&
         !isNaN(symbolset.modifier2[i]["Code"])
