@@ -87,6 +87,7 @@ export default {
         ms._scale(0.7, icn["ST.IC.BOMB"]),
         icn["ST.IC.EXPLOSION"]
       ];
+      sId["110700"] = [icn["GR.IN.MC.HOME"]];
       sId["120000"] = [icn["AC.IC.CRIMINAL.CIVIL DISTURBANCE"]];
       sId["120100"] = [icn["ST.IC.DEMONSTRATION"]];
       sId["130000"] = [];
@@ -222,6 +223,7 @@ export default {
         icn["ST.M2.RELIGIOUS"]
       ];
       sId["180200"] = [icn["ST.IC.INDIVIDUAL"], icn["ST.M1.SPEAKER"]];
+      sId["180300"] = [icn["GR.IC.ISOLATED PERSONNEL"]];
 
       //sIdm1['00'] = 'Unspecified';
       sIdm1["01"] = [icn["ST.M1.ASSASSINATION"]];

@@ -36,6 +36,17 @@ export default {
       sId["110208"] = [icn["GR.IC.SECURITY"]];
       sId["110209"] = [icn["GR.IC.SNIPER"]];
       sId["110210"] = [icn["GR.IC.SPECIAL OPERATIONS FORCES"]];
+      sId["110211"] = [icn["GR.EQ.DESIGNATED MARKSMAN"]];
+      sId["110212"] = [icn["GR.EQ.MEDIC"]];
+      sId["110213"] = [icn["GR.IC.FF.SIGNAL DISMOUNTED"]];
+      sId["110214"] = [icn["GR.IC.FF.RECONNAISSANCE DISMOUNTED"]];
+      sId["110215"] = [icn["GR.IC.FF.INFANTRY DISMOUNTED"]];
+      sId["110216"] = [icn["GR.EQ.CLOSE PROTECTION"]];
+      sId["110217"] = [icn["GR.EQ.CROWD AND RIOT CONTROL"]];
+      sId["110218"] = [icn["GR.EQ.SPECIAL WEAPONS AND TACTICS (SWAT)"]];
+      sId["110219"] = [icn["GR.EQ.DEMOLITION"]];
+      sId["110220"] = [icn["GR.EQ.COMMANDER (CDR)"]];
+      sId["110221"] = [icn["GR.EQ.SECOND IN COMMAND (SIC)"]];
 
       sId["110300"] = [];
       sId["110301"] = [icn["GR.EQ.RIFLE"]];

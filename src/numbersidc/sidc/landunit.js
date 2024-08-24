@@ -607,6 +607,11 @@ export default {
       sIdm2["78"] = [icn["GR.M2.SECURITY FORCE ASSISTANCE"]];
       sIdm2["81"] = [icn["GR.M2.SURGICAL"]];
       sIdm2["82"] = [icn["GR.M2.BLOOD"]];
+      sIdm2["83"] = [icn["GR.M2.COMBAT AND OPERATIONAL STRESS CONTROL"]];
+      sIdm2["84"] = [icn["GR.M2.JAMMING"]];
+      sIdm2["86"] = [icn["GR.M2.OPTOMETRY"]];
+      sIdm2["87"] = [icn["GR.M2.PREVENTIVE MEDICIN"]];
+      sIdm2["89"] = [icn["GR.IC.FF.AIR DEFENCE"]];
     }
   }
 };

@@ -72,6 +72,7 @@ export default {
       sId["112200"] = [icn["GR.IC.FF.EMERGENCY OPERATION"]];
       sId["112201"] = [icn["GR.IC.FIRE PROTECTION"]];
       sId["112202"] = [icn["GR.IC.EMERGENCY MEDICAL OPERATION"]];
+      sId["112300"] = [icn["GR.IN.MC.HOME"]];
       sId["120000"] = [];
       sId["120100"] = [icn["GR.IN.IC.AGRICULTURE AND FOOD INFRASTRUCTURE"]];
       sId["120101"] = [icn["GR.IN.IC.AGRICULTURAL LABORATORY"]];
@@ -130,6 +131,7 @@ export default {
       sId["120800"] = [icn["GR.IN.IC.MILITARY INFRASTRUCTURE"]];
       sId["120801"] = [icn["GR.IN.IC.BASE"], icn["AC.M1.MILITARY ARMORY"]];
       sId["120802"] = [icn["GR.IN.IC.BASE"]];
+      sId["120803"] = [icn["GR.IN.IC.AIRPORT"]];
       sId["120900"] = [icn["GR.IN.IC.POSTAL SERVICE INFRASTRUCTURE"]];
       sId["120901"] = [icn["GR.IN.IC.POSTAL DISTRIBUTION CENTER"]];
       sId["120902"] = [icn["GR.IN.IC.POST OFFICE"]];
@@ -210,6 +212,7 @@ export default {
       sIdm2["07"] = [icn["GR.IN.M2.NUCLEAR MATERIAL STORAGE"]];
       sIdm2["08"] = [icn["GR.IN.M2.WEAPONS GRADE PRODUCTION"]];
       sIdm2["09"] = [icn["GR.M2.CYBERSPACE"]];
+      sIdm2["10"] = [icn["GR.IN.M2.TRANSPORTATION"]];
     }
   }
 };
