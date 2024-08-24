@@ -21,7 +21,7 @@ import engagmentbar from "./symbolfunctions/engagmentbar.js";
 import affliationdimension from "./symbolfunctions/affliationdimension.js";
 import textfields from "./symbolfunctions/textfields.js";
 import directionarrow from "./symbolfunctions/directionarrow.js";
-//import debug from "./symbolfunctions/debug.js";
+import debug from "./symbolfunctions/debug.js";
 
 ms.setColorMode = function(mode, colorMode) {
   this._colorModes[mode] = {};
@@ -84,7 +84,6 @@ ms.reset = function() {
   ms.addSymbolPart(affliationdimension);
   ms.addSymbolPart(textfields);
   ms.addSymbolPart(directionarrow);
-  //ms.addSymbolPart(debug);
 };
 
 ms.reset();
@@ -233,6 +232,9 @@ ms.setStandard = function(standard) {
   return false;
 };
 
+ms.showOctagon = function() {
+  ms.addSymbolPart(debug);
+};
 /* ***************************************************************************************
 Add base geometries
 *************************************************************************************** */
