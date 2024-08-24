@@ -269,6 +269,7 @@ export default function icon(ms) {
         }
       } else {
         //Handle special cases of dismounted individual where weapons should be scaled
+        // TODO take care of common modifiers...
         var mainSIDC = Number(this.metadata.functionid.substr(0, 6));
         if (
           this.metadata.dismounted &&
@@ -279,19 +280,28 @@ export default function icon(ms) {
             this.metadata.functionid.substr(6, 2) != "00" &&
             this.metadata.functionid.substr(8, 2) != "00"
           ) {
-            mainIcon = [ms._scale(0.5, mainIcon)];
+            mainIcon = [ms._scale(0.45, mainIcon, true)];
           }
           if (
             this.metadata.functionid.substr(6, 2) == "00" &&
             this.metadata.functionid.substr(8, 2) != "00"
           ) {
-            mainIcon = [ms._translate(0, -10, ms._scale(0.7, mainIcon))];
+            mainIcon = [ms._translate(0, -10, ms._scale(0.7, mainIcon, true))];
           }
           if (
             this.metadata.functionid.substr(6, 2) != "00" &&
             this.metadata.functionid.substr(8, 2) == "00"
           ) {
-            mainIcon = [ms._translate(0, 10, ms._scale(0.7, mainIcon))];
+            mainIcon = [ms._translate(0, 10, ms._scale(0.7, mainIcon, true))];
+          }
+          if (
+            this.metadata.functionid.substr(6, 2) == "00" &&
+            this.metadata.functionid.substr(8, 2) == "00"
+          ) {
+            // This is to make sure we reset the stroke width if the symbol shouldn't be scaled.
+            // Not the cleanest way to do it, but it works
+            // TODO to fix this in a better way, will probably never be done
+            mainIcon = [ms._scale(1, mainIcon, true)];
           }
         }
         // End special case, just add to draw array
