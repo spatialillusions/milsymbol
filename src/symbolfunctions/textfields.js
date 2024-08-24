@@ -187,18 +187,27 @@ export default function textfields(ms) {
   // Print text in right position
   function text(str) {
     var size = 42;
-    var y = 115;
+    var y = 100;
     if (str.length == 1) {
       size = 45;
-      y = 115;
     }
     if (str.length == 3) {
       size = 35;
-      y = 110;
     }
-    if (str.length >= 4) {
+    if (str.length == 4) {
       size = 32;
-      y = 110;
+    }
+    if (str.length == 5) {
+      size = 29;
+    }
+    if (str.length == 6) {
+      size = 26;
+    }
+    if (str.length == 7) {
+      size = 25;
+    }
+    if (str.length >= 8) {
+      size = 24;
     }
     var t = {
       type: "text",
@@ -206,6 +215,7 @@ export default function textfields(ms) {
       x: 100,
       y: y,
       textanchor: "middle",
+      alignmentBaseline: "middle",
       fontsize: size,
       fontfamily: fontFamily,
       fill: fontColor,
