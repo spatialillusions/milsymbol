@@ -482,7 +482,10 @@ export default function modifier(ms) {
         this.metadata.mobility == "Over snow (prime mover)" ||
         this.metadata.mobility == "Sled"
       ) {
-        bbox.y2 += 13;
+        bbox.y2 += 18;
+      }
+      if (this.metadata.mobility == "Barge") {
+        bbox.y2 += 5;
       }
     }
     var mobilities = {
