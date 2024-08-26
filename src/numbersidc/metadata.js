@@ -48,6 +48,12 @@ export function metadata(ms, metadata, mapping) {
   };
 
   var functionid = (metadata.functionid = this.options.sidc.substr(10, 10));
+  metadata._modifier1 =
+    (this.options.sidc.substr(20, 1) || "0") +
+    (functionid.substr(6, 2) || "00");
+  metadata._modifier2 =
+    (this.options.sidc.substr(21, 1) || "0") +
+    (functionid.substr(8, 2) || "00");
 
   metadata.context = mapping.context[parseInt(this.options.sidc.substr(2, 1))];
   metadata.affiliation = affiliationMapping[standardIdentity2];

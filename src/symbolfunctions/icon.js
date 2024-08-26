@@ -321,8 +321,17 @@ export default function icon(ms) {
       if (this.metadata.functionid.substr(4, 2) == "98")
         drawArray2.push(iconParts["GR.IC.FF.THEATRE SUPPORT"]);
       //Modifier 1
-      if (this.metadata.functionid.substr(6, 2) != "00") {
-        var modifier1 = m1[this.metadata.functionid.substr(6, 2)];
+      if (this.metadata._modifier1.substr(0, 1) == "0") {
+        if (this.metadata.functionid.substr(6, 2) != "00") {
+          let modifier1 = m1[this.metadata.functionid.substr(6, 2)];
+          if (typeof modifier1 === "undefined") {
+            this.validIcon = false;
+          } else {
+            drawArray2.push(modifier1);
+          }
+        }
+      } else {
+        let modifier1 = m1[this.metadata._modifier1];
         if (typeof modifier1 === "undefined") {
           this.validIcon = false;
         } else {
@@ -331,22 +340,23 @@ export default function icon(ms) {
       }
 
       //Modifier 2
-      if (this.metadata.functionid.substr(8, 2) != "00") {
-        var modifier2 = m2[this.metadata.functionid.substr(8, 2)];
+      if (this.metadata._modifier2.substr(0, 1) == "0") {
+        if (this.metadata.functionid.substr(8, 2) != "00") {
+          let modifier2 = m2[this.metadata.functionid.substr(8, 2)];
+          if (typeof modifier2 === "undefined") {
+            this.validIcon = false;
+          } else {
+            drawArray2.push(modifier2);
+          }
+        }
+      } else {
+        let modifier2 = m2[this.metadata._modifier2];
         if (typeof modifier2 === "undefined") {
           this.validIcon = false;
         } else {
           drawArray2.push(modifier2);
         }
       }
-      /*
-      var modifier2 =
-        this.metadata.functionid.substr(8, 2) != "00"
-          ? m2[this.metadata.functionid.substr(8, 2)] || []
-          : [];
-      if (modifier2.length) {
-        drawArray2.push(modifier2);
-      }*/
     } else {
       //Letter based SIDC
       var genericSIDC =

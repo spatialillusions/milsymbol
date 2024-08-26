@@ -87,7 +87,7 @@ export default function getMetadata() {
     .replace(/\*/g, "-")
     .replace(/ /g, "");
 
-  metadata.numberSIDC = !isNaN(this.options.sidc);
+  metadata.numberSIDC = !isNaN(this.options.sidc.substr(0, 2));
   if (metadata.numberSIDC) {
     //This is for new number based SIDCs
 
