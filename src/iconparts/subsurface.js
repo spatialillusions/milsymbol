@@ -625,7 +625,7 @@ export default function(
             : "rgb(255,255,0)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
-      d: "m 75.5,136.8 49,0 M 100,130.5 l 0,7.3"
+      d: "m 75.5,136.8 49,0 M 100,128.5 l 0,9.3"
     }
   ];
   icn["SU.IC.SEA MINE MILEC - FLOATING"] = [
@@ -719,7 +719,7 @@ export default function(
             : "rgb(0, 130, 24)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
-      d: "m 75.5,136.8 49,0 M 100,130.5 l 0,7.3"
+      d: "m 75.5,136.8 49,0 M 100,128.5 l 0,9.3"
     }
   ];
   icn["SU.IC.SEA MINE MILCO - FLOATING"] = [
@@ -979,7 +979,7 @@ export default function(
             : "rgb(0, 130, 24)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
-      d: "m 75.5,136.8 49,0 M 100,130.5 l 0,7.3"
+      d: "m 75.5,136.8 49,0 M 100,128.5 l 0,9.3"
     }
   ];
   icn["SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT - FLOATING"] = [
