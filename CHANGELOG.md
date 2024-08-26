@@ -2,11 +2,27 @@
 
 ## 3.0.0
 
+### Added
+
+- Support for MIL-STD-2525E and STANAG APP6 E
+
 ### Changed
+
+- Icons will now as far as possible be based on MIL-STD-2525E / FM 1-02.2 look and feel
+
+- Minor changes for readability on multiple icons
 
 - ColorModes now includes a property "Suspect" for the new colors introduced in 2525E
 
 - When calling ms.ColorMode you should now include a suspect color if you use 2525E `ms.ColorMode(civilian, friend, hostile, neutral, unknown, suspect)`
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
 
 ## 2.0.0
 
