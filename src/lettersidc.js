@@ -18,7 +18,7 @@ import std2525bextra from "./lettersidc/sidc/2525b-ch2.js";
 import tacticalpoints2525 from "./lettersidc/sidc/tactical-points-2525.js";
 import tacticalpointsapp6 from "./lettersidc/sidc/tactical-points-app6.js";
 
-var app6b = [
+const app6b = [
   space,
   air,
   ground,
@@ -29,7 +29,7 @@ var app6b = [
   sof,
   tacticalpointsapp6
 ];
-var std2525b = [
+const std2525b = [
   space,
   air,
   ground,
@@ -43,7 +43,7 @@ var std2525b = [
   std2525bextra,
   tacticalpoints2525
 ];
-var std2525c = [
+const std2525c = [
   space,
   air,
   ground,
