@@ -12,6 +12,7 @@ import {
   std2525c, // 2525C
   app6d, // APP6-D
   std2525d, // 2525D
+  std2525e, // 2525E
   path2d // Pollyfill for Path2D in IE or node-canvas
 } from "./index.esm.js";
 
@@ -20,6 +21,7 @@ ms.addIcons(std2525b);
 ms.addIcons(std2525c);
 ms.addIcons(app6d);
 ms.addIcons(std2525d);
+ms.addIcons(std2525e);
 ms.Path2D = path2d;
 
 /* ***************************************************************************************

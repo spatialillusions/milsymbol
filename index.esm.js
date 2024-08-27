@@ -19,7 +19,7 @@ export {
   tacticalpoints2525 as lettertacticalpoints2525,
   tacticalpointsapp6 as lettertacticalpointsapp6
 } from "./src/lettersidc.js";
-export { app6d, std2525d } from "./src/numbersidc.js";
+export { app6d, std2525d, std2525e } from "./src/numbersidc.js";
 export {
   air as numberair,
   airmissile as numberairmissile,
