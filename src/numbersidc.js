@@ -1,6 +1,7 @@
 /* ***************************************************************************************
- based SIDC
+Number based SIDC
 *************************************************************************************** */
+import common from "./numbersidc/sidc/common.js";
 import air from "./numbersidc/sidc/air.js";
 import airmissile from "./numbersidc/sidc/airmissile.js";
 import space from "./numbersidc/sidc/space.js";
@@ -18,7 +19,7 @@ import cyberspace from "./numbersidc/sidc/cyberspace.js";
 import dismountedindividual from "./numbersidc/sidc/dismountedindividual.js";
 import tacticalpoints from "./numbersidc/sidc/control-measure.js";
 
-var app6d = [
+const app6d = [
   air,
   airmissile,
   space,
@@ -35,7 +36,7 @@ var app6d = [
   dismountedindividual,
   tacticalpoints
 ];
-var std2525d = [
+const std2525d = [
   air,
   airmissile,
   space,
@@ -52,9 +53,30 @@ var std2525d = [
   cyberspace,
   tacticalpoints
 ];
+
+const std2525e = [
+  common,
+  air,
+  airmissile,
+  space,
+  spacemissile,
+  landunit,
+  landcivilian,
+  landequipment,
+  landinstallation,
+  sea,
+  subsurface,
+  minewarfare,
+  activites,
+  signalsintelligence,
+  cyberspace,
+  tacticalpoints
+];
+
 export {
   app6d,
   std2525d,
+  std2525e,
   air,
   airmissile,
   space,
