@@ -45,51 +45,51 @@ export default function(
 
   icn["SP.I.ANTISATELLITE WEAPON"] = {
     type: "path",
-    strokewidth: 3,
+
     d:
       "m 100,110 v 9  m 0,-35 v 6  m 0,-9 -2,3 h 4 z  m -8,9 v 20 h 16 V 90 Z  m 26,0 v 20 h 26 V 90 Z  M 82,90 H 56 v 20 h 26 z  m 0,10 h 10  m 16,0 h 10"
   };
   icn["SP.I.ASTRONOMICAL SATELLITE"] = {
     type: "path",
-    strokewidth: 3,
+
     d:
       "m 97,90 -1,-9 h 8 l -1,9  m -5,20 1,9 h 2 l 1,-9  m 6,-10 h 10  m -36,0 H 92  M 82,90 H 56 v 20 h 26 z  m 36,0 v 20 h 26 V 90 Z  m -26,0 v 20 h 16 V 90 Z"
   };
   icn["SP.I.BIOSATELLITE"] = {
     type: "path",
-    strokewidth: 3,
+
     d:
       "m 98,88 c 0,3 -2.5,6 -6,6 -3.5,0 -6,-3 -6,-6 0,-4 2.5,-7 6,-7 3.5,0 6,3 6,7 z  m -6,11 v 20 h 16 V 99 Z  m 26,0 v 20 h 22 V 99 Z  M 82,99 H 60 v 20 h 22 z  m 0,10 h 10  m 16,0 h 10  M 96.192895,82.850539 115,94 114,96 98,87.5"
   };
   icn["SP.I.CAPSULE"] = {
     type: "path",
-    strokewidth: 3,
+
     d: "m 85,115 c -2,5 32,5 30,0 l -5,-30 c -1,-5 -19,-5 -20,0 z"
   };
   icn["SP.I.CIVILIAN ASTRONOMICAL SATELLITE"] = {
     type: "path",
-    strokewidth: 3,
+
     fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
     d:
       "m 97,90 -1,-9 h 8 l -1,9  m -5,20 1,9 h 2 l 1,-9  m 6,-10 h 10  m -36,0 H 92  M 82,90 H 56 v 20 h 26 z  m 36,0 v 20 h 26 V 90 Z  m -26,0 v 20 h 16 V 90 Z"
   };
   icn["SP.I.CIVILIAN BIOSATELLITE"] = {
     type: "path",
-    strokewidth: 3,
+
     fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
     d:
       "m 98,88 c 0,3 -2.5,6 -6,6 -3.5,0 -6,-3 -6,-6 0,-4 2.5,-7 6,-7 3.5,0 6,3 6,7 z  m -6,11 v 20 h 16 V 99 Z  m 26,0 v 20 h 22 V 99 Z  M 82,99 H 60 v 20 h 22 z  m 0,10 h 10  m 16,0 h 10  M 96.192895,82.850539 115,94 114,96 98,87.5"
   };
   icn["SP.I.CIVILIAN CAPSULE"] = {
     type: "path",
-    strokewidth: 3,
+
     fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
     d: "m 85,115 c -2,5 32,5 30,0 l -5,-30 c -1,-5 -19,-5 -20,0 z"
   };
   icn["SP.I.CIVILIAN COMMUNICATIONS SATELLITE"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
       d:
         "m 108,109 h 10  m -36,0 H 92  M 82,99 H 60 v 20 h 22 z  m 36,0 v 20 h 22 V 99 Z  m -26,0 v 20 h 16 V 99 Z"
@@ -97,14 +97,14 @@ export default function(
     {
       type: "path",
       fill: false,
-      strokewidth: 3,
+
       d: "m 100,90 0,9 M 75,81 c 16,12 34,12 50,0"
     }
   ];
   icn["SP.I.CIVILIAN EARTH OBSERVATION SATELLITE"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
       d:
         "m 107,113 c 0,4 -3.1,7 -7,7 -3.9,0 -7,-3.1 -7,-7 0,-3.9 3.1,-7 7,-7 4,0 7,3.1 7,7 z  M 91.905742,81 92,97 h 16 l -0.0943,-16 z  M 117.90574,81 118,97 h 22 l -0.0943,-16 z  m -35.999998,0 h -22 L 60,97 H 82 Z  M 82,89 h 10  m 16,0 h 10"
@@ -112,21 +112,21 @@ export default function(
     {
       type: "path",
       fill: false,
-      strokewidth: 3,
+
       d: "m 88,107 c 8,-9 16,-9 24,0"
     }
   ];
   icn["SP.I.CIVILIAN MINIATURIZED SATELLITE"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
       d:
         "m 92,94 v 12 h 16 V 94 Z  m 26,0 v 12 h 14 V 94 Z  M 82,94 H 68 v 12 h 14 z  m 0,6 h 9.1  m 17,0 h 10"
     },
     {
       type: "path",
-      strokewidth: 3,
+
       fill: false,
       d:
         "m 90,119 10,-9 10,9 m -20,-38 10,9 10,-9 m 35,9 -10,10 10,10 M 55,90 65,100 55,110"
@@ -135,7 +135,7 @@ export default function(
   icn["SP.I.CIVILIAN NAVIGATIONAL SATELLITE"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
       d:
         "m 108,109 h 10  m -36,0 H 92  M 82,99 H 60 v 20 h 22 z  m 36,0 v 20 h 22 V 99 Z  m -26,0 v 20 h 16 V 99 Z"
@@ -143,27 +143,27 @@ export default function(
     {
       type: "path",
       fill: false,
-      strokewidth: 3,
+
       d: "m 88,87 c 8,6 16,6 24,0 m -20,8 8,-14 8,14"
     }
   ];
   icn["SP.I.CIVILIAN ORBITER SHUTTLE"] = {
     type: "path",
-    strokewidth: 3,
+
     fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
     d: "m 89,115 6,-25 c 3,-12 7,-12 10,0 l 6,25 -10,0 -1,5 -1,-5 z"
   };
   icn["SP.I.CIVILIAN SATELLITE"] = {
     type: "path",
     fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
-    strokewidth: 3,
+
     d:
       "m 108,100 h 10  m -36,0 H 92  M 82,90 H 56 v 20 h 26 z  m 36,0 v 20 h 26 V 90 Z  m -26,0 v 20 h 16 V 90 Z"
   };
   icn["SP.I.CIVILIAN SPACE STATION"] = {
     type: "path",
     fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
-    strokewidth: 3,
+
     d:
       "m 97.5,112.5 0,7.5 5,0 0,-7.5 z m 0,-32.5 5,0 0,26.4 -5,0 z m -0.3,7.6 C 83.3,88.2 72.5,93.5 72.5,100 c 0,6.9 12.3,12.5 27.5,12.5 15.2,0 27.5,-5.6 27.5,-12.5 0,-6.5 -11,-11.9 -25,-12.4 l 0,5.6 c 9.9,0.4 17.5,3.2 17.5,6.6 0,3.7 -8.9,6.7 -19.8,6.7 -10.9,0 -19.8,-3 -19.8,-6.7 0,-3.4 7.4,-6.1 17.1,-6.6 l 0,-5.6 c -0.1,0 -0.2,-0 -0.3,0 z"
   };
@@ -175,14 +175,14 @@ export default function(
   icn["SP.I.CIVILIAN TETHERED SATELLITE"] = {
     type: "path",
     fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
-    strokewidth: 3,
+
     d:
       "m 120,87 -20,12  m 33,-12 c 0,3.6 -2.9,6.5 -6.5,6.5 -3.6,0 -6.5,-2.9 -6.5,-6.5 0,-3.6 2.9,-6.5 6.5,-6.5 3.6,0 6.5,2.9 6.5,6.5 z  m -25,22 h 10  m -36,0 H 92  M 82,99 H 60 v 20 h 22 z  m 36,0 v 20 h 22 V 99 Z  m -26,0 v 20 h 16 V 99 Z"
   };
   icn["SP.I.CIVILIAN WEATHER SATELLITE"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
       d:
         "m 108,109 h 10  m -36,0 H 92  M 82,99 H 60 v 20 h 22 z  m 36,0 v 20 h 22 V 99 Z  m -26,0 v 20 h 16 V 99 Z"
@@ -205,14 +205,14 @@ export default function(
   icn["SP.I.COMMUNICATIONS SATELLITE"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       d:
         "m 108,109 h 10  m -36,0 H 92  M 82,99 H 60 v 20 h 22 z  m 36,0 v 20 h 22 V 99 Z  m -26,0 v 20 h 16 V 99 Z"
     },
     {
       type: "path",
       fill: false,
-      strokewidth: 3,
+
       d: "m 100,90 0,9 M 75,81 c 16,12 34,12 50,0"
     }
   ];
@@ -221,14 +221,14 @@ export default function(
   icn["SP.I.EARTH OBSERVATION SATELLITE"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       d:
         "m 107,113 c 0,4 -3.1,7 -7,7 -3.9,0 -7,-3.1 -7,-7 0,-3.9 3.1,-7 7,-7 4,0 7,3.1 7,7 z  M 91.905742,81 92,97 h 16 l -0.0943,-16 z  M 117.90574,81 118,97 h 22 l -0.0943,-16 z  m -35.999998,0 h -22 L 60,97 H 82 Z  M 82,89 h 10  m 16,0 h 10"
     },
     {
       type: "path",
       fill: false,
-      strokewidth: 3,
+
       d: "m 88,107 c 8,-9 16,-9 24,0"
     }
   ];
@@ -254,7 +254,7 @@ export default function(
   icn["SP.I.FF.SPACE STATION"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       d:
         "m 103.1,97.4 c -12.4,0.3 -25.7,0.1 -36.7,6.7 -4.1,2.1 -8.5,5.9 -7.8,11 0.2,3.7 0.3,7.4 0.5,11.1 6.2,7.8 16.6,10.4 26,11.8 14,1.8 28.5,1.2 42.1,-3 5.2,-1.7 10.4,-4.3 14.2,-8.3 0.3,-5.1 -0.3,-10.4 0.7,-15.3 -1.2,-4.3 -5.9,-6.4 -9.7,-8.2 -9.2,-4 -19.3,-5.4 -29.2,-5.6 z m -3.2,9.6 c 10.1,-0.2 20.5,1.9 29.1,7.4 -13,8.4 -29.6,9.7 -44.3,6.1 -4.9,-1.3 -9.7,-3.3 -13.7,-6.4 8.8,-4.9 18.9,-6.9 28.9,-7.2 z",
       fill: STD2525 ? iconFillColor : none
@@ -284,7 +284,7 @@ export default function(
     },
     {
       type: "path",
-      strokewidth: 3,
+
       fill: false,
       d:
         "m 90,119 10,-9 10,9 m -20,-38 10,9 10,-9 m 35,9 -10,10 10,10 M 55,90 65,100 55,110"
@@ -293,14 +293,14 @@ export default function(
   icn["SP.I.NAVIGATIONAL SATELLITE"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       d:
         "m 108,109 h 10  m -36,0 H 92  M 82,99 H 60 v 20 h 22 z  m 36,0 v 20 h 22 V 99 Z  m -26,0 v 20 h 16 V 99 Z"
     },
     {
       type: "path",
       fill: false,
-      strokewidth: 3,
+
       d: "m 88,87 c 8,6 16,6 24,0 m -20,8 8,-14 8,14"
     }
   ];
@@ -316,14 +316,14 @@ export default function(
   icn["SP.I.RE-ENTRY VEHICLE"] = text("RV");
   icn["SP.I.RECONNAISSANCE SATELLITE"] = {
     type: "path",
-    strokewidth: 3,
+
     d:
       "m 106,100 9,20  m -21,-20 -9,20  m 17,-20 3,20  m -7,-20 -3,20  m 13,-30 h 10  M 82,90 H 92  M 82,81 H 60 v 19 h 22 z  m 36,0 v 19 h 22 V 81 Z  m -26,0 v 19 h 16 V 81 Z"
   };
   icn["SP.I.SATELLITE, GENERAL"] = text("SAT");
   icn["SP.I.SATELLITE"] = {
     type: "path",
-    strokewidth: 3,
+
     d:
       "m 108,100 h 10  m -36,0 H 92  M 82,90 H 56 v 20 h 26 z  m 36,0 v 20 h 26 V 90 Z  m -26,0 v 20 h 16 V 90 Z"
   };
@@ -336,14 +336,14 @@ export default function(
   icn["SP.I.SPACE VEHICLE"] = text("SV");
   icn["SP.I.TETHERED SATELLITE"] = {
     type: "path",
-    strokewidth: 3,
+
     d:
       "m 120,87 -20,12  m 33,-12 c 0,3.6 -2.9,6.5 -6.5,6.5 -3.6,0 -6.5,-2.9 -6.5,-6.5 0,-3.6 2.9,-6.5 6.5,-6.5 3.6,0 6.5,2.9 6.5,6.5 z  m -25,22 h 10  m -36,0 H 92  M 82,99 H 60 v 20 h 22 z  m 36,0 v 20 h 22 V 99 Z  m -26,0 v 20 h 16 V 99 Z"
   };
   icn["SP.I.WEATHER SATELLITE"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       d:
         "m 108,109 h 10  m -36,0 H 92  M 82,99 H 60 v 20 h 22 z  m 36,0 v 20 h 22 V 99 Z  m -26,0 v 20 h 16 V 99 Z"
     },
@@ -367,7 +367,7 @@ export default function(
   icn["SP.M2.INFRARED"] = textm2("IR");
   icn["SP.M2.LASER"] = {
     type: "path",
-    strokewidth: 3,
+
     fill: false,
     d:
       "m 130,129 h -17 l -3,7 -3,-13 -4,13 -3.1,-13 -3.4,6 h -9.9 l -3.3,7 -3.3,-13 -3.3,13 -3.3,-13 -3.3,13  m 52.9,-13 7,6 -7,7"
@@ -375,12 +375,12 @@ export default function(
   icn["SP.M2.MAINTENANCE"] = {
     type: "path",
     fill: false,
-    strokewidth: 3,
+
     d: "M75,125 c8,0 8,16 0,16 m8,-8 l35,0 m8,-8 c-8,0 -8,16 0,16"
   };
   icn["SP.M2.MINE"] = {
     type: "path",
-    strokewidth: 3,
+
     d:
       "m 111,133 c 0,4 -5,6 -11,6 -6.3,0 -11.4,-2 -11.4,-6 0,-2 5.1,-5 11.4,-5 6,0 11,3 11,5 z  m -2,-11 -17.5,23  m 0,-23 17.5,23  m -9,-23 v 23"
   };
