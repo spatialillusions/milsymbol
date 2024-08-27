@@ -258,7 +258,7 @@ export default function(
         ? colors.iconColor.Hostile
         : iconFillColor,
     stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
-    strokewidth: 3,
+
     d:
       "M 115.9,73 126.5,62.4 137.1,73 126.5,83.6 m -53,0 L 62.9,73 73.5,62.4 84.1,73 m 8.4,-3 0,-15 15,0 0,15 m 22.5,30 c 0,16.6 -13.4,30 -30,30 -16.6,0 -30,-13.4 -30,-30 0,-16.6 13.4,-30 30,-30 C 116.6,70 130,83.4 130,100 z"
   };
@@ -266,7 +266,7 @@ export default function(
     icn["SU.IC.SEA MINE"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? colors.iconColor.Hostile
@@ -279,7 +279,7 @@ export default function(
     icn["SU.IC.SEA MINE"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? colors.iconColor.Hostile
@@ -292,7 +292,7 @@ export default function(
     icn["SU.IC.SEA MINE"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill: false,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"
@@ -302,7 +302,7 @@ export default function(
     icn["SU.IC.SEA MINE"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         numberSIDC && alternateMedal
           ? ""
@@ -317,7 +317,7 @@ export default function(
     icn["SU.IC.SEA MINE"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill: false,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 130,100 15,0 M 70,100 l -15,0"
@@ -358,7 +358,7 @@ export default function(
   icn["SU.IC.SEA MINE EXERCISE MINE"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -398,7 +398,7 @@ export default function(
     icn["SU.IC.SEA MINE EXERCISE MINE"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -413,7 +413,7 @@ export default function(
     icn["SU.IC.SEA MINE EXERCISE MINE"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -428,7 +428,7 @@ export default function(
     icn["SU.IC.SEA MINE EXERCISE MINE"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill: false,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"
@@ -438,7 +438,7 @@ export default function(
     icn["SU.IC.SEA MINE EXERCISE MINE"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -451,7 +451,7 @@ export default function(
   ];
   icn["SU.IC.SEA MINE DECOY"] = {
     type: "path",
-    strokewidth: 3,
+
     fill:
       (STD2525 || numberSIDC) && !monoColor
         ? alternateMedal
@@ -466,7 +466,7 @@ export default function(
     icn["SU.IC.SEA MINE DECOY"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -481,7 +481,7 @@ export default function(
     icn["SU.IC.SEA MINE DECOY"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -495,7 +495,7 @@ export default function(
   icn["SU.IC.SEA MINE NEUTRALIZED"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? colors.iconColor.Neutral
@@ -515,7 +515,7 @@ export default function(
     icn["SU.IC.SEA MINE NEUTRALIZED"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? colors.iconColor.Neutral
@@ -528,7 +528,7 @@ export default function(
     icn["SU.IC.SEA MINE NEUTRALIZED"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? colors.iconColor.Neutral
@@ -541,7 +541,7 @@ export default function(
     icn["SU.IC.SEA MINE NEUTRALIZED"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill: false,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"
@@ -551,7 +551,7 @@ export default function(
     icn["SU.IC.SEA MINE NEUTRALIZED"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? colors.iconColor.Neutral
@@ -564,7 +564,7 @@ export default function(
     icn["SU.IC.SEA MINE NEUTRALIZED"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill: false,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 130,100 15,0 M 70,100 l -15,0"
@@ -573,7 +573,7 @@ export default function(
   icn["SU.IC.SEA MINE MILEC"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -602,7 +602,7 @@ export default function(
     icn["SU.IC.SEA MINE MILEC"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -617,7 +617,7 @@ export default function(
     icn["SU.IC.SEA MINE MILEC"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -632,7 +632,7 @@ export default function(
     icn["SU.IC.SEA MINE MILEC"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill: false,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"
@@ -641,7 +641,7 @@ export default function(
   icn["SU.IC.SEA MINE MINE ANCHOR"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -669,7 +669,7 @@ export default function(
   icn["SU.IC.SEA MINE MILCO"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -696,7 +696,7 @@ export default function(
     icn["SU.IC.SEA MINE MILCO"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -711,7 +711,7 @@ export default function(
     icn["SU.IC.SEA MINE MILCO"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -726,7 +726,7 @@ export default function(
     icn["SU.IC.SEA MINE MILCO"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill: false,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"
@@ -829,7 +829,7 @@ export default function(
     icn["SU.IC.SEA MINE NEGATIVE REACQUISITION"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -844,7 +844,7 @@ export default function(
     icn["SU.IC.SEA MINE NEGATIVE REACQUISITION"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -859,7 +859,7 @@ export default function(
     icn["SU.IC.SEA MINE NEGATIVE REACQUISITION"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill: false,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"
@@ -868,7 +868,7 @@ export default function(
   icn["SU.IC.SEA MINE GENERAL OBSTRUCTOR"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -896,7 +896,7 @@ export default function(
   icn["SU.IC.SEA MINE GENERAL OBSTRUCTOR NEUTRALIZED"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? colors.iconColor.Neutral
@@ -927,7 +927,7 @@ export default function(
   icn["SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -956,7 +956,7 @@ export default function(
     icn["SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -971,7 +971,7 @@ export default function(
     icn["SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -986,7 +986,7 @@ export default function(
     icn["SU.IC.SEA MINE NON-MINE MINE-LIKE CONTACT"],
     {
       type: "path",
-      strokewidth: 3,
+
       fill: false,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10"
@@ -1019,7 +1019,7 @@ export default function(
   icn["SU.IC.ENVIRONMENTAL REPORT LOCATION"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       fill: false,
       stroke:
         (STD2525 || numberSIDC) && !monoColor
@@ -1043,7 +1043,7 @@ export default function(
   icn["SU.IC.DIVE REPORT LOCATION"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       fill: false,
       stroke:
         (STD2525 || numberSIDC) && !monoColor
@@ -1066,7 +1066,7 @@ export default function(
   ];
   icn["SU.IC.SEABED INSTALLATION/MANMADE"] = {
     type: "path",
-    strokewidth: 3,
+
     fill: iconFillColor,
     stroke: black,
     d: "m 140,125 -80,0 10,-30 10,20 20,-50 20,50 10,-25 z"
