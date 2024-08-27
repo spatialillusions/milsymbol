@@ -18,6 +18,8 @@ export function defaultProperties(instructions, iconColor) {
     }
     if (!instructions.hasOwnProperty("fill")) instructions.fill = iconColor;
     if (!instructions.hasOwnProperty("stroke")) instructions.stroke = iconColor;
+    if (!instructions.hasOwnProperty("strokewidth"))
+      instructions.strokewidth = 3;
     return;
   }
 }
