@@ -91,10 +91,11 @@ function labels(icon) {
 }
 
 function renderSymbolSet(symbolset) {
+  console.log(symbolset);
   var output = "";
   var i;
-  output += "<h2>" + symbolset.name + "</h2>";
-  output += "<h3>" + symbolset.name + " Main Icon</h3>";
+  output += "<h2>" + (symbolset.name || "Common") + "</h2>";
+  output += "<h3>" + (symbolset.name || "Common") + " Main Icon</h3>";
   output += "<table border=1><thead><tr><th>Description</th><th>Icon</th>";
 
   if (symbolset.symbolset == 36) output += "<th>Alternate Icon</th>";
@@ -111,7 +112,7 @@ function renderSymbolSet(symbolset) {
       continue;
     var symbol = new ms.Symbol(
       "1003" +
-        symbolset.symbolset +
+        (symbolset.symbolset || "10") +
         "0000" +
         symbolset.mainIcon[i]["Code"] +
         "0000",
@@ -181,7 +182,7 @@ function renderSymbolSet(symbolset) {
         }
       }
 
-      output += "<br><em>Symbol Set Code:</em> " + symbolset.symbolset;
+      output += "<br><em>Symbol Set Code:</em> " + (symbolset.symbolset || "");
     }
 
     output += "<br><em>Code:</em> " + symbolset.mainIcon[i]["Code"];
@@ -196,7 +197,7 @@ function renderSymbolSet(symbolset) {
         "</td><td>" +
         "<!-- " +
         "1003" +
-        symbolset.symbolset +
+        (symbolset.symbolset || "10") +
         "0000" +
         symbolset.mainIcon[i]["Code"] +
         "0000" +
@@ -212,7 +213,7 @@ function renderSymbolSet(symbolset) {
         "<td>" +
         new ms.Symbol(
           "1003" +
-            symbolset.symbolset +
+            (symbolset.symbolset || "10") +
             "0000" +
             symbolset.mainIcon[i]["Code"] +
             "0000",
@@ -231,24 +232,47 @@ function renderSymbolSet(symbolset) {
   }
   output += "</table>";
   if (symbolset.modifier1.length) {
-    output += "<h3>" + symbolset.name + " Modifier 1</h3>";
+    output += "<h3>" + (symbolset.name || "Common") + " Modifier 1</h3>";
     output +=
       "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
     for (i = 0; i < symbolset.modifier1.length; i++) {
       if (symbolset.modifier1[i]["First Modifier"] == "{Disused}") continue;
-      var symbol = new ms.Symbol(
-        "1003" +
-          symbolset.symbolset +
-          "0000000000" +
-          symbolset.modifier1[i]["Code"] +
-          "00",
-        { size: size },
-        remarks(symbolset.modifier1[i]["Remarks"])
-      );
+
+      if (
+        symbolset.modifier1[i]["Code"] &&
+        symbolset.modifier1[i]["Code"].length == 2
+      ) {
+        var symbol = new ms.Symbol(
+          "1003" +
+            (symbolset.symbolset || "10") +
+            "0000000000" +
+            symbolset.modifier1[i]["Code"] +
+            "00",
+          { size: size },
+          remarks(symbolset.modifier1[i]["Remarks"])
+        );
+      }
+      if (
+        symbolset.modifier1[i]["Code"] &&
+        symbolset.modifier1[i]["Code"].length == 3
+      ) {
+        var symbol = new ms.Symbol(
+          "1003" +
+            (symbolset.symbolset || "10") +
+            "0000000000" +
+            symbolset.modifier1[i]["Code"].substr(1, 2) +
+            "00" +
+            symbolset.modifier1[i]["Code"].substr(0, 1),
+          { size: size },
+          remarks(symbolset.modifier1[i]["Remarks"])
+        );
+      }
+
       output += "<tr";
 
       if (
-        symbolset.modifier1[i]["Code"].length == 2 &&
+        symbolset.modifier1[i]["Code"] &&
+        //symbolset.modifier1[i]["Code"].length == 2 &&
         //symbolset.modifier1[i]["Code"] != 99 &&
         !symbol.isValid() &&
         !(symbolset.symbolset == "25" && symbolset.modifier1[i]["Code"] <= 12) // mobility modifiers we don't support
@@ -264,7 +288,8 @@ function renderSymbolSet(symbolset) {
       }
 
       output += "><td><b>" + symbolset.modifier1[i]["First Modifier"] + "</b>";
-      output += "<br><br><em>Symbol Set Code:</em> " + symbolset.symbolset;
+      output +=
+        "<br><br><em>Symbol Set Code:</em> " + (symbolset.symbolset || "");
       output += "<br><em>Code:</em> " + symbolset.modifier1[i]["Code"];
       output += "</td><td>";
       if (
@@ -278,23 +303,45 @@ function renderSymbolSet(symbolset) {
     output += "</table>";
   }
   if (symbolset.modifier2.length != 0) {
-    output += "<h3>" + symbolset.name + " Modifier 2</h3>";
+    output += "<h3>" + (symbolset.name || "Common") + " Modifier 2</h3>";
     output +=
       "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
     for (i = 0; i < symbolset.modifier2.length; i++) {
       if (symbolset.modifier2[i]["Second Modifier"] == "{Disused}") continue;
-      var symbol = new ms.Symbol(
-        "1003" +
-          symbolset.symbolset +
-          "000000000000" +
-          symbolset.modifier2[i]["Code"],
-        { size: size },
-        remarks(symbolset.modifier2[i]["Remarks"])
-      );
+      if (
+        symbolset.modifier2[i]["Code"] &&
+        symbolset.modifier2[i]["Code"].length == 2
+      ) {
+        var symbol = new ms.Symbol(
+          "1003" +
+            (symbolset.symbolset || "10") +
+            "000000000000" +
+            symbolset.modifier2[i]["Code"] +
+            "00",
+          { size: size },
+          remarks(symbolset.modifier2[i]["Remarks"])
+        );
+      }
+      if (
+        symbolset.modifier2[i]["Code"] &&
+        symbolset.modifier2[i]["Code"].length == 3
+      ) {
+        var symbol = new ms.Symbol(
+          "1003" +
+            (symbolset.symbolset || "10") +
+            "000000000000" +
+            symbolset.modifier2[i]["Code"].substr(1, 2) +
+            "0" +
+            symbolset.modifier2[i]["Code"].substr(0, 1),
+          { size: size },
+          remarks(symbolset.modifier2[i]["Remarks"])
+        );
+      }
+
       output += "<tr";
 
       if (
-        symbolset.modifier2[i]["Code"].length == 2 &&
+        //symbolset.modifier2[i]["Code"].length == 2 &&
         //symbolset.modifier2[i]["Code"] != 99 &&
         !symbol.isValid()
       ) {
@@ -309,13 +356,14 @@ function renderSymbolSet(symbolset) {
       }
 
       output += "><td><b>" + symbolset.modifier2[i]["Second Modifier"] + "</b>";
-      output += "<br><br><em>Symbol Set Code:</em> " + symbolset.symbolset;
+      output +=
+        "<br><br><em>Symbol Set Code:</em> " + (symbolset.symbolset || "");
       output += "<br><em>Code:</em> " + symbolset.modifier2[i]["Code"];
       output += "</td><td>";
       output +=
         "<!-- " +
         "1003" +
-        symbolset.symbolset +
+        (symbolset.symbolset || "10") +
         "000000000000" +
         symbolset.modifier2[i]["Code"] +
         " -->";
