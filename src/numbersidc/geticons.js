@@ -1,4 +1,3 @@
-//import { ms } from "../ms.js";
 export function geticons(ms, symbolSet, iconParts, STD2525) {
   var iconSIDC = {};
   var iconModifier1 = {};
