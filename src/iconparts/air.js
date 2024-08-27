@@ -52,20 +52,20 @@ export default function(
   icn["AR.I.CIVILIAN"].strokewidth = 3;
   icn["AR.I.MILITARY FIXED WING"] = {
     type: "path",
-    strokewidth: 3,
+
     d:
       "M100,100 L130,88 c15,0 15,24 0,24 L100,100 70,112 c-15,0 -15,-24 0,-24 Z"
   };
   icn["AR.I.CIVILIAN FIXED WING"] = {
     type: "path",
-    strokewidth: 3,
+
     fill: false,
     d:
       "M100,100 L130,88 c15,0 15,24 0,24 L100,100 70,112 c-15,0 -15,-24 0,-24 Z"
   };
   icn["AR.I.FF.CIVILIAN FIXED WING"] = {
     type: "path",
-    strokewidth: 3,
+
     stroke: black,
     d:
       "M62,80 l30,0 0,-10 16,0 0,10 30,0 0,15 -30,0 0,25 10,0 0,5 -36,0 0,-5 10,0 0,-25 -30,0 Z M95,70 l0,-5 10,0 0,5",
@@ -73,12 +73,12 @@ export default function(
   };
   icn["AR.I.MILITARY ROTARY WING"] = {
     type: "path",
-    strokewidth: 3,
+
     d: "M60,85 l40,15 40,-15 0,30 -40,-15 -40,15 z"
   };
   icn["AR.I.CIVILIAN ROTARY WING"] = {
     type: "path",
-    strokewidth: 3,
+
     fill: STD2525 || numberSIDC ? iconFillColor : false,
     stroke: black,
     d: "M60,85 l40,15 40,-15 0,30 -40,-15 -40,15 z"
@@ -86,7 +86,7 @@ export default function(
   icn["AR.I.FF.CIVILIAN ROTARY WING"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       stroke: black,
       d:
         "M80,70 l10,10 M120,110 l-10,-10 M80,110 l10,-10 M120,70 l-10,10 M100,115 l0,20 M95,135 l10,0",
@@ -94,7 +94,7 @@ export default function(
     },
     {
       type: "path",
-      strokewidth: 3,
+
       stroke: black,
       fill: STD2525 ? iconFillColor : false,
       d:
@@ -102,17 +102,17 @@ export default function(
     }
   ];
   icn["AR.I.MILITARY BALLOON"] = [
-    { type: "circle", strokewidth: 3, cx: 100, cy: 95, r: 15 },
-    { type: "path", strokewidth: 3, d: "M95,110 l0,10 10,0 0,-10 z" }
+    { type: "circle", cx: 100, cy: 95, r: 15 },
+    { type: "path", d: "M95,110 l0,10 10,0 0,-10 z" }
   ];
   icn["AR.I.FF.MILITARY BALLOON"] = [
-    { type: "path", strokewidth: 3, d: "M90,115 l20,0 0,20 -20,0 z" },
-    { type: "circle", strokewidth: 3, cx: 100, cy: 90, r: 35 }
+    { type: "path", d: "M90,115 l20,0 0,20 -20,0 z" },
+    { type: "circle", cx: 100, cy: 90, r: 35 }
   ];
   icn["AR.I.CIVILIAN BALLOON"] = [
     {
       type: "circle",
-      strokewidth: 3,
+
       fill: STD2525 || numberSIDC ? iconFillColor : false,
       stroke: black,
       cx: 100,
@@ -121,7 +121,7 @@ export default function(
     },
     {
       type: "path",
-      strokewidth: 3,
+
       fill: STD2525 || numberSIDC ? iconFillColor : false,
       stroke: black,
       d: "M95,110 l0,10 10,0 0,-10 z"
@@ -130,14 +130,14 @@ export default function(
   icn["AR.I.FF.CIVILIAN BALLOON"] = [
     {
       type: "path",
-      strokewidth: 3,
+
       fill: STD2525 || numberSIDC ? iconFillColor : false,
       stroke: black,
       d: "M90,125 l20,0 0,10 -20,0 z"
     },
     {
       type: "circle",
-      strokewidth: 3,
+
       fill: STD2525 || numberSIDC ? iconFillColor : false,
       stroke: black,
       cx: 100,
@@ -147,13 +147,13 @@ export default function(
   ];
   icn["AR.I.MILITARY AIRSHIP"] = {
     type: "path",
-    strokewidth: 3,
+
     d:
       "m 110,110 10,10 10,0 -5,-15 m 0,-10 5,-15 -10,0 -10,10 m 17.2,10 c 0,6.1 -12.2,11.1 -27.2,11.1 -15,0 -27.2,-5 -27.2,-11.1 0,-6.1 12.2,-11.1 27.2,-11.1 15,0 27.2,5 27.2,11.1 z"
   };
   icn["AR.I.CIVILIAN AIRSHIP"] = {
     type: "path",
-    strokewidth: 3,
+
     fill: STD2525 || numberSIDC ? iconFillColor : false,
     stroke: black,
     d:
@@ -161,7 +161,7 @@ export default function(
   };
   icn["AR.I.CIVILIAN MEDICAL EVACUATION"] = {
     type: "path",
-    strokewidth: 3,
+
     fill: STD2525 || numberSIDC ? iconFillColor : false,
     stroke: black,
     d: "M93,83 l14,0 0,10 10,0 0,14 -10,0 0,10 -14,0 0,-10 -10,0 0,-14 10,0 Z"
@@ -173,19 +173,19 @@ export default function(
   };
   icn["AR.I.AIR DECOY"] = {
     type: "path",
-    strokewidth: 3,
+
     d:
       "M65,95 l15,-15 0,30 Z M92.5,95 l15,-15 0,30 Z M120,95 l15,-15 0,30 Z M65,120 l70,0 0,-5 -70,0 Z"
   };
   icn["SU.IC.AIR DECOY DSymbol"] = {
     type: "path",
-    strokewidth: 3,
+
     d:
       "M 85 81 L 65 98 L 85 119 L 85 81 z M 110 81 L 90 98 L 110 119 L 110 81 z M 135 81 L 115 98 L 135 119 L 135 81 z"
   };
   icn["AR.I.MEDICAL EVACUATION"] = {
     type: "path",
-    strokewidth: 3,
+
     d: "M93,83 l14,0 0,10 10,0 0,14 -10,0 0,10 -14,0 0,-10 -10,0 0,-14 10,0 Z"
   };
   icn["AR.I.ATTACK/STRIKE"] = text("A");
@@ -231,14 +231,14 @@ export default function(
   //2525D
   icn["AR.I.FIXED-WING DSymbol"] = {
     type: "path",
-    strokewidth: 3,
+
     d: STD2525
       ? "M 99.4 80.8 C 97.9 81.1 98.1 83.4 98.1 83.4 L 98 90.7 L 78.6 107.4 L 79.3 109.4 L 98.1 98.3 L 98.3 112.9 L 93.9 116.6 L 93.9 118.7 L 98.8 116.8 C 99.1 117 99.7 117.5 99.7 117.5 C 99.7 117.5 100.4 117 100.7 116.8 L 105.6 118.7 L 105.6 116.6 L 101.1 112.9 L 101.3 98.3 L 120.2 109.4 L 120.9 107.4 L 101.5 90.7 L 101.3 83.4 C 101.3 83.4 101.6 81.1 100 80.8 C 99.8 80.8 99.6 80.8 99.4 80.8 z"
       : "M100,100 L130,88 c15,0 15,24 0,24 L100,100 70,112 c-15,0 -15,-24 0,-24 Z"
   };
   icn["AR.I.CIVILIAN FIXED-WING DSymbol"] = {
     type: "path",
-    strokewidth: 3,
+
     fill: STD2525 || numberSIDC ? iconFillColor : false,
     stroke: black,
     d: STD2525
@@ -252,19 +252,19 @@ export default function(
   icn["AR.I.ELECTRONIC ATTACK (EA)"] = text("EA");
   icn["AR.I.VERTICAL-TAKEOFF UAV (VT-UAV)"] = {
     type: "path",
-    strokewidth: 3,
+
     d:
       "m 70,84 30,14 30,-14 V 81 L 100,91 70,81 Z  m 0,9 30,15 30,-15 v 25 l -30,-10 -30,10 z"
   };
   icn["AR.I.TETHERED LIGHTER THAN AIR"] = {
     type: "path",
-    strokewidth: 3,
+
     d:
       "M 75,110 85,95 m -5,20 c 0,2.8 -2.2,5 -5,5 -2.8,0 -5,-2.2 -5,-5 0,-2.8 2.2,-5 5,-5 2.8,0 5,2.2 5,5 z m 15,-6 0,11 10,0 0,-11 m 10,-14 c 0,8.3 -6.7,15 -15,15 -8.3,0 -15,-6.7 -15,-15 0,-8.3 6.7,-15 15,-15 8.3,0 15,6.7 15,15 z"
   };
   icn["AR.I.CIVILIAN TETHERED LIGHTER THAN AIR"] = {
     type: "path",
-    strokewidth: 3,
+
     fill: STD2525 || numberSIDC ? iconFillColor : false,
     stroke: black,
     d:
@@ -272,7 +272,7 @@ export default function(
   };
   icn["AR.I.CIVILIAN UNMANNED AERIAL VEHICLE"] = {
     type: "path",
-    strokewidth: 3,
+
     fill: STD2525 || numberSIDC ? iconFillColor : false,
     stroke: black,
     d: "m 60,84 40,20 40,-20 0,8 -40,25 -40,-25 z"
@@ -280,7 +280,7 @@ export default function(
   icn["AR.I.WEAPON"] = text("WPN");
   icn["AR.I.UNDERWATER DECOY DSymbol"] = {
     type: "path",
-    strokewidth: 3,
+
     d:
       "M 85 81 L 65 98 L 85 119 L 85 81 z M 110 81 L 90 98 L 110 119 L 110 81 z M 135 81 L 115 98 L 135 119 L 135 81 z"
   };
@@ -309,7 +309,7 @@ export default function(
   ];
   icn["AIR.M1.MEDEVAC"] = {
     type: "path",
-    strokewidth: 3,
+
     stroke: false,
     d: "M95.5,80 l9,0 0,-9 9,0 0,-9 -9,0 0,-9 -9,0 0,9 -9,0 0,9 9,0 Z"
   };
@@ -379,7 +379,6 @@ export default function(
   };
   icn["AIR.MISSILE.ICON"] = {
     type: "path",
-    strokewidth: 3,
     d: "M90,135 l0,-10 5,-5 0,-55 5,-5 5,5 0,55 5,5 0,10 -10,-10 z"
   };
   if (STD2525 || numberSIDC)
