@@ -74,6 +74,8 @@ export function metadata(ms, metadata, mapping) {
     metadata.space = true;
   //SymbolSets that are Activities
   if (symbolSet == "40") metadata.activity = true;
+  //SymbolSets that are landequipment
+  if (symbolSet == "15") metadata.landequipment = true;
   //SymbolSets that are Installations
   if (symbolSet == "20") metadata.installation = true;
   //SymbolSets that are control-measure
