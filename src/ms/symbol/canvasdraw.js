@@ -135,7 +135,9 @@ export default function canvasDraw(ctx, instruction) {
             ctx.fillText(
               instruction[i].text,
               instruction[i].x,
-              instruction[i].y
+              // There is a small difference in text insertion points between SVG and Canvas
+              // add some portion of the fontsize to compensate for this
+              instruction[i].y + instruction[i].fontsize * 0.15
             );
 
             if (instruction[i].stroke)
