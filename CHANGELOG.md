@@ -16,6 +16,8 @@
 
 - When calling ms.ColorMode you should now include a suspect color if you use 2525E `ms.ColorMode(civilian, friend, hostile, neutral, unknown, suspect)`
 
+- uniqueDesignation will now be rendered with a smaller font on most control measure points
+
 ### Deprecated
 
 ### Removed
