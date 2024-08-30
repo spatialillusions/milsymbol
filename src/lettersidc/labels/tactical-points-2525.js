@@ -119,8 +119,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -144,8 +144,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -190,8 +190,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -215,8 +215,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -240,8 +240,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -265,8 +265,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -290,8 +290,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -315,8 +315,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -417,8 +417,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -506,8 +506,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -656,8 +656,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -683,8 +683,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -709,8 +709,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -736,8 +736,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -763,8 +763,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -790,8 +790,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -816,8 +816,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -891,8 +891,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -917,8 +917,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -944,8 +944,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -971,8 +971,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -998,8 +998,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -1024,8 +1024,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     uniqueDesignation1: {
       stroke: false,
@@ -1058,8 +1058,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -1085,8 +1085,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -1112,8 +1112,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -1139,8 +1139,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -1166,8 +1166,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -1193,8 +1193,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -1220,8 +1220,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -1247,8 +1247,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -1274,8 +1274,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -1301,8 +1301,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -1328,8 +1328,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -1355,8 +1355,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -1678,8 +1678,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -1704,8 +1704,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
