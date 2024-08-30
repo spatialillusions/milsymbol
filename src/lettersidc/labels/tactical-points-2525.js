@@ -326,8 +326,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 140,
-      y: 125,
-      fontsize: 70
+      y: 117,
+      fontsize: 50
     }
   }; //TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
 

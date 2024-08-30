@@ -117,8 +117,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 150,
-      y: 0,
-      fontsize: 80
+      y: -30,
+      fontsize: 40
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
@@ -174,8 +174,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 140,
-      y: 125,
-      fontsize: 70
+      y: 117,
+      fontsize: 50
     }
   }; //Command and Control Points / Waypoint
   sidc["131900"] = {

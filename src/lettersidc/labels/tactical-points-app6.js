@@ -1731,8 +1731,8 @@ export default function tacticalPoints(sidc) {
       stroke: false,
       textanchor: "start",
       x: 140,
-      y: 125,
-      fontsize: 70
+      y: 117,
+      fontsize: 50
     }
   }; //2.X.2.5.2.10 WAY POINT
   sidc["G-O-VA----"] = {}; //2.X.3.1.1 ARSON/FIRE
