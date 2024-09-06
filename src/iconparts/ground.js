@@ -1547,28 +1547,28 @@ export default function(
   );
   icn["GR.M1.NODE CENTRE"] = textm1("NC");
   icn["GR.M1.NUCLEAR"] = textm1("N");
-  icn["GR.M1.OF-1"] = textm1("OF-1");
-  icn["GR.M1.OF-2"] = textm1("OF-2");
-  icn["GR.M1.OF-3"] = textm1("OF-3");
-  icn["GR.M1.OF-4"] = textm1("OF-4");
-  icn["GR.M1.OF-5"] = textm1("OF-5");
-  icn["GR.M1.OF-6"] = textm1("OF-6");
-  icn["GR.M1.OF-7"] = textm1("OF-7");
-  icn["GR.M1.OF-8"] = textm1("OF-8");
-  icn["GR.M1.OF-9"] = textm1("OF-9");
-  icn["GR.M1.OF-10"] = textm1("OF-10");
-  icn["GR.M1.OF-D"] = textm1("OF-D");
+  icn["GR.M1.OF-1"] = !STD2525 ? textm1("O-1/O-2") : textm1("OF-1");
+  icn["GR.M1.OF-2"] = STD2525 ? textm1("O-3") : textm1("OF-2");
+  icn["GR.M1.OF-3"] = STD2525 ? textm1("O-4") : textm1("OF-3");
+  icn["GR.M1.OF-4"] = STD2525 ? textm1("O-5") : textm1("OF-4");
+  icn["GR.M1.OF-5"] = STD2525 ? textm1("O-6") : textm1("OF-5");
+  icn["GR.M1.OF-6"] = STD2525 ? textm1("O-7") : textm1("OF-6");
+  icn["GR.M1.OF-7"] = STD2525 ? textm1("O-8") : textm1("OF-7");
+  icn["GR.M1.OF-8"] = STD2525 ? textm1("O-9") : textm1("OF-8");
+  icn["GR.M1.OF-9"] = STD2525 ? textm1("O-10") : textm1("OF-9");
+  icn["GR.M1.OF-10"] = STD2525 ? textm1("O-11") : textm1("OF-10");
+  icn["GR.M1.OF-D"] = STD2525 ? textm1("") : textm1("OF-D");
   icn["GR.M1.OPERATIONS"] = textm1("OPS");
   icn["GR.M1.OPTICAL"] = textm1("OPT");
-  icn["GR.M1.OR-1"] = textm1("OR-1");
-  icn["GR.M1.OR-2"] = textm1("OR-2");
-  icn["GR.M1.OR-3"] = textm1("OR-3");
-  icn["GR.M1.OR-4"] = textm1("OR-4");
-  icn["GR.M1.OR-5"] = textm1("OR-5");
-  icn["GR.M1.OR-6"] = textm1("OR-6");
-  icn["GR.M1.OR-7"] = textm1("OR-7");
-  icn["GR.M1.OR-8"] = textm1("OR-8");
-  icn["GR.M1.OR-9"] = textm1("OR-9");
+  icn["GR.M1.OR-1"] = STD2525 ? textm1("E-1") : textm1("OR-1");
+  icn["GR.M1.OR-2"] = STD2525 ? textm1("E-2") : textm1("OR-2");
+  icn["GR.M1.OR-3"] = STD2525 ? textm1("E-3") : textm1("OR-3");
+  icn["GR.M1.OR-4"] = STD2525 ? textm1("E-4") : textm1("OR-4");
+  icn["GR.M1.OR-5"] = STD2525 ? textm1("E-5") : textm1("OR-5");
+  icn["GR.M1.OR-6"] = STD2525 ? textm1("E-6") : textm1("OR-6");
+  icn["GR.M1.OR-7"] = STD2525 ? textm1("E-7") : textm1("OR-7");
+  icn["GR.M1.OR-8"] = STD2525 ? textm1("E-8") : textm1("OR-8");
+  icn["GR.M1.OR-9"] = STD2525 ? textm1("E-9") : textm1("OR-9");
   icn["GR.M1.OTHER"] = textm1("OTH");
   icn["GR.M1.PALLETIZED LOAD SYSTEM"] = textm1("PLS");
   icn["GR.M1.PERSONNEL RECOVERY"] = textm1("H");
@@ -1942,20 +1942,20 @@ export default function(
   icn["GR.M2.MOUNTAIN"] = {
     type: "path",
     stroke: false,
-    d: "M90,140 L100,120 110,140"
+    d: "m 87,142 10,-20 5,10 3,-5 8,15"
   };
   icn["GR.M2.MULTIPLE ALTITUDES"] = textm2("H/MA");
   icn["GR.M2.MULTI-CHANNEL"] = textm2("MC");
-  icn["GR.M2.OF-1"] = textm2("OF-1");
-  icn["GR.M2.OF-2"] = textm2("OF-2");
-  icn["GR.M2.OF-3"] = textm2("OF-3");
-  icn["GR.M2.OF-4"] = textm2("OF-4");
-  icn["GR.M2.OF-5"] = textm2("OF-5");
-  icn["GR.M2.OF-6"] = textm2("OF-6");
-  icn["GR.M2.OF-7"] = textm2("OF-7");
-  icn["GR.M2.OF-8"] = textm2("OF-8");
-  icn["GR.M2.OF-9"] = textm2("OF-9");
-  icn["GR.M2.OF-10"] = textm2("OF-10");
+  icn["GR.M2.OF-1"] = STD2525 ? textm2("O-1/O-2") : textm2("OF-1");
+  icn["GR.M2.OF-2"] = STD2525 ? textm2("O-3") : textm2("OF-2");
+  icn["GR.M2.OF-3"] = STD2525 ? textm2("O-4") : textm2("OF-3");
+  icn["GR.M2.OF-4"] = STD2525 ? textm2("O-5") : textm2("OF-4");
+  icn["GR.M2.OF-5"] = STD2525 ? textm2("O-6") : textm2("OF-5");
+  icn["GR.M2.OF-6"] = STD2525 ? textm2("O-7") : textm2("OF-6");
+  icn["GR.M2.OF-7"] = STD2525 ? textm2("O-8") : textm2("OF-7");
+  icn["GR.M2.OF-8"] = STD2525 ? textm2("O-9") : textm2("OF-8");
+  icn["GR.M2.OF-9"] = STD2525 ? textm2("O-10") : textm2("OF-9");
+  icn["GR.M2.OF-10"] = STD2525 ? textm2("O-11") : textm2("OF-10");
   icn["GR.M2.OF-D"] = textm2("OF-D");
   icn["GR.M2.OPTICAL"] = textm2("OPT");
   icn["GR.M2.OPTOMETRY"] = [
@@ -1972,15 +1972,15 @@ export default function(
       stroke: false
     }
   ];
-  icn["GR.M2.OR-1"] = textm2("OR-1");
-  icn["GR.M2.OR-2"] = textm2("OR-2");
-  icn["GR.M2.OR-3"] = textm2("OR-3");
-  icn["GR.M2.OR-4"] = textm2("OR-4");
-  icn["GR.M2.OR-5"] = textm2("OR-5");
-  icn["GR.M2.OR-6"] = textm2("OR-6");
-  icn["GR.M2.OR-7"] = textm2("OR-7");
-  icn["GR.M2.OR-8"] = textm2("OR-8");
-  icn["GR.M2.OR-9"] = textm2("OR-9");
+  icn["GR.M2.OR-1"] = STD2525 ? textm2("E-1") : textm2("OR-1");
+  icn["GR.M2.OR-2"] = STD2525 ? textm2("E-2") : textm2("OR-2");
+  icn["GR.M2.OR-3"] = STD2525 ? textm2("E-3") : textm2("OR-3");
+  icn["GR.M2.OR-4"] = STD2525 ? textm2("E-4") : textm2("OR-4");
+  icn["GR.M2.OR-5"] = STD2525 ? textm2("E-5") : textm2("OR-5");
+  icn["GR.M2.OR-6"] = STD2525 ? textm2("E-6") : textm2("OR-6");
+  icn["GR.M2.OR-7"] = STD2525 ? textm2("E-7") : textm2("OR-7");
+  icn["GR.M2.OR-8"] = STD2525 ? textm2("E-8") : textm2("OR-8");
+  icn["GR.M2.OR-9"] = STD2525 ? textm2("E-9") : textm2("OR-9");
   icn["GR.M2.GUERILLA"] = textm2("G");
   icn["GR.M2.AMPHIBIOUS"] = {
     Unknown: {
@@ -2044,11 +2044,11 @@ export default function(
     }
   ];
   icn["GR.M2.RAILROAD"] = [
-    { type: "path", d: "M60,120 l80,0", fill: false },
-    { type: "circle", fill: false, cx: 65, cy: 125, r: 5 },
-    { type: "circle", fill: false, cx: 75, cy: 125, r: 5 },
-    { type: "circle", fill: false, cx: 125, cy: 125, r: 5 },
-    { type: "circle", fill: false, cx: 135, cy: 125, r: 5 }
+    { type: "path", d: "M65,125 l70,0", fill: false },
+    { type: "circle", fill: false, cx: 70, cy: 130, r: 5 },
+    { type: "circle", fill: false, cx: 80, cy: 130, r: 5 },
+    { type: "circle", fill: false, cx: 120, cy: 130, r: 5 },
+    { type: "circle", fill: false, cx: 130, cy: 130, r: 5 }
   ];
   icn["GR.M2.TRACTOR TRAILER"] = [
     { type: "path", d: "M60,120 l80,0", fill: false },
@@ -2104,7 +2104,7 @@ export default function(
   icn["GR.M2.TROOP"] = textm2("T");
   icn["GR.M2.TRACKED"] = {
     type: "path",
-    d: "M 70,120 l 60,0 c10,0 10,10 0,10 l -60,0 c-10,0 -10,-10 0,-10",
+    d: "m 90,125 h 20 c 10,0 10,15 0,15 H 90 c -10,0 -10,-15 0,-15",
     fill: false
   };
   icn["GR.M2.TRUCK"] = [
@@ -2130,13 +2130,13 @@ export default function(
     text: "V"
   };
   icn["GR.M2.WHEELED"] = [
-    { type: "circle", cx: 70, cy: 125, r: 5, fill: false },
-    { type: "circle", cx: 100, cy: 125, r: 5, fill: false },
-    { type: "circle", cx: 130, cy: 125, r: 5, fill: false }
+    { type: "circle", cx: 75, cy: 130, r: 7, fill: false },
+    { type: "circle", cx: 100, cy: 130, r: 7, fill: false },
+    { type: "circle", cx: 125, cy: 130, r: 7, fill: false }
   ];
   icn["GR.M2.WHEELED LIMITED"] = [
-    { type: "circle", cx: 70, cy: 125, r: 5, fill: false },
-    { type: "circle", cx: 130, cy: 125, r: 5, fill: false }
+    { type: "circle", cx: 80, cy: 130, r: 7, fill: false },
+    { type: "circle", cx: 120, cy: 130, r: 7, fill: false }
   ];
   icn["GR.M2.WO-1"] = textm2("WO-1");
   icn["GR.M2.WO-2"] = textm2("WO-2");
@@ -2173,7 +2173,7 @@ export default function(
   };
   icn["GR.EQ.GRENADE LAUNCHER"] = [
     icn["GR.EQ.RIFLE"],
-    { type: "circle", cx: 100, cy: 90, r: 15, fill: false }
+    { type: "circle", cx: 100, cy: 90, r: 10, fill: false }
   ];
   icn["GR.EQ.FLAME THROWER"] = {
     type: "path",
@@ -2962,14 +2962,7 @@ export default function(
 
   // SUBSURFACE
 
-  icn["SOF.IC.UNDERWATER DEMOLITION TEAM"] = {
-    type: "text",
-    stroke: false,
-    x: 100,
-    y: 110,
-    fontsize: 32,
-    text: "UDT"
-  };
+  icn["SOF.IC.UNDERWATER DEMOLITION TEAM"] = text("UD");
   icn["SOF.M2.ATTACK"] = textm2("A");
   icn["SOF.M2.REFUEL"] = textm2("K");
   icn["SOF.M2.UTILITY"] = textm2("U");
@@ -4885,13 +4878,159 @@ export default function(
       "M 80.9,81.7 V 113 h 17.2 v 1 H 86.2 v 4 H 113 v -4 h -13 v -1 h 19 V 81.7 Z  m 1.9,2 H 117 V 111 H 82.8 Z"
   };
 
-  icn["CY.IC."] = { type: "path", d: "" };
+  icn["CY.IC.MOBILE"] = {
+    type: "path",
+    stroke: false,
+    d:
+      "M 106,82 H 94.1 c -3,0 -4.2,2.4 -4.2,4.7 V 113 c 0,3 1.2,5 4.2,5 H 106 c 2,0 4,-2 4,-5 V 86.7 c 0,-2.3 -2,-4.7 -4,-4.7 z  m -7.9,32 c 0,-1 1,-1 1.9,-1 1,0 1,0 1,1 0,1 0,2 -1,2 -0.9,0 -1.9,-1 -1.9,-2 z  m -7.3,-3 V 87.8 H 108 V 111 Z  M 104,85.5 c 0,0.4 0,0.8 0,0.8 h -7.9 c -1,0 -1,-0.4 -1,-0.8 0,-0.8 0,-1.1 1,-1.1 h 7.9 c 0,0 0,0.3 0,1.1 z"
+  };
 
-  icn["CY.IC."] = { type: "path", d: "" };
+  icn["CY.IC.TABLET"] = {
+    type: "path",
+    stroke: false,
+    d:
+      "m 74.2,113 c 0,3 2,5 4.7,5 H 121 c 3,0 5,-2 5,-5 V 87.2 c 0,-2.7 -2,-4.7 -5,-4.7 H 78.8 c -2.6,0 -4.7,2 -4.7,4.7 z  m 4.7,2 V 84.8 H 119 V 115 Z  M 121,100 c 0,-1.2 0,-2 1,-2 1,0 2,0.8 2,2 0,1 -1,2 -2,2 -1,0 -1,-1 -1,-2 z"
+  };
 
-  icn["CY.IC."] = { type: "path", d: "" };
+  icn["CY.IC.LAPTOP"] = {
+    type: "path",
+    stroke: false,
+    d:
+      "m 123,81.9 v 0 H 77 c -1.2,0 -2.5,1.3 -2.5,2.9 V 109 c 0,1 1.3,3 2.5,3 h 46 c 1,0 2,-2 2,-3 V 84.8 c 0,-1.6 -1,-2.9 -2,-2.9 z  M 122,108 H 77.8 V 85.2 H 122 Z  m -52,5 c 0,3 2.9,5 6.2,5 H 123 c 4,0 7,-2 7,-5 z  m 35,3 h -8.9 v -1 h 8.9 z"
+  };
 
-  icn["CY.IC."] = { type: "path", d: "" };
+  icn["CY.IC.HEALTH MONITOR"] = {
+    type: "path",
+    fill: false,
+    d:
+      "m 112,98.5 h -8 l -4,6.5 -3.5,-9.9 -2.6,4.9 H 82.7 C 76.3,86.7 92.8,77 100,89 v 0 c 7,-12 24,-2.7 17,11 l -17,16 -11,-10"
+  };
+  icn["CY.IC.SMARTVEST"] = {
+    type: "path",
+    fill: false,
+    d:
+      "m 85.3,116 c 0,0 17.7,4 29.7,-1 v 0 -14 l -4,-2.2 3,-14.2 -7,-1.6 c -1,8.6 -13.1,8.6 -14.3,0 l -6.6,1.6 2.3,14.7 -3.1,1.7 v 14 z  m 6.2,-11 h -6.2 v 1 h 6.2 z  m 0,6 h -6.2 v 1 h 6.2 z  m 23.5,-5 h -7 v 0 z  m 0,5 h -7 v 1 h 7 z  M 106,95.2 H 93.5 V 102 H 106 Z  m -10.4,3.6 h 1.6  m 2,0 h 0.8  m 2,0 h 3"
+  };
+  icn["CY.IC.SMARTWATCH"] = {
+    type: "path",
+    strokewidth: 1,
+    d:
+      "M 106,88.5 105,84 c 0,-1.3 -1,-2.5 -1,-2.5 h -9.9 c -1.2,0 -2.4,1.2 -2.8,2.5 l -0.7,4.5 c -1.9,0.3 -3.5,2.3 -3.5,4.7 V 106 c 0,2 1.6,5 3.5,5 l 0.7,4 c 0.4,2 1.6,3 2.8,3 h 9.9 c 0,0 1,-1 1,-3 l 1,-4 c 3,0 4,-3 4,-5 V 93.2 c 0,-2.4 -1,-4.4 -4,-4.7 z  M 93.3,84.2 c 0.3,-0.2 0.3,-0.7 0.8,-0.7 h 9.9 c 0,0 0,0.5 0,0.7 v 4.3 H 92.9 Z  M 104,115 c 0,0 0,1 0,1 h -9.9 c -0.5,0 -0.5,-1 -0.8,-1 l -0.4,-4 H 104 Z  m 4,-9 c 0,2 -1,3 -3,3 H 91.7 C 90.2,109 89,108 89,106 V 93.2 c 0,-1.7 1.2,-2.7 2.7,-2.7 H 105 c 2,0 3,1 3,2.7 z  m 5,-7.8 v 2.8 c 0,0 -1,1 -1,1 -1,0 -1,-1 -1,-1 v -2.8 c 0,-0.5 0,-1 1,-1 0,0 1,0.5 1,1 z"
+  };
+  icn["CY.IC.WEARABLE"] = [
+    {
+      type: "path",
+      fill: false,
+      d:
+        "m 93.1,81.1 h -5.4 l -10.4,9.8 6.4,6.1 4.7,-4.8 c 0.4,-0.4 1.8,0 1.8,0.8 v 26 H 111 V 93 c 0,-0.7 1,-1.1 2,-0.7 l 4,4.7 6,-6.1 -10,-9.8 h -6 c -1,2.6 -5,4.3 -7.3,4.3 -2.7,0 -5.2,-1.7 -6.6,-4.3 z"
+    },
+    {
+      type: "path",
+      fill: false,
+      strokewidth: 2,
+      d:
+        "m 93.25,100.9 c 9.05,0 14.65,5.6 14.65,13.1  m -14.65,-8.4 c 5.24,0 9.95,3.7 9.95,8.4  m -9.95,-4.7 c 2.81,0 5.24,2.8 5.24,4.7  m -4.02,0 c 0,0 -0.28,0 -0.47,0 -0.19,0 -0.65,0 -0.65,0 0,-0.9 0.18,-0.9 0.65,-0.9 0.28,0 0.47,0 0.47,0.9 z"
+    }
+  ];
+  icn["CY.IC.IOT"] = {
+    type: "path",
+    fill: false,
+    strokewidth: 5,
+    d:
+      "M 92.49,83.01 V 101.6  M 100,89.31 a 14.4,14.4 0 0 1 6.9,12.29 v 0 A 14.4,14.4 0 0 1 92.5,116 14.4,14.4 0 0 1 78.1,101.6 14.4,14.4 0 0 1 84.52,89.61  m 26.88,-4.07 h 21.3  m -10.6,0.14 V 114.3  M 67.3,84.11 v 31.59"
+  };
+  icn["CY.IC.PRINTER"] = {
+    type: "path",
+    strokewidth: 1.5,
+    d:
+      "m 89.13,107.9 h 21.77 v 1.2 H 89.13 Z  M 109,97.03 h 6.8 v 1.19 H 109 Z  M 89.13,111.6 h 21.77 v 1.2 H 89.13 Z  m 27.27,6 v -6.2 h 4.4 V 93.22 h -4.4 V 82.35 H 83.59 v 10.87 h -4.35 v 18.18 h 4.35 v 6.2 z  m -1.1,-1.2 H 84.82 v -12 H 115.3 Z  M 84.82,83.51 h 30.48 v 9.67 H 84.82 Z  M 80.47,110.2 V 94.37 h 39.13 v 15.83 h -3.2 v -7 H 83.63 v 7 z"
+  };
+  icn["CY.IC.ROUTER"] = {
+    type: "path",
+    fill: false,
+    d:
+      "m 100,81.8 c 10.1,0 18.2,8.14 18.2,18.2 0,10.1 -8.1,18.2 -18.2,18.2 -10.01,0 -18.19,-8.1 -18.19,-18.2 0,-10.02 8.14,-18.2 18.19,-18.2 z  m 3.3,8.22 -3.2,-3.21 -3.26,3.29  m 3.26,7.65 v -10.9  m 6.6,16.35 -3.2,-3.2 3.3,-3.25  m 7.6,3.25 h -10.9  m -6.66,10 3.16,3.2 3.3,-3.3  m -3.2,-7.7 v 10.9  m -6.59,-16.35 3.21,3.21 -3.29,3.24  M 85.74,100 h 10.9"
+  };
+  icn["CY.IC.SWITCH"] = {
+    type: "path",
+    stroke: false,
+    d:
+      "M 92.85 81.63 L 88.07 87.39 L 91.08 87.39 L 91.08 98.78 C 91.06 99.01 91.05 99.24 91.05 99.47 C 91.05 101.2 91.58 102.8 92.49 104.2 L 87.09 104.2 L 87.09 101.3 L 81.33 106.1 L 83.93 108.3 L 84.46 108.7 L 87.09 110.9 L 87.09 108 L 99.59 108 C 101.4 108 103 107.5 104.4 106.5 L 104.4 112.6 L 101.4 112.6 L 103.6 115.2 L 104.1 115.7 L 106.2 118.4 L 108.4 115.7 L 108.8 115.2 L 111 112.6 L 108.2 112.6 L 108.2 100.5 L 108.1 100.5 C 108.2 100.2 108.2 99.82 108.2 99.47 C 108.2 97.7 107.6 96.05 106.7 94.69 L 112.9 94.69 L 112.9 97.63 L 115.5 95.45 L 116.1 94.99 L 118.7 92.81 L 112.9 87.99 L 112.9 90.93 L 99.59 90.93 C 97.83 90.93 96.2 91.47 94.84 92.38 L 94.84 87.39 L 97.67 87.39 L 92.85 81.63 z  M 99.59 94.69 C 102.3 94.69 104.4 96.8 104.4 99.47 C 104.4 102.2 102.3 104.2 99.59 104.2 C 96.89 104.2 94.81 102.2 94.81 99.47 L 94.84 99.47 L 94.84 98.94 C 95.1 96.52 97.09 94.69 99.59 94.69 z"
+  };
+  icn["CY.M1.DEFENSIVE CYBERSPACE"] = {
+    type: "path",
+    stroke: false,
+    d:
+      "M 67.8,78 78.1,60.9 88.6,78 Z  M 112,78 122,60.9 132,78 Z  M 89.2,78 99.6,60.9 111,78 Z"
+  };
+  icn["CY.M1.OFFENSIVE CYBERSPACE"] = {
+    type: "path",
+    stroke: false,
+    d: "m 75,66.7 h 40 V 59 l 10,9.7 -10,9.7 V 70.6 H 75 Z"
+  };
+  icn["CY.M1.SOCIAL"] = {
+    type: "path",
+    fill: false,
+    d:
+      "m 107,69.5 h 11  m -6,-2 v 10.9  m 4,-15.6 a 3.87,3.65 0 0 1 -4,3.6 3.87,3.65 0 0 1 -4,-3.6 3.87,3.65 0 0 1 4,-3.7 3.87,3.65 0 0 1 4,3.7 z  M 94.9,69.5 H 105  m -5.1,-2 V 78.4  M 105,62.8 a 4.91,4.64 0 0 1 -5.1,4.6 4.91,4.64 0 0 1 -4.9,-4.6 4.91,4.64 0 0 1 4.9,-4.6 4.91,4.64 0 0 1 5.1,4.6 z  m -22.6,6.7 h 10.5  m -5.4,-2 v 10.9  m 4.3,-15.6 a 3.87,3.65 0 0 1 -3.9,3.6 3.87,3.65 0 0 1 -3.9,-3.6 3.87,3.65 0 0 1 3.9,-3.7 3.87,3.65 0 0 1 3.9,3.7 z"
+  };
+  icn["CY.M1.WIRED"] = {
+    type: "path",
+    fill: false,
+    d:
+      "M 98.3,78.9 V 68.2  M 113,78.9 V 68.2  M 84.7,78.9 V 68.2  M 78.3,67.8 H 122  M 91.9,67 V 56.3  M 107,67 V 56.3  M 91.9,67.4 V 56.7  M 107,67.4 V 56.7  M 91.9,67 V 56.3  M 107,67 V 56.3"
+  };
+  icn["CY.M1.WIRELESS"] = [
+    {
+      type: "path",
+      stroke: false,
+      d:
+        "m 85.7,74.3 c 0,-1.9 2.4,-3.9 5.2,-3.9 3.1,0 5.5,2 5.5,3.9 0,2.4 -2.4,4 -5.5,4 -2.8,0 -5.2,-1.6 -5.2,-4 z"
+    },
+    {
+      type: "path",
+      fill: false,
+      d:
+        "M 114,75.5 C 114,65.3 103,56.6 89.3,56.6  M 109,75.5 c 0,-8.3 -9,-15 -19.7,-15  m 13.7,15 C 103,69.6 96.8,64.9 89.3,64.9"
+    }
+  ];
+  icn["CY.M1.RADIO FREQUENCY"] = textm1("RF");
+  icn["CY.M1.OPERATING SYSTEM"] = {
+    type: "path",
+    stroke: false,
+    d:
+      "m 112.3,65.45 2.6,-0.86 c 0.1,-0.56 0.1,-1.15 0.1,-1.7 l -2.6,-1.01 c -0.1,-0.42 -0.3,-0.8 -0.5,-1.14 l 1.3,-2.5 C 113,58 112.9,57.79 112.7,57.58 112.5,57.37 112.2,57.16 112,56.99 l -2.5,1.11 c -0.4,-0.21 -0.8,-0.35 -1.1,-0.49 l -0.9,-2.67 c -0.6,-0.1 -1.1,-0.1 -1.7,0 l -1,2.6 c -0.4,0.1 -0.8,0.24 -1.2,0.42 l -2.5,-1.25 c -0.2,0.17 -0.4,0.35 -0.6,0.55 -0.2,0.18 -0.4,0.38 -0.6,0.59 l 1.1,2.57 c -0.2,0.38 -0.4,0.73 -0.5,1.14 l -2.64,0.84 c -0.1,0.59 -0.11,1.14 -0.1,1.73 l 2.64,1.01 c 0.1,0.38 0.3,0.76 0.4,1.14 l -1.28,2.5 c 0.18,0.21 0.39,0.45 0.58,0.66 0.2,0.2 0.4,0.38 0.6,0.59 l 2.6,-1.15 c 0.3,0.21 0.7,0.38 1.1,0.52 l 0.9,2.67 c 0.5,0.1 1.1,0.1 1.7,0 l 1,-2.6 c 0.4,-0.11 0.8,-0.25 1.2,-0.46 l 2.5,1.29 c 0.2,-0.18 0.4,-0.35 0.6,-0.56 0.2,-0.21 0.4,-0.41 0.6,-0.62 l -1.1,-2.57 c 0.2,-0.34 0.3,-0.73 0.5,-1.11 z  m -2.9,1.22 c -1.8,1.63 -4.5,1.56 -6.2,-0.21 -1.6,-1.74 -1.6,-4.51 0.2,-6.14 1.7,-1.66 4.5,-1.56 6.2,0.17 1.6,1.77 1.5,4.51 -0.2,6.18 z  m -12.27,6.76 2.77,-0.14 c 0.2,-0.52 0.4,-1.07 0.5,-1.63 L 98.17,70 c 0,-0.42 0,-0.84 -0.11,-1.22 l 1.88,-2.08 c -0.11,-0.28 -0.21,-0.52 -0.35,-0.76 -0.14,-0.28 -0.28,-0.52 -0.45,-0.76 l -2.78,0.41 C 96.09,65.31 95.77,65.04 95.43,64.83 L 95.29,62.02 C 94.77,61.81 94.21,61.64 93.66,61.5 l -1.67,2.25 c -0.41,0 -0.79,0 -1.21,0.14 L 88.7,61.98 c -0.24,0.11 -0.52,0.25 -0.76,0.39 -0.25,0.1 -0.49,0.27 -0.73,0.41 l 0.41,2.78 c -0.31,0.27 -0.55,0.62 -0.79,0.93 l -2.81,0.14 c -0.21,0.52 -0.38,1.08 -0.49,1.63 l 2.26,1.67 c 0,0.41 0,0.83 0.1,1.21 l -1.91,2.08 c 0.11,0.24 0.25,0.52 0.38,0.76 0.14,0.28 0.28,0.52 0.42,0.77 l 2.78,-0.42 c 0.31,0.28 0.62,0.56 0.97,0.76 l 0.1,2.81 c 0.52,0.21 1.08,0.38 1.63,0.49 l 1.7,-2.22 c 0.38,0 0.8,0 1.21,-0.14 l 2.05,1.91 c 0.28,-0.11 0.52,-0.25 0.8,-0.38 0.24,-0.11 0.48,-0.28 0.73,-0.42 l -0.42,-2.77 c 0.31,-0.28 0.55,-0.63 0.8,-0.94 z  m -3.12,0.38 c -2.12,1.14 -4.76,0.31 -5.9,-1.8 -1.11,-2.12 -0.31,-4.79 1.8,-5.9 2.15,-1.14 4.79,-0.31 5.9,1.8 1.14,2.12 0.31,4.79 -1.8,5.9 z"
+  };
+  icn["CY.M1.CONTINUITY OF OPERATIONS"] = {
+    type: "path",
+    strokewidth: 1.5,
+    d:
+      "m 101.6,56.69 v 1.17 c 6.4,0.34 10.8,1.53 13.6,3.08 2.8,1.55 3.8,3.38 3.7,5.18 -0.1,1.8 -1.3,3.73 -3.7,5.33 -2.1,1.48 -5.2,2.66 -9,3.17 L 107,72 101.6,75.47 108,78 106.2,75.8 c 3.9,-0.52 7.3,-1.75 9.7,-3.39 2.5,-1.73 4.1,-3.93 4.2,-6.24 0.1,-2.31 -1.3,-4.57 -4.3,-6.25 -3,-1.68 -7.6,-2.88 -14.2,-3.23 z  M 93,55 l 1.01,2.1 c -5.57,0.7 -9.33,2.13 -11.6,4.01 -2.36,1.96 -3.02,4.49 -2.16,6.81 0.85,2.31 3.08,4.4 6.26,5.9 3.18,1.5 7.33,2.4 12.11,2.28 V 74.92 C 93.97,75.05 90,74.17 87.01,72.76 c -2.99,-1.41 -4.97,-3.35 -5.67,-5.25 -0.7,-1.9 -0.26,-3.77 1.82,-5.5 1.99,-1.64 5.54,-3.05 10.94,-3.74 L 94,61 98.6,57.31 Z"
+  };
+  icn["CY.M1.INTERNET SERVICE PROVIDER"] = textm1("ISP");
+  icn["CY.M1.FINANCE"] = textm1("$");
+  icn["CY.M1."] = { type: "path", d: "" };
+  icn["CY.M1."] = { type: "path", d: "" };
+  icn["CY.M1."] = { type: "path", d: "" };
+  icn["CY.M1."] = { type: "path", d: "" };
+  icn["CY.M1."] = { type: "path", d: "" };
+
+  icn["CY.M2."] = { type: "path", d: "" };
+  icn["CY.M2."] = { type: "path", d: "" };
+  icn["CY.M2."] = { type: "path", d: "" };
+  icn["CY.M2."] = { type: "path", d: "" };
+  icn["CY.M2."] = { type: "path", d: "" };
+  icn["CY.M2."] = { type: "path", d: "" };
+  icn["CY.M2."] = { type: "path", d: "" };
+  icn["CY.M2."] = { type: "path", d: "" };
+  icn["CY.M2."] = { type: "path", d: "" };
+  icn["CY.M2."] = { type: "path", d: "" };
+  icn["CY.M2."] = { type: "path", d: "" };
+  icn["CY.M2."] = { type: "path", d: "" };
+  icn["CY.M2."] = { type: "path", d: "" };
+  icn["CY.M2."] = { type: "path", d: "" };
+  icn["CY.M2."] = { type: "path", d: "" };
+  icn["CY.M2."] = { type: "path", d: "" };
 
   for (var key in icn) {
     if (!icn.hasOwnProperty(key)) continue;
