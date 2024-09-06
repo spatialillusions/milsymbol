@@ -1,7 +1,7 @@
 /* ***************************************************************************************
 Number based SIDC
 *************************************************************************************** */
-import common from "./numbersidc/sidc/common.js";
+//import common from "./numbersidc/sidc/common.js";
 import air from "./numbersidc/sidc/air.js";
 import airmissile from "./numbersidc/sidc/airmissile.js";
 import space from "./numbersidc/sidc/space.js";
