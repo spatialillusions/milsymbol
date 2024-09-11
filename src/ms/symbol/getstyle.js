@@ -1,6 +1,6 @@
 export default function getStyle() {
-  var key;
-  var options = {};
+  let key;
+  const options = {};
   for (key in this.style) {
     if (!this.style.hasOwnProperty(key)) continue;
     // clone all styles

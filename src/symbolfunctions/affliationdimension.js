@@ -1,9 +1,9 @@
 //Affiliation and dimension addons to base geometries ####################################
 export default function affliationdimension(ms) {
-  var drawArray1 = [];
-  var drawArray2 = [];
-  var bbox = this.metadata.baseGeometry.bbox;
-  var frameColor = this.colors.frameColor[this.metadata.affiliation];
+  let drawArray1 = [];
+  let drawArray2 = [];
+  let bbox = this.metadata.baseGeometry.bbox;
+  const frameColor = this.colors.frameColor[this.metadata.affiliation];
   //Draws the a question mark for some unknown or other dimension symbols
   if (this.metadata.dimensionUnknown && frameColor) {
     drawArray2.push({
@@ -20,7 +20,7 @@ export default function affliationdimension(ms) {
   }
   //If we don't have a geometry we shouldn't add anything.
   if (this.metadata.baseGeometry.g && frameColor) {
-    var spacing = 10;
+    let spacing = 10;
     if (
       this.metadata.affiliation == "Unknown" ||
       (this.metadata.affiliation == "Hostile" &&

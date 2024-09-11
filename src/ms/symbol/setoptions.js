@@ -1,10 +1,10 @@
 import { ms } from "../../ms.js";
 export default function setOptions() {
-  var i;
+  let i;
   for (i = 0; i < arguments.length; i++) {
-    var options = arguments[i];
+    const options = arguments[i];
     if (typeof options === "object") {
-      for (var key in options) {
+      for (let key in options) {
         if (!options.hasOwnProperty(key)) continue;
         if (key === "SIDC") {
           // backward compability
@@ -37,8 +37,8 @@ export default function setOptions() {
   //Processing all parts of the symbol, adding them to the drawinstruction and updating the boundingbox
   for (i in ms._symbolParts) {
     if (!ms._symbolParts.hasOwnProperty(i)) continue;
-    var m = ms._symbolParts[i].call(this, ms);
-    var notEmpty = m.pre.length > 0 || m.post.length > 0;
+    const m = ms._symbolParts[i].call(this, ms);
+    const notEmpty = m.pre.length > 0 || m.post.length > 0;
     if (!m.pre) continue;
     if (m.pre.length > 0) {
       while (m.pre.length == 1) {
@@ -74,7 +74,7 @@ export default function setOptions() {
     this.bbox.y2 += this.style.padding;
   }
 
-  var anchor = { x: 100, y: 100 };
+  let anchor = { x: 100, y: 100 };
   this.octagonAnchor = {
     x:
       ((anchor.x -
@@ -93,7 +93,7 @@ export default function setOptions() {
   };
   //If it is a headquarters the anchor should be at the end of the staf
   if (this.metadata.headquarters) {
-    var hqStaffLength = this.style.hqStaffLength || ms._hqStaffLength;
+    let hqStaffLength = this.style.hqStaffLength || ms._hqStaffLength;
     anchor = {
       x: this.metadata.baseGeometry.bbox.x1,
       y: this.metadata.baseGeometry.bbox.y2 + hqStaffLength

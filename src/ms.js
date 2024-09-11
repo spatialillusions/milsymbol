@@ -1,4 +1,4 @@
-var ms = new (function() {
+const ms = new (function() {
   this._autoValidation = false;
   this.version = "3.0.0";
   if (typeof console === "object" && typeof process !== "object") {
@@ -36,7 +36,7 @@ ms.setColorMode = function(mode, colorMode) {
 
 ms.addSymbolPart = function(part) {
   if (typeof part === "function") {
-    var symbolParts = ms.getSymbolParts();
+    const symbolParts = ms.getSymbolParts();
     if (symbolParts.indexOf(part) == -1)
       ms.setSymbolParts(symbolParts.concat(part));
   }
@@ -55,7 +55,7 @@ ms.setSymbolParts = function(parts) {
 ms.reset = function() {
   this._brokenPath2D = undefined;
   this._colorModes = {};
-  for (var name in ColorModes) {
+  for (let name in ColorModes) {
     ms.setColorMode(name, ColorModes[name]);
   }
   this._dashArrays = {
@@ -105,9 +105,9 @@ ms._getIconParts = function iconparts(
   monoColor,
   alternateMedal
 ) {
-  var icn = {};
+  const icn = {};
 
-  for (var i in this._iconParts) {
+  for (let i in this._iconParts) {
     if (!this._iconParts.hasOwnProperty(i)) continue;
     this._iconParts[i].call(
       this,
@@ -159,7 +159,7 @@ ms._translate = function(x, y, instruction) {
 
 ms.addIconParts = function(parts) {
   if (!Array.isArray(parts)) parts = [parts];
-  for (var i = 0; i < parts.length; i++) {
+  for (let i = 0; i < parts.length; i++) {
     if (
       typeof parts[i] === "function" &&
       this._iconParts.indexOf(parts[i]) == -1
@@ -183,7 +183,7 @@ ms.addLabelOverrides = function(parts, type) {
 ms.addIcons = function(obj) {
   this._iconCache = {}; // Clear the cache
   if (!Array.isArray(obj)) obj = [obj];
-  for (var i = 0; i < obj.length; i++) {
+  for (let i = 0; i < obj.length; i++) {
     if (obj[i].hasOwnProperty("getMetadata"))
       ms._getMetadata[obj[i].type] = obj[i].getMetadata;
     if (obj[i].hasOwnProperty("getIcons"))
@@ -205,7 +205,7 @@ ms.addSIDCicons = function(parts, type) {
 };
 
 ms.getColorMode = function(mode) {
-  var c = this._colorModes[mode];
+  const c = this._colorModes[mode];
   // Clone the mode and return the clone
   return new ms.ColorMode(
     c.Civilian,

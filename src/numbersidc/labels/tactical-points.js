@@ -2,7 +2,7 @@
 export default function tacticalPoints(sidc) {
   // Tactical Point Symbols =========================================================================
   // TODO Maybe add some way to define additions for different symbol sets
-  var actionPoint = {
+  const actionPoint = {
     additionalInformation: {
       stroke: false,
       textanchor: "middle",
@@ -34,7 +34,7 @@ export default function tacticalPoints(sidc) {
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
   };
-  var actionPoint1 = {
+  const actionPoint1 = {
     additionalInformation: {
       stroke: false,
       textanchor: "middle",
@@ -59,7 +59,7 @@ export default function tacticalPoints(sidc) {
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
     dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
   };
-  var actionPoint2 = {
+  const actionPoint2 = {
     additionalInformation: {
       stroke: false,
       textanchor: "middle",

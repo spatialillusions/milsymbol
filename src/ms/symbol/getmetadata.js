@@ -1,6 +1,6 @@
 import { ms } from "../../ms.js";
 export default function getMetadata() {
-  var metadata = {
+  let metadata = {
     activity: false, //Is it an Activity
     affiliation: "undefined", //Affiliation it is shown as (Friend/Hostile...)
     baseAffilation: "", //Affiliation it belongs to (Friend/Hostile...)
@@ -29,7 +29,7 @@ export default function getMetadata() {
     taskForce: false, //Is it a task force
     unit: false // Is this equipment or not
   };
-  var mapping = {};
+  const mapping = {};
   mapping.context = ["Reality", "Exercise", "Simulation"];
   mapping.status = [
     "Present",

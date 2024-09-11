@@ -1,5 +1,5 @@
 export default function isValid(extended) {
-  var drawInstructions =
+  const drawInstructions =
     JSON.stringify(this.drawInstructions).indexOf("null") == -1;
 
   if (extended) {

@@ -90,8 +90,8 @@ import canvasDraw from "./symbol/canvasdraw.js";
 Symbol.prototype.canvasDraw = canvasDraw;
 
 Symbol.prototype.asDOM = function() {
-  var doc = document;
-  var doc2 = new DOMParser().parseFromString(this.asSVG(), "text/xml");
+  const doc = document;
+  const doc2 = new DOMParser().parseFromString(this.asSVG(), "text/xml");
   return doc.adoptNode(doc2.documentElement);
 };
 

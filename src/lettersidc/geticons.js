@@ -1,9 +1,9 @@
 //import { ms } from "../ms.js";
 export function geticons(ms, iconParts, STD2525) {
-  var iconSIDC = {};
-  var iconBbox = {};
+  const iconSIDC = {};
+  const iconBbox = {};
 
-  for (var i in ms._iconSIDC.letter) {
+  for (let i in ms._iconSIDC.letter) {
     if (!ms._iconSIDC.letter.hasOwnProperty(i)) continue;
     ms._iconSIDC.letter[i].call(this, iconSIDC, iconBbox, iconParts, STD2525);
   }

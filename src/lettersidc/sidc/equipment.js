@@ -583,7 +583,7 @@ export default {
     sId["S-G-EXML--"] = [icn["GR.EQ.ANTIPERSONNEL LAND MINE LESS THAN LETHAL"]];
 
     //This sets up the bounding boxes for equipment to have the bottom at the right place. (this will be used for mobility when unframed)
-    var equipmentBottom = {
+    const equipmentBottom = {
       "E-----": 0,
       "EWM---": 140,
       "EWMA--": 140,
@@ -750,7 +750,7 @@ export default {
       "EXMC--": 122,
       "EXML--": 122
     };
-    for (var key in equipmentBottom) {
+    for (let key in equipmentBottom) {
       if (!equipmentBottom.hasOwnProperty(key)) continue;
       bbox["S-G-" + key] = {
         x1: 50,

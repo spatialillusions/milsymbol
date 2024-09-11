@@ -1,9 +1,9 @@
 //Base Geometry for the Symbol ###########################################################
 export default function basegeometry(ms) {
-  var modifier;
-  var drawArray1 = [];
-  var drawArray2 = [];
-  var frameColor = this.colors.frameColor[this.metadata.affiliation];
+  let modifier;
+  let drawArray1 = [];
+  let drawArray2 = [];
+  let frameColor = this.colors.frameColor[this.metadata.affiliation];
 
   //If unframed but with icon, then just return.
   if (
@@ -18,7 +18,7 @@ export default function basegeometry(ms) {
   }
 
   //Clone the base geometry
-  var geom = { type: this.metadata.baseGeometry.g.type };
+  let geom = { type: this.metadata.baseGeometry.g.type };
   switch (geom.type) {
     case "path":
       geom.d = this.metadata.baseGeometry.g.d;
@@ -35,7 +35,7 @@ export default function basegeometry(ms) {
   geom.strokewidth = this.style.size >= 10 ? this.style.strokeWidth : 10;
   //outline
   if (this.style.frame && this.style.outlineWidth > 0) {
-    var outline;
+    let outline;
     if (geom.type == "path" && this.metadata.fill && !this.style.monoColor) {
       outline = { type: this.metadata.baseGeometry.g.type };
       outline.d = this.metadata.baseGeometry.g.d + " Z"; //Making sure the path is closed

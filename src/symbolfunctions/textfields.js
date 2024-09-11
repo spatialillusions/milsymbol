@@ -1,38 +1,38 @@
 //Text Fields ############################################################################
 export default function textfields(ms) {
-  var drawArray1 = [];
-  var drawArray2 = [];
-  var bbox = this.metadata.baseGeometry.bbox;
-  var fontColor =
+  let drawArray1 = [];
+  let drawArray2 = [];
+  let bbox = this.metadata.baseGeometry.bbox;
+  const fontColor =
     (typeof this.style.infoColor === "object"
       ? this.style.infoColor[this.metadata.affiliation]
       : this.style.infoColor) ||
     this.colors.iconColor[this.metadata.affiliation] ||
     this.colors.iconColor["Friend"];
-  var fontFamily = this.style.fontfamily;
-  var fontSize = this.style.infoSize;
+  const fontFamily = this.style.fontfamily;
+  const fontSize = this.style.infoSize;
 
-  var infoBackground =
+  const infoBackground =
     typeof this.style.infoBackground === "object"
       ? this.style.infoBackground[this.metadata.affiliation]
       : this.style.infoBackground;
-  var infoBackgroundFrame =
+  const infoBackgroundFrame =
     typeof this.style.infoBackground === "object"
       ? this.style.infoBackground[this.metadata.affiliation]
       : this.style.infoBackground;
 
-  var gbbox = new ms.BBox();
-  var spaceTextIcon = 20; //The distance between the Icon and the labels
+  const gbbox = new ms.BBox();
+  const spaceTextIcon = 20; //The distance between the Icon and the labels
 
   //Text fields overrides
   function labelOverride(label) {
-    var texts = [];
-    var labelbox;
-    for (var i in label) {
+    let texts = [];
+    let labelbox;
+    for (let i in label) {
       if (this.options.hasOwnProperty(i) && this.options[i] != "") {
         if (!label.hasOwnProperty(i)) continue;
-        for (var j = 0; j < (label[i].length || 1); j++) {
-          var lbl;
+        for (let j = 0; j < (label[i].length || 1); j++) {
+          let lbl;
           if (Array.isArray(label[i])) {
             lbl = label[i][j];
           } else {
@@ -45,7 +45,7 @@ export default function textfields(ms) {
               lbl.x + strWidth(this.options[i]) * (lbl.fontsize / fontSize);
           }
           if (lbl.textanchor == "middle") {
-            var w = strWidth(this.options[i]) * (lbl.fontsize / fontSize);
+            const w = strWidth(this.options[i]) * (lbl.fontsize / fontSize);
             labelbox.x1 = lbl.x - w / 2;
             labelbox.x2 = lbl.x + w / 2;
           }
@@ -56,7 +56,7 @@ export default function textfields(ms) {
             labelbox.x2 = lbl.x;
           }
           gbbox.merge(labelbox);
-          var text = { type: "text", fontfamily: fontFamily, fill: fontColor };
+          let text = { type: "text", fontfamily: fontFamily, fill: fontColor };
           if (lbl.hasOwnProperty("fill")) text.fill = lbl.fill;
           if (lbl.hasOwnProperty("stroke")) text.stroke = lbl.stroke;
           if (lbl.hasOwnProperty("textanchor"))
@@ -78,7 +78,7 @@ export default function textfields(ms) {
   function strWidth(str) {
     if (str.length == 0) return 0;
     //We need to calculate how long our string will be in pixels
-    var strWidths = {
+    const strWidths = {
       " ": 9,
       "!": 10,
       '"': 15,
@@ -174,8 +174,8 @@ export default function textfields(ms) {
       "}": 12,
       "~": 18
     };
-    var w = 0;
-    for (var i = 0; i < str.length; i++) {
+    let w = 0;
+    for (let i = 0; i < str.length; i++) {
       //If we dont know how wide the char is, set it to 28.5 that is the width of W and no char is wider than that.
       w += (fontSize / 30) * (strWidths[str[i]] ? strWidths[str[i]] : 28.5);
     }
@@ -186,8 +186,8 @@ export default function textfields(ms) {
 
   // Print text in right position
   function text(str) {
-    var size = 42;
-    var y = 100;
+    let size = 42;
+    const y = 100;
     if (str.length == 1) {
       size = 45;
     }
@@ -209,7 +209,7 @@ export default function textfields(ms) {
     if (str.length >= 8) {
       size = 24;
     }
-    var t = {
+    const t = {
       type: "text",
       text: str,
       x: 100,
@@ -224,7 +224,7 @@ export default function textfields(ms) {
     };
     return t;
   }
-  var i, genericSIDC;
+  let i, genericSIDC;
   if (this.metadata.numberSIDC) {
     //Number based SIDCs.
     if (!ms._labelCache.hasOwnProperty("number")) {
@@ -295,7 +295,7 @@ export default function textfields(ms) {
   }
 
   //Check that we have some texts to print
-  var textFields =
+  const textFields =
     this.options.quantity ||
     this.options.reinforcedReduced ||
     this.options.staffComments ||
@@ -368,7 +368,7 @@ export default function textfields(ms) {
       gbbox.y2 = bbox.y2 + 35;
     }
 
-    var gStrings = {
+    const gStrings = {
       L1: "",
       L2: "",
       L3: "",
@@ -380,7 +380,7 @@ export default function textfields(ms) {
       R4: "",
       R5: ""
     }; //Text information on left and right sIde.
-    var a;
+    let a;
     //Air & Space (They should be different but we skip that at the moment) TODO
     if (!isNaN(this.options.sidc) && this.metadata.baseDimension == "Air") {
       gStrings.R1 = this.options.uniqueDesignation;
@@ -656,8 +656,8 @@ export default function textfields(ms) {
 
     // Background boxes behind text
     if (this.style.infoBackground) {
-      var leftBox = { x1: 100, y1: 1000, y2: 0 };
-      var rightBox = { x2: 100, y1: 1000, y2: 0 };
+      let leftBox = { x1: 100, y1: 1000, y2: 0 };
+      let rightBox = { x2: 100, y1: 1000, y2: 0 };
       if (gStrings.L1)
         leftBox = {
           x1: Math.min(leftBox.x1, bbox.x1 - strWidth(gStrings.L1)),

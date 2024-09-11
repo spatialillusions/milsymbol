@@ -2,10 +2,10 @@
 export default function debug(ms) {
   //This debug function is a minimal example of how to extend milsymbol.
   //Create a variable to store your geometries
-  var drawArray1 = [];
-  var drawArray2 = [];
+  let drawArray1 = [];
+  let drawArray2 = [];
   //Get a new bounding box and modify it if your geometry extends outside the current bounds.
-  var gbbox = new ms.BBox();
+  let gbbox = new ms.BBox();
   //Draws the icon octagon
   drawArray2.push({
     type: "path",

@@ -1,6 +1,6 @@
 import { ms } from "../../ms.js";
 export default function canvasDraw(ctx, instruction) {
-  for (var i = 0; i < instruction.length; i++) {
+  for (let i = 0; i < instruction.length; i++) {
     if (Array.isArray(instruction[i])) {
       if (instruction[i].length) {
         canvasDraw.call(this, ctx, instruction[i]);
@@ -39,11 +39,11 @@ export default function canvasDraw(ctx, instruction) {
         if (typeof instruction[i].fillopacity !== "undefined") {
           ctx.globalAlpha = instruction[i].fillopacity;
         }
-
+        let x, y;
         switch (instruction[i].type) {
           case "path":
             if (!ms._brokenPath2D) {
-              var d = new Path2D(instruction[i].d);
+              const d = new Path2D(instruction[i].d);
               if (instruction[i].hasOwnProperty("clipPath")) {
                 ctx.save();
                 ctx.clip(new Path2D(instruction[i].clipPath), "nonzero");
@@ -158,8 +158,8 @@ export default function canvasDraw(ctx, instruction) {
             //ctx.translate(-instruction[i].x, -instruction[i].y);
             break;
           case "rotate":
-            var x = instruction[i].x;
-            var y = instruction[i].y;
+            x = instruction[i].x;
+            y = instruction[i].y;
             ctx.save();
             ctx.translate(x, y);
             ctx.rotate((instruction[i].degree * Math.PI) / 180);

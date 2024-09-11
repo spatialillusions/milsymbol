@@ -1,6 +1,6 @@
 export default function getOptions(includeStyle) {
-  var key;
-  var options = {};
+  let key;
+  const options = {};
   for (key in this.options) {
     if (!this.options.hasOwnProperty(key)) continue;
     // clone all options

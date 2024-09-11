@@ -654,7 +654,7 @@ export default {
       sIdm2["09"] = [icn["GR.M2.ROBOTIC"]];
 
       //This sets up the bounding boxes for equipment to have the bottom at the right place. (this will be used for mobility when unframed)
-      var equipmentBottom = {
+      const equipmentBottom = {
         110000: 140,
         110100: 140,
         110101: 140,
@@ -873,7 +873,7 @@ export default {
         230200: 120,
         240000: 118.75
       };
-      for (var key in equipmentBottom) {
+      for (let key in equipmentBottom) {
         if (!equipmentBottom.hasOwnProperty(key)) continue;
         bbox[key] = {
           x1: 50,

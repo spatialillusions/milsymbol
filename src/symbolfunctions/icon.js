@@ -1,32 +1,32 @@
 //Icon #################################################################################
 export default function icon(ms) {
-  var drawArray1 = [];
-  var drawArray2 = [];
-  var gbbox = new ms.BBox({ x1: 50, x2: 150, y1: 50, y2: 150 });
-  var icons, iconColor;
+  let drawArray1 = [];
+  let drawArray2 = [];
+  let gbbox = new ms.BBox({ x1: 50, x2: 150, y1: 50, y2: 150 });
+  let icons, iconColor;
 
   //This is the building blocks we use to create icons
-  var iconParts = [];
+  let iconParts = [];
   //Main icon
-  //var icon = [];
+  //let icon = [];
   //Modifier 1 used in number based SIDCs
-  var m1 = [];
+  let m1 = [];
   //Modifier 2 used in number based SIDCs
-  var m2 = [];
+  let m2 = [];
   //Boundingboxes other than normal
-  var specialbbox = [];
+  let specialbbox = [];
 
   if (this.style.icon) {
-    var fillColor = this.colors.fillColor[this.metadata.affiliation];
+    let fillColor = this.colors.fillColor[this.metadata.affiliation];
     //So we don't happend to use civilian colors
-    var neutralColor = this.colors.fillColor.Neutral;
+    let neutralColor = this.colors.fillColor.Neutral;
     iconColor = this.colors.iconColor[this.metadata.affiliation];
-    var iconFillColor = this.colors.iconFillColor[this.metadata.affiliation];
-    var none = this.colors.none[this.metadata.affiliation];
-    var black = this.colors.black[this.metadata.affiliation];
-    var white = this.colors.white[this.metadata.affiliation];
+    let iconFillColor = this.colors.iconFillColor[this.metadata.affiliation];
+    let none = this.colors.none[this.metadata.affiliation];
+    let black = this.colors.black[this.metadata.affiliation];
+    let white = this.colors.white[this.metadata.affiliation];
     //Store previous used icons in memory.
-    var icnet =
+    let icnet =
       (this.metadata.STD2525 ? "2525" : "APP6") +
       "," +
       this.metadata.dimension +
@@ -97,9 +97,9 @@ export default function icon(ms) {
           /*			This code dosen't work at the moment..... TODO
 					if(element){
 					listBBoxes = '';
-					for (var property in sId) {
+					for (let property in sId) {
 						if(property.substr(4,1) == 'E'){
-							var BaseGeometry = document.createElementNS(ms._svgNS, "g");
+							let BaseGeometry = document.createElementNS(ms._svgNS, "g");
 							BaseGeometry.setAttribute('id', 'BaseGeometryEquipment');
 								BaseGeometry.appendChild(
 									BaseGeometry.ownerDocument.importNode(
@@ -108,7 +108,7 @@ export default function icon(ms) {
 										), true
 									)
 								);
-							var svgSymbol = document.createElementNS(ms._svgNS, "svg");
+							let svgSymbol = document.createElementNS(ms._svgNS, "svg");
 							svgSymbol.setAttribute("width", 200);
 							svgSymbol.setAttribute("height", 200);
 							svgSymbol.setAttribute("version", 1.1);
@@ -116,12 +116,12 @@ export default function icon(ms) {
 							svgSymbol.setAttribute("xmlns", ms._svgNS);
 							svgSymbol.appendChild(BaseGeometry);
 
-							var targetElement = document.getElementById(element);
+							let targetElement = document.getElementById(element);
 							if(targetElement.hasChildNodes()){
 								targetElement.removeChild(targetElement.childNodes[0])
 							}
 							targetElement.appendChild(svgSymbol);
-							var BBox = document.getElementById("BaseGeometryEquipment").getBBox()
+							let BBox = document.getElementById("BaseGeometryEquipment").getBBox()
 							listBBoxes += '\'' + property.substr(4,6) + '\':' + (BBox.y+ BBox.height)+',';
 						}
 						}
@@ -139,7 +139,7 @@ export default function icon(ms) {
     //Number based SIDCs.
     if (this.metadata.numberSIDC) {
       //Number based SIDCs.
-      var symbolSet = String(this.options.sidc).substr(4, 2);
+      let symbolSet = String(this.options.sidc).substr(4, 2);
       if (ms._iconCache[icnet].hasOwnProperty("numberSIDC")) {
         if (
           ms._iconCache[icnet].numberSIDC.symbolSet.hasOwnProperty(symbolSet)
@@ -192,9 +192,9 @@ export default function icon(ms) {
 					if(ms._element){
 					listBBoxes = '';
 					sId = ms._iconCache[icnet].numberSIDC.symbolSet[15].icn;
-					for (var property in sId) {
+					for (let property in sId) {
 					console.log(property)
-							var BaseGeometry = document.createElementNS("http://www.w3.org/2000/svg", "g");
+							let BaseGeometry = document.createElementNS("http://www.w3.org/2000/svg", "g");
 							BaseGeometry.setAttribute('id', 'BaseGeometryEquipment');
 								BaseGeometry.appendChild(
 									BaseGeometry.ownerDocument.importNode(
@@ -203,7 +203,7 @@ export default function icon(ms) {
 										), true
 									)
 								);
-							var svgSymbol = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+							let svgSymbol = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 							svgSymbol.setAttribute("width", 200);
 							svgSymbol.setAttribute("height", 200);
 							svgSymbol.setAttribute("version", 1.1);
@@ -213,13 +213,13 @@ export default function icon(ms) {
 							svgSymbol.setAttribute("xmlns", "http://www.w3.org/2000/svg");
 							svgSymbol.appendChild(BaseGeometry);
 
-							var targetElement = document.getElementById(ms._element);
+							let targetElement = document.getElementById(ms._element);
 							if(targetElement.hasChildNodes()){
 								targetElement.removeChild(targetElement.childNodes[0])
 							}
 							targetElement.appendChild(svgSymbol);
 							console.log(targetElement)
-							var BBox = document.getElementById("BaseGeometryEquipment").getBBox()
+							let BBox = document.getElementById("BaseGeometryEquipment").getBBox()
 							listBBoxes +=  property + ':' + (BBox.y+ BBox.height)+',';
 
 						}
@@ -235,7 +235,7 @@ export default function icon(ms) {
 
     // Put all this togheter and return the Icon. ============================================
     iconColor = this.colors.iconColor[this.metadata.affiliation];
-    var undefinedIcon = [
+    let undefinedIcon = [
       {
         type: "path",
         stroke: false,
@@ -246,7 +246,7 @@ export default function icon(ms) {
     ];
     if (this.metadata.numberSIDC) {
       //Number based SIDC
-      var mainIcon = icons[this.metadata.functionid.substr(0, 6)]; //Main symbol
+      let mainIcon = icons[this.metadata.functionid.substr(0, 6)]; //Main symbol
       //*
       if (
         typeof mainIcon === "undefined" &&
@@ -270,7 +270,7 @@ export default function icon(ms) {
       } else {
         //Handle special cases of dismounted individual where weapons should be scaled
         // TODO take care of common modifiers...
-        var mainSIDC = Number(this.metadata.functionid.substr(0, 6));
+        let mainSIDC = Number(this.metadata.functionid.substr(0, 6));
         if (
           (this.metadata.dismounted &&
             mainSIDC >= 110301 &&
@@ -360,7 +360,7 @@ export default function icon(ms) {
       }
     } else {
       //Letter based SIDC
-      var genericSIDC =
+      let genericSIDC =
         this.options.sidc.substr(0, 1) +
         "-" +
         this.options.sidc.substr(2, 1) +

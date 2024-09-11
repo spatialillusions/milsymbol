@@ -1,15 +1,15 @@
 //import { ms } from "../ms.js";
 export function metadata(ms, metadata, mapping) {
-  var version = this.options.sidc.substr(0, 2);
+  const version = this.options.sidc.substr(0, 2);
   //metadata.v13 = version > 13;
-  var standardIdentity1 = this.options.sidc.substr(2, 1);
-  var standardIdentity2 = this.options.sidc.substr(3, 1);
-  var symbolSet = this.options.sidc.substr(4, 2);
-  var status = this.options.sidc.substr(6, 1);
-  var headquartersTaskForceDummy = this.options.sidc.substr(7, 1);
-  var echelonMobility = this.options.sidc.substr(8, 2);
+  const standardIdentity1 = this.options.sidc.substr(2, 1);
+  const standardIdentity2 = this.options.sidc.substr(3, 1);
+  const symbolSet = this.options.sidc.substr(4, 2);
+  const status = this.options.sidc.substr(6, 1);
+  const headquartersTaskForceDummy = this.options.sidc.substr(7, 1);
+  const echelonMobility = this.options.sidc.substr(8, 2);
 
-  var affiliationMapping = {
+  const affiliationMapping = {
     "0": "Unknown",
     "1": "Unknown",
     "2": "Friend",
@@ -23,7 +23,7 @@ export function metadata(ms, metadata, mapping) {
     metadata.suspect = true;
   }
 
-  var dimensionMapping = {
+  const dimensionMapping = {
     "00": "Sea",
     "01": "Air",
     "02": "Air",
@@ -47,7 +47,7 @@ export function metadata(ms, metadata, mapping) {
     "60": "Ground"
   };
 
-  var functionid = (metadata.functionid = this.options.sidc.substr(10, 10));
+  const functionid = (metadata.functionid = this.options.sidc.substr(10, 10));
   metadata._modifier1 =
     (this.options.sidc.substr(20, 1) || "0") +
     (functionid.substr(6, 2) || "00");

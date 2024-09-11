@@ -1,22 +1,22 @@
 import { ms } from "../../ms.js";
 export default function getColors() {
-  var baseFillColor =
+  let baseFillColor =
     typeof this.style.colorMode === "object"
       ? this.style.colorMode
       : ms.getColorMode(this.style.colorMode);
-  var baseFrameColor =
+  const baseFrameColor =
     typeof this.style.frameColor === "object"
       ? this.style.frameColor
       : ms.getColorMode("FrameColor");
-  var baseIconColor =
+  const baseIconColor =
     typeof this.style.iconColor === "object"
       ? this.style.iconColor
       : ms.getColorMode("IconColor");
-  var baseIconFillColor = baseFillColor;
-  var baseColorBlack = ms.getColorMode("Black");
-  var baseColorWhite = ms.getColorMode("White");
-  var baseColorOffWhite = ms.getColorMode("OffWhite");
-  var baseColorNone = ms.getColorMode("None");
+  const baseIconFillColor = baseFillColor;
+  let baseColorBlack = ms.getColorMode("Black");
+  let baseColorWhite = ms.getColorMode("White");
+  const baseColorOffWhite = ms.getColorMode("OffWhite");
+  const baseColorNone = ms.getColorMode("None");
 
   //If it is a Civilian Symbol and civilian colors not are turned off, use civilian colors...
   if (this.style.civilianColor && this.metadata.civilian) {
@@ -48,7 +48,7 @@ export default function getColors() {
     baseColorWhite = baseFillColor = baseColorNone;
   }
 
-  var colors = {
+  const colors = {
     fillColor: baseFillColor,
     frameColor: baseFrameColor,
     iconColor: baseIconColor,

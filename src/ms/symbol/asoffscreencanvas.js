@@ -13,21 +13,21 @@ export default function asOffscreenCanvas(ratio) {
       ms.setBrokenPath2D(true);
     } else {
       // If Path2D exists we need to check if it is broken
-      var canv = new OffscreenCanvas(1, 1);
-      var _ctx = canv.getContext("2d");
+      const canv = new OffscreenCanvas(1, 1);
+      const _ctx = canv.getContext("2d");
       // Draw an SVG path to the canvas...
-      var p = new Path2D("M0 0 h 10 v 10 h -10 Z");
+      const p = new Path2D("M0 0 h 10 v 10 h -10 Z");
       _ctx.fill(p);
       // Pick a pixel and see if it is filled with black... (if not SVG is not working)
-      var data = _ctx.getImageData(0, 0, 1, 1).data.join();
+      const data = _ctx.getImageData(0, 0, 1, 1).data.join();
       ms.setBrokenPath2D(!(data == "0,0,0,255"));
     }
   }
 
   //TODO fix the pixel ratio
   ratio = ratio || 1; //window.devicePixelRatio || 1;
-  var canvas = new OffscreenCanvas(this.width * ratio, this.height * ratio);
-  var ctx = canvas.getContext("2d");
+  const canvas = new OffscreenCanvas(this.width * ratio, this.height * ratio);
+  const ctx = canvas.getContext("2d");
   ctx.scale((ratio * this.style.size) / 100, (ratio * this.style.size) / 100);
   ctx.translate(
     -(this.bbox.x1 - this.style.strokeWidth - this.style.outlineWidth),

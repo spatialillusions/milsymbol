@@ -1,18 +1,18 @@
 //Symbol Modifiers #######################################################################
 export default function modifier(ms) {
-  var drawArray1 = [];
-  var drawArray2 = [];
-  var bbox = new ms.BBox(this.metadata.baseGeometry.bbox); // clone the bbox
-  var color = this.style.frameColor
+  let drawArray1 = [];
+  let drawArray2 = [];
+  let bbox = new ms.BBox(this.metadata.baseGeometry.bbox); // clone the bbox
+  let color = this.style.frameColor
     ? this.style.frameColor[this.metadata.affiliation]
     : this.colors.iconColor[this.metadata.affiliation];
-  var gbbox = new ms.BBox(); // bounding box for the added geometries
-  var geom;
+  let gbbox = new ms.BBox(); // bounding box for the added geometries
+  let geom;
 
-  var hqStaffLength = Number(this.style.hqStaffLength || ms._hqStaffLength);
+  let hqStaffLength = Number(this.style.hqStaffLength || ms._hqStaffLength);
   if (this.metadata.headquarters && hqStaffLength > 0) {
     //HEADQUARTERS
-    var y = 100;
+    let y = 100;
     if (
       [
         "AirFriend",
@@ -60,7 +60,7 @@ export default function modifier(ms) {
   }
   if (this.metadata.taskForce) {
     //TASK FORCE
-    var width = {
+    let width = {
       "Corps/MEF": 110,
       Army: 145,
       "Army Group/front": 180,
@@ -108,7 +108,7 @@ export default function modifier(ms) {
   }
   if (this.metadata.installation) {
     //INSTALLATION
-    var gapFiller = 0;
+    let gapFiller = 0;
     if (
       ["AirHostile", "GroundHostile", "SeaHostile"].indexOf(
         this.metadata.dimension + this.metadata.affiliation
@@ -160,7 +160,7 @@ export default function modifier(ms) {
   }
   if (this.metadata.feintDummy) {
     //FEINT DUMMY
-    var topPoint = bbox.y1 - 0 - bbox.width() / 2;
+    let topPoint = bbox.y1 - 0 - bbox.width() / 2;
     geom = {
       type: "path",
       strokedasharray: ms._dashArrays.feintDummy,
@@ -197,8 +197,8 @@ export default function modifier(ms) {
   }
   //Unit Size
   if (this.metadata.echelon) {
-    var installationPadding = this.metadata.installation ? 15 : 0;
-    var echelons = {
+    let installationPadding = this.metadata.installation ? 15 : 0;
+    let echelons = {
       "Team/Crew": {
         g: [
           { type: "circle", cx: 100, cy: bbox.y1 - 20, r: 15 },
@@ -488,7 +488,7 @@ export default function modifier(ms) {
         bbox.y2 += 5;
       }
     }
-    var mobilities = {
+    let mobilities = {
       "Wheeled limited cross country": {
         g: [
           { type: "path", d: "M 53,1 l 94,0" },
@@ -619,7 +619,7 @@ export default function modifier(ms) {
 
   //Dismounted Leadership
   if (this.metadata.leadership) {
-    var leadership = {
+    let leadership = {
       Friend: {
         type: "path",
         d: "m 45,60 55,-25 55,25"
@@ -636,13 +636,13 @@ export default function modifier(ms) {
     }
   }
   //Assign fill, stroke and stroke-width
-  for (var i = 0; i < drawArray1.length; i++) {
+  for (let i = 0; i < drawArray1.length; i++) {
     if (!drawArray1[i].hasOwnProperty("fill")) drawArray1[i].fill = false;
     if (!drawArray1[i].hasOwnProperty("stroke")) drawArray1[i].stroke = color;
     if (!drawArray1[i].hasOwnProperty("strokewidth"))
       drawArray1[i].strokewidth = this.style.strokeWidth;
   }
-  for (i = 0; i < drawArray2.length; i++) {
+  for (let i = 0; i < drawArray2.length; i++) {
     if (!drawArray2[i].hasOwnProperty("fill")) drawArray2[i].fill = false;
     if (!drawArray2[i].hasOwnProperty("stroke")) drawArray2[i].stroke = color;
     if (!drawArray2[i].hasOwnProperty("strokewidth"))

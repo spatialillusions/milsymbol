@@ -6,7 +6,7 @@ export function Colormode(
   unknown,
   suspect
 ) {
-  var o = {};
+  const o = {};
   o.Civilian = civilian;
   o.Friend = friend;
   o.Hostile = hostile;

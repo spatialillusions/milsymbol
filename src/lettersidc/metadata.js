@@ -2,27 +2,27 @@
 export function metadata(ms, metadata, mapping) {
   this.options.sidc = this.options.sidc.toUpperCase();
 
-  var codingscheme =
+  const codingscheme =
     this.options.sidc.charAt(0) != "" ? this.options.sidc.charAt(0) : "-";
-  var affiliation =
+  const affiliation =
     this.options.sidc.charAt(1) != "" ? this.options.sidc.charAt(1) : "-";
-  var battledimension =
+  const battledimension =
     this.options.sidc.charAt(2) != "" ? this.options.sidc.charAt(2) : "-";
-  var status =
+  const status =
     this.options.sidc.charAt(3) != "" ? this.options.sidc.charAt(3) : "-";
-  var functionid = (metadata.functionid =
+  const functionid = (metadata.functionid =
     this.options.sidc.substr(4, 6) != ""
       ? this.options.sidc.substr(4, 6)
       : "------");
-  var symbolmodifier11 =
+  const symbolmodifier11 =
     this.options.sidc.charAt(10) != "" ? this.options.sidc.charAt(10) : "-";
-  var symbolmodifier12 =
+  const symbolmodifier12 =
     this.options.sidc.charAt(11) != "" ? this.options.sidc.charAt(11) : "-";
   /*
-  var countrycode = this.options.sidc.substr(12, 2) != ""
+  const countrycode = this.options.sidc.substr(12, 2) != ""
     ? this.options.sidc.substr(12, 2)
     : "--";
-  var orderofbattle = this.options.sidc.charAt(14) != "" ? this.options.sidc.charAt(14) : "-";
+  const orderofbattle = this.options.sidc.charAt(14) != "" ? this.options.sidc.charAt(14) : "-";
   */
   if (["H", "S", "J", "K"].indexOf(affiliation) > -1)
     metadata.affiliation = mapping.affiliation[0];

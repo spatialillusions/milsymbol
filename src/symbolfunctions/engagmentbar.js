@@ -1,17 +1,17 @@
 // Engagment bar ##################################################################################
 export default function engagement(ms) {
-  var drawArray1 = [];
-  var drawArray2 = [];
-  var bbox = this.bbox;
-  var x1 = bbox.x1;
-  var x2 = bbox.x2;
-  var y1 = bbox.y1;
-  var y2 = bbox.y2;
+  let drawArray1 = [];
+  let drawArray2 = [];
+  let bbox = this.bbox;
+  let x1 = bbox.x1;
+  let x2 = bbox.x2;
+  let y1 = bbox.y1;
+  let y2 = bbox.y2;
 
   if (this.options.engagementBar !== "") {
     y1 -= 6;
-    var fontFamily = this.style.fontfamily;
-    var fontColor =
+    const fontFamily = this.style.fontfamily;
+    const fontColor =
       this.colors.iconColor[this.metadata.affiliation] ||
       this.colors.iconColor["Friend"];
 
@@ -28,9 +28,9 @@ export default function engagement(ms) {
       stroke: false
     });
 
-    var color = false;
+    let color = false;
     if (this.metadata.fill && this.style.monoColor === "") {
-      var colors = {
+      const colors = {
         TARGET: "rgb(255, 0, 0)",
         "NON-TARGET": "rgb(255, 255, 255)",
         EXPIRED: "rgb(255, 120, 0)"
@@ -40,7 +40,7 @@ export default function engagement(ms) {
         this.colors.fillColor[this.metadata.affiliation];
     }
     // Bar width
-    var width = Math.max(bbox.width(), this.options.engagementBar.length * 16);
+    let width = Math.max(bbox.width(), this.options.engagementBar.length * 16);
     x1 = Math.min(x1, 100 - width / 2);
     x2 = Math.max(x2, 100 + width / 2);
 
@@ -66,7 +66,7 @@ export default function engagement(ms) {
     y1 -= 25;
     //outline
     if (this.style.outlineWidth > 0) {
-      var outline;
+      let outline;
       if (this.metadata.fill && this.style.monoColor === "") {
         outline = drawArray2[0];
       } else {

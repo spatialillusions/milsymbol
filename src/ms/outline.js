@@ -1,14 +1,14 @@
 export default function(geom, outline, stroke, color) {
   function process(geom, outline, stroke, color) {
-    var clone;
+    let clone;
     if (Array.isArray(geom)) {
       clone = [];
-      for (var i in geom) {
+      for (let i in geom) {
         clone.push(process(geom[i], outline, stroke, color));
       }
     } else {
       clone = {};
-      for (var key in geom) {
+      for (let key in geom) {
         if (["fill", "fillopacity"].indexOf(key) == -1) {
           clone[key] = geom[key];
         }
@@ -19,7 +19,7 @@ export default function(geom, outline, stroke, color) {
         geom.type == "scale"
       ) {
         clone.draw = [];
-        for (var draw in geom.draw) {
+        for (let draw in geom.draw) {
           clone.draw.push(process(geom.draw[draw], outline, stroke, color));
         }
       } else {

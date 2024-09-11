@@ -1,15 +1,15 @@
 import { ms } from "../../ms.js";
 export default function asSVG() {
   function processInstructions(instruction) {
-    var svgxml = "";
-    for (var i = 0; i < instruction.length; i++) {
+    let svgxml = "";
+    for (let i = 0; i < instruction.length; i++) {
       if (Array.isArray(instruction[i])) {
         if (instruction[i].length) {
           svgxml += processInstructions.call(this, instruction[i]);
         }
       } else {
         if (typeof instruction[i] === "object") {
-          var svg = "";
+          let svg = "";
           if (instruction[i].type == "svg") {
             svg += instruction[i].svg;
           } else {
@@ -145,7 +145,7 @@ export default function asSVG() {
     }
     return svgxml;
   }
-  var xml =
+  let xml =
     '<svg xmlns="' +
     ms._svgNS +
     '" version="1.2" baseProfile="tiny" width="' +

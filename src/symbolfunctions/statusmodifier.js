@@ -1,10 +1,10 @@
 //Sets modifiers depending of status #####################################################
 export default function statusmodifier(ms) {
-  var drawArray1 = [];
-  var drawArray2 = [];
-  var bbox = this.metadata.baseGeometry.bbox;
-  var y1 = bbox.y1;
-  var y2 = bbox.y2;
+  let drawArray1 = [];
+  let drawArray2 = [];
+  let bbox = this.metadata.baseGeometry.bbox;
+  let y1 = bbox.y1;
+  let y2 = bbox.y2;
 
   if (this.metadata.condition) {
     if (
@@ -12,7 +12,7 @@ export default function statusmodifier(ms) {
       this.style.monoColor === "" &&
       !this.style.simpleStatusModifier
     ) {
-      var colors = {
+      const colors = {
         FullyCapable: "rgb(0,255,0)",
         Damaged: "rgb(255,255,0)",
         Destroyed: "rgb(255,0,0)",

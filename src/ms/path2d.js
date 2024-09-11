@@ -7,10 +7,10 @@ export default function(ctx, d) {
   // This function converts a svg path to canvas instructions, it does not support everything
   // but most of the commands in paths.
   ctx.beginPath();
-  var x, y, x1, y1, x2, y2, i, j;
-  var x0, y0;
-  var c;
-  var parts = d.match(/([MCLHV][^MCLHV]*)/gi);
+  let x, y, x1, y1, x2, y2, i, j;
+  let x0, y0;
+  let c;
+  let parts = d.match(/([MCLHV][^MCLHV]*)/gi);
   for (i = 0; i < parts.length; i++) {
     if (parts[i].charAt(0) == "M") {
       c = parts[i].match(/[-\d].*[\d]/)[0].split(/[\s,]/g);
