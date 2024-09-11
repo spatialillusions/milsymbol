@@ -1,13 +1,13 @@
-var size = 70;
+let size = 70;
 
 /*
         // Since we don't have any geometry types in APP-6 D controle measures, let us get them from 2525D
-        var control = milstd["ms2525d"]["25"]["main icon"];
-        var std2525lookup = {};
-        for (var i = 0; i < control.length; i++) {
+        let control = milstd["ms2525d"]["25"]["main icon"];
+        let std2525lookup = {};
+        for (let i = 0; i < control.length; i++) {
           std2525lookup[control[i]["Code"]] = control[i].geometry;
         }
-        for (var j = 0; j < milstd["app6d"]["25"]["main icon"].length; j++) {
+        for (let j = 0; j < milstd["app6d"]["25"]["main icon"].length; j++) {
           milstd["app6d"]["25"]["main icon"][j].geometry = std2525lookup[milstd["app6d"]["25"]["main icon"][j]["Code"]];
         }
     */
@@ -15,10 +15,10 @@ var size = 70;
         ms.addSymbolPart(function debug() {
           //This debug function is a minimal example of how to extend milsymbol.
           //Create a variable to store your geometries
-          var drawArray1 = [];
-          var drawArray2 = [];
+          let drawArray1 = [];
+          let drawArray2 = [];
           //Get a new bounding box and modify it if your geometry extends outside the current bounds.
-          var gbbox = new ms.BBox();
+          let gbbox = new ms.BBox();
           //Draws the icon octagon
           drawArray2.push({
             type: "path",
@@ -32,9 +32,13 @@ var size = 70;
         });
         //*/
 
+function svgLoad() {
+  console.log(this);
+}
+
 function generatenavigation() {
-  var i = 0;
-  var indexoftables = "";
+  let i = 0;
+  let indexoftables = "";
   document.querySelectorAll("h2, h3").forEach(function(d) {
     i++;
     d.id = "heading-" + i;
@@ -50,7 +54,7 @@ function generatenavigation() {
   document.getElementById("indexoftables").innerHTML = indexoftables;
 
   i = 0;
-  var indexoffigures = "";
+  let indexoffigures = "";
   document.querySelectorAll("figure").forEach(function(d) {
     i++;
     d.id = "figure-" + i;
@@ -90,16 +94,38 @@ function labels(icon) {
   };
 }
 
-function renderSymbolSet(symbolset) {
+function renderSymbolSet(symbolset, svgIcon) {
   console.log(symbolset);
-  var output = "";
-  var i;
+
+  const svgIcons = {
+    Space: "Space",
+    "Space Missile": "Space",
+    "Signals Intelligence – Space": "SigInt",
+    //"Signals Intelligence – Space": "SigInt",
+    "Sea surface": "SeaSurface",
+    "Sea subsurface": "SeaSubsurface",
+    "Mine warfare": "SeaSubsurface",
+    "Land unit": "Land",
+    "Land civilian unit/Organization": "Land",
+    "Land equipment": "Land",
+    "Land installations": "Land",
+    "Dismounted individuals": "Dismounted",
+    Cyberspace: "Cyberspace",
+    "Control measure": "ControlMeasures",
+    "": "CommonMods",
+    Air: "Air",
+    "Air missile": "Air",
+    "Activity/Event": "Activities"
+  };
+  let output = "";
+  let i;
+  let symbol;
   output += "<h2>" + (symbolset.name || "Common") + "</h2>";
   output += "<h3>" + (symbolset.name || "Common") + " Main Icon</h3>";
   output += "<table border=1><thead><tr><th>Description</th><th>Icon</th>";
 
   if (symbolset.symbolset == 36) output += "<th>Alternate Icon</th>";
-
+  if (svgIcon) output += "<th>SVG Icon</th>";
   output += "<th>Remarks</th></tr></thead>";
 
   for (i = 0; i < symbolset.mainIcon.length; i++) {
@@ -110,7 +136,7 @@ function renderSymbolSet(symbolset) {
       symbolset.mainIcon[i]["Entity Subtype"] == "{Disused} "
     )
       continue;
-    var symbol = new ms.Symbol(
+    symbol = new ms.Symbol(
       "1003" +
         (symbolset.symbolset || "10") +
         "0000" +
@@ -223,6 +249,26 @@ function renderSymbolSet(symbolset) {
       output += "</td>";
     }
 
+    if (svgIcon) {
+      output +=
+        '<td class="svg-icon"><img onerror=\'this.onerror=null;this.src="svg-icons-2525E/' +
+        svgIcons[symbolset.name] +
+        "/" +
+        symbolset.symbolset +
+        symbolset.mainIcon[i]["Code"] +
+        '_1.svg"\' src="svg-icons-2525E/' +
+        svgIcons[symbolset.name] +
+        "/" +
+        symbolset.symbolset +
+        symbolset.mainIcon[i]["Code"] +
+        '.svg"><!--<img src="svg-icons-2525E/' +
+        svgIcons[symbolset.name] +
+        "/" +
+        symbolset.symbolset +
+        symbolset.mainIcon[i]["Code"] +
+        '_1.svg">--></td>';
+    }
+
     output +=
       "<td>" +
       (symbolset.mainIcon[i]["Remarks"]
@@ -233,8 +279,9 @@ function renderSymbolSet(symbolset) {
   output += "</table>";
   if (symbolset.modifier1.length) {
     output += "<h3>" + (symbolset.name || "Common") + " Modifier 1</h3>";
-    output +=
-      "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
+    output += "<table border=1><thead><tr><th>Description</th><th>Icon</th>";
+    if (svgIcon) output += "<th>SVG Icon</th>";
+    output += "<th>Remarks</th></tr></thead>";
     for (i = 0; i < symbolset.modifier1.length; i++) {
       if (symbolset.modifier1[i]["First Modifier"] == "{Disused}") continue;
 
@@ -242,7 +289,7 @@ function renderSymbolSet(symbolset) {
         symbolset.modifier1[i]["Code"] &&
         symbolset.modifier1[i]["Code"].length == 2
       ) {
-        var symbol = new ms.Symbol(
+        symbol = new ms.Symbol(
           "1003" +
             (symbolset.symbolset || "10") +
             "0000000000" +
@@ -256,7 +303,7 @@ function renderSymbolSet(symbolset) {
         symbolset.modifier1[i]["Code"] &&
         symbolset.modifier1[i]["Code"].length == 3
       ) {
-        var symbol = new ms.Symbol(
+        symbol = new ms.Symbol(
           "1003" +
             (symbolset.symbolset || "10") +
             "0000000000" +
@@ -297,6 +344,24 @@ function renderSymbolSet(symbolset) {
         !isNaN(symbolset.modifier1[i]["Code"])
       )
         output += symbol.asSVG();
+
+      if (svgIcon) {
+        output +=
+          '</td><td class="svg-icon"><img onerror=\'this.onerror=null;this.src="svg-icons-2525E/' +
+          svgIcons[symbolset.name] +
+          "/mod1/" +
+          (symbolset.symbolset
+            ? symbolset.symbolset + symbolset.modifier1[i]["Code"]
+            : symbolset.modifier1[i]["Code"] + "_") +
+          '1_1.svg"\' src="svg-icons-2525E/' +
+          svgIcons[symbolset.name] +
+          "/mod1/" +
+          (symbolset.symbolset
+            ? symbolset.symbolset + symbolset.modifier1[i]["Code"]
+            : symbolset.modifier1[i]["Code"] + "_") +
+          '1.svg">';
+      }
+
       output +=
         "</td><td>" + (symbolset.modifier1[i]["Remarks"] || "") + "</td></tr>";
     }
@@ -304,15 +369,17 @@ function renderSymbolSet(symbolset) {
   }
   if (symbolset.modifier2.length != 0) {
     output += "<h3>" + (symbolset.name || "Common") + " Modifier 2</h3>";
-    output +=
-      "<table border=1><thead><tr><th>Description</th><th>Icon</th><th>Remarks</th></tr></thead>";
+    output += "<table border=1><thead><tr><th>Description</th><th>Icon</th>";
+    if (svgIcon) output += "<th>SVG Icon</th>";
+    output += "<th>Remarks</th></tr></thead>";
+
     for (i = 0; i < symbolset.modifier2.length; i++) {
       if (symbolset.modifier2[i]["Second Modifier"] == "{Disused}") continue;
       if (
         symbolset.modifier2[i]["Code"] &&
         symbolset.modifier2[i]["Code"].length == 2
       ) {
-        var symbol = new ms.Symbol(
+        symbol = new ms.Symbol(
           "1003" +
             (symbolset.symbolset || "10") +
             "000000000000" +
@@ -326,7 +393,7 @@ function renderSymbolSet(symbolset) {
         symbolset.modifier2[i]["Code"] &&
         symbolset.modifier2[i]["Code"].length == 3
       ) {
-        var symbol = new ms.Symbol(
+        symbol = new ms.Symbol(
           "1003" +
             (symbolset.symbolset || "10") +
             "000000000000" +
@@ -372,6 +439,23 @@ function renderSymbolSet(symbolset) {
         !isNaN(symbolset.modifier2[i]["Code"])
       )
         output += symbol.asSVG();
+
+      if (svgIcon) {
+        output +=
+          '</td><td class="svg-icon"><img onerror=\'this.onerror=null;this.src="svg-icons-2525E/' +
+          svgIcons[symbolset.name] +
+          "/mod2/" +
+          (symbolset.symbolset
+            ? symbolset.symbolset + symbolset.modifier2[i]["Code"]
+            : symbolset.modifier2[i]["Code"] + "_") +
+          '2_1.svg"\'src="svg-icons-2525E/' +
+          svgIcons[symbolset.name] +
+          "/mod2/" +
+          (symbolset.symbolset
+            ? symbolset.symbolset + symbolset.modifier2[i]["Code"]
+            : symbolset.modifier2[i]["Code"] + "_") +
+          '2.svg">';
+      }
       output +=
         "</td><td>" + (symbolset.modifier2[i]["Remarks"] || "") + "</td></tr>";
     }
