@@ -26,19 +26,19 @@ export default function(
   true/false for sea mine stuff
   */
 
-  var affiliation = metadata.affiliation || "Friend";
+  const affiliation = metadata.affiliation || "Friend";
   //If hostile and not monoColor, make it red, otherwise use the iconColor.
-  var iconColor =
+  const iconColor =
     affiliation == "Hostile" && !monoColor
       ? "rgb(255, 0, 0)"
       : colors.iconColor[affiliation];
-  var fillColor =
+  const fillColor =
     affiliation == "Hostile" && !monoColor
       ? "rgb(255, 0, 0)"
       : colors.fillColor[affiliation];
-  var numberSIDC = metadata.numberSIDC;
-  var white = colors.white[affiliation];
-  var icn = {};
+  const numberSIDC = metadata.numberSIDC;
+  const white = colors.white[affiliation];
+  const icn = {};
 
   icn["TP.DESTROY"] =
     !STD2525 && !numberSIDC
@@ -3823,7 +3823,7 @@ export default function(
   function defaultProperties(instructions) {
     if (typeof instructions === "object") {
       if (Array.isArray(instructions)) {
-        for (var i = 0; i < instructions.length; i++) {
+        for (let i = 0; i < instructions.length; i++) {
           defaultProperties.call(this, instructions[i]);
         }
         return;
@@ -3836,7 +3836,7 @@ export default function(
     }
   }
 //*/
-  for (var key in icn) {
+  for (let key in icn) {
     if (!icn.hasOwnProperty(key)) continue;
     if (iconParts.hasOwnProperty(key)) console.warn("Override of: " + key);
     defaultProperties.call(this, icn[key], iconColor);

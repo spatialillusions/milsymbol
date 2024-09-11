@@ -30,12 +30,12 @@ export default function(
   true/false for sea mine stuff
   */
 
-  var affiliation = metadata.affiliation || "Friend";
+  const affiliation = metadata.affiliation || "Friend";
   //If hostile and not monoColor, make it red, otherwise use the iconColor.
-  var iconColor = colors.iconColor[affiliation];
+  const iconColor = colors.iconColor[affiliation];
 
-  //var numberSIDC = metadata.numberSIDC;
-  var icn = {};
+  //const numberSIDC = metadata.numberSIDC;
+  const icn = {};
 
   // SIGNALS INTELLIGENCE ==========================================================
   //if(symbol.codingscheme == "I"){
@@ -375,7 +375,7 @@ export default function(
     text: "G"
   };
 
-  for (var key in icn) {
+  for (let key in icn) {
     if (!icn.hasOwnProperty(key)) continue;
     if (iconParts.hasOwnProperty(key)) console.warn("Override of: " + key);
     defaultProperties.call(this, icn[key], iconColor);

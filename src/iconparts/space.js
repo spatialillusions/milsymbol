@@ -30,18 +30,18 @@ export default function(
   true/false for sea mine stuff
   */
 
-  var affiliation = metadata.affiliation || "Friend";
-  var frame = metadata.frame;
-  var numberSIDC = metadata.numberSIDC;
+  const affiliation = metadata.affiliation || "Friend";
+  const frame = metadata.frame;
+  const numberSIDC = metadata.numberSIDC;
 
   //If hostile and not monoColor, make it red, otherwise use the iconColor.
-  var iconColor = colors.iconColor[affiliation];
-  var iconFillColor = colors.iconFillColor[affiliation];
-  var none = colors.none[affiliation];
-  var black = colors.black[affiliation];
+  const iconColor = colors.iconColor[affiliation];
+  const iconFillColor = colors.iconFillColor[affiliation];
+  const none = colors.none[affiliation];
+  const black = colors.black[affiliation];
 
-  //var numberSIDC = metadata.numberSIDC;
-  var icn = {};
+  //const numberSIDC = metadata.numberSIDC;
+  const icn = {};
 
   icn["SP.I.ANTISATELLITE WEAPON"] = {
     type: "path",
@@ -479,7 +479,7 @@ export default function(
   };
   icn["SPACE.PLANET LANDER"] = text("PL");
   //*/
-  for (var key in icn) {
+  for (let key in icn) {
     if (!icn.hasOwnProperty(key)) continue;
     if (iconParts.hasOwnProperty(key)) console.warn("Override of: " + key);
     defaultProperties.call(this, icn[key], iconColor);

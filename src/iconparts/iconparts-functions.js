@@ -25,8 +25,8 @@ export function defaultProperties(instructions, iconColor) {
 }
 
 export function text(str) {
-  var size = 48;
-  //var y = 115;
+  let size = 48;
+  //let y = 115;
   if (str.length == 1) {
     size = 48;
     //y = 115;
@@ -39,7 +39,7 @@ export function text(str) {
     size = 33;
     //y = 110;
   }
-  var t = {
+  return {
     type: "text",
     stroke: false,
     textanchor: "middle",
@@ -50,10 +50,9 @@ export function text(str) {
     //fontweight: "normal",
     text: str
   };
-  return t;
 }
 export function textm1(str) {
-  var size = 28;
+  let size = 28;
   if (str.length == 3) {
     size = 25;
   }
@@ -72,8 +71,8 @@ export function textm1(str) {
   };
 }
 export function textm2(str) {
-  var size = 28;
-  var y = 143;
+  let size = 28;
+  let y = 143;
 
   if (str.length == 3) {
     size = 25;

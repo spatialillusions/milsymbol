@@ -33,19 +33,19 @@ export default function(
   true/false for sea mine stuff
   */
 
-  var frame = metadata.frame;
-  var affiliation = metadata.affiliation || "Friend";
-  var baseGeometry = metadata.baseGeometry;
-  var numberSIDC = metadata.numberSIDC;
-  //var fillColor = colors.fillColor[affiliation];
-  var iconColor = colors.iconColor[affiliation];
-  var iconFillColor = colors.iconFillColor[affiliation];
-  //  var none = colors.none[affiliation];
-  var black = colors.black[affiliation];
-  var white = colors.white[affiliation];
+  const frame = metadata.frame;
+  const affiliation = metadata.affiliation || "Friend";
+  const baseGeometry = metadata.baseGeometry;
+  const numberSIDC = metadata.numberSIDC;
+  //const fillColor = colors.fillColor[affiliation];
+  const iconColor = colors.iconColor[affiliation];
+  const iconFillColor = colors.iconFillColor[affiliation];
+  //  const none = colors.none[affiliation];
+  const black = colors.black[affiliation];
+  const white = colors.white[affiliation];
 
-  //var numberSIDC = metadata.numberSIDC;
-  var icn = {};
+  //const numberSIDC = metadata.numberSIDC;
+  const icn = {};
 
   icn["GR.IC.MILITARY"] = text("MIL");
   icn["GR.I.GOVERNMENT"] = text("GOV");
@@ -5095,7 +5095,7 @@ export default function(
   icn["CY.M2."] = { type: "path", d: "" };
   icn["CY.M2."] = { type: "path", d: "" };
 
-  for (var key in icn) {
+  for (let key in icn) {
     if (!icn.hasOwnProperty(key)) continue;
     if (iconParts.hasOwnProperty(key)) console.warn("Override of: " + key);
     defaultProperties.call(this, icn[key], iconColor);

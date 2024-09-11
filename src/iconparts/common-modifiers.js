@@ -30,19 +30,19 @@ export default function(
   true/false for sea mine stuff
   */
 
-  //let frame = metadata.frame;
-  let affiliation = metadata.affiliation || "Friend";
-  //let baseGeometry = metadata.baseGeometry;
-  //let numberSIDC = metadata.numberSIDC;
-  //let fillColor = colors.fillColor[affiliation];
-  let iconColor = colors.iconColor[affiliation];
-  //let iconFillColor = colors.iconFillColor[affiliation];
-  //  let none = colors.none[affiliation];
-  //let black = colors.black[affiliation];
-  //let white = colors.white[affiliation];
+  //const frame = metadata.frame;
+  const affiliation = metadata.affiliation || "Friend";
+  //const baseGeometry = metadata.baseGeometry;
+  //const numberSIDC = metadata.numberSIDC;
+  //const fillColor = colors.fillColor[affiliation];
+  const iconColor = colors.iconColor[affiliation];
+  //const iconFillColor = colors.iconFillColor[affiliation];
+  //  const none = colors.none[affiliation];
+  //const black = colors.black[affiliation];
+  //const white = colors.white[affiliation];
 
-  //let numberSIDC = metadata.numberSIDC;
-  let icn = {};
+  //const numberSIDC = metadata.numberSIDC;
+  const icn = {};
 
   icn["COM.M1.UNMANNED AERIAL VEHICLE(UAV)"] = {
     type: "path",
