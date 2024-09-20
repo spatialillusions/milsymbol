@@ -63,8 +63,8 @@ export default {
       sIdm2["05"] = [icn["SP.M2.CYBERSPACE"]];
       sIdm2["07"] = [icn["SP.M2.HIGH POWER MICROWAVE"]];
       sIdm2["08"] = [icn["SP.M2.LASER"]];
-      sIdm2["09"] = [icn["SP.M2.MINE"]];
-      sIdm2["10"] = [icn["SP.M2.MAINTENANCE"]];
+      sIdm2["09"] = [icn["SP.M2.MAINTENANCE"]];
+      sIdm2["10"] = [icn["SP.M2.MINE"]];
       sIdm2["11"] = [icn["SP.M2.REFUEL"]];
       sIdm2["12"] = [icn["SP.M2.TUG"]];
     }

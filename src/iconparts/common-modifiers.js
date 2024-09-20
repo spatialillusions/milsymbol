@@ -88,7 +88,11 @@ export default function(
   icn["COM.M1.COMMAND POST NODE"] = textm1("CPN");
   icn["COM.M1.JOINT NETWORK NODE"] = textm1("JNN");
   icn["COM.M1.RETRANSMISSION SITE"] = textm1("RTNS");
-  icn["COM.M1.BRIGADE"] = textm1("X");
+  icn["COM.M1.BRIGADE"] = {
+    type: "path",
+    fill: false,
+    d: "m 107.5,62.5 -15,15  m 0,-15 15,15"
+  };
   icn["COM.M1.BRIDGE"] = {
     type: "path",
     fill: false,
@@ -109,7 +113,7 @@ export default function(
   icn["COM.M1.MAINTENANCE"] = {
     type: "path",
     fill: false,
-    d: "m 84,70 32,0 m 4,-5 c -5,0 -5,10 0,10 M 80,65 c 5,0 5,10 0,10"
+    d: "m 83,70 h 34  m 8,-7 c -10,0 -10,14 0,14  M 75,63 c 10,0 10,14 0,14"
   };
   icn["COM.M1.MEDICAL"] = {
     type: "path",
@@ -122,21 +126,21 @@ export default function(
   icn["COM.M1.SECURITY"] = textm1("SEC");
   icn["COM.M1.SNIPER"] = {
     type: "path",
-    d: "M75,60 l20,0 M100,76 l0,-18 M125,60 l-20,0",
+    d: "m 75,62 h 20  m 5,16 V 62.1  M 125,62 h -20",
     fill: false
   };
   icn["COM.M1.SPECIAL OPERATION FORCES"] = textm1("SOF");
   icn["COM.M1.SWAT"] = textm1("SWAT");
   icn["COM.M1.GUIDED MISSILE"] = textm1("G");
   icn["COM.M1.OTHER GUIDED MISSILE"] = textm1("GM");
-  icn["COM.IN.M1.PETROLEUM"] = {
+  icn["COM.M1.PETROLEUM"] = {
     type: "path",
-    d: "m 100,75 0,-10 -6,-10 12,0 -6,10",
+    d: "M 100,79 V 69 L 91,57 h 18 l -9,12",
     fill: false
   };
   icn["COM.M1.WATER"] = {
     type: "path",
-    d: "m 90,55 20,0 m -10,10 0,-10 m -25,10 40,0 c 10,0 15,5 15,10",
+    d: "m 92,59 h 16  m -8,9.7 V 59  M 75,69 h 40 c 10,0 15,5 15,10",
     fill: false
   };
   icn["COM.M1.WEAPON"] = textm1("WPN");
@@ -163,13 +167,21 @@ export default function(
     d: "m 110,59 v 16  m -8,-8 h 16  M 90,59 v 16  m 8,-8 H 82",
     fill: false
   };
-  icn["COM.M1.COMPANY"] = textm1("I");
+  icn["COM.M1.COMPANY"] = {
+    type: "path",
+    fill: false,
+    d: "M 100,59.6 V 78"
+  };
   icn["COM.M1.PLATOON"] = [
     { type: "circle", stroke: false, cx: 80, cy: 68, r: 8 },
     { type: "circle", stroke: false, cx: 100, cy: 68, r: 8 },
     { type: "circle", stroke: false, cx: 120, cy: 68, r: 8 }
   ];
-  icn["COM.M1.REGIMENT"] = textm1("III");
+  icn["COM.M1.REGIMENT"] = {
+    type: "path",
+    fill: false,
+    d: "m 110,60 v 18 0  M 90,60 v 18  m 10,-18 v 18"
+  };
   icn["COM.M1.SECTION"] = [
     { type: "circle", stroke: false, cx: 90, cy: 68, r: 8 },
     { type: "circle", stroke: false, cx: 110, cy: 68, r: 8 }
@@ -185,7 +197,11 @@ export default function(
     { type: "circle", fill: false, cx: 100, cy: 65, r: 10 },
     { type: "path", d: "m 90,75 l20,-20" }
   ];
-  icn["COM.M1.BATTALION"] = textm1("II");
+  icn["COM.M1.BATTALION"] = {
+    type: "path",
+    fill: false,
+    d: "m 105,60 v 18 0  M 95,60 v 18"
+  };
   icn["COM.M1.HIJACKER"] = textm1("HIJ");
   icn["COM.M1.ELECTROMAGNETIC WARFARE"] = textm1("EW");
 

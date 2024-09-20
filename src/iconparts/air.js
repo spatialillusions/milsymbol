@@ -173,13 +173,11 @@ export default function(
   };
   icn["AR.I.AIR DECOY"] = {
     type: "path",
-
     d:
       "M65,95 l15,-15 0,30 Z M92.5,95 l15,-15 0,30 Z M120,95 l15,-15 0,30 Z M65,120 l70,0 0,-5 -70,0 Z"
   };
   icn["SU.IC.AIR DECOY DSymbol"] = {
     type: "path",
-
     d:
       "M 85 81 L 65 98 L 85 119 L 85 81 z M 110 81 L 90 98 L 110 119 L 110 81 z M 135 81 L 115 98 L 135 119 L 135 81 z"
   };
@@ -282,7 +280,7 @@ export default function(
     type: "path",
 
     d:
-      "M 85 81 L 65 98 L 85 119 L 85 81 z M 110 81 L 90 98 L 110 119 L 110 81 z M 135 81 L 115 98 L 135 119 L 135 81 z"
+      "M 86.6,82.8 68.7,100 86.6,117 Z  m 22.4,0 -18,17.2 18,17 z  m 23,0 -18,17.2 18,17 z"
   };
   icn["AR.I.BOMB"] = text("BOMB");
   icn["AR.I.MANUAL TRACK"] = text("MAN");

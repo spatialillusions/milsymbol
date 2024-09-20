@@ -1378,10 +1378,19 @@ export default function(
   };
   icn["GR.M1.ANTISUBMARINE WARFARE"] = textm1("P");
   icn["GR.M1.AREA"] = textm1("AREA");
-  icn["GR.M1.ARMY"] = textm1("XXXX");
+  icn["GR.M1.ARMY"] = {
+    type: "path",
+    fill: false,
+    d:
+      "m 132,64.9 -13,12.7  m 0,-12.7 13,12.7  M 115,64.9 102,77.6  m 0,-12.7 13,12.7  M 97.9,64.9 85.2,77.6  m 0,-12.7 12.7,12.7  M 80.9,64.9 68.2,77.6  m 0,-12.7 12.7,12.7"
+  };
   icn["GR.M1.ATTACK"] = textm1("A");
   icn["GR.M1.AVIATION"] = { type: "path", d: "m 75,60 0,15 50,-15 0,15 z" };
-  icn["GR.M1.BATTALION"] = textm1("II");
+  icn["GR.M1.BATTALION"] = {
+    type: "path",
+    fill: false,
+    d: "m 105,60 v 18 0  M 95,60 v 18"
+  };
   icn["GR.M1.BIOLOGICAL"] = textm1("B");
   icn["GR.M1.BORDER"] = textm1("BOR");
   icn["GR.M1.BRIDGING"] = {
@@ -1389,7 +1398,11 @@ export default function(
     fill: false,
     d: "m 80,80 5,-5 30,0 5,5 m -40,-20 5,5 30,0 5,-5"
   };
-  icn["GR.M1.BRIGADE"] = textm1("X");
+  icn["GR.M1.BRIGADE"] = {
+    type: "path",
+    fill: false,
+    d: "m 107.5,62.5 -15,15  m 0,-15 15,15"
+  };
   icn["GR.M1.CHEMICAL"] = textm1("C");
   icn["GR.M1.INTRUSION"] = textm1("I");
   icn["GR.M1.CHEMICAL SURVEILLANCE"] = textm1("RS");
@@ -1411,8 +1424,17 @@ export default function(
     fontsize: 20,
     text: "CONST"
   };
-  icn["GR.M1.COMPANY"] = textm1("I");
-  icn["GR.M1.CORPS"] = textm1("XXX");
+  icn["GR.M1.COMPANY"] = {
+    type: "path",
+    fill: false,
+    d: "M 100,59.6 V 78"
+  };
+  icn["GR.M1.CORPS"] = {
+    type: "path",
+    fill: false,
+    d:
+      "m 127.5,62.5 -15,15  m 0,-15 15,15  m -20,-15 -15,15  m 0,-15 15,15  m -20,-15 -15,15  m 0,-15 15,15"
+  };
   icn["GR.M1.CROSS CULTURAL COMMUNICATION"] = textm1("CCC");
   icn["GR.M1.CROWD AND RIOT CONTROL"] = textm1("CRC");
   icn["GR.M1.DECONTAMINATION"] = textm1("D");
@@ -1431,7 +1453,12 @@ export default function(
     d:
       "m 104.6,64.8 c 0,2.7 -2.1,4.8 -4.6,4.8 -2.5,0 -4.6,-2.2 -4.6,-4.8 0,-2.7 2.1,-4.8 4.6,-4.8 2.5,0 4.6,2.2 4.6,4.8 z m 0,8.7 4.6,4.8 -18.3,0 4.6,-4.8 M 108.3,60 l 4.6,0 0,9.6 -4.6,0 m -16.5,0 -4.6,0 0,-9.6 4.6,0 m 17.4,4.8 c 0,5.3 -4.1,9.6 -9.2,9.6 -5.1,0 -9.2,-4.3 -9.2,-9.6 0,-5.3 4.1,-9.6 9.2,-9.6 5.1,0 9.2,4.3 9.2,9.6 z"
   };
-  icn["GR.M1.DIVISION"] = textm1("XX");
+  icn["GR.M1.DIVISION"] = {
+    type: "path",
+
+    fill: false,
+    d: "m 117.5,62.5 -15,15  m 0,-15 15,15  m -20,-15 -15,15  m 0,-15 15,15"
+  };
   icn["GR.M1.MARINE DIVISION"] = textm1("D");
   icn["GR.M1.DOG"] = textm1("DOG");
   icn["GR.M1.DRILLING"] = { type: "path", d: "m 90,60 5,15 10,0 5,-15 z" };
@@ -1467,7 +1494,7 @@ export default function(
   icn["GR.M1.MAINTENANCE"] = {
     type: "path",
     fill: false,
-    d: "m 84,70 32,0 m 4,-5 c -5,0 -5,10 0,10 M 80,65 c 5,0 5,10 0,10"
+    d: "m 83,70 h 34  m 8,-7 c -10,0 -10,14 0,14  M 75,63 c 10,0 10,14 0,14"
   };
   icn["GR.M1.MEDEVAC"] = {
     type: "path",
@@ -1596,7 +1623,11 @@ export default function(
   icn["GR.M1.RADIOLOGICAL"] = textm1("RAD");
   icn["GR.M1.RANGER"] = textm1("RGR");
   icn["GR.M1.RECON"] = textm1("R");
-  icn["GR.M1.REGIMENT"] = textm1("III");
+  icn["GR.M1.REGIMENT"] = {
+    type: "path",
+    fill: false,
+    d: "m 110,60 v 18 0  M 90,60 v 18  m 10,-18 v 18"
+  };
   icn["GR.M1.RETRANSMISSION SITE"] = textm1("RTNS");
   icn["GR.M1.ROBOTIC"] = {
     type: "path",
@@ -1633,7 +1664,7 @@ export default function(
   };
   icn["GR.M1.WATER"] = {
     type: "path",
-    d: "m 90,55 20,0 m -10,10 0,-10 m -25,10 40,0 c 10,0 15,5 15,10",
+    d: "m 92,59 h 16  m -8,9.7 V 59  M 75,69 h 40 c 10,0 15,5 15,10",
     fill: false
   };
   icn["GR.M1.INDEPENDENT COMMAND"] = {
@@ -1684,7 +1715,7 @@ export default function(
   icn["GR.M1.SMOKE/DECON"] = textm1("SD");
   icn["GR.M1.SNIPER"] = {
     type: "path",
-    d: "M75,60 l20,0 M100,76 l0,-18 M125,60 l-20,0",
+    d: "m 75,62 h 20  m 5,16 V 62.1  M 125,62 h -20",
     fill: false
   };
   icn["GR.M1.SOUND RANGING"] = textm1("SDR");
@@ -1710,10 +1741,14 @@ export default function(
     { type: "circle", fill: false, cx: 100, cy: 65, r: 10 },
     { type: "path", d: "m 90,75 l20,-20" }
   ];
-  icn["GR.M1.THEATRE"] = textm1("XXXXX");
+  icn["GR.M1.THEATRE"] = {
+    type: "path",
+    fill: false,
+    d:
+      "m 135,66.6 -11,11  m 0,-11 11,11  m -15,-11 -12,11  m 0,-11 12,11  m -15,-11 -10.7,11  m 0,-11 10.7,11  m -14.3,-11 -11.1,11  m 0,-11 11.1,11  m -14.9,-11 -11.1,11  m 0,-11 11.1,11"
+  };
   icn["GR.M1.TOPOGRAPHIC"] = {
     type: "path",
-
     fill: false,
     d: "m 92,65 c 6,3 10,3 16,0 m -18,13 10,-23 10,23"
   };
@@ -2937,7 +2972,7 @@ export default function(
   icn["GR.IN.M1.NATURAL GAS"] = textm1("NG");
   icn["GR.IN.M1.PETROLEUM"] = {
     type: "path",
-    d: "m 100,75 0,-10 -6,-10 12,0 -6,10",
+    d: "M 100,79 V 69 L 91,57 h 18 l -9,12",
     fill: false
   };
   icn["GR.IN.M1.CIVILIAN"] = textm1("CIV");
@@ -4853,7 +4888,7 @@ export default function(
     type: "path",
     stroke: false,
     d:
-      "m 97,82 h -4 l -0,5.88 c -1.18,0.51 -2.27,1.14 -3.27,1.89 -1.5,1.16 -2.69,2.61 -3.58,4.34 -0.89,1.71 -1.33,3.67 -1.33,5.89 0,2.3 0.44,4.3 1.33,6 0.89,1.7 2.08,3.2 3.58,4.3 0.99,0.7 2.07,1.3 3.25,1.8 L 93,118 h 4 l -0.1,-4.7 c 1.36,0.3 2.74,0.4 4.16,0.4 0.6,0 1.3,0 1.9,-0.1 v 4.4 h 4 v -5.2 c 1,-0.3 2,-0.7 2.8,-1 1.2,-0.5 2.2,-1 3,-1.4 0.7,-0.4 1.2,-0.6 1.4,-0.6 h 0.3 0.3 l 0.4,-0.4 -3.4,-5.4 -0.7,0.4 c 0.1,0.2 0.2,0.4 0.2,0.6 0,0.5 -0.3,0.9 -1,1.4 -0.7,0.5 -1.5,1 -2.4,1.4 -1,0.3 -2.1,0.6 -3.3,0.9 -1.2,0.3 -2.4,0.4 -3.5,0.4 -1.4,0 -2.76,-0.2 -4.09,-0.6 -1.3,-0.4 -2.44,-1 -3.43,-1.8 -0.95,-0.8 -1.72,-1.8 -2.3,-2.9 -0.58,-1.1 -0.87,-2.4 -0.87,-3.91 0,-1.46 0.29,-2.75 0.87,-3.88 0.58,-1.16 1.35,-2.13 2.3,-2.92 0.99,-0.78 2.13,-1.38 3.43,-1.79 1.33,-0.41 2.69,-0.61 4.09,-0.61 0.9,0 1.8,0.1 2.8,0.3 1,0.21 2,0.46 2.9,0.77 0.9,0.31 1.7,0.67 2.3,1.08 0.6,0.37 0.9,0.75 1,1.12 0.1,0.14 0.1,0.26 0.1,0.36 v 0.31 l 0.5,0.35 4,-6.18 -0.8,-0.62 c -0.1,0.1 -0.2,0.24 -0.3,0.41 -0.1,0.17 -0.2,0.26 -0.4,0.26 -0.1,0 -0.5,-0.14 -1.1,-0.41 -0.6,-0.27 -1.4,-0.56 -2.5,-0.87 -0.8,-0.22 -1.7,-0.43 -2.6,-0.63 V 82 h -4 v 4.35 c -0.6,-0 -1.2,-0.1 -1.9,-0.1 -1.42,0 -2.8,0.13 -4.16,0.39 z"
+      "m 92.23,81 v 7.56 c -0.4,0.36 -0.78,0.76 -1.14,1.19 -2.13,2.59 -3.21,5.89 -3.21,9.94 0,5.31 1.43,9.21 4.28,11.71 0,0 0,0 0.1,0.1 v 7.4 h 3.35 v -5.4 c 1.38,0.6 2.9,0.9 4.59,0.9 1.5,0 2.9,-0.3 4.3,-0.8 v 5.3 h 3.4 v -7.1 c 0.4,-0.3 0.7,-0.6 1,-0.9 1.9,-1.9 3,-4.4 3.3,-7.3 h -3.7 c -0.3,1.8 -0.9,3.3 -1.7,4.4 -1.4,2.1 -3.4,3.1 -6.2,3.1 -2.93,0 -5.16,-1 -6.67,-3 -1.48,-2 -2.23,-4.6 -2.23,-7.8 0,-3.91 0.83,-6.8 2.48,-8.69 1.66,-1.89 3.85,-2.84 6.52,-2.84 2.2,0 3.9,0.52 5.1,1.54 1.2,1.04 2.2,2.43 2.5,4.19 h 3.7 c -0.2,-2.32 -1.4,-4.39 -3.3,-6.23 -0.3,-0.26 -0.5,-0.5 -0.8,-0.72 V 81 h -3.4 v 4.99 c -1.1,-0.29 -2.5,-0.45 -3.8,-0.45 -1.87,0 -3.58,0.3 -5.09,0.91 V 81 Z"
   };
 
   icn["CY.IC.PERSONA"] = {

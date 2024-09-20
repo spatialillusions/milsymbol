@@ -59,7 +59,7 @@ export default {
     sIdm1["132"] = [icn["COM.M1.SWAT"]];
     sIdm1["133"] = [icn["COM.M1.GUIDED MISSILE"]];
     sIdm1["134"] = [icn["COM.M1.OTHER GUIDED MISSILE"]];
-    sIdm1["135"] = [icn["COM.IN.M1.PETROLEUM"]];
+    sIdm1["135"] = [icn["COM.M1.PETROLEUM"]];
     sIdm1["136"] = [icn["COM.M1.WATER"]];
     sIdm1["137"] = [icn["COM.M1.WEAPON"]];
     sIdm1["138"] = [icn["COM.M1.CHEMICAL"]];
