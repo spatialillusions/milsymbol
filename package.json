@@ -37,7 +37,7 @@
     "milstandard-e": "^0.2.8",
     "nyc": "^17.0.0",
     "prettier": "^1.19.1",
-    "rollup": "^0.58.2",
+    "rollup": "^3.29.5",
     "rollup-plugin-copy": "^0.2.3",
     "stanag-app6": "^0.2.0",
     "tead": "^0.5.3",
