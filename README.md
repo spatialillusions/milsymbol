@@ -1,7 +1,5 @@
 # Milsymbol
 
-[![Build Status](https://travis-ci.org/spatialillusions/milsymbol.svg?branch=master)](https://travis-ci.org/spatialillusions/milsymbol)
-
 Milsymbol is a small library in pure javascript that creates military unit symbols according to MIL-STD-2525 and STANAG APP-6.
 
 ![Figure 13](https://github.com/spatialillusions/milsymbol/blob/master/docs/images/milsymbol.png?raw=true)
@@ -114,10 +112,9 @@ Milsymbol can easily be extended with new functionality and examples of this can
 Milsymbol is created and maintained by Måns Beckman
 
 - http://www.spatialillusions.com to see more examples of what milsymbol can be used for
-- https://twitter.com/spatialillusion for milsymbol and mapping/military related information
 
 ## Licensing
 
 MIT, See [LICENSE](LICENSE) for details.
 
-Even if I'm giving it away for free, I don't mind if you would like to send me some cool company giveaways or unit badges. Just send me an email and and I will provide you with my address.
+If you like my work and would like to support it, please use https://buymeacoffee.com/spatialillusion
