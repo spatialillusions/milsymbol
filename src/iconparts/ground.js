@@ -580,11 +580,11 @@ export default function(
     fill: false
   };
   icn["GR.IC.RADIO"] = [
-    { type: "circle", cx: 100, cy: 130, r: 10, fill: false },
     {
       type: "path",
       fill: false,
-      d: "M100,120 l0,-60 M70,70 l10,-10 10,10 10,-10 10,10 10,-10 10,10"
+      d:
+        "M 100,108 V 82.5  m -12.5,4.1 4.1,-4.1 4.2,4.1 4.2,-4.1 4,4.1 4,-4.1 5,4.1  M 100,107 c -3.2,0 -5.9,3 -5.9,6 0,3 2.7,6 5.9,6 3,0 6,-3 6,-6 0,-3 -3,-6 -6,-6 z"
     }
   ];
   icn["GR.IC.RADIO RELAY"] = [
