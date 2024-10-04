@@ -588,19 +588,19 @@ export default function(
     }
   ];
   icn["GR.IC.RADIO RELAY"] = [
-    { type: "circle", cx: 100, cy: 130, r: 10, fill: false },
     {
       type: "path",
       fill: false,
-      d: "M100,120 l-15,-40 15,0 0,-20 M70,60 l60,0"
+      d:
+        "m 85,83 h 30  m -15,25 V 82.5  m 0,24.5 c -3.2,0 -5.9,3 -5.9,6 0,3 2.7,6 5.9,6 3,0 6,-3 6,-6 0,-3 -3,-6 -6,-6 z"
     }
   ];
   icn["GR.IC.RADIO TELETYPE CENTRE"] = [
-    { type: "text", stroke: false, x: 100, y: 135, fontsize: 30, text: "C" },
+    { type: "text", stroke: false, x: 100, y: 120, fontsize: 30, text: "C" },
     {
       type: "path",
       fill: false,
-      d: "M100,140 l0,-80  M70,60 l60,0 M80,70 l40,0"
+      d: "M 100,120 V 82  M 85.8,82 H 114  M 90.5,86.7 H 109"
     }
   ];
   icn["GR.IC.RAILHEAD"] = [
