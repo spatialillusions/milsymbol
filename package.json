@@ -16,11 +16,8 @@
     "lint": "eslint src test --fix",
     "prebuild": "npm run lint && npm test",
     "build": "npm run bundle && npm run minify",
-    "build-amd": "npm run bundle-amd && npm run minify-amd",
     "bundle": "rollup -c",
-    "bundle-amd": "rollup -c rollup.config.amd.js",
     "minify": "uglifyjs dist/milsymbol.development.js -o dist/milsymbol.js --comments --compress --mangle --source-map",
-    "minify-amd": "uglifyjs dist/amd/milsymbol.development.js -o dist/amd/milsymbol.js --comments --compress --mangle --source-map",
     "test": "tead --coverage"
   },
   "repository": {
@@ -41,7 +38,7 @@
     "nyc": "^17.0.0",
     "prettier": "^1.19.1",
     "rollup": "^4.24.0",
-    "rollup-plugin-copy": "^0.2.3",
+    "rollup-plugin-copy": "^3.5.0",
     "stanag-app6": "^0.2.0",
     "tead": "^0.5.3",
     "uglify-js": "^3.17.4"

@@ -40,9 +40,20 @@ export default [
     },
     plugins: [
       copy({
-        "node_modules/mil-std-2525/milstd2525.js": "docs/milstd-2525.js",
-        "node_modules/stanag-app6/stanagapp6.js": "docs/stanag-app6.js",
-        "node_modules/milstandard-e/milstandard.js": "docs/milstandard-e.js",
+        targets: [
+          {
+            src: "node_modules/mil-std-2525/milstd2525.js",
+            dest: "docs/"
+          },
+          {
+            src: "node_modules/stanag-app6/stanagapp6.js",
+            dest: "docs/"
+          },
+          {
+            src: "node_modules/milstandard-e/milstandard.js",
+            dest: "docs/"
+          }
+        ],
         verbose: true
       })
     ]

@@ -26,9 +26,9 @@ yarn-error.log*
 .nyc_output/
 coverage/
 docs/milstd.js
-docs/milstd-2525.js
-docs/stanag-app6.js
-docs/milstandard-e.js
+docs/milstd2525.js
+docs/stanagapp6.js
+docs/milstandard.js
 *.tgz
 
 docs/svg-icons-2525E

@@ -1,107 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Milsymbol 2525B</title>
+    <link rel="stylesheet" href="style.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Milsymbol 2525B</title>
-  <link rel="stylesheet" href="style.css" />
+    <script src="../dist/milsymbol.development.js"></script>
+    <script src="milstd2525.js"></script>
 
-  <script src="../dist/milsymbol.development.js"></script>
-  <script src="milstd-2525.js"></script>
+    <script src="letter-sidc.js"></script>
+  </head>
 
-  <script src="letter-sidc.js"></script>
-</head>
+  <body onload="generatenavigation();">
+    <h1>Milsymbol MIL-STD-2525B change 2 Implementation</h1>
+    This page shows figures and tables from MIL-STD-2525B change 2 drawn with
+    milsymbol.
+    <br />
+    All symbols are drawn using milsymbol when the page is loaded, no images or
+    other external resources than milsymbol are used.
+    <br />
+    <br />
+    <b>INDEX OF TABLES</b>
+    <br />
+    <div id="indexoftables"></div>
+    <br />
+    <b>INDEX OF FIGURES</b>
+    <br />
+    <div id="indexoffigures"></div>
+    <br />
 
-<body onload="generatenavigation();">
+    <script>
+      document.write(
+        renderSymbolSet(
+          milstd2525["ms2525b"].WAR.SPC // Space
+        )
+      );
+    </script>
 
-  <h1>Milsymbol MIL-STD-2525B change 2 Implementation</h1>
-  This page shows figures and tables from MIL-STD-2525B change 2 drawn with milsymbol.
-  <br> All symbols are drawn using milsymbol when the page is loaded, no images or other external resources than
-  milsymbol are
-  used.
-  <br>
-  <br>
-  <b>INDEX OF TABLES</b>
-  <br>
-  <div id="indexoftables"></div>
-  <br>
-  <b>INDEX OF FIGURES</b>
-  <br>
-  <div id="indexoffigures"></div>
-  <br>
+    <script>
+      document.write(
+        renderSymbolSet(
+          milstd2525["ms2525b"].WAR.AIRTRK // Air
+        )
+      );
+    </script>
 
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd2525["ms2525b"].WAR.SPC // Space
-      )
-    );
-  </script>
+    <script>
+      document.write(
+        renderSymbolSet(
+          milstd2525["ms2525b"].WAR.GRDTRK // Ground
+        )
+      );
+    </script>
 
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd2525["ms2525b"].WAR.AIRTRK // Air
-      )
-    );
-  </script>
+    <script>
+      document.write(
+        renderSymbolSet(
+          milstd2525["ms2525b"].WAR.SSUF // Sea surface
+        )
+      );
+    </script>
 
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd2525["ms2525b"].WAR.GRDTRK // Ground
-      )
-    );
-  </script>
+    <script>
+      document.write(
+        renderSymbolSet(
+          milstd2525["ms2525b"].WAR.SBSUF // Sea subsurface
+        )
+      );
+    </script>
 
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd2525["ms2525b"].WAR.SSUF // Sea surface
-      )
-    );
-  </script>
+    <script>
+      document.write(
+        renderSymbolSet(
+          milstd2525["ms2525b"].WAR.SOFUNT // SOF
+        )
+      );
+    </script>
 
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd2525["ms2525b"].WAR.SBSUF // Sea subsurface
-      )
-    );
-  </script>
+    <script>
+      document.write(renderSymbolSet(milstd2525["ms2525b"].TACGRP));
+    </script>
 
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd2525["ms2525b"].WAR.SOFUNT // SOF
-      )
-    );
-  </script>
+    <script>
+      document.write(
+        renderSymbolSet(
+          milstd2525["ms2525b"].SIGINT // OTHER
+        )
+      );
+    </script>
 
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd2525["ms2525b"].TACGRP
-      )
-    );
-  </script>
-
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd2525["ms2525b"].SIGINT // OTHER
-      )
-    );
-  </script>
-
-  <script>
-    document.write(
-      renderSymbolSet(
-        milstd2525["ms2525b"].MOOTW // OTHER
-      )
-    );
-  </script>
-
-</body>
-
+    <script>
+      document.write(
+        renderSymbolSet(
+          milstd2525["ms2525b"].MOOTW // OTHER
+        )
+      );
+    </script>
+  </body>
 </html>
