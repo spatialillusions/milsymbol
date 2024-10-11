@@ -6,15 +6,24 @@
     <link rel="stylesheet" href="style.css" />
 
     <script src="../dist/milsymbol.development.js"></script>
+    <script>
+      ms.showOctagon();
+      let svgIcon = true;
+    </script>
     <!--<script src="milstd.js"></script>-->
     <script src="milstandard-e.js"></script>
 
     <script src="number-sidc.js"></script>
+    <style>
+      .svg-icon img {
+        width: 80px;
+      }
+    </style>
   </head>
 
   <body onload="generatenavigation();">
     <h1>Milsymbol MIL-STD-2525E Implementation</h1>
-    This page shows figures and tables from MIL-STD-2525D drawn with milsymbol.
+    This page shows figures and tables from MIL-STD-2525E drawn with milsymbol.
     <br />
     All symbols are drawn using milsymbol when the page is loaded, no images or
     other external resources than milsymbol are used.
@@ -466,7 +475,7 @@
 
     <h3 id="TABLEII">TABLE II. Exercise frames.</h3>
 
-    <table border="1" style="">
+    <table border="1">
       <thead>
         <tr>
           <td></td>
@@ -910,7 +919,7 @@
 
     <h3 id="TABLEIII">TABLE II. Simulation frames.</h3>
 
-    <table border="1" style="">
+    <table border="1">
       <thead>
         <tr>
           <td></td>
@@ -2418,8 +2427,8 @@
     </table>
 
     <h3>
-      Table 1-4: Alternate Operational Condition Colour Amplifiers for
-      Icon-based Symbols.
+      Table 1-4: Alternate Operational Condition Color Amplifiers for Icon-based
+      Symbols.
     </h3>
     <table>
       <thead>
@@ -2817,6 +2826,10 @@
       </tr>
     </table>
 
+    <script>
+      document.write(renderSymbolSet(milstd2525["ms2525e"]["common"], svgIcon));
+    </script>
+
     <figure>
       <script>
         document.write(
@@ -2856,25 +2869,11 @@
     </figure>
 
     <script>
-      document.write(
-        renderSymbolSet(
-          milstd2525["ms2525e"]["05"],
-          "Table 6-3: Space Equipment and Platform Icons",
-          "Table 6-4: Space Equipment and Platform Sector 1 Modifiers",
-          "Table 6-5: Space Equipment and Platform Sector 2 Modifiers"
-        )
-      );
+      document.write(renderSymbolSet(milstd2525["ms2525e"]["05"], svgIcon));
     </script>
 
     <script>
-      document.write(
-        renderSymbolSet(
-          milstd2525["ms2525e"]["06"],
-          "Table 6-3: Space Missile Icons",
-          "Table 6-4: Space Missile Sector 1 Modifiers",
-          "Table 6-5: Space Missile Sector 2 Modifiers"
-        )
-      );
+      document.write(renderSymbolSet(milstd2525["ms2525e"]["06"], svgIcon));
     </script>
 
     <figure>
@@ -2904,25 +2903,11 @@
     </figure>
 
     <script>
-      document.write(
-        renderSymbolSet(
-          milstd2525["ms2525e"]["01"],
-          "Table 2-3: Air Equipment and Platform Icons",
-          "Table 2-5: Air Equipment and Platform Sector 1 Modifiers",
-          "Table 2-6: Air Equipment and Platform Sector 2 Modifiers"
-        )
-      );
+      document.write(renderSymbolSet(milstd2525["ms2525e"]["01"], svgIcon));
     </script>
 
     <script>
-      document.write(
-        renderSymbolSet(
-          milstd2525["ms2525e"]["02"],
-          "Table 2-4: Air Missile Entity/Entity Type/Entity Subtype",
-          "Table 2-7: Air Missile Sector 1 Modifiers",
-          "Table 2-8: Air Missile Sector 2 Modifiers Description"
-        )
-      );
+      document.write(renderSymbolSet(milstd2525["ms2525e"]["02"], svgIcon));
     </script>
 
     <figure>
@@ -2962,25 +2947,11 @@
     </figure>
 
     <script>
-      document.write(
-        renderSymbolSet(
-          milstd2525["ms2525e"]["10"],
-          "Table 3-3: Land Unit Main Sector Icons",
-          "Table 3-4: Land Unit Sector 1 Modifiers",
-          "Table 3-5: Land Unit Sector 2 Modifiers"
-        )
-      );
+      document.write(renderSymbolSet(milstd2525["ms2525e"]["10"], svgIcon));
     </script>
 
     <script>
-      document.write(
-        renderSymbolSet(
-          milstd2525["ms2525e"]["11"],
-          "Table 3-12: Land Civilian Organization Icons",
-          "Table 3-13: Land Civilian Organization Sector 1 Modifiers",
-          "Table 3-14: Land Civilian Organization Sector 2 Modifiers"
-        )
-      );
+      document.write(renderSymbolSet(milstd2525["ms2525e"]["11"], svgIcon));
     </script>
 
     <figure>
@@ -3023,15 +2994,35 @@
       </figcaption>
     </figure>
 
+    <figure>
+      <script>
+        document.write(
+          new ms.Symbol("10031500001103030000", { size: 80 }).asSVG()
+        );
+      </script>
+      <script>
+        document.write(
+          new ms.Symbol("10031500001103030100", { size: 80 }).asSVG()
+        );
+      </script>
+      <script>
+        document.write(
+          new ms.Symbol("1003150000110303000401", { size: 80 }).asSVG()
+        );
+      </script>
+      <script>
+        document.write(
+          new ms.Symbol("1003150000110303010401", { size: 80 }).asSVG()
+        );
+      </script>
+      <figcaption>
+        Milsymbol will automaticly scale the weapons icon based on if there are
+        any modifiers set or not, as defined in FM 1-02.2.
+      </figcaption>
+    </figure>
+
     <script>
-      document.write(
-        renderSymbolSet(
-          milstd2525["ms2525e"]["15"],
-          "Table 3-17: Land Equipment Icons",
-          "Table 3-18: Land Equipment Sector 1 Modifiers",
-          ""
-        )
-      );
+      document.write(renderSymbolSet(milstd2525["ms2525e"]["15"], svgIcon));
     </script>
 
     <figure>
@@ -3074,14 +3065,7 @@
     </figure>
 
     <script>
-      document.write(
-        renderSymbolSet(
-          milstd2525["ms2525e"]["20"],
-          "Table 3-23: Land Installation Icons",
-          "Table 3-24: Land Installation Sector 1 Modifiers",
-          "Table 3-25: Land Installation Sector 2 Modifiers"
-        )
-      );
+      document.write(renderSymbolSet(milstd2525["ms2525e"]["20"], svgIcon));
     </script>
 
     <figure>
@@ -3124,8 +3108,6 @@
       </figcaption>
     </figure>
 
-    Milsymbol will automaticly scale the weapons icon based on if there are any
-    modifiers set or not.
     <figure>
       <script>
         document.write(
@@ -3148,19 +3130,13 @@
         );
       </script>
       <figcaption>
-        Figure 4-6: Alternative Main Icon Symbol Sizes.
+        Milsymbol will automaticly scale the weapons icon based on if there are
+        any modifiers set or not, as defined in FM 1-02.2.
       </figcaption>
     </figure>
 
     <script>
-      document.write(
-        renderSymbolSet(
-          milstd2525["ms2525e"]["27"],
-          "TABLE F-III. Dismounted individuals",
-          "TABLE F-IV. Dismounted individual sector 1 modifiers",
-          "TABLE F-V. Dismounted individual sector 2 modifiers"
-        )
-      );
+      document.write(renderSymbolSet(milstd2525["ms2525e"]["27"], svgIcon));
     </script>
 
     <figure>
@@ -3208,14 +3184,7 @@
     </figure>
 
     <script>
-      document.write(
-        renderSymbolSet(
-          milstd2525["ms2525e"]["30"],
-          "Table 5-3: Sea Surface Military and Civilian Vessel/Ship Icons",
-          "Table 5-6: Sea Surface Sector 1 Modifiers",
-          "Table 5-7: Sea Surface Sector 2 Modifiers"
-        )
-      );
+      document.write(renderSymbolSet(milstd2525["ms2525e"]["30"], svgIcon));
     </script>
 
     <figure>
@@ -3263,25 +3232,11 @@
     </figure>
 
     <script>
-      document.write(
-        renderSymbolSet(
-          milstd2525["ms2525e"]["35"],
-          "Table 5-10: Sea Subsurface Military and Civilian Main Icons",
-          "Table 5-11: Sea Subsurface Sector 1 Modifiers",
-          "Table 5-12: Sea Subsurface Sector 2 Modifiers"
-        )
-      );
+      document.write(renderSymbolSet(milstd2525["ms2525e"]["35"], svgIcon));
     </script>
 
     <script>
-      document.write(
-        renderSymbolSet(
-          milstd2525["ms2525e"]["36"],
-          "Table 5-15: Mine Warfare Main Icons",
-          "",
-          ""
-        )
-      );
+      document.write(renderSymbolSet(milstd2525["ms2525e"]["36"], svgIcon));
     </script>
 
     <figure>
@@ -3325,49 +3280,19 @@
     </figure>
 
     <script>
-      document.write(
-        renderSymbolSet(
-          milstd2525["ms2525e"]["40"],
-          "Table 7-3: Stability and Civil Support Activities Main Sector Icons",
-          "Table 7-4: Activities Sector 1 Modifiers",
-          ""
-        )
-      );
-    </script>
-
-    <!--
-    <script>
-      document.write(
-        renderSymbolSet(
-          milstd2525["ms2525e"]["25"],
-          "Control Measures",
-          "TODO",
-          "TODO"
-        )
-      );
-    </script>
--->
-
-    <script>
-      document.write(
-        renderSymbolSet(
-          milstd2525["ms2525e"]["50"],
-          "Table 6-3: Signals Intelligence Icons",
-          "Table 6-4: Signals Intelligence Sector 1 Modifiers",
-          "Table 6-5: Signals Intelligence Sector 2 Modifiers"
-        )
-      );
+      document.write(renderSymbolSet(milstd2525["ms2525e"]["40"], svgIcon));
     </script>
 
     <script>
-      document.write(
-        renderSymbolSet(
-          milstd2525["ms2525e"]["60"],
-          "Table 6-3: Cyberspace Icons",
-          "Table 6-4: Cyberspace Sector 1 Modifiers",
-          "Table 6-5: Cyberspace Sector 2 Modifiers"
-        )
-      );
+      document.write(renderSymbolSet(milstd2525["ms2525e"]["50"], svgIcon));
+    </script>
+
+    <script>
+      document.write(renderSymbolSet(milstd2525["ms2525e"]["60"], svgIcon));
+    </script>
+
+    <script>
+      document.write(renderSymbolSet(milstd2525["ms2525e"]["25"], svgIcon));
     </script>
 
     <br />
