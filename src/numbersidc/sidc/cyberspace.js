@@ -22,6 +22,8 @@ export default {
       sId["110100"] = [icn["CY.IC.COMBAT MISSION TEAM"]];
       sId["110200"] = [icn["CY.IC.NATIONAL MISSION TEAM"]];
       sId["110300"] = [icn["CY.IC.CYBER PROTECTION TEAM"]];
+      sId["110400"] = []; // Disused
+      sId["110500"] = []; // Disused
       sId["110600"] = [icn["CY.IC.DEFENSIVE CYBERSPACE OPERATION"]];
       sId["110700"] = [icn["CY.IC.OFFENSIVE CYBERSPACE OPERATION"]];
       sId["110800"] = [icn["CY.IC.INTERNET SERVICE PROVIDER"]];
@@ -84,7 +86,7 @@ export default {
       sIdm2["01"] = [icn["CY.M2.SECURED"]];
       sIdm2["02"] = [icn["CY.M2.OPEN"]];
       sIdm2["03"] = [icn["CY.M2.RESPONSE ACTIONS"]];
-      //sIdm2["04"] = [];
+      sIdm2["04"] = []; // Icon not avialable
       sIdm2["05"] = [icn["CY.M2.INTERNAL DEFENSE MEASURES"]];
       sIdm2["06"] = [icn["CY.M2.ADVANCED PERSISTENT THREAT"]];
       sIdm2["07"] = [icn["CY.M2.NATION STATE"]];
