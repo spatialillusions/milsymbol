@@ -529,7 +529,7 @@ export default {
       sId["170400"] = [icn["GR.IC.DRUG ENFORCEMENT AGENCY (DEA)"]];
       sId["170500"] = [icn["GR.IC.FF.DEPARTMENT OF JUSTICE (DOJ)"]];
       sId["170600"] = [icn["GR.IC.FEDERAL BUREAU OF INVESTIGATION (FBI)"]];
-      sId["170700"] = [icn["GR.IC.MILITARY POLICE"]];
+      sId["170700"] = [icn["GR.IC.LAW ENFORCEMENT"]];
       sId["170800"] = [icn["GR.IC.UNITED STATES SECRET SERVICE(TREAS) (USSS)"]];
       sId["170900"] = [icn["GR.IC.TRANSPORTATION SECURITY AGENCY (TSA)"]];
       sId["171000"] = [icn["GR.IC.LAW ENFORCEMENT VESSEL"]];
