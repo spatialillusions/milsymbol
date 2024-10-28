@@ -77,11 +77,11 @@ export default {
       sId["110603"] = [icn["ST.IC.EXPLOSION"], icn["ST.IC.MINE"]];
       sId["110604"] = [
         icn["ST.IC.EXPLOSION"],
-        ms._scale(0.6, icn["GR.EQ.MORTAR"])
+        ms._scale(0.6, icn["GR.EQ.MORTAR"], true)
       ];
       sId["110605"] = [
         icn["ST.IC.EXPLOSION"],
-        ms._scale(0.6, icn["GR.EQ.SINGLE ROCKET LAUNCHER"])
+        ms._scale(0.6, icn["GR.EQ.SINGLE ROCKET LAUNCHER"], true)
       ];
       sId["110606"] = [
         ms._scale(0.7, icn["ST.IC.BOMB"]),
