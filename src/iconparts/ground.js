@@ -283,7 +283,7 @@ export default function(
     STD2525 || numberSIDC ? iconFillColor : !frame ? iconFillColor : false;
   icn["GR.I.CIVILIAN"].stroke = black;
   icn["GR.I.CIVILIAN"].strokewidth = 3;
-  icn["GR.IC.COMMAND AND CONTROL"] = text("C2");
+  icn["GR.IC.COMMAND AND CONTROL"] = text("");
   icn["GR.IC.COMBAT"] = text("CBT");
   icn["GR.IC.COMBAT SERVICE SUPPORT"] = text("CSS");
   icn["GR.IC.COMBAT SUPPORT"] = text("CS");
