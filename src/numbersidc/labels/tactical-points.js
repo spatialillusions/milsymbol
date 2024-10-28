@@ -203,7 +203,7 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 110,
       fontsize: 35,
-      fill: "rgb(255,255,255)",
+      fill: "#800080",
       fontweight: "bold"
     }
   }; //Command and Control Points / Key Terrain
