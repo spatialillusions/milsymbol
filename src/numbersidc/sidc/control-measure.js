@@ -38,6 +38,7 @@ export default {
       bbox["130800"] = { x1: 60, x2: 140, y1: -60 };
       sidc["130900"] = icn["TP.ENTRY CONTROL POINT"]; //Command and Control Points / Entry Control Point
       bbox["130900"] = { x1: 60, x2: 140, y1: -60 };
+      sidc["131000"] = []; // Just hirarcy
       sidc["131001"] = icn["TP.FLY-TO-POINT (SONOBUOY)"]; //Command and Control Points / Fly-To-Point / Sonobuoy
       bbox["131001"] = { x1: 60, x2: 140, y1: -60 };
       sidc["131002"] = icn["TP.FLY-TO-POINT (WEAPON)"]; //Command and Control Points / Fly-To-Point / Weapon
