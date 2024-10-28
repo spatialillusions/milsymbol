@@ -37,7 +37,7 @@ export default function(
       ? "rgb(255, 0, 0)"
       : colors.fillColor[affiliation];
   const numberSIDC = metadata.numberSIDC;
-  const white = colors.white[affiliation];
+  //const white = colors.white[affiliation];
   const icn = {};
 
   icn["TP.DESTROY"] =
@@ -2256,7 +2256,11 @@ export default function(
       "M 52.3687,127.5 123.816,86.2499 M 99.9998,45 l 47.6312,82.5 -95.2623,0 z"
   };
   icn["TP.FORWARD OBSERVER POSITION"] = [
-    icn["TP.OBSERVATION POST/RECONNAISSANCE"],
+    {
+      type: "path",
+      fill: false,
+      d: "m 100,45 48,83 H 52.4 Z"
+    },
     {
       type: "path",
       d:
@@ -3380,6 +3384,8 @@ export default function(
   icn["TP.KEY TERRAIN"] = [
     {
       type: "path",
+      fill: false,
+      stroke: "#800080",
       d:
         "m 145,100 a 45,45 0 0 1 -45,45 45,45 0 0 1 -45,-45 45,45 0 0 1 45,-45 45,45 0 0 1 45,45 z"
     },
@@ -3391,7 +3397,7 @@ export default function(
       y: 110,
       fontsize: 35,
       text: "K",
-      fill: white
+      fill: "#800080"
     }
   ];
   icn["TP.BT BOUY DROP"] = [
