@@ -82,7 +82,7 @@ export default function(
   icn["SE.IC.DESTROYER"] = text("DD");
   icn["SE.IC.FRIGATE"] = text("FF");
   icn["SE.IC.CORVETTE"] = text("FS");
-  icn["SE.IC.LITTORAL COMBATANT SHIP"] = text("LL");
+  icn["SE.IC.LITTORAL COMBATANT SHIP"] = text("LCS");
   icn["SE.IC.AMPHIBIOUS WARFARE SHIP"] = {
     type: "path",
     d: "m 100,120 20,0 m -20,0 -20,-20 10,0 0,-20 20,0 0,20 10,0 z"
@@ -104,12 +104,12 @@ export default function(
   icn["SE.IC.MINESWEEPER"] = text("MS");
   icn["SE.IC.MINESWEEPER, DRONE"] = text("MSD");
   icn["SE.IC.MINEHUNTER"] = text("MH");
-  icn["SE.IC.MINE COUNTER MEASURE SUPPORT SHIP"] = text(STD2525 ? "MA" : "MCS");
+  icn["SE.IC.MINE COUNTER MEASURE SUPPORT SHIP"] = text("MCS");
   icn["SE.IC.MINE COUNTERMEASURES"] = text("MCM");
   icn["SE.IC.SEA SURFACE DECOY"] = {
     type: "path",
     d:
-      "M 105,110 90,95 105,80 z M 85,110 70,95 85,80 z m 40,-30 -15,15 15,15 z m -55,40 0,-5 55,0 0,5 z"
+      "M 85.6,82.5 68.2,99.9 85.6,117 Z  M 109,82.5 91.4,99.9 109,117 Z  m 23,0 -17,17.4 17,17.1 z"
   };
   icn["SE.IC.PATROL"] = {
     type: "path",
@@ -159,18 +159,18 @@ export default function(
   icn["SE.IC.NAVY TASK ORGANIZATION UNIT"] = [
     { type: "path", d: "m 110,80 15,15 0,25 M 90,80 75,95 l 0,25", fill: false }
   ];
-  if (STD2525)
-    icn["SE.IC.NAVY TASK ORGANIZATION UNIT"].push({
-      type: "path",
-      d: "m 100,80 -15,15 0,25 30,0 0,-25 -15,-15"
-    });
+  //if (STD2525)
+  //  icn["SE.IC.NAVY TASK ORGANIZATION UNIT"].push({
+  //    type: "path",
+  //    d: "m 100,80 -15,15 0,25 30,0 0,-25 -15,-15"
+  //  });
   icn["SE.IC.NAVY TASK FORCE"] = [
     icn["SE.IC.NAVY TASK ORGANIZATION UNIT"],
     {
       type: "text",
       stroke: false,
       x: 100,
-      y: STD2525 ? 150 : 120,
+      y: /*STD2525 ? 150 :*/ 120,
       fontsize: 30,
       text: "TF"
     }
@@ -181,7 +181,7 @@ export default function(
       type: "text",
       stroke: false,
       x: 100,
-      y: STD2525 ? 150 : 120,
+      y: /*STD2525 ? 150 :*/ 120,
       fontsize: 30,
       text: "TG"
     }
@@ -192,7 +192,7 @@ export default function(
       type: "text",
       stroke: false,
       x: 100,
-      y: STD2525 ? 150 : 120,
+      y: /*STD2525 ? 150 :*/ 120,
       fontsize: 30,
       text: "TU"
     }
@@ -203,7 +203,7 @@ export default function(
       type: "text",
       stroke: false,
       x: 100,
-      y: STD2525 ? 150 : 120,
+      y: /*STD2525 ? 150 :*/ 120,
       fontsize: 30,
       text: "TE"
     }
@@ -220,16 +220,16 @@ export default function(
   icn["SE.IC.AMMUNITION SHIP"] = text("AE");
   icn["SE.IC.STORES SHIP"] = text("AF");
   icn["SE.IC.AUXILIARY FLAG OR COMMAND SHIP"] = text("AGF");
-  icn["SE.IC.INTELLIGENCE COLLECTOR"] = text(STD2525 ? "JI" : "AI");
+  icn["SE.IC.INTELLIGENCE COLLECTOR"] = text("AGI");
   icn["SE.IC.OCEAN RESEARCH SHIP"] = text("AGO");
   icn["SE.IC.SURVEY SHIP"] = text("AGS");
   icn["SE.IC.HOSPITAL SHIP"] = text("AH");
   icn["SE.IC.CARGO SHIP"] = text("AK");
   icn["SE.IC.COMBAT SUPPORT SHIP, FAST"] = text("AOE");
-  icn["SE.IC.OILER, REPLENISHMENT"] = text("AO");
+  icn["SE.IC.OILER, REPLENISHMENT"] = text("AOR");
   icn["SE.IC.REPAIR SHIP"] = text("AR");
   icn["SE.IC.SUBMARINE TENDER"] = text("AS");
-  icn["SE.IC.TUG, OCEAN GOING"] = text(STD2525 ? "AS" : "AT");
+  icn["SE.IC.TUG, OCEAN GOING"] = text("AT");
   icn["SE.IC.SERVICE CRAFT, YARD, GENERAL"] = STD2525 ? text("YY") : text("YT");
   icn["SE.IC.BARGE, NOT SELF-PROPELLED"] = text("YB");
   icn["SE.IC.BARGE, SELF-PROPELLED"] = text("YS");
@@ -247,17 +247,17 @@ export default function(
       stroke: false,
       x: 100,
       y: 115,
-      fontsize: 30,
-      text: STD2525 ? "CA" : "A"
+      fontsize: 45,
+      text: /*STD2525 ? "CA" :*/ "A"
     }
   ];
   icn["SE.IC.CONTAINER SHIP"] = [
     icn["SE.IC.MERCHANT SHIP, GENERAL"],
-    { type: "text", stroke: false, x: 100, y: 115, fontsize: 30, text: "C" }
+    { type: "text", stroke: false, x: 100, y: 115, fontsize: 45, text: "C" }
   ];
   icn["SE.IC.DREDGE"] = [
     icn["SE.IC.MERCHANT SHIP, GENERAL"],
-    { type: "text", stroke: false, x: 100, y: 115, fontsize: 30, text: "D" }
+    { type: "text", stroke: false, x: 100, y: 115, fontsize: 45, text: "D" }
   ];
   icn["SE.IC.RADAR"] = {
     type: "path",
@@ -271,8 +271,8 @@ export default function(
       stroke: false,
       x: 100,
       y: 115,
-      fontsize: STD2525 ? "30" : "30",
-      text: STD2525 ? "RO" : "E"
+      fontsize: /*STD2525 ? "30" :*/ "45",
+      text: /*STD2525 ? "RO" : */ "E"
     }
   ];
   icn["SE.IC.FERRY"] = [
@@ -282,13 +282,13 @@ export default function(
       stroke: false,
       x: 100,
       y: 115,
-      fontsize: 30,
-      text: STD2525 ? "FE" : "F"
+      fontsize: 45,
+      text: /*STD2525 ? "FE" :*/ "F"
     }
   ];
   icn["SE.IC.HEAVY LIFT"] = [
     icn["SE.IC.MERCHANT SHIP, GENERAL"],
-    { type: "text", stroke: false, x: 100, y: 115, fontsize: 30, text: "H" }
+    { type: "text", stroke: false, x: 100, y: 115, fontsize: 45, text: "H" }
   ];
   icn["SE.IC.HOVERCRAFT"] = {
     type: "path",
@@ -298,7 +298,7 @@ export default function(
   };
   icn["SE.IC.HOVERCRAFT 2525D"] = [
     icn["SE.IC.MERCHANT SHIP, GENERAL"],
-    { type: "text", stroke: false, x: 100, y: 115, fontsize: 30, text: "J" }
+    { type: "text", stroke: false, x: 100, y: 115, fontsize: 45, text: "J" }
   ];
   icn["SE.IC.HOVERCRAFT CIVILIAN"] = {
     type: "path",
@@ -327,7 +327,7 @@ export default function(
   ];
   icn["SE.IC.MERCHANT SHIP, LASH CARRIER (WITH BARGES)"] = [
     icn["SE.IC.MERCHANT SHIP, GENERAL"],
-    { type: "text", stroke: false, x: 100, y: 115, fontsize: 30, text: "L" }
+    { type: "text", stroke: false, x: 100, y: 115, fontsize: 45, text: "L" }
   ];
   icn["SE.IC.OILER/TANKER"] = [
     icn["SE.IC.MERCHANT SHIP, GENERAL"],
@@ -336,8 +336,8 @@ export default function(
       stroke: false,
       x: 100,
       y: 115,
-      fontsize: 30,
-      text: STD2525 ? "OT" : "O"
+      fontsize: 45,
+      text: /*STD2525 ? "OT" :*/ "O"
     }
   ];
   icn["SE.IC.PASSENGER SHIP"] = [
@@ -347,8 +347,8 @@ export default function(
       stroke: false,
       x: 100,
       y: 115,
-      fontsize: 30,
-      text: STD2525 ? "PA" : "P"
+      fontsize: 45,
+      text: /*STD2525 ? "PA" :*/ "P"
     }
   ];
   icn["SE.IC.TUG, OCEAN GOING CIVILIAN"] = [
@@ -358,27 +358,27 @@ export default function(
       stroke: false,
       x: 100,
       y: 115,
-      fontsize: 30,
-      text: STD2525 ? "TU" : "T"
+      fontsize: 45,
+      text: /*STD2525 ? "TU" :*/ "T"
     }
   ];
   icn["SE.IC.TOW"] = [
     icn["SE.IC.MERCHANT SHIP, GENERAL"],
-    { type: "text", stroke: false, x: 100, y: 115, fontsize: 30, text: "TW" }
+    { type: "text", stroke: false, x: 100, y: 130, fontsize: 35, text: "TW" }
   ];
   icn["SE.IC.TRANSPORT SHIP, HAZARDOUS MATERIAL"] = [
     icn["SE.IC.MERCHANT SHIP, GENERAL"],
-    { type: "text", stroke: false, x: 100, y: 115, fontsize: 30, text: "HZ" }
+    { type: "text", stroke: false, x: 100, y: 130, fontsize: 35, text: "HZ" }
   ];
   icn["SE.IC.JUNK/DHOW"] = [
     icn["SE.IC.MERCHANT SHIP, GENERAL"],
-    { type: "text", stroke: false, x: 100, y: 115, fontsize: 30, text: "QJ" }
+    { type: "text", stroke: false, x: 100, y: 130, fontsize: 35, text: "QJ" }
   ];
-  icn["SE.IC.BARGE, NOT SELF-PROPELLED"] = [
+  icn["SE.IC.BARGE, NOT SELF-PROPELLED CIV"] = [
     icn["SE.IC.MERCHANT SHIP, GENERAL"],
-    { type: "text", stroke: false, x: 100, y: 115, fontsize: 30, text: "YB" }
+    { type: "text", stroke: false, x: 100, y: 130, fontsize: 35, text: "YB" }
   ];
-  icn["SE.IC.HOSPITAL SHIP2"] = [
+  icn["SE.IC.HOSPITAL SHIP CIV"] = [
     icn["SE.IC.MERCHANT SHIP, GENERAL"],
     {
       type: "path",

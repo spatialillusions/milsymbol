@@ -61,7 +61,7 @@ export default {
       sId["130104"] = [icn["SE.IC.INTELLIGENCE COLLECTOR"]];
       sId["130105"] = [icn["SE.IC.OCEAN RESEARCH SHIP"]];
       sId["130106"] = [icn["SE.IC.SURVEY SHIP"]];
-      sId["130107"] = [icn["SE.IC.HOSPITAL SHIP2"]];
+      sId["130107"] = [icn["SE.IC.HOSPITAL SHIP"]];
       sId["130108"] = [icn["SE.IC.CARGO SHIP"]];
       sId["130109"] = [icn["SE.IC.COMBAT SUPPORT SHIP, FAST"]];
       sId["130110"] = [icn["SE.IC.OILER, REPLENISHMENT"]];
@@ -89,8 +89,8 @@ export default {
       sId["140112"] = [icn["SE.IC.TOW"]];
       sId["140113"] = [icn["SE.IC.TRANSPORT SHIP, HAZARDOUS MATERIAL"]];
       sId["140114"] = [icn["SE.IC.JUNK/DHOW"]];
-      sId["140115"] = [icn["SE.IC.BARGE, NOT SELF-PROPELLED"]];
-      sId["140116"] = [icn["SE.IC.HOSPITAL SHIP"]];
+      sId["140115"] = [icn["SE.IC.BARGE, NOT SELF-PROPELLED CIV"]];
+      sId["140116"] = [icn["SE.IC.HOSPITAL SHIP CIV"]];
       sId["140200"] = [icn["SE.IC.FISHING VESSEL"]];
       sId["140201"] = [icn["SE.IC.DRIFTER"]];
       sId["140202"] = [icn["SE.IC.TRAWLER"]];
