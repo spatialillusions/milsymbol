@@ -3385,7 +3385,8 @@ export default function(
     {
       type: "path",
       fill: false,
-      stroke: "#800080",
+      stroke: "rgb(128,0,128)",
+      strokewidth: 6,
       d:
         "m 145,100 a 45,45 0 0 1 -45,45 45,45 0 0 1 -45,-45 45,45 0 0 1 45,-45 45,45 0 0 1 45,45 z"
     },
@@ -3397,7 +3398,7 @@ export default function(
       y: 110,
       fontsize: 35,
       text: "K",
-      fill: "#800080"
+      fill: "rgb(128,0,128)"
     }
   ];
   icn["TP.BT BOUY DROP"] = [
