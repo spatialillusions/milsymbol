@@ -68,6 +68,9 @@ export default {
       sidc["132000"] = icn["TP.TARGET HANDOVER"]; //Command and Control Points / Target Handover
       bbox["132000"] = { x1: 40, x2: 160, y1: 40, y2: 160 };
       sidc["132100"] = icn["TP.KEY TERRAIN"]; //Command and Control Points / Key Terrain
+      sidc["132200"] = icn["TP.CONTROL POINT"];
+      bbox["132200"] = { x1: 60, x2: 140, y1: -60 };
+      sidc["132300"] = icn["TP.VITAL GROUND"];
       sidc["160100"] = icn["TP.OBSERVATION POST/OUTPOST"]; //Maneuver Points / Observation Post/Outpost (unspecified)
       bbox["160100"] = { x1: 50, x2: 150, y1: 40, y2: 150 };
       sidc["160200"] = icn["TP.OBSERVATION POST/OUTPOST"]; // N/A //Maneuver Points / Observation Post/Outpost (specified)
@@ -136,6 +139,8 @@ export default {
       bbox["182400"] = { x1: 60, x2: 140, y1: 30, y2: 170 };
       sidc["182500"] = icn["TP.ORBIT - RANDOM, CLOSED"]; //Aircraft (VTUA) / Orbit – Random Closed
       bbox["182500"] = { x1: 60, x2: 140, y1: 30, y2: 170 };
+      sidc["182600"] = icn["TP.ISOLATED PERSONNEL LOCATION"];
+      bbox["182600"] = { x1: 60, x2: 140, y1: 20, y2: 105 };
       sidc["200400"] = icn["TP.SHIP AREA OF INTEREST (AEGIS ONLY)"]; //Maritime Control Areas / Ship Area of Interest
       sidc["200500"] = icn["TP.ACTIVE MANOEUVRE AREA (AEGIS ONLY)"]; //Maritime Control Areas / Active Maneuver Area
       bbox["200500"] = { x1: 40, x2: 160, y1: 40, y2: 160 };
@@ -510,6 +515,8 @@ export default {
       bbox["321716"] = { x1: 60, x2: 140, y1: -60 };
       sidc["321800"] = icn["TP.MEDICAL SUPPLY POINT"]; //Sustainment Points / Medical Supply Point
       bbox["321800"] = { x1: 60, x2: 140, y1: -60 };
+      sidc["321900"] = icn["TP.MORTUARY AFFAIRS COLLECTION POINT"];
+      bbox["321900"] = { x1: 60, x2: 140, y1: -60 };
       sidc["340900"] = icn["TP.DESTROY"]; //Mission Tasks / Destroy
       bbox["340900"] = { x1: 0, x2: 200, y1: 40, y2: 160 };
       sidc["341400"] = icn["TP.INTERDICT"]; //Mission Tasks / Interdict
@@ -714,9 +721,13 @@ export default {
         icn["TP.M1.WIDE AREA ANTITANK MINE 2"],
         icn["TP.M1.MINE CLUSTER 3"]
       ];
-      /*
-    sIdm2["01"] = [icn["SP.M2.OPTICAL"]];
-//*/
+      sIdm1["51"] = icn["TP.M1.DISMOUNTED"];
+
+      sIdm2["01"] = icn["TP.M2.URBAN"];
+      sIdm2["02"] = icn["TP.M2.WATER"];
+      sIdm2["03"] = icn["TP.M2.GROUND"];
+      sIdm2["04"] = icn["TP.M2.VEGETATION"];
+      sIdm2["05"] = icn["TP.M2.OBSTACLES"];
     }
   }
 };
