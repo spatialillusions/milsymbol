@@ -368,6 +368,7 @@ export default function(
   icn["SP.M2.RADAR"] = textm2("R");
   icn["SP.M2.REFUEL"] = textm2("K");
   icn["SP.M2.SIGNALS INTELLIGENCE (SIGINT)"] = textm2("SI"); //Space Missile
+  icn["SP.M2.ELECTROMAGNETIC WARFARE (ASAT)"] = textm2("EW");
   icn["SP.M2.TUG"] = textm2("TUG");
   icn["SPACE.MISSILE.ICON"] = {
     type: "path",
