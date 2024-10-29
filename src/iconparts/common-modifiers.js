@@ -160,7 +160,7 @@ export default function(
   icn["COM.M1.ANTISUBMARINE WARFARE"] = textm1("ASW");
   icn["COM.M1.ESCORT"] = textm1("E");
   icn["COM.M1.MINE COUNTERMEASURES"] = textm1("MCM");
-  icn["COM.M1.MINE WARFARE"] = textm1("MIW");
+  icn["COM.M1.MINE WARFARE"] = textm1(STD2525 ? "MIW" : "MW");
   icn["COM.M1.SURFACE WARFARE"] = textm1("SUW");
   icn["COM.M1.INDEPENDENT COMMAND"] = {
     type: "path",
