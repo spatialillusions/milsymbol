@@ -207,6 +207,17 @@ export default function tacticalPoints(sidc) {
       fontweight: "bold"
     }
   }; //Command and Control Points / Key Terrain
+
+  sidc["132200"] = actionPoint;
+  sidc["132300"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 150,
+      y: 150,
+      fontsize: 40
+    }
+  };
   sidc["160100"] = {}; //Maneuver Points / Observation Post/Outpost (unspecified)
   sidc["160200"] = {}; //Maneuver Points / Observation Post/Outpost (specified)
   sidc["160201"] = {}; //Maneuver Points / Observation Post/Outpost (specified) / Reconnaissance Outpost
@@ -274,6 +285,17 @@ export default function tacticalPoints(sidc) {
   sidc["182300"] = {}; //Aircraft (VTUA)" / Orbit – Figure Eight
   sidc["182400"] = {}; //Aircraft (VTUA)" / Orbit – Race Track
   sidc["182500"] = {}; //Aircraft (VTUA)" / Orbit – Random Closed
+  sidc["182600"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 10,
+      fontsize: 40
+    },
+    dtg: { stroke: false, textanchor: "end", x: 50, y: 50, fontsize: 40 },
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 90, fontsize: 40 }
+  };
   sidc["200400"] = {}; //Maritime Control Areas / Ship Area of Interest
   sidc["200500"] = {}; //Maritime Control Areas / Active Maneuver Area
   sidc["200600"] = {}; //Maritime Control Areas / Cued Acquisition Doctrine
@@ -999,6 +1021,7 @@ export default function tacticalPoints(sidc) {
   sidc["321715"] = actionPoint1; //Sustainment Points / General Supply Point / US Class IX Supply Point
   sidc["321716"] = actionPoint1; //Sustainment Points / General Supply Point / US Class X Supply Point
   sidc["321800"] = actionPoint2; //Sustainment Points / Medical Supply Point
+  sidc["321900"] = actionPoint2;
   sidc["340300"] = {}; //Mission Tasks / Bypass
   sidc["340400"] = {}; //Mission Tasks / Canalize
   sidc["340900"] = {}; //Mission Tasks / Destroy
