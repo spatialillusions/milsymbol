@@ -1566,6 +1566,14 @@ export default function(
       text: "RC"
     }
   ];
+  icn["TP.ISOLATED PERSONNEL LOCATION"] = [
+    { type: "circle", cx: 100, cy: 35, r: 10 },
+    {
+      type: "path",
+      fill: false,
+      d: "m 75,100 h 50  M 100,55 v 45  M 70,25 100,55 130,25"
+    }
+  ];
   icn["TP.ACTION POINT"] = {
     type: "path",
     fill: false,
@@ -3340,6 +3348,14 @@ export default function(
       d: "m 100,-20 0,-40 m -40,25 80,0"
     }
   ];
+  icn["TP.MORTUARY AFFAIRS COLLECTION POINT"] = [
+    icn["TP.SUPPLY POINT"],
+    {
+      type: "path",
+      fill: false,
+      d: "m 113,-50 v 21  M 75,-40 h 50  M 67,-54 h 66 v 30 H 67 Z"
+    }
+  ];
   icn["TP.AMMUNITION SUPPLY POINT (ASP)"] = [
     icn["TP.ACTION POINT"],
     {
@@ -3398,6 +3414,34 @@ export default function(
       y: 110,
       fontsize: 35,
       text: "K",
+      fill: "rgb(128,0,128)"
+    }
+  ];
+  icn["TP.CONTROL POINT"] = [
+    icn["TP.ACTION POINT"],
+    {
+      type: "path",
+      d:
+        "m 131,-35 -5,-5 v 10 z  m -31.1,16 -4.8,-5 h 9.9 z  m 0,-33 -5,5 H 105 Z  m -29.9,17 5,-5 v 10 z  m 30,-16.3 V -19  M 70,-35 h 60"
+    }
+  ];
+  icn["TP.VITAL GROUND"] = [
+    {
+      type: "path",
+      fill: false,
+      stroke: "rgb(128,0,128)",
+      strokewidth: 6,
+      d:
+        "m 145,100 a 45,45 0 0 1 -45,45 45,45 0 0 1 -45,-45 45,45 0 0 1 45,-45 45,45 0 0 1 45,45 z"
+    },
+    {
+      type: "text",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 110,
+      fontsize: 35,
+      text: "VG",
       fill: "rgb(128,0,128)"
     }
   ];
@@ -3826,6 +3870,59 @@ export default function(
     }
   ];
 
+  icn["TP.M1.DISMOUNTED"] = [
+    {
+      type: "path",
+      fill: false,
+      strokewidth: 8,
+      d: "m 140,100 -20,35 -40,0 -20,-35 20,-34.6 40,0 z"
+    }
+  ];
+  icn["TP.M2.URBAN"] = {
+    type: "text",
+    stroke: false,
+    textanchor: "middle",
+    x: 100,
+    y: 115,
+    fontsize: 35,
+    text: "URBAN"
+  };
+  icn["TP.M2.WATER"] = {
+    type: "text",
+    stroke: false,
+    textanchor: "middle",
+    x: 100,
+    y: 115,
+    fontsize: 35,
+    text: "WATER"
+  };
+  icn["TP.M2.GROUND"] = {
+    type: "text",
+    stroke: false,
+    textanchor: "middle",
+    x: 100,
+    y: 115,
+    fontsize: 35,
+    text: "GROUND"
+  };
+  icn["TP.M2.VEGETATION"] = {
+    type: "text",
+    stroke: false,
+    textanchor: "middle",
+    x: 100,
+    y: 115,
+    fontsize: 35,
+    text: "VEGETATION"
+  };
+  icn["TP.M2.OBSTACLES"] = {
+    type: "text",
+    stroke: false,
+    textanchor: "middle",
+    x: 100,
+    y: 115,
+    fontsize: 35,
+    text: "OBSTACLES"
+  };
   /*
   function defaultProperties(instructions) {
     if (typeof instructions === "object") {
