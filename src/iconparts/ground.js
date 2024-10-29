@@ -398,7 +398,6 @@ export default function(
   icn["GR.IC.ISOLATED PERSONNEL"] = [
     {
       type: "path",
-
       d: "M 100,100 88,88  m 12,12 12,-12  m -12,30 v -18  m -9.5,18 H 110",
       fill: false
     },
