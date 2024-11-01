@@ -375,7 +375,7 @@ export default function(
     text: "G"
   };
 
-  for (let key in icn) {
+  for (const key in icn) {
     if (!icn.hasOwnProperty(key)) continue;
     if (iconParts.hasOwnProperty(key)) console.warn("Override of: " + key);
     defaultProperties.call(this, icn[key], iconColor);

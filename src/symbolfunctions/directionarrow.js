@@ -1,13 +1,13 @@
 //Direction Arrow #######################################################################
 export default function directionarrow(ms) {
-  let drawArray1 = [];
-  let drawArray2 = [];
+  const drawArray1 = [];
+  const drawArray2 = [];
   let bbox = this.metadata.baseGeometry.bbox;
   if (this.metadata.baseGeometry.g == "") {
     // in the case we don't have any frame
     bbox = this.bbox; //Set bbox to the current symbols bounds
   }
-  let gbbox = new ms.BBox();
+  const gbbox = new ms.BBox();
   const color =
     this.colors.iconColor[this.metadata.affiliation] ||
     this.colors.iconColor["Friend"];
@@ -18,7 +18,7 @@ export default function directionarrow(ms) {
         // Movement indicator
         // The length of the lines in a direction of movement indicator are
         // a bit discussed but I use one frame height. (=100px)
-        let arrowLength = 95;
+        const arrowLength = 95;
         arrow = [
           {
             type: "rotate",
@@ -101,10 +101,10 @@ export default function directionarrow(ms) {
         drawArray2.push(arrow);
       } else {
         // This is speed leader
-        let length = this.options.speedLeader * (100 / this.style.size);
-        let rad = (this.options.direction * Math.PI) / 180;
-        let y = -length * Math.cos(rad);
-        let x = length * Math.sin(rad);
+        const length = this.options.speedLeader * (100 / this.style.size);
+        const rad = (this.options.direction * Math.PI) / 180;
+        const y = -length * Math.cos(rad);
+        const x = length * Math.sin(rad);
 
         gbbox.x1 = Math.min(100, 100 + x);
         gbbox.x2 = Math.max(100, 100 + x);

@@ -1,8 +1,8 @@
 export default function(ms, name, sidc) {
-  let result = {};
+  const result = {};
   for (let i = 0; i < sidc.mainIcon.length; i++) {
     if (sidc.mainIcon[i].remarks == "N/A") continue;
-    let icon =
+    const icon =
       sidc.mainIcon[i].codingscheme +
       "F" +
       sidc.mainIcon[i].battledimension +
@@ -10,7 +10,7 @@ export default function(ms, name, sidc) {
       sidc.mainIcon[i].functionid +
       " " +
       sidc.mainIcon[i].name;
-    let symbol = new ms.Symbol(
+    const symbol = new ms.Symbol(
       sidc.mainIcon[i].codingscheme +
         "F" +
         sidc.mainIcon[i].battledimension +

@@ -1,4 +1,4 @@
-import { ms } from "../index.esm.js";
+import { ms } from "../index.mjs";
 ms.reset();
 
 export default {
@@ -19,6 +19,6 @@ export default {
     setDashArrays: [typeof ms.setDashArrays(), "object"],
     setHqStaffLength: [typeof ms.setHqStaffLength(100), "number"],
     setStandard: [typeof ms.setStandard(), "boolean"],
-    setSymbolParts: [typeof ms.setSymbolParts(), "object"]
-  }
+    setSymbolParts: [typeof ms.setSymbolParts(), "object"],
+  },
 };

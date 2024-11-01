@@ -65,7 +65,7 @@ export default function(
     { type: "text", stroke: false, x: 100, y: 145, fontsize: 30, text: "SS" }
   ]; //WAR.SBSUF.SUB.STN
 
-  for (let key in icn) {
+  for (const key in icn) {
     if (!icn.hasOwnProperty(key)) continue;
     if (iconParts.hasOwnProperty(key)) console.warn("Override of: " + key);
     defaultProperties.call(this, icn[key], iconColor);

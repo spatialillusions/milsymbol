@@ -1140,7 +1140,7 @@ export default function(
   icn["SU.M2.REMOTELY PILOTED"] = textm2("RP");
   icn["SU.M2.EXPENDABLE"] = textm2("EXP");
 
-  for (let key in icn) {
+  for (const key in icn) {
     if (!icn.hasOwnProperty(key)) continue;
     if (iconParts.hasOwnProperty(key)) console.warn("Override of: " + key);
     defaultProperties.call(this, icn[key], iconColor);

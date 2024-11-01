@@ -9,5 +9,5 @@ ms.addIcons(icons);
 export default verify(
   ms,
   "MIL-STD-2525C Emergency Management Symbols",
-  ms2525c.EMS
+  ms2525c.EMS,
 );

@@ -4,9 +4,9 @@ import {
   std2525b, // 2525B
   std2525c, // 2525C
   app6d, // APP6-D
-  std2525d // 2525D
+  std2525d, // 2525D
   //path2d // Pollyfill for Path2D in IE or node-canvas
-} from "../index.esm.js";
+} from "../index.mjs";
 ms.reset();
 
 ms.addIcons(app6b);
@@ -18,11 +18,11 @@ ms.addIcons(std2525d);
 
 import sampleSymbolSvgs from "./sample-symbol-svgs.js";
 
-let sampleSvgs = {};
-for (let key in sampleSymbolSvgs) {
+const sampleSvgs = {};
+for (const key in sampleSymbolSvgs) {
   sampleSvgs[key] = [
     new ms.Symbol(key, { size: 40 }).asSVG(),
-    sampleSymbolSvgs[key]
+    sampleSymbolSvgs[key],
   ];
 }
 
@@ -42,8 +42,8 @@ export default {
     getSize: [typeof symbol.getSize(), "object"],
     getStyle: [typeof symbol.getStyle(), "object"],
     isValid: [typeof symbol.isValid(), "boolean"], // TOOD make it possible to pass extended option and return an Object
-    setOptions: [typeof symbol.setOptions(), "object"]
+    setOptions: [typeof symbol.setOptions(), "object"],
     //toDataURL: [typeof symbol.toDataURL(), "string"] // TODO
   },
-  "Sample SVGs": sampleSvgs
+  "Sample SVGs": sampleSvgs,
 };

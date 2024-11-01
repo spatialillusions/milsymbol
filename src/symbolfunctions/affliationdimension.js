@@ -1,7 +1,7 @@
 //Affiliation and dimension addons to base geometries ####################################
 export default function affliationdimension(ms) {
-  let drawArray1 = [];
-  let drawArray2 = [];
+  const drawArray1 = [];
+  const drawArray2 = [];
   let bbox = this.metadata.baseGeometry.bbox;
   const frameColor = this.colors.frameColor[this.metadata.affiliation];
   //Draws the a question mark for some unknown or other dimension symbols

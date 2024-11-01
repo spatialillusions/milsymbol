@@ -1,15 +1,15 @@
 //Symbol Modifiers #######################################################################
 export default function modifier(ms) {
-  let drawArray1 = [];
-  let drawArray2 = [];
-  let bbox = new ms.BBox(this.metadata.baseGeometry.bbox); // clone the bbox
-  let color = this.style.frameColor
+  const drawArray1 = [];
+  const drawArray2 = [];
+  const bbox = new ms.BBox(this.metadata.baseGeometry.bbox); // clone the bbox
+  const color = this.style.frameColor
     ? this.style.frameColor[this.metadata.affiliation]
     : this.colors.iconColor[this.metadata.affiliation];
-  let gbbox = new ms.BBox(); // bounding box for the added geometries
+  const gbbox = new ms.BBox(); // bounding box for the added geometries
   let geom;
 
-  let hqStaffLength = Number(this.style.hqStaffLength || ms._hqStaffLength);
+  const hqStaffLength = Number(this.style.hqStaffLength || ms._hqStaffLength);
   if (this.metadata.headquarters && hqStaffLength > 0) {
     //HEADQUARTERS
     let y = 100;
@@ -160,7 +160,7 @@ export default function modifier(ms) {
   }
   if (this.metadata.feintDummy) {
     //FEINT DUMMY
-    let topPoint = bbox.y1 - 0 - bbox.width() / 2;
+    const topPoint = bbox.y1 - 0 - bbox.width() / 2;
     geom = {
       type: "path",
       strokedasharray: ms._dashArrays.feintDummy,
@@ -197,8 +197,8 @@ export default function modifier(ms) {
   }
   //Unit Size
   if (this.metadata.echelon) {
-    let installationPadding = this.metadata.installation ? 15 : 0;
-    let echelons = {
+    const installationPadding = this.metadata.installation ? 15 : 0;
+    const echelons = {
       "Team/Crew": {
         g: [
           { type: "circle", cx: 100, cy: bbox.y1 - 20, r: 15 },
@@ -488,7 +488,7 @@ export default function modifier(ms) {
         bbox.y2 += 5;
       }
     }
-    let mobilities = {
+    const mobilities = {
       "Wheeled limited cross country": {
         g: [
           { type: "path", d: "M 53,1 l 94,0" },
@@ -619,7 +619,7 @@ export default function modifier(ms) {
 
   //Dismounted Leadership
   if (this.metadata.leadership) {
-    let leadership = {
+    const leadership = {
       Friend: {
         type: "path",
         d: "m 45,60 55,-25 55,25"

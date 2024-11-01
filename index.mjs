@@ -17,7 +17,7 @@ export {
   emergencymanagementsymbols as letteremergencymanagementsymbols,
   std2525bextra as letterstd2525bextra,
   tacticalpoints2525 as lettertacticalpoints2525,
-  tacticalpointsapp6 as lettertacticalpointsapp6
+  tacticalpointsapp6 as lettertacticalpointsapp6,
 } from "./src/lettersidc.js";
 export { app6d, std2525d, std2525e } from "./src/numbersidc.js";
 export {
@@ -36,7 +36,7 @@ export {
   signalsintelligence as numbersignalsintelligence,
   cyberspace as numbercyberspace,
   dismountedindividual as numberdismountedindividual,
-  tacticalpoints as numbertacticalpoints
+  tacticalpoints as numbertacticalpoints,
 } from "./src/numbersidc.js";
 export { default as path2d } from "./src/ms/path2d.js";
 

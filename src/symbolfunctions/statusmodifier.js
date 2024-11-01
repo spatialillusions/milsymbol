@@ -1,8 +1,8 @@
 //Sets modifiers depending of status #####################################################
 export default function statusmodifier(ms) {
-  let drawArray1 = [];
-  let drawArray2 = [];
-  let bbox = this.metadata.baseGeometry.bbox;
+  const drawArray1 = [];
+  const drawArray2 = [];
+  const bbox = this.metadata.baseGeometry.bbox;
   let y1 = bbox.y1;
   let y2 = bbox.y2;
 

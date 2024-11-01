@@ -750,7 +750,7 @@ export default {
       "EXMC--": 122,
       "EXML--": 122
     };
-    for (let key in equipmentBottom) {
+    for (const key in equipmentBottom) {
       if (!equipmentBottom.hasOwnProperty(key)) continue;
       bbox["S-G-" + key] = {
         x1: 50,

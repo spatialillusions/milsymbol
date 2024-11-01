@@ -1,5 +1,5 @@
 export default function(ms, sidc) {
-  let mainIcon = {};
+  const mainIcon = {};
   for (let i = 0; i < sidc.mainIcon.length; i++) {
     if (
       sidc.mainIcon[i].hasOwnProperty("Geometric Rendering") &&
@@ -7,24 +7,24 @@ export default function(ms, sidc) {
     ) {
       continue;
     }
-    let icon =
+    const icon =
       sidc.mainIcon[i]["Code"] +
       " " +
       (sidc.mainIcon[i]["Entity Subtype"] ||
         sidc.mainIcon[i]["Entity Type"] ||
         sidc.mainIcon[i]["Entity"]);
-    let valid = new ms.Symbol(
+    const valid = new ms.Symbol(
       "1003" + sidc.symbolset + "0000" + sidc.mainIcon[i]["Code"] + "0000"
     ).isValid();
     mainIcon[icon] = [valid, true];
   }
 
-  let modifier1 = {};
+  const modifier1 = {};
   for (let i = 0; i < sidc.modifier1.length; i++) {
     if (sidc.symbolset == "25" && sidc.modifier1[i]["Code"] <= 12) {
       continue; // mobility modifiers for tactical points that we don't support
     }
-    let icon =
+    const icon =
       sidc.modifier1[i]["Code"] + " " + sidc.modifier1[i]["First Modifier"];
     let valid;
     if (
@@ -43,9 +43,9 @@ export default function(ms, sidc) {
     }
   }
 
-  let modifier2 = {};
+  const modifier2 = {};
   for (let i = 0; i < sidc.modifier2.length; i++) {
-    let icon =
+    const icon =
       sidc.modifier2[i]["Code"] + " " + sidc.modifier2[i]["Second Modifier"];
     let valid;
     if (

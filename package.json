@@ -7,6 +7,7 @@
     ".": "./index.js",
     "./package.json": "./package.json"
   },
+  "type": "module",
   "types": "index.d.ts",
   "directories": {
     "doc": "docs",
@@ -31,12 +32,13 @@
   },
   "homepage": "https://github.com/spatialillusions/milsymbol",
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-plugin-prettier": "^3.4.1",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "mil-std-2525": "^0.2.5",
     "milstandard-e": "^0.2.13",
     "nyc": "^17.0.0",
-    "prettier": "^1.19.1",
+    "prettier": "3.3.3",
     "rollup": "^4.24.0",
     "rollup-plugin-copy": "^3.5.0",
     "stanag-app6": "^0.2.0",

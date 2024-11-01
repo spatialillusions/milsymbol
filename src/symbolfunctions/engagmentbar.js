@@ -1,12 +1,12 @@
 // Engagment bar ##################################################################################
 export default function engagement(ms) {
-  let drawArray1 = [];
-  let drawArray2 = [];
-  let bbox = this.bbox;
+  const drawArray1 = [];
+  const drawArray2 = [];
+  const bbox = this.bbox;
   let x1 = bbox.x1;
   let x2 = bbox.x2;
   let y1 = bbox.y1;
-  let y2 = bbox.y2;
+  const y2 = bbox.y2;
 
   if (this.options.engagementBar !== "") {
     y1 -= 6;
@@ -40,7 +40,7 @@ export default function engagement(ms) {
         this.colors.fillColor[this.metadata.affiliation];
     }
     // Bar width
-    let width = Math.max(bbox.width(), this.options.engagementBar.length * 16);
+    const width = Math.max(bbox.width(), this.options.engagementBar.length * 16);
     x1 = Math.min(x1, 100 - width / 2);
     x2 = Math.max(x2, 100 + width / 2);
 

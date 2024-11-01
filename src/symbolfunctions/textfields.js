@@ -1,8 +1,8 @@
 //Text Fields ############################################################################
 export default function textfields(ms) {
-  let drawArray1 = [];
-  let drawArray2 = [];
-  let bbox = this.metadata.baseGeometry.bbox;
+  const drawArray1 = [];
+  const drawArray2 = [];
+  const bbox = this.metadata.baseGeometry.bbox;
   const fontColor =
     (typeof this.style.infoColor === "object"
       ? this.style.infoColor[this.metadata.affiliation]
@@ -26,9 +26,9 @@ export default function textfields(ms) {
 
   //Text fields overrides
   function labelOverride(label) {
-    let texts = [];
+    const texts = [];
     let labelbox;
-    for (let i in label) {
+    for (const i in label) {
       if (this.options.hasOwnProperty(i) && this.options[i] != "") {
         if (!label.hasOwnProperty(i)) continue;
         for (let j = 0; j < (label[i].length || 1); j++) {
@@ -56,7 +56,7 @@ export default function textfields(ms) {
             labelbox.x2 = lbl.x;
           }
           gbbox.merge(labelbox);
-          let text = { type: "text", fontfamily: fontFamily, fill: fontColor };
+          const text = { type: "text", fontfamily: fontFamily, fill: fontColor };
           if (lbl.hasOwnProperty("fill")) text.fill = lbl.fill;
           if (lbl.hasOwnProperty("stroke")) text.stroke = lbl.stroke;
           if (lbl.hasOwnProperty("textanchor"))

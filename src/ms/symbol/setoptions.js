@@ -4,7 +4,7 @@ export default function setOptions() {
   for (i = 0; i < arguments.length; i++) {
     const options = arguments[i];
     if (typeof options === "object") {
-      for (let key in options) {
+      for (const key in options) {
         if (!options.hasOwnProperty(key)) continue;
         if (key === "SIDC") {
           // backward compability
@@ -93,7 +93,7 @@ export default function setOptions() {
   };
   //If it is a headquarters the anchor should be at the end of the staf
   if (this.metadata.headquarters) {
-    let hqStaffLength = this.style.hqStaffLength || ms._hqStaffLength;
+    const hqStaffLength = this.style.hqStaffLength || ms._hqStaffLength;
     anchor = {
       x: this.metadata.baseGeometry.bbox.x1,
       y: this.metadata.baseGeometry.bbox.y2 + hqStaffLength

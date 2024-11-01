@@ -3,12 +3,12 @@ export default function(geom, outline, stroke, color) {
     let clone;
     if (Array.isArray(geom)) {
       clone = [];
-      for (let i in geom) {
+      for (const i in geom) {
         clone.push(process(geom[i], outline, stroke, color));
       }
     } else {
       clone = {};
-      for (let key in geom) {
+      for (const key in geom) {
         if (["fill", "fillopacity"].indexOf(key) == -1) {
           clone[key] = geom[key];
         }
@@ -19,7 +19,7 @@ export default function(geom, outline, stroke, color) {
         geom.type == "scale"
       ) {
         clone.draw = [];
-        for (let draw in geom.draw) {
+        for (const draw in geom.draw) {
           clone.draw.push(process(geom.draw[draw], outline, stroke, color));
         }
       } else {

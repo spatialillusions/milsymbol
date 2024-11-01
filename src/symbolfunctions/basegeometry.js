@@ -1,9 +1,9 @@
 //Base Geometry for the Symbol ###########################################################
 export default function basegeometry(ms) {
   let modifier;
-  let drawArray1 = [];
-  let drawArray2 = [];
-  let frameColor = this.colors.frameColor[this.metadata.affiliation];
+  const drawArray1 = [];
+  const drawArray2 = [];
+  const frameColor = this.colors.frameColor[this.metadata.affiliation];
 
   //If unframed but with icon, then just return.
   if (

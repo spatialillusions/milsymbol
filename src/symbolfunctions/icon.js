@@ -1,7 +1,7 @@
 //Icon #################################################################################
 export default function icon(ms) {
-  let drawArray1 = [];
-  let drawArray2 = [];
+  const drawArray1 = [];
+  const drawArray2 = [];
   let gbbox = new ms.BBox({ x1: 50, x2: 150, y1: 50, y2: 150 });
   let icons, iconColor;
 
@@ -17,16 +17,16 @@ export default function icon(ms) {
   let specialbbox = [];
 
   if (this.style.icon) {
-    let fillColor = this.colors.fillColor[this.metadata.affiliation];
+    const fillColor = this.colors.fillColor[this.metadata.affiliation];
     //So we don't happend to use civilian colors
-    let neutralColor = this.colors.fillColor.Neutral;
+    const neutralColor = this.colors.fillColor.Neutral;
     iconColor = this.colors.iconColor[this.metadata.affiliation];
-    let iconFillColor = this.colors.iconFillColor[this.metadata.affiliation];
-    let none = this.colors.none[this.metadata.affiliation];
-    let black = this.colors.black[this.metadata.affiliation];
-    let white = this.colors.white[this.metadata.affiliation];
+    const iconFillColor = this.colors.iconFillColor[this.metadata.affiliation];
+    const none = this.colors.none[this.metadata.affiliation];
+    const black = this.colors.black[this.metadata.affiliation];
+    const white = this.colors.white[this.metadata.affiliation];
     //Store previous used icons in memory.
-    let icnet =
+    const icnet =
       (this.metadata.STD2525 ? "2525" : "APP6") +
       "," +
       this.metadata.dimension +
@@ -139,7 +139,7 @@ export default function icon(ms) {
     //Number based SIDCs.
     if (this.metadata.numberSIDC) {
       //Number based SIDCs.
-      let symbolSet = String(this.options.sidc).substr(4, 2);
+      const symbolSet = String(this.options.sidc).substr(4, 2);
       if (ms._iconCache[icnet].hasOwnProperty("numberSIDC")) {
         if (
           ms._iconCache[icnet].numberSIDC.symbolSet.hasOwnProperty(symbolSet)
@@ -235,7 +235,7 @@ export default function icon(ms) {
 
     // Put all this togheter and return the Icon. ============================================
     iconColor = this.colors.iconColor[this.metadata.affiliation];
-    let undefinedIcon = [
+    const undefinedIcon = [
       {
         type: "path",
         stroke: false,
@@ -270,7 +270,7 @@ export default function icon(ms) {
       } else {
         //Handle special cases of dismounted individual where weapons should be scaled
         // TODO take care of common modifiers...
-        let mainSIDC = Number(this.metadata.functionid.substr(0, 6));
+        const mainSIDC = Number(this.metadata.functionid.substr(0, 6));
         if (
           (this.metadata.dismounted &&
             mainSIDC >= 110301 &&
@@ -324,7 +324,7 @@ export default function icon(ms) {
       //Modifier 1
       if (this.metadata._modifier1.substr(0, 1) == "0") {
         if (this.metadata.functionid.substr(6, 2) != "00") {
-          let modifier1 = m1[this.metadata.functionid.substr(6, 2)];
+          const modifier1 = m1[this.metadata.functionid.substr(6, 2)];
           if (typeof modifier1 === "undefined") {
             this.validIcon = false;
           } else {
@@ -332,7 +332,7 @@ export default function icon(ms) {
           }
         }
       } else {
-        let modifier1 = m1[this.metadata._modifier1];
+        const modifier1 = m1[this.metadata._modifier1];
         if (typeof modifier1 === "undefined") {
           this.validIcon = false;
         } else {
@@ -343,7 +343,7 @@ export default function icon(ms) {
       //Modifier 2
       if (this.metadata._modifier2.substr(0, 1) == "0") {
         if (this.metadata.functionid.substr(8, 2) != "00") {
-          let modifier2 = m2[this.metadata.functionid.substr(8, 2)];
+          const modifier2 = m2[this.metadata.functionid.substr(8, 2)];
           if (typeof modifier2 === "undefined") {
             this.validIcon = false;
           } else {
@@ -351,7 +351,7 @@ export default function icon(ms) {
           }
         }
       } else {
-        let modifier2 = m2[this.metadata._modifier2];
+        const modifier2 = m2[this.metadata._modifier2];
         if (typeof modifier2 === "undefined") {
           this.validIcon = false;
         } else {
@@ -360,7 +360,7 @@ export default function icon(ms) {
       }
     } else {
       //Letter based SIDC
-      let genericSIDC =
+      const genericSIDC =
         this.options.sidc.substr(0, 1) +
         "-" +
         this.options.sidc.substr(2, 1) +

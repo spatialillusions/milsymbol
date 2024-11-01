@@ -873,7 +873,7 @@ export default {
         230200: 120,
         240000: 118.75
       };
-      for (let key in equipmentBottom) {
+      for (const key in equipmentBottom) {
         if (!equipmentBottom.hasOwnProperty(key)) continue;
         bbox[key] = {
           x1: 50,

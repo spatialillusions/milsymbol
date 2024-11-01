@@ -9,7 +9,7 @@ ms.addIcons(icons);
 export default verify(
   ms,
   "MIL-STD-2525C Signals Intelligence Space",
-  ms2525c.SIGINT
+  ms2525c.SIGINT,
 );
 
 /*verify(ms, "MIL-STD-2525C Signals Intelligence Air", ms2525c.SIGINT.AIRTRK);

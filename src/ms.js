@@ -55,7 +55,7 @@ ms.setSymbolParts = function(parts) {
 ms.reset = function() {
   this._brokenPath2D = undefined;
   this._colorModes = {};
-  for (let name in ColorModes) {
+  for (const name in ColorModes) {
     ms.setColorMode(name, ColorModes[name]);
   }
   this._dashArrays = {
@@ -107,7 +107,7 @@ ms._getIconParts = function iconparts(
 ) {
   const icn = {};
 
-  for (let i in this._iconParts) {
+  for (const i in this._iconParts) {
     if (!this._iconParts.hasOwnProperty(i)) continue;
     this._iconParts[i].call(
       this,
