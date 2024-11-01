@@ -11,7 +11,7 @@ module.exports = {
   plugins: ["prettier"],
   rules: {
     "prettier/prettier": "error",
-    "linebreak-style": ["error", "unix"],
+    //"linebreak-style": ["error", "windows"],
     "no-console": ["error", { allow: ["info", "warn", "error"] }],
     "no-unused-vars": ["error", { vars: "all", args: "none" }],
     semi: ["error", "always"]
