@@ -40,7 +40,7 @@
     "rollup": "^4.24.0",
     "rollup-plugin-copy": "^3.5.0",
     "stanag-app6": "^0.2.0",
-    "tead": "^0.5.3",
+    "tead": "^0.7.1",
     "uglify-js": "^3.17.4"
   },
   "babel": {
