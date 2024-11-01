@@ -16,7 +16,7 @@ ms.addIcons(app6d);
 ms.addIcons(std2525d);
 //ms.Path2D = path2d;
 
-import sampleSymbolSvgs from "./sample-symbol-svgs";
+import sampleSymbolSvgs from "./sample-symbol-svgs.js";
 
 let sampleSvgs = {};
 for (let key in sampleSymbolSvgs) {
