@@ -6,8 +6,4 @@ import verify from "./letter-sidc.js";
 import { emergencymanagementsymbols as icons } from "../src/lettersidc.js";
 ms.addIcons(icons);
 
-export default verify(
-  ms,
-  "MIL-STD-2525C Emergency Management Symbols",
-  ms2525c.EMS,
-);
+export default verify(ms, "MIL-STD-2525C Emergency Symbols", ms2525c.EMS);

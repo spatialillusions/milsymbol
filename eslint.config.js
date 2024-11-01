@@ -6,8 +6,8 @@ export default [
       "prefer-const": "error"
     },
     languageOptions: {
-      //ecmaVersion: 6
-      //sourceType: "module"
+      ecmaVersion: 6,
+      sourceType: "module"
     },
     plugins: {
       prettier: {

@@ -6,11 +6,7 @@ import verify from "./letter-sidc.js";
 import { signalsIntelligence as icons } from "../src/lettersidc.js";
 ms.addIcons(icons);
 
-export default verify(
-  ms,
-  "MIL-STD-2525C Signals Intelligence Space",
-  ms2525c.SIGINT,
-);
+export default verify(ms, "MIL-STD-2525C Signals Intelligence", ms2525c.SIGINT);
 
 /*verify(ms, "MIL-STD-2525C Signals Intelligence Air", ms2525c.SIGINT.AIRTRK);
 verify(ms, "MIL-STD-2525C Signals Intelligence Ground", ms2525c.SIGINT.GRDTRK);
