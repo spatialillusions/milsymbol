@@ -1,4 +1,4 @@
-let size = 70;
+const size = 70;
 
 /*
         // Since we don't have any geometry types in APP-6 D controle measures, let us get them from 2525D
@@ -39,7 +39,7 @@ function svgLoad() {
 function generatenavigation() {
   let i = 0;
   let indexoftables = "";
-  document.querySelectorAll("h2, h3").forEach(function(d) {
+  document.querySelectorAll("h2, h3").forEach(function (d) {
     i++;
     d.id = "heading-" + i;
     indexoftables +=
@@ -55,7 +55,7 @@ function generatenavigation() {
 
   i = 0;
   let indexoffigures = "";
-  document.querySelectorAll("figure").forEach(function(d) {
+  document.querySelectorAll("figure").forEach(function (d) {
     i++;
     d.id = "figure-" + i;
     d = d.getElementsByTagName("figcaption").item(0);
@@ -68,7 +68,7 @@ function generatenavigation() {
 function remarks(remark) {
   if (
     ["From MIL-STD-2525.", "Simplification of MIL-STD-2525 icon TBD."].indexOf(
-      remark
+      remark,
     ) != -1
   ) {
     return { monoColor: "Silver" };
@@ -90,7 +90,7 @@ function labels(icon) {
     dtg1: "W1",
     altitudeDepth: "X",
     location: "Y",
-    targetNumber: "AP"
+    targetNumber: "AP",
   };
 }
 
@@ -115,7 +115,7 @@ function renderSymbolSet(symbolset, svgIcon) {
     "": "CommonMods",
     Air: "Air",
     "Air missile": "Air",
-    "Activity/Event": "Activities"
+    "Activity/Event": "Activities",
   };
   let output = "";
   let i;
@@ -132,8 +132,7 @@ function renderSymbolSet(symbolset, svgIcon) {
     if (
       symbolset.mainIcon[i]["Entity"] == "{Disused}" ||
       symbolset.mainIcon[i]["Entity Type"] == "{Disused}" ||
-      symbolset.mainIcon[i]["Entity Subtype"] == "{Disused}" ||
-      symbolset.mainIcon[i]["Entity Subtype"] == "{Disused} "
+      symbolset.mainIcon[i]["Entity Subtype"] == "{Disused}"
     )
       continue;
     symbol = new ms.Symbol(
@@ -144,14 +143,14 @@ function renderSymbolSet(symbolset, svgIcon) {
         "0000",
       { size: size },
       remarks(symbolset.mainIcon[i]["Remarks"]),
-      symbolset.symbolset == 25 ? labels() : {}
+      symbolset.symbolset == 25 ? labels() : {},
     );
 
     output += "<tr";
 
     if (
       ["N/A", "For training or hierarchical purposes only"].indexOf(
-        symbolset.mainIcon[i]["Remarks"]
+        symbolset.mainIcon[i]["Remarks"],
       ) != -1
     ) {
       output += ' class="na"';
@@ -172,7 +171,7 @@ function renderSymbolSet(symbolset, svgIcon) {
             "\n" +
             symbol.getOptions().sidc +
             "\n" +
-            symbol.isValid(true)
+            symbol.isValid(true),
       );
     }
 
@@ -194,8 +193,8 @@ function renderSymbolSet(symbolset, svgIcon) {
         (symbolset.mainIcon[i]["Entity Subtype"]
           ? "Entity Subtype"
           : symbolset.mainIcon[i]["Entity Type"]
-          ? "Entity Type"
-          : "Entity");
+            ? "Entity Type"
+            : "Entity");
       if (symbolset.mainIcon[i]["Entity Subtype"]) {
         output +=
           "<br><em>Entity/Entity Type:</em> " +
@@ -244,7 +243,7 @@ function renderSymbolSet(symbolset, svgIcon) {
             symbolset.mainIcon[i]["Code"] +
             "0000",
           { size: size, alternateMedal: true },
-          remarks(symbolset.mainIcon[i]["Remarks"])
+          remarks(symbolset.mainIcon[i]["Remarks"]),
         ).asSVG();
       output += "</td>";
     }
@@ -296,7 +295,7 @@ function renderSymbolSet(symbolset, svgIcon) {
             symbolset.modifier1[i]["Code"] +
             "00",
           { size: size },
-          remarks(symbolset.modifier1[i]["Remarks"])
+          remarks(symbolset.modifier1[i]["Remarks"]),
         );
       }
       if (
@@ -311,7 +310,7 @@ function renderSymbolSet(symbolset, svgIcon) {
             "00" +
             symbolset.modifier1[i]["Code"].substr(0, 1),
           { size: size },
-          remarks(symbolset.modifier1[i]["Remarks"])
+          remarks(symbolset.modifier1[i]["Remarks"]),
         );
       }
 
@@ -330,7 +329,7 @@ function renderSymbolSet(symbolset, svgIcon) {
             "\n" +
             symbol.getOptions().sidc +
             "\n" +
-            symbol.isValid(true)
+            symbol.isValid(true),
         );
       }
 
@@ -386,7 +385,7 @@ function renderSymbolSet(symbolset, svgIcon) {
             symbolset.modifier2[i]["Code"] +
             "00",
           { size: size },
-          remarks(symbolset.modifier2[i]["Remarks"])
+          remarks(symbolset.modifier2[i]["Remarks"]),
         );
       }
       if (
@@ -401,7 +400,7 @@ function renderSymbolSet(symbolset, svgIcon) {
             "0" +
             symbolset.modifier2[i]["Code"].substr(0, 1),
           { size: size },
-          remarks(symbolset.modifier2[i]["Remarks"])
+          remarks(symbolset.modifier2[i]["Remarks"]),
         );
       }
 
@@ -418,7 +417,7 @@ function renderSymbolSet(symbolset, svgIcon) {
             "\n" +
             symbol.getOptions().sidc +
             "\n" +
-            symbol.isValid(true)
+            symbol.isValid(true),
         );
       }
 
