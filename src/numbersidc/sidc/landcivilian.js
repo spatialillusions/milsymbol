@@ -27,7 +27,7 @@ export default {
       sId["110600"] = [icn["ST.IC.KILLING VICTIMS"]];
       sId["110700"] = [
         icn["ST.IC.INDIVIDUAL"],
-        icn["ST.IC.ATTEMPTED CRIMINAL ACTIVITY"]
+        icn["ST.IC.ATTEMPTED CRIMINAL ACTIVITY"],
       ]; //VICTIM OF AN ATTEMPTED CRIME
       sId["110800"] = [icn["ST.IC.SPY"]];
       sId["110900"] = [icn["ST.IC.COMPOSITE LOSS"]];
@@ -63,5 +63,5 @@ export default {
       sIdm2["01"] = [icn["ST.M2.LEADER OR LEADERSHIP"]];
       sIdm2["02"] = [icn["GR.M2.CYBERSPACE"]];
     }
-  }
+  },
 };

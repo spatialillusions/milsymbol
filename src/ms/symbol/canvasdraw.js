@@ -81,9 +81,7 @@ export default function canvasDraw(ctx, instruction) {
                 )
                   ctx.stroke();
               } else {
-                console.warn(
-                  "ms.Path2D() is not present, you will need to load functionality for using Canvas in older version of Internet Explorer."
-                );
+                console.warn("ms.Path2D() is not present");
               }
             }
             break;
@@ -137,7 +135,7 @@ export default function canvasDraw(ctx, instruction) {
               instruction[i].x,
               // There is a small difference in text insertion points between SVG and Canvas
               // add some portion of the fontsize to compensate for this
-              instruction[i].y + instruction[i].fontsize * 0.2
+              instruction[i].y //+ instruction[i].fontsize * 0.2
             );
 
             if (instruction[i].stroke)
@@ -146,7 +144,7 @@ export default function canvasDraw(ctx, instruction) {
                 instruction[i].x,
                 // There is a small difference in text insertion points between SVG and Canvas
                 // add some portion of the fontsize to compensate for this
-                instruction[i].y + instruction[i].fontsize * 0.2
+                instruction[i].y // + instruction[i].fontsize * 0.2,
               );
 
             break;

@@ -27,7 +27,7 @@ export default function getMetadata() {
     space: false, //Is it in Space
     STD2525: ms._STD2525,
     taskForce: false, //Is it a task force
-    unit: false // Is this equipment or not
+    unit: false, // Is this equipment or not
   };
   const mapping = {};
   mapping.context = ["Reality", "Exercise", "Simulation"];
@@ -37,7 +37,7 @@ export default function getMetadata() {
     "FullyCapable",
     "Damaged",
     "Destroyed",
-    "FullToCapacity"
+    "FullToCapacity",
   ];
   mapping.echelonMobility = {
     "11": "Team/Crew",
@@ -68,7 +68,7 @@ export default function getMetadata() {
     "61": "Short towed array",
     "62": "Long towed Array",
     "71": "Leader Individual",
-    "72": "Deputy Individual"
+    "72": "Deputy Individual",
   };
 
   mapping.affiliation = ["Hostile", "Friend", "Neutral", "Unknown"];

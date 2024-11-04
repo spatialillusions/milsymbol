@@ -14,11 +14,11 @@ export default {
     sId["O-V-MA----"] = [icn["ST.IC.KILLING VICTIM"], icn["ST.M1.MURDER"]];
     sId["O-V-MB----"] = [
       icn["ST.IC.KILLING VICTIM"],
-      icn["ST.M1.EXECUTION (WRONGFUL KILLING)"]
+      icn["ST.M1.EXECUTION (WRONGFUL KILLING)"],
     ];
     sId["O-V-MC----"] = [
       icn["ST.IC.KILLING VICTIM"],
-      icn["ST.M1.ASSASSINATION"]
+      icn["ST.M1.ASSASSINATION"],
     ];
     sId["O-V-B-----"] = [icn["ST.IC.BOMB"]];
     sId["O-V-Y-----"] = [icn["ST.IC.BOOBY TRAP"]];
@@ -36,21 +36,21 @@ export default {
     sId["O-O-RW----"] = [icn["ST.IC.INDIVIDUAL"], icn["ST.M1.WILLING"]];
     sId["O-O-RC----"] = [
       icn["ST.IC.INDIVIDUAL"],
-      icn["ST.M1.COERCED/IMPRESSED"]
+      icn["ST.M1.COERCED/IMPRESSED"],
     ];
     sId["O-O-D-----"] = [icn["ST.IC.DEMONSTRATION"]];
     sId["O-O-M-----"] = [icn["ST.IC.MINE LAYING"]];
     sId["O-O-Y-----"] = [icn["ST.IC.PSYCHOLOGICAL OPERATIONS"]];
     sId["O-O-YT----"] = [
-      icn["ST.IC.RADIO AND TELEVISION PSYCHOLOGICAL OPERATIONS"]
+      icn["ST.IC.RADIO AND TELEVISION PSYCHOLOGICAL OPERATIONS"],
     ];
     sId["O-O-YW----"] = [
       icn["ST.IC.PSYCHOLOGICAL OPERATIONS"],
-      icn["ST.M1.WRITTEN PSYCHOLOGICAL OPERATIONS"]
+      icn["ST.M1.WRITTEN PSYCHOLOGICAL OPERATIONS"],
     ];
     sId["O-O-YH----"] = [
       icn["ST.IC.PSYCHOLOGICAL OPERATIONS"],
-      icn["ST.M1.HOUSE-TO-HOUSE"]
+      icn["ST.M1.HOUSE-TO-HOUSE"],
     ];
     sId["O-O-F-----"] = [icn["ST.IC.SEARCHING"]];
     sId["O-O-S-----"] = [icn["ST.IC.SPY"]];
@@ -59,21 +59,21 @@ export default {
     sId["O-O-H-----"] = []; // N/A
     sId["O-O-HT----"] = [
       icn["ST.IC.KNOWN INSURGENT VEHICLE"],
-      icn["ST.M1.HIJACKING/HIJACKED"]
+      icn["ST.M1.HIJACKING/HIJACKED"],
     ];
     sId["O-O-HA----"] = [
       icn["ST.IC.HIJACKING (AIRPLANE)"],
-      icn["ST.M1.HIJACKING/HIJACKED"]
+      icn["ST.M1.HIJACKING/HIJACKED"],
     ];
     sId["O-O-HV----"] = [
       icn["ST.IC.HIJACKING (BOAT)"],
-      icn["ST.M1.HIJACKING/HIJACKED"]
+      icn["ST.M1.HIJACKING/HIJACKED"],
     ];
     sId["O-O-K-----"] = [icn["ST.IC.INDIVIDUAL"], icn["ST.M1.KIDNAPPING"]];
     sId["O-O-KA----"] = [
       icn["ST.IC.INDIVIDUAL"],
       icn["ST.M1.KIDNAPPING"],
-      icn["ST.IC.ATTEMPTED CRIMINAL ACTIVITY"]
+      icn["ST.IC.ATTEMPTED CRIMINAL ACTIVITY"],
     ];
     sId["O-O-A-----"] = [icn["ST.IC.ARREST"]];
     sId["O-O-U-----"] = [icn["ST.IC.DRUG RELATED ACTIVITIES"]];
@@ -88,7 +88,7 @@ export default {
     sId["O-I-I-----"] = [icn["ST.IC.KNOWN INSURGENT VEHICLE"]];
     sId["O-I-D-----"] = [
       icn["ST.IC.KNOWN INSURGENT VEHICLE"],
-      icn["ST.M1.DRUG"]
+      icn["ST.M1.DRUG"],
     ];
     sId["O-I-F-----"] = [icn["ST.IC.INTERNAL SECURITY FORCE"]];
     sId["O-P-------"] = [icn["ST.IC.INDIVIDUAL"]];
@@ -98,11 +98,11 @@ export default {
     sId["O-G-------"] = [icn["ST.IC.GROUP"]];
     sId["O-G-A-----"] = [
       icn["ST.IC.GROUP"],
-      icn["ST.M1.DISPLACED PERSONS, REFUGEES, AND EVACUEES"]
+      icn["ST.M1.DISPLACED PERSONS, REFUGEES, AND EVACUEES"],
     ];
     sId["O-G-B-----"] = [
       icn["ST.IC.GROUP"],
-      icn["ST.M1.NONGOVERNMENTAL ORGANIZATION (NGO)"]
+      icn["ST.M1.NONGOVERNMENTAL ORGANIZATION (NGO)"],
     ];
     sId["O-G-C-----"] = [icn["ST.IC.GROUP"], icn["ST.M1.TERRORIST"]];
     sId["O-G-D-----"] = [icn["ST.IC.GROUP"], icn["ST.M1.RELIGIOUS"]];
@@ -112,7 +112,7 @@ export default {
     sId["O-R-A-----"] = [
       icn["ST.IC.INDIVIDUAL"],
       icn["ST.M1.RAPE"],
-      icn["ST.IC.ATTEMPTED CRIMINAL ACTIVITY"]
+      icn["ST.IC.ATTEMPTED CRIMINAL ACTIVITY"],
     ];
-  }
+  },
 };

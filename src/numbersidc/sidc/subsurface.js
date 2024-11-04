@@ -28,7 +28,7 @@ export default {
       sId["110400"] = [
         icn[
           "SU.IC.AUTONOMOUS UNDERWATER VEHICLE/ UNMANNED UNDERWATER VEHICLE (AUV/UUV)"
-        ]
+        ],
       ];
       sId["110500"] = [icn["SU.IC.DIVER, MILITARY"]];
       sId["120000"] = [icn["SU.IC.CIVILIAN"]];
@@ -36,7 +36,7 @@ export default {
       sId["120200"] = [
         icn[
           "SU.IC.AUTONOMOUS UNDERWATER VEHICLE/ UNMANNED UNDERWATER VEHICLE (AUV/UUV), CIVILIAN"
-        ]
+        ],
       ];
       sId["120300"] = [icn["SU.IC.DIVER, CIVILIAN"]];
       sId["130000"] = [icn["SU.IC.UNDERWATER WEAPON"]];
@@ -44,14 +44,14 @@ export default {
       sId["130200"] = [icn["SU.IC.IMPROVISED EXPLOSIVE DEVICE (IED)"]];
       sId["130300"] = [icn["SU.IC.UNDERWATER DECOY DSymbol"]];
       sId["140000"] = [
-        icn["SU.IC.ECHO TRACKER CLASSIFIER (ETC)/POSSIBLE CONTACT (POSCON)"]
+        icn["SU.IC.ECHO TRACKER CLASSIFIER (ETC)/POSSIBLE CONTACT (POSCON)"],
       ];
       sId["150000"] = [icn["SU.IC.FUSED TRACK"]];
       sId["160000"] = [icn["SU.IC.MANUAL TRACK"]];
 
       sId["200000"] = [icn["SU.IC.SEABED INSTALLATION, MAN-MADE, MILITARY"]];
       sId["210000"] = [
-        icn["SU.IC.SEABED INSTALLATION, MAN-MADE, NON-MILITARY"]
+        icn["SU.IC.SEABED INSTALLATION, MAN-MADE, NON-MILITARY"],
       ];
 
       sIdm1["01"] = [icn["SU.M1.ANTISUBMARINE WARFARE"]];
@@ -95,5 +95,5 @@ export default {
       sIdm2["16"] = [icn["SU.M2.EXPENDABLE"]];
       sIdm2["17"] = [icn["SU.M2.CYBERSPACE"]];
     }
-  }
+  },
 };

@@ -118,5 +118,5 @@ export default {
     sIdm2["123"] = [icn["COM.M2.SECURITY FORCE ASSISTANCE"]];
     sIdm2["124"] = [icn["COM.M2.BED"]];
     sIdm2["125"] = [icn["COM.M2.MULTIFUNCTIONAL"]];
-  }
+  },
 };

@@ -116,7 +116,7 @@ export function metadata(ms, metadata, mapping) {
         "EB----",
         "EC----",
         "ED----",
-        "EE----"
+        "EE----",
       ].indexOf(functionid) > -1) ||
       (battledimension == "F" &&
         ["BA----", "MA----", "MC----"].indexOf(functionid) > -1))
@@ -238,7 +238,7 @@ export function metadata(ms, metadata, mapping) {
       "EV----",
       "ZM----",
       "ZN----",
-      "ZI----"
+      "ZI----",
     ].indexOf(functionid) > -1
   ) {
     metadata.frame = false;
@@ -262,7 +262,7 @@ export function metadata(ms, metadata, mapping) {
       "CB----",
       "CC----",
       "CD----",
-      "CE----"
+      "CE----",
     ].indexOf(functionid) > -1
   ) {
     metadata.frame = false;
@@ -280,7 +280,7 @@ export function metadata(ms, metadata, mapping) {
       "WSS-LI",
       "WSTMH-",
       "WST-FC",
-      "WSTSS-"
+      "WSTSS-",
     ].indexOf(functionid) > -1
   ) {
     metadata.frame = false;
@@ -337,7 +337,7 @@ export function metadata(ms, metadata, mapping) {
       "NBR---",
       "NBW---",
       "NM----",
-      "NA----"
+      "NA----",
     ].indexOf(functionid) > -1
   ) {
     if (metadata.STD2525) {

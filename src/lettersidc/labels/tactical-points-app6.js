@@ -14,8 +14,8 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 30,
       fontsize: 45,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.1.1.1.2 POINT OF INTEREST
   sidc["G-C-MAAP--"] = {
     uniqueDesignation: {
@@ -24,8 +24,8 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 135,
       fontsize: 45,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.1.2.1.1 AIR CONTROL POINT (ACP)
   sidc["G-C-MAAC--"] = {
     uniqueDesignation: {
@@ -34,8 +34,8 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 135,
       fontsize: 45,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.1.2.1.2 COMMUNICATIONS CHECKPOINT (CCP)
   sidc["G-C-MAAU--"] = {}; //2.X.2.1.2.1.3 POP UP POINT (PUP)
   sidc["G-C-MAAD--"] = {}; //2.X.2.1.2.1.4 DOWNED AIRCREW PICK UP POINT
@@ -47,8 +47,8 @@ export default function tacticalPoints(sidc) {
       x: 115,
       y: 85,
       fontsize: 45,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.1.4.1.1 TARGET REFERENCE POINT (TRP)
   sidc["G-C-MMPO--"] = {}; //2.X.2.1.4.1.4 OBSERVATION POST/OUTPOST
   sidc["G-C-MMPOC-"] = {}; //2.X.2.1.4.1.4.1 COMBAT OUTPOST
@@ -77,8 +77,8 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 165,
       fontsize: 30,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.2.1.6.6 SCATTERABLE MINES
   sidc["G-C-BOAIH-"] = {
     dtg: {
@@ -87,8 +87,8 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 165,
       fontsize: 30,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.2.1.6.7 ANTIPERSONNEL (AP) MINEFIELD REINFORCED WITH SCATTERABLE WITH SELF-DESTRUCT DATE-TIME-GROUP
   sidc["G-C-BOAID-"] = {
     dtg: {
@@ -97,8 +97,8 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 165,
       fontsize: 30,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.2.1.6.8 SCATTERABLE MINEFIELD WITH SELF-DESTRUCT DATE-TIME-GROUP
   sidc["G-C-BOAV--"] = {
     dtg: {
@@ -107,8 +107,8 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 165,
       fontsize: 30,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.2.1.6.8 SCATTERABLE MINEFIELD WITH SELF-DESTRUCT DATE-TIME-GROUP
   sidc["G-C-BYCG--"] = {
     additionalInformation: {
@@ -116,24 +116,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.2.2.2.8 ENGINEER REGULATING POINT
   sidc["G-C-BSE---"] = {}; //2.X.2.2.3.1 EARTHWORK, SMALL TRENCH OR FORTIFICATION
   sidc["G-C-BSF---"] = {}; //2.X.2.2.3.2 FORT
@@ -145,7 +145,7 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 150,
       y: 20,
-      fontsize: 35
+      fontsize: 35,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: 20, fontsize: 35 },
     hostile: {
@@ -153,21 +153,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 150,
       y: 100,
-      fontsize: 35
+      fontsize: 35,
     },
     location: {
       stroke: false,
       textanchor: "middle",
       x: 100,
       y: 140,
-      fontsize: 35
+      fontsize: 35,
     },
     quantity: {
       stroke: false,
       textanchor: "middle",
       x: 100,
       y: -25,
-      fontsize: 35
+      fontsize: 35,
     },
     type: { stroke: false, textanchor: "end", x: 50, y: 60, fontsize: 35 },
     uniqueDesignation: {
@@ -175,8 +175,8 @@ export default function tacticalPoints(sidc) {
       textanchor: "end",
       x: 50,
       y: 100,
-      fontsize: 35
-    }
+      fontsize: 35,
+    },
   }; //2.X.2.2.4.2 NUCLEAR DETONATIONS FRIENDLY GROUND ZERO
   sidc["G-C-BWE---"] = {
     additionalInformation: {
@@ -184,7 +184,7 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 150,
       y: 20,
-      fontsize: 35
+      fontsize: 35,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: 20, fontsize: 35 },
     hostile: {
@@ -192,21 +192,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 150,
       y: 100,
-      fontsize: 35
+      fontsize: 35,
     },
     location: {
       stroke: false,
       textanchor: "middle",
       x: 100,
       y: 140,
-      fontsize: 35
+      fontsize: 35,
     },
     quantity: {
       stroke: false,
       textanchor: "middle",
       x: 100,
       y: -25,
-      fontsize: 35
+      fontsize: 35,
     },
     type: { stroke: false, textanchor: "end", x: 50, y: 60, fontsize: 35 },
     uniqueDesignation: {
@@ -214,8 +214,8 @@ export default function tacticalPoints(sidc) {
       textanchor: "end",
       x: 50,
       y: 100,
-      fontsize: 35
-    }
+      fontsize: 35,
+    },
   }; //2.X.2.2.4.3 ENEMY KNOWN GROUND ZERO
   sidc["G-C-BWI---"] = {
     additionalInformation: {
@@ -223,7 +223,7 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 150,
       y: 20,
-      fontsize: 35
+      fontsize: 35,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: 20, fontsize: 35 },
     hostile: {
@@ -231,21 +231,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 150,
       y: 100,
-      fontsize: 35
+      fontsize: 35,
     },
     location: {
       stroke: false,
       textanchor: "middle",
       x: 100,
       y: 140,
-      fontsize: 35
+      fontsize: 35,
     },
     quantity: {
       stroke: false,
       textanchor: "middle",
       x: 100,
       y: -25,
-      fontsize: 35
+      fontsize: 35,
     },
     type: { stroke: false, textanchor: "end", x: 50, y: 60, fontsize: 35 },
     uniqueDesignation: {
@@ -253,8 +253,8 @@ export default function tacticalPoints(sidc) {
       textanchor: "end",
       x: 50,
       y: 100,
-      fontsize: 35
-    }
+      fontsize: 35,
+    },
   }; //2.X.2.2.4.4 ENEMY TEMPLATED
   sidc["G-C-BWF---"] = {
     additionalInformation: {
@@ -262,7 +262,7 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 150,
       y: 20,
-      fontsize: 35
+      fontsize: 35,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: 20, fontsize: 35 },
     hostile: {
@@ -270,21 +270,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 150,
       y: 100,
-      fontsize: 35
+      fontsize: 35,
     },
     location: {
       stroke: false,
       textanchor: "middle",
       x: 100,
       y: 140,
-      fontsize: 35
+      fontsize: 35,
     },
     quantity: {
       stroke: false,
       textanchor: "middle",
       x: 100,
       y: -25,
-      fontsize: 35
+      fontsize: 35,
     },
     type: { stroke: false, textanchor: "end", x: 50, y: 60, fontsize: 35 },
     uniqueDesignation: {
@@ -292,8 +292,8 @@ export default function tacticalPoints(sidc) {
       textanchor: "end",
       x: 50,
       y: 100,
-      fontsize: 35
-    }
+      fontsize: 35,
+    },
   }; //2.X.2.2.4.5 FRIENDLY PLANNED OR ON-ORDER
   sidc["G-C-BWP---"] = {}; //2.X.2.2.4.6 FALLOUT PRODUCING
   sidc["G-C-BWDP--"] = {
@@ -302,24 +302,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.2.4.11.1 DECON SITE/POINT (UNSPECIFIED)
   sidc["G-C-BWDA--"] = {
     additionalInformation: {
@@ -327,24 +327,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.2.4.11.2 ALTERNATE DECON SITE/POINT (UNSPECIFIED)
   sidc["G-C-BWDT--"] = {
     additionalInformation: {
@@ -352,24 +352,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.2.4.11.3 DECON SITE/POINT (TROOPS)
   sidc["G-C-BWDE--"] = {
     additionalInformation: {
@@ -377,24 +377,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.2.4.11.4 DECON SITE/POINT (EQUIPMENT)
   sidc["G-C-BWDS--"] = {
     additionalInformation: {
@@ -402,24 +402,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.2.4.11.5 DECON SITE/POINT (EQUIPMENT AND TROOPS)
   sidc["G-C-BWDO--"] = {
     additionalInformation: {
@@ -427,24 +427,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.2.4.11.6 DECON SITE/POINT (OPERATIONAL DECONTAMINATION)
   sidc["G-C-BWDG--"] = {
     additionalInformation: {
@@ -452,24 +452,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.2.4.11.7 DECON SITE/POINT (THOROUGH DECONTAMINATION)
   sidc["G-C-BWDEM-"] = {
     additionalInformation: {
@@ -477,24 +477,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.2.4.11.8 DECON POINT (MAIN) EQUIPMENT
   sidc["G-C-BWDTF-"] = {
     additionalInformation: {
@@ -502,24 +502,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.2.4.11.9 DECON POINT (FORWARD) TROOPS
   sidc["G-C-FSTP--"] = {
     additionalInformation: {
@@ -527,22 +527,22 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 120,
       y: 145,
-      fontsize: 40
+      fontsize: 40,
     },
     altitudeDepth: {
       stroke: false,
       textanchor: "end",
       x: 80,
       y: 145,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 120,
       y: 80,
-      fontsize: 40
-    }
+      fontsize: 40,
+    },
   }; //2.X.2.3.1.1.1 POINT /SINGLE TARGET
   sidc["G-C-FSS---"] = {
     uniqueDesignation: {
@@ -551,8 +551,8 @@ export default function tacticalPoints(sidc) {
       x: 125,
       y: 115,
       fontsize: 40,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.3.1.2 FIRE SUPPORT STATION
   sidc["G-C-FAU---"] = {
     uniqueDesignation: {
@@ -561,8 +561,8 @@ export default function tacticalPoints(sidc) {
       x: 120,
       y: 80,
       fontsize: 40,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.3.3.9 NUCLEAR TARGET
   sidc["G-C-SPA---"] = {
     additionalInformation: {
@@ -570,21 +570,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -592,10 +592,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.1 AMBULANCE EXCHANGE POINT
   sidc["G-C-SPC---"] = {
     additionalInformation: {
@@ -603,21 +603,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -625,10 +625,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.2 CANNIBALIZATION POINT
   sidc["G-C-SPY---"] = {
     additionalInformation: {
@@ -636,21 +636,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -658,10 +658,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.3 CASUALTY COLLECTION POINT
   sidc["G-C-SPT---"] = {
     additionalInformation: {
@@ -669,21 +669,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -691,10 +691,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.4 CIVILIAN COLLECTION POINT
   sidc["G-C-SPD---"] = {
     additionalInformation: {
@@ -702,21 +702,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -724,10 +724,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.5 DETAINEE COLLECTION POINT
   sidc["G-C-SPE---"] = {
     additionalInformation: {
@@ -735,21 +735,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -757,10 +757,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.6 ENEMY PRISONER OF WAR (EPW) COLLECTION POINT
   sidc["G-C-SPL---"] = {
     additionalInformation: {
@@ -768,21 +768,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -790,10 +790,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.7 LOGISTICS RELEASE POINT (LRP)
   sidc["G-C-SPM---"] = {
     additionalInformation: {
@@ -801,21 +801,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -823,10 +823,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.8 MAINTENANCE COLLECTION POINT
   sidc["G-C-SPR---"] = {
     additionalInformation: {
@@ -834,21 +834,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -856,10 +856,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.9 REARM, REFUEL AND RE-SUPPLY POINT
   sidc["G-C-SPU---"] = {
     additionalInformation: {
@@ -867,21 +867,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -889,10 +889,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.10 REFUEL ON THE MOVE (ROM) POINT
   sidc["G-C-SPO---"] = {
     additionalInformation: {
@@ -900,21 +900,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -922,10 +922,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.11 TRAFFIC CONTROL POST (TCP)
   sidc["G-C-SPI---"] = {
     additionalInformation: {
@@ -933,21 +933,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -955,10 +955,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.12 TRAILER TRANSFER POINT
   sidc["G-C-SPN---"] = {
     additionalInformation: {
@@ -966,21 +966,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -988,10 +988,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.13 UNIT MAINTENANCE COLLECTION POINT
   sidc["G-C-SPQT--"] = {
     additionalInformation: {
@@ -999,24 +999,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.14.1 GENERAL
   sidc["G-C-SPQA--"] = {
     additionalInformation: {
@@ -1024,24 +1024,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.14.2 CLASS I
   sidc["G-C-SPQB--"] = {
     additionalInformation: {
@@ -1049,24 +1049,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.14.3 CLASS II
   sidc["G-C-SPQC--"] = {
     additionalInformation: {
@@ -1074,24 +1074,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.14.4 CLASS III
   sidc["G-C-SPQD--"] = {
     additionalInformation: {
@@ -1099,24 +1099,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.14.5 CLASS IV
   sidc["G-C-SPQE--"] = {
     additionalInformation: {
@@ -1124,24 +1124,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.14.6 CLASS V
   sidc["G-C-SPQF--"] = {
     additionalInformation: {
@@ -1149,24 +1149,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.14.7 CLASS VI
   sidc["G-C-SPQG--"] = {
     additionalInformation: {
@@ -1174,24 +1174,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.14.8 CLASS VII
   sidc["G-C-SPQH--"] = {
     additionalInformation: {
@@ -1199,24 +1199,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.14.9 CLASS VIII
   sidc["G-C-SPQI--"] = {
     additionalInformation: {
@@ -1224,24 +1224,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.14.10 CLASS IX
   sidc["G-C-SPQJ--"] = {
     additionalInformation: {
@@ -1249,24 +1249,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.14.11 CLASS X
   sidc["G-C-SPMA--"] = {
     additionalInformation: {
@@ -1274,21 +1274,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -1296,10 +1296,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.15.1 AMMUNITION SUPPLY POINT (ASP)
   sidc["G-C-SPMT--"] = {
     additionalInformation: {
@@ -1307,21 +1307,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -1329,10 +1329,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.4.1.15.2 AMMUNITION TRANSFER POINT (ATP)
   sidc["G-C-OX----"] = {}; //2.X.2.5.1 SPECIAL POINT
   sidc["G-C-OXRN--"] = {}; //2.X.2.5.1.1.1 NAV REFERENCE
@@ -1379,7 +1379,7 @@ export default function tacticalPoints(sidc) {
       x: 140,
       y: 92,
       fontsize: 30,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg1: {
       stroke: false,
@@ -1387,8 +1387,8 @@ export default function tacticalPoints(sidc) {
       x: 140,
       y: 128,
       fontsize: 30,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.5.1.8.1 COMBATANT STATION
   sidc["G-C-OXSTCP"] = {
     dtg: {
@@ -1397,7 +1397,7 @@ export default function tacticalPoints(sidc) {
       x: 140,
       y: 92,
       fontsize: 30,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg1: {
       stroke: false,
@@ -1405,8 +1405,8 @@ export default function tacticalPoints(sidc) {
       x: 140,
       y: 128,
       fontsize: 30,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.5.1.8.1.1 PICKET STATION
   sidc["G-C-OXSTCA"] = {
     dtg: {
@@ -1415,7 +1415,7 @@ export default function tacticalPoints(sidc) {
       x: 140,
       y: 92,
       fontsize: 30,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg1: {
       stroke: false,
@@ -1423,8 +1423,8 @@ export default function tacticalPoints(sidc) {
       x: 140,
       y: 128,
       fontsize: 30,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.5.1.8.1.2 ASW SHIP STATION
   sidc["G-C-OXSTR-"] = {
     dtg: {
@@ -1433,7 +1433,7 @@ export default function tacticalPoints(sidc) {
       x: 140,
       y: 92,
       fontsize: 30,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg1: {
       stroke: false,
@@ -1441,8 +1441,8 @@ export default function tacticalPoints(sidc) {
       x: 140,
       y: 128,
       fontsize: 30,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.5.1.8.2 REPLENISHMENT AT SEA (RAS) STATION
   sidc["G-C-OXSTH-"] = {
     dtg: {
@@ -1451,7 +1451,7 @@ export default function tacticalPoints(sidc) {
       x: 140,
       y: 92,
       fontsize: 30,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg1: {
       stroke: false,
@@ -1459,8 +1459,8 @@ export default function tacticalPoints(sidc) {
       x: 140,
       y: 128,
       fontsize: 30,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.5.1.8.3 RESCUE STATION
   sidc["G-C-OXSTS-"] = {
     dtg: {
@@ -1469,7 +1469,7 @@ export default function tacticalPoints(sidc) {
       x: 140,
       y: 92,
       fontsize: 30,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg1: {
       stroke: false,
@@ -1477,8 +1477,8 @@ export default function tacticalPoints(sidc) {
       x: 140,
       y: 128,
       fontsize: 30,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.5.1.8.4 SUBMARINE STATION
   sidc["G-C-OXSTSA"] = {
     dtg: {
@@ -1487,7 +1487,7 @@ export default function tacticalPoints(sidc) {
       x: 140,
       y: 92,
       fontsize: 30,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg1: {
       stroke: false,
@@ -1495,8 +1495,8 @@ export default function tacticalPoints(sidc) {
       x: 140,
       y: 128,
       fontsize: 30,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.5.1.8.5 ASW SUBMARINE STATION
   sidc["G-C-OXS---"] = {}; //2.X.2.5.1.9 SEARCH
   sidc["G-C-OXSA--"] = {}; //2.X.2.5.1.9.1 SEARCH AREA
@@ -1520,21 +1520,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -1542,10 +1542,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.5.2 GENERAL OR UNSPECIFIED COMMAND AND CONTROL POINT
   sidc["G-C-OGC---"] = {
     additionalInformation: {
@@ -1553,21 +1553,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -1575,10 +1575,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.5.2.1 CHECKPOINT
   sidc["G-C-OGP---"] = {
     uniqueDesignation: {
@@ -1587,8 +1587,8 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 40,
       fontsize: 45,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.5.2.2 CONTACT POINT
   sidc["G-C-OGT---"] = {}; //2.X.2.5.2.3 COORDINATION POINT
   sidc["G-C-OGD---"] = {
@@ -1598,8 +1598,8 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 115,
       fontsize: 45,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //2.X.2.5.2.4 DECISION POINT
   sidc["G-C-OGL---"] = {
     additionalInformation: {
@@ -1607,24 +1607,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.5.2.5 LINKUP POINT
   sidc["G-C-OGN---"] = {
     additionalInformation: {
@@ -1632,24 +1632,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.5.2.6 PASSAGE POINT
   sidc["G-C-OGR---"] = {
     additionalInformation: {
@@ -1657,24 +1657,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.5.2.7 RALLY POINT
   sidc["G-C-OGS---"] = {
     additionalInformation: {
@@ -1682,24 +1682,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.5.2.8 RELEASE POINT
   sidc["G-C-OGI---"] = {
     additionalInformation: {
@@ -1707,24 +1707,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //2.X.2.5.2.9 START POINT
   sidc["G-C-OGW---"] = {
     uniqueDesignation: {
@@ -1732,8 +1732,8 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 140,
       y: 117,
-      fontsize: 50
-    }
+      fontsize: 50,
+    },
   }; //2.X.2.5.2.10 WAY POINT
   sidc["G-O-VA----"] = {}; //2.X.3.1.1 ARSON/FIRE
   sidc["G-O-VR----"] = {}; //2.X.3.1.2 ARTILLERY/ARTILLERY FIRE

@@ -3,11 +3,11 @@ export default [
   {
     rules: {
       semi: "error",
-      "prefer-const": "error"
+      "prefer-const": "error",
     },
     languageOptions: {
       ecmaVersion: 6,
-      sourceType: "module"
+      sourceType: "module",
     },
     plugins: {
       prettier: {
@@ -15,10 +15,10 @@ export default [
         //"linebreak-style": ["error", "windows"],
         "no-console": ["error", { allow: ["info", "warn", "error"] }],
         "no-unused-vars": ["error", { vars: "all", args: "none" }],
-        semi: ["error", "always"]
-      }
-    }
-  }
+        semi: ["error", "always"],
+      },
+    },
+  },
 ];
 
 /*

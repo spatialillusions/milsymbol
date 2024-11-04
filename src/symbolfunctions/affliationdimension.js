@@ -15,7 +15,7 @@ export default function affliationdimension(ms) {
       fontfamily: this.style.fontfamily,
       fontsize: 80,
       fontweight: "bold",
-      textanchor: "middle"
+      textanchor: "middle",
     });
   }
   //If we don't have a geometry we shouldn't add anything.
@@ -39,7 +39,7 @@ export default function affliationdimension(ms) {
           fontfamily: this.style.fontfamily,
           fontsize: 35,
           fontweight: "bold",
-          textanchor: "start"
+          textanchor: "start",
         });
       }
       if (this.metadata.joker) {
@@ -52,7 +52,7 @@ export default function affliationdimension(ms) {
           fontfamily: this.style.fontfamily,
           fontsize: 35,
           fontweight: "bold",
-          textanchor: "start"
+          textanchor: "start",
         });
       }
       if (this.metadata.faker) {
@@ -65,7 +65,7 @@ export default function affliationdimension(ms) {
           fontfamily: this.style.fontfamily,
           fontsize: 35,
           fontweight: "bold",
-          textanchor: "start"
+          textanchor: "start",
         });
       }
       bbox = { x2: bbox.x2 + spacing + 22, y1: 50 - 25 };
@@ -80,7 +80,7 @@ export default function affliationdimension(ms) {
         fontfamily: this.style.fontfamily,
         fontsize: 35,
         fontweight: "bold",
-        textanchor: "start"
+        textanchor: "start",
       });
       bbox = new ms.BBox({ x2: bbox.x2 + spacing + 22, y1: 50 - 25 });
     }

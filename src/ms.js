@@ -61,7 +61,7 @@ ms.reset = function() {
   this._dashArrays = {
     pending: "4,4",
     anticipated: "8,12",
-    feintDummy: "8,8"
+    feintDummy: "8,8",
   };
   this._getIcons = {};
   this._getMetadata = {};
@@ -150,7 +150,7 @@ ms._scale = function(factor, instruction, non_scaling_stroke) {
     type: "translate",
     x: 100 - factor * 100,
     y: 100 - factor * 100,
-    draw: [{ type: "scale", factor: factor, draw: [instruction] }]
+    draw: [{ type: "scale", factor: factor, draw: [instruction] }],
   };
 };
 ms._translate = function(x, y, instruction) {

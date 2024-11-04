@@ -34,16 +34,16 @@ export default {
       sIdm2["07"] = [icn["SPACE.MISSILE.M2.GROUND-BASED INTERCEPTOR (GBI)"]];
       sIdm2["08"] = [icn["SPACE.MISSILE.M2.PATRIOT"]];
       sIdm2["09"] = [
-        icn["SPACE.MISSILE.M2.STANDARD MISSILE - TERMINAL PHASE (SM-T)"]
+        icn["SPACE.MISSILE.M2.STANDARD MISSILE - TERMINAL PHASE (SM-T)"],
       ];
       sIdm2["10"] = [icn["SPACE.MISSILE.M2.STANDARD MISSILE - 3 (SM-3)"]];
       sIdm2["11"] = [
-        icn["SPACE.MISSILE.M2.TERMINAL HIGH-ALTITUDE AREA DEFENSE (THAAD)"]
+        icn["SPACE.MISSILE.M2.TERMINAL HIGH-ALTITUDE AREA DEFENSE (THAAD)"],
       ];
       sIdm2["12"] = [icn["SPACE.MISSILE.M2.SPACE"]];
       sIdm2["13"] = [icn["SPACE.MISSILE.M2.CLOSE RANGE"]];
       sIdm2["14"] = [icn["SPACE.MISSILE.M2.DEBRIS"]];
       sIdm2["15"] = [icn["SPACE.MISSILE.M2.UNKNOWN"]];
     }
-  }
+  },
 };

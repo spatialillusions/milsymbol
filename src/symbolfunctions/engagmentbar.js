@@ -25,7 +25,7 @@ export default function engagement(ms) {
       fontfamily: fontFamily,
       fontweight: "bold",
       fill: fontColor,
-      stroke: false
+      stroke: false,
     });
 
     let color = false;
@@ -33,7 +33,7 @@ export default function engagement(ms) {
       const colors = {
         TARGET: "rgb(255, 0, 0)",
         "NON-TARGET": "rgb(255, 255, 255)",
-        EXPIRED: "rgb(255, 120, 0)"
+        EXPIRED: "rgb(255, 120, 0)",
       };
       color =
         colors[this.options.engagementType.toUpperCase()] ||
@@ -59,7 +59,7 @@ export default function engagement(ms) {
         width +
         ",0 0,-25 -" +
         width +
-        ",0 z"
+        ",0 z",
     });
 
     //Add the hight of the codition bar to the geometry bounds
@@ -89,6 +89,6 @@ export default function engagement(ms) {
   return {
     pre: drawArray1,
     post: drawArray2,
-    bbox: { x1: x1, x2: x2, y1: y1, y2: y2 }
+    bbox: { x1: x1, x2: x2, y1: y1, y2: y2 },
   };
 }

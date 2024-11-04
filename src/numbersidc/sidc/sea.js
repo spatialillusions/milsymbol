@@ -43,7 +43,7 @@ export default {
       sId["120700"] = [icn["SE.IC.UNMANNED SURFACE WATER VEHICLE"]];
       sId["120800"] = [icn["SE.IC.MILITARY SPEEDBOAT"]];
       sId["120801"] = [
-        icn["SE.IC.MILITARY SPEEDBOAT, RIGID-HULL INFLATABLE BOAT"]
+        icn["SE.IC.MILITARY SPEEDBOAT, RIGID-HULL INFLATABLE BOAT"],
       ];
       sId["120900"] = [icn["SE.IC.MILITARY JETSKI"]];
       sId["121000"] = [icn["SE.IC.NAVY TASK ORGANIZATION UNIT"]];
@@ -99,7 +99,7 @@ export default {
       sId["140400"] = [icn["SE.IC.LEISURE CRAFT, SAILING BOAT"]];
       sId["140500"] = [icn["SE.IC.LEISURE CRAFT, MOTORIZED"]];
       sId["140501"] = [
-        icn["SE.IC.LEISURE CRAFT, MOTORIZED, RIGID-HULL INFLATABLE BOAT"]
+        icn["SE.IC.LEISURE CRAFT, MOTORIZED, RIGID-HULL INFLATABLE BOAT"],
       ];
       sId["140502"] = [icn["SE.IC.LEISURE CRAFT, MOTORIZED, SPEEDBOAT"]];
       sId["140600"] = [icn["SE.IC.LEISURE CRAFT, JETSKI"]];
@@ -131,7 +131,7 @@ export default {
       sIdm1["21"] = [
         icn[
           "SE.M1.BALLISTIC MISSILE DEFENSE, LONG- RANGE SURVEILLANCE AND TRACK (LRS&T)"
-        ]
+        ],
       ];
       sIdm1["22"] = [icn["SE.M1.SEA-BASE X-BAND"]];
       sIdm1["23"] = [icn["SE.M1.HIJACKING/HIJACKED"]];
@@ -155,5 +155,5 @@ export default {
       sIdm2["15"] = [icn["SE.M2.EXPENDABLE"]];
       sIdm2["16"] = [icn["SE.M2.CYBERSPACE"]];
     }
-  }
+  },
 };

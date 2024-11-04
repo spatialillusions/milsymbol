@@ -47,5 +47,5 @@ export default {
       sIdm2["15"] = [icn["AIR.MISSILE.M2.LONG RANGE"]];
       sIdm2["16"] = [icn["AIR.MISSILE.M2.INTERCONTINENTAL"]];
     }
-  }
+  },
 };

@@ -539,187 +539,187 @@ export default {
       sIdm1["14"] = [
         icn["TP.M1.ANTIPERSONNEL MINE 1"],
         icn["TP.M1.ANTIPERSONNEL MINE 2"],
-        icn["TP.M1.ANTIPERSONNEL MINE 3"]
+        icn["TP.M1.ANTIPERSONNEL MINE 3"],
       ];
       sIdm1["15"] = [
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 2"],
-        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"]
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"],
       ];
       sIdm1["16"] = [
         icn["TP.M1.ANTITANK MINE 1"],
         icn["TP.M1.ANTITANK MINE 2"],
-        icn["TP.M1.ANTITANK MINE 3"]
+        icn["TP.M1.ANTITANK MINE 3"],
       ];
       sIdm1["17"] = [
         icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 1"],
         icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"],
-        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"]
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"],
       ];
       sIdm1["18"] = [
         icn["TP.M1.WIDE AREA ANTITANK MINE 1"],
         icn["TP.M1.WIDE AREA ANTITANK MINE 2"],
-        icn["TP.M1.WIDE AREA ANTITANK MINE 3"]
+        icn["TP.M1.WIDE AREA ANTITANK MINE 3"],
       ];
       sIdm1["19"] = [
         icn["TP.M1.MINE CLUSTER 1"],
         icn["TP.M1.MINE CLUSTER 2"],
-        icn["TP.M1.MINE CLUSTER 3"]
+        icn["TP.M1.MINE CLUSTER 3"],
       ];
       sIdm1["20"] = [
         icn["TP.M1.ANTIPERSONNEL MINE 1"],
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 2"],
-        icn["TP.M1.ANTIPERSONNEL MINE 3"]
+        icn["TP.M1.ANTIPERSONNEL MINE 3"],
       ];
       sIdm1["21"] = [
         icn["TP.M1.ANTITANK MINE 1"],
         icn["TP.M1.ANTIPERSONNEL MINE 2"],
-        icn["TP.M1.ANTITANK MINE 3"]
+        icn["TP.M1.ANTITANK MINE 3"],
       ];
       sIdm1["22"] = [
         icn["TP.M1.ANTIPERSONNEL MINE 1"],
         icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"],
-        icn["TP.M1.ANTIPERSONNEL MINE 3"]
+        icn["TP.M1.ANTIPERSONNEL MINE 3"],
       ];
       sIdm1["23"] = [
         icn["TP.M1.ANTIPERSONNEL MINE 1"],
         icn["TP.M1.WIDE AREA ANTITANK MINE 2"],
-        icn["TP.M1.ANTIPERSONNEL MINE 3"]
+        icn["TP.M1.ANTIPERSONNEL MINE 3"],
       ];
       sIdm1["24"] = [
         icn["TP.M1.ANTIPERSONNEL MINE 1"],
         icn["TP.M1.MINE CLUSTER 2"],
-        icn["TP.M1.ANTIPERSONNEL MINE 3"]
+        icn["TP.M1.ANTIPERSONNEL MINE 3"],
       ];
       sIdm1["25"] = [
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
         icn["TP.M1.ANTITANK MINE 2"],
-        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"]
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"],
       ];
       sIdm1["26"] = [
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
         icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"],
-        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"]
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"],
       ];
       sIdm1["27"] = [
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
         icn["TP.M1.WIDE AREA ANTITANK MINE 2"],
-        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"]
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"],
       ];
       sIdm1["28"] = [
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
         icn["TP.M1.MINE CLUSTER 2"],
-        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"]
+        icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"],
       ];
       sIdm1["29"] = [
         icn["TP.M1.ANTITANK MINE 1"],
         icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"],
-        icn["TP.M1.ANTITANK MINE 3"]
+        icn["TP.M1.ANTITANK MINE 3"],
       ];
       sIdm1["30"] = [
         icn["TP.M1.ANTITANK MINE 1"],
         icn["TP.M1.WIDE AREA ANTITANK MINE 2"],
-        icn["TP.M1.ANTITANK MINE 3"]
+        icn["TP.M1.ANTITANK MINE 3"],
       ];
       sIdm1["31"] = [
         icn["TP.M1.ANTITANK MINE 1"],
         icn["TP.M1.MINE CLUSTER 2"],
-        icn["TP.M1.ANTITANK MINE 3"]
+        icn["TP.M1.ANTITANK MINE 3"],
       ];
       sIdm1["32"] = [
         icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 1"],
         icn["TP.M1.WIDE AREA ANTITANK MINE 2"],
-        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"]
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"],
       ];
       sIdm1["33"] = [
         icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 1"],
         icn["TP.M1.MINE CLUSTER 2"],
-        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"]
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"],
       ];
       sIdm1["34"] = [
         icn["TP.M1.WIDE AREA ANTITANK MINE 1"],
         icn["TP.M1.MINE CLUSTER 2"],
-        icn["TP.M1.WIDE AREA ANTITANK MINE 3"]
+        icn["TP.M1.WIDE AREA ANTITANK MINE 3"],
       ];
       sIdm1["35"] = [
         icn["TP.M1.ANTIPERSONNEL MINE 1"],
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 2"],
-        icn["TP.M1.ANTITANK MINE 3"]
+        icn["TP.M1.ANTITANK MINE 3"],
       ];
       sIdm1["36"] = [
         icn["TP.M1.ANTIPERSONNEL MINE 1"],
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 2"],
-        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"]
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"],
       ];
       sIdm1["37"] = [
         icn["TP.M1.ANTIPERSONNEL MINE 1"],
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 2"],
-        icn["TP.M1.WIDE AREA ANTITANK MINE 3"]
+        icn["TP.M1.WIDE AREA ANTITANK MINE 3"],
       ];
       sIdm1["38"] = [
         icn["TP.M1.ANTIPERSONNEL MINE 1"],
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 2"],
-        icn["TP.M1.MINE CLUSTER 3"]
+        icn["TP.M1.MINE CLUSTER 3"],
       ];
       sIdm1["39"] = [
         icn["TP.M1.ANTIPERSONNEL MINE 1"],
         icn["TP.M1.ANTITANK MINE 2"],
-        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"]
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"],
       ];
       sIdm1["40"] = [
         icn["TP.M1.ANTIPERSONNEL MINE 1"],
         icn["TP.M1.ANTITANK MINE 2"],
-        icn["TP.M1.WIDE AREA ANTITANK MINE 3"]
+        icn["TP.M1.WIDE AREA ANTITANK MINE 3"],
       ];
       sIdm1["41"] = [
         icn["TP.M1.ANTIPERSONNEL MINE 1"],
         icn["TP.M1.ANTITANK MINE 2"],
-        icn["TP.M1.MINE CLUSTER 3"]
+        icn["TP.M1.MINE CLUSTER 3"],
       ];
       sIdm1["42"] = [
         icn["TP.M1.ANTIPERSONNEL MINE 1"],
         icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"],
-        icn["TP.M1.WIDE AREA ANTITANK MINE 3"]
+        icn["TP.M1.WIDE AREA ANTITANK MINE 3"],
       ];
       sIdm1["43"] = [
         icn["TP.M1.ANTIPERSONNEL MINE 1"],
         icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"],
-        icn["TP.M1.MINE CLUSTER 3"]
+        icn["TP.M1.MINE CLUSTER 3"],
       ];
       sIdm1["44"] = [
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
         icn["TP.M1.WIDE AREA ANTITANK MINE 2"],
-        icn["TP.M1.MINE CLUSTER 3"]
+        icn["TP.M1.MINE CLUSTER 3"],
       ];
       sIdm1["45"] = [
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
         icn["TP.M1.ANTITANK MINE 2"],
-        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"]
+        icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 3"],
       ];
       sIdm1["46"] = [
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
         icn["TP.M1.ANTITANK MINE 2"],
-        icn["TP.M1.WIDE AREA ANTITANK MINE 3"]
+        icn["TP.M1.WIDE AREA ANTITANK MINE 3"],
       ];
       sIdm1["47"] = [
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
         icn["TP.M1.ANTITANK MINE 2"],
-        icn["TP.M1.MINE CLUSTER 3"]
+        icn["TP.M1.MINE CLUSTER 3"],
       ];
       sIdm1["48"] = [
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
         icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"],
-        icn["TP.M1.WIDE AREA ANTITANK MINE 3"]
+        icn["TP.M1.WIDE AREA ANTITANK MINE 3"],
       ];
       sIdm1["49"] = [
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
         icn["TP.M1.ANTITANK MINE WITH ANTIHANDLING DEVICE 2"],
-        icn["TP.M1.MINE CLUSTER 3"]
+        icn["TP.M1.MINE CLUSTER 3"],
       ];
       sIdm1["50"] = [
         icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 1"],
         icn["TP.M1.WIDE AREA ANTITANK MINE 2"],
-        icn["TP.M1.MINE CLUSTER 3"]
+        icn["TP.M1.MINE CLUSTER 3"],
       ];
       sIdm1["51"] = icn["TP.M1.DISMOUNTED"];
 
@@ -729,5 +729,5 @@ export default {
       sIdm2["04"] = icn["TP.M2.VEGETATION"];
       sIdm2["05"] = icn["TP.M2.OBSTACLES"];
     }
-  }
+  },
 };

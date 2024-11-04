@@ -17,7 +17,7 @@ export default {
     sId["E-I-BA----"] = [icn["ST.IC.BOMB"], icn["AC.M1.THREAT"]];
     sId["E-I-BC----"] = [
       icn["ST.IC.EXPLOSION"],
-      ms._scale(0.6, icn["ST.IC.BOMB"])
+      ms._scale(0.6, icn["ST.IC.BOMB"]),
     ];
     sId["E-I-BD----"] = [icn["ST.IC.GROUP"], icn["ST.M1.LOOT"]];
     sId["E-I-BF----"] = [icn["AC.IC.SHOOTING"]];
@@ -48,11 +48,11 @@ export default {
     sId["E-I-DO----"] = [icn["AC.IC.UNEXPLODED ORDNANCE"]];
     sId["E-I-E-----"] = [
       icn["ST.M1.INCIDENT"],
-      icn["ST.IC.HIJACKING (AIRPLANE)"]
+      icn["ST.IC.HIJACKING (AIRPLANE)"],
     ];
     sId["E-I-EA----"] = [
       icn["ST.M1.ACCIDENT"],
-      icn["ST.IC.HIJACKING (AIRPLANE)"]
+      icn["ST.IC.HIJACKING (AIRPLANE)"],
     ];
     sId["E-I-F-----"] = [icn["ST.M1.INCIDENT"], icn["ST.IC.HIJACKING (BOAT)"]];
     sId["E-I-FA----"] = [icn["ST.M1.ACCIDENT"], icn["ST.IC.HIJACKING (BOAT)"]];
@@ -60,15 +60,15 @@ export default {
     sId["E-I-GA----"] = [icn["ST.M1.ACCIDENT"], icn["GR.EQ.TRAIN LOCOMOTIVE"]];
     sId["E-I-GB----"] = [
       icn["GR.EQ.TRAIN LOCOMOTIVE"],
-      icn["ST.M1.HIJACKING/HIJACKED"]
+      icn["ST.M1.HIJACKING/HIJACKED"],
     ];
     sId["E-I-H-----"] = [
       icn["ST.M1.INCIDENT"],
-      icn["ST.IC.KNOWN INSURGENT VEHICLE"]
+      icn["ST.IC.KNOWN INSURGENT VEHICLE"],
     ];
     sId["E-I-HA----"] = [
       icn["ST.M1.ACCIDENT"],
-      icn["ST.IC.KNOWN INSURGENT VEHICLE"]
+      icn["ST.IC.KNOWN INSURGENT VEHICLE"],
     ];
     sId["E-N-A-----"] = []; // N/A
     sId["E-N-AA----"] = [icn["AC.IC.AFTERSHOCK"]];
@@ -84,20 +84,20 @@ export default {
     sId["E-N-BC----"] = [icn["AC.IC.FLOOD"]];
     sId["W-S-WSFGSO"] = [icn["ATMOSPHERIC.IC.FOG.SKY OBSCURED"]];
     sId["W-S-WSGRL-"] = [
-      icn["ATMOSPHERIC.IC.HAIL.LIGHT NOT ASSOCIATED WITH THUNDER"]
+      icn["ATMOSPHERIC.IC.HAIL.LIGHT NOT ASSOCIATED WITH THUNDER"],
     ];
     sId["E-N-BF----"] = [icn["AC.IC.INVERSION"]];
     sId["W-S-WSR-LI"] = [icn["ATMOSPHERIC.IC.RAIN.INTERMITTENT LIGHT"]];
     sId["W-S-WSDSLM"] = [icn["ATMOSPHERIC.IC.DUST OR SAND.LIGHT TO MODERATE"]];
     sId["W-S-WSS-LI"] = [icn["ATMOSPHERIC.IC.SNOW.INTERMITTENT LIGHT"]];
     sId["W-S-WSTMH-"] = [
-      icn["ATMOSPHERIC.IC.STORMS.THUNDERSTORM LIGHT TO MODERATE - WITH HAIL"]
+      icn["ATMOSPHERIC.IC.STORMS.THUNDERSTORM LIGHT TO MODERATE - WITH HAIL"],
     ];
     sId["W-S-WST-FC"] = [
-      icn["ATMOSPHERIC.IC.STORMS.FUNNEL CLOUD (TORNADO/WATERSPOUT)"]
+      icn["ATMOSPHERIC.IC.STORMS.FUNNEL CLOUD (TORNADO/WATERSPOUT)"],
     ];
     sId["W-S-WSTSS-"] = [
-      icn["ATMOSPHERIC.IC.TROPICAL STORM SYSTEMS.TROPICAL STORM"]
+      icn["ATMOSPHERIC.IC.TROPICAL STORM SYSTEMS.TROPICAL STORM"],
     ];
     sId["E-N-BM----"] = [icn["AC.IC.TSUNAMI"]];
     sId["E-N-C-----"] = []; // N/A
@@ -111,11 +111,11 @@ export default {
     ] = sId["E-O-AD----"] = [icn["GR.IC.EMERGENCY MEDICAL OPERATION"]];
     sId["E-O-AE----"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
-      icn["GR.M1.MEDEVAC"]
+      icn["GR.M1.MEDEVAC"],
     ];
     sId["E-O-AF----"] = [
       ms._translate(0, 10, ms._scale(0.8, icn["GR.I.FF.CIVILIAN ROTARY WING"])),
-      icn["GR.M1.MEDEVAC"]
+      icn["GR.M1.MEDEVAC"],
     ];
     sId["E-O-AG----"] = [icn["AC.IC.HEALTH DEPARTMENT FACILITY"]];
     sId["E-O-AJ----"] = [icn["AC.IC.MEDICAL FACILITIES OUTPATIENT"]];
@@ -127,30 +127,30 @@ export default {
     ] = [icn["GR.IC.FF.EMERGENCY OPERATION"]];
     sId["E-O-BD----"] = [
       ms._scale(0.7, icn["GR.IC.FF.EMERGENCY OPERATION"]),
-      icn["AC.M1.EMERGENCY COLLECTION EVACUATION POINT"]
+      icn["AC.M1.EMERGENCY COLLECTION EVACUATION POINT"],
     ];
     sId["E-O-BE----"] = [
       ms._scale(0.7, icn["GR.IC.FF.EMERGENCY OPERATION"]),
-      icn["AC.M1.EMERGENCY INCIDENT COMMAND CENTER"]
+      icn["AC.M1.EMERGENCY INCIDENT COMMAND CENTER"],
     ];
     sId["E-O-BF----"] = [
       ms._scale(0.7, icn["GR.IC.FF.EMERGENCY OPERATION"]),
-      icn["AC.M1.EMERGENCY OPERATIONS CENTER"]
+      icn["AC.M1.EMERGENCY OPERATIONS CENTER"],
     ];
     sId["E-O-BG----"] = [icn["AC.IC.EMERGENCY PUBLIC INFORMATION CENTER"]];
     sId["E-O-BH----"] = [
       ms._scale(0.7, icn["GR.IC.FF.EMERGENCY OPERATION"]),
-      icn["AC.M1.EMERGENCY SHELTER"]
+      icn["AC.M1.EMERGENCY SHELTER"],
     ];
     sId["E-O-BI----"] = [
       ms._scale(0.7, icn["GR.IC.FF.EMERGENCY OPERATION"]),
-      icn["AC.M1.EMERGENCY STAGING AREA"]
+      icn["AC.M1.EMERGENCY STAGING AREA"],
     ];
     sId["E-O-BJ----"] = [icn["GR.IC.FF.EMERGENCY OPERATION"]];
     sId["E-O-BK----"] = sId["S-G-USSW--"];
     sId["E-O-BL----"] = [
       icn["ST.IC.FOOD DISTRIBUTION"],
-      icn["AC.M1.EMERGENCY"]
+      icn["AC.M1.EMERGENCY"],
     ];
     sId["E-O-C-----"] = sId["E-O-CA----"] = sId["E-O-CB----"] = sId[
       "E-O-CE----"
@@ -165,7 +165,7 @@ export default {
     ] = [
       icn[
         "GR.IC.BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF) (DEPARTMENT OF JUSTICE)"
-      ]
+      ],
     ];
     sId["E-O-DE----"] = sId["E-O-DEA---"] = sId["E-O-DEB---"] = sId[
       "E-O-DEC---"
@@ -183,7 +183,7 @@ export default {
       "E-O-DIC---"
     ] = [icn["GR.IC.FEDERAL BUREAU OF INVESTIGATION (FBI)"]];
     sId["E-O-DJ----"] = sId["E-O-DJB---"] = sId["E-O-DJC---"] = [
-      icn["GR.IC.LAW ENFORCEMENT"]
+      icn["GR.IC.LAW ENFORCEMENT"],
     ];
     sId["E-O-DK----"] = [icn["GR.IC.FF.PRISON"]];
     sId["E-O-DL----"] = sId["E-O-DLA---"] = sId["E-O-DLB---"] = sId[
@@ -193,47 +193,47 @@ export default {
       "E-O-DMC---"
     ] = [icn["GR.IC.TRANSPORTATION SECURITY AGENCY (TSA)"]];
     sId["E-O-DN----"] = sId["E-O-DNA---"] = sId["E-O-DNC---"] = [
-      icn["GR.IC.LAW ENFORCEMENT VESSEL"]
+      icn["GR.IC.LAW ENFORCEMENT VESSEL"],
     ];
     sId["E-O-DO----"] = sId["E-O-DOA---"] = sId["E-O-DOB---"] = sId[
       "E-O-DOC---"
     ] = [icn["GR.IC.FF.US MARSHALS SERVICE"]];
     sId["E-O-EA----"] = [
       ms._scale(0.6, icn["GR.EQ.SENSOR"]),
-      icn["GR.M1.BIOLOGICAL"]
+      icn["GR.M1.BIOLOGICAL"],
     ];
     sId["E-O-EB----"] = [
       ms._scale(0.6, icn["GR.EQ.SENSOR"]),
-      icn["GR.M1.CHEMICAL"]
+      icn["GR.M1.CHEMICAL"],
     ];
     sId["E-O-EC----"] = [
       ms._scale(0.6, icn["GR.EQ.SENSOR"]),
-      icn["GR.M1.INTRUSION"]
+      icn["GR.M1.INTRUSION"],
     ];
     sId["E-O-ED----"] = [
       ms._scale(0.6, icn["GR.EQ.SENSOR"]),
-      icn["GR.M1.NUCLEAR"]
+      icn["GR.M1.NUCLEAR"],
     ];
     sId["E-O-EE----"] = [
       ms._scale(0.6, icn["GR.EQ.SENSOR"]),
-      icn["GR.M1.RADIOLOGICAL"]
+      icn["GR.M1.RADIOLOGICAL"],
     ];
     sId["E-F-A-----"] = [icn["GR.IN.IC.AGRICULTURE AND FOOD INFRASTRUCTURE"]];
     sId["E-F-AA----"] = [icn["GR.IN.IC.AGRICULTURAL LABORATORY"]];
     sId["E-F-AB----"] = [icn["GR.IN.IC.ANIMAL FEEDLOT"]];
     sId["E-F-AC----"] = [
       icn["ST.IC.FOOD DISTRIBUTION"],
-      icn["AC.M1.COMMERCIAL"]
+      icn["AC.M1.COMMERCIAL"],
     ];
     sId["E-F-AD----"] = [icn["GR.IN.IC.FARM/RANCH"]];
     sId["E-F-AE----"] = [
       icn["ST.IC.FOOD DISTRIBUTION"],
-      icn["AC.M1.PRODUCTION"]
+      icn["AC.M1.PRODUCTION"],
     ];
     sId["E-F-AF----"] = [icn["ST.IC.FOOD DISTRIBUTION"], icn["AC.M1.RETAIL"]];
     sId["E-F-AG----"] = [icn["GR.IN.IC.GRAIN STORAGE"]];
     sId["E-F-B-----"] = [
-      icn["AC.IC.BANKING FINANCE AND INSURANCE INFRASTRUCTURE"]
+      icn["AC.IC.BANKING FINANCE AND INSURANCE INFRASTRUCTURE"],
     ];
     sId["E-F-BA----"] = [icn["GR.IN.IC.ATM"]];
     sId["E-F-BB----"] = [icn["GR.IN.IC.BANK"]];
@@ -257,7 +257,7 @@ export default {
     sId["E-F-DB----"] = [icn["GR.IN.IC.SCHOOL"]];
     sId["E-F-EA----"] = [
       ms._translate(0, 15, ms._scale(0.75, icn["GR.IN.IC.ELECTRIC POWER"])),
-      icn["AC.M1.GENERATION STATION"]
+      icn["AC.M1.GENERATION STATION"],
     ];
     sId["E-F-EB----"] = [icn["GR.IN.IC.NATURAL GAS FACILITY"]];
     sId["E-F-EE----"] = [icn["GR.IN.IC.PROPANE FACILITY"]];
@@ -282,7 +282,7 @@ export default {
     sId["G-M-BCB---"] = [icn["GR.IN.IC.BRIDGE"]];
     bbox["G-M-BCB---"] = { x1: 50, x2: 150, y1: 50, y2: 150 };
     sId["E-F-LD----"] = [
-      icn["GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE"]
+      icn["GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE"],
     ];
     sId["E-F-LE----"] = [icn["GR.IC.FERRY"]];
     sId["E-F-LF----"] = [icn["GR.IN.IC.HELICOPTER LANDING SITE"]];
@@ -291,7 +291,7 @@ export default {
     sId["E-F-LJ----"] = [icn["GR.IC.RAILHEAD"]];
     sId["E-F-LK----"] = [icn["GR.IN.IC.REST STOP"]];
     sId["W-S-HPBA--"] = [
-      icn["GR.IN.IC.TRANSPORTATION INFRASTRUCTURE SHIP ANCHORAGE"]
+      icn["GR.IN.IC.TRANSPORTATION INFRASTRUCTURE SHIP ANCHORAGE"],
     ];
     sId["E-F-LM----"] = [icn["GR.IN.IC.TOLL FACILITY"]];
     /*sId["G-S-PO----"] = [
@@ -318,15 +318,15 @@ export default {
     sId["O-V-P-----"] = [icn["ST.IC.POISONING"]];
     sId["O-O-HA----"] = [
       icn["ST.IC.HIJACKING (AIRPLANE)"],
-      icn["ST.M1.HIJACKING/HIJACKED"]
+      icn["ST.M1.HIJACKING/HIJACKED"],
     ];
     sId["O-O-HV----"] = [
       icn["ST.IC.HIJACKING (BOAT)"],
-      icn["ST.M1.HIJACKING/HIJACKED"]
+      icn["ST.M1.HIJACKING/HIJACKED"],
     ];
     sId["O-O-HT----"] = [
       icn["ST.IC.KNOWN INSURGENT VEHICLE"],
-      icn["ST.M1.HIJACKING/HIJACKED"]
+      icn["ST.M1.HIJACKING/HIJACKED"],
     ];
 
     sId["S-G-IXH---"] = [icn["GR.IC.FF.MEDICAL TREATMENT FACILITY"]];
@@ -338,7 +338,7 @@ export default {
     sId["S-G-IUE---"] = [icn["GR.IN.IC.ELECTRIC POWER"]];
     sId["S-G-IUEN--"] = [
       icn["GR.IN.IC.ELECTRIC POWER"],
-      icn["GR.IN.IC.ELECTRIC POWER NUCLEAR"]
+      icn["GR.IN.IC.ELECTRIC POWER NUCLEAR"],
     ];
     sId["S-G-IRP---"] = [icn["GR.IC.FF.CLASS III"]];
     sId["S-G-IB----"] = [icn["GR.IN.IC.BASE"]];
@@ -346,9 +346,9 @@ export default {
     sId["S-G-IT----"] = [icn["GR.IC.TRANSPORTATION"]];
     sId["S-G-IBA---"] = [
       icn["GR.IC.TRANSPORTATION"],
-      icn["GR.IC.AIRPORT OF DEBARKATION"]
+      icn["GR.IC.AIRPORT OF DEBARKATION"],
     ];
     sId["S-G-IBN---"] = [icn["GR.IC.NAVAL"]];
     sId["S-G-IUP---"] = [icn["GR.IC.WATER"]];
-  }
+  },
 };

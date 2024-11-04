@@ -47,177 +47,177 @@ export default {
     sId["S-A-MFQ---"] = [icn["AR.I.UNMANNED AERIAL VEHICLE"]];
     sId["S-A-MFQA--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.ATTACK"]
+      icn["AIR.M1.ATTACK"],
     ];
     sId["S-A-MFQB--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.BOMBER"]
+      icn["AIR.M1.BOMBER"],
     ];
     sId["S-A-MFQC--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.CARGO"]
+      icn["AIR.M1.CARGO"],
     ];
     sId["S-A-MFQD--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.AIRBORNE COMMAND POST"]
+      icn["AIR.M1.AIRBORNE COMMAND POST"],
     ];
     sId["S-A-MFQF--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.FIGHTER"]
+      icn["AIR.M1.FIGHTER"],
     ];
     sId["S-A-MFQH--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.COMBAT SEARCH AND RESCUE"]
+      icn["AIR.M1.COMBAT SEARCH AND RESCUE"],
     ];
     sId["S-A-MFQJ--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.JAMMER / ELECTRONIC COUNTER-MEASURES"]
+      icn["AIR.M1.JAMMER / ELECTRONIC COUNTER-MEASURES"],
     ];
     sId["S-A-MFQK--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.TANKER"]
+      icn["AIR.M1.TANKER"],
     ];
     sId["S-A-MFQL--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.VSTOL"]
+      icn["AIR.M1.VSTOL"],
     ];
     sId["S-A-MFQM--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.SPECIAL OPERATIONS FORCES"]
+      icn["AIR.M1.SPECIAL OPERATIONS FORCES"],
     ];
     sId["S-A-MFQI--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.MINE COUNTERMEASURES"]
+      icn["AIR.M1.MINE COUNTERMEASURES"],
     ];
     sId["S-A-MFQN--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.ANTISURFACE WARFARE"]
+      icn["AIR.M1.ANTISURFACE WARFARE"],
     ];
     sId["S-A-MFQP--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.PATROL"]
+      icn["AIR.M1.PATROL"],
     ];
     sId["S-A-MFQR--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.RECONNAISSANCE"]
+      icn["AIR.M1.RECONNAISSANCE"],
     ];
     sId["S-A-MFQRW-"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.AIRBORNE EARLY WARNING"]
+      icn["AIR.M1.AIRBORNE EARLY WARNING"],
     ];
     sId["S-A-MFQRZ-"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.ELECTRONIC SURVEILLANCE MEASURES"]
+      icn["AIR.M1.ELECTRONIC SURVEILLANCE MEASURES"],
     ];
     sId["S-A-MFQRX-"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.PHOTOGRAPHIC"]
+      icn["AIR.M1.PHOTOGRAPHIC"],
     ];
     sId["S-A-MFQS--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.ANTISUBMARINE WARFARE"]
+      icn["AIR.M1.ANTISUBMARINE WARFARE"],
     ];
     sId["S-A-MFQT--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.TRAINER"]
+      icn["AIR.M1.TRAINER"],
     ];
     sId["S-A-MFQU--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.UTILITY"]
+      icn["AIR.M1.UTILITY"],
     ];
     sId["S-A-MFQY--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.COMMUNICATIONS"]
+      icn["AIR.M1.COMMUNICATIONS"],
     ];
     sId["S-A-MFQO--"] = [
       icn["AR.I.UNMANNED AERIAL VEHICLE"],
-      icn["AIR.M1.MEDEVAC"]
+      icn["AIR.M1.MEDEVAC"],
     ];
     sId["S-A-MFS---"] = [icn["AR.I.ANTISUBMARINE WARFARE"]];
     sId["S-A-MFM---"] = [icn["AR.I.SPECIAL OPERATIONS FORCES"]];
     sId["S-A-MH----"] = [icn["AR.I.MILITARY ROTARY WING"]];
     sId["S-A-MHA---"] = [
       icn["AR.I.MILITARY ROTARY WING"],
-      icn["AIR.M1.ATTACK"]
+      icn["AIR.M1.ATTACK"],
     ];
     sId["S-A-MHS---"] = [
       icn["AR.I.MILITARY ROTARY WING"],
-      icn["AIR.M1.ANTISUBMARINE WARFARE"]
+      icn["AIR.M1.ANTISUBMARINE WARFARE"],
     ];
     sId["S-A-MHU---"] = [
       icn["AR.I.MILITARY ROTARY WING"],
-      icn["AIR.M1.UTILITY"]
+      icn["AIR.M1.UTILITY"],
     ];
     sId["S-A-MHUL--"] = [
       icn["AR.I.MILITARY ROTARY WING"],
       icn["AIR.M1.UTILITY"],
-      icn["AIR.M2.LIGHT"]
+      icn["AIR.M2.LIGHT"],
     ];
     sId["S-A-MHUM--"] = [
       icn["AR.I.MILITARY ROTARY WING"],
       icn["AIR.M1.UTILITY"],
-      icn["AIR.M2.MEDIUM"]
+      icn["AIR.M2.MEDIUM"],
     ];
     sId["S-A-MHUH--"] = [
       icn["AR.I.MILITARY ROTARY WING"],
       icn["AIR.M1.UTILITY"],
-      icn["AIR.M2.HEAVY"]
+      icn["AIR.M2.HEAVY"],
     ];
     sId["S-A-MHI---"] = [
       icn["AR.I.MILITARY ROTARY WING"],
-      icn["AIR.M1.MINE COUNTERMEASURES"]
+      icn["AIR.M1.MINE COUNTERMEASURES"],
     ];
     sId["S-A-MHH---"] = [
       icn["AR.I.MILITARY ROTARY WING"],
-      icn["AIR.M1.COMBAT SEARCH AND RESCUE"]
+      icn["AIR.M1.COMBAT SEARCH AND RESCUE"],
     ];
     sId["S-A-MHR---"] = [
       icn["AR.I.MILITARY ROTARY WING"],
-      icn["AIR.M1.RECONNAISSANCE"]
+      icn["AIR.M1.RECONNAISSANCE"],
     ];
     sId["S-A-MHQ---"] = [
       icn["AR.I.MILITARY ROTARY WING"],
-      icn["AIR.M1.UNMANNED AERIAL VEHICLE"]
+      icn["AIR.M1.UNMANNED AERIAL VEHICLE"],
     ];
     sId["S-A-MHC---"] = [icn["AR.I.MILITARY ROTARY WING"], icn["AIR.M1.CARGO"]];
     sId["S-A-MHCL--"] = [
       icn["AR.I.MILITARY ROTARY WING"],
       icn["AIR.M1.CARGO"],
-      icn["AIR.M2.LIGHT"]
+      icn["AIR.M2.LIGHT"],
     ];
     sId["S-A-MHCM--"] = [
       icn["AR.I.MILITARY ROTARY WING"],
       icn["AIR.M1.CARGO"],
-      icn["AIR.M2.MEDIUM"]
+      icn["AIR.M2.MEDIUM"],
     ];
     sId["S-A-MHCH--"] = [
       icn["AR.I.MILITARY ROTARY WING"],
       icn["AIR.M1.CARGO"],
-      icn["AIR.M2.HEAVY"]
+      icn["AIR.M2.HEAVY"],
     ];
     sId["S-A-MHT---"] = [
       icn["AR.I.MILITARY ROTARY WING"],
-      icn["AIR.M1.TRAINER"]
+      icn["AIR.M1.TRAINER"],
     ];
     sId["S-A-MHO---"] = [
       icn["AR.I.MILITARY ROTARY WING"],
-      icn["AIR.M1.MEDEVAC"]
+      icn["AIR.M1.MEDEVAC"],
     ];
     sId["S-A-MHM---"] = [
       icn["AR.I.MILITARY ROTARY WING"],
-      icn["AIR.M1.SPECIAL OPERATIONS FORCES"]
+      icn["AIR.M1.SPECIAL OPERATIONS FORCES"],
     ];
     sId["S-A-MHD---"] = [
       icn["AR.I.MILITARY ROTARY WING"],
-      icn["AIR.M1.AIRBORNE COMMAND POST"]
+      icn["AIR.M1.AIRBORNE COMMAND POST"],
     ];
     sId["S-A-MHK---"] = [
       icn["AR.I.MILITARY ROTARY WING"],
-      icn["AIR.M1.TANKER"]
+      icn["AIR.M1.TANKER"],
     ];
     sId["S-A-MHJ---"] = [
       icn["AR.I.MILITARY ROTARY WING"],
-      icn["AIR.M1.JAMMER / ELECTRONIC COUNTER-MEASURES"]
+      icn["AIR.M1.JAMMER / ELECTRONIC COUNTER-MEASURES"],
     ];
     sId["S-A-ML----"] = [icn["AR.I.FF.MILITARY BALLOON"]];
     sId["S-A-MV----"] = [icn["AR.I.VIP"]];
@@ -227,66 +227,66 @@ export default {
     sId["S-A-WMS---"] = [
       icn["AIR.MISSILE.ICON"],
       icn["AIR.MISSILE.M1.SURFACE"],
-      icn["AIR.MISSILE.M2.LAUNCHED"]
+      icn["AIR.MISSILE.M2.LAUNCHED"],
     ];
     sId["S-A-WMSS--"] = [
       icn["AIR.MISSILE.ICON"],
       icn["AIR.MISSILE.M1.SURFACE"],
-      icn["AIR.MISSILE.M2.SURFACE"]
+      icn["AIR.MISSILE.M2.SURFACE"],
     ];
     sId["S-A-WMSA--"] = [
       icn["AIR.MISSILE.ICON"],
       icn["AIR.MISSILE.M1.SURFACE"],
-      icn["AIR.MISSILE.M2.AIR"]
+      icn["AIR.MISSILE.M2.AIR"],
     ];
     sId["S-A-WMSU--"] = [
       icn["AIR.MISSILE.ICON"],
       icn["AIR.MISSILE.M1.SURFACE"],
-      icn["AIR.MISSILE.M2.SUBSURFACE"]
+      icn["AIR.MISSILE.M2.SUBSURFACE"],
     ];
     sId["S-A-WMSB--"] = [
       icn["AIR.MISSILE.ICON"],
-      icn["AIR.MISSILE.IC.ANTIBALLISTIC MISSILE"]
+      icn["AIR.MISSILE.IC.ANTIBALLISTIC MISSILE"],
     ];
     sId["S-A-WMA---"] = [
       icn["AIR.MISSILE.ICON"],
       icn["AIR.MISSILE.M1.AIR"],
-      icn["AIR.MISSILE.M2.LAUNCHED"]
+      icn["AIR.MISSILE.M2.LAUNCHED"],
     ];
     sId["S-A-WMAS--"] = [
       icn["AIR.MISSILE.ICON"],
       icn["AIR.MISSILE.M1.AIR"],
-      icn["AIR.MISSILE.M2.SURFACE"]
+      icn["AIR.MISSILE.M2.SURFACE"],
     ];
     sId["S-A-WMAA--"] = [
       icn["AIR.MISSILE.ICON"],
       icn["AIR.MISSILE.M1.AIR"],
-      icn["AIR.MISSILE.M2.AIR"]
+      icn["AIR.MISSILE.M2.AIR"],
     ];
     sId["S-A-WMAP--"] = [
       icn["AIR.MISSILE.ICON"],
       icn["AIR.MISSILE.M1.AIR"],
-      icn["AIR.MISSILE.M2.SPACE"]
+      icn["AIR.MISSILE.M2.SPACE"],
     ];
     sId["S-A-WMU---"] = [
       icn["AIR.MISSILE.ICON"],
       icn["AIR.MISSILE.M1.SUBSURFACE"],
-      icn["AIR.MISSILE.M2.SURFACE"]
+      icn["AIR.MISSILE.M2.SURFACE"],
     ];
     sId["S-A-WML---"] = [
       icn["AIR.MISSILE.ICON"],
       icn["AIR.MISSILE.M1.LAND"],
-      icn["AIR.MISSILE.M2.AIR"]
+      icn["AIR.MISSILE.M2.AIR"],
     ];
     sId["S-A-WMCM--"] = [
       icn["AIR.MISSILE.ICON"],
       icn["AIR.MISSILE.M1.CRUISE"],
-      icn["AIR.MISSILE.M2.MISSILE"]
+      icn["AIR.MISSILE.M2.MISSILE"],
     ];
     sId["S-A-WMB---"] = [
       icn["AIR.MISSILE.ICON"],
       icn["AIR.MISSILE.M1.BALLISTIC"],
-      icn["AIR.MISSILE.M2.MISSILE"]
+      icn["AIR.MISSILE.M2.MISSILE"],
     ];
     sId["S-A-WB----"] = [icn["AIR.MISSILE.IC.BOMB"]];
     sId["S-A-WD----"] = [icn["AR.I.AIR DECOY"]];
@@ -294,5 +294,5 @@ export default {
     sId["S-A-CF----"] = [icn["AR.I.FF.CIVILIAN FIXED WING"]];
     sId["S-A-CH----"] = [icn["AR.I.FF.CIVILIAN ROTARY WING"]];
     sId["S-A-CL----"] = [icn["AR.I.FF.CIVILIAN BALLOON"]];
-  }
+  },
 };

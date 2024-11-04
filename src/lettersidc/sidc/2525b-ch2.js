@@ -23,5 +23,5 @@ export default {
     // Tactical points
     sId["G-O-SBWD--"] = icn["TP.WRECK, DANGEROUS"]; //TACGRP.OTH.SSUBSR.BTMRTN.WRKD
     bbox["G-O-SBXD--"] = { x1: 35, x2: 165, y1: 70, y2: 130 };
-  }
+  },
 };

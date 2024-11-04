@@ -57,21 +57,21 @@ export default {
       sId["110306"] = [icn["GR.EQ.MACHINE GUN"], icn["GR.EQ.SHORT RANGE"]];
       sId["110307"] = [
         icn["GR.EQ.MACHINE GUN"],
-        icn["GR.EQ.INTERMEDIATE RANGE"]
+        icn["GR.EQ.INTERMEDIATE RANGE"],
       ];
       sId["110308"] = [icn["GR.EQ.MACHINE GUN"], icn["GR.EQ.LONG RANGE"]];
       sId["110309"] = [icn["GR.EQ.GRENADE LAUNCHER"]];
       sId["110310"] = [
         icn["GR.EQ.GRENADE LAUNCHER"],
-        ms._translate(0, 20, icn["GR.EQ.SHORT RANGE"])
+        ms._translate(0, 20, icn["GR.EQ.SHORT RANGE"]),
       ];
       sId["110311"] = [
         icn["GR.EQ.GRENADE LAUNCHER"],
-        ms._translate(0, 20, icn["GR.EQ.INTERMEDIATE RANGE"])
+        ms._translate(0, 20, icn["GR.EQ.INTERMEDIATE RANGE"]),
       ];
       sId["110312"] = [
         icn["GR.EQ.GRENADE LAUNCHER"],
-        ms._translate(0, 20, icn["GR.EQ.LONG RANGE"])
+        ms._translate(0, 20, icn["GR.EQ.LONG RANGE"]),
       ];
       sId["110313"] = [icn["GR.EQ.FLAME THROWER"]];
       sId["110314"] = [icn["GR.EQ.MORTAR"]];
@@ -434,5 +434,5 @@ export default {
       sIdm2["38"] = [icn["GR.M2.WO-5"]];
       sIdm2["39"] = [icn["GR.M2.SKI"]];
     }
-  }
+  },
 };

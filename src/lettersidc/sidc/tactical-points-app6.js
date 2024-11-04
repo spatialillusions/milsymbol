@@ -335,7 +335,7 @@ export default {
     sidc["G-O-PC----"] = [icn["ST.IC.INDIVIDUAL"], icn["ST.M1.WILLING"]]; //2.X.3.3.3
     sidc["G-O-PCU---"] = [
       icn["ST.IC.INDIVIDUAL"],
-      icn["ST.M1.COERCED/IMPRESSED"]
+      icn["ST.M1.COERCED/IMPRESSED"],
     ]; //2.X.3.3.3.1
     sidc["G-O-PD----"] = icn["ST.IC.DEMONSTRATION"]; //2.X.3.3.4
     sidc["G-O-PM----"] = icn["ST.IC.MINE LAYING"]; //2.X.3.3.5
@@ -344,15 +344,15 @@ export default {
       icn["ST.IC.RADIO AND TELEVISION PSYCHOLOGICAL OPERATIONS"]; //2.X.3.3.6.1
     sidc["G-O-PHW---"] = [
       icn["ST.IC.PSYCHOLOGICAL OPERATIONS"],
-      icn["ST.M1.WRITTEN PSYCHOLOGICAL OPERATIONS"]
+      icn["ST.M1.WRITTEN PSYCHOLOGICAL OPERATIONS"],
     ]; //2.X.3.3.6.2
     sidc["G-O-PHG---"] = [
       icn["ST.IC.PSYCHOLOGICAL OPERATIONS"],
-      icn["ST.M1.WRITTEN PSYCHOLOGICAL OPERATIONS"]
+      icn["ST.M1.WRITTEN PSYCHOLOGICAL OPERATIONS"],
     ]; //2.X.3.3.6.3
     sidc["G-O-PHT---"] = [
       icn["ST.IC.PSYCHOLOGICAL OPERATIONS"],
-      icn["ST.M1.HOUSE-TO-HOUSE"]
+      icn["ST.M1.HOUSE-TO-HOUSE"],
     ]; //2.X.3.3.6.4
     sidc["G-O-PG----"] = icn["ST.IC.SEARCHING"]; //2.X.3.3.7
     sidc["G-O-PS----"] = icn["ST.IC.SPY"]; //2.X.3.3.8
@@ -360,20 +360,20 @@ export default {
     sidc["G-O-PI----"] = icn["GR.IC.FF.MEDICAL TREATMENT FACILITY"]; //2.X.3.3.10
     sidc["G-O-PE----"] = [
       icn["GR.IC.ELECTRONIC WARFARE"],
-      icn["GR.IC.FF.INTERCEPT"]
+      icn["GR.IC.FF.INTERCEPT"],
     ]; //2.X.3.3.11
     sidc["G-O-PX----"] = icn["ST.IC.EXTORTION"]; //2.X.3.3.12
     sidc["G-O-PJV---"] = [
       icn["ST.IC.KNOWN INSURGENT VEHICLE"],
-      icn["ST.M1.HIJACKING/HIJACKED"]
+      icn["ST.M1.HIJACKING/HIJACKED"],
     ]; //2.X.3.3.13.1
     sidc["G-O-PJA---"] = [
       icn["ST.IC.HIJACKING (AIRPLANE)"],
-      icn["ST.M1.HIJACKING/HIJACKED"]
+      icn["ST.M1.HIJACKING/HIJACKED"],
     ]; //2.X.3.3.13.2
     sidc["G-O-PJB---"] = [
       icn["ST.IC.HIJACKING (BOAT)"],
-      icn["ST.M1.HIJACKING/HIJACKED"]
+      icn["ST.M1.HIJACKING/HIJACKED"],
     ]; //2.X.3.3.13.3
     sidc["G-O-PK----"] = [icn["ST.IC.INDIVIDUAL"], icn["ST.M1.KIDNAPPING"]]; //2.X.3.3.14
     sidc["G-O-PA----"] = icn["ST.IC.ARREST"]; //2.X.3.3.15
@@ -385,8 +385,8 @@ export default {
     sidc["G-O-IK----"] = icn["ST.IC.KNOWN INSURGENT VEHICLE"]; //2.X.3.4.5
     sidc["G-O-ID----"] = [
       icn["ST.IC.KNOWN INSURGENT VEHICLE"],
-      icn["ST.M1.DRUG"]
+      icn["ST.M1.DRUG"],
     ]; //2.X.3.4.6
     sidc["G-O-IF----"] = icn["ST.IC.INTERNAL SECURITY FORCE"]; //2.X.3.4.7
-  }
+  },
 };

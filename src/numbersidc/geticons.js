@@ -21,6 +21,6 @@ export function geticons(ms, symbolSet, iconParts, STD2525) {
     icons: iconSIDC,
     m1: iconModifier1,
     m2: iconModifier2,
-    bbox: iconBbox
+    bbox: iconBbox,
   };
 }

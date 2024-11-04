@@ -48,7 +48,7 @@ export function text(str) {
     y: 103,
     fontsize: size,
     //fontweight: "normal",
-    text: str
+    text: str,
   };
 }
 export function textm1(str) {
@@ -67,7 +67,7 @@ export function textm1(str) {
     y: 77,
     fontsize: size,
     //fontweight: "normal",
-    text: str
+    text: str,
   };
 }
 export function textm2(str) {
@@ -90,6 +90,6 @@ export function textm2(str) {
     y: y,
     fontsize: size,
     //fontweight: "normal",
-    text: str
+    text: str,
   };
 }

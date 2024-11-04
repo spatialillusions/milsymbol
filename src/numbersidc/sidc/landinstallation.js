@@ -34,7 +34,7 @@ export default {
       sId["111100"] = [icn["ST.IC.MASS GRAVE LOCATION"]];
       sId["111200"] = [
         icn["GR.IN.IC.MILITARY/CIVILIAN.MATERIEL"],
-        icn["GR.IC.FF.SUPPLY"]
+        icn["GR.IC.FF.SUPPLY"],
       ];
       sId["111300"] = [icn["GR.IN.IC.MINE"]];
       sId["111400"] = [icn["GR.EQ.MISSILE LAUNCHER"]];
@@ -45,19 +45,19 @@ export default {
       sId["111900"] = [icn["GR.EQ.TENT"]];
       sId["111901"] = [
         icn["GR.EQ.TENT"],
-        icn["ST.M1.DISPLACED PERSONS, REFUGEES, AND EVACUEES"]
+        icn["ST.M1.DISPLACED PERSONS, REFUGEES, AND EVACUEES"],
       ];
       sId["111902"] = [icn["GR.EQ.TENT"], icn["GR.M1.TRAINING CAMP"]];
       sId["112000"] = [
         icn["GR.IN.IC.INDUSTRIAL SITE"],
-        icn["GR.IN.IC.WAREHOUSE/STORAGE FACILITY"]
+        icn["GR.IN.IC.WAREHOUSE/STORAGE FACILITY"],
       ];
       sId["112001"] = [icn["GR.IC.GRENADE"]];
       sId["112100"] = [icn["GR.IC.FF.LAW ENFORCEMENT"]];
       sId["112101"] = [
         icn[
           "GR.IC.BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF) (DEPARTMENT OF JUSTICE)"
-        ]
+        ],
       ];
       sId["112102"] = [icn["GR.IC.FF.BORDER PATROL"]];
       sId["112103"] = [icn["GR.IC.FF.CUSTOMS SERVICE"]];
@@ -85,7 +85,7 @@ export default {
       sId["120107"] = [icn["ST.IC.FOOD DISTRIBUTION"], icn["AC.M1.RETAIL"]];
       sId["120108"] = [icn["GR.IN.IC.GRAIN STORAGE"]];
       sId["120200"] = [
-        icn["AC.IC.BANKING FINANCE AND INSURANCE INFRASTRUCTURE"]
+        icn["AC.IC.BANKING FINANCE AND INSURANCE INFRASTRUCTURE"],
       ];
       sId["120201"] = [icn["GR.IN.IC.ATM"]];
       sId["120202"] = [icn["GR.IN.IC.BANK"]];
@@ -93,7 +93,7 @@ export default {
       sId["120204"] = [
         icn[
           "GR.IN.IC.INFRASTRUCTURE.BANKING FINANCE AND INSURANCE  INFRASTRUCTURE.ECONOMIC INFRASTRUCTURE ASSET"
-        ]
+        ],
       ];
       sId["120205"] = [icn["GR.IN.IC.FEDERAL RESERVE BANK"]];
       sId["120206"] = [icn["GR.IN.IC.FINANCIAL EXCHANGE"]];
@@ -116,7 +116,7 @@ export default {
       sId["120501"] = [ms._scale(0.6, icn["GR.IN.IC.ELECTRIC POWER"])];
       sId["120502"] = [
         ms._translate(0, 15, ms._scale(0.75, icn["GR.IN.IC.ELECTRIC POWER"])),
-        icn["AC.M1.GENERATION STATION"]
+        icn["AC.M1.GENERATION STATION"],
       ];
       sId["120503"] = [icn["GR.IN.IC.NATURAL GAS FACILITY"]];
       sId["120504"] = [ms._scale(1.5, icn["GR.IC.FF.CLASS III"])];
@@ -127,7 +127,7 @@ export default {
       sId["120701"] = [icn["GR.IC.FF.MEDICAL"]];
       sId["120702"] = [
         icn["GR.IC.FF.MEDICAL"],
-        icn["GR.IC.FF.MEDICAL TREATMENT FACILITY"]
+        icn["GR.IC.FF.MEDICAL TREATMENT FACILITY"],
       ];
       sId["120800"] = [icn["GR.IN.IC.MILITARY INFRASTRUCTURE"]];
       sId["120801"] = [icn["GR.IN.IC.BASE"], icn["AC.M1.MILITARY ARMORY"]];
@@ -150,17 +150,17 @@ export default {
       sId["121202"] = [
         icn[
           "GR.IN.IC.INFRASTRUCTURE.TELECOMMUNICATIONS INFRASTRUCTURE.TELECOMMUNICATIONS"
-        ]
+        ],
       ];
       sId["121203"] = [icn["GR.IN.IC.TELECOMMUNICATIONS TOWER"]];
       sId["121300"] = [ms._scale(1.5, icn["GR.IC.TRANSPORTATION"])];
       sId["121301"] = [
         icn["GR.IC.TRANSPORTATION"],
-        icn["GR.IC.AIRPORT OF DEBARKATION"]
+        icn["GR.IC.AIRPORT OF DEBARKATION"],
       ];
       sId["121302"] = [icn["GR.IN.IC.AIR TRAFFIC CONTROL FACILITY"]];
       sId["121303"] = [
-        icn["GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE"]
+        icn["GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE"],
       ];
       sId["121304"] = [icn["GR.IC.FERRY"]];
       sId["121305"] = [icn["GR.IN.IC.HELICOPTER LANDING SITE"]];
@@ -215,5 +215,5 @@ export default {
       sIdm2["09"] = [icn["GR.M2.CYBERSPACE"]];
       sIdm2["10"] = [icn["GR.IN.M2.TRANSPORTATION"]];
     }
-  }
+  },
 };

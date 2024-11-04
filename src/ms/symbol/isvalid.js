@@ -9,7 +9,7 @@ export default function isValid(extended) {
       dimensionUnknown: this.metadata.dimensionUnknown,
       drawInstructions: drawInstructions,
       icon: this.validIcon,
-      mobility: this.metadata.mobility != undefined
+      mobility: this.metadata.mobility != undefined,
     };
   } else {
     return (

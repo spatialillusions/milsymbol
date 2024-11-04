@@ -98,5 +98,5 @@ export default {
 
       sIdm2["01"] = [icn["SI.M2.CYBER"]];
     }
-  }
+  },
 };

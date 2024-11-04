@@ -172,7 +172,7 @@ export default function textfields(ms) {
       "{": 12,
       "|": 9,
       "}": 12,
-      "~": 18
+      "~": 18,
     };
     let w = 0;
     for (let i = 0; i < str.length; i++) {
@@ -220,7 +220,7 @@ export default function textfields(ms) {
       fontfamily: fontFamily,
       fill: fontColor,
       stroke: false,
-      fontweight: "bold"
+      fontweight: "bold",
     };
     return t;
   }
@@ -337,7 +337,7 @@ export default function textfields(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
       });
       gbbox.y1 = bbox.y1 - 10 - fontSize;
     }
@@ -363,7 +363,7 @@ export default function textfields(ms) {
         fontfamily: fontFamily,
         fontweight: "bold",
         fill: fontColor,
-        stroke: false
+        stroke: false,
       });
       gbbox.y2 = bbox.y2 + 35;
     }
@@ -378,7 +378,7 @@ export default function textfields(ms) {
       R2: "",
       R3: "",
       R4: "",
-      R5: ""
+      R5: "",
     }; //Text information on left and right sIde.
     let a;
     //Air & Space (They should be different but we skip that at the moment) TODO
@@ -500,7 +500,7 @@ export default function textfields(ms) {
           fontsize: fontSize,
           fontfamily: fontFamily,
           fill: fontColor,
-          stroke: false
+          stroke: false,
         });
         gbbox.y2 = bbox.y2 + fontSize;
       }
@@ -663,35 +663,35 @@ export default function textfields(ms) {
           x1: Math.min(leftBox.x1, bbox.x1 - strWidth(gStrings.L1)),
           x2: bbox.x1 - spaceTextIcon / 2,
           y1: Math.min(leftBox.y1, 100 - 2.5 * fontSize),
-          y2: Math.max(leftBox.y2, 100 - 1.5 * fontSize + spaceTextIcon / 2)
+          y2: Math.max(leftBox.y2, 100 - 1.5 * fontSize + spaceTextIcon / 2),
         };
       if (gStrings.L2)
         leftBox = {
           x1: Math.min(leftBox.x1, bbox.x1 - strWidth(gStrings.L2)),
           x2: bbox.x1 - spaceTextIcon / 2,
           y1: Math.min(leftBox.y1, 100 - 1.5 * fontSize),
-          y2: Math.max(leftBox.y2, 100 - 0.5 * fontSize + spaceTextIcon / 2)
+          y2: Math.max(leftBox.y2, 100 - 0.5 * fontSize + spaceTextIcon / 2),
         };
       if (gStrings.L3)
         leftBox = {
           x1: Math.min(leftBox.x1, bbox.x1 - strWidth(gStrings.L3)),
           x2: bbox.x1 - spaceTextIcon / 2,
           y1: Math.min(leftBox.y1, 100 - 0.5 * fontSize),
-          y2: Math.max(leftBox.y2, 100 + 0.5 * fontSize + spaceTextIcon / 2)
+          y2: Math.max(leftBox.y2, 100 + 0.5 * fontSize + spaceTextIcon / 2),
         };
       if (gStrings.L4)
         leftBox = {
           x1: Math.min(leftBox.x1, bbox.x1 - strWidth(gStrings.L4)),
           x2: bbox.x1 - spaceTextIcon / 2,
           y1: Math.min(leftBox.y1, 100 + 0.5 * fontSize),
-          y2: Math.max(leftBox.y2, 100 + 1.5 * fontSize + spaceTextIcon / 2)
+          y2: Math.max(leftBox.y2, 100 + 1.5 * fontSize + spaceTextIcon / 2),
         };
       if (gStrings.L5)
         leftBox = {
           x1: Math.min(leftBox.x1, bbox.x1 - strWidth(gStrings.L5)),
           x2: bbox.x1 - spaceTextIcon / 2,
           y1: Math.min(leftBox.y1, 100 + 1.5 * fontSize),
-          y2: Math.max(leftBox.y2, 100 + 2.5 * fontSize + spaceTextIcon / 2)
+          y2: Math.max(leftBox.y2, 100 + 2.5 * fontSize + spaceTextIcon / 2),
         };
       if (leftBox.hasOwnProperty("x2")) {
         gbbox.x1 -= fontSize / 2;
@@ -720,7 +720,7 @@ export default function textfields(ms) {
             leftBox.y2 +
             "z",
           fill: infoBackground,
-          stroke: infoBackgroundFrame || false
+          stroke: infoBackgroundFrame || false,
         });
       }
       if (gStrings.R1)
@@ -728,35 +728,35 @@ export default function textfields(ms) {
           x1: bbox.x2 + spaceTextIcon / 2,
           x2: Math.max(rightBox.x2, bbox.x2 + strWidth(gStrings.R1)),
           y1: Math.min(rightBox.y1, 100 - 2.5 * fontSize),
-          y2: Math.max(rightBox.y2, 100 - 1.5 * fontSize + spaceTextIcon / 2)
+          y2: Math.max(rightBox.y2, 100 - 1.5 * fontSize + spaceTextIcon / 2),
         };
       if (gStrings.R2)
         rightBox = {
           x1: bbox.x2 + spaceTextIcon / 2,
           x2: Math.max(rightBox.x2, bbox.x2 + strWidth(gStrings.R2)),
           y1: Math.min(rightBox.y1, 100 - 1.5 * fontSize),
-          y2: Math.max(rightBox.y2, 100 - 0.5 * fontSize + spaceTextIcon / 2)
+          y2: Math.max(rightBox.y2, 100 - 0.5 * fontSize + spaceTextIcon / 2),
         };
       if (gStrings.R3)
         rightBox = {
           x1: bbox.x2 + spaceTextIcon / 2,
           x2: Math.max(rightBox.x2, bbox.x2 + strWidth(gStrings.R3)),
           y1: Math.min(rightBox.y1, 100 - 0.5 * fontSize),
-          y2: Math.max(rightBox.y2, 100 + 0.5 * fontSize + spaceTextIcon / 2)
+          y2: Math.max(rightBox.y2, 100 + 0.5 * fontSize + spaceTextIcon / 2),
         };
       if (gStrings.R4)
         rightBox = {
           x1: bbox.x2 + spaceTextIcon / 2,
           x2: Math.max(rightBox.x2, bbox.x2 + strWidth(gStrings.R4)),
           y1: Math.min(rightBox.y1, 100 + 0.5 * fontSize),
-          y2: Math.max(rightBox.y2, 100 + 1.5 * fontSize + spaceTextIcon / 2)
+          y2: Math.max(rightBox.y2, 100 + 1.5 * fontSize + spaceTextIcon / 2),
         };
       if (gStrings.R5)
         rightBox = {
           x1: bbox.x2 + spaceTextIcon / 2,
           x2: Math.max(rightBox.x2, bbox.x2 + strWidth(gStrings.R5)),
           y1: Math.min(rightBox.y1, 100 + 1.5 * fontSize),
-          y2: Math.max(rightBox.y2, 100 + 2.5 * fontSize + spaceTextIcon / 2)
+          y2: Math.max(rightBox.y2, 100 + 2.5 * fontSize + spaceTextIcon / 2),
         };
       if (rightBox.hasOwnProperty("x1")) {
         gbbox.x2 += fontSize / 2;
@@ -785,7 +785,7 @@ export default function textfields(ms) {
             rightBox.y2 +
             "z",
           fill: infoBackground,
-          stroke: infoBackgroundFrame || false
+          stroke: infoBackgroundFrame || false,
         });
       }
     }
@@ -800,7 +800,7 @@ export default function textfields(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
       });
     if (gStrings.L2)
       drawArray2.push({
@@ -812,7 +812,7 @@ export default function textfields(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
       });
     if (gStrings.L3)
       drawArray2.push({
@@ -824,7 +824,7 @@ export default function textfields(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
       });
     if (gStrings.L4)
       drawArray2.push({
@@ -836,7 +836,7 @@ export default function textfields(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
       });
     if (gStrings.L5)
       drawArray2.push({
@@ -848,7 +848,7 @@ export default function textfields(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
       });
 
     //geometries
@@ -862,7 +862,7 @@ export default function textfields(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
       });
     if (gStrings.R2)
       drawArray2.push({
@@ -874,7 +874,7 @@ export default function textfields(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
       });
     if (gStrings.R3)
       drawArray2.push({
@@ -886,7 +886,7 @@ export default function textfields(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
       });
     if (gStrings.R4)
       drawArray2.push({
@@ -898,7 +898,7 @@ export default function textfields(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
       });
     if (gStrings.R5)
       drawArray2.push({
@@ -910,7 +910,7 @@ export default function textfields(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
       });
 
     //outline

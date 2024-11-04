@@ -34,7 +34,7 @@ const app6d = [
   activites,
   signalsintelligence,
   dismountedindividual,
-  tacticalpoints
+  tacticalpoints,
 ];
 const std2525d = [
   air,
@@ -51,7 +51,7 @@ const std2525d = [
   activites,
   signalsintelligence,
   cyberspace,
-  tacticalpoints
+  tacticalpoints,
 ];
 
 const std2525e = [
@@ -70,7 +70,7 @@ const std2525e = [
   activites,
   signalsintelligence,
   cyberspace,
-  tacticalpoints
+  tacticalpoints,
 ];
 
 export {
@@ -92,5 +92,5 @@ export {
   signalsintelligence,
   cyberspace,
   dismountedindividual,
-  tacticalpoints
+  tacticalpoints,
 };

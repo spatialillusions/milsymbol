@@ -9,7 +9,7 @@ export default {
     Hostile: "black",
     Neutral: "black",
     Unknown: "black",
-    Suspect: "black"
+    Suspect: "black",
   },
   Dark: {
     Civilian: "rgb(80,0,80)",
@@ -17,7 +17,7 @@ export default {
     Hostile: "rgb(200,0,0)",
     Neutral: "rgb(0,160,0)",
     Unknown: "rgb(225,220,0)",
-    Suspect: "rgb(255, 188, 1)"
+    Suspect: "rgb(255, 188, 1)",
   },
   FrameColor: {
     Civilian: "rgb(255,0,255)",
@@ -25,7 +25,7 @@ export default {
     Hostile: "rgb(255, 0, 0)",
     Neutral: "rgb(0, 255, 0)",
     Unknown: "rgb(255, 255, 0)",
-    Suspect: "rbg(255, 188, 1)"
+    Suspect: "rbg(255, 188, 1)",
   },
   IconColor: {
     Civilian: "rgb(255,0,255)",
@@ -33,7 +33,7 @@ export default {
     Hostile: "rgb(255, 0, 0)",
     Neutral: "rgb(0, 255, 0)",
     Unknown: "rgb(255, 255, 0)",
-    Suspect: "rgb(255, 188, 1)"
+    Suspect: "rgb(255, 188, 1)",
   },
   Light: {
     Civilian: "rgb(255,161,255)",
@@ -41,7 +41,7 @@ export default {
     Hostile: "rgb(255,128,128)",
     Neutral: "rgb(170,255,170)",
     Unknown: "rgb(255,255,128)",
-    Suspect: "rgb(255, 229, 153)"
+    Suspect: "rgb(255, 229, 153)",
   },
   Medium: {
     Civilian: "rgb(128,0,128)",
@@ -49,7 +49,7 @@ export default {
     Hostile: "rgb(255,48,49)",
     Neutral: "rgb(0,226,110)",
     Unknown: "rgb(255,255,0)",
-    Suspect: "rgb(255, 217, 107)"
+    Suspect: "rgb(255, 217, 107)",
   },
   None: {
     Civilian: false,
@@ -57,7 +57,7 @@ export default {
     Hostile: false,
     Neutral: false,
     Unknown: false,
-    Suspect: false
+    Suspect: false,
   },
   OffWhite: {
     Civilian: "rgb(239, 239, 239)",
@@ -65,7 +65,7 @@ export default {
     Hostile: "rgb(239, 239, 239)",
     Neutral: "rgb(239, 239, 239)",
     Unknown: "rgb(239, 239, 239)",
-    Suspect: "rgb(239, 239, 239)"
+    Suspect: "rgb(239, 239, 239)",
   },
   White: {
     Civilian: "white",
@@ -73,6 +73,6 @@ export default {
     Hostile: "white",
     Neutral: "white",
     Unknown: "white",
-    Suspect: "white"
-  }
+    Suspect: "white",
+  },
 };

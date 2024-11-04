@@ -67,6 +67,6 @@ export default function(ms, sidc) {
   return {
     "Main Icon": mainIcon,
     "Modifier 1": modifier1,
-    "Modifier 2": modifier2
+    "Modifier 2": modifier2,
   };
 }

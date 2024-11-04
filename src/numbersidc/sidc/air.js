@@ -119,5 +119,5 @@ export default {
       sIdm2["11"] = [icn["AIR.M2.DOWNLINKED"]];
       sIdm2["12"] = [icn["AIR.M2.CYBERSPACE"]];
     }
-  }
+  },
 };

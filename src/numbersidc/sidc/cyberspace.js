@@ -92,5 +92,5 @@ export default {
       sIdm2["07"] = [icn["CY.M2.NATION STATE"]];
       sIdm2["08"] = [icn["CY.M2.NATION STATE SPONSORED"]];
     }
-  }
+  },
 };

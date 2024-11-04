@@ -14,49 +14,49 @@ export default {
     sId["S-G-EW----"] = []; // N/A
     sId["S-G-EWM---"] = [icn["GR.EQ.MISSILE LAUNCHER"]];
     sId["S-G-EWMA--"] = [
-      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"]
+      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
     ];
     sId["S-G-EWMAS-"] = [
       icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
-      icn["GR.EQ.SHORT RANGE"]
+      icn["GR.EQ.SHORT RANGE"],
     ];
     sId["S-G-EWMASR"] = [
       icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
       icn["GR.EQ.SHORT RANGE"],
-      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR"]
+      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR"],
     ];
     sId["S-G-EWMASE"] = [
       icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
       icn["GR.EQ.SHORT RANGE"],
-      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR"]
+      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR"],
     ];
     sId["S-G-EWMAI-"] = [
       icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
-      icn["GR.EQ.INTERMEDIATE RANGE"]
+      icn["GR.EQ.INTERMEDIATE RANGE"],
     ];
     sId["S-G-EWMAIR"] = [
       icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
       icn["GR.EQ.INTERMEDIATE RANGE"],
-      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR"]
+      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR"],
     ];
     sId["S-G-EWMAIE"] = [
       icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
       icn["GR.EQ.INTERMEDIATE RANGE"],
-      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR"]
+      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR"],
     ];
     sId["S-G-EWMAL-"] = [
       icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
-      icn["GR.EQ.LONG RANGE"]
+      icn["GR.EQ.LONG RANGE"],
     ];
     sId["S-G-EWMALR"] = [
       icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
       icn["GR.EQ.LONG RANGE"],
-      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR"]
+      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR"],
     ];
     sId["S-G-EWMALE"] = [
       icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
       icn["GR.EQ.LONG RANGE"],
-      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR"]
+      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR"],
     ];
     sId["S-G-EWMAT-"] = [
       ms._translate(
@@ -64,7 +64,7 @@ export default {
         -15,
         ms._scale(0.7, icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"])
       ),
-      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR THEATRE"]
+      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR THEATRE"],
     ];
     sId["S-G-EWMATR"] = [
       ms._translate(
@@ -73,7 +73,7 @@ export default {
         ms._scale(0.7, icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"])
       ),
       icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR THEATRE"],
-      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR"]
+      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR"],
     ];
     sId["S-G-EWMATE"] = [
       ms._translate(
@@ -82,72 +82,72 @@ export default {
         ms._scale(0.7, icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"])
       ),
       icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR THEATRE"],
-      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR"]
+      icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR"],
     ];
     sId["S-G-EWMS--"] = [icn["GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER"]];
     sId["S-G-EWMSS-"] = [
       icn["GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER"],
-      icn["GR.EQ.SHORT RANGE"]
+      icn["GR.EQ.SHORT RANGE"],
     ];
     sId["S-G-EWMSI-"] = [
       icn["GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER"],
-      icn["GR.EQ.INTERMEDIATE RANGE"]
+      icn["GR.EQ.INTERMEDIATE RANGE"],
     ];
     sId["S-G-EWMSL-"] = [
       icn["GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER"],
-      icn["GR.EQ.LONG RANGE"]
+      icn["GR.EQ.LONG RANGE"],
     ];
     sId["S-G-EWMT--"] = [icn["GR.EQ.ANTITANK MISSILE LAUNCHER"]];
     sId["S-G-EWMTL-"] = [
       icn["GR.EQ.ANTITANK MISSILE LAUNCHER"],
-      icn["GR.EQ.SHORT RANGE"]
+      icn["GR.EQ.SHORT RANGE"],
     ];
     sId["S-G-EWMTM-"] = [
       icn["GR.EQ.ANTITANK MISSILE LAUNCHER"],
-      icn["GR.EQ.INTERMEDIATE RANGE"]
+      icn["GR.EQ.INTERMEDIATE RANGE"],
     ];
     sId["S-G-EWMTH-"] = [
       icn["GR.EQ.ANTITANK MISSILE LAUNCHER"],
-      icn["GR.EQ.LONG RANGE"]
+      icn["GR.EQ.LONG RANGE"],
     ];
     sId["S-G-EWS---"] = [icn["GR.EQ.SINGLE ROCKET LAUNCHER"]];
     sId["S-G-EWSL--"] = [
       icn["GR.EQ.SINGLE ROCKET LAUNCHER"],
-      icn["GR.EQ.SHORT RANGE"]
+      icn["GR.EQ.SHORT RANGE"],
     ];
     sId["S-G-EWSM--"] = [
       icn["GR.EQ.SINGLE ROCKET LAUNCHER"],
-      icn["GR.EQ.INTERMEDIATE RANGE"]
+      icn["GR.EQ.INTERMEDIATE RANGE"],
     ];
     sId["S-G-EWSH--"] = [
       icn["GR.EQ.SINGLE ROCKET LAUNCHER"],
-      icn["GR.EQ.LONG RANGE"]
+      icn["GR.EQ.LONG RANGE"],
     ];
     sId["S-G-EWX---"] = [icn["GR.EQ.MULTIPLE ROCKET LAUNCHER"]];
     sId["S-G-EWXL--"] = [
       icn["GR.EQ.MULTIPLE ROCKET LAUNCHER"],
-      ms._translate(0, 10, icn["GR.EQ.SHORT RANGE"])
+      ms._translate(0, 10, icn["GR.EQ.SHORT RANGE"]),
     ];
     sId["S-G-EWXM--"] = [
       icn["GR.EQ.MULTIPLE ROCKET LAUNCHER"],
-      ms._translate(0, 10, icn["GR.EQ.INTERMEDIATE RANGE"])
+      ms._translate(0, 10, icn["GR.EQ.INTERMEDIATE RANGE"]),
     ];
     sId["S-G-EWXH--"] = [
       icn["GR.EQ.MULTIPLE ROCKET LAUNCHER"],
-      ms._translate(0, 10, icn["GR.EQ.LONG RANGE"])
+      ms._translate(0, 10, icn["GR.EQ.LONG RANGE"]),
     ];
     sId["S-G-EWT---"] = [icn["GR.EQ.ANTITANK ROCKET LAUNCHER"]];
     sId["S-G-EWTL--"] = [
       icn["GR.EQ.ANTITANK ROCKET LAUNCHER"],
-      icn["GR.EQ.SHORT RANGE"]
+      icn["GR.EQ.SHORT RANGE"],
     ];
     sId["S-G-EWTM--"] = [
       icn["GR.EQ.ANTITANK ROCKET LAUNCHER"],
-      icn["GR.EQ.INTERMEDIATE RANGE"]
+      icn["GR.EQ.INTERMEDIATE RANGE"],
     ];
     sId["S-G-EWTH--"] = [
       icn["GR.EQ.ANTITANK ROCKET LAUNCHER"],
-      icn["GR.EQ.LONG RANGE"]
+      icn["GR.EQ.LONG RANGE"],
     ];
     sId["S-G-EWR---"] = [icn["GR.EQ.RIFLE"]];
     sId["S-G-EWRR--"] = [icn["GR.EQ.RIFLE"], icn["GR.EQ.SHORT RANGE"]];
@@ -156,15 +156,15 @@ export default {
     sId["S-G-EWZ---"] = [icn["GR.EQ.GRENADE LAUNCHER"]];
     sId["S-G-EWZL--"] = [
       icn["GR.EQ.GRENADE LAUNCHER"],
-      ms._translate(0, 20, icn["GR.EQ.SHORT RANGE"])
+      ms._translate(0, 20, icn["GR.EQ.SHORT RANGE"]),
     ];
     sId["S-G-EWZM--"] = [
       icn["GR.EQ.GRENADE LAUNCHER"],
-      ms._translate(0, 20, icn["GR.EQ.INTERMEDIATE RANGE"])
+      ms._translate(0, 20, icn["GR.EQ.INTERMEDIATE RANGE"]),
     ];
     sId["S-G-EWZH--"] = [
       icn["GR.EQ.GRENADE LAUNCHER"],
-      ms._translate(0, 20, icn["GR.EQ.LONG RANGE"])
+      ms._translate(0, 20, icn["GR.EQ.LONG RANGE"]),
     ];
     sId["S-G-EWO---"] = [icn["GR.EQ.MORTAR"]];
     sId["S-G-EWOL--"] = [icn["GR.EQ.MORTAR"], icn["GR.EQ.SHORT RANGE"]];
@@ -178,11 +178,11 @@ export default {
         -15,
         ms._scale(0.8, [icn["GR.EQ.HOWITZER"], icn["GR.EQ.SHORT RANGE"]])
       ),
-      icn["GR.EQ.HOWITZER TRACKED"]
+      icn["GR.EQ.HOWITZER TRACKED"],
     ];
     sId["S-G-EWHM--"] = [
       icn["GR.EQ.HOWITZER"],
-      icn["GR.EQ.INTERMEDIATE RANGE"]
+      icn["GR.EQ.INTERMEDIATE RANGE"],
     ];
     sId["S-G-EWHMS-"] = [
       ms._translate(
@@ -190,7 +190,7 @@ export default {
         -15,
         ms._scale(0.8, [icn["GR.EQ.HOWITZER"], icn["GR.EQ.INTERMEDIATE RANGE"]])
       ),
-      icn["GR.EQ.HOWITZER TRACKED"]
+      icn["GR.EQ.HOWITZER TRACKED"],
     ];
     sId["S-G-EWHH--"] = [icn["GR.EQ.HOWITZER"], icn["GR.EQ.LONG RANGE"]];
     sId["S-G-EWHHS-"] = [
@@ -199,20 +199,20 @@ export default {
         -15,
         ms._scale(0.8, [icn["GR.EQ.HOWITZER"], icn["GR.EQ.LONG RANGE"]])
       ),
-      icn["GR.EQ.HOWITZER TRACKED"]
+      icn["GR.EQ.HOWITZER TRACKED"],
     ];
     sId["S-G-EWG---"] = [icn["GR.EQ.ANTITANK GUN"]];
     sId["S-G-EWGL--"] = [icn["GR.EQ.ANTITANK GUN"], icn["GR.EQ.SHORT RANGE"]];
     sId["S-G-EWGM--"] = [
       icn["GR.EQ.ANTITANK GUN"],
-      icn["GR.EQ.INTERMEDIATE RANGE"]
+      icn["GR.EQ.INTERMEDIATE RANGE"],
     ];
     sId["S-G-EWGH--"] = [icn["GR.EQ.ANTITANK GUN"], icn["GR.EQ.LONG RANGE"]];
     sId["S-G-EWGR--"] = [icn["GR.EQ.RECOILLESS GUN"]];
     sId["S-G-EWD---"] = [icn["GR.EQ.DIRECT FIRE GUN"]];
     sId["S-G-EWDL--"] = [
       icn["GR.EQ.DIRECT FIRE GUN"],
-      icn["GR.EQ.SHORT RANGE"]
+      icn["GR.EQ.SHORT RANGE"],
     ];
     sId["S-G-EWDLS-"] = [
       ms._translate(
@@ -220,11 +220,11 @@ export default {
         -15,
         ms._scale(0.8, [icn["GR.EQ.DIRECT FIRE GUN"], icn["GR.EQ.SHORT RANGE"]])
       ),
-      icn["GR.EQ.HOWITZER TRACKED"]
+      icn["GR.EQ.HOWITZER TRACKED"],
     ];
     sId["S-G-EWDM--"] = [
       icn["GR.EQ.DIRECT FIRE GUN"],
-      icn["GR.EQ.INTERMEDIATE RANGE"]
+      icn["GR.EQ.INTERMEDIATE RANGE"],
     ];
     sId["S-G-EWDMS-"] = [
       ms._translate(
@@ -232,10 +232,10 @@ export default {
         -15,
         ms._scale(0.8, [
           icn["GR.EQ.DIRECT FIRE GUN"],
-          icn["GR.EQ.INTERMEDIATE RANGE"]
+          icn["GR.EQ.INTERMEDIATE RANGE"],
         ])
       ),
-      icn["GR.EQ.HOWITZER TRACKED"]
+      icn["GR.EQ.HOWITZER TRACKED"],
     ];
     sId["S-G-EWDH--"] = [icn["GR.EQ.DIRECT FIRE GUN"], icn["GR.EQ.LONG RANGE"]];
     sId["S-G-EWDHS-"] = [
@@ -244,116 +244,116 @@ export default {
         -15,
         ms._scale(0.8, [icn["GR.EQ.DIRECT FIRE GUN"], icn["GR.EQ.LONG RANGE"]])
       ),
-      icn["GR.EQ.HOWITZER TRACKED"]
+      icn["GR.EQ.HOWITZER TRACKED"],
     ];
     sId["S-G-EWA---"] = [icn["GR.EQ.AIR DEFENCE GUN"]];
     sId["S-G-EWAL--"] = [
       icn["GR.EQ.AIR DEFENCE GUN"],
-      icn["GR.EQ.SHORT RANGE"]
+      icn["GR.EQ.SHORT RANGE"],
     ];
     sId["S-G-EWAM--"] = [
       icn["GR.EQ.AIR DEFENCE GUN"],
-      icn["GR.EQ.INTERMEDIATE RANGE"]
+      icn["GR.EQ.INTERMEDIATE RANGE"],
     ];
     sId["S-G-EWAH--"] = [icn["GR.EQ.AIR DEFENCE GUN"], icn["GR.EQ.LONG RANGE"]];
 
     sId["S-G-EV----"] = [
       icn[
         "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
-      ]
+      ],
     ];
     sId["S-G-EVA---"] = [
       icn[
         "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
       ],
-      icn["GR.EQ.ARMOURED VEHICLE"]
+      icn["GR.EQ.ARMOURED VEHICLE"],
     ];
     sId["S-G-EVAT--"] = [icn["GR.EQ.TANK"]];
     sId["S-G-EVATL-"] = [icn["GR.EQ.TANK"], icn["GR.EQ.LIGHT TANK"]];
     sId["S-G-EVATLR"] = sId["S-G-EVATW-"] = [
       icn["GR.EQ.TANK"],
       icn["GR.EQ.LIGHT TANK"],
-      icn["GR.EQ.TANK RECOVERY VEHICLE"]
+      icn["GR.EQ.TANK RECOVERY VEHICLE"],
     ];
     sId["S-G-EVATM-"] = [icn["GR.EQ.TANK"], icn["GR.EQ.MEDIUM TANK"]];
     sId["S-G-EVATMR"] = sId["S-G-EVATX-"] = [
       icn["GR.EQ.TANK"],
       icn["GR.EQ.MEDIUM TANK"],
-      icn["GR.EQ.TANK RECOVERY VEHICLE"]
+      icn["GR.EQ.TANK RECOVERY VEHICLE"],
     ];
     sId["S-G-EVATH-"] = [icn["GR.EQ.TANK"], icn["GR.EQ.HEAVY TANK"]];
     sId["S-G-EVATHR"] = sId["S-G-EVATY-"] = [
       icn["GR.EQ.TANK"],
       icn["GR.EQ.HEAVY TANK"],
-      icn["GR.EQ.TANK RECOVERY VEHICLE"]
+      icn["GR.EQ.TANK RECOVERY VEHICLE"],
     ];
     sId["S-G-EVAA--"] = [icn["GR.EQ.ARMOURED PERSONNEL CARRIER"]];
     sId["S-G-EVAAR-"] = [
       icn["GR.EQ.ARMOURED PERSONNEL CARRIER"],
-      icn["GR.EQ.TANK RECOVERY VEHICLE"]
+      icn["GR.EQ.TANK RECOVERY VEHICLE"],
     ];
     sId["S-G-EVAI--"] = [icn["GR.EQ.ARMOURED FIGHTING VEHICLE"]];
     sId["S-G-EVAC--"] = [
-      icn["GR.EQ.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL"]
+      icn["GR.EQ.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL"],
     ];
     sId["S-G-EVAS--"] = [
-      icn["GR.EQ.ARMOURED PERSONNEL CARRIER COMBAT SERVICE SUPPORT VEHICLE"]
+      icn["GR.EQ.ARMOURED PERSONNEL CARRIER COMBAT SERVICE SUPPORT VEHICLE"],
     ];
     sId["S-G-EVAL--"] = [
       icn["GR.EQ.ARMOURED FIGHTING VEHICLE"],
-      icn["GR.EQ.CROSS-COUNTRY"]
+      icn["GR.EQ.CROSS-COUNTRY"],
     ];
     sId["S-G-EVU---"] = [icn["GR.EQ.UTILITY VEHICLE"]];
     sId["S-G-EVUB--"] = [icn["GR.EQ.BUS"]];
     sId["S-G-EVUS--"] = [icn["GR.EQ.SEMI-TRAILER TRUCK"]];
     sId["S-G-EVUSL-"] = [
       icn["GR.EQ.SEMI-TRAILER TRUCK"],
-      icn["GR.EQ.UTILITY VEHICLE LIGHT"]
+      icn["GR.EQ.UTILITY VEHICLE LIGHT"],
     ];
     sId["S-G-EVUSM-"] = [
       icn["GR.EQ.SEMI-TRAILER TRUCK"],
-      icn["GR.EQ.UTILITY VEHICLE MEDIUM"]
+      icn["GR.EQ.UTILITY VEHICLE MEDIUM"],
     ];
     sId["S-G-EVUSH-"] = [
       icn["GR.EQ.SEMI-TRAILER TRUCK"],
-      icn["GR.EQ.UTILITY VEHICLE HEAVY"]
+      icn["GR.EQ.UTILITY VEHICLE HEAVY"],
     ];
     sId["S-G-EVUL--"] = [
       icn["GR.EQ.UTILITY VEHICLE"],
-      icn["GR.EQ.LIMITED CROSS-COUNTRY"]
+      icn["GR.EQ.LIMITED CROSS-COUNTRY"],
     ];
     sId["S-G-EVUX--"] = [
       icn["GR.EQ.UTILITY VEHICLE"],
-      icn["GR.EQ.CROSS-COUNTRY"]
+      icn["GR.EQ.CROSS-COUNTRY"],
     ];
     sId["S-G-EVUR--"] = [icn["GR.EQ.WATER VEHICLE"]];
     sId["S-G-EVUT--"] = [
       icn["GR.EQ.UTILITY VEHICLE"],
-      icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK"]
+      icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK"],
     ];
     sId["S-G-EVUTL-"] = [
       icn["GR.EQ.UTILITY VEHICLE"],
       icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK"],
-      icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK.LIGHT"]
+      icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK.LIGHT"],
     ];
     sId["S-G-EVUTH-"] = [
       icn["GR.EQ.UTILITY VEHICLE"],
       icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK"],
-      icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK.HEAVY"]
+      icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK.HEAVY"],
     ];
     sId["S-G-EVUA--"] = [
       icn["GR.EQ.UTILITY VEHICLE"],
-      icn["GR.EQ.MEDICAL EVACUATION"]
+      icn["GR.EQ.MEDICAL EVACUATION"],
     ];
     sId["S-G-EVUAA-"] = [
       icn["GR.EQ.ARMOURED PERSONNEL CARRIER"],
-      icn["GR.EQ.MEDICAL EVACUATION"]
+      icn["GR.EQ.MEDICAL EVACUATION"],
     ];
     sId["S-G-EVE---"] = [
       icn[
         "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
       ],
-      ms._scale(0.7, icn["GR.IC.ENGINEER"])
+      ms._scale(0.7, icn["GR.IC.ENGINEER"]),
     ];
     sId["S-G-EVEB--"] = [icn["GR.EQ.BRIDGE"]];
     sId["S-G-EVEE--"] = [icn["GR.EQ.EARTHMOVER"]];
@@ -362,213 +362,213 @@ export default {
     sId["S-G-EVEC--"] = [
       icn["GR.EQ.UTILITY VEHICLE"],
       icn["GR.EQ.LIMITED CROSS-COUNTRY"],
-      ms._scale(0.6, icn["GR.IC.ENGINEER"])
+      ms._scale(0.6, icn["GR.IC.ENGINEER"]),
     ];
     sId["S-G-EVEM--"] = [
       icn["GR.EQ.UTILITY VEHICLE"],
-      icn["GR.EQ.MINE LAYING VEHICLE"]
+      icn["GR.EQ.MINE LAYING VEHICLE"],
     ];
     sId["S-G-EVEMA-"] = [
       icn["GR.EQ.MINE CLEARING EQUIPMENT"],
-      icn["GR.EQ.TANK"]
+      icn["GR.EQ.TANK"],
     ];
     sId["S-G-EVEMV-"] = [
       icn["GR.EQ.ARMOURED PERSONNEL CARRIER"],
-      icn["GR.EQ.ARMORED CARRIER WITH VOLCANO"]
+      icn["GR.EQ.ARMORED CARRIER WITH VOLCANO"],
     ];
     sId["S-G-EVEMT-"] = [
       icn["GR.EQ.MINE CLEARING EQUIPMENT"],
-      ms._translate(0, -10, icn["GR.EQ.LIMITED CROSS-COUNTRY"])
+      ms._translate(0, -10, icn["GR.EQ.LIMITED CROSS-COUNTRY"]),
     ];
     sId["S-G-EVEML-"] = [
       icn["GR.EQ.UTILITY VEHICLE"],
       icn["GR.EQ.LIMITED CROSS-COUNTRY"],
-      icn["GR.EQ.ARMORED CARRIER WITH VOLCANO"]
+      icn["GR.EQ.ARMORED CARRIER WITH VOLCANO"],
     ];
     sId["S-G-EVEA--"] = [icn["GR.EQ.MINE CLEARING EQUIPMENT"]];
     sId["S-G-EVEAA-"] = [
       icn["GR.EQ.MINE CLEARING EQUIPMENT"],
-      icn["GR.EQ.TANK"]
+      icn["GR.EQ.TANK"],
     ];
     sId["S-G-EVEAT-"] = [
       icn["GR.EQ.MINE CLEARING EQUIPMENT"],
-      ms._translate(0, -10, icn["GR.EQ.LIMITED CROSS-COUNTRY"])
+      ms._translate(0, -10, icn["GR.EQ.LIMITED CROSS-COUNTRY"]),
     ];
     sId["S-G-EVEMSM"] = [
       icn["GR.EQ.ARMOURED PERSONNEL CARRIER"],
-      icn["GR.EQ.MINE SCATTERABLE"]
+      icn["GR.EQ.MINE SCATTERABLE"],
     ];
     sId["S-G-EVED--"] = [icn["GR.EQ.DOZER"]];
     sId["S-G-EVEDA-"] = [icn["GR.EQ.DOZER ARMORED"]];
     sId["S-G-EVES--"] = [
       icn["GR.EQ.ARMOURED PERSONNEL CARRIER"],
-      ms._scale(0.6, icn["GR.IC.ENGINEER"])
+      ms._scale(0.6, icn["GR.IC.ENGINEER"]),
     ];
     sId["S-G-EVER--"] = [
       icn["GR.EQ.ARMOURED PERSONNEL CARRIER"],
       ms._scale(0.6, icn["GR.IC.ENGINEER"]),
-      icn["GR.EQ.ARMOURED PERSONNEL CARRIER ENGINEER RECON VEHICLE"]
+      icn["GR.EQ.ARMOURED PERSONNEL CARRIER ENGINEER RECON VEHICLE"],
     ];
     sId["S-G-EVEH--"] = [
       icn["GR.EQ.UTILITY VEHICLE"],
       icn["GR.EQ.LIMITED CROSS-COUNTRY"],
-      icn["GR.EQ.UTILITY VEHICLE BACKHOE"]
+      icn["GR.EQ.UTILITY VEHICLE BACKHOE"],
     ];
     sId["S-G-EVEF--"] = [
       icn["GR.EQ.UTILITY VEHICLE"],
       icn["GR.EQ.CROSS-COUNTRY"],
-      icn["GR.EQ.UTILITY VEHICLE FERRY TRANSPORTER"]
+      icn["GR.EQ.UTILITY VEHICLE FERRY TRANSPORTER"],
     ];
     sId["S-G-EVD---"] = [
       icn["GR.EQ.UTILITY VEHICLE"],
       icn["GR.EQ.CROSS-COUNTRY"],
-      ms._scale(0.7, icn["GR.IC.DRILLING"])
+      ms._scale(0.7, icn["GR.IC.DRILLING"]),
     ];
     sId["S-G-EVT---"] = [icn["GR.EQ.TRAIN LOCOMOTIVE"]];
     sId["S-G-EVC---"] = [icn["GR.I.CIVILIAN"]];
     sId["S-G-EVCA--"] = [icn["GR.EQ.CIVILIAN VEHICLE.AUTOMOBILE"]];
     sId["S-G-EVCAL-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.AUTOMOBILE"],
-      icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"]
+      icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"],
     ];
     sId["S-G-EVCAM-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.AUTOMOBILE"],
-      icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"]
+      icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"],
     ];
     sId["S-G-EVCAH-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.AUTOMOBILE"],
-      icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"]
+      icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"],
     ];
     sId["S-G-EVCO--"] = [icn["GR.EQ.CIVILIAN VEHICLE.OPEN-BED TRUCK"]];
     sId["S-G-EVCOL-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.OPEN-BED TRUCK"],
-      icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"]
+      icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"],
     ];
     sId["S-G-EVCOM-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.OPEN-BED TRUCK"],
-      icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"]
+      icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"],
     ];
     sId["S-G-EVCOH-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.OPEN-BED TRUCK"],
-      icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"]
+      icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"],
     ];
     sId["S-G-EVCM--"] = [
-      icn["GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE"]
+      icn["GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE"],
     ];
     sId["S-G-EVCML-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE"],
-      icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"]
+      icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"],
     ];
     sId["S-G-EVCMM-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE"],
-      icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"]
+      icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"],
     ];
     sId["S-G-EVCMH-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE"],
-      icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"]
+      icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"],
     ];
     sId["S-G-EVCU--"] = [icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"]];
     sId["S-G-EVCUL-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
-      icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"]
+      icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"],
     ];
     sId["S-G-EVCUM-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
-      icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"]
+      icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"],
     ];
     sId["S-G-EVCUH-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
-      icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"]
+      icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"],
     ];
     sId["S-G-EVCJ--"] = [icn["GR.EQ.CIVILIAN VEHICLE.JEEP TYPE VEHICLE"]];
     sId["S-G-EVCJL-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.JEEP TYPE VEHICLE"],
-      icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"]
+      icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"],
     ];
     sId["S-G-EVCJM-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.JEEP TYPE VEHICLE"],
-      icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"]
+      icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"],
     ];
     sId["S-G-EVCJH-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.JEEP TYPE VEHICLE"],
-      icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"]
+      icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"],
     ];
     sId["S-G-EVCT--"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
-      icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"]
+      icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"],
     ];
     sId["S-G-EVCTL-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
       icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"],
-      icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"]
+      icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"],
     ];
     sId["S-G-EVCTM-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
       icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"],
-      icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"]
+      icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"],
     ];
     sId["S-G-EVCTH-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
       icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"],
-      icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"]
+      icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"],
     ];
     sId["S-G-EVCF--"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.OPEN-BED TRUCK"],
-      icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"]
+      icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"],
     ];
     sId["S-G-EVCFL-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.OPEN-BED TRUCK"],
       icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"],
-      icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"]
+      icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"],
     ];
     sId["S-G-EVCFM-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.OPEN-BED TRUCK"],
       icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"],
-      icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"]
+      icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"],
     ];
     sId["S-G-EVCFH-"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.OPEN-BED TRUCK"],
       icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"],
-      icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"]
+      icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"],
     ];
     sId["S-G-EVM---"] = [icn["GR.EQ.PACK ANIMAL"]];
     sId["S-G-EVS---"] = [
       icn[
         "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
       ],
-      icn["GR.EQ.MISSILE SUPPORT"]
+      icn["GR.EQ.MISSILE SUPPORT"],
     ];
     sId["S-G-EVST--"] = _STD2525 // For some strange reason app6 uses this code for other things...
       ? [
           icn[
             "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
           ],
-          icn["GR.EQ.MISSILE TRANSLOADER"]
+          icn["GR.EQ.MISSILE TRANSLOADER"],
         ]
       : [icn["GR.EQ.TRAIN LOCOMOTIVE"]];
     sId["S-G-EVSR--"] = [
       icn[
         "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
       ],
-      icn["GR.EQ.MISSILE TRANSPORTER"]
+      icn["GR.EQ.MISSILE TRANSPORTER"],
     ];
     sId["S-G-EVSC--"] = [
       icn[
         "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
       ],
-      icn["GR.EQ.MISSILE CRANE/LOADING DEVICE"]
+      icn["GR.EQ.MISSILE CRANE/LOADING DEVICE"],
     ];
     sId["S-G-EVSP--"] = [
       icn[
         "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
       ],
-      icn["GR.EQ.MISSILE PROPELLANT TRANSPORTER"]
+      icn["GR.EQ.MISSILE PROPELLANT TRANSPORTER"],
     ];
     sId["S-G-EVSW--"] = [
       icn[
         "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
       ],
-      icn["GR.EQ.MISSILE WARHEAD TRANSPORTER"]
+      icn["GR.EQ.MISSILE WARHEAD TRANSPORTER"],
     ];
     sId["S-G-ES----"] = [icn["GR.EQ.SENSOR"]];
     sId["S-G-ESR---"] = [icn["GR.EQ.RADAR"]];
@@ -748,7 +748,7 @@ export default {
       "EXF---": 135,
       "EXM---": 130,
       "EXMC--": 122,
-      "EXML--": 122
+      "EXML--": 122,
     };
     for (const key in equipmentBottom) {
       if (!equipmentBottom.hasOwnProperty(key)) continue;
@@ -756,8 +756,8 @@ export default {
         x1: 50,
         x2: 150,
         y1: 50,
-        y2: equipmentBottom[key]
+        y2: equipmentBottom[key],
       };
     }
-  }
+  },
 };

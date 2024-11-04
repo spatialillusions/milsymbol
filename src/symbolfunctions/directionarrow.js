@@ -34,10 +34,10 @@ export default function directionarrow(ms) {
                 d:
                   "M100,100 l0,-" +
                   (arrowLength - 20) +
-                  " -5,3 5,-15 5,15 -5,-3"
-              }
-            ]
-          }
+                  " -5,3 5,-15 5,15 -5,-3",
+              },
+            ],
+          },
         ];
 
         gbbox.y1 = Math.min(
@@ -78,8 +78,8 @@ export default function directionarrow(ms) {
                 fill: color,
                 stroke: color,
                 strokewidth: this.style.strokeWidth,
-                d: "M 100," + bbox.y2 + "l0," + 100
-              }
+                d: "M 100," + bbox.y2 + "l0," + 100,
+              },
             ];
           } else {
             // For headquarters
@@ -90,8 +90,8 @@ export default function directionarrow(ms) {
                 y:
                   bbox.y2 -
                   (100 - (this.style.hqStaffLength || ms._hqStaffLength)),
-                draw: arrow
-              }
+                draw: arrow,
+              },
             ];
             gbbox.x1 += bbox.x1 - 100;
             gbbox.x2 += bbox.x1 - 100;
@@ -115,7 +115,7 @@ export default function directionarrow(ms) {
           fill: color,
           stroke: color,
           strokewidth: this.style.strokeWidth,
-          d: "M 100,100  l" + x + "," + y
+          d: "M 100,100  l" + x + "," + y,
         };
         drawArray1.push(arrow);
       }

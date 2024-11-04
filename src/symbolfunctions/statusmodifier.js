@@ -16,7 +16,7 @@ export default function statusmodifier(ms) {
         FullyCapable: "rgb(0,255,0)",
         Damaged: "rgb(255,255,0)",
         Destroyed: "rgb(255,0,0)",
-        FullToCapacity: "rgb(0, 180, 240)"
+        FullToCapacity: "rgb(0, 180, 240)",
       };
       //If it is unframed and equipment use the bottom of the icon
       if (!this.metadata.frame && this.metadata.iconBottom) {
@@ -43,7 +43,7 @@ export default function statusmodifier(ms) {
           bbox.width() +
           ",0 0,25 -" +
           bbox.width() +
-          ",0 z"
+          ",0 z",
       });
       //Add the hight of the codition bar to the geometry bounds
       y2 += 25;
@@ -68,7 +68,7 @@ export default function statusmodifier(ms) {
           type: "path",
           d: "M150,20 L50,180",
           strokewidth: this.style.strokeWidth * 2,
-          stroke: this.colors.frameColor[this.metadata.affiliation]
+          stroke: this.colors.frameColor[this.metadata.affiliation],
         });
         //Add space for the modifier to the geometry bounds
         y1 = 20;
@@ -79,7 +79,7 @@ export default function statusmodifier(ms) {
           type: "path",
           d: "M50,20 L150,180",
           strokewidth: this.style.strokeWidth * 2,
-          stroke: this.colors.frameColor[this.metadata.affiliation]
+          stroke: this.colors.frameColor[this.metadata.affiliation],
         });
       //outline
       if (this.style.outlineWidth > 0)

@@ -17,7 +17,7 @@ export default {
       sId["110102"] = [icn["ST.IC.ARSON/FIRE"]];
       sId["110103"] = [
         icn["ST.IC.INDIVIDUAL"],
-        icn["ST.IC.ATTEMPTED CRIMINAL ACTIVITY"]
+        icn["ST.IC.ATTEMPTED CRIMINAL ACTIVITY"],
       ];
       sId["110104"] = [icn["ST.IC.DRIVE-BY SHOOTING"]];
       sId["110105"] = [icn["ST.IC.DRUG RELATED ACTIVITIES"]];
@@ -44,7 +44,7 @@ export default {
           10,
           ms._scale(0.8, icn["AC.IC.CRIMINAL.ACTIVITY.INCIDENT"])
         ),
-        icn["AC.M1.THREAT"]
+        icn["AC.M1.THREAT"],
       ];
       sId["110200"] = [icn["ST.IC.BOMB"]];
       sId["110201"] = [icn["ST.IC.BOMB"], icn["AC.M1.THREAT"]];
@@ -56,7 +56,7 @@ export default {
           15,
           ms._scale(0.7, [icn["ST.IC.EXPLOSION"], icn["ST.IC.IED"]])
         ),
-        icn["ST.M1.PREMATURE"]
+        icn["ST.M1.PREMATURE"],
       ];
       sId["110303"] = [icn["ST.IC.IED"], icn["GR.IC.FF.SUPPLY"]];
       sId["110304"] = [icn["ST.IC.INDIVIDUAL"], icn["ST.M1.IED"]];
@@ -65,11 +65,11 @@ export default {
       sId["110500"] = [icn["ST.IC.ILLEGAL DRUG OPERATION"]];
       sId["110501"] = [
         icn["ST.IC.ILLEGAL DRUG OPERATION"],
-        icn["ST.M1.TRAFFICKING"]
+        icn["ST.M1.TRAFFICKING"],
       ];
       sId["110502"] = [
         icn["ST.IC.ILLEGAL DRUG OPERATION"],
-        icn["ST.M1.LABRATORY"]
+        icn["ST.M1.LABRATORY"],
       ];
       sId["110600"] = [icn["ST.IC.EXPLOSION"]];
       sId["110601"] = [icn["ST.IC.EXPLOSION"], icn["ST.IC.GRENADE"]];
@@ -77,15 +77,15 @@ export default {
       sId["110603"] = [icn["ST.IC.EXPLOSION"], icn["ST.IC.MINE"]];
       sId["110604"] = [
         icn["ST.IC.EXPLOSION"],
-        ms._scale(0.6, icn["GR.EQ.MORTAR"], true)
+        ms._scale(0.6, icn["GR.EQ.MORTAR"], true),
       ];
       sId["110605"] = [
         icn["ST.IC.EXPLOSION"],
-        ms._scale(0.6, icn["GR.EQ.SINGLE ROCKET LAUNCHER"], true)
+        ms._scale(0.6, icn["GR.EQ.SINGLE ROCKET LAUNCHER"], true),
       ];
       sId["110606"] = [
         ms._scale(0.7, icn["ST.IC.BOMB"]),
-        icn["ST.IC.EXPLOSION"]
+        icn["ST.IC.EXPLOSION"],
       ];
       sId["110700"] = [icn["GR.IN.MC.HOME"]];
       sId["120000"] = [icn["AC.IC.CRIMINAL.CIVIL DISTURBANCE"]];
@@ -94,7 +94,7 @@ export default {
       sId["130100"] = [icn["ST.IC.PATROLLING"]];
       sId["130200"] = [icn["ST.IC.PSYCHOLOGICAL OPERATIONS"]];
       sId["130201"] = [
-        icn["ST.IC.RADIO AND TELEVISION PSYCHOLOGICAL OPERATIONS"]
+        icn["ST.IC.RADIO AND TELEVISION PSYCHOLOGICAL OPERATIONS"],
       ];
       sId["130300"] = [icn["ST.IC.SEARCHING"]];
       sId["130400"] = [];
@@ -111,25 +111,25 @@ export default {
       sId["131200"] = [icn["GR.IC.FF.EMERGENCY OPERATION"]];
       sId["131201"] = [
         ms._scale(0.7, icn["GR.IC.FF.EMERGENCY OPERATION"]),
-        icn["AC.M1.EMERGENCY COLLECTION EVACUATION POINT"]
+        icn["AC.M1.EMERGENCY COLLECTION EVACUATION POINT"],
       ];
       sId["131202"] = [icn["ST.IC.FOOD DISTRIBUTION"]];
       sId["131203"] = [
         ms._scale(0.7, icn["GR.IC.FF.EMERGENCY OPERATION"]),
-        icn["AC.M1.EMERGENCY INCIDENT COMMAND CENTER"]
+        icn["AC.M1.EMERGENCY INCIDENT COMMAND CENTER"],
       ];
       sId["131204"] = [
         ms._scale(0.7, icn["GR.IC.FF.EMERGENCY OPERATION"]),
-        icn["AC.M1.EMERGENCY OPERATIONS CENTER"]
+        icn["AC.M1.EMERGENCY OPERATIONS CENTER"],
       ];
       sId["131205"] = [icn["AC.IC.EMERGENCY PUBLIC INFORMATION CENTER"]];
       sId["131206"] = [
         ms._scale(0.7, icn["GR.IC.FF.EMERGENCY OPERATION"]),
-        icn["AC.M1.EMERGENCY SHELTER"]
+        icn["AC.M1.EMERGENCY SHELTER"],
       ];
       sId["131207"] = [
         ms._scale(0.7, icn["GR.IC.FF.EMERGENCY OPERATION"]),
-        icn["AC.M1.EMERGENCY STAGING AREA"]
+        icn["AC.M1.EMERGENCY STAGING AREA"],
       ];
       sId["131208"] = [icn["GR.IC.FF.SUPPLY"], icn["GR.IC.WATER"]];
       sId["131300"] = [icn["GR.IC.EMERGENCY MEDICAL OPERATION"]];
@@ -147,7 +147,7 @@ export default {
       sId["131501"] = [
         icn[
           "GR.IC.BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF) (DEPARTMENT OF JUSTICE)"
-        ]
+        ],
       ];
       sId["131502"] = [icn["GR.IC.FF.BORDER PATROL"]];
       sId["131503"] = [icn["GR.IC.FF.CUSTOMS SERVICE"]];
@@ -194,7 +194,7 @@ export default {
       sId["160400"] = [icn["ST.IC.KNOWN INSURGENT VEHICLE"]];
       sId["160500"] = [
         icn["ST.IC.EXPLOSION"],
-        ms._scale(0.7, icn["ST.IC.KNOWN INSURGENT VEHICLE"])
+        ms._scale(0.7, icn["ST.IC.KNOWN INSURGENT VEHICLE"]),
       ];
       sId["170000"] = [icn["ST.IC.NATURAL EVENT"]];
       sId["170100"] = [icn["ST.IC.GEOLOGIC"]];
@@ -220,7 +220,7 @@ export default {
       sId["180100"] = [
         icn["ST.IC.INDIVIDUAL"],
         icn["ST.M1.LEADER"],
-        icn["ST.M2.RELIGIOUS"]
+        icn["ST.M2.RELIGIOUS"],
       ];
       sId["180200"] = [icn["ST.IC.INDIVIDUAL"], icn["ST.M1.SPEAKER"]];
       sId["180300"] = [icn["GR.IC.ISOLATED PERSONNEL"]];
@@ -252,5 +252,5 @@ export default {
       sIdm2["01"] = [icn["GR.M2.CYBERSPACE"]];
       sIdm2["02"] = [icn["GR.M2.SECURITY FORCE ASSISTANCE"]];
     }
-  }
+  },
 };

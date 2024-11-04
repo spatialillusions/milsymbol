@@ -16,7 +16,7 @@ export function BBox(box) {
     getSize: function() {
       return {
         height: this.y2 - this.y1,
-        width: this.x2 - this.x1
+        width: this.x2 - this.x1,
       };
     },
     merge: function(box) {
@@ -25,6 +25,6 @@ export function BBox(box) {
       this.x2 = box.x2 >= this.x2 ? box.x2 : this.x2;
       this.y2 = box.y2 >= this.y2 ? box.y2 : this.y2;
       return this;
-    }
+    },
   };
 }

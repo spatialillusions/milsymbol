@@ -69,5 +69,5 @@ export default {
       sIdm2["11"] = [icn["SP.M2.REFUEL"]];
       sIdm2["12"] = [icn["SP.M2.TUG"]];
     }
-  }
+  },
 };

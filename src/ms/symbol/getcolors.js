@@ -55,7 +55,7 @@ export default function getColors() {
     iconFillColor: baseIconFillColor,
     none: baseColorNone,
     black: baseColorBlack,
-    white: baseColorWhite
+    white: baseColorWhite,
   };
   //console.info(baseFrameColor);
   //Turn of the frame

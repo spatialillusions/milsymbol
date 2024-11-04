@@ -28,49 +28,49 @@ export default {
       sId["110201"] = [icn["GR.EQ.MACHINE GUN"], icn["GR.EQ.SHORT RANGE"]];
       sId["110202"] = [
         icn["GR.EQ.MACHINE GUN"],
-        icn["GR.EQ.INTERMEDIATE RANGE"]
+        icn["GR.EQ.INTERMEDIATE RANGE"],
       ];
       sId["110203"] = [icn["GR.EQ.MACHINE GUN"], icn["GR.EQ.LONG RANGE"]];
       sId["110300"] = [icn["GR.EQ.GRENADE LAUNCHER"]];
       sId["110301"] = [
         icn["GR.EQ.GRENADE LAUNCHER"],
-        ms._translate(0, 20, icn["GR.EQ.SHORT RANGE"])
+        ms._translate(0, 20, icn["GR.EQ.SHORT RANGE"]),
       ];
       sId["110302"] = [
         icn["GR.EQ.GRENADE LAUNCHER"],
-        ms._translate(0, 20, icn["GR.EQ.INTERMEDIATE RANGE"])
+        ms._translate(0, 20, icn["GR.EQ.INTERMEDIATE RANGE"]),
       ];
       sId["110303"] = [
         icn["GR.EQ.GRENADE LAUNCHER"],
-        ms._translate(0, 20, icn["GR.EQ.LONG RANGE"])
+        ms._translate(0, 20, icn["GR.EQ.LONG RANGE"]),
       ];
       sId["110400"] = [icn["GR.EQ.FLAME THROWER"]];
       sId["110500"] = [icn["GR.EQ.AIR DEFENCE GUN"]];
       sId["110501"] = [icn["GR.EQ.AIR DEFENCE GUN"], icn["GR.EQ.SHORT RANGE"]];
       sId["110502"] = [
         icn["GR.EQ.AIR DEFENCE GUN"],
-        icn["GR.EQ.INTERMEDIATE RANGE"]
+        icn["GR.EQ.INTERMEDIATE RANGE"],
       ];
       sId["110503"] = [icn["GR.EQ.AIR DEFENCE GUN"], icn["GR.EQ.LONG RANGE"]];
       sId["110600"] = [icn["GR.EQ.ANTITANK GUN"]];
       sId["110601"] = [icn["GR.EQ.ANTITANK GUN"], icn["GR.EQ.SHORT RANGE"]];
       sId["110602"] = [
         icn["GR.EQ.ANTITANK GUN"],
-        icn["GR.EQ.INTERMEDIATE RANGE"]
+        icn["GR.EQ.INTERMEDIATE RANGE"],
       ];
       sId["110603"] = [icn["GR.EQ.ANTITANK GUN"], icn["GR.EQ.LONG RANGE"]];
       sId["110700"] = [icn["GR.EQ.DIRECT FIRE GUN"]];
       sId["110701"] = [icn["GR.EQ.DIRECT FIRE GUN"], icn["GR.EQ.SHORT RANGE"]];
       sId["110702"] = [
         icn["GR.EQ.DIRECT FIRE GUN"],
-        icn["GR.EQ.INTERMEDIATE RANGE"]
+        icn["GR.EQ.INTERMEDIATE RANGE"],
       ];
       sId["110703"] = [icn["GR.EQ.DIRECT FIRE GUN"], icn["GR.EQ.LONG RANGE"]];
       sId["110800"] = [icn["GR.EQ.RECOILLESS GUN"]];
       sId["110801"] = [icn["GR.EQ.RECOILLESS GUN"], icn["GR.EQ.SHORT RANGE"]];
       sId["110802"] = [
         icn["GR.EQ.RECOILLESS GUN"],
-        icn["GR.EQ.INTERMEDIATE RANGE"]
+        icn["GR.EQ.INTERMEDIATE RANGE"],
       ];
       sId["110803"] = [icn["GR.EQ.RECOILLESS GUN"], icn["GR.EQ.LONG RANGE"]];
       sId["110900"] = [icn["GR.EQ.HOWITZER"]];
@@ -81,79 +81,79 @@ export default {
       sId["111001"] = [icn["GR.EQ.MISSILE LAUNCHER"], icn["GR.EQ.SHORT RANGE"]];
       sId["111002"] = [
         icn["GR.EQ.MISSILE LAUNCHER"],
-        icn["GR.EQ.INTERMEDIATE RANGE"]
+        icn["GR.EQ.INTERMEDIATE RANGE"],
       ];
       sId["111003"] = [icn["GR.EQ.MISSILE LAUNCHER"], icn["GR.EQ.LONG RANGE"]];
       sId["111100"] = [
-        icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"]
+        icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
       ];
       sId["111101"] = [
         icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
-        icn["GR.EQ.SHORT RANGE"]
+        icn["GR.EQ.SHORT RANGE"],
       ];
       sId["111102"] = [
         icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
         icn["GR.EQ.SHORT RANGE"],
-        icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR"]
+        icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR"],
       ];
       sId["111103"] = [
         icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
         icn["GR.EQ.SHORT RANGE"],
-        icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR"]
+        icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR"],
       ];
       sId["111104"] = [
         icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
-        icn["GR.EQ.INTERMEDIATE RANGE"]
+        icn["GR.EQ.INTERMEDIATE RANGE"],
       ];
       sId["111105"] = [
         icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
         icn["GR.EQ.INTERMEDIATE RANGE"],
-        icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR"]
+        icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR"],
       ];
       sId["111106"] = [
         icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
         icn["GR.EQ.INTERMEDIATE RANGE"],
-        icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR"]
+        icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR"],
       ];
       sId["111107"] = [
         icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
-        icn["GR.EQ.LONG RANGE"]
+        icn["GR.EQ.LONG RANGE"],
       ];
       sId["111108"] = [
         icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
         icn["GR.EQ.LONG RANGE"],
-        icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR"]
+        icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR"],
       ];
       sId["111109"] = [
         icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR"],
         icn["GR.EQ.LONG RANGE"],
-        icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR"]
+        icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR"],
       ];
       sId["111200"] = [icn["GR.EQ.ANTITANK MISSILE LAUNCHER"]];
       sId["111201"] = [
         icn["GR.EQ.ANTITANK MISSILE LAUNCHER"],
-        icn["GR.EQ.SHORT RANGE"]
+        icn["GR.EQ.SHORT RANGE"],
       ];
       sId["111202"] = [
         icn["GR.EQ.ANTITANK MISSILE LAUNCHER"],
-        icn["GR.EQ.INTERMEDIATE RANGE"]
+        icn["GR.EQ.INTERMEDIATE RANGE"],
       ];
       sId["111203"] = [
         icn["GR.EQ.ANTITANK MISSILE LAUNCHER"],
-        icn["GR.EQ.LONG RANGE"]
+        icn["GR.EQ.LONG RANGE"],
       ];
       sId["111300"] = [icn["GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER"]];
       sId["111301"] = [
         icn["GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER"],
-        icn["GR.EQ.SHORT RANGE"]
+        icn["GR.EQ.SHORT RANGE"],
       ];
       sId["111302"] = [
         icn["GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER"],
-        icn["GR.EQ.INTERMEDIATE RANGE"]
+        icn["GR.EQ.INTERMEDIATE RANGE"],
       ];
       sId["111303"] = [
         icn["GR.EQ.SURFACE-TO-SURFACE MISSILE LAUNCHER"],
-        icn["GR.EQ.LONG RANGE"]
+        icn["GR.EQ.LONG RANGE"],
       ];
       sId["111400"] = [icn["GR.EQ.MORTAR"]];
       sId["111401"] = [icn["GR.EQ.MORTAR"], icn["GR.EQ.SHORT RANGE"]];
@@ -162,41 +162,41 @@ export default {
       sId["111500"] = [icn["GR.EQ.SINGLE ROCKET LAUNCHER"]];
       sId["111501"] = [
         icn["GR.EQ.SINGLE ROCKET LAUNCHER"],
-        icn["GR.EQ.SHORT RANGE"]
+        icn["GR.EQ.SHORT RANGE"],
       ];
       sId["111502"] = [
         icn["GR.EQ.SINGLE ROCKET LAUNCHER"],
-        icn["GR.EQ.INTERMEDIATE RANGE"]
+        icn["GR.EQ.INTERMEDIATE RANGE"],
       ];
       sId["111503"] = [
         icn["GR.EQ.SINGLE ROCKET LAUNCHER"],
-        icn["GR.EQ.LONG RANGE"]
+        icn["GR.EQ.LONG RANGE"],
       ];
       sId["111600"] = [icn["GR.EQ.MULTIPLE ROCKET LAUNCHER"]];
       sId["111601"] = [
         icn["GR.EQ.MULTIPLE ROCKET LAUNCHER"],
-        ms._translate(0, 10, icn["GR.EQ.SHORT RANGE"])
+        ms._translate(0, 10, icn["GR.EQ.SHORT RANGE"]),
       ];
       sId["111602"] = [
         icn["GR.EQ.MULTIPLE ROCKET LAUNCHER"],
-        ms._translate(0, 10, icn["GR.EQ.INTERMEDIATE RANGE"])
+        ms._translate(0, 10, icn["GR.EQ.INTERMEDIATE RANGE"]),
       ];
       sId["111603"] = [
         icn["GR.EQ.MULTIPLE ROCKET LAUNCHER"],
-        ms._translate(0, 10, icn["GR.EQ.LONG RANGE"])
+        ms._translate(0, 10, icn["GR.EQ.LONG RANGE"]),
       ];
       sId["111700"] = [icn["GR.EQ.ANTITANK ROCKET LAUNCHER"]];
       sId["111701"] = [
         icn["GR.EQ.ANTITANK ROCKET LAUNCHER"],
-        icn["GR.EQ.SHORT RANGE"]
+        icn["GR.EQ.SHORT RANGE"],
       ];
       sId["111702"] = [
         icn["GR.EQ.ANTITANK ROCKET LAUNCHER"],
-        icn["GR.EQ.INTERMEDIATE RANGE"]
+        icn["GR.EQ.INTERMEDIATE RANGE"],
       ];
       sId["111703"] = [
         icn["GR.EQ.ANTITANK ROCKET LAUNCHER"],
-        icn["GR.EQ.LONG RANGE"]
+        icn["GR.EQ.LONG RANGE"],
       ];
       sId["111800"] = [icn["GR.EQ.NON-LETHAL WEAPON"]];
       sId["111900"] = [icn["GR.EQ.TASER"]];
@@ -204,42 +204,42 @@ export default {
       sId["120000"] = [
         icn[
           "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
-        ]
+        ],
       ];
       sId["120100"] = [
         icn[
           "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
         ],
-        icn["GR.EQ.ARMOURED VEHICLE"]
+        icn["GR.EQ.ARMOURED VEHICLE"],
       ];
       sId["120101"] = [icn["GR.EQ.ARMOURED FIGHTING VEHICLE"]];
       sId["120102"] = [
-        icn["GR.EQ.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL"]
+        icn["GR.EQ.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL"],
       ];
       sId["120103"] = [icn["GR.EQ.ARMOURED PERSONNEL CARRIER"]];
       sId["120104"] = [
         icn["GR.EQ.ARMOURED PERSONNEL CARRIER"],
-        icn["GR.EQ.MEDICAL EVACUATION"]
+        icn["GR.EQ.MEDICAL EVACUATION"],
       ];
       sId["120105"] = [icn["GR.IC.ARMOUR"]];
       sId["120106"] = [icn["GR.IC.ARMOUR"], icn["GR.EQ.TANK RECOVERY VEHICLE"]];
       sId["120107"] = [icn["GR.IC.ARMOUR"], icn["GR.EQ.MEDICAL EVACUATION"]];
       sId["120108"] = [
         icn["GR.EQ.ARMOURED PERSONNEL CARRIER"],
-        icn["GR.EQ.TANK RECOVERY VEHICLE"]
+        icn["GR.EQ.TANK RECOVERY VEHICLE"],
       ];
       sId["120109"] = [
         icn["GR.EQ.ARMOURED PERSONNEL CARRIER"],
-        icn["GR.EQ.COMBAT SERVICE SUPPORT VEHICLE"]
+        icn["GR.EQ.COMBAT SERVICE SUPPORT VEHICLE"],
       ];
       sId["120110"] = [
         icn["GR.EQ.ARMOURED FIGHTING VEHICLE"],
-        icn["GR.EQ.CROSS-COUNTRY"]
+        icn["GR.EQ.CROSS-COUNTRY"],
       ];
       sId["120111"] = [
         icn["GR.EQ.ARMOURED FIGHTING VEHICLE"],
         icn["GR.EQ.CROSS-COUNTRY"],
-        icn["GR.IC.FF.RECONNAISSANCE EQUPIMENT"]
+        icn["GR.IC.FF.RECONNAISSANCE EQUPIMENT"],
       ];
       sId["120200"] = [icn["GR.EQ.TANK"]];
       sId["120201"] = [icn["GR.EQ.TANK"], icn["GR.EQ.LIGHT TANK"]];
@@ -249,163 +249,163 @@ export default {
       sId["120301"] = [
         icn["GR.EQ.TANK"],
         icn["GR.EQ.LIGHT TANK"],
-        icn["GR.EQ.TANK RECOVERY VEHICLE"]
+        icn["GR.EQ.TANK RECOVERY VEHICLE"],
       ];
       sId["120302"] = [
         icn["GR.EQ.TANK"],
         icn["GR.EQ.MEDIUM TANK"],
-        icn["GR.EQ.TANK RECOVERY VEHICLE"]
+        icn["GR.EQ.TANK RECOVERY VEHICLE"],
       ];
       sId["120303"] = [
         icn["GR.EQ.TANK"],
         icn["GR.EQ.HEAVY TANK"],
-        icn["GR.EQ.TANK RECOVERY VEHICLE"]
+        icn["GR.EQ.TANK RECOVERY VEHICLE"],
       ];
       sId["130000"] = [
         icn[
           "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
         ],
-        ms._scale(0.7, icn["GR.IC.ENGINEER"])
+        ms._scale(0.7, icn["GR.IC.ENGINEER"]),
       ];
       sId["130100"] = [icn["GR.IN.IC.BRIDGE"]];
       sId["130200"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
-        ms._scale(0.8, icn["GR.IN.IC.BRIDGE"])
+        ms._scale(0.8, icn["GR.IN.IC.BRIDGE"]),
       ];
       sId["130300"] = [icn["GR.IN.IC.BRIDGE"], icn["GR.EQ.FIXED BRIDGE"]];
       sId["130400"] = [icn["GR.IN.IC.BRIDGE"], icn["GR.M2.RIVERINE"]];
       sId["130500"] = [
         icn["GR.IN.IC.BRIDGE"],
-        icn["GR.EQ.FOLDING GIRDER BRIDGE"]
+        icn["GR.EQ.FOLDING GIRDER BRIDGE"],
       ];
       sId["130600"] = [icn["GR.IN.IC.BRIDGE"], icn["GR.EQ.HOLLOW DECK BRIDGE"]];
       sId["130700"] = [icn["GR.IC.DRILLING"]];
       sId["130701"] = [
         ms._scale(0.7, icn["GR.IC.DRILLING"]),
-        icn["GR.EQ.UTILITY VEHICLE"]
+        icn["GR.EQ.UTILITY VEHICLE"],
       ];
       sId["130800"] = [icn["GR.EQ.EARTHMOVER"]];
       sId["130801"] = [icn["GR.EQ.MULTIFUNCTIONAL EARTHMOVER/DIGGER"]];
       sId["130900"] = [icn["GR.EQ.MINE CLEARING EQUIPMENT"]];
       sId["130901"] = [
         icn["GR.EQ.MINE CLEARING EQUIPMENT"],
-        ms._translate(0, -10, icn["GR.EQ.LIMITED CROSS-COUNTRY"])
+        ms._translate(0, -10, icn["GR.EQ.LIMITED CROSS-COUNTRY"]),
       ];
       sId["130902"] = [icn["GR.EQ.MINE CLEARING EQUIPMENT"], icn["GR.EQ.TANK"]];
       sId["130903"] = [
-        icn["GR.EQ.ASSAULT BREACHER VEHICLE (ABV) WITH COMBAT DOZER BLADE"]
+        icn["GR.EQ.ASSAULT BREACHER VEHICLE (ABV) WITH COMBAT DOZER BLADE"],
       ];
       sId["130904"] = [
         icn["GR.M1.ROUTE, RECONNAISSANCE, AND CLEARANCE"],
         icn["GR.IC.ENGINEER UTILITY VEHICLE"],
-        icn["GR.M2.MEDIUM"]
+        icn["GR.M2.MEDIUM"],
       ];
       sId["130905"] = [
         icn["GR.M1.ROUTE, RECONNAISSANCE, AND CLEARANCE"],
         icn["GR.IC.ENGINEER UTILITY VEHICLE"],
-        icn["GR.M2.HEAVY"]
+        icn["GR.M2.HEAVY"],
       ];
       sId["131000"] = [icn["GR.IC.MINE LAYING"]];
       sId["131001"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
-        ms._translate(0, 10, ms._scale(0.7, icn["GR.IC.MINE LAYING"]))
+        ms._translate(0, 10, ms._scale(0.7, icn["GR.IC.MINE LAYING"])),
       ];
       sId["131002"] = [
         icn["GR.EQ.ARMOURED PERSONNEL CARRIER"],
-        icn["GR.EQ.ARMORED CARRIER WITH VOLCANO"]
+        icn["GR.EQ.ARMORED CARRIER WITH VOLCANO"],
       ];
       sId["131003"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
         icn["GR.EQ.LIMITED CROSS-COUNTRY"],
-        icn["GR.EQ.ARMORED CARRIER WITH VOLCANO"]
+        icn["GR.EQ.ARMORED CARRIER WITH VOLCANO"],
       ];
       sId["131100"] = [icn["GR.EQ.DOZER"]];
       sId["131101"] = [icn["GR.EQ.DOZER ARMORED"]];
       sId["131200"] = [
         icn["GR.EQ.ARMOURED PERSONNEL CARRIER"],
-        ms._scale(0.6, icn["GR.IC.ENGINEER"])
+        ms._scale(0.6, icn["GR.IC.ENGINEER"]),
       ];
       sId["131300"] = [
         icn["GR.EQ.ARMOURED PERSONNEL CARRIER"],
         ms._scale(0.6, icn["GR.IC.ENGINEER"]),
-        icn["GR.EQ.ARMOURED PERSONNEL CARRIER ENGINEER RECON VEHICLE"]
+        icn["GR.EQ.ARMOURED PERSONNEL CARRIER ENGINEER RECON VEHICLE"],
       ];
       sId["131400"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
         icn["GR.EQ.LIMITED CROSS-COUNTRY"],
-        icn["GR.EQ.UTILITY VEHICLE BACKHOE"]
+        icn["GR.EQ.UTILITY VEHICLE BACKHOE"],
       ];
       sId["131500"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
         icn["GR.EQ.LIMITED CROSS-COUNTRY"],
-        ms._scale(0.6, icn["GR.IC.ENGINEER"])
+        ms._scale(0.6, icn["GR.IC.ENGINEER"]),
       ];
       sId["131600"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
         icn["GR.EQ.CROSS-COUNTRY"],
-        icn["GR.EQ.UTILITY VEHICLE FERRY TRANSPORTER"]
+        icn["GR.EQ.UTILITY VEHICLE FERRY TRANSPORTER"],
       ];
       sId["140000"] = [];
       sId["140100"] = [icn["GR.EQ.UTILITY VEHICLE"]];
       sId["140200"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
-        icn["GR.EQ.MEDICAL VEHICLE"]
+        icn["GR.EQ.MEDICAL VEHICLE"],
       ];
       sId["140300"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
-        icn["GR.EQ.MEDICAL EVACUATION"]
+        icn["GR.EQ.MEDICAL EVACUATION"],
       ];
       sId["140400"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
-        icn["GR.EQ.MOBILE EMERGENCY PHYSICIAN"]
+        icn["GR.EQ.MOBILE EMERGENCY PHYSICIAN"],
       ];
       sId["140500"] = [icn["GR.EQ.BUS"]];
       sId["140600"] = [icn["GR.EQ.SEMI-TRAILER TRUCK"]];
       sId["140601"] = [
         icn["GR.EQ.SEMI-TRAILER TRUCK"],
-        icn["GR.EQ.UTILITY VEHICLE LIGHT"]
+        icn["GR.EQ.UTILITY VEHICLE LIGHT"],
       ];
       sId["140602"] = [
         icn["GR.EQ.SEMI-TRAILER TRUCK"],
-        icn["GR.EQ.UTILITY VEHICLE MEDIUM"]
+        icn["GR.EQ.UTILITY VEHICLE MEDIUM"],
       ];
       sId["140603"] = [
         icn["GR.EQ.SEMI-TRAILER TRUCK"],
-        icn["GR.EQ.UTILITY VEHICLE HEAVY"]
+        icn["GR.EQ.UTILITY VEHICLE HEAVY"],
       ];
       sId["140700"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
-        icn["GR.EQ.LIMITED CROSS-COUNTRY"]
+        icn["GR.EQ.LIMITED CROSS-COUNTRY"],
       ];
       sId["140800"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
-        icn["GR.EQ.CROSS-COUNTRY"]
+        icn["GR.EQ.CROSS-COUNTRY"],
       ];
       sId["140900"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
-        ms._scale(0.8, icn["GR.IC.FF.CLASS III"])
+        ms._scale(0.8, icn["GR.IC.FF.CLASS III"]),
       ];
       sId["141000"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
-        ms._scale(0.7, icn["GR.IC.WATER"])
+        ms._scale(0.7, icn["GR.IC.WATER"]),
       ];
       sId["141100"] = [
         icn["GR.EQ.WATER VEHICLE"],
-        icn["GR.EQ.LIMITED CROSS-COUNTRY"]
+        icn["GR.EQ.LIMITED CROSS-COUNTRY"],
       ];
       sId["141200"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
-        icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK"]
+        icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK"],
       ];
       sId["141201"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
         icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK"],
-        icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK.LIGHT"]
+        icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK.LIGHT"],
       ];
       sId["141202"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
         icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK"],
-        icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK.HEAVY"]
+        icn["GR.EQ.UTILITY VEHICLE.TOW TRUCK.HEAVY"],
       ];
       sId["150000"] = [];
       sId["150100"] = [icn["GR.EQ.TRAIN LOCOMOTIVE"]];
@@ -414,107 +414,107 @@ export default {
       sId["160100"] = [icn["GR.EQ.CIVILIAN VEHICLE.AUTOMOBILE"]];
       sId["160101"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.AUTOMOBILE"],
-        icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"]
+        icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"],
       ];
       sId["160102"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.AUTOMOBILE"],
-        icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"]
+        icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"],
       ];
       sId["160103"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.AUTOMOBILE"],
-        icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"]
+        icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"],
       ];
       sId["160200"] = [icn["GR.EQ.CIVILIAN VEHICLE.OPEN-BED TRUCK"]];
       sId["160201"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.OPEN-BED TRUCK"],
-        icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"]
+        icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"],
       ];
       sId["160202"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.OPEN-BED TRUCK"],
-        icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"]
+        icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"],
       ];
       sId["160203"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.OPEN-BED TRUCK"],
-        icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"]
+        icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"],
       ];
       sId["160300"] = [
-        icn["GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE"]
+        icn["GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE"],
       ];
       sId["160301"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE"],
-        icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"]
+        icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"],
       ];
       sId["160302"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE"],
-        icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"]
+        icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"],
       ];
       sId["160303"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.MULTIPLE PASSENGER VEHICLE"],
-        icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"]
+        icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"],
       ];
       sId["160400"] = [icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"]];
       sId["160401"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
-        icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"]
+        icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"],
       ];
       sId["160402"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
-        icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"]
+        icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"],
       ];
       sId["160403"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
-        icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"]
+        icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"],
       ];
       sId["160500"] = [icn["GR.EQ.CIVILIAN VEHICLE.JEEP TYPE VEHICLE"]];
       sId["160501"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.JEEP TYPE VEHICLE"],
-        icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"]
+        icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"],
       ];
       sId["160502"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.JEEP TYPE VEHICLE"],
-        icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"]
+        icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"],
       ];
       sId["160503"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.JEEP TYPE VEHICLE"],
-        icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"]
+        icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"],
       ];
       sId["160600"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
-        icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"]
+        icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"],
       ];
       sId["160601"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
         icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"],
-        icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"]
+        icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"],
       ];
       sId["160602"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
         icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"],
-        icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"]
+        icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"],
       ];
       sId["160603"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
         icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"],
-        icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"]
+        icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"],
       ];
       sId["160700"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.OPEN-BED TRUCK"],
-        icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"]
+        icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"],
       ];
       sId["160701"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.OPEN-BED TRUCK"],
         icn["GR.EQ.CIVILIAN VEHICLE.LIGHT"],
-        icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"]
+        icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"],
       ];
       sId["160702"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.OPEN-BED TRUCK"],
         icn["GR.EQ.CIVILIAN VEHICLE.MEDIUM"],
-        icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"]
+        icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"],
       ];
       sId["160703"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.OPEN-BED TRUCK"],
         icn["GR.EQ.CIVILIAN VEHICLE.HEAVY"],
-        icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"]
+        icn["GR.EQ.CIVILIAN VEHICLE.TRAILER"],
       ];
       sId["160800"] = [icn["ST.IC.KNOWN INSURGENT VEHICLE"]];
       sId["160900"] = [icn["ST.IC.KNOWN INSURGENT VEHICLE"], icn["ST.M1.DRUG"]];
@@ -522,7 +522,7 @@ export default {
       sId["170100"] = [
         icn[
           "GR.IC.BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF) (DEPARTMENT OF JUSTICE)"
-        ]
+        ],
       ];
       sId["170200"] = [icn["GR.IC.FF.BORDER PATROL"]];
       sId["170300"] = [icn["GR.IC.FF.CUSTOMS SERVICE"]];
@@ -539,37 +539,37 @@ export default {
         icn[
           "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
         ],
-        icn["GR.EQ.MISSILE SUPPORT"]
+        icn["GR.EQ.MISSILE SUPPORT"],
       ];
       sId["190100"] = [
         icn[
           "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
         ],
-        icn["GR.EQ.MISSILE TRANSLOADER"]
+        icn["GR.EQ.MISSILE TRANSLOADER"],
       ];
       sId["190200"] = [
         icn[
           "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
         ],
-        icn["GR.EQ.MISSILE TRANSPORTER"]
+        icn["GR.EQ.MISSILE TRANSPORTER"],
       ];
       sId["190300"] = [
         icn[
           "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
         ],
-        icn["GR.EQ.MISSILE CRANE/LOADING DEVICE"]
+        icn["GR.EQ.MISSILE CRANE/LOADING DEVICE"],
       ];
       sId["190400"] = [
         icn[
           "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
         ],
-        icn["GR.EQ.MISSILE PROPELLANT TRANSPORTER"]
+        icn["GR.EQ.MISSILE PROPELLANT TRANSPORTER"],
       ];
       sId["190500"] = [
         icn[
           "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
         ],
-        icn["GR.EQ.MISSILE WARHEAD TRANSPORTER"]
+        icn["GR.EQ.MISSILE WARHEAD TRANSPORTER"],
       ];
       sId["200000"] = [];
       sId["200100"] = [icn["GR.IC.FF.BROADCAST TRANSMITTER ANTENNA"]];
@@ -582,12 +582,12 @@ export default {
       sId["200800"] = [
         icn[
           "GR.EQ.GROUND-BASED MIDCOURSE DEFENSE (GMD) FIRE CONTROL (GFC) CENTER"
-        ]
+        ],
       ];
       sId["200900"] = [
         icn[
           "GR.EQ.IN-FLIGHT INTERCEPTOR COMMUNICATIONS SYSTEM (IFICS) DATA TERMINAL (IDT)"
-        ]
+        ],
       ];
       sId["201000"] = [icn["GR.EQ.LASER"]];
       sId["201100"] = [icn["GR.EQ.PSYCHOLOGICAL OPERATIONS EQUIPMENT"]];
@@ -611,7 +611,7 @@ export default {
       sId["230000"] = [icn["GR.IC.FF.EMERGENCY OPERATION"]];
       sId["230100"] = [
         icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
-        icn["GR.M1.MEDEVAC"]
+        icn["GR.M1.MEDEVAC"],
       ];
       sId["230200"] = [icn["GR.IC.FIRE PROTECTION"]];
       sId["240000"] = [icn["GR.IC.MANUAL TRACK"]];
@@ -871,7 +871,7 @@ export default {
         230000: 135,
         230100: 132.5,
         230200: 120,
-        240000: 118.75
+        240000: 118.75,
       };
       for (const key in equipmentBottom) {
         if (!equipmentBottom.hasOwnProperty(key)) continue;
@@ -879,9 +879,9 @@ export default {
           x1: 50,
           x2: 150,
           y1: 50,
-          y2: equipmentBottom[key]
+          y2: equipmentBottom[key],
         };
       }
     }
-  }
+  },
 };

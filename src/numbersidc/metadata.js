@@ -16,7 +16,7 @@ export function metadata(ms, metadata, mapping) {
     "3": "Friend",
     "4": "Neutral",
     "5": "Hostile",
-    "6": "Hostile"
+    "6": "Hostile",
   };
 
   if (version >= 13 && standardIdentity2 == 5) {
@@ -44,7 +44,7 @@ export function metadata(ms, metadata, mapping) {
     "52": "Ground",
     "53": "Sea",
     "54": "Subsurface",
-    "60": "Ground"
+    "60": "Ground",
   };
 
   const functionid = (metadata.functionid = this.options.sidc.substr(10, 10));

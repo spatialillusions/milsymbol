@@ -89,14 +89,14 @@ export default function setOptions() {
         parseFloat(this.style.strokeWidth) +
         parseFloat(this.style.outlineWidth)) *
         this.style.size) /
-      100
+      100,
   };
   //If it is a headquarters the anchor should be at the end of the staf
   if (this.metadata.headquarters) {
     const hqStaffLength = this.style.hqStaffLength || ms._hqStaffLength;
     anchor = {
       x: this.metadata.baseGeometry.bbox.x1,
-      y: this.metadata.baseGeometry.bbox.y2 + hqStaffLength
+      y: this.metadata.baseGeometry.bbox.y2 + hqStaffLength,
     };
   }
 
@@ -136,7 +136,7 @@ export default function setOptions() {
         parseFloat(this.style.strokeWidth) +
         parseFloat(this.style.outlineWidth)) *
         this.style.size) /
-      100
+      100,
   };
 
   //if (ms._autoSVG) this.asSVG();

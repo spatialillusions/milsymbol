@@ -40,8 +40,8 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 30,
       fontsize: 45,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //TACGRP.C2GM.GNL.PNT.REFPNT.PNTINR
   sidc["G-G-GPWA--"] = {}; //TACGRP.C2GM.GNL.PNT.WPN.AIMPNT
   sidc["G-G-GPWD--"] = {}; //TACGRP.C2GM.GNL.PNT.WPN.DRPPNT
@@ -58,8 +58,8 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 115,
       fontsize: 45,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //TACGRP.C2GM.GNL.PNT.HBR
   sidc["G-G-GPHQ--"] = {}; //TACGRP.C2GM.GNL.PNT.HBR.PNTQ
   sidc["G-G-GPHA--"] = {}; //TACGRP.C2GM.GNL.PNT.HBR.PNTA
@@ -98,7 +98,7 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     additionalInformation1: {
       stroke: false,
@@ -106,24 +106,24 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: -20,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //TACGRP.C2GM.GNL.PNT.ACTPNT
   sidc["G-G-GPPK--"] = {
     additionalInformation: {
@@ -131,24 +131,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
   sidc["G-G-GPPC--"] = {
     uniqueDesignation: {
@@ -157,8 +157,8 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 40,
       fontsize: 45,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
   sidc["G-G-GPPO--"] = {}; //TACGRP.C2GM.GNL.PNT.ACTPNT.CRDPNT
   sidc["G-G-GPPD--"] = {
@@ -168,8 +168,8 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 115,
       fontsize: 45,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //TACGRP.C2GM.GNL.PNT.ACTPNT.DCNPNT
   sidc["G-G-GPPL--"] = {
     additionalInformation: {
@@ -177,24 +177,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
   sidc["G-G-GPPP--"] = {
     additionalInformation: {
@@ -202,24 +202,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
   sidc["G-G-GPPR--"] = {
     additionalInformation: {
@@ -227,24 +227,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
   sidc["G-G-GPPE--"] = {
     additionalInformation: {
@@ -252,24 +252,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
   sidc["G-G-GPPS--"] = {
     additionalInformation: {
@@ -277,24 +277,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
   sidc["G-G-GPPA--"] = {
     additionalInformation: {
@@ -302,24 +302,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
   sidc["G-G-GPPW--"] = {
     uniqueDesignation: {
@@ -327,8 +327,8 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 140,
       y: 117,
-      fontsize: 50
-    }
+      fontsize: 50,
+    },
   }; //TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
 
   //TACGRP.C2GM.GNL.PNT.ACTPNT.WAP
@@ -361,8 +361,8 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 135,
       fontsize: 45,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
 
   //TACGRP.C2GM.AVN.PNT.COMMCP
@@ -373,8 +373,8 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 135,
       fontsize: 45,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
 
   sidc["G-G-APU---"] = {}; //TACGRP.C2GM.AVN.PNT.PUP
@@ -388,8 +388,8 @@ export default function tacticalPoints(sidc) {
       x: 115,
       y: 85,
       fontsize: 45,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
 
   sidc["G-G-DPO---"] = {}; //TACGRP.C2GM.DEF.PNT.OBSPST
@@ -404,24 +404,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   sidc["G-M-OAOF--"] = {}; //TACGRP.MOBSU.OBST.ATO.TDTSM.FIXPFD
@@ -441,7 +441,7 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: 55,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: [
       {
@@ -450,7 +450,7 @@ export default function tacticalPoints(sidc) {
         x: 35,
         y: 110,
         fontsize: 30,
-        fontweight: "bold"
+        fontweight: "bold",
       },
       {
         stroke: false,
@@ -458,10 +458,10 @@ export default function tacticalPoints(sidc) {
         x: 165,
         y: 110,
         fontsize: 30,
-        fontweight: "bold"
-      }
+        fontweight: "bold",
+      },
     ],
-    dtg: { stroke: false, textanchor: "middle", x: 100, y: 175, fontsize: 40 }
+    dtg: { stroke: false, textanchor: "middle", x: 100, y: 175, fontsize: 40 },
   };
   //TACGRP.MOBSU.OBST.AVN.TWR.LOW
   sidc["G-M-OHTL--"] = {
@@ -471,8 +471,8 @@ export default function tacticalPoints(sidc) {
       x: 120,
       y: 60,
       fontsize: 40,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
   //TACGRP.MOBSU.OBST.AVN.TWR.HIGH
   sidc["G-M-OHTH--"] = {
@@ -482,8 +482,8 @@ export default function tacticalPoints(sidc) {
       x: 115,
       y: 60,
       fontsize: 40,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
 
   //TACGRP.MOBSU.OBSTBP.CSGSTE.ERP
@@ -493,24 +493,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   sidc["G-M-SE----"] = {}; //TACGRP.MOBSU.SU.ESTOF
@@ -524,7 +524,7 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 150,
       y: 20,
-      fontsize: 35
+      fontsize: 35,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: 20, fontsize: 35 },
     hostile: {
@@ -532,21 +532,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 150,
       y: 100,
-      fontsize: 35
+      fontsize: 35,
     },
     location: {
       stroke: false,
       textanchor: "middle",
       x: 100,
       y: 140,
-      fontsize: 35
+      fontsize: 35,
     },
     quantity: {
       stroke: false,
       textanchor: "middle",
       x: 100,
       y: -25,
-      fontsize: 35
+      fontsize: 35,
     },
     type: { stroke: false, textanchor: "end", x: 50, y: 60, fontsize: 35 },
     uniqueDesignation: {
@@ -554,8 +554,8 @@ export default function tacticalPoints(sidc) {
       textanchor: "end",
       x: 50,
       y: 100,
-      fontsize: 35
-    }
+      fontsize: 35,
+    },
   };
   sidc["G-M-NF----"] = {}; //TACGRP.MOBSU.CBRN.FAOTP
   //TACGRP.MOBSU.CBRN.REEVNT.BIO
@@ -565,7 +565,7 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 150,
       y: 20,
-      fontsize: 35
+      fontsize: 35,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: 20, fontsize: 35 },
     hostile: {
@@ -573,29 +573,29 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 150,
       y: 100,
-      fontsize: 35
+      fontsize: 35,
     },
     location: {
       stroke: false,
       textanchor: "middle",
       x: 100,
       y: 140,
-      fontsize: 35
+      fontsize: 35,
     },
     quantity: {
       stroke: false,
       textanchor: "middle",
       x: 100,
       y: -25,
-      fontsize: 35
+      fontsize: 35,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "end",
       x: 50,
       y: 100,
-      fontsize: 35
-    }
+      fontsize: 35,
+    },
   };
   //TACGRP.MOBSU.CBRN.REEVNT.CML
   sidc["G-M-NEC---"] = {
@@ -604,7 +604,7 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 150,
       y: 20,
-      fontsize: 35
+      fontsize: 35,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: 20, fontsize: 35 },
     hostile: {
@@ -612,29 +612,29 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 150,
       y: 100,
-      fontsize: 35
+      fontsize: 35,
     },
     location: {
       stroke: false,
       textanchor: "middle",
       x: 100,
       y: 140,
-      fontsize: 35
+      fontsize: 35,
     },
     quantity: {
       stroke: false,
       textanchor: "middle",
       x: 100,
       y: -25,
-      fontsize: 35
+      fontsize: 35,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "end",
       x: 50,
       y: 100,
-      fontsize: 35
-    }
+      fontsize: 35,
+    },
   };
   //TACGRP.MOBSU.CBRN.DECONP.USP
   sidc["G-M-NDP---"] = {
@@ -643,24 +643,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.MOBSU.CBRN.DECONP.ALTUSP
@@ -670,24 +670,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
   //TACGRP.MOBSU.CBRN.DECONP.TRP
   sidc["G-M-NDT---"] = {
@@ -696,24 +696,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.MOBSU.CBRN.DECONP.EQT
@@ -723,24 +723,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.MOBSU.CBRN.DECONP.EQTTRP
@@ -750,24 +750,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.MOBSU.CBRN.DECONP.OPDECN
@@ -777,24 +777,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
   //TACGRP.MOBSU.CBRN.DECONP.TRGH
   sidc["G-M-NDD---"] = {
@@ -803,24 +803,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
   //TACGRP.FSUPP.PNT.TGT.PTGT
   sidc["G-F-PTS---"] = {
@@ -829,22 +829,22 @@ export default function tacticalPoints(sidc) {
       textanchor: "start",
       x: 120,
       y: 145,
-      fontsize: 40
+      fontsize: 40,
     },
     altitudeDepth: {
       stroke: false,
       textanchor: "end",
       x: 80,
       y: 145,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 120,
       y: 80,
-      fontsize: 40
-    }
+      fontsize: 40,
+    },
   };
 
   //TACGRP.FSUPP.PNT.TGT.NUCTGT
@@ -855,8 +855,8 @@ export default function tacticalPoints(sidc) {
       x: 120,
       y: 80,
       fontsize: 40,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
 
   //TACGRP.FSUPP.PNT.C2PNT.FSS
@@ -867,8 +867,8 @@ export default function tacticalPoints(sidc) {
       x: 125,
       y: 115,
       fontsize: 40,
-      fontweight: "bold"
-    }
+      fontweight: "bold",
+    },
   }; //TACGRP.C2GM.GNL.PNT.ACTPNT.CONPNT
 
   //TACGRP.FSUPP.PNT.C2PNT.SCP
@@ -878,24 +878,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
   //TACGRP.FSUPP.PNT.C2PNT.FP
   sidc["G-F-PCB---"] = {
@@ -904,24 +904,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.FSUPP.PNT.C2PNT.RP
@@ -931,24 +931,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.FSUPP.PNT.C2PNT.HP
@@ -958,24 +958,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.FSUPP.PNT.C2PNT.LP
@@ -985,24 +985,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
   //TACGRP.CSS.PNT.AEP
   sidc["G-S-PX----"] = {
@@ -1011,21 +1011,21 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation1: {
       stroke: false,
@@ -1033,10 +1033,10 @@ export default function tacticalPoints(sidc) {
       x: 100,
       y: 10,
       fontsize: 35,
-      fontweight: "bold"
+      fontweight: "bold",
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   }; //TACGRP.C2GM.GNL.PNT.ACTPNT
   //TACGRP.CSS.PNT.CBNP
   sidc["G-S-PC----"] = {
@@ -1045,24 +1045,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.CCP
@@ -1072,24 +1072,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.CVP
@@ -1099,24 +1099,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.DCP
@@ -1126,24 +1126,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.EPWCP
@@ -1153,24 +1153,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.LRP
@@ -1180,24 +1180,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.MCP
@@ -1207,24 +1207,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.RRRP
@@ -1234,24 +1234,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.ROM
@@ -1261,24 +1261,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.TCP
@@ -1288,24 +1288,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.TTP
@@ -1315,24 +1315,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.UMC
@@ -1342,24 +1342,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   sidc["G-S-PS----"] = {}; //TACGRP.CSS.PNT.SPT
@@ -1370,24 +1370,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.SPT.CLS1
@@ -1397,24 +1397,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.SPT.CLS2
@@ -1424,24 +1424,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.SPT.CLS3
@@ -1451,24 +1451,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.SPT.CLS4
@@ -1478,24 +1478,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.SPT.CLS5
@@ -1505,24 +1505,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.SPT.CLS6
@@ -1532,24 +1532,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.SPT.CLS7
@@ -1559,24 +1559,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
 
   //TACGRP.CSS.PNT.SPT.CLS8
@@ -1586,24 +1586,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
   //TACGRP.CSS.PNT.SPT.CLS9
   sidc["G-S-PSI---"] = {
@@ -1612,24 +1612,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
   //TACGRP.CSS.PNT.SPT.CLS10
   sidc["G-S-PSJ---"] = {
@@ -1638,24 +1638,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
   sidc["G-S-PA----"] = {}; //TACGRP.CSS.PNT.AP
   //TACGRP.CSS.PNT.AP.ASP
@@ -1665,24 +1665,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
   //TACGRP.CSS.PNT.AP.ATP
   sidc["G-S-PAT---"] = {
@@ -1691,24 +1691,24 @@ export default function tacticalPoints(sidc) {
       textanchor: "middle",
       x: 100,
       y: -70,
-      fontsize: 40
+      fontsize: 40,
     },
     hostile: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: 45,
-      fontsize: 40
+      fontsize: 40,
     },
     uniqueDesignation: {
       stroke: false,
       textanchor: "start",
       x: 150,
       y: -30,
-      fontsize: 40
+      fontsize: 40,
     },
     dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+    dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
   };
   sidc["G-O-ED----"] = {}; //TACGRP.OTH.ER.DTHAC
   sidc["G-O-EP----"] = {}; //TACGRP.OTH.ER.PIW

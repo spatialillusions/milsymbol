@@ -20,21 +20,21 @@ export default {
     sId["S-S-CLLL--"] = [icn["SE.IC.LITTORAL COMBATANT SHIP"]];
     sId["S-S-CLLLAS"] = [
       icn["SE.IC.LITTORAL COMBATANT SHIP"],
-      icn["SE.M2.ANTISUBMARINE WARFARE"]
+      icn["SE.M2.ANTISUBMARINE WARFARE"],
     ];
     sId["S-S-CLLLMI"] = [
       icn["SE.IC.LITTORAL COMBATANT SHIP"],
-      icn["SE.M2.MINE WARFARE"]
+      icn["SE.M2.MINE WARFARE"],
     ];
     sId["S-S-CLLLSU"] = [
       icn["SE.IC.LITTORAL COMBATANT SHIP"],
-      icn["SE.M2.SURFACE WARFARE"]
+      icn["SE.M2.SURFACE WARFARE"],
     ];
     sId["S-S-CA----"] = [icn["SE.IC.AMPHIBIOUS WARFARE SHIP"]];
     sId["S-S-CALA--"] = [
       _STD2525
         ? icn["SE.IC.AMPHIBIOUS ASSAULT"]
-        : icn["SE.IC.AMPHIBIOUS ASSAULT SHIP, GENERAL"]
+        : icn["SE.IC.AMPHIBIOUS ASSAULT SHIP, GENERAL"],
     ];
     sId["S-S-CALS--"] = [icn["SE.IC.LANDING SHIP"]];
     sId["S-S-CALSM-"] = [icn["SE.IC.LANDING SHIP"], icn["SE.M2.MEDIUM"]];
@@ -68,19 +68,19 @@ export default {
     sId["S-S-CU----"] = [icn["SE.IC.UNMANNED SURFACE WATER VEHICLE"]];
     sId["S-S-CUM---"] = [
       icn["SE.IC.UNMANNED SURFACE WATER VEHICLE"],
-      icn["SE.M1.MINE COUNTERMEASURES"]
+      icn["SE.M1.MINE COUNTERMEASURES"],
     ];
     sId["S-S-CUS---"] = [
       icn["SE.IC.UNMANNED SURFACE WATER VEHICLE"],
-      icn["SE.M1.ANTISUBMARINE WARFARE"]
+      icn["SE.M1.ANTISUBMARINE WARFARE"],
     ];
     sId["S-S-CUN---"] = [
       icn["SE.IC.UNMANNED SURFACE WATER VEHICLE"],
-      icn["SE.M1.SURFACE WARFARE"]
+      icn["SE.M1.SURFACE WARFARE"],
     ];
     sId["S-S-CUR---"] = [
       icn["SE.IC.UNMANNED SURFACE WATER VEHICLE"],
-      icn["SE.M1.REMOTE MULTI-MISSION VEHIHLE"]
+      icn["SE.M1.REMOTE MULTI-MISSION VEHIHLE"],
     ];
     sId["S-S-N-----"] = [icn["SE.IC.NONCOMBATANT"]];
     sId["S-S-NR----"] = [icn["SE.IC.AUXILIARY SHIP"]];
@@ -101,7 +101,7 @@ export default {
     sId["S-S-XME---"] = sId["S-S-XMR---"] = [icn["SE.IC.ROLL ON-ROLL OFF"]];
     sId["S-S-XMO---"] = [icn["SE.IC.OILER/TANKER"]];
     sId["S-S-XMT---"] = sId["S-S-XMTU--"] = [
-      icn["SE.IC.TUG, OCEAN GOING CIVILIAN"]
+      icn["SE.IC.TUG, OCEAN GOING CIVILIAN"],
     ];
     sId["S-S-XMF---"] = [icn["SE.IC.FERRY"]];
     sId["S-S-XMP---"] = [icn["SE.IC.PASSENGER SHIP"]];
@@ -117,7 +117,7 @@ export default {
     sId["S-S-XH----"] = [icn["SE.IC.HOVERCRAFT CIVILIAN"]];
     sId["S-S-XA----"] = [icn["SE.IC.LEISURE CRAFT, MOTORIZED"]];
     sId["S-S-XAR---"] = [
-      icn["SE.IC.LEISURE CRAFT, MOTORIZED, RIGID-HULL INFLATABLE BOAT"]
+      icn["SE.IC.LEISURE CRAFT, MOTORIZED, RIGID-HULL INFLATABLE BOAT"],
     ];
     sId["S-S-XAS---"] = [icn["SE.IC.LEISURE CRAFT, MOTORIZED, SPEEDBOAT"]];
     sId["S-S-XP----"] = [icn["SE.IC.LEISURE CRAFT, JETSKI"]];
@@ -130,5 +130,5 @@ export default {
     sId["S-S-ZM----"] = [icn["SE.IC.SEA MINELIKE"]];
     sId["S-S-ZN----"] = [icn["SE.IC.NAVIGATIONAL"]];
     sId["S-S-ZI----"] = [icn["SE.IC.ICEBERG"]];
-  }
+  },
 };

@@ -2,7 +2,7 @@ import {
   defaultProperties,
   text,
   textm1,
-  textm2
+  textm2,
 } from "./iconparts-functions.js";
 
 export default function(
@@ -43,12 +43,12 @@ export default function(
     type: "path",
     d:
       "m 93,120 14,0 0,0 m -7,-27 0,27 m 2,-25 8,2 -5,5 13,3 m -20,-10 -8,2 5,5 -14,3 m 21,-13 8,-2 -5,-5 13,-3 m -37,0 14,3 -5,5 8,2",
-    fill: false
+    fill: false,
   };
   icn["SI.IC.RADAR"] = {
     type: "path",
     d: "m 115,90 -15,15 0,-15 -15,15 M 80,85 c 0,25 15,35 35,35",
-    fill: false
+    fill: false,
   };
   icn["SI.I.JAMMER / ELECTRONIC COUNTER-MEASURES"] = text("J");
 
@@ -123,7 +123,7 @@ export default function(
     x: 68,
     y: 110,
     fontsize: 25,
-    text: "A"
+    text: "A",
   };
   icn["SI.M1.BRAVO"] = {
     type: "text",
@@ -131,7 +131,7 @@ export default function(
     x: 68,
     y: 110,
     fontsize: 25,
-    text: "B"
+    text: "B",
   };
   icn["SI.M1.CHARLIE"] = {
     type: "text",
@@ -139,7 +139,7 @@ export default function(
     x: 68,
     y: 110,
     fontsize: 25,
-    text: "C"
+    text: "C",
   };
   icn["SI.M1.DELTA"] = {
     type: "text",
@@ -147,7 +147,7 @@ export default function(
     x: 68,
     y: 110,
     fontsize: 25,
-    text: "D"
+    text: "D",
   };
   icn["SI.M1.ECHO"] = {
     type: "text",
@@ -155,7 +155,7 @@ export default function(
     x: 68,
     y: 110,
     fontsize: 25,
-    text: "E"
+    text: "E",
   };
   icn["SI.M1.FOXTROT"] = {
     type: "text",
@@ -163,7 +163,7 @@ export default function(
     x: 68,
     y: 110,
     fontsize: 25,
-    text: "F"
+    text: "F",
   };
   icn["SI.M1.HOTEL"] = {
     type: "text",
@@ -171,7 +171,7 @@ export default function(
     x: 68,
     y: 110,
     fontsize: 25,
-    text: "H"
+    text: "H",
   };
   icn["SI.M1.INDY"] = {
     type: "text",
@@ -179,7 +179,7 @@ export default function(
     x: 68,
     y: 110,
     fontsize: 25,
-    text: "I"
+    text: "I",
   };
   icn["SI.M1.MIKE"] = {
     type: "text",
@@ -187,7 +187,7 @@ export default function(
     x: 68,
     y: 110,
     fontsize: 25,
-    text: "M"
+    text: "M",
   };
   icn["SI.M1.OSCAR"] = {
     type: "text",
@@ -195,7 +195,7 @@ export default function(
     x: 68,
     y: 110,
     fontsize: 25,
-    text: "O"
+    text: "O",
   };
   icn["SI.M1.PAPA"] = {
     type: "text",
@@ -203,7 +203,7 @@ export default function(
     x: 68,
     y: 110,
     fontsize: 25,
-    text: "P"
+    text: "P",
   };
   icn["SI.M1.SIERRA"] = {
     type: "text",
@@ -211,7 +211,7 @@ export default function(
     x: 68,
     y: 110,
     fontsize: 25,
-    text: "S"
+    text: "S",
   };
   icn["SI.M1.TANGO"] = {
     type: "text",
@@ -219,7 +219,7 @@ export default function(
     x: 68,
     y: 110,
     fontsize: 25,
-    text: "T"
+    text: "T",
   };
   icn["SI.M1.UNIFORM"] = {
     type: "text",
@@ -227,7 +227,7 @@ export default function(
     x: 68,
     y: 110,
     fontsize: 25,
-    text: "U"
+    text: "U",
   };
   icn["SI.M2.ALPHA"] = {
     type: "text",
@@ -235,7 +235,7 @@ export default function(
     x: 132,
     y: 110,
     fontsize: 25,
-    text: "A"
+    text: "A",
   };
   icn["SI.M2.BRAVO"] = {
     type: "text",
@@ -243,7 +243,7 @@ export default function(
     x: 132,
     y: 110,
     fontsize: 25,
-    text: "B"
+    text: "B",
   };
   icn["SI.M2.CHARLIE"] = {
     type: "text",
@@ -251,7 +251,7 @@ export default function(
     x: 132,
     y: 110,
     fontsize: 25,
-    text: "C"
+    text: "C",
   };
   icn["SI.M2.CYBER"] = textm2("CYB");
   icn["SI.M2.DELTA"] = {
@@ -260,7 +260,7 @@ export default function(
     x: 132,
     y: 110,
     fontsize: 25,
-    text: "D"
+    text: "D",
   };
   icn["SI.M2.ECHO"] = {
     type: "text",
@@ -268,7 +268,7 @@ export default function(
     x: 132,
     y: 110,
     fontsize: 25,
-    text: "E"
+    text: "E",
   };
   icn["SI.M2.FOXTROT"] = {
     type: "text",
@@ -276,7 +276,7 @@ export default function(
     x: 132,
     y: 110,
     fontsize: 25,
-    text: "F"
+    text: "F",
   };
   icn["SI.M2.GOLF"] = {
     type: "text",
@@ -284,7 +284,7 @@ export default function(
     x: 132,
     y: 110,
     fontsize: 25,
-    text: "G"
+    text: "G",
   };
   icn["SI.M2.INDY"] = {
     type: "text",
@@ -292,7 +292,7 @@ export default function(
     x: 132,
     y: 110,
     fontsize: 25,
-    text: "I"
+    text: "I",
   };
   icn["SI.M2.LIMA"] = {
     type: "text",
@@ -300,7 +300,7 @@ export default function(
     x: 132,
     y: 110,
     fontsize: 25,
-    text: "L"
+    text: "L",
   };
   icn["SI.M2.MIKE"] = {
     type: "text",
@@ -308,7 +308,7 @@ export default function(
     x: 132,
     y: 110,
     fontsize: 25,
-    text: "M"
+    text: "M",
   };
   icn["SI.M2.NOVEMBER"] = {
     type: "text",
@@ -316,7 +316,7 @@ export default function(
     x: 132,
     y: 110,
     fontsize: 25,
-    text: "N"
+    text: "N",
   };
   icn["SI.M2.PAPA"] = {
     type: "text",
@@ -324,7 +324,7 @@ export default function(
     x: 132,
     y: 110,
     fontsize: 25,
-    text: "P"
+    text: "P",
   };
   icn["SI.M2.SIERRA"] = {
     type: "text",
@@ -332,7 +332,7 @@ export default function(
     x: 132,
     y: 110,
     fontsize: 25,
-    text: "S"
+    text: "S",
   };
   icn["SI.M2.TANGO"] = {
     type: "text",
@@ -340,7 +340,7 @@ export default function(
     x: 132,
     y: 110,
     fontsize: 25,
-    text: "T"
+    text: "T",
   };
   icn["SI.M2.UNIFORM"] = {
     type: "text",
@@ -348,7 +348,7 @@ export default function(
     x: 132,
     y: 110,
     fontsize: 25,
-    text: "U"
+    text: "U",
   };
   icn["SI.M2.WHISKEY"] = {
     type: "text",
@@ -356,7 +356,7 @@ export default function(
     x: 132,
     y: 110,
     fontsize: 25,
-    text: "W"
+    text: "W",
   };
   icn["SI.M3.SPACE"] = {
     type: "text",
@@ -364,7 +364,7 @@ export default function(
     x: 100,
     y: 75,
     fontsize: 25,
-    text: "S"
+    text: "S",
   };
   icn["SI.M3.GROUND"] = {
     type: "text",
@@ -372,7 +372,7 @@ export default function(
     x: 100,
     y: 75,
     fontsize: 25,
-    text: "G"
+    text: "G",
   };
 
   for (const key in icn) {
