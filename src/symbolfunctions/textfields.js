@@ -56,7 +56,11 @@ export default function textfields(ms) {
             labelbox.x2 = lbl.x;
           }
           gbbox.merge(labelbox);
-          const text = { type: "text", fontfamily: fontFamily, fill: fontColor };
+          const text = {
+            type: "text",
+            fontfamily: fontFamily,
+            fill: fontColor,
+          };
           if (lbl.hasOwnProperty("fill")) text.fill = lbl.fill;
           if (lbl.hasOwnProperty("stroke")) text.stroke = lbl.stroke;
           if (lbl.hasOwnProperty("textanchor"))
@@ -95,16 +99,16 @@ export default function textfields(ms) {
       "-": 10,
       ".": 9,
       "/": 9,
-      "0": 17,
-      "1": 17,
-      "2": 17,
-      "3": 17,
-      "4": 17,
-      "5": 17,
-      "6": 17,
-      "7": 17,
-      "8": 17,
-      "9": 17,
+      0: 17,
+      1: 17,
+      2: 17,
+      3: 17,
+      4: 17,
+      5: 17,
+      6: 17,
+      7: 17,
+      8: 17,
+      9: 17,
       ":": 10,
       ";": 10,
       "<": 18,
@@ -928,8 +932,8 @@ export default function textfields(ms) {
           this.style.infoOutlineColor
             ? this.style.infoOutlineColor
             : typeof this.style.outlineColor === "object"
-            ? this.style.outlineColor[this.metadata.affiliation]
-            : this.style.outlineColor
+              ? this.style.outlineColor[this.metadata.affiliation]
+              : this.style.outlineColor
         )
       );
   }
