@@ -137,7 +137,6 @@ export default function canvasDraw(ctx, instruction) {
               // add some portion of the fontsize to compensate for this
               instruction[i].y //+ instruction[i].fontsize * 0.2
             );
-
             if (instruction[i].stroke)
               ctx.strokeText(
                 instruction[i].text,
