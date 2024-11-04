@@ -25,10 +25,10 @@ export function defaultProperties(instructions, iconColor) {
 }
 
 export function text(str) {
-  let size = 48;
+  let size = 45;
   //let y = 115;
   if (str.length == 1) {
-    size = 48;
+    size = 45;
     //y = 115;
   }
   if (str.length == 3) {
