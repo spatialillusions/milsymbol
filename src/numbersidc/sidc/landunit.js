@@ -141,7 +141,8 @@ export default {
       ];
       sId["130102"] = [
         icn["GR.IC.FF.AIR DEFENCE"],
-        icn["GR.IC.AIR DEFENSE MISSILE"],
+        icn["GR.IC.MISSILE"],
+        //icn["GR.IC.AIR DEFENSE MISSILE"],
       ];
       sId["130103"] = [
         icn["GR.IC.FF.AIR DEFENCE"],
