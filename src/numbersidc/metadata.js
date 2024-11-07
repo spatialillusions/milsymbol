@@ -8,15 +8,16 @@ export function metadata(ms, metadata, mapping) {
   const status = this.options.sidc.substr(6, 1);
   const headquartersTaskForceDummy = this.options.sidc.substr(7, 1);
   const echelonMobility = this.options.sidc.substr(8, 2);
+  const frameshape = this.options.sidc.substr(22, 1) || "0";
 
   const affiliationMapping = {
-    "0": "Unknown",
-    "1": "Unknown",
-    "2": "Friend",
-    "3": "Friend",
-    "4": "Neutral",
-    "5": "Hostile",
-    "6": "Hostile",
+    0: "Unknown",
+    1: "Unknown",
+    2: "Friend",
+    3: "Friend",
+    4: "Neutral",
+    5: "Hostile",
+    6: "Hostile",
   };
 
   if (version >= 13 && standardIdentity2 == 5) {
@@ -29,22 +30,22 @@ export function metadata(ms, metadata, mapping) {
     "02": "Air",
     "05": "Air",
     "06": "Air",
-    "10": "Ground",
-    "11": "Ground",
-    "12": "Ground",
-    "15": "Ground",
-    "20": "Ground",
-    "30": "Sea",
-    "35": "Subsurface",
-    "36": "Subsurface",
-    "39": "Subsurface",
-    "40": "Ground",
-    "50": "Air",
-    "51": "Air",
-    "52": "Ground",
-    "53": "Sea",
-    "54": "Subsurface",
-    "60": "Ground",
+    10: "Ground",
+    11: "Ground",
+    12: "Ground",
+    15: "Ground",
+    20: "Ground",
+    30: "Sea",
+    35: "Subsurface",
+    36: "Subsurface",
+    39: "Subsurface",
+    40: "Ground",
+    50: "Air",
+    51: "Air",
+    52: "Ground",
+    53: "Sea",
+    54: "Subsurface",
+    60: "Ground",
   };
 
   const functionid = (metadata.functionid = this.options.sidc.substr(10, 10));
@@ -144,6 +145,56 @@ export function metadata(ms, metadata, mapping) {
   //Signal INTELLIGENCE Ground should have the same geometry as sea Friend...
   if (symbolSet == "15" || symbolSet == "52")
     metadata.dimension = mapping.dimension[2];
+
+  // Frame shape overrides 2525E
+  if (frameshape != "0") {
+    metadata.cyberspace = false;
+    metadata.installation = false;
+    metadata.landequipment = false;
+    metadata.activity = false;
+    metadata.space = false;
+    metadata.unit = false;
+    metadata.cyberspace = false;
+    switch (frameshape) {
+      case "1": // Space
+        metadata.dimension = "Air";
+        metadata.space = true;
+        break;
+      case "2": // Air
+        metadata.dimension = "Air";
+        break;
+      case "3": // Land Unit
+        metadata.dimension = "Ground";
+        metadata.unit = true;
+        break;
+      case "4": // Land Equipment/Sea Surface
+        metadata.dimension = "Sea";
+        metadata.landequipment = true;
+        break;
+      case "5": // Land Installation
+        metadata.dimension = "Ground";
+        metadata.installation = true;
+        break;
+      case "6": // Dismounted Individuals
+        metadata.dimension = "LandDismountedIndividual";
+        metadata.dismounted = true;
+        break;
+      case "7": // Sea Subsurface
+        metadata.dimension = "Subsurface";
+        break;
+      case "8": // Activity/Event
+        metadata.dimension = "Ground";
+        metadata.activity = true;
+        metadata.unit = true;
+        break;
+      case "9": // Cyberspace
+        metadata.dimension = "Ground";
+        metadata.cyberspace = false;
+        metadata.unit = true;
+        break;
+    }
+  }
+  if (frameshape == "A") metadata.frame = false;
 
   //Setting up Headquarters/task force/dummy
   if (["1", "3", "5", "7"].indexOf(headquartersTaskForceDummy) > -1)
