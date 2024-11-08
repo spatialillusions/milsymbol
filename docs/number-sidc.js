@@ -348,6 +348,10 @@ function renderSymbolSet(symbolset, svgIcon) {
       )
         output += symbol.asSVG();
 
+      // Add canvas rendering
+      output += "</td><td>";
+      output += '<img src="' + symbol.asCanvas().toDataURL() + '">';
+
       if (svgIcon) {
         output +=
           '</td><td class="svg-icon"><img onerror=\'this.onerror=null;this.src="svg-icons-2525E/' +
@@ -442,6 +446,10 @@ function renderSymbolSet(symbolset, svgIcon) {
         !isNaN(symbolset.modifier2[i]["Code"])
       )
         output += symbol.asSVG();
+
+      // Add canvas rendering
+      output += "</td><td>";
+      output += '<img src="' + symbol.asCanvas().toDataURL() + '">';
 
       if (svgIcon) {
         output +=
