@@ -106,9 +106,12 @@ export default {
     sId["E-N-CC----"] = [icn["AC.IC.MICROBIAL"]];
     sId["E-N-CD----"] = [icn["AC.IC.REPTILE"]];
     sId["E-N-CE----"] = [icn["AC.IC.RODENT"]];
-    sId["E-O-A-----"] = sId["E-O-AA----"] = sId["E-O-AB----"] = sId[
-      "E-O-AC----"
-    ] = sId["E-O-AD----"] = [icn["GR.IC.EMERGENCY MEDICAL OPERATION"]];
+    sId["E-O-A-----"] =
+      sId["E-O-AA----"] =
+      sId["E-O-AB----"] =
+      sId["E-O-AC----"] =
+      sId["E-O-AD----"] =
+        [icn["GR.IC.EMERGENCY MEDICAL OPERATION"]];
     sId["E-O-AE----"] = [
       icn["GR.EQ.CIVILIAN VEHICLE.UTILITY VEHICLE"],
       icn["GR.M1.MEDEVAC"],
@@ -122,9 +125,11 @@ export default {
     sId["E-O-AK----"] = [icn["AC.IC.OPERATION/EMERGENCY MEDICAL OPERATION"]];
     sId["E-O-AL----"] = [icn["AC.IC.PHARMACY"]];
     sId["E-O-AM----"] = [icn["AC.IC.TRIAGE"]];
-    sId["E-O-B-----"] = sId["E-O-BA----"] = sId["E-O-BB----"] = sId[
-      "E-O-BC----"
-    ] = [icn["GR.IC.FF.EMERGENCY OPERATION"]];
+    sId["E-O-B-----"] =
+      sId["E-O-BA----"] =
+      sId["E-O-BB----"] =
+      sId["E-O-BC----"] =
+        [icn["GR.IC.FF.EMERGENCY OPERATION"]];
     sId["E-O-BD----"] = [
       ms._scale(0.7, icn["GR.IC.FF.EMERGENCY OPERATION"]),
       icn["AC.M1.EMERGENCY COLLECTION EVACUATION POINT"],
@@ -152,52 +157,76 @@ export default {
       icn["ST.IC.FOOD DISTRIBUTION"],
       icn["AC.M1.EMERGENCY"],
     ];
-    sId["E-O-C-----"] = sId["E-O-CA----"] = sId["E-O-CB----"] = sId[
-      "E-O-CE----"
-    ] = [icn["GR.IC.FIRE PROTECTION"]];
+    sId["E-O-C-----"] =
+      sId["E-O-CA----"] =
+      sId["E-O-CB----"] =
+      sId["E-O-CE----"] =
+        [icn["GR.IC.FIRE PROTECTION"]];
     sId["E-O-CC----"] = [icn["AC.IC.FIRE HYDRANT"]];
     sId["E-O-CD----"] = [icn["AC.IC.OTHER WATER SUPPLY LOCATION"]];
-    sId["E-O-D-----"] = sId["E-O-DA----"] = sId["E-O-DB----"] = sId[
-      "E-O-DC----"
-    ] = [icn["GR.IC.FF.LAW ENFORCEMENT"]];
-    sId["E-O-DD----"] = sId["E-O-DDA---"] = sId["E-O-DDB---"] = sId[
-      "E-O-DDC---"
-    ] = [
-      icn[
-        "GR.IC.BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF) (DEPARTMENT OF JUSTICE)"
-      ],
-    ];
-    sId["E-O-DE----"] = sId["E-O-DEA---"] = sId["E-O-DEB---"] = sId[
-      "E-O-DEC---"
-    ] = [icn["GR.IC.FF.BORDER PATROL"]];
-    sId["E-O-DF----"] = sId["E-O-DFA---"] = sId["E-O-DFB---"] = sId[
-      "E-O-DFC---"
-    ] = [icn["GR.IC.FF.CUSTOMS SERVICE"]];
-    sId["E-O-DG----"] = sId["E-O-DGA---"] = sId["E-O-DGB---"] = sId[
-      "E-O-DGC---"
-    ] = [icn["GR.IC.DRUG ENFORCEMENT AGENCY (DEA)"]];
-    sId["E-O-DH----"] = sId["E-O-DHA---"] = sId["E-O-DHB---"] = sId[
-      "E-O-DHC---"
-    ] = [icn["GR.IC.FF.DEPARTMENT OF JUSTICE (DOJ)"]];
-    sId["E-O-DI----"] = sId["E-O-DIA---"] = sId["E-O-DIB---"] = sId[
-      "E-O-DIC---"
-    ] = [icn["GR.IC.FEDERAL BUREAU OF INVESTIGATION (FBI)"]];
-    sId["E-O-DJ----"] = sId["E-O-DJB---"] = sId["E-O-DJC---"] = [
-      icn["GR.IC.LAW ENFORCEMENT"],
-    ];
+    sId["E-O-D-----"] =
+      sId["E-O-DA----"] =
+      sId["E-O-DB----"] =
+      sId["E-O-DC----"] =
+        [icn["GR.IC.FF.LAW ENFORCEMENT"]];
+    sId["E-O-DD----"] =
+      sId["E-O-DDA---"] =
+      sId["E-O-DDB---"] =
+      sId["E-O-DDC---"] =
+        [
+          icn[
+            "GR.IC.BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF) (DEPARTMENT OF JUSTICE)"
+          ],
+        ];
+    sId["E-O-DE----"] =
+      sId["E-O-DEA---"] =
+      sId["E-O-DEB---"] =
+      sId["E-O-DEC---"] =
+        [icn["GR.IC.FF.BORDER PATROL"]];
+    sId["E-O-DF----"] =
+      sId["E-O-DFA---"] =
+      sId["E-O-DFB---"] =
+      sId["E-O-DFC---"] =
+        [icn["GR.IC.FF.CUSTOMS SERVICE"]];
+    sId["E-O-DG----"] =
+      sId["E-O-DGA---"] =
+      sId["E-O-DGB---"] =
+      sId["E-O-DGC---"] =
+        [icn["GR.IC.DRUG ENFORCEMENT AGENCY (DEA)"]];
+    sId["E-O-DH----"] =
+      sId["E-O-DHA---"] =
+      sId["E-O-DHB---"] =
+      sId["E-O-DHC---"] =
+        [icn["GR.IC.FF.DEPARTMENT OF JUSTICE (DOJ)"]];
+    sId["E-O-DI----"] =
+      sId["E-O-DIA---"] =
+      sId["E-O-DIB---"] =
+      sId["E-O-DIC---"] =
+        [icn["GR.IC.FEDERAL BUREAU OF INVESTIGATION (FBI)"]];
+    sId["E-O-DJ----"] =
+      sId["E-O-DJB---"] =
+      sId["E-O-DJC---"] =
+        [icn["GR.IC.LAW ENFORCEMENT"]];
     sId["E-O-DK----"] = [icn["GR.IC.FF.PRISON"]];
-    sId["E-O-DL----"] = sId["E-O-DLA---"] = sId["E-O-DLB---"] = sId[
-      "E-O-DLC---"
-    ] = [icn["GR.IC.UNITED STATES SECRET SERVICE(TREAS) (USSS)"]];
-    sId["E-O-DM----"] = sId["E-O-DMA---"] = sId["E-O-DMB---"] = sId[
-      "E-O-DMC---"
-    ] = [icn["GR.IC.TRANSPORTATION SECURITY AGENCY (TSA)"]];
-    sId["E-O-DN----"] = sId["E-O-DNA---"] = sId["E-O-DNC---"] = [
-      icn["GR.IC.LAW ENFORCEMENT VESSEL"],
-    ];
-    sId["E-O-DO----"] = sId["E-O-DOA---"] = sId["E-O-DOB---"] = sId[
-      "E-O-DOC---"
-    ] = [icn["GR.IC.FF.US MARSHALS SERVICE"]];
+    sId["E-O-DL----"] =
+      sId["E-O-DLA---"] =
+      sId["E-O-DLB---"] =
+      sId["E-O-DLC---"] =
+        [icn["GR.IC.UNITED STATES SECRET SERVICE(TREAS) (USSS)"]];
+    sId["E-O-DM----"] =
+      sId["E-O-DMA---"] =
+      sId["E-O-DMB---"] =
+      sId["E-O-DMC---"] =
+        [icn["GR.IC.TRANSPORTATION SECURITY AGENCY (TSA)"]];
+    sId["E-O-DN----"] =
+      sId["E-O-DNA---"] =
+      sId["E-O-DNC---"] =
+        [icn["GR.IC.LAW ENFORCEMENT VESSEL"]];
+    sId["E-O-DO----"] =
+      sId["E-O-DOA---"] =
+      sId["E-O-DOB---"] =
+      sId["E-O-DOC---"] =
+        [icn["GR.IC.FF.US MARSHALS SERVICE"]];
     sId["E-O-EA----"] = [
       ms._scale(0.6, icn["GR.EQ.SENSOR"]),
       icn["GR.M1.BIOLOGICAL"],
@@ -256,7 +285,11 @@ export default {
     sId["E-F-DA----"] = [icn["GR.IN.IC.COLLEGE/UNIVERSITY"]];
     sId["E-F-DB----"] = [icn["GR.IN.IC.SCHOOL"]];
     sId["E-F-EA----"] = [
-      ms._translate(0, 15, ms._scale(0.75, icn["GR.IN.IC.ELECTRIC POWER"])),
+      ms._translate(
+        0,
+        15,
+        ms._scale(0.75, icn["GR.IN.IC.ELECTRIC POWER"], true)
+      ),
       icn["AC.M1.GENERATION STATION"],
     ];
     sId["E-F-EB----"] = [icn["GR.IN.IC.NATURAL GAS FACILITY"]];
