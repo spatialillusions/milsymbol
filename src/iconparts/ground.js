@@ -3034,8 +3034,10 @@ export default function (
   icn["ST.IC.EXTORTION"] = {
     type: "text",
     stroke: false,
+    textanchor: "middle",
+    alignmentBaseline: "middle",
     x: 100,
-    y: 130,
+    y: 103,
     fontsize: 80,
     text: "$",
   };
