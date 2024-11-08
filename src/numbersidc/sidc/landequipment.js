@@ -265,12 +265,12 @@ export default {
         icn[
           "GR.EQ.ARMOURED PROTECTED VEHICLE WITH LIMITED CROSS COUNTRY MOBILITY"
         ],
-        ms._scale(0.7, icn["GR.IC.ENGINEER"]),
+        ms._scale(0.7, icn["GR.IC.ENGINEER"], true),
       ];
       sId["130100"] = [icn["GR.IN.IC.BRIDGE"]];
       sId["130200"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
-        ms._scale(0.8, icn["GR.IN.IC.BRIDGE"]),
+        ms._scale(0.8, icn["GR.IN.IC.BRIDGE"], true),
       ];
       sId["130300"] = [icn["GR.IN.IC.BRIDGE"], icn["GR.EQ.FIXED BRIDGE"]];
       sId["130400"] = [icn["GR.IN.IC.BRIDGE"], icn["GR.M2.RIVERINE"]];
@@ -281,7 +281,7 @@ export default {
       sId["130600"] = [icn["GR.IN.IC.BRIDGE"], icn["GR.EQ.HOLLOW DECK BRIDGE"]];
       sId["130700"] = [icn["GR.IC.DRILLING"]];
       sId["130701"] = [
-        ms._scale(0.7, icn["GR.IC.DRILLING"]),
+        ms._scale(0.7, icn["GR.IC.DRILLING"], true),
         icn["GR.EQ.UTILITY VEHICLE"],
       ];
       sId["130800"] = [icn["GR.EQ.EARTHMOVER"]];
@@ -308,7 +308,7 @@ export default {
       sId["131000"] = [icn["GR.IC.MINE LAYING"]];
       sId["131001"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
-        ms._translate(0, 10, ms._scale(0.7, icn["GR.IC.MINE LAYING"])),
+        ms._translate(0, 10, ms._scale(0.7, icn["GR.IC.MINE LAYING"], true)),
       ];
       sId["131002"] = [
         icn["GR.EQ.ARMOURED PERSONNEL CARRIER"],
@@ -323,11 +323,11 @@ export default {
       sId["131101"] = [icn["GR.EQ.DOZER ARMORED"]];
       sId["131200"] = [
         icn["GR.EQ.ARMOURED PERSONNEL CARRIER"],
-        ms._scale(0.6, icn["GR.IC.ENGINEER"]),
+        ms._scale(0.6, icn["GR.IC.ENGINEER"], true),
       ];
       sId["131300"] = [
         icn["GR.EQ.ARMOURED PERSONNEL CARRIER"],
-        ms._scale(0.6, icn["GR.IC.ENGINEER"]),
+        ms._scale(0.6, icn["GR.IC.ENGINEER"], true),
         icn["GR.EQ.ARMOURED PERSONNEL CARRIER ENGINEER RECON VEHICLE"],
       ];
       sId["131400"] = [
@@ -338,7 +338,7 @@ export default {
       sId["131500"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
         icn["GR.EQ.LIMITED CROSS-COUNTRY"],
-        ms._scale(0.6, icn["GR.IC.ENGINEER"]),
+        ms._scale(0.6, icn["GR.IC.ENGINEER"], true),
       ];
       sId["131600"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
@@ -383,11 +383,11 @@ export default {
       ];
       sId["140900"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
-        ms._scale(0.8, icn["GR.IC.FF.CLASS III"]),
+        ms._scale(0.8, icn["GR.IC.FF.CLASS III"], true),
       ];
       sId["141000"] = [
         icn["GR.EQ.UTILITY VEHICLE"],
-        ms._scale(0.7, icn["GR.IC.WATER"]),
+        ms._scale(0.7, icn["GR.IC.WATER"], true),
       ];
       sId["141100"] = [
         icn["GR.EQ.WATER VEHICLE"],

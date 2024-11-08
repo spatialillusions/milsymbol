@@ -106,14 +106,14 @@ export default {
       bbox["180700"] = { x1: 60, x2: 140, y1: 30, y2: 170 };
       sidc["180800"] = icn["TP.AEW STATION"]; //Airspace Control Points / Airborne Early Warning (AEW) Station
       bbox["180800"] = { x1: 60, x2: 140, y1: 30, y2: 170 };
-      sidc["180900"] = icn["TP.FIXED WING"]; //Airspace Control Points / ASW (Helo and F/W) Station
+      sidc["180900"] = icn["TP.ASW FIXED WING"]; //Airspace Control Points / ASW (Helo and F/W) Station
       sidc["181000"] = icn["TP.STRIKE IP"]; //Airspace Control Points / Strike Initial Point
       bbox["181000"] = { x1: 60, x2: 140, y1: 30, y2: 170 };
       sidc["181100"] = icn["TP.REPLENISHMENT STATION"]; //Airspace Control Points / Replenishment Station
       bbox["181100"] = { x1: 60, x2: 140, y1: 30, y2: 170 };
       sidc["181200"] = icn["TP.TANKING"]; //Airspace Control Points / Tanking
       bbox["181200"] = { x1: 60, x2: 140, y1: 30, y2: 170 };
-      sidc["181300"] = icn["TP.SUCAP - ROTARY WING"]; //Airspace Control Points / Antisubmarine Warfare, Rotary Wing
+      sidc["181300"] = icn["TP.ASW ROTARY WING"]; //Airspace Control Points / Antisubmarine Warfare, Rotary Wing
       bbox["181300"] = { x1: 60, x2: 140, y1: 40, y2: 160 };
       sidc["181400"] = icn["TP.SUCAP - FIXED WING"]; //Airspace Control Points / Surface Combat Air Patrol (SUCAP) – Fixed Wing
       bbox["181400"] = { x1: 60, x2: 140, y1: 40, y2: 160 };

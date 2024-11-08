@@ -156,10 +156,11 @@ export default function tacticalPoints(sidc) {
   sidc["131200"] = actionPoint; //Command and Control Points / Passage Point
   sidc["131300"] = {
     uniqueDesignation: {
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 30,
+      y: 20,
       fontsize: 40,
       fontweight: "bold",
     },
@@ -171,19 +172,21 @@ export default function tacticalPoints(sidc) {
   sidc["131700"] = {}; //Command and Control Points / Special Point
   sidc["131800"] = {
     uniqueDesignation: {
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "start",
       x: 140,
-      y: 117,
+      y: 107,
       fontsize: 50,
     },
   }; //Command and Control Points / Waypoint
   sidc["131900"] = {
     uniqueDesignation: {
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "start",
       x: 180,
-      y: 115,
+      y: 105,
       fontsize: 40,
     },
   }; //Command and Control Points / Airfield
@@ -198,10 +201,11 @@ export default function tacticalPoints(sidc) {
   }; //Command and Control Points / Target Handover
   sidc["132100"] = {
     uniqueDesignation: {
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "start",
       x: 100,
-      y: 110,
+      y: 100,
       fontsize: 35,
       fill: "#800080",
       fontweight: "bold",
@@ -238,19 +242,21 @@ export default function tacticalPoints(sidc) {
   sidc["180000"] = {};
   sidc["180100"] = {
     uniqueDesignation: {
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 130,
+      y: 120,
       fontsize: 35,
     },
   }; //Airspace Control Points / Air Control Point
   sidc["180200"] = {
     uniqueDesignation: {
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 130,
+      y: 120,
       fontsize: 35,
     },
   }; //Airspace Control Points / Communications Checkpoint
@@ -327,10 +333,11 @@ export default function tacticalPoints(sidc) {
   sidc["210900"] = {}; //Maritime Control Points / Predicted Impact Point
   sidc["211000"] = {
     additionalInformation: {
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 80,
+      y: 70,
       fontsize: 35,
     },
   }; //Maritime Control Points / Launched Torpedo
@@ -353,10 +360,11 @@ export default function tacticalPoints(sidc) {
   sidc["212700"] = {}; //Maritime Control Points / Formation
   sidc["212800"] = {
     additionalInformation: {
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 105,
       fontsize: 45,
     },
   }; //Maritime Control Points / Harbor
@@ -683,10 +691,11 @@ export default function tacticalPoints(sidc) {
   sidc["240603"] = {}; //Fires Areas / Point Targets / Target-Recorded
   sidc["240900"] = {
     uniqueDesignation: {
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "start",
       x: 195,
-      y: 110,
+      y: 100,
       fontsize: 35,
       fontweight: "bold",
     },
@@ -698,10 +707,11 @@ export default function tacticalPoints(sidc) {
   sidc["250500"] = actionPoint1; //Fires Points / Survey Control Point
   sidc["250600"] = {
     uniqueDesignation: {
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "start",
       x: 180,
-      y: 80,
+      y: 70,
       fontsize: 35,
     },
   };

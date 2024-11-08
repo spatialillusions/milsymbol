@@ -368,7 +368,15 @@ export default function (
   ];
   icn["GR.IC.FIELD CAMP CONSTRUCTION"] = [
     icn["GR.IC.ENGINEER"],
-    { type: "text", stroke: false, x: 100, y: 77, fontsize: 25, text: "CAMP" },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 100,
+      y: 72,
+      fontsize: 25,
+      text: "CAMP",
+    },
   ];
   icn["GR.IC.FINANCE"] = {
     type: "path",
@@ -474,7 +482,15 @@ export default function (
   };
   icn["GR.IC.MINE CLEARING"] = [
     icn["GR.IC.MINE"],
-    { type: "text", stroke: false, x: 100, y: 77, fontsize: 25, text: "CLR" },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 100,
+      y: 72,
+      fontsize: 25,
+      text: "CLR",
+    },
   ];
   icn["GR.IC.MINE LAUNCHING"] = [
     icn["GR.IC.MINE"],
@@ -593,7 +609,15 @@ export default function (
     },
   ];
   icn["GR.IC.RADIO TELETYPE CENTRE"] = [
-    { type: "text", stroke: false, x: 100, y: 120, fontsize: 30, text: "C" },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 100,
+      y: 110,
+      fontsize: 30,
+      text: "C",
+    },
     {
       type: "path",
       fill: false,
@@ -628,7 +652,7 @@ export default function (
       d: "M100,80 l0,40 M81,90.5 l38,19 M81,109.5 l38,-19",
     },
     { type: "circle", cx: 100, cy: 100, r: 20, fill: false },
-    ms._translate(0, -35, ms._scale(0.6, icn["GR.IC.NAVAL"])),
+    ms._translate(0, -35, ms._scale(0.6, icn["GR.IC.NAVAL"], true)),
   ];
   icn["GR.IC.SECURITY"] = text("SEC");
   icn["GR.IC.SECURITY POLICE (AIR)"] = [
@@ -714,7 +738,15 @@ export default function (
   };
   icn["GR.IC.WATER PURIFICATION"] = [
     icn["GR.IC.WATER"],
-    { type: "text", stroke: false, x: 90, y: 110, fontsize: 20, text: "PURE" },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 90,
+      y: 105,
+      fontsize: 20,
+      text: "PURE",
+    },
   ];
   icn["GR.IC.FF.AIR ASSAULT WITH ORGANIC LIFT"] = {
     Unknown: {
@@ -1173,9 +1205,10 @@ export default function (
   };
   icn["GR.IC.FF.CLASS MULTIPLE"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     x: 100,
-    y: 110,
+    y: 100,
     fontsize: 30,
     text: "MULT",
   };
@@ -1297,9 +1330,10 @@ export default function (
   ];
   icn["GR.IC.FF.CLASS X"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     x: 100,
-    y: 110,
+    y: 100,
     fontsize: 30,
     text: "CA",
   };
@@ -1398,9 +1432,10 @@ export default function (
   icn["GR.M1.COMMUNICATIONS CONTINGENCY PACKAGE"] = textm1("CCP");
   icn["GR.M1.CONSTRUCTION"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     x: 100,
-    y: 75,
+    y: 70,
     fontsize: 20,
     text: "CONST",
   };
@@ -1527,40 +1562,44 @@ export default function (
   };
   icn["GR.M1.NATO MEDICAL ROLE 1"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     x: 120,
-    y: 77,
+    y: 72,
     fontsize: 25,
     text: "1",
   };
   icn["GR.M1.NATO MEDICAL ROLE 2"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     x: 120,
-    y: 77,
+    y: 72,
     fontsize: 25,
     text: "2",
   };
   icn["GR.M1.NATO MEDICAL ROLE 3"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     x: 120,
-    y: 77,
+    y: 72,
     fontsize: 25,
     text: "3",
   };
   icn["GR.M1.NATO MEDICAL ROLE 4"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     x: 120,
-    y: 77,
+    y: 72,
     fontsize: 25,
     text: "4",
   };
   icn["GR.M1.NAVAL"] = ms._translate(
     0,
     -35,
-    ms._scale(0.6, icn["GR.IC.NAVAL"])
+    ms._scale(0.6, icn["GR.IC.NAVAL"], true)
   );
   icn["GR.M1.NODE CENTRE"] = textm1("NC");
   icn["GR.M1.NUCLEAR"] = textm1("N");
@@ -1604,7 +1643,7 @@ export default function (
   icn["GR.M1.POLICE"] = {
     type: "path",
     fill: false,
-    d: "m 100,77.4 c 13,-4.9 8,-12.6 10,-19.6 -3,3.8 -7,3.8 -10,0 -3.2,3.8 -6.5,3.8 -9.7,0 1.6,7 -3.4,14.7 9.7,19.6 z",
+    d: "m 90.3,57.8 c 1.6,7 -3.4,14.7 9.7,19.6 13,-4.9 8,-12.6 10,-19.6  m 0,0 c -3,3.8 -7,3.8 -10,0  m 0,0 c -3.2,3.8 -6.5,3.8 -9.7,0",
   };
   icn["GR.M1.RADAR"] = {
     type: "path",
@@ -2149,17 +2188,19 @@ export default function (
   };
   icn["GR.M2.VERTICAL OR SHORT TAKE-OFF AND LANDING "] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     x: 100,
-    y: 135,
+    y: 130,
     fontsize: 20,
     text: "VSTOL",
   };
   icn["GR.M2.VETERINARY"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     x: 115,
-    y: 142,
+    y: 137,
     fontsize: 28,
     text: "V",
   };
@@ -2268,15 +2309,32 @@ export default function (
   };
   icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TLAR"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     x: 132,
-    y: 110,
+    y: 100,
     fontsize: 25,
     text: "R",
   };
   icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR TELAR"] = [
-    { type: "text", stroke: false, x: 68, y: 110, fontsize: 25, text: "E" },
-    { type: "text", stroke: false, x: 132, y: 110, fontsize: 25, text: "R" },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 68,
+      y: 100,
+      fontsize: 25,
+      text: "E",
+    },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 132,
+      y: 100,
+      fontsize: 25,
+      text: "R",
+    },
   ];
   icn["GR.EQ.AIR DEFENCE MISSILE LAUNCHER SURFACE-TO-AIR THEATRE"] = {
     type: "text",
@@ -2351,9 +2409,10 @@ export default function (
   if (numberSIDC) {
     icn["GR.EQ.ARMOURED FIGHTING VEHICLE (AFV) COMMAND AND CONTROL"].push({
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       x: 100,
-      y: 110,
+      y: 103,
       fontsize: 30,
       text: "C2",
     });
@@ -2477,9 +2536,10 @@ export default function (
     icn["GR.EQ.EARTHMOVER"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       x: 100,
-      y: 110,
+      y: 100,
       fontsize: 30,
       text: "MF",
     },
@@ -2719,11 +2779,35 @@ export default function (
     d: "m 70,125 15,-50 15,50 15,-50 15,50 ",
   };
   icn["GR.EQ.MISSILE SUPPORT"] = [
-    { type: "text", stroke: false, x: 100, y: 100, fontsize: 20, text: "MSL" },
-    { type: "text", stroke: false, x: 100, y: 115, fontsize: 20, text: "SPT" },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 100,
+      y: 93,
+      fontsize: 20,
+      text: "MSL",
+    },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 100,
+      y: 110,
+      fontsize: 20,
+      text: "SPT",
+    },
   ];
   icn["GR.EQ.MISSILE TRANSLOADER"] = [
-    { type: "text", stroke: false, x: 100, y: 110, fontsize: 30, text: "MSL" },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 100,
+      y: 100,
+      fontsize: 30,
+      text: "MSL",
+    },
     {
       type: "path",
       fill: false,
@@ -2731,11 +2815,27 @@ export default function (
     },
   ];
   icn["GR.EQ.MISSILE TRANSPORTER"] = [
-    { type: "text", stroke: false, x: 100, y: 110, fontsize: 30, text: "MSL" },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 100,
+      y: 100,
+      fontsize: 30,
+      text: "MSL",
+    },
     //{ type: "path", fill: false, d: "m 55,85 90,0" }
   ];
   icn["GR.EQ.MISSILE CRANE/LOADING DEVICE"] = [
-    { type: "text", stroke: false, x: 100, y: 110, fontsize: 30, text: "MSL" },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 100,
+      y: 100,
+      fontsize: 30,
+      text: "MSL",
+    },
     {
       type: "path",
       fill: false,
@@ -2743,12 +2843,36 @@ export default function (
     },
   ];
   icn["GR.EQ.MISSILE PROPELLANT TRANSPORTER"] = [
-    { type: "text", stroke: false, x: 90, y: 110, fontsize: 20, text: "MSL" },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 90,
+      y: 100,
+      fontsize: 20,
+      text: "MSL",
+    },
     { type: "path", fill: false, d: "m 120,115 0,-15 -10,-10 20,0 -10,10" },
   ];
   icn["GR.EQ.MISSILE WARHEAD TRANSPORTER"] = [
-    { type: "text", stroke: false, x: 100, y: 100, fontsize: 20, text: "MSL" },
-    { type: "text", stroke: false, x: 100, y: 115, fontsize: 20, text: "WHD" },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 100,
+      y: 93,
+      fontsize: 20,
+      text: "MSL",
+    },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 100,
+      y: 110,
+      fontsize: 20,
+      text: "WHD",
+    },
   ];
   icn["GR.EQ.LAND MINE"] = numberSIDC
     ? { type: "circle", cx: 100, cy: 100, r: 22, fill: false }
@@ -2795,7 +2919,7 @@ export default function (
     d: "m 100,60 c 0,15 25,40 40,40 -15,0 -40,25 -40,40 0,-15 -25,-40 -40,-40 15,0 40,-25 40,-40 z",
   };
   icn["GR.EQ.SENSOR EMPLACED"] = [
-    ms._scale(0.75, icn["GR.EQ.SENSOR"]),
+    ms._scale(0.75, icn["GR.EQ.SENSOR"], true),
     {
       type: "path",
       fill: false,
@@ -2861,9 +2985,10 @@ export default function (
   };
   icn["GR.IN.IC.ELECTRIC POWER NUCLEAR"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     x: 100,
-    y: 105,
+    y: 100,
     fontsize: 40,
     text: "N",
   };
@@ -3007,18 +3132,20 @@ export default function (
         },
         {
           type: "text",
+          alignmentBaseline: "middle",
           stroke: false,
           x: 100,
-          y: 75,
+          y: 70,
           fontsize: 25,
           text: "ASN",
         },
       ]
     : {
         type: "text",
+        alignmentBaseline: "middle",
         stroke: false,
         x: 100,
-        y: 110,
+        y: 103,
         fontsize: 35,
         text: "FIRE",
       };
@@ -3029,8 +3156,24 @@ export default function (
   };
   icn["ST.IC.BLACK LIST LOCATION"] = text("BLK");
   icn["ST.IC.BLACK MARKETING"] = [
-    { type: "text", stroke: false, x: 100, y: 95, fontsize: 30, text: "BLK" },
-    { type: "text", stroke: false, x: 100, y: 125, fontsize: 30, text: "MKT" },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 100,
+      y: 93,
+      fontsize: 22,
+      text: "BLK",
+    },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 100,
+      y: 110,
+      fontsize: 22,
+      text: "MKT",
+    },
   ];
   icn["ST.IC.BOMB"] = text("BOMB");
   icn["ST.IC.BOOBY TRAP"] = {

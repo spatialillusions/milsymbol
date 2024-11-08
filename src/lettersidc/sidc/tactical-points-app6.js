@@ -269,7 +269,7 @@ export default {
     bbox["G-C-OXAT--"] = { x1: 60, x2: 140, y1: 40, y2: 160 };
     sidc["G-C-OXAK--"] = icn["TP.TANKING"]; //2.X.2.5.1.10.4
     bbox["G-C-OXAK--"] = { x1: 60, x2: 140, y1: 40, y2: 160 };
-    sidc["G-C-OXAF--"] = icn["TP.FIXED WING"]; //2.X.2.5.1.10.5
+    sidc["G-C-OXAF--"] = icn["TP.ASW FIXED WING"]; //2.X.2.5.1.10.5
     bbox["G-C-OXAF--"] = { x1: 60, x2: 140, y1: 40, y2: 160 };
     sidc["G-C-OXAH--"] = icn["TP.ROTARY WING"]; //2.X.2.5.1.10.6
     bbox["G-C-OXAH--"] = { x1: 60, x2: 140, y1: 40, y2: 160 };

@@ -61,6 +61,8 @@ export default function textfields(ms) {
             fontfamily: fontFamily,
             fill: fontColor,
           };
+          if (lbl.hasOwnProperty("alignmentBaseline"))
+            text.alignmentBaseline = lbl.alignmentBaseline;
           if (lbl.hasOwnProperty("fill")) text.fill = lbl.fill;
           if (lbl.hasOwnProperty("stroke")) text.stroke = lbl.stroke;
           if (lbl.hasOwnProperty("textanchor"))

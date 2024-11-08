@@ -5,7 +5,7 @@ import {
   textm2,
 } from "./iconparts-functions.js";
 
-export default function(
+export default function (
   iconParts,
   metadata,
   colors,
@@ -145,8 +145,7 @@ export default function(
   ];
   icn["SU.IC.OTHER SUBMERSIBLE"] = {
     type: "path",
-    d:
-      "m 85,90 0,-10 30,0 0,10 m 20,10 c 0,5.5 -15.7,10 -35,10 -19.3,0 -35,-4.5 -35,-10 0,-5.5 15.7,-10 35,-10 19.3,0 35,4.5 35,10 z",
+    d: "m 85,90 0,-10 30,0 0,10 m 20,10 c 0,5.5 -15.7,10 -35,10 -19.3,0 -35,-4.5 -35,-10 0,-5.5 15.7,-10 35,-10 19.3,0 35,4.5 35,10 z",
   };
   icn["SU.IC.OTHER SUBMERSIBLE, SURFACED"] = [
     icn["SU.IC.OTHER SUBMERSIBLE"],
@@ -167,41 +166,42 @@ export default function(
     STD2525 && !numberSIDC
       ? {
           type: "text",
+          alignmentBaseline: "middle",
           stroke: false,
           x: 100,
-          y: 110,
+          y: 100,
           fontsize: 35,
           text: "NON",
         }
       : [
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             x: 100,
-            y: 100,
-            fontsize: 25,
+            y: 93,
+            fontsize: 23,
             text: "NON",
           },
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             x: 100,
-            y: 120,
-            fontsize: 25,
+            y: 113,
+            fontsize: 23,
             text: "SUB",
           },
         ];
   icn["SU.IC.DIVER, MILITARY"] = {
     type: "path",
     stroke: false,
-    d:
-      "M 100 80 C 93.7 80 88.3 82.7 85.8 88.3 L 85.8 88.3 L 77.8 88.3 L 77.8 105 L 85.8 105 L 85.8 104.8 C 87.3 108.2 88.8 110 92 111.7 L 92.1 111.7 L 84.2 120 L 115.8 120 L 107.9 111.7 L 108 111.7 C 111.1 110 112.8 108.3 114.3 105 L 122.2 105 L 122.2 88.3 L 114.3 88.3 L 114.3 88.3 C 111.7 82.8 106.3 80 100 80 z M 100 86.6 C 105.4 86.6 109.8 91.1 109.8 96.6 C 109.8 102.1 105.4 106.6 100 106.6 C 94.6 106.6 90.1 102.1 90.1 96.6 C 90.1 91.1 94.6 86.6 100 86.6 z M 100 89.6 C 96.2 89.6 93.1 92.7 93.1 96.6 C 93.1 100.5 96.2 103.6 100 103.6 C 103.8 103.6 106.8 100.5 106.8 96.6 C 106.8 92.7 103.8 89.6 100 89.6 z",
+    d: "M 100 80 C 93.7 80 88.3 82.7 85.8 88.3 L 85.8 88.3 L 77.8 88.3 L 77.8 105 L 85.8 105 L 85.8 104.8 C 87.3 108.2 88.8 110 92 111.7 L 92.1 111.7 L 84.2 120 L 115.8 120 L 107.9 111.7 L 108 111.7 C 111.1 110 112.8 108.3 114.3 105 L 122.2 105 L 122.2 88.3 L 114.3 88.3 L 114.3 88.3 C 111.7 82.8 106.3 80 100 80 z M 100 86.6 C 105.4 86.6 109.8 91.1 109.8 96.6 C 109.8 102.1 105.4 106.6 100 106.6 C 94.6 106.6 90.1 102.1 90.1 96.6 C 90.1 91.1 94.6 86.6 100 86.6 z M 100 89.6 C 96.2 89.6 93.1 92.7 93.1 96.6 C 93.1 100.5 96.2 103.6 100 103.6 C 103.8 103.6 106.8 100.5 106.8 96.6 C 106.8 92.7 103.8 89.6 100 89.6 z",
   };
   icn["SU.IC.SUBMERSIBLE, CIVILIAN"] = {
     type: "path",
     fill: STD2525 ? iconFillColor : !frame ? iconFillColor : false,
-    d:
-      "m 85,90 0,-10 30,0 0,10 m 20,10 c 0,5.5 -15.7,10 -35,10 -19.3,0 -35,-4.5 -35,-10 0,-5.5 15.7,-10 35,-10 19.3,0 35,4.5 35,10 z",
+    d: "m 85,90 0,-10 30,0 0,10 m 20,10 c 0,5.5 -15.7,10 -35,10 -19.3,0 -35,-4.5 -35,-10 0,-5.5 15.7,-10 35,-10 19.3,0 35,4.5 35,10 z",
   };
   icn[
     "SU.IC.AUTONOMOUS UNDERWATER VEHICLE/ UNMANNED UNDERWATER VEHICLE (AUV/UUV), CIVILIAN"
@@ -216,8 +216,7 @@ export default function(
   icn["SU.IC.DIVER, CIVILIAN"] = {
     type: "path",
     fill: iconFillColor,
-    d:
-      "M 114.3,94 C 114.3,102.3 107.9,109 100,109 c -7.9,0 -14.2,-6.7 -14.2,-15 0,-8.3 6.4,-15 14.2,-15 7.9,0 14.3,6.7 14.3,15 z m 0,27 14.3,15 -57,0 14.3,-15 M 125.7,79 l 14.3,0 0,30 -14.3,0 m -51.3,0 -14.3,0 0,-30 14.3,0 m 54.2,15 c 0,16.6 -12.8,30 -28.5,30 -15.7,0 -28.5,-13.4 -28.5,-30 C 71.5,77.4 84.3,64 100,64 115.7,64 128.5,77.4 128.5,94 z",
+    d: "M 114.3,94 C 114.3,102.3 107.9,109 100,109 c -7.9,0 -14.2,-6.7 -14.2,-15 0,-8.3 6.4,-15 14.2,-15 7.9,0 14.3,6.7 14.3,15 z m 0,27 14.3,15 -57,0 14.3,-15 M 125.7,79 l 14.3,0 0,30 -14.3,0 m -51.3,0 -14.3,0 0,-30 14.3,0 m 54.2,15 c 0,16.6 -12.8,30 -28.5,30 -15.7,0 -28.5,-13.4 -28.5,-30 C 71.5,77.4 84.3,64 100,64 115.7,64 128.5,77.4 128.5,94 z",
   };
   icn["SU.IC.UNDERWATER WEAPON"] = text("WPN");
   icn["SU.IC.TORPEDO"] = {
@@ -236,20 +235,24 @@ export default function(
   };
   icn["SU.IC.UNDERWATER DECOY DSymbol"] = {
     type: "path",
-    d:
-      "M 85 81 L 65 98 L 85 119 L 85 81 z M 110 81 L 90 98 L 110 119 L 110 81 z M 135 81 L 115 98 L 135 119 L 135 81 z",
+    d: "M 85 81 L 65 98 L 85 119 L 85 81 z M 110 81 L 90 98 L 110 119 L 110 81 z M 135 81 L 115 98 L 135 119 L 135 81 z",
   };
   icn["SU.IC.ECHO TRACKER CLASSIFIER (ETC)/POSSIBLE CONTACT (POSCON)"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     x: 100,
-    y: 130,
+    y: 120,
     fontsize: 60,
     text: "?",
   };
   icn["SU.IC.FUSED TRACK"] = [
     text("?"),
-    { type: "path", fill: false, d: "m 70,65 10,35 -10,35 60,0 -10,-35 10,-35" },
+    {
+      type: "path",
+      fill: false,
+      d: "m 70,65 10,35 -10,35 60,0 -10,-35 10,-35",
+    },
   ];
   icn["SU.IC.SEA MINE"] = {
     type: "path",
@@ -259,8 +262,7 @@ export default function(
         : iconFillColor,
     stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
 
-    d:
-      "M 115.9,73 126.5,62.4 137.1,73 126.5,83.6 m -53,0 L 62.9,73 73.5,62.4 84.1,73 m 8.4,-3 0,-15 15,0 0,15 m 22.5,30 c 0,16.6 -13.4,30 -30,30 -16.6,0 -30,-13.4 -30,-30 0,-16.6 13.4,-30 30,-30 C 116.6,70 130,83.4 130,100 z",
+    d: "M 115.9,73 126.5,62.4 137.1,73 126.5,83.6 m -53,0 L 62.9,73 73.5,62.4 84.1,73 m 8.4,-3 0,-15 15,0 0,15 m 22.5,30 c 0,16.6 -13.4,30 -30,30 -16.6,0 -30,-13.4 -30,-30 0,-16.6 13.4,-30 30,-30 C 116.6,70 130,83.4 130,100 z",
   };
   icn["SU.IC.SEA MINE - BOTTOM"] = [
     icn["SU.IC.SEA MINE"],
@@ -307,8 +309,8 @@ export default function(
         numberSIDC && alternateMedal
           ? ""
           : (STD2525 || numberSIDC) && !monoColor
-          ? colors.iconColor.Hostile
-          : iconFillColor,
+            ? colors.iconColor.Hostile
+            : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 100,128 -10,15 20,0 z",
     },
@@ -327,14 +329,15 @@ export default function(
     icn["SU.IC.SEA MINE"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       fill: monoColor
         ? monoColor
         : (STD2525 || numberSIDC) && !alternateMedal
-        ? black
-        : white,
+          ? black
+          : white,
       x: 100,
-      y: 110,
+      y: 103,
       fontsize: 35,
       text: "K",
     },
@@ -343,14 +346,15 @@ export default function(
     icn["SU.IC.SEA MINE"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       fill: monoColor
         ? monoColor
         : (STD2525 || numberSIDC) && !alternateMedal
-        ? black
-        : white,
+          ? black
+          : white,
       x: 100,
-      y: 112,
+      y: 103,
       fontsize: 30,
       text: "SO",
     },
@@ -358,7 +362,6 @@ export default function(
   icn["SU.IC.SEA MINE EXERCISE MINE"] = [
     {
       type: "path",
-
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -366,19 +369,19 @@ export default function(
             : "rgb(0, 130, 24)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
-      d:
-        "M 115.9,73 126.5,62.4 137.1,73 126.5,83.6 m -53,0 L 62.9,73 73.5,62.4 84.1,73 m 8.4,-3 0,-15 15,0 0,15 m 22.5,30 c 0,16.6 -13.4,30 -30,30 -16.6,0 -30,-13.4 -30,-30 0,-16.6 13.4,-30 30,-30 C 116.6,70 130,83.4 130,100 z",
+      d: "M 115.9,73 126.5,62.4 137.1,73 126.5,83.6 m -53,0 L 62.9,73 73.5,62.4 84.1,73 m 8.4,-3 0,-15 15,0 0,15 m 22.5,30 c 0,16.6 -13.4,30 -30,30 -16.6,0 -30,-13.4 -30,-30 0,-16.6 13.4,-30 30,-30 C 116.6,70 130,83.4 130,100 z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       fill: monoColor
         ? monoColor
         : (STD2525 || numberSIDC) && !alternateMedal
-        ? black
-        : white,
+          ? black
+          : white,
       x: 100,
-      y: 112,
+      y: 103,
       fontsize: 30,
       text: "EX",
     },
@@ -386,10 +389,11 @@ export default function(
       ? []
       : {
           type: "text",
+          alignmentBaseline: "middle",
           stroke: false,
           fill: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
           x: 150,
-          y: 46,
+          y: 36,
           fontsize: 40,
           text: "X",
         },
@@ -459,8 +463,7 @@ export default function(
           : "rgb(0, 130, 24)"
         : iconFillColor,
     stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
-    d:
-      "m 106.6,101.6 0,26.3 -13.1,-13.1 z m -19.7,0 0,26.3 -13.1,-13.1 z m 39.4,0 0,26.3 -13.1,-13.1 13.1,-13.1 M 100,75.3 c -14.5,0 -26.3,11.8 -26.3,26.3 l 52.5,0 C 126.3,87.1 114.5,75.3 100,75.3 z m -6.6,0 0,-13.1 13.1,0 0,13.1 m -29.8,12.3 -9.3,-9.3 9.3,-9.3 9.3,9.3 m 27.9,0 9.3,-9.3 9.3,9.3 -9.3,9.3",
+    d: "m 106.6,101.6 0,26.3 -13.1,-13.1 z m -19.7,0 0,26.3 -13.1,-13.1 z m 39.4,0 0,26.3 -13.1,-13.1 13.1,-13.1 M 100,75.3 c -14.5,0 -26.3,11.8 -26.3,26.3 l 52.5,0 C 126.3,87.1 114.5,75.3 100,75.3 z m -6.6,0 0,-13.1 13.1,0 0,13.1 m -29.8,12.3 -9.3,-9.3 9.3,-9.3 9.3,9.3 m 27.9,0 9.3,-9.3 9.3,9.3 -9.3,9.3",
   };
   icn["SU.IC.SEA MINE DECOY, BOTTOM/GROUND"] = [
     icn["SU.IC.SEA MINE DECOY"],
@@ -501,8 +504,7 @@ export default function(
           ? colors.iconColor.Neutral
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
-      d:
-        "M 115.9,73 126.5,62.4 137.1,73 126.5,83.6 m -53,0 L 62.9,73 73.5,62.4 84.1,73 m 8.4,-3 0,-15 15,0 0,15 m 22.5,30 c 0,16.6 -13.4,30 -30,30 -16.6,0 -30,-13.4 -30,-30 0,-16.6 13.4,-30 30,-30 C 116.6,70 130,83.4 130,100 z",
+      d: "M 115.9,73 126.5,62.4 137.1,73 126.5,83.6 m -53,0 L 62.9,73 73.5,62.4 84.1,73 m 8.4,-3 0,-15 15,0 0,15 m 22.5,30 c 0,16.6 -13.4,30 -30,30 -16.6,0 -30,-13.4 -30,-30 0,-16.6 13.4,-30 30,-30 C 116.6,70 130,83.4 130,100 z",
     },
     {
       type: "path",
@@ -581,19 +583,19 @@ export default function(
             : "rgb(255,255,0)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
-      d:
-        "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z",
+      d: "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       fill: monoColor
         ? monoColor
         : (STD2525 || numberSIDC) && !alternateMedal
-        ? black
-        : white,
+          ? black
+          : white,
       x: 100,
-      y: 112,
+      y: 103,
       fontsize: 30,
       text: "E",
     },
@@ -649,19 +651,19 @@ export default function(
             : "rgb(0, 130, 24)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : false,
-      d:
-        "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z",
+      d: "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       fill: monoColor
         ? monoColor
         : (STD2525 || numberSIDC) && !alternateMedal
-        ? black
-        : white,
+          ? black
+          : white,
       x: 100,
-      y: 105,
+      y: 103,
       fontsize: 18,
       text: "ANCR",
     },
@@ -669,7 +671,6 @@ export default function(
   icn["SU.IC.SEA MINE MILCO"] = [
     {
       type: "path",
-
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -677,17 +678,17 @@ export default function(
             : "rgb(255,141,42)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
-      d:
-        "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z",
+      d: "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z",
     },
     numberSIDC
       ? []
       : {
           type: "text",
+          alignmentBaseline: "middle",
           stroke: false,
           fill: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
           x: 100,
-          y: 112,
+          y: 103,
           fontsize: 30,
           text: "#",
         },
@@ -696,7 +697,6 @@ export default function(
     icn["SU.IC.SEA MINE MILCO"],
     {
       type: "path",
-
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -711,7 +711,6 @@ export default function(
     icn["SU.IC.SEA MINE MILCO"],
     {
       type: "path",
-
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? alternateMedal
@@ -726,7 +725,6 @@ export default function(
     icn["SU.IC.SEA MINE MILCO"],
     {
       type: "path",
-
       fill: false,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
       d: "m 75,140 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10 5,-10 5,10",
@@ -734,66 +732,71 @@ export default function(
   ];
   icn["SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 1"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     fill: monoColor
       ? monoColor
       : (STD2525 || numberSIDC) && !alternateMedal
-      ? black
-      : white,
+        ? black
+        : white,
     x: 100,
-    y: 110,
+    y: 103,
     fontsize: 35,
     text: "1",
   };
   icn["SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 2"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     fill: monoColor
       ? monoColor
       : (STD2525 || numberSIDC) && !alternateMedal
-      ? black
-      : white,
+        ? black
+        : white,
     x: 100,
-    y: 110,
+    y: 103,
     fontsize: 35,
     text: "2",
   };
   icn["SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 3"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     fill: monoColor
       ? monoColor
       : (STD2525 || numberSIDC) && !alternateMedal
-      ? black
-      : white,
+        ? black
+        : white,
     x: 100,
-    y: 110,
+    y: 103,
     fontsize: 35,
     text: "3",
   };
   icn["SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 4"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     fill: monoColor
       ? monoColor
       : (STD2525 || numberSIDC) && !alternateMedal
-      ? black
-      : white,
+        ? black
+        : white,
     x: 100,
-    y: 110,
+    y: 103,
     fontsize: 35,
     text: "4",
   };
   icn["SU.IC.SEA MINE MILCO - GENERAL, CONFIDENCE LEVEL 5"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     fill: monoColor
       ? monoColor
       : (STD2525 || numberSIDC) && !alternateMedal
-      ? black
-      : white,
+        ? black
+        : white,
     x: 100,
-    y: 110,
+    y: 103,
     fontsize: 35,
     text: "5",
   };
@@ -808,19 +811,19 @@ export default function(
             : "rgb(255,255,0)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
-      d:
-        "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z",
+      d: "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       fill: monoColor
         ? monoColor
         : (STD2525 || numberSIDC) && !alternateMedal
-        ? black
-        : white,
+          ? black
+          : white,
       x: 100,
-      y: 112,
+      y: 103,
       fontsize: 30,
       text: "NR",
     },
@@ -876,19 +879,19 @@ export default function(
             : "rgb(255,255,0)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
-      d:
-        "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z",
+      d: "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       fill: monoColor
         ? monoColor
         : (STD2525 || numberSIDC) && !alternateMedal
-        ? black
-        : white,
+          ? black
+          : white,
       x: 100,
-      y: 112,
+      y: 103,
       fontsize: 30,
       text: "OB",
     },
@@ -902,8 +905,7 @@ export default function(
           ? colors.iconColor.Neutral
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
-      d:
-        "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z",
+      d: "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z",
     },
     {
       type: "text",
@@ -935,19 +937,19 @@ export default function(
             : "rgb(0, 130, 24)"
           : iconFillColor,
       stroke: (STD2525 || numberSIDC) && !monoColor ? black : iconColor,
-      d:
-        "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z",
+      d: "m 113.8,127.6 -27.6,0 -13.8,-13.8 0,-27.6 13.8,-13.8 27.6,0 13.8,13.8 0,27.6 z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       fill: monoColor
         ? monoColor
         : (STD2525 || numberSIDC) && !alternateMedal
-        ? black
-        : white,
+          ? black
+          : white,
       x: 100,
-      y: 112,
+      y: 103,
       fontsize: 30,
       text: "N",
     },
@@ -1005,13 +1007,14 @@ export default function(
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? colors.iconColor.Hostile
           : iconColor,
       x: 100,
-      y: 110,
+      y: 103,
       fontsize: 30,
       text: "UXO",
     },
@@ -1029,13 +1032,14 @@ export default function(
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? colors.iconColor.Neutral
           : iconColor,
       x: 100,
-      y: 122,
+      y: 107,
       fontsize: 60,
       text: "E",
     },
@@ -1043,7 +1047,6 @@ export default function(
   icn["SU.IC.DIVE REPORT LOCATION"] = [
     {
       type: "path",
-
       fill: false,
       stroke:
         (STD2525 || numberSIDC) && !monoColor
@@ -1053,20 +1056,20 @@ export default function(
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       fill:
         (STD2525 || numberSIDC) && !monoColor
           ? colors.iconColor.Neutral
           : iconColor,
       x: 100,
-      y: 122,
+      y: 107,
       fontsize: 60,
       text: "D",
     },
   ];
   icn["SU.IC.SEABED INSTALLATION/MANMADE"] = {
     type: "path",
-
     fill: iconFillColor,
     stroke: black,
     d: "m 140,125 -80,0 10,-30 10,20 20,-50 20,50 10,-25 z",

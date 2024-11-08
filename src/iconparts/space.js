@@ -164,10 +164,11 @@ export default function (
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 95,
+      y: 85,
       fontsize: 22,
       text: "WX",
     },

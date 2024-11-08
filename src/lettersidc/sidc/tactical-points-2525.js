@@ -123,9 +123,9 @@ export default {
     bbox["G-G-GPAW--"] = { x1: 60, x2: 140, y1: 40, y2: 160 };
     sidc["G-G-GPAK--"] = icn["TP.TANKING"]; //TACGRP.C2GM.GNL.PNT.ACTL.TAK
     bbox["G-G-GPAK--"] = { x1: 60, x2: 140, y1: 40, y2: 160 };
-    sidc["G-G-GPAA--"] = icn["TP.FIXED WING"]; //TACGRP.C2GM.GNL.PNT.ACTL.ASBWF
+    sidc["G-G-GPAA--"] = icn["TP.ASW FIXED WING"]; //TACGRP.C2GM.GNL.PNT.ACTL.ASBWF
     bbox["G-G-GPAA--"] = { x1: 60, x2: 140, y1: 40, y2: 160 };
-    sidc["G-G-GPAH--"] = icn["TP.ROTARY WING"]; //TACGRP.C2GM.GNL.PNT.ACTL.ASBWR
+    sidc["G-G-GPAH--"] = icn["TP.ASW ROTARY WING"]; //TACGRP.C2GM.GNL.PNT.ACTL.ASBWR
     bbox["G-G-GPAH--"] = { x1: 60, x2: 140, y1: 40, y2: 160 };
     sidc["G-G-GPAB--"] = icn["TP.SUCAP - FIXED WING"]; //TACGRP.C2GM.GNL.PNT.ACTL.SUWF
     bbox["G-G-GPAB--"] = { x1: 60, x2: 140, y1: 40, y2: 160 };

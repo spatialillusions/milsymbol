@@ -1165,7 +1165,7 @@ export default function (
     !numberSIDC && !STD2525 ? { type: "circle", cx: 100, cy: 100, r: 15 } : [],
   ];
   */
-  icn["TP.FIXED WING"] = [
+  icn["TP.ASW FIXED WING"] = [
     icn["TP.AIR CONTROL"],
     !numberSIDC && !STD2525
       ? [
@@ -1201,7 +1201,7 @@ export default function (
           },
         ],
   ];
-  icn["TP.ROTARY WING"] = [
+  icn["TP.ASW ROTARY WING"] = [
     icn["TP.AIR CONTROL"],
     !numberSIDC && !STD2525
       ? [
@@ -1264,7 +1264,7 @@ export default function (
       x: 100,
       y: 65,
       fontsize: 32,
-      text: "ASW",
+      text: "SUW",
     },
     { type: "path", d: "m 65,80 0,40 70,-40 0,40 -70,-40", stroke: false },
   ];
