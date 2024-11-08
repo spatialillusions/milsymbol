@@ -148,6 +148,7 @@ export function metadata(ms, metadata, mapping) {
 
   // Frame shape overrides 2525E
   if (frameshape != "0") {
+    metadata.civilian = false;
     metadata.cyberspace = false;
     metadata.installation = false;
     metadata.landequipment = false;
