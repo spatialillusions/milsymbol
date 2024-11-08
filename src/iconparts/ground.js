@@ -61,9 +61,10 @@ export default function (
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 30,
       text: STD2525 ? "FE" : "F",
     },
@@ -76,7 +77,15 @@ export default function (
       fill: false,
       d: "m 85,80 30,0 c 5.54,0 10,4.46 10,10 l 0,5 c 0,5.54 -4.46,10 -10,10 l -30,0 c -5.54,0 -10,-4.46 -10,-10 l 0,-5 c 0,-5.54 4.46,-10 10,-10 z",
     },
-    { type: "text", stroke: false, x: 100, y: 101, fontsize: 20, text: "C" },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 100,
+      y: 95,
+      fontsize: 20,
+      text: "C",
+    },
   ];
   icn["GR.IC.AIR DEFENSE COMPOSITE"] = {
     type: "path",
@@ -128,7 +137,15 @@ export default function (
       fill: false,
       d: "m 85,80 30,0 c 5.54,0 10,4.46 10,10 l 0,5 c 0,5.54 -4.46,10 -10,10 l -30,0 c -5.54,0 -10,-4.46 -10,-10 l 0,-5 c 0,-5.54 4.46,-10 10,-10 z",
     },
-    { type: "text", stroke: false, x: 100, y: 101, fontsize: 20, text: "S" },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 100,
+      y: 95,
+      fontsize: 20,
+      text: "S",
+    },
   ];
   icn["GR.IC.AIR DEFENSE VULCAN"] = [
     {
@@ -136,7 +153,15 @@ export default function (
       fill: false,
       d: "m 85,80 30,0 c 5.54,0 10,4.46 10,10 l 0,5 c 0,5.54 -4.46,10 -10,10 l -30,0 c -5.54,0 -10,-4.46 -10,-10 l 0,-5 c 0,-5.54 4.46,-10 10,-10 z",
     },
-    { type: "text", stroke: false, x: 100, y: 101, fontsize: 20, text: "V" },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 100,
+      y: 95,
+      fontsize: 20,
+      text: "V",
+    },
   ];
   icn["GR.IC.AIR DEFENSE GUN UNIT"] = {
     type: "path",
@@ -3176,7 +3201,15 @@ export default function (
   icn["ST.IC.SPY"] = text("SPY");
   icn["ST.IC.SNIPING"] = [
     { type: "path", d: "m 95,85 5,-5 5,5 m -5,-5 0,40", fill: false },
-    { type: "text", stroke: false, x: 100, y: 75, fontsize: 25, text: "S" },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 100,
+      y: 65,
+      fontsize: 25,
+      text: "S",
+    },
   ];
   icn["ST.IC.VANDALISM/LOOT/RANSACK/PLUNDER/SACK"] = {
     type: "path",
@@ -4364,6 +4397,7 @@ export default function (
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       x: 100,
       y: 103,
@@ -4463,7 +4497,15 @@ export default function (
     },
   ];
   icn["GR.IN.IC.WAREHOUSE/STORAGE FACILITY"] = [
-    { type: "text", stroke: false, x: 100, y: 113, fontsize: 23, text: "STOR" },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      x: 100,
+      y: 103,
+      fontsize: 23,
+      text: "STOR",
+    },
   ];
   icn["GR.IN.IC.WASTEWATER TREATMENT FACILITY"] = [
     {

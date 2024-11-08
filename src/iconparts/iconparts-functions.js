@@ -63,8 +63,9 @@ export function textm1(str) {
     type: "text",
     stroke: false,
     textanchor: "middle",
+    alignmentBaseline: "middle",
     x: 100,
-    y: 77,
+    y: 71,
     fontsize: size,
     //fontweight: "normal",
     text: str,
@@ -72,22 +73,23 @@ export function textm1(str) {
 }
 export function textm2(str) {
   let size = 28;
-  let y = 143;
+  //let y = 143;
 
   if (str.length == 3) {
     size = 25;
-    y = 140;
+    // y = 140;
   }
   if (str.length >= 4) {
     size = 20;
-    y = 135;
+    // y = 135;
   }
   return {
     type: "text",
     stroke: false,
     textanchor: "middle",
+    alignmentBaseline: "middle",
     x: 100,
-    y: y,
+    y: 134,
     fontsize: size,
     //fontweight: "normal",
     text: str,
