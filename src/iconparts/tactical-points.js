@@ -1,6 +1,6 @@
 import { defaultProperties } from "./iconparts-functions.js";
 
-export default function(
+export default function (
   iconParts,
   metadata,
   colors,
@@ -52,15 +52,15 @@ export default function(
           {
             type: "path",
             fill: false,
-            d:
-              "m 0,45 85,46.75 m 30,16.5 85,46.75 M 0,155 85,108.25 M 115,91.75 200,45",
+            d: "m 0,45 85,46.75 m 30,16.5 85,46.75 M 0,155 85,108.25 M 115,91.75 200,45",
           },
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             textanchor: "middle",
             x: 100,
-            y: 115,
+            y: 103,
             fontsize: 45,
             text: "D",
           },
@@ -70,22 +70,21 @@ export default function(
       ? {
           type: "path",
           fill: false,
-          d:
-            "m 0,100 200,0 M 0,155 200,45.2 M 185,85 l 15,15 -15,15 m 9.2,-49.3 5.5,-20.5 -20.5,-5.5",
+          d: "m 0,100 200,0 M 0,155 200,45.2 M 185,85 l 15,15 -15,15 m 9.2,-49.3 5.5,-20.5 -20.5,-5.5",
         }
       : [
           {
             type: "path",
             fill: false,
-            d:
-              "m 194.203,65.6674 5.49,-20.4904 -20.49,-5.4904 M 115,91.75 200,45 M 0,155 85,108.25 M 185,85 l 15,15 -15,15 m -70,-15 85,0 m -200,0 85,0",
+            d: "m 194.203,65.6674 5.49,-20.4904 -20.49,-5.4904 M 115,91.75 200,45 M 0,155 85,108.25 M 185,85 l 15,15 -15,15 m -70,-15 85,0 m -200,0 85,0",
           },
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             textanchor: "middle",
             x: 100,
-            y: 115,
+            y: 103,
             fontsize: 45,
             text: "I",
           },
@@ -115,10 +114,11 @@ export default function(
           },
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             textanchor: "middle",
             x: 100,
-            y: 115,
+            y: 103,
             fontsize: 45,
             text: "N",
           },
@@ -149,10 +149,11 @@ export default function(
           },
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             textanchor: "middle",
             x: 100,
-            y: 115,
+            y: 103,
             fontsize: 45,
             text: "S",
           },
@@ -161,8 +162,7 @@ export default function(
     {
       type: "path",
       stroke: false,
-      d:
-        "m 100,50 0,50 50,0 C 150,72.3858 127.614,50 100,50 Z m 0,50 -50,0 c 0,27.614 22.3858,50 50,50 z",
+      d: "m 100,50 0,50 50,0 C 150,72.3858 127.614,50 100,50 Z m 0,50 -50,0 c 0,27.614 22.3858,50 50,50 z",
     },
     { type: "circle", fill: false, cx: 100, cy: 100, r: 50 },
   ];
@@ -170,19 +170,21 @@ export default function(
     { type: "path", d: "m 65,0 70,0 m -35,80 0,-80 m 0,100 -45,-20 90,0 z" },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 75,
-      y: 55,
+      y: 45,
       fontsize: 45,
       text: "B",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 125,
-      y: 55,
+      y: 45,
       fontsize: 45,
       text: "C",
     },
@@ -191,19 +193,21 @@ export default function(
     { type: "path", d: "m 65,0 70,0 m -35,80 0,-80 m 0,100 -45,-20 90,0 z" },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 75,
-      y: 55,
+      y: 45,
       fontsize: 45,
       text: "L",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 125,
-      y: 55,
+      y: 45,
       fontsize: 45,
       text: "C",
     },
@@ -220,19 +224,21 @@ export default function(
     { type: "path", d: "m 65,0 70,0 m -35,80 0,-80 m 0,100 -45,-20 90,0 z" },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 75,
-      y: 55,
+      y: 45,
       fontsize: 45,
       text: "T",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 125,
-      y: 55,
+      y: 45,
       fontsize: 45,
       text: "T",
     },
@@ -245,10 +251,11 @@ export default function(
     icn["TP.SONOBUOY"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "P",
     },
@@ -257,10 +264,11 @@ export default function(
     icn["TP.SONOBUOY"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "D",
     },
@@ -269,10 +277,11 @@ export default function(
     icn["TP.SONOBUOY"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "L",
     },
@@ -281,10 +290,11 @@ export default function(
     icn["TP.SONOBUOY"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "C",
     },
@@ -293,10 +303,11 @@ export default function(
     icn["TP.SONOBUOY"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "S",
     },
@@ -305,10 +316,11 @@ export default function(
     icn["TP.SONOBUOY"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "B",
     },
@@ -317,10 +329,11 @@ export default function(
     icn["TP.SONOBUOY"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "A",
     },
@@ -329,10 +342,11 @@ export default function(
     icn["TP.SONOBUOY"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "V",
     },
@@ -341,10 +355,11 @@ export default function(
     icn["TP.SONOBUOY"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "T",
     },
@@ -353,10 +368,11 @@ export default function(
     icn["TP.SONOBUOY"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "BR",
     },
@@ -365,10 +381,11 @@ export default function(
     icn["TP.SONOBUOY"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "B",
     },
@@ -377,10 +394,11 @@ export default function(
     icn["TP.SONOBUOY"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "CM",
     },
@@ -389,10 +407,11 @@ export default function(
     icn["TP.SONOBUOY"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "E",
     },
@@ -401,10 +420,11 @@ export default function(
     icn["TP.SONOBUOY"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "R",
     },
@@ -413,10 +433,11 @@ export default function(
     icn["TP.SONOBUOY"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "K",
     },
@@ -427,37 +448,39 @@ export default function(
   ];
   icn["TP.SEARCH"] = {
     type: "path",
-    d:
-      "m 80,80 20,20 -20,20 40,0 -20,-20 20,-20 z M 50,150 150,50 M 50,50 150,150",
+    d: "m 80,80 20,20 -20,20 40,0 -20,-20 20,-20 z M 50,150 150,50 M 50,50 150,150",
   };
   icn["TP.SEARCH AREA"] = [
     icn["TP.SEARCH"],
     !STD2525 && !numberSIDC
       ? {
           type: "text",
+          alignmentBaseline: "middle",
           stroke: false,
           textanchor: "end",
           x: 75,
-          y: 115,
+          y: 103,
           fontsize: 40,
           text: "SA",
         }
       : [
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             textanchor: "middle",
             x: 60,
-            y: 115,
+            y: 103,
             fontsize: 45,
             text: "S",
           },
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             textanchor: "middle",
             x: 140,
-            y: 115,
+            y: 103,
             fontsize: 45,
             text: "A",
           },
@@ -468,29 +491,32 @@ export default function(
     !STD2525 && !numberSIDC
       ? {
           type: "text",
+          alignmentBaseline: "middle",
           stroke: false,
           textanchor: "end",
           x: 75,
-          y: 115,
+          y: 103,
           fontsize: 40,
           text: "DIP",
         }
       : [
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             textanchor: "middle",
             x: 60,
-            y: 115,
+            y: 103,
             fontsize: 45,
             text: "D",
           },
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             textanchor: "middle",
             x: 140,
-            y: 115,
+            y: 103,
             fontsize: 45,
             text: "P",
           },
@@ -499,8 +525,7 @@ export default function(
   icn["TP.SEARCH CENTER"] = {
     type: "path",
     stroke: false,
-    d:
-      "m 100,100 -50,10 0,-20 z m 0,0 10,50 -20,0 z m 0,0 50,-10 0,20 z m 0,0 -10,-50 20,0 z",
+    d: "m 100,100 -50,10 0,-20 z m 0,0 10,50 -20,0 z m 0,0 50,-10 0,20 z m 0,0 -10,-50 20,0 z",
   };
   icn["TP.REFERENCE POINT"] = [
     { type: "path", fill: false, d: "M 160,160 40,160 40,40 160,40 Z" },
@@ -525,10 +550,11 @@ export default function(
     icn["TP.SPECIAL POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 150,
+      y: 140,
       fontsize: 40,
       text: "D",
     },
@@ -537,10 +563,11 @@ export default function(
     icn["TP.REFERENCE POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 150,
+      y: 140,
       fontsize: 40,
       text: "P",
     },
@@ -549,10 +576,11 @@ export default function(
     icn["TP.REFERENCE POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 150,
+      y: 140,
       fontsize: 40,
       text: "PL",
     },
@@ -561,10 +589,11 @@ export default function(
     icn["TP.REFERENCE POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 150,
+      y: 140,
       fontsize: 40,
       text: "M",
     },
@@ -573,10 +602,11 @@ export default function(
     icn["TP.REFERENCE POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 150,
+      y: 140,
       fontsize: 40,
       text: "W",
     },
@@ -585,10 +615,11 @@ export default function(
     icn["TP.REFERENCE POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 150,
+      y: 140,
       fontsize: 40,
       text: "C",
     },
@@ -597,10 +628,11 @@ export default function(
     icn["TP.REFERENCE POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 150,
+      y: 140,
       fontsize: 40,
       text: "ENY",
     },
@@ -608,8 +640,7 @@ export default function(
   icn["TP.POINT OF INTEREST"] = [
     {
       type: "path",
-      d:
-        "M 129.021,41.957 C 121.48,49.9458 110.986,54.4816 100,54.5 89.0432,54.4928 78.569,49.9914 71.0234,42.0469 L 100,100 Z",
+      d: "M 129.021,41.957 C 121.48,49.9458 110.986,54.4816 100,54.5 89.0432,54.4928 78.569,49.9914 71.0234,42.0469 L 100,100 Z",
     },
     { type: "circle", fill: false, cx: 100, cy: 15, r: 40 },
   ];
@@ -617,10 +648,11 @@ export default function(
     icn["TP.POINT OF INTEREST"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 30,
+      y: 20,
       fontsize: 40,
       fontweight: "bold",
       text: "LE",
@@ -667,27 +699,25 @@ export default function(
   icn["TP.DEFENDED ASSET"] = {
     type: "path",
     fill: false,
-    d:
-      "m 90,135 0,-30 20,0 0,30 m -50,0 0,-50 -10,0 0,-20 20,0 0,10 20,0 0,-10 20,0 0,10 20,0 0,-10 20,0 0,20 -10,0 0,50 z",
+    d: "m 90,135 0,-30 20,0 0,30 m -50,0 0,-50 -10,0 0,-20 20,0 0,10 20,0 0,-10 20,0 0,10 20,0 0,-10 20,0 0,20 -10,0 0,50 z",
   };
   icn["TP.CHEMICAL EVENT"] = [
     {
       type: "path",
       fill: false,
-      d:
-        "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z",
+      d: "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z",
     },
     {
       type: "path",
-      d:
-        "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z",
+      d: "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 20,
+      y: 10,
       fontsize: 30,
       text: "C",
     },
@@ -696,29 +726,29 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z",
+      d: "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z",
     },
     {
       type: "path",
-      d:
-        "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z",
+      d: "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 20,
+      y: 10,
       fontsize: 30,
       text: "C",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 85,
+      y: 75,
       fontsize: 30,
       text: "T",
     },
@@ -728,20 +758,19 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z",
+      d: "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z",
     },
     {
       type: "path",
-      d:
-        "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z",
+      d: "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 20,
+      y: 10,
       fontsize: 30,
       text: "B",
     },
@@ -750,29 +779,29 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z",
+      d: "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z",
     },
     {
       type: "path",
-      d:
-        "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z",
+      d: "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 20,
+      y: 10,
       fontsize: 30,
       text: "B",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 85,
+      y: 75,
       fontsize: 30,
       text: "T",
     },
@@ -782,20 +811,19 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z",
+      d: "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z",
     },
     {
       type: "path",
-      d:
-        "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z",
+      d: "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 20,
+      y: 10,
       fontsize: 30,
       text: "N",
     },
@@ -804,20 +832,19 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z",
+      d: "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z",
     },
     {
       type: "path",
-      d:
-        "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z",
+      d: "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 20,
+      y: 10,
       fontsize: 30,
       text: "R",
     },
@@ -826,29 +853,29 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z",
+      d: "M 110,60 C 110,40 115,25 80,20 M 90,60 C 90,40 85,25 120,20 m -20,80 -60,-110 120,0 z",
     },
     {
       type: "path",
-      d:
-        "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z",
+      d: "m 120,20 c 10,0 10,15 0,15 -10,0 -10,-15 0,-15 z M 80,35 c 10,0 10,-15 0,-15 -10,0 -10,15 0,15 z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 20,
+      y: 10,
       fontsize: 30,
       text: "R",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 85,
+      y: 75,
       fontsize: 30,
       text: "T",
     },
@@ -856,8 +883,7 @@ export default function(
   icn["TP.DROP POINT"] = {
     type: "path",
     fill: false,
-    d:
-      "m 130,100 0,-40 m -60,40 0,-40 m 60,40 0,0 c 0,8.284 -6.716,15 -15,15 -8.284,0 -15,-6.716 -15,-15 m 0,0 0,0 c 0,8.284 -6.7157,15 -15,15 -8.2843,0 -15,-6.716 -15,-15 m 30,-40 0,40",
+    d: "m 130,100 0,-40 m -60,40 0,-40 m 60,40 0,0 c 0,8.284 -6.716,15 -15,15 -8.284,0 -15,-6.716 -15,-15 m 0,0 0,0 c 0,8.284 -6.7157,15 -15,15 -8.2843,0 -15,-6.716 -15,-15 m 30,-40 0,40",
   };
   icn["TP.ENTRY POINT"] = {
     type: "path",
@@ -866,20 +892,17 @@ export default function(
   };
   icn["TP.AIR DETONATION"] = {
     type: "path",
-    d:
-      "m 55,150 90,0 m -35,-95 5,20 15,-10 0,15 15,5 -15,10 15,10 -15,5 5,15 -20,-5 -5,20 -10,-15 -10,20 -5,-25 -20,10 5,-15 L 55,105 70,95 60,85 70,80 70,65 85,75 90,55 100,70 Z",
+    d: "m 55,150 90,0 m -35,-95 5,20 15,-10 0,15 15,5 -15,10 15,10 -15,5 5,15 -20,-5 -5,20 -10,-15 -10,20 -5,-25 -20,10 5,-15 L 55,105 70,95 60,85 70,80 70,65 85,75 90,55 100,70 Z",
     fill: false,
   };
   icn["TP.GROUND ZERO"] = {
     type: "path",
     stroke: false,
-    d:
-      "M 100 28 C 100 28 65.4398 29.8261 61.6543 55 C 60.2826 64.1213 75.0115 70.4884 82.2363 71.6543 C 89.4611 72.8201 91.7277 55.3462 98.5098 56.0371 L 93 90 C 93 90 70 90 67 97 C 65.0304 101.596 100 100 100 100 C 100 100 134.97 101.596 133 97 C 130 90 107 90 107 90 L 101.49 56.0371 C 108.272 55.3462 110.539 72.8201 117.764 71.6543 C 124.988 70.4884 139.718 64.1213 138.346 55 C 134.56 29.8261 100 28 100 28 z",
+    d: "M 100 28 C 100 28 65.4398 29.8261 61.6543 55 C 60.2826 64.1213 75.0115 70.4884 82.2363 71.6543 C 89.4611 72.8201 91.7277 55.3462 98.5098 56.0371 L 93 90 C 93 90 70 90 67 97 C 65.0304 101.596 100 100 100 100 C 100 100 134.97 101.596 133 97 C 130 90 107 90 107 90 L 101.49 56.0371 C 108.272 55.3462 110.539 72.8201 117.764 71.6543 C 124.988 70.4884 139.718 64.1213 138.346 55 C 134.56 29.8261 100 28 100 28 z",
   };
   icn["TP.LAUNCHED TORPEDO (AEGIS ONLY)"] = {
     type: "path",
-    d:
-      "m 150,90 0,20 m -10,-10 10,0 m -97,-10 84,0 c 1.662,0 3,1.338 3,3 l 0,14 c 0,1.662 -1.338,3 -3,3 l -84,0 c -1.662,0 -3,-1.338 -3,-3 l 0,-14 c 0,-1.662 1.338,-3 3,-3 z",
+    d: "m 150,90 0,20 m -10,-10 10,0 m -97,-10 84,0 c 1.662,0 3,1.338 3,3 l 0,14 c 0,1.662 -1.338,3 -3,3 l -84,0 c -1.662,0 -3,-1.338 -3,-3 l 0,-14 c 0,-1.662 1.338,-3 3,-3 z",
   };
   icn["TP.MSL DETECT POINT"] = {
     type: "path",
@@ -887,14 +910,12 @@ export default function(
   };
   icn["TP.ACOUSTIC COUNTER MEASURE (DECOY)"] = {
     type: "path",
-    d:
-      "M 107.5,55 92.5518,70 107.5,85 Z M 50,30 150,30 m -90,70 0,-5 80,0 0,5 z m 70,-45 -15,15 15,15 z M 85,55 70,70 85,85 Z m 15,-25 0,33",
+    d: "M 107.5,55 92.5518,70 107.5,85 Z M 50,30 150,30 m -90,70 0,-5 80,0 0,5 z m 70,-45 -15,15 15,15 z M 85,55 70,70 85,85 Z m 15,-25 0,33",
   };
   icn["TP.ELECTRONIC COUNTER MEASURES (ECM) DECOY"] = [
     {
       type: "path",
-      d:
-        "m 80,120 -20,10 20,10 z m 30,0 -20,10 20,10 0,-20 z m 30,0 -20,10 20,10 z m -25,-20 c 0,10 -10,18 -19.4,14 -9.4,-2 -13.8,-14.7 -8,-22.5 5.2,-8.2 18.4,-8.7 24.4,-0.8 2,2.6 3,5.9 3,9.3 z",
+      d: "m 80,120 -20,10 20,10 z m 30,0 -20,10 20,10 0,-20 z m 30,0 -20,10 20,10 z m -25,-20 c 0,10 -10,18 -19.4,14 -9.4,-2 -13.8,-14.7 -8,-22.5 5.2,-8.2 18.4,-8.7 24.4,-0.8 2,2.6 3,5.9 3,9.3 z",
     },
     {
       type: "path",
@@ -903,10 +924,11 @@ export default function(
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 80,
+      y: 70,
       fontsize: 30,
       text: "ECM",
     },
@@ -935,10 +957,11 @@ export default function(
     icn["TP.HARBOR"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "Q",
     },
@@ -947,10 +970,11 @@ export default function(
     icn["TP.HARBOR"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "A",
     },
@@ -959,10 +983,11 @@ export default function(
     icn["TP.HARBOR"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "Y",
     },
@@ -971,10 +996,11 @@ export default function(
     icn["TP.HARBOR"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "X",
     },
@@ -982,17 +1008,17 @@ export default function(
   icn["TP.ROUTE"] = {
     type: "path",
     fill: false,
-    d:
-      "m 138.484,76.82 c 0,-7.4823 6.066,-13.5478 13.548,-13.548 7.483,-3e-4 13.549,6.0653 13.549,13.548 m -27.097,0 0,0 c 0,6.9484 -5.634,12.5807 -12.582,12.58 -6.948,-4e-4 -12.58,-5.6324 -12.58,-12.58 m -27.097,0 c 2e-4,-7.4823 6.0657,-13.5478 13.548,-13.548 7.483,-3e-4 13.549,6.0653 13.549,13.548 m -79.3554,0 c 2e-4,-7.4824 6.066,-13.548 13.5484,-13.548 7.4824,0 13.5482,6.0656 13.5484,13.548 m 25.1616,0 0,0 C 86.2246,83.7681 80.5918,89.4003 73.6437,89.4 66.696,89.3998 61.0638,83.7677 61.0634,76.82 m 77.4206,47.328 c 0,-7.482 6.066,-13.548 13.548,-13.548 7.483,0 13.549,6.065 13.549,13.548 m -27.097,0 0,0 c 0,6.948 -5.634,12.581 -12.582,12.58 -6.948,0 -12.58,-5.632 -12.58,-12.58 m -27.097,0 c 2e-4,-7.482 6.0657,-13.548 13.548,-13.548 7.483,0 13.549,6.065 13.549,13.548 m -79.3554,0 c 2e-4,-7.482 6.066,-13.548 13.5484,-13.548 7.4824,0 13.5482,6.066 13.5484,13.548 m 25.1616,0 0,0 c -4e-4,6.948 -5.6332,12.58 -12.5813,12.58 -6.9477,0 -12.5799,-5.632 -12.5803,-12.58 m -27.0968,-23.664 132.5184,0",
+    d: "m 138.484,76.82 c 0,-7.4823 6.066,-13.5478 13.548,-13.548 7.483,-3e-4 13.549,6.0653 13.549,13.548 m -27.097,0 0,0 c 0,6.9484 -5.634,12.5807 -12.582,12.58 -6.948,-4e-4 -12.58,-5.6324 -12.58,-12.58 m -27.097,0 c 2e-4,-7.4823 6.0657,-13.5478 13.548,-13.548 7.483,-3e-4 13.549,6.0653 13.549,13.548 m -79.3554,0 c 2e-4,-7.4824 6.066,-13.548 13.5484,-13.548 7.4824,0 13.5482,6.0656 13.5484,13.548 m 25.1616,0 0,0 C 86.2246,83.7681 80.5918,89.4003 73.6437,89.4 66.696,89.3998 61.0638,83.7677 61.0634,76.82 m 77.4206,47.328 c 0,-7.482 6.066,-13.548 13.548,-13.548 7.483,0 13.549,6.065 13.549,13.548 m -27.097,0 0,0 c 0,6.948 -5.634,12.581 -12.582,12.58 -6.948,0 -12.58,-5.632 -12.58,-12.58 m -27.097,0 c 2e-4,-7.482 6.0657,-13.548 13.548,-13.548 7.483,0 13.549,6.065 13.549,13.548 m -79.3554,0 c 2e-4,-7.482 6.066,-13.548 13.5484,-13.548 7.4824,0 13.5482,6.066 13.5484,13.548 m 25.1616,0 0,0 c -4e-4,6.948 -5.6332,12.58 -12.5813,12.58 -6.9477,0 -12.5799,-5.632 -12.5803,-12.58 m -27.0968,-23.664 132.5184,0",
   };
   icn["TP.ROUTE RENDEZVOUS"] = [
     icn["TP.ROUTE"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 170,
+      y: 160,
       fontsize: 45,
       text: "R",
     },
@@ -1001,10 +1027,11 @@ export default function(
     icn["TP.ROUTE"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 170,
+      y: 160,
       fontsize: 45,
       text: "D",
     },
@@ -1013,10 +1040,11 @@ export default function(
     icn["TP.ROUTE"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 170,
+      y: 160,
       fontsize: 45,
       text: "W",
     },
@@ -1025,10 +1053,11 @@ export default function(
     icn["TP.ROUTE"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 170,
+      y: 160,
       fontsize: 45,
       text: "M",
     },
@@ -1037,10 +1066,11 @@ export default function(
     icn["TP.ROUTE"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 170,
+      y: 160,
       fontsize: 45,
       text: "P",
     },
@@ -1049,10 +1079,11 @@ export default function(
     icn["TP.ROUTE"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 170,
+      y: 160,
       fontsize: 45,
       text: "PK",
     },
@@ -1061,10 +1092,11 @@ export default function(
     icn["TP.ROUTE"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 170,
+      y: 160,
       fontsize: 45,
       text: "R",
     },
@@ -1073,10 +1105,11 @@ export default function(
     icn["TP.ROUTE"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 170,
+      y: 160,
       fontsize: 45,
       text: "RZ",
     },
@@ -1094,10 +1127,11 @@ export default function(
     icn["TP.AIR CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "C",
     },
@@ -1106,37 +1140,42 @@ export default function(
     icn["TP.AIR CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "W",
     },
   ];
+  /*
   icn["TP.TANKING"] = [
     icn["TP.AIR CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: !numberSIDC && !STD2525 ? 155 : 115,
+      y: !numberSIDC && !STD2525 ? 145 : 103,
       fontsize: 45,
       text: "K",
     },
     !numberSIDC && !STD2525 ? { type: "circle", cx: 100, cy: 100, r: 15 } : [],
   ];
+  */
   icn["TP.FIXED WING"] = [
     icn["TP.AIR CONTROL"],
     !numberSIDC && !STD2525
       ? [
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             textanchor: "middle",
             x: 100,
-            y: 155,
+            y: 145,
             fontsize: 45,
             text: "F",
           },
@@ -1145,10 +1184,11 @@ export default function(
       : [
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             textanchor: "middle",
             x: 100,
-            y: 75,
+            y: 65,
             fontsize: 32,
             text: STD2525 ? "ASW" : "AS",
           },
@@ -1167,10 +1207,11 @@ export default function(
       ? [
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             textanchor: "middle",
             x: 100,
-            y: 155,
+            y: 145,
             fontsize: 45,
             text: "H",
           },
@@ -1179,14 +1220,19 @@ export default function(
       : [
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             textanchor: "middle",
             x: 100,
-            y: 75,
+            y: 65,
             fontsize: 32,
             text: "ASW",
           },
-          { type: "path", d: "m 65,80 0,40 70,-40 0,40 -70,-40", stroke: false },
+          {
+            type: "path",
+            d: "m 65,80 0,40 70,-40 0,40 -70,-40",
+            stroke: false,
+          },
         ],
   ];
   icn["TP.SUCAP - FIXED WING"] = [
@@ -1212,10 +1258,11 @@ export default function(
     icn["TP.AIR CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 75,
+      y: 65,
       fontsize: 32,
       text: "ASW",
     },
@@ -1225,10 +1272,11 @@ export default function(
     icn["TP.AIR CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 75,
+      y: 65,
       fontsize: 32,
       text: STD2525 ? "MIW" : "MW",
     },
@@ -1244,10 +1292,11 @@ export default function(
     icn["TP.AIR CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 75,
+      y: 65,
       fontsize: 32,
       text: STD2525 ? "MIW" : "MW",
     },
@@ -1259,10 +1308,11 @@ export default function(
       ? [
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             textanchor: "middle",
             x: 100,
-            y: 155,
+            y: 145,
             fontsize: 45,
             text: "S",
           },
@@ -1270,10 +1320,11 @@ export default function(
         ]
       : {
           type: "text",
+          alignmentBaseline: "middle",
           stroke: false,
           textanchor: "middle",
           x: 100,
-          y: 115,
+          y: 103,
           fontsize: 45,
           text: "S",
         },
@@ -1282,10 +1333,11 @@ export default function(
     icn["TP.AIR CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 155,
+      y: 145,
       fontsize: 45,
       text: "C",
     },
@@ -1295,10 +1347,11 @@ export default function(
     icn["TP.AIR CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: !numberSIDC && !STD2525 ? 155 : 115,
+      y: !numberSIDC && !STD2525 ? 145 : 103,
       fontsize: 45,
       text: "RZ",
     },
@@ -1307,10 +1360,11 @@ export default function(
     icn["TP.AIR CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: !numberSIDC && !STD2525 ? 155 : 115,
+      y: !numberSIDC && !STD2525 ? 145 : 103,
       fontsize: 45,
       text: "C",
     },
@@ -1319,10 +1373,11 @@ export default function(
     icn["TP.AIR CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: !numberSIDC && !STD2525 ? 155 : 115,
+      y: !numberSIDC && !STD2525 ? 145 : 103,
       fontsize: 45,
       text: "W",
     },
@@ -1331,10 +1386,11 @@ export default function(
     icn["TP.AIR CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: !numberSIDC && !STD2525 ? 155 : 115,
+      y: !numberSIDC && !STD2525 ? 145 : 103,
       fontsize: 45,
       text: "T",
     },
@@ -1344,10 +1400,11 @@ export default function(
     icn["TP.AIR CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: !numberSIDC && !STD2525 ? 155 : 115,
+      y: !numberSIDC && !STD2525 ? 145 : 103,
       fontsize: 45,
       text: "RP",
     },
@@ -1356,10 +1413,11 @@ export default function(
     icn["TP.AIR CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: !numberSIDC && !STD2525 ? 155 : 115,
+      y: !numberSIDC && !STD2525 ? 145 : 103,
       fontsize: 45,
       text: "K",
     },
@@ -1370,10 +1428,11 @@ export default function(
       ? [
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             textanchor: "middle",
             x: 100,
-            y: 155,
+            y: 145,
             fontsize: 45,
             text: "O",
           },
@@ -1381,10 +1440,11 @@ export default function(
         ]
       : {
           type: "text",
+          alignmentBaseline: "middle",
           stroke: false,
           textanchor: "middle",
           x: 100,
-          y: 115,
+          y: 103,
           fontsize: 45,
           text: "TC",
         },
@@ -1394,35 +1454,38 @@ export default function(
     numberSIDC
       ? {
           type: "text",
+          alignmentBaseline: "middle",
           stroke: false,
           textanchor: "middle",
           x: 100,
-          y: 115,
+          y: 103,
           fontsize: 45,
           text: "RS",
         }
       : !STD2525
-      ? [
-          {
+        ? [
+            {
+              type: "text",
+              alignmentBaseline: "middle",
+              stroke: false,
+              textanchor: "middle",
+              x: 100,
+              y: 145,
+              fontsize: 45,
+              text: "R",
+            },
+            { type: "circle", cx: 100, cy: 100, r: 15 },
+          ]
+        : {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             textanchor: "middle",
             x: 100,
-            y: 155,
+            y: 103,
             fontsize: 45,
-            text: "R",
+            text: "RC",
           },
-          { type: "circle", cx: 100, cy: 100, r: 15 },
-        ]
-      : {
-          type: "text",
-          stroke: false,
-          textanchor: "middle",
-          x: 100,
-          y: 115,
-          fontsize: 45,
-          text: "RC",
-        },
   ];
   icn["TP.REPLENISH"] = [
     icn["TP.AIR CONTROL"],
@@ -1430,10 +1493,11 @@ export default function(
       ? [
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             textanchor: "middle",
             x: 100,
-            y: 155,
+            y: 145,
             fontsize: 45,
             text: "F",
           },
@@ -1441,10 +1505,11 @@ export default function(
         ]
       : {
           type: "text",
+          alignmentBaseline: "middle",
           stroke: false,
           textanchor: "middle",
           x: 100,
-          y: 115,
+          y: 103,
           fontsize: 45,
           text: "RP",
         },
@@ -1455,10 +1520,11 @@ export default function(
       ? [
           {
             type: "text",
+            alignmentBaseline: "middle",
             stroke: false,
             textanchor: "middle",
             x: 100,
-            y: 155,
+            y: 145,
             fontsize: 45,
             text: "M",
           },
@@ -1466,10 +1532,11 @@ export default function(
         ]
       : {
           type: "text",
+          alignmentBaseline: "middle",
           stroke: false,
           textanchor: "middle",
           x: 100,
-          y: 115,
+          y: 103,
           fontsize: 45,
           text: "M",
         },
@@ -1487,18 +1554,18 @@ export default function(
     {
       type: "path",
       stroke: false,
-      d:
-        "m 70,95 30,15 30,-15 0,30 -30,-15 -30,15 z m 0,-25 30,15 30,-15 0,15 -30,15 -30,-15 z",
+      d: "m 70,95 30,15 30,-15 0,30 -30,-15 -30,15 z m 0,-25 30,15 30,-15 0,15 -30,15 -30,-15 z",
     },
   ];
   icn["TP.ORBIT"] = [
     icn["TP.AIR CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "O",
     },
@@ -1507,19 +1574,21 @@ export default function(
     icn["TP.AIR CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "O",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 150,
+      y: 140,
       fontsize: 40,
       text: "F8",
     },
@@ -1528,19 +1597,21 @@ export default function(
     icn["TP.AIR CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "O",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 150,
+      y: 140,
       fontsize: 40,
       text: "RT",
     },
@@ -1549,19 +1620,21 @@ export default function(
     icn["TP.AIR CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "O",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 150,
+      y: 140,
       fontsize: 40,
       text: "RC",
     },
@@ -1583,10 +1656,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "CKP",
     },
@@ -1607,8 +1681,7 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "m 155,100 0,-35 M 45,100 45,65 m 88,0 0,35 m -22,-35 0,35 m -22,-35 0,35 m -22,0 0,-35 m -37,70 0,-35 140,0 0,40",
+      d: "m 155,100 0,-35 M 45,100 45,65 m 88,0 0,35 m -22,-35 0,35 m -22,-35 0,35 m -22,0 0,-35 m -37,70 0,-35 140,0 0,40",
     },
   ];
   icn["TP.COORDINATION POINT"] = [
@@ -1618,17 +1691,17 @@ export default function(
   icn["TP.DECISION POINT"] = {
     type: "path",
     fill: false,
-    d:
-      "M 99.9998,25.5886 117.061,76.5192 170.77,77.0054 127.604,108.968 143.738,160.2 100,129.024 56.2624,160.2 72.3967,108.968 29.2306,77.0059 82.9403,76.5192 Z",
+    d: "M 99.9998,25.5886 117.061,76.5192 170.77,77.0054 127.604,108.968 143.738,160.2 100,129.024 56.2624,160.2 72.3967,108.968 29.2306,77.0059 82.9403,76.5192 Z",
   };
   icn["TP.DISTRESS CALL"] = [
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "SOS",
     },
@@ -1637,10 +1710,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "EC",
     },
@@ -1650,19 +1724,21 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "FTP",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 20,
+      y: 10,
       fontsize: 35,
       text: "SBY",
     },
@@ -1671,19 +1747,21 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "FTP",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 20,
+      y: 10,
       fontsize: 35,
       text: "WPN",
     },
@@ -1692,19 +1770,21 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "FTP",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 20,
+      y: 10,
       fontsize: 35,
       text: "NRM",
     },
@@ -1713,10 +1793,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "LU",
     },
@@ -1725,10 +1806,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "PP",
     },
@@ -1737,10 +1819,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "RLY",
     },
@@ -1749,10 +1832,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "RP",
     },
@@ -1761,10 +1845,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "SP",
     },
@@ -1773,10 +1858,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "AMN",
     },
@@ -1791,10 +1877,11 @@ export default function(
     icn["TP.WAYPOINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "end",
       x: 75,
-      y: 115,
+      y: 103,
       fontsize: 40,
       text: "CBT",
     },
@@ -1803,10 +1890,11 @@ export default function(
     icn["TP.WAYPOINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "end",
       x: 75,
-      y: 115,
+      y: 103,
       fontsize: 40,
       text: "PKT",
     },
@@ -1815,10 +1903,11 @@ export default function(
     icn["TP.WAYPOINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "end",
       x: 75,
-      y: 115,
+      y: 103,
       fontsize: 40,
       text: "ASW",
     },
@@ -1827,10 +1916,11 @@ export default function(
     icn["TP.WAYPOINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "end",
       x: 75,
-      y: 115,
+      y: 103,
       fontsize: 40,
       text: "RAS",
     },
@@ -1839,10 +1929,11 @@ export default function(
     icn["TP.WAYPOINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "end",
       x: 75,
-      y: 115,
+      y: 103,
       fontsize: 40,
       text: "RSC",
     },
@@ -1851,10 +1942,11 @@ export default function(
     icn["TP.WAYPOINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "end",
       x: 75,
-      y: 115,
+      y: 103,
       fontsize: 40,
       text: "SUB",
     },
@@ -1863,10 +1955,11 @@ export default function(
     icn["TP.WAYPOINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "end",
       x: 75,
-      y: 115,
+      y: 103,
       fontsize: 40,
       text: "ASW/SUB",
     },
@@ -1900,10 +1993,11 @@ export default function(
     icn["TP.(USV)"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 95,
+      y: 85,
       fontsize: 40,
       text: "RMV",
     },
@@ -1912,10 +2006,11 @@ export default function(
     icn["TP.(USV)"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 95,
+      y: 85,
       fontsize: 40,
       text: "ASW",
     },
@@ -1924,10 +2019,11 @@ export default function(
     icn["TP.(USV)"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 95,
+      y: 85,
       fontsize: 40,
       text: "MW",
     },
@@ -1936,10 +2032,11 @@ export default function(
     icn["TP.(USV)"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 95,
+      y: 85,
       fontsize: 40,
       text: "SUW",
     },
@@ -1948,10 +2045,11 @@ export default function(
     icn["TP.(USV)"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 95,
+      y: 85,
       fontsize: 40,
       text: "MIW",
     },
@@ -1960,10 +2058,11 @@ export default function(
     icn["TP.SEA SURFACE CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "ASW",
     },
@@ -1972,10 +2071,11 @@ export default function(
     icn["TP.SEA SURFACE CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "MW",
     },
@@ -1984,10 +2084,11 @@ export default function(
     icn["TP.SEA SURFACE CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "NC",
     },
@@ -1996,10 +2097,11 @@ export default function(
     icn["TP.SEA SURFACE CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "SUW",
     },
@@ -2008,10 +2110,11 @@ export default function(
     icn["TP.SEA SURFACE CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "MIW",
     },
@@ -2020,10 +2123,11 @@ export default function(
     icn["TP.SEA SURFACE CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "PK",
     },
@@ -2032,10 +2136,11 @@ export default function(
     icn["TP.SEA SURFACE CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "RZ",
     },
@@ -2044,10 +2149,11 @@ export default function(
     icn["TP.SEA SURFACE CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "RAS",
     },
@@ -2056,10 +2162,11 @@ export default function(
     icn["TP.SEA SURFACE CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "RS",
     },
@@ -2068,10 +2175,11 @@ export default function(
     icn["TP.SEA SURFACE CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "RP",
     },
@@ -2080,10 +2188,11 @@ export default function(
     icn["TP.SEA SURFACE CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 45,
       text: "NC",
     },
@@ -2116,10 +2225,11 @@ export default function(
     icn["TP.(UUV)"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 95,
+      y: 85,
       fontsize: 40,
       text: "ASW",
     },
@@ -2128,10 +2238,11 @@ export default function(
     icn["TP.(UUV)"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 95,
+      y: 85,
       fontsize: 40,
       text: "MW",
     },
@@ -2140,10 +2251,11 @@ export default function(
     icn["TP.(UUV)"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 95,
+      y: 85,
       fontsize: 40,
       text: "SUW",
     },
@@ -2152,10 +2264,11 @@ export default function(
     icn["TP.(UUV)"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 95,
+      y: 85,
       fontsize: 40,
       text: "MIW",
     },
@@ -2164,10 +2277,11 @@ export default function(
     icn["TP.SUB SURFACE CONTROL"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 130,
+      y: 120,
       fontsize: 35,
       text: "SS",
     },
@@ -2177,18 +2291,18 @@ export default function(
     icn["TP.SUB SURFACE CONTROL"],
     {
       type: "path",
-      d:
-        "m 68.75,105 -12.5,12.5 12.5,12.5 62.5,0 12.5,-12.5 -12.5,-12.5 z M 75,95 l 0,-20 50,0 0,20 z m 25,-30 0,40",
+      d: "m 68.75,105 -12.5,12.5 12.5,12.5 62.5,0 12.5,-12.5 -12.5,-12.5 z M 75,95 l 0,-20 50,0 0,20 z m 25,-30 0,40",
     },
   ];
   icn["TP.AIR CONTROL POINT (ACP)"] = [
     { type: "circle", fill: false, cx: 100, cy: 100, r: 50 },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 90,
+      y: 80,
       fontsize: 30,
       text: "ACP",
     },
@@ -2197,10 +2311,11 @@ export default function(
     { type: "circle", fill: false, cx: 100, cy: 100, r: 50 },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 90,
+      y: 80,
       fontsize: 30,
       text: "CCP",
     },
@@ -2209,10 +2324,11 @@ export default function(
     { type: "circle", fill: false, cx: 100, cy: 100, r: 50 },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "start",
       x: 160,
-      y: 115,
+      y: 103,
       fontsize: 40,
       text: "PUP",
     },
@@ -2231,8 +2347,7 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "m 75,100 c 0,5.523 -4.4772,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.5228,0 10,4.4772 10,10 z m 70,0 c 0,5.523 -4.477,10 -10,10 -5.523,0 -10,-4.477 -10,-10 0,-5.5228 4.477,-10 10,-10 5.523,0 10,4.4772 10,10 z m -35,0 c 0,5.523 -4.477,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.523,0 10,4.4772 10,10 z m -70,-40 0,80 120,0 0,-80 z",
+      d: "m 75,100 c 0,5.523 -4.4772,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.5228,0 10,4.4772 10,10 z m 70,0 c 0,5.523 -4.477,10 -10,10 -5.523,0 -10,-4.477 -10,-10 0,-5.5228 4.477,-10 10,-10 5.523,0 10,4.4772 10,10 z m -35,0 c 0,5.523 -4.477,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.523,0 10,4.4772 10,10 z m -70,-40 0,80 120,0 0,-80 z",
     },
     {
       type: "path",
@@ -2254,14 +2369,12 @@ export default function(
   icn["TP.COMBAT OUTPOST"] = {
     type: "path",
     fill: false,
-    d:
-      "m 140,140 0,-12.5 m -16,12.5 0,-12.5 m -16,12.5 0,-12.5 m -48.0001,12.5 3e-4,-12.5 m 15.9993,12.5 4e-4,-12.501 m 16,12.501 3e-4,-12.5 m -46.43,-12.493 10.8256,6.25 m -2.8256,-20.107 10.8256,6.251 m -2.8257,-20.1071 10.8257,6.2506 m 13.1743,-47.8198 10.8257,6.2506 m -18.8253,7.6056 10.8256,6.2506 m -18.826,7.606 10.8257,6.2506 M 114.43,45.725 l -10.826,6.25 m 18.826,7.6064 -10.826,6.25 m 18.826,7.6064 -10.826,6.25 m 34.826,35.3192 -10.826,6.25 m 2.826,-20.106 -10.826,6.25 m 2.826,-20.1068 -10.826,6.25 M 99.9998,45 l 47.6312,82.5 -95.2623,0 z",
+    d: "m 140,140 0,-12.5 m -16,12.5 0,-12.5 m -16,12.5 0,-12.5 m -48.0001,12.5 3e-4,-12.5 m 15.9993,12.5 4e-4,-12.501 m 16,12.501 3e-4,-12.5 m -46.43,-12.493 10.8256,6.25 m -2.8256,-20.107 10.8256,6.251 m -2.8257,-20.1071 10.8257,6.2506 m 13.1743,-47.8198 10.8257,6.2506 m -18.8253,7.6056 10.8256,6.2506 m -18.826,7.606 10.8257,6.2506 M 114.43,45.725 l -10.826,6.25 m 18.826,7.6064 -10.826,6.25 m 18.826,7.6064 -10.826,6.25 m 34.826,35.3192 -10.826,6.25 m 2.826,-20.106 -10.826,6.25 m 2.826,-20.1068 -10.826,6.25 M 99.9998,45 l 47.6312,82.5 -95.2623,0 z",
   };
   icn["TP.OBSERVATION POST/RECONNAISSANCE"] = {
     type: "path",
     fill: false,
-    d:
-      "M 52.3687,127.5 123.816,86.2499 M 99.9998,45 l 47.6312,82.5 -95.2623,0 z",
+    d: "M 52.3687,127.5 123.816,86.2499 M 99.9998,45 l 47.6312,82.5 -95.2623,0 z",
   };
   icn["TP.FORWARD OBSERVER POSITION"] = [
     {
@@ -2271,8 +2384,7 @@ export default function(
     },
     {
       type: "path",
-      d:
-        "m 115,100 c 0,8.284 -6.716,15 -15,15 -8.2843,0 -15,-6.716 -15,-15 0,-8.2843 6.7157,-15 15,-15 8.284,0 15,6.7157 15,15 z",
+      d: "m 115,100 c 0,8.284 -6.716,15 -15,15 -8.2843,0 -15,-6.716 -15,-15 0,-8.2843 6.7157,-15 15,-15 8.284,0 15,6.7157 15,15 z",
     },
   ];
   icn["TP.SENSOR OUTPOST"] = numberSIDC
@@ -2285,37 +2397,34 @@ export default function(
         {
           type: "path",
           stroke: false,
-          d:
-            "m 100,80 c 0,7.5 12.5,20 20,20 -7.5,0 -20,12.5 -20,20 0,-7.5 -12.5,-20 -20,-20 7.5,0 20,-12.5 20,-20 z",
+          d: "m 100,80 c 0,7.5 12.5,20 20,20 -7.5,0 -20,12.5 -20,20 0,-7.5 -12.5,-20 -20,-20 7.5,0 20,-12.5 20,-20 z",
         },
       ]
     : {
         type: "path",
         fill: false,
-        d:
-          "m 61.1738,112.25 23.6601,0 m 30.3321,0 23.66,0 M 80,105 l 10,15 20,0 10,-15 z m 19.9998,-60 47.6312,82.5 -95.2623,0 z",
+        d: "m 61.1738,112.25 23.6601,0 m 30.3321,0 23.66,0 M 80,105 l 10,15 20,0 10,-15 z m 19.9998,-60 47.6312,82.5 -95.2623,0 z",
       };
   icn["TP.CBRN OBSERVATION POST"] = [
     {
       type: "path",
       fill: false,
-      d:
-        "m 99.9998,45 47.6312,82.5 -95.2623,0 z M 88,119 c 2.1824,-13.288 7.7157,-24.22 22,-29 m 1.829,29 C 109.664,105.712 104.173,94.78 90,90 M 52.3687,127.5 123.816,86.2499",
+      d: "m 99.9998,45 47.6312,82.5 -95.2623,0 z M 88,119 c 2.1824,-13.288 7.7157,-24.22 22,-29 m 1.829,29 C 109.664,105.712 104.173,94.78 90,90 M 52.3687,127.5 123.816,86.2499",
     },
     {
       type: "path",
-      d:
-        "m 91,92 c 0,2.7614 -2.2386,5 -5,5 -2.7614,0 -5,-2.2386 -5,-5 0,-2.7614 2.2386,-5 5,-5 2.7614,0 5,2.2386 5,5 z m 28.011,0 c 0,2.7678 -2.243,5.0117 -5.011,5.012 -2.768,-3e-4 -5.011,-2.2442 -5.011,-5.012 0,-2.7676 2.243,-5.0112 5.011,-5.0115 2.768,3e-4 5.011,2.2439 5.011,5.0115 z",
+      d: "m 91,92 c 0,2.7614 -2.2386,5 -5,5 -2.7614,0 -5,-2.2386 -5,-5 0,-2.7614 2.2386,-5 5,-5 2.7614,0 5,2.2386 5,5 z m 28.011,0 c 0,2.7678 -2.243,5.0117 -5.011,5.012 -2.768,-3e-4 -5.011,-2.2442 -5.011,-5.012 0,-2.7676 2.243,-5.0112 5.011,-5.0115 2.768,3e-4 5.011,2.2439 5.011,5.0115 z",
     },
   ];
   icn["TP.POINT OF DEPARTURE"] = [
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "PD",
     },
@@ -2337,19 +2446,16 @@ export default function(
   icn["TP.BOOBY TRAP"] = {
     type: "path",
     fill: false,
-    d:
-      "M 77.2413,87.9311 100,50 122.781,87.9687 M 130,100 c 0,10.24 -13.431,18.541 -30,18.541 -16.5685,0 -30,-8.301 -30,-18.541 0,-10.2399 13.4315,-18.541 30,-18.541 16.569,0 30,8.3011 30,18.541 z",
+    d: "M 77.2413,87.9311 100,50 122.781,87.9687 M 130,100 c 0,10.24 -13.431,18.541 -30,18.541 -16.5685,0 -30,-8.301 -30,-18.541 0,-10.2399 13.4315,-18.541 30,-18.541 16.569,0 30,8.3011 30,18.541 z",
   };
   icn["TP.UNSPECIFIED MINE"] = {
     type: "path",
     fill: false,
-    d:
-      "m 129,100 c 0,16.016 -12.984,29 -29,29 -16.0163,0 -29,-12.984 -29,-29 0,-16.0163 12.9837,-29 29,-29 16.016,0 29,12.9837 29,29 z",
+    d: "m 129,100 c 0,16.016 -12.984,29 -29,29 -16.0163,0 -29,-12.984 -29,-29 0,-16.0163 12.9837,-29 29,-29 16.016,0 29,12.9837 29,29 z",
   };
   icn["TP.ANTITANK MINE (AT)"] = {
     type: "path",
-    d:
-      "m 129,100 c 0,16.016 -12.984,29 -29,29 -16.0163,0 -29,-12.984 -29,-29 0,-16.0163 12.9837,-29 29,-29 16.016,0 29,12.9837 29,29 z",
+    d: "m 129,100 c 0,16.016 -12.984,29 -29,29 -16.0163,0 -29,-12.984 -29,-29 0,-16.0163 12.9837,-29 29,-29 16.016,0 29,12.9837 29,29 z",
   };
   icn["TP.(AT) ANTIHANDLING DEVICE"] = [
     icn["TP.ANTITANK MINE (AT)"],
@@ -2369,8 +2475,7 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "m 131,100 10,0 M 50,50 79.5,79.5 m 41,0 L 150,50 m -4,50 10,0 m 5,0 10,0 m -10,-10 10,10 -10,10",
+      d: "m 131,100 10,0 M 50,50 79.5,79.5 m 41,0 L 150,50 m -4,50 10,0 m 5,0 10,0 m -10,-10 10,10 -10,10",
     },
   ];
   icn["TP.WIDE AREA MINES"] = [
@@ -2391,15 +2496,13 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "m 75,100 c 0,5.523 -4.4772,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.5228,0 10,4.4772 10,10 z m 70,0 c 0,5.523 -4.477,10 -10,10 -5.523,0 -10,-4.477 -10,-10 0,-5.5228 4.477,-10 10,-10 5.523,0 10,4.4772 10,10 z m -35,0 c 0,5.523 -4.477,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.523,0 10,4.4772 10,10 z",
+      d: "m 75,100 c 0,5.523 -4.4772,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.5228,0 10,4.4772 10,10 z m 70,0 c 0,5.523 -4.477,10 -10,10 -5.523,0 -10,-4.477 -10,-10 0,-5.5228 4.477,-10 10,-10 5.523,0 10,4.4772 10,10 z m -35,0 c 0,5.523 -4.477,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.523,0 10,4.4772 10,10 z",
     },
   ];
   icn["TP.MINEFIELDS STATIC"] = {
     type: "path",
     fill: false,
-    d:
-      "m 40,65 0,70 120,0 0,-70 z m 70,35 c 0,5.523 -4.477,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.523,0 10,4.4772 10,10 z m 35,0 c 0,5.523 -4.477,10 -10,10 -5.523,0 -10,-4.477 -10,-10 0,-5.5228 4.477,-10 10,-10 5.523,0 10,4.4772 10,10 z m -70,0 c 0,5.523 -4.4772,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.5228,0 10,4.4772 10,10 z",
+    d: "m 40,65 0,70 120,0 0,-70 z m 70,35 c 0,5.523 -4.477,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.523,0 10,4.4772 10,10 z m 35,0 c 0,5.523 -4.477,10 -10,10 -5.523,0 -10,-4.477 -10,-10 0,-5.5228 4.477,-10 10,-10 5.523,0 10,4.4772 10,10 z m -70,0 c 0,5.523 -4.4772,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.5228,0 10,4.4772 10,10 z",
   };
   icn["TP.MINEFIELD, STATIC"] = {
     type: "path",
@@ -2413,18 +2516,18 @@ export default function(
     { type: "path", fill: false, d: "m 40,65 0,70 120,0 0,-70 z" },
     {
       type: "path",
-      d:
-        "m 75,100 c 0,5.523 -4.4772,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.5228,0 10,4.4772 10,10 z m 70,0 c 0,5.523 -4.477,10 -10,10 -5.523,0 -10,-4.477 -10,-10 0,-5.5228 4.477,-10 10,-10 5.523,0 10,4.4772 10,10 z m -35,0 c 0,5.523 -4.477,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.523,0 10,4.4772 10,10 z",
+      d: "m 75,100 c 0,5.523 -4.4772,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.5228,0 10,4.4772 10,10 z m 70,0 c 0,5.523 -4.477,10 -10,10 -5.523,0 -10,-4.477 -10,-10 0,-5.5228 4.477,-10 10,-10 5.523,0 10,4.4772 10,10 z m -35,0 c 0,5.523 -4.477,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.523,0 10,4.4772 10,10 z",
     },
   ];
   icn["TP.SCATTERABLE MINES"] = [
     icn["TP.MINEFIELDS STATIC"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 60,
+      y: 50,
       fontsize: 35,
       text: "S",
     },
@@ -2432,28 +2535,29 @@ export default function(
   icn["TP.ANTIPERSONNEL (AP) MINEFIELD"] = [
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 60,
+      y: 50,
       fontsize: 35,
       text: "+S",
     },
     { type: "path", fill: false, d: "m 40,65 0,70 120,0 0,-70 z" },
     {
       type: "path",
-      d:
-        "M 72.0703,92.9297 80,82.3622 m -30,0 7.9297,10.5675 m 49.1403,0 7.93,-10.5675 m -30,0 7.9297,10.5675 m 49.1403,0 7.93,-10.5675 m -30,0 7.93,10.5675 M 110,100 c 0,5.523 -4.477,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.523,0 10,4.4772 10,10 z m 35,0 c 0,5.523 -4.477,10 -10,10 -5.523,0 -10,-4.477 -10,-10 0,-5.5228 4.477,-10 10,-10 5.523,0 10,4.4772 10,10 z m -70,0 c 0,5.523 -4.4772,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.5228,0 10,4.4772 10,10 z",
+      d: "M 72.0703,92.9297 80,82.3622 m -30,0 7.9297,10.5675 m 49.1403,0 7.93,-10.5675 m -30,0 7.9297,10.5675 m 49.1403,0 7.93,-10.5675 m -30,0 7.93,10.5675 M 110,100 c 0,5.523 -4.477,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.523,0 10,4.4772 10,10 z m 35,0 c 0,5.523 -4.477,10 -10,10 -5.523,0 -10,-4.477 -10,-10 0,-5.5228 4.477,-10 10,-10 5.523,0 10,4.4772 10,10 z m -70,0 c 0,5.523 -4.4772,10 -10,10 -5.5228,0 -10,-4.477 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.5228,0 10,4.4772 10,10 z",
     },
   ];
   icn["TP.SCATTERABLE MINEFIELD WITH SELF-DESTRUCT"] = [
     icn["TP.ANTITANK (AT) MINEFIELD"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 60,
+      y: 50,
       fontsize: 35,
       text: "S",
     },
@@ -2462,10 +2566,11 @@ export default function(
     icn["TP.ANTITANK (AT) MINEFIELD"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 60,
+      y: 50,
       fontsize: 35,
       text: "V",
     },
@@ -2480,18 +2585,18 @@ export default function(
       type: "path",
       fill: false,
       strokewidth: 8,
-      d:
-        "m 100,40 c 2.358,31.6754 7.162,59.2531 25,64.999 M 100,40 c -2.358,31.6754 -7.1624,59.2531 -25,65",
+      d: "m 100,40 c 2.358,31.6754 7.162,59.2531 25,64.999 M 100,40 c -2.358,31.6754 -7.1624,59.2531 -25,65",
     },
   ];
   icn["TP.ENGINEER REGULATING POINT"] = [
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "ERP",
     },
@@ -2503,8 +2608,7 @@ export default function(
   icn["TP.FORT"] = {
     type: "path",
     fill: false,
-    d:
-      "m 135,65 15,-15 m -15,85 15,15 M 65,135 50,150 m 15,-85 0,70 70,0 0,-70 -70,0 -15,-15",
+    d: "m 135,65 15,-15 m -15,85 15,15 M 65,135 50,150 m 15,-85 0,70 70,0 0,-70 -70,0 -15,-15",
   };
   icn["TP.SURFACE SHELTER"] = {
     type: "path",
@@ -2522,10 +2626,11 @@ export default function(
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 75,
+      y: 65,
       fontsize: 35,
       text: "N",
     },
@@ -2539,10 +2644,11 @@ export default function(
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 75,
+      y: 65,
       fontsize: 35,
       text: "N",
     },
@@ -2551,15 +2657,15 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "m 120,85 -15,15 m -25,0 40,-35 M 80,80 120,40 M 80,55 115,25 M 80,40 95,25 m -40,0 c 0,-60 90,-60 90,0 z m 25,0 0,75 40,0 0,-75",
+      d: "m 120,85 -15,15 m -25,0 40,-35 M 80,80 120,40 M 80,55 115,25 M 80,40 95,25 m -40,0 c 0,-60 90,-60 90,0 z m 25,0 0,75 40,0 0,-75",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 75,
+      y: 65,
       fontsize: 35,
       text: "N",
     },
@@ -2572,19 +2678,21 @@ export default function(
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 85,
+      y: 75,
       fontsize: 35,
       text: "B",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "end",
       x: 50,
-      y: 60,
+      y: 50,
       fontsize: 35,
       text: "BIO",
     },
@@ -2593,24 +2701,25 @@ export default function(
     {
       type: "path",
       fill: !monoColor ? "rgb(255,255,0)" : false,
-      d:
-        "m 85,-15 0,59.0625 C 75.7313,49.4137 70.0154,59.2975 70,70 c 0,16.5685 13.4315,30 30,30 16.569,0 30,-13.4315 30,-30 -0.01,-10.7067 -5.728,-20.5959 -15,-25.9492 L 115,-15 Z",
+      d: "m 85,-15 0,59.0625 C 75.7313,49.4137 70.0154,59.2975 70,70 c 0,16.5685 13.4315,30 30,30 16.569,0 30,-13.4315 30,-30 -0.01,-10.7067 -5.728,-20.5959 -15,-25.9492 L 115,-15 Z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 80,
+      y: 70,
       fontsize: 35,
       text: "C",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "end",
       x: 50,
-      y: 60,
+      y: 50,
       fontsize: 35,
       text: "CML",
     },
@@ -2619,10 +2728,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "DCN",
     },
@@ -2631,19 +2741,21 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -30,
+      y: -40,
       fontsize: 35,
       text: "DCN",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 0,
+      y: -10,
       fontsize: 35,
       text: "ALT",
     },
@@ -2652,19 +2764,21 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -30,
+      y: -40,
       fontsize: 35,
       text: "DCN",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 0,
+      y: -10,
       fontsize: 35,
       text: "T",
     },
@@ -2673,19 +2787,21 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -30,
+      y: -40,
       fontsize: 35,
       text: "DCN",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 0,
+      y: -10,
       fontsize: 35,
       text: "E",
     },
@@ -2694,19 +2810,21 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -30,
+      y: -40,
       fontsize: 35,
       text: "DCN",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 0,
+      y: -10,
       fontsize: 35,
       text: "E/T",
     },
@@ -2715,19 +2833,21 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -30,
+      y: -40,
       fontsize: 35,
       text: "DCN",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 0,
+      y: -10,
       fontsize: 35,
       text: "O",
     },
@@ -2736,19 +2856,21 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -30,
+      y: -40,
       fontsize: 35,
       text: "DCN",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 0,
+      y: -10,
       fontsize: 35,
       text: "TH",
     },
@@ -2757,28 +2879,31 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -30,
+      y: -40,
       fontsize: 30,
       text: "DCN",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -10,
+      y: -20,
       fontsize: 25,
       text: "(M)",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 13,
+      y: 3,
       fontsize: 25,
       text: "E",
     },
@@ -2787,28 +2912,31 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -30,
+      y: -40,
       fontsize: 30,
       text: "DCN",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -10,
+      y: -20,
       fontsize: 25,
       text: "(F)",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 13,
+      y: 3,
       fontsize: 25,
       text: "T",
     },
@@ -2817,6 +2945,69 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -40,
+      fontsize: 35,
+      text: "DCN",
+    },
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -10,
+      fontsize: 35,
+      text: "W",
+    },
+  ];
+  icn["TP.AMBULANCE CONTROL POINT"] = [
+    icn["TP.ACTION POINT"],
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -30,
+      fontsize: 35,
+      text: "ACP",
+    },
+  ];
+  icn["TP.AMBULANCE LOAD POINT"] = [
+    icn["TP.ACTION POINT"],
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -30,
+      fontsize: 35,
+      text: "ALP",
+    },
+  ];
+  icn["TP.AMBULANCE RELAY POINT"] = [
+    icn["TP.ACTION POINT"],
+    {
+      type: "text",
+      alignmentBaseline: "middle",
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -30,
+      fontsize: 35,
+      text: "ARP",
+    },
+  ];
+  icn["TP.DECON POINT (MAIN) EQUIPMENT"] = [
+    icn["TP.ACTION POINT"],
+    {
+      type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
@@ -2826,67 +3017,11 @@ export default function(
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
       y: 0,
-      fontsize: 35,
-      text: "W",
-    },
-  ];
-  icn["TP.AMBULANCE CONTROL POINT"] = [
-    icn["TP.ACTION POINT"],
-    {
-      type: "text",
-      stroke: false,
-      textanchor: "middle",
-      x: 100,
-      y: -20,
-      fontsize: 35,
-      text: "ACP",
-    },
-  ];
-  icn["TP.AMBULANCE LOAD POINT"] = [
-    icn["TP.ACTION POINT"],
-    {
-      type: "text",
-      stroke: false,
-      textanchor: "middle",
-      x: 100,
-      y: -20,
-      fontsize: 35,
-      text: "ALP",
-    },
-  ];
-  icn["TP.AMBULANCE RELAY POINT"] = [
-    icn["TP.ACTION POINT"],
-    {
-      type: "text",
-      stroke: false,
-      textanchor: "middle",
-      x: 100,
-      y: -20,
-      fontsize: 35,
-      text: "ARP",
-    },
-  ];
-  icn["TP.DECON POINT (MAIN) EQUIPMENT"] = [
-    icn["TP.ACTION POINT"],
-    {
-      type: "text",
-      stroke: false,
-      textanchor: "middle",
-      x: 100,
-      y: -20,
-      fontsize: 35,
-      text: "DCN",
-    },
-    {
-      type: "text",
-      stroke: false,
-      textanchor: "middle",
-      x: 100,
-      y: 10,
       fontsize: 35,
       text: "(M)E",
     },
@@ -2895,19 +3030,21 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "DCN",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 10,
+      y: 0,
       fontsize: 35,
       text: "(F)T",
     },
@@ -2925,10 +3062,11 @@ export default function(
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "start",
       x: 110,
-      y: 80,
+      y: 70,
       fontsize: 30,
       text: "KNP",
     },
@@ -2936,8 +3074,7 @@ export default function(
   icn["TP.NUCLEAR TARGET"] = {
     type: "path",
     fill: false,
-    d:
-      "m 90,100 -40,0 m 50,10 0,40 m 10,-50 40,0 m -50,-10 0,-40 m 2.5,50 c 0,1.381 -1.119,2.5 -2.5,2.5 -1.3807,0 -2.5,-1.119 -2.5,-2.5 0,-1.3807 1.1193,-2.5 2.5,-2.5 1.381,0 2.5,1.1193 2.5,2.5 z",
+    d: "m 90,100 -40,0 m 50,10 0,40 m 10,-50 40,0 m -50,-10 0,-40 m 2.5,50 c 0,1.381 -1.119,2.5 -2.5,2.5 -1.3807,0 -2.5,-1.119 -2.5,-2.5 0,-1.3807 1.1193,-2.5 2.5,-2.5 1.381,0 2.5,1.1193 2.5,2.5 z",
   };
   icn["TP.TARGETRECORDED (AEGIS ONLY)"] = [
     {
@@ -2960,10 +3097,11 @@ export default function(
     numberSIDC
       ? {
           type: "text",
+          alignmentBaseline: "middle",
           stroke: false,
           textanchor: "left",
           x: 120,
-          y: 110,
+          y: 100,
           fontsize: 35,
           text: "FSS",
         }
@@ -2973,10 +3111,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "SCP",
     },
@@ -2985,10 +3124,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "FP",
     },
@@ -2997,10 +3137,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "RLP",
     },
@@ -3009,10 +3150,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "HP",
     },
@@ -3021,10 +3163,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "LP",
     },
@@ -3033,10 +3176,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "AXP",
     },
@@ -3045,10 +3189,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "CAN",
     },
@@ -3057,10 +3202,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "CCP",
     },
@@ -3069,10 +3215,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "CIV",
     },
@@ -3081,10 +3228,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "DET",
     },
@@ -3093,10 +3241,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "EPW",
     },
@@ -3105,10 +3254,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "LRP",
     },
@@ -3117,10 +3267,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "MCP",
     },
@@ -3129,28 +3280,29 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -30,
+      y: -40,
       fontsize: 30,
       text: "MEP",
     },
     {
       type: "path",
       stroke: false,
-      d:
-        "m 95,-25 0,10 -10,0 0,10 10,0 0,10 10,0 0,-10 10,0 0,-10 -10,0 0,-10 z",
+      d: "m 95,-25 0,10 -10,0 0,10 10,0 0,10 10,0 0,-10 10,0 0,-10 -10,0 0,-10 z",
     },
   ];
   icn["TP.REARM, REFUEL AND RESUPPLY POINT"] = [
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "R3P",
     },
@@ -3159,10 +3311,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "ROM",
     },
@@ -3171,10 +3324,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "TCP",
     },
@@ -3183,10 +3337,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "TTP",
     },
@@ -3195,10 +3350,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 25,
       text: "UMCP",
     },
@@ -3212,10 +3368,11 @@ export default function(
     icn["TP.SUPPLY POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 45,
       text: "I",
     },
@@ -3224,10 +3381,11 @@ export default function(
     icn["TP.SUPPLY POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 45,
       text: "II",
     },
@@ -3236,10 +3394,11 @@ export default function(
     icn["TP.SUPPLY POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 45,
       text: "III",
     },
@@ -3248,10 +3407,11 @@ export default function(
     icn["TP.SUPPLY POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 45,
       text: "IV",
     },
@@ -3277,8 +3437,7 @@ export default function(
     {
       type: "path",
       stroke: false,
-      d:
-        "m 101.143,3.91602 q 3.662,-0.26368 4.746,-1.08399 1.084,-0.84961 1.084,-4.33594 l 0,-26.68949 q 0,-3.3105 -1.084,-4.248 -1.084,-0.9668 -4.746,-1.1426 l 0,-1.1133 17.753,0 0,1.1133 q -3.662,0.1758 -4.746,1.1426 -1.084,0.9375 -1.084,4.248 l 0,26.68949 q 0,3.48633 1.084,4.33594 1.084,0.82031 4.746,1.08399 l 0,1.08398 -17.753,0 0,-1.08398 z m 8.877,-38.61332 0,0 z M 81.1035,3.91602 q 3.6621,-0.26368 4.7461,-1.08399 1.084,-0.84961 1.084,-4.33594 l 0,-26.68949 q 0,-3.3105 -1.084,-4.248 -1.084,-0.9668 -4.7461,-1.1426 l 0,-1.1133 17.7539,0 0,1.1133 q -3.6621,0.1758 -4.7461,1.1426 -1.084,0.9375 -1.084,4.248 l 0,26.68949 q 0,3.48633 1.084,4.33594 1.084,0.82031 4.7461,1.08399 l 0,1.08398 -17.7539,0 0,-1.08398 z m 8.877,-38.61332 0,0 z",
+      d: "m 101.143,3.91602 q 3.662,-0.26368 4.746,-1.08399 1.084,-0.84961 1.084,-4.33594 l 0,-26.68949 q 0,-3.3105 -1.084,-4.248 -1.084,-0.9668 -4.746,-1.1426 l 0,-1.1133 17.753,0 0,1.1133 q -3.662,0.1758 -4.746,1.1426 -1.084,0.9375 -1.084,4.248 l 0,26.68949 q 0,3.48633 1.084,4.33594 1.084,0.82031 4.746,1.08399 l 0,1.08398 -17.753,0 0,-1.08398 z m 8.877,-38.61332 0,0 z M 81.1035,3.91602 q 3.6621,-0.26368 4.7461,-1.08399 1.084,-0.84961 1.084,-4.33594 l 0,-26.68949 q 0,-3.3105 -1.084,-4.248 -1.084,-0.9668 -4.7461,-1.1426 l 0,-1.1133 17.7539,0 0,1.1133 q -3.6621,0.1758 -4.7461,1.1426 -1.084,0.9375 -1.084,4.248 l 0,26.68949 q 0,3.48633 1.084,4.33594 1.084,0.82031 4.7461,1.08399 l 0,1.08398 -17.7539,0 0,-1.08398 z m 8.877,-38.61332 0,0 z",
     },
   ];
   icn["TP.SP CLASS III"] = [
@@ -3302,8 +3461,7 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "m 75,-20 50,0 m -25,15 15,25 m -15,-50 0,25 -20,25 m 30,-60 c 0,5.5228 -4.477,10 -10,10 -5.5228,0 -10,-4.4772 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.523,0 10,4.4772 10,10 z",
+      d: "m 75,-20 50,0 m -25,15 15,25 m -15,-50 0,25 -20,25 m 30,-60 c 0,5.5228 -4.477,10 -10,10 -5.5228,0 -10,-4.4772 -10,-10 0,-5.5228 4.4772,-10 10,-10 5.523,0 10,4.4772 10,10 z",
     },
   ];
   icn["TP.SP CLASS VII"] = [
@@ -3311,8 +3469,7 @@ export default function(
     { type: "path", fill: false, d: "m 85,-25 c 10,-10 20,-10 30,0" },
     {
       type: "path",
-      d:
-        "m 129.6,-20 c 0,5.3019 -4.298,9.5999 -9.6,9.5998 -5.302,10e-5 -9.6,-4.2979 -9.6,-9.5998 0,-5.3019 4.298,-9.5999 9.6,-9.5998 5.302,-1e-4 9.6,4.2979 9.6,9.5998 z m -40.4886,0 c 0,5.0321 -4.0793,9.1114 -9.1114,9.1114 -5.0321,0 -9.1114,-4.0793 -9.1114,-9.1114 0,-5.0321 4.0793,-9.1114 9.1114,-9.1114 5.0321,0 9.1114,4.0793 9.1114,9.1114 z",
+      d: "m 129.6,-20 c 0,5.3019 -4.298,9.5999 -9.6,9.5998 -5.302,10e-5 -9.6,-4.2979 -9.6,-9.5998 0,-5.3019 4.298,-9.5999 9.6,-9.5998 5.302,-1e-4 9.6,4.2979 9.6,9.5998 z m -40.4886,0 c 0,5.0321 -4.0793,9.1114 -9.1114,9.1114 -5.0321,0 -9.1114,-4.0793 -9.1114,-9.1114 0,-5.0321 4.0793,-9.1114 9.1114,-9.1114 5.0321,0 9.1114,4.0793 9.1114,9.1114 z",
     },
   ];
   icn["TP.SP CLASS VIII"] = [
@@ -3324,18 +3481,18 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "m 121.213,-36.2132 -7.08,7.0802 M 85.8669,-0.866982 78.7868,6.2132 m 0,-42.4264 7.0801,7.0802 m 28.2661,28.266018 7.08,7.080182 M 100,-45 l 0,10 m 0,40 0,10 m -30,-30 10,0 m 40,0 10,0 m -10,0 c 0,11.04569 -8.954,20 -20,20 -11.0457,0 -20,-8.95431 -20,-20 0,-11.0457 8.9543,-20 20,-20 11.046,0 20,8.9543 20,20 z",
+      d: "m 121.213,-36.2132 -7.08,7.0802 M 85.8669,-0.866982 78.7868,6.2132 m 0,-42.4264 7.0801,7.0802 m 28.2661,28.266018 7.08,7.080182 M 100,-45 l 0,10 m 0,40 0,10 m -30,-30 10,0 m 40,0 10,0 m -10,0 c 0,11.04569 -8.954,20 -20,20 -11.0457,0 -20,-8.95431 -20,-20 0,-11.0457 8.9543,-20 20,-20 11.046,0 20,8.9543 20,20 z",
     },
   ];
   icn["TP.SP CLASS X"] = [
     icn["TP.SUPPLY POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -10,
+      y: -20,
       fontsize: 40,
       text: "CA",
     },
@@ -3360,10 +3517,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "ASP",
     },
@@ -3372,10 +3530,11 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: -20,
+      y: -30,
       fontsize: 35,
       text: "ATP",
     },
@@ -3389,10 +3548,11 @@ export default function(
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 110,
+      y: 100,
       fontsize: 30,
       text: "TH",
     },
@@ -3403,15 +3563,15 @@ export default function(
       fill: false,
       stroke: "rgb(128,0,128)",
       strokewidth: 6,
-      d:
-        "m 145,100 a 45,45 0 0 1 -45,45 45,45 0 0 1 -45,-45 45,45 0 0 1 45,-45 45,45 0 0 1 45,45 z",
+      d: "m 145,100 a 45,45 0 0 1 -45,45 45,45 0 0 1 -45,-45 45,45 0 0 1 45,-45 45,45 0 0 1 45,45 z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 80,
-      y: 110,
+      y: 100,
       fontsize: 35,
       text: "K",
       fill: "rgb(128,0,128)",
@@ -3421,8 +3581,7 @@ export default function(
     icn["TP.ACTION POINT"],
     {
       type: "path",
-      d:
-        "m 131,-35 -5,-5 v 10 z  m -31.1,16 -4.8,-5 h 9.9 z  m 0,-33 -5,5 H 105 Z  m -29.9,17 5,-5 v 10 z  m 30,-16.3 V -19  M 70,-35 h 60",
+      d: "m 131,-35 -5,-5 v 10 z  m -31.1,16 -4.8,-5 h 9.9 z  m 0,-33 -5,5 H 105 Z  m -29.9,17 5,-5 v 10 z  m 30,-16.3 V -19  M 70,-35 h 60",
     },
   ];
   icn["TP.VITAL GROUND"] = [
@@ -3431,15 +3590,15 @@ export default function(
       fill: false,
       stroke: "rgb(128,0,128)",
       strokewidth: 6,
-      d:
-        "m 145,100 a 45,45 0 0 1 -45,45 45,45 0 0 1 -45,-45 45,45 0 0 1 45,-45 45,45 0 0 1 45,45 z",
+      d: "m 145,100 a 45,45 0 0 1 -45,45 45,45 0 0 1 -45,-45 45,45 0 0 1 45,-45 45,45 0 0 1 45,45 z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 110,
+      y: 100,
       fontsize: 35,
       text: "VG",
       fill: "rgb(128,0,128)",
@@ -3453,24 +3612,25 @@ export default function(
     },
     {
       type: "path",
-      d:
-        "m 104,100 c 0,2 -3,2 -4.8,2 -1.4,0 -4.1,-1 -2.7,-2.9 1.9,-1.4 4.5,-1.4 6.5,-0.4 1,0.3 1,0.7 1,1.3 z m 0,40 c 0,2 -3,2 -4.8,2 -1.4,0 -4.1,-1 -2.7,-3 1.9,-1 4.5,-1 6.5,0 1,0 1,0 1,1 z",
+      d: "m 104,100 c 0,2 -3,2 -4.8,2 -1.4,0 -4.1,-1 -2.7,-2.9 1.9,-1.4 4.5,-1.4 6.5,-0.4 1,0.3 1,0.7 1,1.3 z m 0,40 c 0,2 -3,2 -4.8,2 -1.4,0 -4.1,-1 -2.7,-3 1.9,-1 4.5,-1 6.5,0 1,0 1,0 1,1 z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 80,
-      y: 110,
+      y: 100,
       fontsize: 35,
       text: "B",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 120,
-      y: 110,
+      y: 100,
       fontsize: 35,
       text: "T",
     },
@@ -3478,56 +3638,46 @@ export default function(
   icn["TP.REPORTED BOTTOMED SUB"] = {
     type: "path",
     fill: false,
-    d:
-      "M 129,122.4 70.9,78.8 m 0,43.6 58.1,-43.6 m -80,-14.5 0,43.6 29,0 0,29 43.6,0 0,-29 29,0 0,-43.6",
+    d: "M 129,122.4 70.9,78.8 m 0,43.6 58.1,-43.6 m -80,-14.5 0,43.6 29,0 0,29 43.6,0 0,-29 29,0 0,-43.6",
   };
   icn["TP.MOVING HAVEN"] = {
     type: "path",
-    d:
-      "M 108.142,100 A 8.14167,8.14167 0 0 1 100,108.142 8.14167,8.14167 0 0 1 91.8583,100 8.14167,8.14167 0 0 1 100,91.8583 8.14167,8.14167 0 0 1 108.142,100 Z M 45,55 l 0,90 m 110,-90 0,90 m -110,-45 110,0",
+    d: "M 108.142,100 A 8.14167,8.14167 0 0 1 100,108.142 8.14167,8.14167 0 0 1 91.8583,100 8.14167,8.14167 0 0 1 100,91.8583 8.14167,8.14167 0 0 1 108.142,100 Z M 45,55 l 0,90 m 110,-90 0,90 m -110,-45 110,0",
   };
   icn["TP.SCREEN CENTRE"] = {
     type: "path",
-    d:
-      "m 100,55 0,90 m 8.142,-45 A 8.14167,8.14167 0 0 1 100,108.142 8.14167,8.14167 0 0 1 91.8583,100 8.14167,8.14167 0 0 1 100,91.8583 8.14167,8.14167 0 0 1 108.142,100 Z",
+    d: "m 100,55 0,90 m 8.142,-45 A 8.14167,8.14167 0 0 1 100,108.142 8.14167,8.14167 0 0 1 91.8583,100 8.14167,8.14167 0 0 1 100,91.8583 8.14167,8.14167 0 0 1 108.142,100 Z",
   };
   icn["TP.SHORE CONTROL STATION"] = {
     type: "path",
     fill: false,
-    d:
-      "m 30,155 140,0 m -27,-20 2,-10 -10,5 m -78,5 -2,-10 10,5 m 35,-55 0,68 m 7.5,-76 A 7.5,7.5 0 0 1 100,74.5 7.5,7.5 0 0 1 92.5,67 7.5,7.5 0 0 1 100,59.5 7.5,7.5 0 0 1 107.5,67 Z m -52.5,8 90,0 m -90,50 c 15,25 75,25 90,0 M 40,45 50,55 60,45 70,55 80,45 l 10,10 10,-10 10,10 10,-10 10,10 10,-10 10,10 10,-10",
+    d: "m 30,155 140,0 m -27,-20 2,-10 -10,5 m -78,5 -2,-10 10,5 m 35,-55 0,68 m 7.5,-76 A 7.5,7.5 0 0 1 100,74.5 7.5,7.5 0 0 1 92.5,67 7.5,7.5 0 0 1 100,59.5 7.5,7.5 0 0 1 107.5,67 Z m -52.5,8 90,0 m -90,50 c 15,25 75,25 90,0 M 40,45 50,55 60,45 70,55 80,45 l 10,10 10,-10 10,10 10,-10 10,10 10,-10 10,10 10,-10",
   };
   icn["TP.DITCHED AIRCRAFT"] = {
     type: "path",
-    d:
-      "m 145,120 -15,-15 m -15,15 15,-15 m -75,15 15,-15 m 15,15 -15,-15 m 10,10 25,-30 -10,-10 10,-10 20,20 -10,35 -15,-15 -15,15 z",
+    d: "m 145,120 -15,-15 m -15,15 15,-15 m -75,15 15,-15 m 15,15 -15,-15 m 10,10 25,-30 -10,-10 10,-10 20,20 -10,35 -15,-15 -15,15 z",
   };
   icn["TP.PERSON IN WATER"] = {
     type: "path",
-    d:
-      "m 105,110 10,-10 0,-15 5,0 0,20 -10,10 z m -10,0 -10,-10 0,-15 -5,0 0,20 10,10 z m 5,-5 0,-10 -5,0 -5,-5 0,-10 5,-5 10,0 5,5 0,10 -5,5 -5,0 m -15,25 15,-15 m 45,15 -15,-15 m -15,15 15,-15 m -75,15 15,-15 m 15,15 -15,-15 m 45,15 -15,-15",
+    d: "m 105,110 10,-10 0,-15 5,0 0,20 -10,10 z m -10,0 -10,-10 0,-15 -5,0 0,20 10,10 z m 5,-5 0,-10 -5,0 -5,-5 0,-10 5,-5 10,0 5,5 0,10 -5,5 -5,0 m -15,25 15,-15 m 45,15 -15,-15 m -15,15 15,-15 m -75,15 15,-15 m 15,15 -15,-15 m 45,15 -15,-15",
   };
   icn["TP.CLUTTER, STATIONARY OR CEASE REPORTING"] = {
     type: "path",
     fill: false,
-    d:
-      "m 65,135 c 23.3,-23 47,-46.7 70,-70 m -70,0 c 23.3,23.3 47,47 70,70 m -35,-4 c -19.7,0 -47.8,-8 -50,-31 3,-24.9 33.9,-32 55,-30.7 19,0.8 46,10.9 45,33.7 -5,21 -31,28 -50,28 z m 31,-31 c 0,20 -8,48 -31,50 C 75.1,147 68,116 69.3,95 70.1,76.2 80.2,48.6 103,50.2 c 21,4.9 28,31.1 28,49.8 z",
+    d: "m 65,135 c 23.3,-23 47,-46.7 70,-70 m -70,0 c 23.3,23.3 47,47 70,70 m -35,-4 c -19.7,0 -47.8,-8 -50,-31 3,-24.9 33.9,-32 55,-30.7 19,0.8 46,10.9 45,33.7 -5,21 -31,28 -50,28 z m 31,-31 c 0,20 -8,48 -31,50 C 75.1,147 68,116 69.3,95 70.1,76.2 80.2,48.6 103,50.2 c 21,4.9 28,31.1 28,49.8 z",
   };
   icn["TP.TENTATIVE OR PROVISIONAL TRACK"] = {
     type: "path",
     fill: false,
-    d:
-      "M 130.902,100 A 30.9017,50 0 0 1 100,150 30.9017,50 0 0 1 69.0983,100 30.9017,50 0 0 1 100,50 30.9017,50 0 0 1 130.902,100 Z M 100,130.902 A 50,30.9017 0 0 1 50,100 50,30.9017 0 0 1 100,69.0983 50,30.9017 0 0 1 150,100 50,30.9017 0 0 1 100,130.902 Z",
+    d: "M 130.902,100 A 30.9017,50 0 0 1 100,150 30.9017,50 0 0 1 69.0983,100 30.9017,50 0 0 1 100,50 30.9017,50 0 0 1 130.902,100 Z M 100,130.902 A 50,30.9017 0 0 1 50,100 50,30.9017 0 0 1 100,69.0983 50,30.9017 0 0 1 150,100 50,30.9017 0 0 1 100,130.902 Z",
   };
   icn["TP.DISTRESSED VESSEL"] = {
     type: "path",
-    d:
-      "m 120,65 -20,20 20,-20 m -5,55 -35,-35 0,-20 45,45 z m -30,0 -15,-15 m -15,15 15,-15 m 45,15 15,-15 m 15,15 -15,-15 m -45,15 15,-15",
+    d: "m 120,65 -20,20 20,-20 m -5,55 -35,-35 0,-20 45,45 z m -30,0 -15,-15 m -15,15 15,-15 m 45,15 15,-15 m 15,15 -15,-15 m -45,15 15,-15",
   };
   icn["TP.SEA MINELIKE"] = {
     type: "path",
-    d:
-      "M 75,75 55,55 m 45,-15 0,25 m 25,10 20,-20 m -80,60 0,-30 20,-20 30,0 20,20 0,30 -20,20 -30,0 z",
+    d: "M 75,75 55,55 m 45,-15 0,25 m 25,10 20,-20 m -80,60 0,-30 20,-20 30,0 20,20 0,30 -20,20 -30,0 z",
   };
   icn["TP.ICEBERG"] = {
     type: "path",
@@ -3561,8 +3711,7 @@ export default function(
       type: "path",
       strokedasharray: "5,5",
       fill: false,
-      d:
-        "m 156.547,100 c 0,16.382 -25.162,29.662 -56.202,29.662 -31.0395,0 -56.2019,-13.28 -56.2017,-29.662 0,-16.3818 25.1624,-29.6618 56.2017,-29.6618 31.039,-1e-4 56.202,13.28 56.202,29.6618 z",
+      d: "m 156.547,100 c 0,16.382 -25.162,29.662 -56.202,29.662 -31.0395,0 -56.2019,-13.28 -56.2017,-29.662 0,-16.3818 25.1624,-29.6618 56.2017,-29.6618 31.039,-1e-4 56.202,13.28 56.202,29.6618 z",
     },
   ];
   icn["TP.MARINE LIFE"] = {
@@ -3583,17 +3732,17 @@ export default function(
   icn["TP.FIX ELECTRO-MAGNETIC"] = {
     type: "path",
     fill: false,
-    d:
-      "m 50,90 15,20 5,-20 15,20 5,-20 20,20 5,-20 15,20 5,-20 15,20 M 50,150 150,50 M 50,50 150,150 m -50,-100 0,100",
+    d: "m 50,90 15,20 5,-20 15,20 5,-20 20,20 5,-20 15,20 5,-20 15,20 M 50,150 150,50 M 50,50 150,150 m -50,-100 0,100",
   };
   icn["TP.ELECTRO MAGNETIC - MAGNETIC ANOMALY DETECTION (MAD)"] = [
     icn["TP.FIX ELECTRO-MAGNETIC"],
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 180,
+      y: 170,
       fontsize: 35,
       text: "MAD",
     },
@@ -3601,17 +3750,17 @@ export default function(
   icn["TP.FIX ELECTRO-OPTICAL"] = {
     type: "path",
     fill: false,
-    d:
-      "m 150,100 c 0,6.904 -22.386,12.5 -50,12.5 -27.6142,0 -50,-5.596 -50,-12.5 0,-6.9036 22.3858,-12.5 50,-12.5 27.614,0 50,5.5964 50,12.5 z M 50,150 150,50 M 50,50 150,150 m -50,-100 0,100",
+    d: "m 150,100 c 0,6.904 -22.386,12.5 -50,12.5 -27.6142,0 -50,-5.596 -50,-12.5 0,-6.9036 22.3858,-12.5 50,-12.5 27.614,0 50,5.5964 50,12.5 z M 50,150 150,50 M 50,50 150,150 m -50,-100 0,100",
   };
   //APP6-B stuff
   icn["TP.FIRE"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     fill: colors.iconColor[affiliation],
     textanchor: "middle",
     x: 100,
-    y: 115,
+    y: 103,
     fontsize: 35,
     text: "FIRE",
   };
@@ -3625,8 +3774,7 @@ export default function(
     type: "path",
     stroke: colors.iconColor[affiliation],
     fill: false,
-    d:
-      "m 77.5,106 20,0 m -20,-12 20,0 M 75,82 95,82 m -20,36 20,0 m -25,12 20,0 M 70,70 90,70 M 80,60 c 25,15 25,65 0,80 m 45,-50 10,10 -10,10 m -25,-10 35,0",
+    d: "m 77.5,106 20,0 m -20,-12 20,0 M 75,82 95,82 m -20,36 20,0 m -25,12 20,0 M 70,70 90,70 M 80,60 c 25,15 25,65 0,80 m 45,-50 10,10 -10,10 m -25,-10 35,0",
   };
   icn["TP.ROAD BLOCK"] = {
     type: "path",
@@ -3666,15 +3814,15 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "m 140,100 c 1,26 -27,47 -51.8,38 C 63.1,131 51.5,98.3 67,77.4 c 13.8,-21.9 49,-23.2 64,-2.3 6,7 9,15.9 9,24.9 z",
+      d: "m 140,100 c 1,26 -27,47 -51.8,38 C 63.1,131 51.5,98.3 67,77.4 c 13.8,-21.9 49,-23.2 64,-2.3 6,7 9,15.9 9,24.9 z",
     },
     {
       type: "text",
+      alignmentBaseline: "middle",
       stroke: false,
       textanchor: "middle",
       x: 100,
-      y: 115,
+      y: 103,
       fontsize: 35,
       text: "EP",
     },
@@ -3695,8 +3843,7 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "M 60,110 75,100 60,90 m 50,50 -10,-15 -10,15 m 50,-50 -15,10 15,10 M 90,60 100,75 110,60",
+      d: "M 60,110 75,100 60,90 m 50,50 -10,-15 -10,15 m 50,-50 -15,10 15,10 M 90,60 100,75 110,60",
     },
   ];
   icn["MAN MADE SPACE DEBRIS MEDIUM"] = [
@@ -3709,8 +3856,7 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "m 90,75 10,-15 10,15 M 75,110 60,100 75,90 m 35,35 -10,15 -10,-15 m 35,-35 15,10 -15,10",
+      d: "m 90,75 10,-15 10,15 M 75,110 60,100 75,90 m 35,35 -10,15 -10,-15 m 35,-35 15,10 -15,10",
     },
   ];
 
@@ -3720,8 +3866,7 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "M 60,110 75,100 60,90 m 50,50 -10,-15 -10,15 m 50,-50 -15,10 15,10 M 90,60 100,75 110,60",
+      d: "M 60,110 75,100 60,90 m 50,50 -10,-15 -10,15 m 50,-50 -15,10 15,10 M 90,60 100,75 110,60",
     },
   ];
   icn["NATURAL SPACE DEBRIS MEDIUM"] = [
@@ -3734,8 +3879,7 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "m 90,75 10,-15 10,15 M 75,110 60,100 75,90 m 35,35 -10,15 -10,-15 m 35,-35 15,10 -15,10",
+      d: "m 90,75 10,-15 10,15 M 75,110 60,100 75,90 m 35,35 -10,15 -10,-15 m 35,-35 15,10 -15,10",
     },
   ];
 
@@ -3773,8 +3917,7 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "M 64.4,88.3 75,75 m -40,0 10.6,13.3 m 32.4,10 2,1.7 -2,2 z m -8,1.7 3.3,0",
+      d: "M 64.4,88.3 75,75 m -40,0 10.6,13.3 m 32.4,10 2,1.7 -2,2 z m -8,1.7 3.3,0",
     },
   ];
   icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 2"] = [
@@ -3782,8 +3925,7 @@ export default function(
     {
       type: "path",
       fill: false,
-      d:
-        "M 109,88.3 120,75 m -40,0 10.6,13.3 m 32.4,10 2,1.7 -2,2 z m -8,1.7 3,0",
+      d: "M 109,88.3 120,75 m -40,0 10.6,13.3 m 32.4,10 2,1.7 -2,2 z m -8,1.7 3,0",
     },
   ];
   icn["TP.M1.ANTIPERSONNEL MINE WITH DIRECTIONAL EFFECTS 3"] = [
@@ -3880,46 +4022,51 @@ export default function(
   ];
   icn["TP.M2.URBAN"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     textanchor: "middle",
     x: 100,
-    y: 115,
+    y: 103,
     fontsize: 35,
     text: "URBAN",
   };
   icn["TP.M2.WATER"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     textanchor: "middle",
     x: 100,
-    y: 115,
+    y: 103,
     fontsize: 35,
     text: "WATER",
   };
   icn["TP.M2.GROUND"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     textanchor: "middle",
     x: 100,
-    y: 115,
+    y: 103,
     fontsize: 35,
     text: "GROUND",
   };
   icn["TP.M2.VEGETATION"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     textanchor: "middle",
     x: 100,
-    y: 115,
+    y: 103,
     fontsize: 35,
     text: "VEGETATION",
   };
   icn["TP.M2.OBSTACLES"] = {
     type: "text",
+    alignmentBaseline: "middle",
     stroke: false,
     textanchor: "middle",
     x: 100,
-    y: 115,
+    y: 103,
     fontsize: 35,
     text: "OBSTACLES",
   };

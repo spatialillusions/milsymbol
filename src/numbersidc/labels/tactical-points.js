@@ -949,7 +949,46 @@ export default function tacticalPoints(sidc) {
       y: 90,
       fontsize: 35,
     },
-  }; //Protection Points / Radiological
+  };
+  sidc["281701"] = {
+    additionalInformation: {
+      stroke: false,
+      textanchor: "start",
+      x: 160,
+      y: 30,
+      fontsize: 35,
+    },
+    dtg: { stroke: false, textanchor: "end", x: 40, y: 30, fontsize: 35 },
+    hostile: {
+      stroke: false,
+      textanchor: "start",
+      x: 160,
+      y: 90,
+      fontsize: 35,
+    },
+    location: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: 135,
+      fontsize: 35,
+    },
+    quantity: {
+      stroke: false,
+      textanchor: "middle",
+      x: 100,
+      y: -20,
+      fontsize: 35,
+    },
+    uniqueDesignation: {
+      stroke: false,
+      textanchor: "end",
+      x: 40,
+      y: 90,
+      fontsize: 35,
+    },
+  };
+  //Protection Points / Radiological
   sidc["281800"] = actionPoint; //Protection Points / General Decontamination Point/Site
   sidc["281801"] = actionPoint; //Protection Points / General Decontamination Point/Site / Alternate
   sidc["281802"] = actionPoint; //Protection Points / General Decontamination Point/Site / Equipment
