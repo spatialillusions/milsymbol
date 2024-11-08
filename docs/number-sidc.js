@@ -122,7 +122,8 @@ function renderSymbolSet(symbolset, svgIcon) {
   let symbol;
   output += "<h2>" + (symbolset.name || "Common") + "</h2>";
   output += "<h3>" + (symbolset.name || "Common") + " Main Icon</h3>";
-  output += "<table border=1><thead><tr><th>Description</th><th>Icon</th>";
+  output +=
+    "<table border=1><thead><tr><th>Description</th><th>SVG Icon</th><th>Canvas Icon</th>";
 
   if (symbolset.symbolset == 36) output += "<th>Alternate Icon</th>";
   if (svgIcon) output += "<th>SVG Icon</th>";
@@ -282,7 +283,8 @@ function renderSymbolSet(symbolset, svgIcon) {
   output += "</table>";
   if (symbolset.modifier1.length) {
     output += "<h3>" + (symbolset.name || "Common") + " Modifier 1</h3>";
-    output += "<table border=1><thead><tr><th>Description</th><th>Icon</th>";
+    output +=
+      "<table border=1><thead><tr><th>Description</th><th>SVG Icon</th><th>Canvas Icon</th>";
     if (svgIcon) output += "<th>SVG Icon</th>";
     output += "<th>Remarks</th></tr></thead>";
     for (i = 0; i < symbolset.modifier1.length; i++) {
@@ -376,7 +378,8 @@ function renderSymbolSet(symbolset, svgIcon) {
   }
   if (symbolset.modifier2.length != 0) {
     output += "<h3>" + (symbolset.name || "Common") + " Modifier 2</h3>";
-    output += "<table border=1><thead><tr><th>Description</th><th>Icon</th>";
+    output +=
+      "<table border=1><thead><tr><th>Description</th><th>SVG Icon</th><th>Canvas Icon</th>";
     if (svgIcon) output += "<th>SVG Icon</th>";
     output += "<th>Remarks</th></tr></thead>";
 
