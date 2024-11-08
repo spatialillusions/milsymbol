@@ -5,7 +5,7 @@ Milsymbol is a small library in pure javascript that creates military unit symbo
 ![Figure 13](https://github.com/spatialillusions/milsymbol/blob/master/docs/images/milsymbol.png?raw=true)
 
 ```javascript
-new ms.Symbol("sfgpewrh--mt", {
+new ms.Symbol("130315003611010300000000000000", {
   size: 35,
   quantity: 200,
   staffComments: "for reinforcements".toUpperCase(),
@@ -13,7 +13,7 @@ new ms.Symbol("sfgpewrh--mt", {
   direction: (750 * 360) / 6400,
   type: "machine gun".toUpperCase(),
   dtg: "30140000ZSEP97",
-  location: "0900000.0E570306.0N"
+  location: "0900000.0E570306.0N",
 }).asSVG();
 ```
 
@@ -25,7 +25,7 @@ Compared to reference figure from MIL-STD-2525C:
 
 Milsymbol supports a lot of different options:
 
-- NATO or US standards (MIL-STD-2525C, MIL-STD-2525D, STANAG APP-6 B, STANAG APP-6 D)
+- NATO or US standards (MIL-STD-2525C, MIL-STD-2525D, MIL-STD-2525E, FM 1-02.2, STANAG APP-6 B, STANAG APP-6 D, STANAG APP-6 E)
 - Filled/Unfilled symbols
 - Framed/Unframed symbols
 - Text fields
@@ -35,6 +35,8 @@ Milsymbol supports a lot of different options:
 - and much more...
 
 For detailed descriptions of what is possible with milsymbol, see the API documentation under /docs.
+
+Since version 3.0, symbology will be rendered as closely as possible to MIL-STD-2525E / STANAG APP-6 E / FM 1-02.2 as possible, even if the symbol might look slightly different in older standard documents. This is to make symbology uniform between systems that uses different versions of the SIDC codes. In some cases where symbols are inconsistent between different appendixes in the standard documents, they have been made consistent for easier interpetation.
 
 Milsymbol can be integrated with most common javascript libraries, such as:
 
@@ -62,7 +64,7 @@ To create your first symbol you use the symbol method to create a symbol object:
 
 To make a symbol for an infantry platoon the syntax would be:
 
-`var sym = new ms.Symbol("SFG-UCI----D");`
+`var sym = new ms.Symbol("130310001412110000000000000000");`
 
 And `sym` will now be a symbol object containing information about the size and draw instructions.
 
@@ -72,7 +74,7 @@ But you want something to put on your screen, and since milsymbol provides diffe
 
 And if you don't want to make it step by step, you can chain it all together like this:
 
-`var canvasElement = new ms.Symbol("SFG-UCI----D").asCanvas();`
+`var canvasElement = new ms.Symbol("130310001412110000000000000000").asCanvas();`
 
 ![Infantry Platoon](https://github.com/spatialillusions/milsymbol/blob/master/docs/images/infantry-platoon.png?raw=true)
 
@@ -80,12 +82,12 @@ Options you provided to your symbol can change the size of the symbol, define if
 
 The options can be set when you create your symbol:
 
-`var sym = new ms.Symbol("SFG-UCI----D",{size:35}).asCanvas();`
+`var sym = new ms.Symbol("130310001412110000000000000000",{size:35}).asCanvas();`
 
 Or they can be updated at any time using `setOptions(options)`:
 
 ```
-var sym = new ms.Symbol("SFG-UCI----D");
+var sym = new ms.Symbol("130310001412110000000000000000");
 sym.setOptions({size:35});
 var canvasElement = sym.asCanvas();
 ```
@@ -99,19 +101,21 @@ The library is built on the idea that everything used inside milsymbol should be
 Milsymbol uses pure javascript to create SVG, Scalable Vector Graphics, and also has built in for native Canvas support.
 
 - No external dependencies, just one javascript file required
-- Super fast, can create 1000 symbols in less than 25 milliseconds (SVG output)
+- Super fast, can create 1000 symbols in less than 20 milliseconds (SVG output)
 
 The symbols are created using building blocks defined in the code and no images or fonts are used, this makes it possible to modify almost every aspect of the symbols, such as fill, frame, color, size, stroke width and easily switch between APP6 and 2525 symbology.
 
-To see what is possible with milsymbol use the unit test documents in the docs folder that lists all tabels and figures from the different standards using MilSymbol. (The documents use milsymbol to render every image that you see, look into the code if you want to see how it is done.)
+To see what is possible with milsymbol use the unit test documents in the docs folder that lists all tabels and figures from the different standards using milsymbol. (The documents use milsymbol to render every image that you see, look into the code if you want to see how it is done.)
 
-Milsymbol can easily be extended with new functionality and examples of this can be found at: https://github.com/spatialillusions/milsymbol-extensions
+## Extending milsymbol
+
+Milsymbol can easily be extended with new functionality, if you go to https://spatialillusions.com/unitgenerator/ you can see that it uses a modified verison of milsymbol with closed source extensions "stack-extension", "reinforced/reduced-extension", and "country flag-extension". Please contact me if you would like to use them in your project.
 
 ## Contact
 
 Milsymbol is created and maintained by Måns Beckman
 
-- http://www.spatialillusions.com to see more examples of what milsymbol can be used for
+- http://www.spatialillusions.com
 
 ## Licensing
 
