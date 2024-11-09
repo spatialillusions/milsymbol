@@ -2220,7 +2220,7 @@ export default function (
     x: 100,
     y: 130,
     fontsize: 20,
-    text: "VSTOL",
+    text: "VTOL",
   };
   icn["GR.M2.VETERINARY"] = {
     type: "text",
