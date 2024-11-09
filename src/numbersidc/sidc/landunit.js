@@ -501,9 +501,9 @@ export default {
       sIdm1["78"] = [icn["GR.M1.AVIATION"]];
       sIdm1["79"] = [icn["GR.M1.ROUTE, RECONNAISSANCE, AND CLEARANCE"]];
       sIdm1["80"] = [icn["GR.M1.TILT-ROTOR"]];
-      sIdm1["81"] = [icn["GR.M1.COMMAND POST NODE"]];
-      sIdm1["82"] = [icn["GR.M1.JOINT NETWORK NODE"]];
-      sIdm1["83"] = [icn["GR.M1.RETRANSMISSION SITE"]];
+      sIdm1["81"] = [icn["GR.M1.NATO MEDICAL ROLE 2 BASIC"]];
+      sIdm1["82"] = [icn["GR.M1.NATO MEDICAL ROLE 2 ENHANCED"]];
+      sIdm1["83"] = [icn["GR.M1.NATO MEDICAL ROLE 2 FORWARD"]];
       sIdm1["84"] = [icn["GR.M1.ASSAULT"]];
 
       sIdm1["85"] = [icn["GR.M1.WEAPONS"]];

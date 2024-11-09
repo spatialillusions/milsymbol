@@ -1578,6 +1578,33 @@ export default function (
     fontsize: 25,
     text: "2",
   };
+  icn["GR.M1.NATO MEDICAL ROLE 2 BASIC"] = {
+    type: "text",
+    alignmentBaseline: "middle",
+    stroke: false,
+    x: 120,
+    y: 72,
+    fontsize: 25,
+    text: "2B",
+  };
+  icn["GR.M1.NATO MEDICAL ROLE 2 ENHANCED"] = {
+    type: "text",
+    alignmentBaseline: "middle",
+    stroke: false,
+    x: 120,
+    y: 72,
+    fontsize: 25,
+    text: "2E",
+  };
+  icn["GR.M1.NATO MEDICAL ROLE 2 FORWARD"] = {
+    type: "text",
+    alignmentBaseline: "middle",
+    stroke: false,
+    x: 120,
+    y: 72,
+    fontsize: 25,
+    text: "2E",
+  };
   icn["GR.M1.NATO MEDICAL ROLE 3"] = {
     type: "text",
     alignmentBaseline: "middle",
