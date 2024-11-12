@@ -146,6 +146,19 @@ export function metadata(ms, metadata, mapping) {
   if (symbolSet == "15" || symbolSet == "52")
     metadata.dimension = mapping.dimension[2];
 
+  //Civilian stuff
+  if (
+    (symbolSet == "01" && functionid.substring(0, 2) == "12") ||
+    (symbolSet == "05" && functionid.substring(0, 2) == "12") ||
+    symbolSet == "11" ||
+    (symbolSet == "12" && functionid.substring(0, 2) == "12") ||
+    (symbolSet == "15" && functionid.substring(0, 2) == "16") ||
+    (symbolSet == "30" && functionid.substring(0, 2) == "14") ||
+    (symbolSet == "35" && functionid.substring(0, 2) == "12")
+  ) {
+    metadata.civilian = true;
+  }
+
   // Frame shape overrides 2525E
   if (frameshape != "0") {
     metadata.civilian = false;
@@ -214,18 +227,6 @@ export function metadata(ms, metadata, mapping) {
   }
   if (echelonMobility >= 70 && echelonMobility < 80) {
     metadata.leadership = mapping.echelonMobility[echelonMobility];
-  }
-  //Civilian stuff
-  if (
-    (symbolSet == "01" && functionid.substring(0, 2) == "12") ||
-    (symbolSet == "05" && functionid.substring(0, 2) == "12") ||
-    symbolSet == "11" ||
-    (symbolSet == "12" && functionid.substring(0, 2) == "12") ||
-    (symbolSet == "15" && functionid.substring(0, 2) == "16") ||
-    (symbolSet == "30" && functionid.substring(0, 2) == "14") ||
-    (symbolSet == "35" && functionid.substring(0, 2) == "12")
-  ) {
-    metadata.civilian = true;
   }
 
   return metadata;
