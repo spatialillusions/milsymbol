@@ -69,6 +69,7 @@ const std2525e = [
   minewarfare,
   activites,
   signalsintelligence,
+  dismountedindividual,
   cyberspace,
   tacticalpoints,
 ];
