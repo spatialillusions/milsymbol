@@ -31,7 +31,7 @@ this:
     <script src="dojo/dojo.js" data-dojo-config="async: true"></script>
     <script src="app/milsymbol.js"></script>
     <script>
-      require(["milsymbol"], function(ms) {
+      require(["milsymbol"], function (ms) {
         var symbol = new ms.Symbol("SFG-UCI----D", { size: 30 });
       });
     </script>
@@ -394,12 +394,12 @@ externally, but you can also choose to build your own version of milsymbol.
 
 ## Building milsymbol
 
-Milsymbol is built using [webpack](https://webpack.js.org), and if you installed
+Milsymbol is built using rollupjs, and if you installed
 milsymbol npm everything you need to build milsymbol should have been installed
 as well since they are listed as devDependencies in package.json, if you don't
 have npm installed, you will have to install it to build milsymbol.
 
-The structure of the code is that the webpack config (_webpack.config.js_) is
+The structure of the code is that the rollup config (_rollup.config.js_) is
 located in the root directory, and the entry point (_index.js_) and all other
 source code is under `/src`.
 
@@ -410,7 +410,7 @@ run:
 npm run build
 ```
 
-Webpack will then build milsymbol and minify the output into `/dist`.
+Rollup will then build milsymbol and minify the output into `/dist`.
 
 It is also possible to build an un-minified version of milsymbol by running:
 
@@ -605,15 +605,9 @@ you can do this by adding an icon function.
 Example:
 
 ```javascript
-ms.addIconParts(function(
-  iconParts,
-  metadata,
-  colors,
-  std2525,
-  monoColor,
-  alternateMedal
-) {
-  /*
+ms.addIconParts(
+  function (iconParts, metadata, colors, std2525, monoColor, alternateMedal) {
+    /*
     iconParts: Object - The existing object of icon parts
     metadata: Object - properties object
     colors: Object - color object
@@ -621,18 +615,19 @@ ms.addIconParts(function(
     alternateMedal: Boolean - true/false for sea mine stuff
     */
 
-  // Adding a custom part for tactical graphics
-  iconParts["TP.HARBOR"] = {
-    type: "path",
-    fill: false,
-    d: "M 80,140 50,60 150,60 120,140"
-  };
+    // Adding a custom part for tactical graphics
+    iconParts["TP.HARBOR"] = {
+      type: "path",
+      fill: false,
+      d: "M 80,140 50,60 150,60 120,140",
+    };
 
-  /* 
+    /* 
     Since we are modifying directly to the existing object of icon parts, 
     we don't have to return anything.
     */
-});
+  }
+);
 ```
 
 **Returns**
@@ -672,24 +667,24 @@ ms.addLabelOverrides(
         textanchor: "middle",
         x: 100,
         y: -70,
-        fontsize: 40
+        fontsize: 40,
       },
       hostile: {
         stroke: false,
         textanchor: "start",
         x: 150,
         y: 45,
-        fontsize: 40
+        fontsize: 40,
       },
       uniqueDesignation: {
         stroke: false,
         textanchor: "start",
         x: 150,
         y: 0,
-        fontsize: 80
+        fontsize: 80,
       },
       dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-      dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
+      dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
     };
 
     /* 
