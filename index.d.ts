@@ -225,3 +225,9 @@ export function getVersion(): string;
 
 /** Sets the preferred standard. */
 export function setStandard(standard: "2525" | "APP6"): boolean;
+
+declare const _default: {
+  Symbol: typeof Symbol;
+};
+
+export default _default;
