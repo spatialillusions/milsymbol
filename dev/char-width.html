@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate character widths</title>
+  </head>
+  <body>
+    <h1>Calculate character widths used in textfields.js</h1>
+    <canvas id="myCanvas" width="5" height="2"></canvas>
+    <pre id="output"></pre>
+    <script>
+      let CHARSET = " !\"#$%&'()*+,-./0123456789:;<=>?@{|}~[]^_`";
+      CHARSET += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      CHARSET += "abcdefghijklmnopqrstuvwxyz";
+      CHARSET +=
+        "АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя";
+      const widths = {};
+      // Get the canvas element and its context
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      // Set the font style
+      // Default font size in milsymbol is 40, but we need to set it a bit smaller because of how strings are rendered
+      ctx.font = "33px Arial";
+
+      Array.from(CHARSET).forEach((char) => {
+        widths[char] = Math.ceil(ctx.measureText(char).width);
+      });
+      document.getElementById("output").innerHTML = JSON.stringify(
+        widths,
+        "",
+        4
+      );
+    </script>
+  </body>
+</html>
