@@ -94,7 +94,7 @@ function labels(icon) {
   };
 }
 
-function renderSymbolSet(symbolset, svgIcon) {
+function renderSymbolSet(standardEdition, symbolset, svgIcon) {
   console.log(symbolset);
 
   const svgIcons = {
@@ -110,6 +110,7 @@ function renderSymbolSet(symbolset, svgIcon) {
     "Land equipment": "Land",
     "Land installations": "Land",
     "Dismounted individuals": "Dismounted",
+    "Dismounted individual": "Dismounted",
     Cyberspace: "Cyberspace",
     "Control measure": "ControlMeasures",
     "": "CommonMods",
@@ -137,7 +138,8 @@ function renderSymbolSet(symbolset, svgIcon) {
     )
       continue;
     symbol = new ms.Symbol(
-      "1003" +
+      standardEdition +
+        "03" +
         (symbolset.symbolset || "10") +
         "0000" +
         symbolset.mainIcon[i]["Code"] +
@@ -222,7 +224,8 @@ function renderSymbolSet(symbolset, svgIcon) {
       output +=
         "</td><td>" +
         "<!-- " +
-        "1003" +
+        standardEdition +
+        "03" +
         (symbolset.symbolset || "10") +
         "0000" +
         symbolset.mainIcon[i]["Code"] +
@@ -242,7 +245,8 @@ function renderSymbolSet(symbolset, svgIcon) {
       output +=
         "<td>" +
         new ms.Symbol(
-          "1003" +
+          standardEdition +
+            "03" +
             (symbolset.symbolset || "10") +
             "0000" +
             symbolset.mainIcon[i]["Code"] +
@@ -255,17 +259,23 @@ function renderSymbolSet(symbolset, svgIcon) {
 
     if (svgIcon) {
       output +=
-        '<td class="svg-icon"><img onerror=\'this.onerror=null;this.src="svg-icons-2525E/' +
+        '<td class="svg-icon"><img onerror=\'this.onerror=null;this.src="svg-icons-2525' +
+        (standardEdition < 13 ? "D" : "E") +
+        "/" +
         svgIcons[symbolset.name] +
         "/" +
         symbolset.symbolset +
         symbolset.mainIcon[i]["Code"] +
-        '_1.svg"\' src="svg-icons-2525E/' +
+        '_1.svg"\' src="svg-icons-2525' +
+        (standardEdition < 13 ? "D" : "E") +
+        "/" +
         svgIcons[symbolset.name] +
         "/" +
         symbolset.symbolset +
         symbolset.mainIcon[i]["Code"] +
-        '.svg"><!--<img src="svg-icons-2525E/' +
+        '.svg"><!--<img src="svg-icons-2525' +
+        (standardEdition < 13 ? "D" : "E") +
+        "/" +
         svgIcons[symbolset.name] +
         "/" +
         symbolset.symbolset +
@@ -289,13 +299,22 @@ function renderSymbolSet(symbolset, svgIcon) {
     output += "<th>Remarks</th></tr></thead>";
     for (i = 0; i < symbolset.modifier1.length; i++) {
       if (symbolset.modifier1[i]["First Modifier"] == "{Disused}") continue;
-
+      if (
+        symbolset.modifier1[i]["First Modifier"] ==
+          "{Reserved for future use}" ||
+        symbolset.modifier1[i]["First Modifier"] == "Reserved for Future Use" ||
+        symbolset.modifier1[i]["First Modifier"] == "Reserved for future Use"
+      )
+        continue;
+      if (symbolset.modifier1[i]["First Modifier"] == "Version Extension Flag")
+        continue;
       if (
         symbolset.modifier1[i]["Code"] &&
         symbolset.modifier1[i]["Code"].length == 2
       ) {
         symbol = new ms.Symbol(
-          "1003" +
+          standardEdition +
+            "03" +
             (symbolset.symbolset || "10") +
             "0000000000" +
             symbolset.modifier1[i]["Code"] +
@@ -309,7 +328,8 @@ function renderSymbolSet(symbolset, svgIcon) {
         symbolset.modifier1[i]["Code"].length == 3
       ) {
         symbol = new ms.Symbol(
-          "1003" +
+          standardEdition +
+            "03" +
             (symbolset.symbolset || "10") +
             "0000000000" +
             symbolset.modifier1[i]["Code"].substr(1, 2) +
@@ -356,13 +376,17 @@ function renderSymbolSet(symbolset, svgIcon) {
 
       if (svgIcon) {
         output +=
-          '</td><td class="svg-icon"><img onerror=\'this.onerror=null;this.src="svg-icons-2525E/' +
+          '</td><td class="svg-icon"><img onerror=\'this.onerror=null;this.src="svg-icons-2525' +
+          (standardEdition < 13 ? "D" : "E") +
+          "/" +
           svgIcons[symbolset.name] +
           "/mod1/" +
           (symbolset.symbolset
             ? symbolset.symbolset + symbolset.modifier1[i]["Code"]
             : symbolset.modifier1[i]["Code"] + "_") +
-          '1_1.svg"\' src="svg-icons-2525E/' +
+          '1_1.svg"\' src="svg-icons-2525' +
+          (standardEdition < 13 ? "D" : "E") +
+          "/" +
           svgIcons[symbolset.name] +
           "/mod1/" +
           (symbolset.symbolset
@@ -386,11 +410,22 @@ function renderSymbolSet(symbolset, svgIcon) {
     for (i = 0; i < symbolset.modifier2.length; i++) {
       if (symbolset.modifier2[i]["Second Modifier"] == "{Disused}") continue;
       if (
+        symbolset.modifier2[i]["Second Modifier"] ==
+          "{Reserved for future use}" ||
+        symbolset.modifier2[i]["Second Modifier"] ==
+          "Reserved for Future Use" ||
+        symbolset.modifier2[i]["Second Modifier"] == "Reserved for future Use"
+      )
+        continue;
+      if (symbolset.modifier2[i]["Second Modifier"] == "Version Extension Flag")
+        continue;
+      if (
         symbolset.modifier2[i]["Code"] &&
         symbolset.modifier2[i]["Code"].length == 2
       ) {
         symbol = new ms.Symbol(
-          "1003" +
+          standardEdition +
+            "03" +
             (symbolset.symbolset || "10") +
             "000000000000" +
             symbolset.modifier2[i]["Code"] +
@@ -404,7 +439,8 @@ function renderSymbolSet(symbolset, svgIcon) {
         symbolset.modifier2[i]["Code"].length == 3
       ) {
         symbol = new ms.Symbol(
-          "1003" +
+          standardEdition0 +
+            "03" +
             (symbolset.symbolset || "10") +
             "000000000000" +
             symbolset.modifier2[i]["Code"].substr(1, 2) +
@@ -439,7 +475,8 @@ function renderSymbolSet(symbolset, svgIcon) {
       output += "</td><td>";
       output +=
         "<!-- " +
-        "1003" +
+        standardEdition +
+        "03" +
         (symbolset.symbolset || "10") +
         "000000000000" +
         symbolset.modifier2[i]["Code"] +
@@ -456,13 +493,17 @@ function renderSymbolSet(symbolset, svgIcon) {
 
       if (svgIcon) {
         output +=
-          '</td><td class="svg-icon"><img onerror=\'this.onerror=null;this.src="svg-icons-2525E/' +
+          '</td><td class="svg-icon"><img onerror=\'this.onerror=null;this.src="svg-icons-2525' +
+          (standardEdition < 13 ? "D" : "E") +
+          "/" +
           svgIcons[symbolset.name] +
           "/mod2/" +
           (symbolset.symbolset
             ? symbolset.symbolset + symbolset.modifier2[i]["Code"]
             : symbolset.modifier2[i]["Code"] + "_") +
-          '2_1.svg"\'src="svg-icons-2525E/' +
+          '2_1.svg"\'src="svg-icons-2525' +
+          (standardEdition < 13 ? "D" : "E") +
+          "/" +
           svgIcons[symbolset.name] +
           "/mod2/" +
           (symbolset.symbolset
