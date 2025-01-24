@@ -1,0 +1,31 @@
+# The basics
+.DS_Store
+node_modules
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+# The others
+.nyc_output/
+coverage/
+*.tgz
+
+docs
+examples
+test
