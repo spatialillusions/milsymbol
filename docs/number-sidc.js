@@ -468,7 +468,11 @@ function renderSymbolSet(standardEdition, symbolset, svgIcon) {
         );
       }
 
-      output += "><td><b>" + symbolset.modifier2[i]["Second Modifier"] + "</b>";
+      output +=
+        "><td><b>" +
+        (symbolset.modifier2[i]["Second Modifier"] ||
+          symbolset.modifier2[i]["First Modifier"]) +
+        "</b>";
       output +=
         "<br><br><em>Symbol Set Code:</em> " + (symbolset.symbolset || "");
       output += "<br><em>Code:</em> " + symbolset.modifier2[i]["Code"];
