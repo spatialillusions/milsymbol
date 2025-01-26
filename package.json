@@ -19,7 +19,8 @@
     "./dist",
     "./index.js",
     "./index.mjs",
-    "./index.d.ts"
+    "./index.d.ts",
+    "./src"
   ],
   "scripts": {
     "lint": "eslint src test --fix",
