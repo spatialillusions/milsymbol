@@ -101,6 +101,7 @@ function renderSymbolSet(standardEdition, symbolset, svgIcon) {
     Space: "Space",
     "Space Missile": "Space",
     "Signals Intelligence – Space": "SigInt",
+    "Signals Intelligence – Air": "SigInt",
     //"Signals Intelligence – Space": "SigInt",
     "Sea surface": "SeaSurface",
     "Sea subsurface": "SeaSubsurface",
