@@ -20,6 +20,13 @@ export function metadata(ms, metadata, mapping) {
     6: "Hostile",
   };
 
+  if (version == 10 || version == 11 || version == 12) {
+    metadata.edition = "D";
+  }
+  if (version == 13 || version == 14) {
+    metadata.edition = "E";
+  }
+
   if (version >= 13 && standardIdentity2 == 5) {
     metadata.suspect = true;
   }

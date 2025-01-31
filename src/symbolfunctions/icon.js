@@ -27,7 +27,10 @@ export default function icon(ms) {
     const white = this.colors.white[this.metadata.affiliation];
     //Store previous used icons in memory.
     const icnet =
+      "standard:" +
       (this.metadata.STD2525 ? "2525" : "APP6") +
+      ",edition:" +
+      (this.metadata.edition || "") +
       "," +
       this.metadata.dimension +
       this.metadata.affiliation +
@@ -178,7 +181,8 @@ export default function icon(ms) {
               ms,
               symbolSet,
               iconParts,
-              this.metadata.STD2525
+              this.metadata.STD2525,
+              this.metadata.edition
             );
           icons = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].icons;
           m1 = ms._iconCache[icnet].numberSIDC.symbolSet[symbolSet].m1;

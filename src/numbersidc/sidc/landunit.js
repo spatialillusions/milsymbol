@@ -8,7 +8,16 @@ export default {
   getMetadata: metadata_number,
   getIcons: getIcons_number,
   iconParts: icons,
-  icons: function landunit(sId, sIdm1, sIdm2, bbox, symbolSet, icn, _STD2525) {
+  icons: function landunit(
+    sId,
+    sIdm1,
+    sIdm2,
+    bbox,
+    symbolSet,
+    icn,
+    _STD2525,
+    edition
+  ) {
     //Land Unit
     if (symbolSet == "10") {
       sId["110000"] = [icn["GR.IC.COMMAND AND CONTROL"]];
@@ -501,9 +510,18 @@ export default {
       sIdm1["78"] = [icn["GR.M1.AVIATION"]];
       sIdm1["79"] = [icn["GR.M1.ROUTE, RECONNAISSANCE, AND CLEARANCE"]];
       sIdm1["80"] = [icn["GR.M1.TILT-ROTOR"]];
-      sIdm1["81"] = [icn["GR.M1.NATO MEDICAL ROLE 2 BASIC"]];
-      sIdm1["82"] = [icn["GR.M1.NATO MEDICAL ROLE 2 ENHANCED"]];
-      sIdm1["83"] = [icn["GR.M1.NATO MEDICAL ROLE 2 FORWARD"]];
+      sIdm1["81"] =
+        edition == "D"
+          ? [icn["GR.M1.COMMAND POST NODE"]]
+          : [icn["GR.M1.NATO MEDICAL ROLE 2 BASIC"]];
+      sIdm1["82"] =
+        edition == "D"
+          ? [icn["GR.M1.JOINT NETWORK NODE"]]
+          : [icn["GR.M1.NATO MEDICAL ROLE 2 ENHANCED"]];
+      sIdm1["83"] =
+        edition == "D"
+          ? [icn["GR.M1.RETRANSMISSION SITE"]]
+          : [icn["GR.M1.NATO MEDICAL ROLE 2 FORWARD"]];
       sIdm1["84"] = [icn["GR.M1.ASSAULT"]];
 
       sIdm1["85"] = [icn["GR.M1.WEAPONS"]];
