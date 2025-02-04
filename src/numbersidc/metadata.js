@@ -17,13 +17,13 @@ export function metadata(ms, metadata, mapping) {
     3: "Friend",
     4: "Neutral",
     5: "Hostile",
-    6: "Hostile",
+    6: "Hostile"
   };
 
-  if (version == 10 || version == 11 || version == 12) {
+  if (version == "10" || version == "11" || version == "12") {
     metadata.edition = "D";
   }
-  if (version == 13 || version == 14) {
+  if (version == "13" || version == "14") {
     metadata.edition = "E";
   }
 
@@ -52,7 +52,7 @@ export function metadata(ms, metadata, mapping) {
     52: "Ground",
     53: "Sea",
     54: "Subsurface",
-    60: "Ground",
+    60: "Ground"
   };
 
   const functionid = (metadata.functionid = this.options.sidc.substr(10, 10));
