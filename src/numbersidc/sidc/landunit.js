@@ -28,11 +28,11 @@ export default {
       sId["110500"] = [icn["GR.IC.LIAISON"]];
       sId["110501"] = [icn["GR.IC.LIAISON"], icn["GR.IC.FF.RECONNAISSANCE"]];
       sId["110600"] = [
-        icn["GR.IC.MILITARY INFORMATION SUPPORT OPERATIONS (MISO)"],
+        icn["GR.IC.MILITARY INFORMATION SUPPORT OPERATIONS (MISO)"]
       ];
       sId["110601"] = [
         icn["GR.IC.MILITARY INFORMATION SUPPORT OPERATIONS (MISO)"],
-        icn["GR.IC.FF.BROADCAST TRANSMITTER ANTENNA"],
+        icn["GR.IC.FF.BROADCAST TRANSMITTER ANTENNA"]
       ];
       sId["110700"] = [icn["GR.IC.RADIO"]];
       sId["110800"] = [icn["GR.IC.RADIO RELAY"]];
@@ -42,7 +42,7 @@ export default {
       sId["111002"] = [icn["GR.IC.FF.SIGNAL"], icn["GR.IC.RADIO RELAY"]];
       sId["111003"] = [
         icn["GR.IC.FF.SIGNAL"],
-        icn["GR.IC.RADIO TELETYPE CENTRE"],
+        icn["GR.IC.RADIO TELETYPE CENTRE"]
       ];
       sId["111004"] = [icn["GR.IC.FF.SIGNAL"], icn["GR.I.FF.SATELLITE"]];
       sId["111005"] = [icn["GR.IC.FF.SIGNAL"], icn["GR.IC.VIDEO IMAGERY"]];
@@ -61,11 +61,11 @@ export default {
       sId["120400"] = [icn["GR.IC.FF.ANTITANK/ANTIARMOUR"]];
       sId["120401"] = [
         icn["GR.IC.FF.ANTITANK/ANTIARMOUR"],
-        icn["GR.IC.ARMOUR"],
+        icn["GR.IC.ARMOUR"]
       ];
       sId["120402"] = [
         icn["GR.IC.FF.ANTITANK/ANTIARMOUR"],
-        icn["GR.IC.FF.MOTORIZED"],
+        icn["GR.IC.FF.MOTORIZED"]
       ];
       sId["120500"] = [icn["GR.IC.ARMOUR"]];
       sId["120501"] = [icn["GR.IC.ARMOUR"], icn["GR.IC.FF.RECONNAISSANCE"]];
@@ -74,7 +74,7 @@ export default {
       sId["120600"] = [icn["GR.IC.AVIATION ROTARY WING"]];
       sId["120601"] = [
         icn["GR.IC.AVIATION ROTARY WING"],
-        icn["GR.IC.FF.RECONNAISSANCE"],
+        icn["GR.IC.FF.RECONNAISSANCE"]
       ];
       //sId['120695'] = [icn['GR.IC.AVIATION ROTARY WING'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
       //sId['120697'] = [icn['GR.IC.AVIATION ROTARY WING'],icn['GR.IC.FF.CORPS SUPPORT']];
@@ -84,7 +84,7 @@ export default {
       sId["120800"] = [icn["GR.IC.AVIATION FIXED WING"]];
       sId["120801"] = [
         icn["GR.IC.AVIATION FIXED WING"],
-        icn["GR.IC.FF.RECONNAISSANCE"],
+        icn["GR.IC.FF.RECONNAISSANCE"]
       ];
       //sId['120895'] = [icn['GR.IC.AVIATION FIXED WING'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
       sId["120900"] = [icn["GR.IC.COMBAT"]];
@@ -95,13 +95,13 @@ export default {
       sId["121102"] = [icn["GR.IC.FF.INFANTRY"], icn["GR.IC.ARMOUR"]];
       sId["121103"] = [
         icn["GR.IC.FF.INFANTRY"],
-        icn["GR.IC.FF.MAIN GUN SYSTEM"],
+        icn["GR.IC.FF.MAIN GUN SYSTEM"]
       ];
       sId["121104"] = [icn["GR.IC.FF.INFANTRY"], icn["GR.IC.FF.MOTORIZED"]];
       sId["121105"] = [
         icn["GR.IC.FF.INFANTRY"],
         icn["GR.IC.ARMOUR"],
-        icn["GR.IC.FF.MAIN GUN SYSTEM"],
+        icn["GR.IC.FF.MAIN GUN SYSTEM"]
       ];
       sId["121106"] = [icn["GR.IC.FF.MAIN GUN SYSTEM"]];
       //sId['121195'] = [icn['GR.IC.FF.INFANTRY'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
@@ -109,15 +109,15 @@ export default {
       sId["121300"] = [icn["GR.IC.FF.RECONNAISSANCE"]];
       sId["121301"] = [
         icn["GR.IC.FF.RECONNAISSANCE"],
-        icn["GR.IC.SURVEILLANCE"],
+        icn["GR.IC.SURVEILLANCE"]
       ];
       sId["121302"] = [
         icn["GR.IC.FF.RECONNAISSANCE"],
-        icn["GR.IC.FF.AMPHIBIOUS"],
+        icn["GR.IC.FF.AMPHIBIOUS"]
       ];
       sId["121303"] = [
         icn["GR.IC.FF.RECONNAISSANCE"],
-        icn["GR.IC.FF.MOTORIZED"],
+        icn["GR.IC.FF.MOTORIZED"]
       ];
       //sId['121395'] = [icn['GR.IC.FF.RECONNAISSANCE'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
       sId["121400"] = [icn["GR.IC.SEA-AIR-LAND"]];
@@ -129,15 +129,15 @@ export default {
       sId["121801"] = [icn["GR.IC.FIXED WING MISO"]];
       sId["121802"] = [
         icn["GR.IC.SPECIAL OPERATIONS FORCES"],
-        icn["GR.IC.FF.INFANTRY"],
+        icn["GR.IC.FF.INFANTRY"]
       ];
       sId["121803"] = [
         icn["GR.IC.COMBATANT"],
-        icn["GR.M1.SPECIAL OPERATIONS FORCES (SOF)"],
+        icn["GR.M1.SPECIAL OPERATIONS FORCES (SOF)"]
       ]; //SPECIAL BOAT
       sId["121804"] = [
         icn["GR.IC.SUBMARINE NUCLEAR PROPULSION"],
-        icn["GR.M1.SPECIAL OPERATIONS FORCES (SOF)"],
+        icn["GR.M1.SPECIAL OPERATIONS FORCES (SOF)"]
       ]; //SPECIAL SSNR)
       sId["121805"] = [icn["SOF.IC.UNDERWATER DEMOLITION TEAM"]];
       sId["121900"] = [icn["GR.IC.UNMANNED SYSTEMS"]];
@@ -146,37 +146,37 @@ export default {
       sId["130100"] = [icn["GR.IC.FF.AIR DEFENCE"]];
       sId["130101"] = [
         icn["GR.IC.FF.AIR DEFENCE"],
-        icn["GR.IC.FF.MAIN GUN SYSTEM"],
+        icn["GR.IC.FF.MAIN GUN SYSTEM"]
       ];
       sId["130102"] = [
         icn["GR.IC.FF.AIR DEFENCE"],
-        icn["GR.IC.MISSILE"],
+        icn["GR.IC.MISSILE"]
         //icn["GR.IC.AIR DEFENSE MISSILE"],
       ];
       sId["130103"] = [
         icn["GR.IC.FF.AIR DEFENCE"],
-        icn["GR.IC.AIR AND MISSILE DEFENSE"],
+        icn["GR.IC.AIR AND MISSILE DEFENSE"]
       ];
       //sId['130195'] = [icn['GR.IC.FF.AIR DEFENCE'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
       sId["130200"] = [
         icn["GR.IC.FIELD ARTILLERY"],
         icn["GR.IC.FF.RECONNAISSANCE"],
         icn["GR.IC.AVIATION ROTARY WING"],
-        icn["GR.M1.NAVAL"],
+        icn["GR.M1.NAVAL"]
       ];
       sId["130300"] = [icn["GR.IC.FIELD ARTILLERY"]];
       sId["130301"] = [
         ms._scale(0.8, icn["GR.IC.FIELD ARTILLERY"]),
-        icn["GR.IC.ARMOUR"],
+        icn["GR.IC.ARMOUR"]
       ]; //ARTILLERY SELF-PROPELLED
       sId["130302"] = [
         ms._scale(0.8, icn["GR.IC.FIELD ARTILLERY"]),
         icn["GR.IC.ARMOUR"],
-        icn["GR.IC.FF.RECONNAISSANCE"],
+        icn["GR.IC.FF.RECONNAISSANCE"]
       ]; //ARTILLERY TARGET ACQUISITION
       sId["130303"] = [
         ms._scale(0.8, icn["GR.IC.FIELD ARTILLERY"]),
-        icn["GR.IC.FF.RECONNAISSANCE"],
+        icn["GR.IC.FF.RECONNAISSANCE"]
       ]; //RECONNAISSANCE
       //sId['130395'] = [icn['GR.IC.FIELD ARTILLERY'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
       sId["130400"] = [icn["GR.IC.FIELD ARTILLERY OBSERVER"]];
@@ -196,18 +196,18 @@ export default {
       sId["140104"] = [
         icn["GR.IC.CBRN"],
         icn["GR.IC.FF.RECONNAISSANCE"],
-        icn["GR.IC.ARMOUR"],
+        icn["GR.IC.ARMOUR"]
       ];
       sId["140105"] = [
         icn["GR.IC.CBRN"],
         icn["GR.IC.FF.RECONNAISSANCE"],
-        icn["GR.IC.FF.MOTORIZED"],
+        icn["GR.IC.FF.MOTORIZED"]
       ];
       sId["140106"] = [
         icn["GR.IC.CBRN"],
         icn[
           "GR.CHEMICAL, BIOLOGICAL, RADIOLOGICAL, NUCLEAR, AND HIGH-YIELD EXPLOSIVES"
-        ],
+        ]
       ];
       //sId['140195'] = [icn['GR.IC.CBRN'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
       sId["140200"] = [icn["GR.IC.COMBAT SUPPORT (MANOEUVRE ENHANCEMENT)"]];
@@ -248,19 +248,19 @@ export default {
       sId["150500"] = [icn["GR.IC.ELECTRONIC WARFARE"]];
       sId["150501"] = [
         icn["GR.IC.ELECTRONIC WARFARE"],
-        icn["GR.IC.FF.ANALYSIS"],
+        icn["GR.IC.FF.ANALYSIS"]
       ];
       sId["150502"] = [
         icn["GR.IC.ELECTRONIC WARFARE"],
-        icn["GR.IC.FF.DIRECTION FINDING"],
+        icn["GR.IC.FF.DIRECTION FINDING"]
       ];
       sId["150503"] = [
         icn["GR.IC.ELECTRONIC WARFARE"],
-        icn["GR.IC.FF.INTERCEPT"],
+        icn["GR.IC.FF.INTERCEPT"]
       ];
       sId["150504"] = [
         icn["GR.IC.ELECTRONIC WARFARE"],
-        icn["GR.IC.FF.JAMMING"],
+        icn["GR.IC.FF.JAMMING"]
       ];
       sId["150505"] = [icn["GR.IC.ELECTRONIC WARFARE"], icn["GR.IC.FF.SEARCH"]];
       sId["150600"] = [icn["GR.IC.FF.INTERCEPT"]];
@@ -282,7 +282,7 @@ export default {
       sId["160200"] = [icn["GR.IC.FF.SUPPLY"], icn["GR.IC.FF.CLASS ALL"]];
       sId["160300"] = [
         icn["GR.IC.TRANSPORTATION"],
-        icn["GR.IC.AIRPORT OF DEBARKATION"],
+        icn["GR.IC.AIRPORT OF DEBARKATION"]
       ];
       sId["160400"] = [icn["GR.IC.AMMUNITION"]];
       sId["160500"] = [icn["GR.IC.BAND"]];
@@ -309,16 +309,16 @@ export default {
       sId["161700"] = [icn["GR.IC.FF.SUPPLY"], icn["GR.IC.FF.CLASS MULTIPLE"]];
       sId["161800"] = [
         icn["GR.IC.FF.SUPPLY"],
-        icn["GR.IC.FF.NATO SUPPLY CLASS I"],
+        icn["GR.IC.FF.NATO SUPPLY CLASS I"]
       ];
       sId["161900"] = [
         icn["GR.IC.FF.SUPPLY"],
-        icn["GR.IC.FF.NATO SUPPLY CLASS II"],
+        icn["GR.IC.FF.NATO SUPPLY CLASS II"]
       ];
       sId["162000"] = [icn["GR.IC.FF.SUPPLY"], icn["GR.IC.FF.CLASS III"]];
       sId["162100"] = [
         icn["GR.IC.FF.SUPPLY"],
-        icn["GR.IC.FF.NATO SUPPLY CLASS IV"],
+        icn["GR.IC.FF.NATO SUPPLY CLASS IV"]
       ];
       sId["162200"] = [icn["GR.IC.FF.SUPPLY"], icn["GR.IC.FF.CLASS V"]];
       sId["162300"] = [icn["GR.IC.ORDNANCE"]];
@@ -346,7 +346,7 @@ export default {
       sId["163600"] = [icn["GR.IC.TRANSPORTATION"]];
       sId["163601"] = [
         icn["GR.IC.TRANSPORTATION"],
-        icn["GR.IC.FLOATING CRAFT"],
+        icn["GR.IC.FLOATING CRAFT"]
       ];
       //sId['163695'] = [icn['GR.IC.TRANSPORTATION'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
       //sId['163697'] = [icn['GR.IC.TRANSPORTATION'],icn['GR.IC.FF.CORPS SUPPORT']];
@@ -366,7 +366,7 @@ export default {
       sId["164900"] = [icn["GR.IC.PUBLIC AFFAIRS BROADCAST"]];
       sId["165000"] = [
         icn["GR.IC.FF.SUPPLY"],
-        icn["GR.IC.FF.NATO SUPPLY CLASS ALL"],
+        icn["GR.IC.FF.NATO SUPPLY CLASS ALL"]
       ];
       sId["165100"] = [icn["GR.IC.INTERPRETER/TRANSLATOR"]];
       sId["165200"] = [icn["GR.IC.SUPPORT"]];
@@ -378,11 +378,11 @@ export default {
       sId["170100"] = [icn["GR.IC.NAVAL"]];
       sId["180000"] = [];
       sId["180100"] = [
-        icn["GR.IC.ALLIED COMMAND EUROPE RAPID REACTION CORPS (ARRC)"],
+        icn["GR.IC.ALLIED COMMAND EUROPE RAPID REACTION CORPS (ARRC)"]
       ];
       sId["180200"] = [icn["GR.IC.ALLIED COMMAND OPERATIONS"]];
       sId["180300"] = [
-        icn["GR.IC.INTERNATIONAL SECURITY ASSISTANCE FORCE (ISAF)"],
+        icn["GR.IC.INTERNATIONAL SECURITY ASSISTANCE FORCE (ISAF)"]
       ];
       sId["180400"] = [icn["GR.IC.MULTINATIONAL (MN)"]];
       sId["190000"] = [icn["GR.IC.FF.EMERGENCY OPERATION"]];
@@ -390,7 +390,7 @@ export default {
       sId["200100"] = [
         icn[
           "GR.IC.BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES (ATF) (DEPARTMENT OF JUSTICE)"
-        ],
+        ]
       ];
       sId["200200"] = [icn["GR.IC.FF.BORDER PATROL"]];
       sId["200300"] = [icn["GR.IC.FF.CUSTOMS SERVICE"]];
@@ -409,7 +409,7 @@ export default {
       sIdm1["01"] = [
         _STD2525
           ? icn["GR.M1.TACTICAL SATELLITE COMMUNICATIONS"]
-          : icn["GR.M1.AIRMOBILE/AIR ASSAULT"],
+          : icn["GR.M1.AIRMOBILE/AIR ASSAULT"]
       ];
       sIdm1["02"] = [icn["GR.M1.AREA"]];
       sIdm1["03"] = [icn["GR.M1.ATTACK"]];
@@ -459,24 +459,24 @@ export default {
       sIdm1["47"] = [
         _STD2525
           ? icn["GR.M1.UNMANNED AERIAL VEHICLE"]
-          : icn["GR.M1.NODE CENTRE"],
+          : icn["GR.M1.NODE CENTRE"]
       ];
       sIdm1["48"] = [icn["GR.M1.NUCLEAR"]];
       sIdm1["49"] = [icn["GR.M1.OPERATIONS"]];
       sIdm1["50"] = [icn["GR.M1.RADAR"]];
       sIdm1["51"] = [
-        icn["GR.M1.RADIO FREQUENCY IDENTIFICATION (RFID) INTERROGATOR/ SENSOR"],
+        icn["GR.M1.RADIO FREQUENCY IDENTIFICATION (RFID) INTERROGATOR/ SENSOR"]
       ];
       sIdm1["52"] = [icn["GR.M1.RADIOLOGICAL"]];
       sIdm1["53"] = [icn["GR.M1.SEARCH AND RESCUE"]];
       sIdm1["54"] = [icn["GR.M1.SECURITY"]];
       sIdm1["55"] = [icn["GR.M1.SENSOR"]];
       sIdm1["56"] = [
-        _STD2525 ? icn["GR.M1.WEAPON"] : icn["GR.M1.SENSOR CONTROL MODULE"],
+        _STD2525 ? icn["GR.M1.WEAPON"] : icn["GR.M1.SENSOR CONTROL MODULE"]
       ];
       sIdm1["57"] = [icn["GR.M1.SIGNALS INTELLIGENCE"]];
       sIdm1["58"] = [
-        _STD2525 ? icn["GR.M1.ARMORED"] : icn["GR.M1.SINGLE SHELTER SWITCH"],
+        _STD2525 ? icn["GR.M1.ARMORED"] : icn["GR.M1.SINGLE SHELTER SWITCH"]
       ];
       sIdm1["59"] = [icn["GR.M1.SINGLE ROCKET LAUNCHER"]];
       sIdm1["60"] = [icn["GR.M1.SMOKE"]];
@@ -491,18 +491,18 @@ export default {
       sIdm1["69"] = [icn["GR.M1.UTILITY"]];
       sIdm1["70"] = [icn["GR.M1.VIDEO IMAGERY"]];
       sIdm1["71"] = [
-        _STD2525 ? icn["GR.M1.MOBILITY ASSAULT"] : icn["GR.M1.ACCIDENT"],
+        _STD2525 ? icn["GR.M1.MOBILITY ASSAULT"] : icn["GR.M1.ACCIDENT"]
       ];
       sIdm1["72"] = [
-        _STD2525 ? icn["GR.M1.AMPHIBIOUS WARFARE SHIP "] : icn["GR.M1.OTHER"],
+        _STD2525 ? icn["GR.M1.AMPHIBIOUS WARFARE SHIP "] : icn["GR.M1.OTHER"]
       ];
       sIdm1["73"] = [
-        _STD2525 ? icn["GR.M1.LOAD HANDLING SYSTEM"] : icn["GR.M1.CIVILIAN"],
+        _STD2525 ? icn["GR.M1.LOAD HANDLING SYSTEM"] : icn["GR.M1.CIVILIAN"]
       ];
       sIdm1["74"] = [
         _STD2525
           ? icn["GR.M1.PALLETIZED LOAD SYSTEM"]
-          : icn["GR.M1.ANTISUBMARINE WARFARE"],
+          : icn["GR.M1.ANTISUBMARINE WARFARE"]
       ];
       sIdm1["75"] = [icn["GR.M1.MEDEVAC"]];
       sIdm1["76"] = [icn["GR.M1.RANGER"]];
@@ -531,7 +531,7 @@ export default {
       sIdm1["89"] = [
         icn[
           "GR.M1.AIRFIELD, AERIAL PORT OF DEBARKATION, OR AERIAL PORT OF EMBARKATION"
-        ],
+        ]
       ];
       sIdm1["90"] = [icn["GR.M1.PIPELINE"]];
       sIdm1["91"] = [icn["GR.M1.POSTAL"]];
@@ -632,5 +632,5 @@ export default {
       sIdm2["87"] = [icn["GR.M2.PREVENTIVE MEDICIN"]];
       sIdm2["89"] = [icn["GR.IC.FF.AIR DEFENCE"]];
     }
-  },
+  }
 };
