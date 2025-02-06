@@ -11,13 +11,19 @@
 
     <script>
       //ms.showOctagon();
-      let svgIcon = false;
+      const standardEdition = 10;
+      const svgIcon = true;
     </script>
 
     <script src="number-sidc.js"></script>
     <script>
       ms.setStandard("APP6");
     </script>
+    <style>
+      .svg-icon img {
+        width: 80px;
+      }
+    </style>
   </head>
 
   <body onload="generatenavigation();">
@@ -566,7 +572,7 @@
               new ms.Symbol(1003052, {
                 size: 40,
                 simpleStatusModifier: true,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
@@ -577,7 +583,7 @@
               new ms.Symbol(1003152, {
                 size: 40,
                 simpleStatusModifier: true,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
@@ -587,7 +593,7 @@
               new ms.Symbol(1003202, {
                 size: 40,
                 simpleStatusModifier: true,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
@@ -597,7 +603,7 @@
               new ms.Symbol(1003302, {
                 size: 40,
                 simpleStatusModifier: true,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
@@ -607,7 +613,7 @@
               new ms.Symbol(1003352, {
                 size: 40,
                 simpleStatusModifier: true,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
@@ -620,7 +626,7 @@
               new ms.Symbol(1003053, {
                 size: 40,
                 simpleStatusModifier: true,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
@@ -631,7 +637,7 @@
               new ms.Symbol(1003153, {
                 size: 40,
                 simpleStatusModifier: true,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
@@ -641,7 +647,7 @@
               new ms.Symbol(1003203, {
                 size: 40,
                 simpleStatusModifier: true,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
@@ -651,7 +657,7 @@
               new ms.Symbol(1003303, {
                 size: 40,
                 simpleStatusModifier: true,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
@@ -661,7 +667,7 @@
               new ms.Symbol(1003353, {
                 size: 40,
                 simpleStatusModifier: true,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
@@ -674,7 +680,7 @@
               new ms.Symbol(1003054, {
                 size: 40,
                 simpleStatusModifier: true,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
@@ -685,7 +691,7 @@
               new ms.Symbol(1003154, {
                 size: 40,
                 simpleStatusModifier: true,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
@@ -695,7 +701,7 @@
               new ms.Symbol(1003204, {
                 size: 40,
                 simpleStatusModifier: true,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
@@ -705,7 +711,7 @@
               new ms.Symbol(1003304, {
                 size: 40,
                 simpleStatusModifier: true,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
@@ -715,7 +721,7 @@
               new ms.Symbol(1003354, {
                 size: 40,
                 simpleStatusModifier: true,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
@@ -872,13 +878,13 @@
             <script>
               document.write(
                 new ms.Symbol(
-                  "10060100000000000000",
+                  standardEdition + "060100000000000000",
                   {
                     engagementBar: "MBE",
                     engagementType: "TARGET",
                   },
-                  { size: 40 },
-                ).asSVG(),
+                  { size: 40 }
+                ).asSVG()
               );
             </script>
           </td>
@@ -886,13 +892,13 @@
             <script>
               document.write(
                 new ms.Symbol(
-                  "10060100000000000000",
+                  standardEdition + "060100000000000000",
                   {
                     engagementBar: "MBE",
                     engagementType: "NON-TARGET",
                   },
-                  { size: 40 },
-                ).asSVG(),
+                  { size: 40 }
+                ).asSVG()
               );
             </script>
           </td>
@@ -900,13 +906,13 @@
             <script>
               document.write(
                 new ms.Symbol(
-                  "10060100000000000000",
+                  standardEdition + "060100000000000000",
                   {
                     engagementBar: "MBE",
                     engagementType: "EXPIRED",
                   },
-                  { size: 40 },
-                ).asSVG(),
+                  { size: 40 }
+                ).asSVG()
               );
             </script>
           </td>
@@ -922,7 +928,7 @@
       <script>
         document.write(
           new ms.Symbol(
-            "10030150000000000000",
+            standardEdition + "030150000000000000",
             {
               staffComments: "G",
               additionalInformation: "H",
@@ -935,26 +941,30 @@
               direction: 240,
               speedLeader: 150,
             },
-            { size: 100 },
-          ).asSVG(),
+            { size: 100 }
+          ).asSVG()
         );
       </script>
       <figcaption>Figure 2-2: Air Amplifier Fields.</figcaption>
     </figure>
 
     <script>
-      document.write(renderSymbolSet(stanagapp6["app6d"]["01"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, stanagapp6["app6d"]["01"], svgIcon)
+      );
     </script>
 
     <script>
-      document.write(renderSymbolSet(stanagapp6["app6d"]["02"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, stanagapp6["app6d"]["02"], svgIcon)
+      );
     </script>
 
     <figure>
       <script>
         document.write(
           new ms.Symbol(
-            "10031057140000000000",
+            standardEdition + "031057140000000000",
             {
               quantity: "C",
               reinforcedReduced: "F",
@@ -977,8 +987,8 @@
               headquartersElement: "AH",
               engagementBar: "AO",
             },
-            { size: 100 },
-          ).asSVG(),
+            { size: 100 }
+          ).asSVG()
         );
       </script>
       <figcaption>
@@ -987,18 +997,22 @@
     </figure>
 
     <script>
-      document.write(renderSymbolSet(stanagapp6["app6d"]["10"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, stanagapp6["app6d"]["10"], svgIcon)
+      );
     </script>
 
     <script>
-      document.write(renderSymbolSet(stanagapp6["app6d"]["11"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, stanagapp6["app6d"]["11"], svgIcon)
+      );
     </script>
 
     <figure>
       <script>
         document.write(
           new ms.Symbol(
-            "10031551310000000000",
+            standardEdition + "031551310000000000",
             {
               quantity: "C",
               reinforcedReduced: "F",
@@ -1025,8 +1039,8 @@
               //headquartersElement: 'AH',
               engagementBar: "AO",
             },
-            { size: 100 },
-          ).asSVG(),
+            { size: 100 }
+          ).asSVG()
         );
       </script>
       <figcaption>
@@ -1035,7 +1049,9 @@
     </figure>
 
     <script>
-      document.write(renderSymbolSet(stanagapp6["app6d"]["15"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, stanagapp6["app6d"]["15"], svgIcon)
+      );
     </script>
 
     <h3>Table 3-19: Equipment Mobility Indicators</h3>
@@ -1057,38 +1073,46 @@
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500311101010000", {
+              new ms.Symbol(standardEdition + "031500311101010000", {
                 size: 40,
                 frame: false,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10011500311101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "011500311101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500311101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "031500311101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10041500311101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "041500311101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10061500311101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "061500311101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
@@ -1099,38 +1123,46 @@
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500321101010000", {
+              new ms.Symbol(standardEdition + "031500321101010000", {
                 size: 40,
                 frame: false,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10011500321101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "011500321101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500321101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "031500321101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10041500321101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "041500321101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10061500321101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "061500321101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
@@ -1141,38 +1173,46 @@
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500331101010000", {
+              new ms.Symbol(standardEdition + "031500331101010000", {
                 size: 40,
                 frame: false,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10011500331101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "011500331101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500331101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "031500331101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10041500331101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "041500331101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10061500331101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "061500331101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
@@ -1183,38 +1223,46 @@
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500341101010000", {
+              new ms.Symbol(standardEdition + "031500341101010000", {
                 size: 40,
                 frame: false,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10011500341101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "011500341101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500341101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "031500341101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10041500341101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "041500341101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10061500341101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "061500341101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
@@ -1225,38 +1273,46 @@
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500351101010000", {
+              new ms.Symbol(standardEdition + "031500351101010000", {
                 size: 40,
                 frame: false,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10011500351101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "011500351101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500351101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "031500351101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10041500351101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "041500351101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10061500351101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "061500351101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
@@ -1267,38 +1323,46 @@
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500361101010000", {
+              new ms.Symbol(standardEdition + "031500361101010000", {
                 size: 40,
                 frame: false,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10011500361101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "011500361101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500361101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "031500361101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10041500361101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "041500361101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10061500361101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "061500361101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
@@ -1309,38 +1373,46 @@
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500411101010000", {
+              new ms.Symbol(standardEdition + "031500411101010000", {
                 size: 40,
                 frame: false,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10011500411101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "011500411101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500411101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "031500411101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10041500411101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "041500411101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10061500411101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "061500411101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
@@ -1351,38 +1423,46 @@
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500421101010000", {
+              new ms.Symbol(standardEdition + "031500421101010000", {
                 size: 40,
                 frame: false,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10011500421101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "011500421101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500421101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "031500421101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10041500421101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "041500421101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10061500421101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "061500421101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
@@ -1393,38 +1473,46 @@
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500371101010000", {
+              new ms.Symbol(standardEdition + "031500371101010000", {
                 size: 40,
                 frame: false,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10011500371101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "011500371101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500371101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "031500371101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10041500371101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "041500371101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10061500371101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "061500371101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
@@ -1435,38 +1523,46 @@
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500511101010000", {
+              new ms.Symbol(standardEdition + "031500511101010000", {
                 size: 40,
                 frame: false,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10011500511101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "011500511101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500511101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "031500511101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10041500511101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "041500511101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10061500511101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "061500511101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
@@ -1477,38 +1573,46 @@
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500521101010000", {
+              new ms.Symbol(standardEdition + "031500521101010000", {
                 size: 40,
                 frame: false,
-              }).asSVG(),
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10011500521101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "011500521101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10031500521101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "031500521101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10041500521101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "041500521101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
         <td>
           <script>
             document.write(
-              new ms.Symbol("10061500521101010000", { size: 40 }).asSVG(),
+              new ms.Symbol(standardEdition + "061500521101010000", {
+                size: 40,
+              }).asSVG()
             );
           </script>
         </td>
@@ -1519,7 +1623,7 @@
       <script>
         document.write(
           new ms.Symbol(
-            "10032051000000000000",
+            standardEdition + "032051000000000000",
             {
               //quantity: 'C',
               //reinforcedReduced: 'F',
@@ -1545,8 +1649,8 @@
               installationComposition: "AI",
               //engagementBar: 'AO'
             },
-            { size: 100 },
-          ).asSVG(),
+            { size: 100 }
+          ).asSVG()
         );
       </script>
       <figcaption>
@@ -1555,14 +1659,16 @@
     </figure>
 
     <script>
-      document.write(renderSymbolSet(stanagapp6["app6d"]["20"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, stanagapp6["app6d"]["20"], svgIcon)
+      );
     </script>
 
     <figure>
       <script>
         document.write(
           new ms.Symbol(
-            "10032700710000000000",
+            standardEdition + "032700710000000000",
             {
               quantity: "R",
               //reinforcedReduced: 'F',
@@ -1588,8 +1694,8 @@
               installationComposition: "AI",
               //engagementBar: 'AO'
             },
-            { size: 100 },
-          ).asSVG(),
+            { size: 100 }
+          ).asSVG()
         );
       </script>
       <figcaption>
@@ -1603,29 +1709,39 @@
     <figure>
       <script>
         document.write(
-          new ms.Symbol("10032700001103010527", { size: 80 }).asSVG(),
+          new ms.Symbol(standardEdition + "032700001103010527", {
+            size: 80,
+          }).asSVG()
         );
       </script>
       <script>
         document.write(
-          new ms.Symbol("10032700001103010000", { size: 80 }).asSVG(),
+          new ms.Symbol(standardEdition + "032700001103010000", {
+            size: 80,
+          }).asSVG()
         );
       </script>
       <script>
         document.write(
-          new ms.Symbol("10032700001103010027", { size: 80 }).asSVG(),
+          new ms.Symbol(standardEdition + "032700001103010027", {
+            size: 80,
+          }).asSVG()
         );
       </script>
       <script>
         document.write(
-          new ms.Symbol("10032700001103010500", { size: 80 }).asSVG(),
+          new ms.Symbol(standardEdition + "032700001103010500", {
+            size: 80,
+          }).asSVG()
         );
       </script>
       <figcaption>Figure 4-6: Alternative Main Icon Symbol Sizes.</figcaption>
     </figure>
 
     <script>
-      document.write(renderSymbolSet(stanagapp6["app6d"]["27"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, stanagapp6["app6d"]["27"], svgIcon)
+      );
     </script>
 
     <h3>Table 4-8: Leadership Indicator Amplifier</h3>
@@ -1648,7 +1764,9 @@
         <td>
           <script>
             document.write(
-              new ms.Symbol("10032700710000000000", { size: size }).asSVG(),
+              new ms.Symbol(standardEdition + "032700710000000000", {
+                size: size,
+              }).asSVG()
             );
           </script>
         </td>
@@ -1660,7 +1778,7 @@
       <script>
         document.write(
           new ms.Symbol(
-            "10033050000000000000",
+            standardEdition + "033050000000000000",
             {
               //quantity: 'C',
               //reinforcedReduced: 'F',
@@ -1691,22 +1809,24 @@
               direction: 240,
               speedLeader: 150,
             },
-            { size: 100 },
-          ).asSVG(),
+            { size: 100 }
+          ).asSVG()
         );
       </script>
       <figcaption>Figure 5-3: Sea Surface Symbol Amplifier Fields.</figcaption>
     </figure>
 
     <script>
-      document.write(renderSymbolSet(stanagapp6["app6d"]["30"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, stanagapp6["app6d"]["30"], svgIcon)
+      );
     </script>
 
     <figure>
       <script>
         document.write(
           new ms.Symbol(
-            "10033550000000000000",
+            standardEdition + "033550000000000000",
             {
               //quantity: 'C',
               //reinforcedReduced: 'F',
@@ -1737,8 +1857,8 @@
               direction: 240,
               speedLeader: 150,
             },
-            { size: 100 },
-          ).asSVG(),
+            { size: 100 }
+          ).asSVG()
         );
       </script>
       <figcaption>
@@ -1747,18 +1867,22 @@
     </figure>
 
     <script>
-      document.write(renderSymbolSet(stanagapp6["app6d"]["35"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, stanagapp6["app6d"]["35"], svgIcon)
+      );
     </script>
 
     <script>
-      document.write(renderSymbolSet(stanagapp6["app6d"]["36"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, stanagapp6["app6d"]["36"], svgIcon)
+      );
     </script>
 
     <figure>
       <script>
         document.write(
           new ms.Symbol(
-            "10030550000000000000",
+            standardEdition + "030550000000000000",
             {
               //quantity: 'C',
               //reinforcedReduced: 'F',
@@ -1783,22 +1907,24 @@
               direction: 290,
               speedLeader: 150,
             },
-            { size: 100 },
-          ).asSVG(),
+            { size: 100 }
+          ).asSVG()
         );
       </script>
       <figcaption>Figure 6-2: Space Symbol Amplifier Fields.</figcaption>
     </figure>
 
     <script>
-      document.write(renderSymbolSet(stanagapp6["app6d"]["05"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, stanagapp6["app6d"]["05"], svgIcon)
+      );
     </script>
 
     <figure>
       <script>
         document.write(
           new ms.Symbol(
-            "10034050000000000000",
+            standardEdition + "034050000000000000",
             {
               //quantity: 'C',
               //reinforcedReduced: 'F',
@@ -1824,8 +1950,8 @@
               //engagementBar: 'AO',
               direction: 90,
             },
-            { size: 100 },
-          ).asSVG(),
+            { size: 100 }
+          ).asSVG()
         );
       </script>
       <figcaption>
@@ -1835,11 +1961,15 @@
     </figure>
 
     <script>
-      document.write(renderSymbolSet(stanagapp6["app6d"]["40"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, stanagapp6["app6d"]["40"], svgIcon)
+      );
     </script>
 
     <script>
-      document.write(renderSymbolSet(stanagapp6["app6d"]["25"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, stanagapp6["app6d"]["25"], svgIcon)
+      );
     </script>
 
     <br />

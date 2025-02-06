@@ -2,13 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Milsymbol 2525E / APP6-B (E)</title>
+    <title>Milsymbol 2525E / APP6 (E)</title>
     <link rel="stylesheet" href="style.css" />
 
     <script src="../dist/milsymbol.development.js"></script>
     <script>
       //ms.showOctagon();
-      let svgIcon = false;
+      // To render APP6 (E) set sandardEdition to 14
+      const standardEdition = 13;
+      // To render APP6 (E) enable APP6 as standard
+      if (standardEdition == 14) {
+        ms.setStandard("APP6");
+      }
+      const svgIcon = true;
     </script>
     <!--<script src="milstd.js"></script>-->
     <script src="milstandard.js"></script>
@@ -22,13 +28,13 @@
   </head>
 
   <body onload="generatenavigation();">
-    <h1>Milsymbol MIL-STD-2525E / STANAG APP6-B (E) Implementation</h1>
+    <h1>Milsymbol MIL-STD-2525E / STANAG APP6 (E) Implementation</h1>
     This page shows figures and tables from MIL-STD-2525E drawn with milsymbol.
     <br />
     All symbols are drawn using milsymbol when the page is loaded, no images or
     other external resources than milsymbol are used.
     <br />
-    The milsymbol implementation of MIL-STD-2525E / STANAG APP6-B (E) is a
+    The milsymbol implementation of MIL-STD-2525E / STANAG APP6 (E) is a
     combination of the standards, that also is cross referenced with FM 1-02.2
     to get the best symbol coverage.
     <br />
@@ -2489,7 +2495,7 @@
             <script>
               document.write(
                 new ms.Symbol(
-                  "10060100000000000000",
+                  standardEdition + "060100000000000000",
                   {
                     engagementBar: "MBE",
                     engagementType: "TARGET",
@@ -2503,7 +2509,7 @@
             <script>
               document.write(
                 new ms.Symbol(
-                  "10060100000000000000",
+                  standardEdition + "060100000000000000",
                   {
                     engagementBar: "MBE",
                     engagementType: "NON-TARGET",
@@ -2517,7 +2523,7 @@
             <script>
               document.write(
                 new ms.Symbol(
-                  "10060100000000000000",
+                  standardEdition + "060100000000000000",
                   {
                     engagementBar: "MBE",
                     engagementType: "EXPIRED",
@@ -2686,14 +2692,20 @@
     </table>
 
     <script>
-      document.write(renderSymbolSet(milstd2525["ms2525e"]["common"], svgIcon));
+      document.write(
+        renderSymbolSet(
+          standardEdition,
+          milstd2525["ms2525e"]["common"],
+          svgIcon
+        )
+      );
     </script>
 
     <figure>
       <script>
         document.write(
           new ms.Symbol(
-            "10030550000000000000",
+            standardEdition + "030550000000000000",
             {
               //quantity: 'C',
               //reinforcedReduced: 'F',
@@ -2726,18 +2738,22 @@
     </figure>
 
     <script>
-      document.write(renderSymbolSet(milstd2525["ms2525e"]["05"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, milstd2525["ms2525e"]["05"], svgIcon)
+      );
     </script>
 
     <script>
-      document.write(renderSymbolSet(milstd2525["ms2525e"]["06"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, milstd2525["ms2525e"]["06"], svgIcon)
+      );
     </script>
 
     <figure>
       <script>
         document.write(
           new ms.Symbol(
-            "10030150000000000000",
+            standardEdition + "030150000000000000",
             {
               staffComments: "G",
               additionalInformation: "H",
@@ -2758,18 +2774,22 @@
     </figure>
 
     <script>
-      document.write(renderSymbolSet(milstd2525["ms2525e"]["01"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, milstd2525["ms2525e"]["01"], svgIcon)
+      );
     </script>
 
     <script>
-      document.write(renderSymbolSet(milstd2525["ms2525e"]["02"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, milstd2525["ms2525e"]["02"], svgIcon)
+      );
     </script>
 
     <figure>
       <script>
         document.write(
           new ms.Symbol(
-            "10031057140000000000",
+            standardEdition + "031057140000000000",
             {
               quantity: "C",
               reinforcedReduced: "F",
@@ -2802,18 +2822,22 @@
     </figure>
 
     <script>
-      document.write(renderSymbolSet(milstd2525["ms2525e"]["10"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, milstd2525["ms2525e"]["10"], svgIcon)
+      );
     </script>
 
     <script>
-      document.write(renderSymbolSet(milstd2525["ms2525e"]["11"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, milstd2525["ms2525e"]["11"], svgIcon)
+      );
     </script>
 
     <figure>
       <script>
         document.write(
           new ms.Symbol(
-            "10031551310000000000",
+            standardEdition + "031551310000000000",
             {
               quantity: "C",
               reinforcedReduced: "F",
@@ -2852,22 +2876,30 @@
     <figure>
       <script>
         document.write(
-          new ms.Symbol("10031500001103030000", { size: 80 }).asSVG()
+          new ms.Symbol(standardEdition + "031500001103030000", {
+            size: 80,
+          }).asSVG()
         );
       </script>
       <script>
         document.write(
-          new ms.Symbol("10031500001103030100", { size: 80 }).asSVG()
+          new ms.Symbol(standardEdition + "031500001103030100", {
+            size: 80,
+          }).asSVG()
         );
       </script>
       <script>
         document.write(
-          new ms.Symbol("1003150000110303000401", { size: 80 }).asSVG()
+          new ms.Symbol(standardEdition + "03150000110303000401", {
+            size: 80,
+          }).asSVG()
         );
       </script>
       <script>
         document.write(
-          new ms.Symbol("1003150000110303010401", { size: 80 }).asSVG()
+          new ms.Symbol(standardEdition + "03150000110303010401", {
+            size: 80,
+          }).asSVG()
         );
       </script>
       <figcaption>
@@ -2877,14 +2909,16 @@
     </figure>
 
     <script>
-      document.write(renderSymbolSet(milstd2525["ms2525e"]["15"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, milstd2525["ms2525e"]["15"], svgIcon)
+      );
     </script>
 
     <figure>
       <script>
         document.write(
           new ms.Symbol(
-            "10032051000000000000",
+            standardEdition + "032051000000000000",
             {
               //quantity: 'C',
               //reinforcedReduced: 'F',
@@ -2920,14 +2954,16 @@
     </figure>
 
     <script>
-      document.write(renderSymbolSet(milstd2525["ms2525e"]["20"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, milstd2525["ms2525e"]["20"], svgIcon)
+      );
     </script>
 
     <figure>
       <script>
         document.write(
           new ms.Symbol(
-            "10032700710000000000",
+            standardEdition + "032700710000000000",
             {
               quantity: "R",
               //reinforcedReduced: 'F',
@@ -2966,22 +3002,30 @@
     <figure>
       <script>
         document.write(
-          new ms.Symbol("10032700001103010527", { size: 80 }).asSVG()
+          new ms.Symbol(standardEdition + "032700001103010527", {
+            size: 80,
+          }).asSVG()
         );
       </script>
       <script>
         document.write(
-          new ms.Symbol("10032700001103010000", { size: 80 }).asSVG()
+          new ms.Symbol(standardEdition + "032700001103010000", {
+            size: 80,
+          }).asSVG()
         );
       </script>
       <script>
         document.write(
-          new ms.Symbol("10032700001103010027", { size: 80 }).asSVG()
+          new ms.Symbol(standardEdition + "032700001103010027", {
+            size: 80,
+          }).asSVG()
         );
       </script>
       <script>
         document.write(
-          new ms.Symbol("10032700001103010500", { size: 80 }).asSVG()
+          new ms.Symbol(standardEdition + "032700001103010500", {
+            size: 80,
+          }).asSVG()
         );
       </script>
       <figcaption>
@@ -2991,14 +3035,16 @@
     </figure>
 
     <script>
-      document.write(renderSymbolSet(milstd2525["ms2525e"]["27"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, milstd2525["ms2525e"]["27"], svgIcon)
+      );
     </script>
 
     <figure>
       <script>
         document.write(
           new ms.Symbol(
-            "10033050000000000000",
+            standardEdition + "033050000000000000",
             {
               //quantity: 'C',
               //reinforcedReduced: 'F',
@@ -3037,14 +3083,16 @@
     </figure>
 
     <script>
-      document.write(renderSymbolSet(milstd2525["ms2525e"]["30"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, milstd2525["ms2525e"]["30"], svgIcon)
+      );
     </script>
 
     <figure>
       <script>
         document.write(
           new ms.Symbol(
-            "10033550000000000000",
+            standardEdition + "033550000000000000",
             {
               //quantity: 'C',
               //reinforcedReduced: 'F',
@@ -3085,18 +3133,22 @@
     </figure>
 
     <script>
-      document.write(renderSymbolSet(milstd2525["ms2525e"]["35"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, milstd2525["ms2525e"]["35"], svgIcon)
+      );
     </script>
 
     <script>
-      document.write(renderSymbolSet(milstd2525["ms2525e"]["36"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, milstd2525["ms2525e"]["36"], svgIcon)
+      );
     </script>
 
     <figure>
       <script>
         document.write(
           new ms.Symbol(
-            "10034050000000000000",
+            standardEdition + "034050000000000000",
             {
               //quantity: 'C',
               //reinforcedReduced: 'F',
@@ -3133,19 +3185,27 @@
     </figure>
 
     <script>
-      document.write(renderSymbolSet(milstd2525["ms2525e"]["40"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, milstd2525["ms2525e"]["40"], svgIcon)
+      );
     </script>
 
     <script>
-      document.write(renderSymbolSet(milstd2525["ms2525e"]["50"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, milstd2525["ms2525e"]["50"], svgIcon)
+      );
     </script>
 
     <script>
-      document.write(renderSymbolSet(milstd2525["ms2525e"]["60"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, milstd2525["ms2525e"]["60"], svgIcon)
+      );
     </script>
 
     <script>
-      document.write(renderSymbolSet(milstd2525["ms2525e"]["25"], svgIcon));
+      document.write(
+        renderSymbolSet(standardEdition, milstd2525["ms2525e"]["25"], svgIcon)
+      );
     </script>
 
     <br />

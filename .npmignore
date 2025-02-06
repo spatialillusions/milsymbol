@@ -1,7 +1,6 @@
 # The basics
 .DS_Store
 node_modules
-dist
 
 # Local env files
 .env
@@ -25,11 +24,8 @@ yarn-error.log*
 # The others
 .nyc_output/
 coverage/
-docs/milstd.js
-docs/milstd2525.js
-docs/stanagapp6.js
-docs/milstandard.js
 *.tgz
 
-docs/svg-icons-2525D
-docs/svg-icons-2525E
+docs
+examples
+test

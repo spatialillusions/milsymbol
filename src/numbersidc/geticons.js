@@ -1,4 +1,4 @@
-export function geticons(ms, symbolSet, iconParts, STD2525) {
+export function geticons(ms, symbolSet, iconParts, STD2525, edition) {
   const iconSIDC = {};
   const iconModifier1 = {};
   const iconModifier2 = {};
@@ -14,7 +14,8 @@ export function geticons(ms, symbolSet, iconParts, STD2525) {
       iconBbox,
       symbolSet,
       iconParts,
-      STD2525
+      STD2525,
+      edition
     );
   }
   return {

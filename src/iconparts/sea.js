@@ -226,7 +226,7 @@ export default function (
     type: "path",
     d: "m 80,100 0,-20 40,0 0,20 15,0 0,20 -70,0 0,-20 z",
   };
-  icn["SE.IC.AUXILIARY SHIP"] = text(STD2525 ? "AR" : "AA");
+  icn["SE.IC.AUXILIARY SHIP"] = text(STD2525 && !numberSIDC ? "AR" : "AA");
   icn["SE.IC.AMMUNITION SHIP"] = text("AE");
   icn["SE.IC.STORES SHIP"] = text("AF");
   icn["SE.IC.AUXILIARY FLAG OR COMMAND SHIP"] = text("AGF");

@@ -1,22 +1,32 @@
 {
   "name": "milsymbol",
-  "version": "3.0.0",
+  "version": "3.0.0-rc1",
   "description": "Milsymbol.js is a small library in pure javascript that creates symbols according to MIL-STD-2525 and APP6.",
-  "main": "dist/milsymbol.js",
+  "type": "module",
   "exports": {
-    ".": "./index.js",
+    ".": {
+      "require": "./dist/milsymbol.js",
+      "import": "./index.js",
+      "types": "./index.d.ts"
+    },
     "./package.json": "./package.json"
   },
-  "type": "module",
-  "types": "index.d.ts",
-  "directories": {
-    "doc": "docs",
-    "example": "examples"
-  },
+  "main": "./dist/milsymbol.js",
+  "module": "./index.js",
+  "browser": "./dist/milsymbol.js",
+  "types": "./index.d.ts",
+  "files": [
+    "./dist",
+    "./src",
+    "./index.js",
+    "./index.mjs",
+    "./index.d.ts"
+  ],
   "scripts": {
     "lint": "eslint src test --fix",
     "prebuild": "npm run lint && npm test",
     "build": "npm run bundle && npm run minify",
+    "postbuild": "node --eval \"const fs = require('node:fs'); fs.writeFileSync('./dist/package.json', JSON.stringify({ type: 'commonjs' }));\"",
     "bundle": "rollup -c",
     "minify": "uglifyjs dist/milsymbol.development.js -o dist/milsymbol.js --comments --compress --mangle --source-map",
     "test": "tead --coverage"
