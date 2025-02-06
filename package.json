@@ -17,6 +17,7 @@
   "types": "./index.d.ts",
   "files": [
     "./dist",
+    "./src",
     "./index.js",
     "./index.mjs",
     "./index.d.ts"
