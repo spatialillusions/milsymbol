@@ -228,6 +228,16 @@ export function setStandard(standard: "2525" | "APP6"): boolean;
 
 declare const _default: {
   Symbol: typeof Symbol;
+  BBox: typeof BBox;
+  ColorMode: typeof ColorMode;
+  getColorMode: typeof getColorMode;
+  setColorMode: typeof setColorMode;
+  getHqStaffLength: typeof getHqStaffLength;
+  setHqStaffLength: typeof setHqStaffLength;
+  getDashArrays: typeof getDashArrays;
+  setDashArrays: typeof setDashArrays;
+  getVersion: typeof getVersion;
+  setStandard: typeof setStandard;
 };
 
 export default _default;
