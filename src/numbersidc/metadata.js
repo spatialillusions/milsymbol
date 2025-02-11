@@ -27,7 +27,7 @@ export function metadata(ms, metadata, mapping) {
     metadata.edition = "E";
   }
 
-  if (version >= 13 && standardIdentity2 == 5) {
+  if (version == 13 && standardIdentity2 == 5) {
     metadata.suspect = true;
   }
 
