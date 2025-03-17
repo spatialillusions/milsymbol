@@ -58,7 +58,7 @@ export default function asSVG() {
                   svg += 'font-weight="' + instruction[i].fontweight + '" ';
                 if (instruction[i].alignmentBaseline)
                   svg +=
-                    'alignment-baseline="' +
+                    'dominant-baseline="' +
                     instruction[i].alignmentBaseline +
                     '" ';
                 break;
