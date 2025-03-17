@@ -7,15 +7,7 @@ export default {
   getMetadata: metadata_number,
   getIcons: getIcons_number,
   iconParts: icons,
-  icons: function landequipment(
-    sId,
-    sIdm1,
-    sIdm2,
-    bbox,
-    symbolSet,
-    icn,
-    _STD2525
-  ) {
+  icons: function common(sId, sIdm1, sIdm2, bbox, symbolSet, icn, _STD2525) {
     // Common modifiers
 
     //sIdm1["01"] = [icn["SE.M1.OWN SHIP"]];
@@ -118,5 +110,5 @@ export default {
     sIdm2["123"] = [icn["COM.M2.SECURITY FORCE ASSISTANCE"]];
     sIdm2["124"] = [icn["COM.M2.BED"]];
     sIdm2["125"] = [icn["COM.M2.MULTIFUNCTIONAL"]];
-  },
+  }
 };
