@@ -1,6 +1,6 @@
-const ms = new (function() {
+const ms = new (function () {
   this._autoValidation = false;
-  this.version = "3.0.0";
+  this.version = "3.0.1";
   if (typeof console === "object" && typeof process !== "object") {
     console.info(
       "milsymbol.js " +
@@ -23,7 +23,7 @@ import textfields from "./symbolfunctions/textfields.js";
 import directionarrow from "./symbolfunctions/directionarrow.js";
 import debug from "./symbolfunctions/debug.js";
 
-ms.setColorMode = function(mode, colorMode) {
+ms.setColorMode = function (mode, colorMode) {
   this._colorModes[mode] = {};
   this._colorModes[mode].Hostile = colorMode.Hostile;
   this._colorModes[mode].Friend = colorMode.Friend;
@@ -34,7 +34,7 @@ ms.setColorMode = function(mode, colorMode) {
   return this._colorModes[mode];
 };
 
-ms.addSymbolPart = function(part) {
+ms.addSymbolPart = function (part) {
   if (typeof part === "function") {
     const symbolParts = ms.getSymbolParts();
     if (symbolParts.indexOf(part) == -1)
@@ -43,16 +43,16 @@ ms.addSymbolPart = function(part) {
   return ms;
 };
 
-ms.getSymbolParts = function() {
+ms.getSymbolParts = function () {
   return this._symbolParts.slice(0);
 };
 
-ms.setSymbolParts = function(parts) {
+ms.setSymbolParts = function (parts) {
   this._symbolParts = parts;
   return ms;
 };
 
-ms.reset = function() {
+ms.reset = function () {
   this._brokenPath2D = undefined;
   this._colorModes = {};
   for (const name in ColorModes) {
@@ -61,7 +61,7 @@ ms.reset = function() {
   this._dashArrays = {
     pending: "4,4",
     anticipated: "8,12",
-    feintDummy: "8,8",
+    feintDummy: "8,8"
   };
   this._getIcons = {};
   this._getMetadata = {};
@@ -94,7 +94,7 @@ import { Colormode } from "./ms/colormode.js";
 ms.BBox = BBox;
 ms.ColorMode = Colormode;
 
-ms.setBrokenPath2D = function(broken) {
+ms.setBrokenPath2D = function (broken) {
   ms._brokenPath2D = broken;
 };
 
@@ -123,16 +123,16 @@ ms._getIconParts = function iconparts(
   return icn;
 };
 
-ms._scale = function(factor, instruction, non_scaling_stroke) {
+ms._scale = function (factor, instruction, non_scaling_stroke) {
   function recurse_scale(instruction, factor) {
     if (Array.isArray(instruction)) {
-      instruction.forEach(d => {
+      instruction.forEach((d) => {
         d.non_scaling_stroke = 1 / factor;
         if (d.hasOwnProperty("draw")) {
           recurse_scale(d.draw, factor);
         }
         if (Array.isArray(d)) {
-          d.forEach(e => {
+          d.forEach((e) => {
             recurse_scale(e, factor);
           });
         }
@@ -150,14 +150,14 @@ ms._scale = function(factor, instruction, non_scaling_stroke) {
     type: "translate",
     x: 100 - factor * 100,
     y: 100 - factor * 100,
-    draw: [{ type: "scale", factor: factor, draw: [instruction] }],
+    draw: [{ type: "scale", factor: factor, draw: [instruction] }]
   };
 };
-ms._translate = function(x, y, instruction) {
+ms._translate = function (x, y, instruction) {
   return { type: "translate", x: x, y: y, draw: [instruction] };
 };
 
-ms.addIconParts = function(parts) {
+ms.addIconParts = function (parts) {
   if (!Array.isArray(parts)) parts = [parts];
   for (let i = 0; i < parts.length; i++) {
     if (
@@ -169,7 +169,7 @@ ms.addIconParts = function(parts) {
   }
   return ms;
 };
-ms.addLabelOverrides = function(parts, type) {
+ms.addLabelOverrides = function (parts, type) {
   this._labelCache = {}; // Clear the cache
   if (typeof parts === "function") {
     if (!this._labelOverrides.hasOwnProperty(type)) {
@@ -180,7 +180,7 @@ ms.addLabelOverrides = function(parts, type) {
   return ms;
 };
 
-ms.addIcons = function(obj) {
+ms.addIcons = function (obj) {
   this._iconCache = {}; // Clear the cache
   if (!Array.isArray(obj)) obj = [obj];
   for (let i = 0; i < obj.length; i++) {
@@ -196,7 +196,7 @@ ms.addIcons = function(obj) {
   }
 };
 
-ms.addSIDCicons = function(parts, type) {
+ms.addSIDCicons = function (parts, type) {
   if (typeof parts === "function") {
     if (this._iconSIDC[type].indexOf(parts) == -1)
       this._iconSIDC[type] = this._iconSIDC[type].concat(parts);
@@ -204,7 +204,7 @@ ms.addSIDCicons = function(parts, type) {
   return ms;
 };
 
-ms.getColorMode = function(mode) {
+ms.getColorMode = function (mode) {
   const c = this._colorModes[mode];
   // Clone the mode and return the clone
   return new ms.ColorMode(
@@ -216,14 +216,14 @@ ms.getColorMode = function(mode) {
     c.Suspect
   );
 };
-ms.getDashArrays = function() {
+ms.getDashArrays = function () {
   return this._dashArrays;
 };
-ms.getHqStaffLength = function() {
+ms.getHqStaffLength = function () {
   return this._hqStaffLength;
 };
 
-ms.getVersion = function() {
+ms.getVersion = function () {
   return this.version;
 };
 
@@ -231,18 +231,18 @@ import outline from "./ms/outline.js";
 
 ms.outline = outline;
 
-ms.setDashArrays = function(pending, anticipated, feintDummy) {
+ms.setDashArrays = function (pending, anticipated, feintDummy) {
   this._dashArrays.pending = pending;
   this._dashArrays.anticipated = anticipated;
   this._dashArrays.feintDummy = feintDummy;
   return this._dashArrays;
 };
-ms.setHqStaffLength = function(len) {
+ms.setHqStaffLength = function (len) {
   this._hqStaffLength = len;
   return this._hqStaffLength;
 };
 
-ms.setStandard = function(standard) {
+ms.setStandard = function (standard) {
   if (standard == "2525") {
     this._STD2525 = true;
     return true;
@@ -254,7 +254,7 @@ ms.setStandard = function(standard) {
   return false;
 };
 
-ms.showOctagon = function() {
+ms.showOctagon = function () {
   ms.addSymbolPart(debug);
 };
 /* ***************************************************************************************
