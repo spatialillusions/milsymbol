@@ -1,4 +1,4 @@
-type ColorMode = {
+export type ColorMode = {
   Civilian: string;
   Friend: string;
   Hostile: string;
@@ -7,7 +7,7 @@ type ColorMode = {
   Suspect: string;
 };
 
-type SymbolOptions = {
+export type SymbolOptions = {
   additionalInformation?: string;
   alternateMedal?: boolean;
   altitudeDepth?: string;
@@ -118,7 +118,7 @@ type Mobility =
 
 type Leadership = "Leader Individual" | "Deputy Individual";
 
-type SymbolMetadata = {
+export type SymbolMetadata = {
   activity: boolean; // Is it an Activity
   affiliation: Affiliation; // Affiliation it is shown as (Friend/Hostile...)
   baseAffilation: BaseAffiliation; // Affiliation it belongs to (Friend/Hostile...)
@@ -149,7 +149,7 @@ type SymbolMetadata = {
   unit: boolean; // Is this equipment or not
 };
 
-type SymbolColors = {
+export type SymbolColors = {
   black: ColorMode; // Black parts of the symbol.
   fillColor: ColorMode; // Symbol fill color.
   frameColor: ColorMode; // Symbol frame color.
@@ -181,7 +181,7 @@ export class Symbol {
   toDataURL(): string;
 }
 
-interface Box {
+export interface Box {
   x1: number,
   y1: number,
   x2: number,
@@ -210,7 +210,7 @@ export function getHqStaffLength(): number;
 export function setHqStaffLength(staff_length: number): number;
 
 
-interface DashObject {
+export interface DashObject {
   pending: string,
   anticipated: string,
   feintDummy: string
