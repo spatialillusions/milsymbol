@@ -30,6 +30,7 @@ export default function textfieldsMod(ms) {
 
   //Text fields overrides
   function labelOverride(label) {
+    const spaceTextIcon = 0;
     const texts = [];
     let labelbox;
     for (const i in label) {
@@ -49,25 +50,20 @@ export default function textfieldsMod(ms) {
           if (lbl.textanchor == "start") {
             labelbox.x1 = lbl.x;
             labelbox.x2 =
-              lbl.x +
-              strWidth(this.options[i]) *
-                (lbl.fontsize / fontSize, fontSize, spaceTextIcon);
+              lbl.x + strWidth(this.options[i], lbl.fontsize, spaceTextIcon);
           }
           if (lbl.textanchor == "middle") {
-            const w =
-              strWidth(this.options[i]) *
-              (lbl.fontsize / fontSize, fontSize, spaceTextIcon);
+            const w = strWidth(this.options[i], lbl.fontsize, spaceTextIcon);
             labelbox.x1 = lbl.x - w / 2;
             labelbox.x2 = lbl.x + w / 2;
           }
           //if(lbl.textanchor == 'middle'){}
           if (lbl.textanchor == "end") {
             labelbox.x1 =
-              lbl.x -
-              strWidth(this.options[i]) *
-                (lbl.fontsize / fontSize, fontSize, spaceTextIcon);
+              lbl.x - strWidth(this.options[i], lbl.fontsize, spaceTextIcon);
             labelbox.x2 = lbl.x;
           }
+          //console.log(labelbox);
           gbbox.merge(labelbox);
           const text = {
             type: "text",
