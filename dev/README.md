@@ -18,5 +18,6 @@ Some minor notes and resources so that we (I) don't forget things.
 
 - Update `package.json`, set `version` to version, e.g. `2.0.0`
 - Update version in ms.js
+- Run `npm login` to login in the console
 - Run `npm publish` to publish
 - Create release on GitHub with tag `v2.0.0`
