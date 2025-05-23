@@ -15,7 +15,7 @@ export default function affliationdimension(ms) {
       fontfamily: this.style.fontfamily,
       fontsize: 80,
       fontweight: "bold",
-      textanchor: "middle",
+      textanchor: "middle"
     });
   }
   //If we don't have a geometry we shouldn't add anything.
@@ -40,6 +40,7 @@ export default function affliationdimension(ms) {
           fontsize: 35,
           fontweight: "bold",
           textanchor: "start",
+          alignmentBaseline: "middle"
         });
       }
       if (this.metadata.joker) {
@@ -47,12 +48,13 @@ export default function affliationdimension(ms) {
           type: "text",
           text: "J",
           x: bbox.x2 + spacing,
-          y: 50,
+          y: 40,
           fill: frameColor,
           fontfamily: this.style.fontfamily,
           fontsize: 35,
           fontweight: "bold",
           textanchor: "start",
+          alignmentBaseline: "middle"
         });
       }
       if (this.metadata.faker) {
@@ -60,29 +62,31 @@ export default function affliationdimension(ms) {
           type: "text",
           text: "K",
           x: bbox.x2 + spacing,
-          y: 50,
+          y: 40,
           fill: frameColor,
           fontfamily: this.style.fontfamily,
           fontsize: 35,
           fontweight: "bold",
           textanchor: "start",
+          alignmentBaseline: "middle"
         });
       }
-      bbox = { x2: bbox.x2 + spacing + 22, y1: 50 - 25 };
+      bbox = { x2: bbox.x2 + spacing + 22, y1: 40 - 25 };
     }
     if (this.metadata.context == "Simulation") {
       drawArray2.push({
         type: "text",
         text: "S",
         x: bbox.x2 + spacing,
-        y: 50,
+        y: 40,
         fill: frameColor,
         fontfamily: this.style.fontfamily,
         fontsize: 35,
         fontweight: "bold",
         textanchor: "start",
+        alignmentBaseline: "middle"
       });
-      bbox = new ms.BBox({ x2: bbox.x2 + spacing + 22, y1: 50 - 25 });
+      bbox = new ms.BBox({ x2: bbox.x2 + spacing + 22, y1: 40 - 25 });
     }
   }
   //outline
