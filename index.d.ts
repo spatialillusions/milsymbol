@@ -7,7 +7,7 @@ export type ColorMode = {
   Suspect: string;
 };
 
-export type SymbolOptions = {
+export interface SymbolOptions {
   additionalInformation?: string;
   alternateMedal?: boolean;
   altitudeDepth?: string;
@@ -68,7 +68,7 @@ export type SymbolOptions = {
   strokeWidth?: number;
   type?: string;
   uniqueDesignation?: string;
-};
+}
 
 type BaseAffiliation = "" | "Hostile" | "Friend" | "Neutral" | "Unknown";
 type Affiliation = "undefined" | BaseAffiliation;
@@ -123,7 +123,15 @@ export type SymbolMetadata = {
   affiliation: Affiliation; // Affiliation it is shown as (Friend/Hostile...)
   baseAffilation: BaseAffiliation; // Affiliation it belongs to (Friend/Hostile...)
   baseDimension: BaseDimension; // Dimension it belongs to (Air/Ground...)
-  baseGeometry: Object; // Geometry is a combination of dimension and affiliation (AirFriend/GroundHostile...)
+  baseGeometry: {
+    bbox: BBoxObject;
+    g:
+      | {
+          type: "path";
+          d: string;
+        }
+      | string;
+  }; // Geometry is a combination of dimension and affiliation (AirFriend/GroundHostile...)
   civilian: boolean; // Is it Civilian
   condition: Condition; // What condition is it in
   context: Context; // Context of the symbol (Reality/Exercise...)
@@ -195,7 +203,9 @@ interface BBoxObject extends Box {
   merge(box: Box): this
 }
 /** Creates a bounding box object */
-export function BBox(box?: Partial<Box>): BBoxObject;
+export type BBoxConstructor = {
+  new (box?: Partial<Box>): BBoxObject;
+};
 
 /** Creates a ColorMode Object with colors used for different affiliations. */
 export function ColorMode(civilian: string, friend: string, hostile: string, neutral: string, unknown: string, suspect: string): ColorMode;
@@ -226,9 +236,93 @@ export function getVersion(): string;
 /** Sets the preferred standard. */
 export function setStandard(standard: "2525" | "APP6"): boolean;
 
+
+type DrawPath = {
+  type: "path";
+  d: string;
+  fill: string | false;
+  fillopacity?: number;
+  stroke: string | false;
+  strokedasharray?: string;
+  strokewidth?: number;
+};
+
+type DrawCircle = {
+  type: "circle";
+  cx: number;
+  cy: number;
+  r: number;
+  fill: string | false;
+  fillopacity?: number;
+  stroke: string | false;
+  strokedasharray?: string;
+  strokewidth?: number;
+};
+
+type DrawText = {
+  type: "text";
+  x: number;
+  y: number;
+  textanchor: string;
+  fontsize: number;
+  fontfamily: string;
+  fontweight: string;
+  fill: string | false;
+  fillopacity?: number;
+  stroke: string | false;
+  strokedasharray?: string;
+  strokewidth?: number;
+};
+
+type DrawSVG = {
+  type: "svg";
+  svg: string; // Full SVG XML
+};
+
+type DrawTranslate = {
+  type: "translate";
+  x: number;
+  y: number;
+  draw: DrawInstruction[];
+};
+
+type DrawRotate = {
+  type: "rotate";
+  degree: number;
+  x: number;
+  y: number;
+  draw: DrawInstruction[];
+};
+
+type DrawScale = {
+  type: "scale";
+  factor: number;
+  draw: DrawInstruction[];
+};
+
+export type DrawInstruction =
+  | DrawPath
+  | DrawCircle
+  | DrawText
+  | DrawSVG
+  | DrawTranslate
+  | DrawRotate
+  | DrawScale;
+
+export type ExtensionFunction = (
+  this: Symbol,
+  ms: typeof _default
+) => {
+  pre: DrawInstruction[];
+  post: DrawInstruction[];
+  bbox: BBoxObject;
+};
+
+export function addSymbolPart(extension: ExtensionFunction): typeof _default;
+
 declare const _default: {
   Symbol: typeof Symbol;
-  BBox: typeof BBox;
+  BBox: BBoxConstructor;
   ColorMode: typeof ColorMode;
   getColorMode: typeof getColorMode;
   setColorMode: typeof setColorMode;
@@ -238,6 +332,7 @@ declare const _default: {
   setDashArrays: typeof setDashArrays;
   getVersion: typeof getVersion;
   setStandard: typeof setStandard;
+  addSymbolPart: typeof addSymbolPart;
 };
 
 export default _default;
