@@ -18,7 +18,7 @@ function Symbol() {
   this.options.higherFormation = ""; // FieldID M
   this.options.hostile = ""; // FieldID N
   this.options.iffSif = ""; // FieldID P
-  this.options.direction = ""; // FieldID Q
+  this.options.direction = undefined; // FieldID Q
   this.options.sigint = ""; // FieldID R2
   this.options.uniqueDesignation = ""; // FieldID T
   this.options.type = ""; // FieldID V

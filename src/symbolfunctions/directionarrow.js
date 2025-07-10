@@ -13,7 +13,11 @@ export default function directionarrow(ms) {
     this.colors.iconColor["Friend"];
   let arrow;
   if (this.style.infoFields) {
-    if (this.options.direction !== "") {
+    if (
+      typeof this.options.direction !== "undefined" &&
+      // extra test to be backward compatible with legacy string type
+      this.options.direction !== ""
+    ) {
       if (this.options.speedLeader == 0) {
         // Movement indicator
         // The length of the lines in a direction of movement indicator are
