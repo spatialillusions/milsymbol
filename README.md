@@ -50,9 +50,6 @@ Milsymbol can be integrated with most common JavaScript libraries, such as:
 
 Examples of some of the integrations are included with milsymbol.
 
-You can find all documentation and examples at:
-http://spatialillusions.com/milsymbol/
-
 ## Getting started
 
 You can download [milsymbol from GitHub](https://github.com/spatialillusions/milsymbol "milsymbol"), or install it using npm:
