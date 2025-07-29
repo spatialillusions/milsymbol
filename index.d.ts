@@ -17,7 +17,7 @@ export interface SymbolOptions {
   combatEffectiveness?: string;
   commonIdentifier?: string;
   country?: string;
-  direction?: string;
+  direction?: number;
   dtg?: string;
   engagementBar?: string;
   engagementType?: string;
