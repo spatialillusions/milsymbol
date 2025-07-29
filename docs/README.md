@@ -753,12 +753,12 @@ part: function
 ```
 
 Adds a new symbol function to milsymbol. A symbol function is a function that
-returns an Object with two drawInstruction and one bounding box, like this:
+returns an Object with two arrays of drawInstruction and one bounding box, like this:
 
 ```javascript
 Object {
-  pre: drawInstruction, // This is to be drawn before anything else
-  post: drawInstruction, // This is to be drawn after anything else
+  pre: [drawInstruction, ...], // This is to be drawn before anything else
+  post: [drawInstruction, ...], // This is to be drawn after anything else
   bbox: bbox // The bounding box of the added drawInstructions
 }
 ```
@@ -767,11 +767,31 @@ By inserting a pre and a post drawInstruction, we are able to draw parts of
 the symbol that requires information, such as bounding boxes, previously drawn,
 but to draw them before the other parts are drawn. It's quite clever, trust me.
 
+```js
+ms.addSymbolPart(function myExtension(ms) {
+  const options = this.getOptions();
+
+  const bbox = new ms.BBox();
+  const preDrawArray = [];
+  const postDrawArray = [];
+
+  // some logic
+
+  return {
+    pre: preDrawArray,
+    post: postDrawArray,
+    bbox,
+  };
+});
+```
+
 **Returns**
 
 ```javascript
 Object ms
 ```
+
+milsymbol was built in a modular way: each feature (such as text fields, direction, etc.) was implemented as a part. Take a look at the source code to see how to design your own extensions. (ex: [debug extension](https://github.com/spatialillusions/milsymbol/blob/master/src/symbolfunctions/debug.js))
 
 ## ms.getColorMode(mode)
 
@@ -963,4 +983,45 @@ can be used to modify the symbol functions that are built into milsymbol.
 
 ```javascript
 Object ms
+```
+
+
+## Usage with TypeScript
+
+If you develop extensions to enhance the library, you'll probably want to define new options that you'll use in your code. If you're using TypeScript, you can add a definition file to your project.
+
+```ts
+// ./your-project/src/milsymbol.d.ts
+import "milsymbol";
+declare module "milsymbol" {
+  export interface SymbolOptions {
+    customOption?: number
+  }
+}
+```
+
+Then in the extension:
+
+```ts
+import ms from "milsymbol";
+import { type DrawInstruction } from "milsymbol";
+
+ms.addSymbolPart(function (ms) {
+  const options = this.getOptions();
+
+  const bbox = new ms.BBox();
+  const preDrawArray: DrawInstruction[] = [];
+  const postDrawArray: DrawInstruction[] = [];
+
+
+  const custom = options.customOptions; // Type-Safe
+
+  // your code...
+
+  return {
+    pre: preDrawArray,
+    post: postDrawArray,
+    bbox,
+  };
+});
 ```
