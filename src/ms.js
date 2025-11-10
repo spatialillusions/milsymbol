@@ -1,6 +1,6 @@
 const ms = new (function () {
   this._autoValidation = false;
-  this.version = "3.0.3";
+  this.version = "3.0.4";
   if (typeof console === "object" && typeof process !== "object") {
     console.info(
       "milsymbol.js " +
@@ -14,6 +14,7 @@ const ms = new (function () {
 
 import ColorModes from "./colormodes.js";
 import basegeometry from "./symbolfunctions/basegeometry.js";
+import stack from "./symbolfunctions/stack-extension.js";
 import icon from "./symbolfunctions/icon.js";
 import modifier from "./symbolfunctions/modifier.js";
 import statusmodifier from "./symbolfunctions/statusmodifier.js";
@@ -76,6 +77,7 @@ ms.reset = function () {
   this._STD2525 = true;
   this._svgNS = "http://www.w3.org/2000/svg";
   this._symbolParts = [];
+  ms.addSymbolPart(stack);
   ms.addSymbolPart(basegeometry);
   ms.addSymbolPart(icon);
   ms.addSymbolPart(modifier);
