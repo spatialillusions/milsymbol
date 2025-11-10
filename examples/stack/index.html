@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="../../dist/milsymbol.js"></script>
+  </head>
+
+  <body onload="example()">
+    Stacked symbols:
+    <select id="outlineWidth" onchange="example()">
+      <option value="0">1</option>
+      <option value="1">2</option>
+      <option value="2" selected>3</option>
+      <option value="3">4</option>
+      <option value="4">5</option>
+      <option value="5">6</option>
+      <option value="6">7</option>
+      <option value="7">8</option>
+      <option value="8">9</option>
+      <option value="9">10</option>
+    </select>
+    <br />
+    SVG Example:
+    <br />
+    <div id="SVG"></div>
+    Canvas Example:
+    <br />
+    <div id="Canvas">
+      <p></p>
+    </div>
+    <script>
+      function example() {
+        const outline =
+          document.getElementById("outlineWidth")[
+            document.getElementById("outlineWidth").selectedIndex
+          ].value;
+
+        const symbol = new ms.Symbol("13031000141211000000000000000000", {
+          size: 35,
+          stack: outline,
+          additionalInformation: "TEST"
+        });
+
+        document.getElementById("SVG").innerHTML = symbol.asSVG();
+
+        document
+          .getElementById("Canvas")
+          .replaceChild(
+            symbol.asCanvas(),
+            document.getElementById("Canvas").firstChild
+          );
+      }
+    </script>
+  </body>
+</html>
