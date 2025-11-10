@@ -550,11 +550,11 @@ export default function textfieldsMod(ms) {
               this.metadata.baseGeometry.bbox.width()) /
               2
           : 0,
-        strWidth(gStrings.R1 + stack, fontSize, spaceTextIcon),
-        strWidth(gStrings.R2 + stack, fontSize, spaceTextIcon),
-        strWidth(gStrings.R3 + stack, fontSize, spaceTextIcon),
-        strWidth(gStrings.R4 + stack + flag * 1.5, fontSize, spaceTextIcon),
-        strWidth(gStrings.R5 + stack + flag * 1.5, fontSize, spaceTextIcon)
+        strWidth(gStrings.R1, fontSize, spaceTextIcon + stack),
+        strWidth(gStrings.R2, fontSize, spaceTextIcon + stack),
+        strWidth(gStrings.R3, fontSize, spaceTextIcon + stack),
+        strWidth(gStrings.R4, fontSize, spaceTextIcon + stack + flag * 1.5),
+        strWidth(gStrings.R5, fontSize, spaceTextIcon + stack + flag * 1.5)
       );
 
     //Extra space above for field 1

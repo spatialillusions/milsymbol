@@ -162,6 +162,7 @@ different ways.
 | simpleStatusModifier | Boolean             | false                           | Should the symbol use simplified status modifiers, this is the default for unfilled symbols and can be forced for filled symbols using this option.                                                                                                                                                                                                                                                                                                        |
 | standard             | String              | ''                              | This is a way to override the default standard set for milsymbol. You can set this variable to "2525" or "APP6" depending on what standard you prefer.                                                                                                                                                                                                                                                                                                     |
 | square               | Boolean             | false                           | Should the symbol be square with the insertion point in the center.                                                                                                                                                                                                                                                                                                                                                                                        |
+| stack                | Number              | 0                               | Should the symbol be displayed as a stack of units. The number indicates the additional units that should be displayed behind the original symbol, so 0 shows one unit, three shows four units in total.                                                                                                                                                                                                                                                   |
 | strokeWidth          | Number              | 3                               | The stroke width of the symbol.                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 **Returns**
@@ -619,7 +620,7 @@ ms.addIconParts(
     iconParts["TP.HARBOR"] = {
       type: "path",
       fill: false,
-      d: "M 80,140 50,60 150,60 120,140",
+      d: "M 80,140 50,60 150,60 120,140"
     };
 
     /* 
@@ -667,24 +668,24 @@ ms.addLabelOverrides(
         textanchor: "middle",
         x: 100,
         y: -70,
-        fontsize: 40,
+        fontsize: 40
       },
       hostile: {
         stroke: false,
         textanchor: "start",
         x: 150,
         y: 45,
-        fontsize: 40,
+        fontsize: 40
       },
       uniqueDesignation: {
         stroke: false,
         textanchor: "start",
         x: 150,
         y: 0,
-        fontsize: 80,
+        fontsize: 80
       },
       dtg: { stroke: false, textanchor: "end", x: 50, y: -30, fontsize: 40 },
-      dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 },
+      dtg1: { stroke: false, textanchor: "end", x: 50, y: 10, fontsize: 40 }
     };
 
     /* 
@@ -780,7 +781,7 @@ ms.addSymbolPart(function myExtension(ms) {
   return {
     pre: preDrawArray,
     post: postDrawArray,
-    bbox,
+    bbox
   };
 });
 ```
@@ -985,7 +986,6 @@ can be used to modify the symbol functions that are built into milsymbol.
 Object ms
 ```
 
-
 ## Usage with TypeScript
 
 If you develop extensions to enhance the library, you'll probably want to define new options that you'll use in your code. If you're using TypeScript, you can add a definition file to your project.
@@ -995,7 +995,7 @@ If you develop extensions to enhance the library, you'll probably want to define
 import "milsymbol";
 declare module "milsymbol" {
   export interface SymbolOptions {
-    customOption?: number
+    customOption?: number;
   }
 }
 ```
@@ -1013,7 +1013,6 @@ ms.addSymbolPart(function (ms) {
   const preDrawArray: DrawInstruction[] = [];
   const postDrawArray: DrawInstruction[] = [];
 
-
   const custom = options.customOptions; // Type-Safe
 
   // your code...
@@ -1021,7 +1020,7 @@ ms.addSymbolPart(function (ms) {
   return {
     pre: preDrawArray,
     post: postDrawArray,
-    bbox,
+    bbox
   };
 });
 ```

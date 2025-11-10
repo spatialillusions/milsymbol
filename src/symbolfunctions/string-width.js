@@ -158,7 +158,7 @@ const strWidths = {
   Ю: 34,
   ю: 25,
   Я: 24,
-  я: 18,
+  я: 18
 };
 
 //Function to calculate the width of a string

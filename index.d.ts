@@ -63,6 +63,7 @@ export interface SymbolOptions {
   speed?: string;
   speedLeader?: number;
   square?: boolean;
+  stack?: number;
   staffComments?: string;
   standard?: string;
   strokeWidth?: number;
@@ -81,10 +82,17 @@ type BaseDimension = "" | "Air" | "Ground" | "Sea" | "Subsurface";
 type Dimension = "undefined" | "LandDismountedIndividual" | BaseDimension;
 
 // What condition is it in
-type Condition = "" | "Present" | "Planned" | "FullyCapable" | "Damaged" | "Destroyed" | "FullToCapacity";
+type Condition =
+  | ""
+  | "Present"
+  | "Planned"
+  | "FullyCapable"
+  | "Damaged"
+  | "Destroyed"
+  | "FullToCapacity";
 
 type Echelon =
-  ""
+  | ""
   | "Team/Crew"
   | "Squad"
   | "Section"
@@ -101,7 +109,7 @@ type Echelon =
   | "Command";
 
 type Mobility =
-  ""
+  | ""
   | "Wheeled limited cross country"
   | "Wheeled cross country"
   | "Tracked"
@@ -168,10 +176,7 @@ export type SymbolColors = {
 };
 
 export class Symbol {
-  constructor(
-    code: string | SymbolOptions,
-    ...options: SymbolOptions[]
-  );
+  constructor(code: string | SymbolOptions, ...options: SymbolOptions[]);
 
   asCanvas(factor?: number): HTMLCanvasElement;
   asDOM(): Element;
@@ -190,17 +195,17 @@ export class Symbol {
 }
 
 export interface Box {
-  x1: number,
-  y1: number,
-  x2: number,
-  y2: number,
+  x1: number;
+  y1: number;
+  x2: number;
+  y2: number;
 }
 
 interface BBoxObject extends Box {
-  width(): number,
-  height(): number,
+  width(): number;
+  height(): number;
   /** Merges one box with another returns the original box */
-  merge(box: Box): this
+  merge(box: Box): this;
 }
 /** Creates a bounding box object */
 export type BBoxConstructor = {
@@ -208,7 +213,14 @@ export type BBoxConstructor = {
 };
 
 /** Creates a ColorMode Object with colors used for different affiliations. */
-export function ColorMode(civilian: string, friend: string, hostile: string, neutral: string, unknown: string, suspect: string): ColorMode;
+export function ColorMode(
+  civilian: string,
+  friend: string,
+  hostile: string,
+  neutral: string,
+  unknown: string,
+  suspect: string
+): ColorMode;
 /** Gets a color mode that has been registred with setColorMode */
 export function getColorMode(mode: string): ColorMode;
 /** Register a ColorMode with a name or override an existing ColorMode. */
@@ -219,23 +231,25 @@ export function getHqStaffLength(): number;
 /** Sets the length of the HQ staf used for HQ symbols. */
 export function setHqStaffLength(staff_length: number): number;
 
-
 export interface DashObject {
-  pending: string,
-  anticipated: string,
-  feintDummy: string
+  pending: string;
+  anticipated: string;
+  feintDummy: string;
 }
 /** Gets the diffrent dash arrays used for dashed lines. */
 export function getDashArrays(): DashObject;
 /** Sets the dash arrays used for dashed lines */
-export function setDashArrays(pending: string, anticipated: string, feintDummy: string): DashObject;
+export function setDashArrays(
+  pending: string,
+  anticipated: string,
+  feintDummy: string
+): DashObject;
 
 // Gets the version of milsymbol.
 export function getVersion(): string;
 
 /** Sets the preferred standard. */
 export function setStandard(standard: "2525" | "APP6"): boolean;
-
 
 type DrawPath = {
   type: "path";
