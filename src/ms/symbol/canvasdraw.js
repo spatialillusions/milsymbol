@@ -174,6 +174,12 @@ export default function canvasDraw(ctx, instruction) {
             ctx.restore();
             //ctx.scale(1/instruction[i].factor,1/instruction[i].factor);
             break;
+          case "clip":
+            ctx.save();
+            ctx.clip(new Path2D(instruction[i].d), "nonzero");
+            canvasDraw.call(this, ctx, instruction[i].draw);
+            ctx.restore();
+            break;
         }
         if (instruction[i].linecap) {
           ctx.lineCap = "butt";

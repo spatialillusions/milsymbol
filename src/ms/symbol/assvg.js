@@ -83,6 +83,13 @@ export default function asSVG() {
               case "scale":
                 svg += '<g transform="scale(' + instruction[i].factor + ')" ';
                 break;
+              case "clip":
+                svg += '<clipPath id="' + instruction[i].clipId + '">';
+                svg +=
+                  '<path d="' + instruction[i].d + '" clip-rule="nonzero" />';
+                svg += "</clipPath>";
+                svg += '<g clip-path="url(#' + instruction[i].clipId + ')" ';
+                break;
             }
             if (typeof instruction[i].stroke !== "undefined") {
               svg +=
@@ -134,6 +141,10 @@ export default function asSVG() {
                 svg += "</g>";
                 break;
               case "scale":
+                svg += processInstructions.call(this, instruction[i].draw);
+                svg += "</g>";
+                break;
+              case "clip":
                 svg += processInstructions.call(this, instruction[i].draw);
                 svg += "</g>";
                 break;
