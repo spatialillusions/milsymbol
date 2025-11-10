@@ -153,6 +153,10 @@ export default {
       sIdm2["06"] = [icn["CY.M2.ADVANCED PERSISTENT THREAT"]];
       sIdm2["07"] = [icn["CY.M2.NATION STATE"]];
       sIdm2["08"] = [icn["CY.M2.NATION STATE SPONSORED"]];
+
+      if (!_STD2525 /*This is APP6*/ && edition == "E") {
+        // APP6E overrides
+      }
     }
   }
 };
