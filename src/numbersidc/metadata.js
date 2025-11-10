@@ -167,7 +167,7 @@ export function metadata(ms, metadata, mapping) {
   }
 
   // Frame shape overrides 2525E
-  if (frameshape != "0") {
+  if (frameshape != "0" && metadata.edition == "E") {
     metadata.civilian = false;
     metadata.cyberspace = false;
     metadata.installation = false;
