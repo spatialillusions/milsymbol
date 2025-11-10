@@ -5,6 +5,12 @@ export default function textfieldsMod(ms) {
   const drawArray2 = [];
   const bbox = this.metadata.baseGeometry.bbox;
   let flag = this.options.country_flag ? 70 : 0;
+  flag =
+    this.options.full_frame_flag &&
+    this.metadata.affiliation == "Friend" &&
+    this.metadata.dimension == "Ground"
+      ? 0
+      : flag;
   flag += this.options.signature == "!" ? 30 : 0;
   const stack = this.options.stack ? this.options.stack * 15 : 0;
   const fontColor =
