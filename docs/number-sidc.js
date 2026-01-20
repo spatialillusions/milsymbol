@@ -90,7 +90,7 @@ function labels(icon) {
     dtg1: "W1",
     altitudeDepth: "X",
     location: "Y",
-    targetNumber: "AP",
+    targetNumber: "AP"
   };
 }
 
@@ -117,7 +117,7 @@ function renderSymbolSet(standardEdition, symbolset, svgIcon) {
     "": "CommonMods",
     Air: "Air",
     "Air missile": "Air",
-    "Activity/Event": "Activities",
+    "Activity/Event": "Activities"
   };
   let output = "";
   let i;
@@ -440,7 +440,7 @@ function renderSymbolSet(standardEdition, symbolset, svgIcon) {
         symbolset.modifier2[i]["Code"].length == 3
       ) {
         symbol = new ms.Symbol(
-          standardEdition0 +
+          standardEdition +
             "03" +
             (symbolset.symbolset || "10") +
             "000000000000" +
