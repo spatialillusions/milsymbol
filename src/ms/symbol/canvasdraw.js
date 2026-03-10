@@ -28,13 +28,20 @@ export default function canvasDraw(ctx, instruction) {
           ctx.lineCap = instruction[i].linecap;
           ctx.lineJoin = instruction[i].linecap;
         }
+
+        let fill = "rgba(0,0,0,0)";
         if (instruction[i].fill) {
-          ctx.fillStyle = instruction[i].fill;
+          fill = instruction[i].fill;
+          //ctx.fillStyle = fill;
+        }
+        if (instruction[i].styleFill && this.style.styleFill) {
+          fill = "rgba(255,255,255,0.4)";
         }
         //fill is set to false, make it transparent
-        if (!instruction[i].fill) {
-          ctx.fillStyle = "rgba(0,0,0,0)";
-        }
+        //if (!instruction[i].fill && !this.style.styleFill) {
+        //  ctx.fillStyle = "rgba(0,0,0,0)";
+        //}
+        ctx.fillStyle = fill;
 
         if (typeof instruction[i].fillopacity !== "undefined") {
           ctx.globalAlpha = instruction[i].fillopacity;
@@ -51,7 +58,8 @@ export default function canvasDraw(ctx, instruction) {
               if (
                 typeof instruction[i].fill === "undefined" ||
                 (typeof instruction[i].fill !== "undefined" &&
-                  instruction[i].fill)
+                  instruction[i].fill) ||
+                (instruction[i].styleFill && this.style.styleFill)
               )
                 ctx.fill(d);
               if (instruction[i].hasOwnProperty("clipPath")) {
@@ -70,7 +78,8 @@ export default function canvasDraw(ctx, instruction) {
                 if (
                   typeof instruction[i].fill === "undefined" ||
                   (typeof instruction[i].fill !== "undefined" &&
-                    instruction[i].fill)
+                    instruction[i].fill) ||
+                  (instruction[i].styleFill && this.style.styleFill)
                 )
                   ctx.fill();
                 if (ctx.globalAlpha != 1) ctx.globalAlpha = 1;
@@ -102,7 +111,8 @@ export default function canvasDraw(ctx, instruction) {
             if (
               typeof instruction[i].fill === "undefined" ||
               (typeof instruction[i].fill !== "undefined" &&
-                instruction[i].fill)
+                instruction[i].fill) ||
+              (instruction[i].styleFill && this.style.styleFill)
             )
               ctx.fill();
             if (instruction[i].hasOwnProperty("clipPath")) {

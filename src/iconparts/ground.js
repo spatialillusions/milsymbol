@@ -185,22 +185,25 @@ export default function (
   icn["GR.IC.AMMUNITION"] = {
     type: "path",
     d: "m 90,117 0,-25 c 0,-15 20,-15 20,0 l 0,25 m -25,0 30,0",
-    fill: false
+    fill: false,
+    styleFill: true
   };
   icn["GR.IC.ARMOUR"] = {
     type: "path",
     d: "M125,80 C150,80 150,120 125,120 L75,120 C50,120 50,80 75,80 Z",
-    fill: false
+    fill: false,
+    styleFill: true
   };
   icn["GR.IC.ARMOR, WHEELED"] = [
     {
       type: "path",
       d: "m 120,80 c 25,0 25,30 0,30 l -40,0 C 55,110 55,80 80,80 Z",
-      fill: false
+      fill: false,
+      styleFill: true
     },
-    { type: "circle", cx: 70, cy: 115, r: 5, fill: false },
-    { type: "circle", cx: 100, cy: 115, r: 5, fill: false },
-    { type: "circle", cx: 130, cy: 115, r: 5, fill: false }
+    { type: "circle", cx: 70, cy: 115, r: 5, fill: false, styleFill: true },
+    { type: "circle", cx: 100, cy: 115, r: 5, fill: false, styleFill: true },
+    { type: "circle", cx: 130, cy: 115, r: 5, fill: false, styleFill: true }
   ];
   icn["GR.IC.AVIATION ROTARY WING"] = {
     type: "path",
@@ -294,9 +297,9 @@ export default function (
   icn["GR.IC.CIVIL AFFAIRS"] = text("CA");
   icn["GR.IC.CIVIL-MILITARY-COOPERATION"] = {
     type: "path",
-
     d: "m 65,85 h 69 v 15 c 0,20 -69,20 -69,0 z",
-    fill: false
+    fill: false,
+    styleFill: true
   };
   icn["GR.I.CIVILIAN"] = text("CIV");
   icn["GR.I.CIVILIAN"].fill =
@@ -315,7 +318,8 @@ export default function (
   icn["GR.IC.COMBINED ARMS"] = {
     type: "path",
     d: "m 70,80 60,40 m 0,-40 -60,40 m 55,-40 c 25,0 25,40 0,40 l -50,0 C 50,120 50,80 75,80 z",
-    fill: false
+    fill: false,
+    styleFill: true
   };
   icn["GR.IC.COUNTER-INTELLIGENCE"] = text("CI");
   icn["GR.IC.CRIMINAL INVESTIGATION DIVISION"] = text("CID");
@@ -343,6 +347,7 @@ export default function (
   icn["GR.IC.ENGINEER MECHANIZED"] = {
     type: "path",
     fill: false,
+    styleFill: true,
     d: "m 100,90 0,15 m -25,5 0,-20 50,0 0,20 m 0,-30 c 25,0 25,40 0,40 l -50,0 C 50,120 50,80 75,80 Z"
   };
   icn["GR.IC.ENGINEER UTILITY VEHICLE"] = {
@@ -359,12 +364,13 @@ export default function (
   icn["GR.IC.FEDERAL BUREAU OF INVESTIGATION (FBI)"] = text("FBI");
   icn["GR.IC.FIELD ARTILLERY"] = { type: "circle", cx: 100, cy: 100, r: 15 };
   icn["GR.IC.FIELD ARTILLERY OBSERVER"] = [
-    { type: "circle", cx: 100, cy: 108, r: 5 },
     {
       type: "path",
       d: "m 100,80 -25,40 50,0 z",
-      fill: false
-    }
+      fill: false,
+      styleFill: true
+    },
+    { type: "circle", cx: 100, cy: 108, r: 5 }
   ];
   icn["GR.IC.FIELD CAMP CONSTRUCTION"] = [
     icn["GR.IC.ENGINEER"],
@@ -380,9 +386,9 @@ export default function (
   ];
   icn["GR.IC.FINANCE"] = {
     type: "path",
-
     d: "m 80,95 10,-10 20,0 10,10 m -40,0 0,20 40,0 0,-20 z",
-    fill: false
+    fill: false,
+    styleFill: true
   };
   icn["GR.IC.FIRE PROTECTION"] = {
     type: "path",
@@ -445,7 +451,8 @@ export default function (
   icn["GR.IC.LAW ENFORCEMENT"] = {
     type: "path",
     d: "m 82,82 c 6,7 12,7 18,0 6,7 12,7 18,0  m 0,0 c -3,13 6,27 -18,36 C 76,109 85,95 82,82",
-    fill: false
+    fill: false,
+    styleFill: true
   };
   icn["GR.IC.LAW ENFORCEMENT VESSEL"] = [
     {
@@ -529,9 +536,9 @@ export default function (
   ];
   icn["GR.IC.MORTUARY AFFAIRS"] = {
     type: "path",
-
     d: "m 70,85 h 60 v 30 H 70 Z  m 40,5 v 20  M 74.8,100 H 125",
-    fill: false
+    fill: false,
+    styleFill: true
   };
   icn["GR.IC.MULTINATIONAL (MN)"] = text("MN");
   icn["GR.IC.NAVAL"] = [
@@ -549,19 +556,21 @@ export default function (
   icn["GR.IC.OBSERVER/OBSERVATION"] = {
     type: "path",
     d: "m 100,80 -25,40 50,0 z",
-    fill: false
+    fill: false,
+    styleFill: true
   };
   icn["GR.IC.ORDNANCE"] = {
     type: "path",
     d: "M 90,97 83,83 m 27,14 7,-14 M 95,95 90,81 m 15,14 5,-14 m 10,26.5 c 0,6.9 -9,12.5 -20,12.5 -11,0 -20,-5.6 -20,-12.5 0,-6.9 9,-12.5 20,-12.5 11,0 20,5.6 20,12.5 z",
-    fill: false
+    fill: false,
+    styleFill: true
   };
   icn["GR.IC.PERSONNEL SERVICES"] = text("PS");
   icn["GR.IC.PETROLEUM OIL LUBRICANTS"] = {
     type: "path",
-
     d: "m 100,119 0,-24 m 0,0 C 99,95 85,81 85,81 l 30,0 z",
-    fill: false
+    fill: false,
+    styleFill: true
   };
   icn["GR.IC.PIPELINE"] = {
     type: "path",
@@ -570,23 +579,22 @@ export default function (
   };
   icn["GR.IC.POSTAL"] = {
     type: "path",
-
     d: "m 80,80 30,0 c -1.4,15.5 0,25 10,35 -20,0 -40,-20 -40,-35 z",
-    fill: false
+    fill: false,
+    styleFill: true
   };
   icn["GR.IC.PUBLIC AFFAIRS"] = text("PA");
   icn["GR.IC.PUBLIC AFFAIRS BROADCAST"] = text("BPAD");
   icn["GR.IC.PSYCHOLOGICAL OPERATIONS"] = {
     type: "path",
-
     fill: STD2525 ? iconFillColor : false,
     stroke: black,
     d: "M70,85 l40,0 10,-10 0,50 -10,-10 -40,0 z M120,85 l10,0 M120,95 l10,0 M120,105 l10,0 M120,115 l10,0"
   }; //TODO
   icn["GR.IC.QUARTERMASTER"] = {
     type: "path",
-
     fill: false,
+    styleFill: true,
     d: "m 115,95 c 0,15 15,15 15,0 0,-15 -15,-15 -15,0 z m 0,0 -45,0 0,10 10,0 0,-10"
   };
   icn["GR.IC.RADAR"] = {
@@ -674,9 +682,9 @@ export default function (
   };
   icn["GR.IC.PARACHUTE RIGGER"] = {
     type: "path",
-
     fill: false,
-    d: "m 120,100 -20,20 -20,-20 m 0,0 c 0,-25 40,-25 40,0 l -40,0"
+    d: "m 120,100 -20,20  m 0,0 -20,-20  m 0,0 c 0,-25 40,-25 40,0 H 80",
+    styleFill: true
   };
   icn["GR.IC.SPECIAL FORCES"] = text("SF");
   icn["GR.IC.SPECIAL OPERATIONS FORCES"] = text("SOF");
@@ -707,8 +715,8 @@ export default function (
   icn["GR.IC.TRANSPORTATION"] = [
     {
       type: "path",
-
       fill: false,
+      styleFill: true,
       d: "M 119,100 A 18.5,18.3 0 0 1 99.4,118 18.5,18.3 0 0 1 81.2,100 18.5,18.3 0 0 1 99.4,81.8 18.5,18.3 0 0 1 119,100 Z  M 100,81.9 V 118  M 82.9,91.2 117,108  M 82.9,108 117,91.2"
     }
   ];
@@ -728,7 +736,8 @@ export default function (
   icn["GR.IC.VIDEO IMAGERY"] = {
     type: "path",
     fill: false,
-    d: "m 140,110 -26,0 m 7,-20 19,0 m -15,-10 -65,0 0,40 50,0 z m 15,5 0,30"
+    styleFill: true,
+    d: "M 125,80 H 60 v 40 h 50 z  m -11,30 h 26 V 90 H 121  M 140,85 v 30"
   };
   icn["GR.IC.UNITED STATES SECRET SERVICE(TREAS) (USSS)"] = text("USSS");
   icn["GR.IC.WATER"] = {
@@ -1026,7 +1035,8 @@ export default function (
   icn["GR.IC.FF.MILITARY POLICE"] = {
     type: "path",
     d: "m 65.31,70.62 c 11.56,13.49 23.13,13.49 34.69,0  m 0,0 c 11.6,13.49 23.1,13.49 34.7,0  m 0,0 C 128.9,95.67 146.3,122.7 100,140 53.75,122.7 71.09,95.67 65.31,70.62",
-    fill: false
+    fill: false,
+    styleFill: true
   };
   icn["GR.IC.FF.MOTORIZED"] = {
     type: "path",
@@ -1214,31 +1224,30 @@ export default function (
   };
   icn["GR.IC.FF.CLASS I"] = {
     type: "path",
-
     d: "M 111,115 C 96.3,110 96.3,89.5 111,84 100,79.7 87.5,86.3 87.5,99.5 87.5,113 100,119 111,115 Z",
-    fill: false
+    fill: false,
+    styleFill: true
   };
   icn["GR.IC.FF.NATO SUPPLY CLASS I"] = text("I");
   icn["GR.IC.FF.CLASS II"] = icn["GR.IC.QUARTERMASTER"];
   icn["GR.IC.FF.NATO SUPPLY CLASS II"] = text("II");
   icn["GR.IC.FF.CLASS III"] = {
     type: "path",
-
     d: "m 100,120 0,-20 -15,-20 30,0 -15,20 ",
-    fill: false
+    fill: false,
+    styleFill: true
   };
   icn["GR.IC.FF.CLASS IV"] = icn["GR.IC.ENGINEER"];
   icn["GR.IC.FF.NATO SUPPLY CLASS IV"] = text("IV");
   icn["GR.IC.FF.CLASS V"] = {
     type: "path",
-
     d: "m 90,115 0,-25 c 0,-10 20,-10 20,0 l 0,25 m -25,0 30,0",
-    fill: false
+    fill: false,
+    styleFill: true
   };
   icn["GR.IC.INTERPRETER/TRANSLATOR"] = [
     {
       type: "path",
-
       d: "m 65,90 15,0 0,-10 20,20 -20,20 0,-10 -15,0 z",
       fill: iconFillColor
     },
@@ -1313,7 +1322,7 @@ export default function (
     }
   }[affiliation];
   icn["GR.IC.FF.CLASS IX"] = [
-    { type: "circle", cx: 100, cy: 100, r: 10, fill: false },
+    { type: "circle", cx: 100, cy: 100, r: 10, fill: false, styleFill: true },
     {
       type: "path",
       d: "m 100,110 0,10 m 0,-30 0,-10 m 8.7,14.2 8.4,-4.8 m -8.4,15.9 8,5.4 m -25.4,-5.4 -8.2,5.4 m 8.2,-16.3 -8,-5.4",

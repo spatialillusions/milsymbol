@@ -71,6 +71,7 @@ function Symbol() {
   this.style.square = false; // If the symbol should be square
   this.style.standard = ""; // Set standard override
   this.style.strokeWidth = 4; // The stroke width of he icon frame.
+  this.style.styleFill = false;
 
   this.symbolAnchor = { x: 50, y: 50 }; // The anchor point for the current symbol
   this.validIcon = true; // If we were able to find a valid icon or not.
@@ -89,7 +90,7 @@ Symbol.prototype.asOffscreenCanvas = asOffscreenCanvas;
 import canvasDraw from "./symbol/canvasdraw.js";
 Symbol.prototype.canvasDraw = canvasDraw;
 
-Symbol.prototype.asDOM = function() {
+Symbol.prototype.asDOM = function () {
   const doc = document;
   const doc2 = new DOMParser().parseFromString(this.asSVG(), "text/xml");
   return doc.adoptNode(doc2.documentElement);
@@ -98,14 +99,14 @@ Symbol.prototype.asDOM = function() {
 import asSVG from "./symbol/assvg.js";
 Symbol.prototype.asSVG = asSVG;
 
-Symbol.prototype.getAnchor = function() {
+Symbol.prototype.getAnchor = function () {
   return this.symbolAnchor;
 };
 
 import getColors from "./symbol/getcolors.js";
 Symbol.prototype.getColors = getColors;
 
-Symbol.prototype.getOctagonAnchor = function() {
+Symbol.prototype.getOctagonAnchor = function () {
   return this.octagonAnchor;
 };
 
@@ -127,7 +128,7 @@ Symbol.prototype.isValid = isValid;
 import setOptions from "./symbol/setoptions.js";
 Symbol.prototype.setOptions = setOptions;
 
-Symbol.prototype.toDataURL = function() {
+Symbol.prototype.toDataURL = function () {
   return "data:image/svg+xml;utf8," + encodeURIComponent(this.asSVG());
 };
 

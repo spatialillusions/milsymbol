@@ -281,13 +281,13 @@ export default function asSVG() {
               : "none";
             svg += attr("stroke", strokeColor);
           }
-          if (typeof instruction[i].fill !== "undefined")
-            svg += attr(
-              "fill",
-              instruction[i].fill
-                ? sanitizeColor(instruction[i].fill, "none")
-                : "none"
-            );
+          if (typeof instruction[i].fill !== "undefined") {
+            let fill = instruction[i].fill;
+            if (instruction[i].styleFill && this.style.styleFill) {
+              fill = "rgba(255,255,255,0.4)";
+            }
+            svg += attr("fill", fill ? sanitizeColor(fill, "none") : "none");
+          }
           if (typeof instruction[i].fillopacity !== "undefined") {
             const fillOpacity = Math.min(
               Math.max(safeNumber(instruction[i].fillopacity, 1), 0),

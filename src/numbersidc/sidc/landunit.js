@@ -45,7 +45,7 @@ export default {
         icn["GR.IC.RADIO TELETYPE CENTRE"]
       ];
       sId["111004"] = [icn["GR.IC.FF.SIGNAL"], icn["GR.I.FF.SATELLITE"]];
-      sId["111005"] = [icn["GR.IC.FF.SIGNAL"], icn["GR.IC.VIDEO IMAGERY"]];
+      sId["111005"] = [icn["GR.IC.VIDEO IMAGERY"], icn["GR.IC.FF.SIGNAL"]];
       //sId['111095'] = [icn['GR.IC.FF.SIGNAL'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
       //sId['111097'] = [icn['GR.IC.FF.SIGNAL'],icn['GR.IC.FF.CORPS SUPPORT']];
       //sId['111098'] = [icn['GR.IC.FF.SIGNAL'],icn['GR.IC.FF.THEATRE SUPPORT']];
@@ -60,8 +60,8 @@ export default {
       sId["120300"] = [icn["GR.IC.FF.AMPHIBIOUS"]];
       sId["120400"] = [icn["GR.IC.FF.ANTITANK/ANTIARMOUR"]];
       sId["120401"] = [
-        icn["GR.IC.FF.ANTITANK/ANTIARMOUR"],
-        icn["GR.IC.ARMOUR"]
+        icn["GR.IC.ARMOUR"],
+        icn["GR.IC.FF.ANTITANK/ANTIARMOUR"]
       ];
       sId["120402"] = [
         icn["GR.IC.FF.ANTITANK/ANTIARMOUR"],
@@ -92,15 +92,15 @@ export default {
       //sId['121095'] = [icn['GR.IC.COMBINED ARMS'],icn['GR.IC.FF.HEADQUARTERS OR HEADQUARTERS ELEMENT']];
       sId["121100"] = [icn["GR.IC.FF.INFANTRY"]];
       sId["121101"] = [icn["GR.IC.FF.INFANTRY"], icn["GR.IC.FF.AMPHIBIOUS"]];
-      sId["121102"] = [icn["GR.IC.FF.INFANTRY"], icn["GR.IC.ARMOUR"]];
+      sId["121102"] = [icn["GR.IC.ARMOUR"], icn["GR.IC.FF.INFANTRY"]];
       sId["121103"] = [
         icn["GR.IC.FF.INFANTRY"],
         icn["GR.IC.FF.MAIN GUN SYSTEM"]
       ];
       sId["121104"] = [icn["GR.IC.FF.INFANTRY"], icn["GR.IC.FF.MOTORIZED"]];
       sId["121105"] = [
-        icn["GR.IC.FF.INFANTRY"],
         icn["GR.IC.ARMOUR"],
+        icn["GR.IC.FF.INFANTRY"],
         icn["GR.IC.FF.MAIN GUN SYSTEM"]
       ];
       sId["121106"] = [icn["GR.IC.FF.MAIN GUN SYSTEM"]];
