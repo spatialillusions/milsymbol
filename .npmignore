@@ -26,6 +26,6 @@ yarn-error.log*
 coverage/
 *.tgz
 
-docs
-examples
-test
+docs/*
+examples/*
+test/*
