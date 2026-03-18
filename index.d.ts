@@ -286,6 +286,7 @@ type DrawText = {
   stroke: string | false;
   strokedasharray?: string;
   strokewidth?: number;
+  text: string;
 };
 
 type DrawSVG = {
@@ -334,6 +335,15 @@ export type ExtensionFunction = (
 
 export function addSymbolPart(extension: ExtensionFunction): typeof _default;
 
+export type IconPartsFunction = (
+  this: Symbol,
+  iconParts: Record<string, DrawInstruction | DrawInstruction[]>,
+  metadata: SymbolMetadata,
+  colors: SymbolColors
+) => void;
+
+export function addIconParts(iconParts: IconPartsFunction);
+
 declare const _default: {
   Symbol: typeof Symbol;
   BBox: BBoxConstructor;
@@ -347,6 +357,7 @@ declare const _default: {
   getVersion: typeof getVersion;
   setStandard: typeof setStandard;
   addSymbolPart: typeof addSymbolPart;
+  addIconParts: typeof addIconParts;
 };
 
 export default _default;
