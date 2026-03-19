@@ -342,7 +342,7 @@ export type IconPartsFunction = (
   colors: SymbolColors
 ) => void;
 
-export function addIconParts(iconParts: IconPartsFunction);
+export function addIconParts(iconParts: IconPartsFunction): typeof _default;
 
 declare const _default: {
   Symbol: typeof Symbol;
