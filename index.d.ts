@@ -148,7 +148,7 @@ export type SymbolMetadata = {
   dismounted?: boolean; // Land Dismounted Individual should have special icons
   echelon: Echelon; //What echelon (Platoon/Company...)
   faker: boolean; // Is it a Faker
-  fenintDummy: boolean; // Is it a feint/dummy
+  feintDummy: boolean; // Is it a feint/dummy
   fill: boolean; // Standard says it should be filled
   frame: boolean; // Standard says it should be framed
   functionid: string; // Part of SIDC referring to the icon.

@@ -13,7 +13,7 @@ export default function getMetadata() {
     dimensionUnknown: false, //Is the dimension unknown
     echelon: "", //What echelon (Platoon/Company...)
     faker: false, //Is it a Faker
-    fenintDummy: false, //Is it a feint/dummy
+    feintDummy: false, //Is it a feint/dummy
     fill: this.style.fill, //Standard says it should be filled
     frame: this.style.frame, //Standard says it should be framed
     functionid: "", //Part of SIDC referring to the icon.

@@ -264,7 +264,7 @@ Object {
   dimensionUnknown: Boolean, // Is the dimension unknown
   echelon: String, //What echelon (Platoon/Company...)
   faker: Boolean, // Is it a Faker
-  fenintDummy: Boolean, // Is it a feint/dummy
+  feintDummy: Boolean, // Is it a feint/dummy
   fill: Boolean, // Standard says it should be filled
   frame: Boolean, // Standard says it should be framed
   functionid: String, // Part of SIDC referring to the icon.
