@@ -41,6 +41,9 @@
     "url": "https://github.com/spatialillusions/milsymbol/issues"
   },
   "homepage": "https://github.com/spatialillusions/milsymbol",
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  },
   "devDependencies": {
     "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.1.8",

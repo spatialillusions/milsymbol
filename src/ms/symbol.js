@@ -99,6 +99,9 @@ Symbol.prototype.asDOM = function () {
 import asSVG from "./symbol/assvg.js";
 Symbol.prototype.asSVG = asSVG;
 
+import asPNG from "./symbol/aspng.js";
+Symbol.prototype.asPNG = asPNG;
+
 Symbol.prototype.getAnchor = function () {
   return this.symbolAnchor;
 };

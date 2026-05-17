@@ -181,6 +181,7 @@ export class Symbol {
   asCanvas(factor?: number): HTMLCanvasElement;
   asDOM(): Element;
   asOffscreenCanvas(factor?: number): OffscreenCanvas;
+  asPNG(options?: { width?: number; height?: number }): Promise<Uint8Array>;
   asSVG(): string;
   getAnchor(): { x: number; y: number };
   getColors(): SymbolColors;
