@@ -6,8 +6,8 @@ export default function modifier(ms) {
   const color = this.style.modifierColor
     ? this.style.modifierColor
     : this.style.frameColor
-    ? this.style.frameColor[this.metadata.affiliation]
-    : this.colors.iconColor[this.metadata.affiliation];
+      ? this.style.frameColor[this.metadata.affiliation]
+      : this.colors.iconColor[this.metadata.affiliation];
   const gbbox = new ms.BBox(); // bounding box for the added geometries
   let geom;
 
@@ -22,7 +22,7 @@ export default function modifier(ms) {
         "GroundFriend",
         "GroundNeutral",
         "SeaNeutral",
-        "SubsurfaceNeutral",
+        "SubsurfaceNeutral"
       ].indexOf(this.metadata.dimension + this.metadata.affiliation) > -1
     )
       y = bbox.y2;
@@ -41,7 +41,7 @@ export default function modifier(ms) {
         " L" +
         bbox.x1 +
         "," +
-        (bbox.y2 + hqStaffLength),
+        (bbox.y2 + hqStaffLength)
     };
 
     //outline
@@ -66,7 +66,7 @@ export default function modifier(ms) {
       "Corps/MEF": 110,
       Army: 145,
       "Army Group/front": 180,
-      "Region/Theater": 215,
+      "Region/Theater": 215
     };
     width = width[this.metadata.echelon] || 90;
     geom = {
@@ -87,7 +87,7 @@ export default function modifier(ms) {
         " " +
         (100 + width / 2) +
         "," +
-        bbox.y1,
+        bbox.y1
     };
 
     //outline
@@ -123,7 +123,7 @@ export default function modifier(ms) {
         "GroundUnknown",
         "SeaUnknown",
         "AirFriend",
-        "SeaFriend",
+        "SeaFriend"
       ].indexOf(this.metadata.dimension + this.metadata.affiliation) > -1
     )
       gapFiller = 2;
@@ -141,7 +141,7 @@ export default function modifier(ms) {
         (bbox.y1 + gapFiller - this.style.strokeWidth / 2) +
         " 100," +
         (bbox.y1 - this.style.strokeWidth) +
-        " Z",
+        " Z"
     };
 
     //outline
@@ -178,7 +178,7 @@ export default function modifier(ms) {
         " L" +
         bbox.x2 +
         "," +
-        (bbox.y1 - 0),
+        (bbox.y1 - 0)
     };
 
     //outline
@@ -206,10 +206,10 @@ export default function modifier(ms) {
           { type: "circle", cx: 100, cy: bbox.y1 - 20, r: 15 },
           {
             type: "path",
-            d: "M80," + (bbox.y1 - 10) + "L120," + (bbox.y1 - 30),
-          },
+            d: "M80," + (bbox.y1 - 10) + "L120," + (bbox.y1 - 30)
+          }
         ],
-        bbox: { y1: bbox.y1 - 40 - installationPadding },
+        bbox: { y1: bbox.y1 - 40 - installationPadding }
       },
       Squad: {
         g: [
@@ -218,10 +218,10 @@ export default function modifier(ms) {
             fill: color,
             cx: 100,
             cy: bbox.y1 - 20,
-            r: 7.5,
-          },
+            r: 7.5
+          }
         ],
-        bbox: { y1: bbox.y1 - 20 - 7.5 - installationPadding },
+        bbox: { y1: bbox.y1 - 20 - 7.5 - installationPadding }
       },
       Section: {
         g: [
@@ -230,17 +230,17 @@ export default function modifier(ms) {
             fill: color,
             cx: 115,
             cy: bbox.y1 - 20,
-            r: 7.5,
+            r: 7.5
           },
           {
             type: "circle",
             fill: color,
             cx: 85,
             cy: bbox.y1 - 20,
-            r: 7.5,
-          },
+            r: 7.5
+          }
         ],
-        bbox: { y1: bbox.y1 - 20 - 7.5 - installationPadding },
+        bbox: { y1: bbox.y1 - 20 - 7.5 - installationPadding }
       },
       "Platoon/detachment": {
         g: [
@@ -249,69 +249,69 @@ export default function modifier(ms) {
             fill: color,
             cx: 100,
             cy: bbox.y1 - 20,
-            r: 7.5,
+            r: 7.5
           },
           {
             type: "circle",
             fill: color,
             cx: 70,
             cy: bbox.y1 - 20,
-            r: 7.5,
+            r: 7.5
           },
           {
             type: "circle",
             fill: color,
             cx: 130,
             cy: bbox.y1 - 20,
-            r: 7.5,
-          },
+            r: 7.5
+          }
         ],
-        bbox: { y1: bbox.y1 - 20 - 7.5 - installationPadding },
+        bbox: { y1: bbox.y1 - 20 - 7.5 - installationPadding }
       },
       "Company/battery/troop": {
         g: [
           {
             type: "path",
-            d: "M100," + (bbox.y1 - 10) + "L100," + (bbox.y1 - 35),
-          },
+            d: "M100," + (bbox.y1 - 10) + "L100," + (bbox.y1 - 35)
+          }
         ],
-        bbox: { y1: bbox.y1 - 40 - installationPadding },
+        bbox: { y1: bbox.y1 - 40 - installationPadding }
       },
       "Battalion/squadron": {
         g: [
           {
             type: "path",
-            d: "M90," + (bbox.y1 - 10) + "L90," + (bbox.y1 - 35),
+            d: "M90," + (bbox.y1 - 10) + "L90," + (bbox.y1 - 35)
           },
           {
             type: "path",
-            d: "M110," + (bbox.y1 - 10) + "L110," + (bbox.y1 - 35),
-          },
+            d: "M110," + (bbox.y1 - 10) + "L110," + (bbox.y1 - 35)
+          }
         ],
-        bbox: { y1: bbox.y1 - 40 - installationPadding },
+        bbox: { y1: bbox.y1 - 40 - installationPadding }
       },
       "Regiment/group": {
         g: [
           {
             type: "path",
-            d: "M100," + (bbox.y1 - 10) + "L100," + (bbox.y1 - 35),
+            d: "M100," + (bbox.y1 - 10) + "L100," + (bbox.y1 - 35)
           },
           {
             type: "path",
-            d: "M120," + (bbox.y1 - 10) + "L120," + (bbox.y1 - 35),
+            d: "M120," + (bbox.y1 - 10) + "L120," + (bbox.y1 - 35)
           },
-          { type: "path", d: "M80," + (bbox.y1 - 10) + "L80," + (bbox.y1 - 35) },
+          { type: "path", d: "M80," + (bbox.y1 - 10) + "L80," + (bbox.y1 - 35) }
         ],
-        bbox: { y1: bbox.y1 - 40 - installationPadding },
+        bbox: { y1: bbox.y1 - 40 - installationPadding }
       },
       Brigade: {
         g: [
           {
             type: "path",
-            d: "M87.5," + (bbox.y1 - 10) + " l25,-25 m0,25 l-25,-25",
-          },
+            d: "M87.5," + (bbox.y1 - 10) + " l25,-25 m0,25 l-25,-25"
+          }
         ],
-        bbox: { y1: bbox.y1 - 15 - 25 - installationPadding },
+        bbox: { y1: bbox.y1 - 15 - 25 - installationPadding }
       },
       Division: {
         g: [
@@ -322,14 +322,14 @@ export default function modifier(ms) {
               (bbox.y1 - 10) +
               " l25,-25 m0,25 l-25,-25   M105," +
               (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25",
-          },
+              " l25,-25 m0,25 l-25,-25"
+          }
         ],
         bbox: {
           y1: bbox.y1 - 15 - 25 - installationPadding,
           x1: 70,
-          x2: 130,
-        },
+          x2: 130
+        }
       },
       "Corps/MEF": {
         g: [
@@ -342,14 +342,14 @@ export default function modifier(ms) {
               (bbox.y1 - 10) +
               " l25,-25 m0,25 l-25,-25    M122.5," +
               (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25",
-          },
+              " l25,-25 m0,25 l-25,-25"
+          }
         ],
         bbox: {
           y1: bbox.y1 - 15 - 25 - installationPadding,
           x1: 52.5,
-          x2: 147.5,
-        },
+          x2: 147.5
+        }
       },
       Army: {
         g: [
@@ -364,14 +364,14 @@ export default function modifier(ms) {
               (bbox.y1 - 10) +
               " l25,-25 m0,25 l-25,-25    M140," +
               (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25",
-          },
+              " l25,-25 m0,25 l-25,-25"
+          }
         ],
         bbox: {
           y1: bbox.y1 - 15 - 25 - installationPadding,
           x1: 35,
-          x2: 165,
-        },
+          x2: 165
+        }
       },
       "Army Group/front": {
         g: [
@@ -388,14 +388,14 @@ export default function modifier(ms) {
               (bbox.y1 - 10) +
               " l25,-25 m0,25 l-25,-25       M157.5," +
               (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25",
-          },
+              " l25,-25 m0,25 l-25,-25"
+          }
         ],
         bbox: {
           y1: bbox.y1 - 15 - 25 - installationPadding,
           x1: 17.5,
-          x2: 182.5,
-        },
+          x2: 182.5
+        }
       },
       "Region/Theater": {
         g: [
@@ -414,14 +414,14 @@ export default function modifier(ms) {
               (bbox.y1 - 10) +
               " l25,-25 m0,25 l-25,-25     M175," +
               (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25",
-          },
+              " l25,-25 m0,25 l-25,-25"
+          }
         ],
         bbox: {
           y1: bbox.y1 - 15 - 25 - installationPadding,
           x1: 0,
-          x2: 200,
-        },
+          x2: 200
+        }
       },
       Command: {
         g: [
@@ -432,15 +432,15 @@ export default function modifier(ms) {
               (bbox.y1 - 22.5) +
               " l25,0 m-12.5,12.5 l0,-25   M105," +
               (bbox.y1 - 22.5) +
-              " l25,0 m-12.5,12.5 l0,-25",
-          },
+              " l25,0 m-12.5,12.5 l0,-25"
+          }
         ],
         bbox: {
           y1: bbox.y1 - 15 - 25 - installationPadding,
           x1: 70,
-          x2: 130,
-        },
-      },
+          x2: 130
+        }
+      }
     };
     if (echelons.hasOwnProperty(this.metadata.echelon)) {
       geom = echelons[this.metadata.echelon].g;
@@ -462,7 +462,7 @@ export default function modifier(ms) {
         type: "translate",
         x: 0,
         y: -installationPadding,
-        draw: geom,
+        draw: geom
       });
       gbbox.merge(echelons[this.metadata.echelon].bbox);
     }
@@ -495,45 +495,45 @@ export default function modifier(ms) {
         g: [
           { type: "path", d: "M 53,1 l 94,0" },
           { type: "circle", cx: 58, cy: 8, r: 8 },
-          { type: "circle", cx: 142, cy: 8, r: 8 },
+          { type: "circle", cx: 142, cy: 8, r: 8 }
         ],
-        bbox: { y2: bbox.y2 + 8 * 2 },
+        bbox: { y2: bbox.y2 + 8 * 2 }
       },
       "Wheeled cross country": {
         g: [
           { type: "path", d: "M 53,1 l 94,0" },
           { type: "circle", cx: 58, cy: 8, r: 8 },
           { type: "circle", cx: 142, cy: 8, r: 8 },
-          { type: "circle", cx: 100, cy: 8, r: 8 },
+          { type: "circle", cx: 100, cy: 8, r: 8 }
         ],
-        bbox: { y2: bbox.y2 + 8 * 2 },
+        bbox: { y2: bbox.y2 + 8 * 2 }
       },
       Tracked: {
         g: [
           {
             type: "path",
-            d: "M 53,1 l 100,0 c15,0 15,15 0,15 l -100,0 c-15,0 -15,-15 0,-15",
-          },
+            d: "M 53,1 l 100,0 c15,0 15,15 0,15 l -100,0 c-15,0 -15,-15 0,-15"
+          }
         ],
-        bbox: { y2: bbox.y2 + 18, x1: 42, x2: 168 },
+        bbox: { y2: bbox.y2 + 18, x1: 42, x2: 168 }
       },
       "Wheeled and tracked combination": {
         g: [
           { type: "circle", cx: 58, cy: 8, r: 8 },
           {
             type: "path",
-            d: "M 83,1 l 70,0 c15,0 15,15 0,15 l -70,0 c-15,0 -15,-15 0,-15",
-          },
+            d: "M 83,1 l 70,0 c15,0 15,15 0,15 l -70,0 c-15,0 -15,-15 0,-15"
+          }
         ],
-        bbox: { y2: bbox.y2 + 8 * 2, x2: 168 },
+        bbox: { y2: bbox.y2 + 8 * 2, x2: 168 }
       },
       Towed: {
         g: [
           { type: "path", d: "M 63,1 l 74,0" },
           { type: "circle", cx: 58, cy: 3, r: 8 },
-          { type: "circle", cx: 142, cy: 3, r: 8 },
+          { type: "circle", cx: 142, cy: 3, r: 8 }
         ],
-        bbox: { y2: bbox.y2 + 10 },
+        bbox: { y2: bbox.y2 + 10 }
       },
       Rail: {
         g: [
@@ -541,63 +541,60 @@ export default function modifier(ms) {
           { type: "circle", cx: 58, cy: 8, r: 8 },
           { type: "circle", cx: 73, cy: 8, r: 8 },
           { type: "circle", cx: 127, cy: 8, r: 8 },
-          { type: "circle", cx: 142, cy: 8, r: 8 },
+          { type: "circle", cx: 142, cy: 8, r: 8 }
         ],
-        bbox: { y2: bbox.y2 + 8 * 2 },
+        bbox: { y2: bbox.y2 + 8 * 2 }
       },
       "Over snow (prime mover)": {
         g: [{ type: "path", d: "M 50,-9 l10,10 90,0" }],
-        bbox: { y2: bbox.y2 + 9 },
+        bbox: { y2: bbox.y2 + 9 }
       },
       Sled: {
         g: [
           {
             type: "path",
-            d: "M 145,-12  c15,0 15,15 0,15 l -90,0 c-15,0 -15,-15 0,-15",
-          },
+            d: "M 145,-12  c15,0 15,15 0,15 l -90,0 c-15,0 -15,-15 0,-15"
+          }
         ],
-        bbox: { y2: bbox.y2 + 15, x1: 42, x2: 168 },
+        bbox: { y2: bbox.y2 + 15, x1: 42, x2: 168 }
       },
       "Pack animals": {
         g: [{ type: "path", d: "M 80,20 l 10,-20 10,20 10,-20 10,20" }],
-        bbox: { y2: bbox.y2 + 20 },
+        bbox: { y2: bbox.y2 + 20 }
       },
       Barge: {
         g: [{ type: "path", d: "M 50,1 l 100,0 c0,10 -100,10 -100,0" }],
-        bbox: { y2: bbox.y2 + 10 },
+        bbox: { y2: bbox.y2 + 10 }
       },
       Amphibious: {
         g: [
           {
             type: "path",
-            d:
-              "M 65,10 c 0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0",
-          },
+            d: "M 65,10 c 0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0"
+          }
         ],
-        bbox: { y2: bbox.y2 + 20 },
+        bbox: { y2: bbox.y2 + 20 }
       },
       "Short towed array": {
         g: [
           {
             type: "path",
             fill: color,
-            d:
-              "M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M100,0 l5,5 -5,5 -5,-5 z",
-          },
+            d: "M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M100,0 l5,5 -5,5 -5,-5 z"
+          }
         ],
-        bbox: { y2: bbox.y2 + 10 },
+        bbox: { y2: bbox.y2 + 10 }
       },
       "Long towed Array": {
         g: [
           {
             type: "path",
             fill: color,
-            d:
-              "M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M105,0 l-10,0 0,10 10,0 z M75,0 l5,5 -5,5 -5,-5 z  M125,0 l5,5 -5,5 -5,-5 z",
-          },
+            d: "M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M105,0 l-10,0 0,10 10,0 z M75,0 l5,5 -5,5 -5,-5 z  M125,0 l5,5 -5,5 -5,-5 z"
+          }
         ],
-        bbox: { y2: bbox.y2 + 10 },
-      },
+        bbox: { y2: bbox.y2 + 10 }
+      }
     };
     if (mobilities.hasOwnProperty(this.metadata.mobility)) {
       geom = mobilities[this.metadata.mobility].g;
@@ -624,8 +621,8 @@ export default function modifier(ms) {
     const leadership = {
       Friend: {
         type: "path",
-        d: "m 45,60 55,-25 55,25",
-      }, /*,
+        d: "m 45,60 55,-25 55,25"
+      } /*,
       Neutral: { type: "path", d: "m 45,60 55,-25 55,25" },
       Hostile: { type: "path", d: "m 42,71 57.8,-43.3 58.2,42.8" },
       Unknown: { type: "path", d: "m 50,60 10,-20 80,0 10,20" }//*/
