@@ -71,6 +71,7 @@ function Symbol() {
   this.style.square = false; // If the symbol should be square
   this.style.standard = ""; // Set standard override
   this.style.strokeWidth = 4; // The stroke width of he icon frame.
+  this.style.modifierColor = ''; // Optional override for modifier decorator stroke colour (HQ staff, TF brackets, feint/dummy, echelon). When set, takes priority over frameColor and iconColor.
   this.style.styleFill = false;
 
   this.symbolAnchor = { x: 50, y: 50 }; // The anchor point for the current symbol
