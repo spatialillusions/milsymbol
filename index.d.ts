@@ -46,6 +46,7 @@ export interface SymbolOptions {
   infoSize?: number;
   installationComposition?: string;
   location?: string;
+  modifierColor?: string;
   monoColor?: string;
   outlineColor?: ColorMode | string;
   outlineWidth?: number;
