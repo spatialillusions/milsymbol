@@ -123,6 +123,30 @@ export default function (
             text: "N",
           },
         ];
+  icn["TP.OCCUPY"] =
+    [
+          {
+            type: "path",
+            fill: false,
+            d: "M0,50 A50,50 0 0,1 96.98,32.89 M96.98,67.1 A50,50 0 0,1 9.04,78.67",
+          },
+          {
+            type: "path",
+            fill: false,
+            d: "M9.04,78.67 l15,5 M9.04,78.67 l-11.18,11.18 M9.04,78.67 l11.18,-11.18 M9.04,78.67 l-15,-5"
+          },
+
+          {
+            type: "text",
+            alignmentBaseline: "middle",
+            stroke: false,
+            textanchor: "middle",
+            x: 96,
+            y: 53,
+            fontsize: 26,
+            text: "O",
+          }
+        ];
   icn["TP.SUPPRESS"] =
     !STD2525 && !numberSIDC
       ? [

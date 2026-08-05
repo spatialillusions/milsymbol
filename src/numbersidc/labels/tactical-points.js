@@ -1076,6 +1076,7 @@ export default function tacticalPoints(sidc) {
   sidc["340900"] = {}; //Mission Tasks / Destroy
   sidc["341400"] = {}; //Mission Tasks / Interdict
   sidc["341600"] = {}; //Mission Tasks / Neutralize
+  sidc["341700"] = {}; //Mission Tasks / Occupy
   sidc["342800"] = {};
   sidc["350101"] = {};
   sidc["350102"] = {};

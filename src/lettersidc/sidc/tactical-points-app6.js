@@ -17,6 +17,8 @@ export default {
     bbox["G-T-GI----"] = { x1: 0, x2: 200, y1: 40, y2: 160 };
     sidc["G-T-GN----"] = icn["TP.NEUTRALIZE"]; //2.X.1.1.15
     bbox["G-T-GN----"] = { x1: 0, x2: 200, y1: 40, y2: 160 };
+    sidc["G-T-GO----"] = icn["TP.OCCUPY"]; //2.X.1.1.17
+    bbox["G-T-GO----"] = { x1: -2, x2: 102, y1: 0, y2: 100 };
     sidc["G-C-MGPFE-"] = icn["TP.FIX ELECTRO-MAGNETIC"]; //2.X.2.1.1.1.1.2
     sidc["G-C-MGPFA-"] = icn["TP.FIX ACOUSTIC"]; //2.X.2.1.1.1.1.2
     sidc["G-C-MGPFO-"] = icn["TP.FIX ELECTRO-OPTICAL"]; //2.X.2.1.1.1.1.3

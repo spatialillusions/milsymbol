@@ -4,6 +4,7 @@ export default function tacticalPoints(sidc) {
   sidc["G-T-GD----"] = {}; //2.X.1.1.9 DESTROY
   sidc["G-T-GI----"] = {}; //2.X.1.1.13 INTERDICT
   sidc["G-T-GN----"] = {}; //2.X.1.1.15 NEUTRALIZE
+  sidc["G-T-GO----"] = {}; //2.X.1.1.17 OCCUPY
   sidc["G-C-MGPFE-"] = {}; //2.X.2.1.1.1.1.1 ELECTRO-MAGNETIC
   sidc["G-C-MGPFA-"] = {}; //2.X.2.1.1.1.1.2 ACOUSTIC
   sidc["G-C-MGPFO-"] = {}; //2.X.2.1.1.1.1.3 ELECTRO-OPTICAL

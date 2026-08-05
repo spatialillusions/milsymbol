@@ -17,6 +17,8 @@ export default {
     bbox["G-T-I-----"] = { x1: 0, x2: 200, y1: 40, y2: 160 };
     sidc["G-T-N-----"] = icn["TP.NEUTRALIZE"]; //TACGRP.TSK.NEUT
     bbox["G-T-N-----"] = { x1: 0, x2: 200, y1: 40, y2: 160 };
+    sidc["G-T-O-----"] = icn["TP.OCCUPY"]; //TACGRP.TSK.OCCP
+    bbox["G-T-O-----"] = { x1: -2, x2: 102, y1: 0, y2: 100 };
     sidc["G-G-GPUUD-"] = icn["TP.DATUM"]; //TACGRP.C2GM.GNL.PNT.USW.UH2.DTM
     bbox["G-G-GPUUD-"] = { x1: 50, x2: 150, y1: 50, y2: 150 };
     sidc["G-G-GPUUB-"] = icn["TP.BRIEF CONTACT"]; //TACGRP.C2GM.GNL.PNT.USW.UH2.BCON

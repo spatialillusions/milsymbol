@@ -4,6 +4,7 @@ export default function tacticalPoints(sidc) {
   sidc["G-T-D-----"] = {}; //TACGRP.TSK.DSTY
   sidc["G-T-I-----"] = {}; //TACGRP.TSK.ITDT
   sidc["G-T-N-----"] = {}; //TACGRP.TSK.NEUT
+  sidc["G-T-O-----"] = {}; //TACGRP.TSK.OCCP
   sidc["G-G-GPUUD-"] = {}; //TACGRP.C2GM.GNL.PNT.USW.UH2.DTM
   sidc["G-G-GPUUB-"] = {}; //TACGRP.C2GM.GNL.PNT.USW.UH2.BCON
   sidc["G-G-GPUUL-"] = {}; //TACGRP.C2GM.GNL.PNT.USW.UH2.LCON

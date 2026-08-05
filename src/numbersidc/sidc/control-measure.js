@@ -523,6 +523,8 @@ export default {
       bbox["341400"] = { x1: 0, x2: 200, y1: 40, y2: 160 };
       sidc["341600"] = icn["TP.NEUTRALIZE"]; //Mission Tasks / Neutralize
       bbox["341600"] = { x1: 0, x2: 200, y1: 40, y2: 160 };
+      sidc["341700"] = icn["TP.OCCUPY"]; //Mission Tasks / Occupy
+      bbox["341700"] = { x1: -2, x2: 102, y1: 0, y2: 100 };
       sidc["342800"] = icn["TP.SUPPRESS"];
       bbox["342800"] = { x1: 0, x2: 200, y1: 40, y2: 160 };
       //sidc["350000"] = []; // N/A
