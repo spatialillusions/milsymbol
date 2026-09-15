@@ -25,7 +25,7 @@ export default {
     Hostile: "rgb(255, 0, 0)",
     Neutral: "rgb(0, 255, 0)",
     Unknown: "rgb(255, 255, 0)",
-    Suspect: "rbg(255, 188, 1)",
+    Suspect: "rgb(255, 188, 1)",
   },
   IconColor: {
     Civilian: "rgb(255,0,255)",
