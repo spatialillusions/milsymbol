@@ -1,6 +1,20 @@
 import resolveColorMode from "../ms/symbol/resolvecolormode.js";
 
 //Symbol Modifiers #######################################################################
+/*
+This file contains the modifier function which adds modifiers to the symbol. 
+These include headquarters, task force, installation, feint dummy, echelon, 
+mobility and dismounted leadership.
+
+  TODO refactor this function to use external JSON files for the modifier
+  geometries and bounding boxes similar to what we do for the echelon modifiers. 
+  This will make it easier to maintain and update the modifier geometries 
+  without having to modify the code directly.
+
+*/
+
+import echelons from "./modifier-echelon-json.js";
+
 export default function modifier(ms) {
   const drawArray1 = [];
   const drawArray2 = [];
@@ -28,7 +42,7 @@ export default function modifier(ms) {
         "GroundFriend",
         "GroundNeutral",
         "SeaNeutral",
-        "SubsurfaceNeutral",
+        "SubsurfaceNeutral"
       ].indexOf(this.metadata.dimension + this.metadata.affiliation) > -1
     )
       y = bbox.y2;
@@ -48,6 +62,7 @@ export default function modifier(ms) {
         bbox.x1 +
         "," +
         (bbox.y2 + hqStaffLength),
+      cssClass: "milsymbol-headquarters"
     };
 
     //outline
@@ -72,7 +87,7 @@ export default function modifier(ms) {
       "Corps/MEF": 110,
       Army: 145,
       "Army Group/front": 180,
-      "Region/Theater": 215,
+      "Region/Theater": 215
     };
     width = width[this.metadata.echelon] || 90;
     geom = {
@@ -94,6 +109,7 @@ export default function modifier(ms) {
         (100 + width / 2) +
         "," +
         bbox.y1,
+      cssClass: "milsymbol-taskforce"
     };
 
     //outline
@@ -129,7 +145,7 @@ export default function modifier(ms) {
         "GroundUnknown",
         "SeaUnknown",
         "AirFriend",
-        "SeaFriend",
+        "SeaFriend"
       ].indexOf(this.metadata.dimension + this.metadata.affiliation) > -1
     )
       gapFiller = 2;
@@ -148,6 +164,7 @@ export default function modifier(ms) {
         " 100," +
         (bbox.y1 - this.style.strokeWidth) +
         " Z",
+      cssClass: "milsymbol-installation"
     };
 
     //outline
@@ -185,6 +202,7 @@ export default function modifier(ms) {
         bbox.x2 +
         "," +
         (bbox.y1 - 0),
+      cssClass: "milsymbol-feintdummy"
     };
 
     //outline
@@ -205,251 +223,21 @@ export default function modifier(ms) {
   }
   //Unit Size
   if (this.metadata.echelon) {
+    const cssEchelonClass = "milsymbol-echelon";
     const installationPadding = this.metadata.installation ? 15 : 0;
-    const echelons = {
-      "Team/Crew": {
-        g: [
-          { type: "circle", cx: 100, cy: bbox.y1 - 20, r: 15 },
-          {
-            type: "path",
-            d: "M80," + (bbox.y1 - 10) + "L120," + (bbox.y1 - 30),
-          },
-        ],
-        bbox: { y1: bbox.y1 - 40 - installationPadding },
-      },
-      Squad: {
-        g: [
-          {
-            type: "circle",
-            fill: color,
-            cx: 100,
-            cy: bbox.y1 - 20,
-            r: 7.5,
-          },
-        ],
-        bbox: { y1: bbox.y1 - 20 - 7.5 - installationPadding },
-      },
-      Section: {
-        g: [
-          {
-            type: "circle",
-            fill: color,
-            cx: 115,
-            cy: bbox.y1 - 20,
-            r: 7.5,
-          },
-          {
-            type: "circle",
-            fill: color,
-            cx: 85,
-            cy: bbox.y1 - 20,
-            r: 7.5,
-          },
-        ],
-        bbox: { y1: bbox.y1 - 20 - 7.5 - installationPadding },
-      },
-      "Platoon/detachment": {
-        g: [
-          {
-            type: "circle",
-            fill: color,
-            cx: 100,
-            cy: bbox.y1 - 20,
-            r: 7.5,
-          },
-          {
-            type: "circle",
-            fill: color,
-            cx: 70,
-            cy: bbox.y1 - 20,
-            r: 7.5,
-          },
-          {
-            type: "circle",
-            fill: color,
-            cx: 130,
-            cy: bbox.y1 - 20,
-            r: 7.5,
-          },
-        ],
-        bbox: { y1: bbox.y1 - 20 - 7.5 - installationPadding },
-      },
-      "Company/battery/troop": {
-        g: [
-          {
-            type: "path",
-            d: "M100," + (bbox.y1 - 10) + "L100," + (bbox.y1 - 35),
-          },
-        ],
-        bbox: { y1: bbox.y1 - 40 - installationPadding },
-      },
-      "Battalion/squadron": {
-        g: [
-          {
-            type: "path",
-            d: "M90," + (bbox.y1 - 10) + "L90," + (bbox.y1 - 35),
-          },
-          {
-            type: "path",
-            d: "M110," + (bbox.y1 - 10) + "L110," + (bbox.y1 - 35),
-          },
-        ],
-        bbox: { y1: bbox.y1 - 40 - installationPadding },
-      },
-      "Regiment/group": {
-        g: [
-          {
-            type: "path",
-            d: "M100," + (bbox.y1 - 10) + "L100," + (bbox.y1 - 35),
-          },
-          {
-            type: "path",
-            d: "M120," + (bbox.y1 - 10) + "L120," + (bbox.y1 - 35),
-          },
-          { type: "path", d: "M80," + (bbox.y1 - 10) + "L80," + (bbox.y1 - 35) },
-        ],
-        bbox: { y1: bbox.y1 - 40 - installationPadding },
-      },
-      Brigade: {
-        g: [
-          {
-            type: "path",
-            d: "M87.5," + (bbox.y1 - 10) + " l25,-25 m0,25 l-25,-25",
-          },
-        ],
-        bbox: { y1: bbox.y1 - 15 - 25 - installationPadding },
-      },
-      Division: {
-        g: [
-          {
-            type: "path",
-            d:
-              "M70," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25   M105," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25",
-          },
-        ],
-        bbox: {
-          y1: bbox.y1 - 15 - 25 - installationPadding,
-          x1: 70,
-          x2: 130,
-        },
-      },
-      "Corps/MEF": {
-        g: [
-          {
-            type: "path",
-            d:
-              "M52.5," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25    M87.5," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25    M122.5," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25",
-          },
-        ],
-        bbox: {
-          y1: bbox.y1 - 15 - 25 - installationPadding,
-          x1: 52.5,
-          x2: 147.5,
-        },
-      },
-      Army: {
-        g: [
-          {
-            type: "path",
-            d:
-              "M35," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25   M70," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25   M105," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25    M140," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25",
-          },
-        ],
-        bbox: {
-          y1: bbox.y1 - 15 - 25 - installationPadding,
-          x1: 35,
-          x2: 165,
-        },
-      },
-      "Army Group/front": {
-        g: [
-          {
-            type: "path",
-            d:
-              "M17.5," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25    M52.5," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25    M87.5," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25    M122.5," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25       M157.5," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25",
-          },
-        ],
-        bbox: {
-          y1: bbox.y1 - 15 - 25 - installationPadding,
-          x1: 17.5,
-          x2: 182.5,
-        },
-      },
-      "Region/Theater": {
-        g: [
-          {
-            type: "path",
-            d:
-              "M0," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25   M35," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25   M70," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25   M105," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25    M140," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25     M175," +
-              (bbox.y1 - 10) +
-              " l25,-25 m0,25 l-25,-25",
-          },
-        ],
-        bbox: {
-          y1: bbox.y1 - 15 - 25 - installationPadding,
-          x1: 0,
-          x2: 200,
-        },
-      },
-      Command: {
-        g: [
-          {
-            type: "path",
-            d:
-              "M70," +
-              (bbox.y1 - 22.5) +
-              " l25,0 m-12.5,12.5 l0,-25   M105," +
-              (bbox.y1 - 22.5) +
-              " l25,0 m-12.5,12.5 l0,-25",
-          },
-        ],
-        bbox: {
-          y1: bbox.y1 - 15 - 25 - installationPadding,
-          x1: 70,
-          x2: 130,
-        },
-      },
-    };
+
     if (echelons.hasOwnProperty(this.metadata.echelon)) {
       geom = echelons[this.metadata.echelon].g;
+
+      for (let i = 0; i < geom.length; i++) {
+        geom[i].cssClass = cssEchelonClass;
+        if (geom[i].hasOwnProperty("fill")) {
+          if (geom[i].fill === true) {
+            geom[i].fill = color;
+          }
+          geom[i].cssClass = cssEchelonClass + " " + cssEchelonClass + "-fill";
+        }
+      }
 
       //outline
       if (this.style.outlineWidth > 0)
@@ -467,10 +255,24 @@ export default function modifier(ms) {
       drawArray2.push({
         type: "translate",
         x: 0,
-        y: -installationPadding,
-        draw: geom,
+        y: bbox.y1 - installationPadding,
+        draw: geom
       });
-      gbbox.merge(echelons[this.metadata.echelon].bbox);
+
+      const echelonBbox = {
+        x1:
+          echelons[this.metadata.echelon].bbox.x1 === 0
+            ? 0
+            : echelons[this.metadata.echelon].bbox.x1 || undefined,
+        x2: echelons[this.metadata.echelon].bbox.x2 || undefined,
+        y1:
+          bbox.y1 +
+          echelons[this.metadata.echelon].bbox.y1 -
+          installationPadding,
+        y2: echelons[this.metadata.echelon].bbox.y2 || undefined
+      };
+
+      gbbox.merge(echelonBbox);
     }
   }
   //This is for movability indicators.
@@ -501,45 +303,45 @@ export default function modifier(ms) {
         g: [
           { type: "path", d: "M 53,1 l 94,0" },
           { type: "circle", cx: 58, cy: 8, r: 8 },
-          { type: "circle", cx: 142, cy: 8, r: 8 },
+          { type: "circle", cx: 142, cy: 8, r: 8 }
         ],
-        bbox: { y2: bbox.y2 + 8 * 2 },
+        bbox: { y2: bbox.y2 + 8 * 2 }
       },
       "Wheeled cross country": {
         g: [
           { type: "path", d: "M 53,1 l 94,0" },
           { type: "circle", cx: 58, cy: 8, r: 8 },
           { type: "circle", cx: 142, cy: 8, r: 8 },
-          { type: "circle", cx: 100, cy: 8, r: 8 },
+          { type: "circle", cx: 100, cy: 8, r: 8 }
         ],
-        bbox: { y2: bbox.y2 + 8 * 2 },
+        bbox: { y2: bbox.y2 + 8 * 2 }
       },
       Tracked: {
         g: [
           {
             type: "path",
-            d: "M 53,1 l 100,0 c15,0 15,15 0,15 l -100,0 c-15,0 -15,-15 0,-15",
-          },
+            d: "M 53,1 l 100,0 c15,0 15,15 0,15 l -100,0 c-15,0 -15,-15 0,-15"
+          }
         ],
-        bbox: { y2: bbox.y2 + 18, x1: 42, x2: 168 },
+        bbox: { y2: bbox.y2 + 18, x1: 42, x2: 168 }
       },
       "Wheeled and tracked combination": {
         g: [
           { type: "circle", cx: 58, cy: 8, r: 8 },
           {
             type: "path",
-            d: "M 83,1 l 70,0 c15,0 15,15 0,15 l -70,0 c-15,0 -15,-15 0,-15",
-          },
+            d: "M 83,1 l 70,0 c15,0 15,15 0,15 l -70,0 c-15,0 -15,-15 0,-15"
+          }
         ],
-        bbox: { y2: bbox.y2 + 8 * 2, x2: 168 },
+        bbox: { y2: bbox.y2 + 8 * 2, x2: 168 }
       },
       Towed: {
         g: [
           { type: "path", d: "M 63,1 l 74,0" },
           { type: "circle", cx: 58, cy: 3, r: 8 },
-          { type: "circle", cx: 142, cy: 3, r: 8 },
+          { type: "circle", cx: 142, cy: 3, r: 8 }
         ],
-        bbox: { y2: bbox.y2 + 10 },
+        bbox: { y2: bbox.y2 + 10 }
       },
       Rail: {
         g: [
@@ -547,63 +349,60 @@ export default function modifier(ms) {
           { type: "circle", cx: 58, cy: 8, r: 8 },
           { type: "circle", cx: 73, cy: 8, r: 8 },
           { type: "circle", cx: 127, cy: 8, r: 8 },
-          { type: "circle", cx: 142, cy: 8, r: 8 },
+          { type: "circle", cx: 142, cy: 8, r: 8 }
         ],
-        bbox: { y2: bbox.y2 + 8 * 2 },
+        bbox: { y2: bbox.y2 + 8 * 2 }
       },
       "Over snow (prime mover)": {
         g: [{ type: "path", d: "M 50,-9 l10,10 90,0" }],
-        bbox: { y2: bbox.y2 + 9 },
+        bbox: { y2: bbox.y2 + 9 }
       },
       Sled: {
         g: [
           {
             type: "path",
-            d: "M 145,-12  c15,0 15,15 0,15 l -90,0 c-15,0 -15,-15 0,-15",
-          },
+            d: "M 145,-12  c15,0 15,15 0,15 l -90,0 c-15,0 -15,-15 0,-15"
+          }
         ],
-        bbox: { y2: bbox.y2 + 15, x1: 42, x2: 168 },
+        bbox: { y2: bbox.y2 + 15, x1: 42, x2: 168 }
       },
       "Pack animals": {
         g: [{ type: "path", d: "M 80,20 l 10,-20 10,20 10,-20 10,20" }],
-        bbox: { y2: bbox.y2 + 20 },
+        bbox: { y2: bbox.y2 + 20 }
       },
       Barge: {
         g: [{ type: "path", d: "M 50,1 l 100,0 c0,10 -100,10 -100,0" }],
-        bbox: { y2: bbox.y2 + 10 },
+        bbox: { y2: bbox.y2 + 10 }
       },
       Amphibious: {
         g: [
           {
             type: "path",
-            d:
-              "M 65,10 c 0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0",
-          },
+            d: "M 65,10 c 0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0 0,10 10,10 10,0	0,-10 10,-10 10,0"
+          }
         ],
-        bbox: { y2: bbox.y2 + 20 },
+        bbox: { y2: bbox.y2 + 20 }
       },
       "Short towed array": {
         g: [
           {
             type: "path",
             fill: color,
-            d:
-              "M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M100,0 l5,5 -5,5 -5,-5 z",
-          },
+            d: "M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M100,0 l5,5 -5,5 -5,-5 z"
+          }
         ],
-        bbox: { y2: bbox.y2 + 10 },
+        bbox: { y2: bbox.y2 + 10 }
       },
       "Long towed Array": {
         g: [
           {
             type: "path",
             fill: color,
-            d:
-              "M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M105,0 l-10,0 0,10 10,0 z M75,0 l5,5 -5,5 -5,-5 z  M125,0 l5,5 -5,5 -5,-5 z",
-          },
+            d: "M 50,5 l 100,0 M50,0 l10,0 0,10 -10,0 z M150,0 l-10,0 0,10 10,0 z M105,0 l-10,0 0,10 10,0 z M75,0 l5,5 -5,5 -5,-5 z  M125,0 l5,5 -5,5 -5,-5 z"
+          }
         ],
-        bbox: { y2: bbox.y2 + 10 },
-      },
+        bbox: { y2: bbox.y2 + 10 }
+      }
     };
     if (mobilities.hasOwnProperty(this.metadata.mobility)) {
       geom = mobilities[this.metadata.mobility].g;
@@ -630,8 +429,8 @@ export default function modifier(ms) {
     const leadership = {
       Friend: {
         type: "path",
-        d: "m 45,60 55,-25 55,25",
-      }, /*,
+        d: "m 45,60 55,-25 55,25"
+      } /*,
       Neutral: { type: "path", d: "m 45,60 55,-25 55,25" },
       Hostile: { type: "path", d: "m 42,71 57.8,-43.3 58.2,42.8" },
       Unknown: { type: "path", d: "m 50,60 10,-20 80,0 10,20" }//*/
@@ -645,13 +444,21 @@ export default function modifier(ms) {
   }
   //Assign fill, stroke and stroke-width
   for (let i = 0; i < drawArray1.length; i++) {
+    if (drawArray1[i].hasOwnProperty("fill") && drawArray1[i].fill === true)
+      drawArray1[i].fill = color;
     if (!drawArray1[i].hasOwnProperty("fill")) drawArray1[i].fill = false;
+
     if (!drawArray1[i].hasOwnProperty("stroke")) drawArray1[i].stroke = color;
     if (!drawArray1[i].hasOwnProperty("strokewidth"))
       drawArray1[i].strokewidth = this.style.strokeWidth;
   }
   for (let i = 0; i < drawArray2.length; i++) {
+    if (drawArray2[i].hasOwnProperty("fill") && drawArray2[i].fill === true) {
+      drawArray2[i].fill = color;
+    }
+
     if (!drawArray2[i].hasOwnProperty("fill")) drawArray2[i].fill = false;
+
     if (!drawArray2[i].hasOwnProperty("stroke")) drawArray2[i].stroke = color;
     if (!drawArray2[i].hasOwnProperty("strokewidth"))
       drawArray2[i].strokewidth = this.style.strokeWidth;

@@ -127,6 +127,14 @@ function sanitizeId(value, fallback = "") {
   return normalized || fallback;
 }
 
+function sanitizeCssClass(value) {
+  if (value === null || typeof value === "undefined") return "";
+  return String(value)
+    .replace(/[\u0000-\u001F\u007F]/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
 export default function asSVG() {
   let clipCounter = 0;
   function processInstructions(instruction) {
@@ -294,6 +302,12 @@ export default function asSVG() {
               1
             );
             svg += attr("fill-opacity", fillOpacity);
+          }
+          if (typeof instruction[i].cssClass !== "undefined") {
+            const cssClass = sanitizeCssClass(instruction[i].cssClass);
+            if (cssClass) {
+              svg += attr("class", cssClass);
+            }
           }
           svg += " >";
           switch (instruction[i].type) {

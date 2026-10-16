@@ -3,6 +3,9 @@ import strWidth from "./string-width.js";
 export default function textfieldsMod(ms) {
   const drawArray1 = [];
   const drawArray2 = [];
+
+  const cssClass = "milsymbol-textfields";
+
   const bbox = this.metadata.baseGeometry.bbox;
   let flag = this.options.country_flag ? 70 : 0;
   flag =
@@ -88,6 +91,8 @@ export default function textfieldsMod(ms) {
             text.fontsize = lbl.fontsize;
           if (Object.prototype.hasOwnProperty.call(lbl, "fontweight"))
             text.fontweight = lbl.fontweight;
+          if (Object.prototype.hasOwnProperty.call(lbl, "cssClass"))
+            text.cssClass = lbl.cssClass;
           text.x = lbl.x;
           text.y = lbl.y;
           text.text = this.options[i];
@@ -255,7 +260,8 @@ export default function textfieldsMod(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
+        cssClass: cssClass
       });
       gbbox.y1 = bbox.y1 - 10 - fontSize;
     }
@@ -418,7 +424,8 @@ export default function textfieldsMod(ms) {
           fontsize: fontSize,
           fontfamily: fontFamily,
           fill: fontColor,
-          stroke: false
+          stroke: false,
+          cssClass: cssClass
         });
         gbbox.y2 = bbox.y2 + fontSize;
       }
@@ -756,7 +763,8 @@ export default function textfieldsMod(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
+        cssClass: cssClass
       });
     if (gStrings.L2)
       drawArray2.push({
@@ -768,7 +776,8 @@ export default function textfieldsMod(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
+        cssClass: cssClass
       });
     if (gStrings.L3)
       drawArray2.push({
@@ -780,7 +789,8 @@ export default function textfieldsMod(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
+        cssClass: cssClass
       });
     if (gStrings.L4)
       drawArray2.push({
@@ -792,7 +802,8 @@ export default function textfieldsMod(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
+        cssClass: cssClass
       });
     if (gStrings.L5)
       drawArray2.push({
@@ -804,7 +815,8 @@ export default function textfieldsMod(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
+        cssClass: cssClass
       });
 
     //geometries
@@ -818,7 +830,8 @@ export default function textfieldsMod(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
+        cssClass: cssClass
       });
     if (gStrings.R2)
       drawArray2.push({
@@ -830,7 +843,8 @@ export default function textfieldsMod(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
+        cssClass: cssClass
       });
     if (gStrings.R3)
       drawArray2.push({
@@ -842,7 +856,8 @@ export default function textfieldsMod(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
+        cssClass: cssClass
       });
     if (gStrings.R4)
       drawArray2.push({
@@ -854,7 +869,8 @@ export default function textfieldsMod(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
+        cssClass: cssClass
       });
     if (gStrings.R5)
       drawArray2.push({
@@ -866,7 +882,8 @@ export default function textfieldsMod(ms) {
         fontsize: fontSize,
         fontfamily: fontFamily,
         fill: fontColor,
-        stroke: false
+        stroke: false,
+        cssClass: cssClass
       });
 
     //outline

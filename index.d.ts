@@ -42,7 +42,8 @@ export interface SymbolOptions {
   infoColor?: ColorMode | string;
   infoFields?: boolean;
   infoOutlineColor?: string;
-  infoOutlineWidth?: number;
+  /** Width of the text-field outline, or `false` to use `outlineWidth`. */
+  infoOutlineWidth?: number | false;
   infoSize?: number;
   installationComposition?: string;
   location?: string;
@@ -192,6 +193,7 @@ export class Symbol {
   isValid(extended?: boolean): boolean | Object;
   setOptions(opts: SymbolOptions): Symbol;
   toDataURL(): string;
+  drawInstructions: DrawInstruction[];
 }
 
 export interface Box {
@@ -344,6 +346,13 @@ export type IconPartsFunction = (
 
 export function addIconParts(iconParts: IconPartsFunction): typeof _default;
 
+export function outline<T extends DrawInstruction | DrawInstruction[]>(
+  drawInstructions: T,
+  outline: number,
+  stroke?: number,
+  color?: string
+): T;
+
 declare const _default: {
   Symbol: typeof Symbol;
   BBox: BBoxConstructor;
@@ -358,6 +367,7 @@ declare const _default: {
   setStandard: typeof setStandard;
   addSymbolPart: typeof addSymbolPart;
   addIconParts: typeof addIconParts;
+  outline: typeof outline;
 };
 
 export default _default;
