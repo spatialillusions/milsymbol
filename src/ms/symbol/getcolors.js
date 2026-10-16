@@ -1,49 +1,37 @@
 import { ms } from "../../ms.js";
+import resolveColorMode from "./resolvecolormode.js";
+
 export default function getColors() {
-  let baseFillColor =
+  let baseFillColor = resolveColorMode(
     typeof this.style.colorMode === "object"
       ? this.style.colorMode
-      : ms.getColorMode(this.style.colorMode);
-  const baseFrameColor =
+      : ms.getColorMode(this.style.colorMode),
+    this.style,
+    this.metadata
+  );
+  const baseFrameColor = resolveColorMode(
     typeof this.style.frameColor === "object"
       ? this.style.frameColor
-      : ms.getColorMode("FrameColor");
-  const baseIconColor =
+      : ms.getColorMode("FrameColor"),
+    this.style,
+    this.metadata,
+    true
+  );
+  const baseIconColor = resolveColorMode(
     typeof this.style.iconColor === "object"
       ? this.style.iconColor
-      : ms.getColorMode("IconColor");
+      : ms.getColorMode("IconColor"),
+    this.style,
+    this.metadata
+  );
   const baseIconFillColor = baseFillColor;
   let baseColorBlack = ms.getColorMode("Black");
   let baseColorWhite = ms.getColorMode("White");
   const baseColorOffWhite = ms.getColorMode("OffWhite");
   const baseColorNone = ms.getColorMode("None");
 
-  //If it is a Civilian Symbol and civilian colors not are turned off, use civilian colors...
-  if (this.style.civilianColor && this.metadata.civilian) {
-    baseFillColor.Friend = baseFillColor.Neutral = baseFillColor.Unknown =
-      baseFillColor.Civilian;
-    baseFrameColor.Friend = baseFrameColor.Neutral = baseFrameColor.Unknown =
-      baseFrameColor.Civilian;
-    baseIconColor.Friend = baseIconColor.Neutral = baseIconColor.Unknown =
-      baseIconColor.Civilian;
-  }
-  //Joker and Faker
-  if (this.metadata.joker || this.metadata.faker) {
-    baseFillColor.Friend = baseFillColor.Hostile;
-    baseFrameColor.Friend = baseFrameColor.Hostile;
-    baseIconColor.Friend = baseIconColor.Hostile;
-  }
-
-  //Joker and Faker
-  if (this.metadata.suspect) {
-    baseFillColor.Friend = baseFillColor.Hostile = baseFillColor.Suspect;
-    baseFrameColor.Friend = baseFrameColor.Hostile = baseFrameColor.Suspect;
-    baseIconColor.Friend = baseIconColor.Hostile = baseIconColor.Suspect;
-  }
-
   //If the user has specified a mono color to use for all symbols.
   if (this.style.monoColor != "") {
-    baseFrameColor.Friend = baseFrameColor.Neutral = baseFrameColor.Hostile = baseFrameColor.Unknown = baseFrameColor.Civilian = this.style.monoColor;
     baseColorBlack = baseFrameColor;
     baseColorWhite = baseFillColor = baseColorNone;
   }
@@ -62,7 +50,7 @@ export default function getColors() {
   if (this.metadata.frame /* || (!this.metadata.frame && !this.style.icon)*/) {
     colors.frameColor =
       typeof this.style.frameColor === "object"
-        ? this.style.frameColor
+        ? baseFrameColor
         : baseColorBlack;
   } else {
     colors.frameColor = baseColorNone;
@@ -76,7 +64,7 @@ export default function getColors() {
         : baseFillColor;
     colors.iconColor =
       typeof this.style.iconColor === "object"
-        ? this.style.iconColor
+        ? baseIconColor
         : baseColorBlack;
     //Dirty override, we want colors in the icon if we just turn off the frame. This is a special fix for filled icn in 2525.
     colors.iconFillColor = !this.metadata.frame

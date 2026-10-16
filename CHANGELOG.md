@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.0.6
+
+### Fixed
+
+- getColors no longer mutates the colorMode, frameColor, or iconColor objects
+  passed in as options, so shared color objects can safely be reused across
+  symbols
+
 ## 3.0.5
 
 - Refresh compatible dependency versions and the lockfile to resolve known security advisories.

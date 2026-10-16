@@ -1,3 +1,5 @@
+import resolveColorMode from "../ms/symbol/resolvecolormode.js";
+
 //Symbol Modifiers #######################################################################
 /*
 This file contains the modifier function which adds modifiers to the symbol. 
@@ -17,9 +19,15 @@ export default function modifier(ms) {
   const drawArray1 = [];
   const drawArray2 = [];
   const bbox = new ms.BBox(this.metadata.baseGeometry.bbox); // clone the bbox
-  const color = this.style.frameColor
-    ? this.style.frameColor[this.metadata.affiliation]
-    : this.colors.iconColor[this.metadata.affiliation];
+  const color =
+    typeof this.style.frameColor === "object"
+      ? resolveColorMode(
+          this.style.frameColor,
+          this.style,
+          this.metadata,
+          true
+        )[this.metadata.affiliation]
+      : this.colors.iconColor[this.metadata.affiliation];
   const gbbox = new ms.BBox(); // bounding box for the added geometries
   let geom;
 
