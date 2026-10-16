@@ -1,5 +1,12 @@
 # Change Log
 
+## 3.0.5
+
+- Refresh compatible dependency versions and the lockfile to resolve known security advisories.
+- Require Rollup 4.59.0 or later for its path-traversal security fix.
+- Replace the unused general-purpose glob/copy dependency chain with a tested helper for the three documentation standard files.
+- Keep the Rollup replacement plugin in development dependencies; it is not a runtime dependency.
+
 ## 3.0.0
 
 ### Added

@@ -48,16 +48,13 @@
     "mil-std-2525": "^0.2.8",
     "milstandard-e": "^0.2.14",
     "prettier": "^3.8.1",
-    "rollup": "^4.57.1",
-    "rollup-plugin-copy": "^3.5.0",
+    "rollup": "^4.59.0",
     "stanag-app6": "^0.2.0",
     "tead": "^0.7.1",
-    "uglify-js": "^3.19.3"
+    "uglify-js": "^3.19.3",
+    "@rollup/plugin-replace": "^6.0.3"
   },
   "babel": {
     "presets": "env"
-  },
-  "dependencies": {
-    "@rollup/plugin-replace": "^6.0.3"
   }
 }

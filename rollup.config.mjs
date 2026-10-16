@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-import copy from "rollup-plugin-copy";
+import copyStandards from "./build-plugins/copy-standards.mjs";
 import replace from "@rollup/plugin-replace";
 
 const packageJSON = JSON.parse(
@@ -48,23 +48,7 @@ export default [
       name: "ms"
     },
     plugins: [
-      copy({
-        targets: [
-          {
-            src: "node_modules/mil-std-2525/milstd2525.js",
-            dest: "docs/"
-          },
-          {
-            src: "node_modules/stanag-app6/stanagapp6.js",
-            dest: "docs/"
-          },
-          {
-            src: "node_modules/milstandard-e/milstandard.js",
-            dest: "docs/"
-          }
-        ],
-        verbose: true
-      }),
+      copyStandards(),
       replace({
         __version__: JSON.stringify(version),
         preventAssignment: true
