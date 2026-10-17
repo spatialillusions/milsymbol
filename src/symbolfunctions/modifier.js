@@ -19,8 +19,9 @@ export default function modifier(ms) {
   const drawArray1 = [];
   const drawArray2 = [];
   const bbox = new ms.BBox(this.metadata.baseGeometry.bbox); // clone the bbox
-  const color =
-    typeof this.style.frameColor === "object"
+  const color = this.style.modifierColor
+    ? this.style.modifierColor
+    : typeof this.style.frameColor === "object"
       ? resolveColorMode(
           this.style.frameColor,
           this.style,
