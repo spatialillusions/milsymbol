@@ -10,7 +10,7 @@ Historical wording is retained; duplicate version headings and empty template
 categories are omitted. See [Development resources](dev/README.md) for the
 publication workflow and GitHub/npm version inventory.
 
-## 3.0.5 (Unreleased)
+## 3.0.5 - 2026-10-27
 
 ### Added
 
