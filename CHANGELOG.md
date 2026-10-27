@@ -1,6 +1,16 @@
 # Change Log
 
-## 3.0.5
+This is the release history for milsymbol. Update the next unreleased version
+alongside code changes, using Added, Changed, Deprecated, Removed, Fixed, and
+Security sections as needed.
+
+Published entries include all 23 public [GitHub releases](https://github.com/spatialillusions/milsymbol/releases),
+verified on 2026-10-27. Dates below are UTC publication dates from GitHub metadata.
+Historical wording is retained; duplicate version headings and empty template
+categories are omitted. See [Development resources](dev/README.md) for the
+publication workflow and GitHub/npm version inventory.
+
+## 3.0.5 (Unreleased)
 
 ### Added
 
@@ -44,7 +54,52 @@
   helper for the three documentation standard files. Keep the Rollup replacement
   plugin in development dependencies rather than runtime dependencies.
 
-## 3.0.0
+## 3.0.4 - 2026-03-10
+
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/v3.0.4)
+
+### Added
+
+Stack extension is now part of milsymbol thanks to a sponsorship by Austrian Armed Forces.
+
+### Security
+
+A possible XSS vulnerability in the SVG output has been fixed by parsing all user provided input before we create the SVG string.
+
+## 3.0.3 - 2025-07-29
+
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/v3.0.3)
+
+### Fixed
+
+- Updated TypeScript definitions.
+- Minor change in canvas output where some symbols were clipped.
+- Fixed number in space modifier 2 after clarification from SSMC
+
+## 3.0.2 - 2025-04-11
+
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/v3.0.2)
+
+### Changed
+
+- Updated TypeScript definitions.
+
+### Fixed
+
+- Control measure points did not get all labels set correctly, that should be fixed now.
+
+## 3.0.1 - 2025-03-17
+
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/v3.0.1)
+
+### Changed
+
+- Changed baseline property in SVG to resolve Firefox issue
+-  String widths are now in a separate file
+
+## 3.0.0 - 2025-02-08
+
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/v3.0.0)
 
 ### Added
 
@@ -62,15 +117,28 @@
 
 - uniqueDesignation will now be rendered with a smaller font on most control measure points
 
-### Deprecated
+## 2.2.0 - 2023-03-15
 
-### Removed
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/v2.2.0)
 
-### Fixed
+- Fixed #280 that broke in the last release.
+- Added support for the option fillColor that makes it possible to fill a symbol with any color in a simple way.
 
-### Security
+## 2.1.0 - 2023-03-05
 
-## 2.0.0
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/v2.1.0)
+
+### Changed
+
+Since MIL-STD-2525D never was released, we reverted a lot of things in the cyberspace appendix.
+
+Also updated to use the NMP packages stanag-app6 and mil-std-2525 instead of the old milstd.
+
+And a bunch of minor fixes.
+
+## 2.0.0 - 2019-04-25
+
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/v2.0.0)
 
 ### Added
 
@@ -103,8 +171,6 @@
 
 - Make it possible to set infoColor to a Color Mode
 
-### Deprecated
-
 ### Removed
 
 - `symbol.getProperties()` is removed (use `symbol.getMetadata()` instead)
@@ -124,40 +190,27 @@
 
 - Prevented XSS issue where malicious code could be inserted into text fields of SVG symbols, all < and > are now encoded to prevent this.
 
-## 1.3.3 14 NOV 2017
+## 1.3.3 - 2017-11-14
 
-### Added
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/1.3.3)
 
 ### Changed
 
 - Updated and moved the unit generator from dev to examples.
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 
 - The option infoColor was not set when used, this is now fixed, again.
-- The option hqStaffLength was not set when used, this is now fixed.
+- The option hqStafLength was not set when used, this is now fixed.
 - Fill opacity affected outline opacity as well in canvas output.
 
-### Security
+## 1.3.2 - 2017-11-13
 
-## 1.3.2 13 NOV 2017
-
-### Added
-
-### Changed
-
-### Deprecated
-
-### Removed
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/1.3.2)
 
 ### Fixed
 
 - Following symbols were drawn as fixed wing instead of rotary wing
-
   - WAR.SOFUNT.AVN.ROT.ATK
   - WAR.SOFUNT.AVN.ROT.UTY
   - WAR.SOFUNT.AVN.ROT.UTY.LIT
@@ -166,30 +219,21 @@
 
 - The option infoColor was not set when used, this is now fixed.
 
-### Security
+## 1.3.1 - 2017-10-17
 
-## 1.3.1 17 OCT 2017
-
-### Added
-
-### Changed
-
-### Deprecated
-
-### Removed
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/1.3.1)
 
 ### Fixed
 
 - Fixed canvas output in Microsoft Edge 14
 
-### Security
+## 1.3.0 - 2017-08-21
 
-## 1.3.0 21 AUG 2017
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/1.3.0)
 
 ### Added
 
-- symbol.getOptions(_includeStyle_) will return the options that are set on the
-  symbol.
+- symbol.getOptions(*includeStyle*) will return the options that are set on the symbol.
 
 - symbol.getStyle() will return the style options that are set on the symbol.
 
@@ -197,39 +241,23 @@
 
 ### Changed
 
-- Options and Style are now stored in separate Objects on the symbol for better
-  structure.
+- Options and Style are now stored in separate Objects on the symbol for better structure.
 
 - ms.Symbol and setOptions can now take any number of arguments from 0 to n.
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 
-- ArcGIS example had to be updated because of change of how Options and Style
-  are stored.
+- ArcGIS example had to be updated because of change of how Options and Style are stored.
 
-- monoColor was initialized as `false` instead of an empty string, this is now
-  corrected and makes the correct status modifiers to be used by default.
+- monoColor was initialized as `false` instead of an empty string, this is now corrected and makes the correct status modifiers to be used by default.
 
-- 10031000001104000000 was drawn with an icon IW instead of IO (Since it is IW
-  in 2525C, but that is now fiexed.)
+- 10031000001104000000 was drawn with an icon IW instead of IO (Since it is IW in 2525C, but that is now fiexed.)
 
 - Fixed the size of the sensor icon used in 2525D
 
-### Security
+## 1.2.1 - 2017-06-12
 
-## 1.2.1 12 JUN 2017
-
-### Added
-
-### Changed
-
-### Deprecated
-
-### Removed
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/1.2.1)
 
 ### Fixed
 
@@ -237,9 +265,9 @@
 
 - Typo in Changelog
 
-### Security
+## 1.2.0 - 2017-06-11
 
-## 1.2.0 11 JUN 2017
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/1.2.0)
 
 ### Added
 
@@ -247,15 +275,11 @@
 
 ### Changed
 
-- isValid(option) can now take an bolean input that makes it return a validaton
-  object with extended information about the vadility.
+- isValid(option) can now take an bolean input that makes it return a validaton object with extended information about the vadility.
 
 - isValid now validates the mobility modifier as well as the symbol icon.
 
-- Updated ENERGY FACITILIES INFRASTRUCTURE to better representation of the
-  standard.
-
-### Deprecated
+- Updated ENERGY FACITILIES INFRASTRUCTURE to better representation of the standard.
 
 ### Removed
 
@@ -263,86 +287,63 @@
 
 ### Fixed
 
-- The quantiy field would be cut if the content was wider than the symbol, this
-  is now fixed so that the symbol size adopts to to width of the quantity field.
+- The quantiy field would be cut if the content was wider than the symbol, this is now fixed so that the symbol size adopts to to width of the quantity field.
 
-- Fixed Land Unit M1 10 command and control that was displayed in as a Y instead
-  of C2.
+- Fixed Land Unit M1 10 command and control that was displayed in as a Y instead of C2.
 
 - Some modifiers on Signals Intelligence symbols in 2525C was incorrect
 
-### Security
+## 1.1.0 - 2017-04-16
 
-## 1.1.0 16 APR 2017
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/1.1.0)
 
-I would like to thank @okwolf that has contributed with unit tests and some code
-reorganization.
+I would like to thank @okwolf that has contributed with unit tests and some code reorganization.
 
 ### Added
 
 - It is now possible to use `sidc` or `SIDC` in an options object.
 
-- It is now possible to initiate a symbol with just an options object
-  `ms.Symbol({options})`.
+- It is now possible to initiate a symbol with just an options object `ms.Symbol({options})`.
 
-- ms.Symbol().isValid() now returns a boolean representing if it was possible to
-  find the symbol icon for the provided SIDC.
+- ms.Symbol().isValid() now returns a boolean representing if it was possible to find the symbol icon for the provided SIDC.
 
 - The source code for the unit generator is now provided in the dev folder.
 
-- Added 2525B symbols that are missing in 2525C, so now we have full support for
-  2525B as well.
+- Added 2525B symbols that are missing in 2525C, so now we have full support for 2525B as well.
 
 - Initial unit tests added to the repository.
 
-### Changed
-
-### Deprecated
-
-### Removed
-
 ### Fixed
 
-- Fix for that tactical points with labels with large font sizes might draw too
-  narrow so that part of the label can't be seen.
+- Fix for that tactical points with labels with large font sizes might draw too narrow so that part of the label can't be seen.
 
-- Fix for that units with invalid icon part in the SIDC did not get the upside
-  down question mark when canvas output was used.
+- Fix for that units with invalid icon part in the SIDC did not get the upside down question mark when canvas output was used.
 
-- G-F-PTS--- TACGRP.FSUPP.PNT.TGT.PTGT and G-C-FSTP-- 2.X.2.3.1.1.1 POINT/SINGLE
-  TARGET now uses altitudeDepth instead of additionalInformation1 to display the
-  target altitude.
+- G-F-PTS--- TACGRP.FSUPP.PNT.TGT.PTGT and G-C-FSTP-- 2.X.2.3.1.1.1 POINT/SINGLE TARGET now uses altitudeDepth instead of additionalInformation1 to display the target altitude.
 
-- Made sure that tactical points that dosen't have labels in the specifications
-  don't get labels even if they are set.
+- Made sure that tactical points that dosen't have labels in the specifications don't get labels even if they are set.
 
-### Security
+## 1.0.0 - 2017-03-03
 
-## 1.0.0 03 MAR 2017
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/1.0.0)
 
-- Milsymbol is now split into several modules and built with
-  [webpack](https://webpack.github.io/), this makes the code easier to maintain.
+- Milsymbol is now split into several modules and built with [webpack](https://webpack.github.io/), this makes the code easier to maintain.
 
-- Avoid getting and setting properties directly, use methods for this when they
-  are available, in the future properties might change names.
+- Avoid getting and setting properties directly, use methods for this when they are available, in the future properties might change names.
 
 ### Added
 
-- colorMode property can now be set to a string representing the name of a
-  registered color mode.
+- colorMode property can now be set to a string representing the name of a registered color mode.
 
 - symbol.getSize() returns an object with the width and height of the symbol.
 
 - symbol.getAnchor() returns an object with the x and y offset of the symbol.
 
-- symbol.getOctagonAnchor() returns an object with the x and y offset of the
-  octagon center.
+- symbol.getOctagonAnchor() returns an object with the x and y offset of the octagon center.
 
-- bbox.merge(another-bbox), use this instead of MS.bboxMax for merging bounding
-  boxes.
+- bbox.merge(another-bbox), use this instead of MS.bboxMax for merging bounding boxes.
 
-- Milsymbol can now be used as a AMD/CommonJS/etc... module, by requiering
-  `milsymbol`, the global `var` is called ms.
+- Milsymbol can now be used as a AMD/CommonJS/etc... module, by requiering `milsymbol`, the global `var` is called ms.
 
 - ms.getVersion() that returns the version as a string.
 
@@ -358,18 +359,15 @@ reorganization.
 
 - ms.BBox() should be used instead of MS.bbox(). (Since it is a class...)
 
-- ms.ColorMode() should be used instead of MS.colorMode(). (Since it is a
-  class...)
+- ms.ColorMode() should be used instead of MS.colorMode(). (Since it is a class...)
 
 - ms.Symbol() should be used instead of MS.symbol(). (Since it is a class...)
 
-- Tactical points is now part of _/dist/milsymbol.js_, no need to include any
-  extra files.
+- Tactical points is now part of */dist/milsymbol.js*, no need to include any extra files.
 
 - Tactical points now supports APP6-B ANNEX E.
 
-- Symbols with an invalid icon in the SIDC will now be rendered with an upside
-  down ?. (According to MIL-STD-2525D)
+- Symbols with an invalid icon in the SIDC will now be rendered with an upside down ?. (According to MIL-STD-2525D)
 
 ### Changed
 
@@ -377,14 +375,14 @@ reorganization.
 
 - Feint/Dummy indicator drawn as specified in MIL-STD-2525D change 1.
 
+
 ### Deprecated
 
 - Avoid setting properties directly, use setOptions(options) instead.
 
 - Do not use .XML anymore, use asSVG() instead, **if needed set `ms.autoSVG = true`**. ms.autoSVG will be removed in a future version.
 
-- getMarker(), it's not needed anymore, symbols are automatically updated when
-  options are updated using setOptions().
+- getMarker(), it's not needed anymore, symbols are automatically updated when options are updated using setOptions().
 
 - MS.bboxMax(), use bbox.merge() instead.
 
@@ -422,76 +420,62 @@ reorganization.
 
 - Fixed a bug that prevented specialHeadquarters to be drawn on Canvas output.
 
-### Security
+## 0.6.0 - 2016-12-25
 
-## 0.6.0 25 DEC 2016
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/0.6.0)
 
 ### Added
-
-- Support for outlines on symbols using properties `outlineColor` and
-  `outlineWidth`.
-
-- toDataURL() that returns a base 64 encoding of the SVG symbol. (See
-  deprication of _asImage()_)
-
+- Support for outlines on symbols using properties `outlineColor` and `outlineWidth`.
+- toDataURL() that returns a base 64 encoding of the SVG symbol. (See deprication of _asImage()_)
 - Possibility to Add/Update existing SIDC.
-
 - Possibility to Add/Update the icon parts that constructs the icons.
-
 - Support for tactical point symbols in MIL-STD-2525C.
 
-### Changed
-
 ### Deprecated
-
 - _asImage()_ since it returns a data url and not an image.
 
-### Removed
+## 0.5.6 - 2016-05-14
 
-### Fixed
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/0.5.6)
 
-### Security
+Several minor updates and minor changes to symbols that had some errors in them.
+- asCanvas() is now also supported in Internet Explorer 11, this makes it simpler to integrate with Open Layers 3 and Cesium
+- Added back the possibility to create effects with SVG filters in custom extensions
 
-## 0.5.6 14 MAY 2016
+## 0.5.5 - 2016-01-30
 
-### Added
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/0.5.5)
 
-- asCanvas() is now also supported in Internet Explorer 11, this makes it
-  simpler to integrate with Open Layers 3 and Cesium
-- Added back the possibility to create effects with SVG filters in custom
-  extensions
-
-## 0.5.5 13 JAN 2016
-
-### Added
-
+All symbol geometries has been remade to decrease code size and to make it possible to have native canvas output.
 - Native Canvas output
+- Reduced code size
 
-### Changed
+## 0.5.1 - 2015-07-24
 
-- Made several changes to the code to reduce the code size
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/0.5.1)
 
-## 0.5.1 24 JUL 2015
+This is just a maintenance release, no code in milsymbol has changed, but some errors in the documentation has been fixed.
 
-### Changed
+## 0.5.0 - 2015-07-20
 
-- Minor documentation updates
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/0.5.0)
 
-## 0.5.0 - 20 JUL 2015
-
-### Added
-
-- New API
 - Much faster
+- New API
 - Support point symbols from MIL-STD-2525D
 - New examples
 
-## 0.4.5 - 24 NOV 2014
+## 0.4.5 - 2014-11-23
 
-### Added
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/0.4.5)
 
+### New in this release:
 - Now supports MIL-STD-2525C Emergency Management Symbols
-- Speeeeed, the code now runs 3-5 times faster when you are creating a lot of
-  symbols. (1000 random symbols can be created in less than 1 second, my test
-  record is 0.25 seconds on a modern iMac running Safari.)
+- Speeeeed, the code now runs 3-5 times faster when you are creating a lot of symbols. (1000 random symbols can be created in less than 1 second, my test record is 0.25 seconds on a modern iMac running Safari.)
 - Added an example showing generation of 1000 random symbols.
+
+## 0.4.4 - 2014-10-28
+
+[GitHub release](https://github.com/spatialillusions/milsymbol/releases/tag/v0.4.4)
+
+Initial release when code moved to GitHub, same as on homepage.
