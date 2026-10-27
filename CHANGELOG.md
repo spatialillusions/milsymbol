@@ -1,19 +1,48 @@
 # Change Log
 
-## 3.0.6
+## 3.0.5
+
+### Added
+
+- Add the `modifierColor` style option to control modifier decorator colors
+  independently of frame and icon colors, including HQ staffs, task force brackets,
+  feint/dummy indicators, and echelon indicators.
+- Support `cssClass` on SVG drawing instructions, add the
+  `milsymbol-textfields` class to standard text fields, and allow custom
+  label classes. Add CSS classes for HQ, task force, installation, feint/dummy,
+  and echelon modifiers.
+- Extend TypeScript definitions with `addIconParts`, `IconPartsFunction`,
+  `Symbol.drawInstructions`, and `outline`. Include `modifierColor`,
+  support `infoOutlineWidth: false`, and declare text drawing instructions'
+  `text` property. Correct `addIconParts`' return type for chaining.
+
+### Changed
+
+- Read the version from `package.json` when building the bundle, replacing
+  the hardcoded runtime version.
+- Move echelon geometry definitions into a separate data module to simplify
+  maintenance.
 
 ### Fixed
 
-- getColors no longer mutates the colorMode, frameColor, or iconColor objects
-  passed in as options, so shared color objects can safely be reused across
-  symbols
+- Restore direct source imports by providing a version fallback when the build-time
+  `__version__` constant is unavailable. Verify the source version matches
+  `package.json` in the test suite.
+- Correct the suspect frame color's CSS syntax so unfilled MIL-STD-2525E suspect
+  symbols and their labels render with the intended color on canvas.
+- Stop `getColors` from mutating caller-provided `colorMode`,
+  `frameColor`, and `iconColor` objects, so shared palettes can safely
+  be reused across symbols. Resolve modifier frame colors without relying on
+  palette mutation.
 
-## 3.0.5
+### Security
 
-- Refresh compatible dependency versions and the lockfile to resolve known security advisories.
-- Require Rollup 4.59.0 or later for its path-traversal security fix.
-- Replace the unused general-purpose glob/copy dependency chain with a tested helper for the three documentation standard files.
-- Keep the Rollup replacement plugin in development dependencies; it is not a runtime dependency.
+- Refresh compatible development dependency versions and the lockfile to address
+  known security advisories, including requiring Rollup 4.59.0 or later for its
+  path-traversal fix.
+- Replace the unused general-purpose glob/copy dependency chain with a tested
+  helper for the three documentation standard files. Keep the Rollup replacement
+  plugin in development dependencies rather than runtime dependencies.
 
 ## 3.0.0
 

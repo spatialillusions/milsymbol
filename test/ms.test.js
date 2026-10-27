@@ -1,4 +1,8 @@
 import { ms } from "../index.mjs";
+import { readFileSync } from "node:fs";
+
+const packageVersion = JSON.parse(readFileSync("package.json", "utf8")).version;
+
 ms.reset();
 
 export default {
@@ -14,6 +18,7 @@ export default {
     getHqStaffLength: [typeof ms.getHqStaffLength(), "number"],
     getSymbolParts: [typeof ms.getSymbolParts(), "object"],
     getVersion: [typeof ms.getVersion(), "string"],
+    "getVersion matches package.json": [ms.getVersion(), packageVersion],
     outline: [typeof ms.outline({}), "object"],
     setColorMode: [typeof ms.setColorMode("TestMode", {}), "object"],
     setDashArrays: [typeof ms.setDashArrays(), "object"],

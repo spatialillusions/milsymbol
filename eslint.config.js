@@ -19,6 +19,12 @@ export default [
       },
     },
   },
+  {
+    files: ["test/**/*.mjs"],
+    languageOptions: {
+      ecmaVersion: 2022,
+    },
+  },
 ];
 
 /*
