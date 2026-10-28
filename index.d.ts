@@ -252,7 +252,7 @@ export function setDashArrays(
   feintDummy: string
 ): DashObject;
 
-// Gets the version of milsymbol.
+/** Gets the version of milsymbol. */
 export function getVersion(): string;
 
 /** Sets the preferred standard. */
