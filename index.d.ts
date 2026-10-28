@@ -194,6 +194,10 @@ export class Symbol {
   isValid(extended?: boolean): boolean | Object;
   setOptions(opts: SymbolOptions): Symbol;
   toDataURL(): string;
+  canvasDraw(
+    ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D,
+    instructions: (DrawInstruction | DrawInstruction[])[]
+  ): void;
   drawInstructions: DrawInstruction[];
 }
 
@@ -338,14 +342,136 @@ export type ExtensionFunction = (
 
 export function addSymbolPart(extension: ExtensionFunction): typeof _default;
 
+export type IconParts = Record<string, DrawInstruction | DrawInstruction[]>;
+
+export type SidcIcons = Record<string, DrawInstruction | DrawInstruction[]>;
+
+export type SidcBoxes = Record<string, Partial<Box>>;
+
+export type SidcType = "number" | "letter";
+
 export type IconPartsFunction = (
-  this: Symbol,
-  iconParts: Record<string, DrawInstruction | DrawInstruction[]>,
+  this: typeof _default,
+  iconParts: IconParts,
   metadata: SymbolMetadata,
-  colors: SymbolColors
+  colors: SymbolColors,
+  STD2525?: boolean,
+  monoColor?: string,
+  alternateMedal?: boolean
 ) => void;
 
-export function addIconParts(iconParts: IconPartsFunction): typeof _default;
+export function addIconParts(
+  iconParts: IconPartsFunction | IconPartsFunction[]
+): typeof _default;
+
+export type NumberSidcIconsFunction = (
+  sId: SidcIcons,
+  sIdm1: SidcIcons,
+  sIdm2: SidcIcons,
+  bbox: SidcBoxes,
+  symbolSet: string,
+  icn: IconParts,
+  STD2525: boolean,
+  edition?: string
+) => void;
+
+export type LetterSidcIconsFunction = (
+  sId: SidcIcons,
+  bbox: SidcBoxes,
+  icn: IconParts,
+  STD2525: boolean
+) => void;
+
+export function addSIDCicons(
+  icons: NumberSidcIconsFunction,
+  type: "number"
+): typeof _default;
+export function addSIDCicons(
+  icons: LetterSidcIconsFunction,
+  type: "letter"
+): typeof _default;
+
+export interface LabelPosition {
+  x: number;
+  y: number;
+  fontsize: number;
+  textanchor: string;
+  alignmentBaseline?: string;
+  fontweight?: string;
+  fill?: string | false;
+  stroke?: string | false;
+  cssClass?: string;
+}
+
+export type LabelOverrides = Record<
+  string,
+  Record<string, LabelPosition | LabelPosition[]>
+>;
+
+export type LabelOverridesFunction = (
+  this: Symbol,
+  labels: LabelOverrides
+) => void;
+
+export function addLabelOverrides(
+  labels: LabelOverridesFunction,
+  type: SidcType
+): typeof _default;
+
+export type MetadataFunction = (
+  this: Symbol,
+  ms: typeof _default,
+  metadata: SymbolMetadata,
+  mapping: Record<string, string[] | Record<string, string>>
+) => SymbolMetadata;
+
+export interface NumberIconSet {
+  type: "number";
+  getMetadata?: MetadataFunction;
+  getIcons?: (
+    ms: typeof _default,
+    symbolSet: string,
+    iconParts: IconParts,
+    STD2525: boolean,
+    edition?: string
+  ) => { icons: SidcIcons; m1: SidcIcons; m2: SidcIcons; bbox: SidcBoxes };
+  iconParts?: IconPartsFunction | IconPartsFunction[];
+  labels?: LabelOverridesFunction;
+  icons?: NumberSidcIconsFunction;
+}
+
+export interface LetterIconSet {
+  type: "letter";
+  getMetadata?: MetadataFunction;
+  getIcons?: (
+    ms: typeof _default,
+    iconParts: IconParts,
+    STD2525: boolean
+  ) => { icons: SidcIcons; bbox: SidcBoxes };
+  iconParts?: IconPartsFunction | IconPartsFunction[];
+  labels?: LabelOverridesFunction;
+  icons?: LetterSidcIconsFunction;
+}
+
+export type IconSet = NumberIconSet | LetterIconSet;
+
+export function addIcons(icons: IconSet | IconSet[]): void;
+
+export function getSymbolParts(): ExtensionFunction[];
+export function setSymbolParts(parts: ExtensionFunction[]): typeof _default;
+
+export function reset(): void;
+
+export function showOctagon(): void;
+
+export function setBrokenPath2D(broken: boolean): void;
+
+export function Path2D(
+  ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D,
+  d: string
+): void;
+
+export const version: string;
 
 export function outline<T extends DrawInstruction | DrawInstruction[]>(
   drawInstructions: T,
@@ -358,6 +484,7 @@ declare const _default: {
   Symbol: typeof Symbol;
   BBox: BBoxConstructor;
   ColorMode: typeof ColorMode;
+  Path2D: typeof Path2D;
   getColorMode: typeof getColorMode;
   setColorMode: typeof setColorMode;
   getHqStaffLength: typeof getHqStaffLength;
@@ -368,6 +495,15 @@ declare const _default: {
   setStandard: typeof setStandard;
   addSymbolPart: typeof addSymbolPart;
   addIconParts: typeof addIconParts;
+  addIcons: typeof addIcons;
+  getSymbolParts: typeof getSymbolParts;
+  setSymbolParts: typeof setSymbolParts;
+  addLabelOverrides: typeof addLabelOverrides;
+  addSIDCicons: typeof addSIDCicons;
+  reset: typeof reset;
+  setBrokenPath2D: typeof setBrokenPath2D;
+  showOctagon: typeof showOctagon;
+  version: string;
   outline: typeof outline;
 };
 
