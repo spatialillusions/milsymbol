@@ -244,7 +244,12 @@ export default function modifier(ms) {
       if (this.style.outlineWidth > 0)
         drawArray1.push(
           ms.outline(
-            { type: "translate", x: 0, y: -installationPadding, draw: geom },
+            {
+              type: "translate",
+              x: 0,
+              y: bbox.y1 - installationPadding,
+              draw: geom
+            },
             this.style.outlineWidth,
             this.style.strokeWidth,
             typeof this.style.outlineColor === "object"
