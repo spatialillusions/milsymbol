@@ -10,6 +10,13 @@ Historical wording is retained; duplicate version headings and empty template
 categories are omitted. See [Development resources](dev/README.md) for the
 publication workflow and GitHub/npm version inventory.
 
+## 3.0.6 - Unreleased
+
+### Fixed
+
+- Draw the echelon outline around the echelon marker instead of above it when
+  `outlineWidth` is set ([#361](https://github.com/spatialillusions/milsymbol/issues/361)).
+
 ## 3.0.5 - 2026-10-27
 
 ### Added
