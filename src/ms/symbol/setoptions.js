@@ -98,6 +98,19 @@ export default function setOptions() {
       x: this.metadata.baseGeometry.bbox.x1,
       y: this.metadata.baseGeometry.bbox.y2 + hqStaffLength,
     };
+  } else if (
+    // Ground symbols draw the direction of movement arrow on a staff below the
+    // frame (see directionarrow.js); optionally anchor at the end of that staff
+    this.style.directionStaffAnchor &&
+    this.style.infoFields &&
+    typeof this.options.direction !== "undefined" &&
+    this.options.direction !== "" &&
+    this.options.speedLeader == 0 &&
+    (this.metadata.baseDimension == "Ground" ||
+      this.metadata.baseDimension == "") &&
+    this.metadata.baseGeometry.g != ""
+  ) {
+    anchor = { x: 100, y: this.metadata.baseGeometry.bbox.y2 + 100 };
   }
 
   if (this.style.square) {

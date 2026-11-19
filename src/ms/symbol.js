@@ -46,6 +46,7 @@ function Symbol() {
   this.style.alternateMedal = false; // 2525D lets you choose between MEDAL icn and alternate MEDAL icn for Mines; default is set to MEDAL.
   this.style.civilianColor = true; // Should we use the Civilian Purple defined in 2525? (We set this to default because I like the color.
   this.style.colorMode = "Light"; // 2525C Allows you to use Dark; Medium or Light colors. The values you can set are "Dark";"Medium" or "Light"
+  this.style.directionStaffAnchor = false; // Anchor ground symbols with a direction of movement indicator at the end of its staff
   this.style.fill = true; // Should the icon be filled with color
   this.style.fillColor = ""; // Override the frame fill with any color
   this.style.fillOpacity = 1; // Possibility to change the fill opacity

@@ -18,6 +18,7 @@ export interface SymbolOptions {
   commonIdentifier?: string;
   country?: string;
   direction?: number;
+  directionStaffAnchor?: boolean;
   dtg?: string;
   engagementBar?: string;
   engagementType?: string;
