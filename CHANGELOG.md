@@ -10,12 +10,12 @@ Historical wording is retained; duplicate version headings and empty template
 categories are omitted. See [Development resources](dev/README.md) for the
 publication workflow and GitHub/npm version inventory.
 
-## Unreleased
+## 3.0.7 - Unreleased
 
 ### Added
 
-- `directionStaffAnchor` style option: anchor ground symbols with a direction of
-  movement indicator at the end of the staff the arrow is drawn on.
+- Add the `directionStaffAnchor` style option to anchor ground symbols with a
+  direction of movement indicator at the end of the staff the arrow is drawn on.
 
 ## 3.0.6 - 2026-11-18
 
