@@ -121,7 +121,7 @@ export default function directionarrow(ms) {
           strokewidth: this.style.strokeWidth,
           d: "M 100,100  l" + x + "," + y,
         };
-        drawArray1.push(arrow);
+        drawArray2.push(arrow);
       }
       //outline
       if (this.style.outlineWidth > 0)

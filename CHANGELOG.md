@@ -10,6 +10,14 @@ Historical wording is retained; duplicate version headings and empty template
 categories are omitted. See [Development resources](dev/README.md) for the
 publication workflow and GitHub/npm version inventory.
 
+## 3.0.7 - Unreleased
+
+### Fixed
+
+- Draw the speed leader on top of the frame. It was drawn behind the frame, so
+  the frame fill hid the part inside it and the visible line was shorter than
+  `speedLeader`.
+
 ## 3.0.6 - 2026-11-18
 
 ### Fixed
